@@ -1,12 +1,12 @@
 {
   "summary": {
-    "generated_at": "2026-08-16T03:19:58.914Z",
+    "generated_at": "2026-08-16T03:23:41.657Z",
     "canonical_categories": 149,
     "categories_with_any_source": 59,
     "categories_with_live_discovery": 55,
     "categories_with_authoritative_manufacturer_evidence": 2,
-    "categories_with_direct_trade_source": 10,
-    "categories_with_multi_graph_source": 10,
+    "categories_with_direct_trade_source": 11,
+    "categories_with_multi_graph_source": 11,
     "manufacturer_evidence_records": 3,
     "source_adapters": 3,
     "principle": "Coverage is measured against Product Twin's canonical taxonomy. A source contributes capabilities; it never defines the category universe."
@@ -3170,12 +3170,12 @@
       ],
       "live_discovery_signals": 149,
       "authoritative_manufacturer_evidence_records": 0,
-      "direct_trade_sources": 0,
+      "direct_trade_sources": 1,
       "live_commerce_sources": 2,
       "technical_evidence_sources": 1,
       "geometry_sources": 0,
       "bim_sources": 0,
-      "coverage_state": "TECHNICAL_PLUS_COMMERCE"
+      "coverage_state": "MULTI_GRAPH_SOURCE"
     },
     {
       "category_id": "STRUCTURE.FOUNDATIONS",
