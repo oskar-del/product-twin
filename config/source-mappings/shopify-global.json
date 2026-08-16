@@ -45,6 +45,7 @@
     {"category_id":"FINISHES.PAINT","fitness":"secondary","queries":["interior mineral paint limewash","premium interior paint matte"]},
     {"category_id":"FINISHES.WALLCOVERING","fitness":"secondary","queries":["natural grasscloth wallpaper","textured wallcovering neutral"]},
     {"category_id":"OPENINGS.HARDWARE","fitness":"secondary","queries":["brass door handle architectural","door lever bronze premium"]},
+    {"category_id":"OPENINGS.WINDOWS","fitness":"experimental","queries":["aluminium window system thermal break","sliding window system aluminium architectural"]},
     {"category_id":"ELECTRICAL.SWITCHES","fitness":"secondary","queries":["brass light switch architectural","premium switch socket bronze"]},
     {"category_id":"POOL.LIGHTING","fitness":"secondary","queries":["LED pool light underwater","underwater pool light stainless"]},
     {"category_id":"POOL.PUMPS","fitness":"secondary","queries":["variable speed pool pump","swimming pool circulation pump"]},
@@ -58,7 +59,13 @@
     {"category_id":"STRUCTURE.MASONRY","fitness":"experimental","queries":["concrete block masonry building","clay brick construction"]},
     {"category_id":"ENVELOPE.INSULATION","fitness":"experimental","queries":["thermal insulation board building","mineral wool insulation"]},
     {"category_id":"ENVELOPE.WATERPROOFING","fitness":"experimental","queries":["waterproofing membrane building","liquid waterproofing membrane"]},
-    {"category_id":"ENERGY.PV","fitness":"secondary","queries":["solar panel photovoltaic","residential solar panel"]},
+    {"category_id":"HVAC.HEAT_PUMPS","fitness":"secondary","queries":["air to water heat pump residential","monobloc heat pump heating cooling"]},
+    {"category_id":"ENERGY.SOLAR.PANEL","fitness":"secondary","queries":["solar panel photovoltaic 450W","residential photovoltaic module","bifacial solar panel module"]},
+    {"category_id":"ENERGY.SOLAR.INVERTER","fitness":"secondary","queries":["solar inverter three phase residential","hybrid solar inverter 10kW","photovoltaic inverter Europe"]},
+    {"category_id":"ENERGY.SOLAR.MOUNTING","fitness":"experimental","queries":["solar panel roof mounting system","photovoltaic mounting rails roof"]},
     {"category_id":"ENERGY.BATTERY","fitness":"secondary","queries":["home battery storage solar","residential energy storage battery"]}
-  ]
+  ],
+  "deprecated_category_aliases": {
+    "ENERGY.PV": "ENERGY.SOLAR.PANEL"
+  }
 }
