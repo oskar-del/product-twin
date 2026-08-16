@@ -1,0 +1,73 @@
+{
+  "summary": {
+    "generated_at": "2026-08-16T17:03:06.926Z",
+    "manufacturer": "Herman Miller",
+    "configuration_family": "Sayl Chair – Suspension Mid Back – Fully Adjustable Arms",
+    "assets_checked": 3,
+    "assets_reachable": 3,
+    "formats_reachable": [
+      "Revit",
+      "SketchUp",
+      "AutoCAD 3D"
+    ],
+    "binaries_committed": false,
+    "source_state": "MANUFACTURER_BIM_SOURCE_LIVE_TESTED",
+    "rights_state": "space_planning_use_supported; persistent storage/redistribution review"
+  },
+  "assets": [
+    {
+      "format": "Revit",
+      "url": "https://www.hermanmiller.com/content/dam/hmicom/app_assets/product_models/s/sayl_chairs/sayl_chair_suspension_mid_back_fully_adjustable_arms/HMI_Sayl_Chair_Suspension_Mid_Back_Fully_Adjustable_Arms_rfa.zip",
+      "role": "BIM/specification geometry candidate",
+      "reachable": true,
+      "http_status": 200,
+      "content_type": "application/zip",
+      "content_length_header": 1404901,
+      "resolved_url": "https://www.hermanmiller.com/content/dam/hmicom/app_assets/product_models/s/sayl_chairs/sayl_chair_suspension_mid_back_fully_adjustable_arms/HMI_Sayl_Chair_Suspension_Mid_Back_Fully_Adjustable_Arms_rfa.zip",
+      "bytes": 1404901,
+      "sha256": "bdec16e97911f9ba8302c4ce885256f86e7455c28e0e6315bed70884d52985fa",
+      "signature": {
+        "first_16_hex": "504b03041400000008005557a55c05b9",
+        "first_32_ascii": "PK........UW%\\.9\"5K\"...@..8.$.He"
+      },
+      "container_valid": true,
+      "persisted_binary": false
+    },
+    {
+      "format": "SketchUp",
+      "url": "https://www.hermanmiller.com/content/dam/hmicom/app_assets/product_models/s/sayl_chairs/sayl_chair_suspension_mid_back_fully_adjustable_arms/HMI_Sayl_Chair_Suspension_Mid_Back_Fully_Adjustable_Arms.skp",
+      "role": "design/visual geometry candidate",
+      "reachable": true,
+      "http_status": 200,
+      "content_type": "application/vnd.koan",
+      "content_length_header": 2796839,
+      "resolved_url": "https://www.hermanmiller.com/content/dam/hmicom/app_assets/product_models/s/sayl_chairs/sayl_chair_suspension_mid_back_fully_adjustable_arms/HMI_Sayl_Chair_Suspension_Mid_Back_Fully_Adjustable_Arms.skp",
+      "bytes": 2796839,
+      "sha256": "880ff0192e0e36d58a13947980b60dcd64f23135281f0e2d6b1d1bb8ef5a2d5d",
+      "signature": {
+        "first_16_hex": "fffeff0e53006b006500740063006800",
+        "first_32_ascii": ".~..S.k.e.t.c.h.U.p. .M.o.d.e.l."
+      },
+      "persisted_binary": false
+    },
+    {
+      "format": "AutoCAD 3D",
+      "url": "https://www.hermanmiller.com/content/dam/hmicom/app_assets/product_models/s/sayl_chairs/sayl_chair_suspension_mid_back_fully_adjustable_arms/HMI_Sayl_Chair_Suspension_Mid_Back_Fully_Adjustable_Arms_3D.dwg",
+      "role": "3D CAD geometry candidate",
+      "reachable": true,
+      "http_status": 200,
+      "content_type": "image/vnd.dwg",
+      "content_length_header": 846333,
+      "resolved_url": "https://www.hermanmiller.com/content/dam/hmicom/app_assets/product_models/s/sayl_chairs/sayl_chair_suspension_mid_back_fully_adjustable_arms/HMI_Sayl_Chair_Suspension_Mid_Back_Fully_Adjustable_Arms_3D.dwg",
+      "bytes": 846333,
+      "sha256": "644ee6f554f16e1425dd3748ae9a9f9a19d0ddbd7ba7f209d7b9d53c9d522a3c",
+      "signature": {
+        "first_16_hex": "41433130313800000000006803200100",
+        "first_32_ascii": "AC1018.....h. ....}....}........"
+      },
+      "file_signature_valid": true,
+      "persisted_binary": false
+    }
+  ],
+  "policy": "Validate manufacturer assets transiently. Persist URLs, hash, metadata and QA only; do not commit manufacturer binaries until redistribution rights are explicitly confirmed."
+}
