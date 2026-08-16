@@ -1,0 +1,50 @@
+name: Probe GF Sanipex CAD BIM
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'config/geometry/gf-sanipex-4700-096-target.json'
+      - 'scripts/probe-gf-sanipex-cad-bim.mjs'
+      - '.github/workflows/gf-sanipex-cad-bim-probe.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-gf-sanipex-cad-bim
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Probe exact manufacturer CAD/BIM controls
+        run: node scripts/probe-gf-sanipex-cad-bim.mjs
+      - name: Commit metadata only
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Any manufacturer binary is ephemeral and intentionally excluded from git."
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/geometry/gf-sanipex-4700-096-cad-bim-probe.json data/metrics/gf-sanipex-4700-096-cad-bim-probe-latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "data: record GF Sanipex CAD BIM probe"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt*3))
+          done
+          exit 1
