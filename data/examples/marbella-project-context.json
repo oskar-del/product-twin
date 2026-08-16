@@ -1,0 +1,46 @@
+{
+  "project_id": "EXAMPLE_MARBELLA_VILLA",
+  "site": {
+    "latitude": 36.51,
+    "longitude": -4.97,
+    "country_code": "ES",
+    "region": "Andalucía",
+    "province": "Málaga",
+    "municipality": "Marbella",
+    "postal_code": "29660",
+    "timezone": "Europe/Madrid"
+  },
+  "resolved": {
+    "jurisdiction_chain": ["ES-MA-MARBELLA", "ES-MA", "ES-AN", "ES", "EU"],
+    "climate": {
+      "cte_climate_zone": null,
+      "status": "unresolved",
+      "rule": "Resolve from an official/maintained source before energy-compliance calculation."
+    },
+    "solar": {
+      "status": "ready_for_calculation",
+      "source_adapter": "PVGIS_or_equivalent",
+      "roof_surfaces": []
+    },
+    "grid": {
+      "status": "unresolved",
+      "distribution_area": null
+    },
+    "supply_region": {
+      "postal_code": "29660",
+      "country": "ES",
+      "region": "Andalucía",
+      "local_radius_km": 75,
+      "regional_radius_km": 300,
+      "preferred_origins": ["ES-AN", "ES", "EU"]
+    },
+    "construction": {
+      "project_type": "residential_villa",
+      "building_use": "residential",
+      "new_build_or_existing": "new_build",
+      "gross_area_m2": null,
+      "storeys": null,
+      "required_completion_date": null
+    }
+  }
+}
