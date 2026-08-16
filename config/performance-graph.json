@@ -1,0 +1,86 @@
+{
+  "version": "0.1",
+  "principle": "Once geometry, assemblies, material/product evidence, systems and context are known, Product Twin can generate performance predictions. Predictions remain separate from measured/commissioned as-built evidence.",
+  "states": ["not_run", "inputs_incomplete", "predicted", "engineer_review", "verified_by_measurement", "failed", "not_applicable"],
+  "domains": [
+    {
+      "id": "acoustics.airborne",
+      "name": "Airborne sound insulation",
+      "inputs": ["room_geometry", "separating_assemblies", "doors_windows", "element_sound_reduction_data", "junctions", "flanking_paths", "room_absorption"],
+      "outputs": ["predicted_room_to_room_isolation", "weakest_path", "uncertainty", "compliance_state"],
+      "standard_family": ["ISO 12354-1", "local building acoustics rules"],
+      "verification": ["field measurement", "as-built inspection"]
+    },
+    {
+      "id": "acoustics.impact",
+      "name": "Impact sound / footfall transmission",
+      "inputs": ["floor_structure", "floor_covering", "floating_floor", "ceiling_system", "junctions", "flanking_paths", "room_geometry", "measured_element_data"],
+      "outputs": ["predicted_impact_sound", "critical_floor_zones", "upgrade_options", "compliance_state"],
+      "standard_family": ["ISO 12354-2", "ISO 717-2", "local building acoustics rules"],
+      "verification": ["tapping_machine_or_field_test", "as-built inspection"]
+    },
+    {
+      "id": "acoustics.room",
+      "name": "Room acoustics / speech / reverberation",
+      "inputs": ["room_geometry", "surface_absorption_by_frequency", "furniture", "ceiling", "occupancy", "sound_source_positions"],
+      "outputs": ["reverberation_time", "speech_clarity", "absorption_map", "treatment_recommendations"]
+    },
+    {
+      "id": "acoustics.installations",
+      "name": "Building-services noise",
+      "inputs": ["fan_pump_compressor_sound_power", "duct_pipe_routes", "mountings", "room_geometry", "partitions", "operating_scenarios"],
+      "outputs": ["predicted_service_noise", "tonal_risk", "vibration_path", "compliance_state"]
+    },
+    {
+      "id": "movement.accessibility",
+      "name": "Accessibility and movement",
+      "inputs": ["navigable_geometry", "doors", "stairs", "ramps", "clear_widths", "turning_spaces", "occupant_profiles"],
+      "outputs": ["accessible_routes", "clearance_failures", "turning_conflicts", "travel_distances"]
+    },
+    {
+      "id": "movement.egress",
+      "name": "Occupant flow / egress",
+      "inputs": ["navigable_geometry", "occupancy_scenarios", "doors", "stairs", "exit_capacity", "movement_profiles"],
+      "outputs": ["travel_paths", "congestion_hotspots", "egress_time_scenarios", "bottlenecks"],
+      "review": "Life-safety conclusions require applicable fire/egress engineering and local-code review."
+    },
+    {
+      "id": "movement.delivery_install",
+      "name": "Delivery and installation movement",
+      "inputs": ["product_or_module_dimensions", "weight", "route_geometry", "door_lift_corridor_dimensions", "turning_radius", "crane_or_lifting_points"],
+      "outputs": ["route_feasibility", "collision_points", "minimum_clearance", "required_temporary_removals", "lift_or_crane_requirement"]
+    },
+    {
+      "id": "thermal.energy",
+      "name": "Thermal / operational energy",
+      "inputs": ["climate", "geometry", "orientation", "envelope_u_values", "thermal_bridges", "airtightness", "glazing", "shading", "HVAC", "occupancy"],
+      "outputs": ["heating_load", "cooling_load", "energy_use", "comfort_risk", "system_sizing_inputs"]
+    },
+    {
+      "id": "solar.daylight",
+      "name": "Solar / daylight",
+      "inputs": ["site_context", "geometry", "glazing", "shading", "surface_properties", "weather_data"],
+      "outputs": ["irradiance", "daylight", "glare_risk", "shading_effectiveness", "PV_resource"]
+    },
+    {
+      "id": "moisture",
+      "name": "Moisture / condensation risk",
+      "inputs": ["assembly_layers", "material_vapour_properties", "climate", "indoor_conditions", "junctions", "waterproofing"],
+      "outputs": ["interstitial_condensation_risk", "surface_condensation_risk", "wet_area_risk", "assembly_review"]
+    },
+    {
+      "id": "embodied_carbon",
+      "name": "Embodied carbon",
+      "inputs": ["quantities", "manufacturer_EPDs", "material_factors", "transport", "waste", "replacement_cycles"],
+      "outputs": ["kgCO2e_total", "kgCO2e_m2", "hotspots", "alternative_scenarios"]
+    },
+    {
+      "id": "maintainability",
+      "name": "Maintainability / replacement",
+      "inputs": ["installed_assets", "service_clearances", "access_routes", "maintenance_cycles", "replacement_dimensions"],
+      "outputs": ["service_access_failures", "replacement_route_feasibility", "maintenance_schedule", "future_replacement_candidates"]
+    }
+  ],
+  "evidence_rule": "Product/category data may supply simulation inputs only at its verified evidence grade. Missing junction, installation or field-condition data must remain explicit uncertainty, never silently assumed as verified.",
+  "digital_thread": "design_prediction -> technical_review -> construction_quality_evidence -> field_measurement_or_commissioning -> as_built_verified_performance"
+}
