@@ -54,6 +54,7 @@ jobs:
           test ! -d data/shopify || { echo "ERROR: persistent Shopify catalog cache detected"; exit 1; }
       - name: Commit aggregate metrics only
         run: |
+          set -euo pipefail
           git config user.name "product-twin-bot"
           git config user.email "product-twin-bot@users.noreply.github.com"
           git add data/coverage data/metrics data/tests
@@ -62,4 +63,6 @@ jobs:
             exit 0
           fi
           git commit -m "data: refresh live-source aggregate Product Twin metrics"
-          git push
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
