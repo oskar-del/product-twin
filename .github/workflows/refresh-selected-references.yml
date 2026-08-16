@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "data/references/**"
+      - "data/evidence/manufacturer/**"
   workflow_dispatch:
 
 permissions:
@@ -27,21 +28,23 @@ jobs:
           node-version: "22"
       - name: Refresh selected variants live with Global lookup
         run: npm run references:refresh
+      - name: Resolve canonical manufacturer identity
+        run: npm run identity:resolve
       - name: Retest merchant Cart MCP
         run: npm run carts:create
       - name: Prepare guarded Checkout quote
         run: npm run checkouts:quote
-      - name: Commit aggregate refresh metrics only
+      - name: Commit aggregate refresh metrics and identity links
         run: |
           set -euo pipefail
           git config user.name "product-twin-bot"
           git config user.email "product-twin-bot@users.noreply.github.com"
-          git add data/metrics
+          git add data/metrics data/identity
           if git diff --cached --quiet; then
-            echo "No aggregate changes."
+            echo "No permitted changes."
             exit 0
           fi
-          git commit -m "data: refresh selected Product Twin commerce references"
+          git commit -m "data: refresh selected commerce references and identity links"
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main
