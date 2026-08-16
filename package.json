@@ -1,6 +1,6 @@
 {
   "name": "product-twin",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
   "type": "module",
   "engines": {"node": ">=22"},
@@ -14,6 +14,7 @@
     "carts:create": "node scripts/create-merchant-carts.mjs",
     "checkouts:quote": "node scripts/create-checkout-quotes.mjs",
     "technical:extract": "node scripts/extract-technical-evidence.mjs",
+    "technical:fit": "node scripts/evaluate-technical-fit.mjs",
     "regulatory:test": "node scripts/regulatory-evaluate.mjs",
     "context:test": "node scripts/project-context-resolve.mjs",
     "whole-building:test": "node scripts/whole-building-test.mjs",
