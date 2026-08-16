@@ -1,0 +1,68 @@
+{
+  "requirement_id": "REQ_SOLAR_PROJECT_MARBELLA_VILLA_001",
+  "project_id": "PROJECT_MARBELLA_VILLA_001",
+  "system": "solar_pv",
+  "status": "needs_inputs",
+  "objective": "Size a technically compatible, regulation-aware PV system from site performance and building demand before selecting commercial products.",
+  "verified_site_resource": {
+    "annual_energy_kwh_per_kwp": 1732.34,
+    "annual_plane_irradiation_kwh_m2": 2154.05,
+    "optimal_tilt_deg": 33,
+    "optimal_pvgis_azimuth_deg": 2,
+    "source": "PVGIS 5.3 / PVGIS-SARAH3"
+  },
+  "sizing_factors": {
+    "annual_generation_per_1_kwp_kwh": 1732.34,
+    "kwp_required_per_10000_kwh_year": 5.773,
+    "example_10_kwp_annual_generation_kwh": 17323.4
+  },
+  "project_targets": {
+    "annual_electricity_demand_kwh": null,
+    "target_annual_pv_generation_kwh": null,
+    "calculated_target_kwp": null,
+    "usable_roof_area_m2": null
+  },
+  "physical_constraints": {
+    "target_roof_plane": {
+      "optimal_screening_tilt_deg": 33,
+      "optimal_screening_azimuth_deg": 2,
+      "actual_roof_plane_selection": "pending_geometry_intersection"
+    },
+    "module_count": "pending_real_panel_dimensions_and_roof_geometry",
+    "access_and_fire_setbacks": "pending_local_design_and_regulatory_rules"
+  },
+  "electrical_or_connection_constraints": {
+    "nominal_voltage_v": 230,
+    "frequency_hz": 50,
+    "phase": "unknown",
+    "string_voltage_current_window": "derived_after_panel_and_inverter_candidate matching",
+    "grid_connection": "pending_project_grid_context"
+  },
+  "product_twin_category_ids": [
+    "ENERGY.SOLAR.PANEL",
+    "ENERGY.SOLAR.INVERTER",
+    "ENERGY.SOLAR.MOUNTING",
+    "ENERGY.SOLAR.BOS",
+    "ENERGY.BATTERY"
+  ],
+  "selection_sequence": [
+    "resolve building load / generation target",
+    "intersect roof geometry with solar resource and shading",
+    "derive target kWp and layout envelope",
+    "find real PV module Twins fitting roof/efficiency constraints",
+    "derive string architecture from selected modules",
+    "find compatible inverter Twin",
+    "evaluate battery objective and compatible battery Twin if needed",
+    "run regulation/grid checks",
+    "resolve local offers, installer route, logistics and landed/installed cost"
+  ],
+  "missing_inputs": [
+    "annual electricity demand or desired annual PV generation",
+    "usable roof-plane geometry/area after setbacks",
+    "local obstruction/shading model",
+    "confirmed electrical phase",
+    "grid export/import constraints and contracted supply",
+    "battery/autonomy objective if storage is desired"
+  ],
+  "principle": "No commercial panel or inverter is selected before the project-level performance requirement is defined."
+}
