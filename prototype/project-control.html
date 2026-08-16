@@ -1,0 +1,93 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Product Twin · Project Control</title><style>
+:root{--bg:#ede9df;--paper:#f8f6f0;--ink:#17231d;--green:#204d3b;--line:#d8d2c6;--muted:#738078;--good:#2f6b4f;--hold:#a36f22;--review:#6f668e;--bad:#9a4e42}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:13px Inter,system-ui,-apple-system,sans-serif}.top{background:#16231c;color:white;padding:24px 28px}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:10px;opacity:.72}.top h1{font-size:27px;margin:6px 0 4px}.sub{opacity:.68;font-size:12px}.wrap{max-width:1500px;margin:auto;padding:20px}.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:16px}.kpi{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px}.kpi span{font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}.kpi b{display:block;font-size:23px;margin-top:4px}.context{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.pill{background:#e0ded5;border-radius:14px;padding:6px 9px;font-size:10px}.table{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}.row{display:grid;grid-template-columns:180px 120px 160px 130px 110px 120px 155px 1fr;border-top:1px solid var(--line);min-height:82px}.row.head{min-height:auto;background:#e4e0d7;border-top:0;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#69746d}.cell{padding:11px;border-left:1px solid var(--line)}.cell:first-child{border-left:0}.name{font-size:14px;font-weight:700}.cat{font-size:9px;color:var(--muted);margin-top:4px}.tag{display:inline-block;font-size:9px;padding:4px 6px;border-radius:9px;margin:2px 2px 2px 0;background:#e4e2da}.tag.good{background:#dce9df;color:#24583e}.tag.hold{background:#f2e4cd;color:#815712}.tag.review{background:#e6e1ef;color:#574e78}.tag.bad{background:#eedbd7;color:#803e34}.tag.muted{color:#6d746f}.n{font-size:18px;font-weight:700}.small{font-size:9px;color:var(--muted);line-height:1.45}.route{font-weight:700;margin-bottom:4px}.actions{font-size:10px;line-height:1.45}.actions div:before{content:'→ ';color:var(--green);font-weight:700}.legend{font-size:10px;color:var(--muted);margin:12px 2px}.filters{margin-bottom:10px;display:flex;gap:6px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:var(--paper);border-radius:16px;padding:7px 10px;cursor:pointer;font-size:10px}.filter.on{background:var(--green);color:white;border-color:var(--green)}.hidden{display:none}.sourcebadges{margin-top:5px}@media(max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}.table{overflow-x:auto}.row{min-width:1170px}}@media(max-width:650px){.kpis{grid-template-columns:repeat(2,1fr)}.wrap{padding:10px}}
+</style></head><body><div class="top"><div class="eyebrow">Product Twin · Plot to Project</div><h1>Marbella Villa Whole-Building Test</h1><div class="sub">Marbella, Andalucía · 29660</div></div><div class="wrap"><div class="kpis"><div class="kpi"><span>Categories mapped</span><b>59/149</b></div><div class="kpi"><span>Shopify live</span><b>55</b></div><div class="kpi"><span>Direct trade</span><b>11</b></div><div class="kpi"><span>Stable refs</span><b>10/10</b></div><div class="kpi"><span>Postcode offers</span><b>10/10</b></div><div class="kpi"><span>Procurement ready</span><b>0/10</b></div></div><div class="context"><span class="pill">CTE A3</span><span class="pill">1,732 kWh/kWp/yr</span><span class="pill">PV optimum ~33° tilt</span></div><div class="filters"><button class="filter on" data-filter="all">all</button><button class="filter " data-filter="configured_rfq">configured rfq</button><button class="filter " data-filter="merchant_cart">merchant cart</button><button class="filter " data-filter="direct_trade">direct trade</button></div><div class="table"><div class="row head"><div class="cell">Project slot</div><div class="cell">Requirement</div><div class="cell">Supply graph</div><div class="cell">Identity</div><div class="cell">Technical</div><div class="cell">Regulation</div><div class="cell">Procurement</div><div class="cell">Next</div></div><div id="rows"><div class="row" data-route="configured_rfq">
+    <div class="cell"><div class="name">Structural concrete</div><div class="cat">STRUCTURE.CONCRETE</div></div>
+    <div class="cell"><span class="tag hold">needs inputs</span><div class="small">7 missing inputs</div></div>
+    <div class="cell"><div class="n">149</div><div class="small">live discovery</div><span class="tag good">1 direct</span><div class="sourcebadges"><span class="tag good">cemex go es</span><span class="tag muted">shopify global catalog</span></div></div>
+    <div class="cell"><span class="tag review">UNRESOLVED</span><div class="small">stable ref yes</div></div>
+    <div class="cell"><span class="tag review">unverified</span></div>
+    <div class="cell"><span class="tag hold">HOLD</span></div>
+    <div class="cell"><div class="route">configured rfq</div><span class="tag hold">needs requirement</span><div class="small">cemex_go_es</div></div>
+    <div class="cell actions"><div>specified concrete compressive-strength class</div><div>exposure class / durability environment</div><div>consistency or slump class</div><div>maximum aggregate size</div></div>
+  </div><div class="row" data-route="merchant_cart">
+    <div class="cell"><div class="name">Window system</div><div class="cat">OPENINGS.WINDOWS</div></div>
+    <div class="cell"><span class="tag hold">needs inputs</span><div class="small">requirement captured / not modeled</div></div>
+    <div class="cell"><div class="n">98</div><div class="small">live discovery</div><div class="sourcebadges"><span class="tag muted">shopify global catalog</span></div></div>
+    <div class="cell"><span class="tag review">UNRESOLVED</span><div class="small">stable ref yes</div></div>
+    <div class="cell"><span class="tag review">unverified</span></div>
+    <div class="cell"><span class="tag hold">HOLD</span></div>
+    <div class="cell"><div class="route">merchant cart</div><span class="tag review">needs technical review</span><div class="small">shopify_global_catalog</div></div>
+    <div class="cell actions"><div>authoritative shipping/landed cost via Checkout or supplier quote</div><div>verified lead time</div><div>canonical manufacturer identity / exact model verification</div></div>
+  </div><div class="row" data-route="merchant_cart">
+    <div class="cell"><div class="name">Natural stone</div><div class="cat">FINISHES.STONE</div></div>
+    <div class="cell"><span class="tag hold">needs inputs</span><div class="small">requirement captured / not modeled</div></div>
+    <div class="cell"><div class="n">147</div><div class="small">live discovery</div><div class="sourcebadges"><span class="tag muted">shopify global catalog</span></div></div>
+    <div class="cell"><span class="tag review">UNRESOLVED</span><div class="small">stable ref yes</div></div>
+    <div class="cell"><span class="tag review">unverified</span></div>
+    <div class="cell"><span class="tag hold">HOLD</span></div>
+    <div class="cell"><div class="route">merchant cart</div><span class="tag review">needs technical review</span><div class="small">shopify_global_catalog</div></div>
+    <div class="cell actions"><div>authoritative shipping/landed cost via Checkout or supplier quote</div><div>verified lead time</div><div>canonical manufacturer identity / exact model verification</div></div>
+  </div><div class="row" data-route="merchant_cart">
+    <div class="cell"><div class="name">Pool pressure pipe</div><div class="cat">POOL.PIPE</div></div>
+    <div class="cell"><span class="tag hold">needs inputs</span><div class="small">requirement captured / not modeled</div></div>
+    <div class="cell"><div class="n">89</div><div class="small">live discovery</div><span class="tag good">1 direct</span><div class="sourcebadges"><span class="tag good">fluidra pro es</span><span class="tag muted">shopify global catalog</span></div></div>
+    <div class="cell"><span class="tag review">UNRESOLVED</span><div class="small">stable ref yes</div></div>
+    <div class="cell"><span class="tag review">unverified</span></div>
+    <div class="cell"><span class="tag muted">NOT APPLICABLE</span></div>
+    <div class="cell"><div class="route">merchant cart</div><span class="tag review">needs technical review</span><div class="small">shopify_global_catalog</div></div>
+    <div class="cell actions"><div>authoritative shipping/landed cost via Checkout or supplier quote</div><div>verified lead time</div><div>canonical manufacturer identity / exact model verification</div></div>
+  </div><div class="row" data-route="direct_trade">
+    <div class="cell"><div class="name">Pool circulation pump</div><div class="cat">POOL.PUMPS</div></div>
+    <div class="cell"><span class="tag hold">needs inputs</span><div class="small">4 missing inputs</div></div>
+    <div class="cell"><div class="n">175</div><div class="small">live discovery</div><span class="tag good">1 direct</span><span class="tag good">2 evidence</span><div class="sourcebadges"><span class="tag good">fluidra pro es</span><span class="tag muted">shopify global catalog</span></div></div>
+    <div class="cell"><span class="tag review">UNRESOLVED</span><div class="small">stable ref yes</div></div>
+    <div class="cell"><span class="tag review">unverified</span></div>
+    <div class="cell"><span class="tag muted">NOT APPLICABLE</span></div>
+    <div class="cell"><div class="route">direct trade</div><span class="tag hold">needs requirement</span><div class="small">fluidra_pro_es</div></div>
+    <div class="cell actions"><div>pool volume + target turnover time, or explicit required filtration flow</div><div>total dynamic head from pipe/fitting/filter/equipment hydraulic calculation</div><div>pump connection / pipe and fitting system</div><div>pool plant electrical phase/circuit</div></div>
+  </div><div class="row" data-route="merchant_cart">
+    <div class="cell"><div class="name">PV module</div><div class="cat">ENERGY.SOLAR.PANEL</div></div>
+    <div class="cell"><span class="tag hold">needs inputs</span><div class="small">6 missing inputs</div></div>
+    <div class="cell"><div class="n">284</div><div class="small">live discovery</div><div class="sourcebadges"><span class="tag muted">shopify global catalog</span></div></div>
+    <div class="cell"><span class="tag review">UNRESOLVED</span><div class="small">stable ref yes</div></div>
+    <div class="cell"><span class="tag review">unverified</span></div>
+    <div class="cell"><span class="tag review">REVIEW</span></div>
+    <div class="cell"><div class="route">merchant cart</div><span class="tag hold">needs requirement</span><div class="small">shopify_global_catalog</div></div>
+    <div class="cell actions"><div>annual electricity demand or desired annual PV generation</div><div>usable roof-plane geometry/area after setbacks</div><div>local obstruction/shading model</div><div>confirmed electrical phase</div></div>
+  </div><div class="row" data-route="merchant_cart">
+    <div class="cell"><div class="name">PV inverter</div><div class="cat">ENERGY.SOLAR.INVERTER</div></div>
+    <div class="cell"><span class="tag hold">needs inputs</span><div class="small">6 missing inputs</div></div>
+    <div class="cell"><div class="n">251</div><div class="small">live discovery</div><span class="tag good">1 evidence</span><div class="sourcebadges"><span class="tag muted">shopify global catalog</span></div></div>
+    <div class="cell"><span class="tag review">UNRESOLVED</span><div class="small">stable ref yes</div></div>
+    <div class="cell"><span class="tag review">unverified</span></div>
+    <div class="cell"><span class="tag review">REVIEW</span></div>
+    <div class="cell"><div class="route">merchant cart</div><span class="tag hold">needs requirement</span><div class="small">shopify_global_catalog</div></div>
+    <div class="cell actions"><div>annual electricity demand or desired annual PV generation</div><div>usable roof-plane geometry/area after setbacks</div><div>local obstruction/shading model</div><div>confirmed electrical phase</div></div>
+  </div><div class="row" data-route="merchant_cart">
+    <div class="cell"><div class="name">Heat pump</div><div class="cat">HVAC.HEAT_PUMPS</div></div>
+    <div class="cell"><span class="tag hold">needs inputs</span><div class="small">requirement captured / not modeled</div></div>
+    <div class="cell"><div class="n">183</div><div class="small">live discovery</div><div class="sourcebadges"><span class="tag muted">shopify global catalog</span></div></div>
+    <div class="cell"><span class="tag review">UNRESOLVED</span><div class="small">stable ref yes</div></div>
+    <div class="cell"><span class="tag review">unverified</span></div>
+    <div class="cell"><span class="tag review">REVIEW</span></div>
+    <div class="cell"><div class="route">merchant cart</div><span class="tag review">needs technical review</span><div class="small">shopify_global_catalog</div></div>
+    <div class="cell actions"><div>authoritative shipping/landed cost via Checkout or supplier quote</div><div>verified lead time</div><div>canonical manufacturer identity / exact model verification</div></div>
+  </div><div class="row" data-route="merchant_cart">
+    <div class="cell"><div class="name">Pendant luminaire</div><div class="cat">ELECTRICAL.LUMINAIRES.PENDANT</div></div>
+    <div class="cell"><span class="tag hold">needs inputs</span><div class="small">requirement captured / not modeled</div></div>
+    <div class="cell"><div class="n">579</div><div class="small">live discovery</div><div class="sourcebadges"><span class="tag muted">shopify global catalog</span></div></div>
+    <div class="cell"><span class="tag review">UNRESOLVED</span><div class="small">stable ref yes</div></div>
+    <div class="cell"><span class="tag review">unverified</span></div>
+    <div class="cell"><span class="tag review">REVIEW</span></div>
+    <div class="cell"><div class="route">merchant cart</div><span class="tag review">needs technical review</span><div class="small">shopify_global_catalog</div></div>
+    <div class="cell actions"><div>authoritative shipping/landed cost via Checkout or supplier quote</div><div>verified lead time</div><div>canonical manufacturer identity / exact model verification</div></div>
+  </div><div class="row" data-route="merchant_cart">
+    <div class="cell"><div class="name">Living-room sofa</div><div class="cat">FFE.SEATING.SOFA</div></div>
+    <div class="cell"><span class="tag hold">needs inputs</span><div class="small">requirement captured / not modeled</div></div>
+    <div class="cell"><div class="n">528</div><div class="small">live discovery</div><div class="sourcebadges"><span class="tag muted">shopify global catalog</span></div></div>
+    <div class="cell"><span class="tag review">UNRESOLVED</span><div class="small">stable ref yes</div></div>
+    <div class="cell"><span class="tag review">unverified</span></div>
+    <div class="cell"><span class="tag muted">NOT APPLICABLE</span></div>
+    <div class="cell"><div class="route">merchant cart</div><span class="tag review">needs technical review</span><div class="small">shopify_global_catalog</div></div>
+    <div class="cell actions"><div>authoritative shipping/landed cost via Checkout or supplier quote</div><div>verified lead time</div><div>canonical manufacturer identity / exact model verification</div></div>
+  </div></div></div><div class="legend">Green = verified/ready signal · amber = missing design input · violet = review/verification gate · procurement remains blocked until all required gates clear.</div></div><script>document.querySelectorAll('.filter').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.filter').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var f=b.getAttribute('data-filter');document.querySelectorAll('.row[data-route]').forEach(function(r){r.classList.toggle('hidden',f!=='all'&&r.getAttribute('data-route')!==f)})})});</script></body></html>
