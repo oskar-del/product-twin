@@ -1,0 +1,44 @@
+name: Probe Muuto Architect Assets
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'data/twins/PT_MUUTO_OUTLINE_2S_OU2SRA10101.json'
+      - 'scripts/probe-muuto-architect-assets.mjs'
+      - '.github/workflows/muuto-asset-probe.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-muuto-asset-probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Probe public manufacturer asset references
+        run: node scripts/probe-muuto-architect-assets.mjs
+      - name: Commit reference-only asset probe
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/geometry/muuto-outline-architect-asset-probe.json data/metrics/muuto-asset-probe-latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "data: refresh Muuto architect asset probe"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt*3))
+          done
+          exit 1
