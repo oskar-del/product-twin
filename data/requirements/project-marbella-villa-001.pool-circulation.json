@@ -1,0 +1,56 @@
+{
+  "requirement_id": "REQ_POOL_CIRCULATION_PROJECT_MARBELLA_VILLA_001",
+  "project_id": "PROJECT_MARBELLA_VILLA_001",
+  "system": "pool_circulation",
+  "status": "needs_inputs",
+  "objective": "Define the hydraulic and electrical duty for the pool circulation system before selecting a commercial pump.",
+  "design_inputs": {
+    "pool_volume_m3": null,
+    "target_turnover_hours": null,
+    "explicit_required_flow_m3_h": null,
+    "total_dynamic_head_m": null
+  },
+  "required_performance": {
+    "filtration_flow_m3_h": null,
+    "duty_head_m": null,
+    "duty_point": null
+  },
+  "physical_constraints": {
+    "pump_connection": null,
+    "plant_room_clearance": null,
+    "noise_target_db": null
+  },
+  "electrical_or_connection_constraints": {
+    "voltage_v": 230,
+    "frequency_hz": 50,
+    "phase": null
+  },
+  "regulatory_constraints": [
+    "Spain REBT / ITC-BT-31 installation review for pool electrical equipment"
+  ],
+  "product_twin_category_ids": [
+    "POOL.PUMPS",
+    "POOL.FILTRATION",
+    "POOL.PIPE",
+    "POOL.FITTINGS"
+  ],
+  "selection_sequence": [
+    "derive pool water volume from designed geometry",
+    "set circulation/turnover objective with project engineer/operator",
+    "calculate total dynamic head across pipework, fittings, filter and equipment",
+    "define pipe size and pump connection system",
+    "confirm pool-plant electrical circuit",
+    "match manufacturer Q-H curve to required duty point",
+    "check efficiency/noise/control requirements",
+    "run REBT/ITC-BT-31 installation screen",
+    "resolve local/direct trade and live commerce routes",
+    "rank by technical fit, lifecycle energy, locality, availability, delivered cost and lead time"
+  ],
+  "missing_inputs": [
+    "pool volume + target turnover time, or explicit required filtration flow",
+    "total dynamic head from pipe/fitting/filter/equipment hydraulic calculation",
+    "pump connection / pipe and fitting system",
+    "pool plant electrical phase/circuit"
+  ],
+  "principle": "Pump horsepower is not the design requirement. Product Twin selects a pump only after a hydraulic duty point is defined."
+}
