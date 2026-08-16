@@ -7,7 +7,8 @@ const ENDPOINT = "https://catalog.shopify.com/api/ucp/mcp";
 const PROFILE = process.env.UCP_AGENT_PROFILE ||
   "https://shopify.dev/ucp/agent-profiles/2026-04-08/valid-with-capabilities.json";
 
-const cfg = JSON.parse(await fs.readFile(path.join(ROOT, "config/searches.json"), "utf8"));
+const policy = JSON.parse(await fs.readFile(path.join(ROOT, "config/searches.json"), "utf8"));
+const sourceMap = JSON.parse(await fs.readFile(path.join(ROOT, policy.source_mapping), "utf8"));
 const now = new Date().toISOString();
 const runStamp = now.replace(/[:.]/g, "-");
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -15,7 +16,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 async function callMcp(toolName, catalog, attempt=1) {
   const response = await fetch(ENDPOINT, {
     method: "POST",
-    headers: {"content-type": "application/json", "user-agent": "product-twin-github-ingestor/0.1"},
+    headers: {"content-type": "application/json", "user-agent": "product-twin-github-ingestor/0.3"},
     body: JSON.stringify({
       jsonrpc: "2.0",
       id: crypto.randomUUID(),
@@ -33,7 +34,7 @@ async function callMcp(toolName, catalog, attempt=1) {
   if (!response.ok) {
     const text = await response.text();
     if (attempt < 4 && [429,500,502,503,504].includes(response.status)) {
-      await sleep(800 * attempt * attempt);
+      await sleep(900 * attempt * attempt);
       return callMcp(toolName, catalog, attempt + 1);
     }
     throw new Error(`Shopify MCP ${response.status}: ${text}`);
@@ -50,13 +51,27 @@ function firstOffer(product) {
     .sort((a,b) => Number(a.price.amount) - Number(b.price.amount))[0] ?? null;
 }
 
-function candidate(product, query) {
+function discoveryHint(mapping, query) {
+  return {
+    canonical_category_id: mapping.category_id,
+    source_fitness: mapping.fitness,
+    query,
+    fetched_at: now
+  };
+}
+
+function candidate(product, mapping, query) {
   const offer = firstOffer(product);
-  const identity = String(product.id ?? product.url ?? `${product.title}|${query.key}`);
+  const identity = String(product.id ?? product.url ?? `${product.title}|${mapping.category_id}`);
   return {
     candidate_id: `SHOPIFY_${crypto.createHash("sha1").update(identity).digest("hex").slice(0,16)}`,
     source: "shopify_global_catalog",
-    discovered: {query_key: query.key, query: query.query, fetched_at: now},
+    taxonomy: {
+      canonical_category_id: null,
+      canonical_category_confidence: null,
+      canonical_category_hints: [discoveryHint(mapping, query)],
+      source_categories: product.categories ?? []
+    },
     identity: {
       shopify_id: product.id ?? null,
       title: product.title ?? null,
@@ -94,36 +109,83 @@ function candidate(product, query) {
   };
 }
 
+function mergeCandidate(existing, incoming) {
+  const hints = [...(existing.taxonomy?.canonical_category_hints ?? [])];
+  const keys = new Set(hints.map(h => `${h.canonical_category_id}|${h.query}`));
+  for (const h of incoming.taxonomy?.canonical_category_hints ?? []) {
+    const key = `${h.canonical_category_id}|${h.query}`;
+    if (!keys.has(key)) {
+      hints.push(h);
+      keys.add(key);
+    }
+  }
+  existing.taxonomy.canonical_category_hints = hints;
+  return existing;
+}
+
 const rawRuns = [];
 const deduped = new Map();
 const stats = [];
 
-for (const query of cfg.queries) {
+const mappings = sourceMap.mappings.filter(m => policy.include_fitness.includes(m.fitness));
+const queryPlan = mappings.flatMap(mapping =>
+  (mapping.queries ?? []).map(query => ({mapping, query}))
+);
+
+console.log(`Discovery plan: ${queryPlan.length} taxonomy-mapped Shopify searches`);
+
+for (const {mapping, query} of queryPlan) {
   let cursor;
   let count = 0;
+  let pages = 0;
+  let totalCountEstimate = null;
+  const maxPages = Math.min(
+    policy.crawl_pages_by_fitness?.[mapping.fitness] ?? 1,
+    Math.ceil((policy.max_results_per_query ?? 1000) / (policy.page_size ?? 50))
+  );
 
-  for (let page=1; page <= (cfg.pages_per_query ?? 1); page++) {
-    console.log(`Shopify: ${query.key}, page ${page}`);
+  for (let page=1; page <= maxPages; page++) {
+    console.log(`Shopify: ${mapping.category_id} [${mapping.fitness}] :: ${query} :: page ${page}`);
     const result = await callMcp("search_catalog", {
-      query: query.query,
-      filters: {ships_to: {country: cfg.country}, available: true},
-      context: {address_country: cfg.country, currency: cfg.currency, intent: cfg.intent},
-      pagination: {limit: Math.min(cfg.page_size ?? 50, 50), ...(cursor ? {cursor} : {})}
+      query,
+      filters: {ships_to: {country: policy.country}, available: true},
+      context: {address_country: policy.country, currency: policy.currency, intent: policy.intent},
+      pagination: {limit: Math.min(policy.page_size ?? 50, 50), ...(cursor ? {cursor} : {})}
     });
 
     const products = result?.products ?? [];
     count += products.length;
-    rawRuns.push({query_key: query.key, query: query.query, page, result});
+    pages += 1;
+    if (result?.total_count != null) totalCountEstimate = result.total_count;
+
+    rawRuns.push({
+      canonical_category_id: mapping.category_id,
+      source_fitness: mapping.fitness,
+      query,
+      page,
+      result
+    });
 
     for (const p of products) {
-      const c = candidate(p, query);
-      if (!deduped.has(c.candidate_id)) deduped.set(c.candidate_id, c);
+      const c = candidate(p, mapping, query);
+      const existing = deduped.get(c.candidate_id);
+      deduped.set(c.candidate_id, existing ? mergeCandidate(existing, c) : c);
     }
 
-    cursor = result?.pagination?.next_cursor ?? result?.next_cursor ?? result?.cursor?.next ?? undefined;
-    if (!cursor || products.length === 0) break;
+    // Shopify Global Catalog returns the opaque next offset as pagination.cursor.
+    cursor = result?.pagination?.cursor ?? undefined;
+    const hasNext = result?.pagination?.has_next_page;
+    if (!cursor || hasNext === false || products.length === 0) break;
   }
-  stats.push({query_key: query.key, returned: count});
+
+  stats.push({
+    canonical_category_id: mapping.category_id,
+    source_fitness: mapping.fitness,
+    query,
+    pages,
+    returned: count,
+    total_count_estimate: totalCountEstimate
+  });
 }
 
 const candidates = [...deduped.values()];
@@ -134,6 +196,12 @@ await fs.mkdir(path.join(ROOT, "data/shopify/snapshots"), {recursive: true});
 await fs.writeFile(path.join(ROOT, `data/shopify/raw/${runStamp}.json`), JSON.stringify(rawRuns, null, 2));
 await fs.writeFile(path.join(ROOT, "data/shopify/candidates/latest.json"), JSON.stringify(candidates, null, 2));
 await fs.writeFile(path.join(ROOT, `data/shopify/snapshots/${runStamp}.json`), JSON.stringify(candidates, null, 2));
-await fs.writeFile(path.join(ROOT, "data/shopify/latest-run.json"), JSON.stringify({fetched_at: now, candidate_count: candidates.length, query_stats: stats}, null, 2));
+await fs.writeFile(path.join(ROOT, "data/shopify/latest-run.json"), JSON.stringify({
+  fetched_at: now,
+  source_id: sourceMap.source_id,
+  query_count: queryPlan.length,
+  candidate_count: candidates.length,
+  query_stats: stats
+}, null, 2));
 
-console.log(`Done: ${candidates.length} unique Twin Candidates`);
+console.log(`Done: ${candidates.length} unique Twin Candidates from ${queryPlan.length} taxonomy-mapped searches`);
