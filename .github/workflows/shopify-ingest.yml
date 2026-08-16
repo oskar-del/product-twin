@@ -8,6 +8,8 @@ on:
       - "config/**"
       - "scripts/**"
       - "package.json"
+      - "data/projects/**"
+      - "data/tests/whole-building-10.json"
   workflow_dispatch:
   schedule:
     - cron: "17 3 * * 2,5"
@@ -42,17 +44,23 @@ jobs:
       - name: Build canonical category coverage
         run: npm run coverage
 
+      - name: Resolve project context
+        run: npm run context:test > data/tests/project-context.latest.json
+
+      - name: Run whole-building hypothesis test
+        run: npm run whole-building:test
+
       - name: Show summary
         run: npm run summarize
 
-      - name: Commit refreshed catalogue
+      - name: Commit refreshed catalogue and tests
         run: |
           git config user.name "product-twin-bot"
           git config user.email "product-twin-bot@users.noreply.github.com"
-          git add data/shopify data/coverage
+          git add data/shopify data/coverage data/tests
           if git diff --cached --quiet; then
-            echo "No catalogue changes."
+            echo "No data changes."
             exit 0
           fi
-          git commit -m "data: refresh Shopify candidates and category coverage"
+          git commit -m "data: refresh catalogue, coverage and whole-building test"
           git push
