@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "principle": "A source counts as live Product Twin coverage only after a real test succeeds. Sources map into the canonical graph; they never redefine Product Twin identity or taxonomy.",
   "sources": [
     {
@@ -59,12 +59,14 @@
     {
       "source_id": "woocommerce_store_api",
       "type": "merchant_platform_adapter",
-      "state": "LIVE_TEST_RUNNING",
+      "state": "LIVE_PROVEN",
       "territories": ["merchant_defined"],
       "capabilities": ["public_products", "cart", "checkout", "shipping_rates"],
       "authority": "merchant_commerce",
       "access": "public_unauthenticated_store_api",
-      "mapping_file": "config/source-mappings/woocommerce-store.json"
+      "mapping_file": "config/source-mappings/woocommerce-store.json",
+      "live_test": {"stores_tested":3,"stores_live":2,"non_demo_stores_live":1,"candidate_references":16},
+      "scope_note": "Per-merchant commerce adapter, not a single cross-merchant global catalog."
     },
     {
       "source_id": "ebay_browse_api",
