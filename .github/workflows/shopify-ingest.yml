@@ -39,6 +39,8 @@ jobs:
         run: npm run context:test > data/tests/project-context.latest.json
       - name: Resolve exact project offers live
         run: npm run offers:resolve
+      - name: Persist selected external references only
+        run: npm run references:persist
       - name: Create localized merchant carts
         run: npm run carts:create
       - name: Prepare checkout shipping quotes
@@ -52,17 +54,17 @@ jobs:
       - name: Verify no Shopify catalog payload is staged
         run: |
           test ! -d data/shopify || { echo "ERROR: persistent Shopify catalog cache detected"; exit 1; }
-      - name: Commit aggregate metrics only
+      - name: Commit aggregate metrics and reference-only selections
         run: |
           set -euo pipefail
           git config user.name "product-twin-bot"
           git config user.email "product-twin-bot@users.noreply.github.com"
-          git add data/coverage data/metrics data/tests
+          git add data/coverage data/metrics data/tests data/references
           if git diff --cached --quiet; then
-            echo "No aggregate changes."
+            echo "No permitted changes."
             exit 0
           fi
-          git commit -m "data: refresh live-source aggregate Product Twin metrics"
+          git commit -m "data: refresh live-source metrics and external references"
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main
