@@ -1,0 +1,372 @@
+{
+  "generated_at": "2026-08-16T16:58:36.335Z",
+  "target_id": "HM_SAYL_FULLY_ADJUSTABLE_GLB_V0_1",
+  "seed_url": "https://3d-configurator.vercel.app/iframe/5b218f84-aa9c-4cd6-a668-2255a5e18bd5",
+  "policy": "Public configurator HTML/JavaScript inspection only. No authentication bypass, no purchase automation, no manufacturer binary redistribution.",
+  "root_fetch": {
+    "ok": true,
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "resolved_url": "https://3d-configurator.vercel.app/iframe/5b218f84-aa9c-4cd6-a668-2255a5e18bd5",
+    "error": null
+  },
+  "scripts_scanned": 8,
+  "direct_glb_reference_count": 0,
+  "backend_reference_count": 4,
+  "signal_count": 52,
+  "direct_glb_references": [],
+  "backend_references": [
+    {
+      "url": "https://api2.fonts.com/",
+      "source_files": [
+        "https://3d-configurator.vercel.app/iframe/5b218f84-aa9c-4cd6-a668-2255a5e18bd5"
+      ],
+      "signals": [
+        "api_or_backend_reference"
+      ]
+    },
+    {
+      "url": "https://fast.fonts.net/t/1.css?apiType=css&amp;projectid=c01962c5-4ecd-4928-82fa-17295a700cc0",
+      "source_files": [
+        "https://3d-configurator.vercel.app/iframe/5b218f84-aa9c-4cd6-a668-2255a5e18bd5"
+      ],
+      "signals": [
+        "api_or_backend_reference"
+      ]
+    },
+    {
+      "url": "https://fonts.googleapis.com/",
+      "source_files": [
+        "https://3d-configurator.vercel.app/_next/static/chunks/main-f7e0b84f8f9cb20d.js"
+      ],
+      "signals": [
+        "api_or_backend_reference"
+      ]
+    },
+    {
+      "url": "https://fonts.googleapis.com/css",
+      "source_files": [
+        "https://3d-configurator.vercel.app/_next/static/chunks/main-f7e0b84f8f9cb20d.js"
+      ],
+      "signals": [
+        "api_or_backend_reference"
+      ]
+    }
+  ],
+  "code_signals": [
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/framework-e82a91356956e6c8.js",
+      "pattern": "download",
+      "snippet": "isablePictureInPicture disableRemotePlayback formNoValidate hidden loop noModule noValidate open playsInline readOnly required reversed scoped seamless itemScope\".split(\" \").forEach(function(e){S[e]=new w(e,3,!1,e.toLowerCase(),null,!1,!1)}),[\"checked\",\"multiple\",\"muted\",\"selected\"].forEach(function(e){S[e]=new w(e,3,!0,e,null,!1,!1)}),[\"capture\",\"download\"].forEach(function(e){S[e]=new w(e,4,!1,e,null,!1,!1)}),[\"cols\",\"rows\",\"size\",\"span\"].forEach(function(e){S[e]=new w(e,6,!1,e,null,!1,!1)}),[\"rowSpan\",\"start\"].forEach(function(e){S[e]=new w(e,5,!1,e.toLowerCase(),null,!1,!1)});var x=/[\\-:]([a-z])/g;function E(e){return e[1].toUpperCase()}function _(e,n,t,r){var l,a=S.hasOwnProperty(n)?S[n]:null;(null!==a?0!==a.type:r||!(2<n.length)||\"o\"!==n[0]&&\"O\"!==n[0]||\"n\"!==n[1]&&\"N\"!==n[1])&&(function(e,n,t,r){if(null==n||function(e,n,t,r){if(null!==t&&0===t.type)return!1;switch(typeof n){case\"f"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/main-f7e0b84f8f9cb20d.js",
+      "pattern": "api/",
+      "snippet": "taRoute,z.appRouteHandler,z.serverSideRendering,z.appPagesBrowser,z.shared,z.instrument]}},K={edgeSSREntry:\"__next_edge_ssr_entry__\",metadata:\"__next_metadata__\",metadataRoute:\"__next_metadata_route__\",metadataImageMeta:\"__next_metadata_image_meta__\"}},4219:function(e,t){\"use strict\";function r(e){return\"/api\"===e||!!(null==e?void 0:e.startsWith(\"/api/\"))}Object.defineProperty(t,\"__esModule\",{value:!0}),Object.defineProperty(t,\"isAPIRoute\",{enumerable:!0,get:function(){return r}})},274:function(e,t,r){\"use strict\";Object.defineProperty(t,\"__esModule\",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]})}(t,{default:function(){return o},getProperError:function(){return a}});let n=r(8660);function o(e){return\"object\"==typeof e&&null!==e&&\"name\"in e&&\"message\"in e}function a(e){return o(e)?e:Error((0,n.isPlainObject)(e)?JSON.stringify(e):e+\"\")}},6520:f"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/main-f7e0b84f8f9cb20d.js",
+      "pattern": "fetch(",
+      "snippet": "d+t+p,!0)})(e.skipInterpolation?h:(0,u.isDynamicRoute)(m)?(0,a.interpolateAs)(f,h,d).result:m)}_isSsg(e){return this.promisedSsgManifest.then(t=>t.has(e))}loadPage(e){return this.routeLoader.loadRoute(e).then(e=>{if(\"component\"in e)return{page:e.component,mod:e.exports,styleSheets:e.styles.map(e=>({href:e.href,text:e.content}))};throw e.error})}prefetch(e){return this.routeLoader.prefetch(e)}constructor(e,t){this.routeLoader=(0,f.createRouteLoader)(t),this.buildId=e,this.assetPrefix=t,this.promisedSsgManifest=new Promise(e=>{window.__SSG_MANIFEST?e(window.__SSG_MANIFEST):window.__SSG_MANIFEST_CB=()=>{e(window.__SSG_MANIFEST)}})}}(\"function\"==typeof t.default||\"object\"==typeof t.default&&null!==t.default)&&void 0===t.default.__esModule&&(Object.defineProperty(t.default,\"__esModule\",{value:!0}),Object.assign(t.default,t),e.exports=t.default)},8568:function(e,t,r){\"use strict\";let n;Object."
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/main-f7e0b84f8f9cb20d.js",
+      "pattern": "fetch(",
+      "snippet": ",u.isDynamicRoute)(m)?(0,a.interpolateAs)(f,h,d).result:m)}_isSsg(e){return this.promisedSsgManifest.then(t=>t.has(e))}loadPage(e){return this.routeLoader.loadRoute(e).then(e=>{if(\"component\"in e)return{page:e.component,mod:e.exports,styleSheets:e.styles.map(e=>({href:e.href,text:e.content}))};throw e.error})}prefetch(e){return this.routeLoader.prefetch(e)}constructor(e,t){this.routeLoader=(0,f.createRouteLoader)(t),this.buildId=e,this.assetPrefix=t,this.promisedSsgManifest=new Promise(e=>{window.__SSG_MANIFEST?e(window.__SSG_MANIFEST):window.__SSG_MANIFEST_CB=()=>{e(window.__SSG_MANIFEST)}})}}(\"function\"==typeof t.default||\"object\"==typeof t.default&&null!==t.default)&&void 0===t.default.__esModule&&(Object.defineProperty(t.default,\"__esModule\",{value:!0}),Object.assign(t.default,t),e.exports=t.default)},8568:function(e,t,r){\"use strict\";let n;Object.defineProperty(t,\"__esModule\",{value"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/main-f7e0b84f8f9cb20d.js",
+      "pattern": "fetch(",
+      "snippet": "t(e.toString());return n||(document.querySelector('script[src^=\"'+e+'\"]')?Promise.resolve():(r.set(e.toString(),n=new Promise((r,n)=>{(t=document.createElement(\"script\")).onload=r,t.onerror=()=>n(u(Error(\"Failed to load script: \"+e))),t.crossOrigin=void 0,t.src=e,document.body.appendChild(t)})),n))}}function s(e){let t=n.get(e);return t||n.set(e,t=fetch(e,{credentials:\"same-origin\"}).then(t=>{if(!t.ok)throw Error(\"Failed to load stylesheet: \"+e);return t.text().then(t=>({href:e,content:t}))}).catch(e=>{throw u(e)})),t}return{whenEntrypoint:e=>i(e,t),onEntrypoint(e,r){(r?Promise.resolve().then(()=>r()).then(e=>({component:e&&e.default||e,exports:e}),e=>({error:e})):Promise.resolve(void 0)).then(r=>{let n=t.get(e);n&&\"resolve\"in n?r&&(t.set(e,r),n.resolve(r)):(r?t.set(e,r):t.delete(e),a.delete(e))})},loadRoute(r,n){return i(r,a,()=>{let o;return d(h(e,r).then(e=>{let{scripts:n,css:o}=e;ret"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/main-f7e0b84f8f9cb20d.js",
+      "pattern": "fetch(",
+      "snippet": "s(r)?[]:Promise.all(n.map(l)),Promise.all(o.map(s))])}).then(e=>this.whenEntrypoint(r).then(t=>({entrypoint:t,styles:e[1]}))),3800,u(Error(\"Route did not complete loading: \"+r))).then(e=>{let{entrypoint:t,styles:r}=e,n=Object.assign({styles:r},t);return\"error\"in t?t:n}).catch(e=>{if(n)throw e;return{error:e}}).finally(()=>null==o?void 0:o())})},prefetch(t){let r;return(r=navigator.connection)&&(r.saveData||/2g/.test(r.effectiveType))?Promise.resolve():h(e,t).then(e=>Promise.all(c?e.scripts.map(e=>{var t,r,n;return t=e.toString(),r=\"script\",new Promise((e,o)=>{if(document.querySelector('\\n link[rel=\"prefetch\"][href^=\"'+t+'\"],\\n link[rel=\"preload\"][href^=\"'+t+'\"],\\n script[src^=\"'+t+'\"]'))return e();n=document.createElement(\"link\"),r&&(n.as=r),n.rel=\"prefetch\",n.crossOrigin=void 0,n.onload=e,n.onerror=()=>o(u(Error(\"Failed to prefetch: \"+t))),n.href=t,document.head.appendChild(n)})}):[]))."
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/main-f7e0b84f8f9cb20d.js",
+      "pattern": "fetch(",
+      "snippet": "ms:function(){return f}});let n=r(6794),o=r(2322),a=n._(r(2784)),i=r(154),l=r(6789),u=r(3533),s=r(6969);function c(e){return{back(){e.back()},forward(){e.forward()},refresh(){e.reload()},fastRefresh(){},push(t,r){let{scroll:n}=void 0===r?{}:r;e.push(t,void 0,{scroll:n})},replace(t,r){let{scroll:n}=void 0===r?{}:r;e.replace(t,void 0,{scroll:n})},prefetch(t){e.prefetch(t)}}}function f(e){return e.isReady&&e.query?(0,u.asPathToSearchParams)(e.asPath):new URLSearchParams}function d(e){if(!e.isReady||!e.query)return null;let t={};for(let r of Object.keys((0,s.getRouteRegex)(e.pathname).groups))t[r]=e.query[r];return t}function p(e){let{children:t,router:r,...n}=e,u=(0,a.useRef)(n.isAutoExport),s=(0,a.useMemo)(()=>{let e;let t=u.current;if(t&&(u.current=!1),(0,l.isDynamicRoute)(r.pathname)&&(r.isFallback||t&&!r.isReady))return null;try{e=new URL(r.asPath,\"http://f\")}catch(e){return\"/\"}return e"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/main-f7e0b84f8f9cb20d.js",
+      "pattern": "fetch(",
+      "snippet": "return f}});let n=r(6794),o=r(2322),a=n._(r(2784)),i=r(154),l=r(6789),u=r(3533),s=r(6969);function c(e){return{back(){e.back()},forward(){e.forward()},refresh(){e.reload()},fastRefresh(){},push(t,r){let{scroll:n}=void 0===r?{}:r;e.push(t,void 0,{scroll:n})},replace(t,r){let{scroll:n}=void 0===r?{}:r;e.replace(t,void 0,{scroll:n})},prefetch(t){e.prefetch(t)}}}function f(e){return e.isReady&&e.query?(0,u.asPathToSearchParams)(e.asPath):new URLSearchParams}function d(e){if(!e.isReady||!e.query)return null;let t={};for(let r of Object.keys((0,s.getRouteRegex)(e.pathname).groups))t[r]=e.query[r];return t}function p(e){let{children:t,router:r,...n}=e,u=(0,a.useRef)(n.isAutoExport),s=(0,a.useMemo)(()=>{let e;let t=u.current;if(t&&(u.current=!1),(0,l.isDynamicRoute)(r.pathname)&&(r.isFallback||t&&!r.isReady))return null;try{e=new URL(r.asPath,\"http://f\")}catch(e){return\"/\"}return e.pathname},[r."
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/main-f7e0b84f8f9cb20d.js",
+      "pattern": "fetch(",
+      "snippet": "ct:r}}let H=Symbol(\"SSG_DATA_NOT_FOUND\");function W(e){try{return JSON.parse(e)}catch(e){return null}}function G(e){let{dataHref:t,inflightCache:r,isPrefetch:n,hasMiddleware:o,isServerRender:a,parseJSON:l,persistCache:u,isBackground:s,unstable_skipClientCache:c}=e,{href:f}=new URL(t,window.location.href),d=e=>{var s;return(function e(t,r,n){return fetch(t,{credentials:\"same-origin\",method:n.method||\"GET\",headers:Object.assign({},n.headers,{\"x-nextjs-data\":\"1\"})}).then(o=>!o.ok&&r>1&&o.status>=500?e(t,r-1,n):o)})(t,a?3:1,{headers:Object.assign({},n?{purpose:\"prefetch\"}:{},n&&o?{\"x-middleware-prefetch\":\"1\"}:{}),method:null!=(s=null==e?void 0:e.method)?s:\"GET\"}).then(r=>r.ok&&(null==e?void 0:e.method)===\"HEAD\"?{dataHref:t,response:r,text:\"\",json:{},cacheKey:f}:r.text().then(e=>{if(!r.ok){if(o&&[301,302,307,308].includes(r.status))return{dataHref:t,response:r,text:e,json:{},cacheKey:f};if(40"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/main-f7e0b84f8f9cb20d.js",
+      "pattern": "fetch(",
+      "snippet": "ash(e){let[,t=\"\"]=e.split(\"#\",2);(0,L.handleSmoothScroll)(()=>{if(\"\"===t||\"top\"===t){window.scrollTo(0,0);return}let e=decodeURIComponent(t),r=document.getElementById(e);if(r){r.scrollIntoView();return}let n=document.getElementsByName(e)[0];n&&n.scrollIntoView()},{onlyHashChange:this.onlyAHashChange(e)})}urlIsNew(e){return this.asPath!==e}async prefetch(e,t,r){if(void 0===t&&(t=e),void 0===r&&(r={}),(0,C.isBot)(window.navigator.userAgent))return;let n=(0,h.parseRelativeUrl)(e),o=n.pathname,{pathname:i,query:l}=n,u=i;if(!1===r.locale){i=(0,c.normalizeLocalePath)(i,this.locales).pathname,n.pathname=i,e=(0,g.formatWithValidation)(n);let o=(0,h.parseRelativeUrl)(t),a=(0,c.normalizeLocalePath)(o.pathname,this.locales);o.pathname=a.pathname,r.locale=a.detectedLocale||this.defaultLocale,t=(0,g.formatWithValidation)(o)}let s=await this.pageLoader.getPageList(),f=t,d=void 0!==r.locale?r.locale||v"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configuration",
+      "snippet": "://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/\".concat(p.Z,\"/MxtHermanMillerKongfigurator-\").concat(p.Z,\".css\")})}),(0,n.jsx)(u(),{defer:!0,src:\"https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/\".concat(p.Z,\"/MxtHermanMillerKongfigurator-\").concat(p.Z).concat(\".min\",\".js\"),onLoad:U}),e?(0,n.jsx)(h.P,{enableAr:\"true\",environment:x,configurationId:y,shareUrl:g.current,analyticsId:\"Herman Miller Contract Site\"}):null,\"geiger\"===E&&(0,n.jsx)(\"link\",{rel:\"stylesheet\",href:\"https://remote-assets.vercel.app/css/3dc-branded-geiger.css\"})]})};var O=a()(()=>Promise.resolve(x),{ssr:!1})},2544:function(e,t){\"use strict\";t.Z=\"9.7.1-build.7\"},5237:function(e,t,r){e.exports=r(2392)},689:function(e,t,r){e.exports=r(6065)},7729:function(e,t,r){e.exports=r(8792)},5632:function(e,t,r){e.exports=r(743)},5847:function(e,t,r){e.exports=r(9406)},4579:function(e,t,r){\"use strict\";r.d(t,{P:func"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configuration",
+      "snippet": "r r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&0>t.indexOf(n)&&(r[n]=e[n]);if(null!=e&&\"function\"==typeof Object.getOwnPropertySymbols)for(var o=0,n=Object.getOwnPropertySymbols(e);o<n.length;o++)0>t.indexOf(n[o])&&Object.prototype.propertyIsEnumerable.call(e,n[o])&&(r[n[o]]=e[n[o]]);return r};let u=(0,a.memo)(e=>{var{className:t,configurationId:n,environment:o,shareUrl:u,disablePickerUI:c,sku:s,backgroundColor:d,allowPanning:f=\"true\",onExpand:m,onCollapse:h,onReady:p,enableAr:g,disableSkuInUrl:v,autoInit:b,analyticsId:w,disableSkuPlugin:y,apiKey:k}=e,_=i(e,[\"className\",\"configurationId\",\"environment\",\"shareUrl\",\"disablePickerUI\",\"sku\",\"backgroundColor\",\"allowPanning\",\"onExpand\",\"onCollapse\",\"onReady\",\"enableAr\",\"disableSkuInUrl\",\"autoInit\",\"analyticsId\",\"disableSkuPlugin\",\"apiKey\"]);(0,a.useEffect)(()=>{r.e(771).then(r.bind(r,1771))},[]),(0,a.useEffect)(()=>{window.kon"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configuration",
+      "snippet": "ype.propertyIsEnumerable.call(e,n[o])&&(r[n[o]]=e[n[o]]);return r};let u=(0,a.memo)(e=>{var{className:t,configurationId:n,environment:o,shareUrl:u,disablePickerUI:c,sku:s,backgroundColor:d,allowPanning:f=\"true\",onExpand:m,onCollapse:h,onReady:p,enableAr:g,disableSkuInUrl:v,autoInit:b,analyticsId:w,disableSkuPlugin:y,apiKey:k}=e,_=i(e,[\"className\",\"configurationId\",\"environment\",\"shareUrl\",\"disablePickerUI\",\"sku\",\"backgroundColor\",\"allowPanning\",\"onExpand\",\"onCollapse\",\"onReady\",\"enableAr\",\"disableSkuInUrl\",\"autoInit\",\"analyticsId\",\"disableSkuPlugin\",\"apiKey\"]);(0,a.useEffect)(()=>{r.e(771).then(r.bind(r,1771))},[]),(0,a.useEffect)(()=>{window.kongfigurator=window.kongfigurator||{},window.kongfigurator.expandButton={onExpand:m,onCollapse:h},window.kongfigurator.onReady=p},[m,h,p]);let E=Array.isArray(u)?JSON.stringify(u):u;return(0,l.jsx)(\"marxent-kongfigurator\",Object.assign({class:t,\"co"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configuration",
+      "snippet": "Plugin\",\"apiKey\"]);(0,a.useEffect)(()=>{r.e(771).then(r.bind(r,1771))},[]),(0,a.useEffect)(()=>{window.kongfigurator=window.kongfigurator||{},window.kongfigurator.expandButton={onExpand:m,onCollapse:h},window.kongfigurator.onReady=p},[m,h,p]);let E=Array.isArray(u)?JSON.stringify(u):u;return(0,l.jsx)(\"marxent-kongfigurator\",Object.assign({class:t,\"configuration-id\":n,environment:o,\"share-url\":E,\"allow-panning\":f,\"disable-picker-ui\":c,\"background-color\":d,sku:s,\"enable-ar\":g,\"disable-sku-in-url\":v,\"auto-init\":b,\"analytics-id\":w,\"disable-sku-plugin\":y,\"api-key\":k},_))}),c={test:\"Latest\",staging:\"Stage\",production:\"Active\"};(n=o||(o={}))[n.JD_CREDENZA=1]=\"JD_CREDENZA\",n[n.GEIGER_ONE=2]=\"GEIGER_ONE\";let s=(0,a.forwardRef)((e,t)=>{let{className:r,environment:n,autoInit:i=!0,hidePricing:u,allowPanning:s=!0,baseShareUrl:d,baseShareUrls:f,menuId:m,configId:h,freezeItemsInScene:p,onFullscreenEnte"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "||o.removeEventListener(\"click\",i),null==l||l.removeEventListener(\"click\",u),null==n||n.remove()}catch(e){console.warn(e)}}return{setProduct:s=>{if(s!==e){var d;c(),g&&(null==g?void 0:null===(d=g[s])||void 0===d?void 0:d.name)&&(null==g?void 0:g[s].url)&&(r=document.querySelector(\".kong-iframe-container\"),a||function(a){let c=r.querySelector(\".mxt-configurator-picker > .mxt-container\");if(c){let r=c.querySelector(\".mxt-configurator-steps\");c.querySelector(\"#\".concat(v))||(e=a,t=g?g[a]:null,(n=document.createElement(\"div\")).id=v,n.innerHTML=y(t),c.insertBefore(n,r),(l=n.querySelector(\"#\".concat(w))).addEventListener(\"click\",u),(o=n.querySelector(\"#\".concat(b))).addEventListener(\"click\",i))}}(s))}},cleanup:c}},_=function(){let e=document.querySelector(\"marxent-kongfigurator\"),t=document.querySelector(\".wrapper-kongfigurator\"),r=document.querySelector(\".mxt-webar-desktop-modal\"),n=document."
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": ",u),null==n||n.remove()}catch(e){console.warn(e)}}return{setProduct:s=>{if(s!==e){var d;c(),g&&(null==g?void 0:null===(d=g[s])||void 0===d?void 0:d.name)&&(null==g?void 0:g[s].url)&&(r=document.querySelector(\".kong-iframe-container\"),a||function(a){let c=r.querySelector(\".mxt-configurator-picker > .mxt-container\");if(c){let r=c.querySelector(\".mxt-configurator-steps\");c.querySelector(\"#\".concat(v))||(e=a,t=g?g[a]:null,(n=document.createElement(\"div\")).id=v,n.innerHTML=y(t),c.insertBefore(n,r),(l=n.querySelector(\"#\".concat(w))).addEventListener(\"click\",u),(o=n.querySelector(\"#\".concat(b))).addEventListener(\"click\",i))}}(s))}},cleanup:c}},_=function(){let e=document.querySelector(\"marxent-kongfigurator\"),t=document.querySelector(\".wrapper-kongfigurator\"),r=document.querySelector(\".mxt-webar-desktop-modal\"),n=document.querySelector(\".mxt-btn-webAr-onDemand\"),o=document.querySelector(\".mxt-w"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "nction(e,t){let r;let n=[],o=new Map,l=new Set,a=null;return e&&(r=new MutationObserver(function(e){e.forEach(e=>{\"childList\"===e.type&&Array.from((null==e?void 0:e.addedNodes)||[]).filter(E).forEach(e=>{let r=new MutationObserver(r=>{r.forEach(r=>{if(\"attributes\"===r.type&&\"selected\"===r.attributeName&&document.querySelector(\"#millerknoll-product-configurator\")){let r=\"true\"===e.getAttribute(\"selected\"),n=o.get(e)||!1,i=document.querySelector(\"#millerknoll-product-configurator.mxt-landscape\"),u=document.querySelector(\".mxt-configurator-viewer.mxt-container\").getBoundingClientRect().height,c=i?50:u;!n&&r&&(a&&a!==e&&function(e,t){let r=e.shadowRoot.querySelector('[part=\"options-container\"]'),n=e.shadowRoot.querySelector('[part=\"step-header\"]'),o=e.shadowRoot.querySelector('[part=\"chevron flipped\"]'),l=!r.hasAttribute(\"hidden\");e&&l&&!t.has(e)&&(t.add(e),n.setAttribute(\"aria-expanded\",\"fa"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "List\"===e.type&&Array.from((null==e?void 0:e.addedNodes)||[]).filter(E).forEach(e=>{let r=new MutationObserver(r=>{r.forEach(r=>{if(\"attributes\"===r.type&&\"selected\"===r.attributeName&&document.querySelector(\"#millerknoll-product-configurator\")){let r=\"true\"===e.getAttribute(\"selected\"),n=o.get(e)||!1,i=document.querySelector(\"#millerknoll-product-configurator.mxt-landscape\"),u=document.querySelector(\".mxt-configurator-viewer.mxt-container\").getBoundingClientRect().height,c=i?50:u;!n&&r&&(a&&a!==e&&function(e,t){let r=e.shadowRoot.querySelector('[part=\"options-container\"]'),n=e.shadowRoot.querySelector('[part=\"step-header\"]'),o=e.shadowRoot.querySelector('[part=\"chevron flipped\"]'),l=!r.hasAttribute(\"hidden\");e&&l&&!t.has(e)&&(t.add(e),n.setAttribute(\"aria-expanded\",\"false\"),r.setAttribute(\"hidden\",\"\"),o.setAttribute(\"part\",\"chevron\"))}(a,l),setTimeout(()=>{let r=e.getBoundingClientRect("
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": ").filter(E).forEach(e=>{let r=new MutationObserver(r=>{r.forEach(r=>{if(\"attributes\"===r.type&&\"selected\"===r.attributeName&&document.querySelector(\"#millerknoll-product-configurator\")){let r=\"true\"===e.getAttribute(\"selected\"),n=o.get(e)||!1,i=document.querySelector(\"#millerknoll-product-configurator.mxt-landscape\"),u=document.querySelector(\".mxt-configurator-viewer.mxt-container\").getBoundingClientRect().height,c=i?50:u;!n&&r&&(a&&a!==e&&function(e,t){let r=e.shadowRoot.querySelector('[part=\"options-container\"]'),n=e.shadowRoot.querySelector('[part=\"step-header\"]'),o=e.shadowRoot.querySelector('[part=\"chevron flipped\"]'),l=!r.hasAttribute(\"hidden\");e&&l&&!t.has(e)&&(t.add(e),n.setAttribute(\"aria-expanded\",\"false\"),r.setAttribute(\"hidden\",\"\"),o.setAttribute(\"part\",\"chevron\"))}(a,l),setTimeout(()=>{let r=e.getBoundingClientRect(),{scrollY:n}=window,o=n+r.top-c;window.scrollTo({top:o,beha"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": ",\"function\"==typeof t&&t({type:\"scrollBottomIntoView\"})},250),a=e),o.set(e,r)}})});r.observe(e,{attributes:!0}),n.push(r)})})})).observe(e,{subtree:!0,childList:!0}),{cleanup:function(){try{n.forEach(e=>{var t;return null==e?void 0:null===(t=e.disconnect)||void 0===t?void 0:t.call(e)}),null==r||r.disconnect()}catch(e){console.warn(e)}}}};let C=\"3d-configurator-gy2i0tr68-hermanmiller.vercel.app\",L=C?JSON.parse('[\\n \"3d-configurator.vercel.app\",\\n \"demo-hmicom.vagrant\",\\n \"dev-demo.hermanmiller.com\",\\n \"dev.hermanmiller.com\",\\n \"qa.hermanmiller.com\",\\n \"preprod.hermanmiller.com\",\\n \"www.hermanmiller.com\",\\n \"author-hmicom.vagrant\",\\n \"dev-author.hermanmiller.com\",\\n \"qa-author.hermanmiller.com\",\\n \"preprod-author.hermanmiller.com\",\\n \"author.hermanmiller.com\",\\n \"dev.geigerfurniture.com\",\\n \"qa.geigerfurniture.com\",\\n \"preprod.geigerfurniture.com\",\\n \"www.geigerfurniture.com\"\\n]'):\"*\";C&&L"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "r)}})});r.observe(e,{attributes:!0}),n.push(r)})})})).observe(e,{subtree:!0,childList:!0}),{cleanup:function(){try{n.forEach(e=>{var t;return null==e?void 0:null===(t=e.disconnect)||void 0===t?void 0:t.call(e)}),null==r||r.disconnect()}catch(e){console.warn(e)}}}};let C=\"3d-configurator-gy2i0tr68-hermanmiller.vercel.app\",L=C?JSON.parse('[\\n \"3d-configurator.vercel.app\",\\n \"demo-hmicom.vagrant\",\\n \"dev-demo.hermanmiller.com\",\\n \"dev.hermanmiller.com\",\\n \"qa.hermanmiller.com\",\\n \"preprod.hermanmiller.com\",\\n \"www.hermanmiller.com\",\\n \"author-hmicom.vagrant\",\\n \"dev-author.hermanmiller.com\",\\n \"qa-author.hermanmiller.com\",\\n \"preprod-author.hermanmiller.com\",\\n \"author.hermanmiller.com\",\\n \"dev.geigerfurniture.com\",\\n \"qa.geigerfurniture.com\",\\n \"preprod.geigerfurniture.com\",\\n \"www.geigerfurniture.com\"\\n]'):\"*\";C&&L.push(C);let x=()=>{let[e,t]=(0,o.useState)(!1),[r,l]=(0,o.useState)(\"\"),[a"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "f(Array.isArray(L)){var t;L.includes(null===(t=g.current)||void 0===t?void 0:t.hostname)?window.parent.postMessage(e,{targetOrigin:g.current.origin}):g.current&&console.error('\"'.concat(g.current.hostname,'\" is not whitelisted for the postMessage API'))}else window.parent.postMessage(e,{targetOrigin:L})},[]);(0,o.useEffect)(()=>{let e=e=>{O({type:\"configuratorSelected\",configuratorId:e.detail||{}})};return window.addEventListener(\"configuratorSelected\",e),()=>{window.removeEventListener(\"configuratorSelected\",e)}},[O]);let P=(0,o.useCallback)(()=>{O({type:\"fullscreen\",fullscreen:!0})},[O]),M=(0,o.useCallback)(()=>{O({type:\"fullscreen\",fullscreen:!1})},[O]),A=(0,o.useCallback)(()=>{O({type:\"scrollIntoView\"})},[O]),R=(0,o.useCallback)(()=>{var e;i(!0),f.current=document.querySelector('canvas[id^=\"mxt-canvas-\"]'),null==f||null===(e=f.current)||void 0===e||e.addEventListener(\"pointerdown\",A)"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "r t;L.includes(null===(t=g.current)||void 0===t?void 0:t.hostname)?window.parent.postMessage(e,{targetOrigin:g.current.origin}):g.current&&console.error('\"'.concat(g.current.hostname,'\" is not whitelisted for the postMessage API'))}else window.parent.postMessage(e,{targetOrigin:L})},[]);(0,o.useEffect)(()=>{let e=e=>{O({type:\"configuratorSelected\",configuratorId:e.detail||{}})};return window.addEventListener(\"configuratorSelected\",e),()=>{window.removeEventListener(\"configuratorSelected\",e)}},[O]);let P=(0,o.useCallback)(()=>{O({type:\"fullscreen\",fullscreen:!0})},[O]),M=(0,o.useCallback)(()=>{O({type:\"fullscreen\",fullscreen:!1})},[O]),A=(0,o.useCallback)(()=>{O({type:\"scrollIntoView\"})},[O]),R=(0,o.useCallback)(()=>{var e;i(!0),f.current=document.querySelector('canvas[id^=\"mxt-canvas-\"]'),null==f||null===(e=f.current)||void 0===e||e.addEventListener(\"pointerdown\",A),window.kongfigurator."
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "me)?window.parent.postMessage(e,{targetOrigin:g.current.origin}):g.current&&console.error('\"'.concat(g.current.hostname,'\" is not whitelisted for the postMessage API'))}else window.parent.postMessage(e,{targetOrigin:L})},[]);(0,o.useEffect)(()=>{let e=e=>{O({type:\"configuratorSelected\",configuratorId:e.detail||{}})};return window.addEventListener(\"configuratorSelected\",e),()=>{window.removeEventListener(\"configuratorSelected\",e)}},[O]);let P=(0,o.useCallback)(()=>{O({type:\"fullscreen\",fullscreen:!0})},[O]),M=(0,o.useCallback)(()=>{O({type:\"fullscreen\",fullscreen:!1})},[O]),A=(0,o.useCallback)(()=>{O({type:\"scrollIntoView\"})},[O]),R=(0,o.useCallback)(()=>{var e;i(!0),f.current=document.querySelector('canvas[id^=\"mxt-canvas-\"]'),null==f||null===(e=f.current)||void 0===e||e.addEventListener(\"pointerdown\",A),window.kongfigurator.expandButton.onCollapse=M,window.kongfigurator.expandButton.onE"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "igin}):g.current&&console.error('\"'.concat(g.current.hostname,'\" is not whitelisted for the postMessage API'))}else window.parent.postMessage(e,{targetOrigin:L})},[]);(0,o.useEffect)(()=>{let e=e=>{O({type:\"configuratorSelected\",configuratorId:e.detail||{}})};return window.addEventListener(\"configuratorSelected\",e),()=>{window.removeEventListener(\"configuratorSelected\",e)}},[O]);let P=(0,o.useCallback)(()=>{O({type:\"fullscreen\",fullscreen:!0})},[O]),M=(0,o.useCallback)(()=>{O({type:\"fullscreen\",fullscreen:!1})},[O]),A=(0,o.useCallback)(()=>{O({type:\"scrollIntoView\"})},[O]),R=(0,o.useCallback)(()=>{var e;i(!0),f.current=document.querySelector('canvas[id^=\"mxt-canvas-\"]'),null==f||null===(e=f.current)||void 0===e||e.addEventListener(\"pointerdown\",A),window.kongfigurator.expandButton.onCollapse=M,window.kongfigurator.expandButton.onExpand=P,_()},[A,P,M]),j=(0,o.useCallback)(e=>{console.erro"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "Enter:g,onFullscreenExit:v,onAddToCart:b,onInit:w,onError:y,onReady:k}=e,[_,E]=(0,a.useState)(!1),[S,C]=(0,a.useState)(!1),L=(0,a.useRef)(null),x=(0,a.useRef)(void 0);return(0,a.useImperativeHandle)(t,()=>({init(){var e,t,r,n;return e=this,t=void 0,r=void 0,n=function*(){if(x.current&&!_){let e=x.current,t=x.current.init();E(!0),x.current=e.modularConfigurator,yield t.then(()=>{null==w||w(x.current)}).catch(e=>{throw E(!1),console.error(\"MxtModularConfigurator failed to initialize\",e),null==y||y(e),e})}},new(r||(r=Promise))(function(o,l){function a(e){try{u(n.next(e))}catch(e){l(e)}}function i(e){try{u(n.throw(e))}catch(e){l(e)}}function u(e){var t;e.done?o(e.value):((t=e.value)instanceof r?t:new r(function(e){e(t)})).then(a,i)}u((n=n.apply(e,t||[])).next())})},getOptions(){var e;return null===(e=x.current)||void 0===e?void 0:e.options},getAllProducts(){var e,t;return null===(t=null===(e"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "]=(0,a.useState)(!1),L=(0,a.useRef)(null),x=(0,a.useRef)(void 0);return(0,a.useImperativeHandle)(t,()=>({init(){var e,t,r,n;return e=this,t=void 0,r=void 0,n=function*(){if(x.current&&!_){let e=x.current,t=x.current.init();E(!0),x.current=e.modularConfigurator,yield t.then(()=>{null==w||w(x.current)}).catch(e=>{throw E(!1),console.error(\"MxtModularConfigurator failed to initialize\",e),null==y||y(e),e})}},new(r||(r=Promise))(function(o,l){function a(e){try{u(n.next(e))}catch(e){l(e)}}function i(e){try{u(n.throw(e))}catch(e){l(e)}}function u(e){var t;e.done?o(e.value):((t=e.value)instanceof r?t:new r(function(e){e(t)})).then(a,i)}u((n=n.apply(e,t||[])).next())})},getOptions(){var e;return null===(e=x.current)||void 0===e?void 0:e.options},getAllProducts(){var e,t;return null===(t=null===(e=x.current)||void 0===e?void 0:e.getAllProducts)||void 0===t?void 0:t.call(e)},run(){var e,t;return nu"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "===(t=null===(e=x.current)||void 0===e?void 0:e.stop)||void 0===t?void 0:t.call(e)},destroy(){var e,t;return null===(t=null===(e=x.current)||void 0===e?void 0:e.destroy)||void 0===t?void 0:t.call(e)}}),[_,w,y]),(0,a.useEffect)(()=>{let e=document.querySelector('script[src*=\"cdn.3dcloud.io\"]'),t=()=>{null==k||k(),C(!0)};return window.geiger_modular_configurator?(null==k||k(),C(!0)):e?e.addEventListener(\"load\",t):console.warn(\"Required Marxent CDN script not detected in DOM.\"),()=>{null==e||e.removeEventListener(\"load\",t)}},[k]),(0,a.useEffect)(()=>{if(S&&L.current&&!x.current){let e={apiKey:\"AIzaSyBqiBfSTAz4IfG60r66dH4q-CzgKPzXUHk\",element:L.current,assetEnvironment:c[n],addToCart:b,callbacks:{onFullscreenEnter:g,onFullscreenExit:v},pricingAndAvailability:{hidePricing:u},camera:{allowPanning:s},share:{baseShareUrl:d},baseShareUrls:f,skipToPage:m?o[m]:void 0,inspirationStart:h?{hero:h}:voi"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "aSyBqiBfSTAz4IfG60r66dH4q-CzgKPzXUHk\",element:L.current,assetEnvironment:c[n],addToCart:b,callbacks:{onFullscreenEnter:g,onFullscreenExit:v},pricingAndAvailability:{hidePricing:u},camera:{allowPanning:s},share:{baseShareUrl:d},baseShareUrls:f,skipToPage:m?o[m]:void 0,inspirationStart:h?{hero:h}:void 0,freezeItemsInScene:p};if(window.geiger_modular_configurator){let t=new window.geiger_modular_configurator.GEIModular(e);if(x.current=t,i&&!_){let e=t.init();E(!0),x.current=t.modularConfigurator,e.then(()=>{null==w||w(t)}).catch(e=>{E(!1),console.error(\"MxtModularConfigurator failed to initialize\",e),null==y||y(e)})}}}},[_,S,i,n,u,s,d,f,m,h,p,g,v,b,w,y]),(0,a.useEffect)(()=>()=>{var e,t;null===(t=null===(e=x.current)||void 0===e?void 0:e.destroy)||void 0===t||t.call(e)},[]),(0,l.jsx)(\"div\",{ref:L,id:\"mk-modular-config\",className:r})}),d=(0,a.memo)(s)}},function(e){e.O(0,[888,774,179],functi"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "L.current,assetEnvironment:c[n],addToCart:b,callbacks:{onFullscreenEnter:g,onFullscreenExit:v},pricingAndAvailability:{hidePricing:u},camera:{allowPanning:s},share:{baseShareUrl:d},baseShareUrls:f,skipToPage:m?o[m]:void 0,inspirationStart:h?{hero:h}:void 0,freezeItemsInScene:p};if(window.geiger_modular_configurator){let t=new window.geiger_modular_configurator.GEIModular(e);if(x.current=t,i&&!_){let e=t.init();E(!0),x.current=t.modularConfigurator,e.then(()=>{null==w||w(t)}).catch(e=>{E(!1),console.error(\"MxtModularConfigurator failed to initialize\",e),null==y||y(e)})}}}},[_,S,i,n,u,s,d,f,m,h,p,g,v,b,w,y]),(0,a.useEffect)(()=>()=>{var e,t;null===(t=null===(e=x.current)||void 0===e?void 0:e.destroy)||void 0===t||t.call(e)},[]),(0,l.jsx)(\"div\",{ref:L,id:\"mk-modular-config\",className:r})}),d=(0,a.memo)(s)}},function(e){e.O(0,[888,774,179],function(){return e(e.s=8844)}),_N_E=e.O()}]);"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "it:v},pricingAndAvailability:{hidePricing:u},camera:{allowPanning:s},share:{baseShareUrl:d},baseShareUrls:f,skipToPage:m?o[m]:void 0,inspirationStart:h?{hero:h}:void 0,freezeItemsInScene:p};if(window.geiger_modular_configurator){let t=new window.geiger_modular_configurator.GEIModular(e);if(x.current=t,i&&!_){let e=t.init();E(!0),x.current=t.modularConfigurator,e.then(()=>{null==w||w(t)}).catch(e=>{E(!1),console.error(\"MxtModularConfigurator failed to initialize\",e),null==y||y(e)})}}}},[_,S,i,n,u,s,d,f,m,h,p,g,v,b,w,y]),(0,a.useEffect)(()=>()=>{var e,t;null===(t=null===(e=x.current)||void 0===e?void 0:e.destroy)||void 0===t||t.call(e)},[]),(0,l.jsx)(\"div\",{ref:L,id:\"mk-modular-config\",className:r})}),d=(0,a.memo)(s)}},function(e){e.O(0,[888,774,179],function(){return e(e.s=8844)}),_N_E=e.O()}]);"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "configurator",
+      "snippet": "areUrl:d},baseShareUrls:f,skipToPage:m?o[m]:void 0,inspirationStart:h?{hero:h}:void 0,freezeItemsInScene:p};if(window.geiger_modular_configurator){let t=new window.geiger_modular_configurator.GEIModular(e);if(x.current=t,i&&!_){let e=t.init();E(!0),x.current=t.modularConfigurator,e.then(()=>{null==w||w(t)}).catch(e=>{E(!1),console.error(\"MxtModularConfigurator failed to initialize\",e),null==y||y(e)})}}}},[_,S,i,n,u,s,d,f,m,h,p,g,v,b,w,y]),(0,a.useEffect)(()=>()=>{var e,t;null===(t=null===(e=x.current)||void 0===e?void 0:e.destroy)||void 0===t||t.call(e)},[]),(0,l.jsx)(\"div\",{ref:L,id:\"mk-modular-config\",className:r})}),d=(0,a.memo)(s)}},function(e){e.O(0,[888,774,179],function(){return e(e.s=8844)}),_N_E=e.O()}]);"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": "k)(()=>{t(!0)},[]);return((0,o.useEffect)(()=>{document.documentElement.classList.add(\"kong-iframe\"),document.body.classList.add(\"kong-iframe\"),window.MxtHermanMillerKongfigurator&&t(!0)},[]),(0,o.useEffect)(()=>{let e=new MutationObserver(()=>{let e=new URL(window.location.href);if(e.href!==c.current){c.current=e.href;let t=e.searchParams.getAll(\"sku\");t&&O({type:\"sku\",sku:t})}});return e.observe(document,{subtree:!0,childList:!0}),()=>{e.disconnect()}},[O]),(0,o.useEffect)(()=>(window.addEventListener(\"kongfiguratorready\",R),()=>{window.removeEventListener(\"kongfiguratorready\",R)}),[R]),(0,o.useEffect)(()=>(window.addEventListener(\"kongfiguratorerror\",j),()=>{window.removeEventListener(\"kongfiguratorerror\",j)}),[j]),(0,o.useEffect)(()=>(window.addEventListener(\"kongfiguratoranalytics\",q),()=>{window.removeEventListener(\"kongfiguratoranalytics\",q)}),[q]),(0,o.useEffect)(()=>()=>{var e;n"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": ";return((0,o.useEffect)(()=>{document.documentElement.classList.add(\"kong-iframe\"),document.body.classList.add(\"kong-iframe\"),window.MxtHermanMillerKongfigurator&&t(!0)},[]),(0,o.useEffect)(()=>{let e=new MutationObserver(()=>{let e=new URL(window.location.href);if(e.href!==c.current){c.current=e.href;let t=e.searchParams.getAll(\"sku\");t&&O({type:\"sku\",sku:t})}});return e.observe(document,{subtree:!0,childList:!0}),()=>{e.disconnect()}},[O]),(0,o.useEffect)(()=>(window.addEventListener(\"kongfiguratorready\",R),()=>{window.removeEventListener(\"kongfiguratorready\",R)}),[R]),(0,o.useEffect)(()=>(window.addEventListener(\"kongfiguratorerror\",j),()=>{window.removeEventListener(\"kongfiguratorerror\",j)}),[j]),(0,o.useEffect)(()=>(window.addEventListener(\"kongfiguratoranalytics\",q),()=>{window.removeEventListener(\"kongfiguratoranalytics\",q)}),[q]),(0,o.useEffect)(()=>()=>{var e;null==f||null===(e="
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": "rn((0,o.useEffect)(()=>{document.documentElement.classList.add(\"kong-iframe\"),document.body.classList.add(\"kong-iframe\"),window.MxtHermanMillerKongfigurator&&t(!0)},[]),(0,o.useEffect)(()=>{let e=new MutationObserver(()=>{let e=new URL(window.location.href);if(e.href!==c.current){c.current=e.href;let t=e.searchParams.getAll(\"sku\");t&&O({type:\"sku\",sku:t})}});return e.observe(document,{subtree:!0,childList:!0}),()=>{e.disconnect()}},[O]),(0,o.useEffect)(()=>(window.addEventListener(\"kongfiguratorready\",R),()=>{window.removeEventListener(\"kongfiguratorready\",R)}),[R]),(0,o.useEffect)(()=>(window.addEventListener(\"kongfiguratorerror\",j),()=>{window.removeEventListener(\"kongfiguratorerror\",j)}),[j]),(0,o.useEffect)(()=>(window.addEventListener(\"kongfiguratoranalytics\",q),()=>{window.removeEventListener(\"kongfiguratoranalytics\",q)}),[q]),(0,o.useEffect)(()=>()=>{var e;null==f||null===(e=f.cur"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": "n)&&0>t.indexOf(n)&&(r[n]=e[n]);if(null!=e&&\"function\"==typeof Object.getOwnPropertySymbols)for(var o=0,n=Object.getOwnPropertySymbols(e);o<n.length;o++)0>t.indexOf(n[o])&&Object.prototype.propertyIsEnumerable.call(e,n[o])&&(r[n[o]]=e[n[o]]);return r};let u=(0,a.memo)(e=>{var{className:t,configurationId:n,environment:o,shareUrl:u,disablePickerUI:c,sku:s,backgroundColor:d,allowPanning:f=\"true\",onExpand:m,onCollapse:h,onReady:p,enableAr:g,disableSkuInUrl:v,autoInit:b,analyticsId:w,disableSkuPlugin:y,apiKey:k}=e,_=i(e,[\"className\",\"configurationId\",\"environment\",\"shareUrl\",\"disablePickerUI\",\"sku\",\"backgroundColor\",\"allowPanning\",\"onExpand\",\"onCollapse\",\"onReady\",\"enableAr\",\"disableSkuInUrl\",\"autoInit\",\"analyticsId\",\"disableSkuPlugin\",\"apiKey\"]);(0,a.useEffect)(()=>{r.e(771).then(r.bind(r,1771))},[]),(0,a.useEffect)(()=>{window.kongfigurator=window.kongfigurator||{},window.kongfigurator.expa"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": "r o=0,n=Object.getOwnPropertySymbols(e);o<n.length;o++)0>t.indexOf(n[o])&&Object.prototype.propertyIsEnumerable.call(e,n[o])&&(r[n[o]]=e[n[o]]);return r};let u=(0,a.memo)(e=>{var{className:t,configurationId:n,environment:o,shareUrl:u,disablePickerUI:c,sku:s,backgroundColor:d,allowPanning:f=\"true\",onExpand:m,onCollapse:h,onReady:p,enableAr:g,disableSkuInUrl:v,autoInit:b,analyticsId:w,disableSkuPlugin:y,apiKey:k}=e,_=i(e,[\"className\",\"configurationId\",\"environment\",\"shareUrl\",\"disablePickerUI\",\"sku\",\"backgroundColor\",\"allowPanning\",\"onExpand\",\"onCollapse\",\"onReady\",\"enableAr\",\"disableSkuInUrl\",\"autoInit\",\"analyticsId\",\"disableSkuPlugin\",\"apiKey\"]);(0,a.useEffect)(()=>{r.e(771).then(r.bind(r,1771))},[]),(0,a.useEffect)(()=>{window.kongfigurator=window.kongfigurator||{},window.kongfigurator.expandButton={onExpand:m,onCollapse:h},window.kongfigurator.onReady=p},[m,h,p]);let E=Array.isArray(u)"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": ".length;o++)0>t.indexOf(n[o])&&Object.prototype.propertyIsEnumerable.call(e,n[o])&&(r[n[o]]=e[n[o]]);return r};let u=(0,a.memo)(e=>{var{className:t,configurationId:n,environment:o,shareUrl:u,disablePickerUI:c,sku:s,backgroundColor:d,allowPanning:f=\"true\",onExpand:m,onCollapse:h,onReady:p,enableAr:g,disableSkuInUrl:v,autoInit:b,analyticsId:w,disableSkuPlugin:y,apiKey:k}=e,_=i(e,[\"className\",\"configurationId\",\"environment\",\"shareUrl\",\"disablePickerUI\",\"sku\",\"backgroundColor\",\"allowPanning\",\"onExpand\",\"onCollapse\",\"onReady\",\"enableAr\",\"disableSkuInUrl\",\"autoInit\",\"analyticsId\",\"disableSkuPlugin\",\"apiKey\"]);(0,a.useEffect)(()=>{r.e(771).then(r.bind(r,1771))},[]),(0,a.useEffect)(()=>{window.kongfigurator=window.kongfigurator||{},window.kongfigurator.expandButton={onExpand:m,onCollapse:h},window.kongfigurator.onReady=p},[m,h,p]);let E=Array.isArray(u)?JSON.stringify(u):u;return(0,l.jsx)(\"marxe"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": "rn r};let u=(0,a.memo)(e=>{var{className:t,configurationId:n,environment:o,shareUrl:u,disablePickerUI:c,sku:s,backgroundColor:d,allowPanning:f=\"true\",onExpand:m,onCollapse:h,onReady:p,enableAr:g,disableSkuInUrl:v,autoInit:b,analyticsId:w,disableSkuPlugin:y,apiKey:k}=e,_=i(e,[\"className\",\"configurationId\",\"environment\",\"shareUrl\",\"disablePickerUI\",\"sku\",\"backgroundColor\",\"allowPanning\",\"onExpand\",\"onCollapse\",\"onReady\",\"enableAr\",\"disableSkuInUrl\",\"autoInit\",\"analyticsId\",\"disableSkuPlugin\",\"apiKey\"]);(0,a.useEffect)(()=>{r.e(771).then(r.bind(r,1771))},[]),(0,a.useEffect)(()=>{window.kongfigurator=window.kongfigurator||{},window.kongfigurator.expandButton={onExpand:m,onCollapse:h},window.kongfigurator.onReady=p},[m,h,p]);let E=Array.isArray(u)?JSON.stringify(u):u;return(0,l.jsx)(\"marxent-kongfigurator\",Object.assign({class:t,\"configuration-id\":n,environment:o,\"share-url\":E,\"allow-panning\""
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": "lePickerUI:c,sku:s,backgroundColor:d,allowPanning:f=\"true\",onExpand:m,onCollapse:h,onReady:p,enableAr:g,disableSkuInUrl:v,autoInit:b,analyticsId:w,disableSkuPlugin:y,apiKey:k}=e,_=i(e,[\"className\",\"configurationId\",\"environment\",\"shareUrl\",\"disablePickerUI\",\"sku\",\"backgroundColor\",\"allowPanning\",\"onExpand\",\"onCollapse\",\"onReady\",\"enableAr\",\"disableSkuInUrl\",\"autoInit\",\"analyticsId\",\"disableSkuPlugin\",\"apiKey\"]);(0,a.useEffect)(()=>{r.e(771).then(r.bind(r,1771))},[]),(0,a.useEffect)(()=>{window.kongfigurator=window.kongfigurator||{},window.kongfigurator.expandButton={onExpand:m,onCollapse:h},window.kongfigurator.onReady=p},[m,h,p]);let E=Array.isArray(u)?JSON.stringify(u):u;return(0,l.jsx)(\"marxent-kongfigurator\",Object.assign({class:t,\"configuration-id\":n,environment:o,\"share-url\":E,\"allow-panning\":f,\"disable-picker-ui\":c,\"background-color\":d,sku:s,\"enable-ar\":g,\"disable-sku-in-url\":v,\"a"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": "anning:f=\"true\",onExpand:m,onCollapse:h,onReady:p,enableAr:g,disableSkuInUrl:v,autoInit:b,analyticsId:w,disableSkuPlugin:y,apiKey:k}=e,_=i(e,[\"className\",\"configurationId\",\"environment\",\"shareUrl\",\"disablePickerUI\",\"sku\",\"backgroundColor\",\"allowPanning\",\"onExpand\",\"onCollapse\",\"onReady\",\"enableAr\",\"disableSkuInUrl\",\"autoInit\",\"analyticsId\",\"disableSkuPlugin\",\"apiKey\"]);(0,a.useEffect)(()=>{r.e(771).then(r.bind(r,1771))},[]),(0,a.useEffect)(()=>{window.kongfigurator=window.kongfigurator||{},window.kongfigurator.expandButton={onExpand:m,onCollapse:h},window.kongfigurator.onReady=p},[m,h,p]);let E=Array.isArray(u)?JSON.stringify(u):u;return(0,l.jsx)(\"marxent-kongfigurator\",Object.assign({class:t,\"configuration-id\":n,environment:o,\"share-url\":E,\"allow-panning\":f,\"disable-picker-ui\":c,\"background-color\":d,sku:s,\"enable-ar\":g,\"disable-sku-in-url\":v,\"auto-init\":b,\"analytics-id\":w,\"disable-sku-p"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": "gurator=window.kongfigurator||{},window.kongfigurator.expandButton={onExpand:m,onCollapse:h},window.kongfigurator.onReady=p},[m,h,p]);let E=Array.isArray(u)?JSON.stringify(u):u;return(0,l.jsx)(\"marxent-kongfigurator\",Object.assign({class:t,\"configuration-id\":n,environment:o,\"share-url\":E,\"allow-panning\":f,\"disable-picker-ui\":c,\"background-color\":d,sku:s,\"enable-ar\":g,\"disable-sku-in-url\":v,\"auto-init\":b,\"analytics-id\":w,\"disable-sku-plugin\":y,\"api-key\":k},_))}),c={test:\"Latest\",staging:\"Stage\",production:\"Active\"};(n=o||(o={}))[n.JD_CREDENZA=1]=\"JD_CREDENZA\",n[n.GEIGER_ONE=2]=\"GEIGER_ONE\";let s=(0,a.forwardRef)((e,t)=>{let{className:r,environment:n,autoInit:i=!0,hidePricing:u,allowPanning:s=!0,baseShareUrl:d,baseShareUrls:f,menuId:m,configId:h,freezeItemsInScene:p,onFullscreenEnter:g,onFullscreenExit:v,onAddToCart:b,onInit:w,onError:y,onReady:k}=e,[_,E]=(0,a.useState)(!1),[S,C]=(0,a.useS"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": "|{},window.kongfigurator.expandButton={onExpand:m,onCollapse:h},window.kongfigurator.onReady=p},[m,h,p]);let E=Array.isArray(u)?JSON.stringify(u):u;return(0,l.jsx)(\"marxent-kongfigurator\",Object.assign({class:t,\"configuration-id\":n,environment:o,\"share-url\":E,\"allow-panning\":f,\"disable-picker-ui\":c,\"background-color\":d,sku:s,\"enable-ar\":g,\"disable-sku-in-url\":v,\"auto-init\":b,\"analytics-id\":w,\"disable-sku-plugin\":y,\"api-key\":k},_))}),c={test:\"Latest\",staging:\"Stage\",production:\"Active\"};(n=o||(o={}))[n.JD_CREDENZA=1]=\"JD_CREDENZA\",n[n.GEIGER_ONE=2]=\"GEIGER_ONE\";let s=(0,a.forwardRef)((e,t)=>{let{className:r,environment:n,autoInit:i=!0,hidePricing:u,allowPanning:s=!0,baseShareUrl:d,baseShareUrls:f,menuId:m,configId:h,freezeItemsInScene:p,onFullscreenEnter:g,onFullscreenExit:v,onAddToCart:b,onInit:w,onError:y,onReady:k}=e,[_,E]=(0,a.useState)(!1),[S,C]=(0,a.useState)(!1),L=(0,a.useRef)(null"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sku",
+      "snippet": "llapse:h},window.kongfigurator.onReady=p},[m,h,p]);let E=Array.isArray(u)?JSON.stringify(u):u;return(0,l.jsx)(\"marxent-kongfigurator\",Object.assign({class:t,\"configuration-id\":n,environment:o,\"share-url\":E,\"allow-panning\":f,\"disable-picker-ui\":c,\"background-color\":d,sku:s,\"enable-ar\":g,\"disable-sku-in-url\":v,\"auto-init\":b,\"analytics-id\":w,\"disable-sku-plugin\":y,\"api-key\":k},_))}),c={test:\"Latest\",staging:\"Stage\",production:\"Active\"};(n=o||(o={}))[n.JD_CREDENZA=1]=\"JD_CREDENZA\",n[n.GEIGER_ONE=2]=\"GEIGER_ONE\";let s=(0,a.forwardRef)((e,t)=>{let{className:r,environment:n,autoInit:i=!0,hidePricing:u,allowPanning:s=!0,baseShareUrl:d,baseShareUrls:f,menuId:m,configId:h,freezeItemsInScene:p,onFullscreenEnter:g,onFullscreenExit:v,onAddToCart:b,onInit:w,onError:y,onReady:k}=e,[_,E]=(0,a.useState)(!1),[S,C]=(0,a.useState)(!1),L=(0,a.useRef)(null),x=(0,a.useRef)(void 0);return(0,a.useImperativeHandl"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sayl",
+      "snippet": "),s=r.n(c),d=r(5632),f=r(689),m=r.n(f),h=r(4579),p=r(2544);let g={};try{g=JSON.parse('{\\n \"fc7b166e-a35e-4b63-90d2-4facd3a89672\": {\\n \"name\": \"Mirra 2 Chair\",\\n \"url\": \"https://store.hermanmiller.com/home-office-chairs/mirra-2-chair/100063049.html?lang=en_US\"\\n },\\n \"5b218f84-aa9c-4cd6-a668-2255a5e18bd5\": {\\n \"name\": \"Sayl Chair\",\\n \"url\": \"https://store.hermanmiller.com/office-chairs-performance-seating/sayl-chair/2294.html?lang=en_US\"\\n },\\n \"4b01f184-242f-4cbe-916e-52583bffee52\": {\\n \"name\": \"Aeron Chair\",\\n \"url\": \"https://store.hermanmiller.com/office-chairs-aeron/aeron-chair/2195348.html?lang=en_US\"\\n },\\n \"e06ee14e-6437-4286-9800-f7447fd8cc6e\": {\\n \"name\": \"Versus Task Chair\",\\n \"url\": \"https://store.hermanmiller.com/home-office-chairs/verus-task-chair/2519413.html?lang=en_US\"\\n },\\n \"416e03e5-db42-4ede-adb5-97825dd4ca11\": {\\n \"name\": \"Embody Chair\",\\n \"url\": \"https://store.herman"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "sayl",
+      "snippet": "c7b166e-a35e-4b63-90d2-4facd3a89672\": {\\n \"name\": \"Mirra 2 Chair\",\\n \"url\": \"https://store.hermanmiller.com/home-office-chairs/mirra-2-chair/100063049.html?lang=en_US\"\\n },\\n \"5b218f84-aa9c-4cd6-a668-2255a5e18bd5\": {\\n \"name\": \"Sayl Chair\",\\n \"url\": \"https://store.hermanmiller.com/office-chairs-performance-seating/sayl-chair/2294.html?lang=en_US\"\\n },\\n \"4b01f184-242f-4cbe-916e-52583bffee52\": {\\n \"name\": \"Aeron Chair\",\\n \"url\": \"https://store.hermanmiller.com/office-chairs-aeron/aeron-chair/2195348.html?lang=en_US\"\\n },\\n \"e06ee14e-6437-4286-9800-f7447fd8cc6e\": {\\n \"name\": \"Versus Task Chair\",\\n \"url\": \"https://store.hermanmiller.com/home-office-chairs/verus-task-chair/2519413.html?lang=en_US\"\\n },\\n \"416e03e5-db42-4ede-adb5-97825dd4ca11\": {\\n \"name\": \"Embody Chair\",\\n \"url\": \"https://store.hermanmiller.com/home-office-chairs/embody-chair/100137716.html?lang=en_US\"\\n },\\n \"6507132e-13aa-"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "vercel",
+      "snippet": "llBottomIntoView\"})},250),a=e),o.set(e,r)}})});r.observe(e,{attributes:!0}),n.push(r)})})})).observe(e,{subtree:!0,childList:!0}),{cleanup:function(){try{n.forEach(e=>{var t;return null==e?void 0:null===(t=e.disconnect)||void 0===t?void 0:t.call(e)}),null==r||r.disconnect()}catch(e){console.warn(e)}}}};let C=\"3d-configurator-gy2i0tr68-hermanmiller.vercel.app\",L=C?JSON.parse('[\\n \"3d-configurator.vercel.app\",\\n \"demo-hmicom.vagrant\",\\n \"dev-demo.hermanmiller.com\",\\n \"dev.hermanmiller.com\",\\n \"qa.hermanmiller.com\",\\n \"preprod.hermanmiller.com\",\\n \"www.hermanmiller.com\",\\n \"author-hmicom.vagrant\",\\n \"dev-author.hermanmiller.com\",\\n \"qa-author.hermanmiller.com\",\\n \"preprod-author.hermanmiller.com\",\\n \"author.hermanmiller.com\",\\n \"dev.geigerfurniture.com\",\\n \"qa.geigerfurniture.com\",\\n \"preprod.geigerfurniture.com\",\\n \"www.geigerfurniture.com\"\\n]'):\"*\";C&&L.push(C);let x=()=>{let[e,t]=(0,o.us"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "vercel",
+      "snippet": "erve(e,{attributes:!0}),n.push(r)})})})).observe(e,{subtree:!0,childList:!0}),{cleanup:function(){try{n.forEach(e=>{var t;return null==e?void 0:null===(t=e.disconnect)||void 0===t?void 0:t.call(e)}),null==r||r.disconnect()}catch(e){console.warn(e)}}}};let C=\"3d-configurator-gy2i0tr68-hermanmiller.vercel.app\",L=C?JSON.parse('[\\n \"3d-configurator.vercel.app\",\\n \"demo-hmicom.vagrant\",\\n \"dev-demo.hermanmiller.com\",\\n \"dev.hermanmiller.com\",\\n \"qa.hermanmiller.com\",\\n \"preprod.hermanmiller.com\",\\n \"www.hermanmiller.com\",\\n \"author-hmicom.vagrant\",\\n \"dev-author.hermanmiller.com\",\\n \"qa-author.hermanmiller.com\",\\n \"preprod-author.hermanmiller.com\",\\n \"author.hermanmiller.com\",\\n \"dev.geigerfurniture.com\",\\n \"qa.geigerfurniture.com\",\\n \"preprod.geigerfurniture.com\",\\n \"www.geigerfurniture.com\"\\n]'):\"*\";C&&L.push(C);let x=()=>{let[e,t]=(0,o.useState)(!1),[r,l]=(0,o.useState)(\"\"),[a,i]=(0,o.useS"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/chunks/pages/iframe/%5Bconfig%5D-f1a7a2c05ac70aac.js",
+      "pattern": "vercel",
+      "snippet": "n.3dcloud.io/hermanmiller-kongfigurator-frontend/\".concat(p.Z,\"/MxtHermanMillerKongfigurator-\").concat(p.Z).concat(\".min\",\".js\"),onLoad:U}),e?(0,n.jsx)(h.P,{enableAr:\"true\",environment:x,configurationId:y,shareUrl:g.current,analyticsId:\"Herman Miller Contract Site\"}):null,\"geiger\"===E&&(0,n.jsx)(\"link\",{rel:\"stylesheet\",href:\"https://remote-assets.vercel.app/css/3dc-branded-geiger.css\"})]})};var O=a()(()=>Promise.resolve(x),{ssr:!1})},2544:function(e,t){\"use strict\";t.Z=\"9.7.1-build.7\"},5237:function(e,t,r){e.exports=r(2392)},689:function(e,t,r){e.exports=r(6065)},7729:function(e,t,r){e.exports=r(8792)},5632:function(e,t,r){e.exports=r(743)},5847:function(e,t,r){e.exports=r(9406)},4579:function(e,t,r){\"use strict\";r.d(t,{P:function(){return u},l:function(){return d}});var n,o,l=r(2322),a=r(2784),i=function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&0>t.indexO"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/ViNdKJ8SXOuhX5FwIeQjk/_buildManifest.js",
+      "pattern": "configurator",
+      "snippet": "it\":[\"static/chunks/pages/examples/product-config-init-04bf11283387f9f3.js\"],\"/examples/web-component/modular-config\":[\"static/chunks/pages/examples/web-component/modular-config-3c49a5c5cc8997f4.js\"],\"/examples/web-component/modular-config-init\":[\"static/chunks/pages/examples/web-component/modular-config-init-a11346a6d3661a2e.js\"],\"/iframe/modular-configurator\":[\"static/chunks/70-6aa70c71b2a3fa6a.js\",\"static/chunks/pages/iframe/modular-configurator-a06aeb2063c535d6.js\"],\"/iframe/[config]\":[\"static/chunks/pages/iframe/[config]-f1a7a2c05ac70aac.js\"],\"/[chair]\":[e,a,\"static/chunks/pages/[chair]-5f1a2585aff61ea3.js\"],sortedPages:[\"/\",\"/_app\",\"/_error\",\"/examples/iframe/geiger\",\"/examples/iframe/hermanmiller\",\"/examples/modular-config-init\",\"/examples/no-picker/[product]\",\"/examples/product-config-init\",\"/examples/web-component/modular-config\",\"/examples/web-component/modular-config-init\",\"/i"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/ViNdKJ8SXOuhX5FwIeQjk/_buildManifest.js",
+      "pattern": "configurator",
+      "snippet": "b-component/modular-config\":[\"static/chunks/pages/examples/web-component/modular-config-3c49a5c5cc8997f4.js\"],\"/examples/web-component/modular-config-init\":[\"static/chunks/pages/examples/web-component/modular-config-init-a11346a6d3661a2e.js\"],\"/iframe/modular-configurator\":[\"static/chunks/70-6aa70c71b2a3fa6a.js\",\"static/chunks/pages/iframe/modular-configurator-a06aeb2063c535d6.js\"],\"/iframe/[config]\":[\"static/chunks/pages/iframe/[config]-f1a7a2c05ac70aac.js\"],\"/[chair]\":[e,a,\"static/chunks/pages/[chair]-5f1a2585aff61ea3.js\"],sortedPages:[\"/\",\"/_app\",\"/_error\",\"/examples/iframe/geiger\",\"/examples/iframe/hermanmiller\",\"/examples/modular-config-init\",\"/examples/no-picker/[product]\",\"/examples/product-config-init\",\"/examples/web-component/modular-config\",\"/examples/web-component/modular-config-init\",\"/iframe/modular-configurator\",\"/iframe/[config]\",\"/[chair]\"]}}(\"static/chunks/634-45a579018e"
+    },
+    {
+      "kind": "code_signal",
+      "source_file": "https://3d-configurator.vercel.app/_next/static/ViNdKJ8SXOuhX5FwIeQjk/_buildManifest.js",
+      "pattern": "configurator",
+      "snippet": ":[e,a,\"static/chunks/pages/[chair]-5f1a2585aff61ea3.js\"],sortedPages:[\"/\",\"/_app\",\"/_error\",\"/examples/iframe/geiger\",\"/examples/iframe/hermanmiller\",\"/examples/modular-config-init\",\"/examples/no-picker/[product]\",\"/examples/product-config-init\",\"/examples/web-component/modular-config\",\"/examples/web-component/modular-config-init\",\"/iframe/modular-configurator\",\"/iframe/[config]\",\"/[chair]\"]}}(\"static/chunks/634-45a579018ef49f43.js\",\"static/chunks/702-200f985ddb8e2d28.js\"),self.__BUILD_MANIFEST_CB&&self.__BUILD_MANIFEST_CB();"
+    }
+  ],
+  "conclusion": "CONFIGURATOR_FLOW_DISCOVERED_NEEDS_ENDPOINT_RESOLUTION",
+  "next_action": "use discovered public configurator signals to resolve configuration/download endpoint without bypassing access controls"
+}
