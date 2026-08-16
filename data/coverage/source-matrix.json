@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generated_at": "2026-08-16T03:17:37.069Z",
+    "generated_at": "2026-08-16T03:19:58.914Z",
     "canonical_categories": 149,
     "categories_with_any_source": 59,
     "categories_with_live_discovery": 55,
@@ -8,7 +8,7 @@
     "categories_with_direct_trade_source": 10,
     "categories_with_multi_graph_source": 10,
     "manufacturer_evidence_records": 3,
-    "source_adapters": 2,
+    "source_adapters": 3,
     "principle": "Coverage is measured against Product Twin's canonical taxonomy. A source contributes capabilities; it never defines the category universe."
   },
   "categories": [
@@ -3134,6 +3134,23 @@
       "specification_profile": "concrete_material",
       "source_mappings": [
         {
+          "source_id": "cemex_go_es",
+          "source_name": "CEMEX Spain / CEMEX Go",
+          "source_type": "manufacturer_trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_OR_QUOTE_REQUIRED",
+          "capabilities": {
+            "live_price": true,
+            "live_stock": false,
+            "technical_evidence": true,
+            "geometry": false,
+            "bim": false,
+            "order": true,
+            "quote": true,
+            "physical_locations": true
+          }
+        },
+        {
           "source_id": "shopify_global_catalog",
           "source_name": "Shopify Global Catalog MCP",
           "source_type": "global_catalog",
@@ -3154,11 +3171,11 @@
       "live_discovery_signals": 149,
       "authoritative_manufacturer_evidence_records": 0,
       "direct_trade_sources": 0,
-      "live_commerce_sources": 1,
-      "technical_evidence_sources": 0,
+      "live_commerce_sources": 2,
+      "technical_evidence_sources": 1,
       "geometry_sources": 0,
       "bim_sources": 0,
-      "coverage_state": "COMMERCE_SOURCE"
+      "coverage_state": "TECHNICAL_PLUS_COMMERCE"
     },
     {
       "category_id": "STRUCTURE.FOUNDATIONS",
