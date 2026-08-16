@@ -1,0 +1,82 @@
+{
+  "version": "1.0",
+  "researched_at": "2026-08-16",
+  "status": "V0_BROAD_SOURCE_RESEARCH_FROZEN",
+  "principle": "This is the deliberate V0 census. New broad source research is frozen after this file unless a concrete project/category gap requires it. Candidate sources do not count as live coverage until access exists and a real Product Twin test passes.",
+  "roles": {
+    "commerce_marketplace": [
+      {"source_id":"shopify_global_catalog","state":"LIVE_PROVEN","priority":"P0","scope":"global Shopify discovery + merchant UCP cart","notes":"Current canonical broad-commerce source."},
+      {"source_id":"aliexpress_open_platform","state":"CREDENTIALS_REQUIRED","priority":"P0","scope":"cross-border marketplace + affiliate + image search + delivery-country signals"},
+      {"source_id":"ebay_browse_api","state":"DEVELOPER_CREDENTIALS_REQUIRED","priority":"P1","scope":"keyword/image/GTIN marketplace search + offer/affiliate"},
+      {"source_id":"amazon_creators_api","state":"ASSOCIATES_ELIGIBILITY_REQUIRED","priority":"P1","scope":"Amazon marketplace search/offers including ES"},
+      {"source_id":"alibaba_com_buyer_solution","state":"APP_REVIEW_PERMISSION_REQUIRED","priority":"P1","scope":"B2B sourcing/RFQ/manufacturer procurement; not assumed to be Shopify-like open discovery"},
+      {"source_id":"taobao_open_platform_mcp","state":"PARTNER_PAID_ACCESS","priority":"P3","scope":"China-domestic Alibaba-group MCP; parked for V0"}
+    ],
+    "merchant_platform_adapters": [
+      {"source_id":"woocommerce","state":"CODE_READY_TARGET","priority":"P1","scope":"individual WooCommerce manufacturer/distributor stores","capabilities":["public Store API products","cart","checkout","authenticated product/order REST"]},
+      {"source_id":"bigcommerce","state":"MERCHANT_TOKEN_OR_STORE_ACCESS","priority":"P1","scope":"individual BigCommerce suppliers","capabilities":["catalog","storefront products","cart","checkout","shipping"]},
+      {"source_id":"adobe_commerce_magento","state":"MERCHANT_INSTANCE_ACCESS","priority":"P2","scope":"individual Adobe Commerce/Magento suppliers","capabilities":["product catalog","cart","checkout","orders"]},
+      {"source_id":"commercetools","state":"MERCHANT_PROJECT_ACCESS","priority":"P2","scope":"headless/B2B suppliers on commercetools","capabilities":["product search","prices","availability","variants"]},
+      {"source_id":"mirakl_marketplace","state":"MARKETPLACE_INSTANCE_ACCESS","priority":"P1","scope":"marketplaces and distributor networks operated on Mirakl","capabilities":["products","offers","shipping zones","orders","tracking"]}
+    ],
+    "identity_enrichment": [
+      {"source_id":"gs1_verified","state":"PUBLIC_LOW_VOLUME_ENTERPRISE_API_AVAILABLE","priority":"P0","scope":"GTIN/GLN/company identity verification"},
+      {"source_id":"icecat_mcp_api","state":"PARTNER_OR_CONTENT_ACCESS_REQUIRED","priority":"P0","scope":"manufacturer/model/GTIN/spec/media enrichment"},
+      {"source_id":"etim_api","state":"API_AVAILABLE","priority":"P1","scope":"technical-product class/features/values normalization; classification authority not product offer source"},
+      {"source_id":"eclass_webservice","state":"CERTIFICATE_LICENSE_REQUIRED","priority":"P1","scope":"technical product classes/properties/units/mappings via REST XML/JSON"}
+    ],
+    "technical_product_content": [
+      {"source_id":"manufacturer_authoritative","state":"LIVE_MANUAL_PATTERN","priority":"P0","scope":"manufacturer datasheets/manuals/product pages remain highest-authority product facts"},
+      {"source_id":"icecat_mcp_api","state":"PARTNER_OR_CONTENT_ACCESS_REQUIRED","priority":"P0","scope":"standardized specifications and identity"},
+      {"source_id":"bimobject_developer_api","state":"ACCESS_REQUEST_REQUIRED","priority":"P0","scope":"manufacturer BIM product data/specifications/certifications/environmental data"},
+      {"source_id":"bimandco_apis","state":"PARTNERSHIP_REQUIRED","priority":"P1","scope":"PIM2BIM / BIM2WORLD bidirectional product/BIM enrichment"},
+      {"source_id":"ec3_openepd_api","state":"ACCOUNT_API_AVAILABLE_COMMERCIAL_TERMS_REQUIRED","priority":"P1","scope":"EPDs, material/product carbon data and plant geography"}
+    ],
+    "geometry_cad_bim": [
+      {"source_id":"bimobject_developer_api","state":"ACCESS_REQUEST_REQUIRED","priority":"P0","scope":"manufacturer BIM/CAD objects"},
+      {"source_id":"pcon_catalog","state":"B2B_MEMBERSHIP_MANUFACTURER_ACCESS","priority":"P1","scope":"configurable furniture/FF&E geometry + commercial data"},
+      {"source_id":"cadenas_3dfindit","state":"PARTNER_ENTERPRISE_ACCESS_TO_CONFIRM","priority":"P1","scope":"large manufacturer CAD/component network; enterprise integrations confirmed, general third-party API access still requires commercial confirmation"},
+      {"source_id":"bimandco_apis","state":"PARTNERSHIP_REQUIRED","priority":"P1","scope":"BIM object/product data integration"},
+      {"source_id":"prodlib","state":"LIBRARY_ACCESS_NO_PUBLIC_GENERAL_API_CONFIRMED","priority":"P2","scope":"manufacturer BIM/CAD/product libraries; useful acquisition source if partnership/API path exists"},
+      {"source_id":"autodesk_aps_model_derivative","state":"DEVELOPER_CREDENTIALS_AVAILABLE","priority":"P1","scope":"ingest/convert/extract metadata from CAD/BIM files supplied by manufacturers/projects; not a product catalog"},
+      {"source_id":"speckle","state":"API_AVAILABLE_ACCOUNT_TOKEN","priority":"P1","scope":"AEC object/geometry exchange and project integration; not a product catalog"}
+    ],
+    "avatar_generation": [
+      {"source_id":"autodesk_reality_capture_api","state":"APS_CREDENTIALS_REQUIRED","priority":"P0","scope":"multi-photo photogrammetry to high-resolution textured OBJ/RCM; up to 300 hand-held object images"},
+      {"source_id":"apple_object_capture","state":"DEVICE_LOCAL_API","priority":"P1","scope":"multi-photo photogrammetry on supported Apple hardware; strong controlled-scan route"},
+      {"source_id":"meshy_image_to_3d_api","state":"API_KEY_REQUIRED","priority":"P0","scope":"single-image and multi-image AI reconstruction to GLB/OBJ/FBX/USDZ with PBR/remesh options; always proxy until identity/scale/likeness validation"}
+    ],
+    "configurator_parametric_system": [
+      {"source_id":"pcon_catalog","state":"B2B_ACCESS_REQUIRED","priority":"P0","scope":"configurable FF&E systems"},
+      {"source_id":"cadenas_3dfindit","state":"PARTNER_ENTERPRISE_ACCESS_TO_CONFIRM","priority":"P1","scope":"parametric manufacturer CAD components"},
+      {"source_id":"manufacturer_configurators","state":"SOURCE_BY_SOURCE","priority":"P0","scope":"windows, kitchens, facade, HVAC, prefab and other configured systems"},
+      {"source_id":"prefab_factory_cad_config","state":"SUPPLIER_RFQ_ACCESS","priority":"P1","scope":"factory-valid grids/modules/interfaces for system twins"}
+    ],
+    "logistics_landed_cost": [
+      {"source_id":"dhl_express_mydhl","state":"BUSINESS_CREDENTIALS_REQUIRED","priority":"P0","scope":"parcel/multipiece rates, landed cost, shipment creation and tracking"},
+      {"source_id":"dhl_freight_price_quote","state":"DHL_FREIGHT_CONTRACT_REQUIRED","priority":"P0","scope":"European palletized road freight >35kg quotes"},
+      {"source_id":"ups_apis","state":"DEVELOPER_ACCOUNT_REQUIRED","priority":"P1","scope":"rating, transit, tracking, landed-cost/trade tools"},
+      {"source_id":"shippo","state":"API_TOKEN_REQUIRED","priority":"P1","scope":"multi-carrier parcel rates/labels; less suited to construction freight"},
+      {"source_id":"supplier_direct_freight","state":"SOURCE_BY_SOURCE","priority":"P0","scope":"factory/distributor-specific freight, crane, pallet, container and delivery constraints"}
+    ],
+    "environmental_product_data": [
+      {"source_id":"ec3_openepd_api","state":"TEST_ACCESS_AVAILABLE_WITH_ACCOUNT","priority":"P1","scope":"EPDs, carbon metrics, plants and material comparison; production use subject to paid/commercial terms"}
+    ],
+    "project_model_exchange": [
+      {"source_id":"speckle","state":"API_AVAILABLE_ACCOUNT_TOKEN","priority":"P1","scope":"object-level BIM/AEC exchange, GraphQL, SDKs, viewer and automation"},
+      {"source_id":"autodesk_aps","state":"DEVELOPER_CREDENTIALS_AVAILABLE","priority":"P1","scope":"AEC model conversion, property extraction, viewer, data exchange and automation"}
+    ]
+  },
+  "V0_connection_order": [
+    "meshy_image_to_3d_api",
+    "bimobject_developer_api",
+    "icecat_mcp_api",
+    "gs1_verified",
+    "aliexpress_open_platform",
+    "woocommerce",
+    "dhl_express_mydhl",
+    "etim_api",
+    "ec3_openepd_api"
+  ],
+  "freeze_rule": "After this census, do not search broadly for more APIs. Only investigate a new source when an active Product Twin category/identity/geometry/logistics gap cannot be solved by the sources listed here."
+}
