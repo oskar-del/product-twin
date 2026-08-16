@@ -1,0 +1,391 @@
+{
+  "generated_at": "2026-08-16T17:03:17.812Z",
+  "target_id": "HM_SAYL_FULLY_ADJUSTABLE_GLB_V0_1",
+  "status": "PUBLIC_UI_GLB_CAPTURED_REQUIRES_SCALE_RIGHTS_QA",
+  "manufacturer": "Herman Miller",
+  "product_family": "Sayl Chairs",
+  "public_ui": {
+    "initial_url": "https://3d-configurator.vercel.app/iframe/5b218f84-aa9c-4cd6-a668-2255a5e18bd5",
+    "final_url": "https://3d-configurator.vercel.app/iframe/5b218f84-aa9c-4cd6-a668-2255a5e18bd5",
+    "configurator_attributes_initial": [],
+    "configurator_attributes_final": [],
+    "download_control_found": false,
+    "initial_visible_controls": [],
+    "post_download_menu_controls": []
+  },
+  "asset": {
+    "runtime_path": ".runtime/herman-miller-sayl/sayl-configured.glb",
+    "bytes": 138048,
+    "sha256": "5db7a3df678f1c7a4f71107b97c50dcb497c66c67492ec16ca1f9c7cbb7b21b9",
+    "glb_magic_valid": true
+  },
+  "network_signals": [
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/MxtHermanMillerKongfigurator-9.7.1-build.7.css",
+      "status": 200,
+      "content_type": "text/css"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/MxtHermanMillerKongfigurator-9.7.1-build.7.min.js",
+      "status": 200,
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/babylonjs/v7.32.5/manifold.js",
+      "status": 200,
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/babylonjs/v7.32.5/manifold.wasm",
+      "status": 200,
+      "content_type": "application/wasm"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/851-9.7.1-build.7.min.js",
+      "status": 200,
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/activity_monitor_worker-9.7.1-build.7.min.js",
+      "status": 200,
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://discovery-service.3dcloud.io/api/sd/v1/register?key=AIzaSyD_I8oICoFXmRqyvnEdvcETkEFpsUJGbP0",
+      "status": 200,
+      "content_type": "text/html"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en/mxt-spins-common.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en/mxt-ui-utility.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en/mxt-3d-spins.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en/mxt-kongfigurator.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en/custom.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en/mxt-js-renderer-core.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en-us@posix/mxt-3d-spins.json",
+      "status": 404,
+      "content_type": "application/xml; charset=UTF-8"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en-us@posix/mxt-spins-common.json",
+      "status": 404,
+      "content_type": "application/xml; charset=UTF-8"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en-us@posix/custom.json",
+      "status": 404,
+      "content_type": "application/xml; charset=UTF-8"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en-us@posix/mxt-ui-utility.json",
+      "status": 404,
+      "content_type": "application/xml; charset=UTF-8"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en-us@posix/mxt-js-renderer-core.json",
+      "status": 404,
+      "content_type": "application/xml; charset=UTF-8"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/locales/en-us@posix/mxt-kongfigurator.json",
+      "status": 404,
+      "content_type": "application/xml; charset=UTF-8"
+    },
+    {
+      "url": "https://assets.3dcloud.io/production/manifest/000030.manifest",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://assets.3dcloud.io/production/client_app_config/000030/20240808195229210.json",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://assets.3dcloud.io/production/catalog/NILCAT/4.4/000030-product-20260625134515507.db.gz",
+      "status": 200,
+      "content_type": "application/x-gzip"
+    },
+    {
+      "url": "https://assets.3dcloud.io/production/catalog/NILCAT/4.4/000030-app-content-20260625134515507.db.gz",
+      "status": 200,
+      "content_type": "application/x-gzip"
+    },
+    {
+      "url": "https://assets.3dcloud.io/production/catalog/METACAT/1.0/000030-20260625134509119.db.zip",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/jszip-9.7.1-build.7.min.js",
+      "status": 200,
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/sql-wasm.wasm",
+      "status": 200,
+      "content_type": "application/wasm"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/534-9.7.1-build.7.css",
+      "status": 200,
+      "content_type": "text/css"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/534-9.7.1-build.7.min.js",
+      "status": 200,
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/267-9.7.1-build.7.min.js",
+      "status": 200,
+      "content_type": "text/javascript"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/Icons-Misc-ClearText.796e22779e0b0c66b6a0.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/Icons-Misc-Close.1d2dbad849995ade7fff.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_standard.vertex.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_grassPlane.vertex.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_reflectionProbeBlurLOD2.vertex.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_reflectionProbe.vertex.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_shadowPlane.vertex.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_reflectionProbeBlur.vertex.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://assets.3dcloud.io/production/kongfigurator/000030/manifest.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_standard.fragment.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_grassPlane.fragment.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_reflectionProbe.fragment.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_reflectionProbeBlurLOD2.fragment.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_shadowPlane.fragment.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/mxt-3d-spin-viewer/9.7.0/mxt_reflectionProbeBlur.fragment.fx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/MXT_Default_4x4_Tex.0cdc9c752096eac2aa21.png",
+      "status": 200,
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://assets.3dcloud.io/production/hotspots/MXT_Hotspot_InfoIcon.glb",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/Icons-Misc-Alert.24d81e71f70089ff2966.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/export.91532d1852cd00187064.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/Icons-AI-Close.7fe9f4bde1512f8b3844.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/AI-Button.0871f9d4f882f8961721.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/icons-misc-share.151bd91cbaff3c2fa46c.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/icons-view-views.aee712dda7f35ce32c5d.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/icons-misc-hotspot-active.ea835b53ca59efd89370.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/3d-cloud-icon.0c5a536caff186184dd0.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/Icons-AR.b1854eff5baf101cdd45.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/icons-loading-spinner.f0f3e422b5e6a5c38216.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/Icons-AR-Inverse.ff40e93e032cb49149f3.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/icons-misc-dimensions.517224cd7ac52c31d71c.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/Icons-Misc-ChevronLeft.ed044e6a5dd892779abf.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/Icons-Misc-Close.01cc5b4df2c4912e132e.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/Icons-Misc-ChevronRight.e70a94041534e3702c4a.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/expand.58432096a5b475b5d892.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/Icons-Misc-Download.b2803eb2e0ae4ac0fdde.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/view-in-ar.cd89fa9f4a36f7b846f3.png",
+      "status": 200,
+      "content_type": "image/png"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/leftClick.bc73fe448f2ec7bb4888.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/rightClick.a15fdc626384716b9d89.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://cdn.3dcloud.io/hermanmiller-kongfigurator-frontend/9.7.1-build.7/images/scrollToZoom.6d737b551e1c9b31e504.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://zuul-r2.3dcloud.io/api/storage/v1/assets/?type=product-superset&path=manifest.json",
+      "status": 404,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://analytics.3dcloud.io/api/analytics/v3/events?key=AIzaSyD_I8oICoFXmRqyvnEdvcETkEFpsUJGbP0",
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8"
+    },
+    {
+      "url": "https://assets.3dcloud.io/production/kongfigurator/000030/5b218f84-aa9c-4cd6-a668-2255a5e18bd5/20260310194458.json",
+      "status": 200,
+      "content_type": "application/json"
+    }
+  ],
+  "rights": {
+    "render_workflow_supported_by_manufacturer": true,
+    "asset_storage": "ephemeral_only",
+    "redistribution": "review",
+    "derivative": "review"
+  },
+  "promotion": {
+    "current_level": "G0",
+    "maximum_before_scale_validation": "G2",
+    "exact_claim_allowed": false,
+    "blockers": [
+      "validate asset bounds/scale and selected configuration identity",
+      "confirm derivative/storage/redistribution terms before persistent asset handling",
+      "join selected manufacturer configuration to live commerce/RFQ"
+    ]
+  },
+  "policy": "The script interacts only with Herman Miller’s public configurator UI. Captured manufacturer binary remains in ephemeral CI runtime and is never committed."
+}
