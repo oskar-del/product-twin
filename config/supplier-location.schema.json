@@ -1,0 +1,48 @@
+{
+  "version": "0.1",
+  "purpose": "Represent where a product offer can physically originate, with evidence and precision separate from merchant legal identity.",
+  "supplier_location": {
+    "supplier_id": "string",
+    "merchant_or_supplier_name": "string|null",
+    "merchant_domain": "string|null",
+    "location_id": "string",
+    "location_type": "factory | warehouse | distributor | dealer | store | batching_plant | nursery | unknown",
+    "role": "fulfillment_origin | pickup | service_area_anchor | manufacturer_origin | legal_hq",
+    "address": {
+      "street": "string|null",
+      "postal_code": "string|null",
+      "municipality": "string|null",
+      "province": "string|null",
+      "region": "string|null",
+      "country": "ISO-3166 alpha-2|null",
+      "lat": "number|null",
+      "lon": "number|null"
+    },
+    "precision": "exact | postcode | city | province | region | country | unknown",
+    "verification": {
+      "status": "verified | likely | inferred | unknown",
+      "source_type": "merchant_api | manufacturer | distributor | carrier | public_business_record | merchant_website | catalog_filter | manual | unknown",
+      "evidence_uri": "string|null",
+      "verified_at": "ISO-8601|null"
+    },
+    "service": {
+      "ships_to_countries": "array",
+      "ships_to_regions": "array",
+      "ships_to_postcodes": "array",
+      "delivery_radius_km": "number|null",
+      "pickup_available": "boolean|null",
+      "installation_available": "boolean|null"
+    },
+    "project_relation": {
+      "distance_km": "number|null",
+      "tier": "local | regional | national | eu | global | unknown",
+      "within_project_local_radius": "boolean|null"
+    }
+  },
+  "principles": [
+    "Merchant HQ is not assumed to be fulfillment origin.",
+    "A Shopify ships_from country filter verifies country-level origin only; it does not establish city, warehouse, or project distance.",
+    "Distance ranking requires a geocoded fulfillment, factory, dealer, or distributor location with evidence.",
+    "Concrete and other radius-bound products may rank from batching plant/service-area location rather than merchant headquarters."
+  ]
+}
