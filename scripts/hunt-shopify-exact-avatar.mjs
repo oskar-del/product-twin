@@ -6,11 +6,21 @@ const ROOT=process.cwd();
 const ENDPOINT='https://catalog.shopify.com/api/ucp/mcp';
 const PROFILE='https://shopify.dev/ucp/agent-profiles/2026-04-08/valid-with-capabilities.json';
 const config=JSON.parse(await fs.readFile(path.join(ROOT,'config/geometry/exact-avatar-targets.json'),'utf8'));
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 
-async function callSearch(query){
-  const res=await fetch(ENDPOINT,{method:'POST',headers:{'content-type':'application/json','user-agent':'product-twin-exact-avatar-hunt/0.1'},body:JSON.stringify({jsonrpc:'2.0',id:crypto.randomUUID(),method:'tools/call',params:{name:'search_catalog',arguments:{meta:{'ucp-agent':{profile:PROFILE}},catalog:{query,filters:{ships_to:{country:'ES'},available:true},context:{address_country:'ES',currency:'EUR',intent:'Resolve exact manufacturer/model identity for Product Twin avatar'},pagination:{limit:50}}}}})});
+async function callSearch(query,attempt=1){
+  const res=await fetch(ENDPOINT,{method:'POST',headers:{'content-type':'application/json','user-agent':'product-twin-exact-avatar-hunt/0.2'},body:JSON.stringify({jsonrpc:'2.0',id:crypto.randomUUID(),method:'tools/call',params:{name:'search_catalog',arguments:{meta:{'ucp-agent':{profile:PROFILE}},catalog:{query,filters:{ships_to:{country:'ES'},available:true},context:{address_country:'ES',currency:'EUR',intent:'Resolve exact manufacturer/model identity for Product Twin avatar'},pagination:{limit:50}}}}})});
   const text=await res.text();
-  if(!res.ok) throw new Error(`search_catalog ${res.status}: ${text.slice(0,700)}`);
+  if(!res.ok){
+    if(attempt<6&&[429,500,502,503,504].includes(res.status)){
+      const retryAfter=Number(res.headers.get('retry-after'));
+      const wait=Number.isFinite(retryAfter)&&retryAfter>0?retryAfter*1000:Math.min(30000,1500*attempt*attempt+Math.floor(Math.random()*750));
+      console.log(`Shopify ${res.status} for ${query}; retry ${attempt}/5 in ${wait}ms`);
+      await sleep(wait);
+      return callSearch(query,attempt+1);
+    }
+    throw new Error(`search_catalog ${res.status}: ${text.slice(0,700)}`);
+  }
   const json=JSON.parse(text);if(json.error)throw new Error(JSON.stringify(json.error));
   return json.result?.structuredContent??json.result;
 }
@@ -18,19 +28,22 @@ async function callSearch(query){
 function flatText(p){return [p.title,p.description,...(p.variants??[]).flatMap(v=>[v.title,v.sku])].filter(Boolean).join(' ').toLowerCase()}
 function score(target,p){
   const t=flatText(p); let s=0; const reasons=[];
-  const m=target.manufacturer.toLowerCase(); const fam=target.product_family.toLowerCase(); const model=target.model.toLowerCase();
-  if(t.includes(m)){s+=0.25;reasons.push('manufacturer_name')}
-  if(t.includes(fam)){s+=0.25;reasons.push('family_name')}
-  if(t.includes(model)){s+=0.2;reasons.push('model_name')}
+  const m=String(target.manufacturer??'').toLowerCase(); const fam=String(target.product_family??'').toLowerCase(); const model=String(target.model??'').toLowerCase();
+  if(m&&t.includes(m)){s+=0.25;reasons.push('manufacturer_name')}
+  if(fam&&t.includes(fam)){s+=0.25;reasons.push('family_name')}
+  if(model&&t.includes(model)){s+=0.2;reasons.push('model_name')}
   for(const v of p.variants??[]){
     const sku=String(v.sku??'').toLowerCase();
-    if(sku && sku===String(target.manufacturer_item_no??'').toLowerCase()){s+=0.25;reasons.push('exact_manufacturer_item_no')}
-    if(sku && sku===String(target.gtin_ean??'').toLowerCase()){s+=0.3;reasons.push('sku_equals_gtin')}
+    const item=String(target.manufacturer_item_no??'').toLowerCase();
+    const gtin=String(target.gtin_ean??'').toLowerCase();
+    if(sku&&item&&sku===item){s+=0.25;reasons.push('exact_manufacturer_item_no')}
+    if(sku&&gtin&&sku===gtin){s+=0.3;reasons.push('sku_equals_gtin')}
   }
   return {score:Math.min(1,s),reasons:[...new Set(reasons)]};
 }
 function bestVariant(p,target){
-  const exact=(p.variants??[]).find(v=>[target.manufacturer_item_no,target.gtin_ean].filter(Boolean).includes(String(v.sku??'')));
+  const ids=[target.manufacturer_item_no,target.old_item_no,target.gtin_ean].filter(Boolean).map(String);
+  const exact=(p.variants??[]).find(v=>ids.includes(String(v.sku??'')));
   return exact??(p.variants??[]).find(v=>v.availability?.available!==false)??p.variants?.[0]??null;
 }
 
@@ -46,6 +59,7 @@ for(const target of config.targets??[]){
       if(!existing||sc.score>existing.match.score)seen.set(id,{p,match:sc,queries:[q]});
       else existing.queries.push(q);
     }
+    await sleep(700);
   }
   const ranked=[...seen.values()].sort((a,b)=>b.match.score-a.match.score).slice(0,10);
   const refs=ranked.map(({p,match,queries})=>{
