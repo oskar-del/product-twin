@@ -1,0 +1,43 @@
+{
+  "version": "0.1",
+  "target_id": "GF_SANIPEX_MT_1158140_G4_V0_1",
+  "category_id": "PLUMBING.FITTINGS",
+  "type": "system_component",
+  "manufacturer_group": "GF Building Flow Solutions / Uponor",
+  "brand": "GF JRG Sanipex MT",
+  "model": "Adapter JRG Sanipex d16",
+  "manufacturer_part_no": "1158140",
+  "gf_item_no": "351616990",
+  "ean": "7613263030184",
+  "gtin14": "07613263030184",
+  "etim_class": "EC003024",
+  "product_page": "https://www.uponor.com/en-gb/s/gf-jrg-sanipex-mt-adapter-d16-1158140",
+  "bim_page": "https://bim.uponor.com/BLDE/DE/de_DE/library/product/GF_Adapter_SanipexMT_Sanipex?path=%2Fmaster%2FOneBFS_Cat_Hot_Cold_Water_Supply%2FOneBFS_Sys_Composite_Plumbing_Systems%2FOneBFS_PrG_Sanipex_MT%2FSanipex_MT%2FGF_Adapter_SanipexMT_Sanipex",
+  "physical": {
+    "weight_kg": 0.06,
+    "unit_envelope_mm": {"length":45,"width":25,"height":25},
+    "measurements_mm": {"l1":54,"z1":34,"inner_diameter":16,"z_d2":12},
+    "scale_qa_rule": "two short bounding-box axes should be near 25 mm; long axis should fall within 45-56 mm. Internal/connector geometry must remain consistent with d16 identity."
+  },
+  "interface_model": {
+    "component_type": "IfcPipeFittingType",
+    "nominal_system": "JRG Sanipex MT",
+    "nominal_diameter_mm": 16,
+    "connection_role": "adapter",
+    "etim_class": "EC003024"
+  },
+  "geometry": {
+    "target_level": "G4",
+    "official_formats": ["RFA","DWG2D","DWG3D","DXF","IFC","SAT","FBX","OBJ"],
+    "preferred_runtime_source": "OBJ",
+    "preferred_bim_source": "IFC_or_RFA",
+    "persistence_policy": "manufacturer_binary_ephemeral_until_rights_review"
+  },
+  "promotion_blockers": [
+    "capture exact 1158140 product-bound geometry",
+    "scale QA",
+    "validate BIM identity/interface metadata",
+    "confirm Product Twin persistent storage/render/derivative rights",
+    "resolve Spain/EU live offer or RFQ"
+  ]
+}
