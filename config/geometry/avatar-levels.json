@@ -1,0 +1,45 @@
+{
+  "version": "0.1",
+  "principle": "A Product Twin avatar is not always a mesh. Objects, materials and configurable systems require different digital representations.",
+  "avatar_types": {
+    "object": {
+      "examples": ["sofa", "pump", "inverter", "tap", "luminaire", "appliance"],
+      "preferred_representation": ["GLB", "glTF", "USDZ"],
+      "secondary_representation": ["STEP", "DWG", "SKP", "RFA", "IFC"],
+      "placement_model": "rigid_transform"
+    },
+    "material": {
+      "examples": ["SPC flooring", "PVC marble sheet", "WPC wall panel", "flexible stone", "tile", "paint", "fabric"],
+      "preferred_representation": ["PBR material set", "real-world scale texture", "normal", "roughness", "displacement where relevant"],
+      "required_physical_metadata": ["thickness", "module_or_sheet_size", "joint_or_repeat", "installation_system"],
+      "placement_model": "surface_application"
+    },
+    "system": {
+      "examples": ["prefab house", "window system", "kitchen", "bathroom pod", "facade system", "MEP rack"],
+      "preferred_representation": ["parametric assembly", "IFC", "BIM family", "configurator output", "GLB preview"],
+      "required_constraints": ["allowed dimensions", "connection rules", "configuration options", "structural_or_MEP interfaces"],
+      "placement_model": "parametric_assembly"
+    }
+  },
+  "geometry_levels": [
+    {"id":"G0","name":"Identity only","description":"No geometry. Product exists only as canonical identity + evidence/offers.","render_ready":false,"design_use":"catalogue/search only"},
+    {"id":"G1","name":"Bounding proxy","description":"Verified real-world envelope, dimensions, clearance and anchor/pivot. Simple parametric proxy.","render_ready":false,"design_use":"space planning and clash checks"},
+    {"id":"G2","name":"Design proxy","description":"Recognizable low-detail geometry or material representation with verified physical scale and key interfaces.","render_ready":true,"design_use":"interactive design, early visualization"},
+    {"id":"G3","name":"Render avatar","description":"Render-grade geometry/materials with PBR, correct scale, variants and approved visual likeness.","render_ready":true,"design_use":"photoreal visualization and shoppable scenes"},
+    {"id":"G4","name":"Specification/BIM avatar","description":"Engineering/specification-grade interfaces, BIM/CAD metadata, clearances and configuration data.","render_ready":true,"design_use":"coordination, specification, quantity takeoff"},
+    {"id":"G5","name":"Manufacturing/configuration twin","description":"Manufacturer/configurator-authoritative digital model capable of producing valid configured outputs or manufacturing data.","render_ready":true,"design_use":"configured procurement / manufacture"}
+  ],
+  "promotion_rules": {
+    "minimum_for_space_planning": ["verified_dimensions", "verified_units", "verified_orientation"],
+    "minimum_for_render": ["G2_or_higher", "render_usage_rights"],
+    "minimum_for_exact_product_claim": ["verified_canonical_identity", "manufacturer_or_authorized_geometry_match"],
+    "minimum_for_bim_coordination": ["G4_or_higher", "technical_evidence_verified"]
+  },
+  "generation_policy": {
+    "manufacturer_geometry": "preferred",
+    "licensed_bim_or_cad": "preferred",
+    "merchant_model3d": "use when identity and rights are verified",
+    "ai_reconstruction": "allowed only as a non-authoritative visual proxy until exact dimensions and likeness are verified",
+    "generic_proxy": "allowed for design planning but must never be presented as the exact purchasable product"
+  }
+}
