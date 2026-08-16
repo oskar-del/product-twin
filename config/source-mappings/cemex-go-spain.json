@@ -1,0 +1,73 @@
+{
+  "source_id": "cemex_go_es",
+  "name": "CEMEX Spain / CEMEX Go",
+  "source_type": "manufacturer_trade_portal",
+  "operator": "CEMEX España Operaciones",
+  "territories": ["ES"],
+  "authentication": {
+    "public_product_families": "none",
+    "quote_request": "none_or_contact_form",
+    "pricing": "account_or_quote",
+    "ordering": "account",
+    "invoice": "account",
+    "delivery_tracking": "account",
+    "api_integration": "customer_registration_and_developer_access"
+  },
+  "capabilities": {
+    "identity": true,
+    "technical_evidence": true,
+    "geometry": false,
+    "bim": false,
+    "live_price": true,
+    "live_stock": false,
+    "cart": false,
+    "order": true,
+    "quote": true,
+    "invoice": true,
+    "delivery_tracking": true,
+    "physical_locations": true,
+    "gps_delivery_tracking": true,
+    "digital_delivery_tickets": true,
+    "system_api_integration": true,
+    "configured_product": true
+  },
+  "access_state": {
+    "product_twin_credentials_connected": false,
+    "public_product_family_information_usable": true,
+    "trade_commerce_state": "ACCOUNT_OR_QUOTE_REQUIRED",
+    "developer_api_state": "REGISTRATION_REQUIRED"
+  },
+  "taxonomy_mappings": [
+    {"category_id":"STRUCTURE.CONCRETE","fitness":"primary"}
+  ],
+  "procurement_model": {
+    "product_type":"configured_material",
+    "pricing_mode":"rfq_or_negotiated_trade_price",
+    "order_unit":"m3",
+    "delivery_mode":"mixer_truck",
+    "quote_inputs":["project/site address","postal code","concrete/product requirement","quantity_m3","estimated delivery date"],
+    "order_management":["negotiated pricing/agreement","active jobsites","product + quantity","order confirmation"],
+    "logistics_management":["real-time order status","GPS delivery tracking","order changes","electronic delivery ticket"],
+    "document_management":["invoices","delivery tickets","historical transaction documentation"]
+  },
+  "location_resolution": {
+    "mode":"nearest_batching_plant_or_servicing_plant",
+    "source":"CEMEX Spain plant locator / commercial quote routing",
+    "project_specific":true,
+    "current_project_state":"PLANT_UNRESOLVED",
+    "principle":"Do not use corporate headquarters as concrete origin; rank the actual batching/servicing plant that can deliver the engineered mix to the project site."
+  },
+  "known_product_families": [
+    {"family":"Standard / project-designed ready-mix concrete","category_id":"STRUCTURE.CONCRETE","configuration":"project mix design"},
+    {"family":"Vertua","category_id":"STRUCTURE.CONCRETE","configuration":"low-carbon concrete family; exact mix and declared performance project-specific"},
+    {"family":"Evolution","category_id":"STRUCTURE.CONCRETE","configuration":"self-compacting / architectural concrete family; exact structural mix project-specific"},
+    {"family":"Fibermix","category_id":"STRUCTURE.CONCRETE","configuration":"fiber-reinforced concrete family; exact mix project-specific"}
+  ],
+  "refresh_policy":"live_or_quote",
+  "notes":[
+    "CEMEX Spain states that ready-mix is produced in certified plants and distributed by truck, with custom mix design available for project requirements.",
+    "CEMEX Go supports negotiated commercial terms, ordering, real-time delivery tracking, electronic delivery documentation and invoices for customers.",
+    "CEMEX Go Developer Center advertises API/system integration for customer operations.",
+    "A concrete Product Twin is normally a configured material tied to project specification, batching plant, quantity, pour schedule and quote rather than a fixed global SKU."
+  ]
+}
