@@ -1,0 +1,48 @@
+name: Product Twin Source Coverage
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/source-coverage.yml"
+      - "config/source-mappings/**"
+      - "config/taxonomy.json"
+      - "config/taxonomy-energy-extension.json"
+      - "data/evidence/manufacturer/**"
+      - "scripts/build-source-coverage.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-source-coverage
+  cancel-in-progress: true
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Build source-neutral coverage matrix
+        run: npm run coverage:sources
+      - name: Commit coverage matrix
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/coverage/source-matrix.json
+          if git diff --cached --quiet; then
+            echo "No coverage changes."
+            exit 0
+          fi
+          git commit -m "data: refresh multi-source Product Twin coverage"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
