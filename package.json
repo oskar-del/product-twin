@@ -1,12 +1,13 @@
 {
   "name": "product-twin",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "engines": {"node": ">=22"},
   "scripts": {
     "ingest:shopify": "node scripts/shopify-ingest.mjs",
     "triage:shopify": "node scripts/shopify-triage.mjs",
+    "coverage": "node scripts/build-coverage.mjs",
     "summarize": "node scripts/summarize.mjs"
   }
 }
