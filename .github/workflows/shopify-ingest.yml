@@ -36,6 +36,9 @@ jobs:
       - name: Pull Shopify Global Catalog
         run: npm run ingest:shopify
 
+      - name: Triage Twin Candidates
+        run: npm run triage:shopify
+
       - name: Show summary
         run: npm run summarize
 
@@ -48,5 +51,5 @@ jobs:
             echo "No catalogue changes."
             exit 0
           fi
-          git commit -m "data: refresh Shopify Twin Candidates"
+          git commit -m "data: refresh and triage Shopify Twin Candidates"
           git push
