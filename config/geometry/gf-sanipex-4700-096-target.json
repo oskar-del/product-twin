@@ -1,0 +1,33 @@
+{
+  "version": "0.1",
+  "target_id": "GF_SANIPEX_MT_4700_096_G4_V0_1",
+  "category_id": "PLUMBING.FITTINGS",
+  "type": "system_component",
+  "manufacturer": "GF Piping Systems",
+  "brand_family": "JRG Sanipex MT",
+  "model": "Transition union gunmetal 4700.096",
+  "manufacturer_code": "4700.096",
+  "manufacturer_page": "https://www.gfps.com/en-in/products-solutions.catalog.html/fittings/adapters-transitions/~108188/4700.096.html",
+  "manufacturer_spec": {
+    "d_mm": 16,
+    "connection_gn_inch": "1/2",
+    "dimensions_mm": {"l1":43.0,"l2":6.0,"l3":37.0,"z1":16.5,"hex":27.0}
+  },
+  "interface_model": {
+    "side_a": {"type":"JRG_Sanipex_MT","nominal_diameter_mm":16},
+    "side_b": {"type":"thread","nominal":"G 1/2"},
+    "design_role": "transition_union"
+  },
+  "geometry_target": {
+    "target_level": "G4",
+    "preferred_formats": ["IFC","RFA","OBJ","DWG3D","SAT"],
+    "source": "manufacturer CAD/BIM controls on exact product page",
+    "persistence_policy": "binary_ephemeral_until_rights_review"
+  },
+  "promotion_blockers": [
+    "capture product-bound manufacturer CAD/BIM asset",
+    "validate dimensions and connection interface against manufacturer spec",
+    "confirm persistent-storage/derivative/render rights",
+    "resolve Spain/EU procurement route"
+  ]
+}
