@@ -1,0 +1,44 @@
+name: Probe GS1 Global Resolver
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/probe-gs1-resolver.mjs'
+      - '.github/workflows/gs1-resolver-probe.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-gs1-resolver-probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Probe neutral GS1 resolver
+        run: node scripts/probe-gs1-resolver.mjs
+      - name: Commit minimal resolver evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/identity/gs1-resolver-latest.json data/metrics/gs1-resolver-latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "data: record GS1 resolver probe"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt*3))
+          done
+          exit 1
