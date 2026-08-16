@@ -1,0 +1,108 @@
+{
+  "source_id": "fluidra_pro_es",
+  "name": "Fluidra PRO Spain",
+  "source_type": "trade_portal",
+  "operator": "Fluidra Comercial España",
+  "territories": ["ES"],
+  "authentication": {
+    "catalog": "none",
+    "technical_documents": "none_or_account_depending_document",
+    "pricing": "account",
+    "stock": "account",
+    "ordering": "account",
+    "invoice": "account",
+    "delivery_tracking": "account"
+  },
+  "capabilities": {
+    "identity": true,
+    "technical_evidence": true,
+    "geometry": false,
+    "bim": false,
+    "live_price": true,
+    "live_stock": true,
+    "cart": true,
+    "order": true,
+    "quote": true,
+    "invoice": true,
+    "delivery_tracking": true,
+    "physical_locations": true,
+    "quick_order_by_sku_quantity": true
+  },
+  "access_state": {
+    "product_twin_credentials_connected": false,
+    "public_catalog_usable": true,
+    "trade_commerce_state": "ACCOUNT_REQUIRED"
+  },
+  "commerce_policy": {
+    "ship_to": ["Spain mainland", "Balearic Islands", "Canary Islands"],
+    "delivery_method": "Standard",
+    "lead_time_rule": "depends on stock availability and delivery address",
+    "price_and_stock_visibility": "Fluidra Comercial España client account required"
+  },
+  "taxonomy_mappings": [
+    {"category_id":"POOL.PUMPS","fitness":"primary"},
+    {"category_id":"POOL.PIPE","fitness":"primary"},
+    {"category_id":"POOL.FITTINGS","fitness":"primary"},
+    {"category_id":"POOL.FILTRATION","fitness":"primary"},
+    {"category_id":"POOL.TREATMENT","fitness":"primary"},
+    {"category_id":"POOL.HEATING","fitness":"primary"},
+    {"category_id":"POOL.LIGHTING","fitness":"primary"},
+    {"category_id":"POOL.COVERS","fitness":"primary"},
+    {"category_id":"POOL.SPAS","fitness":"secondary"},
+    {"category_id":"POOL.WATER_FEATURES","fitness":"secondary"}
+  ],
+  "known_product_references": [
+    {
+      "category_id":"POOL.PUMPS",
+      "manufacturer":"AstralPool / Fluidra",
+      "external_id":"67547",
+      "description":"Victoria Plus Silent VS - 1 CV",
+      "public_identity_status":"verified",
+      "trade_price_stock_status":"ACCOUNT_REQUIRED"
+    },
+    {
+      "category_id":"POOL.PUMPS",
+      "manufacturer":"AstralPool / Fluidra",
+      "external_id":"67548",
+      "description":"Victoria Plus Silent VS - 2 CV",
+      "public_identity_status":"verified",
+      "trade_price_stock_status":"ACCOUNT_REQUIRED"
+    }
+  ],
+  "locations": [
+    {
+      "location_id":"FLUIDRA_PRO_MALAGA",
+      "name":"Pro Center Málaga",
+      "location_type":"distributor",
+      "role":"pickup_and_service_area_anchor",
+      "address": {
+        "street":"C/ París 39",
+        "postal_code":"29006",
+        "municipality":"Málaga",
+        "province":"Málaga",
+        "region":"Andalucía",
+        "country":"ES",
+        "lat":null,
+        "lon":null
+      },
+      "precision":"street_address",
+      "verification": {
+        "status":"verified",
+        "source_type":"manufacturer_trade_portal",
+        "verified_at":"2026-08-16"
+      },
+      "project_relation": {
+        "distance_km":null,
+        "tier":"regional",
+        "within_project_local_radius":null,
+        "distance_status":"GEOCODE_REQUIRED"
+      }
+    }
+  ],
+  "refresh_policy": "live",
+  "notes": [
+    "Fluidra PRO states that registered trade customers can buy with their commercial conditions, consult stock and product documentation, manage orders and invoices, review delivery status and create customer quotes.",
+    "Public pages establish product identity and professional-channel capability; Product Twin must not claim a live trade price or stock quantity until an authenticated account or authorized feed resolves it.",
+    "The Málaga PRO Center is a verified physical service/pickup node, not automatically the fulfillment origin for every order."
+  ]
+}
