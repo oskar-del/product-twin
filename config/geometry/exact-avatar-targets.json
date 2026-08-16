@@ -1,0 +1,33 @@
+{
+  "version": "0.1",
+  "targets": [
+    {
+      "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
+      "category_id": "FFE.SEATING.SOFA",
+      "manufacturer": "Muuto",
+      "product_family": "Outline Sofa",
+      "model": "Outline Sofa 2-Seater",
+      "manufacturer_item_no": "OU2SRA10101",
+      "old_item_no": "27003-COGN",
+      "gtin_ean": "5713222210793",
+      "configuration": "Refine Leather Cognac / Black, standard base",
+      "dimensions_mm": {"width":1700,"depth":840,"height":710,"seat_height":400,"seat_depth":620},
+      "packaging": {"length_mm":1740,"width_mm":870,"height_mm":440,"gross_weight_kg":45,"net_weight_kg":42,"colli":1},
+      "manufacturer_geometry": {
+        "source_page": "https://www.muuto.com/product/Outline-Sofa-2-Seater--OU2S/OU2SRA10101/?configure=true",
+        "download_hub": "https://download.muuto.com/digitalshowroom/",
+        "available_formats_confirmed_by_manufacturer_faq": ["DWG","3DS","OBJ","SketchUp","Revit"],
+        "geometry_state": "manufacturer_exact_candidate",
+        "space_planning_use_state": "manufacturer_provided_for_architect_files",
+        "redistribution_state": "review",
+        "conversion_state": "OBJ_to_GLB_pending_asset_access"
+      },
+      "commerce_hunt_queries": ["Muuto Outline Sofa 2-Seater","OU2SRA10101","5713222210793","Muuto Outline 2 Seater"],
+      "promotion": {
+        "current_level": "G0",
+        "target_level": "G3",
+        "blockers": ["download exact OBJ/3D asset through manufacturer channel", "validate model dimensions", "resolve usage rights for Product Twin rendering", "find live offer/RFQ and verify exact identity"]
+      }
+    }
+  ]
+}
