@@ -9,107 +9,17 @@
     {"id":"ES-MA-MARBELLA","name":"Marbella","level":"municipality","parent":"ES-MA"}
   ],
   "official_sources": [
-    {
-      "source_id":"EU.CPR",
-      "authority":"European Commission",
-      "title":"Construction Products Regulation",
-      "jurisdiction_id":"EU",
-      "rule_type":"market_access",
-      "official_url":"https://single-market-economy.ec.europa.eu/sectors/construction/construction-products-regulation-cpr_en",
-      "last_verified_at":"2026-08-16",
-      "scope_note":"Harmonised rules for marketing construction products; product performance evidence and CE marking where applicable."
-    },
-    {
-      "source_id":"ES.CTE",
-      "authority":"Gobierno de España / BOE",
-      "title":"Código Técnico de la Edificación (CTE)",
-      "jurisdiction_id":"ES",
-      "rule_type":"building_code",
-      "official_url":"https://www.boe.es/biblioteca_juridica/codigos/codigo.php?id=424",
-      "last_verified_at":"2026-08-16",
-      "scope_note":"National building requirements including safety, habitability and energy performance."
-    },
-    {
-      "source_id":"ES.REBT",
-      "authority":"Gobierno de España / BOE",
-      "title":"Reglamento Electrotécnico para Baja Tensión (REBT)",
-      "jurisdiction_id":"ES",
-      "rule_type":"installation",
-      "official_url":"https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099",
-      "last_verified_at":"2026-08-16",
-      "scope_note":"Low-voltage electrical installations and associated technical instructions."
-    },
-    {
-      "source_id":"ES.RITE",
-      "authority":"Ministerio para la Transición Ecológica y el Reto Demográfico",
-      "title":"Reglamento de Instalaciones Térmicas en los Edificios (RITE)",
-      "jurisdiction_id":"ES",
-      "rule_type":"installation",
-      "official_url":"https://www.miteco.gob.es/es/energia/eficiencia/rite.html",
-      "last_verified_at":"2026-08-16",
-      "scope_note":"Thermal installations for heating, cooling and domestic hot water, including energy-efficiency requirements."
-    },
-    {
-      "source_id":"ES.CTE.DBHE",
-      "authority":"Gobierno de España / BOE",
-      "title":"CTE DB HE - Ahorro de Energía",
-      "jurisdiction_id":"ES",
-      "rule_type":"energy_performance",
-      "official_url":"https://www.boe.es/buscar/act.php?id=BOE-A-2006-5515",
-      "last_verified_at":"2026-08-16",
-      "scope_note":"Basic energy-saving requirements vary with climate zone, building use and intervention scope."
-    },
-    {
-      "source_id":"ESAN.SOLAR.AUTOCONSUMO",
-      "authority":"Junta de Andalucía",
-      "title":"Autoconsumo - normativa y tramitación en Andalucía",
-      "jurisdiction_id":"ES-AN",
-      "rule_type":"permit_or_registration",
-      "official_url":"https://www.juntadeandalucia.es/organismos/industriaenergiayminas/areas/energia/autoconsumo.html",
-      "last_verified_at":"2026-08-16",
-      "scope_note":"Regional legalization/registration workflow for self-consumption installations and links to applicable national rules."
-    }
+    {"source_id":"EU.CPR","authority":"European Commission","title":"Construction Products Regulation","jurisdiction_id":"EU","rule_type":"market_access","official_url":"https://single-market-economy.ec.europa.eu/sectors/construction/construction-products-regulation-cpr_en","last_verified_at":"2026-08-16","scope_note":"Harmonised rules for marketing construction products; product performance evidence and CE marking where applicable."},
+    {"source_id":"ES.CTE","authority":"Gobierno de España / BOE","title":"Código Técnico de la Edificación (CTE)","jurisdiction_id":"ES","rule_type":"building_code","official_url":"https://www.boe.es/biblioteca_juridica/codigos/codigo.php?id=424","last_verified_at":"2026-08-16","scope_note":"National building requirements including safety, habitability and energy performance."},
+    {"source_id":"ES.REBT","authority":"Gobierno de España / BOE","title":"Reglamento Electrotécnico para Baja Tensión (REBT)","jurisdiction_id":"ES","rule_type":"installation","official_url":"https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099","last_verified_at":"2026-08-16","scope_note":"Low-voltage electrical installations and associated technical instructions."},
+    {"source_id":"ES.RITE","authority":"Ministerio para la Transición Ecológica y el Reto Demográfico","title":"Reglamento de Instalaciones Térmicas en los Edificios (RITE)","jurisdiction_id":"ES","rule_type":"installation","official_url":"https://www.miteco.gob.es/es/energia/eficiencia/rite.html","last_verified_at":"2026-08-16","scope_note":"Thermal installations for heating, cooling and domestic hot water, including energy-efficiency requirements."},
+    {"source_id":"ES.CTE.DBHE","authority":"Gobierno de España / BOE","title":"CTE DB HE - Ahorro de Energía","jurisdiction_id":"ES","rule_type":"energy_performance","official_url":"https://www.boe.es/buscar/act.php?id=BOE-A-2006-5515","last_verified_at":"2026-08-16","scope_note":"Basic energy-saving requirements vary with climate zone, building use and intervention scope."},
+    {"source_id":"ESAN.SOLAR.AUTOCONSUMO","authority":"Junta de Andalucía","title":"Autoconsumo - normativa y tramitación en Andalucía","jurisdiction_id":"ES-AN","rule_type":"permit_or_registration","official_url":"https://www.juntadeandalucia.es/organismos/industriaenergiayminas/areas/energia/autoconsumo.html","last_verified_at":"2026-08-16","scope_note":"Regional legalization/registration workflow for self-consumption installations and links to applicable national rules."}
   ],
   "seed_rules": [
-    {
-      "rule_id":"EU.CPR.EVIDENCE_REQUIRED_WHERE_APPLICABLE",
-      "source_id":"EU.CPR",
-      "jurisdiction_id":"EU",
-      "stage":"product_selection",
-      "category_ids":["STRUCTURE.*","ENVELOPE.*","FINISHES.*","OPENINGS.*"],
-      "decision_logic":"If a construction product falls within an applicable harmonised route, require the corresponding declared-performance / CE evidence before marking it compliant for the intended use.",
-      "required_evidence":["declaration_of_performance_or_applicable_conformity_evidence"],
-      "default_state":"HOLD"
-    },
-    {
-      "rule_id":"ES.ELECTRICAL.REBT_REVIEW",
-      "source_id":"ES.REBT",
-      "jurisdiction_id":"ES",
-      "stage":"installation",
-      "category_ids":["ELECTRICAL.*","ENERGY.SOLAR.*","ENERGY.BATTERY","ENERGY.EV_CHARGER"],
-      "decision_logic":"Electrical product suitability is not enough; installation design and execution must be checked against applicable REBT requirements and project conditions.",
-      "professional_signoff":true,
-      "default_state":"REVIEW"
-    },
-    {
-      "rule_id":"ES.THERMAL.RITE_REVIEW",
-      "source_id":"ES.RITE",
-      "jurisdiction_id":"ES",
-      "stage":"design",
-      "category_ids":["HVAC.*","ENERGY.HEAT_PUMP"],
-      "decision_logic":"Thermal equipment selection must be checked as part of a compliant thermal system, including energy-efficiency and control requirements.",
-      "professional_signoff":true,
-      "default_state":"REVIEW"
-    },
-    {
-      "rule_id":"ESAN.SOLAR.REGISTRATION_PATH",
-      "source_id":"ESAN.SOLAR.AUTOCONSUMO",
-      "jurisdiction_id":"ES-AN",
-      "stage":"connection",
-      "category_ids":["ENERGY.SOLAR.PANEL","ENERGY.SOLAR.INVERTER","ENERGY.BATTERY","ENERGY.SOLAR.BOS"],
-      "decision_logic":"A proposed self-consumption system must be routed through the applicable Andalusian legalization/registration path based on system configuration and installed capacity.",
-      "professional_signoff":true,
-      "default_state":"REVIEW"
-    }
+    {"rule_id":"EU.CPR.EVIDENCE_REQUIRED_WHERE_APPLICABLE","source_id":"EU.CPR","jurisdiction_id":"EU","stage":"product_selection","category_ids":["STRUCTURE.*","ENVELOPE.*","FINISHES.*","OPENINGS.*"],"decision_logic":"If a construction product falls within an applicable harmonised route, require the corresponding declared-performance / CE evidence before marking it compliant for the intended use.","required_evidence":["declaration_of_performance_or_applicable_conformity_evidence"],"default_state":"HOLD"},
+    {"rule_id":"ES.ELECTRICAL.REBT_REVIEW","source_id":"ES.REBT","jurisdiction_id":"ES","stage":"installation","category_ids":["ELECTRICAL.*","ENERGY.SOLAR.*","ENERGY.BATTERY","ENERGY.EV_CHARGER"],"decision_logic":"Electrical product suitability is not enough; installation design and execution must be checked against applicable REBT requirements and project conditions.","professional_signoff":true,"default_state":"REVIEW"},
+    {"rule_id":"ES.THERMAL.RITE_REVIEW","source_id":"ES.RITE","jurisdiction_id":"ES","stage":"design","category_ids":["HVAC.*"],"decision_logic":"Thermal equipment selection must be checked as part of a compliant thermal system, including energy-efficiency and control requirements.","professional_signoff":true,"default_state":"REVIEW"},
+    {"rule_id":"ESAN.SOLAR.REGISTRATION_PATH","source_id":"ESAN.SOLAR.AUTOCONSUMO","jurisdiction_id":"ES-AN","stage":"connection","category_ids":["ENERGY.SOLAR.PANEL","ENERGY.SOLAR.INVERTER","ENERGY.BATTERY","ENERGY.SOLAR.BOS"],"decision_logic":"A proposed self-consumption system must be routed through the applicable Andalusian legalization/registration path based on system configuration and installed capacity.","professional_signoff":true,"default_state":"REVIEW"}
   ]
 }
