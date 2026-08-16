@@ -1,17 +1,20 @@
 {
   "generated_at": "2026-08-16",
   "summary": {
-    "avatars": 3,
+    "promoted_avatars": 3,
+    "candidates": 1,
+    "indexed_total": 4,
     "G0": 0,
     "G1": 0,
     "G2": 3,
-    "G3": 0,
-    "G4": 0,
-    "G5": 0,
+    "G3_promoted": 0,
+    "G3_candidates": 1,
+    "G4_promoted": 0,
+    "G5_promoted": 0,
     "object_avatars": 2,
     "material_avatars": 1,
     "system_avatars": 0,
-    "exact_manufacturer_geometry": 0,
+    "exact_manufacturer_geometry_candidates": 1,
     "dimension_verified_proxies": 3
   },
   "avatars": [
@@ -20,6 +23,7 @@
       "category_id": "ENERGY.SOLAR.INVERTER",
       "type": "object",
       "level": "G2",
+      "promotion_state": "promoted_proxy",
       "asset_path": "data/geometry/avatars/huawei-sun2000-10ktl-m1-g2-proxy.glb",
       "identity": "manufacturer_verified",
       "scale": "verified",
@@ -31,6 +35,7 @@
       "category_id": "POOL.PUMPS",
       "type": "object",
       "level": "G2",
+      "promotion_state": "promoted_proxy",
       "asset_path": "data/geometry/avatars/astralpool-victoria-plus-silent-vs-67547-g2-proxy.glb",
       "identity": "manufacturer_verified",
       "scale": "manufacturer-dimensioned conservative envelope",
@@ -43,11 +48,35 @@
       "innovation_id": "INNOV.PVC_MARBLE_SHEET",
       "type": "material",
       "level": "G2",
+      "promotion_state": "promoted_proxy",
       "asset_path": "data/geometry/avatars/ecoplastic-uv-pvc-marble-sheet-1220x2440x3-g2-proxy.glb",
       "identity": "manufacturer-family verified",
       "scale": "verified 1220x2440mm module / 3mm selected thickness",
       "appearance": "neutral proxy; manufacturer decor not copied",
       "next_gate": "specific decor identity + authorized PBR texture + Spain/EU evidence"
+    }
+  ],
+  "candidates": [
+    {
+      "avatar_id": "ARPER_PLY_3853_G3_V0_1",
+      "category_id": "FFE.TABLE.SIDE",
+      "manufacturer": "Arper",
+      "model": "Ply Table 3853",
+      "type": "object",
+      "candidate_level": "G3",
+      "promotion_state": "candidate_rights_and_commerce_blocked",
+      "identity": "manufacturer article verified",
+      "geometry": "exact manufacturer 3DS converted transiently to GLB",
+      "scale": "PASS",
+      "expected_mm": [360, 540, 550],
+      "measured_mm": [360.0061869621277, 539.5571136474609, 549.3096351623535],
+      "max_relative_error": 0.0012552087957208807,
+      "source_asset_sha256": "056266beb2cbea1af1cc91bcab74dccb46620ebc55464276d1d22f90f8977e9a",
+      "persistent_binary": false,
+      "blockers": [
+        "confirm Product Twin render/derivative/persistent-storage rights",
+        "resolve exact live commerce or RFQ identity"
+      ]
     }
   ],
   "prefab_system_lead": {
