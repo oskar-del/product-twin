@@ -1,5 +1,5 @@
 
-> product-twin@1.0.0 context:test
+> product-twin@1.3.0 context:test
 > node scripts/project-context-resolve.mjs
 
 {
@@ -28,11 +28,20 @@
     "status": "provisional"
   },
   "climate": {
-    "cte_zone": null,
+    "cte_zone": "A3",
     "weather_dataset": null,
     "design_temperature_summer_c": null,
     "design_temperature_winter_c": null,
-    "status": "unresolved"
+    "status": "verified",
+    "cte_winter_zone": "A",
+    "cte_summer_zone": "3",
+    "elevation_m": 52,
+    "source": {
+      "authority": "Ministerio de Vivienda y Agenda Urbana / Código Técnico de la Edificación",
+      "document": "DB-HE Ahorro de energía - Anejo B Zonas climáticas",
+      "document_date": "2022-06-14",
+      "verified_at": "2026-08-16"
+    }
   },
   "solar": {
     "analysis_status": "verified",
@@ -51,7 +60,7 @@
     "source_evidence": {
       "authority": "European Commission Joint Research Centre",
       "service": "PVGIS",
-      "generated_at": "2026-08-16T02:56:03.427Z"
+      "generated_at": "2026-08-16T03:01:38.289Z"
     }
   },
   "electrical": {
@@ -79,8 +88,8 @@
     "max_lead_time_days": 90,
     "target_local_spend_percent": 60
   },
-  "context_version": "0.2",
-  "resolved_at": "2026-08-16T03:00:30.409Z",
+  "context_version": "0.3",
+  "resolved_at": "2026-08-16T03:07:30.137Z",
   "procurement_context": {
     "currency": "EUR",
     "destination": {
@@ -106,7 +115,7 @@
       "country": true,
       "postal_code": true,
       "jurisdiction": true,
-      "climate": false,
+      "climate": true,
       "solar": true,
       "electrical": true,
       "logistics": true,
@@ -117,9 +126,7 @@
     "ready_for_logistics_screen": true,
     "ready_for_solar_resource_screen": true,
     "ready_for_solar_product_sizing": true,
-    "ready_for_energy_code_screen": false,
-    "unresolved": [
-      "climate"
-    ]
+    "ready_for_energy_code_screen": true,
+    "unresolved": []
   }
 }
