@@ -1,0 +1,50 @@
+name: Project Procurement Routes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/procurement-routes.yml"
+      - "scripts/select-procurement-routes.mjs"
+      - "data/requirements/**"
+      - "data/references/**"
+      - "data/identity/**"
+      - "data/coverage/source-matrix.json"
+      - "data/tests/results/whole-building-10.latest.json"
+      - "config/source-mappings/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-procurement-routes
+  cancel-in-progress: true
+
+jobs:
+  route:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Select procurement routes
+        run: npm run procurement:routes
+      - name: Commit procurement routes
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/procurement
+          if git diff --cached --quiet; then
+            echo "No procurement-route changes."
+            exit 0
+          fi
+          git commit -m "data: refresh project procurement routes"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
