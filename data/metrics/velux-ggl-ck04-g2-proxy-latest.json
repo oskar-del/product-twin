@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-08-16T17:43:57.623588+00:00",
+  "target_id": "VELUX_GGL_CK04_G4_V0_1",
+  "avatar_id": "AVATAR_VELUX_GGL_CK04_G2_SYSTEM_PROXY",
+  "status": "G2_PROXY_SCALE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/velux-ggl-ck04-g2-system-proxy.glb",
+  "asset_bytes": 5964,
+  "verified_axes": {
+    "width_mm": 550.000011920929,
+    "height_mm": 977.9999852180481
+  },
+  "proxy_axis": {
+    "depth_mm": 55.50000071525574,
+    "reason": "product frame/profile depth not yet source-verified"
+  },
+  "expected": {
+    "outer_width_mm": 550,
+    "outer_height_mm": 978,
+    "opening_width_mm": 466,
+    "opening_height_mm": 899,
+    "visible_glazing_width_mm": 371,
+    "visible_glazing_height_mm": 783
+  },
+  "relative_error": {
+    "width": 2.1674416281960228e-08,
+    "height": 1.5114470249792306e-08
+  },
+  "disclosure": "Dimension-verified G2 system proxy. Width/height/opening/glazing envelopes are manufacturer-sourced; depth, frame profile and industrial-design details are simplified proxy geometry.",
+  "system_rules": {
+    "roof_pitch_deg": {
+      "min": 15,
+      "max": 90
+    },
+    "operation": "manual centre-pivot/top control bar",
+    "cleaning_rotation_deg": 180,
+    "flashing_families": [
+      "ED- single installation",
+      "EB- twin installation",
+      "EK- combination installation"
+    ],
+    "installation_products": [
+      "BDX 2000 insulated frame + pleated underfelt collar",
+      "BFX underfelt collar + drainage gutter",
+      "LSG lining kit"
+    ]
+  },
+  "next_gate": "official VELUX BIM geometry + rights/access + exact variant commerce"
+}
