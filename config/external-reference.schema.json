@@ -1,0 +1,43 @@
+{
+  "version": "0.1",
+  "purpose": "Let a canonical Product Twin retain durable external identity references without caching mutable source catalog payloads.",
+  "external_reference": {
+    "source_id": "string",
+    "reference_type": "catalog_product | merchant_product | variant | manufacturer_sku | gtin | bim_object | geometry_asset | supplier_item | other",
+    "external_id": "string",
+    "canonical_uri": "string|null",
+    "merchant_id": "string|null",
+    "merchant_domain": "string|null",
+    "role": "identity | commerce_lookup | geometry_lookup | technical_evidence | supplier_quote",
+    "refresh_policy": "live_required | periodic | immutable",
+    "persisted_fields_policy": "reference_only | licensed_payload | authoritative_source",
+    "selected_for_project": "boolean",
+    "linked_at": "ISO-8601",
+    "last_resolved_at": "ISO-8601|null",
+    "verification": {
+      "state": "verified | likely | unresolved",
+      "method": "gtin | manufacturer_sku | exact_model | merchant_mapping | manual | other",
+      "evidence_uri": "string|null"
+    }
+  },
+  "shopify_policy": {
+    "source_id": "shopify_global_catalog",
+    "allowed_persistence": [
+      "stable product/variant reference needed for later lookup",
+      "our own canonical Twin linkage",
+      "our own project selection state",
+      "our own taxonomy/category mapping",
+      "aggregate non-product test metrics"
+    ],
+    "live_refresh_fields": [
+      "title/presentation as returned by catalog",
+      "description",
+      "images/media",
+      "price",
+      "availability",
+      "seller offer presentation",
+      "Shopify inferred metadata"
+    ],
+    "principle": "Resolve mutable Shopify Catalog fields live with lookup_catalog/get_product when the reference is used; do not use GitHub or Product Twin as a Shopify catalog cache."
+  }
+}
