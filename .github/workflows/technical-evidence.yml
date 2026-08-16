@@ -7,6 +7,7 @@ on:
       - ".github/workflows/technical-evidence.yml"
       - "data/evidence/manufacturer/**"
       - "scripts/evaluate-technical-fit.mjs"
+      - "scripts/pool-requirement.mjs"
       - "config/jurisdictions/**"
       - "data/projects/**"
       - "data/energy/**"
@@ -30,23 +31,25 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Derive pool circulation requirement
+        run: npm run pool:requirement
       - name: Evaluate Huawei inverter
         run: node scripts/evaluate-technical-fit.mjs data/evidence/manufacturer/huawei-sun2000-10ktl-m1.json
       - name: Evaluate AstralPool 67547 pump
         run: node scripts/evaluate-technical-fit.mjs data/evidence/manufacturer/astralpool-victoria-plus-silent-vs-67547.json
       - name: Evaluate AstralPool 67548 pump
         run: node scripts/evaluate-technical-fit.mjs data/evidence/manufacturer/astralpool-victoria-plus-silent-vs-67548.json
-      - name: Commit fit results
+      - name: Commit requirements and fit results
         run: |
           set -euo pipefail
           git config user.name "product-twin-bot"
           git config user.email "product-twin-bot@users.noreply.github.com"
-          git add data/tests/results
+          git add data/requirements data/tests/results
           if git diff --cached --quiet; then
             echo "No fit changes."
             exit 0
           fi
-          git commit -m "data: refresh solar and pool technical fit results"
+          git commit -m "data: refresh pool requirement and technical fit results"
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main
