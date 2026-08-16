@@ -1,0 +1,9 @@
+{
+  "version": "0.1",
+  "principle": "Application is many-to-many and separate from product category.",
+  "project_types": ["residential","hotel","resort","restaurant","bar","office","retail","healthcare","wellness","mixed_use","landscape"],
+  "project_phases": ["site","structure","envelope","mep","interior_build","finishes","ffe","commissioning","operations"],
+  "environments": ["indoor","outdoor","wet_area","submerged","coastal","high_humidity","plant_room","food_service","public_area","guest_area","back_of_house"],
+  "spaces": ["living_room","dining_room","kitchen","bedroom","bathroom","corridor","lobby","reception","restaurant","bar","ballroom","spa","gym","office","meeting_room","retail_space","terrace","garden","pool_deck","swimming_pool","spa_pool","plant_room","car_park","facade","roof","service_area","laundry","professional_kitchen"],
+  "design_roles": ["structure","weather_barrier","finish","surface","furniture","fixture","equipment","decorative","lighting","water_distribution","water_treatment","air_distribution","power_distribution","controls","security","energy_generation","energy_storage","installation_consumable"]
+}
