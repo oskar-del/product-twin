@@ -3,6 +3,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const taxonomy = JSON.parse(await fs.readFile(path.join(ROOT,"config/taxonomy.json"),"utf8"));
+const energy = JSON.parse(await fs.readFile(path.join(ROOT,"config/taxonomy-energy-extension.json"),"utf8"));
 const candidates = JSON.parse(await fs.readFile(path.join(ROOT,"data/shopify/triage/latest.json"),"utf8"));
 
 function flatten(nodes, parent=null, out=[]) {
@@ -17,7 +18,14 @@ function flatten(nodes, parent=null, out=[]) {
   return out;
 }
 
-const categories = flatten(taxonomy.top_level);
+// Main taxonomy remains the base. More specific extensions override duplicate IDs.
+const categoriesById = new Map();
+for (const c of flatten(taxonomy.top_level)) categoriesById.set(c.id,c);
+if (energy.top_level) {
+  for (const c of flatten([energy.top_level])) categoriesById.set(c.id,c);
+}
+const categories = [...categoriesById.values()];
+
 const rows = new Map(categories.filter(c=>c.leaf).map(c=>[c.id,{
   category_id:c.id,
   name:c.name,
@@ -63,6 +71,7 @@ const leafRows=[...rows.values()].sort((a,b)=>a.category_id.localeCompare(b.cate
 const summary={
   generated_at:new Date().toISOString(),
   taxonomy_version:taxonomy.version,
+  energy_taxonomy_version:energy.version,
   category_count:leafRows.length,
   categories_with_candidates:leafRows.filter(x=>x.candidates>0).length,
   categories_with_commerce:leafRows.filter(x=>x.commerce_ready>0).length,
