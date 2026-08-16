@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "generated_at": "2026-08-16T03:10:37.330Z",
+    "project_id": "PROJECT_MARBELLA_VILLA_001",
+    "live_offers_evaluated": 10,
+    "authoritative_evidence_records": 1,
+    "likely_or_verified_identity_links": 0,
+    "unresolved": 10,
+    "principle": "Persist only Product Twin identity decisions and stable external references; Shopify presentation fields used for matching remain ephemeral."
+  },
+  "links": [
+    {
+      "slot_id": "WB10_01",
+      "category_id": "STRUCTURE.CONCRETE",
+      "external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/6p7y3Aoq4Gfk46FuAXlgjn",
+        "variant_id": "gid://shopify/ProductVariant/44364072648997"
+      },
+      "identity_state": "UNRESOLVED",
+      "matched_evidence_id": null,
+      "matched_subject": null,
+      "confidence": 0,
+      "match_signals": {},
+      "next_action": "manufacturer_identity_enrichment_required"
+    },
+    {
+      "slot_id": "WB10_02",
+      "category_id": "OPENINGS.WINDOWS",
+      "external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/4av5Zo4vEYeFOnVSuCKEtE",
+        "variant_id": "gid://shopify/ProductVariant/44087412031732"
+      },
+      "identity_state": "UNRESOLVED",
+      "matched_evidence_id": null,
+      "matched_subject": null,
+      "confidence": 0,
+      "match_signals": {},
+      "next_action": "manufacturer_identity_enrichment_required"
+    },
+    {
+      "slot_id": "WB10_03",
+      "category_id": "FINISHES.STONE",
+      "external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/3bR8piOcHMiFdWceOyhJwQ",
+        "variant_id": "gid://shopify/ProductVariant/47198186471730"
+      },
+      "identity_state": "UNRESOLVED",
+      "matched_evidence_id": null,
+      "matched_subject": null,
+      "confidence": 0,
+      "match_signals": {},
+      "next_action": "manufacturer_identity_enrichment_required"
+    },
+    {
+      "slot_id": "WB10_04",
+      "category_id": "POOL.PIPE",
+      "external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/3P7aFIlod6xmzwiinxEt5L",
+        "variant_id": "gid://shopify/ProductVariant/47862683435356"
+      },
+      "identity_state": "UNRESOLVED",
+      "matched_evidence_id": null,
+      "matched_subject": null,
+      "confidence": 0,
+      "match_signals": {},
+      "next_action": "manufacturer_identity_enrichment_required"
+    },
+    {
+      "slot_id": "WB10_05",
+      "category_id": "POOL.PUMPS",
+      "external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/BaYtvgCWvPv4yLNAUIVFG",
+        "variant_id": "gid://shopify/ProductVariant/43998617239750"
+      },
+      "identity_state": "UNRESOLVED",
+      "matched_evidence_id": null,
+      "matched_subject": null,
+      "confidence": 0,
+      "match_signals": {},
+      "next_action": "manufacturer_identity_enrichment_required"
+    },
+    {
+      "slot_id": "WB10_06",
+      "category_id": "ENERGY.SOLAR.PANEL",
+      "external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/cK9QLDvaVXCIXOKWiyzoB",
+        "variant_id": "gid://shopify/ProductVariant/47634966184270"
+      },
+      "identity_state": "UNRESOLVED",
+      "matched_evidence_id": null,
+      "matched_subject": null,
+      "confidence": 0,
+      "match_signals": {},
+      "next_action": "manufacturer_identity_enrichment_required"
+    },
+    {
+      "slot_id": "WB10_07",
+      "category_id": "ENERGY.SOLAR.INVERTER",
+      "external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/4pPfq4MhVgZelzH5v2L4Q0",
+        "variant_id": "gid://shopify/ProductVariant/52960387662158"
+      },
+      "identity_state": "UNRESOLVED",
+      "matched_evidence_id": null,
+      "matched_subject": null,
+      "confidence": 0.1,
+      "match_signals": {
+        "manufacturer_token": false,
+        "exact_model_token": false,
+        "manufacturer_sku_token": false,
+        "model_token_hits": 0
+      },
+      "next_action": "manufacturer_identity_enrichment_required"
+    },
+    {
+      "slot_id": "WB10_08",
+      "category_id": "HVAC.HEAT_PUMPS",
+      "external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/Y7RBzvVEwMsqDGR6jC8tg",
+        "variant_id": "gid://shopify/ProductVariant/51627048305023"
+      },
+      "identity_state": "UNRESOLVED",
+      "matched_evidence_id": null,
+      "matched_subject": null,
+      "confidence": 0,
+      "match_signals": {},
+      "next_action": "manufacturer_identity_enrichment_required"
+    },
+    {
+      "slot_id": "WB10_09",
+      "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+      "external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/5KfwjYpcWBC81c8PVGKcuS",
+        "variant_id": "gid://shopify/ProductVariant/54265230000470"
+      },
+      "identity_state": "UNRESOLVED",
+      "matched_evidence_id": null,
+      "matched_subject": null,
+      "confidence": 0,
+      "match_signals": {},
+      "next_action": "manufacturer_identity_enrichment_required"
+    },
+    {
+      "slot_id": "WB10_10",
+      "category_id": "FFE.SEATING.SOFA",
+      "external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/6yZXQwZMcvhdPzhULDkApv",
+        "variant_id": "gid://shopify/ProductVariant/40416650526818"
+      },
+      "identity_state": "UNRESOLVED",
+      "matched_evidence_id": null,
+      "matched_subject": null,
+      "confidence": 0,
+      "match_signals": {},
+      "next_action": "manufacturer_identity_enrichment_required"
+    }
+  ]
+}
