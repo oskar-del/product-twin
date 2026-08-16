@@ -2,67 +2,66 @@
 
 ## Why this exists
 
-Product Twin has generated several strong adjacent ideas: Showroom, Project Lens, developer delivery, performance simulation, prefab tendering and operations. These are valuable, but V0 must not become broad and shallow.
-
-Until the exit criteria below are met, new major product branches are parked. Work should deepen the original Product Twin thesis:
+Product Twin has generated strong adjacent ideas. They are preserved in `docs/IDEA-PARKING.md`, but V0 stays focused on the original loop:
 
 `REAL PRODUCT / SYSTEM → CANONICAL IDENTITY → VERIFIED DIGITAL AVATAR → PROJECT PLACEMENT → TECHNICAL / REGULATORY FIT → LIVE OFFER OR RFQ → PROCUREMENT`
 
+New major product branches remain parked until the exit criteria below are met.
+
 ## Pillar 1 · Source Graph completion
 
-### Already live / proven
+### Current evidence-backed state
 
-- Shopify Global Catalog MCP: broad discovery + offer resolution + merchant Cart MCP.
-- Fluidra PRO Spain: direct specialist pool trade/procurement source model.
-- CEMEX Spain / CEMEX Go: configured-material / ready-mix RFQ and delivery model.
+- **Shopify Global Catalog MCP — LIVE:** broad cross-merchant discovery, offer resolution and merchant cart path.
+- **WooCommerce Store API — LIVE:** second commerce-platform adapter; 2/3 tested stores returned public product data, including 1 non-demo merchant and 16 normalized candidate references. This is per-merchant, not a global cross-store catalog.
+- **Fluidra PRO Spain — LIVE:** specialist pool technical/trade procurement route.
+- **CEMEX Spain / CEMEX Go — LIVE:** configured ready-mix/material RFQ and delivery route.
+- **Herman Miller product models — LIVE:** manufacturer Revit, SketchUp and 3D DWG source validated transiently.
+- **Arper resources — LIVE:** manufacturer 3D/CAD source validated; exact Ply #3853 geometry passed scale QA.
+- **GS1 Global Resolver — LIVE:** neutral machine-readable Digital Link enrichment protocol proven with official control data; real Muuto target currently has no resolver record.
+- **Verified by GS1 — ACCESS GATED FOR AUTOMATION:** public page was reached but automated request was blocked; registry/API access remains required for machine identity verification.
 
-### Already researched, not yet live
+### Broad source research state
 
-- AliExpress Open Platform / affiliate APIs.
-- Icecat MCP / product content APIs.
-- BIMobject Developer Search API.
-- Verified by GS1.
-- eBay Browse API + Partner Network.
-- Amazon Creators API.
-- Alibaba.com Open Platform / Buyer Solution.
-- pCon configurable manufacturer catalogues.
-- Taobao Open Platform MCP (parked / China-domestic).
-
-### Source census still required before calling mapping complete
-
-Perform one deliberate final census by graph role rather than continuing ad hoc research:
-
-1. Commerce / marketplace sources.
-2. Manufacturer / distributor / trade sources.
-3. Canonical identity sources.
-4. Technical/specification content sources.
-5. Geometry / CAD / BIM sources.
-6. Configurator / parametric-system sources.
-7. Logistics / freight / landed-cost sources.
-
-The census should identify important missing networks such as CAD/BIM libraries and manufacturer-specific product data sources, classify access requirements, and then STOP broad source research unless a specific project gap requires a new source.
+The final graph-role census is frozen. Do not resume broad API hunting unless a specific V0 gap requires it. Credential/access candidates remain documented for AliExpress, Icecat, BIMobject, eBay, Amazon, Alibaba, pCon and others.
 
 ### V0 source exit criteria
 
-- Source census documented and ranked.
-- At least 2 live broad commerce sources OR Shopify plus one comparable broad source.
-- At least 1 neutral identity/enrichment source tested live.
-- At least 1 geometry/BIM source tested live.
-- At least 2 direct specialist procurement sources live.
-- Source adapter contract stable enough that adding a new source does not change the canonical Product Twin schema.
+- [x] Source census documented and ranked.
+- [x] Shopify plus a second live commerce-platform adapter (WooCommerce). **Caveat:** a second true global marketplace remains credential-gated.
+- [x] At least 1 neutral identity/enrichment source tested live (GS1 Global Resolver).
+- [x] At least 1 geometry/BIM source tested live (Herman Miller; Arper also live).
+- [x] At least 2 direct specialist procurement sources live (Fluidra + CEMEX).
+- [x] Source adapter contract remains inward-mapped to the canonical Product Twin schema.
+
+**Source Graph V0 is functionally closed.** Future source work should be driven by a concrete product/category gap, not census expansion.
 
 ## Pillar 2 · Avatar Factory completion
 
 ### Current real state
 
+Promoted index:
+
 - 3 G2 dimension-verified proxies.
-- 2 object avatars: Huawei inverter, AstralPool pump.
-- 1 material avatar: Ecoplastic PVC/UV marble sheet.
-- 0 G3 render avatars.
-- 0 G4 BIM/specification avatars.
-- 0 G5 manufacturing/configuration twins.
-- 0 exact manufacturer-geometry avatars.
+- Huawei SUN2000 inverter — G2 object proxy.
+- AstralPool Victoria Plus Silent VS pump — G2 object proxy.
+- Ecoplastic PVC/UV marble sheet — G2 material proxy.
+
+Candidates / technical sources:
+
+- **Arper Ply #3853 — G3 CANDIDATE:** exact manufacturer 3DS captured, transiently converted to GLB and scale-validated to ~0.13% maximum dimensional error. Promotion blocked by rights + exact commerce/RFQ join.
+- **Herman Miller Sayl — manufacturer BIM source proven:** Revit, SketchUp and 3D DWG live-tested; configurable GLB was not accepted because a product-bound asset could not be captured cleanly.
+- **Muuto Outline 2-Seater — exact identity + commerce proven:** manufacturer item/EAN joined to merchant identity and exact cart; manufacturer geometry access remains gated.
+- **GF Sanipex MT fitting — G4 technical target in progress:** pipe-fitting interface + CAD/BIM path.
 - Prefab system remains G0 until factory-valid configuration/CAD is obtained.
+
+Current index accounting:
+
+- 3 promoted avatars.
+- 1 indexed G3 candidate.
+- 4 total promoted/candidate records.
+- 0 fully promoted G3+.
+- 0 fully promoted G4+.
 
 ### V0 avatar targets
 
@@ -78,13 +77,13 @@ Build a deliberately small but complete mixed set:
 
 ### V0 avatar exit criteria
 
-- At least 10 mixed avatars in the index.
-- At least 3 are G3 or higher.
-- At least 2 are G4 or higher.
-- At least 1 avatar is an exact product with verified identity + authorized geometry + live offer/RFQ.
-- Photo-to-avatar pipeline tested on at least one product with multi-view QA and explicit observed/inferred geometry coverage.
-- Material-avatar pipeline tested with real-world scale, joints/repeat and quantity takeoff.
-- System-avatar pipeline tested with interfaces/configuration rules rather than only a pretty mesh.
+- [ ] At least 10 mixed avatars in the index.
+- [ ] At least 3 are **fully promoted** G3 or higher.
+- [ ] At least 2 are **fully promoted** G4 or higher.
+- [ ] At least 1 avatar is an exact product with verified identity + authorized geometry + live offer/RFQ.
+- [ ] Photo-to-avatar pipeline tested on at least one product with multi-view QA and explicit observed/inferred geometry coverage.
+- [ ] Material-avatar pipeline tested with real-world scale, joints/repeat and quantity takeoff.
+- [ ] System-avatar pipeline tested with interfaces/configuration rules rather than only a pretty mesh.
 
 ## Pillar 3 · End-to-end Product Twin proof
 
@@ -129,8 +128,8 @@ The Showroom and Project Lens may be used only as presentation surfaces for the 
 
 ## Working rule
 
-When a new idea appears, ask:
+When a new idea appears, add it to `docs/IDEA-PARKING.md`, then ask:
 
 > Does this directly improve source coverage, canonical identity, avatar quality, project compatibility, or the live procurement loop?
 
-If no, record it and park it until V0 core completion.
+If no, park it until V0 core completion.
