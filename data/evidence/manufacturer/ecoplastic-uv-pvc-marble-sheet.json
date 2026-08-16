@@ -1,0 +1,48 @@
+{
+  "evidence_id": "MFR_ECOPLASTIC_UV_PVC_MARBLE_SHEET_V0_1",
+  "subject": {
+    "manufacturer": "Ningbo Ecoplastic Industry Co., Ltd.",
+    "model": "Waterproof UV Panel PVC Marble Sheet for Wall",
+    "category_id": "FINISHES.WALLCOVERING",
+    "innovation_id": "INNOV.PVC_MARBLE_SHEET",
+    "manufacturer_sku": null,
+    "gtin": null
+  },
+  "authority": {
+    "grade": "A_MANUFACTURER",
+    "publisher": "Ningbo Ecoplastic Industry Co., Ltd.",
+    "source_uri": "https://ecoplastic.cn/en/product-42861-157414.html",
+    "source_type": "manufacturer_product_page",
+    "territory": "China export manufacturer; Spain/EU regulatory suitability unresolved",
+    "retrieved_at": "2026-08-16"
+  },
+  "claims": {
+    "sheet_width_mm": 1220,
+    "sheet_length_mm": 2440,
+    "thickness_options_mm": [2.5, 2.8, 3.0, 3.2, 3.5, 3.8],
+    "material_description": "PVC composite with CaCO3 and additives",
+    "manufacturer_composition_percent": {"PVC": 35, "CaCO3": 62, "additive": 3},
+    "surface_treatment": "high-gloss UV coating",
+    "appearance_options": ["marble", "grain", "wood grain", "solid color", "custom"],
+    "installation_methods": ["aluminium frame", "glue"],
+    "manufacturer_delivery_time_claim": "7-15 days for one container",
+    "manufacturer_application": "interior decoration for commercial and residential places"
+  },
+  "verification": {
+    "identity": "manufacturer_family_verified",
+    "dimensions": "verified",
+    "technical": "partial",
+    "territory_applicability": "unresolved",
+    "render_rights": "unresolved"
+  },
+  "missing_for_spain_specification": [
+    "reaction-to-fire classification and applicable test evidence",
+    "VOC/emissions evidence",
+    "wet-area system evidence where proposed",
+    "substrate/adhesive compatibility documentation",
+    "EU/Spain product-market and intended-use compliance review",
+    "specific decor/pattern identity",
+    "authorized texture/render rights"
+  ],
+  "geometry_policy": "A neutral sheet-scale proxy may be generated from verified dimensions. Manufacturer marble artwork must not be copied into the avatar without rights."
+}
