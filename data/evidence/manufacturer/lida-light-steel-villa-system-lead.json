@@ -1,0 +1,44 @@
+{
+  "evidence_id": "MFR_LIDA_LIGHT_STEEL_VILLA_SYSTEM_LEAD_V0_1",
+  "subject": {
+    "manufacturer": "Lida Group",
+    "system_family": "Light steel prefabricated villa",
+    "category_id": "PREFAB.BUILDING.HOUSE_KIT",
+    "avatar_type": "system"
+  },
+  "authority": {
+    "grade": "A_MANUFACTURER_PUBLIC_PAGE",
+    "publisher": "Lida Group",
+    "source_uri": "https://www.lidamodularhouse.com/es/best-prefab-construction-china-factory-used-as-private-villas.html",
+    "source_type": "manufacturer_product_page",
+    "territory": "China manufacturer / export context; Spain project suitability unresolved",
+    "retrieved_at": "2026-08-16"
+  },
+  "public_claims": {
+    "structural_materials": ["Q345", "G550"],
+    "section_options_mm": [75, 89, 120, 140, 200, 250],
+    "application": ["villa", "resort", "camp"],
+    "design_outputs_listed": ["3D model", "CAD model"],
+    "customization": true
+  },
+  "avatar_state": {
+    "geometry_level": "G0",
+    "reason": "Public marketing evidence confirms a configurable light-steel villa family and CAD/3D design capability, but does not expose enough module/grid/connection/configuration rules to generate a factory-valid system avatar.",
+    "next_promotion": "G4 after manufacturer CAD/configurator data and structural/configuration envelope are obtained"
+  },
+  "required_direct_manufacturer_data": [
+    "structural grid and module rules",
+    "member/section selection rules",
+    "opening constraints",
+    "storey/span limits",
+    "wall/floor/roof build-ups",
+    "connection nodes",
+    "foundation interface tolerances",
+    "MEP interface rules",
+    "shipping split/containerization rules",
+    "CAD/BIM/IFC or parametric model",
+    "Spain/EU structural, fire and energy evidence path",
+    "commercial RFQ/configuration rules"
+  ],
+  "rule": "Do not use a generic AI-generated villa as the supplier's Product Twin. Until manufacturer configuration rules arrive, this remains a sourcing/system lead only."
+}
