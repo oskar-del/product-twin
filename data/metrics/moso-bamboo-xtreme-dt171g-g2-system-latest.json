@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-08-16T17:52:40.062835+00:00",
+  "target_id": "MOSO_BAMBOO_XTREME_BO_DTHT171G_G2_V0_1",
+  "avatar_id": "AVATAR_MOSO_BAMBOO_XTREME_BO_DTHT171G_G2_SYSTEM_PROXY",
+  "status": "G2_REPEAT_TAKEOFF_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/moso-bamboo-xtreme-bo-dtht171g-g2-system-proxy.glb",
+  "asset_bytes": 2068,
+  "module_mm": {
+    "length_mm": 1850,
+    "width_mm": 137,
+    "thickness_mm": 20
+  },
+  "joint_gap_mm": {
+    "min": 5,
+    "max": 6,
+    "design_default": 5.5
+  },
+  "three_board_repeat_expected_mm": {
+    "length": 1850,
+    "width": 422.0,
+    "thickness": 20
+  },
+  "three_board_repeat_measured_mm": {
+    "length": 1850.000023841858,
+    "width": 421.999990940094,
+    "thickness": 19.999999552965164
+  },
+  "relative_error": {
+    "length": 1.2887490762246622e-08,
+    "repeat_width": 2.1468971577865818e-08,
+    "thickness": 2.2351741790771484e-08
+  },
+  "takeoff_test": {
+    "area_m2": 20,
+    "design_gap_mm": 5.5,
+    "effective_repeat_pitch_mm": 142.50000000000003,
+    "effective_coverage_per_full_board_m2": 0.26362500000000005,
+    "preliminary_boards_per_m2": 3.793266951161687,
+    "raw_board_count": 75.86533902323374,
+    "waste_percent": 10,
+    "board_count_after_waste_rounded_up": 84,
+    "ordered_nominal_board_face_area_m2": 21.2898,
+    "caution": "Area-only takeoff is preliminary; final board count depends on deck dimensions, direction, cut optimization, end conditions and substructure layout."
+  },
+  "installation": {
+    "method": "fasteners or screwed on joists",
+    "bim_file_available": true
+  },
+  "disclosure": "Exact MOSO product-family/code and manufacturer-published board dimensions/joint range. Product Twin-owned G2 board geometry is a rectangular module proxy; exact groove/bevel profile and proprietary appearance are not claimed.",
+  "next_gate": "authorized profile/PBR geometry + live Spain/EU offer/RFQ + project-specific fixing/joist layout"
+}
