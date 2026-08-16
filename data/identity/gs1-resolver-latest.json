@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "generated_at": "2026-08-16T17:31:30.786Z",
+    "source_id": "gs1_global_resolver",
+    "protocol_live": true,
+    "target_enrichment_found": false,
+    "status": "LIVE_NEUTRAL_ENRICHMENT_PROTOCOL_TARGET_UNRESOLVED",
+    "note": "GS1 Global Office Resolver is a neutral Digital Link enrichment/link-discovery source. It is not a substitute for Verified by GS1 registry identity verification."
+  },
+  "results": [
+    {
+      "case_id": "EXACT_MUUTO_OUTLINE_2S_001",
+      "kind": "real_product_target",
+      "input_gtin": "5713222210793",
+      "canonical_gtin14": "05713222210793",
+      "request_url": "https://id.gs1.org/01/05713222210793?linkType=all",
+      "http_status": 404,
+      "content_type": "application/json",
+      "location": null,
+      "link_header": null,
+      "state": "RESOLVER_NO_RECORD",
+      "body_excerpt": "Not Found"
+    },
+    {
+      "case_id": "GS1_OFFICIAL_RESOLVER_DEMO",
+      "kind": "official_protocol_control",
+      "input_gtin": "9506000164908",
+      "canonical_gtin14": "09506000164908",
+      "request_url": "https://id.gs1.org/01/09506000164908?linkType=all",
+      "http_status": 200,
+      "content_type": "application/linkset+json",
+      "location": null,
+      "link_header": "<https://ref.gs1.org/standards/resolver/linkset-context>; rel=\"http://www.w3.org/ns/json-ld#context\"; type=\"application/ld+json\"",
+      "state": "RESOLVER_RESPONSE_WITH_LINK_EVIDENCE",
+      "body_excerpt": "{ \"linkset\": [ { \"anchor\": \"https://id.gs1.org/01/09506000164908\", \"description\": \"Crew neck white t-shirt\", \"https://ref.gs1.org/voc/defaultLink\": [ { \"href\": \"https://ref.gs1.org/tools/demo/2024retail/\", \"title\": \"Menu\" } ], \"https://ref.gs1.org/voc/certificationInfo\": [ { \"href\": \"https://ref.gs1.org/tools/demo/2024retail/certificates\", \"title\": \"Certificates\", \"type\": \"text/html\", \"hreflang\": [ \"en\" ], \"context\": [ \"GB\" ] } ], \"https://ref.gs1.org/voc/homepage\": [ { \"href\": \"https://ref.gs1.org/tools/demo/2024retail/\", \"title\": \"Menu\", \"type\": \"text/html\", \"hreflang\": [ \"en\" ], \"context\": [ \"GB\" ] } ], \"https://ref.gs1.org/voc/instructions\": [ { \"href\": \"https://ref.gs1.org/tools/demo/2024retail/recycling\", \"title\": \"Recycling\", \"type\": \"text/html\", \"hreflang\": [ \"en\" ], \"context\": [ \"GB\" ] } ], \"https://ref.gs1.org/voc/pip\": [ { \"href\": \"https://ref.gs1.org/tools/demo/2024retail/pip\", \"title\": \"Product info\", \"type\": \"text/html\", \"hreflang\": [ \"en\" ], \"context\": [ \"GB\" ] } ], \"https://ref.gs1.org/voc/sustainabilityInfo\": [ { \"href\": \"https://ref.gs1.org/tools/demo/2024retail/sustainability\", \"title\": \"Sustainability\", \"type\": \"text/html\", \"hreflang\": [ \"en\" ], \"context\": [ \"GB"
+    }
+  ]
+}
