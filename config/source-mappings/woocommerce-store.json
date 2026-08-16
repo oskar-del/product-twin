@@ -1,0 +1,19 @@
+{
+  "version": "0.1",
+  "source_id": "woocommerce_store_api",
+  "source_class": "merchant_platform_adapter",
+  "principle": "WooCommerce data maps into Product Twin; merchant categories never redefine canonical taxonomy.",
+  "fields": {
+    "identity": ["id", "sku", "name", "permalink"],
+    "commerce": ["prices", "is_in_stock"],
+    "media": ["images"],
+    "taxonomy_inputs": ["categories", "tags", "brands", "name", "description"]
+  },
+  "readiness": {
+    "identity": "candidate_until_manufacturer_or_gtin_verified",
+    "commerce": "merchant_authoritative",
+    "technical": "not_authoritative_without_manufacturer_evidence",
+    "geometry": "unknown_by_default",
+    "rights": "unknown_by_default"
+  }
+}
