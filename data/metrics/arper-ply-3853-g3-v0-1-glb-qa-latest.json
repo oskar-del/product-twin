@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-08-16T17:18:05.461986+00:00",
+  "target_id": "ARPER_PLY_3853_G3_V0_1",
+  "capture_status": "EXACT_MANUFACTURER_3DS_CAPTURED",
+  "qa_status": "EXACT_GEOMETRY_SCALE_PASS_RIGHTS_REVIEW",
+  "promotion_level": "G3_CANDIDATE",
+  "exact_geometry": true,
+  "rights_state": "review",
+  "source_asset_sha256": "056266beb2cbea1af1cc91bcab74dccb46620ebc55464276d1d22f90f8977e9a",
+  "source_url": "https://arper-cdn.thron.com/delivery/public/document/arper/e7270421-ade5-487d-85fd-8d6a80c3db5f/jd4oic/WEB/Arper_Ply_3D_table_h36cm_55x54cm_3853.3DS",
+  "best_unit_hypothesis": "centimeters",
+  "extents_mm_sorted": [
+    360.0061869621277,
+    539.5571136474609,
+    549.3096351623535
+  ],
+  "expected_mm_sorted": [
+    360.0,
+    540.0,
+    550.0
+  ],
+  "max_relative_error": 0.0012552087957208807,
+  "rms_relative_error": 0.0008657379821257445,
+  "geometry_stats": {
+    "mesh_count": 2,
+    "vertices": 8130,
+    "faces": 16188
+  },
+  "remaining_blockers": [
+    "confirm Product Twin render/derivative/persistent-storage rights",
+    "resolve exact live commerce or RFQ identity"
+  ]
+}
