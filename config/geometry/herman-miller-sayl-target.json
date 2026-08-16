@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.3",
   "target_id": "HM_SAYL_FULLY_ADJUSTABLE_GLB_V0_1",
   "category_id": "FFE.SEATING.OFFICE_CHAIR",
   "manufacturer": "Herman Miller",
@@ -10,7 +10,13 @@
     "configurator_page": "https://www.hermanmiller.com/products/seating/office-chairs/sayl-chairs/product-configurator/",
     "configurator_iframe": "https://3d-configurator.vercel.app/iframe/5b218f84-aa9c-4cd6-a668-2255a5e18bd5",
     "configurator_faq": "https://www.hermanmiller.com/resources/3d-models-and-planning-tools/faq/",
+    "dimension_evidence": "https://esstore.hermanmiller.com/products/sayl-white-standard-office-chair",
     "fixed_model_references": [
+      {
+        "format": "Revit",
+        "url": "https://www.hermanmiller.com/content/dam/hmicom/app_assets/product_models/s/sayl_chairs/sayl_chair_suspension_mid_back_fully_adjustable_arms/HMI_Sayl_Chair_Suspension_Mid_Back_Fully_Adjustable_Arms_rfa.zip",
+        "identity_scope": "Sayl Chair – Suspension Mid Back – Fully Adjustable Arms"
+      },
       {
         "format": "SketchUp",
         "url": "https://www.hermanmiller.com/content/dam/hmicom/app_assets/product_models/s/sayl_chairs/sayl_chair_suspension_mid_back_fully_adjustable_arms/HMI_Sayl_Chair_Suspension_Mid_Back_Fully_Adjustable_Arms.skp",
@@ -30,6 +36,23 @@
     "configured_GLBS_reflect_selected_options": true,
     "fixed_family_models_available": ["Revit", "SketchUp", "AutoCAD 2D", "AutoCAD 3D"]
   },
+  "physical": {
+    "dimension_state": "manufacturer_verified",
+    "height_mm_range": [959, 1035],
+    "width_adjustable_arms_mm": 679,
+    "width_fixed_arms_mm": 622,
+    "depth_mm": 502,
+    "seat_height_mm_range": [419, 559],
+    "seat_width_mm": 464,
+    "seat_depth_mm_range": [406, 457],
+    "product_weight_kg_range": [16.8, 18.1],
+    "scale_qa": {
+      "unit_hypotheses": ["meters", "millimeters", "centimeters"],
+      "overall_tolerance_percent": 8,
+      "adjustable_pose_note": "Height and arm position vary. A configured GLB may represent one pose inside manufacturer ranges; width is evaluated against the adjustable-arm envelope for this target.",
+      "hard_reject_if_any_axis_outside_factor": [0.5, 2.0]
+    }
+  },
   "geometry": {
     "current_level": "G0",
     "target_level": "G3",
@@ -37,7 +60,7 @@
     "exactness_target": "manufacturer-configured GLB",
     "runtime_format": "GLB",
     "asset_state": "public_GL_B_capture_running_with_fixed_model_fallback",
-    "fixed_model_state": "official_external_references_confirmed",
+    "fixed_model_state": "official_external_references_live_validated",
     "rights_state": "space-planning/render workflow supported by manufacturer; persistent storage, derivative conversion and redistribution remain review"
   },
   "identity": {
@@ -50,9 +73,9 @@
   },
   "promotion_blockers": [
     "resolve stable configured option identity",
-    "resolve exact manufacturer GLB from public configurator workflow OR validate fixed manufacturer model for G4",
-    "validate physical scale against manufacturer dimensions/specification",
-    "confirm derivative conversion/storage/redistribution policy",
+    "capture product-bound manufacturer GLB OR promote fixed manufacturer BIM/CAD reference through G4 validation",
+    "validate physical scale against manufacturer dimensions",
+    "confirm persistent storage/derivative/redistribution policy",
     "resolve exact live commerce or RFQ identity"
   ]
 }
