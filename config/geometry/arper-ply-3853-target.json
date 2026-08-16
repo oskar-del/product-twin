@@ -1,0 +1,35 @@
+{
+  "version": "0.1",
+  "target_id": "ARPER_PLY_3853_G3_V0_1",
+  "category_id": "FFE.TABLE.COFFEE",
+  "manufacturer": "Arper",
+  "product_family": "Ply Table",
+  "article_no": "3853",
+  "model": "Ply Table low table, small top, wood legs",
+  "manufacturer_page": "https://www.arper.com/es_ES/3853-20article-203853.html",
+  "physical": {
+    "dimension_state": "manufacturer_page_verified",
+    "dimensions_mm_sorted": [360, 540, 550],
+    "qa_tolerance_percent": 5,
+    "adjustable_axes": []
+  },
+  "manufacturer_resources": {
+    "public_without_registration": true,
+    "formats_advertised": ["2D DWG", "3DS", "3DS Max", "Revit", "SketchUp", "Archicad"],
+    "preferred_runtime_source": "3DS",
+    "runtime_target": "GLB"
+  },
+  "geometry": {
+    "current_level": "G0",
+    "target_level": "G3",
+    "identity_scope": "exact Arper article 3853 geometry; material/finish choice remains a configuration layer",
+    "rights_state": "manufacturer project resource available publicly; rendering/derivative/persistent storage/redistribution remain independently reviewed"
+  },
+  "promotion_blockers": [
+    "capture exact article-3853 manufacturer 3DS",
+    "convert transiently to GLB",
+    "validate physical bounds against 360/540/550 mm manufacturer dimensions",
+    "confirm Product Twin rendering/derivative handling terms before persistent binary storage",
+    "resolve exact live commerce or RFQ identity"
+  ]
+}
