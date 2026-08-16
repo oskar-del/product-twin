@@ -1,21 +1,22 @@
 {
   "generated_at": "2026-08-16",
   "summary": {
-    "promoted_avatars": 5,
+    "promoted_avatars": 7,
     "candidates": 1,
-    "indexed_total": 6,
+    "indexed_total": 8,
     "G0": 0,
     "G1": 0,
-    "G2": 5,
+    "G2": 7,
     "G3_promoted": 0,
     "G3_candidates": 1,
     "G4_promoted": 0,
     "G5_promoted": 0,
-    "object_avatars": 2,
-    "material_avatars": 1,
-    "system_avatars": 2,
+    "object_avatars": 3,
+    "material_avatars": 2,
+    "system_avatars": 3,
     "exact_manufacturer_geometry_candidates": 1,
-    "dimension_verified_proxies": 5
+    "dimension_verified_proxies": 7,
+    "material_repeat_takeoff_pipeline_passed": true
   },
   "avatars": [
     {
@@ -89,22 +90,46 @@
       "level": "G2",
       "promotion_state": "promoted_proxy",
       "asset_path": "data/geometry/avatars/gf-sanipex-1158140-g2-system-proxy.glb",
-      "identity": {
-        "manufacturer_part_no":"1158140",
-        "gf_item_no":"351616990",
-        "ean":"7613263030184",
-        "etim_class":"EC003024"
-      },
+      "identity": {"manufacturer_part_no":"1158140","gf_item_no":"351616990","ean":"7613263030184","etim_class":"EC003024"},
       "scale": "verified 45x25x25mm product envelope; schematic interface cue increases whole proxy length to ~53mm",
       "shape": "system proxy; manufacturer industrial-design shape not copied",
-      "interface": {
-        "component_type":"IfcPipeFittingType",
-        "nominal_system":"JRG Sanipex MT",
-        "nominal_diameter_mm":16,
-        "connection_role":"adapter"
-      },
+      "interface": {"component_type":"IfcPipeFittingType","nominal_system":"JRG Sanipex MT","nominal_diameter_mm":16,"connection_role":"adapter"},
       "g4_state": "exact manufacturer BIM identity and formats verified; official download requires account",
       "next_gate": "authorized manufacturer BIM retrieval + exact geometry QA + Spain/EU procurement"
+    },
+    {
+      "avatar_id": "AVATAR_LONGI_LR7_72HVH_670M_G2_PV_PROXY",
+      "category_id": "ENERGY.SOLAR.PANEL",
+      "manufacturer": "LONGi",
+      "product_family": "Hi-MO X10 Guardian Anti-Glare",
+      "model": "LR7-72HVH-670M",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_proxy",
+      "asset_path": "data/geometry/avatars/longi-lr7-72hvh-670m-g2-pv-proxy.glb",
+      "identity": "exact_manufacturer_model",
+      "scale": "verified 1134x2382x30mm module envelope; service-box depth is proxy",
+      "shape": "generic PV module proxy; manufacturer artwork/cell texture not copied",
+      "electrical_stc": {"rated_power_wp":670,"voc_v":54.30,"isc_a":15.60,"vmp_v":44.96,"imp_a":14.91,"calculated_module_efficiency_percent":24.8039},
+      "mechanical": {"weight_kg":28.5,"junction_box":"split, IP68","front_static_load_pa":5400,"back_static_load_pa":2400},
+      "next_gate": "full compliance profile + authorized exact geometry/appearance + Spain/EU offer/RFQ"
+    },
+    {
+      "avatar_id": "AVATAR_MOSO_BAMBOO_XTREME_BO_DTHT171G_G2_SYSTEM_PROXY",
+      "category_id": "SITE.DECKING",
+      "manufacturer": "MOSO Bamboo",
+      "product_family": "Bamboo X-treme Decking",
+      "product_code": "BO-DTHT171G",
+      "type": "material_system",
+      "level": "G2",
+      "promotion_state": "promoted_proxy",
+      "asset_path": "data/geometry/avatars/moso-bamboo-xtreme-bo-dtht171g-g2-system-proxy.glb",
+      "identity": "manufacturer_product_code_and_family_verified",
+      "module_mm": {"length":1850,"width":137,"thickness":20},
+      "joint_gap_mm": {"min":5,"max":6,"design_default":5.5},
+      "shape": "rectangular board/repeat proxy; exact groove/bevel profile and proprietary appearance not claimed",
+      "takeoff_test": {"area_m2":20,"waste_percent":10,"preliminary_boards_per_m2":3.7932669512,"ordered_boards":84},
+      "next_gate": "authorized profile/PBR geometry + live Spain/EU offer/RFQ + project-specific fixing/joist layout"
     }
   ],
   "candidates": [
@@ -124,19 +149,9 @@
       "max_relative_error": 0.0012552087957208807,
       "source_asset_sha256": "056266beb2cbea1af1cc91bcab74dccb46620ebc55464276d1d22f90f8977e9a",
       "persistent_binary": false,
-      "procurement": {
-        "state": "manufacturer_rfq_route_verified",
-        "route": "https://www.arper.com/es_ES/request-product-information",
-        "purpose": "availability and prices",
-        "rfq_context": "Ply Table #3853 / article 3853"
-      },
-      "rights": {
-        "state": "commercial_use_requires_written_permission",
-        "evidence_file": "data/rights/arper-ply-3853-rights-and-rfq.json"
-      },
-      "blockers": [
-        "obtain written Arper permission for Product Twin commercial rendering/derivative use"
-      ]
+      "procurement": {"state":"manufacturer_rfq_route_verified","route":"https://www.arper.com/es_ES/request-product-information","purpose":"availability and prices","rfq_context":"Ply Table #3853 / article 3853"},
+      "rights": {"state":"commercial_use_requires_written_permission","evidence_file":"data/rights/arper-ply-3853-rights-and-rfq.json"},
+      "blockers": ["obtain written Arper permission for Product Twin commercial rendering/derivative use"]
     }
   ],
   "technical_g4_leads": [
