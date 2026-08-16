@@ -5,11 +5,6 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/shopify-ingest.yml"
-      - "config/**"
-      - "scripts/**"
-      - "package.json"
-      - "data/projects/**"
-      - "data/tests/whole-building-10.json"
   workflow_dispatch:
   schedule:
     - cron: "17 3 * * 2,5"
@@ -22,57 +17,51 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  push-noop:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Shopify crawl paused for cache-compliance migration."
+
   ingest:
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     timeout-minutes: 35
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-
       - name: Pull Shopify Global Catalog
         run: npm run ingest:shopify
-
       - name: Triage Twin Candidates
         run: npm run triage:shopify
-
       - name: Build canonical category coverage
         run: npm run coverage
-
       - name: Resolve project context
         run: npm run context:test > data/tests/project-context.latest.json
-
       - name: Resolve exact project offers
         run: npm run offers:resolve
-
       - name: Create localized merchant carts
         run: npm run carts:create
-
       - name: Prepare checkout shipping quotes
         run: npm run checkouts:quote
-
       - name: Extract technical evidence signals
         run: npm run technical:extract
-
       - name: Run whole-building hypothesis test
         run: npm run whole-building:test
-
       - name: Show summary
         run: npm run summarize
-
-      - name: Commit refreshed catalogue and tests
+      - name: Commit permitted summaries only
         run: |
           git config user.name "product-twin-bot"
           git config user.email "product-twin-bot@users.noreply.github.com"
-          git add data/shopify data/coverage data/offers data/carts data/checkouts data/technical data/tests
+          git add data/coverage data/tests || true
           if git diff --cached --quiet; then
-            echo "No data changes."
+            echo "No permitted summary changes."
             exit 0
           fi
-          git commit -m "data: refresh catalogue, offers, carts, checkout quotes, technical signals, coverage and whole-building test"
+          git commit -m "data: refresh permitted aggregate summaries"
           git push
