@@ -1,0 +1,44 @@
+{
+  "version": "0.1",
+  "target_id": "LONGI_LR7_72HVH_670M_G2_V0_1",
+  "category_id": "ENERGY.SOLAR.PANEL",
+  "type": "energy_system_component",
+  "manufacturer": "LONGi",
+  "product_family": "Hi-MO X10 Guardian Anti-Glare",
+  "model": "LR7-72HVH-670M",
+  "official_page": "https://www.longi.com/en/products/modules/hi-mo-x10-guardian-anti-glare/",
+  "mechanical": {
+    "width_mm": 1134,
+    "height_mm": 2382,
+    "thickness_mm": 30,
+    "weight_kg": 28.5,
+    "layout": "144 (6x24)",
+    "junction_box": "split junction box, IP68",
+    "front_static_load_pa": 5400,
+    "back_static_load_pa": 2400,
+    "hail_test": "25 mm diameter at 23 m/s"
+  },
+  "electrical_stc": {
+    "rated_power_wp": 670,
+    "module_efficiency_percent_calculated_from_rated_power_and_verified_area": 24.8039,
+    "voc_v": 54.30,
+    "isc_a": 15.60,
+    "vmp_v": 44.96,
+    "imp_a": 14.91,
+    "temperature_coefficient_isc_percent_per_c": 0.050,
+    "temperature_coefficient_voc_percent_per_c": -0.200,
+    "temperature_coefficient_pmax_percent_per_c": -0.260
+  },
+  "avatar_plan": {
+    "target_level": "G2",
+    "geometry": "Product Twin-owned dimension-verified module proxy",
+    "appearance": "generic dark PV glass/cell proxy; no LONGi marketing artwork or exact cell texture copied",
+    "scale_gate": "1134x2382x30 mm",
+    "spec_readiness": "partial_until_full_datasheet_compliance_fields_are_joined"
+  },
+  "promotion_blockers_for_g3_plus": [
+    "authorized exact manufacturer geometry/appearance rights",
+    "full pv_module specification profile including compliance/certification fields",
+    "Spain/EU live offer or RFQ identity"
+  ]
+}
