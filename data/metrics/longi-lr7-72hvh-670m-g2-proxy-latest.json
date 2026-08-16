@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-08-16T17:51:37.680525+00:00",
+  "target_id": "LONGI_LR7_72HVH_670M_G2_V0_1",
+  "avatar_id": "AVATAR_LONGI_LR7_72HVH_670M_G2_PV_PROXY",
+  "status": "G2_PROXY_SCALE_ELECTRICAL_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/longi-lr7-72hvh-670m-g2-pv-proxy.glb",
+  "asset_bytes": 4760,
+  "verified_core_envelope_mm": {
+    "width": 1134,
+    "height": 2382,
+    "module_thickness": 30
+  },
+  "proxy_whole_extents_mm": {
+    "width": 1133.9999437332153,
+    "depth": 41.000000201165676,
+    "height": 2381.999969482422
+  },
+  "relative_error": {
+    "width": 4.961797589767967e-08,
+    "height": 1.2811745644416456e-08
+  },
+  "electrical_stc": {
+    "rated_power_wp": 670,
+    "module_efficiency_percent_calculated_from_rated_power_and_verified_area": 24.8039,
+    "voc_v": 54.3,
+    "isc_a": 15.6,
+    "vmp_v": 44.96,
+    "imp_a": 14.91,
+    "temperature_coefficient_isc_percent_per_c": 0.05,
+    "temperature_coefficient_voc_percent_per_c": -0.2,
+    "temperature_coefficient_pmax_percent_per_c": -0.26
+  },
+  "calculated_module_efficiency_percent": 24.80390109833155,
+  "mechanical": {
+    "weight_kg": 28.5,
+    "junction_box": "split junction box, IP68",
+    "front_static_load_pa": 5400,
+    "back_static_load_pa": 2400,
+    "hail_test": "25 mm diameter at 23 m/s"
+  },
+  "disclosure": "Exact LONGi model identity and manufacturer-published physical/electrical specs. Product Twin-owned G2 geometry uses the verified panel envelope but generic PV glass/frame/service-box appearance; it is not exact LONGi industrial-design geometry.",
+  "next_gate": "full pv_module compliance profile + authorized exact geometry/appearance + Spain/EU offer/RFQ"
+}
