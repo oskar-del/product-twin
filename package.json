@@ -1,6 +1,6 @@
 {
   "name": "product-twin",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "private": true,
   "type": "module",
   "engines": {"node": ">=22"},
@@ -23,6 +23,7 @@
     "solar:pvgis": "node scripts/pvgis-solar.mjs",
     "solar:requirement": "node scripts/solar-requirement.mjs",
     "pool:requirement": "node scripts/pool-requirement.mjs",
+    "concrete:requirement": "node scripts/concrete-requirement.mjs",
     "climate:cte": "node scripts/cte-climate.mjs",
     "summarize": "node scripts/summarize.mjs"
   }
