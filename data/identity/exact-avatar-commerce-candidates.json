@@ -1,8 +1,8 @@
 {
   "summary": {
-    "generated_at": "2026-08-16T16:47:38.917Z",
-    "targets": 1,
-    "targets_with_candidates": 1,
+    "generated_at": "2026-08-16T17:19:58.862Z",
+    "targets": 2,
+    "targets_with_candidates": 2,
     "strong_identity_candidates": 0,
     "policy": "Search payload ephemeral; persist stable external references and match evidence only."
   },
@@ -205,6 +205,194 @@
           "identity_match_reasons": [
             "manufacturer_name"
           ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        }
+      ]
+    },
+    {
+      "target_id": "EXACT_ARPER_PLY_3853_001",
+      "manufacturer": "Arper",
+      "model": "Ply Table 3853",
+      "queries_run": 4,
+      "candidate_references": [
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_ARPER_PLY_3853_001",
+          "product_id": "gid://shopify/p/6SxJkFGY3L3RMgBnyFiWC",
+          "variant_id": "gid://shopify/ProductVariant/47039915983190",
+          "seller_domain": "2nd-home-io.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72904048982",
+          "matched_queries": [
+            "Arper Ply Table 3853",
+            "Ply Table 3853 Arper"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_ARPER_PLY_3853_001",
+          "product_id": "gid://shopify/p/1J6imVe8pKueVHJrH2oGPi",
+          "variant_id": "gid://shopify/ProductVariant/49284911006038",
+          "seller_domain": "2nd-home-io.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72904048982",
+          "matched_queries": [
+            "Arper Ply Table 3853",
+            "Ply Table 3853 Arper"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_ARPER_PLY_3853_001",
+          "product_id": "gid://shopify/p/3bMWU6xDbYooox3JVFbtCC",
+          "variant_id": "gid://shopify/ProductVariant/51846221136138",
+          "seller_domain": "design-mobel-sale.myshopify.com",
+          "seller_id": "gid://shopify/Shop/35217277065",
+          "matched_queries": [
+            "Arper Ply Table 3853",
+            "Ply Table 3853 Arper"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_ARPER_PLY_3853_001",
+          "product_id": "gid://shopify/p/n4aWZZuTt6S6CvxOlregT",
+          "variant_id": "gid://shopify/ProductVariant/51859122782475",
+          "seller_domain": "qvcnkj-7r.myshopify.com",
+          "seller_id": "gid://shopify/Shop/91475869963",
+          "matched_queries": [
+            "Arper Ply Table 3853",
+            "Ply Table 3853 Arper"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_ARPER_PLY_3853_001",
+          "product_id": "gid://shopify/p/4IkZMS2lguw5VlykTDi0un",
+          "variant_id": "gid://shopify/ProductVariant/52563665092874",
+          "seller_domain": "revive-test-store.myshopify.com",
+          "seller_id": "gid://shopify/Shop/28248277040",
+          "matched_queries": [
+            "Arper Ply Table 3853"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_ARPER_PLY_3853_001",
+          "product_id": "gid://shopify/p/57OVzrevCPfMJ5G3LjjRKN",
+          "variant_id": "gid://shopify/ProductVariant/46314565501234",
+          "seller_domain": "runze-furniture.myshopify.com",
+          "seller_id": "gid://shopify/Shop/77457129778",
+          "matched_queries": [
+            "Arper Ply Table 3853"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_ARPER_PLY_3853_001",
+          "product_id": "gid://shopify/p/es9Nb4Hym9ak05KwZzjXB",
+          "variant_id": "gid://shopify/ProductVariant/47170452717910",
+          "seller_domain": "dvsdvvw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/46990262421",
+          "matched_queries": [
+            "Arper Ply Table 3853"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_ARPER_PLY_3853_001",
+          "product_id": "gid://shopify/p/5kGvkNsXNaSlRRfKsKExTH",
+          "variant_id": "gid://shopify/ProductVariant/46751036539222",
+          "seller_domain": "dvsdvvw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/46990262421",
+          "matched_queries": [
+            "Arper Ply Table 3853"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_ARPER_PLY_3853_001",
+          "product_id": "gid://shopify/p/1RCLZHvRryidvZ6Ncxe4gl",
+          "variant_id": "gid://shopify/ProductVariant/53160301756721",
+          "seller_domain": "artepera-us.myshopify.com",
+          "seller_id": "gid://shopify/Shop/30145839188",
+          "matched_queries": [
+            "Arper Ply Table 3853"
+          ],
+          "identity_match_score": 0,
+          "identity_match_reasons": [],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_ARPER_PLY_3853_001",
+          "product_id": "gid://shopify/p/4Sd2ArXORaThqbY2arVgfI",
+          "variant_id": "gid://shopify/ProductVariant/39628329255041",
+          "seller_domain": "honest-ppe-supply.myshopify.com",
+          "seller_id": "gid://shopify/Shop/4519592065",
+          "matched_queries": [
+            "Arper Ply Table 3853"
+          ],
+          "identity_match_score": 0,
+          "identity_match_reasons": [],
           "identity_state": "provisional_candidate",
           "refresh_policy": "live_required",
           "persisted_fields_policy": "stable_reference_and_match_evidence_only"
