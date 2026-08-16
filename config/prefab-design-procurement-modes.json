@@ -1,0 +1,77 @@
+{
+  "version": "0.1",
+  "principle": "A prefab concept is not guaranteed manufacturable until a supplier accepts the configuration and the required local professional/regulatory checks are complete.",
+  "modes": [
+    {
+      "id": "PREFAB_MODE_A_STANDARD_CATALOG",
+      "name": "Standard catalogue model",
+      "design_freedom": "low",
+      "description": "Use a supplier's existing house/module substantially as published.",
+      "supplier_commitment_needed": "availability + project-location feasibility + quote",
+      "product_twin_state_before_supplier_acceptance": "catalog_system_candidate",
+      "procurement_route": "direct_quote_or_order"
+    },
+    {
+      "id": "PREFAB_MODE_B_CONFIGURED_SYSTEM",
+      "name": "Design inside a known factory system",
+      "design_freedom": "medium",
+      "description": "Load supplier grid, span, opening, stacking, connection and transport rules into the design engine; create a house only inside that configuration envelope.",
+      "supplier_commitment_needed": "configuration validation + engineering + final quote",
+      "product_twin_state_before_supplier_acceptance": "configured_system_candidate",
+      "procurement_route": "configured_rfq",
+      "advantage": "Highest chance that the AI concept translates directly to one supplier's production system."
+    },
+    {
+      "id": "PREFAB_MODE_C_OPEN_BESPOKE_TENDER",
+      "name": "Design first, tender to prefab suppliers",
+      "design_freedom": "high",
+      "description": "Product Twin creates a performance- and geometry-defined house concept independent of one factory, then invites compatible prefab suppliers to respond with feasibility, required design changes, engineering route, price, programme and logistics.",
+      "supplier_commitment_needed": "factory feasibility acceptance + engineering proposal + commercial bid",
+      "product_twin_state_before_supplier_acceptance": "tender_design_not_guaranteed_manufacturable",
+      "procurement_route": "multi_supplier_tender",
+      "advantage": "Lets the user design the house they want first and lets factories compete to industrialize it.",
+      "required_bid_response": [
+        "can_build_as_drawn: yes/no/conditional",
+        "required_geometry_changes",
+        "structural_system proposed",
+        "module/grid strategy",
+        "local code / certification evidence available",
+        "factory scope",
+        "excluded site works",
+        "base price",
+        "option prices",
+        "engineering price",
+        "shipping/containerization",
+        "estimated landed logistics",
+        "lead time",
+        "assembly requirements",
+        "warranty",
+        "payment schedule"
+      ]
+    },
+    {
+      "id": "PREFAB_MODE_D_DESIGN_TO_MANUFACTURE_PARTNERSHIP",
+      "name": "Selected factory adapts the concept",
+      "design_freedom": "high_then_constrained",
+      "description": "After tendering, choose a preferred factory and allow it to translate the concept into its manufacturing system while Product Twin tracks every deviation from the approved design intent.",
+      "supplier_commitment_needed": "signed-off engineered configuration",
+      "product_twin_state_before_supplier_acceptance": "supplier_adaptation_in_progress",
+      "procurement_route": "negotiated_design_and_build"
+    }
+  ],
+  "manufacturability_states": [
+    "CONCEPT_ONLY",
+    "TENDERABLE",
+    "SUPPLIER_FEASIBILITY_RECEIVED",
+    "CONDITIONAL_FACTORY_ACCEPTANCE",
+    "ENGINEERING_IN_PROGRESS",
+    "LOCAL_REGULATORY_REVIEW",
+    "MANUFACTURABLE_CONFIGURATION_APPROVED",
+    "COMMERCIAL_QUOTE_APPROVED",
+    "ORDERED",
+    "IN_PRODUCTION",
+    "SHIPPED",
+    "SITE_ASSEMBLY"
+  ],
+  "selection_rule": "Never label an open bespoke prefab design as an orderable Product Twin until a named supplier has accepted the geometry/configuration and the required engineering/regulatory gates have passed."
+}
