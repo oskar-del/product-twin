@@ -1,0 +1,34 @@
+{
+  "version": "0.1",
+  "target_id": "IKEA_SKURUP_80407114_G2_V0_1",
+  "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+  "type": "luminaire",
+  "manufacturer": "IKEA",
+  "product_family": "SKURUP",
+  "article_no": "804.071.14",
+  "official_spain_page": "https://www.ikea.com/es/es/p/skurup-lampara-techo-negro-80407114/",
+  "dimensions_mm": {"diameter":380,"height":290,"cord_length":1500},
+  "specification": {
+    "max_power_w": 22,
+    "lamp_base": "E27",
+    "shade_material": "steel",
+    "ce_marked": true,
+    "mounting": "ceiling hook",
+    "dimmable": "depends on bulb/dimmer; product page states dimmable"
+  },
+  "commerce_reference": {
+    "merchant": "IKEA Spain",
+    "type": "retailer_direct_online",
+    "product_url": "https://www.ikea.com/es/es/p/skurup-lampara-techo-negro-80407114/",
+    "last_observed_price_eur": 19.99,
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "availability_state": "add-to-cart route observed; delivery/store availability must refresh live"
+  },
+  "avatar_plan": {
+    "target_level": "G2",
+    "geometry": "Product Twin-owned conical pendant-shade proxy using exact overall shade envelope",
+    "appearance": "generic dark metal proxy; exact IKEA industrial-design geometry not copied",
+    "scale_gate": "380 mm diameter x 290 mm height; cord is parametric/adjustable"
+  },
+  "next_gates": ["authorized exact geometry/render rights", "photometric data if available", "live availability refresh"]
+}
