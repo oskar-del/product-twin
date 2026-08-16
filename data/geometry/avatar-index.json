@@ -1,21 +1,21 @@
 {
   "generated_at": "2026-08-16",
   "summary": {
-    "promoted_avatars": 3,
+    "promoted_avatars": 4,
     "candidates": 1,
-    "indexed_total": 4,
+    "indexed_total": 5,
     "G0": 0,
     "G1": 0,
-    "G2": 3,
+    "G2": 4,
     "G3_promoted": 0,
     "G3_candidates": 1,
     "G4_promoted": 0,
     "G5_promoted": 0,
     "object_avatars": 2,
     "material_avatars": 1,
-    "system_avatars": 0,
+    "system_avatars": 1,
     "exact_manufacturer_geometry_candidates": 1,
-    "dimension_verified_proxies": 3
+    "dimension_verified_proxies": 4
   },
   "avatars": [
     {
@@ -54,6 +54,31 @@
       "scale": "verified 1220x2440mm module / 3mm selected thickness",
       "appearance": "neutral proxy; manufacturer decor not copied",
       "next_gate": "specific decor identity + authorized PBR texture + Spain/EU evidence"
+    },
+    {
+      "avatar_id": "AVATAR_VELUX_GGL_CK04_G2_SYSTEM_PROXY",
+      "category_id": "OPENINGS.WINDOWS",
+      "manufacturer": "VELUX",
+      "product_family": "GGL",
+      "size_code": "CK04",
+      "type": "system",
+      "level": "G2",
+      "promotion_state": "promoted_proxy",
+      "asset_path": "data/geometry/avatars/velux-ggl-ck04-g2-system-proxy.glb",
+      "identity": "manufacturer_family_and_size_verified_variant_suffix_unresolved",
+      "scale": "verified outer width/height; opening and visible glazing envelopes manufacturer-sourced; depth is proxy",
+      "shape": "system proxy",
+      "verified_outer_mm": {"width":550,"height":978},
+      "verified_opening_mm": {"width":466,"height":899},
+      "verified_visible_glazing_mm": {"width":371,"height":783},
+      "system_rules": {
+        "roof_pitch_deg": {"min":15,"max":90},
+        "operation": "manual centre-pivot/top control bar",
+        "flashing_families": ["ED-", "EB-", "EK-"]
+      },
+      "variant_reference_seen": "GGL-CK04-2070",
+      "variant_semantics": "unresolved; no glazing performance bound to 2070",
+      "next_gate": "official VELUX BIM geometry + rights/access + exact variant commerce"
     }
   ],
   "candidates": [
@@ -77,6 +102,16 @@
         "confirm Product Twin render/derivative/persistent-storage rights",
         "resolve exact live commerce or RFQ identity"
       ]
+    }
+  ],
+  "technical_g4_leads": [
+    {
+      "target_id": "GF_SANIPEX_MT_1158140_G4_V0_1",
+      "category_id": "PLUMBING.FITTINGS",
+      "state": "exact_identity_and_formats_verified_account_required",
+      "identity": {"part_no":"1158140","gf_item":"351616990","ean":"7613263030184","etim":"EC003024","ifc_type":"IfcPipeFittingType"},
+      "formats": ["RFA","DWG2D","DWG3D","DXF","IFC","SAT","FBX","OBJ"],
+      "reason_not_avatar": "Official BIM service requires a user account before geometry download; no bypass attempted."
     }
   ],
   "prefab_system_lead": {
