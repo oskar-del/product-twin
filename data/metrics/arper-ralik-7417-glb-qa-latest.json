@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-08-16T17:14:54.715187+00:00",
+  "target_id": "ARPER_RALIK_7417_G3_V0_1",
+  "capture_status": "EXACT_MANUFACTURER_3DS_CAPTURED",
+  "qa_status": "SCALE_FAIL",
+  "promotion_level": "G0",
+  "exact_geometry": false,
+  "rights_state": "review",
+  "source_asset_sha256": "a9c8c92950970ea9ca3764b8d69177e52de48744e31665b10c3ecffc9458de46",
+  "source_url": "https://arper-cdn.thron.com/delivery/public/document/arper/54cf63d1-174a-49a3-8ca6-4745ce4b21f6/jd4oic/WEB/Arper_Ralik_Height_Adjustable_Table_7417.3ds",
+  "best_unit_hypothesis": "centimeters",
+  "extents_mm_sorted": [
+    332.9127311706543,
+    439.9999600000001,
+    532.9128837585449
+  ],
+  "expected_mm_sorted": [
+    300.0,
+    510.0,
+    600.0
+  ],
+  "max_relative_error": 0.13725498039215667,
+  "rms_relative_error": 0.12024545625250913,
+  "geometry_stats": {
+    "mesh_count": 7,
+    "vertices": 13306,
+    "faces": 26584
+  },
+  "remaining_blockers": [
+    "manufacturer geometry scale does not match verified product dimensions"
+  ]
+}
