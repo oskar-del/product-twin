@@ -7,6 +7,7 @@ on:
       - ".github/workflows/technical-evidence.yml"
       - "data/evidence/manufacturer/**"
       - "scripts/evaluate-technical-fit.mjs"
+      - "config/jurisdictions/**"
       - "data/projects/**"
       - "data/energy/**"
   workflow_dispatch:
@@ -29,9 +30,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Evaluate Huawei inverter against Marbella project
-        run: npm run technical:fit
-      - name: Commit fit result
+      - name: Evaluate Huawei inverter
+        run: node scripts/evaluate-technical-fit.mjs data/evidence/manufacturer/huawei-sun2000-10ktl-m1.json
+      - name: Evaluate AstralPool 67547 pump
+        run: node scripts/evaluate-technical-fit.mjs data/evidence/manufacturer/astralpool-victoria-plus-silent-vs-67547.json
+      - name: Evaluate AstralPool 67548 pump
+        run: node scripts/evaluate-technical-fit.mjs data/evidence/manufacturer/astralpool-victoria-plus-silent-vs-67548.json
+      - name: Commit fit results
         run: |
           set -euo pipefail
           git config user.name "product-twin-bot"
@@ -41,7 +46,7 @@ jobs:
             echo "No fit changes."
             exit 0
           fi
-          git commit -m "data: refresh authoritative technical fit result"
+          git commit -m "data: refresh solar and pool technical fit results"
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main
