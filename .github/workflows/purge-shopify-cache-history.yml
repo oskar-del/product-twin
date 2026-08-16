@@ -1,0 +1,35 @@
+name: Purge Shopify Cache History
+
+on:
+  push:
+    branches: [purge-shopify-cache-history]
+
+permissions:
+  contents: write
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main with full history
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Rewrite main history without cached Shopify Catalog payloads
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --force \
+            --index-filter 'git rm -r --cached --ignore-unmatch data/shopify' \
+            --prune-empty \
+            --tag-name-filter cat \
+            -- main
+          git push --force origin refs/heads/main:refs/heads/main
+
+      - name: Remove temporary trigger branch
+        if: always()
+        run: git push origin --delete purge-shopify-cache-history || true
