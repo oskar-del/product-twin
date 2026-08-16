@@ -1,0 +1,44 @@
+name: Exact Avatar Commerce Hunt
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'config/geometry/exact-avatar-targets.json'
+      - 'scripts/hunt-shopify-exact-avatar.mjs'
+      - '.github/workflows/exact-avatar-commerce-hunt.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-exact-avatar-commerce-hunt
+  cancel-in-progress: true
+
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Hunt exact manufacturer/model matches in live Shopify catalog
+        run: node scripts/hunt-shopify-exact-avatar.mjs
+      - name: Commit reference-only results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/identity/exact-avatar-commerce-candidates.json data/metrics/exact-avatar-commerce-hunt-latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "data: refresh exact avatar commerce candidates"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt*3))
+          done
+          exit 1
