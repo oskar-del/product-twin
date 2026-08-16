@@ -5,18 +5,17 @@ const ROOT = process.cwd();
 const inputPath = path.join(ROOT, "data/shopify/candidates/latest.json");
 const candidates = JSON.parse(await fs.readFile(inputPath, "utf8"));
 
-const ROOM_WEIGHTS = {
-  sofas: 1.00,
-  lounge_chairs: 0.98,
-  coffee_tables: 0.94,
-  side_tables: 0.90,
-  pendants: 0.88,
-  floor_lamps: 0.84,
-  rugs: 0.90,
-  dining_chairs: 0.45,
-  outdoor_chairs: 0.25,
-  outdoor_sofas: 0.25
-};
+const FITNESS_WEIGHT = {primary: 1.0, secondary: 0.75, experimental: 0.45};
+const LIVING_ROOM_CATEGORIES = new Set([
+  "FFE.SEATING.SOFA",
+  "FFE.SEATING.LOUNGE",
+  "FFE.TABLE.COFFEE",
+  "FFE.TABLE.SIDE",
+  "FFE.RUGS",
+  "ELECTRICAL.LUMINAIRES.PENDANT",
+  "ELECTRICAL.LUMINAIRES.FLOOR",
+  "ELECTRICAL.LUMINAIRES.TABLE"
+]);
 
 function mediaScore(c) {
   const media = c.product?.media ?? [];
@@ -49,7 +48,9 @@ function identityScore(c) {
 
 function textQuality(c) {
   const title = c.product?.title ?? c.identity?.title ?? "";
-  const desc = c.product?.description ?? "";
+  const desc = typeof c.product?.description === "string"
+    ? c.product.description
+    : JSON.stringify(c.product?.description ?? "");
   let s = 0;
   if (title.length >= 5) s += 0.45;
   if (desc.length >= 40) s += 0.25;
@@ -58,45 +59,61 @@ function textQuality(c) {
   return Math.min(1, s);
 }
 
-function priceSignal(c) {
-  const p = Number(c.best_offer?.price_minor);
-  if (!Number.isFinite(p) || p <= 0) return 0;
-  return 1;
+function provisionalCategory(c) {
+  const hints = c.taxonomy?.canonical_category_hints ?? [];
+  const scores = new Map();
+  for (const h of hints) {
+    const weight = FITNESS_WEIGHT[h.source_fitness] ?? 0.5;
+    scores.set(h.canonical_category_id, (scores.get(h.canonical_category_id) ?? 0) + weight);
+  }
+  const ranked = [...scores.entries()].sort((a,b) => b[1] - a[1]);
+  if (!ranked.length) return {id: null, confidence: 0, alternatives: []};
+  const total = ranked.reduce((a,x) => a + x[1], 0);
+  const confidence = total ? ranked[0][1] / total : 0;
+  return {
+    id: ranked[0][0],
+    confidence: Number(confidence.toFixed(3)),
+    alternatives: ranked.slice(1,4).map(([id,score]) => ({id, score:Number((score/total).toFixed(3))}))
+  };
 }
 
 function triage(c) {
-  const queryKey = c.discovered?.query_key ?? "unknown";
+  const category = provisionalCategory(c);
   const scores = {
     identity: identityScore(c),
     commerce: offerScore(c),
     media: mediaScore(c),
-    text: textQuality(c),
-    price: priceSignal(c),
-    room_relevance: ROOM_WEIGHTS[queryKey] ?? 0.5
+    text: textQuality(c)
   };
 
-  // This is intentionally NOT a render-readiness score.
-  // Geometry, scale and rights are separate downstream gates.
+  // Quality only measures whether this is a useful candidate record.
+  // It does not imply physical/specification/render readiness.
   const candidate_quality =
-    scores.identity * 0.20 +
-    scores.commerce * 0.30 +
-    scores.media * 0.18 +
-    scores.text * 0.12 +
-    scores.price * 0.08 +
-    scores.room_relevance * 0.12;
+    scores.identity * 0.27 +
+    scores.commerce * 0.38 +
+    scores.media * 0.22 +
+    scores.text * 0.13;
 
   const holds = [];
   if (scores.identity < 0.65) holds.push("identity_enrichment");
   if (scores.commerce < 0.55) holds.push("commerce_enrichment");
   if (scores.media < 0.25) holds.push("media_enrichment");
+  if (!category.id || category.confidence < 0.55) holds.push("taxonomy_review");
 
   return {
     ...c,
+    taxonomy: {
+      ...(c.taxonomy ?? {}),
+      canonical_category_id: category.id,
+      canonical_category_confidence: category.confidence,
+      canonical_category_alternatives: category.alternatives,
+      classification_status: category.confidence >= 0.75 ? "provisional_high" : "provisional_review"
+    },
     triage: {
       candidate_quality: Number(candidate_quality.toFixed(4)),
       scores,
       holds,
-      next_gate: "identity_dimensions_geometry_rights",
+      next_gate: "identity_dimensions_geometry_rights_specification",
       render_ready: false
     }
   };
@@ -104,24 +121,22 @@ function triage(c) {
 
 const triaged = candidates.map(triage).sort((a,b) => b.triage.candidate_quality - a.triage.candidate_quality);
 
-const byQuery = new Map();
+const byCategory = new Map();
 for (const c of triaged) {
-  const key = c.discovered?.query_key ?? "unknown";
-  const arr = byQuery.get(key) ?? [];
+  const key = c.taxonomy?.canonical_category_id ?? "UNCLASSIFIED";
+  const arr = byCategory.get(key) ?? [];
   arr.push(c);
-  byQuery.set(key, arr);
+  byCategory.set(key, arr);
 }
 
 const shortlist = [];
-for (const [key, rows] of byQuery) {
-  const max = ["sofas","lounge_chairs","coffee_tables","side_tables","pendants","floor_lamps","rugs"].includes(key) ? 8 : 3;
-  shortlist.push(...rows.slice(0, max));
+for (const [categoryId, rows] of byCategory) {
+  const limit = LIVING_ROOM_CATEGORIES.has(categoryId) ? 12 : 5;
+  shortlist.push(...rows.slice(0, limit));
 }
 shortlist.sort((a,b) => b.triage.candidate_quality - a.triage.candidate_quality);
 
-const livingRoom = shortlist.filter(c => [
-  "sofas","lounge_chairs","coffee_tables","side_tables","pendants","floor_lamps","rugs"
-].includes(c.discovered?.query_key));
+const livingRoom = shortlist.filter(c => LIVING_ROOM_CATEGORIES.has(c.taxonomy?.canonical_category_id));
 
 const analytics = {
   generated_at: new Date().toISOString(),
@@ -129,12 +144,13 @@ const analytics = {
   triaged_candidates: triaged.length,
   shortlist_candidates: shortlist.length,
   living_room_candidates: livingRoom.length,
-  by_query: Object.fromEntries([...byQuery].map(([k,v]) => [k, {
+  classified_categories: byCategory.size,
+  by_category: Object.fromEntries([...byCategory].map(([k,v]) => [k, {
     count: v.length,
     top_quality: v[0]?.triage?.candidate_quality ?? null,
     average_quality: Number((v.reduce((a,x) => a + x.triage.candidate_quality, 0) / Math.max(1,v.length)).toFixed(4))
   }])),
-  disclaimer: "Triage measures catalogue/commercial completeness, not geometry, rights, physical scale, or render readiness."
+  disclaimer: "Category assignment is provisional from source/query evidence. Candidate triage does not imply dimensions, geometry, rights, specification or render readiness."
 };
 
 await fs.mkdir(path.join(ROOT, "data/shopify/triage"), {recursive:true});
@@ -143,6 +159,6 @@ await fs.writeFile(path.join(ROOT, "data/shopify/triage/shortlist.json"), JSON.s
 await fs.writeFile(path.join(ROOT, "data/shopify/triage/living-room.json"), JSON.stringify(livingRoom, null, 2));
 await fs.writeFile(path.join(ROOT, "data/shopify/triage/analytics.json"), JSON.stringify(analytics, null, 2));
 
-console.log(`Triaged ${triaged.length} candidates`);
+console.log(`Triaged ${triaged.length} candidates across ${byCategory.size} provisional canonical categories`);
 console.log(`Shortlist: ${shortlist.length}`);
 console.log(`Living-room set: ${livingRoom.length}`);
