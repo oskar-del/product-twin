@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generated_at": "2026-08-16T03:10:37.330Z",
+    "generated_at": "2026-08-16T03:14:11.627Z",
     "project_id": "PROJECT_MARBELLA_VILLA_001",
     "live_offers_evaluated": 10,
-    "authoritative_evidence_records": 1,
+    "authoritative_evidence_records": 3,
     "likely_or_verified_identity_links": 0,
     "unresolved": 10,
     "principle": "Persist only Product Twin identity decisions and stable external references; Shopify presentation fields used for matching remain ephemeral."
@@ -80,8 +80,13 @@
       "identity_state": "UNRESOLVED",
       "matched_evidence_id": null,
       "matched_subject": null,
-      "confidence": 0,
-      "match_signals": {},
+      "confidence": 0.1,
+      "match_signals": {
+        "manufacturer_token": false,
+        "exact_model_token": false,
+        "manufacturer_sku_token": false,
+        "model_token_hits": 0
+      },
       "next_action": "manufacturer_identity_enrichment_required"
     },
     {
