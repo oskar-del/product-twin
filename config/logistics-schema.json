@@ -1,0 +1,22 @@
+{
+  "version":"0.1",
+  "principle":"A Product Twin can have many commercial offers and many logistics routes. Logistics is modeled separately from product identity.",
+  "entities": {
+    "supply_location": {
+      "fields":["location_id","supplier_id","name","address","country","region","postal_code","lat","lon","location_type","inventory_scope"]
+    },
+    "logistics_offer": {
+      "fields":["logistics_offer_id","offer_id","origin_location_id","destination_scope","shipping_mode","carrier_or_3pl","lead_time_days_min","lead_time_days_max","dispatch_days","delivery_cost_minor","currency","free_shipping_threshold_minor","minimum_order","minimum_order_unit","weight_limit_kg","volume_limit_m3","palletization","hazmat","temperature_controlled","tail_lift_required","crane_required","site_access_constraints","incoterm","valid_from","valid_to"]
+    },
+    "project_destination": {
+      "fields":["project_id","site_address","country","region","postal_code","lat","lon","access_notes","vehicle_size_limit","delivery_hours","storage_capacity_m3","crane_available","forklift_available","contact"]
+    },
+    "delivery_package": {
+      "fields":["package_id","project_id","construction_phase","required_on_site_date","supplier_id","origin_location_id","line_items","total_weight_kg","total_volume_m3","pallets","shipping_mode","landed_cost_minor","currency","status"]
+    }
+  },
+  "shipping_modes":["parcel","courier","pallet","ltl","ftl","container","local_delivery","supplier_truck","ready_mix_truck","specialist_freight","pickup"],
+  "construction_phases":["siteworks","foundations","structure","envelope","mep_rough_in","interior_build","finishes","fixtures","ffe","landscape","commissioning"],
+  "cost_model":["product_price","freight","duties","tax","handling","site_unloading","storage","installation","waste_allowance"],
+  "selection_priority":["technical_fit","project_location","availability","required_on_site_date","landed_cost","lead_time","supplier_reliability","carbon_distance","commercial_terms"]
+}
