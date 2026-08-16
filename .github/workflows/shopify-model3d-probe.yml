@@ -1,0 +1,55 @@
+name: Probe Shopify Model3d
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/probe-shopify-model3d.mjs'
+      - 'data/references/**.shopify.json'
+      - '.github/workflows/shopify-model3d-probe.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-model3d-probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Probe live merchant Model3d media
+        run: node scripts/probe-shopify-model3d.mjs
+
+      - name: Commit safe geometry references and metrics
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/metrics/shopify-model3d-probe-latest.json data/geometry/shopify-model3d-references.json
+          if git diff --cached --quiet; then
+            echo "No Model3d probe changes to commit."
+            exit 0
+          fi
+          git commit -m "data: refresh Shopify Model3d probe"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying..."
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 3))
+          done
+          exit 1
