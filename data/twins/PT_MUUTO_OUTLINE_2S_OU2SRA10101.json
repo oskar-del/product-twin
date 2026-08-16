@@ -1,0 +1,91 @@
+{
+  "twin_id": "PT_MUUTO_OUTLINE_2S_OU2SRA10101",
+  "kind": "object",
+  "category_id": "FFE.SEATING.SOFA",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "Muuto",
+    "product_family": "Outline Sofa",
+    "model": "Outline Sofa 2-Seater",
+    "configuration": "Refine Leather Cognac / Black, standard base",
+    "manufacturer_item_no": "OU2SRA10101",
+    "legacy_item_no": "27003-COGN",
+    "gtin_ean": "5713222210793"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1700,
+      "depth": 840,
+      "height": 710,
+      "seat_height": 400,
+      "seat_depth": 620
+    },
+    "packaging": {
+      "length_mm": 1740,
+      "width_mm": 870,
+      "height_mm": 440,
+      "gross_weight_kg": 45,
+      "net_weight_kg": 42,
+      "colli": 1
+    },
+    "evidence_state": "manufacturer_verified"
+  },
+  "manufacturer_evidence": {
+    "product_page": "https://www.muuto.com/product/Outline-Sofa-2-Seater--OU2S/OU2SRA10101/?configure=true",
+    "architect_download_hub": "https://download.muuto.com/digitalshowroom/",
+    "geometry_formats_advertised": ["DWG", "3DS", "OBJ", "SketchUp", "Revit"],
+    "authority": "A_MANUFACTURER"
+  },
+  "external_identities": [
+    {
+      "source_id": "shopify_global_catalog",
+      "role": "live_commerce_reference",
+      "product_id": "gid://shopify/p/3nZPm57QujLMQfouGtq7c6",
+      "variant_id": "gid://shopify/ProductVariant/41177311510695",
+      "merchant_domain": "top3au.myshopify.com",
+      "merchant_id": "gid://shopify/Shop/57430180007",
+      "verification": {
+        "state": "exact_identity_verified",
+        "merchant_sku": "OU2SRA10101",
+        "merchant_barcode": "5713222210793",
+        "manufacturer_item_match": true,
+        "gtin_match": true,
+        "vendor_match": true,
+        "model_family_match": true
+      },
+      "refresh_policy": "live_required",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "manufacturer_exact_candidate_asset_unresolved",
+    "preferred_source": "Muuto architect file",
+    "advertised_formats": ["OBJ", "3DS", "DWG", "SketchUp", "Revit"],
+    "runtime_target": "GLB",
+    "scale_state": "manufacturer_dimensions_known_asset_not_validated",
+    "exact_likeness_state": "pending_asset_resolution",
+    "rights": {
+      "space_planning_use": "manufacturer_professional_files_available",
+      "render_use": "review",
+      "derivative_conversion": "review",
+      "redistribution": "review"
+    }
+  },
+  "readiness": {
+    "identity": "verified",
+    "commerce": "exact_live_reference_verified",
+    "dimensions": "verified",
+    "geometry": "candidate",
+    "render": "blocked",
+    "specification": "partial_verified",
+    "rights": "review"
+  },
+  "promotion_blockers": [
+    "resolve exact manufacturer 3D asset",
+    "validate asset scale against 1700 x 840 x 710 mm manufacturer dimensions",
+    "confirm render / derivative conversion rights",
+    "resolve live Spain-appropriate offer when project procurement executes"
+  ],
+  "policy": "Exact identity does not imply exact geometry. Mutable marketplace price, stock and imagery are resolved live and are not stored in this Twin."
+}
