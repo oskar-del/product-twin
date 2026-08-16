@@ -1,0 +1,134 @@
+{
+  "version": "0.1",
+  "researched_at": "2026-08-16",
+  "principle": "Candidate integrations do not count as live Product Twin coverage until credentials/access exist and a real project test passes.",
+  "priorities": [
+    {
+      "source_id": "aliexpress_affiliate_open_platform",
+      "source_name": "AliExpress Open Platform / Affiliate product APIs",
+      "priority": "P0",
+      "connection_state": "CREDENTIALS_AND_PROGRAM_ACCESS_REQUIRED",
+      "source_type": "cross_border_affiliate_catalog",
+      "graph_roles": ["discovery", "commerce", "offer", "affiliate"],
+      "why": "Closest Alibaba-group analogue to the Shopify discovery layer found so far. Current official API reference exposes affiliate product query/detail, smart-match, image search, destination country/delivery-day filtering and tracked link generation.",
+      "capabilities_confirmed": [
+        "keyword product query",
+        "product detail lookup",
+        "image search",
+        "smart product matching",
+        "sale-price fields",
+        "commission-rate fields",
+        "ship-to-country filtering",
+        "delivery-days filtering",
+        "tracked affiliate link generation"
+      ],
+      "mvp_test": "Search 10 existing whole-building slots for ES, normalize 30-50 candidate references, compare identity and delivered-commerce coverage against Shopify.",
+      "do_not_assume": ["authoritative manufacturer technical evidence", "EU compliance", "3D/BIM rights", "true landed freight before checkout/order"]
+    },
+    {
+      "source_id": "icecat_mcp_api",
+      "source_name": "Icecat MCP / Product Content APIs",
+      "priority": "P0",
+      "connection_state": "PARTNER_OR_CONTENT_USER_ACCESS_REQUIRED",
+      "source_type": "product_information_network",
+      "graph_roles": ["identity", "technical_content", "media", "enrichment"],
+      "why": "Official Icecat material explicitly advertises MCP access for partner AI agents plus API/JSON/XML feeds. This is potentially the fastest way to enrich manufacturer/model/GTIN/specification identity across appliances, electronics, DIY and adjacent categories without treating marketplace text as technical truth.",
+      "capabilities_confirmed": [
+        "MCP service for partner AI agents",
+        "standardized multilingual product content",
+        "brand product codes",
+        "GTIN and logistics dimensions",
+        "standardized specifications",
+        "manuals and multimedia",
+        "JSON/XML/CSV/API integrations"
+      ],
+      "mvp_test": "Resolve 20 known manufacturer/model/GTIN records and measure exact-identity uplift versus commerce-only matching.",
+      "do_not_assume": ["live retailer price", "live retailer stock", "procurement checkout", "all digital assets are redistributable"]
+    },
+    {
+      "source_id": "bimobject_developer_api",
+      "source_name": "BIMobject Developer Search API",
+      "priority": "P0",
+      "connection_state": "ACCESS_REQUEST_REQUIRED",
+      "source_type": "bim_product_network",
+      "graph_roles": ["technical_content", "geometry", "bim", "manufacturer_identity"],
+      "why": "Official BIMobject Developer API offers a Search API and manufacturer-managed BIM product data. It directly targets the Product Twin geometry/specification gap rather than commerce.",
+      "capabilities_confirmed": ["search API", "manufacturer product data", "BIM objects", "technical specifications", "certifications", "environmental data", "multiple CAD/BIM formats"],
+      "mvp_test": "Request Developer API access and attempt exact manufacturer/model joins for windows, sanitaryware, HVAC and luminaires.",
+      "do_not_assume": ["commerce price", "stock", "asset redistribution rights beyond API/platform terms"]
+    },
+    {
+      "source_id": "gs1_verified",
+      "source_name": "Verified by GS1",
+      "priority": "P0",
+      "connection_state": "PUBLIC_LOW_VOLUME_AND_ENTERPRISE_API_AVAILABLE",
+      "source_type": "global_identity_registry",
+      "graph_roles": ["canonical_identity", "company_identity", "location_identity"],
+      "why": "This is the neutral identity authority we need between Shopify/Amazon/eBay/AliExpress and manufacturer records. GS1 explicitly positions the service as answering whether a product is what you think it is and offers enterprise API access via member organizations.",
+      "capabilities_confirmed": ["GTIN verification", "company/license owner verification", "GLN/location verification", "basic product master data", "batch/API access for enterprise users"],
+      "mvp_test": "Add GTIN verification as an optional high-confidence identity signal and never infer a GTIN from marketplace text.",
+      "do_not_assume": ["complete technical specification", "price", "stock", "commerce route"]
+    },
+    {
+      "source_id": "ebay_browse_api",
+      "source_name": "eBay Browse API + eBay Partner Network",
+      "priority": "P1",
+      "connection_state": "DEVELOPER_CREDENTIALS_REQUIRED",
+      "source_type": "marketplace_catalog",
+      "graph_roles": ["discovery", "commerce", "offer", "affiliate"],
+      "why": "Official Browse API supports keyword, image, GTIN and product-ID search, item detail, location-aware delivery context and affiliate URLs. Useful as a second broad-market commerce graph after Shopify.",
+      "capabilities_confirmed": ["keyword search", "image search", "GTIN search", "item detail", "affiliate URL", "contextual location for delivery estimates", "local-pickup distance signal"],
+      "mvp_test": "Run the same 10-slot whole-building test for eBay ES/EU-appropriate inventory and measure exact model/GTIN overlap.",
+      "do_not_assume": ["manufacturer-authoritative specs", "all Buy APIs are unrestricted in production", "geometry rights"]
+    },
+    {
+      "source_id": "amazon_creators_api",
+      "source_name": "Amazon Creators API",
+      "priority": "P1",
+      "connection_state": "ASSOCIATES_ELIGIBILITY_AND_API_REGISTRATION_REQUIRED",
+      "source_type": "affiliate_catalog",
+      "graph_roles": ["discovery", "commerce", "offer", "affiliate"],
+      "why": "Amazon has replaced PA-API with Creators API. It supports SearchItems, GetItems, GetVariations, browse nodes and OffersV2, including Spain as a marketplace. Strong for appliances, tools, electrical and FF&E if eligibility is met.",
+      "capabilities_confirmed": ["product search", "ASIN detail", "variations", "category hierarchy", "OffersV2", "Amazon Spain marketplace", "OAuth 2.0"],
+      "mvp_test": "Once eligible, normalize ASIN as an external offer identity and compare price/availability breadth with Shopify.",
+      "do_not_assume": ["open anonymous access", "manufacturer geometry", "technical authority"]
+    },
+    {
+      "source_id": "alibaba_com_open_platform",
+      "source_name": "Alibaba.com Open Platform",
+      "priority": "P1",
+      "connection_state": "DEVELOPER_REGISTRATION_APP_REVIEW_AND_API_PERMISSION_REQUIRED",
+      "source_type": "b2b_marketplace_open_platform",
+      "graph_roles": ["supplier", "sourcing", "rfq", "order_integration"],
+      "why": "Alibaba.com officially describes a Buyer Solution intended to streamline buyer sourcing/procurement, alongside product and business APIs. This may become far more valuable than a retail-style search API for configured/custom products and manufacturer sourcing.",
+      "capabilities_confirmed": ["Open Platform", "app key/secret", "API permission model", "supplier authorization", "product/business APIs", "official Buyer Solution positioning"],
+      "capabilities_not_yet_confirmed": ["anonymous global product search equivalent to Shopify Global Catalog", "public universal buyer checkout API", "exact RFQ endpoint set available to our application class"],
+      "mvp_test": "Register as a developer, request Buyer Solution permissions, then inspect the granted API surface before writing a production adapter.",
+      "do_not_assume": ["Shopify-like open global catalog", "instant access", "affiliate economics"]
+    },
+    {
+      "source_id": "pcon_catalog",
+      "source_name": "pCon.catalog / pCon Community",
+      "priority": "P1",
+      "connection_state": "B2B_MEMBERSHIP_AND_MANUFACTURER_ACCESS_DEPENDENT",
+      "source_type": "configurable_ff_and_e_network",
+      "graph_roles": ["configuration", "geometry", "commercial_data", "manufacturer_identity"],
+      "why": "pCon is unusually relevant for configurable contract furniture: its manufacturer catalogs contain configurable 3D models and commercial data, while public and manufacturer-controlled B2B data now coexist in pCon.catalog.",
+      "capabilities_confirmed": ["configurable 3D manufacturer catalogs", "commercial data", "manufacturer-controlled B2B access", "OAuth account API", "manufacturer product-information APIs"],
+      "mvp_test": "Explore a pCon Community/B2B account and identify whether Product Twin can consume configuration + geometry + commercial data under partner terms.",
+      "do_not_assume": ["public global catalog API for arbitrary third-party consumption", "redistribution rights"]
+    },
+    {
+      "source_id": "taobao_open_platform_mcp",
+      "source_name": "Taobao Open Platform MCP",
+      "priority": "P3",
+      "connection_state": "PARTNER_APPKEY_AND_PAID_MCP_USAGE",
+      "source_type": "china_domestic_mcp",
+      "graph_roles": ["discovery", "commerce", "agent_tools"],
+      "why": "Alibaba Group does operate official MCP interfaces through Taobao Open Platform, with paid MCP usage since October 2025. It proves Alibaba's ecosystem is moving toward MCP, but it is not the same thing as an Alibaba.com global B2B catalog MCP and is not Spain-first.",
+      "capabilities_confirmed": ["official Open Platform MCP service exists", "usage billing model exists"],
+      "mvp_test": "Park until China-domestic sourcing becomes strategically useful or Alibaba exposes equivalent ICBU/global-buyer MCP access.",
+      "do_not_assume": ["Alibaba.com global inventory", "Spain delivery", "same APIs as Alibaba.com"]
+    }
+  ]
+}
