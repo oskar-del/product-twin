@@ -1,0 +1,47 @@
+name: Build VELUX GGL CK04 G2 System Proxy
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'config/geometry/velux-ggl-ck04-target.json'
+      - 'scripts/build-velux-ggl-ck04-proxy.py'
+      - '.github/workflows/velux-ggl-ck04-g2-proxy.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-velux-ggl-ck04-g2
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install geometry tools
+        run: pip install trimesh==4.7.4
+      - name: Build and QA dimension-verified system proxy
+        run: python scripts/build-velux-ggl-ck04-proxy.py
+      - name: Commit Product Twin-owned proxy + QA metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/geometry/avatars/velux-ggl-ck04-g2-system-proxy.glb data/metrics/velux-ggl-ck04-g2-proxy-latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "geometry: build VELUX GGL CK04 G2 system proxy"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt*3))
+          done
+          exit 1
