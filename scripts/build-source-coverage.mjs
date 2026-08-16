@@ -47,6 +47,7 @@ const rows=[...byId.values()].map(c=>({
   coverage_state:"NO_SOURCE"
 }));
 const rowById=new Map(rows.map(x=>[x.category_id,x]));
+const DIRECT_SOURCE_TYPES=new Set(["trade_portal","manufacturer_trade_portal","manufacturer","distributor"]);
 
 for(const source of sourceFiles){
   for(const m of source.mappings??source.taxonomy_mappings??[]){
@@ -70,8 +71,8 @@ for(const source of sourceFiles){
         physical_locations:!!caps.physical_locations
       }
     });
-    if(["trade_portal","manufacturer","distributor"].includes(sourceType))row.direct_trade_sources++;
-    if(source.source_id==="shopify_global_catalog"||caps.live_price||caps.order)row.live_commerce_sources++;
+    if(DIRECT_SOURCE_TYPES.has(sourceType))row.direct_trade_sources++;
+    if(source.source_id==="shopify_global_catalog"||caps.live_price||caps.order||caps.quote)row.live_commerce_sources++;
     if(caps.technical_evidence)row.technical_evidence_sources++;
     if(caps.geometry)row.geometry_sources++;
     if(caps.bim)row.bim_sources++;
