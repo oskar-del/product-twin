@@ -1,0 +1,3266 @@
+{
+  "summary": {
+    "generated_at": "2026-08-16T03:17:37.069Z",
+    "canonical_categories": 149,
+    "categories_with_any_source": 59,
+    "categories_with_live_discovery": 55,
+    "categories_with_authoritative_manufacturer_evidence": 2,
+    "categories_with_direct_trade_source": 10,
+    "categories_with_multi_graph_source": 10,
+    "manufacturer_evidence_records": 3,
+    "source_adapters": 2,
+    "principle": "Coverage is measured against Product Twin's canonical taxonomy. A source contributes capabilities; it never defines the category universe."
+  },
+  "categories": [
+    {
+      "category_id": "BATH.ACCESSORIES",
+      "name": "Bathroom accessories",
+      "specification_profile": "fixture",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "BATH.BASINS",
+      "name": "Basins & vanity basins",
+      "specification_profile": "sanitary_fixture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 199,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "BATH.BATHS",
+      "name": "Baths",
+      "specification_profile": "sanitary_fixture",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "BATH.SHOWERS",
+      "name": "Showers, trays & enclosures",
+      "specification_profile": "sanitary_fixture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 197,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "BATH.TAPS",
+      "name": "Taps & mixers",
+      "specification_profile": "plumbing_fixture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 196,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "BATH.VANITIES",
+      "name": "Bathroom furniture & vanities",
+      "specification_profile": "casework",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 198,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "BATH.WC",
+      "name": "WCs & bidets",
+      "specification_profile": "sanitary_fixture",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ELECTRICAL.CABLE",
+      "name": "Cable & containment",
+      "specification_profile": "electrical_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ELECTRICAL.DISTRIBUTION",
+      "name": "Distribution boards & protection",
+      "specification_profile": "electrical_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ELECTRICAL.EV",
+      "name": "EV charging",
+      "specification_profile": "electrical_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ELECTRICAL.LUMINAIRES.CEILING",
+      "name": "Ceiling & recessed lights",
+      "specification_profile": "luminaire",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
+      "name": "Floor lamps",
+      "specification_profile": "luminaire",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 372,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "ELECTRICAL.LUMINAIRES.LINEAR",
+      "name": "Linear & architectural lighting",
+      "specification_profile": "luminaire",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+      "name": "Pendant lights",
+      "specification_profile": "luminaire",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 579,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "ELECTRICAL.LUMINAIRES.TABLE",
+      "name": "Table lamps",
+      "specification_profile": "luminaire",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 368,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "ELECTRICAL.LUMINAIRES.WALL",
+      "name": "Wall lights",
+      "specification_profile": "luminaire",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 387,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "ELECTRICAL.SWITCHES",
+      "name": "Switches & sockets",
+      "specification_profile": "electrical_component",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 191,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.BACKUP",
+      "name": "Backup / standby power",
+      "specification_profile": "power_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.BATTERY",
+      "name": "Battery storage",
+      "specification_profile": "battery_system",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 159,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.ENERGY_MANAGER",
+      "name": "Energy management & smart controls",
+      "specification_profile": "control_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.EV_CHARGER",
+      "name": "EV charging",
+      "specification_profile": "electrical_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.METERING",
+      "name": "Metering & monitoring",
+      "specification_profile": "metering_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.PV",
+      "name": "Solar PV",
+      "specification_profile": "energy_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.RAINWATER",
+      "name": "Rainwater harvesting",
+      "specification_profile": "water_system_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.SOLAR_THERMAL",
+      "name": "Solar thermal",
+      "specification_profile": "energy_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.SOLAR.BOS",
+      "name": "Solar balance-of-system components",
+      "specification_profile": "electrical_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.SOLAR.INVERTER",
+      "name": "Solar inverters",
+      "specification_profile": "power_electronics",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 251,
+      "authoritative_manufacturer_evidence_records": 1,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 1,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "TECHNICAL_PLUS_COMMERCE"
+    },
+    {
+      "category_id": "ENERGY.SOLAR.MOUNTING",
+      "name": "PV mounting systems",
+      "specification_profile": "solar_mounting",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 83,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.SOLAR.OPTIMIZER",
+      "name": "Power optimizers / microinverters",
+      "specification_profile": "power_electronics",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.SOLAR.PANEL",
+      "name": "Photovoltaic panels",
+      "specification_profile": "pv_module",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 284,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "ENERGY.WATER_REUSE",
+      "name": "Greywater & water reuse",
+      "specification_profile": "water_system_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENVELOPE.AIRTIGHTNESS",
+      "name": "Air & vapour control",
+      "specification_profile": "performance_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENVELOPE.FACADE",
+      "name": "Facade systems & cladding",
+      "specification_profile": "envelope_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENVELOPE.INSULATION",
+      "name": "Thermal & acoustic insulation",
+      "specification_profile": "performance_material",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 99,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "ENVELOPE.ROOF",
+      "name": "Roof systems & coverings",
+      "specification_profile": "envelope_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENVELOPE.SHADING",
+      "name": "External shading & solar control",
+      "specification_profile": "architectural_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "ENVELOPE.WATERPROOFING",
+      "name": "Waterproofing & membranes",
+      "specification_profile": "performance_material",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 87,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.ART",
+      "name": "Art & decorative objects",
+      "specification_profile": "decorative_object",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "FFE.BEDS",
+      "name": "Beds & headboards",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 382,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.BEDSIDE",
+      "name": "Bedside tables",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 366,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.CURTAINS",
+      "name": "Curtains, blinds & window treatments",
+      "specification_profile": "soft_furnishing",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "FFE.MIRRORS",
+      "name": "Mirrors",
+      "specification_profile": "fixture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 389,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.RUGS",
+      "name": "Rugs",
+      "specification_profile": "soft_furnishing",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 564,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.SEATING.DINING",
+      "name": "Dining chairs",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 353,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.SEATING.LOUNGE",
+      "name": "Lounge chairs & armchairs",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 550,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.SEATING.SOFA",
+      "name": "Sofas & sectionals",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 528,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.SEATING.STOOL",
+      "name": "Bar stools & counter stools",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 357,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.STORAGE",
+      "name": "Storage, cabinets & shelving",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 375,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.TABLE.COFFEE",
+      "name": "Coffee tables",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 545,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.TABLE.DESK",
+      "name": "Desks & work tables",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 372,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.TABLE.DINING",
+      "name": "Dining tables",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 378,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.TABLE.SIDE",
+      "name": "Side tables",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 560,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FFE.TEXTILES",
+      "name": "Cushions, throws & decorative textiles",
+      "specification_profile": "soft_furnishing",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "FINISHES.CARPET",
+      "name": "Carpet & textile flooring",
+      "specification_profile": "surface_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "FINISHES.CEILINGS",
+      "name": "Ceiling systems",
+      "specification_profile": "interior_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "FINISHES.JOINERY_MATERIALS",
+      "name": "Joinery boards, veneers & laminates",
+      "specification_profile": "sheet_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "FINISHES.PAINT",
+      "name": "Paint & coatings",
+      "specification_profile": "coating_material",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 200,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FINISHES.PARTITIONS",
+      "name": "Partitions & lining systems",
+      "specification_profile": "interior_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "FINISHES.PLASTER",
+      "name": "Plaster, render & decorative coatings",
+      "specification_profile": "surface_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "FINISHES.RESILIENT_FLOOR",
+      "name": "Resilient & synthetic flooring",
+      "specification_profile": "surface_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "FINISHES.STONE",
+      "name": "Natural stone",
+      "specification_profile": "surface_material",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 147,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FINISHES.TILE",
+      "name": "Ceramic & porcelain tile",
+      "specification_profile": "surface_material",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 287,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "FINISHES.TIMBER_FLOOR",
+      "name": "Timber flooring",
+      "specification_profile": "surface_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "FINISHES.WALLCOVERING",
+      "name": "Wallcoverings",
+      "specification_profile": "surface_material",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 196,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "HOSPITALITY.BAR",
+      "name": "Bar equipment",
+      "specification_profile": "commercial_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HOSPITALITY.GYM",
+      "name": "Gym & fitness equipment",
+      "specification_profile": "commercial_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HOSPITALITY.HOUSEKEEPING",
+      "name": "Housekeeping equipment",
+      "specification_profile": "commercial_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HOSPITALITY.LAUNDRY",
+      "name": "Commercial laundry",
+      "specification_profile": "commercial_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HOSPITALITY.PRO_KITCHEN",
+      "name": "Professional kitchen equipment",
+      "specification_profile": "commercial_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HOSPITALITY.RETAIL_DISPLAY",
+      "name": "Retail & display systems",
+      "specification_profile": "commercial_fixture",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HOSPITALITY.SPA",
+      "name": "Spa & treatment equipment",
+      "specification_profile": "wellness_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HVAC.AHU",
+      "name": "Air handling units",
+      "specification_profile": "mechanical_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HVAC.CONTROLS",
+      "name": "HVAC controls",
+      "specification_profile": "control_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HVAC.DIFFUSERS",
+      "name": "Diffusers, grilles & registers",
+      "specification_profile": "hvac_terminal",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HVAC.DUCT",
+      "name": "Ductwork & fittings",
+      "specification_profile": "duct_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HVAC.FAN_COIL",
+      "name": "Fan-coil & terminal units",
+      "specification_profile": "mechanical_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HVAC.HEAT_PUMPS",
+      "name": "Heat pumps & chillers",
+      "specification_profile": "mechanical_equipment",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 183,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "HVAC.UNDERFLOOR",
+      "name": "Underfloor heating & cooling",
+      "specification_profile": "mechanical_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "HVAC.VENTILATION",
+      "name": "Ventilation & extract",
+      "specification_profile": "mechanical_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "INSTALL.ADHESIVES",
+      "name": "Adhesives",
+      "specification_profile": "installation_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "INSTALL.FIXINGS",
+      "name": "Fixings & anchors",
+      "specification_profile": "installation_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "INSTALL.GROUT",
+      "name": "Grout",
+      "specification_profile": "installation_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "INSTALL.LEVELLING",
+      "name": "Levelling & substrate preparation",
+      "specification_profile": "installation_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "INSTALL.PROTECTION",
+      "name": "Protection & construction consumables",
+      "specification_profile": "installation_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "INSTALL.SEALANTS",
+      "name": "Sealants",
+      "specification_profile": "installation_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "KITCHEN.CABINETRY",
+      "name": "Kitchen cabinetry",
+      "specification_profile": "casework",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "KITCHEN.COOKING",
+      "name": "Ovens, hobs & cooking",
+      "specification_profile": "appliance",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 192,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "KITCHEN.DISHWASHING",
+      "name": "Dishwashers",
+      "specification_profile": "appliance",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "KITCHEN.LAUNDRY",
+      "name": "Laundry appliances",
+      "specification_profile": "appliance",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "KITCHEN.REFRIGERATION",
+      "name": "Refrigeration",
+      "specification_profile": "appliance",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 193,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "KITCHEN.SINKS",
+      "name": "Kitchen sinks",
+      "specification_profile": "sanitary_fixture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 192,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "KITCHEN.SMALL_APPLIANCES",
+      "name": "Small appliances",
+      "specification_profile": "appliance",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "KITCHEN.TAPS",
+      "name": "Kitchen taps",
+      "specification_profile": "plumbing_fixture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 190,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "KITCHEN.WORKTOPS",
+      "name": "Worktops",
+      "specification_profile": "surface_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "OPENINGS.EXTERNAL_DOORS",
+      "name": "External doors",
+      "specification_profile": "opening_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "OPENINGS.GLASS",
+      "name": "Architectural glass",
+      "specification_profile": "performance_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "OPENINGS.HARDWARE",
+      "name": "Handles, hinges, locks & hardware",
+      "specification_profile": "architectural_hardware",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 182,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "OPENINGS.INTERNAL_DOORS",
+      "name": "Internal doors",
+      "specification_profile": "opening_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "OPENINGS.SLIDING_SYSTEMS",
+      "name": "Sliding & folding systems",
+      "specification_profile": "opening_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "OPENINGS.WINDOWS",
+      "name": "Windows",
+      "specification_profile": "opening_system",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 98,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "OUTDOOR_FFE.DINING_CHAIR",
+      "name": "Outdoor dining chairs",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 320,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "OUTDOOR_FFE.LOUNGE_CHAIR",
+      "name": "Outdoor lounge chairs",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 338,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "OUTDOOR_FFE.OUTDOOR_KITCHEN",
+      "name": "Outdoor kitchens & BBQ",
+      "specification_profile": "outdoor_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "OUTDOOR_FFE.SOFA",
+      "name": "Outdoor sofas",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 370,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "OUTDOOR_FFE.SUNLOUNGER",
+      "name": "Sun loungers & daybeds",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 381,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "OUTDOOR_FFE.TABLE",
+      "name": "Outdoor tables",
+      "specification_profile": "furniture",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 371,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "OUTDOOR_FFE.UMBRELLA",
+      "name": "Umbrellas & freestanding shade",
+      "specification_profile": "outdoor_equipment",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 382,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "PLUMBING.DRAINAGE",
+      "name": "Internal drainage systems",
+      "specification_profile": "water_system_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "PLUMBING.FITTINGS",
+      "name": "Pipe fittings",
+      "specification_profile": "pipe_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "PLUMBING.HOT_WATER",
+      "name": "Hot-water systems",
+      "specification_profile": "mechanical_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "PLUMBING.PIPE",
+      "name": "Pipe",
+      "specification_profile": "pipe_component",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 133,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "PLUMBING.PUMPS",
+      "name": "Pumps",
+      "specification_profile": "mechanical_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "PLUMBING.TANKS",
+      "name": "Tanks & water storage",
+      "specification_profile": "mechanical_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "PLUMBING.VALVES",
+      "name": "Valves",
+      "specification_profile": "valve_component",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 100,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "PLUMBING.WATER_TREATMENT",
+      "name": "Water treatment",
+      "specification_profile": "mechanical_equipment",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "POOL.COVERS",
+      "name": "Pool covers",
+      "specification_profile": "pool_equipment",
+      "source_mappings": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_name": "Fluidra PRO Spain",
+          "source_type": "trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_REQUIRED",
+          "capabilities": {
+            "live_price": true,
+            "live_stock": true,
+            "technical_evidence": true,
+            "geometry": false,
+            "bim": false,
+            "order": true,
+            "quote": true,
+            "physical_locations": true
+          }
+        }
+      ],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 1,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 1,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "MULTI_GRAPH_SOURCE"
+    },
+    {
+      "category_id": "POOL.FILTRATION",
+      "name": "Filtration",
+      "specification_profile": "pool_equipment",
+      "source_mappings": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_name": "Fluidra PRO Spain",
+          "source_type": "trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_REQUIRED",
+          "capabilities": {
+            "live_price": true,
+            "live_stock": true,
+            "technical_evidence": true,
+            "geometry": false,
+            "bim": false,
+            "order": true,
+            "quote": true,
+            "physical_locations": true
+          }
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 192,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 1,
+      "live_commerce_sources": 2,
+      "technical_evidence_sources": 1,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "MULTI_GRAPH_SOURCE"
+    },
+    {
+      "category_id": "POOL.FINISH",
+      "name": "Pool finishes & mosaics",
+      "specification_profile": "surface_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "POOL.FITTINGS",
+      "name": "Pool pipe fittings",
+      "specification_profile": "pipe_component",
+      "source_mappings": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_name": "Fluidra PRO Spain",
+          "source_type": "trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_REQUIRED",
+          "capabilities": {
+            "live_price": true,
+            "live_stock": true,
+            "technical_evidence": true,
+            "geometry": false,
+            "bim": false,
+            "order": true,
+            "quote": true,
+            "physical_locations": true
+          }
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 70,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 1,
+      "live_commerce_sources": 2,
+      "technical_evidence_sources": 1,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "MULTI_GRAPH_SOURCE"
+    },
+    {
+      "category_id": "POOL.HEATING",
+      "name": "Pool heating",
+      "specification_profile": "mechanical_equipment",
+      "source_mappings": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_name": "Fluidra PRO Spain",
+          "source_type": "trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_REQUIRED",
+          "capabilities": {
+            "live_price": true,
+            "live_stock": true,
+            "technical_evidence": true,
+            "geometry": false,
+            "bim": false,
+            "order": true,
+            "quote": true,
+            "physical_locations": true
+          }
+        }
+      ],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 1,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 1,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "MULTI_GRAPH_SOURCE"
+    },
+    {
+      "category_id": "POOL.LIGHTING",
+      "name": "Pool lighting",
+      "specification_profile": "luminaire",
+      "source_mappings": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_name": "Fluidra PRO Spain",
+          "source_type": "trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_REQUIRED",
+          "capabilities": {
+            "live_price": true,
+            "live_stock": true,
+            "technical_evidence": true,
+            "geometry": false,
+            "bim": false,
+            "order": true,
+            "quote": true,
+            "physical_locations": true
+          }
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 169,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 1,
+      "live_commerce_sources": 2,
+      "technical_evidence_sources": 1,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "MULTI_GRAPH_SOURCE"
+    },
+    {
+      "category_id": "POOL.PIPE",
+      "name": "Pool pipe",
+      "specification_profile": "pipe_component",
+      "source_mappings": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_name": "Fluidra PRO Spain",
+          "source_type": "trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_REQUIRED",
+          "capabilities": {
+            "live_price": true,
+            "live_stock": true,
+            "technical_evidence": true,
+            "geometry": false,
+            "bim": false,
+            "order": true,
+            "quote": true,
+            "physical_locations": true
+          }
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 89,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 1,
+      "live_commerce_sources": 2,
+      "technical_evidence_sources": 1,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "MULTI_GRAPH_SOURCE"
+    },
+    {
+      "category_id": "POOL.PUMPS",
+      "name": "Pool pumps",
+      "specification_profile": "mechanical_equipment",
+      "source_mappings": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_name": "Fluidra PRO Spain",
+          "source_type": "trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_REQUIRED",
+          "capabilities": {
+            "live_price": true,
+            "live_stock": true,
+            "technical_evidence": true,
+            "geometry": false,
+            "bim": false,
+            "order": true,
+            "quote": true,
+            "physical_locations": true
+          }
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 175,
+      "authoritative_manufacturer_evidence_records": 2,
+      "direct_trade_sources": 1,
+      "live_commerce_sources": 2,
+      "technical_evidence_sources": 1,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "MULTI_GRAPH_SOURCE"
+    },
+    {
+      "category_id": "POOL.SHELL",
+      "name": "Pool shell systems",
+      "specification_profile": "pool_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "POOL.SPAS",
+      "name": "Spa, sauna & thermal equipment",
+      "specification_profile": "wellness_equipment",
+      "source_mappings": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_name": "Fluidra PRO Spain",
+          "source_type": "trade_portal",
+          "fitness": "secondary",
+          "auth_state": "ACCOUNT_REQUIRED",
+          "capabilities": {
+            "live_price": true,
+            "live_stock": true,
+            "technical_evidence": true,
+            "geometry": false,
+            "bim": false,
+            "order": true,
+            "quote": true,
+            "physical_locations": true
+          }
+        }
+      ],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 1,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 1,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "MULTI_GRAPH_SOURCE"
+    },
+    {
+      "category_id": "POOL.TREATMENT",
+      "name": "Dosing, chlorination & treatment",
+      "specification_profile": "pool_equipment",
+      "source_mappings": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_name": "Fluidra PRO Spain",
+          "source_type": "trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_REQUIRED",
+          "capabilities": {
+            "live_price": true,
+            "live_stock": true,
+            "technical_evidence": true,
+            "geometry": false,
+            "bim": false,
+            "order": true,
+            "quote": true,
+            "physical_locations": true
+          }
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 194,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 1,
+      "live_commerce_sources": 2,
+      "technical_evidence_sources": 1,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "MULTI_GRAPH_SOURCE"
+    },
+    {
+      "category_id": "POOL.WATER_FEATURES",
+      "name": "Fountains & water features",
+      "specification_profile": "water_feature_system",
+      "source_mappings": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_name": "Fluidra PRO Spain",
+          "source_type": "trade_portal",
+          "fitness": "secondary",
+          "auth_state": "ACCOUNT_REQUIRED",
+          "capabilities": {
+            "live_price": true,
+            "live_stock": true,
+            "technical_evidence": true,
+            "geometry": false,
+            "bim": false,
+            "order": true,
+            "quote": true,
+            "physical_locations": true
+          }
+        }
+      ],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 1,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 1,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "MULTI_GRAPH_SOURCE"
+    },
+    {
+      "category_id": "POOL.WATERPROOFING",
+      "name": "Pool waterproofing",
+      "specification_profile": "performance_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SITE.DECKING",
+      "name": "Decking",
+      "specification_profile": "surface_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SITE.DRAINAGE",
+      "name": "Site drainage",
+      "specification_profile": "water_system_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SITE.EXTERNAL_LIGHTING",
+      "name": "External lighting",
+      "specification_profile": "luminaire",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SITE.IRRIGATION",
+      "name": "Irrigation",
+      "specification_profile": "water_system_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SITE.PAVING",
+      "name": "External paving & hardscape",
+      "specification_profile": "surface_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SITE.PLANTING",
+      "name": "Plants, trees & softscape",
+      "specification_profile": "living_landscape",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SITE.STREET_FURNITURE",
+      "name": "Site furniture & amenities",
+      "specification_profile": "furniture",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SITE.WALLS",
+      "name": "Retaining & landscape walls",
+      "specification_profile": "construction_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SMART.ACCESS",
+      "name": "Access control",
+      "specification_profile": "security_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SMART.ALARM",
+      "name": "Intrusion & alarm",
+      "specification_profile": "security_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SMART.AUTOMATION",
+      "name": "Building & home automation",
+      "specification_profile": "smart_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SMART.AV",
+      "name": "Audio visual",
+      "specification_profile": "av_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SMART.CCTV",
+      "name": "CCTV & surveillance",
+      "specification_profile": "security_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "SMART.NETWORK",
+      "name": "Networking & Wi-Fi",
+      "specification_profile": "network_component",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "STRUCTURE.CONCRETE",
+      "name": "Concrete, screeds & mortars",
+      "specification_profile": "concrete_material",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 149,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "STRUCTURE.FOUNDATIONS",
+      "name": "Foundation systems",
+      "specification_profile": "structural_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "STRUCTURE.MASONRY",
+      "name": "Blocks, bricks & masonry",
+      "specification_profile": "construction_material",
+      "source_mappings": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_name": "Shopify Global Catalog MCP",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null,
+          "capabilities": {
+            "live_price": false,
+            "live_stock": false,
+            "technical_evidence": false,
+            "geometry": false,
+            "bim": false,
+            "order": false,
+            "quote": false,
+            "physical_locations": false
+          }
+        }
+      ],
+      "live_discovery_signals": 100,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 1,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "COMMERCE_SOURCE"
+    },
+    {
+      "category_id": "STRUCTURE.PRECAST",
+      "name": "Precast structural systems",
+      "specification_profile": "structural_system",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "STRUCTURE.REINFORCEMENT",
+      "name": "Reinforcement",
+      "specification_profile": "structural_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "STRUCTURE.STRUCTURAL_STEEL",
+      "name": "Structural steel",
+      "specification_profile": "structural_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    },
+    {
+      "category_id": "STRUCTURE.STRUCTURAL_TIMBER",
+      "name": "Structural timber",
+      "specification_profile": "structural_material",
+      "source_mappings": [],
+      "live_discovery_signals": 0,
+      "authoritative_manufacturer_evidence_records": 0,
+      "direct_trade_sources": 0,
+      "live_commerce_sources": 0,
+      "technical_evidence_sources": 0,
+      "geometry_sources": 0,
+      "bim_sources": 0,
+      "coverage_state": "NO_SOURCE"
+    }
+  ]
+}
