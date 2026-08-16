@@ -1,0 +1,100 @@
+{
+  "evidence_id": "MFR_ASTRALPOOL_VICTORIA_PLUS_SILENT_VS_67548_V0_1",
+  "subject": {
+    "manufacturer": "AstralPool / Fluidra",
+    "model": "Victoria Plus Silent VS 2 CV",
+    "category_id": "POOL.PUMPS",
+    "manufacturer_sku": "67548",
+    "gtin": null
+  },
+  "authority": {
+    "grade": "A_MANUFACTURER",
+    "publisher": "AstralPool / Fluidra",
+    "source_uri": "https://fluidra.bynder.com/m/603863496dd9b1d2/original/leaflet_victoriaplussilentvariablespeed_ES_2022_11.pdf",
+    "source_type": "manufacturer_datasheet",
+    "territory": "Spain / Europe manufacturer literature",
+    "published_or_updated_at": "2022-11-01",
+    "retrieved_at": "2026-08-16T03:20:00Z",
+    "version_or_revision": "Victoria Plus Silent VS brochure ES 2022-11"
+  },
+  "supporting_sources": [
+    {
+      "publisher": "AstralPool España",
+      "source_uri": "https://www.astralpool.com/es/es/bombas/bombas-de-velocidad-variable/victoria-plus-silent-vs.html",
+      "claim": "Official Spain product page identifies code 67548 as Victoria Plus Silent VS - 2 CV and provides current brochure/manual links."
+    },
+    {
+      "publisher": "AstralPool / Fluidra",
+      "source_uri": "https://fluidra.bynder.com/m/a56a824dae28191/original/installationandmaintenancemanual_67547_67548_EN_ES_FR_IT_DE_PT_EL_DE_EN_ES_FR_GR_IT_PT_2023_06.pdf",
+      "claim": "Official installation manual revision 03 includes technical characteristics and conformity evidence for codes 67547 and 67548."
+    }
+  ],
+  "claims": {
+    "pump_type": "self-priming variable-speed residential swimming-pool pump with integrated prefilter",
+    "rated_hp": 2,
+    "power_supply_v": 230,
+    "frequency_hz": 50,
+    "phase": "single",
+    "max_head_m": 17.5,
+    "connection_external": "ACME D.75",
+    "connection_internal": "2 inch GAS",
+    "dimensions_mm": {
+      "A": 618,
+      "B": 281,
+      "C": 246,
+      "E": 359,
+      "F": 358,
+      "G": 321,
+      "H": 164,
+      "I": 254,
+      "J": 364
+    },
+    "duty_points": [
+      {"speed_rpm": 1400, "power_w": 258, "current_a": 1.4, "flow_m3_h": 11.1, "head_m": 3.2, "efficiency_l_wh": 43},
+      {"speed_rpm": 2100, "power_w": 750, "current_a": 3.4, "flow_m3_h": 18.8, "head_m": 6.2, "efficiency_l_wh": 25},
+      {"speed_rpm": 2750, "power_w": 1560, "current_a": 7.1, "flow_m3_h": 25.5, "head_m": 10.0, "efficiency_l_wh": 16}
+    ],
+    "guaranteed_sound_power_db": [51, 58, 66],
+    "variable_speed": true,
+    "preset_filtering_speeds": 3,
+    "fluidra_connect_compatible": true,
+    "integrated_hmi": true
+  },
+  "manufacturer_conformity_evidence": {
+    "declaration_date": "2023-05-02",
+    "product_codes": ["67547", "67548"],
+    "single_phase": true,
+    "directives": [
+      "2014/30/EU electromagnetic compatibility",
+      "2014/35/EU low voltage",
+      "2000/14/EC noise emission",
+      "2015/863/EU amendment to RoHS 2011/65/EU"
+    ],
+    "listed_standards": [
+      "EN IEC 60335-1:2012 + amendments",
+      "EN IEC 60335-2-41:2021 + A11:2021",
+      "EN IEC 62233:2008 + AC2008",
+      "EN 50581:2012 / EN 63000:2018",
+      "EN ISO 3744:2010",
+      "EN IEC 61000-6-8:2020",
+      "EN IEC 61000-6-1:2019"
+    ]
+  },
+  "commerce_context": {
+    "fluidra_pro_spain": true,
+    "manufacturer_product_code": "67548",
+    "price_and_stock_visibility": "requires Fluidra Comercial España client login",
+    "procurement_path": "direct professional/distributor channel can be evaluated separately from Shopify"
+  },
+  "limitations": [
+    "Hydraulic suitability cannot be determined until the project defines required flow, total dynamic head, turnover target and pool-system losses.",
+    "Connection compatibility must be checked against the selected pool pipe/fitting system and actual plant-room design.",
+    "Electrical conformity evidence does not replace Spain-specific installation design under REBT/ITC-BT-31.",
+    "Commerce pricing, stock and delivery are not stored in this technical evidence record."
+  ],
+  "verification": {
+    "identity": "verified",
+    "technical": "verified",
+    "territory_applicability": "review"
+  }
+}
