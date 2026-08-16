@@ -53,3 +53,18 @@ add_cylinder(pump, W * 0.23, H * 0.42, [-L * 0.34, 0, H * 0.30], "prefilter_pot"
 add_cylinder(pump, 0.035, 0.09, [-L * 0.48, 0, H * 0.42], "inlet", (math.pi / 2, [0, 1, 0]))
 add_cylinder(pump, 0.035, 0.09, [-L * 0.18, 0, H * 0.72], "outlet")
 export(pump, "astralpool-victoria-plus-silent-vs-67547-g2-proxy.glb")
+
+
+# Ningbo Ecoplastic UV/PVC marble-look wall sheet
+# Manufacturer verified module: 1220 x 2440 mm, with thickness options 2.5-3.8 mm.
+# Use 3.0 mm representative configuration for this G2 scale/material proxy.
+# No manufacturer decor artwork is copied. Visual appearance remains intentionally neutral.
+sheet_w, sheet_h, sheet_t = 1.220, 2.440, 0.003
+pvc_sheet = trimesh.Scene()
+add_box(pvc_sheet, [sheet_w, sheet_t, sheet_h], [0, 0, sheet_h / 2], "sheet_1220x2440x3mm")
+# Edge strips make the sheet scale and thickness legible in the viewer without pretending
+# to reproduce a proprietary marble pattern.
+edge_t = 0.004
+add_box(pvc_sheet, [sheet_w, sheet_t + 0.001, edge_t], [0, -(sheet_t / 2), edge_t / 2], "bottom_edge")
+add_box(pvc_sheet, [edge_t, sheet_t + 0.001, sheet_h], [-(sheet_w / 2), -(sheet_t / 2), sheet_h / 2], "left_edge")
+export(pvc_sheet, "ecoplastic-uv-pvc-marble-sheet-1220x2440x3-g2-proxy.glb")
