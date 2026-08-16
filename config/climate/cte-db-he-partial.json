@@ -1,0 +1,20 @@
+{
+  "version": "2022-consolidated-partial-seed",
+  "scope": "Only ranges explicitly verified for current Product Twin test projects are encoded. Missing ranges remain unresolved rather than inferred.",
+  "source": {
+    "authority": "Ministerio de Vivienda y Agenda Urbana / Código Técnico de la Edificación",
+    "document": "DB-HE Ahorro de energía - Anejo B Zonas climáticas",
+    "official_url": "https://www.codigotecnico.org/pdf/Documentos/HE/DBHE.pdf",
+    "document_date": "2022-06-14",
+    "verified_at": "2026-08-16"
+  },
+  "rules": [
+    {
+      "province": "Málaga",
+      "min_elevation_m": 0,
+      "max_elevation_m": 100,
+      "cte_zone": "A3",
+      "evidence_note": "Current DB-HE Annex B table: Málaga row, site altitude band containing 52 m."
+    }
+  ]
+}
