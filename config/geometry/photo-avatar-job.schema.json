@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/photo-avatar-job.schema.json",
+  "title": "Product Twin Photo Avatar Job",
+  "type": "object",
+  "required": ["job_id", "subject", "source_images", "rights", "dimensions", "reconstruction", "qa", "promotion"],
+  "properties": {
+    "job_id": {"type": "string"},
+    "subject": {
+      "type": "object",
+      "required": ["category_id", "identity_state"],
+      "properties": {
+        "product_twin_id": {"type": ["string", "null"]},
+        "category_id": {"type": "string"},
+        "manufacturer": {"type": ["string", "null"]},
+        "model": {"type": ["string", "null"]},
+        "sku": {"type": ["string", "null"]},
+        "gtin": {"type": ["string", "null"]},
+        "identity_state": {"enum": ["unresolved", "candidate", "verified"]}
+      }
+    },
+    "source_images": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["image_id", "source_type", "view", "rights_state"],
+        "properties": {
+          "image_id": {"type": "string"},
+          "source_type": {"enum": ["manufacturer", "merchant", "user_capture", "supplier", "other"]},
+          "source_uri_or_reference": {"type": ["string", "null"]},
+          "view": {"enum": ["front", "rear", "left", "right", "top", "bottom", "three_quarter", "detail", "orbit_frame", "unknown"]},
+          "rights_state": {"enum": ["cleared_for_reconstruction", "review", "not_cleared"]},
+          "known_camera": {"type": "boolean"}
+        }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "required": ["reconstruction_allowed", "render_allowed", "redistribution_allowed"],
+      "properties": {
+        "reconstruction_allowed": {"enum": ["yes", "no", "review"]},
+        "render_allowed": {"enum": ["yes", "no", "review"]},
+        "redistribution_allowed": {"enum": ["yes", "no", "review"]},
+        "evidence_refs": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "required": ["scale_state"],
+      "properties": {
+        "width_mm": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "depth_mm": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "height_mm": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "scale_state": {"enum": ["unknown", "estimated", "merchant_claimed", "manufacturer_verified", "measured"]},
+        "evidence_ref": {"type": ["string", "null"]}
+      }
+    },
+    "reconstruction": {
+      "type": "object",
+      "required": ["engine", "mode", "target_format"],
+      "properties": {
+        "engine": {"enum": ["meshy", "autodesk_reality_capture", "apple_object_capture", "other"]},
+        "mode": {"enum": ["single_image_ai", "multi_image_ai", "photogrammetry", "hybrid"]},
+        "target_format": {"enum": ["glb", "gltf", "obj", "usdz", "other"]},
+        "target_polycount": {"type": ["integer", "null"], "minimum": 100},
+        "pbr_requested": {"type": "boolean"},
+        "remesh_requested": {"type": "boolean"}
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "observed_surface_percent": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+        "inferred_surface_percent": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+        "unresolved_surface_percent": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "qa": {
+      "type": "object",
+      "required": ["scale_checked", "source_view_rerender_required"],
+      "properties": {
+        "scale_checked": {"type": "boolean"},
+        "source_view_rerender_required": {"const": true},
+        "silhouette_error_percent": {"type": ["number", "null"], "minimum": 0},
+        "landmark_error_percent": {"type": ["number", "null"], "minimum": 0},
+        "material_match_state": {"enum": ["not_checked", "proxy", "good", "verified"]},
+        "human_review_state": {"enum": ["not_reviewed", "review", "accepted", "rejected"]}
+      }
+    },
+    "promotion": {
+      "type": "object",
+      "required": ["maximum_claim_level"],
+      "properties": {
+        "maximum_claim_level": {"enum": ["G0", "G1", "G2", "G3", "G4", "G5"]},
+        "exact_product_claim_allowed": {"type": "boolean"},
+        "blocking_reasons": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"subject": {"properties": {"identity_state": {"const": "unresolved"}}}}},
+      "then": {"properties": {"promotion": {"properties": {"exact_product_claim_allowed": {"const": false}}}}}
+    },
+    {
+      "if": {"properties": {"rights": {"properties": {"render_allowed": {"enum": ["no", "review"]}}}}},
+      "then": {"properties": {"promotion": {"properties": {"exact_product_claim_allowed": {"const": false}}}}}
+    }
+  ]
+}
