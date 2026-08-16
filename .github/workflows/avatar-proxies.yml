@@ -1,0 +1,49 @@
+name: Build Product Twin Avatar Proxies
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build-avatar-proxies.py"
+      - "data/evidence/manufacturer/huawei-sun2000-10ktl-m1.json"
+      - "data/evidence/manufacturer/astralpool-victoria-plus-silent-vs-67547.json"
+      - "data/geometry/manifests/**"
+      - ".github/workflows/avatar-proxies.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-avatar-proxies
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install geometry builder
+        run: pip install trimesh numpy
+      - name: Build GLB proxies
+        run: python scripts/build-avatar-proxies.py
+      - name: Commit generated avatars
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/geometry/avatars
+          if git diff --cached --quiet; then
+            echo "No avatar changes."
+            exit 0
+          fi
+          git commit -m "geometry: refresh generated G2 avatar proxies"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
