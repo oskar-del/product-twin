@@ -1,0 +1,48 @@
+{
+  "version": "0.1",
+  "principle": "A bathroom/hotel room pod is a configurable room-system Twin with geometry, service interfaces, performance evidence, delivery route and installation state.",
+  "categories": [
+    {"id":"PREFAB.ROOM.BATHROOM_POD","name":"Bathroom pods"},
+    {"id":"PREFAB.ROOM.HOTEL_BATHROOM_POD","name":"Hotel bathroom pods"},
+    {"id":"PREFAB.ROOM.KITCHEN_POD","name":"Kitchen pods"},
+    {"id":"PREFAB.ROOM.UTILITY_POD","name":"Utility / plant pods"}
+  ],
+  "pod_twin": {
+    "identity": ["manufacturer", "system_family", "configuration_id", "factory_location"],
+    "geometry": ["external_envelope", "internal_clear_dimensions", "door/opening", "service_voids", "lift_points", "centre_of_gravity", "clearance_envelope"],
+    "mass": ["dry_weight_kg", "shipping_weight_kg", "lifting_configuration"],
+    "interfaces": {
+      "structure": ["support_points", "floor_loading", "fixing_points", "movement_tolerance"],
+      "plumbing": ["cold_water", "hot_water", "waste", "vent", "test_points"],
+      "electrical": ["supply", "earthing", "lighting", "controls"],
+      "ventilation": ["extract", "supply_if_applicable"],
+      "fire": ["penetration_details", "fire_stopping_interfaces"],
+      "acoustics": ["wall_performance", "floor_impact_performance", "service_noise", "junction_requirements"]
+    },
+    "finishes": ["wall_finish", "floor_finish", "ceiling", "sanitaryware", "fittings", "mirror", "lighting", "accessories"],
+    "performance": ["waterproofing", "acoustic", "fire", "slip", "ventilation", "water_flow", "electrical", "maintenance_access"],
+    "logistics": ["factory_packaging", "truck", "container", "crane", "maximum_tilt", "temporary_weather_protection"],
+    "installation": ["route_to_final_position", "required_opening", "crane_or_lift", "connection_sequence", "commissioning", "inspection"],
+    "commerce": ["base_price", "option_price", "quantity_breaks", "engineering_fee", "freight", "installation", "warranty", "RFQ"]
+  },
+  "movement_simulation": {
+    "inputs": ["pod_collision_mesh", "pod_mass", "centre_of_gravity", "building_route_geometry", "doors", "corridors", "lifts", "temporary_openings", "crane_geometry", "site_access"],
+    "outputs": ["route_pass_fail", "minimum_clearance_mm", "collision_locations", "required_rotation", "temporary_work_required", "lifting_plan_inputs"],
+    "rule": "Geometric route feasibility is a planning signal; structural lifting, rigging and site safety require competent professional review."
+  },
+  "renovation_case": {
+    "workflow": [
+      "scan/map existing hotel",
+      "identify existing bathroom demolition envelope",
+      "resolve structural/service constraints",
+      "search compatible pod systems or issue configured RFQ",
+      "simulate delivery path to each room",
+      "compare conventional renovation vs pod programme/cost/disruption",
+      "factory engineer confirms configuration",
+      "local design/code review",
+      "manufacture",
+      "route-aware phased installation"
+    ],
+    "high_value_metrics": ["rooms_per_week", "hotel_rooms_out_of_service", "factory_completion_percent", "site_labour_hours_per_room", "route_modifications", "defect_rate", "programme_saving"]
+  }
+}
