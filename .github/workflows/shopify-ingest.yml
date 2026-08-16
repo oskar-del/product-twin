@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/shopify-ingest.yml"
+      - "config/searches.json"
+      - "config/source-mappings/shopify-global.json"
   workflow_dispatch:
   schedule:
     - cron: "17 3 * * 2,5"
@@ -17,14 +19,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  push-noop:
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Shopify crawl paused for cache-compliance migration."
-
   ingest:
-    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
@@ -34,34 +29,37 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Pull Shopify Global Catalog
+      - name: Pull Shopify Global Catalog into ephemeral runtime
         run: npm run ingest:shopify
-      - name: Triage Twin Candidates
+      - name: Triage live Twin Candidates
         run: npm run triage:shopify
-      - name: Build canonical category coverage
+      - name: Build aggregate canonical coverage
         run: npm run coverage
       - name: Resolve project context
         run: npm run context:test > data/tests/project-context.latest.json
-      - name: Resolve exact project offers
+      - name: Resolve exact project offers live
         run: npm run offers:resolve
       - name: Create localized merchant carts
         run: npm run carts:create
       - name: Prepare checkout shipping quotes
         run: npm run checkouts:quote
-      - name: Extract technical evidence signals
+      - name: Extract inferred technical signals
         run: npm run technical:extract
-      - name: Run whole-building hypothesis test
+      - name: Run sanitized whole-building hypothesis test
         run: npm run whole-building:test
       - name: Show summary
         run: npm run summarize
-      - name: Commit permitted summaries only
+      - name: Verify no Shopify catalog payload is staged
+        run: |
+          test ! -d data/shopify || { echo "ERROR: persistent Shopify catalog cache detected"; exit 1; }
+      - name: Commit aggregate metrics only
         run: |
           git config user.name "product-twin-bot"
           git config user.email "product-twin-bot@users.noreply.github.com"
-          git add data/coverage data/tests || true
+          git add data/coverage data/metrics data/tests
           if git diff --cached --quiet; then
-            echo "No permitted summary changes."
+            echo "No aggregate changes."
             exit 0
           fi
-          git commit -m "data: refresh permitted aggregate summaries"
+          git commit -m "data: refresh live-source aggregate Product Twin metrics"
           git push
