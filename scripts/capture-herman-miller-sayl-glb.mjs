@@ -80,7 +80,6 @@ try{
   const custom=await page.locator('marxent-kongfigurator').evaluateAll(els=>els.map(el=>({configuration_id:el.getAttribute('configuration-id'),sku:el.getAttribute('sku'),environment:el.getAttribute('environment'),enable_ar:el.getAttribute('enable-ar')}))).catch(()=>[]);
   const initialControls=await deepInteractiveSnapshot();
 
-  // Try normal Playwright semantics first, then recurse through open shadow roots.
   const downloadCandidates=[page.getByRole('button',{name:/downloads?|export/i}),page.getByText(/^(downloads?|export)$/i),page.locator('button:visible').filter({hasText:/download|export/i}),page.locator('[role="button"]:visible').filter({hasText:/download|export/i})];
   let opened=false,openedBy=null;
   for(const loc of downloadCandidates){const n=await loc.count().catch(()=>0);if(!n)continue;for(let i=0;i<n;i++){try{await loc.nth(i).click({timeout:5000});opened=true;openedBy='playwright_locator';break}catch{}}if(opened)break;}
@@ -101,13 +100,23 @@ try{
     await download.saveAs(file);saved=file;assetSource=download.url();sourceClass='explicit_browser_download';
   }
 
-  // Only accept product-export evidence. Never fall back to arbitrary GLBs such as UI hotspots.
   if(!saved){
     await page.waitForTimeout(3000);
     const candidates=[...generatedAssetUrls.values()].filter(x=>!BAD_ASSET.test(x.url));
     const preferred=[...candidates].reverse().find(x=>PRODUCT_EXPORT_ENDPOINT.test(x.source)||/\/ar(?:-od)?\//i.test(x.url)||/export|configured|product/i.test(x.url));
     if(preferred?.url){
-      try{const r=await context.request.get(preferred.url,{timeout:120000});if(r.ok()){const body=await r.body();if(body.length>20000&&body.subarray(0,4).toString('ascii')==='glTF'){saved=path.join(runtime,'sayl-configured.glb');await fs.writeFile(saved,body);assetSource=preferred.url;sourceClass='product_export_network_reference'}}catch{}
+      try{
+        const r=await context.request.get(preferred.url,{timeout:120000});
+        if(r.ok()){
+          const body=await r.body();
+          if(body.length>20000&&body.subarray(0,4).toString('ascii')==='glTF'){
+            saved=path.join(runtime,'sayl-configured.glb');
+            await fs.writeFile(saved,body);
+            assetSource=preferred.url;
+            sourceClass='product_export_network_reference';
+          }
+        }
+      }catch{}
     }
   }
 
