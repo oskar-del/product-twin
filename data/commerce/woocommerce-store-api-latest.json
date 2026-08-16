@@ -1,0 +1,394 @@
+{
+  "generated_at": "2026-08-16T17:26:35.471Z",
+  "adapter_id": "woocommerce_store_api",
+  "stores_tested": 3,
+  "stores_live": 2,
+  "non_demo_stores_live": 1,
+  "candidate_references": 16,
+  "status": "LIVE_MERCHANT_PLATFORM_ADAPTER_PROVEN",
+  "scope_note": "WooCommerce Store API is a per-merchant public commerce surface, not a single cross-merchant global catalog.",
+  "stores": [
+    {
+      "store_id": "ledinventory",
+      "base_url": "https://ledinventory.com",
+      "relevance": [
+        "ELECTRICAL.LUMINAIRES"
+      ],
+      "demo": false,
+      "state": "UNRESOLVED",
+      "endpoint": null,
+      "product_count_sample": 0,
+      "product_references": [],
+      "attempts": [
+        {
+          "endpoint": "https://ledinventory.com/wp-json/wc/store/v1/products?per_page=8",
+          "http_status": 403,
+          "resolved_url": "https://ledinventory.com/wp-json/wc/store/v1/products?per_page=8",
+          "products_array": false,
+          "content_type": "text/html; charset=UTF-8",
+          "error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content"
+        },
+        {
+          "endpoint": "https://ledinventory.com/?rest_route=/wc/store/v1/products&per_page=8",
+          "http_status": 403,
+          "resolved_url": "https://ledinventory.com/?rest_route=/wc/store/v1/products&per_page=8",
+          "products_array": false,
+          "content_type": "text/html; charset=UTF-8",
+          "error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content"
+        }
+      ]
+    },
+    {
+      "store_id": "b_ledtec",
+      "base_url": "https://b-ledtec.com",
+      "relevance": [
+        "ELECTRICAL.LUMINAIRES"
+      ],
+      "demo": false,
+      "state": "LIVE_STORE_API_PRODUCTS",
+      "endpoint": "https://b-ledtec.com/wp-json/wc/store/v1/products?per_page=8",
+      "product_count_sample": 8,
+      "product_references": [
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "b_ledtec",
+          "merchant_product_id": 6940,
+          "sku": null,
+          "name": "BL-BU-7W",
+          "permalink": "https://b-ledtec.com/shop/bl-bu-7w",
+          "currency": "QAR",
+          "price_minor": "300",
+          "in_stock": true,
+          "category_names": [
+            "Indoor Lighting"
+          ],
+          "image_reference": "https://b-ledtec.com/wp-content/uploads/2025/05/Picture1.jpg",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "b_ledtec",
+          "merchant_product_id": 6478,
+          "sku": null,
+          "name": "TPB3-IN1-860-05-20",
+          "permalink": "https://b-ledtec.com/shop/tpb3-in1-860-05-20",
+          "currency": "QAR",
+          "price_minor": "0",
+          "in_stock": false,
+          "category_names": [
+            "Aluminum Tri-Proof",
+            "TPB3",
+            "Tri-proof lights",
+            "Industrial Lighting"
+          ],
+          "image_reference": "https://b-ledtec.com/wp-content/uploads/2025/04/145-8.png",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "b_ledtec",
+          "merchant_product_id": 6476,
+          "sku": null,
+          "name": "TPB3-IN1-840-05-20",
+          "permalink": "https://b-ledtec.com/shop/tpb3-in1-840-05-20",
+          "currency": "QAR",
+          "price_minor": "0",
+          "in_stock": false,
+          "category_names": [
+            "Aluminum Tri-Proof",
+            "TPB3",
+            "Tri-proof lights",
+            "Industrial Lighting"
+          ],
+          "image_reference": "https://b-ledtec.com/wp-content/uploads/2025/04/145-7.png",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "b_ledtec",
+          "merchant_product_id": 6474,
+          "sku": null,
+          "name": "TPB3-IN1-830-05-20",
+          "permalink": "https://b-ledtec.com/shop/tpb3-in1-830-05-20",
+          "currency": "QAR",
+          "price_minor": "0",
+          "in_stock": false,
+          "category_names": [
+            "Aluminum Tri-Proof",
+            "TPB3",
+            "Tri-proof lights",
+            "Industrial Lighting"
+          ],
+          "image_reference": "https://b-ledtec.com/wp-content/uploads/2025/04/145-6.png",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "b_ledtec",
+          "merchant_product_id": 6472,
+          "sku": null,
+          "name": "TPB2-IN1-860-05-40",
+          "permalink": "https://b-ledtec.com/shop/tpb2-in1-860-05-40",
+          "currency": "QAR",
+          "price_minor": "0",
+          "in_stock": false,
+          "category_names": [
+            "Aluminum Tri-Proof",
+            "TPB2",
+            "Tri-proof lights",
+            "Industrial Lighting"
+          ],
+          "image_reference": "https://b-ledtec.com/wp-content/uploads/2025/04/145-5.png",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "b_ledtec",
+          "merchant_product_id": 6470,
+          "sku": null,
+          "name": "TPB2-IN1-840-05-40",
+          "permalink": "https://b-ledtec.com/shop/tpb2-in1-840-05-40",
+          "currency": "QAR",
+          "price_minor": "14000",
+          "in_stock": true,
+          "category_names": [
+            "Aluminum Tri-Proof",
+            "TPB2",
+            "Tri-proof lights",
+            "Industrial Lighting"
+          ],
+          "image_reference": "https://b-ledtec.com/wp-content/uploads/2025/04/145-4.png",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "b_ledtec",
+          "merchant_product_id": 6468,
+          "sku": null,
+          "name": "TPB2-IN1-830-05-40",
+          "permalink": "https://b-ledtec.com/shop/tpb2-in1-830-05-40",
+          "currency": "QAR",
+          "price_minor": "0",
+          "in_stock": false,
+          "category_names": [
+            "Aluminum Tri-Proof",
+            "TPB2",
+            "Tri-proof lights",
+            "Industrial Lighting"
+          ],
+          "image_reference": "https://b-ledtec.com/wp-content/uploads/2025/04/145-3.png",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "b_ledtec",
+          "merchant_product_id": 6466,
+          "sku": null,
+          "name": "TPB1-IN1-860-05-60",
+          "permalink": "https://b-ledtec.com/shop/tpb1-in1-860-05-60",
+          "currency": "QAR",
+          "price_minor": "0",
+          "in_stock": false,
+          "category_names": [
+            "Aluminum Tri-Proof",
+            "TPB1",
+            "Tri-proof lights",
+            "Industrial Lighting"
+          ],
+          "image_reference": "https://b-ledtec.com/wp-content/uploads/2025/04/145-2.png",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        }
+      ],
+      "attempts": [
+        {
+          "endpoint": "https://b-ledtec.com/wp-json/wc/store/v1/products?per_page=8",
+          "http_status": 200,
+          "resolved_url": "https://b-ledtec.com/wp-json/wc/store/v1/products?per_page=8",
+          "products_array": true,
+          "content_type": "application/json; charset=UTF-8",
+          "error": null
+        }
+      ]
+    },
+    {
+      "store_id": "themify_ultra_craft_demo",
+      "base_url": "https://themify.org/ultra-craft",
+      "relevance": [
+        "FFE",
+        "ELECTRICAL.LUMINAIRES"
+      ],
+      "demo": true,
+      "state": "LIVE_STORE_API_PRODUCTS",
+      "endpoint": "https://themify.org/ultra-craft/wp-json/wc/store/v1/products?per_page=8",
+      "product_count_sample": 8,
+      "product_references": [
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "themify_ultra_craft_demo",
+          "merchant_product_id": 57,
+          "sku": null,
+          "name": "Pandora 2018 Woman Necklace",
+          "permalink": "https://themify.org/ultra-craft/product/pandora-2018-woman-necklace/",
+          "currency": "USD",
+          "price_minor": "79000",
+          "in_stock": true,
+          "category_names": [
+            "Accessories"
+          ],
+          "image_reference": "https://themify.org/ultra-craft/wp-content/uploads/sites/14/2018/11/woman-necklace.jpg",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "themify_ultra_craft_demo",
+          "merchant_product_id": 56,
+          "sku": null,
+          "name": "Blue and Green Art Glass Vase",
+          "permalink": "https://themify.org/ultra-craft/product/9/",
+          "currency": "USD",
+          "price_minor": "15000",
+          "in_stock": true,
+          "category_names": [
+            "Accessories",
+            "Vase"
+          ],
+          "image_reference": "https://themify.org/ultra-craft/wp-content/uploads/sites/14/2018/11/blue-glass-vase.jpg",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "themify_ultra_craft_demo",
+          "merchant_product_id": 55,
+          "sku": null,
+          "name": "Black Vintage Style Lamp",
+          "permalink": "https://themify.org/ultra-craft/product/black-vintage-style-lamp/",
+          "currency": "USD",
+          "price_minor": "12500",
+          "in_stock": true,
+          "category_names": [
+            "Lamp",
+            "Office"
+          ],
+          "image_reference": "https://themify.org/ultra-craft/wp-content/uploads/sites/14/2018/11/vintage-lamp.jpg",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "themify_ultra_craft_demo",
+          "merchant_product_id": 54,
+          "sku": null,
+          "name": "Yellow Single Sofa",
+          "permalink": "https://themify.org/ultra-craft/product/yellow-single-sofa/",
+          "currency": "USD",
+          "price_minor": "25000",
+          "in_stock": true,
+          "category_names": [
+            "Chair",
+            "Decor",
+            "Furniture",
+            "Office"
+          ],
+          "image_reference": "https://themify.org/ultra-craft/wp-content/uploads/sites/14/2018/11/vintage-yellow-single-sofa.jpg",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "themify_ultra_craft_demo",
+          "merchant_product_id": 53,
+          "sku": null,
+          "name": "1970 Wood Cabinet",
+          "permalink": "https://themify.org/ultra-craft/product/1970-wood-cabinet/",
+          "currency": "USD",
+          "price_minor": "37500",
+          "in_stock": true,
+          "category_names": [
+            "Furniture",
+            "Storage"
+          ],
+          "image_reference": "https://themify.org/ultra-craft/wp-content/uploads/sites/14/2018/11/wood-cuppboard-cabinet.jpg",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "themify_ultra_craft_demo",
+          "merchant_product_id": 52,
+          "sku": null,
+          "name": "Handmade Unique Desk Lamp",
+          "permalink": "https://themify.org/ultra-craft/product/handmade-unique-desk-lamp/",
+          "currency": "USD",
+          "price_minor": "12500",
+          "in_stock": true,
+          "category_names": [
+            "Furniture",
+            "Lamp",
+            "Office"
+          ],
+          "image_reference": "https://themify.org/ultra-craft/wp-content/uploads/sites/14/2018/11/wood-craft-lamp.jpg",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "themify_ultra_craft_demo",
+          "merchant_product_id": 51,
+          "sku": null,
+          "name": "Chicago Wood Single Chair",
+          "permalink": "https://themify.org/ultra-craft/product/chicago-wood-single-chair/",
+          "currency": "USD",
+          "price_minor": "45000",
+          "in_stock": true,
+          "category_names": [
+            "Chair",
+            "Decor",
+            "Furniture",
+            "Office"
+          ],
+          "image_reference": "https://themify.org/ultra-craft/wp-content/uploads/sites/14/2018/11/unique-wood-chair.jpg",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        },
+        {
+          "source_id": "woocommerce_store_api",
+          "store_id": "themify_ultra_craft_demo",
+          "merchant_product_id": 50,
+          "sku": null,
+          "name": "Grey Vintage Sofa",
+          "permalink": "https://themify.org/ultra-craft/product/grey-vintage-sofa/",
+          "currency": "USD",
+          "price_minor": "78000",
+          "in_stock": true,
+          "category_names": [
+            "Chair",
+            "Furniture"
+          ],
+          "image_reference": "https://themify.org/ultra-craft/wp-content/uploads/sites/14/2018/11/vintage-grey-sofa.jpg",
+          "identity_state": "merchant_candidate",
+          "refresh_policy": "live_required"
+        }
+      ],
+      "attempts": [
+        {
+          "endpoint": "https://themify.org/ultra-craft/wp-json/wc/store/v1/products?per_page=8",
+          "http_status": 200,
+          "resolved_url": "https://themify.org/ultra-craft/wp-json/wc/store/v1/products?per_page=8",
+          "products_array": true,
+          "content_type": "application/json; charset=UTF-8",
+          "error": null
+        }
+      ]
+    }
+  ]
+}
