@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-08-16T17:48:38.262400+00:00",
+  "target_id": "GF_SANIPEX_MT_1158140_G4_V0_1",
+  "avatar_id": "AVATAR_GF_SANIPEX_MT_1158140_G2_SYSTEM_PROXY",
+  "status": "G2_PROXY_SCALE_INTERFACE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/gf-sanipex-1158140-g2-system-proxy.glb",
+  "asset_bytes": 14728,
+  "exact_identity": {
+    "manufacturer_part_no": "1158140",
+    "gf_item_no": "351616990",
+    "ean": "7613263030184",
+    "etim_class": "EC003024"
+  },
+  "verified_product_envelope_mm": {
+    "length": 45,
+    "width": 25,
+    "height": 25
+  },
+  "verified_interface": {
+    "component_type": "IfcPipeFittingType",
+    "nominal_system": "JRG Sanipex MT",
+    "nominal_diameter_mm": 16,
+    "connection_role": "adapter",
+    "etim_class": "EC003024"
+  },
+  "proxy_whole_extents_mm": {
+    "x": 52.99999937415123,
+    "y": 25.00000037252903,
+    "z": 25.00000037252903
+  },
+  "cross_section_relative_error": 1.4901161193847656e-08,
+  "disclosure": "Exact identity + manufacturer-dimensioned G2 system proxy. Shape/threads/connection detailing are schematic and must not be interpreted as GF manufacturer geometry.",
+  "g4_state": "official BIM identity/formats verified but geometry download requires account",
+  "next_gate": "authorized manufacturer BIM retrieval + scale/interface QA + Spain/EU procurement"
+}
