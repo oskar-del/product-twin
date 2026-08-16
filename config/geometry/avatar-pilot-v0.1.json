@@ -1,0 +1,23 @@
+{
+  "version": "0.1",
+  "goal": "Prove that Product Twin can carry the right digital representation for objects, materials and configurable systems inside one project.",
+  "targets": [
+    {"slot":"A01","type":"object","category_id":"POOL.PUMPS","candidate":"AstralPool Victoria Plus Silent VS 67547 or 67548","target_level":"G3","preferred_source":"manufacturer CAD/3D or authorized reconstruction from manufacturer dimensions","why":"Already has A-grade technical evidence; useful equipment-object test."},
+    {"slot":"A02","type":"object","category_id":"ENERGY.SOLAR.INVERTER","candidate":"Huawei SUN2000-10KTL-M1","target_level":"G3","preferred_source":"manufacturer CAD/3D if available; otherwise dimension-verified design proxy","why":"Already has A-grade technical evidence and project-fit evaluator."},
+    {"slot":"A03","type":"object","category_id":"FFE.SEATING.SOFA","candidate":"live selected Shopify sofa reference","target_level":"G3","preferred_source":"merchant Model3d / manufacturer / licensed asset","why":"Tests commerce-linked shoppable render flow."},
+    {"slot":"M01","type":"material","innovation_id":"INNOV.PVC_MARBLE_SHEET","category_id":"FINISHES.WALLCOVERING","target_level":"G3","preferred_source":"manufacturer sample imagery + physically scaled PBR reconstruction + sheet/joint metadata","why":"Tests low-cost stone-look emerging finish."},
+    {"slot":"M02","type":"material","innovation_id":"INNOV.WPC_WALL_PANEL","category_id":"FINISHES.WALLCOVERING","target_level":"G3","preferred_source":"manufacturer profile dimensions + texture/PBR + repeating module geometry","why":"Tests profiled surface product, not just flat texture."},
+    {"slot":"M03","type":"material","innovation_id":"INNOV.SPC_FLOORING","category_id":"FINISHES.FLOORING","target_level":"G3","preferred_source":"manufacturer plank dimensions + texture/PBR + click/joint metadata","why":"Tests floating floor system and quantity calculation."},
+    {"slot":"S01","type":"system","category_id":"OPENINGS.WINDOWS","candidate":"manufacturer window-system family TBD","target_level":"G4","preferred_source":"manufacturer BIM/configurator","why":"Tests configured geometry, glazing/performance and local-code fit."},
+    {"slot":"S02","type":"system","category_id":"POOL.PIPE","candidate":"pool hydraulic pipe/fitting system TBD","target_level":"G4","preferred_source":"manufacturer dimensional catalogue / BIM","why":"Tests connectivity and hydraulic-system avatar rather than visual object."},
+    {"slot":"P01","type":"system","category_id":"PREFAB.BUILDING.HOUSE_KIT","candidate":"China/EU export prefab supplier TBD","target_level":"G4","preferred_source":"supplier CAD/BIM/configurator + shipping configuration","why":"Tests whole-house configurable system, containerization, site interfaces and RFQ."}
+  ],
+  "success_criteria": [
+    "every target has canonical identity or explicit unresolved identity state",
+    "every avatar has verified scale before placement",
+    "render claims never exceed geometry/rights level",
+    "materials preserve real-world module/sheet/plank scale",
+    "systems expose configuration constraints rather than only preview geometry",
+    "at least one placed avatar can travel from project scene to live offer/cart or RFQ route"
+  ]
+}
