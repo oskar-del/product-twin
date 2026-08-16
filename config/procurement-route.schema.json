@@ -1,0 +1,28 @@
+{
+  "version": "0.1",
+  "purpose": "Select the commercial/procurement mechanism appropriate to a Product Twin or project requirement instead of forcing every product through retail checkout.",
+  "route": {
+    "route_type": "merchant_cart | direct_trade | configured_rfq | supplier_quote | tender | distributor_order | local_purchase | unresolved",
+    "category_id": "string",
+    "project_id": "string",
+    "requirement_id": "string|null",
+    "source_id": "string|null",
+    "state": "ready | needs_account | needs_requirement | needs_identity | needs_quote | needs_address | needs_logistics | needs_technical_review | blocked",
+    "reason": "string",
+    "inputs_required": "array",
+    "technical_gate": "object",
+    "regulatory_gate": "object",
+    "logistics_gate": "object",
+    "commercial_gate": "object"
+  },
+  "selection_priority": [
+    "technical suitability and project requirement",
+    "regulatory suitability",
+    "correct commercial mechanism for the product type",
+    "local/regional supply and logistics",
+    "availability and lead time",
+    "delivered/installed cost",
+    "commercial/affiliate economics"
+  ],
+  "principle": "The existence of a retail checkout does not mean retail checkout is the correct procurement route for an engineered building product."
+}
