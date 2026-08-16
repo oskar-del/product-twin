@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-16T17:42:00.899Z",
+  "generated_at": "2026-08-16T17:45:30.947Z",
   "target_id": "GF_SANIPEX_MT_1158140_G4_V0_1",
-  "status": "DOWNLOAD_UI_OPENED_NO_GEOMETRY_BINARY",
+  "status": "BIM_FORMATS_VERIFIED_ACCOUNT_REQUIRED",
   "page_reached": true,
   "identity_evidence": {
     "manufacturer_part_visible": true,
@@ -21,28 +21,7 @@
     ]
   },
   "download_ui_opened": true,
-  "attempts": [
-    {
-      "format": "OBJ",
-      "selected": false,
-      "method": null,
-      "evidence": null,
-      "download_delta": 0
-    },
-    {
-      "format": "IFC",
-      "selected": false,
-      "method": null,
-      "evidence": null,
-      "download_delta": 0
-    },
-    {
-      "format": "RFA",
-      "selected": false,
-      "method": null,
-      "evidence": null,
-      "download_delta": 0
-    }
-  ],
+  "account_required": true,
+  "attempts": [],
   "geometry_downloads": []
 }

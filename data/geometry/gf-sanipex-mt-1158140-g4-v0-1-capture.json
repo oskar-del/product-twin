@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-16T17:42:00.899Z",
+  "generated_at": "2026-08-16T17:45:30.947Z",
   "target_id": "GF_SANIPEX_MT_1158140_G4_V0_1",
-  "status": "DOWNLOAD_UI_OPENED_NO_GEOMETRY_BINARY",
+  "status": "BIM_FORMATS_VERIFIED_ACCOUNT_REQUIRED",
   "page_reached": true,
   "identity_evidence": {
     "manufacturer_part_visible": true,
@@ -22,611 +22,11 @@
   },
   "variant_selected": true,
   "download_ui_opened": true,
-  "attempts": [
-    {
-      "format": "OBJ",
-      "selected": false,
-      "method": null,
-      "evidence": null,
-      "download_delta": 0
-    },
-    {
-      "format": "IFC",
-      "selected": false,
-      "method": null,
-      "evidence": null,
-      "download_delta": 0
-    },
-    {
-      "format": "RFA",
-      "selected": false,
-      "method": null,
-      "evidence": null,
-      "download_delta": 0
-    }
-  ],
+  "account_required": true,
+  "attempts": [],
   "geometry_downloads": [],
   "other_downloads": [],
-  "format_neighborhood": "M-Bibliothek BIM-Werkzeuge BIM-Services Kontakt Deutschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Oberseite Unterseite Rückseite Seite Hohe Auflösung Produktdetails Identitätsdaten Artikelnummer 1158140 Item no. GF 351616990 EAN 7613263030184 ETIM Class EC003024 Daten Gewicht [kg] 0.06 Verpackungseinheit 5 Mengeneinheit St. BIM Data IFC Export As IfcPipeFittingType Revision 1.0 Privacy and cookie policy BIM: Andreas Sommer Andreas.Sommer@georgfischer.com Kontakt Uponor GmbH 97437 Haßfurt bim.support@georgfischer.com Unterstützt von BIMStreamer © Uponor 2026 Benutzerkonto erforderlich Bitte melden Sie sich zuerst an oder erstellen Sie ein Benutzerkonto, um fortzufahren. Registrieren Anmelden",
-  "format_dom_evidence_before": [
-    {
-      "tag": "ol-bim-root",
-      "text": "Uponor | Online Bibliothek Uponor-Webseite BIM-Bibliothek BIM-Werkzeuge BIM-Services Kontakt Deutschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "",
-      "visible": true,
-      "parent_text": "Uponor | Online Bibliothek Uponor-Webseite BIM-Bibliothek BIM-Werkzeuge BIM-Services Kontakt Deutschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verf",
-      "outer_html": "<ol-bim-root ng-version=\"21.1.2\" ng-server-context=\"ssr\" aria-hidden=\"true\"><router-outlet></router-outlet><ng-component class=\"min-h-screen flex flex-col\"><!----><!----><div class=\"fixed top-0 z-40 w-full\"><router-outlet name=\"header\"></router-outlet><ng-component><ol-main-nav align=\"right\" class=\"block relative z-50\"><header class=\"shadow-md bg-white\" data-testing-id=\"App:Header:Default\"><div class=\"container h-12 md:h-28 flex items-center\"><button class=\"xl:hidden shrink-0 flex self-center flex-col justify-between w-8 h-6 mr-4 md:mr-8 z-20\"><span class=\"h-1 rounded-full w-full bg-primary\"></span><span class=\"h-1 rounded-full w-full bg-primary\"></span><span class=\"h-1 rounded-full w-full bg-primary\"></span></button><!----><div class=\"shrink-0\"><h2 class=\"sr-only\"> Uponor | Online Bibliothek </h2><a class=\"block\" href=\"/BLDE/DE/de_DE/home\"><img class=\"h-7 sm:h-6 md:h-12 mt-1.5 xl:mt-0\" "
-    },
-    {
-      "tag": "ng-component",
-      "text": "Uponor | Online Bibliothek Uponor-Webseite BIM-Bibliothek BIM-Werkzeuge BIM-Services Kontakt Deutschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "min-h-screen flex flex-col",
-      "visible": true,
-      "parent_text": "Uponor | Online Bibliothek Uponor-Webseite BIM-Bibliothek BIM-Werkzeuge BIM-Services Kontakt Deutschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verf",
-      "outer_html": "<ng-component class=\"min-h-screen flex flex-col\"><!----><!----><div class=\"fixed top-0 z-40 w-full\"><router-outlet name=\"header\"></router-outlet><ng-component><ol-main-nav align=\"right\" class=\"block relative z-50\"><header class=\"shadow-md bg-white\" data-testing-id=\"App:Header:Default\"><div class=\"container h-12 md:h-28 flex items-center\"><button class=\"xl:hidden shrink-0 flex self-center flex-col justify-between w-8 h-6 mr-4 md:mr-8 z-20\"><span class=\"h-1 rounded-full w-full bg-primary\"></span><span class=\"h-1 rounded-full w-full bg-primary\"></span><span class=\"h-1 rounded-full w-full bg-primary\"></span></button><!----><div class=\"shrink-0\"><h2 class=\"sr-only\"> Uponor | Online Bibliothek </h2><a class=\"block\" href=\"/BLDE/DE/de_DE/home\"><img class=\"h-7 sm:h-6 md:h-12 mt-1.5 xl:mt-0\" src=\"assets/tenants/uponor/uponor-logo.svg?1786902098305\" alt=\"uponor\"><!----></a></div><nav class=\"xl:w-fu"
-    },
-    {
-      "tag": "div",
-      "text": "BIM-Bibliothek Revit Plug-in UFH Revit Plug-in",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "px-8 xl:px-0 xl:z-50 xl:invisible group-hover:visible xl:absolute static xl:top-full bg-gray-100 xl:bg-white xl:shadow-lg divide-y xl:divide-x divide-gray-200",
-      "visible": true,
-      "parent_text": "BIM-Werkzeuge",
-      "outer_html": "<div class=\"px-8 xl:px-0 xl:z-50 xl:invisible group-hover:visible xl:absolute static xl:top-full bg-gray-100 xl:bg-white xl:shadow-lg divide-y xl:divide-x divide-gray-200\"><a routerlinkactive=\"active\" class=\"block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary\" href=\"/BLDE/DE/de_DE/pages/tools/plugin-revit\"> BIM-Bibliothek Revit Plug-in </a><a routerlinkactive=\"active\" class=\"block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary\" href=\"/BLDE/DE/de_DE/pages/tools/ufh-plugin-revit\"> UFH Revit Plug-in </a><!----></div>"
-    },
-    {
-      "tag": "a",
-      "text": "BIM-Bibliothek Revit Plug-in",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary",
-      "visible": true,
-      "parent_text": "",
-      "outer_html": "<a routerlinkactive=\"active\" class=\"block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary\" href=\"/BLDE/DE/de_DE/pages/tools/plugin-revit\"> BIM-Bibliothek Revit Plug-in </a>"
-    },
-    {
-      "tag": "a",
-      "text": "UFH Revit Plug-in",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary",
-      "visible": true,
-      "parent_text": "",
-      "outer_html": "<a routerlinkactive=\"active\" class=\"block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary\" href=\"/BLDE/DE/de_DE/pages/tools/ufh-plugin-revit\"> UFH Revit Plug-in </a>"
-    },
-    {
-      "tag": "div",
-      "text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzuf",
-      "value": null,
-      "id": "main",
-      "role": "main",
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "grow",
-      "visible": true,
-      "parent_text": "Uponor | Online Bibliothek Uponor-Webseite BIM-Bibliothek BIM-Werkzeuge BIM-Services Kontakt Deutschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verf",
-      "outer_html": "<div role=\"main\" id=\"main\" class=\"grow\"><div class=\"container\"><router-outlet></router-outlet><ng-component><div class=\"container pt-5 pb-20\"><router-outlet></router-outlet><ng-component><ol-breadcrumbs><ng-scrollbar track=\"horizontal\" visibility=\"hover\" style=\"height: 30px;\" _nghost-ng-c576831574=\"\" class=\"ng-scrollbar\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scrollbar-wrapper\" position=\"native\" track=\"horizontal\" appearance=\"compact\" visibility=\"hover\" deactivated=\"false\" dir=\"ltr\" pointereventsmethod=\"viewport\" verticalused=\"false\" horizontalused=\"true\" isverticallyscrollable=\"false\" ishorizontallyscrollable=\"true\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-viewport-wrapper\"><div _ngcontent-ng-c576831574=\"\" scrollviewport=\"\" hidenativescrollbar=\"\" class=\" ng-native-scrollbar-hider ng-scroll-viewport \" style=\"--native-scrollbar-size: -0px;\"><div _ngcontent-ng-c576831574=\"\" cl"
-    },
-    {
-      "tag": "div",
-      "text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzuf",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "container",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<div class=\"container\"><router-outlet></router-outlet><ng-component><div class=\"container pt-5 pb-20\"><router-outlet></router-outlet><ng-component><ol-breadcrumbs><ng-scrollbar track=\"horizontal\" visibility=\"hover\" style=\"height: 30px;\" _nghost-ng-c576831574=\"\" class=\"ng-scrollbar\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scrollbar-wrapper\" position=\"native\" track=\"horizontal\" appearance=\"compact\" visibility=\"hover\" deactivated=\"false\" dir=\"ltr\" pointereventsmethod=\"viewport\" verticalused=\"false\" horizontalused=\"true\" isverticallyscrollable=\"false\" ishorizontallyscrollable=\"true\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-viewport-wrapper\"><div _ngcontent-ng-c576831574=\"\" scrollviewport=\"\" hidenativescrollbar=\"\" class=\" ng-native-scrollbar-hider ng-scroll-viewport \" style=\"--native-scrollbar-size: -0px;\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-content\"><nav class=\"brea"
-    },
-    {
-      "tag": "ng-component",
-      "text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzuf",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<ng-component><div class=\"container pt-5 pb-20\"><router-outlet></router-outlet><ng-component><ol-breadcrumbs><ng-scrollbar track=\"horizontal\" visibility=\"hover\" style=\"height: 30px;\" _nghost-ng-c576831574=\"\" class=\"ng-scrollbar\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scrollbar-wrapper\" position=\"native\" track=\"horizontal\" appearance=\"compact\" visibility=\"hover\" deactivated=\"false\" dir=\"ltr\" pointereventsmethod=\"viewport\" verticalused=\"false\" horizontalused=\"true\" isverticallyscrollable=\"false\" ishorizontallyscrollable=\"true\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-viewport-wrapper\"><div _ngcontent-ng-c576831574=\"\" scrollviewport=\"\" hidenativescrollbar=\"\" class=\" ng-native-scrollbar-hider ng-scroll-viewport \" style=\"--native-scrollbar-size: -0px;\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-content\"><nav class=\"breadcrumb__container\" data-testing-id=\"Breadcrumbs\"><ol c"
-    },
-    {
-      "tag": "div",
-      "text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzuf",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "container pt-5 pb-20",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<div class=\"container pt-5 pb-20\"><router-outlet></router-outlet><ng-component><ol-breadcrumbs><ng-scrollbar track=\"horizontal\" visibility=\"hover\" style=\"height: 30px;\" _nghost-ng-c576831574=\"\" class=\"ng-scrollbar\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scrollbar-wrapper\" position=\"native\" track=\"horizontal\" appearance=\"compact\" visibility=\"hover\" deactivated=\"false\" dir=\"ltr\" pointereventsmethod=\"viewport\" verticalused=\"false\" horizontalused=\"true\" isverticallyscrollable=\"false\" ishorizontallyscrollable=\"true\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-viewport-wrapper\"><div _ngcontent-ng-c576831574=\"\" scrollviewport=\"\" hidenativescrollbar=\"\" class=\" ng-native-scrollbar-hider ng-scroll-viewport \" style=\"--native-scrollbar-size: -0px;\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-content\"><nav class=\"breadcrumb__container\" data-testing-id=\"Breadcrumbs\"><ol class=\"breadcru"
-    },
-    {
-      "tag": "ng-component",
-      "text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzuf",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<ng-component><ol-breadcrumbs><ng-scrollbar track=\"horizontal\" visibility=\"hover\" style=\"height: 30px;\" _nghost-ng-c576831574=\"\" class=\"ng-scrollbar\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scrollbar-wrapper\" position=\"native\" track=\"horizontal\" appearance=\"compact\" visibility=\"hover\" deactivated=\"false\" dir=\"ltr\" pointereventsmethod=\"viewport\" verticalused=\"false\" horizontalused=\"true\" isverticallyscrollable=\"false\" ishorizontallyscrollable=\"true\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-viewport-wrapper\"><div _ngcontent-ng-c576831574=\"\" scrollviewport=\"\" hidenativescrollbar=\"\" class=\" ng-native-scrollbar-hider ng-scroll-viewport \" style=\"--native-scrollbar-size: -0px;\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-content\"><nav class=\"breadcrumb__container\" data-testing-id=\"Breadcrumbs\"><ol class=\"breadcrumb__list\"><li class=\"breadcrumb__item breadcrumb__item--first bre"
-    },
-    {
-      "tag": "ol-product-data",
-      "text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<ol-product-data><div class=\"product-data__wrapper\"><div class=\"product-data\"><div class=\"product-data__details\" style=\"min-height: 542px;\"><div class=\"product-data__details-header\"><h1 class=\"product-data__details-heading\"> GF Sanipex MT Adapter Sanipex </h1><ol-cart-btn-family class=\"product-data__details-cart-button\"><ol-button variant=\"secondary\" class=\"cart-btn-family\"><button class=\"mat-mdc-tooltip-trigger ol-button ol-button--normal ol-button--secondary\" data-testing-id=\"Catalog:Cart:AddFamily\"><!----><ol-icon class=\"flex flex-col hidden lg:flex\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--base mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"add_to_list\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 640\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" foc"
-    },
-    {
-      "tag": "div",
-      "text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-data__wrapper",
-      "visible": true,
-      "parent_text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Oberseite Unterseite Rückseite Seite Hohe Auflösung",
-      "outer_html": "<div class=\"product-data__wrapper\"><div class=\"product-data\"><div class=\"product-data__details\" style=\"min-height: 542px;\"><div class=\"product-data__details-header\"><h1 class=\"product-data__details-heading\"> GF Sanipex MT Adapter Sanipex </h1><ol-cart-btn-family class=\"product-data__details-cart-button\"><ol-button variant=\"secondary\" class=\"cart-btn-family\"><button class=\"mat-mdc-tooltip-trigger ol-button ol-button--normal ol-button--secondary\" data-testing-id=\"Catalog:Cart:AddFamily\"><!----><ol-icon class=\"flex flex-col hidden lg:flex\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--base mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"add_to_list\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 640\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\">\n<"
-    },
-    {
-      "tag": "div",
-      "text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-data",
-      "visible": true,
-      "parent_text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Oberseite Unterseite Rückseite Seite Hohe Auflösung",
-      "outer_html": "<div class=\"product-data\"><div class=\"product-data__details\" style=\"min-height: 542px;\"><div class=\"product-data__details-header\"><h1 class=\"product-data__details-heading\"> GF Sanipex MT Adapter Sanipex </h1><ol-cart-btn-family class=\"product-data__details-cart-button\"><ol-button variant=\"secondary\" class=\"cart-btn-family\"><button class=\"mat-mdc-tooltip-trigger ol-button ol-button--normal ol-button--secondary\" data-testing-id=\"Catalog:Cart:AddFamily\"><!----><ol-icon class=\"flex flex-col hidden lg:flex\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--base mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"add_to_list\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 640\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\">\n<path d=\"M620.8 288h-108.8v-108.8c0-"
-    },
-    {
-      "tag": "div",
-      "text": "Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "",
-      "visible": true,
-      "parent_text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen",
-      "outer_html": "<div><div class=\"product-data__formats\"> Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. <!----></div><div class=\"product-data__download-wrapper\"><div class=\"product-data__tags\"><ol-product-tag><div class=\"mat-mdc-tooltip-trigger product-tag\" aria-describedby=\"cdk-describedby-message-ng-1-2\" cdk-describedby-host=\"ng-1\"><ol-icon size=\"md\" class=\"flex flex-col\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--md mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"tag_tap_water\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\">\n<path d=\"M14.4 2.8v1.467h4.267v1.467c0 1.44 0 1.467-0.8 1.467-0.48 0-0.8 0.133-0.8 0.347 0 0.267-1.173 0.427-4.853 0.613-4.107 0.24-5.093 0.373-6.213 0.88-2.56 1.147-"
-    },
-    {
-      "tag": "div",
-      "text": "Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj.",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-data__formats",
-      "visible": true,
-      "parent_text": "Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen",
-      "outer_html": "<div class=\"product-data__formats\"> Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. <!----></div>"
-    },
-    {
-      "tag": "ol-product-attributes",
-      "text": "Produktdetails Identitätsdaten Artikelnummer 1158140 Item no. GF 351616990 EAN 7613263030184 ETIM Class EC003024 Daten Gewicht [kg] 0.06 Verpackungseinheit 5 Mengeneinheit St. BIM Data IFC Export As IfcPipeFittingType Re",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-attributes block mt-16",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<ol-product-attributes class=\"product-attributes block mt-16\"><h4 class=\"product-attributes__heading\"> Produktdetails </h4><!----><div class=\"first\" data-testing-id=\"Catalog:Details:Attributes\"><div role=\"button\" class=\"product-attributes__group-header product-attributes__group-header--closed\" data-testing-id=\"Catalog:Details:Attributes:Group:Toggle\"><div data-testing-id=\"Catalog:Details:Attributes:Group:Name\"> Identitätsdaten </div><ol-icon size=\"lg\" class=\"flex flex-col product-attributes__group-header-icon product-attributes__group-header-icon--closed\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--lg mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"arrow_down\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" focusa"
-    },
-    {
-      "tag": "div",
-      "text": "BIM Data IFC Export As IfcPipeFittingType Revision 1.0",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "last",
-      "visible": true,
-      "parent_text": "Produktdetails Identitätsdaten Artikelnummer 1158140 Item no. GF 351616990 EAN 7613263030184 ETIM Class EC003024 Daten Gewicht [kg] 0.06 Verpackungseinheit 5 Mengeneinheit St. BIM Data IFC Export As IfcPipeFittingType Revision 1.0",
-      "outer_html": "<div class=\"last\" data-testing-id=\"Catalog:Details:Attributes\"><div role=\"button\" class=\"product-attributes__group-header product-attributes__group-header--closed\" data-testing-id=\"Catalog:Details:Attributes:Group:Toggle\"><div data-testing-id=\"Catalog:Details:Attributes:Group:Name\"> BIM Data </div><ol-icon size=\"lg\" class=\"flex flex-col product-attributes__group-header-icon product-attributes__group-header-icon--closed\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--lg mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"arrow_down\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\">\n<path d=\"M9.28 11.52c-0.427-0.427-1.067-0.427-1.493 0s-0.427 1.067 0 1.493l7.467 7.467c0.427 0.427 1.067 0.427 1.493 0l7.467-"
-    },
-    {
-      "tag": "div",
-      "text": "IFC Export As IfcPipeFittingType Revision 1.0",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-attributes__group",
-      "visible": true,
-      "parent_text": "BIM Data IFC Export As IfcPipeFittingType Revision 1.0",
-      "outer_html": "<div class=\"product-attributes__group\" data-testing-id=\"Catalog:Details:Attributes:Group:Visible\"><div class=\"product-attributes__group-content-wrapper\"><div class=\"product-attributes__group-content-label\" data-testing-id=\"Catalog:Details:Attribute:Name\"> IFC Export As </div><div class=\"product-attributes__group-content\" data-testing-id=\"Catalog:Details:Attribute:Value\"><!----><!----><!----><div>IfcPipeFittingType</div><!----></div></div><div class=\"product-attributes__group-content-wrapper\"><div class=\"product-attributes__group-content-label\" data-testing-id=\"Catalog:Details:Attribute:Name\"> Revision </div><div class=\"product-attributes__group-content\" data-testing-id=\"Catalog:Details:Attribute:Value\"><!----><!----><!----><div>1.0</div><!----></div></div><!----></div>"
-    },
-    {
-      "tag": "div",
-      "text": "IFC Export As IfcPipeFittingType",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-attributes__group-content-wrapper",
-      "visible": true,
-      "parent_text": "IFC Export As IfcPipeFittingType Revision 1.0",
-      "outer_html": "<div class=\"product-attributes__group-content-wrapper\"><div class=\"product-attributes__group-content-label\" data-testing-id=\"Catalog:Details:Attribute:Name\"> IFC Export As </div><div class=\"product-attributes__group-content\" data-testing-id=\"Catalog:Details:Attribute:Value\"><!----><!----><!----><div>IfcPipeFittingType</div><!----></div></div>"
-    },
-    {
-      "tag": "div",
-      "text": "IFC Export As",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-attributes__group-content-label",
-      "visible": true,
-      "parent_text": "IFC Export As IfcPipeFittingType",
-      "outer_html": "<div class=\"product-attributes__group-content-label\" data-testing-id=\"Catalog:Details:Attribute:Name\"> IFC Export As </div>"
-    }
-  ],
-  "format_dom_evidence_after": [
-    {
-      "tag": "ol-bim-root",
-      "text": "Uponor | Online Bibliothek Uponor-Webseite BIM-Bibliothek BIM-Werkzeuge BIM-Services Kontakt Deutschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "",
-      "visible": true,
-      "parent_text": "Uponor | Online Bibliothek Uponor-Webseite BIM-Bibliothek BIM-Werkzeuge BIM-Services Kontakt Deutschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verf",
-      "outer_html": "<ol-bim-root ng-version=\"21.1.2\" ng-server-context=\"ssr\" aria-hidden=\"true\"><router-outlet></router-outlet><ng-component class=\"min-h-screen flex flex-col\"><!----><!----><div class=\"fixed top-0 z-40 w-full\"><router-outlet name=\"header\"></router-outlet><ng-component><ol-main-nav align=\"right\" class=\"block relative z-50\"><header class=\"shadow-md bg-white\" data-testing-id=\"App:Header:Default\"><div class=\"container h-12 md:h-28 flex items-center\"><button class=\"xl:hidden shrink-0 flex self-center flex-col justify-between w-8 h-6 mr-4 md:mr-8 z-20\"><span class=\"h-1 rounded-full w-full bg-primary\"></span><span class=\"h-1 rounded-full w-full bg-primary\"></span><span class=\"h-1 rounded-full w-full bg-primary\"></span></button><!----><div class=\"shrink-0\"><h2 class=\"sr-only\"> Uponor | Online Bibliothek </h2><a class=\"block\" href=\"/BLDE/DE/de_DE/home\"><img class=\"h-7 sm:h-6 md:h-12 mt-1.5 xl:mt-0\" "
-    },
-    {
-      "tag": "ng-component",
-      "text": "Uponor | Online Bibliothek Uponor-Webseite BIM-Bibliothek BIM-Werkzeuge BIM-Services Kontakt Deutschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "min-h-screen flex flex-col",
-      "visible": true,
-      "parent_text": "Uponor | Online Bibliothek Uponor-Webseite BIM-Bibliothek BIM-Werkzeuge BIM-Services Kontakt Deutschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verf",
-      "outer_html": "<ng-component class=\"min-h-screen flex flex-col\"><!----><!----><div class=\"fixed top-0 z-40 w-full\"><router-outlet name=\"header\"></router-outlet><ng-component><ol-main-nav align=\"right\" class=\"block relative z-50\"><header class=\"shadow-md bg-white\" data-testing-id=\"App:Header:Default\"><div class=\"container h-12 md:h-28 flex items-center\"><button class=\"xl:hidden shrink-0 flex self-center flex-col justify-between w-8 h-6 mr-4 md:mr-8 z-20\"><span class=\"h-1 rounded-full w-full bg-primary\"></span><span class=\"h-1 rounded-full w-full bg-primary\"></span><span class=\"h-1 rounded-full w-full bg-primary\"></span></button><!----><div class=\"shrink-0\"><h2 class=\"sr-only\"> Uponor | Online Bibliothek </h2><a class=\"block\" href=\"/BLDE/DE/de_DE/home\"><img class=\"h-7 sm:h-6 md:h-12 mt-1.5 xl:mt-0\" src=\"assets/tenants/uponor/uponor-logo.svg?1786902098305\" alt=\"uponor\"><!----></a></div><nav class=\"xl:w-fu"
-    },
-    {
-      "tag": "div",
-      "text": "BIM-Bibliothek Revit Plug-in UFH Revit Plug-in",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "px-8 xl:px-0 xl:z-50 xl:invisible group-hover:visible xl:absolute static xl:top-full bg-gray-100 xl:bg-white xl:shadow-lg divide-y xl:divide-x divide-gray-200",
-      "visible": true,
-      "parent_text": "BIM-Werkzeuge",
-      "outer_html": "<div class=\"px-8 xl:px-0 xl:z-50 xl:invisible group-hover:visible xl:absolute static xl:top-full bg-gray-100 xl:bg-white xl:shadow-lg divide-y xl:divide-x divide-gray-200\"><a routerlinkactive=\"active\" class=\"block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary\" href=\"/BLDE/DE/de_DE/pages/tools/plugin-revit\"> BIM-Bibliothek Revit Plug-in </a><a routerlinkactive=\"active\" class=\"block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary\" href=\"/BLDE/DE/de_DE/pages/tools/ufh-plugin-revit\"> UFH Revit Plug-in </a><!----></div>"
-    },
-    {
-      "tag": "a",
-      "text": "BIM-Bibliothek Revit Plug-in",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary",
-      "visible": true,
-      "parent_text": "",
-      "outer_html": "<a routerlinkactive=\"active\" class=\"block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary\" href=\"/BLDE/DE/de_DE/pages/tools/plugin-revit\"> BIM-Bibliothek Revit Plug-in </a>"
-    },
-    {
-      "tag": "a",
-      "text": "UFH Revit Plug-in",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary",
-      "visible": true,
-      "parent_text": "",
-      "outer_html": "<a routerlinkactive=\"active\" class=\"block px-5 py-4 hover:bg-gray-100 hover:text-primary active:text-primary\" href=\"/BLDE/DE/de_DE/pages/tools/ufh-plugin-revit\"> UFH Revit Plug-in </a>"
-    },
-    {
-      "tag": "div",
-      "text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzuf",
-      "value": null,
-      "id": "main",
-      "role": "main",
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "grow",
-      "visible": true,
-      "parent_text": "Uponor | Online Bibliothek Uponor-Webseite BIM-Bibliothek BIM-Werkzeuge BIM-Services Kontakt Deutschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verf",
-      "outer_html": "<div role=\"main\" id=\"main\" class=\"grow\"><div class=\"container\"><router-outlet></router-outlet><ng-component><div class=\"container pt-5 pb-20\"><router-outlet></router-outlet><ng-component><ol-breadcrumbs><ng-scrollbar track=\"horizontal\" visibility=\"hover\" style=\"height: 30px;\" _nghost-ng-c576831574=\"\" class=\"ng-scrollbar\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scrollbar-wrapper\" position=\"native\" track=\"horizontal\" appearance=\"compact\" visibility=\"hover\" deactivated=\"false\" dir=\"ltr\" pointereventsmethod=\"viewport\" verticalused=\"false\" horizontalused=\"true\" isverticallyscrollable=\"false\" ishorizontallyscrollable=\"true\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-viewport-wrapper\"><div _ngcontent-ng-c576831574=\"\" scrollviewport=\"\" hidenativescrollbar=\"\" class=\" ng-native-scrollbar-hider ng-scroll-viewport \" style=\"--native-scrollbar-size: -0px;\"><div _ngcontent-ng-c576831574=\"\" cl"
-    },
-    {
-      "tag": "div",
-      "text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzuf",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "container",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<div class=\"container\"><router-outlet></router-outlet><ng-component><div class=\"container pt-5 pb-20\"><router-outlet></router-outlet><ng-component><ol-breadcrumbs><ng-scrollbar track=\"horizontal\" visibility=\"hover\" style=\"height: 30px;\" _nghost-ng-c576831574=\"\" class=\"ng-scrollbar\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scrollbar-wrapper\" position=\"native\" track=\"horizontal\" appearance=\"compact\" visibility=\"hover\" deactivated=\"false\" dir=\"ltr\" pointereventsmethod=\"viewport\" verticalused=\"false\" horizontalused=\"true\" isverticallyscrollable=\"false\" ishorizontallyscrollable=\"true\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-viewport-wrapper\"><div _ngcontent-ng-c576831574=\"\" scrollviewport=\"\" hidenativescrollbar=\"\" class=\" ng-native-scrollbar-hider ng-scroll-viewport \" style=\"--native-scrollbar-size: -0px;\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-content\"><nav class=\"brea"
-    },
-    {
-      "tag": "ng-component",
-      "text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzuf",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<ng-component><div class=\"container pt-5 pb-20\"><router-outlet></router-outlet><ng-component><ol-breadcrumbs><ng-scrollbar track=\"horizontal\" visibility=\"hover\" style=\"height: 30px;\" _nghost-ng-c576831574=\"\" class=\"ng-scrollbar\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scrollbar-wrapper\" position=\"native\" track=\"horizontal\" appearance=\"compact\" visibility=\"hover\" deactivated=\"false\" dir=\"ltr\" pointereventsmethod=\"viewport\" verticalused=\"false\" horizontalused=\"true\" isverticallyscrollable=\"false\" ishorizontallyscrollable=\"true\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-viewport-wrapper\"><div _ngcontent-ng-c576831574=\"\" scrollviewport=\"\" hidenativescrollbar=\"\" class=\" ng-native-scrollbar-hider ng-scroll-viewport \" style=\"--native-scrollbar-size: -0px;\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-content\"><nav class=\"breadcrumb__container\" data-testing-id=\"Breadcrumbs\"><ol c"
-    },
-    {
-      "tag": "div",
-      "text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzuf",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "container pt-5 pb-20",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<div class=\"container pt-5 pb-20\"><router-outlet></router-outlet><ng-component><ol-breadcrumbs><ng-scrollbar track=\"horizontal\" visibility=\"hover\" style=\"height: 30px;\" _nghost-ng-c576831574=\"\" class=\"ng-scrollbar\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scrollbar-wrapper\" position=\"native\" track=\"horizontal\" appearance=\"compact\" visibility=\"hover\" deactivated=\"false\" dir=\"ltr\" pointereventsmethod=\"viewport\" verticalused=\"false\" horizontalused=\"true\" isverticallyscrollable=\"false\" ishorizontallyscrollable=\"true\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-viewport-wrapper\"><div _ngcontent-ng-c576831574=\"\" scrollviewport=\"\" hidenativescrollbar=\"\" class=\" ng-native-scrollbar-hider ng-scroll-viewport \" style=\"--native-scrollbar-size: -0px;\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-content\"><nav class=\"breadcrumb__container\" data-testing-id=\"Breadcrumbs\"><ol class=\"breadcru"
-    },
-    {
-      "tag": "ng-component",
-      "text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzuf",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<ng-component><ol-breadcrumbs><ng-scrollbar track=\"horizontal\" visibility=\"hover\" style=\"height: 30px;\" _nghost-ng-c576831574=\"\" class=\"ng-scrollbar\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scrollbar-wrapper\" position=\"native\" track=\"horizontal\" appearance=\"compact\" visibility=\"hover\" deactivated=\"false\" dir=\"ltr\" pointereventsmethod=\"viewport\" verticalused=\"false\" horizontalused=\"true\" isverticallyscrollable=\"false\" ishorizontallyscrollable=\"true\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-viewport-wrapper\"><div _ngcontent-ng-c576831574=\"\" scrollviewport=\"\" hidenativescrollbar=\"\" class=\" ng-native-scrollbar-hider ng-scroll-viewport \" style=\"--native-scrollbar-size: -0px;\"><div _ngcontent-ng-c576831574=\"\" class=\"ng-scroll-content\"><nav class=\"breadcrumb__container\" data-testing-id=\"Breadcrumbs\"><ol class=\"breadcrumb__list\"><li class=\"breadcrumb__item breadcrumb__item--first bre"
-    },
-    {
-      "tag": "ol-product-data",
-      "text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<ol-product-data><div class=\"product-data__wrapper\"><div class=\"product-data\"><div class=\"product-data__details\" style=\"min-height: 542px;\"><div class=\"product-data__details-header\"><h1 class=\"product-data__details-heading\"> GF Sanipex MT Adapter Sanipex </h1><ol-cart-btn-family class=\"product-data__details-cart-button\"><ol-button variant=\"secondary\" class=\"cart-btn-family\"><button class=\"mat-mdc-tooltip-trigger ol-button ol-button--normal ol-button--secondary\" data-testing-id=\"Catalog:Cart:AddFamily\"><!----><ol-icon class=\"flex flex-col hidden lg:flex\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--base mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"add_to_list\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 640\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" foc"
-    },
-    {
-      "tag": "div",
-      "text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-data__wrapper",
-      "visible": true,
-      "parent_text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Oberseite Unterseite Rückseite Seite Hohe Auflösung",
-      "outer_html": "<div class=\"product-data__wrapper\"><div class=\"product-data\"><div class=\"product-data__details\" style=\"min-height: 542px;\"><div class=\"product-data__details-header\"><h1 class=\"product-data__details-heading\"> GF Sanipex MT Adapter Sanipex </h1><ol-cart-btn-family class=\"product-data__details-cart-button\"><ol-button variant=\"secondary\" class=\"cart-btn-family\"><button class=\"mat-mdc-tooltip-trigger ol-button ol-button--normal ol-button--secondary\" data-testing-id=\"Catalog:Cart:AddFamily\"><!----><ol-icon class=\"flex flex-col hidden lg:flex\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--base mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"add_to_list\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 640\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\">\n<"
-    },
-    {
-      "tag": "div",
-      "text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-data",
-      "visible": true,
-      "parent_text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Oberseite Unterseite Rückseite Seite Hohe Auflösung",
-      "outer_html": "<div class=\"product-data\"><div class=\"product-data__details\" style=\"min-height: 542px;\"><div class=\"product-data__details-header\"><h1 class=\"product-data__details-heading\"> GF Sanipex MT Adapter Sanipex </h1><ol-cart-btn-family class=\"product-data__details-cart-button\"><ol-button variant=\"secondary\" class=\"cart-btn-family\"><button class=\"mat-mdc-tooltip-trigger ol-button ol-button--normal ol-button--secondary\" data-testing-id=\"Catalog:Cart:AddFamily\"><!----><ol-icon class=\"flex flex-col hidden lg:flex\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--base mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"add_to_list\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 640\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\">\n<path d=\"M620.8 288h-108.8v-108.8c0-"
-    },
-    {
-      "tag": "div",
-      "text": "Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "",
-      "visible": true,
-      "parent_text": "GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen",
-      "outer_html": "<div><div class=\"product-data__formats\"> Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. <!----></div><div class=\"product-data__download-wrapper\"><div class=\"product-data__tags\"><ol-product-tag><div class=\"mat-mdc-tooltip-trigger product-tag\" aria-describedby=\"cdk-describedby-message-ng-1-2\" cdk-describedby-host=\"ng-1\"><ol-icon size=\"md\" class=\"flex flex-col\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--md mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"tag_tap_water\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\">\n<path d=\"M14.4 2.8v1.467h4.267v1.467c0 1.44 0 1.467-0.8 1.467-0.48 0-0.8 0.133-0.8 0.347 0 0.267-1.173 0.427-4.853 0.613-4.107 0.24-5.093 0.373-6.213 0.88-2.56 1.147-"
-    },
-    {
-      "tag": "div",
-      "text": "Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj.",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-data__formats",
-      "visible": true,
-      "parent_text": "Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen",
-      "outer_html": "<div class=\"product-data__formats\"> Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. <!----></div>"
-    },
-    {
-      "tag": "ol-product-attributes",
-      "text": "Produktdetails Identitätsdaten Artikelnummer 1158140 Item no. GF 351616990 EAN 7613263030184 ETIM Class EC003024 Daten Gewicht [kg] 0.06 Verpackungseinheit 5 Mengeneinheit St. BIM Data IFC Export As IfcPipeFittingType Re",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-attributes block mt-16",
-      "visible": true,
-      "parent_text": "Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Obersei",
-      "outer_html": "<ol-product-attributes class=\"product-attributes block mt-16\"><h4 class=\"product-attributes__heading\"> Produktdetails </h4><!----><div class=\"first\" data-testing-id=\"Catalog:Details:Attributes\"><div role=\"button\" class=\"product-attributes__group-header product-attributes__group-header--closed\" data-testing-id=\"Catalog:Details:Attributes:Group:Toggle\"><div data-testing-id=\"Catalog:Details:Attributes:Group:Name\"> Identitätsdaten </div><ol-icon size=\"lg\" class=\"flex flex-col product-attributes__group-header-icon product-attributes__group-header-icon--closed\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--lg mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"arrow_down\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" focusa"
-    },
-    {
-      "tag": "div",
-      "text": "BIM Data IFC Export As IfcPipeFittingType Revision 1.0",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "last",
-      "visible": true,
-      "parent_text": "Produktdetails Identitätsdaten Artikelnummer 1158140 Item no. GF 351616990 EAN 7613263030184 ETIM Class EC003024 Daten Gewicht [kg] 0.06 Verpackungseinheit 5 Mengeneinheit St. BIM Data IFC Export As IfcPipeFittingType Revision 1.0",
-      "outer_html": "<div class=\"last\" data-testing-id=\"Catalog:Details:Attributes\"><div role=\"button\" class=\"product-attributes__group-header product-attributes__group-header--closed\" data-testing-id=\"Catalog:Details:Attributes:Group:Toggle\"><div data-testing-id=\"Catalog:Details:Attributes:Group:Name\"> BIM Data </div><ol-icon size=\"lg\" class=\"flex flex-col product-attributes__group-header-icon product-attributes__group-header-icon--closed\"><mat-icon role=\"img\" class=\"mat-icon notranslate mat-mdc-tooltip-trigger ol-icon ol-icon--lg mat-icon-no-color\" aria-hidden=\"true\" data-mat-icon-type=\"svg\" data-mat-icon-name=\"arrow_down\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" fit=\"\" height=\"100%\" width=\"100%\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\">\n<path d=\"M9.28 11.52c-0.427-0.427-1.067-0.427-1.493 0s-0.427 1.067 0 1.493l7.467 7.467c0.427 0.427 1.067 0.427 1.493 0l7.467-"
-    },
-    {
-      "tag": "div",
-      "text": "IFC Export As IfcPipeFittingType Revision 1.0",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-attributes__group",
-      "visible": true,
-      "parent_text": "BIM Data IFC Export As IfcPipeFittingType Revision 1.0",
-      "outer_html": "<div class=\"product-attributes__group\" data-testing-id=\"Catalog:Details:Attributes:Group:Visible\"><div class=\"product-attributes__group-content-wrapper\"><div class=\"product-attributes__group-content-label\" data-testing-id=\"Catalog:Details:Attribute:Name\"> IFC Export As </div><div class=\"product-attributes__group-content\" data-testing-id=\"Catalog:Details:Attribute:Value\"><!----><!----><!----><div>IfcPipeFittingType</div><!----></div></div><div class=\"product-attributes__group-content-wrapper\"><div class=\"product-attributes__group-content-label\" data-testing-id=\"Catalog:Details:Attribute:Name\"> Revision </div><div class=\"product-attributes__group-content\" data-testing-id=\"Catalog:Details:Attribute:Value\"><!----><!----><!----><div>1.0</div><!----></div></div><!----></div>"
-    },
-    {
-      "tag": "div",
-      "text": "IFC Export As IfcPipeFittingType",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-attributes__group-content-wrapper",
-      "visible": true,
-      "parent_text": "IFC Export As IfcPipeFittingType Revision 1.0",
-      "outer_html": "<div class=\"product-attributes__group-content-wrapper\"><div class=\"product-attributes__group-content-label\" data-testing-id=\"Catalog:Details:Attribute:Name\"> IFC Export As </div><div class=\"product-attributes__group-content\" data-testing-id=\"Catalog:Details:Attribute:Value\"><!----><!----><!----><div>IfcPipeFittingType</div><!----></div></div>"
-    },
-    {
-      "tag": "div",
-      "text": "IFC Export As",
-      "value": null,
-      "id": null,
-      "role": null,
-      "type": null,
-      "name": null,
-      "aria": null,
-      "class_name": "product-attributes__group-content-label",
-      "visible": true,
-      "parent_text": "IFC Export As IfcPipeFittingType",
-      "outer_html": "<div class=\"product-attributes__group-content-label\" data-testing-id=\"Catalog:Details:Attribute:Name\"> IFC Export As </div>"
-    }
-  ],
-  "asset_like_controls": [
-    {
-      "tag": "button",
-      "text": "Herunterladen",
-      "href": null,
-      "type": "submit",
-      "name": null,
-      "value": null,
-      "id": null,
-      "role": null,
-      "aria": null,
-      "checked": null,
-      "class_name": "mat-mdc-tooltip-trigger ol-button ol-button--normal ol-button--primary"
-    }
-  ],
+  "format_neighborhood": "utschland / Deutsch Übersicht Building Warm- und Kaltwasserversorgung Verbund-Sanitärsysteme Sanipex MT Sanipex MT GF Sanipex MT Adapter Sanipex GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 GF Sanipex MT Adapter Sanipex Alle Größen hinzufügen. 1158140 GF JRG SANIPEX MT ÜBERGANG AUF JRG SANIPEX D16 Verfügbare Formate: rfa, dwg 2D, dwg 3D, dxf, ifc, sat, fbx, obj. Herunterladen Ansicht Isometrisch Vorderseite Oberseite Unterseite Rückseite Seite Hohe Auflösung Produktdetails Identitätsdaten Artikelnummer 1158140 Item no. GF 351616990 EAN 7613263030184 ETIM Class EC003024 Daten Gewicht [kg] 0.06 Verpackungseinheit 5 Mengeneinheit St. BIM Data IFC Export As IfcPipeFittingType Revision 1.0 Privacy and cookie policy BIM: Andreas Sommer Andreas.Sommer@georgfischer.com Kontakt Uponor GmbH 97437 Haßfurt bim.support@georgfischer.com Unterstützt von BIMStreamer © Uponor 2026 Benutzerkonto erforderlich Bitte melden Sie sich zuerst an oder erstellen Sie ein Benutzerkonto, um fortzufahren. Registrieren Anmelden",
   "network_signals": [
     {
       "url": "https://bim.uponor.com/BLDE/DE/de_DE/library/product/GF_Adapter_SanipexMT_Sanipex?path=%2Fmaster%2FOneBFS_Cat_Hot_Cold_Water_Supply%2FOneBFS_Sys_Composite_Plumbing_Systems%2FOneBFS_PrG_Sanipex_MT%2FSanipex_MT%2FGF_Adapter_SanipexMT_Sanipex",
@@ -639,6 +39,21 @@
       "content_type": "application/javascript"
     },
     {
+      "url": "https://bim.uponor.com/chunk-OIXKAJIH.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-XRT6GWZW.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-BYXBJQAS.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
       "url": "https://bim.uponor.com/chunk-K5U7NTTE.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
@@ -649,42 +64,7 @@
       "content_type": "text/css; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-OIXKAJIH.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
       "url": "https://bim.uponor.com/chunk-IS6D4E5O.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-7TYEEIGA.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-XRT6GWZW.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/polyfills-6ISPNSXF.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-LNKGWW2I.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-KK4K4BKC.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-BYXBJQAS.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -694,12 +74,47 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/main-J3BS7M7O.js",
+      "url": "https://bim.uponor.com/chunk-LNKGWW2I.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
       "url": "https://bim.uponor.com/chunk-MEZLXPGQ.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-KK4K4BKC.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/polyfills-6ISPNSXF.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-7TYEEIGA.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/main-J3BS7M7O.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-ZNNYTFCL.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-EKZM5IBZ.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-2JMOKPM4.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -714,37 +129,7 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-CHBZD3KR.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-AKLNJJJL.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-ZNNYTFCL.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
       "url": "https://bim.uponor.com/chunk-R4TVF3O5.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-DC2EATJL.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-2JMOKPM4.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-6G5WVM6S.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -754,22 +139,12 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-KH7BRNI5.js",
+      "url": "https://bim.uponor.com/chunk-ZUUFBYIN.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-UIS2Z5OB.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-TWZW5B45.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-C5PZ7LE7.js",
+      "url": "https://bim.uponor.com/chunk-CHBZD3KR.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -779,17 +154,17 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-ZUUFBYIN.js",
+      "url": "https://bim.uponor.com/chunk-6G5WVM6S.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-EKZM5IBZ.js",
+      "url": "https://bim.uponor.com/chunk-UIS2Z5OB.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-JEOZ3Z27.js",
+      "url": "https://bim.uponor.com/chunk-C5PZ7LE7.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -799,7 +174,7 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-C6Z6SWCA.js",
+      "url": "https://bim.uponor.com/chunk-AKLNJJJL.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -809,7 +184,32 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
+      "url": "https://bim.uponor.com/chunk-DC2EATJL.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-KH7BRNI5.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
       "url": "https://bim.uponor.com/chunk-WLYDQRP7.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-C6Z6SWCA.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-TWZW5B45.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-JEOZ3Z27.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -834,17 +234,77 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
+      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-1459-70c5-9aee-9a388b58b479.png",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-1472-731e-8153-1850a444c6a4.png",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-146d-73db-9b27-45f74f286951.png",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-1463-7002-b08f-492be4fc07d4.png",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-145e-707d-9c62-86075352000b.png",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-1468-766b-99b8-e731e5a1902c.png",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/twitter.svg?1786902313703",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/linkedin.svg?1786902313703",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/youtube.svg?1786902313703",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://bim.uponor.com/assets/tenants/uponor/uponor-logo.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
       "url": "https://bim.uponor.com/chunk-3PKSUWKF.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-Y4BG7JHW.js",
+      "url": "https://bim.uponor.com/assets/tenants/uponor/uponor-logo.svg?1786902313699",
       "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
+      "content_type": "image/svg+xml"
     },
     {
-      "url": "https://bim.uponor.com/chunk-6FZM3DIJ.js",
+      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/instagram.svg?1786902313703",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/excellence_in_flow.svg?1786902313702",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-Y4BG7JHW.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -859,12 +319,12 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-5PZPRD2T.js",
+      "url": "https://bim.uponor.com/chunk-6FZM3DIJ.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-XMFO4ROC.js",
+      "url": "https://bim.uponor.com/chunk-5PZPRD2T.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -874,54 +334,14 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
+      "url": "https://bim.uponor.com/chunk-XMFO4ROC.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
       "url": "https://bim.uponor.com/chunk-EWM6XBXL.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-1472-731e-8153-1850a444c6a4.png",
-      "status": 200,
-      "content_type": "application/octet-stream"
-    },
-    {
-      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-1463-7002-b08f-492be4fc07d4.png",
-      "status": 200,
-      "content_type": "application/octet-stream"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-UVUMHAUW.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-2UX6Z662.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-FWJAHEH7.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-145e-707d-9c62-86075352000b.png",
-      "status": 200,
-      "content_type": "application/octet-stream"
-    },
-    {
-      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-1468-766b-99b8-e731e5a1902c.png",
-      "status": 200,
-      "content_type": "application/octet-stream"
-    },
-    {
-      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-1459-70c5-9aee-9a388b58b479.png",
-      "status": 200,
-      "content_type": "application/octet-stream"
-    },
-    {
-      "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019f391e-146d-73db-9b27-45f74f286951.png",
-      "status": 200,
-      "content_type": "application/octet-stream"
     },
     {
       "url": "https://bim.uponor.com/chunk-64YXXTQR.js",
@@ -929,22 +349,7 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-RUGZF2SP.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-N6KPLIMZ.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-PH4GRPAQ.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-I7B76AVN.js",
+      "url": "https://bim.uponor.com/chunk-UVUMHAUW.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -959,7 +364,37 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
+      "url": "https://bim.uponor.com/chunk-FWJAHEH7.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-RUGZF2SP.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
       "url": "https://bim.uponor.com/chunk-FZ2IYOD4.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-I7B76AVN.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-PH4GRPAQ.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-2UX6Z662.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-N6KPLIMZ.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -969,59 +404,24 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/excellence_in_flow.svg?1786902094816",
-      "status": 200,
-      "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/uponor-logo.svg?1786902094813",
-      "status": 200,
-      "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/instagram.svg?1786902094816",
-      "status": 200,
-      "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/linkedin.svg?1786902094816",
-      "status": 200,
-      "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/twitter.svg?1786902094816",
-      "status": 200,
-      "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/youtube.svg?1786902094816",
-      "status": 200,
-      "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/core_en_GB.json?v=1786902095444",
-      "status": 200,
-      "content_type": "application/json"
-    },
-    {
-      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/ol_en_GB.json?v=1786902095444",
-      "status": 200,
-      "content_type": "application/json"
-    },
-    {
-      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/ol_en_GB_uponor.json?v=1786902095444",
-      "status": 200,
-      "content_type": "application/json"
-    },
-    {
       "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/data-import/01998150-50b8-7149-a6b2-91bb7e375b95/01998185-8a40-71de-8171-73b97e09cc95.png",
       "status": 200,
       "content_type": "image/png"
     },
     {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/uponor-logo.svg",
+      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/core_en_GB.json?v=1786902314248",
       "status": 200,
-      "content_type": "image/svg+xml"
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/ol_en_GB.json?v=1786902314248",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/ol_en_GB_uponor.json?v=1786902314248",
+      "status": 200,
+      "content_type": "application/json"
     },
     {
       "url": "https://api.production.bimstreamer.com/api/geolocalizer",
@@ -1039,17 +439,17 @@
       "content_type": "application/json; charset=utf-8"
     },
     {
-      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/ol_de_DE_uponor.json?v=1786902095444",
+      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/core_de_DE.json?v=1786902314248",
       "status": 200,
       "content_type": "application/json"
     },
     {
-      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/ol_de_DE.json?v=1786902095444",
+      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/ol_de_DE.json?v=1786902314248",
       "status": 200,
       "content_type": "application/json"
     },
     {
-      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/core_de_DE.json?v=1786902095444",
+      "url": "https://s3.saas.bimstreamer.com/bim-static/translations/ol_de_DE_uponor.json?v=1786902314248",
       "status": 200,
       "content_type": "application/json"
     },
@@ -1079,7 +479,7 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-JJPFXBJU.js",
+      "url": "https://bim.uponor.com/chunk-5NCQ3TEG.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -1089,7 +489,7 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-5NCQ3TEG.js",
+      "url": "https://bim.uponor.com/chunk-JJPFXBJU.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -1099,7 +499,7 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-TUER2AFT.js",
+      "url": "https://bim.uponor.com/chunk-7D4UKQYV.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -1109,27 +509,7 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-7D4UKQYV.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-KH22S6HA.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
       "url": "https://bim.uponor.com/chunk-MVA7ASRR.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-LRHPG2HZ.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "url": "https://bim.uponor.com/chunk-SOR3HJMQ.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
@@ -1139,12 +519,32 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/assets/icons/folder_with.svg",
+      "url": "https://bim.uponor.com/chunk-SOR3HJMQ.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-TUER2AFT.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-LRHPG2HZ.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/chunk-KH22S6HA.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://bim.uponor.com/assets/icons/user.svg",
       "status": 200,
       "content_type": "image/svg+xml"
     },
     {
-      "url": "https://bim.uponor.com/assets/icons/user.svg",
+      "url": "https://bim.uponor.com/assets/icons/folder_with.svg",
       "status": 200,
       "content_type": "image/svg+xml"
     },
@@ -1164,11 +564,6 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://bim.uponor.com/chunk-MMD3KHA7.js",
-      "status": 200,
-      "content_type": "application/javascript; charset=UTF-8"
-    },
-    {
       "url": "https://bim.uponor.com/chunk-AR4LJT3C.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
@@ -1179,17 +574,22 @@
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
+      "url": "https://bim.uponor.com/chunk-MMD3KHA7.js",
+      "status": 200,
+      "content_type": "application/javascript; charset=UTF-8"
+    },
+    {
       "url": "https://bim.uponor.com/chunk-ZBP6777C.js",
       "status": 200,
       "content_type": "application/javascript; charset=UTF-8"
     },
     {
-      "url": "https://analytics.google.com/g/collect?v=2&tid=G-MXKK8QDMNT&gtm=45je68c1h1v9166580708z8832083926za20gzb832083926zd832083926&_p=1786902098412&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGA&are=1&cid=1881257845.1786902099&frm=0&pscdl=noapi&rcb=7&sr=1440x1100&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.16%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.16&uam=&uamb=0&uap=Linux&uapv=6.17.0&uaw=0&ul=en-gb&gaf=2&_s=1&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120213116~120385423&sid=1786902098&sct=1&seg=0&dl=https%3A%2F%2Fbim.uponor.com%2FBLDE%2FDE%2Fde_DE%2Flibrary%2Fproduct%2FGF_Adapter_SanipexMT_Sanipex%3Fpath%3D%252Fmaster%252FOneBFS_Cat_Hot_Cold_Water_Supply%252FOneBFS_Sys_Composite_Plumbing_Systems%252FOneBFS_PrG_Sanipex_MT%252FSanipex_MT%252FGF_Adapter_SanipexMT_Sanipex&dt=GF%20JRG%20SANIPEX%20MT%20%C3%9CBERGANG%20AUF%20JRG%20SANIPEX%20D16%20%7C%20Uponor%20%7C%20Online%20Bibliothek&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=5148",
-      "status": 204,
-      "content_type": "text/plain"
+      "url": "https://bim.uponor.com/assets/icons/add_to_list.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
     },
     {
-      "url": "https://bim.uponor.com/assets/icons/add_to_list.svg",
+      "url": "https://bim.uponor.com/assets/icons/tag_tap_water.svg",
       "status": 200,
       "content_type": "image/svg+xml"
     },
@@ -1204,7 +604,12 @@
       "content_type": "image/svg+xml"
     },
     {
-      "url": "https://bim.uponor.com/assets/icons/arrow_right.svg",
+      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/twitter.svg?1786902316643",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://bim.uponor.com/assets/tenants/uponor/uponor-logo.svg?1786902316619",
       "status": 200,
       "content_type": "image/svg+xml"
     },
@@ -1214,44 +619,39 @@
       "content_type": "image/svg+xml"
     },
     {
+      "url": "https://bim.uponor.com/assets/icons/arrow_right.svg",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
       "url": "https://bim.uponor.com/assets/icons/loader.svg",
       "status": 200,
       "content_type": "image/svg+xml"
     },
     {
-      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-WZRK6Y2823&gtm=45je68c1h1v9125761975z8832083926za20gzb832083926zd832083926&_p=1786902098412&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=EA&are=1&cid=1881257845.1786902099&frm=0&ir=1&ngs=1&pscdl=noapi&rcb=16&sr=1440x1100&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.16%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.16&uam=&uamb=0&uap=Linux&uapv=6.17.0&uaw=0&ul=en-gb&_s=1&tag_exp=115938466~115938468~118395333~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786902098&sct=1&seg=0&dl=https%3A%2F%2Fbim.uponor.com%2FBLDE%2FDE%2Fde_DE%2Flibrary%2Fproduct%2FGF_Adapter_SanipexMT_Sanipex%3Fpath%3D%252Fmaster%252FOneBFS_Cat_Hot_Cold_Water_Supply%252FOneBFS_Sys_Composite_Plumbing_Systems%252FOneBFS_PrG_Sanipex_MT%252FSanipex_MT%252FGF_Adapter_SanipexMT_Sanipex&dt=GF%20JRG%20SANIPEX%20MT%20%C3%9CBERGANG%20AUF%20JRG%20SANIPEX%20D16%20%7C%20Uponor%20%7C%20Online%20Bibliothek&en=page_view&_fv=1&_ss=1&tfd=5390",
+      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/youtube.svg?1786902316643",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/excellence_in_flow.svg?1786902316642",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/linkedin.svg?1786902316643",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/instagram.svg?1786902316643",
+      "status": 200,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-WZRK6Y2823&gtm=45je68c1v9125761975z8832083926za20gzb832083926zd832083926&_p=1786902316751&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=EA&are=1&cid=153615884.1786902317&frm=0&ir=1&ngs=1&pscdl=noapi&rcb=3&sr=1440x1100&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.16%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.16&uam=&uamb=0&uap=Linux&uapv=6.17.0&uaw=0&ul=en-gb&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786902317&sct=1&seg=0&dl=https%3A%2F%2Fbim.uponor.com%2FBLDE%2FDE%2Fde_DE%2Flibrary%2Fproduct%2FGF_Adapter_SanipexMT_Sanipex%3Fpath%3D%252Fmaster%252FOneBFS_Cat_Hot_Cold_Water_Supply%252FOneBFS_Sys_Composite_Plumbing_Systems%252FOneBFS_PrG_Sanipex_MT%252FSanipex_MT%252FGF_Adapter_SanipexMT_Sanipex&dt=GF%20JRG%20SANIPEX%20MT%20%C3%9CBERGANG%20AUF%20JRG%20SANIPEX%20D16%20%7C%20Uponor%20%7C%20Online%20Bibliothek&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=3601",
       "status": 204,
       "content_type": "text/plain"
-    },
-    {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/uponor-logo.svg?1786902098305",
-      "status": 200,
-      "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/instagram.svg?1786902098330",
-      "status": 200,
-      "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/excellence_in_flow.svg?1786902098329",
-      "status": 200,
-      "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/linkedin.svg?1786902098330",
-      "status": 200,
-      "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/youtube.svg?1786902098330",
-      "status": 200,
-      "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://bim.uponor.com/assets/tenants/uponor/layout/icons/twitter.svg?1786902098330",
-      "status": 200,
-      "content_type": "image/svg+xml"
     },
     {
       "url": "https://s3.saas.bimstreamer.com/bim-uponor-production/assets/019ff58c-f53c-72c6-b331-45494e49d8aa.mtl",
@@ -1264,12 +664,12 @@
       "content_type": "application/octet-stream"
     },
     {
-      "url": "https://bim.uponor.com/assets/icons/tag_tap_water.svg",
-      "status": 200,
-      "content_type": "image/svg+xml"
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-MXKK8QDMNT&gtm=45je68c1v9166580708z8832083926za20gzb832083926zd832083926&_p=1786902316751&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGA&are=1&cid=153615884.1786902317&frm=0&pscdl=noapi&rcb=1&sr=1440x1100&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.16%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.16&uam=&uamb=0&uap=Linux&uapv=6.17.0&uaw=0&ul=en-gb&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120213116~120385422&sid=1786902317&sct=1&seg=0&dl=https%3A%2F%2Fbim.uponor.com%2FBLDE%2FDE%2Fde_DE%2Flibrary%2Fproduct%2FGF_Adapter_SanipexMT_Sanipex%3Fpath%3D%252Fmaster%252FOneBFS_Cat_Hot_Cold_Water_Supply%252FOneBFS_Sys_Composite_Plumbing_Systems%252FOneBFS_PrG_Sanipex_MT%252FSanipex_MT%252FGF_Adapter_SanipexMT_Sanipex&dt=GF%20JRG%20SANIPEX%20MT%20%C3%9CBERGANG%20AUF%20JRG%20SANIPEX%20D16%20%7C%20Uponor%20%7C%20Online%20Bibliothek&en=page_view&_fv=1&_ss=1&tfd=3662",
+      "status": 204,
+      "content_type": "text/plain"
     },
     {
-      "url": "https://analytics.google.com/g/collect?v=2&tid=G-MXKK8QDMNT&gtm=45je68c1h1v9166580708za20gzb832083926zd832083926&_p=1786902098412&_gaz=1&gcs=G111&gcd=13n3n3n3n5l1&npa=0&dma=0&gdid=dOThhZD&_eu=AEAAAGQ&ae=a&are=1&cid=1881257845.1786902099&frm=0&pscdl=noapi&rcb=7&sr=1440x1100&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.16%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.16&uam=&uamb=0&uap=Linux&uapv=6.17.0&uaw=0&ul=en-gb&gaf=2&_s=2&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120213116~120385423&dl=https%3A%2F%2Fbim.uponor.com%2FBLDE%2FDE%2Fde_DE%2Flibrary%2Fproduct%2FGF_Adapter_SanipexMT_Sanipex%2F1158140%3Fpath%3D%252Fmaster%252FOneBFS_Cat_Hot_Cold_Water_Supply%252FOneBFS_Sys_Composite_Plumbing_Systems%252FOneBFS_PrG_Sanipex_MT%252FSanipex_MT%252FGF_Adapter_SanipexMT_Sanipex&dr=https%3A%2F%2Fbim.uponor.com%2FBLDE%2FDE%2Fde_DE%2Flibrary%2Fproduct%2FGF_Adapter_SanipexMT_Sanipex%3Fpath%3D%252Fmaster%252FOneBFS_Cat_Hot_Cold_Water_Supply%252FOneBFS_Sys_Composite_Plumbing_Systems%252FOneBFS_PrG_Sanipex_MT%252FSanipex_MT%252FGF_Adapter_SanipexMT_Sanipex&sid=1786902098&sct=1&seg=1&dt=GF%20JRG%20SANIPEX%20MT%20%C3%9CBERGANG%20AUF%20JRG%20SANIPEX%20D16%20%7C%20Uponor%20%7C%20Online%20Bibliothek&_tu=CA&en=page_view&_et=10743&tfd=15894",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-MXKK8QDMNT&gtm=45je68c1v9166580708za20gzb832083926zd832083926&_p=1786902316751&_gaz=1&gcs=G111&gcd=13n3n3n3n5l1&npa=0&dma=0&gdid=dOThhZD&_eu=AEAAAGQ&ae=a&are=1&cid=153615884.1786902317&frm=0&pscdl=noapi&rcb=1&sr=1440x1100&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.16%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.16&uam=&uamb=0&uap=Linux&uapv=6.17.0&uaw=0&ul=en-gb&gaf=2&_s=2&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120213116~120385422&dl=https%3A%2F%2Fbim.uponor.com%2FBLDE%2FDE%2Fde_DE%2Flibrary%2Fproduct%2FGF_Adapter_SanipexMT_Sanipex%2F1158140%3Fpath%3D%252Fmaster%252FOneBFS_Cat_Hot_Cold_Water_Supply%252FOneBFS_Sys_Composite_Plumbing_Systems%252FOneBFS_PrG_Sanipex_MT%252FSanipex_MT%252FGF_Adapter_SanipexMT_Sanipex&dr=https%3A%2F%2Fbim.uponor.com%2FBLDE%2FDE%2Fde_DE%2Flibrary%2Fproduct%2FGF_Adapter_SanipexMT_Sanipex%3Fpath%3D%252Fmaster%252FOneBFS_Cat_Hot_Cold_Water_Supply%252FOneBFS_Sys_Composite_Plumbing_Systems%252FOneBFS_PrG_Sanipex_MT%252FSanipex_MT%252FGF_Adapter_SanipexMT_Sanipex&sid=1786902317&sct=1&seg=1&dt=GF%20JRG%20SANIPEX%20MT%20%C3%9CBERGANG%20AUF%20JRG%20SANIPEX%20D16%20%7C%20Uponor%20%7C%20Online%20Bibliothek&_tu=CA&en=page_view&_et=9718&tfd=13381",
       "status": 204,
       "content_type": "text/plain"
     },
@@ -1277,11 +677,6 @@
       "url": "https://bim.uponor.com/assets/icons/close.svg",
       "status": 200,
       "content_type": "image/svg+xml"
-    },
-    {
-      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-WZRK6Y2823&gtm=45je68c1h1v9125761975za20gzb832083926zd832083926&_p=1786902098412&gcs=G111&gcd=13n3n3n3n5l1&npa=0&dma=0&gdid=dOThhZD&_eu=EEAAAAQ&ae=a&are=1&cid=1881257845.1786902099&frm=0&ir=1&ngs=1&pscdl=noapi&rcb=16&sr=1440x1100&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.16%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.16&uam=&uamb=0&uap=Linux&uapv=6.17.0&uaw=0&ul=en-gb&_s=2&tag_exp=115938466~115938468~118395333~118897920~118897930~119367802~119367810~119527020~120385423&dl=https%3A%2F%2Fbim.uponor.com%2FBLDE%2FDE%2Fde_DE%2Flibrary%2Fproduct%2FGF_Adapter_SanipexMT_Sanipex%2F1158140%3Fpath%3D%252Fmaster%252FOneBFS_Cat_Hot_Cold_Water_Supply%252FOneBFS_Sys_Composite_Plumbing_Systems%252FOneBFS_PrG_Sanipex_MT%252FSanipex_MT%252FGF_Adapter_SanipexMT_Sanipex&dr=https%3A%2F%2Fbim.uponor.com%2FBLDE%2FDE%2Fde_DE%2Flibrary%2Fproduct%2FGF_Adapter_SanipexMT_Sanipex%3Fpath%3D%252Fmaster%252FOneBFS_Cat_Hot_Cold_Water_Supply%252FOneBFS_Sys_Composite_Plumbing_Systems%252FOneBFS_PrG_Sanipex_MT%252FSanipex_MT%252FGF_Adapter_SanipexMT_Sanipex&sid=1786902098&sct=1&seg=1&dt=GF%20JRG%20SANIPEX%20MT%20%C3%9CBERGANG%20AUF%20JRG%20SANIPEX%20D16%20%7C%20Uponor%20%7C%20Online%20Bibliothek&_tu=CA&en=page_view&_et=10510&tfd=21042",
-      "status": 204,
-      "content_type": "text/plain"
     }
   ],
   "rights": {
@@ -1290,5 +685,5 @@
     "derivative_conversion": "review",
     "render_use": "review"
   },
-  "policy": "Interact only with the public official BIM service UI. No protected endpoint is synthesized. Downloaded manufacturer binaries remain ephemeral and are never committed."
+  "policy": "Interact only with the public official BIM service UI. If the service requires an account, stop and record the gate; do not synthesize or bypass protected download endpoints."
 }
