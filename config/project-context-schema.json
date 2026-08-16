@@ -1,0 +1,37 @@
+{
+  "version": "0.1",
+  "purpose": "Canonical site context shared by design, logistics, regulatory, energy and procurement engines.",
+  "required": ["project_id", "site"],
+  "site": {
+    "required": ["latitude", "longitude", "country_code"],
+    "optional": ["address", "postal_code", "municipality", "province", "region", "elevation_m", "timezone"]
+  },
+  "resolved": {
+    "jurisdiction_chain": "Ordered most-specific to broadest jurisdiction IDs used by Regulatory Graph.",
+    "climate": {
+      "fields": ["cte_climate_zone", "weather_station", "heating_degree_days", "cooling_degree_days", "design_temperatures", "source", "verified_at"]
+    },
+    "solar": {
+      "fields": ["annual_irradiance", "horizon_profile", "roof_surfaces", "pv_yield_model", "source", "calculated_at"]
+    },
+    "grid": {
+      "fields": ["distribution_area", "connection_context", "self_consumption_context", "source", "verified_at"]
+    },
+    "supply_region": {
+      "fields": ["postal_code", "country", "region", "local_radius_km", "regional_radius_km", "preferred_origins", "excluded_origins"]
+    },
+    "construction": {
+      "fields": ["project_type", "building_use", "new_build_or_existing", "gross_area_m2", "storeys", "required_completion_date"]
+    }
+  },
+  "derived_constraints": [
+    "regulatory_rules",
+    "shipping_eligibility",
+    "landed_cost_context",
+    "local_supplier_priority",
+    "solar_design_targets",
+    "energy_performance_targets",
+    "lead_time_constraints"
+  ],
+  "rule": "All derived context must retain provenance and timestamp. Unknown fields remain unknown; they are not guessed into compliance."
+}
