@@ -1,0 +1,63 @@
+{
+  "version": "0.1",
+  "purpose": "Single project-location object consumed by regulation, logistics, energy, sourcing and procurement engines.",
+  "fields": {
+    "project_id": "string",
+    "name": "string",
+    "project_type": "villa | apartment | hotel | resort | commercial | other",
+    "location": {
+      "lat": "number",
+      "lon": "number",
+      "address": "string|null",
+      "postal_code": "string|null",
+      "municipality": "string|null",
+      "province": "string|null",
+      "region": "string|null",
+      "country": "ISO-3166 alpha-2"
+    },
+    "jurisdiction": {
+      "resolved_id": "string",
+      "chain": ["EU", "country", "region", "province", "municipality"],
+      "status": "verified | provisional | unresolved"
+    },
+    "climate": {
+      "cte_zone": "string|null",
+      "weather_dataset": "string|null",
+      "design_temperature_summer_c": "number|null",
+      "design_temperature_winter_c": "number|null",
+      "status": "verified | provisional | unresolved"
+    },
+    "solar": {
+      "analysis_status": "not_run | provisional | verified",
+      "irradiance_source": "string|null",
+      "roof_geometry_source": "string|null",
+      "usable_roof_area_m2": "number|null",
+      "annual_yield_estimate_kwh": "number|null"
+    },
+    "electrical": {
+      "nominal_voltage_v": "number|null",
+      "frequency_hz": "number|null",
+      "phase": "single | three | unknown",
+      "grid_connection_status": "unknown | existing | planned | off_grid"
+    },
+    "logistics": {
+      "local_radius_km": "number",
+      "regional_scope": "string",
+      "national_scope": "string",
+      "customs_zone": "string",
+      "site_access": {
+        "max_vehicle_length_m": "number|null",
+        "max_vehicle_weight_t": "number|null",
+        "crane_possible": "boolean|null",
+        "forklift_possible": "boolean|null",
+        "delivery_time_windows": "array"
+      }
+    },
+    "procurement": {
+      "currency": "string",
+      "local_preference": "none | prefer | strong",
+      "max_lead_time_days": "number|null",
+      "target_local_spend_percent": "number|null"
+    }
+  }
+}
