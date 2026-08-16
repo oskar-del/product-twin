@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/energy-context.yml"
       - "scripts/pvgis-solar.mjs"
+      - "scripts/solar-requirement.mjs"
       - "data/projects/**"
   workflow_dispatch:
 
@@ -29,8 +30,11 @@ jobs:
           node-version: "22"
       - name: Calculate PVGIS solar context
         run: npm run solar:pvgis
+      - name: Derive brand-neutral solar requirement
+        run: npm run solar:requirement
       - name: Commit verified project energy context
         run: |
+          set -euo pipefail
           git config user.name "product-twin-bot"
           git config user.email "product-twin-bot@users.noreply.github.com"
           git add data/energy
@@ -38,5 +42,7 @@ jobs:
             echo "No energy-context changes."
             exit 0
           fi
-          git commit -m "data: refresh PVGIS project energy context"
-          git push
+          git commit -m "data: refresh PVGIS context and solar requirement"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
