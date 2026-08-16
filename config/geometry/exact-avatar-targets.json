@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "targets": [
     {
       "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
@@ -27,6 +27,32 @@
         "current_level": "G0",
         "target_level": "G3",
         "blockers": ["download exact OBJ/3D asset through manufacturer channel", "validate model dimensions", "resolve usage rights for Product Twin rendering", "find live offer/RFQ and verify exact identity"]
+      }
+    },
+    {
+      "target_id": "EXACT_ARPER_PLY_3853_001",
+      "category_id": "FFE.TABLE.COFFEE",
+      "manufacturer": "Arper",
+      "product_family": "Ply Table",
+      "model": "Ply Table 3853",
+      "manufacturer_item_no": "3853",
+      "old_item_no": null,
+      "gtin_ean": null,
+      "configuration": "Small low table, 55 x 54 cm top, wood legs, height 36 cm; finish unresolved",
+      "dimensions_mm": {"width":550,"depth":540,"height":360},
+      "manufacturer_geometry": {
+        "source_page": "https://www.arper.com/es_ES/3853-20article-203853.html",
+        "direct_3ds_state": "exact_manufacturer_resource_captured_and_scale_validated",
+        "source_sha256": "056266beb2cbea1af1cc91bcab74dccb46620ebc55464276d1d22f90f8977e9a",
+        "scale_qa_max_relative_error": 0.0012552087957208807,
+        "geometry_state": "G3_CANDIDATE_RIGHTS_REVIEW",
+        "redistribution_state": "review"
+      },
+      "commerce_hunt_queries": ["Arper Ply Table 3853","Arper Ply 3853","Ply Table 3853 Arper","Arper 3853"],
+      "promotion": {
+        "current_level": "G3_CANDIDATE",
+        "target_level": "G3",
+        "blockers": ["confirm render/derivative/persistent-storage rights", "find live offer or RFQ and verify exact article identity"]
       }
     }
   ]
