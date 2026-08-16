@@ -1,0 +1,44 @@
+name: Prove Exact Twin Cart
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'data/twins/PT_MUUTO_OUTLINE_2S_OU2SRA10101.json'
+      - 'scripts/prove-exact-twin-cart.mjs'
+      - '.github/workflows/exact-twin-cart.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-exact-cart
+  cancel-in-progress: true
+
+jobs:
+  prove:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Create merchant cart from exact Product Twin reference
+        run: node scripts/prove-exact-twin-cart.mjs
+      - name: Commit non-mutable proof metric
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/metrics/exact-twin-cart-latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "data: refresh exact Twin cart proof"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt*3))
+          done
+          exit 1
