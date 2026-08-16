@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-08-16",
+  "target_id": "ARPER_PLY_3853_G3_V0_1",
+  "manufacturer": "Arper",
+  "model": "Ply Table #3853",
+  "geometry_source": {
+    "state": "EXACT_MANUFACTURER_GEOMETRY_PUBLICLY_DOWNLOADABLE",
+    "source_page": "https://www.arper.com/es_ES/3853-20article-203853.html",
+    "formats_observed": ["3DS", "3DS Max", "Revit", "SketchUp", "Archicad", "2D DWG"],
+    "scale_qa": "PASS",
+    "binary_policy": "ephemeral_only"
+  },
+  "procurement": {
+    "state": "MANUFACTURER_RFQ_ROUTE_VERIFIED",
+    "route": "https://www.arper.com/es_ES/request-product-information",
+    "evidence": "Arper states that the form is for receiving information about product availability and prices.",
+    "exact_product_context": "Product Twin must transmit model Ply Table #3853 / article 3853 in the RFQ; no price is cached or invented."
+  },
+  "rights": {
+    "state": "COMMERCIAL_USE_REQUIRES_WRITTEN_PERMISSION",
+    "terms_url": "https://www.arper.com/es_ES/terminos-y-condiciones-de-uso",
+    "evidence_summary": "Arper's terms treat technical/graphical/commercial files as protected site content, prohibit reproduction without prior written consent, and expressly prohibit direct or indirect commercial use including use for a specific project offer. Downloadable content remains subject to Arper's stated conditions.",
+    "allowed_product_twin_state": "reference/hash/metadata/QA evidence only; do not persist or commercially render the manufacturer asset without written permission",
+    "redistribution": "not_allowed_without_permission",
+    "commercial_rendering": "blocked_without_permission"
+  },
+  "promotion": {
+    "current_level": "G3_CANDIDATE",
+    "rfq_gate": "PASS",
+    "rights_gate": "BLOCKED",
+    "fully_promoted": false,
+    "next_action": "request written Arper permission for Product Twin commercial rendering/derivative workflow while keeping manufacturer geometry externally referenced"
+  }
+}
