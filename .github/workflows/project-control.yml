@@ -1,0 +1,51 @@
+name: Project Control Dashboard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/project-control.yml"
+      - "scripts/build-project-control.mjs"
+      - "data/procurement/**"
+      - "data/coverage/source-matrix.json"
+      - "data/requirements/**"
+      - "data/identity/**"
+      - "data/references/**"
+      - "data/energy/**"
+      - "data/tests/results/whole-building-10.latest.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-project-control
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Build project control dashboard
+        run: npm run dashboard:project
+      - name: Commit dashboard
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/dashboard prototype/project-control.html
+          if git diff --cached --quiet; then
+            echo "No dashboard changes."
+            exit 0
+          fi
+          git commit -m "ui: refresh Product Twin project control dashboard"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
