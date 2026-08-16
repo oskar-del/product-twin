@@ -1,0 +1,31 @@
+{
+  "version": "0.1",
+  "principle": "Energy systems are first-class Product Twin categories, not miscellaneous equipment.",
+  "top_level": {
+    "id": "ENERGY",
+    "name": "Energy Generation, Storage & Controls",
+    "children": [
+      {"id":"ENERGY.SOLAR.PANEL","name":"Photovoltaic panels","profile":"pv_module"},
+      {"id":"ENERGY.SOLAR.MOUNTING","name":"PV mounting systems","profile":"solar_mounting"},
+      {"id":"ENERGY.SOLAR.INVERTER","name":"Solar inverters","profile":"power_electronics"},
+      {"id":"ENERGY.SOLAR.OPTIMIZER","name":"Power optimizers / microinverters","profile":"power_electronics"},
+      {"id":"ENERGY.SOLAR.BOS","name":"Solar balance-of-system components","profile":"electrical_component"},
+      {"id":"ENERGY.BATTERY","name":"Battery storage","profile":"battery_system"},
+      {"id":"ENERGY.EV_CHARGER","name":"EV charging","profile":"electrical_equipment"},
+      {"id":"ENERGY.ENERGY_MANAGER","name":"Energy management & smart controls","profile":"control_system"},
+      {"id":"ENERGY.METERING","name":"Metering & monitoring","profile":"metering_equipment"},
+      {"id":"ENERGY.BACKUP","name":"Backup / standby power","profile":"power_system"}
+    ]
+  },
+  "application_tags": [
+    "roof",
+    "carport",
+    "facade",
+    "ground_mount",
+    "residential",
+    "hotel",
+    "commercial",
+    "off_grid",
+    "grid_connected"
+  ]
+}
