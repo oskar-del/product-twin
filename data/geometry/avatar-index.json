@@ -89,7 +89,7 @@
       "model": "Ply Table 3853",
       "type": "object",
       "candidate_level": "G3",
-      "promotion_state": "candidate_rights_and_commerce_blocked",
+      "promotion_state": "candidate_commercial_rights_blocked",
       "identity": "manufacturer article verified",
       "geometry": "exact manufacturer 3DS converted transiently to GLB",
       "scale": "PASS",
@@ -98,9 +98,18 @@
       "max_relative_error": 0.0012552087957208807,
       "source_asset_sha256": "056266beb2cbea1af1cc91bcab74dccb46620ebc55464276d1d22f90f8977e9a",
       "persistent_binary": false,
+      "procurement": {
+        "state": "manufacturer_rfq_route_verified",
+        "route": "https://www.arper.com/es_ES/request-product-information",
+        "purpose": "availability and prices",
+        "rfq_context": "Ply Table #3853 / article 3853"
+      },
+      "rights": {
+        "state": "commercial_use_requires_written_permission",
+        "evidence_file": "data/rights/arper-ply-3853-rights-and-rfq.json"
+      },
       "blockers": [
-        "confirm Product Twin render/derivative/persistent-storage rights",
-        "resolve exact live commerce or RFQ identity"
+        "obtain written Arper permission for Product Twin commercial rendering/derivative use"
       ]
     }
   ],
