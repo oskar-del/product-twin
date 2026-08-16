@@ -1,0 +1,59 @@
+{
+  "project_id": "PROJECT_MARBELLA_VILLA_001",
+  "name": "Marbella Villa Whole-Building Test",
+  "project_type": "villa",
+  "location": {
+    "lat": 36.51,
+    "lon": -4.97,
+    "address": null,
+    "postal_code": "29660",
+    "municipality": "Marbella",
+    "province": "Málaga",
+    "region": "Andalucía",
+    "country": "ES"
+  },
+  "jurisdiction": {
+    "resolved_id": "ES-MA-MARBELLA",
+    "chain": ["EU", "ES", "ES-AN", "ES-MA", "ES-MA-MARBELLA"],
+    "status": "provisional"
+  },
+  "climate": {
+    "cte_zone": null,
+    "weather_dataset": null,
+    "design_temperature_summer_c": null,
+    "design_temperature_winter_c": null,
+    "status": "unresolved"
+  },
+  "solar": {
+    "analysis_status": "not_run",
+    "irradiance_source": null,
+    "roof_geometry_source": null,
+    "usable_roof_area_m2": null,
+    "annual_yield_estimate_kwh": null
+  },
+  "electrical": {
+    "nominal_voltage_v": 230,
+    "frequency_hz": 50,
+    "phase": "unknown",
+    "grid_connection_status": "planned"
+  },
+  "logistics": {
+    "local_radius_km": 75,
+    "regional_scope": "Andalucía",
+    "national_scope": "Spain",
+    "customs_zone": "EU",
+    "site_access": {
+      "max_vehicle_length_m": null,
+      "max_vehicle_weight_t": null,
+      "crane_possible": null,
+      "forklift_possible": null,
+      "delivery_time_windows": []
+    }
+  },
+  "procurement": {
+    "currency": "EUR",
+    "local_preference": "prefer",
+    "max_lead_time_days": 90,
+    "target_local_spend_percent": 60
+  }
+}
