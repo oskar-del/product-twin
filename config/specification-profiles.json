@@ -1,0 +1,138 @@
+{
+  "version": "0.1",
+  "profiles": {
+    "furniture": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_placement": ["width_mm", "depth_mm", "height_mm"],
+      "required_for_render": ["geometry_asset", "physical_scale", "materials_or_textures", "render_rights"],
+      "recommended": ["weight_kg", "seat_height_mm", "finish", "colour", "fabric", "outdoor_rating", "fire_rating", "care", "warranty"],
+      "commerce_basis": "each"
+    },
+    "soft_furnishing": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_placement": ["length_mm", "width_mm"],
+      "required_for_render": ["texture_or_geometry", "physical_scale", "render_rights"],
+      "recommended": ["thickness_mm", "material_composition", "colour", "pattern", "pile_height_mm", "fire_rating", "care"],
+      "commerce_basis": "each"
+    },
+    "surface_material": {
+      "required_for_identity": ["manufacturer", "product_or_collection", "category"],
+      "required_for_specification": ["format", "thickness_mm", "finish"],
+      "required_for_render": ["pbr_or_texture", "real_world_scale", "render_rights"],
+      "recommended": ["material", "colour", "water_absorption", "slip_rating", "fire_rating", "freeze_resistance", "stain_resistance", "batch_or_lot", "certifications", "epd"],
+      "commerce_basis": "m2"
+    },
+    "coating_material": {
+      "required_for_identity": ["manufacturer", "product", "category"],
+      "required_for_specification": ["colour_or_code", "finish", "coverage_m2_per_l"],
+      "required_for_render": ["colour_value", "finish_response"],
+      "recommended": ["substrates", "voc", "dry_time", "recoat_time", "scrub_class", "indoor_air_certification"],
+      "commerce_basis": "litre"
+    },
+    "concrete_material": {
+      "required_for_identity": ["manufacturer_or_supplier", "product_or_mix", "category"],
+      "required_for_specification": ["compressive_strength", "exposure_class", "consistency_or_slump", "aggregate_max_mm"],
+      "recommended": ["density", "cement_type", "water_cement_ratio", "chloride_class", "embodied_carbon", "epd", "pumpability", "delivery_radius_km", "minimum_order_m3"],
+      "commerce_basis": "m3"
+    },
+    "structural_material": {
+      "required_for_identity": ["manufacturer_or_supplier", "grade", "category"],
+      "required_for_specification": ["grade", "dimensions_or_section", "standard"],
+      "recommended": ["strength", "coating", "corrosion_class", "fire_performance", "epd", "certifications"],
+      "commerce_basis": "kg_or_length"
+    },
+    "construction_material": {
+      "required_for_identity": ["manufacturer", "product", "category"],
+      "required_for_specification": ["dimensions", "material", "standard"],
+      "recommended": ["strength", "density", "thermal_performance", "acoustic_performance", "fire_performance", "epd"],
+      "commerce_basis": "each_or_m2"
+    },
+    "pipe_component": {
+      "required_for_identity": ["manufacturer", "series_or_product", "category"],
+      "required_for_specification": ["material", "nominal_diameter", "outside_diameter", "pressure_rating", "connection_type"],
+      "recommended": ["inside_diameter", "wall_thickness", "sdr_or_schedule", "temperature_range", "chemical_compatibility", "potable_water_approval", "pool_compatibility", "uv_rating", "standard", "length_m"],
+      "commerce_basis": "length_or_each"
+    },
+    "valve_component": {
+      "required_for_identity": ["manufacturer", "series_or_model", "category"],
+      "required_for_specification": ["nominal_diameter", "pressure_rating", "valve_type", "connection_type", "body_material"],
+      "recommended": ["seal_material", "temperature_range", "flow_coefficient", "actuation", "standard", "chemical_compatibility"],
+      "commerce_basis": "each"
+    },
+    "mechanical_equipment": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_specification": ["capacity", "power_supply", "dimensions"],
+      "recommended": ["efficiency", "flow_rate", "head_or_pressure", "sound_level", "ip_rating", "controls_protocol", "bim_asset", "warranty", "certifications"],
+      "commerce_basis": "each"
+    },
+    "pool_equipment": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_specification": ["capacity_or_flow", "connection_size", "power_supply_or_passive"],
+      "recommended": ["pool_volume_range", "pressure_rating", "chemical_compatibility", "controls", "efficiency", "ip_rating", "warranty"],
+      "commerce_basis": "each"
+    },
+    "luminaire": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_placement": ["dimensions"],
+      "required_for_specification": ["wattage", "lumens", "cct", "cri", "voltage", "ip_rating"],
+      "required_for_render": ["geometry_asset", "physical_scale", "render_rights"],
+      "recommended": ["beam_angle", "dimming", "driver", "photometric_file", "ugr", "finish", "lifetime_hours", "emergency_option"],
+      "commerce_basis": "each"
+    },
+    "electrical_component": {
+      "required_for_identity": ["manufacturer", "series_or_model", "category"],
+      "required_for_specification": ["voltage", "current_or_rating", "standard"],
+      "recommended": ["ip_rating", "ik_rating", "fire_rating", "finish", "mounting", "certifications"],
+      "commerce_basis": "each_or_length"
+    },
+    "opening_system": {
+      "required_for_identity": ["manufacturer", "system", "category"],
+      "required_for_specification": ["width_mm", "height_mm", "frame_material", "glazing_or_panel", "opening_type"],
+      "required_for_render": ["geometry_or_parametric_model", "finish", "render_rights"],
+      "recommended": ["u_value", "g_value", "air_tightness", "water_tightness", "wind_resistance", "acoustic_rating", "security_rating", "fire_rating"],
+      "commerce_basis": "each_or_m2"
+    },
+    "sanitary_fixture": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_placement": ["dimensions", "connections"],
+      "required_for_render": ["geometry_asset", "physical_scale", "render_rights"],
+      "recommended": ["material", "finish", "water_consumption", "flush_volume", "overflow", "waste_size", "certifications"],
+      "commerce_basis": "each"
+    },
+    "plumbing_fixture": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_specification": ["connection_size", "flow_rate", "pressure_range"],
+      "required_for_render": ["geometry_asset", "physical_scale", "render_rights"],
+      "recommended": ["finish", "cartridge", "temperature_limit", "water_efficiency", "certifications", "warranty"],
+      "commerce_basis": "each"
+    },
+    "appliance": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_placement": ["width_mm", "depth_mm", "height_mm"],
+      "required_for_specification": ["power_supply", "installation_type"],
+      "required_for_render": ["geometry_asset", "physical_scale", "render_rights"],
+      "recommended": ["energy_class", "capacity", "water_use", "sound_level", "connectivity", "warranty"],
+      "commerce_basis": "each"
+    },
+    "casework": {
+      "required_for_identity": ["manufacturer_or_system", "model_or_range", "category"],
+      "required_for_placement": ["dimensions"],
+      "required_for_specification": ["carcass_material", "front_finish", "hardware"],
+      "required_for_render": ["geometry_or_parametric_model", "materials", "render_rights"],
+      "recommended": ["module_sizes", "worktop_compatibility", "fire_rating", "moisture_rating", "warranty"],
+      "commerce_basis": "module_or_project"
+    },
+    "performance_material": {
+      "required_for_identity": ["manufacturer", "product", "category"],
+      "required_for_specification": ["thickness_mm", "performance_value", "standard"],
+      "recommended": ["fire_rating", "water_vapour_properties", "thermal_properties", "acoustic_properties", "epd", "certifications"],
+      "commerce_basis": "m2_or_roll"
+    },
+    "energy_equipment": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_specification": ["rated_output_or_capacity", "electrical_characteristics", "dimensions"],
+      "recommended": ["efficiency", "warranty", "communications", "certifications", "bim_asset"],
+      "commerce_basis": "each_or_system"
+    }
+  }
+}
