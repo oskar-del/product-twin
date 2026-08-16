@@ -1,0 +1,50 @@
+name: Build GF Sanipex 1158140 G4 Candidate
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'config/geometry/gf-sanipex-1158140-target.json'
+      - 'scripts/capture-uponor-bim-product.mjs'
+      - '.github/workflows/gf-sanipex-1158140-avatar.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-gf-sanipex-1158140
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Capture exact BIM product through official service
+        run: node scripts/capture-uponor-bim-product.mjs config/geometry/gf-sanipex-1158140-target.json
+      - name: Commit metadata only
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Manufacturer BIM binaries remain ephemeral."
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/geometry/gf-sanipex-mt-1158140-g4-v0-1-capture.json data/metrics/gf-sanipex-mt-1158140-g4-v0-1-capture-latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "data: record GF Sanipex 1158140 BIM capture"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt*3))
+          done
+          exit 1
