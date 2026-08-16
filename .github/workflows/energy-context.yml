@@ -7,6 +7,8 @@ on:
       - ".github/workflows/energy-context.yml"
       - "scripts/pvgis-solar.mjs"
       - "scripts/solar-requirement.mjs"
+      - "scripts/cte-climate.mjs"
+      - "config/climate/**"
       - "data/projects/**"
   workflow_dispatch:
 
@@ -30,6 +32,8 @@ jobs:
           node-version: "22"
       - name: Calculate PVGIS solar context
         run: npm run solar:pvgis
+      - name: Resolve CTE climate zone
+        run: npm run climate:cte
       - name: Derive brand-neutral solar requirement
         run: npm run solar:requirement
       - name: Commit verified project energy context
@@ -42,7 +46,7 @@ jobs:
             echo "No energy-context changes."
             exit 0
           fi
-          git commit -m "data: refresh PVGIS context and solar requirement"
+          git commit -m "data: refresh PVGIS, CTE climate and solar requirement context"
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main
