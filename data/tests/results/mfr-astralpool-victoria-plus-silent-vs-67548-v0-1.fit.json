@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-08-16T03:14:54.985Z",
+  "project_id": "PROJECT_MARBELLA_VILLA_001",
+  "evidence_id": "MFR_ASTRALPOOL_VICTORIA_PLUS_SILENT_VS_67548_V0_1",
+  "subject": {
+    "manufacturer": "AstralPool / Fluidra",
+    "model": "Victoria Plus Silent VS 2 CV",
+    "category_id": "POOL.PUMPS",
+    "manufacturer_sku": "67548",
+    "gtin": null
+  },
+  "evidence_authority": {
+    "grade": "A_MANUFACTURER",
+    "publisher": "AstralPool / Fluidra",
+    "source_uri": "https://fluidra.bynder.com/m/603863496dd9b1d2/original/leaflet_victoriaplussilentvariablespeed_ES_2022_11.pdf",
+    "source_type": "manufacturer_datasheet",
+    "territory": "Spain / Europe manufacturer literature",
+    "published_or_updated_at": "2022-11-01",
+    "retrieved_at": "2026-08-16T03:20:00Z",
+    "version_or_revision": "Victoria Plus Silent VS brochure ES 2022-11"
+  },
+  "overall_state": "HOLD",
+  "checks": [
+    {
+      "check": "manufacturer_technical_evidence",
+      "state": "PASS",
+      "detail": "A_MANUFACTURER"
+    },
+    {
+      "check": "pool_plant_frequency",
+      "state": "PASS",
+      "required": 50,
+      "product": 50
+    },
+    {
+      "check": "pool_plant_voltage",
+      "state": "PASS",
+      "required": 230,
+      "product": 230
+    },
+    {
+      "check": "pool_plant_phase",
+      "state": "HOLD",
+      "required": "unresolved",
+      "product": "single"
+    },
+    {
+      "check": "hydraulic_duty",
+      "state": "HOLD",
+      "required": {
+        "flow_m3_h": null,
+        "total_dynamic_head_m": null,
+        "pool_volume_m3": null,
+        "target_turnover_hours": null
+      },
+      "product": {
+        "max_head_m": 17.5,
+        "max_documented_flow_m3_h": 25.5,
+        "duty_points": [
+          {
+            "speed_rpm": 1400,
+            "power_w": 258,
+            "current_a": 1.4,
+            "flow_m3_h": 11.1,
+            "head_m": 3.2,
+            "efficiency_l_wh": 43
+          },
+          {
+            "speed_rpm": 2100,
+            "power_w": 750,
+            "current_a": 3.4,
+            "flow_m3_h": 18.8,
+            "head_m": 6.2,
+            "efficiency_l_wh": 25
+          },
+          {
+            "speed_rpm": 2750,
+            "power_w": 1560,
+            "current_a": 7.1,
+            "flow_m3_h": 25.5,
+            "head_m": 10,
+            "efficiency_l_wh": 16
+          }
+        ]
+      },
+      "detail": "Pool volume/turnover or required flow and total dynamic head are required."
+    },
+    {
+      "check": "hydraulic_connection",
+      "state": "HOLD",
+      "required": null,
+      "product": {
+        "external": "ACME D.75",
+        "internal": "2 inch GAS"
+      },
+      "detail": "Pool pipe/fitting system at the pump has not been defined."
+    },
+    {
+      "check": "territory_applicability",
+      "state": "REVIEW",
+      "detail": "review"
+    }
+  ],
+  "regulatory_screen": [
+    {
+      "rule_id": "ES.POOL.ELECTRICAL.ITCBT31_REVIEW",
+      "jurisdiction_id": "ES",
+      "stage": "installation",
+      "state": "REVIEW",
+      "missing_evidence": [],
+      "professional_signoff": true
+    }
+  ],
+  "missing_project_inputs": [
+    "pool volume + target turnover time, or explicit required filtration flow",
+    "pool total dynamic head / hydraulic loss calculation",
+    "pool plant electrical phase/circuit confirmation",
+    "pool pump pipe/fitting connection specification"
+  ],
+  "project_context": {
+    "cte_zone": "A3",
+    "solar_yield_kwh_per_kwp": 1732.34,
+    "electrical": {
+      "nominal_voltage_v": 230,
+      "frequency_hz": 50,
+      "phase": "unknown",
+      "grid_connection_status": "planned"
+    },
+    "pool": null
+  },
+  "principle": "Manufacturer-verified product facts and project suitability are independent gates. Performance equipment is selected against a project duty requirement, not marketing size labels."
+}
