@@ -1,0 +1,26 @@
+{
+  "version": "0.1",
+  "adapter_id": "woocommerce_store_api",
+  "probe_limit": 8,
+  "stores": [
+    {
+      "store_id": "ledinventory",
+      "base_url": "https://ledinventory.com",
+      "relevance": ["ELECTRICAL.LUMINAIRES"],
+      "discovery_evidence": "Public site identifies its checkout as powered by WooCommerce."
+    },
+    {
+      "store_id": "b_ledtec",
+      "base_url": "https://b-ledtec.com",
+      "relevance": ["ELECTRICAL.LUMINAIRES"],
+      "discovery_evidence": "Public case study identifies the LED catalog as a WooCommerce store."
+    },
+    {
+      "store_id": "themify_ultra_craft_demo",
+      "base_url": "https://themify.org/ultra-craft",
+      "relevance": ["FFE", "ELECTRICAL.LUMINAIRES"],
+      "demo": true,
+      "discovery_evidence": "Public WooCommerce furniture/home demo used only to validate adapter compatibility."
+    }
+  ]
+}
