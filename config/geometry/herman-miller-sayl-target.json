@@ -1,0 +1,44 @@
+{
+  "version": "0.1",
+  "target_id": "HM_SAYL_FULLY_ADJUSTABLE_GLB_V0_1",
+  "category_id": "FFE.SEATING.OFFICE_CHAIR",
+  "manufacturer": "Herman Miller",
+  "product_family": "Sayl Chairs",
+  "configuration_family": "Sayl Chair – Suspension Mid Back – Fully Adjustable Arms",
+  "manufacturer_sources": {
+    "product_model_page": "https://www.hermanmiller.com/resources/3d-models-and-planning-tools/product-models/individual/sayl-chair-suspension-mid-back-fully-adjustable-arms/",
+    "configurator_page": "https://www.hermanmiller.com/products/seating/office-chairs/sayl-chairs/product-configurator/",
+    "configurator_iframe": "https://3d-configurator.vercel.app/iframe/5b218f84-aa9c-4cd6-a668-2255a5e18bd5",
+    "configurator_faq": "https://www.hermanmiller.com/resources/3d-models-and-planning-tools/faq/"
+  },
+  "manufacturer_claims": {
+    "product_models_for_space_planning": true,
+    "configurator_can_create_renderings": true,
+    "configured_model_download_format": "GLB",
+    "configured_GLBS_reflect_selected_options": true,
+    "fixed_family_models_available": ["Revit", "SketchUp", "AutoCAD 2D", "AutoCAD 3D"]
+  },
+  "geometry": {
+    "current_level": "G0",
+    "target_level": "G3",
+    "exactness_target": "manufacturer-configured GLB",
+    "runtime_format": "GLB",
+    "asset_state": "public_configurator_probe_pending",
+    "rights_state": "render_use_supported_by_manufacturer_workflow; derivative_and_redistribution_review"
+  },
+  "identity": {
+    "state": "configuration_not_yet_frozen",
+    "next_gate": "resolve configurator option codes / resulting configured product identity"
+  },
+  "commerce": {
+    "state": "pending_exact_configuration",
+    "routes_to_test": ["Herman Miller direct commerce", "authorized dealer/RFQ", "Shopify exact identity if available"]
+  },
+  "promotion_blockers": [
+    "resolve stable configured option identity",
+    "resolve exact manufacturer GLB from public configurator workflow",
+    "validate GLB physical scale against manufacturer dimensions/specification",
+    "confirm derivative conversion/storage/redistribution policy",
+    "resolve exact live commerce or RFQ identity"
+  ]
+}
