@@ -1,0 +1,248 @@
+{
+  "version": "0.1",
+  "principle": "Source-neutral taxonomy owned by Product Twin. External taxonomies map into canonical category_ids; they never define the canonical structure.",
+  "top_level": [
+    {
+      "id": "SITE",
+      "name": "Site & Landscape",
+      "children": [
+        {"id":"SITE.PAVING","name":"External paving & hardscape","profile":"surface_material"},
+        {"id":"SITE.DECKING","name":"Decking","profile":"surface_material"},
+        {"id":"SITE.WALLS","name":"Retaining & landscape walls","profile":"construction_material"},
+        {"id":"SITE.PLANTING","name":"Plants, trees & softscape","profile":"living_landscape"},
+        {"id":"SITE.IRRIGATION","name":"Irrigation","profile":"water_system_component"},
+        {"id":"SITE.DRAINAGE","name":"Site drainage","profile":"water_system_component"},
+        {"id":"SITE.EXTERNAL_LIGHTING","name":"External lighting","profile":"luminaire"},
+        {"id":"SITE.STREET_FURNITURE","name":"Site furniture & amenities","profile":"furniture"}
+      ]
+    },
+    {
+      "id": "STRUCTURE",
+      "name": "Structure & Civil",
+      "children": [
+        {"id":"STRUCTURE.CONCRETE","name":"Concrete, screeds & mortars","profile":"concrete_material"},
+        {"id":"STRUCTURE.REINFORCEMENT","name":"Reinforcement","profile":"structural_material"},
+        {"id":"STRUCTURE.STRUCTURAL_STEEL","name":"Structural steel","profile":"structural_material"},
+        {"id":"STRUCTURE.STRUCTURAL_TIMBER","name":"Structural timber","profile":"structural_material"},
+        {"id":"STRUCTURE.MASONRY","name":"Blocks, bricks & masonry","profile":"construction_material"},
+        {"id":"STRUCTURE.PRECAST","name":"Precast structural systems","profile":"structural_system"},
+        {"id":"STRUCTURE.FOUNDATIONS","name":"Foundation systems","profile":"structural_system"}
+      ]
+    },
+    {
+      "id": "ENVELOPE",
+      "name": "Building Envelope",
+      "children": [
+        {"id":"ENVELOPE.FACADE","name":"Facade systems & cladding","profile":"envelope_system"},
+        {"id":"ENVELOPE.ROOF","name":"Roof systems & coverings","profile":"envelope_system"},
+        {"id":"ENVELOPE.INSULATION","name":"Thermal & acoustic insulation","profile":"performance_material"},
+        {"id":"ENVELOPE.WATERPROOFING","name":"Waterproofing & membranes","profile":"performance_material"},
+        {"id":"ENVELOPE.AIRTIGHTNESS","name":"Air & vapour control","profile":"performance_material"},
+        {"id":"ENVELOPE.SHADING","name":"External shading & solar control","profile":"architectural_component"}
+      ]
+    },
+    {
+      "id": "OPENINGS",
+      "name": "Doors, Windows & Architectural Hardware",
+      "children": [
+        {"id":"OPENINGS.WINDOWS","name":"Windows","profile":"opening_system"},
+        {"id":"OPENINGS.EXTERNAL_DOORS","name":"External doors","profile":"opening_system"},
+        {"id":"OPENINGS.INTERNAL_DOORS","name":"Internal doors","profile":"opening_system"},
+        {"id":"OPENINGS.SLIDING_SYSTEMS","name":"Sliding & folding systems","profile":"opening_system"},
+        {"id":"OPENINGS.HARDWARE","name":"Handles, hinges, locks & hardware","profile":"architectural_hardware"},
+        {"id":"OPENINGS.GLASS","name":"Architectural glass","profile":"performance_material"}
+      ]
+    },
+    {
+      "id": "FINISHES",
+      "name": "Interior Construction & Finishes",
+      "children": [
+        {"id":"FINISHES.STONE","name":"Natural stone","profile":"surface_material"},
+        {"id":"FINISHES.TILE","name":"Ceramic & porcelain tile","profile":"surface_material"},
+        {"id":"FINISHES.TIMBER_FLOOR","name":"Timber flooring","profile":"surface_material"},
+        {"id":"FINISHES.RESILIENT_FLOOR","name":"Resilient & synthetic flooring","profile":"surface_material"},
+        {"id":"FINISHES.CARPET","name":"Carpet & textile flooring","profile":"surface_material"},
+        {"id":"FINISHES.PLASTER","name":"Plaster, render & decorative coatings","profile":"surface_material"},
+        {"id":"FINISHES.PAINT","name":"Paint & coatings","profile":"coating_material"},
+        {"id":"FINISHES.WALLCOVERING","name":"Wallcoverings","profile":"surface_material"},
+        {"id":"FINISHES.CEILINGS","name":"Ceiling systems","profile":"interior_system"},
+        {"id":"FINISHES.PARTITIONS","name":"Partitions & lining systems","profile":"interior_system"},
+        {"id":"FINISHES.JOINERY_MATERIALS","name":"Joinery boards, veneers & laminates","profile":"sheet_material"}
+      ]
+    },
+    {
+      "id": "PLUMBING",
+      "name": "Plumbing, Water & Drainage",
+      "children": [
+        {"id":"PLUMBING.PIPE","name":"Pipe","profile":"pipe_component"},
+        {"id":"PLUMBING.FITTINGS","name":"Pipe fittings","profile":"pipe_component"},
+        {"id":"PLUMBING.VALVES","name":"Valves","profile":"valve_component"},
+        {"id":"PLUMBING.PUMPS","name":"Pumps","profile":"mechanical_equipment"},
+        {"id":"PLUMBING.TANKS","name":"Tanks & water storage","profile":"mechanical_equipment"},
+        {"id":"PLUMBING.DRAINAGE","name":"Internal drainage systems","profile":"water_system_component"},
+        {"id":"PLUMBING.WATER_TREATMENT","name":"Water treatment","profile":"mechanical_equipment"},
+        {"id":"PLUMBING.HOT_WATER","name":"Hot-water systems","profile":"mechanical_equipment"}
+      ]
+    },
+    {
+      "id": "BATH",
+      "name": "Bathrooms & Sanitaryware",
+      "children": [
+        {"id":"BATH.BASINS","name":"Basins & vanity basins","profile":"sanitary_fixture"},
+        {"id":"BATH.WC","name":"WCs & bidets","profile":"sanitary_fixture"},
+        {"id":"BATH.BATHS","name":"Baths","profile":"sanitary_fixture"},
+        {"id":"BATH.SHOWERS","name":"Showers, trays & enclosures","profile":"sanitary_fixture"},
+        {"id":"BATH.TAPS","name":"Taps & mixers","profile":"plumbing_fixture"},
+        {"id":"BATH.ACCESSORIES","name":"Bathroom accessories","profile":"fixture"},
+        {"id":"BATH.VANITIES","name":"Bathroom furniture & vanities","profile":"casework"}
+      ]
+    },
+    {
+      "id": "HVAC",
+      "name": "HVAC & Mechanical",
+      "children": [
+        {"id":"HVAC.HEAT_PUMPS","name":"Heat pumps & chillers","profile":"mechanical_equipment"},
+        {"id":"HVAC.AHU","name":"Air handling units","profile":"mechanical_equipment"},
+        {"id":"HVAC.FAN_COIL","name":"Fan-coil & terminal units","profile":"mechanical_equipment"},
+        {"id":"HVAC.DUCT","name":"Ductwork & fittings","profile":"duct_component"},
+        {"id":"HVAC.DIFFUSERS","name":"Diffusers, grilles & registers","profile":"hvac_terminal"},
+        {"id":"HVAC.VENTILATION","name":"Ventilation & extract","profile":"mechanical_equipment"},
+        {"id":"HVAC.UNDERFLOOR","name":"Underfloor heating & cooling","profile":"mechanical_system"},
+        {"id":"HVAC.CONTROLS","name":"HVAC controls","profile":"control_component"}
+      ]
+    },
+    {
+      "id": "ELECTRICAL",
+      "name": "Electrical & Lighting",
+      "children": [
+        {"id":"ELECTRICAL.LUMINAIRES.PENDANT","name":"Pendant lights","profile":"luminaire"},
+        {"id":"ELECTRICAL.LUMINAIRES.CEILING","name":"Ceiling & recessed lights","profile":"luminaire"},
+        {"id":"ELECTRICAL.LUMINAIRES.WALL","name":"Wall lights","profile":"luminaire"},
+        {"id":"ELECTRICAL.LUMINAIRES.FLOOR","name":"Floor lamps","profile":"luminaire"},
+        {"id":"ELECTRICAL.LUMINAIRES.TABLE","name":"Table lamps","profile":"luminaire"},
+        {"id":"ELECTRICAL.LUMINAIRES.LINEAR","name":"Linear & architectural lighting","profile":"luminaire"},
+        {"id":"ELECTRICAL.SWITCHES","name":"Switches & sockets","profile":"electrical_component"},
+        {"id":"ELECTRICAL.DISTRIBUTION","name":"Distribution boards & protection","profile":"electrical_component"},
+        {"id":"ELECTRICAL.CABLE","name":"Cable & containment","profile":"electrical_component"},
+        {"id":"ELECTRICAL.EV","name":"EV charging","profile":"electrical_equipment"}
+      ]
+    },
+    {
+      "id": "SMART",
+      "name": "Smart Building, AV & Security",
+      "children": [
+        {"id":"SMART.AUTOMATION","name":"Building & home automation","profile":"smart_component"},
+        {"id":"SMART.ACCESS","name":"Access control","profile":"security_component"},
+        {"id":"SMART.CCTV","name":"CCTV & surveillance","profile":"security_component"},
+        {"id":"SMART.ALARM","name":"Intrusion & alarm","profile":"security_component"},
+        {"id":"SMART.AV","name":"Audio visual","profile":"av_component"},
+        {"id":"SMART.NETWORK","name":"Networking & Wi-Fi","profile":"network_component"}
+      ]
+    },
+    {
+      "id": "KITCHEN",
+      "name": "Kitchen, Laundry & Appliances",
+      "children": [
+        {"id":"KITCHEN.CABINETRY","name":"Kitchen cabinetry","profile":"casework"},
+        {"id":"KITCHEN.WORKTOPS","name":"Worktops","profile":"surface_material"},
+        {"id":"KITCHEN.SINKS","name":"Kitchen sinks","profile":"sanitary_fixture"},
+        {"id":"KITCHEN.TAPS","name":"Kitchen taps","profile":"plumbing_fixture"},
+        {"id":"KITCHEN.COOKING","name":"Ovens, hobs & cooking","profile":"appliance"},
+        {"id":"KITCHEN.REFRIGERATION","name":"Refrigeration","profile":"appliance"},
+        {"id":"KITCHEN.DISHWASHING","name":"Dishwashers","profile":"appliance"},
+        {"id":"KITCHEN.LAUNDRY","name":"Laundry appliances","profile":"appliance"},
+        {"id":"KITCHEN.SMALL_APPLIANCES","name":"Small appliances","profile":"appliance"}
+      ]
+    },
+    {
+      "id": "POOL",
+      "name": "Pools, Spas & Water Features",
+      "children": [
+        {"id":"POOL.SHELL","name":"Pool shell systems","profile":"pool_system"},
+        {"id":"POOL.WATERPROOFING","name":"Pool waterproofing","profile":"performance_material"},
+        {"id":"POOL.FINISH","name":"Pool finishes & mosaics","profile":"surface_material"},
+        {"id":"POOL.PIPE","name":"Pool pipe","profile":"pipe_component"},
+        {"id":"POOL.FITTINGS","name":"Pool pipe fittings","profile":"pipe_component"},
+        {"id":"POOL.PUMPS","name":"Pool pumps","profile":"mechanical_equipment"},
+        {"id":"POOL.FILTRATION","name":"Filtration","profile":"pool_equipment"},
+        {"id":"POOL.TREATMENT","name":"Dosing, chlorination & treatment","profile":"pool_equipment"},
+        {"id":"POOL.HEATING","name":"Pool heating","profile":"mechanical_equipment"},
+        {"id":"POOL.LIGHTING","name":"Pool lighting","profile":"luminaire"},
+        {"id":"POOL.COVERS","name":"Pool covers","profile":"pool_equipment"},
+        {"id":"POOL.SPAS","name":"Spa, sauna & thermal equipment","profile":"wellness_equipment"},
+        {"id":"POOL.WATER_FEATURES","name":"Fountains & water features","profile":"water_feature_system"}
+      ]
+    },
+    {
+      "id": "FFE",
+      "name": "Interior Furniture, Fixtures & Equipment",
+      "children": [
+        {"id":"FFE.SEATING.SOFA","name":"Sofas & sectionals","profile":"furniture"},
+        {"id":"FFE.SEATING.LOUNGE","name":"Lounge chairs & armchairs","profile":"furniture"},
+        {"id":"FFE.SEATING.DINING","name":"Dining chairs","profile":"furniture"},
+        {"id":"FFE.SEATING.STOOL","name":"Bar stools & counter stools","profile":"furniture"},
+        {"id":"FFE.TABLE.COFFEE","name":"Coffee tables","profile":"furniture"},
+        {"id":"FFE.TABLE.SIDE","name":"Side tables","profile":"furniture"},
+        {"id":"FFE.TABLE.DINING","name":"Dining tables","profile":"furniture"},
+        {"id":"FFE.TABLE.DESK","name":"Desks & work tables","profile":"furniture"},
+        {"id":"FFE.STORAGE","name":"Storage, cabinets & shelving","profile":"furniture"},
+        {"id":"FFE.BEDS","name":"Beds & headboards","profile":"furniture"},
+        {"id":"FFE.BEDSIDE","name":"Bedside tables","profile":"furniture"},
+        {"id":"FFE.RUGS","name":"Rugs","profile":"soft_furnishing"},
+        {"id":"FFE.CURTAINS","name":"Curtains, blinds & window treatments","profile":"soft_furnishing"},
+        {"id":"FFE.TEXTILES","name":"Cushions, throws & decorative textiles","profile":"soft_furnishing"},
+        {"id":"FFE.MIRRORS","name":"Mirrors","profile":"fixture"},
+        {"id":"FFE.ART","name":"Art & decorative objects","profile":"decorative_object"}
+      ]
+    },
+    {
+      "id": "OUTDOOR_FFE",
+      "name": "Outdoor Furniture & Equipment",
+      "children": [
+        {"id":"OUTDOOR_FFE.SOFA","name":"Outdoor sofas","profile":"furniture"},
+        {"id":"OUTDOOR_FFE.LOUNGE_CHAIR","name":"Outdoor lounge chairs","profile":"furniture"},
+        {"id":"OUTDOOR_FFE.DINING_CHAIR","name":"Outdoor dining chairs","profile":"furniture"},
+        {"id":"OUTDOOR_FFE.TABLE","name":"Outdoor tables","profile":"furniture"},
+        {"id":"OUTDOOR_FFE.SUNLOUNGER","name":"Sun loungers & daybeds","profile":"furniture"},
+        {"id":"OUTDOOR_FFE.UMBRELLA","name":"Umbrellas & freestanding shade","profile":"outdoor_equipment"},
+        {"id":"OUTDOOR_FFE.OUTDOOR_KITCHEN","name":"Outdoor kitchens & BBQ","profile":"outdoor_equipment"}
+      ]
+    },
+    {
+      "id": "ENERGY",
+      "name": "Energy & Sustainability",
+      "children": [
+        {"id":"ENERGY.PV","name":"Solar PV","profile":"energy_equipment"},
+        {"id":"ENERGY.BATTERY","name":"Battery storage","profile":"energy_equipment"},
+        {"id":"ENERGY.SOLAR_THERMAL","name":"Solar thermal","profile":"energy_equipment"},
+        {"id":"ENERGY.WATER_REUSE","name":"Greywater & water reuse","profile":"water_system_component"},
+        {"id":"ENERGY.RAINWATER","name":"Rainwater harvesting","profile":"water_system_component"}
+      ]
+    },
+    {
+      "id": "HOSPITALITY",
+      "name": "Hospitality, Commercial & Specialist Equipment",
+      "children": [
+        {"id":"HOSPITALITY.PRO_KITCHEN","name":"Professional kitchen equipment","profile":"commercial_equipment"},
+        {"id":"HOSPITALITY.BAR","name":"Bar equipment","profile":"commercial_equipment"},
+        {"id":"HOSPITALITY.LAUNDRY","name":"Commercial laundry","profile":"commercial_equipment"},
+        {"id":"HOSPITALITY.HOUSEKEEPING","name":"Housekeeping equipment","profile":"commercial_equipment"},
+        {"id":"HOSPITALITY.GYM","name":"Gym & fitness equipment","profile":"commercial_equipment"},
+        {"id":"HOSPITALITY.SPA","name":"Spa & treatment equipment","profile":"wellness_equipment"},
+        {"id":"HOSPITALITY.RETAIL_DISPLAY","name":"Retail & display systems","profile":"commercial_fixture"}
+      ]
+    },
+    {
+      "id": "INSTALL",
+      "name": "Installation, Adhesives & Consumables",
+      "children": [
+        {"id":"INSTALL.ADHESIVES","name":"Adhesives","profile":"installation_material"},
+        {"id":"INSTALL.GROUT","name":"Grout","profile":"installation_material"},
+        {"id":"INSTALL.SEALANTS","name":"Sealants","profile":"installation_material"},
+        {"id":"INSTALL.FIXINGS","name":"Fixings & anchors","profile":"installation_component"},
+        {"id":"INSTALL.LEVELLING","name":"Levelling & substrate preparation","profile":"installation_material"},
+        {"id":"INSTALL.PROTECTION","name":"Protection & construction consumables","profile":"installation_material"}
+      ]
+    }
+  ]
+}
