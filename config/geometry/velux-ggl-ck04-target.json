@@ -1,0 +1,54 @@
+{
+  "version": "0.1",
+  "target_id": "VELUX_GGL_CK04_G4_V0_1",
+  "category_id": "OPENINGS.WINDOWS",
+  "type": "opening_system",
+  "manufacturer": "VELUX",
+  "product_family": "GGL",
+  "model": "Manual centre-pivot pine roof window",
+  "size_code": "CK04",
+  "variant_reference_seen": "GGL-CK04-2070",
+  "variant_semantics": {
+    "state": "unresolved",
+    "rule": "Do not attach glazing performance to suffix 2070 until VELUX explicitly maps that suffix in an authoritative source."
+  },
+  "official_sources": {
+    "spain_product_url": "https://www.velux.es/productos/ventanas-de-tejado?id=GGL-CK04-2070",
+    "spain_technical_library": "https://inspiracion.velux.es/libreria-tecnica",
+    "spain_ggl_manual_white_datasheet": "https://inspiracion.velux.es/hubfs/VELUX%20Spain/Guides_es/Ventana%20de%20apertura%20giratoria%20manual%20blanca%20GGL.pdf?hsLang=es",
+    "velux_bim_page": "https://www.velux.com/healthy-buildings/digital-tools/bim",
+    "bimobject_product": "https://www.bimobject.com/es/velux/product/ggl"
+  },
+  "verified_geometry_envelope": {
+    "outer_width_mm": 550,
+    "outer_height_mm": 978,
+    "opening_width_mm": 466,
+    "opening_height_mm": 899,
+    "visible_glazing_width_mm": 371,
+    "visible_glazing_height_mm": 783,
+    "visible_glazing_area_m2": 0.29
+  },
+  "verified_system_rules": {
+    "roof_pitch_deg": {"min":15,"max":90},
+    "operation": "manual centre-pivot/top control bar",
+    "cleaning_rotation_deg": 180,
+    "flashing_families": ["ED- single installation", "EB- twin installation", "EK- combination installation"],
+    "installation_products": ["BDX 2000 insulated frame + pleated underfelt collar", "BFX underfelt collar + drainage gutter", "LSG lining kit"]
+  },
+  "performance": {
+    "state": "family_datasheet_available_variant_not_bound",
+    "note": "VELUX GGL family datasheet lists glazing variants --70/--76/--68 and their Uw/Ug/Rw/g/light values, but this target does not bind those values to 2070 until the variant code is explicitly resolved."
+  },
+  "avatar_plan": {
+    "current_target": "G2_SYSTEM_PROXY",
+    "upgrade_target": "G4",
+    "g2_rule": "Use verified outer/opening/glazing dimensions and simplified frame/sash geometry; disclose proxy shape.",
+    "g4_source": "Official VELUX BIM objects distributed through BIMobject; access/download and rights must be verified."
+  },
+  "promotion_blockers": [
+    "resolve 2070 suffix semantics before exact glazing-performance binding",
+    "capture/validate official BIM geometry for G4",
+    "confirm geometry rights/persistence rules",
+    "resolve live Spain merchant/distributor offer or RFQ for exact configuration"
+  ]
+}
