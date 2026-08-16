@@ -1,5 +1,5 @@
 
-> product-twin@0.5.0 context:test
+> product-twin@1.0.0 context:test
 > node scripts/project-context-resolve.mjs
 
 {
@@ -35,11 +35,24 @@
     "status": "unresolved"
   },
   "solar": {
-    "analysis_status": "not_run",
-    "irradiance_source": null,
+    "analysis_status": "verified",
+    "irradiance_source": "PVGIS 5.3",
     "roof_geometry_source": null,
     "usable_roof_area_m2": null,
-    "annual_yield_estimate_kwh": null
+    "annual_yield_estimate_kwh": null,
+    "resource_status": "VERIFIED_PVGIS",
+    "weather_dataset": "PVGIS-SARAH3",
+    "annual_yield_kwh_per_kwp": 1732.34,
+    "annual_plane_irradiation_kwh_m2": 2154.05,
+    "optimal_tilt_deg": 33,
+    "optimal_pvgis_azimuth_deg": 2,
+    "elevation_m": 52,
+    "actual_system_size_status": "requires_roof_geometry_and_real_product_twins",
+    "source_evidence": {
+      "authority": "European Commission Joint Research Centre",
+      "service": "PVGIS",
+      "generated_at": "2026-08-16T02:56:03.427Z"
+    }
   },
   "electrical": {
     "nominal_voltage_v": 230,
@@ -66,8 +79,8 @@
     "max_lead_time_days": 90,
     "target_local_spend_percent": 60
   },
-  "context_version": "0.1",
-  "resolved_at": "2026-08-16T02:31:25.183Z",
+  "context_version": "0.2",
+  "resolved_at": "2026-08-16T03:00:30.409Z",
   "procurement_context": {
     "currency": "EUR",
     "destination": {
@@ -94,7 +107,7 @@
       "postal_code": true,
       "jurisdiction": true,
       "climate": false,
-      "solar": false,
+      "solar": true,
       "electrical": true,
       "logistics": true,
       "procurement": true
@@ -102,10 +115,11 @@
     "ready_for_product_search": true,
     "ready_for_regulatory_screen": true,
     "ready_for_logistics_screen": true,
-    "ready_for_solar_optimization": false,
+    "ready_for_solar_resource_screen": true,
+    "ready_for_solar_product_sizing": true,
+    "ready_for_energy_code_screen": false,
     "unresolved": [
-      "climate",
-      "solar"
+      "climate"
     ]
   }
 }
