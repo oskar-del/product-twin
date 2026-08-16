@@ -1,0 +1,25 @@
+{
+  "version": "0.1",
+  "principle": "A showroom is a curated Product Twin scene graph plus a guided narrative. It is not a separate fake catalogue.",
+  "scene_fields": {
+    "identity": ["scene_id", "name", "location_archetype", "property_archetype", "room_type"],
+    "vibe_dna": ["style_tags", "warmth", "formality", "minimalism", "material_richness", "color_palette", "lighting_character"],
+    "commercial": ["budget_tier", "target_room_budget", "target_house_budget", "locality_preference", "availability_horizon"],
+    "environment": ["geometry_ref", "sun_context", "time_of_day", "camera_path", "waypoints"],
+    "placements": ["placement_id", "twin_id_or_reference", "category_id", "avatar_id", "transform", "locked", "role"],
+    "materials": ["surface_id", "material_twin_id", "avatar_id", "real_world_scale", "installation_system"],
+    "story": ["sequence", "story_beat", "why_it_works", "design_principle", "interaction_hotspot"],
+    "actions": ["save_scene", "save_product", "reject_product", "swap_product", "swap_material", "change_budget", "apply_to_my_house", "quote_scene"]
+  },
+  "experience_modes": [
+    {"id":"GUIDED_TOUR","description":"Curated IKEA-like path through a sequence of scenes with deliberate reveals and design lessons."},
+    {"id":"FREE_ROAM","description":"Move freely through the house/showroom and inspect any Product Twin."},
+    {"id":"SHOP_SCENE","description":"Show real products, materials, offers, substitutes and scene/project budget."},
+    {"id":"VALUE_ENGINEER","description":"Keep the vibe while reducing cost, lead time or sourcing distance."},
+    {"id":"APPLY_TO_PROJECT","description":"Transfer vibe DNA, selected Twins and design relationships into the user's own geometry and rerun fit/compliance/logistics."}
+  ],
+  "behavioral_events": [
+    "scene_entered", "scene_completed", "dwell_time", "camera_focus", "product_opened", "product_saved", "product_rejected", "substitute_chosen", "material_saved", "budget_changed", "scene_applied_to_project"
+  ],
+  "learning_rule": "Behavior updates style and procurement preferences, but never overrides technical/regulatory project constraints."
+}
