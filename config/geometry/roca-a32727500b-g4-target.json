@@ -1,0 +1,52 @@
+{
+  "version": "0.1",
+  "target_id": "ROCA_A32727500B_G4_V0_1",
+  "category_id": "BATH.BASINS",
+  "type": "sanitary_fixture",
+  "manufacturer": "Roca",
+  "product_family": "Horizon",
+  "model": "Countertop basin",
+  "reference": "A32727500B",
+  "official_spain_page": "https://www.roca.es/productos/lavabo-encimera-327275..B",
+  "bimobject_page": "https://www.bimobject.com/en/roca/product/327275XXB",
+  "verified": {
+    "dimensions_mm": {"length":600,"width":380,"height":70},
+    "weight_kg": 15,
+    "bowl_depth_mm": 93,
+    "bowl_capacity_l": 8,
+    "material": "vitreous_china",
+    "installation": "countertop",
+    "drain_included": true,
+    "overflow": false,
+    "bim_unique_ref": "327275XXB",
+    "bim_type": "single_object",
+    "ifc_classification": "Sanitary Terminal",
+    "manufactured_in": "Spain"
+  },
+  "commerce": {
+    "source": "Roca Spain",
+    "route": "manufacturer_direct_online",
+    "product_url": "https://www.roca.es/productos/lavabo-encimera-327275..B",
+    "refresh_policy": "live_required"
+  },
+  "rights": {
+    "source": "BIMobject current user terms + Roca professional BIM statements",
+    "project_use_scope": "professional building-project drawings/materials/project documents",
+    "asset_redistribution": "not_allowed",
+    "platform_wide_cache": "not_allowed_without_separate_permission",
+    "ai_training": "not_allowed",
+    "product_twin_policy": "manufacturer/BIM binary stays external or ephemeral; persist only reference/hash/QA/placement metadata. Use exact asset only in a qualifying building project workflow, not as downloadable Product Twin content."
+  },
+  "geometry": {
+    "target_level": "G4_PROJECT_USE",
+    "preferred_source_order": ["Roca direct 3D CAD", "Roca-authored BIMobject Revit/ArchiCAD"],
+    "scale_gate": "600x380x70 mm",
+    "persistence": "ephemeral_only"
+  },
+  "promotion_blockers": [
+    "capture product-bound exact 3D/CAD or BIM geometry through intended public/professional interface",
+    "validate physical scale and identity",
+    "record exact project-use rights scope and redistribution restrictions",
+    "refresh direct Spain commerce route"
+  ]
+}
