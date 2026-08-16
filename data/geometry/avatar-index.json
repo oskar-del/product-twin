@@ -1,22 +1,23 @@
 {
   "generated_at": "2026-08-16",
   "summary": {
-    "promoted_avatars": 7,
+    "promoted_avatars": 9,
     "candidates": 1,
-    "indexed_total": 8,
+    "indexed_total": 10,
     "G0": 0,
     "G1": 0,
-    "G2": 7,
+    "G2": 9,
     "G3_promoted": 0,
     "G3_candidates": 1,
     "G4_promoted": 0,
     "G5_promoted": 0,
-    "object_avatars": 3,
-    "material_avatars": 2,
-    "system_avatars": 3,
+    "promoted_object_avatars": 5,
+    "promoted_material_or_material_system_avatars": 2,
+    "promoted_system_or_component_avatars": 3,
     "exact_manufacturer_geometry_candidates": 1,
-    "dimension_verified_proxies": 7,
-    "material_repeat_takeoff_pipeline_passed": true
+    "dimension_verified_proxies": 9,
+    "material_repeat_takeoff_pipeline_passed": true,
+    "v0_mixed_avatar_index_count_met": true
   },
   "avatars": [
     {
@@ -130,6 +131,39 @@
       "shape": "rectangular board/repeat proxy; exact groove/bevel profile and proprietary appearance not claimed",
       "takeoff_test": {"area_m2":20,"waste_percent":10,"preliminary_boards_per_m2":3.7932669512,"ordered_boards":84},
       "next_gate": "authorized profile/PBR geometry + live Spain/EU offer/RFQ + project-specific fixing/joist layout"
+    },
+    {
+      "avatar_id": "AVATAR_ROCA_A32727500B_G2_BASIN_PROXY",
+      "category_id": "BATH.BASINS",
+      "manufacturer": "Roca",
+      "model": "A32727500B",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_proxy",
+      "asset_path": "data/geometry/avatars/roca-a32727500b-g2-basin-proxy.glb",
+      "identity": "exact_manufacturer_reference",
+      "scale": "verified 600x380x70mm envelope",
+      "shape": "schematic countertop-basin proxy; exact Roca industrial-design geometry not claimed",
+      "specification": {"material":"porcelain","installation_type":"countertop","bowl_capacity_l":8,"drain_included":true,"tap_included":false},
+      "commerce": {"merchant":"Roca Spain","type":"manufacturer_direct_online","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized exact CAD/BIM geometry + connection geometry + live price/stock refresh"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_SKURUP_80407114_G2_PENDANT_PROXY",
+      "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+      "manufacturer": "IKEA",
+      "product_family": "SKURUP",
+      "article_no": "804.071.14",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_proxy",
+      "asset_path": "data/geometry/avatars/ikea-skurup-80407114-g2-pendant-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 380mm diameter x 290mm fixed shade envelope; 1500mm cord is parametric placement metadata",
+      "shape": "generic conical pendant proxy; exact IKEA industrial-design geometry not claimed",
+      "specification": {"max_power_w":22,"lamp_base":"E27","shade_material":"steel","ce_marked":true,"mounting":"ceiling hook"},
+      "commerce": {"merchant":"IKEA Spain","type":"retailer_direct_online","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized exact geometry/render rights + photometric data + live stock/delivery refresh"
     }
   ],
   "candidates": [
