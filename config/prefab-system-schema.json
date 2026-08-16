@@ -1,0 +1,41 @@
+{
+  "version": "0.1",
+  "principle": "Prefab is modeled as a configurable building-system Twin, not as a single retail SKU.",
+  "canonical_categories": [
+    {"id":"PREFAB.BUILDING.HOUSE_KIT","name":"Whole-house prefab / kit systems"},
+    {"id":"PREFAB.BUILDING.MODULE","name":"Volumetric building modules"},
+    {"id":"PREFAB.BUILDING.CABIN","name":"Cabins / pods / tiny-home modules"},
+    {"id":"PREFAB.ROOM.BATHROOM_POD","name":"Bathroom pods"},
+    {"id":"PREFAB.ROOM.KITCHEN_POD","name":"Kitchen pods"},
+    {"id":"PREFAB.STRUCTURE.LSF","name":"Light-gauge steel frame kits"},
+    {"id":"PREFAB.STRUCTURE.SIP","name":"Structural insulated panel systems"},
+    {"id":"PREFAB.STRUCTURE.CLT","name":"CLT / mass-timber systems"},
+    {"id":"PREFAB.FACADE.PANEL","name":"Prefabricated facade panels"},
+    {"id":"PREFAB.MEP.RACK","name":"Prefabricated MEP racks / service modules"}
+  ],
+  "system_twin": {
+    "identity": ["manufacturer","system_name","model_family","configuration_id","factory_locations"],
+    "design_rules": ["structural_grid","module_width_range","module_length_range","storey_height_range","max_storeys","span_limits","opening_rules","stacking_rules","connection_nodes","transport_split_rules"],
+    "structural": ["primary_system","design_codes","wind_limits","seismic_limits","snow_load_limits","corrosion_environment","foundation_interfaces"],
+    "envelope": ["wall_build_up","roof_build_up","floor_build_up","U_values","airtightness","waterproofing","facade_options","window_interfaces"],
+    "MEP": ["electrical_system","plumbing_interfaces","HVAC_options","service_risers","solar_readiness","battery_readiness","smart_home_options"],
+    "configuration": ["allowed_room_modules","bathroom_options","kitchen_options","facade_variants","finish_variants","roof_variants","terrace_options","customization_limits"],
+    "geometry": ["parametric_model","IFC","BIM","GLB_preview","fabrication_drawings","connection_geometry"],
+    "manufacture": ["factory_capacity","lead_time","QA_certificates","inspection_options","production_milestones"],
+    "logistics": ["packed_module_dimensions","shipping_weight","container_or_flat_rack_strategy","container_count","origin_port","destination_port","inland_transport","oversize_constraints","crane_required","site_storage","Incoterms"],
+    "site": ["access_requirements","crane_radius","foundation_tolerances","assembly_sequence","crew_requirements","weather_constraints"],
+    "regulatory": ["CE_or_applicable_product_evidence","structural_code_mapping","fire_strategy","energy_performance","local_building_permit_dependency","professional_signoff"],
+    "commerce": ["pricing_basis","base_system_price","option_prices","freight_quote","installation_quote","tax_and_duty","warranty","payment_schedule","RFQ_or_order_route"]
+  },
+  "design_workflow": [
+    "site and regulation resolve first",
+    "filter prefab systems by structural/environmental limits",
+    "load manufacturer module/grid rules into generative design",
+    "design house only inside valid configuration envelope",
+    "produce configured system Twin + local foundation/site package",
+    "run local professional/code review",
+    "request factory quote + freight + assembly quote",
+    "optimize configuration against landed cost and programme"
+  ],
+  "important_distinction": "The architect can still design creatively, but the AI must know which dimensions and assemblies are factory-valid. A design outside the supplier's configuration envelope is a new/custom manufacturing RFQ, not an off-the-shelf prefab configuration."
+}
