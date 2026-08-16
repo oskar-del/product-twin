@@ -1,0 +1,73 @@
+{
+  "evidence_id": "MFR_HUAWEI_SUN2000_10KTL_M1_V0_1",
+  "subject": {
+    "manufacturer": "Huawei",
+    "model": "SUN2000-10KTL-M1",
+    "category_id": "ENERGY.SOLAR.INVERTER",
+    "manufacturer_sku": null,
+    "gtin": null
+  },
+  "authority": {
+    "grade": "A_MANUFACTURER",
+    "publisher": "Huawei FusionSolar",
+    "source_uri": "https://solar.huawei.com/sa-en/products/sun2000-3-4-5-6-8-10ktl-m1/specs/",
+    "source_type": "manufacturer_product_page",
+    "territory": "official Huawei model-family specification; Spain applicability requires local confirmation",
+    "published_or_updated_at": null,
+    "retrieved_at": "2026-08-16T03:10:00Z",
+    "version_or_revision": "SUN2000-3/4/5/6/8/10KTL-M1 High Current Version"
+  },
+  "market_evidence": [
+    {
+      "publisher": "Huawei FusionSolar España",
+      "source_uri": "https://solar.huawei.com/es/residential/compare-smart-energy-controller-three-phase/",
+      "claim": "SUN2000-3/4/5/6/8/10KTL-M1 High Current Version is listed in Huawei Spain's residential three-phase inverter comparison."
+    }
+  ],
+  "claims": {
+    "rated_ac_power_w": 10000,
+    "recommended_max_pv_power_wp": 15000,
+    "max_dc_input_power_w": 15000,
+    "max_input_voltage_v": 1100,
+    "mppt_voltage_range_v": [140, 980],
+    "startup_voltage_v": 200,
+    "rated_input_voltage_v": 600,
+    "max_input_current_per_mppt_a": 13.5,
+    "max_short_circuit_current_a": 19.5,
+    "mppt_count": 2,
+    "max_inputs_per_mppt": 1,
+    "ac_nominal_voltage_v": [380, 400],
+    "phase_voltage_v": [220, 230],
+    "grid_configuration": "three-phase 3W/N+PE",
+    "frequency_hz": [50, 60],
+    "max_output_current_a": 16.9,
+    "max_efficiency_percent": 98.6,
+    "european_weighted_efficiency_percent": 98.1,
+    "ip_rating": "IP65",
+    "operating_temperature_c": [-25, 60],
+    "weight_kg": 17,
+    "width_mm": 525,
+    "height_mm": 470,
+    "depth_mm": 146.5,
+    "battery_compatible_models": ["LUNA2000-5/10/15-S0", "LUNA2000-7/14/21-S1"],
+    "communications": ["RS485", "WLAN/Ethernet via Smart Dongle-WLAN-FE", "4G/3G/2G via Smart Dongle-4G"]
+  },
+  "manufacturer_listed_standards": [
+    "EN/IEC 62109-1",
+    "EN/IEC 62109-2",
+    "IEC 62116",
+    "IEC 61727"
+  ],
+  "compliance_documents": [],
+  "limitations": [
+    "Numerical claims are extracted from Huawei's official model-family specification page; Product Twin still needs the exact local/EU datasheet revision and Spain-specific grid/conformity evidence before regulatory PASS.",
+    "Huawei's Spain site confirms the M1 family is presented in its Spanish residential three-phase range, but that does not prove suitability for a specific Spanish connection agreement.",
+    "Project electrical phase is currently unknown, so this three-phase inverter cannot yet be marked project-compatible.",
+    "No commerce offer is linked by this evidence record; commerce is resolved independently and live."
+  ],
+  "verification": {
+    "identity": "verified",
+    "technical": "verified",
+    "territory_applicability": "review"
+  }
+}
