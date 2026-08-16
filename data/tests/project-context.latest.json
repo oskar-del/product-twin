@@ -1,0 +1,111 @@
+
+> product-twin@0.5.0 context:test
+> node scripts/project-context-resolve.mjs
+
+{
+  "project_id": "PROJECT_MARBELLA_VILLA_001",
+  "name": "Marbella Villa Whole-Building Test",
+  "project_type": "villa",
+  "location": {
+    "lat": 36.51,
+    "lon": -4.97,
+    "address": null,
+    "postal_code": "29660",
+    "municipality": "Marbella",
+    "province": "Málaga",
+    "region": "Andalucía",
+    "country": "ES"
+  },
+  "jurisdiction": {
+    "resolved_id": "ES-MA-MARBELLA",
+    "chain": [
+      "EU",
+      "ES",
+      "ES-AN",
+      "ES-MA",
+      "ES-MA-MARBELLA"
+    ],
+    "status": "provisional"
+  },
+  "climate": {
+    "cte_zone": null,
+    "weather_dataset": null,
+    "design_temperature_summer_c": null,
+    "design_temperature_winter_c": null,
+    "status": "unresolved"
+  },
+  "solar": {
+    "analysis_status": "not_run",
+    "irradiance_source": null,
+    "roof_geometry_source": null,
+    "usable_roof_area_m2": null,
+    "annual_yield_estimate_kwh": null
+  },
+  "electrical": {
+    "nominal_voltage_v": 230,
+    "frequency_hz": 50,
+    "phase": "unknown",
+    "grid_connection_status": "planned"
+  },
+  "logistics": {
+    "local_radius_km": 75,
+    "regional_scope": "Andalucía",
+    "national_scope": "Spain",
+    "customs_zone": "EU",
+    "site_access": {
+      "max_vehicle_length_m": null,
+      "max_vehicle_weight_t": null,
+      "crane_possible": null,
+      "forklift_possible": null,
+      "delivery_time_windows": []
+    }
+  },
+  "procurement": {
+    "currency": "EUR",
+    "local_preference": "prefer",
+    "max_lead_time_days": 90,
+    "target_local_spend_percent": 60
+  },
+  "context_version": "0.1",
+  "resolved_at": "2026-08-16T02:31:25.183Z",
+  "procurement_context": {
+    "currency": "EUR",
+    "destination": {
+      "country": "ES",
+      "region": "Andalucía",
+      "municipality": "Marbella",
+      "postal_code": "29660",
+      "coordinates": {
+        "lat": 36.51,
+        "lon": -4.97
+      }
+    },
+    "sourcing_preference": {
+      "local_preference": "prefer",
+      "local_radius_km": 75,
+      "target_local_spend_percent": 60,
+      "max_lead_time_days": 90
+    }
+  },
+  "completeness": {
+    "checks": {
+      "coordinates": true,
+      "country": true,
+      "postal_code": true,
+      "jurisdiction": true,
+      "climate": false,
+      "solar": false,
+      "electrical": true,
+      "logistics": true,
+      "procurement": true
+    },
+    "ready_for_product_search": true,
+    "ready_for_regulatory_screen": true,
+    "ready_for_logistics_screen": true,
+    "ready_for_solar_optimization": false,
+    "unresolved": [
+      "climate",
+      "solar"
+    ]
+  }
+}

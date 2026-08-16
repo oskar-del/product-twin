@@ -1,0 +1,495 @@
+{
+  "summary": {
+    "generated_at": "2026-08-16T02:31:25.331Z",
+    "test_id": "WHOLE_BUILDING_10_V0_1",
+    "project_id": "PROJECT_MARBELLA_VILLA_001",
+    "project_context": {
+      "checks": {
+        "coordinates": true,
+        "country": true,
+        "postal_code": true,
+        "jurisdiction": true,
+        "climate": false,
+        "solar": false,
+        "electrical": true,
+        "logistics": true,
+        "procurement": true
+      },
+      "ready_for_product_search": true,
+      "ready_for_regulatory_screen": true,
+      "ready_for_logistics_screen": true,
+      "ready_for_solar_optimization": false,
+      "unresolved": [
+        "climate",
+        "solar"
+      ]
+    },
+    "slots": 10,
+    "categories_resolved": 10,
+    "categories_with_supply": 6,
+    "technical_profiles_available": 8,
+    "regulatory_clear_or_review": 7,
+    "end_to_end_ready": 4,
+    "blocker_counts": {
+      "regulatory_gate": 3,
+      "supply_missing": 4,
+      "specification_profile_missing": 2
+    }
+  },
+  "slots": [
+    {
+      "slot_id": "WB10_01",
+      "category_id": "STRUCTURE.CONCRETE",
+      "label": "Structural concrete",
+      "phase": "substructure",
+      "quantity_basis": "m3",
+      "required_on_site_day": 30,
+      "canonical_category": {
+        "id": "STRUCTURE.CONCRETE",
+        "name": "Concrete, screeds & mortars",
+        "profile": "concrete_material"
+      },
+      "technical_specification_status": {
+        "state": "READY_FOR_REQUIREMENT_CAPTURE",
+        "profile": "concrete_material"
+      },
+      "candidate_supply_count": 149,
+      "best_offer": null,
+      "supply_origin": null,
+      "ships_to_project": null,
+      "landed_cost": null,
+      "lead_time": null,
+      "regulatory_state": "HOLD",
+      "regulatory_rules": [
+        {
+          "rule_id": "EU.CPR.EVIDENCE_REQUIRED_WHERE_APPLICABLE",
+          "source_id": "EU.CPR",
+          "jurisdiction_id": "EU",
+          "stage": "product_selection",
+          "state": "HOLD",
+          "missing_evidence": [
+            "declaration_of_performance_or_applicable_conformity_evidence"
+          ],
+          "professional_signoff": false,
+          "decision_logic": "If a construction product falls within an applicable harmonised route, require the corresponding declared-performance / CE evidence before marking it compliant for the intended use."
+        }
+      ],
+      "missing_evidence": [
+        "declaration_of_performance_or_applicable_conformity_evidence"
+      ],
+      "geometry_or_bim_status": {
+        "geometry_ready": 0,
+        "render_ready": 0
+      },
+      "required_order_date": null,
+      "procurement_route": "OFFER_RESOLUTION_REQUIRED",
+      "blockers": [
+        "regulatory_gate"
+      ]
+    },
+    {
+      "slot_id": "WB10_02",
+      "category_id": "OPENINGS.WINDOWS",
+      "label": "Window system",
+      "phase": "envelope",
+      "quantity_basis": "schedule",
+      "required_on_site_day": 150,
+      "canonical_category": {
+        "id": "OPENINGS.WINDOWS",
+        "name": "Windows",
+        "profile": "opening_system"
+      },
+      "technical_specification_status": {
+        "state": "READY_FOR_REQUIREMENT_CAPTURE",
+        "profile": "opening_system"
+      },
+      "candidate_supply_count": 0,
+      "best_offer": null,
+      "supply_origin": null,
+      "ships_to_project": null,
+      "landed_cost": null,
+      "lead_time": null,
+      "regulatory_state": "HOLD",
+      "regulatory_rules": [
+        {
+          "rule_id": "EU.CPR.EVIDENCE_REQUIRED_WHERE_APPLICABLE",
+          "source_id": "EU.CPR",
+          "jurisdiction_id": "EU",
+          "stage": "product_selection",
+          "state": "HOLD",
+          "missing_evidence": [
+            "declaration_of_performance_or_applicable_conformity_evidence"
+          ],
+          "professional_signoff": false,
+          "decision_logic": "If a construction product falls within an applicable harmonised route, require the corresponding declared-performance / CE evidence before marking it compliant for the intended use."
+        }
+      ],
+      "missing_evidence": [
+        "declaration_of_performance_or_applicable_conformity_evidence"
+      ],
+      "geometry_or_bim_status": {
+        "geometry_ready": 0,
+        "render_ready": 0
+      },
+      "required_order_date": null,
+      "procurement_route": "SOURCE_DISCOVERY_REQUIRED",
+      "blockers": [
+        "supply_missing",
+        "regulatory_gate"
+      ]
+    },
+    {
+      "slot_id": "WB10_03",
+      "category_id": "FINISHES.STONE",
+      "label": "Natural stone",
+      "phase": "finishes",
+      "quantity_basis": "m2",
+      "required_on_site_day": 230,
+      "canonical_category": {
+        "id": "FINISHES.STONE",
+        "name": "Natural stone",
+        "profile": "surface_material"
+      },
+      "technical_specification_status": {
+        "state": "READY_FOR_REQUIREMENT_CAPTURE",
+        "profile": "surface_material"
+      },
+      "candidate_supply_count": 148,
+      "best_offer": null,
+      "supply_origin": null,
+      "ships_to_project": null,
+      "landed_cost": null,
+      "lead_time": null,
+      "regulatory_state": "HOLD",
+      "regulatory_rules": [
+        {
+          "rule_id": "EU.CPR.EVIDENCE_REQUIRED_WHERE_APPLICABLE",
+          "source_id": "EU.CPR",
+          "jurisdiction_id": "EU",
+          "stage": "product_selection",
+          "state": "HOLD",
+          "missing_evidence": [
+            "declaration_of_performance_or_applicable_conformity_evidence"
+          ],
+          "professional_signoff": false,
+          "decision_logic": "If a construction product falls within an applicable harmonised route, require the corresponding declared-performance / CE evidence before marking it compliant for the intended use."
+        }
+      ],
+      "missing_evidence": [
+        "declaration_of_performance_or_applicable_conformity_evidence"
+      ],
+      "geometry_or_bim_status": {
+        "geometry_ready": 0,
+        "render_ready": 0
+      },
+      "required_order_date": null,
+      "procurement_route": "OFFER_RESOLUTION_REQUIRED",
+      "blockers": [
+        "regulatory_gate"
+      ]
+    },
+    {
+      "slot_id": "WB10_04",
+      "category_id": "POOL.PIPE",
+      "label": "Pool pressure pipe",
+      "phase": "pool_first_fix",
+      "quantity_basis": "m",
+      "required_on_site_day": 170,
+      "canonical_category": {
+        "id": "POOL.PIPE",
+        "name": "Pool pipe",
+        "profile": "pipe_component"
+      },
+      "technical_specification_status": {
+        "state": "READY_FOR_REQUIREMENT_CAPTURE",
+        "profile": "pipe_component"
+      },
+      "candidate_supply_count": 89,
+      "best_offer": null,
+      "supply_origin": null,
+      "ships_to_project": null,
+      "landed_cost": null,
+      "lead_time": null,
+      "regulatory_state": "NOT_APPLICABLE",
+      "regulatory_rules": [],
+      "missing_evidence": [],
+      "geometry_or_bim_status": {
+        "geometry_ready": 0,
+        "render_ready": 0
+      },
+      "required_order_date": null,
+      "procurement_route": "OFFER_RESOLUTION_REQUIRED",
+      "blockers": []
+    },
+    {
+      "slot_id": "WB10_05",
+      "category_id": "POOL.PUMPS",
+      "label": "Pool circulation pump",
+      "phase": "pool_plant",
+      "quantity_basis": "each",
+      "required_on_site_day": 260,
+      "canonical_category": {
+        "id": "POOL.PUMPS",
+        "name": "Pool pumps",
+        "profile": "mechanical_equipment"
+      },
+      "technical_specification_status": {
+        "state": "READY_FOR_REQUIREMENT_CAPTURE",
+        "profile": "mechanical_equipment"
+      },
+      "candidate_supply_count": 175,
+      "best_offer": null,
+      "supply_origin": null,
+      "ships_to_project": null,
+      "landed_cost": null,
+      "lead_time": null,
+      "regulatory_state": "NOT_APPLICABLE",
+      "regulatory_rules": [],
+      "missing_evidence": [],
+      "geometry_or_bim_status": {
+        "geometry_ready": 0,
+        "render_ready": 0
+      },
+      "required_order_date": null,
+      "procurement_route": "OFFER_RESOLUTION_REQUIRED",
+      "blockers": []
+    },
+    {
+      "slot_id": "WB10_06",
+      "category_id": "ENERGY.SOLAR.PANEL",
+      "label": "PV module",
+      "phase": "energy",
+      "quantity_basis": "each",
+      "required_on_site_day": 300,
+      "canonical_category": {
+        "id": "ENERGY.SOLAR.PANEL",
+        "name": "Photovoltaic panels",
+        "profile": "pv_module"
+      },
+      "technical_specification_status": {
+        "state": "HOLD",
+        "reason": "Specification profile 'pv_module' is not yet defined"
+      },
+      "candidate_supply_count": 0,
+      "best_offer": null,
+      "supply_origin": null,
+      "ships_to_project": null,
+      "landed_cost": null,
+      "lead_time": null,
+      "regulatory_state": "REVIEW",
+      "regulatory_rules": [
+        {
+          "rule_id": "ES.ELECTRICAL.REBT_REVIEW",
+          "source_id": "ES.REBT",
+          "jurisdiction_id": "ES",
+          "stage": "installation",
+          "state": "REVIEW",
+          "missing_evidence": [],
+          "professional_signoff": true,
+          "decision_logic": "Electrical product suitability is not enough; installation design and execution must be checked against applicable REBT requirements and project conditions."
+        },
+        {
+          "rule_id": "ESAN.SOLAR.REGISTRATION_PATH",
+          "source_id": "ESAN.SOLAR.AUTOCONSUMO",
+          "jurisdiction_id": "ES-AN",
+          "stage": "connection",
+          "state": "REVIEW",
+          "missing_evidence": [],
+          "professional_signoff": true,
+          "decision_logic": "A proposed self-consumption system must be routed through the applicable Andalusian legalization/registration path based on system configuration and installed capacity."
+        }
+      ],
+      "missing_evidence": [],
+      "geometry_or_bim_status": {
+        "geometry_ready": 0,
+        "render_ready": 0
+      },
+      "required_order_date": null,
+      "procurement_route": "SOURCE_DISCOVERY_REQUIRED",
+      "blockers": [
+        "specification_profile_missing",
+        "supply_missing"
+      ]
+    },
+    {
+      "slot_id": "WB10_07",
+      "category_id": "ENERGY.SOLAR.INVERTER",
+      "label": "PV inverter",
+      "phase": "energy",
+      "quantity_basis": "each",
+      "required_on_site_day": 300,
+      "canonical_category": {
+        "id": "ENERGY.SOLAR.INVERTER",
+        "name": "Solar inverters",
+        "profile": "power_electronics"
+      },
+      "technical_specification_status": {
+        "state": "HOLD",
+        "reason": "Specification profile 'power_electronics' is not yet defined"
+      },
+      "candidate_supply_count": 0,
+      "best_offer": null,
+      "supply_origin": null,
+      "ships_to_project": null,
+      "landed_cost": null,
+      "lead_time": null,
+      "regulatory_state": "REVIEW",
+      "regulatory_rules": [
+        {
+          "rule_id": "ES.ELECTRICAL.REBT_REVIEW",
+          "source_id": "ES.REBT",
+          "jurisdiction_id": "ES",
+          "stage": "installation",
+          "state": "REVIEW",
+          "missing_evidence": [],
+          "professional_signoff": true,
+          "decision_logic": "Electrical product suitability is not enough; installation design and execution must be checked against applicable REBT requirements and project conditions."
+        },
+        {
+          "rule_id": "ESAN.SOLAR.REGISTRATION_PATH",
+          "source_id": "ESAN.SOLAR.AUTOCONSUMO",
+          "jurisdiction_id": "ES-AN",
+          "stage": "connection",
+          "state": "REVIEW",
+          "missing_evidence": [],
+          "professional_signoff": true,
+          "decision_logic": "A proposed self-consumption system must be routed through the applicable Andalusian legalization/registration path based on system configuration and installed capacity."
+        }
+      ],
+      "missing_evidence": [],
+      "geometry_or_bim_status": {
+        "geometry_ready": 0,
+        "render_ready": 0
+      },
+      "required_order_date": null,
+      "procurement_route": "SOURCE_DISCOVERY_REQUIRED",
+      "blockers": [
+        "specification_profile_missing",
+        "supply_missing"
+      ]
+    },
+    {
+      "slot_id": "WB10_08",
+      "category_id": "HVAC.HEAT_PUMPS",
+      "label": "Heat pump",
+      "phase": "mep_second_fix",
+      "quantity_basis": "each",
+      "required_on_site_day": 260,
+      "canonical_category": {
+        "id": "HVAC.HEAT_PUMPS",
+        "name": "Heat pumps & chillers",
+        "profile": "mechanical_equipment"
+      },
+      "technical_specification_status": {
+        "state": "READY_FOR_REQUIREMENT_CAPTURE",
+        "profile": "mechanical_equipment"
+      },
+      "candidate_supply_count": 0,
+      "best_offer": null,
+      "supply_origin": null,
+      "ships_to_project": null,
+      "landed_cost": null,
+      "lead_time": null,
+      "regulatory_state": "REVIEW",
+      "regulatory_rules": [
+        {
+          "rule_id": "ES.THERMAL.RITE_REVIEW",
+          "source_id": "ES.RITE",
+          "jurisdiction_id": "ES",
+          "stage": "design",
+          "state": "REVIEW",
+          "missing_evidence": [],
+          "professional_signoff": true,
+          "decision_logic": "Thermal equipment selection must be checked as part of a compliant thermal system, including energy-efficiency and control requirements."
+        }
+      ],
+      "missing_evidence": [],
+      "geometry_or_bim_status": {
+        "geometry_ready": 0,
+        "render_ready": 0
+      },
+      "required_order_date": null,
+      "procurement_route": "SOURCE_DISCOVERY_REQUIRED",
+      "blockers": [
+        "supply_missing"
+      ]
+    },
+    {
+      "slot_id": "WB10_09",
+      "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+      "label": "Pendant luminaire",
+      "phase": "final_fix",
+      "quantity_basis": "each",
+      "required_on_site_day": 340,
+      "canonical_category": {
+        "id": "ELECTRICAL.LUMINAIRES.PENDANT",
+        "name": "Pendant lights",
+        "profile": "luminaire"
+      },
+      "technical_specification_status": {
+        "state": "READY_FOR_REQUIREMENT_CAPTURE",
+        "profile": "luminaire"
+      },
+      "candidate_supply_count": 553,
+      "best_offer": null,
+      "supply_origin": null,
+      "ships_to_project": null,
+      "landed_cost": null,
+      "lead_time": null,
+      "regulatory_state": "REVIEW",
+      "regulatory_rules": [
+        {
+          "rule_id": "ES.ELECTRICAL.REBT_REVIEW",
+          "source_id": "ES.REBT",
+          "jurisdiction_id": "ES",
+          "stage": "installation",
+          "state": "REVIEW",
+          "missing_evidence": [],
+          "professional_signoff": true,
+          "decision_logic": "Electrical product suitability is not enough; installation design and execution must be checked against applicable REBT requirements and project conditions."
+        }
+      ],
+      "missing_evidence": [],
+      "geometry_or_bim_status": {
+        "geometry_ready": 0,
+        "render_ready": 0
+      },
+      "required_order_date": null,
+      "procurement_route": "OFFER_RESOLUTION_REQUIRED",
+      "blockers": []
+    },
+    {
+      "slot_id": "WB10_10",
+      "category_id": "FFE.SEATING.SOFA",
+      "label": "Living-room sofa",
+      "phase": "ff&e",
+      "quantity_basis": "each",
+      "required_on_site_day": 390,
+      "canonical_category": {
+        "id": "FFE.SEATING.SOFA",
+        "name": "Sofas & sectionals",
+        "profile": "furniture"
+      },
+      "technical_specification_status": {
+        "state": "READY_FOR_REQUIREMENT_CAPTURE",
+        "profile": "furniture"
+      },
+      "candidate_supply_count": 537,
+      "best_offer": null,
+      "supply_origin": null,
+      "ships_to_project": null,
+      "landed_cost": null,
+      "lead_time": null,
+      "regulatory_state": "NOT_APPLICABLE",
+      "regulatory_rules": [],
+      "missing_evidence": [],
+      "geometry_or_bim_status": {
+        "geometry_ready": 0,
+        "render_ready": 0
+      },
+      "required_order_date": null,
+      "procurement_route": "OFFER_RESOLUTION_REQUIRED",
+      "blockers": []
+    }
+  ]
+}
