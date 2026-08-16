@@ -1,0 +1,40 @@
+{
+  "version": "0.1",
+  "purpose": "Describe how any external source can contribute identity, technical evidence, commerce, logistics or procurement to Product Twin without redefining the canonical taxonomy.",
+  "source_adapter": {
+    "source_id": "string",
+    "name": "string",
+    "source_type": "global_catalog | merchant_storefront | manufacturer | distributor | trade_portal | bim_library | material_library | logistics_provider | other",
+    "territories": "array",
+    "authentication": {
+      "catalog": "none | api_key | oauth | account | other",
+      "pricing": "none | account | quote | unavailable",
+      "stock": "none | account | quote | unavailable",
+      "ordering": "none | account | external_checkout | quote | unavailable"
+    },
+    "capabilities": {
+      "identity": "boolean",
+      "technical_evidence": "boolean",
+      "geometry": "boolean",
+      "bim": "boolean",
+      "live_price": "boolean",
+      "live_stock": "boolean",
+      "cart": "boolean",
+      "order": "boolean",
+      "quote": "boolean",
+      "invoice": "boolean",
+      "delivery_tracking": "boolean",
+      "physical_locations": "boolean"
+    },
+    "taxonomy_mappings": "array",
+    "locations": "array",
+    "refresh_policy": "live | periodic | authoritative_versioned",
+    "notes": "array"
+  },
+  "principles": [
+    "A source can be excellent for one graph and weak for another.",
+    "Manufacturer technical truth and commercial availability remain independently versioned.",
+    "Authentication requirements are explicit so Product Twin can distinguish public discovery from trade-account procurement.",
+    "Physical locations are stored only when they are evidenced as relevant supply/service nodes, not inferred from a corporate headquarters."
+  ]
+}
