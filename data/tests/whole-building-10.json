@@ -1,0 +1,32 @@
+{
+  "test_id": "WHOLE_BUILDING_10_V0_1",
+  "project_id": "PROJECT_MARBELLA_VILLA_001",
+  "purpose": "Prove that radically different building products can pass through one Product Twin requirement, compliance, sourcing, logistics and procurement model.",
+  "requirements": [
+    {"slot_id":"WB10_01","category_id":"STRUCTURE.CONCRETE","label":"Structural concrete","phase":"substructure","quantity_basis":"m3","required_on_site_day":30},
+    {"slot_id":"WB10_02","category_id":"OPENINGS.WINDOWS","label":"Window system","phase":"envelope","quantity_basis":"schedule","required_on_site_day":150},
+    {"slot_id":"WB10_03","category_id":"FINISHES.STONE","label":"Natural stone","phase":"finishes","quantity_basis":"m2","required_on_site_day":230},
+    {"slot_id":"WB10_04","category_id":"POOL.PIPE","label":"Pool pressure pipe","phase":"pool_first_fix","quantity_basis":"m","required_on_site_day":170},
+    {"slot_id":"WB10_05","category_id":"POOL.PUMPS","label":"Pool circulation pump","phase":"pool_plant","quantity_basis":"each","required_on_site_day":260},
+    {"slot_id":"WB10_06","category_id":"ENERGY.SOLAR.PANEL","label":"PV module","phase":"energy","quantity_basis":"each","required_on_site_day":300},
+    {"slot_id":"WB10_07","category_id":"ENERGY.SOLAR.INVERTER","label":"PV inverter","phase":"energy","quantity_basis":"each","required_on_site_day":300},
+    {"slot_id":"WB10_08","category_id":"HVAC.HEAT_PUMP","label":"Heat pump","phase":"mep_second_fix","quantity_basis":"each","required_on_site_day":260},
+    {"slot_id":"WB10_09","category_id":"ELECTRICAL.LUMINAIRES.PENDANT","label":"Pendant luminaire","phase":"final_fix","quantity_basis":"each","required_on_site_day":340},
+    {"slot_id":"WB10_10","category_id":"FFE.SEATING.SOFA","label":"Living-room sofa","phase":"ff&e","quantity_basis":"each","required_on_site_day":390}
+  ],
+  "required_answers_per_slot": [
+    "canonical_category",
+    "technical_specification_status",
+    "candidate_supply_count",
+    "best_offer",
+    "supply_origin",
+    "ships_to_project",
+    "landed_cost",
+    "lead_time",
+    "regulatory_state",
+    "missing_evidence",
+    "geometry_or_bim_status",
+    "required_order_date",
+    "procurement_route"
+  ]
+}
