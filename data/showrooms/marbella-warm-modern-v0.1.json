@@ -1,0 +1,119 @@
+{
+  "showroom_id": "SHOWROOM_MARBELLA_WARM_MODERN_V0_1",
+  "name": "Marbella Warm Modern",
+  "status": "prototype_curated_scene_graph",
+  "location_archetype": "Marbella / Costa del Sol",
+  "audience": "Client exploring a luxury contemporary villa before committing to a full design brief",
+  "promise": "Walk through a sequence of rooms, learn what you like, then transplant the look into your own project with real products and materials.",
+  "vibe_dna": {
+    "style_tags": ["warm modern", "Mediterranean", "quiet luxury", "natural", "architectural"],
+    "warmth": 0.82,
+    "formality": 0.48,
+    "minimalism": 0.66,
+    "material_richness": 0.78,
+    "palette": ["warm limestone", "cream linen", "smoked oak", "bronze", "soft plaster", "olive green"],
+    "lighting_character": "low warm daylight with layered decorative lighting"
+  },
+  "guided_path": [
+    {
+      "order": 1,
+      "scene_id": "MWM_01_ARRIVAL",
+      "name": "Arrival / first impression",
+      "room_type": "entrance_lobby",
+      "story_beat": "Compression to reveal: stone, shadow, one sculptural light, almost no furniture.",
+      "design_principle": "Luxury through restraint and material scale rather than object count.",
+      "budget_role": "architectural_materials"
+    },
+    {
+      "order": 2,
+      "scene_id": "MWM_02_LIVING",
+      "name": "Sunken living room",
+      "room_type": "living_room",
+      "story_beat": "The hero social room: low cream upholstery, oak, stone, large rug and framed garden view.",
+      "design_principle": "Large calm forms + fewer better objects.",
+      "budget_role": "hero_ffe"
+    },
+    {
+      "order": 3,
+      "scene_id": "MWM_03_DINING",
+      "name": "Dining gallery",
+      "room_type": "dining_room",
+      "story_beat": "Long table, textured wall, pendant rhythm and a strong indoor/outdoor axis.",
+      "design_principle": "Repeat simple elements to create architectural rhythm.",
+      "budget_role": "lighting_and_furniture"
+    },
+    {
+      "order": 4,
+      "scene_id": "MWM_04_PRIMARY_SUITE",
+      "name": "Primary suite",
+      "room_type": "bedroom",
+      "story_beat": "Softer and quieter: upholstered wall, warm oak, indirect light, stone bedside objects.",
+      "design_principle": "Reduce contrast and complexity as privacy increases.",
+      "budget_role": "joinery_textiles_lighting"
+    },
+    {
+      "order": 5,
+      "scene_id": "MWM_05_BATH",
+      "name": "Stone bathroom",
+      "room_type": "bathroom",
+      "story_beat": "One material dominates, with precise bronze fittings and concealed services.",
+      "design_principle": "Continuous surfaces make small rooms feel monolithic and expensive.",
+      "budget_role": "surface_and_fittings"
+    },
+    {
+      "order": 6,
+      "scene_id": "MWM_06_TERRACE",
+      "name": "Pool terrace",
+      "room_type": "outdoor_living",
+      "story_beat": "Outdoor room rather than loose terrace furniture: shade, sofa, stone, planting, dining and water.",
+      "design_principle": "Treat exterior space with the same compositional discipline as interiors.",
+      "budget_role": "outdoor_ffe_landscape"
+    },
+    {
+      "order": 7,
+      "scene_id": "MWM_07_INNOVATION",
+      "name": "New-material studio",
+      "room_type": "materials_gallery",
+      "story_beat": "Compare real stone/timber with lower-cost new systems such as flexible stone, WPC, SPC and PVC/UV stone-look sheet.",
+      "design_principle": "Preserve the visual intention while making material, cost, durability and compliance trade-offs explicit.",
+      "budget_role": "innovation_value_engineering"
+    }
+  ],
+  "live_avatar_placements": [
+    {
+      "placement_id": "MWM_SYS_01",
+      "scene_id": "MWM_07_INNOVATION",
+      "category_id": "ENERGY.SOLAR.INVERTER",
+      "avatar_id": "AVATAR_HUAWEI_SUN2000_10KTL_M1_G2_PROXY",
+      "role": "systems-wall demonstration",
+      "claim_level": "dimension_verified_proxy"
+    },
+    {
+      "placement_id": "MWM_SYS_02",
+      "scene_id": "MWM_07_INNOVATION",
+      "category_id": "POOL.PUMPS",
+      "avatar_id": "AVATAR_ASTRALPOOL_VICTORIA_PLUS_SILENT_VS_67547_G2_PROXY",
+      "role": "plant-room / hidden infrastructure demonstration",
+      "claim_level": "manufacturer-dimensioned proxy"
+    }
+  ],
+  "client_actions": [
+    "save_whole_vibe",
+    "save_individual_product_or_material",
+    "say_too_expensive",
+    "show_lower_cost_same_feel",
+    "show_more_local",
+    "show_more_innovative",
+    "apply_scene_to_my_house",
+    "apply_entire_showroom_dna_to_my_house"
+  ],
+  "future_collections": [
+    "Marbella Sculptural Minimal",
+    "Andalusian Contemporary",
+    "Nordic Mediterranean",
+    "Resort at Home",
+    "Smart Value Marbella",
+    "China New-Build Materials Lab",
+    "Prefab Villa Gallery"
+  ]
+}
