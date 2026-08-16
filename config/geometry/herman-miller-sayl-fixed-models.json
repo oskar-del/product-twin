@@ -1,0 +1,29 @@
+{
+  "version": "0.1",
+  "manufacturer": "Herman Miller",
+  "product_family": "Sayl Chairs",
+  "configuration_family": "Sayl Chair – Suspension Mid Back – Fully Adjustable Arms",
+  "manufacturer_page": "https://www.hermanmiller.com/resources/3d-models-and-planning-tools/product-models/individual/sayl-chair-suspension-mid-back-fully-adjustable-arms/",
+  "manufacturer_usage_context": "Herman Miller describes Product Models as downloads for use in space-planning applications.",
+  "assets": [
+    {
+      "format": "Revit",
+      "url": "https://www.hermanmiller.com/content/dam/hmicom/app_assets/product_models/s/sayl_chairs/sayl_chair_suspension_mid_back_fully_adjustable_arms/HMI_Sayl_Chair_Suspension_Mid_Back_Fully_Adjustable_Arms_rfa.zip",
+      "expected_public_page_size_mb": 1.4,
+      "role": "BIM/specification geometry candidate"
+    },
+    {
+      "format": "SketchUp",
+      "url": "https://www.hermanmiller.com/content/dam/hmicom/app_assets/product_models/s/sayl_chairs/sayl_chair_suspension_mid_back_fully_adjustable_arms/HMI_Sayl_Chair_Suspension_Mid_Back_Fully_Adjustable_Arms.skp",
+      "expected_public_page_size_mb": 2.7,
+      "role": "design/visual geometry candidate"
+    },
+    {
+      "format": "AutoCAD 3D",
+      "url": "https://www.hermanmiller.com/content/dam/hmicom/app_assets/product_models/s/sayl_chairs/sayl_chair_suspension_mid_back_fully_adjustable_arms/HMI_Sayl_Chair_Suspension_Mid_Back_Fully_Adjustable_Arms_3D.dwg",
+      "expected_public_page_size_mb": 0.9,
+      "role": "3D CAD geometry candidate"
+    }
+  ],
+  "asset_policy": "Validate manufacturer assets transiently. Persist URLs, hash, metadata and QA only; do not commit manufacturer binaries until redistribution rights are explicitly confirmed."
+}
