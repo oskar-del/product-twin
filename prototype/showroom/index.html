@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Product Twin Showroom · Marbella Warm Modern</title>
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#171a17;color:#f3efe5;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}canvas{display:block}
+#hud{position:fixed;inset:0;pointer-events:none}.brand{position:absolute;left:24px;top:22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}.brand b{font-size:15px;letter-spacing:.06em}.mode{position:absolute;left:24px;top:64px;color:#b8c1b8;font-size:12px}.help{position:absolute;left:24px;bottom:22px;background:rgba(18,22,19,.82);backdrop-filter:blur(10px);padding:12px 14px;border:1px solid rgba(255,255,255,.08);border-radius:12px;font-size:11px;line-height:1.6}.cross{position:absolute;left:50%;top:50%;width:8px;height:8px;border:1px solid white;border-radius:50%;transform:translate(-50%,-50%);opacity:.65}
+#start{pointer-events:auto;position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(120deg,rgba(25,37,30,.93),rgba(19,22,20,.78))}.start-card{width:min(560px,calc(100vw - 44px));padding:34px;border:1px solid rgba(255,255,255,.12);background:rgba(20,25,21,.82);backdrop-filter:blur(20px);border-radius:20px}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:#c5b594}.start-card h1{font:500 36px/1.05 Georgia,serif;margin:9px 0 12px}.start-card p{color:#bfc6c0;font-size:13px;line-height:1.7}.start-card button,#panel button{border:0;border-radius:999px;padding:11px 16px;background:#e9e1d0;color:#1b261f;font-weight:700;cursor:pointer;margin-top:10px}
+#panel{pointer-events:auto;position:absolute;right:18px;top:18px;bottom:18px;width:330px;background:rgba(244,240,230,.96);color:#1c2820;border-radius:18px;padding:20px;box-sizing:border-box;transform:translateX(370px);transition:.25s;overflow:auto}#panel.open{transform:none}#panel .close{float:right;background:none;color:#34473c;padding:0;margin:0;font-size:18px}#panel .small{font-size:10px;color:#718077;text-transform:uppercase;letter-spacing:.12em}#panel h2{font:500 25px/1.08 Georgia,serif;margin:8px 0 10px}#panel p{font-size:12px;line-height:1.55;color:#58645c}.pill{display:inline-block;background:#e5e9e4;padding:5px 8px;border-radius:999px;font-size:9px;margin:2px}.warning{margin-top:14px;padding:10px;background:#f0e5d4;border-radius:10px;font-size:10px;color:#745a38}.apply{position:absolute;right:24px;bottom:24px;pointer-events:auto;border:1px solid rgba(255,255,255,.18);background:rgba(25,34,28,.9);color:#fff;padding:12px 16px;border-radius:999px;font-weight:700;cursor:pointer}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="hud">
+  <div class="brand"><b>PRODUCT TWIN</b><br>SHOWROOM</div>
+  <div class="mode">Marbella Warm Modern · guided prototype</div>
+  <div class="cross"></div>
+  <div class="help">CLICK to walk · W A S D to move · mouse to look · E to inspect<br>G2 = physically scaled proxy, not exact manufacturer geometry</div>
+  <button class="apply" id="apply">Apply this vibe to my house</button>
+  <div id="start"><div class="start-card"><div class="eyebrow">Digital inspiration showroom · prototype 0.1</div><h1>Walk through a feeling before you design the house.</h1><p>Marbella Warm Modern is a curated Product Twin scene. Move through living, material and systems galleries. Real Product Twin avatars are loaded where we have verified geometry; abstract objects remain placeholders until their identity and geometry are promoted.</p><button id="enter">Enter showroom</button></div></div>
+  <aside id="panel"><button class="close" id="close">×</button><div class="small" id="ptype">Product Twin</div><h2 id="ptitle">Selected object</h2><div id="pills"></div><p id="pbody"></p><div class="warning" id="warning"></div><button id="save">Save to my look</button></aside>
+</div>
+<script type="module">
+import * as THREE from 'three';
+import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x9ba79e);scene.fog=new THREE.Fog(0x9ba79e,12,55);
+const camera=new THREE.PerspectiveCamera(70,innerWidth/innerHeight,.05,100);camera.position.set(0,1.65,9);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;document.body.prepend(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xfff4df,0x445449,2.4));const sun=new THREE.DirectionalLight(0xffe1ac,3.2);sun.position.set(9,12,5);sun.castShadow=true;scene.add(sun);
+const controls=new PointerLockControls(camera,document.body);const enter=document.getElementById('enter'),start=document.getElementById('start');enter.onclick=()=>controls.lock();controls.addEventListener('lock',()=>start.style.display='none');controls.addEventListener('unlock',()=>{if(!document.getElementById('panel').classList.contains('open'))start.style.display='grid'});
+
+const floorMat=new THREE.MeshStandardMaterial({color:0xc9bfae,roughness:.86});const wallMat=new THREE.MeshStandardMaterial({color:0xe8e0cf,roughness:.92});const darkMat=new THREE.MeshStandardMaterial({color:0x25352b,roughness:.75});const bronze=new THREE.MeshStandardMaterial({color:0x7c6646,metalness:.45,roughness:.5});
+function box(name,size,pos,mat=wallMat,meta=null){const m=new THREE.Mesh(new THREE.BoxGeometry(...size),mat);m.position.set(...pos);m.name=name;m.castShadow=m.receiveShadow=true;if(meta)m.userData.inspect=meta;scene.add(m);return m}
+// continuous gallery shell
+box('floor',[9,.18,34],[0,-.09,-7],floorMat);box('left wall',[.18,3.2,34],[-4.5,1.6,-7]);box('right wall',[.18,3.2,34],[4.5,1.6,-7]);
+// room dividers / portals
+for(const z of [3,-7,-17]){box('portal L',[2.2,3.1,.18],[-3.4,1.55,z]);box('portal R',[2.2,3.1,.18],[3.4,1.55,z]);box('portal head',[2.4,.35,.18],[0,2.93,z]);}
+// living room primitives — explicitly scene placeholders
+box('sofa placeholder',[3.1,.55,1.05],[-.7,.42,-1.4],new THREE.MeshStandardMaterial({color:0xd8d1c1,roughness:1}),{title:'Hero sofa · placeholder',type:'Scene placeholder',pills:['FFE.SEATING.SOFA','Awaiting exact avatar'],body:'This mass keeps the composition and circulation intact while Product Twin resolves an exact sofa identity, dimensions, geometry and rights.',warning:'Not purchasable / not an exact product claim.'});
+box('coffee table',[1.5,.22,.85],[1.2,.28,-.2],bronze,{title:'Coffee table role',type:'Design role',pills:['FFE.TABLE.COFFEE'],body:'The showroom can preserve the role and proportions while swapping real Product Twins by budget, availability or locality.',warning:'Generic scene geometry only.'});
+box('stone wall',[7.6,2.5,.12],[0,1.25,-5.8],new THREE.MeshStandardMaterial({color:0xb5a78f,roughness:.8}),{title:'Feature stone surface',type:'Material role',pills:['FINISHES.STONE','Surface avatar'],body:'Future state: compare natural stone, flexible stone, PU stone and PVC/UV stone-look alternatives at true module scale.',warning:'Current showroom surface is illustrative, not a Product Twin material.'});
+// innovation material gallery panels
+const materialCards=[['PVC / UV marble sheet',-2.6,0xd9d4c7,'INNOV.PVC_MARBLE_SHEET'],['WPC fluted panel',0,0x806e55,'INNOV.WPC_WALL_PANEL'],['SPC floor system',2.6,0xa89a84,'INNOV.SPC_FLOORING']];
+for(const [title,x,color,id] of materialCards){box(title,[2.0,2.15,.12],[x,1.18,-12.5],new THREE.MeshStandardMaterial({color,roughness:.7}),{title,type:'Innovation material avatar target',pills:[id,'G0 → G3'],body:'This slot will become a physically scaled material avatar with sheet/plank/profile dimensions, PBR appearance, installation rules and regulatory evidence.',warning:'Radar lead only until a real manufacturer product is selected.'});}
+// systems room mounting walls
+box('systems wall',[7.5,2.5,.12],[0,1.25,-22.2],darkMat);
+const loader=new GLTFLoader();
+async function loadAvatar(path,pos,scale,meta){try{const gltf=await loader.loadAsync(path);const root=gltf.scene;root.position.set(...pos);root.scale.setScalar(scale);root.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;o.userData.inspect=meta}});scene.add(root)}catch(e){console.error('avatar load failed',path,e)}}
+loadAvatar('../../data/geometry/avatars/huawei-sun2000-10ktl-m1-g2-proxy.glb',[-2.0,.55,-21.95],2.1,{title:'Huawei SUN2000-10KTL-M1',type:'G2 Product Twin avatar',pills:['ENERGY.SOLAR.INVERTER','A-grade manufacturer evidence','Scale verified'],body:'525 × 470 × 146.5 mm manufacturer-verified outer envelope. The mesh is a Product Twin visual proxy for planning and early visualization.',warning:'Proxy geometry — not Huawei manufacturer CAD and not an exact photoreal likeness.'});
+loadAvatar('../../data/geometry/avatars/astralpool-victoria-plus-silent-vs-67547-g2-proxy.glb',[1.8,.15,-21.9],1.65,{title:'AstralPool Victoria Plus Silent VS 67547',type:'G2 Product Twin avatar',pills:['POOL.PUMPS','A-grade manufacturer evidence','Hydraulic fit HOLD'],body:'Manufacturer-dimensioned equipment proxy tied to real pump performance evidence and the Marbella project hydraulic requirement.',warning:'Exact shape is not claimed; manufacturer drawing axes/CAD still need promotion to G3/G4.'});
+
+const keys={};addEventListener('keydown',e=>{keys[e.code]=true;if(e.code==='KeyE')inspect()});addEventListener('keyup',e=>keys[e.code]=false);const clock=new THREE.Clock();
+function inspect(){const ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2(0,0),camera);const hits=ray.intersectObjects(scene.children,true);const hit=hits.find(h=>h.object.userData.inspect);if(!hit)return;const m=hit.object.userData.inspect;document.getElementById('ptype').textContent=m.type;document.getElementById('ptitle').textContent=m.title;document.getElementById('pbody').textContent=m.body;document.getElementById('warning').textContent=m.warning||'';document.getElementById('pills').innerHTML=(m.pills||[]).map(x=>'<span class="pill">'+x+'</span>').join('');document.getElementById('panel').classList.add('open');controls.unlock();start.style.display='none'}
+document.getElementById('close').onclick=()=>document.getElementById('panel').classList.remove('open');document.getElementById('save').onclick=()=>alert('Prototype event: saved_to_style_intent_graph');document.getElementById('apply').onclick=()=>alert('Prototype event: apply SHOWROOM_MARBELLA_WARM_MODERN_V0_1 vibe DNA to active project');
+function animate(){const dt=Math.min(clock.getDelta(),.04);if(controls.isLocked){const speed=4.2*dt;if(keys.KeyW)controls.moveForward(speed);if(keys.KeyS)controls.moveForward(-speed);if(keys.KeyA)controls.moveRight(-speed);if(keys.KeyD)controls.moveRight(speed);camera.position.y=1.65;camera.position.x=THREE.MathUtils.clamp(camera.position.x,-4.15,4.15);camera.position.z=THREE.MathUtils.clamp(camera.position.z,-23.5,9.5)}renderer.render(scene,camera)}renderer.setAnimationLoop(animate);
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+</script>
+</body>
+</html>
