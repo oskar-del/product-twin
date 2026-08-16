@@ -1,0 +1,18 @@
+{
+  "avatar_id": "AVATAR_HUAWEI_SUN2000_10KTL_M1_G2_PROXY",
+  "product_evidence_id": "MFR_HUAWEI_SUN2000_10KTL_M1_V0_1",
+  "category_id": "ENERGY.SOLAR.INVERTER",
+  "avatar_type": "object",
+  "geometry_level": "G2",
+  "representation": "dimension_verified_visual_proxy",
+  "asset_path": "data/geometry/avatars/huawei-sun2000-10ktl-m1-g2-proxy.glb",
+  "units": "meter",
+  "verified_envelope_mm": {"width": 525, "height": 470, "depth": 146.5},
+  "scale_state": "verified_from_manufacturer_evidence",
+  "identity_state": "manufacturer_verified",
+  "shape_state": "proxy_not_exact",
+  "render_rights": "proxy_generated_by_product_twin; does not include manufacturer geometry or artwork",
+  "allowed_uses": ["space_planning", "clearance_planning", "early_visualization", "showroom_system_demo"],
+  "forbidden_claims": ["exact manufacturer geometry", "photoreal product likeness", "fabrication geometry"],
+  "promotion_target": "G3 after authorized manufacturer geometry or likeness verification"
+}
