@@ -1,0 +1,71 @@
+name: Build Arper Ply 3853 Avatar Candidate
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'config/geometry/arper-ply-3853-target.json'
+      - 'scripts/capture-arper-product-3ds.mjs'
+      - 'scripts/qa-fixed-dimension-avatar.py'
+      - '.github/workflows/arper-ply-3853-avatar.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-arper-ply-3853
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      ARPER_TARGET: config/geometry/arper-ply-3853-target.json
+      AVATAR_TARGET: config/geometry/arper-ply-3853-target.json
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install avatar-factory tools
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+          sudo apt-get update
+          sudo apt-get install -y assimp-utils
+          pip install trimesh numpy
+      - name: Capture exact manufacturer 3DS
+        run: node scripts/capture-arper-product-3ds.mjs
+      - name: Convert exact manufacturer geometry to ephemeral GLB
+        shell: bash
+        run: |
+          set -euo pipefail
+          SLUG=arper-ply-3853-g3-v0-1
+          if [ -f .runtime/$SLUG/source.3ds ]; then
+            assimp export .runtime/$SLUG/source.3ds .runtime/$SLUG/model.glb -f glb2
+          else
+            echo "No exact manufacturer 3DS captured; QA will remain G0."
+          fi
+      - name: Run fixed-dimension physical QA
+        run: python scripts/qa-fixed-dimension-avatar.py
+      - name: Commit metadata only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/metrics/arper-ply-3853-g3-v0-1-3ds-capture-latest.json data/metrics/arper-ply-3853-g3-v0-1-glb-qa-latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "data: record Arper Ply exact-avatar QA"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt*3))
+          done
+          exit 1
