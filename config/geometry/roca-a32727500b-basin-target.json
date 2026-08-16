@@ -1,0 +1,34 @@
+{
+  "version": "0.1",
+  "target_id": "ROCA_A32727500B_BASIN_G2_V0_1",
+  "category_id": "BATH.BASINS",
+  "type": "sanitary_fixture",
+  "manufacturer": "Roca",
+  "model": "Lavabo de encimera",
+  "reference": "A32727500B",
+  "official_spain_page": "https://www.roca.es/productos/lavabo-encimera-327275..B",
+  "dimensions_mm": {"length":600,"width":380,"height":70},
+  "specification": {
+    "material": "porcelain",
+    "installation_type": "countertop",
+    "bowl_capacity_l": 8,
+    "drain_included": true,
+    "tap_included": false,
+    "shape_description": "asymmetric"
+  },
+  "commerce_reference": {
+    "merchant": "Roca Spain",
+    "type": "manufacturer_direct_online",
+    "product_url": "https://www.roca.es/productos/lavabo-encimera-327275..B",
+    "last_observed_price_eur": 225.06,
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "availability_state": "online_purchase_route_observed; refresh live"
+  },
+  "avatar_plan": {
+    "target_level": "G2",
+    "geometry": "Product Twin-owned countertop basin envelope/schematic bowl proxy",
+    "appearance": "neutral ceramic proxy; exact Roca industrial-design geometry not copied",
+    "scale_gate": "600x380x70 mm"
+  },
+  "next_gates": ["authorized exact CAD/BIM geometry and render rights", "connection/drain geometry", "live price/stock refresh"]
+}
