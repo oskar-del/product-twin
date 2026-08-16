@@ -1,0 +1,21 @@
+{
+  "version": "0.1",
+  "purpose": "Represent a design/performance need before selecting any commercial product.",
+  "requirement": {
+    "requirement_id": "string",
+    "project_id": "string",
+    "system": "solar_pv | battery | hvac | envelope | water | lighting | pool | other",
+    "status": "needs_inputs | provisional | engineered | approved",
+    "objective": "string",
+    "design_inputs": "object",
+    "required_performance": "object",
+    "physical_constraints": "object",
+    "electrical_or_connection_constraints": "object",
+    "regulatory_constraints": "array",
+    "logistics_constraints": "object",
+    "product_twin_category_ids": "array",
+    "evidence": "array",
+    "missing_inputs": "array"
+  },
+  "principle": "Performance requirements are generated from the project/site/design first. Product search happens only after the need is defined."
+}
