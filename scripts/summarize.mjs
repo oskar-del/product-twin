@@ -1,19 +1,16 @@
 import fs from "node:fs/promises";
-
-const candidates = JSON.parse(await fs.readFile("data/shopify/triage/latest.json", "utf8"));
-const coverage = JSON.parse(await fs.readFile("data/coverage/summary.json", "utf8"));
-const categories = new Map();
-
-for (const c of candidates) {
-  const key = c.taxonomy?.canonical_category_id ?? "UNCLASSIFIED";
-  categories.set(key, (categories.get(key) ?? 0) + 1);
-}
-
-console.log(`Twin candidates: ${candidates.length}`);
-console.log(`Canonical categories with candidates: ${coverage.categories_with_candidates}/${coverage.category_count}`);
-console.log(`Categories with commerce candidates: ${coverage.categories_with_commerce}`);
-console.log(`Categories with renderable supply: ${coverage.categories_with_renderable_supply}`);
-console.log("\nCandidate count by provisional canonical category:");
-for (const [key,count] of [...categories.entries()].sort((a,b)=>b[1]-a[1])) {
-  console.log(`${key}: ${count}`);
-}
+async function read(p,fallback={}){try{return JSON.parse(await fs.readFile(p,"utf8"));}catch{return fallback;}}
+const discovery=await read("data/metrics/shopify-discovery-latest.json");
+const coverage=await read("data/coverage/summary.json");
+const offers=await read("data/metrics/shopify-offer-resolution-latest.json");
+const carts=await read("data/metrics/cart-test-latest.json");
+const checkouts=await read("data/metrics/checkout-quote-latest.json");
+const test=await read("data/tests/results/whole-building-10.latest.json");
+console.log(`Live Shopify discovery: ${discovery.unique_candidate_count??0} unique candidates across ${discovery.query_count??0} searches`);
+console.log(`Taxonomy live coverage: ${coverage.categories_with_live_discovery??0}/${coverage.category_count??0} categories`);
+console.log(`Whole-building slots with live discovery: ${offers.slots_with_discovery??0}`);
+console.log(`Slots with postcode-deliverable offer: ${offers.slots_with_postcode_deliverable_offer??0}`);
+console.log(`Merchant carts created: ${carts.carts_created??0}`);
+console.log(`Authoritative checkout shipping quotes: ${checkouts.authoritative_shipping_quotes??0}`);
+console.log(`Procurement-ready test slots: ${test.summary?.procurement_ready??0}`);
+console.log("Storage policy: Shopify catalog payloads are ephemeral and are not committed to the repository.");
