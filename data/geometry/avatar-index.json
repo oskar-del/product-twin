@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-08-16",
+  "summary": {
+    "avatars": 3,
+    "G0": 0,
+    "G1": 0,
+    "G2": 3,
+    "G3": 0,
+    "G4": 0,
+    "G5": 0,
+    "object_avatars": 2,
+    "material_avatars": 1,
+    "system_avatars": 0,
+    "exact_manufacturer_geometry": 0,
+    "dimension_verified_proxies": 3
+  },
+  "avatars": [
+    {
+      "avatar_id": "AVATAR_HUAWEI_SUN2000_10KTL_M1_G2_PROXY",
+      "category_id": "ENERGY.SOLAR.INVERTER",
+      "type": "object",
+      "level": "G2",
+      "asset_path": "data/geometry/avatars/huawei-sun2000-10ktl-m1-g2-proxy.glb",
+      "identity": "manufacturer_verified",
+      "scale": "verified",
+      "shape": "proxy",
+      "next_gate": "authorized manufacturer geometry / exact likeness"
+    },
+    {
+      "avatar_id": "AVATAR_ASTRALPOOL_VICTORIA_PLUS_SILENT_VS_67547_G2_PROXY",
+      "category_id": "POOL.PUMPS",
+      "type": "object",
+      "level": "G2",
+      "asset_path": "data/geometry/avatars/astralpool-victoria-plus-silent-vs-67547-g2-proxy.glb",
+      "identity": "manufacturer_verified",
+      "scale": "manufacturer-dimensioned conservative envelope",
+      "shape": "proxy",
+      "next_gate": "manufacturer CAD/BIM or verified exact reconstruction"
+    },
+    {
+      "avatar_id": "AVATAR_ECOPLASTIC_UV_PVC_MARBLE_SHEET_G2_PROXY",
+      "category_id": "FINISHES.WALLCOVERING",
+      "innovation_id": "INNOV.PVC_MARBLE_SHEET",
+      "type": "material",
+      "level": "G2",
+      "asset_path": "data/geometry/avatars/ecoplastic-uv-pvc-marble-sheet-1220x2440x3-g2-proxy.glb",
+      "identity": "manufacturer-family verified",
+      "scale": "verified 1220x2440mm module / 3mm selected thickness",
+      "appearance": "neutral proxy; manufacturer decor not copied",
+      "next_gate": "specific decor identity + authorized PBR texture + Spain/EU evidence"
+    }
+  ],
+  "prefab_system_lead": {
+    "evidence_id": "MFR_LIDA_LIGHT_STEEL_VILLA_SYSTEM_LEAD_V0_1",
+    "category_id": "PREFAB.BUILDING.HOUSE_KIT",
+    "current_geometry_level": "G0",
+    "reason": "CAD/3D capability is advertised, but the public configuration envelope is insufficient for a factory-valid system avatar."
+  }
+}
