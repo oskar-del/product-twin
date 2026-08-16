@@ -1,19 +1,14 @@
 {
   "country": "ES",
   "currency": "EUR",
-  "intent": "Premium contemporary Mediterranean residential and hospitality interiors in Spain. Prefer natural materials, warm neutrals, restrained luxury, and products suitable for real project procurement.",
+  "intent": "Products, materials, fixtures, equipment and building components for premium residential, hospitality and renovation projects in Spain. Relevance to real specification, visualization and procurement matters more than consumer popularity.",
   "page_size": 50,
-  "pages_per_query": 2,
-  "queries": [
-    {"key":"sofas","query":"cream modular sofa contemporary"},
-    {"key":"lounge_chairs","query":"cream linen lounge chair oak contemporary"},
-    {"key":"coffee_tables","query":"oak coffee table contemporary"},
-    {"key":"side_tables","query":"travertine stone side table contemporary"},
-    {"key":"dining_chairs","query":"linen dining chair oak natural"},
-    {"key":"outdoor_chairs","query":"teak outdoor lounge chair neutral cushion"},
-    {"key":"outdoor_sofas","query":"teak outdoor sofa neutral cushion"},
-    {"key":"pendants","query":"bronze pendant light warm contemporary"},
-    {"key":"floor_lamps","query":"brass floor lamp contemporary"},
-    {"key":"rugs","query":"beige wool rug natural contemporary"}
-  ]
+  "crawl_pages_by_fitness": {
+    "primary": 4,
+    "secondary": 2,
+    "experimental": 1
+  },
+  "include_fitness": ["primary", "secondary", "experimental"],
+  "max_results_per_query": 1000,
+  "source_mapping": "config/source-mappings/shopify-global.json"
 }
