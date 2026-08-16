@@ -1,0 +1,73 @@
+{
+  "version": "0.1",
+  "principle": "Developer delivery state is projected onto the same canonical spatial graph. Procurement may be native to Product Twin or imported from external ERP/contractor systems.",
+  "portfolio_hierarchy": ["portfolio", "development", "building", "floor", "unit_or_space", "element_or_package", "product_or_system_twin"],
+  "status_palette_semantics": {
+    "green": "complete / installed / accepted for current milestone",
+    "blue": "on site / ready for installation",
+    "yellow": "ordered / in production / in transit",
+    "red": "late / blocked / required but unavailable",
+    "grey": "not required yet / not in current milestone",
+    "purple": "inspection / approval / regulatory review",
+    "orange": "change / substitution / commercial decision required"
+  },
+  "package_states": [
+    "not_required_yet",
+    "design_incomplete",
+    "tendering",
+    "quote_review",
+    "selected",
+    "ordered",
+    "in_production",
+    "in_transit",
+    "on_site",
+    "installing",
+    "installed",
+    "inspection",
+    "accepted",
+    "blocked",
+    "late",
+    "substitution_required"
+  ],
+  "blocker_types": [
+    "design_information",
+    "technical_approval",
+    "regulatory_approval",
+    "supplier_confirmation",
+    "material_availability",
+    "manufacturing_delay",
+    "freight_delay",
+    "site_access",
+    "preceding_trade",
+    "quality_failure",
+    "commercial_approval",
+    "change_order"
+  ],
+  "spatial_queries": [
+    "show all red objects",
+    "show packages blocking floor 3",
+    "show materials required in next 14 days",
+    "show ordered items not yet allocated to a unit",
+    "show products on site but not installed",
+    "show substitutions awaiting architect approval",
+    "show units unable to reach practical completion",
+    "show procurement exposure by supplier",
+    "show all bathrooms using product/system X",
+    "show expected versus actual installed progress"
+  ],
+  "time_model": {
+    "planned": ["required_design_date", "tender_date", "order_by_date", "required_on_site_date", "planned_install_start", "planned_install_finish"],
+    "actual": ["approved_at", "ordered_at", "production_started_at", "shipped_at", "arrived_site_at", "installed_at", "accepted_at"],
+    "derived": ["days_late", "float_remaining", "downstream_packages_at_risk"]
+  },
+  "integration_model": {
+    "native": ["Product Twin offers", "Product Twin RFQs", "direct trade adapters"],
+    "external": ["ERP purchase orders", "contractor procurement", "supplier portals", "delivery notes", "site QA", "BIM/IFC", "construction schedule"],
+    "rule": "Externally procured items may still be canonical Product Twins and participate in status, performance and as-built graphs."
+  },
+  "commercial_modes": [
+    {"id":"software_only","description":"Developer uses Product Twin control/performance graph while procurement remains external."},
+    {"id":"procurement_connected","description":"Product Twin resolves products/suppliers and integrates selected external purchasing routes."},
+    {"id":"managed_procurement","description":"Product Twin coordinates RFQs/orders/logistics and captures commercial margin/referral where appropriate."}
+  ]
+}
