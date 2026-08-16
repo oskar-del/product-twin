@@ -1,0 +1,11 @@
+{
+  "name": "product-twin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "ingest:shopify": "node scripts/shopify-ingest.mjs",
+    "summarize": "node scripts/summarize.mjs"
+  }
+}
