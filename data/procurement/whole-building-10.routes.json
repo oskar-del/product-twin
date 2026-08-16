@@ -1,0 +1,383 @@
+{
+  "summary": {
+    "generated_at": "2026-08-16T03:23:00.739Z",
+    "project_id": "PROJECT_MARBELLA_VILLA_001",
+    "slots": 10,
+    "by_route": {
+      "configured_rfq": 1,
+      "merchant_cart": 8,
+      "direct_trade": 1
+    },
+    "by_state": {
+      "needs_requirement": 4,
+      "needs_technical_review": 6
+    },
+    "executable_now": 0,
+    "principle": "Route follows product behavior and project requirement; retail checkout is not the universal procurement mechanism."
+  },
+  "routes": [
+    {
+      "slot_id": "WB10_01",
+      "label": "Structural concrete",
+      "category_id": "STRUCTURE.CONCRETE",
+      "project_id": "PROJECT_MARBELLA_VILLA_001",
+      "requirement_id": "REQ_STRUCTURAL_CONCRETE_PROJECT_MARBELLA_VILLA_001",
+      "requirement_state": "needs_inputs",
+      "selected_external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/6p7y3Aoq4Gfk46FuAXlgjn",
+        "variant_id": "gid://shopify/ProductVariant/44364072648997"
+      },
+      "identity_state": "UNRESOLVED",
+      "available_sources": [
+        {
+          "source_id": "cemex_go_es",
+          "source_type": "manufacturer_trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_OR_QUOTE_REQUIRED"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null
+        }
+      ],
+      "route_type": "configured_rfq",
+      "source_id": "cemex_go_es",
+      "state": "needs_requirement",
+      "reason": "STRUCTURE.CONCRETE behaves as a project-configured product; direct RFQ/trade procurement is preferred over retail carting.",
+      "inputs_required": [
+        "specified concrete compressive-strength class",
+        "exposure class / durability environment",
+        "consistency or slump class",
+        "maximum aggregate size",
+        "estimated concrete quantity in m3 by pour/package",
+        "required pour/delivery date or construction programme milestone",
+        "real project delivery address for batching-plant routing and truck logistics"
+      ],
+      "fallbacks": [
+        {
+          "route_type": "merchant_cart",
+          "source_id": "shopify_global_catalog",
+          "state": "discovery_or_small_quantity_only",
+          "reason": "Useful for exploratory/small packaged products, not preferred project procurement route."
+        }
+      ]
+    },
+    {
+      "slot_id": "WB10_02",
+      "label": "Window system",
+      "category_id": "OPENINGS.WINDOWS",
+      "project_id": "PROJECT_MARBELLA_VILLA_001",
+      "requirement_id": null,
+      "requirement_state": null,
+      "selected_external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/4av5Zo4vEYeFOnVSuCKEtE",
+        "variant_id": "gid://shopify/ProductVariant/44087412031732"
+      },
+      "identity_state": "UNRESOLVED",
+      "available_sources": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null
+        }
+      ],
+      "route_type": "merchant_cart",
+      "source_id": "shopify_global_catalog",
+      "state": "needs_technical_review",
+      "reason": "A live-refresh Shopify reference and merchant Cart MCP path exist; procurement waits for exact technical identity/fit and final logistics quote.",
+      "inputs_required": [
+        "authoritative shipping/landed cost via Checkout or supplier quote",
+        "verified lead time",
+        "canonical manufacturer identity / exact model verification"
+      ],
+      "fallbacks": []
+    },
+    {
+      "slot_id": "WB10_03",
+      "label": "Natural stone",
+      "category_id": "FINISHES.STONE",
+      "project_id": "PROJECT_MARBELLA_VILLA_001",
+      "requirement_id": null,
+      "requirement_state": null,
+      "selected_external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/3bR8piOcHMiFdWceOyhJwQ",
+        "variant_id": "gid://shopify/ProductVariant/47198186471730"
+      },
+      "identity_state": "UNRESOLVED",
+      "available_sources": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null
+        }
+      ],
+      "route_type": "merchant_cart",
+      "source_id": "shopify_global_catalog",
+      "state": "needs_technical_review",
+      "reason": "A live-refresh Shopify reference and merchant Cart MCP path exist; procurement waits for exact technical identity/fit and final logistics quote.",
+      "inputs_required": [
+        "authoritative shipping/landed cost via Checkout or supplier quote",
+        "verified lead time",
+        "canonical manufacturer identity / exact model verification"
+      ],
+      "fallbacks": []
+    },
+    {
+      "slot_id": "WB10_04",
+      "label": "Pool pressure pipe",
+      "category_id": "POOL.PIPE",
+      "project_id": "PROJECT_MARBELLA_VILLA_001",
+      "requirement_id": null,
+      "requirement_state": null,
+      "selected_external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/3P7aFIlod6xmzwiinxEt5L",
+        "variant_id": "gid://shopify/ProductVariant/47862683435356"
+      },
+      "identity_state": "UNRESOLVED",
+      "available_sources": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_type": "trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_REQUIRED"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "source_type": "global_catalog",
+          "fitness": "experimental",
+          "auth_state": null
+        }
+      ],
+      "route_type": "merchant_cart",
+      "source_id": "shopify_global_catalog",
+      "state": "needs_technical_review",
+      "reason": "A live-refresh Shopify reference and merchant Cart MCP path exist; procurement waits for exact technical identity/fit and final logistics quote.",
+      "inputs_required": [
+        "authoritative shipping/landed cost via Checkout or supplier quote",
+        "verified lead time",
+        "canonical manufacturer identity / exact model verification"
+      ],
+      "fallbacks": []
+    },
+    {
+      "slot_id": "WB10_05",
+      "label": "Pool circulation pump",
+      "category_id": "POOL.PUMPS",
+      "project_id": "PROJECT_MARBELLA_VILLA_001",
+      "requirement_id": "REQ_POOL_CIRCULATION_PROJECT_MARBELLA_VILLA_001",
+      "requirement_state": "needs_inputs",
+      "selected_external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/BaYtvgCWvPv4yLNAUIVFG",
+        "variant_id": "gid://shopify/ProductVariant/43998617239750"
+      },
+      "identity_state": "UNRESOLVED",
+      "available_sources": [
+        {
+          "source_id": "fluidra_pro_es",
+          "source_type": "trade_portal",
+          "fitness": "primary",
+          "auth_state": "ACCOUNT_REQUIRED"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null
+        }
+      ],
+      "route_type": "direct_trade",
+      "source_id": "fluidra_pro_es",
+      "state": "needs_requirement",
+      "reason": "Specialist direct trade source exists, but pump selection must wait for a hydraulic duty requirement.",
+      "inputs_required": [
+        "pool volume + target turnover time, or explicit required filtration flow",
+        "total dynamic head from pipe/fitting/filter/equipment hydraulic calculation",
+        "pump connection / pipe and fitting system",
+        "pool plant electrical phase/circuit"
+      ],
+      "fallbacks": [
+        {
+          "route_type": "merchant_cart",
+          "source_id": "shopify_global_catalog",
+          "state": "available",
+          "reason": "Valid alternate commerce route for a technically verified exact pump."
+        }
+      ]
+    },
+    {
+      "slot_id": "WB10_06",
+      "label": "PV module",
+      "category_id": "ENERGY.SOLAR.PANEL",
+      "project_id": "PROJECT_MARBELLA_VILLA_001",
+      "requirement_id": "REQ_SOLAR_PROJECT_MARBELLA_VILLA_001",
+      "requirement_state": "needs_inputs",
+      "selected_external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/cK9QLDvaVXCIXOKWiyzoB",
+        "variant_id": "gid://shopify/ProductVariant/47634966184270"
+      },
+      "identity_state": "UNRESOLVED",
+      "available_sources": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null
+        }
+      ],
+      "route_type": "merchant_cart",
+      "source_id": "shopify_global_catalog",
+      "state": "needs_requirement",
+      "reason": "Solar hardware must follow the project performance/electrical requirement; current system sizing inputs are incomplete.",
+      "inputs_required": [
+        "annual electricity demand or desired annual PV generation",
+        "usable roof-plane geometry/area after setbacks",
+        "local obstruction/shading model",
+        "confirmed electrical phase",
+        "grid export/import constraints and contracted supply",
+        "battery/autonomy objective if storage is desired"
+      ],
+      "fallbacks": []
+    },
+    {
+      "slot_id": "WB10_07",
+      "label": "PV inverter",
+      "category_id": "ENERGY.SOLAR.INVERTER",
+      "project_id": "PROJECT_MARBELLA_VILLA_001",
+      "requirement_id": "REQ_SOLAR_PROJECT_MARBELLA_VILLA_001",
+      "requirement_state": "needs_inputs",
+      "selected_external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/4pPfq4MhVgZelzH5v2L4Q0",
+        "variant_id": "gid://shopify/ProductVariant/52960387662158"
+      },
+      "identity_state": "UNRESOLVED",
+      "available_sources": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null
+        }
+      ],
+      "route_type": "merchant_cart",
+      "source_id": "shopify_global_catalog",
+      "state": "needs_requirement",
+      "reason": "Solar hardware must follow the project performance/electrical requirement; current system sizing inputs are incomplete.",
+      "inputs_required": [
+        "annual electricity demand or desired annual PV generation",
+        "usable roof-plane geometry/area after setbacks",
+        "local obstruction/shading model",
+        "confirmed electrical phase",
+        "grid export/import constraints and contracted supply",
+        "battery/autonomy objective if storage is desired"
+      ],
+      "fallbacks": []
+    },
+    {
+      "slot_id": "WB10_08",
+      "label": "Heat pump",
+      "category_id": "HVAC.HEAT_PUMPS",
+      "project_id": "PROJECT_MARBELLA_VILLA_001",
+      "requirement_id": null,
+      "requirement_state": null,
+      "selected_external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/Y7RBzvVEwMsqDGR6jC8tg",
+        "variant_id": "gid://shopify/ProductVariant/51627048305023"
+      },
+      "identity_state": "UNRESOLVED",
+      "available_sources": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_type": "global_catalog",
+          "fitness": "secondary",
+          "auth_state": null
+        }
+      ],
+      "route_type": "merchant_cart",
+      "source_id": "shopify_global_catalog",
+      "state": "needs_technical_review",
+      "reason": "A live-refresh Shopify reference and merchant Cart MCP path exist; procurement waits for exact technical identity/fit and final logistics quote.",
+      "inputs_required": [
+        "authoritative shipping/landed cost via Checkout or supplier quote",
+        "verified lead time",
+        "canonical manufacturer identity / exact model verification"
+      ],
+      "fallbacks": []
+    },
+    {
+      "slot_id": "WB10_09",
+      "label": "Pendant luminaire",
+      "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+      "project_id": "PROJECT_MARBELLA_VILLA_001",
+      "requirement_id": null,
+      "requirement_state": null,
+      "selected_external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/5KfwjYpcWBC81c8PVGKcuS",
+        "variant_id": "gid://shopify/ProductVariant/54265230000470"
+      },
+      "identity_state": "UNRESOLVED",
+      "available_sources": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null
+        }
+      ],
+      "route_type": "merchant_cart",
+      "source_id": "shopify_global_catalog",
+      "state": "needs_technical_review",
+      "reason": "A live-refresh Shopify reference and merchant Cart MCP path exist; procurement waits for exact technical identity/fit and final logistics quote.",
+      "inputs_required": [
+        "authoritative shipping/landed cost via Checkout or supplier quote",
+        "verified lead time",
+        "canonical manufacturer identity / exact model verification"
+      ],
+      "fallbacks": []
+    },
+    {
+      "slot_id": "WB10_10",
+      "label": "Living-room sofa",
+      "category_id": "FFE.SEATING.SOFA",
+      "project_id": "PROJECT_MARBELLA_VILLA_001",
+      "requirement_id": null,
+      "requirement_state": null,
+      "selected_external_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/6yZXQwZMcvhdPzhULDkApv",
+        "variant_id": "gid://shopify/ProductVariant/40416650526818"
+      },
+      "identity_state": "UNRESOLVED",
+      "available_sources": [
+        {
+          "source_id": "shopify_global_catalog",
+          "source_type": "global_catalog",
+          "fitness": "primary",
+          "auth_state": null
+        }
+      ],
+      "route_type": "merchant_cart",
+      "source_id": "shopify_global_catalog",
+      "state": "needs_technical_review",
+      "reason": "A live-refresh Shopify reference and merchant Cart MCP path exist; procurement waits for exact technical identity/fit and final logistics quote.",
+      "inputs_required": [
+        "authoritative shipping/landed cost via Checkout or supplier quote",
+        "verified lead time",
+        "canonical manufacturer identity / exact model verification"
+      ],
+      "fallbacks": []
+    }
+  ]
+}
