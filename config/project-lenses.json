@@ -1,0 +1,115 @@
+{
+  "version": "0.1",
+  "principle": "One canonical spatial/project graph, many visual lenses. Lenses change visibility, styling and interaction; they never create separate versions of the building.",
+  "canonical_component_link": {
+    "required": ["element_id", "element_type", "geometry_ref", "project_state"],
+    "optional": ["space_id", "assembly_id", "product_twin_id", "system_id", "requirement_id", "order_id", "installation_id", "regulatory_evidence_ids", "maintenance_asset_id"],
+    "wall_assembly_example": {
+      "element_id": "WALL_EXT_001",
+      "layers": [
+        {"role": "interior_finish", "product_twin_id": null},
+        {"role": "board_or_plaster", "product_twin_id": null},
+        {"role": "service_zone", "system_id": "MEP_ZONE_EXT_001"},
+        {"role": "insulation", "product_twin_id": null},
+        {"role": "structure", "product_twin_id": null},
+        {"role": "weather_barrier", "product_twin_id": null},
+        {"role": "external_finish", "product_twin_id": null}
+      ]
+    }
+  },
+  "state_dimensions": {
+    "design": ["concept", "proposed", "selected", "locked", "superseded"],
+    "technical": ["unknown", "candidate", "review", "verified", "failed"],
+    "regulatory": ["not_screened", "pass", "review", "hold", "block", "opportunity"],
+    "procurement": ["not_sourced", "discovered", "quoted", "selected", "ordered", "in_production", "shipped", "on_site", "installed"],
+    "logistics": ["unknown", "supplier", "factory", "warehouse", "in_transit", "site", "installed"],
+    "geometry": ["G0", "G1", "G2", "G3", "G4", "G5"]
+  },
+  "lenses": [
+    {
+      "id": "experience",
+      "name": "Experience",
+      "purpose": "Homeowner/decorator view of the finished building.",
+      "render": "materials_lighting_landscape",
+      "default_interaction": "inspect visible finishes, furniture and fixtures",
+      "primary_questions": ["How will it feel?", "What can I change?", "What does this cost?"]
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture",
+      "purpose": "Architectural working view with clean linework and spatial hierarchy.",
+      "render": "monochrome_edges_sections_levels_grids",
+      "default_interaction": "select spaces, walls, slabs, openings and dimensions",
+      "primary_questions": ["What is the geometry?", "How are spaces organized?", "What changed?"]
+    },
+    {
+      "id": "assembly",
+      "name": "Build / Assembly",
+      "purpose": "Dissect the building into physical construction layers and packages.",
+      "render": "exploded_components_by_assembly",
+      "default_interaction": "explode wall/roof/floor/system and inspect each layer",
+      "primary_questions": ["What is this made of?", "How is it assembled?", "What connects to it?"]
+    },
+    {
+      "id": "products",
+      "name": "Product Twins",
+      "purpose": "Show the building as a composition of real or unresolved Product Twins.",
+      "render": "component_colors_by_product_category",
+      "default_interaction": "select product, substitute, compare, open Twin inspector",
+      "primary_questions": ["Which real products are here?", "Which are still placeholders?", "What alternatives fit?"]
+    },
+    {
+      "id": "procurement",
+      "name": "Procurement",
+      "purpose": "Visualize quote/order/manufacture/shipping/site state directly on the house.",
+      "render": "heatmap_by_procurement_state",
+      "default_interaction": "open supplier/order/ETA/landed-cost trail",
+      "primary_questions": ["What has been ordered?", "What is late?", "What is on site?", "What is still unsourced?"]
+    },
+    {
+      "id": "systems",
+      "name": "Systems / MEP",
+      "purpose": "Isolate electrical, plumbing, HVAC, pool, solar and controls networks.",
+      "render": "system_networks_with_shell_xray",
+      "default_interaction": "trace connected system and inspect equipment/interfaces",
+      "primary_questions": ["What feeds this?", "Where does it run?", "What equipment is connected?"]
+    },
+    {
+      "id": "compliance",
+      "name": "Regulation",
+      "purpose": "Expose regulatory evidence and unresolved compliance states spatially.",
+      "render": "heatmap_by_regulatory_state",
+      "default_interaction": "inspect rule, evidence, jurisdiction and required reviewer",
+      "primary_questions": ["What passes?", "What is on hold?", "What needs professional review?"]
+    },
+    {
+      "id": "performance",
+      "name": "Performance",
+      "purpose": "Show sun, shading, thermal, solar, energy and environmental results on the actual building.",
+      "render": "analysis_overlays",
+      "default_interaction": "inspect surface/system performance and compare design alternatives",
+      "primary_questions": ["Where is solar gain?", "What is the PV potential?", "Which envelope elements drive performance?"]
+    },
+    {
+      "id": "as_built",
+      "name": "As-built / Operations",
+      "purpose": "Installed asset record after construction.",
+      "render": "installed_asset_status",
+      "default_interaction": "inspect serial, warranty, manuals, maintenance and replacement options",
+      "primary_questions": ["What was actually installed?", "When is it serviced?", "What replaces it?"]
+    }
+  ],
+  "role_presets": {
+    "homeowner": ["experience", "products", "procurement"],
+    "architect": ["architecture", "assembly", "compliance", "performance"],
+    "interior_designer": ["experience", "products", "architecture"],
+    "contractor": ["assembly", "procurement", "systems", "compliance"],
+    "procurement_manager": ["products", "procurement", "assembly"],
+    "facility_manager": ["as_built", "systems", "products"]
+  },
+  "exploded_product_view": {
+    "purpose": "Temporarily separate the house into product/assembly groups without changing canonical transforms.",
+    "grouping_options": ["category", "construction_phase", "supplier", "procurement_state", "system", "room", "cost_band"],
+    "interaction": ["explode", "isolate", "ghost_unselected", "reassemble", "select_group", "inspect_product_twin"]
+  }
+}
