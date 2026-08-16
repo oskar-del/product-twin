@@ -1,0 +1,38 @@
+{
+  "version": "0.1",
+  "purpose": "Store durable technical facts from authoritative or licensed sources independently from mutable commerce feeds.",
+  "evidence_record": {
+    "evidence_id": "string",
+    "subject": {
+      "manufacturer": "string",
+      "model": "string",
+      "category_id": "string",
+      "manufacturer_sku": "string|null",
+      "gtin": "string|null"
+    },
+    "authority": {
+      "grade": "A_MANUFACTURER | A_REGULATOR | B_CERTIFICATION_BODY | B_DISTRIBUTOR_AUTHORIZED | C_CATALOG_INFERRED | D_UNVERIFIED",
+      "publisher": "string",
+      "source_uri": "string",
+      "source_type": "manufacturer_product_page | manufacturer_datasheet | certificate | declaration | regulator | distributor | catalog | other",
+      "territory": "string|null",
+      "published_or_updated_at": "ISO-8601|null",
+      "retrieved_at": "ISO-8601",
+      "version_or_revision": "string|null"
+    },
+    "claims": "object",
+    "compliance_documents": "array",
+    "limitations": "array",
+    "verification": {
+      "identity": "verified | likely | unresolved",
+      "technical": "verified | partial | unresolved",
+      "territory_applicability": "verified | review | unresolved"
+    }
+  },
+  "principles": [
+    "Manufacturer technical evidence can verify product facts but does not itself prove project suitability.",
+    "A commercial listing never upgrades inferred technical fields to authoritative evidence.",
+    "Regional model differences must be tracked; a global model-family specification can remain REVIEW for local regulatory applicability.",
+    "Compliance documents and installation suitability are separate from marketing availability."
+  ]
+}
