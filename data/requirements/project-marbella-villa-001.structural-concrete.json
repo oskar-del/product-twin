@@ -1,0 +1,78 @@
+{
+  "requirement_id": "REQ_STRUCTURAL_CONCRETE_PROJECT_MARBELLA_VILLA_001",
+  "project_id": "PROJECT_MARBELLA_VILLA_001",
+  "system": "structural_concrete",
+  "status": "needs_inputs",
+  "objective": "Convert the engineered structural concrete specification and construction programme into a configured-material RFQ/order requirement.",
+  "required_performance": {
+    "compressive_strength": null,
+    "exposure_class": null,
+    "consistency_or_slump": null,
+    "aggregate_max_mm": null,
+    "chloride_class": null,
+    "cement_or_binder_constraints": null,
+    "special_requirements": []
+  },
+  "quantity_and_schedule": {
+    "quantity_m3": null,
+    "required_on_site_date": null,
+    "pour_id": null,
+    "pour_sequence": null,
+    "discharge_rate_m3_h": null,
+    "pump_required": null
+  },
+  "sustainability": {
+    "max_embodied_carbon_kgco2e_m3": null,
+    "epd_required": null,
+    "recycled_content_target_percent": null
+  },
+  "logistics_constraints": {
+    "project_address": null,
+    "postal_code": "29660",
+    "coordinates": {
+      "lat": 36.51,
+      "lon": -4.97
+    },
+    "site_access": {
+      "max_vehicle_length_m": null,
+      "max_vehicle_weight_t": null,
+      "crane_possible": null,
+      "forklift_possible": null,
+      "delivery_time_windows": []
+    },
+    "batching_plant": "resolve from supplier against project location and required mix",
+    "delivery_mode": "mixer_truck",
+    "time_slot": "must coordinate with pour programme",
+    "local_preference": "prefer"
+  },
+  "product_twin_category_ids": [
+    "STRUCTURE.CONCRETE"
+  ],
+  "configured_twin": {
+    "kind": "configured_material",
+    "configuration_status": "needs_inputs",
+    "pricing_mode": "rfq",
+    "commerce_basis": "m3"
+  },
+  "selection_sequence": [
+    "receive structural engineer's concrete specification",
+    "split requirement into pours / programme packages",
+    "resolve viable local batching plants and delivery radius",
+    "request configured mix / quote from direct concrete sources",
+    "verify declared mix performance, plant quality evidence and sustainability documentation",
+    "rank by technical compliance before price, then plant distance, embodied carbon, capacity, truck logistics and delivered price",
+    "reserve pour slot and mixer/pump logistics",
+    "track trucks / delivery tickets / as-delivered batch evidence",
+    "attach tickets and conformity records back to the project Twin"
+  ],
+  "missing_inputs": [
+    "specified concrete compressive-strength class",
+    "exposure class / durability environment",
+    "consistency or slump class",
+    "maximum aggregate size",
+    "estimated concrete quantity in m3 by pour/package",
+    "required pour/delivery date or construction programme milestone",
+    "real project delivery address for batching-plant routing and truck logistics"
+  ],
+  "principle": "Ready-mix concrete is procured as an engineered, configured, plant-and-pour-specific material—not as a generic catalog SKU."
+}
