@@ -1,0 +1,88 @@
+{
+  "version": "0.1",
+  "principle": "Regulatory Graph is source-neutral and jurisdiction-aware. Product Twin never treats a marketplace listing as proof of legal suitability.",
+  "jurisdiction_model": {
+    "levels": ["supranational", "country", "region", "province", "municipality", "site_specific"],
+    "inheritance": "Rules cascade from broader jurisdictions unless superseded or narrowed by a more specific rule.",
+    "example_path": ["EU", "ES", "ES-AN", "ES-MA", "ES-MA-MARBELLA"]
+  },
+  "rule_types": [
+    "market_access",
+    "building_code",
+    "product_performance",
+    "installation",
+    "grid_connection",
+    "commissioning",
+    "operation_maintenance",
+    "fire_safety",
+    "water_health",
+    "energy_performance",
+    "environmental",
+    "waste_end_of_life",
+    "permit_or_registration",
+    "professional_qualification",
+    "incentive_or_subsidy"
+  ],
+  "decision_states": {
+    "PASS": "Known evidence indicates the item/system satisfies this rule for the proposed use.",
+    "BLOCK": "Known evidence indicates it must not be specified/procured/installed for this use.",
+    "HOLD": "Required evidence is missing or stale; professional review or documentation is required.",
+    "REVIEW": "Rule is context-dependent and requires project professional/authority confirmation.",
+    "OPPORTUNITY": "Not mandatory; an incentive, efficiency improvement or preferred-compliance option exists.",
+    "NOT_APPLICABLE": "Rule does not apply to this product/system/use." 
+  },
+  "regulation_source": {
+    "required": ["source_id", "authority", "title", "jurisdiction_id", "rule_type", "official_url", "last_verified_at"],
+    "optional": ["citation", "effective_from", "effective_to", "supersedes", "status", "notes"]
+  },
+  "rule": {
+    "required": ["rule_id", "source_id", "jurisdiction_id", "stage", "decision_logic"],
+    "optional": ["category_ids", "application_tags", "project_types", "building_uses", "thresholds", "required_evidence", "professional_signoff", "authority_process"]
+  },
+  "stages": [
+    "design",
+    "product_selection",
+    "procurement",
+    "installation",
+    "connection",
+    "commissioning",
+    "handover",
+    "operation"
+  ],
+  "product_compliance_evidence": {
+    "fields": [
+      "evidence_id",
+      "twin_id",
+      "type",
+      "document_number",
+      "issuer",
+      "jurisdictions",
+      "standards",
+      "declared_performance",
+      "intended_use",
+      "valid_from",
+      "valid_to",
+      "document_url",
+      "verified_at",
+      "verification_source"
+    ],
+    "examples": [
+      "CE_marking",
+      "declaration_of_performance",
+      "declaration_of_conformity",
+      "ETA",
+      "test_report",
+      "fire_classification",
+      "electrical_certificate",
+      "water_approval",
+      "installer_certificate",
+      "grid_approval",
+      "commissioning_record"
+    ]
+  },
+  "procurement_gate": {
+    "inputs": ["project_jurisdiction", "category_id", "application", "product_evidence", "system_design", "installation_context"],
+    "outputs": ["state", "blocking_rules", "missing_evidence", "review_items", "opportunities", "source_refs"],
+    "rule": "No Product Twin is marked legally suitable solely because it is purchasable or ships to the project region."
+  }
+}
