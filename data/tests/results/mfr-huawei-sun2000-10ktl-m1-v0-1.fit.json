@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-08-16T03:08:29.375Z",
+  "project_id": "PROJECT_MARBELLA_VILLA_001",
+  "evidence_id": "MFR_HUAWEI_SUN2000_10KTL_M1_V0_1",
+  "subject": {
+    "manufacturer": "Huawei",
+    "model": "SUN2000-10KTL-M1",
+    "category_id": "ENERGY.SOLAR.INVERTER",
+    "manufacturer_sku": null,
+    "gtin": null
+  },
+  "evidence_authority": {
+    "grade": "A_MANUFACTURER",
+    "publisher": "Huawei FusionSolar",
+    "source_uri": "https://solar.huawei.com/sa-en/products/sun2000-3-4-5-6-8-10ktl-m1/specs/",
+    "source_type": "manufacturer_product_page",
+    "territory": "official Huawei model-family specification; Spain applicability requires local confirmation",
+    "published_or_updated_at": null,
+    "retrieved_at": "2026-08-16T03:10:00Z",
+    "version_or_revision": "SUN2000-3/4/5/6/8/10KTL-M1 High Current Version"
+  },
+  "overall_state": "HOLD",
+  "checks": [
+    {
+      "check": "manufacturer_technical_evidence",
+      "state": "PASS",
+      "detail": "A_MANUFACTURER"
+    },
+    {
+      "check": "grid_frequency",
+      "state": "PASS",
+      "required": 50,
+      "product": [
+        50,
+        60
+      ]
+    },
+    {
+      "check": "phase",
+      "state": "HOLD",
+      "required": "unknown",
+      "product": "three"
+    },
+    {
+      "check": "nominal_voltage",
+      "state": "PASS",
+      "required": 230,
+      "product": {
+        "phase_voltage_v": [
+          220,
+          230
+        ],
+        "line_voltage_v": [
+          380,
+          400
+        ]
+      }
+    },
+    {
+      "check": "pv_system_sizing",
+      "state": "HOLD",
+      "required_target_kwp": null,
+      "product_recommended_max_pv_kwp": 15
+    },
+    {
+      "check": "territory_applicability",
+      "state": "REVIEW",
+      "detail": "review"
+    }
+  ],
+  "regulatory_screen": [
+    {
+      "rule_id": "ES.ELECTRICAL.REBT_REVIEW",
+      "jurisdiction_id": "ES",
+      "stage": "installation",
+      "state": "REVIEW",
+      "missing_evidence": [],
+      "professional_signoff": true
+    },
+    {
+      "rule_id": "ESAN.SOLAR.REGISTRATION_PATH",
+      "jurisdiction_id": "ES-AN",
+      "stage": "connection",
+      "state": "REVIEW",
+      "missing_evidence": [],
+      "professional_signoff": true
+    }
+  ],
+  "missing_project_inputs": [
+    "confirmed electrical phase",
+    "target PV system kWp from building load/generation objective",
+    "usable roof area / roof-plane geometry"
+  ],
+  "project_context": {
+    "cte_zone": "A3",
+    "solar_yield_kwh_per_kwp": 1732.34,
+    "electrical": {
+      "nominal_voltage_v": 230,
+      "frequency_hz": 50,
+      "phase": "unknown",
+      "grid_connection_status": "planned"
+    }
+  },
+  "principle": "Manufacturer-verified product facts and project suitability are independent gates."
+}
