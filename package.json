@@ -1,6 +1,6 @@
 {
   "name": "product-twin",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "private": true,
   "type": "module",
   "engines": {"node": ">=22"},
@@ -8,6 +8,7 @@
     "ingest:shopify": "node scripts/shopify-ingest.mjs",
     "triage:shopify": "node scripts/shopify-triage.mjs",
     "coverage": "node scripts/build-coverage.mjs",
+    "coverage:sources": "node scripts/build-source-coverage.mjs",
     "offers:resolve": "node scripts/resolve-offers.mjs",
     "references:persist": "node scripts/persist-selected-references.mjs",
     "references:refresh": "node scripts/refresh-selected-references.mjs",
