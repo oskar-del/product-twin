@@ -1,0 +1,55 @@
+{
+  "version": "0.1",
+  "purpose": "Represent real products that are manufactured, cut, mixed, assembled or engineered to a project configuration rather than selected as a fixed retail SKU.",
+  "configured_twin": {
+    "twin_id": "string",
+    "kind": "configured_material | configured_component | configured_system",
+    "canonical_category_id": "string",
+    "base_product_or_system": {
+      "manufacturer": "string",
+      "family": "string|null",
+      "source_id": "string|null",
+      "external_family_id": "string|null"
+    },
+    "project_configuration": {
+      "project_id": "string",
+      "requirement_id": "string",
+      "configuration_status": "needs_inputs | provisional | engineered | manufacturer_confirmed | ordered",
+      "parameters": "object",
+      "engineering_evidence": "array"
+    },
+    "manufacturing_or_supply": {
+      "location_id": "string|null",
+      "batch_or_order_reference": "string|null",
+      "minimum_order": "object|null",
+      "production_lead_time": "object|null"
+    },
+    "commerce": {
+      "pricing_mode": "fixed | configured_price | trade_price | rfq | tender",
+      "quote_id": "string|null",
+      "quote_valid_until": "ISO-8601|null",
+      "unit": "each | m | m2 | m3 | kg | tonne | project",
+      "unit_price": "number|null",
+      "currency": "string|null"
+    },
+    "logistics": {
+      "delivery_mode": "parcel | pallet | ltl | full_truck | mixer_truck | crane_truck | specialist | pickup | other",
+      "required_on_site_at": "ISO-8601|null",
+      "slot_or_sequence": "object|null",
+      "route": "object|null"
+    },
+    "quality_and_traceability": {
+      "lot_or_batch_required": "boolean",
+      "delivery_ticket_required": "boolean",
+      "certificate_required": "boolean",
+      "as_delivered_evidence": "array"
+    }
+  },
+  "examples": [
+    "Ready-mix concrete: family + engineered mix specification + batching plant + m3 + pour date + mixer-truck sequence.",
+    "Window system: profile family + exact opening dimensions + glazing + hardware + finish + fabrication shop.",
+    "Kitchen: cabinet system + module schedule + fronts + hardware + worktop fabrication.",
+    "Stone: slab/lot + cut schedule + finish + edge treatment + fabricator."
+  ],
+  "principle": "The canonical Twin can be a real configured project product even when no single fixed SKU exists before engineering or quotation."
+}
