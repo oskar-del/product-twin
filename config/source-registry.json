@@ -1,0 +1,78 @@
+{
+  "version": "0.1",
+  "principle": "A source counts as live Product Twin coverage only after a real test succeeds. Sources map into the canonical graph; they never redefine Product Twin identity or taxonomy.",
+  "sources": [
+    {
+      "source_id": "shopify_global_catalog",
+      "type": "commerce_marketplace",
+      "state": "LIVE_PROVEN",
+      "territories": ["global"],
+      "capabilities": ["discovery", "offers", "merchant_resolution", "cart"],
+      "authority": "commerce",
+      "mapping_file": "config/source-mappings/shopify-global.json"
+    },
+    {
+      "source_id": "fluidra_pro_spain",
+      "type": "direct_specialist_procurement",
+      "state": "LIVE_PROVEN",
+      "territories": ["ES"],
+      "capabilities": ["specialist_product", "technical_evidence", "trade_procurement"],
+      "authority": "manufacturer_trade",
+      "mapping_file": "config/source-mappings/fluidra-pro-spain.json"
+    },
+    {
+      "source_id": "cemex_go_spain",
+      "type": "configured_material_procurement",
+      "state": "LIVE_PROVEN",
+      "territories": ["ES"],
+      "capabilities": ["configured_material", "rfq", "delivery"],
+      "authority": "manufacturer_trade",
+      "mapping_file": "config/source-mappings/cemex-go-spain.json"
+    },
+    {
+      "source_id": "herman_miller_product_models",
+      "type": "manufacturer_geometry_bim",
+      "state": "LIVE_PROVEN",
+      "territories": ["global"],
+      "capabilities": ["revit", "sketchup", "autocad_3d"],
+      "authority": "manufacturer_geometry",
+      "rights_state": "space_planning_supported_persistent_storage_and_redistribution_review"
+    },
+    {
+      "source_id": "arper_resources",
+      "type": "manufacturer_geometry_bim",
+      "state": "LIVE_PROVEN",
+      "territories": ["global"],
+      "capabilities": ["3ds", "revit", "sketchup", "archicad"],
+      "authority": "manufacturer_geometry",
+      "rights_state": "public_download_geometry_usage_review"
+    },
+    {
+      "source_id": "gs1_verified",
+      "type": "neutral_identity_registry",
+      "state": "LIVE_TEST_RUNNING",
+      "territories": ["global"],
+      "capabilities": ["gtin_verification", "licensee_identity", "product_master_data"],
+      "authority": "neutral_identity",
+      "access": "public_low_volume_enterprise_api_via_gs1_member_organisation"
+    },
+    {
+      "source_id": "woocommerce_store_api",
+      "type": "merchant_platform_adapter",
+      "state": "LIVE_TEST_RUNNING",
+      "territories": ["merchant_defined"],
+      "capabilities": ["public_products", "cart", "checkout", "shipping_rates"],
+      "authority": "merchant_commerce",
+      "access": "public_unauthenticated_store_api",
+      "mapping_file": "config/source-mappings/woocommerce-store.json"
+    },
+    {
+      "source_id": "ebay_browse_api",
+      "type": "commerce_marketplace",
+      "state": "CREDENTIALS_REQUIRED",
+      "territories": ["multiple_marketplaces"],
+      "capabilities": ["keyword_search", "gtin_search", "image_search", "item_detail", "delivery_context"],
+      "authority": "commerce"
+    }
+  ]
+}
