@@ -1,0 +1,14 @@
+{
+  "version": "0.1",
+  "source_id": "gs1_verified",
+  "public_query_budget_policy": "Use only deliberate low-volume identity tests; never crawl or batch the public web UI.",
+  "targets": [
+    {
+      "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
+      "gtin": "5713222210793",
+      "expected_brand_signals": ["Muuto"],
+      "expected_product_signals": ["Outline", "Sofa"],
+      "known_manufacturer_item_no": "OU2SRA10101"
+    }
+  ]
+}
