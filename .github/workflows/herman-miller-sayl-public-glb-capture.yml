@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'scripts/capture-herman-miller-sayl-glb.mjs'
+      - 'scripts/qa-herman-miller-sayl-glb.py'
       - 'config/geometry/herman-miller-sayl-target.json'
       - '.github/workflows/herman-miller-sayl-public-glb-capture.yml'
 
@@ -26,12 +27,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install Playwright
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install capture and geometry QA tools
         run: |
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
+          pip install trimesh numpy
       - name: Use public configurator Downloads flow
         run: node scripts/capture-herman-miller-sayl-glb.mjs
+      - name: Validate product-bound GLB physical scale
+        run: python scripts/qa-herman-miller-sayl-glb.py
       - name: Commit metadata only
         shell: bash
         run: |
@@ -39,9 +46,9 @@ jobs:
           test ! -d .runtime || echo "Runtime assets intentionally not committed"
           git config user.name "product-twin-bot"
           git config user.email "product-twin-bot@users.noreply.github.com"
-          git add data/metrics/herman-miller-sayl-public-glb-capture-latest.json
+          git add data/metrics/herman-miller-sayl-public-glb-capture-latest.json data/metrics/herman-miller-sayl-glb-qa-latest.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "data: record Herman Miller Sayl public GLB capture"
+          git commit -m "data: record and QA Herman Miller Sayl GLB capture"
           for attempt in 1 2 3; do
             if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
             git rebase --abort 2>/dev/null || true
