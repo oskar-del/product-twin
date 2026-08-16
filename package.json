@@ -1,6 +1,6 @@
 {
   "name": "product-twin",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "engines": {"node": ">=22"},
@@ -20,6 +20,7 @@
     "regulatory:test": "node scripts/regulatory-evaluate.mjs",
     "context:test": "node scripts/project-context-resolve.mjs",
     "whole-building:test": "node scripts/whole-building-test.mjs",
+    "procurement:routes": "node scripts/select-procurement-routes.mjs",
     "solar:pvgis": "node scripts/pvgis-solar.mjs",
     "solar:requirement": "node scripts/solar-requirement.mjs",
     "pool:requirement": "node scripts/pool-requirement.mjs",
