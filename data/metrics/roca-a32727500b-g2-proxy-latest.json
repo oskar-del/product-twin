@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-08-16T17:56:06.106750+00:00",
+  "target_id": "ROCA_A32727500B_BASIN_G2_V0_1",
+  "avatar_id": "AVATAR_ROCA_A32727500B_G2_BASIN_PROXY",
+  "status": "G2_PROXY_SCALE_COMMERCE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/roca-a32727500b-g2-basin-proxy.glb",
+  "asset_bytes": 7184,
+  "expected_mm": {
+    "length": 600,
+    "width": 380,
+    "height": 70
+  },
+  "measured_mm": {
+    "length": 600.0000238418579,
+    "width": 379.9999952316284,
+    "height": 70.00000029802322
+  },
+  "relative_error_max": 3.9736429850260414e-08,
+  "specification": {
+    "material": "porcelain",
+    "installation_type": "countertop",
+    "bowl_capacity_l": 8,
+    "drain_included": true,
+    "tap_included": false,
+    "shape_description": "asymmetric"
+  },
+  "commerce_reference": {
+    "merchant": "Roca Spain",
+    "type": "manufacturer_direct_online",
+    "product_url": "https://www.roca.es/productos/lavabo-encimera-327275..B",
+    "last_observed_price_eur": 225.06,
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "availability_state": "online_purchase_route_observed; refresh live"
+  },
+  "disclosure": "Exact Roca product reference, dimensions, installation/spec and direct-Spain commerce reference. Product Twin-owned G2 geometry is a schematic basin envelope; exact Roca industrial-design shape is not claimed.",
+  "next_gate": "authorized exact CAD/BIM geometry + connection geometry + live price/stock refresh"
+}

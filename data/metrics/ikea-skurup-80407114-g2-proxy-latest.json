@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-08-16T17:56:06.109772+00:00",
+  "target_id": "IKEA_SKURUP_80407114_G2_V0_1",
+  "avatar_id": "AVATAR_IKEA_SKURUP_80407114_G2_PENDANT_PROXY",
+  "status": "G2_PROXY_SCALE_COMMERCE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-skurup-80407114-g2-pendant-proxy.glb",
+  "asset_bytes": 6108,
+  "verified_fixed_envelope_mm": {
+    "diameter": 380,
+    "height": 290
+  },
+  "measured_fixed_envelope_mm": {
+    "diameter": 379.9999952316284,
+    "height": 290.0000065565109
+  },
+  "relative_error": {
+    "diameter": 1.2548346268503289e-08,
+    "height": 2.26086583630792e-08
+  },
+  "parametric_placement": {
+    "cord_length_mm": 1500,
+    "note": "Cord/drop is adjustable placement metadata and is not part of the fixed shade mesh."
+  },
+  "specification": {
+    "max_power_w": 22,
+    "lamp_base": "E27",
+    "shade_material": "steel",
+    "ce_marked": true,
+    "mounting": "ceiling hook",
+    "dimmable": "depends on bulb/dimmer; product page states dimmable"
+  },
+  "commerce_reference": {
+    "merchant": "IKEA Spain",
+    "type": "retailer_direct_online",
+    "product_url": "https://www.ikea.com/es/es/p/skurup-lampara-techo-negro-80407114/",
+    "last_observed_price_eur": 19.99,
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "availability_state": "add-to-cart route observed; delivery/store availability must refresh live"
+  },
+  "disclosure": "Exact IKEA article identity, Spain commerce reference and manufacturer-published dimensions/spec. Product Twin-owned G2 shade geometry is a generic conical proxy; exact IKEA industrial-design geometry is not claimed.",
+  "next_gate": "authorized exact geometry/render rights + photometric data + live stock/delivery refresh"
+}
