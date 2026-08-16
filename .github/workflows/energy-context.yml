@@ -1,0 +1,42 @@
+name: Project Energy Context
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/energy-context.yml"
+      - "scripts/pvgis-solar.mjs"
+      - "data/projects/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-twin-energy-context
+  cancel-in-progress: true
+
+jobs:
+  solar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Calculate PVGIS solar context
+        run: npm run solar:pvgis
+      - name: Commit verified project energy context
+        run: |
+          git config user.name "product-twin-bot"
+          git config user.email "product-twin-bot@users.noreply.github.com"
+          git add data/energy
+          if git diff --cached --quiet; then
+            echo "No energy-context changes."
+            exit 0
+          fi
+          git commit -m "data: refresh PVGIS project energy context"
+          git push
