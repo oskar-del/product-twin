@@ -53,14 +53,33 @@ function solarFromEvidence(base, evidence) {
   };
 }
 
+function climateFromEvidence(base, evidence) {
+  if (evidence?.status !== "verified" || !evidence?.cte_zone) return base;
+  return {
+    ...(base ?? {}),
+    status: "verified",
+    cte_zone: evidence.cte_zone,
+    cte_winter_zone: evidence.winter_zone ?? null,
+    cte_summer_zone: evidence.summer_zone ?? null,
+    elevation_m: evidence.elevation_m ?? null,
+    source: {
+      authority: evidence.source?.authority ?? null,
+      document: evidence.source?.document ?? null,
+      document_date: evidence.source?.document_date ?? null,
+      verified_at: evidence.source?.verified_at ?? null
+    }
+  };
+}
+
 export function resolveProjectContext(project, evidence={}) {
   assert(project?.project_id, "project_id is required");
   assert(project?.location, "location is required");
 
   const resolved = {
     ...project,
+    climate: climateFromEvidence(project.climate, evidence.climate),
     solar: solarFromEvidence(project.solar, evidence.solar),
-    context_version: "0.2",
+    context_version: "0.3",
     resolved_at: new Date().toISOString(),
     procurement_context: {
       currency: project.procurement?.currency ?? "EUR",
@@ -87,16 +106,20 @@ export function resolveProjectContext(project, evidence={}) {
   return resolved;
 }
 
-async function loadSolarEvidence(project) {
-  const slug=(project.project_id||"project").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
-  const file=path.join("data/energy",`${slug}.pvgis.json`);
+function projectSlug(project) {
+  return (project.project_id||"project").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+}
+
+async function loadEvidence(project, suffix) {
+  const file=path.join("data/energy",`${projectSlug(project)}.${suffix}.json`);
   try { return JSON.parse(await fs.readFile(file,"utf8")); } catch { return null; }
 }
 
 if (process.argv[1]?.endsWith("project-context-resolve.mjs")) {
   const input = process.argv[2] || "data/projects/marbella-villa.example.json";
   const project = JSON.parse(await fs.readFile(input,"utf8"));
-  const solar=await loadSolarEvidence(project);
-  const result = resolveProjectContext(project,{solar});
+  const solar=await loadEvidence(project,"pvgis");
+  const climate=await loadEvidence(project,"cte-climate");
+  const result = resolveProjectContext(project,{solar,climate});
   console.log(JSON.stringify(result,null,2));
 }
