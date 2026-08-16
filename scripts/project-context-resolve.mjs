@@ -1,4 +1,5 @@
 import fs from "node:fs/promises";
+import path from "node:path";
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -21,18 +22,45 @@ function completeness(project) {
     ready_for_product_search: checks.coordinates && checks.country && checks.procurement,
     ready_for_regulatory_screen: checks.jurisdiction,
     ready_for_logistics_screen: checks.coordinates && checks.country && checks.logistics,
-    ready_for_solar_optimization: checks.coordinates && checks.climate && checks.solar,
+    ready_for_solar_resource_screen: checks.coordinates && checks.solar,
+    ready_for_solar_product_sizing: checks.coordinates && checks.solar && checks.electrical,
+    ready_for_energy_code_screen: checks.jurisdiction && checks.climate,
     unresolved: Object.entries(checks).filter(([,v])=>!v).map(([k])=>k)
   };
 }
 
-export function resolveProjectContext(project) {
+function solarFromEvidence(base, evidence) {
+  if (!evidence?.performance?.annual_energy_kwh_per_kwp) return base;
+  return {
+    ...(base ?? {}),
+    analysis_status: "verified",
+    resource_status: "VERIFIED_PVGIS",
+    irradiance_source: `${evidence.source?.service ?? "PVGIS"} ${evidence.source?.api_version ?? ""}`.trim(),
+    weather_dataset: evidence.source?.radiation_database ?? null,
+    annual_yield_kwh_per_kwp: evidence.performance.annual_energy_kwh_per_kwp,
+    annual_plane_irradiation_kwh_m2: evidence.performance.annual_plane_irradiation_kwh_m2 ?? null,
+    optimal_tilt_deg: evidence.optimized_plane?.tilt_deg ?? null,
+    optimal_pvgis_azimuth_deg: evidence.optimized_plane?.pvgis_azimuth_deg ?? null,
+    elevation_m: evidence.location?.elevation_m ?? null,
+    roof_geometry_source: base?.roof_geometry_source ?? null,
+    usable_roof_area_m2: base?.usable_roof_area_m2 ?? null,
+    actual_system_size_status: "requires_roof_geometry_and_real_product_twins",
+    source_evidence: {
+      authority: evidence.source?.authority ?? "European Commission Joint Research Centre",
+      service: evidence.source?.service ?? "PVGIS",
+      generated_at: evidence.generated_at ?? null
+    }
+  };
+}
+
+export function resolveProjectContext(project, evidence={}) {
   assert(project?.project_id, "project_id is required");
   assert(project?.location, "location is required");
 
   const resolved = {
     ...project,
-    context_version: "0.1",
+    solar: solarFromEvidence(project.solar, evidence.solar),
+    context_version: "0.2",
     resolved_at: new Date().toISOString(),
     procurement_context: {
       currency: project.procurement?.currency ?? "EUR",
@@ -59,9 +87,16 @@ export function resolveProjectContext(project) {
   return resolved;
 }
 
+async function loadSolarEvidence(project) {
+  const slug=(project.project_id||"project").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+  const file=path.join("data/energy",`${slug}.pvgis.json`);
+  try { return JSON.parse(await fs.readFile(file,"utf8")); } catch { return null; }
+}
+
 if (process.argv[1]?.endsWith("project-context-resolve.mjs")) {
   const input = process.argv[2] || "data/projects/marbella-villa.example.json";
   const project = JSON.parse(await fs.readFile(input,"utf8"));
-  const result = resolveProjectContext(project);
+  const solar=await loadSolarEvidence(project);
+  const result = resolveProjectContext(project,{solar});
   console.log(JSON.stringify(result,null,2));
 }
