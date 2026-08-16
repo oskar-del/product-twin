@@ -1,6 +1,6 @@
 {
   "name": "product-twin",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "type": "module",
   "engines": {"node": ">=22"},
@@ -9,6 +9,7 @@
     "triage:shopify": "node scripts/shopify-triage.mjs",
     "coverage": "node scripts/build-coverage.mjs",
     "offers:resolve": "node scripts/resolve-offers.mjs",
+    "technical:extract": "node scripts/extract-technical-evidence.mjs",
     "regulatory:test": "node scripts/regulatory-evaluate.mjs",
     "context:test": "node scripts/project-context-resolve.mjs",
     "whole-building:test": "node scripts/whole-building-test.mjs",
