@@ -1,0 +1,43 @@
+{
+  "version": "0.1",
+  "target_id": "MOSO_BAMBOO_XTREME_BO_DTHT171G_G2_V0_1",
+  "category_id": "SITE.DECKING",
+  "type": "repeating_material_system",
+  "manufacturer": "MOSO Bamboo",
+  "product_family": "Bamboo X-treme Decking",
+  "product_code": "BO-DTHT171G",
+  "finish": "Woca oil",
+  "style": "Thermo-Density",
+  "edges": "bevel",
+  "surface": "Standard Groove / Flat",
+  "official_spain_page": "https://www.moso-bamboo.com/es/producto/bamboo-x-treme-tarima-de-bambu-para-exterior/",
+  "official_accessories_page": "https://www.moso-bamboo.com/product/outdoor-accessories/",
+  "module": {
+    "length_mm": 1850,
+    "width_mm": 137,
+    "thickness_mm": 20
+  },
+  "installation": {
+    "method": "fasteners or screwed on joists",
+    "joint_gap_mm": {"min":5,"max":6,"design_default":5.5},
+    "bim_file_available": true
+  },
+  "takeoff": {
+    "rule": "effective repeat width = board width + selected side gap; board count is layout-dependent and rounded up after waste",
+    "default_waste_percent": 10,
+    "default_test_area_m2": 20,
+    "caution": "Area-only takeoff is preliminary; final board count depends on deck dimensions, direction, cut optimization, end conditions and substructure layout."
+  },
+  "avatar_plan": {
+    "target_level": "G2",
+    "geometry": "Product Twin-owned rectangular board/module and repeated 3-board assembly using exact outer module dimensions and 5.5mm design gap",
+    "appearance": "neutral bamboo-toned material placeholder; no MOSO proprietary texture copied",
+    "profile_detail": "proxy; exact Standard Groove profile not claimed"
+  },
+  "next_gates": [
+    "authorized PBR/appearance or render rights",
+    "manufacturer BIM/profile geometry if rights allow",
+    "Spain/EU live distributor offer/RFQ",
+    "project-specific joist/fixing layout"
+  ]
+}
