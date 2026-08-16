@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "profiles": {
     "furniture": {
       "required_for_identity": ["manufacturer", "model", "category"],
@@ -133,6 +133,35 @@
       "required_for_specification": ["rated_output_or_capacity", "electrical_characteristics", "dimensions"],
       "recommended": ["efficiency", "warranty", "communications", "certifications", "bim_asset"],
       "commerce_basis": "each_or_system"
+    },
+    "pv_module": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_placement": ["width_mm", "height_mm", "thickness_mm", "weight_kg"],
+      "required_for_specification": ["rated_power_wp", "module_efficiency_percent", "voc_v", "isc_a", "vmp_v", "imp_a", "max_system_voltage_v", "temperature_coefficient_pmax", "fire_class_or_rating"],
+      "required_for_compliance": ["ce_or_applicable_conformity", "iec_61215_or_applicable_standard", "iec_61730_or_applicable_standard"],
+      "recommended": ["cell_technology", "bifacial", "bifaciality_percent", "power_tolerance", "product_warranty_years", "performance_warranty_years", "connector_type", "mechanical_load_pa", "hail_rating", "degradation_year_1", "annual_degradation", "epd", "recycling_scheme"],
+      "commerce_basis": "each"
+    },
+    "power_electronics": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_specification": ["rated_ac_power_w", "max_dc_input_power_w", "mppt_voltage_range_v", "max_input_voltage_v", "mppt_count", "ac_nominal_voltage_v", "frequency_hz", "phase", "max_efficiency_percent", "ip_rating"],
+      "required_for_compliance": ["ce_or_applicable_conformity", "grid_connection_compatibility", "applicable_electrical_standards"],
+      "recommended": ["euro_efficiency_percent", "max_input_current_a", "max_short_circuit_current_a", "communications", "export_control", "backup_capability", "battery_compatibility", "operating_temperature_c", "sound_level_db", "warranty_years", "dimensions", "weight_kg"],
+      "commerce_basis": "each"
+    },
+    "battery_system": {
+      "required_for_identity": ["manufacturer", "model", "category"],
+      "required_for_specification": ["usable_capacity_kwh", "nominal_voltage_v", "continuous_power_kw", "round_trip_efficiency_percent", "chemistry", "ip_rating"],
+      "required_for_compliance": ["ce_or_applicable_conformity", "battery_safety_certification", "electrical_installation_compatibility"],
+      "recommended": ["peak_power_kw", "depth_of_discharge_percent", "cycles", "operating_temperature_c", "indoor_outdoor", "communications", "warranty_years", "dimensions", "weight_kg", "fire_safety_documentation"],
+      "commerce_basis": "each"
+    },
+    "solar_mounting": {
+      "required_for_identity": ["manufacturer", "system", "category"],
+      "required_for_specification": ["roof_or_ground_type", "module_compatibility", "design_load", "material", "fixing_method"],
+      "required_for_compliance": ["structural_design_evidence", "corrosion_class_or_environmental_suitability"],
+      "recommended": ["tilt_range_deg", "wind_load", "snow_load", "waterproofing_interface", "warranty_years"],
+      "commerce_basis": "system_or_module"
     }
   }
 }
