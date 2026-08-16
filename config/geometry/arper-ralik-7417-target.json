@@ -1,0 +1,38 @@
+{
+  "version": "0.1",
+  "target_id": "ARPER_RALIK_7417_G3_V0_1",
+  "category_id": "FFE.TABLE.COFFEE",
+  "manufacturer": "Arper",
+  "product_family": "Ralik",
+  "article_no": "7417",
+  "model": "Ralik Coffee Table Rectangular 51x60x30 cm",
+  "manufacturer_page": "https://www.arper.com/es_ES/7417-20article-207417.html",
+  "physical": {
+    "dimension_state": "manufacturer_page_verified",
+    "dimensions_mm_sorted": [300, 510, 600],
+    "weight_state": "not_required_for_geometry_qa",
+    "qa_tolerance_percent": 5
+  },
+  "manufacturer_resources": {
+    "public_without_registration": true,
+    "formats_advertised": ["2D DWG", "3DS", "Revit", "SketchUp", "Archicad"],
+    "preferred_runtime_source": "3DS",
+    "runtime_target": "GLB"
+  },
+  "geometry": {
+    "current_level": "G0",
+    "target_level": "G3",
+    "identity_scope": "exact Arper article 7417 geometry; finish configuration may remain separate",
+    "download_state": "pending_public_resource_capture",
+    "conversion_state": "3DS_to_GLB_pending",
+    "scale_state": "pending_bounds_validation",
+    "rights_state": "manufacturer_project_resource_available_without_registration; render/derivative/persistent_storage/redistribution review remains explicit"
+  },
+  "promotion_blockers": [
+    "capture exact article-7417 manufacturer 3DS",
+    "convert transiently to GLB",
+    "validate GLB bounds against 300/510/600 mm manufacturer dimensions",
+    "confirm render/derivative handling terms before persistent asset storage",
+    "resolve exact live commerce/RFQ identity"
+  ]
+}
