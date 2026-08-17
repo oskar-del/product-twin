@@ -138,6 +138,36 @@ export function validateSaterdalsvagen14({
   "historic plan evidence was promoted into a current plot entitlement");
   check(findingById.get("FINDING_SE_PLAN_22D1008_MAP_AVAILABLE")?.value?.current_property_directly_identified === false,
     "the current property was falsely identified on the historic plan map");
+  const strategicStatus = findingById.get("FINDING_SE_CURRENT_STRATEGIC_PLAN_STATUS");
+  check(strategicStatus?.value?.municipality_wide_plan_adopted === "2025-12-15"
+    && strategicStatus?.value?.svartinge_1984_plan_status === "OUTDATED_BUT_CONTINUES_UNTIL_REPLACED"
+    && strategicStatus?.value?.svartinge_2026_proposal_adopted === false,
+  "adopted, continuing and proposed strategic-plan states were conflated");
+  const draftPointContext = findingById.get("FINDING_SE_DRAFT_FOP_POINT_CONTEXT");
+  check(draftPointContext?.verification === "PARTIAL"
+    && draftPointContext?.value?.proposal_stage === "CONSULTATION_DRAFT_NOT_ADOPTED"
+    && draftPointContext?.value?.proposed_area_name === "Övre Svärtinge"
+    && exactSet(draftPointContext?.value?.proposal_minimum_plot_size_m2, [1000, 1200])
+    && draftPointContext?.value?.geotechnical_zone === 2,
+  "draft municipal point context changed or was over-promoted");
+  check(draftPointContext?.value?.absence_inference_permitted === false
+    && draftPointContext?.limitations?.some((text) => text.includes("zero point intersections cannot establish non-intersection")),
+  "point-only zero intersections were converted into parcel-wide absence evidence");
+  for (const gateId of ["GATE_SE_GROUND_CONDITIONS", "GATE_SE_FLOOD_AND_GEOHAZARDS", "GATE_SE_ENVIRONMENTAL_RESTRICTIONS"]) {
+    check(gateById.get(gateId)?.evidence_refs?.includes("FINDING_SE_DRAFT_FOP_POINT_CONTEXT"), `${gateId} is not bound to the municipal point-screen limitations`);
+  }
+  const ebhContext = findingById.get("FINDING_SE_EBH_CONTEXT_2KM");
+  check(ebhContext?.value?.records_within_2km === 4
+    && ebhContext?.value?.nearest_records?.[0]?.ebh_object_id === 143275
+    && ebhContext?.value?.nearest_records?.[0]?.distance_m === 312.3
+    && ebhContext?.value?.nearest_records?.[1]?.ebh_object_id === 144072
+    && ebhContext?.value?.nearest_records?.[1]?.risk_class === "2",
+  "EBH contamination-context records changed");
+  check(ebhContext?.value?.plot_contamination_conclusion === "UNRESOLVED"
+    && ebhContext?.limitations?.some((text) => text.includes("do not prove contamination")),
+  "EBH context was converted into a plot contamination conclusion");
+  check(gateById.get("GATE_SE_CULTURAL_AND_CONTAMINATION")?.evidence_refs?.includes("FINDING_SE_EBH_CONTEXT_2KM"),
+    "contamination gate is not bound to the EBH context and its limitations");
   check(gateById.get("GATE_SE_MUNICIPAL_JURISDICTION")?.status === "SATISFIED"
     && gateById.get("GATE_SE_MUNICIPAL_JURISDICTION")?.evidence_refs?.includes("FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"), "municipal jurisdiction is not bound to the NOKA evidence");
 

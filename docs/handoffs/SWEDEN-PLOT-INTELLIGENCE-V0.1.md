@@ -4,6 +4,23 @@ Date: 2026-08-17
 
 Branch: `agent/plot-to-project-spatial-studio`
 
+## Svärtinge Neighbourhood Twin Alpha checkpoint (2026-08-18)
+
+The first versioned Neighbourhood Twin Alpha now binds the existing `SVÄRTINGE 54:28` discovery record without promoting its unresolved geometry or planning claims. The authoritative checkpoint is `docs/handoffs/NEIGHBOURHOOD-TWIN-ALPHA-V0.1.md`.
+
+Implemented artifacts:
+
+- `config/spatial/neighbourhood-twin-alpha-v0.1.schema.json`
+- `data/sites/sweden/saterdalsvagen-14/neighbourhood-twin-alpha-v0.1.json`
+- `data/sites/sweden/saterdalsvagen-14/neighbourhood-context-indicative-v0.1.geojson`
+- `scripts/build-svartinge-neighbourhood-twin-alpha.mjs`
+- `scripts/validate-svartinge-neighbourhood-twin-alpha.mjs`
+- `scripts/test-svartinge-neighbourhood-twin-alpha.mjs`
+
+The interface exposes `REGION → NEIGHBOURHOOD → STREET → PLOT → BUILDING → UNIT → ROOM`, but only region/neighbourhood labels, a street name, the verified point anchor and an explicitly non-legal area-equivalent uncertainty disc are currently renderable. Ten hard gates prohibit legal boundary, terrain, surrounding-building, road, entitlement, access, utility, flood/drainage, soil/groundwater and heritage/environment promotion. Building orbit, unit entry and room entry remain blocked. Munin carries zero persisted payloads and no opaque ID is invented.
+
+Run `npm run site:sweden:svartinge:neighbourhood:gate` for the deterministic builder, validator and negative mutations.
+
 ## Outcome
 
 The repository now has a reusable national Sweden adapter for Plot-to-Project.

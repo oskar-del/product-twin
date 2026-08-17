@@ -195,6 +195,36 @@
       "sha256": "0ba9865c9e2e075a88bf93858aca4e8c2bc1b800ca6ca4a17823a7aa2e3d8b24",
       "scope": "Official protection decision and zone rules; exact plot-zone intersection remains unresolved.",
       "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_NORRKOPING_OVERSIKTSPLAN_STATUS_PAGE",
+      "source_id": "SE_MUNICIPAL_PLAN_AND_PERMIT_ARCHIVE",
+      "retrieved_at": "2026-08-17T21:46:28.991Z",
+      "request_or_record_ref": "https://norrkoping.se/boende-trafik-och-miljo/planer-och-byggprojekt/oversiktsplanering",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/municipal-oversiktsplanering-2026-08-17.html",
+      "sha256": "d0f11ecaacf56914c7877c508f94eeaf43937ee87299a93f1bba6160841a9811",
+      "scope": "Current municipal status page distinguishing the adopted 2025 municipal plan, the still-applicable but outdated 1984 Svartinge area plan and the unadopted 2026 consultation proposal.",
+      "evidence_class": "MUNICIPAL_RECORD"
+    },
+    {
+      "receipt_id": "RCPT_SE_NORRKOPING_SVARTINGE_FOP_POINT_SCREEN",
+      "source_id": "SE_MUNICIPAL_PLAN_AND_PERMIT_ARCHIVE",
+      "retrieved_at": "2026-08-17T21:46:28.991Z",
+      "request_or_record_ref": "Norrkoping public ArcGIS FOP Svartinge consultation web maps; exact EPSG:4326 point queries at the unverified address locator",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/municipal-fop-point-screen-2026-08-17.json",
+      "sha256": "03f5867cbe78ab36cfb6ff0010df066e539529924198d7155dc49a3cde730005",
+      "scope": "Draft strategic land-use, flood, geotechnical, water, nature, cultural and national-interest point screen; not parcel geometry, entitlement or an absence certificate.",
+      "evidence_class": "MUNICIPAL_RECORD"
+    },
+    {
+      "receipt_id": "RCPT_SE_LST_EBH_CONTEXT_2KM",
+      "source_id": "SE_LST_CONTAMINATED_LAND",
+      "retrieved_at": "2026-08-17T21:50:40.575Z",
+      "request_or_record_ref": "Länsstyrelserna public EBH risk-class layer, 2,000 m search around the unverified EPSG:4326 address locator",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/lst-ebh-context-2km-2026-08-17.geojson",
+      "sha256": "252460c6ac091fa152926e9854ea02b42094ef45ed7a83dcdc71fc922afa3178",
+      "scope": "Known or suspected contaminated-site context points only; neither presence nor absence of plot contamination is established.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
     }
   ],
   "findings": [
@@ -400,6 +430,73 @@
       "observed_at": "2026-08-17T17:37:00Z",
       "verification": "PARTIAL",
       "limitations": ["The exact plot-zone intersection has not been established from an authoritative vector or municipal response.", "Zone-specific permit and notification requirements cannot yet be evaluated."]
+    },
+    {
+      "finding_id": "FINDING_SE_CURRENT_STRATEGIC_PLAN_STATUS",
+      "domain": "planning_screening",
+      "value": {
+        "municipality_wide_plan_adopted": "2025-12-15",
+        "svartinge_1984_plan_status": "OUTDATED_BUT_CONTINUES_UNTIL_REPLACED",
+        "svartinge_2026_proposal_stage": "CONSULTATION_2026-05-22_TO_2026-09-07",
+        "svartinge_2026_proposal_adopted": false
+      },
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_NORRKOPING_OVERSIKTSPLAN_STATUS_PAGE"],
+      "method": "Captured the current municipal planning-status page and kept adopted, continuing and proposed strategic instruments distinct.",
+      "observed_at": "2026-08-17T21:46:28.991Z",
+      "verification": "VERIFIED",
+      "limitations": ["Comprehensive plans are strategic and nonbinding; this finding does not replace the property-specific effective plan and amendment chain.", "The 2026 consultation proposal must not be presented as adopted policy or building entitlement."]
+    },
+    {
+      "finding_id": "FINDING_SE_DRAFT_FOP_POINT_CONTEXT",
+      "domain": "municipal_spatial_screening",
+      "value": {
+        "locator_role": "UNVERIFIED_MARKET_ADDRESS_LOCATOR",
+        "proposal_stage": "CONSULTATION_DRAFT_NOT_ADOPTED",
+        "proposed_land_use": "Bostadsbebyggelse",
+        "proposed_area_name": "Övre Svärtinge",
+        "proposed_use_status": "Utvecklad användning",
+        "proposal_minimum_plot_size_m2": [1000, 1200],
+        "geotechnical_zone": 2,
+        "groundwater_body": "Övre Svärtinge SE650294-151443",
+        "total_defence_influence": "MSA area for Malmen air flotilla",
+        "zero_point_intersections": [
+          "extreme-rain mapped areas",
+          "100-year and BHF flood polygons",
+          "Glan water-protection polygon",
+          "queried nature-value, reserve, Natura 2000, cultural-environment and recreation polygons"
+        ],
+        "absence_inference_permitted": false
+      },
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_NORRKOPING_SVARTINGE_FOP_POINT_SCREEN"],
+      "method": "Queried 30 named layers in Norrkoping's public 2026 Svartinge consultation web maps at the address locator and retained every exact request and raw response.",
+      "observed_at": "2026-08-17T21:46:28.991Z",
+      "verification": "PARTIAL",
+      "limitations": ["The queried coordinate is not verified parcel geometry, so zero point intersections cannot establish non-intersection across the property.", "The 1,000-1,200 m2 statement is a proposed strategic direction for Ovre Svartinge, not an effective subdivision right or a resolution of the 1936 plan.", "Geotechnical zone 2 calls for geotechnical investigation and does not prove site conditions or foundation feasibility.", "The groundwater and total-defence results are planning context; project-specific effects remain unassessed."]
+    },
+    {
+      "finding_id": "FINDING_SE_EBH_CONTEXT_2KM",
+      "domain": "contamination_screening",
+      "value": {
+        "records_within_2km": 4,
+        "nearest_records": [
+          {"ebh_object_id": 143275, "distance_m": 312.3, "primary_industry": "Drivmedelshantering", "status": "Förstudie", "risk_class": null},
+          {"ebh_object_id": 144072, "distance_m": 680.8, "primary_industry": "Plantskola", "status": "Inventering", "risk_class": "2"},
+          {"ebh_object_id": 143743, "distance_m": 1260.8, "primary_industry": "Betong- och cementindustri", "status": "Identifiering", "risk_class": null},
+          {"ebh_object_id": 143216, "distance_m": 1390.6, "primary_industry": "Drivmedelshantering", "status": "Delåtgärd", "risk_class": null}
+        ],
+        "plot_contamination_conclusion": "UNRESOLVED"
+      },
+      "unit": null,
+      "evidence_class": "DERIVED_VERIFIED",
+      "source_receipt_refs": ["RCPT_SE_LST_EBH_CONTEXT_2KM"],
+      "method": "Queried the official public EBH risk-class point layer within 2,000 m and calculated great-circle distances from the unverified address locator without changing source coordinates or attributes.",
+      "observed_at": "2026-08-17T21:50:40.575Z",
+      "verification": "VERIFIED",
+      "limitations": ["EBH points identify known or suspected potentially contaminating activities and do not prove contamination at those points or on this plot.", "The public map is not a complete clean-land certificate; additional records may exist with the municipality, authorities and site history.", "The locator is not verified parcel geometry, and sampling is required to determine actual soil or groundwater contamination."]
     }
   ],
   "gates": [
@@ -409,15 +506,15 @@
     {"gate_id": "GATE_SE_PROPERTY_REGISTER", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No property-register extract has been requested; explicit permission is absent."},
     {"gate_id": "GATE_SE_RIGHTS_AND_JOINT_FACILITIES", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Servitudes, joint facilities, cadastral acts, road rights and mortgages remain unresolved."},
     {"gate_id": "GATE_SE_BOUNDARY_FOR_DESIGN", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The seller map is nonbinding and no field survey or boundary determination exists."},
-    {"gate_id": "GATE_SE_DETAIL_PLAN_AND_STATUS", "status": "OPEN", "evidence_refs": ["RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY", "RCPT_SE_NORRKOPING_PLAN_22D1008_DESCRIPTION", "RCPT_SE_NORRKOPING_PLAN_22D1008_MAP", "FINDING_SE_NOKA_EFFECTIVE_PLAN_LOCATOR", "FINDING_SE_PLAN_22D1008_HISTORIC_PROVISIONS", "FINDING_SE_PLAN_22D1008_MAP_AVAILABLE"], "decided_at": null, "reason": "NOKA identifies one legally effective Avstyckningsplan, 0581K-22D:1008, at the address point, with legal-force date 1936-05-26, and the linked plan description and map are now acquired. The historic record signals one dwelling house per plot and an original average lot pattern of about 3,000 m², but the current property-to-historic-lot mapping, exact present legal effect and amendment chain remain unresolved, so the planning basis is not closed."},
+    {"gate_id": "GATE_SE_DETAIL_PLAN_AND_STATUS", "status": "OPEN", "evidence_refs": ["RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY", "RCPT_SE_NORRKOPING_PLAN_22D1008_DESCRIPTION", "RCPT_SE_NORRKOPING_PLAN_22D1008_MAP", "RCPT_SE_NORRKOPING_OVERSIKTSPLAN_STATUS_PAGE", "RCPT_SE_NORRKOPING_SVARTINGE_FOP_POINT_SCREEN", "FINDING_SE_NOKA_EFFECTIVE_PLAN_LOCATOR", "FINDING_SE_PLAN_22D1008_HISTORIC_PROVISIONS", "FINDING_SE_PLAN_22D1008_MAP_AVAILABLE", "FINDING_SE_CURRENT_STRATEGIC_PLAN_STATUS", "FINDING_SE_DRAFT_FOP_POINT_CONTEXT"], "decided_at": null, "reason": "NOKA identifies effective Avstyckningsplan 0581K-22D:1008 at the address point and its source files are acquired. Norrkoping also confirms that the outdated 1984 Svartinge strategic plan continues until replacement, while the 2026 FOP is only a consultation proposal. That proposal places the locator in Ovre Svartinge residential context and proposes 1,000-1,200 m2 minimum plots, but it is not entitlement. The current property-to-historic-lot mapping, exact present legal effect and amendment chain remain unresolved."},
     {"gate_id": "GATE_SE_CURRENT_LAW_PROFILE", "status": "SATISFIED", "evidence_refs": ["RCPT_SE_BOVERKET_CURRENT_LAW", "FINDING_SE_CURRENT_H30_H50_PROFILE"], "decided_at": "2026-08-17T17:37:00Z", "reason": "Current Boverket guidance and the 2025-12-01 effective profile are bound for this assessment date."},
     {"gate_id": "GATE_SE_H30_H50_ELIGIBILITY", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Neither H30 nor H50 eligibility can be determined before plan status, principal-building facts, aggregate areas, placement and protections are resolved."},
     {"gate_id": "GATE_SE_BUILDABLE_ENVELOPE", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No authoritative buildable envelope may be drawn while boundary, planning, rights, environmental and access gates remain open."},
     {"gate_id": "GATE_SE_TERRAIN", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The exact 1 m STAC item is identified, but its raster asset returned HTTP 401 and no plot clip or deterministic derivations exist."},
-    {"gate_id": "GATE_SE_GROUND_CONDITIONS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Official screening shows glaciofluvial sediment and strong nearby depth variability; plot-specific geotechnical, groundwater, radon, contamination and infiltration evidence is absent."},
-    {"gate_id": "GATE_SE_FLOOD_AND_GEOHAZARDS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Terrain bytes, municipal cloudburst/flood layers and plot drainage review are incomplete."},
-    {"gate_id": "GATE_SE_ENVIRONMENTAL_RESTRICTIONS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The national WFS responses are inconclusive, the Svärtinge Natura context is known, and Glan water-protection zone plus shoreline status remain unresolved."},
-    {"gate_id": "GATE_SE_CULTURAL_AND_CONTAMINATION", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Two published heritage points occur about 472 m from the market locator, but full geometry/uncertainty, contamination and historic-use screening remain incomplete."},
+    {"gate_id": "GATE_SE_GROUND_CONDITIONS", "status": "OPEN", "evidence_refs": ["RCPT_SE_NORRKOPING_SVARTINGE_FOP_POINT_SCREEN", "FINDING_SE_DRAFT_FOP_POINT_CONTEXT"], "decided_at": null, "reason": "Official screening shows glaciofluvial sediment, strong nearby depth variability, proposed municipal geotechnical zone 2 and the Ovre Svartinge groundwater body at the locator. The draft layer says geotechnical investigation is required; plot-specific geotechnical, groundwater, radon, contamination and infiltration evidence is absent."},
+    {"gate_id": "GATE_SE_FLOOD_AND_GEOHAZARDS", "status": "OPEN", "evidence_refs": ["RCPT_SE_NORRKOPING_SVARTINGE_FOP_POINT_SCREEN", "FINDING_SE_DRAFT_FOP_POINT_CONTEXT"], "decided_at": null, "reason": "The address locator did not intersect the draft municipality's extreme-rain, 100-year or BHF flood polygons, but that point-only result cannot establish absence across an unverified parcel. Terrain bytes, legal boundary, local drainage and parcel-wide municipal screening remain incomplete."},
+    {"gate_id": "GATE_SE_ENVIRONMENTAL_RESTRICTIONS", "status": "OPEN", "evidence_refs": ["RCPT_SE_NORRKOPING_SVARTINGE_FOP_POINT_SCREEN", "FINDING_SE_DRAFT_FOP_POINT_CONTEXT"], "decided_at": null, "reason": "The draft municipal point screen returned no intersection with its Glan water-protection, queried nature, reserve or Natura polygons, but a point-only consultation layer cannot prove parcel-wide absence or legal status. The national WFS responses remain inconclusive, and shoreline protection plus the authoritative Glan zone overlay remain unresolved."},
+    {"gate_id": "GATE_SE_CULTURAL_AND_CONTAMINATION", "status": "OPEN", "evidence_refs": ["RCPT_SE_LST_EBH_CONTEXT_2KM", "FINDING_SE_EBH_CONTEXT_2KM"], "decided_at": null, "reason": "Two published heritage points occur about 472 m from the market locator. The public EBH layer also returns four known or suspected activity records within 2 km, nearest a fuel-handling record about 312 m away and a risk-class 2 nursery about 681 m away. These are context signals; full geometry/uncertainty, plot history, detailed EBH records and sampling remain incomplete."},
     {"gate_id": "GATE_SE_LEGAL_ACCESS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Road proximity and the seller listing cannot prove legal or permitted access, road manager approval, gradients or construction access."},
     {"gate_id": "GATE_SE_UTILITIES_AND_CAPACITY", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The seller statement that municipal VA is paid is not a provider-confirmed capacity, connection-point, cost or lead-time response."},
     {"gate_id": "GATE_SE_CONSTRUCTION_CLEARANCE", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No Ledningskollen case, provider line response, permit, notification or start clearance has been requested."}

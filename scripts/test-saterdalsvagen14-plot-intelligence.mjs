@@ -44,6 +44,9 @@ const attacks = [
   ["NOKA plan locator over-promoted", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_NOKA_EFFECTIVE_PLAN_LOCATOR").verification = "VERIFIED"; }],
   ["historic average lot size treated as current minimum", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_PLAN_22D1008_HISTORIC_PROVISIONS").limitations = []; }],
   ["current parcel invented on historic plan map", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_PLAN_22D1008_MAP_AVAILABLE").value.current_property_directly_identified = true; }],
+  ["consultation proposal treated as adopted", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_CURRENT_STRATEGIC_PLAN_STATUS").value.svartinge_2026_proposal_adopted = true; }],
+  ["point-only zero intersections treated as parcel absence", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_DRAFT_FOP_POINT_CONTEXT").value.absence_inference_permitted = true; }],
+  ["EBH context treated as a clean plot certificate", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_EBH_CONTEXT_2KM").value.plot_contamination_conclusion = "NO_CONTAMINATION"; }],
 ];
 
 for (const [name, mutate] of attacks) {
