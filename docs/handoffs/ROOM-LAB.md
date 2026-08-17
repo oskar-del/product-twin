@@ -74,8 +74,10 @@ Agent-preview QA must cover: add one table; add a second table; confirm unique s
 ## Deployment
 
 - Live Room Lab: https://product-twin-avatar-gallery.adored-elm-4393.chatgpt.site/room
-- Room Lab interaction release: version 9.
-- Sites version ID: `appgprj_6a822d27eeb08191ab5be5783925f742~appgver_8519495f2a3481918d74bf8832393550`
-- Deployment ID: `appgdep_6a8311a8df8481918212a9c2fc9edab5`
-- Source commit: `3d36f07c32e42b168a74c5bc03a263e8c63e6eab`
-- Status: succeeded, verified by the main-agent deployment-status call.
+- Functional Room Lab interaction release: version 9.
+- Functional source commit: `3d36f07c32e42b168a74c5bc03a263e8c63e6eab`
+- Functional deployment: `appgdep_6a8311a8df8481918212a9c2fc9edab5`
+- Current handoff/source commit: `04cc6237ba6aeaf4a15f47d9cf5b5e2632abd1c0`
+- Current live Sites version: `appgprj_6a822d27eeb08191ab5be5783925f742~appgver_81fcf39b3d5081918aa7f1126c1d872c`
+- Current live deployment: `appgdep_6a8314641d24819192bce5da824b5749`
+- Status: both functional version 9 and current handoff version 10 succeeded and were verified by main-agent deployment-status calls.
