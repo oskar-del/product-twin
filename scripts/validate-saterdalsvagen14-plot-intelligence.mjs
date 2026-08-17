@@ -89,13 +89,13 @@ export function validateSaterdalsvagen14({
   check(factById.get("WORKING_PROPERTY_DESIGNATION")?.value === "SVÄRTINGE 54:28", "working property designation changed");
   check(project.comparisons?.length === 1
     && project.comparisons[0].market_value_m2 === 1939
-    && project.comparisons[0].public_locator_value_m2 === 1938
-    && project.comparisons[0].delta_m2 === 1
+    && project.comparisons[0].public_locator_value_m2 === 1938.1988442902577
+    && project.comparisons[0].delta_m2 === 0.8011557097423
     && project.comparisons[0].resolution === "OPEN_PENDING_AUTHORITATIVE_PROPERTY_RECORD", "area discrepancy is not retained as open");
 
   const gateById = new Map((site.gates ?? []).map((gate) => [gate.gate_id, gate]));
   const satisfiedGates = (site.gates ?? []).filter((gate) => gate.status === "SATISFIED").map((gate) => gate.gate_id);
-  check(exactSet(satisfiedGates, ["GATE_SE_CURRENT_LAW_PROFILE"]), "a discovery screen improperly closed a gate");
+  check(exactSet(satisfiedGates, ["GATE_SE_MUNICIPAL_JURISDICTION", "GATE_SE_CURRENT_LAW_PROFILE"]), "the verified discovery gate set is wrong");
   for (const gateId of [
     "GATE_SE_PLOT_IDENTITY",
     "GATE_SE_BOUNDARY_FOR_DESIGN",
@@ -123,6 +123,23 @@ export function validateSaterdalsvagen14({
   check(findingById.get("FINDING_SE_HEIGHT_ITEM_AVAILABLE_NOT_FETCHED")?.value?.asset_access === "HTTP_401_WITHOUT_CREDENTIALS", "terrain asset access gap disappeared without evidence");
   check(findingById.get("FINDING_SE_SVARTINGE_UDDE_AMENDMENT_SCOPE")?.limitations?.some((text) => text.includes("not been proven")), "Svärtinge Udde plan was treated as governing this plot");
   check(findingById.get("FINDING_SE_GLAN_WATER_PROTECTION_UNRESOLVED")?.value?.plot_zone === null, "water-protection zone was invented");
+  check(findingById.get("FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED")?.value?.property_designation === "SVÄRTINGE 54:28"
+    && findingById.get("FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED")?.value?.municipality === "Norrköping", "NOKA property locator changed");
+  check(findingById.get("FINDING_SE_NOKA_EFFECTIVE_PLAN_LOCATOR")?.value?.plan_record === "0581K-22D:1008"
+    && findingById.get("FINDING_SE_NOKA_EFFECTIVE_PLAN_LOCATOR")?.verification === "PARTIAL", "NOKA effective-plan locator changed or was over-promoted");
+  const historicPlanFinding = findingById.get("FINDING_SE_PLAN_22D1008_HISTORIC_PROVISIONS");
+  check(historicPlanFinding?.value?.historic_review_signals?.maximum_dwelling_houses_per_plot === 1
+    && historicPlanFinding?.value?.historic_review_signals?.average_plot_area_approx_m2 === 3000
+    && historicPlanFinding?.value?.historic_review_signals?.maximum_road_gradient === "1:12"
+    && historicPlanFinding?.value?.historic_review_signals?.high_voltage_corridor_width_m === 40,
+  "historic plan review signals changed");
+  check(historicPlanFinding?.verification === "PARTIAL"
+    && historicPlanFinding?.limitations?.some((text) => text.includes("not recorded as a present minimum-plot-size provision")),
+  "historic plan evidence was promoted into a current plot entitlement");
+  check(findingById.get("FINDING_SE_PLAN_22D1008_MAP_AVAILABLE")?.value?.current_property_directly_identified === false,
+    "the current property was falsely identified on the historic plan map");
+  check(gateById.get("GATE_SE_MUNICIPAL_JURISDICTION")?.status === "SATISFIED"
+    && gateById.get("GATE_SE_MUNICIPAL_JURISDICTION")?.evidence_refs?.includes("FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"), "municipal jurisdiction is not bound to the NOKA evidence");
 
   if (requireRuntime) {
     const receipts = [...(site.source_receipts ?? []), ...(project.market_source_receipts ?? [])];

@@ -30,6 +30,7 @@ const attacks = [
   ["scenario access invented", ({ scenario }) => { scenario.access_point = [559900, 6501800]; }],
   ["scenario promoted", ({ scenario }) => { scenario.status = "DESIGN_BASIS"; }],
   ["identity gate closed from market locator", ({ site }) => { site.gates.find((gate) => gate.gate_id === "GATE_SE_PLOT_IDENTITY").status = "SATISFIED"; }],
+  ["municipal jurisdiction evidence removed", ({ site }) => { site.gates.find((gate) => gate.gate_id === "GATE_SE_MUNICIPAL_JURISDICTION").status = "OPEN"; }],
   ["plan gate closed from non-governing plan", ({ site }) => { site.gates.find((gate) => gate.gate_id === "GATE_SE_DETAIL_PLAN_AND_STATUS").status = "SATISFIED"; }],
   ["terrain gate closed without raster", ({ site }) => { site.gates.find((gate) => gate.gate_id === "GATE_SE_TERRAIN").status = "SATISFIED"; }],
   ["ground gate closed from overview screen", ({ site }) => { site.gates.find((gate) => gate.gate_id === "GATE_SE_GROUND_CONDITIONS").status = "SATISFIED"; }],
@@ -39,6 +40,10 @@ const attacks = [
   ["water protection zone invented", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_GLAN_WATER_PROTECTION_UNRESOLVED").value.plot_zone = "tertiary"; }],
   ["soil depth normalized", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_MODELLED_SOIL_DEPTH_9M").value = 5; }],
   ["heritage record removed", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_HERITAGE_POINTS_500M").value.pop(); }],
+  ["NOKA property designation altered", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED").value.property_designation = "SVÄRTINGE 54:29"; }],
+  ["NOKA plan locator over-promoted", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_NOKA_EFFECTIVE_PLAN_LOCATOR").verification = "VERIFIED"; }],
+  ["historic average lot size treated as current minimum", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_PLAN_22D1008_HISTORIC_PROVISIONS").limitations = []; }],
+  ["current parcel invented on historic plan map", ({ site }) => { site.findings.find((finding) => finding.finding_id === "FINDING_SE_PLAN_22D1008_MAP_AVAILABLE").value.current_property_directly_identified = true; }],
 ];
 
 for (const [name, mutate] of attacks) {

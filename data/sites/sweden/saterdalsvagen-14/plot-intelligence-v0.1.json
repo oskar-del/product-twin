@@ -117,6 +117,36 @@
       "evidence_class": "MUNICIPAL_RECORD"
     },
     {
+      "receipt_id": "RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY",
+      "source_id": "SE_MUNICIPAL_PLAN_AND_PERMIT_ARCHIVE",
+      "retrieved_at": "2026-08-17T18:31:15Z",
+      "request_or_record_ref": "NOKA address search Säterdalsvägen 14 and point query at EPSG:3010 122807,6504014 with Fastigheter and Detaljplaner, gällande active",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/noka-property-plan-observation-2026-08-17.json",
+      "sha256": "df6c06ee2c29d6407c194222bf8ecd76f60edba5bd86e768617243fdba74cf3b",
+      "scope": "Municipal address-to-property and effective detailed-plan point result, with the map's explicit nonbinding-boundary warning retained.",
+      "evidence_class": "MUNICIPAL_RECORD"
+    },
+    {
+      "receipt_id": "RCPT_SE_NORRKOPING_PLAN_22D1008_DESCRIPTION",
+      "source_id": "SE_MUNICIPAL_PLAN_AND_PERMIT_ARCHIVE",
+      "retrieved_at": "2026-08-17T18:37:32Z",
+      "request_or_record_ref": "https://kartor.norrkoping.se/custom/detaljplaner/Planbeskrivning/1746757.pdf",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/municipal-plan-0581K-22D-1008-description.pdf",
+      "sha256": "686ef26c1485082a5504186c4751c4c681630d4eff8f07de0c648f556936a229",
+      "scope": "Fourteen-page municipal archive file for avstyckningsplan 0581K-22D:1008, including the 1935-1936 review, conditions, applicant undertakings and approval decision.",
+      "evidence_class": "MUNICIPAL_RECORD"
+    },
+    {
+      "receipt_id": "RCPT_SE_NORRKOPING_PLAN_22D1008_MAP",
+      "source_id": "SE_MUNICIPAL_PLAN_AND_PERMIT_ARCHIVE",
+      "retrieved_at": "2026-08-17T18:37:32Z",
+      "request_or_record_ref": "https://kartor.norrkoping.se/custom/detaljplaner/Plankarta/1723829.pdf",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/municipal-plan-0581K-22D-1008-map.pdf",
+      "sha256": "19e7313a5478900a1c5693471c796065917968081a40904d2f4355363c01217b",
+      "scope": "Official scanned 1:2,000 subdivision-plan map for 0581K-22D:1008; the present property number is not printed on the historic sheet.",
+      "evidence_class": "MUNICIPAL_RECORD"
+    },
+    {
       "receipt_id": "RCPT_SE_NORRKOPING_SVARTINGE_UDDE_PLAN",
       "source_id": "SE_MUNICIPAL_PLAN_AND_PERMIT_ARCHIVE",
       "retrieved_at": "2026-08-17T17:20:00Z",
@@ -277,6 +307,77 @@
       "limitations": ["The plan map is for Svärtinge Udde south of the town; it has not been proven to govern SVÄRTINGE 54:28.", "Its dimensional provisions must not be applied to this listing until NOKA or a municipal record confirms intersection."]
     },
     {
+      "finding_id": "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED",
+      "domain": "municipal_property_locator",
+      "value": {"address_result": "Säterdalsvägen 14 (Adress)", "property_designation": "SVÄRTINGE 54:28", "query_point_epsg_3010": [122807, 6504014], "municipality": "Norrköping", "municipal_map_area_m2": 1938.1988442902577, "property_area_part_number": 1, "property_total_area_parts": 1, "municipal_property_key_fnr": 50061226},
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"],
+      "method": "Selected the public municipal NOKA address result, enabled the Fastigheter layer and queried the marked address point.",
+      "observed_at": "2026-08-17T18:31:15Z",
+      "verification": "VERIFIED",
+      "limitations": ["This confirms the municipal address-to-property locator, not registered ownership or the full property record.", "The 1,938.198844 m² value is computed from the municipal map surface and is not promoted to the registered legal area.", "The municipal map explicitly states that displayed boundaries have no legal effect and can vary in positional quality."]
+    },
+    {
+      "finding_id": "FINDING_SE_NOKA_EFFECTIVE_PLAN_LOCATOR",
+      "domain": "planning_screening",
+      "value": {"plan_record": "0581K-22D:1008", "municipal_layer": "Detaljplaner, gällande", "result_count": 1, "query_point_epsg_3010": [122807, 6504014], "plan_type": "Avstyckningsplan", "legal_force_date": "1936-05-26", "document_links_exposed": ["Planbeskrivning", "Plankarta"]},
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"],
+      "method": "Enabled NOKA's legally effective detailed-plan layer and queried the marked Säterdalsvägen 14 address point.",
+      "observed_at": "2026-08-17T18:31:15Z",
+      "verification": "PARTIAL",
+      "limitations": ["The point result identifies the applicable plan record but is not by itself the complete plan evidence pack.", "The linked plan files are now acquired, but the historic plan's lot notation, present property geometry, amendment chain and current municipal interpretation must be reconciled before the planning gate can close."]
+    },
+    {
+      "finding_id": "FINDING_SE_PLAN_22D1008_HISTORIC_PROVISIONS",
+      "domain": "planning_screening",
+      "value": {
+        "plan_record": "0581K-22D:1008",
+        "plan_type": "Avstyckningsplan",
+        "legal_force_date": "1936-05-26",
+        "original_estate": "stadsägan nr 2257 DL i Östra Eneby församling",
+        "historic_review_signals": {
+          "maximum_dwelling_houses_per_plot": 1,
+          "average_plot_area_approx_m2": 3000,
+          "maximum_road_gradient": "1:12",
+          "high_voltage_corridor_width_m": 40,
+          "stormwater_method": "open roadside ditches / natural infiltration in the original sparse development pattern",
+          "water_supply_condition": "water line to each plot before sale or construction under the applicant's undertaking"
+        }
+      },
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_NORRKOPING_PLAN_22D1008_DESCRIPTION", "RCPT_SE_NORRKOPING_PLAN_22D1008_MAP"],
+      "method": "Visually reviewed all fourteen pages of the scanned municipal archive file and the official 1:2,000 plan map; retained the original approval language as historic signals rather than converting it into a modern buildable-envelope rule.",
+      "observed_at": "2026-08-17T18:37:32Z",
+      "verification": "PARTIAL",
+      "limitations": [
+        "The NOKA point query links the address to this plan, but the current property SVÄRTINGE 54:28 is not directly labelled on the 1936 map and has not yet been reconciled to an original lot or plan notation.",
+        "The approximately 3,000 m² figure describes the original plan's average lot pattern; it is not recorded as a present minimum-plot-size provision for SVÄRTINGE 54:28.",
+        "The one-dwelling language and applicant undertaking are material historic evidence, but their exact present legal effect requires a complete amendment chain and property-specific municipal interpretation.",
+        "Historic water, drainage, electricity and road statements do not prove current provider capacity, standards or access rights."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_PLAN_22D1008_MAP_AVAILABLE",
+      "domain": "planning_screening",
+      "value": {
+        "plan_record": "0581K-22D:1008",
+        "map_scale": "1:2000",
+        "map_form": "historic scanned subdivision plan",
+        "current_property_directly_identified": false
+      },
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_NORRKOPING_PLAN_22D1008_MAP"],
+      "method": "Inspected the full official plan sheet and compared its historic labelling with the present NOKA property result.",
+      "observed_at": "2026-08-17T18:37:32Z",
+      "verification": "PARTIAL",
+      "limitations": ["A cadastral-history bridge or municipal GIS overlay is required before any historic line or notation is applied to the present parcel geometry."]
+    },
+    {
       "finding_id": "FINDING_SE_CURRENT_H30_H50_PROFILE",
       "domain": "current_law",
       "value": {"effective_from": "2025-12-01", "inside_detail_plan_max_individual_m2": 30, "inside_detail_plan_max_cumulative_m2": 45, "inside_detail_plan_max_ridge_m": 4, "outside_detail_plan_max_individual_m2": 50, "outside_detail_plan_max_cumulative_m2": 65, "outside_detail_plan_max_ridge_m": 4.5},
@@ -302,13 +403,13 @@
     }
   ],
   "gates": [
-    {"gate_id": "GATE_SE_PLOT_IDENTITY", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "SVÄRTINGE 54:28 is a high-confidence market locator, but no authoritative property-register record has confirmed identity or the 1,938/1,939 m² area discrepancy."},
-    {"gate_id": "GATE_SE_MUNICIPAL_JURISDICTION", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Norrköping is the working jurisdiction; a property-level official locator or municipal map record is still required for formal closure."},
-    {"gate_id": "GATE_SE_PROPERTY_DIVISION_CONTEXT", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No approved Lantmäteriet property-division vector item has been acquired."},
+    {"gate_id": "GATE_SE_PLOT_IDENTITY", "status": "OPEN", "evidence_refs": ["RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY", "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"], "decided_at": null, "reason": "NOKA confirms that the municipal address point maps to SVÄRTINGE 54:28 and its indicative map surface measures 1,938.198844 m², but no authoritative property-register record has confirmed registered area or title; the 1,939 m² listing remains a market statement."},
+    {"gate_id": "GATE_SE_MUNICIPAL_JURISDICTION", "status": "SATISFIED", "evidence_refs": ["RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY", "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"], "decided_at": "2026-08-17T18:31:15Z", "reason": "Norrköping's public NOKA address search and point query return Säterdalsvägen 14 and SVÄRTINGE 54:28 inside the municipal map service."},
+    {"gate_id": "GATE_SE_PROPERTY_DIVISION_CONTEXT", "status": "OPEN", "evidence_refs": ["RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY", "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"], "decided_at": null, "reason": "NOKA now provides indicative municipal property context, but explicitly states that its displayed boundaries have no legal effect; no approved Lantmäteriet property-division vector item has been acquired."},
     {"gate_id": "GATE_SE_PROPERTY_REGISTER", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No property-register extract has been requested; explicit permission is absent."},
     {"gate_id": "GATE_SE_RIGHTS_AND_JOINT_FACILITIES", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Servitudes, joint facilities, cadastral acts, road rights and mortgages remain unresolved."},
     {"gate_id": "GATE_SE_BOUNDARY_FOR_DESIGN", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The seller map is nonbinding and no field survey or boundary determination exists."},
-    {"gate_id": "GATE_SE_DETAIL_PLAN_AND_STATUS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The Svärtinge Udde plan was screened to prevent misapplication, but the governing plan or outside-plan status for SVÄRTINGE 54:28 is not yet established."},
+    {"gate_id": "GATE_SE_DETAIL_PLAN_AND_STATUS", "status": "OPEN", "evidence_refs": ["RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY", "RCPT_SE_NORRKOPING_PLAN_22D1008_DESCRIPTION", "RCPT_SE_NORRKOPING_PLAN_22D1008_MAP", "FINDING_SE_NOKA_EFFECTIVE_PLAN_LOCATOR", "FINDING_SE_PLAN_22D1008_HISTORIC_PROVISIONS", "FINDING_SE_PLAN_22D1008_MAP_AVAILABLE"], "decided_at": null, "reason": "NOKA identifies one legally effective Avstyckningsplan, 0581K-22D:1008, at the address point, with legal-force date 1936-05-26, and the linked plan description and map are now acquired. The historic record signals one dwelling house per plot and an original average lot pattern of about 3,000 m², but the current property-to-historic-lot mapping, exact present legal effect and amendment chain remain unresolved, so the planning basis is not closed."},
     {"gate_id": "GATE_SE_CURRENT_LAW_PROFILE", "status": "SATISFIED", "evidence_refs": ["RCPT_SE_BOVERKET_CURRENT_LAW", "FINDING_SE_CURRENT_H30_H50_PROFILE"], "decided_at": "2026-08-17T17:37:00Z", "reason": "Current Boverket guidance and the 2025-12-01 effective profile are bound for this assessment date."},
     {"gate_id": "GATE_SE_H30_H50_ELIGIBILITY", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Neither H30 nor H50 eligibility can be determined before plan status, principal-building facts, aggregate areas, placement and protections are resolved."},
     {"gate_id": "GATE_SE_BUILDABLE_ENVELOPE", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No authoritative buildable envelope may be drawn while boundary, planning, rights, environmental and access gates remain open."},

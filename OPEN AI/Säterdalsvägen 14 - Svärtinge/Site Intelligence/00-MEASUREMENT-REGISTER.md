@@ -163,6 +163,8 @@ Bolagsverket API access, beneficial-owner access and documents may require an ac
 | Current H30/H50 rule profile | National limits and case conditions | Boverket/PBL, rechecked on assessment date |
 | Plot-specific H30/H50 eligibility | Yes/no/unresolved with every condition tested | Only after plan, principal-building and protection facts close |
 
+Current governing-plan discovery: NOKA links the address point to `0581K-22D:1008`, an `Avstyckningsplan` in force since 1936-05-26. Its official plan map and 14-page archive file are now captured. The historic file signals one dwelling house per plot and an original average plot pattern of approximately 3,000 m², but those signals are not converted into a current minimum-area rule or plot entitlement until today's `SVÄRTINGE 54:28` geometry, the historic lot notation, amendments and municipal interpretation are reconciled.
+
 The 2025 Svärtinge Udde shoreline amendment is retained as context but is not applied to this property unless the municipal overlay proves intersection.
 
 ## 08. Municipal permit and case history
@@ -520,14 +522,14 @@ The graph will store each node and edge with source ID, source record, effective
 
 ## Current first-read signals
 
-- Working identity: `SVÄRTINGE 54:28`; official property identity remains open.
-- Listing area: 1,939 m²; a public locator reports approximately 1,938 m².
+- Norrköping NOKA confirms that the `Säterdalsvägen 14` address point maps to `SVÄRTINGE 54:28`; registered area, title and the legal/design boundary remain open.
+- Listing area: 1,939 m²; NOKA's indicative map surface is 1,938.198844 m², a 0.801156 m² difference that remains open pending the registered legal area.
 - Listing claims municipal VA is paid; provider confirmation is absent.
 - SGU: glaciofluvial sediment and modelled 9 m soil depth at the market pin.
 - Nearby soil-depth observations show strong local variation, approximately 0-22 m.
 - Two RAÄ published capture-pit records occur approximately 472 m from the market pin; parcel impact is unresolved.
 - The correct Lantmäteriet 1 m terrain item is identified, but the raster requires working download access before terrain metrics can be derived.
-- Governing detailed-plan/outside-plan status is unresolved. The Svärtinge Udde shoreline amendment must not be applied without a proven intersection.
+- NOKA identifies legally effective plan record `0581K-22D:1008` at the address point, and both linked municipal plan files are captured. The historic one-dwelling and approximately 3,000 m² average-lot signals are retained, while current parcel mapping, amendments and legal interpretation remain unresolved; no buildable envelope is applied yet.
 - Glan water-protection zone, Natura/protected-area intersection, legal access, rights and utility capacity remain open.
 
 ## Definition of a Golden Swedish Site Intelligence release
