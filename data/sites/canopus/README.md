@@ -1,5 +1,9 @@
 # CANOPUS Site Twin v0.1
 
+The official boundary/terrain promotion is documented under
+`data/sites/canopus/spatial/README.md`; the original v0.1 evidence-only records
+remain unchanged.
+
 This directory is an evidence-first seed for parcel `5410501UF2451S`. It separates:
 
 - `PRJ_CANOPUS`: the project/deal and its seller brief and underwriting assumptions;

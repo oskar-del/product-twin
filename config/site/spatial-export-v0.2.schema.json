@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/site/spatial-export-v0.2.schema.json",
+  "title": "Coordinate-aware Site Twin viewer/export contract",
+  "type": "object",
+  "required": ["schema_version", "entity_type", "site_twin_ref", "coordinate_frames", "layers", "controls", "separation"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "0.2"},
+    "entity_type": {"const": "SpatialExportContract"},
+    "site_twin_ref": {
+      "type": "object",
+      "required": ["id", "version", "content_sha256", "path"],
+      "properties": {
+        "id": {"const": "SITE_CANOPUS_5410501UF2451S"},
+        "version": {"const": "0.2"},
+        "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "path": {"type": "string"}
+      }
+    },
+    "coordinate_frames": {"type": "object", "required": ["web", "projected", "model"]},
+    "layers": {
+      "type": "object",
+      "required": ["boundary", "terrain_mesh", "contours", "section_aa", "spot_elevations", "roads", "buildings", "access_candidates_unverified", "concept_massing_overlay", "planning_envelope"],
+      "properties": {"concept_massing_overlay": {"type": "null"}, "planning_envelope": {"type": "null"}}
+    },
+    "controls": {"type": "object", "required": ["seasonal_sun", "la_concha_sightline"]},
+    "separation": {
+      "type": "object",
+      "required": ["project_seller_facts_mutated", "scenario_geometry_imported", "boundary_redefined_by_scenario", "permitted_access_established", "planning_entitlement_established"],
+      "additionalProperties": false,
+      "properties": {
+        "project_seller_facts_mutated": {"const": false},
+        "scenario_geometry_imported": {"const": false},
+        "boundary_redefined_by_scenario": {"const": false},
+        "permitted_access_established": {"const": false},
+        "planning_entitlement_established": {"const": false}
+      }
+    }
+  }
+}

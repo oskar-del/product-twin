@@ -71,6 +71,15 @@
     "climate:cte": "node scripts/cte-climate.mjs",
     "site:canopus:validate": "node scripts/validate-canopus-site-twin.mjs",
     "site:canopus:validate:test": "node scripts/test-canopus-site-twin.mjs",
+    "site:canopus:spatial:fetch": "node scripts/fetch-canopus-spatial-sources.mjs",
+    "site:canopus:spatial:build": ".runtime/sites/canopus/venv/bin/python scripts/build-canopus-spatial-v0.2.py --catastro-gml .runtime/sites/canopus/raw/canopus-catastro.gml --catastro-reference .runtime/sites/canopus/raw/canopus-catastro-reference-wgs84.xml --catastro-capabilities .runtime/sites/canopus/raw/canopus-catastro-capabilities.xml --catastro-service-metadata .runtime/sites/canopus/raw/canopus-catastro-service-metadata.xml --catastro-dataset-metadata .runtime/sites/canopus/raw/catastro-dataset-metadata.xml --terrain-cog .runtime/sites/canopus/raw/canopus-mdt05-buffer1000-cog.tif --terrain-metadata .runtime/sites/canopus/raw/ign-mdt05-ogc-collection.json --buildings-gml .runtime/sites/canopus/raw/canopus-catastro-buildings-100m.gml --roads-geojson .runtime/sites/canopus/raw/canopus-roadlink-context.geojson --fetch-receipts .runtime/sites/canopus/raw/fetch-receipts.json",
+    "site:canopus:spatial:validate": "node scripts/validate-canopus-spatial-v0.2.mjs",
+    "site:canopus:source:validate": "node scripts/validate-canopus-spatial-v0.2.mjs --require-runtime",
+    "site:canopus:parcel:validate": "node scripts/validate-canopus-spatial-v0.2.mjs",
+    "site:canopus:terrain:validate": "node scripts/validate-canopus-spatial-v0.2.mjs",
+    "site:canopus:spatial:mutations": "node scripts/test-canopus-spatial-v0.2.mjs",
+    "site:canopus:separation:test": "node scripts/test-canopus-spatial-v0.2.mjs",
+    "site:canopus:gate": "npm run site:canopus:validate && npm run site:canopus:validate:test && npm run site:canopus:spatial:validate && npm run site:canopus:spatial:mutations",
     "summarize": "node scripts/summarize.mjs"
   }
 }

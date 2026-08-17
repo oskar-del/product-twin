@@ -1,0 +1,91 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -4.95001393,
+          36.49808181
+        ],
+        "type": "Point"
+      },
+      "id": "ACCESS_CANDIDATE_1",
+      "properties": {
+        "does_not_establish_legal_access": true,
+        "gap_m": 3.853,
+        "nearest_road_point_epsg25830": [
+          325350.367,
+          4040967.043
+        ],
+        "parcel_boundary_point_epsg25830": [
+          325351.73,
+          4040963.44
+        ],
+        "road_feature_id": "VIAL_TR290690201752",
+        "road_functional_class": null,
+        "road_surface": "paved",
+        "status": "UNVERIFIED_PHYSICAL_PROXIMITY_ONLY"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -4.95167272,
+          36.49758939
+        ],
+        "type": "Point"
+      },
+      "id": "ACCESS_CANDIDATE_2",
+      "properties": {
+        "does_not_establish_legal_access": true,
+        "gap_m": 4.545,
+        "nearest_road_point_epsg25830": [
+          325200.142,
+          4040915.95
+        ],
+        "parcel_boundary_point_epsg25830": [
+          325202.04,
+          4040911.82
+        ],
+        "road_feature_id": "VIAL_TR290690201752",
+        "road_functional_class": null,
+        "road_surface": "paved",
+        "status": "UNVERIFIED_PHYSICAL_PROXIMITY_ONLY"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -4.95140416,
+          36.49768897
+        ],
+        "type": "Point"
+      },
+      "id": "ACCESS_CANDIDATE_3",
+      "properties": {
+        "does_not_establish_legal_access": true,
+        "gap_m": 4.567,
+        "nearest_road_point_epsg25830": [
+          325224.688,
+          4040926.646
+        ],
+        "parcel_boundary_point_epsg25830": [
+          325226.32,
+          4040922.38
+        ],
+        "road_feature_id": "VIAL_TR290690201752",
+        "road_functional_class": null,
+        "road_surface": "paved",
+        "status": "UNVERIFIED_PHYSICAL_PROXIMITY_ONLY"
+      },
+      "type": "Feature"
+    }
+  ],
+  "properties": {
+    "permitted_access_point": null,
+    "status": "UNVERIFIED_ANALYSIS_OVERLAY",
+    "warning": "Geometric road proximity does not establish ownership, connection feasibility, highway consent, easement or legal access."
+  },
+  "type": "FeatureCollection"
+}
