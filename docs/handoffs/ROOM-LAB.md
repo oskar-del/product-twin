@@ -9,14 +9,18 @@ Room Lab is the narrow, playable proof that a real room can contain multiple ind
 - Route: `/room`
 - Shell: explicitly assumed 6.0 × 4.6 m Marbella living room; it is not presented as a surveyed client room.
 - Baseline: eight Product Twin placement records / eight visible avatars.
-- Furniture can be selected from the 3D scene or the shared top-plan fallback, moved in 100 mm steps, rotated by 15°, reset or removed.
+- Furniture already in the room can be selected directly in the 3D scene and moved continuously across the floor plane.
+- Direct movement uses gentle magnetic alignment to room centre lines, walls, neighbouring centres and edges, 100 mm clear gaps and the 100 mm planning grid.
+- A released overlapping placement searches deterministically for the nearest clear position and otherwise returns to its prior clear transform.
+- The selected-placement buttons remain available for 100 mm nudges, 15° rotation and reset.
+- Furniture can also be selected from the shared top-plan fallback.
 - `Add to room` and `Add another` create unique placement IDs and select the new placement.
 - New placements use a deterministic centre-first 100 mm grid search and are only created when their G2 planning envelopes fit inside the shell without overlapping another obstacle.
 - Product bundles are explicit: one LISABO chair set is one placement record and four placed chair avatars.
 - WebGL and fallback plan use the same placement transforms.
 - Selected WebGL placements receive a box highlight and floor-envelope outline; the fallback highlights the selected footprint.
 - VALNÄS remains a comparison-only, client-approval-gated replacement for unavailable LISTERBY. The hard-coded evidence is still the 17 Aug 2026 Spain/29660 snapshot.
-- Geometry remains G2 proxy geometry. No avatar GLBs or material textures were changed in this slice.
+- Geometry remains G2 proxy geometry. No avatar GLBs, material textures, Product Twin identities, supply, price, rights or procurement claims changed in version 11.
 
 ## Decisions that must remain true
 
@@ -29,55 +33,70 @@ Room Lab is the narrow, playable proof that a real room can contain multiple ind
 
 ## Files
 
-- `app/room/room-lab.tsx` — Room Lab UI, Three.js scene, selection and placement actions.
+- `app/room/room-lab.tsx` — Room Lab UI, Three.js scene, selection, direct movement and placement actions.
 - `app/room/room-contract.ts` — record, product, transform and envelope types.
 - `app/room/room-data.ts` — current Product Twin catalogue and baseline placements.
-- `app/room/room-state.mjs` — truth gate, placement creation, shared transforms, fit and deterministic spawn logic.
+- `app/room/room-state.mjs` — truth gate, placement creation, shared transforms, magnetic alignment, fit and deterministic settling/spawn logic.
 - `app/room/room-state.d.mts` — TypeScript declarations for the shared state module.
-- `app/globals.css` — Room Lab selection, fallback plan, catalogue and inspector presentation.
-- `tests/room-state.test.mjs` — deterministic truth, ID, spawn, bundle, transform and fit tests.
+- `app/globals.css` — Room Lab selection, movement feedback, fallback plan, catalogue and inspector presentation.
+- `tests/room-state.test.mjs` — deterministic truth, ID, spawn, bundle, transform, fit and magnetic movement tests.
 - `tests/room-model-scale.test.mjs` — metre-scale GLB and Room Lab contract checks.
 
-## Verification commands
+## Verification
 
-```bash
-node --test tests/*.test.mjs
-npm run build
-npm test
-npm run validate:artifact
-git diff --check
-```
+Source commit `f00270c0f93d64531782dfb73abf6bfe7a247331` passed:
 
-Agent-preview QA must cover: add one table; add a second table; confirm unique selected ID; move it 100 mm and observe the fallback footprint move; add one and two four-chair sets; verify set/avatar counts; remove the selected placement; test collision/outside feedback; reset to eight baseline records.
+- 9/9 Node tests.
+- vinext production build.
+- Sites artifact validation.
+- `git diff --check`.
+- Direct Sites deployment-status verification after publish.
+
+Required production browser QA remains **not completed**. Two attempts to open the public `/room` route in the controlled browser were denied because the administrator-enforced browser security policy could not be verified. No security control was bypassed, and none of the following should be reported as production-verified yet:
+
+- Desktop and mobile/touch selection.
+- Continuous floor-plane drag.
+- Magnetic guide appearance.
+- Valid release and collision recovery.
+- Wall and room-boundary constraints.
+- Orbit/navigation coexistence.
+- Adding another product.
+- 100 mm nudges and 15° rotation.
+- Room reset.
+
+The failed browser access is not evidence that the production interaction is broken, so version 10 was not restored.
 
 ## Current blockers
 
-- None for the v9 interaction slice.
+- Controlled-browser production interaction QA is blocked by an administrator-enforced browser security check.
 - Photoreal material fidelity is blocked on rights-safe PBR textures / authorized or QA-promoted avatars. The current G2 GLBs contain flat material factors, not product-grade upholstery, timber or jute textures.
 - The supply panel is still a fixed Spain snapshot. SE/GB/US evidence is not live in this Site.
 
-## Next three decision prompts
+## Next priority
 
-1. Should the next visible milestone be the first rights-safe textured G2/G3 furniture set, or a data-driven Spain supply tray?
-2. When generic Sweet Home 3D Design Assets arrive, should they appear in a separate catalogue filter by default or only as gap-fill suggestions when no Product Twin fits?
-3. For the first real client room, do we import a measured room shell first or preserve this assumed shell and build a separate project route?
+Stop general dashboard expansion. The next Room Lab slice is:
+
+1. Consume versioned furniture/avatar manifests instead of hard-coded dashboard geometry bindings.
+2. Improve truthful, rights-safe furniture realism with Avatar Factory while preserving explicit geometry-level evidence.
+3. Re-run the full desktop and mobile/touch production interaction matrix when controlled browser access is available.
 
 ## Do not do
 
-- Do not add drag gizmos, undo/redo, saved-room persistence or a broad dashboard before the avatar/supply core needs them.
+- Do not add unrelated dashboard UI, broad analytics, saved-room persistence or general expansion before the manifest and Avatar Factory work.
 - Do not copy commerce fields onto a Design Asset or call generic geometry a purchasable product.
 - Do not label a G2 proxy as exact visual geometry or photoreal G3.
-- Do not change avatar GLBs in the dashboard workstream.
+- Do not change avatar GLBs in the dashboard workstream; consume Avatar Factory outputs through versioned manifests.
 - Do not claim Spanish-local supply from an IKEA Spain storefront when seller/dispatch origin is unresolved.
 - Do not contact individual suppliers by email; use the mapped commerce/manufacturer evidence routes.
 
 ## Deployment
 
 - Live Room Lab: https://product-twin-avatar-gallery.adored-elm-4393.chatgpt.site/room
-- Functional Room Lab interaction release: version 9.
-- Functional source commit: `3d36f07c32e42b168a74c5bc03a263e8c63e6eab`
-- Functional deployment: `appgdep_6a8311a8df8481918212a9c2fc9edab5`
-- Current handoff/source commit: `04cc6237ba6aeaf4a15f47d9cf5b5e2632abd1c0`
-- Current live Sites version: `appgprj_6a822d27eeb08191ab5be5783925f742~appgver_81fcf39b3d5081918aa7f1126c1d872c`
-- Current live deployment: `appgdep_6a8314641d24819192bce5da824b5749`
-- Status: both functional version 9 and current handoff version 10 succeeded and were verified by main-agent deployment-status calls.
+- Current live Sites version: `appgprj_6a822d27eeb08191ab5be5783925f742~appgver_510ade2367d88191ab348521c68b04c0` (version 11).
+- Live source commit: `f00270c0f93d64531782dfb73abf6bfe7a247331`.
+- Live deployment: `appgdep_6a8339a5a1cc8191973575b93fa1b8eb`.
+- Provider deployment: `site---6a822d27eeb08191ab5be5783925f742`.
+- Deployment status: `succeeded`, directly verified after terminal completion on 17 Aug 2026.
+- Known-good fallback: version 10 deployment `appgdep_6a8314641d24819192bce5da824b5749`.
+- Saved version 12 remains non-live; this approval intentionally published version 11.
+- Public interaction status: deployed successfully, browser-smoke-test pending because the controlled browser security policy denied access.
