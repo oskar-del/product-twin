@@ -1,0 +1,1016 @@
+{
+  "schema_version": "0.1",
+  "entity_type": "SiteTwin",
+  "site_twin_id": "SITE_CANOPUS_5410501UF2451S",
+  "project_id": "PRJ_CANOPUS",
+  "status": "EVIDENCE_ONLY_RAW_GEOMETRY_GATED",
+  "evidence_source_manifest": "data/sites/canopus/evidence-sources-v0.1.json",
+  "identity": {
+    "assertions": {
+      "cadastral_reference": {
+        "value": "5410501UF2451S",
+        "unit": null,
+        "evidence_class": "official_source_reported",
+        "source": {
+          "document_id": "DOC_CANOPUS_LAND_REPORT",
+          "pdf_page": 2,
+          "printed_page": "1 / 4",
+          "section": "01 - The Parcel",
+          "authority": "Catastro"
+        },
+        "method": "Transcribed from the reported Catastro INSPIRE parcel identity.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "The official Catastro response must be re-fetched and hash-bound."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "registered_area_m2": {
+        "value": 52733,
+        "unit": "m2",
+        "evidence_class": "official_source_reported",
+        "source": {
+          "document_id": "DOC_CANOPUS_LAND_REPORT",
+          "pdf_page": 2,
+          "printed_page": "1 / 4",
+          "section": "01 - The Parcel",
+          "authority": "Catastro"
+        },
+        "method": "Transcribed registered surface from the reported Catastro record.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "The value will be cross-checked against the official polygon area after import."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "municipality": {
+        "value": "Marbella",
+        "unit": null,
+        "evidence_class": "official_source_reported",
+        "source": {
+          "document_id": "DOC_CANOPUS_LAND_REPORT",
+          "pdf_page": 2,
+          "printed_page": "1 / 4",
+          "section": "01 - The Parcel",
+          "authority": "Catastro as reported by Concept Casas"
+        },
+        "method": "Transcribed municipality label.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "Municipal containment will be checked from official geometry."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "district": {
+        "value": "Nueva Andalucia",
+        "unit": null,
+        "evidence_class": "official_source_reported",
+        "source": {
+          "document_id": "DOC_CANOPUS_LAND_REPORT",
+          "pdf_page": 2,
+          "printed_page": "1 / 4",
+          "section": "01 - The Parcel",
+          "authority": "Concept Casas dossier"
+        },
+        "method": "Transcribed district label from the land report.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "The district boundary source is not attached."
+        },
+        "confidence": "medium",
+        "limitations": []
+      }
+    }
+  },
+  "cadastral_record": {
+    "assertions": {
+      "cadastral_class": {
+        "value": "RUSTICA",
+        "unit": null,
+        "evidence_class": "official_source_reported",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 3,
+          "printed_page": "02",
+          "section": "02 - The Public Record",
+          "authority": "Catastro OVC"
+        },
+        "method": "Transcribed from the reported Catastro OVC response.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "The official cadastral response is not attached."
+        },
+        "confidence": "high",
+        "limitations": [
+          "Cadastral class is a fiscal record and does not itself establish planning entitlement."
+        ]
+      },
+      "principal_use": {
+        "value": "Agrario",
+        "unit": null,
+        "evidence_class": "official_source_reported",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 3,
+          "printed_page": "02",
+          "section": "02 - The Public Record",
+          "authority": "Catastro OVC"
+        },
+        "method": "Transcribed from the reported Catastro OVC response.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "The official cadastral response is not attached."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "built_surface_m2": {
+        "value": 0,
+        "unit": "m2",
+        "evidence_class": "official_source_reported",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 3,
+          "printed_page": "02",
+          "section": "02 - The Public Record",
+          "authority": "Catastro OVC"
+        },
+        "method": "Transcribed from the reported Catastro OVC response.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "The official cadastral response is not attached."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "subparcel_land_cover": {
+        "value": "MATORRAL",
+        "unit": null,
+        "evidence_class": "official_source_reported",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 3,
+          "printed_page": "02",
+          "section": "02 - The Public Record",
+          "authority": "Catastro OVC"
+        },
+        "method": "Transcribed reported subparcel land-cover class.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "Current land cover and vegetation require field and current imagery verification."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "undeveloped_aerial_history": {
+        "value": "undeveloped in reviewed aerial vintages from 2004 to 2026",
+        "unit": null,
+        "evidence_class": "official_source_reported",
+        "source": {
+          "document_id": "DOC_CANOPUS_LAND_REPORT",
+          "pdf_page": 5,
+          "printed_page": "4 / 4",
+          "section": "04 - Verdict",
+          "authority": "IGN PNOA as reported by Concept Casas"
+        },
+        "method": "Transcribed dossier conclusion from the reported PNOA aerial review.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "Aerial identifiers and imagery are not attached."
+        },
+        "confidence": "medium",
+        "limitations": []
+      }
+    }
+  },
+  "spatial": {
+    "boundary": {
+      "status": "MISSING_RAW_ARTIFACT",
+      "raw_artifact": null,
+      "geometry": null,
+      "crs": null,
+      "gate_id": "GATE_CATASTRO_BOUNDARY",
+      "assertions": {
+        "reported_shape": {
+          "value": "irregular, broad south, tapering north-east",
+          "unit": null,
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 2,
+            "printed_page": "01",
+            "section": "01 - The Subject",
+            "authority": "Concept Casas"
+          },
+          "method": "Transcribed qualitative shape derived from the reported cadastral boundary.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "The polygon is intentionally absent until the official GML is imported."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "reported_extent_east_west_m": {
+          "value": 328,
+          "unit": "m",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 2,
+            "printed_page": "01",
+            "section": "01 - The Subject",
+            "authority": "Concept Casas"
+          },
+          "method": "Transcribed calculated parcel extent.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Extent will be recalculated from the imported polygon in a metric CRS."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "reported_extent_north_south_m": {
+          "value": 312,
+          "unit": "m",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 2,
+            "printed_page": "01",
+            "section": "01 - The Subject",
+            "authority": "Concept Casas"
+          },
+          "method": "Transcribed calculated parcel extent.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Extent will be recalculated from the imported polygon in a metric CRS."
+          },
+          "confidence": "medium",
+          "limitations": []
+        }
+      }
+    },
+    "terrain": {
+      "status": "REPORTED_SUMMARY_ONLY",
+      "raw_dem": null,
+      "terrain_mesh": null,
+      "vertical_datum": null,
+      "gate_id": "GATE_IGN_TERRAIN",
+      "assertions": {
+        "source_grid_resolution_m": {
+          "value": 5,
+          "unit": "m",
+          "evidence_class": "official_source_reported",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 4,
+            "printed_page": "03",
+            "section": "03 - The Terrain",
+            "authority": "Instituto Geografico Nacional"
+          },
+          "method": "Transcribed reported IGN terrain-grid resolution.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "The exact IGN tile, acquisition date, CRS and vertical datum are absent."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "reported_minimum_elevation_m": {
+          "value": 4,
+          "unit": "m_asl",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 4,
+            "printed_page": "03",
+            "section": "03 - The Terrain",
+            "authority": "Concept Casas from IGN terrain"
+          },
+          "method": "Transcribed calculated minimum elevation from the reported clipped terrain.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Must be reproduced from the clipped official terrain raster."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "reported_maximum_elevation_m": {
+          "value": 15,
+          "unit": "m_asl",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 4,
+            "printed_page": "03",
+            "section": "03 - The Terrain",
+            "authority": "Concept Casas from IGN terrain"
+          },
+          "method": "Transcribed calculated maximum elevation from the reported clipped terrain.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Must be reproduced from the clipped official terrain raster."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "reported_total_fall_m": {
+          "value": 11,
+          "unit": "m",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 4,
+            "printed_page": "03",
+            "section": "03 - The Terrain",
+            "authority": "Concept Casas from IGN terrain"
+          },
+          "method": "Maximum reported elevation minus minimum reported elevation.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "reproducible_from_reported_values",
+            "note": "11 m equals 15 m minus 4 m; raw-terrain reproduction remains pending."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "reported_mean_gradient_percent": {
+          "value": 2.5,
+          "unit": "percent",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 4,
+            "printed_page": "03",
+            "section": "03 - The Terrain",
+            "authority": "Concept Casas from IGN terrain"
+          },
+          "method": "Transcribed reported mean gradient calculation.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Gradient aggregation method and clipped raster are absent."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "reported_aspect_deg": {
+          "value": 80,
+          "unit": "degrees_true",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 4,
+            "printed_page": "03",
+            "section": "03 - The Terrain",
+            "authority": "Concept Casas from IGN terrain"
+          },
+          "method": "Transcribed reported terrain aspect.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Aspect must be recalculated from the official clipped raster."
+          },
+          "confidence": "medium",
+          "limitations": [
+            "The northern tip is separately reported as a local low point; the full surface is required to reconcile local and mean fall."
+          ]
+        },
+        "reported_high_ground": {
+          "value": "west / south-west, 12-15 m ASL",
+          "unit": null,
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 4,
+            "printed_page": "03",
+            "section": "03 - The Terrain",
+            "authority": "Concept Casas from IGN terrain"
+          },
+          "method": "Transcribed terrain-summary location.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Spot locations are not machine-readable in the source set."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "reported_low_point": {
+          "value": "northern tip, approximately 5 m ASL",
+          "unit": null,
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 4,
+            "printed_page": "03",
+            "section": "03 - The Terrain",
+            "authority": "Concept Casas from IGN terrain"
+          },
+          "method": "Transcribed terrain-summary location.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Spot coordinates are not machine-readable in the source set."
+          },
+          "confidence": "medium",
+          "limitations": []
+        }
+      }
+    }
+  },
+  "solar": {
+    "status": "REPORTED_CALCULATION_EXACT_CENTROID_PENDING",
+    "assertions": {
+      "reference_latitude_deg": {
+        "value": 36.5,
+        "unit": "degrees_north",
+        "evidence_class": "calculated",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 10,
+          "printed_page": "09",
+          "section": "09 - The Sun",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed rounded latitude used by the reported solar model.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "Exact parcel centroid is unavailable until the official boundary is imported."
+        },
+        "confidence": "medium",
+        "limitations": []
+      },
+      "june_noon_altitude_deg": {
+        "value": 76.9,
+        "unit": "degrees",
+        "evidence_class": "calculated",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 10,
+          "printed_page": "09",
+          "section": "09 - The Sun",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed computed 21 June noon solar altitude.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "reproducible_from_reported_values",
+          "note": "Consistent with solar geometry at the reported 36.5 degree latitude."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "equinox_noon_altitude_deg": {
+        "value": 53.1,
+        "unit": "degrees",
+        "evidence_class": "calculated",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 10,
+          "printed_page": "09",
+          "section": "09 - The Sun",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed computed equinox noon solar altitude.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "reproducible_from_reported_values",
+          "note": "Value can be rerun after exact centroid import."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "december_noon_altitude_deg": {
+        "value": 30.1,
+        "unit": "degrees",
+        "evidence_class": "calculated",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 10,
+          "printed_page": "09",
+          "section": "09 - The Sun",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed computed 21 December noon solar altitude.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "reproducible_from_reported_values",
+          "note": "Consistent with solar geometry at the reported latitude."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "june_sunset_azimuth_deg": {
+        "value": 299.7,
+        "unit": "degrees_true",
+        "evidence_class": "calculated",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 10,
+          "printed_page": "09",
+          "section": "09 - The Sun",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed computed June sunset azimuth.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "reproducible_from_reported_values",
+          "note": "Value can be rerun after exact centroid import."
+        },
+        "confidence": "high",
+        "limitations": []
+      }
+    }
+  },
+  "views": {
+    "mountain": {
+      "status": "REPORTED_MODEL_CLAIM_RAW_PROFILE_PENDING",
+      "assertions": {
+        "target": {
+          "value": "La Concha summit",
+          "unit": null,
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 7,
+            "printed_page": "06",
+            "section": "06 - The Second Test",
+            "authority": "Concept Casas"
+          },
+          "method": "Transcribed sightline target.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Target coordinates and terrain profile are not attached."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "distance_km": {
+          "value": 2.57,
+          "unit": "km",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 7,
+            "printed_page": "06",
+            "section": "06 - The Second Test",
+            "authority": "Concept Casas"
+          },
+          "method": "Transcribed computed site-to-summit distance.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Observer and target coordinates are absent."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "bearing_deg": {
+          "value": 349.4,
+          "unit": "degrees_true",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 7,
+            "printed_page": "06",
+            "section": "06 - The Second Test",
+            "authority": "Concept Casas"
+          },
+          "method": "Transcribed computed true bearing.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Must be reproduced after observer and target coordinates are acquired."
+          },
+          "confidence": "medium",
+          "limitations": [
+            "Use this value instead of the presentation's imprecise phrase due north."
+          ]
+        },
+        "elevation_angle_deg": {
+          "value": 25.1,
+          "unit": "degrees",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 7,
+            "printed_page": "06",
+            "section": "06 - The Second Test",
+            "authority": "Concept Casas"
+          },
+          "method": "Transcribed computed summit elevation angle.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Observer elevation, target coordinate and terrain profile are absent."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "summit_elevation_m": {
+          "value": 1215,
+          "unit": "m_asl",
+          "evidence_class": "official_source_reported",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 7,
+            "printed_page": "06",
+            "section": "06 - The Second Test",
+            "authority": "Concept Casas terrain study"
+          },
+          "method": "Transcribed target summit elevation used by the sightline model.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "The official summit dataset is not attached."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "obstruction_height_ratio": {
+          "value": 0.469,
+          "unit": "height_per_horizontal_distance",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 8,
+            "printed_page": "07",
+            "section": "07 - The Rule",
+            "authority": "Concept Casas"
+          },
+          "method": "Tangent of the reported 25.1 degree elevation angle.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "reproducible_from_reported_values",
+            "note": "The ratio is mathematically reproducible; the underlying sightline remains pending."
+          },
+          "confidence": "high",
+          "limitations": []
+        }
+      }
+    },
+    "sea": {
+      "status": "CONDITIONAL_MODEL_CLAIM",
+      "assertions": {
+        "reported_open_land_eye_height_m": {
+          "value": 3.9,
+          "unit": "m_above_site_ground",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 6,
+            "printed_page": "05",
+            "section": "05 - The First Test",
+            "authority": "Concept Casas"
+          },
+          "method": "Transcribed terrain-profile result for unobstructed open land.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "The southward terrain profile is not attached."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "reported_three_storey_corridor_eye_height_m": {
+          "value": 23.8,
+          "unit": "m_above_site_ground",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 6,
+            "printed_page": "05",
+            "section": "05 - The First Test",
+            "authority": "Concept Casas"
+          },
+          "method": "Transcribed modelled eye height needed to clear a 9 m corridor obstruction.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "The obstruction geometry and model are not attached."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "reported_four_storey_corridor_eye_height_m": {
+          "value": 31.1,
+          "unit": "m_above_site_ground",
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 6,
+            "printed_page": "05",
+            "section": "05 - The First Test",
+            "authority": "Concept Casas"
+          },
+          "method": "Transcribed modelled eye height needed to clear a 12 m corridor obstruction.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "The obstruction geometry and model are not attached."
+          },
+          "confidence": "medium",
+          "limitations": []
+        },
+        "no_sea_view_at_reported_four_storey_scheme": {
+          "value": true,
+          "unit": null,
+          "evidence_class": "calculated",
+          "source": {
+            "document_id": "DOC_LCG_STUDY",
+            "pdf_page": 6,
+            "printed_page": "05",
+            "section": "05 - The First Test",
+            "authority": "Concept Casas"
+          },
+          "method": "Transcribed dossier conclusion comparing reported 15-18 m four-storey height with the modelled corridor clearance.",
+          "as_of": "2026-08",
+          "verification": {
+            "status": "underlying_source_pending",
+            "note": "Treat as conditional until context geometry and legally permitted height are verified."
+          },
+          "confidence": "low",
+          "limitations": [
+            "The seller-stated four-storey entitlement is unverified.",
+            "Neighbouring obstruction geometry is not attached."
+          ]
+        }
+      }
+    }
+  },
+  "access": {
+    "status": "PHYSICAL_CONTEXT_REPORTED_PERMISSION_UNKNOWN",
+    "permitted_access_point": null,
+    "gate_id": "GATE_PERMITTED_ACCESS",
+    "assertions": {
+      "reported_frontage_context": {
+        "value": "direct exposure to the A-7 corridor and Nueva Andalucia road grid",
+        "unit": null,
+        "evidence_class": "calculated",
+        "source": {
+          "document_id": "DOC_CANOPUS_LAND_REPORT",
+          "pdf_page": 4,
+          "printed_page": "3 / 4",
+          "section": "03 - Constraints",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed aerial and road-grid interpretation.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "Road geometry and highways permission are not attached."
+        },
+        "confidence": "medium",
+        "limitations": [
+          "Physical frontage does not establish a lawful vehicle entrance."
+        ]
+      }
+    }
+  },
+  "planning": {
+    "status": "UNRESOLVED_NO_COMPLIANCE_CLAIM",
+    "entitlement": null,
+    "buildable_envelope": null,
+    "gate_ids": [
+      "GATE_CERTIFICADO_URBANISTICO",
+      "GATE_GOVERNING_PLAN",
+      "GATE_A7_BUILDING_LINE_AND_ACCESS",
+      "GATE_ROOFTOP_RULES"
+    ],
+    "assertions": {
+      "cadastral_seller_use_conflict": {
+        "value": true,
+        "unit": null,
+        "evidence_class": "calculated",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 3,
+          "printed_page": "02",
+          "section": "02 - The Public Record",
+          "authority": "Concept Casas"
+        },
+        "method": "Compared reported RUSTICA / Agrario cadastral record with seller-stated hotel entitlement.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "Only current municipal planning documents can resolve the conflict."
+        },
+        "confidence": "high",
+        "limitations": [
+          "Cadastral class is not itself planning classification."
+        ]
+      }
+    }
+  },
+  "hard_gates": [
+    {
+      "gate_id": "GATE_CATASTRO_BOUNDARY",
+      "status": "OPEN",
+      "severity": "HARD",
+      "required_artifact": "Official Catastro INSPIRE parcel GML or equivalent authoritative polygon response",
+      "blocks": [
+        "authoritative boundary geometry",
+        "parcel centroid and canonical CRS",
+        "area and extent geometry QA",
+        "terrain clipping and survey alignment"
+      ],
+      "reason": "The PDFs contain a rendered boundary only; digitising it would fabricate survey geometry.",
+      "source": {
+        "document_id": "DOC_CANOPUS_LAND_REPORT",
+        "pdf_page": 2,
+        "section": "01 - The Parcel"
+      }
+    },
+    {
+      "gate_id": "GATE_IGN_TERRAIN",
+      "status": "OPEN",
+      "severity": "HARD",
+      "required_artifact": "Official IGN MDT05 or LiDAR-derived terrain tile with metadata, CRS and vertical datum",
+      "blocks": [
+        "authoritative terrain mesh",
+        "reproducible elevation, slope and aspect QA",
+        "verified contours and earthworks analysis"
+      ],
+      "reason": "Only summary terrain values and a rendered diagram are available.",
+      "source": {
+        "document_id": "DOC_LCG_STUDY",
+        "pdf_page": 4,
+        "section": "03 - The Terrain"
+      }
+    },
+    {
+      "gate_id": "GATE_CONTEXT_OBSTRUCTIONS",
+      "status": "OPEN",
+      "severity": "HARD",
+      "required_artifact": "Georeferenced terrain and building/vegetation obstruction surface for north and south sightline corridors",
+      "blocks": [
+        "verified mountain visibility",
+        "verified sea-view exclusion",
+        "view-optimised window placement"
+      ],
+      "reason": "Reported sightline conclusions cannot be replayed from the source set.",
+      "source": {
+        "document_id": "DOC_LCG_STUDY",
+        "pdf_page": 7,
+        "section": "06 - The Second Test"
+      }
+    },
+    {
+      "gate_id": "GATE_CERTIFICADO_URBANISTICO",
+      "status": "OPEN",
+      "severity": "HARD",
+      "required_artifact": "Current certificado urbanistico from Ayuntamiento de Marbella for parcel 5410501UF2451S",
+      "blocks": [
+        "hotel or tertiary use claim",
+        "32,000 m2 buildability claim",
+        "250-key and four-storey entitlement claim",
+        "planning-compliant design status"
+      ],
+      "reason": "The core programme is seller-stated and conflicts with the reported cadastral record.",
+      "source": {
+        "document_id": "DOC_CANOPUS_LAND_REPORT",
+        "pdf_page": 5,
+        "section": "04 - Verdict"
+      }
+    },
+    {
+      "gate_id": "GATE_GOVERNING_PLAN",
+      "status": "OPEN",
+      "severity": "HARD",
+      "required_artifact": "Planning instrument and parcel-specific regulations governing at licence date",
+      "blocks": [
+        "planning classification",
+        "setbacks and buildable envelope",
+        "height and use compliance"
+      ],
+      "reason": "The dossiers identify uncertainty between the reinstated 1986 framework and the developing PGOM.",
+      "source": {
+        "document_id": "DOC_LCG_STUDY",
+        "pdf_page": 13,
+        "section": "12 - Due Diligence"
+      }
+    },
+    {
+      "gate_id": "GATE_A7_BUILDING_LINE_AND_ACCESS",
+      "status": "OPEN",
+      "severity": "HARD",
+      "required_artifact": "Highways-authority determination of the A-7 building line, any urban reduction and approved access arrangement",
+      "blocks": [
+        "southern setback geometry",
+        "public-edge placement",
+        "lawful vehicle access"
+      ],
+      "reason": "The dossier reports a possible 50 m autovia line but labels it unconfirmed.",
+      "source": {
+        "document_id": "DOC_LCG_STUDY",
+        "pdf_page": 13,
+        "section": "12 - Due Diligence"
+      }
+    },
+    {
+      "gate_id": "GATE_PERMITTED_ACCESS",
+      "status": "OPEN",
+      "severity": "HARD",
+      "required_artifact": "Authority-confirmed site entrance location and access geometry",
+      "blocks": [
+        "permitted access-point geometry",
+        "construction logistics routing",
+        "arrival compliance"
+      ],
+      "reason": "The design places arrival at the northern tip, while only general road exposure is reported.",
+      "source": {
+        "document_id": "DOC_CANOPUS_LAND_REPORT",
+        "pdf_page": 4,
+        "section": "03 - Constraints"
+      }
+    },
+    {
+      "gate_id": "GATE_ROOFTOP_RULES",
+      "status": "OPEN",
+      "severity": "HARD",
+      "required_artifact": "Applicable Marbella rules for structures and occupation above the cornice",
+      "blocks": [
+        "rooftop terrace and pergola compliance",
+        "maximum height model"
+      ],
+      "reason": "The master presentation explicitly identifies the rooftop rule as open.",
+      "source": {
+        "document_id": "DOC_LCG_STUDY",
+        "pdf_page": 13,
+        "section": "12 - Due Diligence"
+      }
+    },
+    {
+      "gate_id": "GATE_TITLE_AND_CHARGES",
+      "status": "OPEN",
+      "severity": "HARD",
+      "required_artifact": "Current nota simple from Registro de la Propiedad",
+      "blocks": [
+        "ownership verification",
+        "surface and easement reconciliation",
+        "investment mandate readiness"
+      ],
+      "reason": "Ownership, mortgages, easements and registry surface are not established by the cadastral record.",
+      "source": {
+        "document_id": "DOC_CANOPUS_LAND_REPORT",
+        "pdf_page": 4,
+        "section": "03 - Constraints"
+      }
+    },
+    {
+      "gate_id": "GATE_FLOOD_AND_OVERLAYS",
+      "status": "OPEN",
+      "severity": "HARD",
+      "required_artifact": "SNCZI flood-map result and authoritative sectoral/environmental overlay checks",
+      "blocks": [
+        "flood-risk clearance",
+        "environmental-constraint clearance",
+        "buildable-envelope completion"
+      ],
+      "reason": "Aerial interpretation is not a substitute for authoritative constraint layers.",
+      "source": {
+        "document_id": "DOC_CANOPUS_LAND_REPORT",
+        "pdf_page": 5,
+        "section": "04 - Verdict"
+      }
+    },
+    {
+      "gate_id": "GATE_UTILITY_CAPACITY",
+      "status": "OPEN",
+      "severity": "HARD",
+      "required_artifact": "Utility connection-capacity letters for the hotel and commercial load",
+      "blocks": [
+        "servicing capacity claim",
+        "utility infrastructure design",
+        "development cost confidence"
+      ],
+      "reason": "Surrounding urban services do not prove available capacity for the proposed load.",
+      "source": {
+        "document_id": "DOC_CANOPUS_LAND_REPORT",
+        "pdf_page": 5,
+        "section": "04 - Verdict"
+      }
+    }
+  ]
+}

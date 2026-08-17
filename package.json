@@ -69,6 +69,8 @@
     "pool:requirement": "node scripts/pool-requirement.mjs",
     "concrete:requirement": "node scripts/concrete-requirement.mjs",
     "climate:cte": "node scripts/cte-climate.mjs",
+    "site:canopus:validate": "node scripts/validate-canopus-site-twin.mjs",
+    "site:canopus:validate:test": "node scripts/test-canopus-site-twin.mjs",
     "summarize": "node scripts/summarize.mjs"
   }
 }

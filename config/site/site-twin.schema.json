@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/site/site-twin.schema.json",
+  "title": "Evidence-first Site Twin",
+  "description": "Separates reported facts and calculations from absent raw geometry, access permission and planning entitlement.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "entity_type",
+    "site_twin_id",
+    "project_id",
+    "status",
+    "evidence_source_manifest",
+    "identity",
+    "cadastral_record",
+    "spatial",
+    "solar",
+    "views",
+    "access",
+    "planning",
+    "hard_gates"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "assertionMap": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"$ref": "./evidence-assertion.schema.json"}
+    },
+    "hardGate": {
+      "type": "object",
+      "required": ["gate_id", "status", "severity", "required_artifact", "blocks", "reason", "source"],
+      "additionalProperties": false,
+      "properties": {
+        "gate_id": {"type": "string", "pattern": "^GATE_[A-Z0-9_]+$"},
+        "status": {"const": "OPEN"},
+        "severity": {"const": "HARD"},
+        "required_artifact": {"type": "string", "minLength": 3},
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 3}
+        },
+        "reason": {"type": "string", "minLength": 3},
+        "source": {
+          "type": "object",
+          "required": ["document_id", "pdf_page", "section"],
+          "additionalProperties": false,
+          "properties": {
+            "document_id": {"type": "string"},
+            "pdf_page": {"type": "integer", "minimum": 1},
+            "section": {"type": "string"}
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "entity_type": {"const": "SiteTwin"},
+    "site_twin_id": {"type": "string", "pattern": "^SITE_[A-Z0-9_]+$"},
+    "project_id": {"type": "string", "pattern": "^PRJ_[A-Z0-9_]+$"},
+    "status": {"const": "EVIDENCE_ONLY_RAW_GEOMETRY_GATED"},
+    "evidence_source_manifest": {"type": "string"},
+    "identity": {
+      "type": "object",
+      "required": ["assertions"],
+      "additionalProperties": false,
+      "properties": {"assertions": {"$ref": "#/$defs/assertionMap"}}
+    },
+    "cadastral_record": {
+      "type": "object",
+      "required": ["assertions"],
+      "additionalProperties": false,
+      "properties": {"assertions": {"$ref": "#/$defs/assertionMap"}}
+    },
+    "spatial": {
+      "type": "object",
+      "required": ["boundary", "terrain"],
+      "additionalProperties": false,
+      "properties": {
+        "boundary": {
+          "type": "object",
+          "required": ["status", "raw_artifact", "geometry", "crs", "gate_id", "assertions"],
+          "additionalProperties": false,
+          "properties": {
+            "status": {"const": "MISSING_RAW_ARTIFACT"},
+            "raw_artifact": {"type": "null"},
+            "geometry": {"type": "null"},
+            "crs": {"type": "null"},
+            "gate_id": {"const": "GATE_CATASTRO_BOUNDARY"},
+            "assertions": {"$ref": "#/$defs/assertionMap"}
+          }
+        },
+        "terrain": {
+          "type": "object",
+          "required": ["status", "raw_dem", "terrain_mesh", "vertical_datum", "gate_id", "assertions"],
+          "additionalProperties": false,
+          "properties": {
+            "status": {"const": "REPORTED_SUMMARY_ONLY"},
+            "raw_dem": {"type": "null"},
+            "terrain_mesh": {"type": "null"},
+            "vertical_datum": {"type": "null"},
+            "gate_id": {"const": "GATE_IGN_TERRAIN"},
+            "assertions": {"$ref": "#/$defs/assertionMap"}
+          }
+        }
+      }
+    },
+    "solar": {
+      "type": "object",
+      "required": ["status", "assertions"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {"const": "REPORTED_CALCULATION_EXACT_CENTROID_PENDING"},
+        "assertions": {"$ref": "#/$defs/assertionMap"}
+      }
+    },
+    "views": {
+      "type": "object",
+      "required": ["mountain", "sea"],
+      "additionalProperties": false,
+      "properties": {
+        "mountain": {
+          "type": "object",
+          "required": ["status", "assertions"],
+          "additionalProperties": false,
+          "properties": {
+            "status": {"const": "REPORTED_MODEL_CLAIM_RAW_PROFILE_PENDING"},
+            "assertions": {"$ref": "#/$defs/assertionMap"}
+          }
+        },
+        "sea": {
+          "type": "object",
+          "required": ["status", "assertions"],
+          "additionalProperties": false,
+          "properties": {
+            "status": {"const": "CONDITIONAL_MODEL_CLAIM"},
+            "assertions": {"$ref": "#/$defs/assertionMap"}
+          }
+        }
+      }
+    },
+    "access": {
+      "type": "object",
+      "required": ["status", "permitted_access_point", "gate_id", "assertions"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {"const": "PHYSICAL_CONTEXT_REPORTED_PERMISSION_UNKNOWN"},
+        "permitted_access_point": {"type": "null"},
+        "gate_id": {"const": "GATE_PERMITTED_ACCESS"},
+        "assertions": {"$ref": "#/$defs/assertionMap"}
+      }
+    },
+    "planning": {
+      "type": "object",
+      "required": ["status", "entitlement", "buildable_envelope", "gate_ids", "assertions"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {"const": "UNRESOLVED_NO_COMPLIANCE_CLAIM"},
+        "entitlement": {"type": "null"},
+        "buildable_envelope": {"type": "null"},
+        "gate_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^GATE_[A-Z0-9_]+$"}
+        },
+        "assertions": {"$ref": "#/$defs/assertionMap"}
+      }
+    },
+    "hard_gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/hardGate"}
+    }
+  }
+}

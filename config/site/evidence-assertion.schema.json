@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/site/evidence-assertion.schema.json",
+  "title": "Evidence-backed assertion",
+  "description": "A single site, programme, design or commercial assertion with explicit provenance and verification state.",
+  "type": "object",
+  "required": [
+    "value",
+    "unit",
+    "evidence_class",
+    "source",
+    "method",
+    "as_of",
+    "verification",
+    "confidence"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "value": {},
+    "unit": {
+      "type": ["string", "null"]
+    },
+    "evidence_class": {
+      "enum": [
+        "official_source_reported",
+        "calculated",
+        "seller_stated",
+        "concept",
+        "underwriting_assumption",
+        "external_market_reported"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "required": ["document_id", "pdf_page", "section", "authority"],
+      "additionalProperties": false,
+      "properties": {
+        "document_id": {"type": "string", "minLength": 1},
+        "pdf_page": {"type": "integer", "minimum": 1},
+        "printed_page": {"type": ["string", "null"]},
+        "section": {"type": "string", "minLength": 1},
+        "authority": {"type": "string", "minLength": 1}
+      }
+    },
+    "method": {
+      "type": "string",
+      "minLength": 3
+    },
+    "as_of": {
+      "type": "string",
+      "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+    },
+    "verification": {
+      "type": "object",
+      "required": ["status", "note"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "underlying_source_pending",
+            "reproducible_from_reported_values",
+            "seller_document_pending",
+            "design_intent_only",
+            "underwriting_model_pending",
+            "primary_source_refresh_required"
+          ]
+        },
+        "note": {"type": "string", "minLength": 3}
+      }
+    },
+    "confidence": {
+      "enum": ["high", "medium", "low"]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 3},
+      "uniqueItems": true
+    }
+  }
+}

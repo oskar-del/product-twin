@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/site/design-scenario.schema.json",
+  "title": "Site design scenario",
+  "description": "A non-authoritative design option that references, but cannot overwrite, a Site Twin.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "entity_type",
+    "scenario_id",
+    "project_id",
+    "site_twin_id",
+    "status",
+    "planning_compliance_status",
+    "evidence_source_manifest",
+    "assertions",
+    "programme",
+    "design_rules",
+    "geometry"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "assertionMap": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"$ref": "./evidence-assertion.schema.json"}
+    }
+  },
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "entity_type": {"const": "DesignScenario"},
+    "scenario_id": {"type": "string", "pattern": "^SCN_[A-Z0-9_]+$"},
+    "project_id": {"type": "string", "pattern": "^PRJ_[A-Z0-9_]+$"},
+    "site_twin_id": {"type": "string", "pattern": "^SITE_[A-Z0-9_]+$"},
+    "status": {"const": "CONCEPT_ONLY"},
+    "planning_compliance_status": {"const": "NOT_ASSESSED_ENTITLEMENT_GATED"},
+    "evidence_source_manifest": {"type": "string"},
+    "assertions": {"$ref": "#/$defs/assertionMap"},
+    "programme": {
+      "type": "object",
+      "required": ["assertions"],
+      "additionalProperties": false,
+      "properties": {"assertions": {"$ref": "#/$defs/assertionMap"}}
+    },
+    "design_rules": {
+      "type": "object",
+      "required": ["assertions"],
+      "additionalProperties": false,
+      "properties": {"assertions": {"$ref": "#/$defs/assertionMap"}}
+    },
+    "geometry": {
+      "type": "object",
+      "required": ["status", "survey_alignment", "model_asset"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {"const": "NO_MACHINE_READABLE_CONCEPT_GEOMETRY"},
+        "survey_alignment": {"type": "null"},
+        "model_asset": {"type": "null"}
+      }
+    }
+  }
+}
