@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-08-17T12:02:53.273Z",
+  "avatar_id": "AVATAR_IKEA_VALNAS_20628038_G2_COFFEE_TABLE_PROXY",
+  "status": "G2_REALISTIC_PROXY_SCALE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-valnas-20628038-g2-coffee-table-proxy.glb",
+  "asset_bytes": 11360,
+  "identity": {
+    "merchant": "IKEA Spain",
+    "product_family": "VALNÄS",
+    "article_no": "206.280.38",
+    "official_url": "https://www.ikea.com/es/en/p/valnas-coffee-table-oak-veneer-20628038/"
+  },
+  "expected_mm": {
+    "width": 1180,
+    "depth": 720,
+    "height": 500
+  },
+  "measured_xyz_mm": {
+    "width": 1180,
+    "height": 500,
+    "depth": 720
+  },
+  "relative_error_max": 0,
+  "material_cues": [
+    "natural oak veneer",
+    "warm clear-coated wood structure"
+  ],
+  "placement": {
+    "origin": "floor_center",
+    "recommended_sofa_gap_mm": 420,
+    "recommended_circulation_clearance_mm": 600
+  },
+  "disclosure": "Product Twin-owned realistic planning geometry at verified scale. Product identity and dimensions are exact; proprietary manufacturer geometry and texture artwork are not claimed.",
+  "commerce": {
+    "state": "OFFICIAL_PRODUCT_PAGE_AND_DESTINATION_AVAILABLE",
+    "destination_postal_code": "29660",
+    "IKEA_Malaga_store": "IN_STOCK",
+    "observed_at": "2026-08-17",
+    "refresh_before_purchase": true
+  }
+}

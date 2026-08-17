@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { evaluatePhotoAvatarJob } from './preflight-photo-avatar-job.mjs';
 
 const ROOT=process.cwd();
 const jobPath=process.env.AVATAR_JOB;
@@ -13,12 +14,19 @@ await fs.mkdir(path.join(ROOT,'data','metrics'),{recursive:true});
 function resultBase(status){return {generated_at:new Date().toISOString(),job_id:job.job_id,engine:'meshy',status,subject:job.subject,policy:{exact_product_claim_allowed:false,source_images_not_copied:true,generated_asset_public_commit_allowed:job.rights?.redistribution_allowed==='yes'}}}
 async function persistMetric(obj){await fs.writeFile(path.join(ROOT,'data','metrics','meshy-avatar-job-latest.json'),JSON.stringify(obj,null,2));}
 
+const preflight=evaluatePhotoAvatarJob(job);
+if(preflight.status!=='PASS'){
+  const out={...resultBase('PREFLIGHT_BLOCKED'),preflight};await persistMetric(out);console.log(JSON.stringify(out,null,2));process.exit(0);
+}
 if(job.rights?.reconstruction_allowed!=='yes'){
   const out={...resultBase('RIGHTS_BLOCKED'),reason:'reconstruction_allowed must be yes'};await persistMetric(out);console.log(JSON.stringify(out,null,2));process.exit(0);
 }
 if(!apiKey){const out={...resultBase('CREDENTIAL_REQUIRED'),reason:'MESHY_API_KEY is not configured'};await persistMetric(out);console.log(JSON.stringify(out,null,2));process.exit(0);}
 
-const images=(job.source_images??[]).filter(x=>x.rights_state==='cleared_for_reconstruction').map(x=>x.source_uri_or_reference).filter(x=>/^https?:\/\//.test(String(x))).slice(0,4);
+const viewPriority=['front','rear','left','right','three_quarter'];
+const cleared=(job.source_images??[]).filter(x=>x.rights_state==='cleared_for_reconstruction'&&/^https:\/\//.test(String(x.source_uri_or_reference)));
+const selected=[...viewPriority.map(view=>cleared.find(image=>image.view===view)).filter(Boolean),...cleared].filter((image,index,all)=>all.findIndex(candidate=>candidate.image_id===image.image_id)===index).slice(0,4);
+const images=selected.map(image=>image.source_uri_or_reference);
 if(!images.length)throw new Error('No cleared publicly accessible image URLs in job');
 
 const multi=images.length>1;
@@ -68,6 +76,11 @@ const out={
   external_task_id:taskId,
   mode:multi?'multi_image_ai':'single_image_ai',
   source_view_count:images.length,
+  capture_view_count:cleared.length,
+  capture_views:[...new Set(cleared.map(image=>image.view))],
+  generation_input_views:selected.map(image=>image.view),
+  expected_dimensions_mm:{width:dimensions.width_mm,depth:dimensions.depth_mm,height:dimensions.height_mm},
+  scale_state:dimensions.scale_state,
   runtime_asset_path:path.relative(ROOT,glbPath),
   asset_bytes:bytes.length,
   pbr_requested:true,

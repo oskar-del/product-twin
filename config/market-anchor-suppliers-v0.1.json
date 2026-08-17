@@ -1,0 +1,73 @@
+{
+  "network_id": "PRODUCT_TWIN_LOCAL_ANCHOR_NETWORK_V0_1",
+  "version": "0.1",
+  "purpose": "Require strong destination-market supply routes instead of treating a global catalogue as locally procurable.",
+  "minimum_market_coverage": {
+    "home_and_furniture_anchor": 1,
+    "building_materials_anchor": 1,
+    "trade_mep_anchor": 1,
+    "manufacturer_bim_and_identity_routes": 1
+  },
+  "markets": [
+    {
+      "country": "ES",
+      "anchor_candidates": [
+        {"name":"IKEA Spain","role":"home_and_furniture_anchor","connection_state":"EXACT_PRODUCT_ROUTES_CONNECTED_DESTINATION_EVIDENCE_PARTIAL_ROOM"},
+        {"name":"Leroy Merlin Spain","role":"building_materials_anchor","connection_state":"MIRAKL_SELLER_STACK_DOCUMENTED_BUYER_CATALOGUE_NOT_CONNECTED"},
+        {"name":"OBRAMAT","role":"trade_mep_anchor","connection_state":"DISCOVERY_CANDIDATE_NOT_CONNECTED"}
+      ]
+    },
+    {
+      "country": "SE",
+      "anchor_candidates": [
+        {"name":"IKEA Sweden","role":"home_and_furniture_anchor","connection_state":"DISCOVERY_CANDIDATE_NOT_CONNECTED"},
+        {"name":"Byggmax or Beijer Byggmaterial","role":"building_materials_anchor","connection_state":"MUNIN_SOURCE_RESEARCH_REQUIRED"},
+        {"name":"Ahlsell Sweden","role":"trade_mep_anchor","connection_state":"MUNIN_SOURCE_RESEARCH_REQUIRED"}
+      ]
+    },
+    {
+      "country": "GB",
+      "anchor_candidates": [
+        {"name":"IKEA UK","role":"home_and_furniture_anchor","connection_state":"DISCOVERY_CANDIDATE_NOT_CONNECTED"},
+        {"name":"B&Q","role":"building_materials_anchor","connection_state":"UK_STACK_SOURCE_RESEARCH_REQUIRED"},
+        {"name":"Screwfix or Travis Perkins","role":"trade_mep_anchor","connection_state":"UK_STACK_SOURCE_RESEARCH_REQUIRED"}
+      ]
+    },
+    {
+      "country": "US",
+      "anchor_candidates": [
+        {"name":"IKEA US","role":"home_and_furniture_anchor","connection_state":"DISCOVERY_CANDIDATE_NOT_CONNECTED"},
+        {"name":"The Home Depot","role":"building_materials_anchor","connection_state":"OFFICIAL_PRO_PARTNER_INTEGRATION_RESEARCH_REQUIRED"},
+        {"name":"Lowe's","role":"trade_mep_anchor","connection_state":"PARTNER_OR_PUBLIC_ACCESS_RESEARCH_REQUIRED"}
+      ]
+    }
+  ],
+  "cross_market_platform_routes": [
+    {
+      "name": "Shopify Storefront MCP / UCP",
+      "state": "CONNECTED_SOURCE_PATTERN",
+      "scope": "Per-store catalogue and shopping interface; not a universal multi-merchant Product Twin, geometry or local-logistics source.",
+      "official_reference": "https://shopify.dev/docs/apps/build/storefront-mcp"
+    },
+    {
+      "name": "WooCommerce REST API",
+      "state": "CONNECTED_SOURCE_PATTERN",
+      "scope": "Per-store authenticated commerce adapter; catalogue quality, fields and delivery evidence depend on each merchant.",
+      "official_reference": "https://woocommerce.github.io/woocommerce-rest-api-docs/"
+    },
+    {
+      "name": "GS1 Digital Link",
+      "state": "IDENTITY_ROUTE_MAPPED",
+      "scope": "Neutral identity and linked-information route; does not itself provide current seller offers, 3D geometry or destination delivery.",
+      "official_reference": "https://www.gs1.org/standards/gs1-digital-link"
+    },
+    {
+      "name": "Mirakl seller APIs and multichannel integrators",
+      "state": "DOCUMENTED_SELLER_SIDE_PATTERN",
+      "scope": "Reusable seller-side product, offer, stock, order and shipment integration across Leroy Merlin/ADEO and other Mirakl marketplaces. It requires an approved seller/shop credential and does not expose the complete marketplace catalogue to a buyer application.",
+      "official_reference": "https://developer.mirakl.com/content/product/mmp/rest/seller/openapi3",
+      "strategic_use": "Onboard authorized suppliers once, enrich their records into Product Twins and syndicate the improved identity/media/3D data outward while retaining dated stock, offer and order evidence inward."
+    }
+  ],
+  "policy": "Candidate names are research targets, not claims of API access or procurement readiness. Each connection must separately prove identity, permitted access, offer freshness, destination logistics and avatar rights."
+}

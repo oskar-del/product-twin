@@ -17,7 +17,7 @@
       {"source_id":"bigcommerce","state":"MERCHANT_TOKEN_OR_STORE_ACCESS","priority":"P1","scope":"individual BigCommerce suppliers","capabilities":["catalog","storefront products","cart","checkout","shipping"]},
       {"source_id":"adobe_commerce_magento","state":"MERCHANT_INSTANCE_ACCESS","priority":"P2","scope":"individual Adobe Commerce/Magento suppliers","capabilities":["product catalog","cart","checkout","orders"]},
       {"source_id":"commercetools","state":"MERCHANT_PROJECT_ACCESS","priority":"P2","scope":"headless/B2B suppliers on commercetools","capabilities":["product search","prices","availability","variants"]},
-      {"source_id":"mirakl_marketplace","state":"MARKETPLACE_INSTANCE_ACCESS","priority":"P1","scope":"marketplaces and distributor networks operated on Mirakl","capabilities":["products","offers","shipping zones","orders","tracking"]}
+      {"source_id":"mirakl_marketplace","state":"DOCUMENTED_SELLER_API_APPROVED_INSTANCE_ACCESS_REQUIRED","priority":"P1","scope":"seller-authorized products, offers, stock, orders and shipment events across Mirakl marketplaces; BeezUP, Koongo, Poleepo and Oceges are documented integration routes for Leroy Merlin/ADEO","capabilities":["seller_owned_products","offers","stock","shipping_configuration","orders","tracking"],"limit":"not a public buyer-side full-marketplace catalogue or destination-stock API"}
     ],
     "identity_enrichment": [
       {"source_id":"gs1_verified","state":"PUBLIC_LOW_VOLUME_ENTERPRISE_API_AVAILABLE","priority":"P0","scope":"GTIN/GLN/company identity verification"},

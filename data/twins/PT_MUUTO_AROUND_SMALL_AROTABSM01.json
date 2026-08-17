@@ -1,0 +1,82 @@
+{
+  "twin_id": "PT_MUUTO_AROUND_SMALL_AROTABSM01",
+  "kind": "object",
+  "category_id": "FFE.TABLE.COFFEE",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "Muuto",
+    "product_family": "Around Coffee Table",
+    "model": "Around Coffee Table Small",
+    "configuration": "Oak",
+    "manufacturer_item_no": "AROTABSM01",
+    "legacy_item_no": "60012",
+    "gtin_ean": "5713294887800"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "diameter": 450,
+      "height": 460
+    },
+    "evidence_state": "manufacturer_verified"
+  },
+  "manufacturer_evidence": {
+    "product_page": "https://www.muuto.com/product/Around-Coffee-Table--AROTABSM/AROTABSM01/",
+    "professional_product_page": "https://professionals.muuto.com/product/around-coffee-table--p1920/60019/",
+    "architect_download_page": "https://professionals.muuto.com/toolbox/product-information/download-ad-files/",
+    "architect_download_hub": "https://download.muuto.com/digitalshowroom/",
+    "geometry_formats_advertised": ["DWG", "3DS", "OBJ", "SketchUp", "Revit"],
+    "authority": "A_MANUFACTURER"
+  },
+  "external_identities": [
+    {
+      "source_id": "andlight_es",
+      "role": "live_commerce_reference",
+      "product_url": "https://andlight.es/shop/mesa-de-centro-21632p.html",
+      "verification": {
+        "state": "exact_legacy_identity_and_gtin_verified",
+        "merchant_legacy_item_no": "60012",
+        "merchant_gtin_ean": "5713294887800",
+        "configuration_match": true,
+        "dimension_match": true,
+        "postcode_delivery_state": "checkout_or_written_confirmation_required"
+      },
+      "refresh_policy": "live_required",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "exact_product_bound_asset_unresolved",
+    "preferred_source": "Muuto architect file",
+    "advertised_formats": ["OBJ", "3DS", "DWG", "SketchUp", "Revit"],
+    "runtime_target": "GLB",
+    "scale_state": "manufacturer_dimensions_known_asset_not_validated",
+    "exact_likeness_state": "pending_asset_resolution",
+    "rights": {
+      "space_planning_use": "manufacturer_professional_files_available",
+      "render_use": "review",
+      "derivative_conversion": "review",
+      "redistribution": "review"
+    }
+  },
+  "readiness": {
+    "identity": "verified",
+    "commerce": "exact_spain_listing_postcode_unverified",
+    "dimensions": "verified",
+    "geometry": "candidate",
+    "render": "blocked",
+    "specification": "partial_verified",
+    "rights": "review"
+  },
+  "promotion_blockers": [
+    "receive exact product-bound manufacturer 3D asset through an authorized Muuto route",
+    "validate asset scale against 450 mm diameter x 460 mm height manufacturer dimensions",
+    "validate exact Oak material and finish",
+    "receive written commercial-render and derivative-conversion rights",
+    "refresh the live offer and verify delivery to postcode 29660"
+  ],
+  "commerce_evidence_file": "data/commerce/muuto-residential-hero-set-spain-offers-2026-08-17.json",
+  "authorized_intake_manifest": "config/geometry/intake/muuto-around-small-arotabsm01-authorized-intake.json",
+  "qa_evidence_template": "config/geometry/qa-evidence-templates/muuto-around-small-arotabsm01-geometry-qa.example.json",
+  "policy": "Exact identity and a Spain listing do not imply exact geometry or deliverability. Mutable price, stock and delivery data are resolved live before procurement."
+}

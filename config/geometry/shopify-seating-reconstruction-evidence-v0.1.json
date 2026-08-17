@@ -1,0 +1,90 @@
+{
+  "version": "0.1",
+  "source_metric": "data/metrics/shopify-design-public-product-media-latest.json",
+  "merchant_origin": "https://trade.designpublicgroup.com",
+  "review_method": "visual review of temporary contact sheets; stable evidence tags only, no source photography persisted here",
+  "rights": {"reconstruction_allowed": "review", "render_allowed": "review", "redistribution_allowed": "no"},
+  "products": [
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584850764",
+      "observed_views": ["front", "left", "right", "three_quarter", "detail"],
+      "isolated_background": true,
+      "multiple_visible_finishes": true,
+      "dimension_evidence_state": "partial_authoritative",
+      "variant_visual_binding_state": "present_unresolved",
+      "notes": ["overall height remains ambiguous because the bolster is dimensioned separately"]
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852108",
+      "observed_views": ["front", "rear", "right", "three_quarter", "detail"],
+      "isolated_background": true,
+      "multiple_visible_finishes": true,
+      "dimension_evidence_state": "manufacturer_verified",
+      "variant_visual_binding_state": "present_unresolved",
+      "notes": ["strongest first photo-reconstruction hero kit"],
+      "product_twin_id": "PT_NORR11_MAN_2_SEATER_SOFA_NOR_MAN_2_SEAT_SOFA_CAT2",
+      "source_image_bindings": [
+        {"view":"front","image_gid":"gid://shopify/ImageSource/22646300868685"},
+        {"view":"rear","image_gid":"gid://shopify/ImageSource/22646301556813"},
+        {"view":"left","image_gid":"gid://shopify/ImageSource/22646301327437"},
+        {"view":"right","image_gid":"gid://shopify/ImageSource/22646301261901"},
+        {"view":"three_quarter","image_gid":"gid://shopify/ImageSource/22646301458509"},
+        {"view":"detail","image_gid":"gid://shopify/ImageSource/22646301818957"}
+      ]
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852492",
+      "observed_views": ["front", "rear", "right", "three_quarter", "detail"],
+      "isolated_background": true,
+      "multiple_visible_finishes": true,
+      "dimension_evidence_state": "manufacturer_verified",
+      "variant_visual_binding_state": "present_unresolved",
+      "notes": []
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584851276",
+      "observed_views": ["front", "rear", "left", "right", "three_quarter", "detail"],
+      "isolated_background": true,
+      "multiple_visible_finishes": true,
+      "dimension_evidence_state": "manufacturer_verified",
+      "variant_visual_binding_state": "present_unresolved",
+      "notes": []
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_35853729804",
+      "observed_views": ["front", "left", "right", "three_quarter", "detail"],
+      "isolated_background": true,
+      "multiple_visible_finishes": true,
+      "dimension_evidence_state": "manufacturer_verified",
+      "variant_visual_binding_state": "present_unresolved",
+      "notes": ["strong upholstery and timber close-up coverage; rear coverage is not authoritative"]
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_782311161966",
+      "observed_views": ["front", "rear", "left", "right", "three_quarter", "detail"],
+      "isolated_background": true,
+      "multiple_visible_finishes": true,
+      "dimension_evidence_state": "unknown",
+      "variant_visual_binding_state": "present_unresolved",
+      "notes": ["strong image kit but authoritative current overall dimensions were not captured"]
+    },
+    {
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_b163aea21fdf6542",
+      "observed_views": ["front", "rear", "right", "three_quarter", "detail"],
+      "isolated_background": true,
+      "multiple_visible_finishes": true,
+      "dimension_evidence_state": "manufacturer_verified",
+      "variant_visual_binding_state": "present_unresolved",
+      "notes": []
+    },
+    {
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_c78c9916e34465e8",
+      "observed_views": ["front", "right", "three_quarter"],
+      "isolated_background": true,
+      "multiple_visible_finishes": true,
+      "dimension_evidence_state": "manufacturer_verified",
+      "variant_visual_binding_state": "present_unresolved",
+      "notes": ["sparse image set; native model or additional rear/detail evidence remains important"]
+    }
+  ]
+}

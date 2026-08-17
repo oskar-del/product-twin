@@ -1,0 +1,18 @@
+{
+  "version": "0.1",
+  "merchant_origin": "https://trade.designpublicgroup.com",
+  "merchant_id": "design_public_group_trade",
+  "storefront_api_version": "2026-07",
+  "maximum_product_probes": 1594,
+  "concurrency": 6,
+  "roles": [
+    {"room_role":"sofa","category_id":"FFE.SEATING.SOFA","probe_target":136,"patterns":["sofa","sectional","loveseat","settee"]},
+    {"room_role":"lounge_chair","category_id":"FFE.SEATING.LOUNGE","probe_target":136,"patterns":["lounge chair","armchair","easy chair","club chair","accent chair"]},
+    {"room_role":"coffee_table","category_id":"FFE.TABLE.COFFEE","probe_target":604,"patterns":["coffee table","cocktail table"]},
+    {"room_role":"side_table","category_id":"FFE.TABLE.SIDE","probe_target":385,"patterns":["side table","end table","occasional table"]},
+    {"room_role":"floor_lamp","category_id":"ELECTRICAL.LUMINAIRES.FLOOR","probe_target":121,"patterns":["floor lamp","standing lamp"]},
+    {"room_role":"rug","category_id":"FFE.TEXTILES.RUG","probe_target":212,"patterns":["area rug","rug"]}
+  ],
+  "exclusion_patterns": ["cover only", "replacement cover", "slipcover", "protective cover", "spare part", "replacement part"],
+  "persistence_policy": "Persist only stable merchant IDs, minimal identity, role classification and native MODEL_3D evidence. Do not persist model source URLs or the merchant catalogue mirror."
+}

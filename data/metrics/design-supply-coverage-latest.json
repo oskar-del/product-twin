@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-08-17T12:19:05.943Z",
+  "contract_id": "DESIGN_SUPPLY_COVERAGE_V0_1",
+  "design": {
+    "design_id": "DESIGN_ROOM_LAB_LIVING_V0_1",
+    "project_id": "PROJECT_MARBELLA_VILLA_001",
+    "space_id": "ROOM_LAB_LIVING_V0",
+    "name": "Room Lab living room — eight-object baseline",
+    "destination": {
+      "country": "ES",
+      "region": "Malaga",
+      "postal_code": "29660",
+      "construction_phase": "ffe"
+    },
+    "placement_line_items": 8,
+    "placed_units": 8,
+    "avatar_rule": "Every placement keeps its Product Twin, exact selected configuration and avatar; supply evidence refreshes independently."
+  },
+  "current_market_headline": {
+    "confirmed_deliverable_percentage_by_units": 87.5,
+    "confirmed_unavailable_percentage_by_units": 12.5,
+    "exact_route_refresh_required_percentage_by_units": 0,
+    "unresolved_or_incomplete_percentage_by_units": 0
+  },
+  "benchmark_markets": [
+    {
+      "country": "ES",
+      "name": "Spain",
+      "headline": {
+        "confirmed_deliverable_percentage_by_units": 87.5,
+        "confirmed_unavailable_percentage_by_units": 12.5,
+        "exact_route_refresh_required_percentage_by_units": 0,
+        "unresolved_or_incomplete_percentage_by_units": 0
+      }
+    },
+    {
+      "country": "SE",
+      "name": "Sweden",
+      "headline": {
+        "confirmed_deliverable_percentage_by_units": 0,
+        "confirmed_unavailable_percentage_by_units": 0,
+        "exact_route_refresh_required_percentage_by_units": 0,
+        "unresolved_or_incomplete_percentage_by_units": 100
+      }
+    },
+    {
+      "country": "GB",
+      "name": "United Kingdom",
+      "headline": {
+        "confirmed_deliverable_percentage_by_units": 0,
+        "confirmed_unavailable_percentage_by_units": 0,
+        "exact_route_refresh_required_percentage_by_units": 0,
+        "unresolved_or_incomplete_percentage_by_units": 100
+      }
+    },
+    {
+      "country": "US",
+      "name": "United States",
+      "headline": {
+        "confirmed_deliverable_percentage_by_units": 0,
+        "confirmed_unavailable_percentage_by_units": 0,
+        "exact_route_refresh_required_percentage_by_units": 0,
+        "unresolved_or_incomplete_percentage_by_units": 100
+      }
+    }
+  ],
+  "substitutions": {
+    "candidates": 3,
+    "candidate_alternative_coverage_percentage_by_line_item": 37.5,
+    "confirmed_alternative_coverage_percentage_by_line_item": 0,
+    "conditional_scenarios": [
+      {
+        "substitution_id": "SUB_LISTERBY_TO_VALNAS",
+        "scenario_state": "CONDITIONAL_NOT_APPROVED",
+        "conditional_confirmed_deliverable_percentage_by_units": 100,
+        "confirmed_deliverable_lift_percentage_points": 12.5
+      },
+      {
+        "substitution_id": "SUB_KIVIK_TO_NORR11_MAN_2S",
+        "scenario_state": "NO_CONFIRMED_SUPPLY_RESCUE",
+        "conditional_confirmed_deliverable_percentage_by_units": null,
+        "confirmed_deliverable_lift_percentage_points": null
+      },
+      {
+        "substitution_id": "SUB_POANG_TO_NORR11_MAN_LOUNGE",
+        "scenario_state": "NO_CONFIRMED_SUPPLY_RESCUE",
+        "conditional_confirmed_deliverable_percentage_by_units": null,
+        "confirmed_deliverable_lift_percentage_points": null
+      }
+    ]
+  }
+}

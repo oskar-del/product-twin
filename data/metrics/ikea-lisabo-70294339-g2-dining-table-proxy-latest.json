@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-08-16T23:25:33.888Z",
+  "avatar_id": "AVATAR_IKEA_LISABO_70294339_G2_DINING_TABLE_PROXY",
+  "status": "G2_REALISTIC_PROXY_SCALE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-lisabo-70294339-g2-dining-table-proxy.glb",
+  "asset_bytes": 19140,
+  "identity": {
+    "merchant": "IKEA Spain",
+    "product_family": "LISABO",
+    "article_no": "702.943.39",
+    "official_url": "https://www.ikea.com/es/es/p/lisabo-mesa-chapa-fresno-70294339/"
+  },
+  "expected_mm": {
+    "width": 1400,
+    "depth": 780,
+    "height": 740
+  },
+  "measured_xyz_mm": {
+    "width": 1400,
+    "height": 742.378589738865,
+    "depth": 780
+  },
+  "relative_error_max": 0.0032143104579256793,
+  "material_cues": [
+    "natural ash veneer",
+    "solid birch legs"
+  ],
+  "placement": {
+    "origin": "floor_center",
+    "recommended_chair_zone_mm": 750
+  },
+  "disclosure": "Product Twin-owned realistic planning geometry at verified scale. Product identity and dimensions are exact; proprietary manufacturer geometry and texture artwork are not claimed.",
+  "commerce": {
+    "state": "OFFICIAL_PRODUCT_PAGE_VERIFIED_LIVE_AVAILABILITY_REFRESH_REQUIRED",
+    "observed_at": "2026-08-17"
+  }
+}

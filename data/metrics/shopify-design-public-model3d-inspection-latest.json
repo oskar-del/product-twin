@@ -1,0 +1,768 @@
+{
+  "summary": {
+    "generated_at": "2026-08-17T01:12:50.943Z",
+    "candidates": 6,
+    "inspected": 6,
+    "failed": 0,
+    "candidates_with_textures": 4,
+    "candidates_with_normal_maps": 4,
+    "single_variant_candidates": 0,
+    "manufacturer_scale_qa_passes": 4,
+    "promoted_g3": 0,
+    "policy": "GLB source URLs are not persisted. Resolved binaries remain only under gitignored runtime for inspection; stable hashes, measurements and QA states are persisted."
+  },
+  "inspections": [
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584850764",
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "identity": {
+        "product_title": "Man Day Bed",
+        "vendor": "NORR11",
+        "product_type": "Sofa Beds & Daybeds",
+        "handle": "humlevik-krojgaard-man-day-bed-sofabeds-norr11",
+        "merchant_product_gid": "gid://shopify/Product/10584850764",
+        "merchant_model3d_gid": "gid://shopify/Model3d/25288453521485"
+      },
+      "status": "LIVE_MODEL3D_INSPECTED_SCALE_AND_VARIANT_QA_REQUIRED",
+      "asset": {
+        "format": "glb",
+        "bytes": 1909760,
+        "sha256": "ea809c9ac5dfe69cedf0a4a9e44d8916d8e8ec762b314f83f43b0babe98f3a41",
+        "source_url_persisted": false,
+        "binary_committed": false,
+        "runtime_file_retained": true
+      },
+      "geometry": {
+        "dimensions_mm": [
+          843.815803527832,
+          505.3018638232061,
+          2009.0655088424683
+        ],
+        "position_accessor_count": 3,
+        "scale_state": "EXPECTED_DIMENSIONS_NOT_CONFIGURED",
+        "scale_qa": {
+          "state": "EXPECTED_DIMENSIONS_NOT_CONFIGURED",
+          "pass": false
+        }
+      },
+      "materials": {
+        "material_count": 3,
+        "texture_count": 3,
+        "image_count": 3,
+        "materials": [
+          {
+            "index": 0,
+            "name": "Stainless Steel",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0.699999988079071,
+            "roughness_factor": 0.30000001192092896,
+            "normal_texture_present": false
+          },
+          {
+            "index": 1,
+            "name": "canvas",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": null,
+            "base_color_texture_present": true,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": true
+          },
+          {
+            "index": 2,
+            "name": "Material 1",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": false
+          }
+        ]
+      },
+      "variants": {
+        "count_returned": 8,
+        "available_count": 8,
+        "binding_state": "PRODUCT_LEVEL_MODEL_MULTIPLE_VARIANTS_UNRESOLVED"
+      },
+      "rights": {
+        "state": "REVIEW",
+        "render_scope": "UNRESOLVED",
+        "derivative_storage": "RUNTIME_INSPECTION_ONLY",
+        "redistribution": false
+      },
+      "commerce": {
+        "destination_delivery_state": "UNVERIFIED_MERCHANT_CENSUS_NOT_CATALOG_DESTINATION_FILTERED",
+        "checkout_refresh_required": true
+      },
+      "promotion": {
+        "current_level": "G2_CANDIDATE",
+        "target_level": "G3",
+        "blocked_by": [
+          "manufacturer dimension scale QA",
+          "exact selected-variant material binding",
+          "render and platform-display rights review",
+          "Shopify catalog destination join and checkout refresh"
+        ]
+      }
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852108",
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "identity": {
+        "product_title": "Man 2-Seater Sofa",
+        "vendor": "NORR11",
+        "product_type": "Sofas",
+        "handle": "humlevik-krojgaard-man-sofa-2-seater-sofas-norr11",
+        "merchant_product_gid": "gid://shopify/Product/10584852108",
+        "merchant_model3d_gid": "gid://shopify/Model3d/25288453652557"
+      },
+      "status": "LIVE_MODEL3D_INSPECTED_SCALE_AND_VARIANT_QA_REQUIRED",
+      "asset": {
+        "format": "glb",
+        "bytes": 3629888,
+        "sha256": "5d384b82e9fe09e98ed5cd33a95fea2c0be352b501948c9873b2011199915712",
+        "source_url_persisted": false,
+        "binary_committed": false,
+        "runtime_file_retained": true
+      },
+      "geometry": {
+        "dimensions_mm": [
+          1292.9904460906982,
+          767.605834380447,
+          775.7274806499481
+        ],
+        "position_accessor_count": 3,
+        "scale_state": "MANUFACTURER_SCALE_QA_PASS",
+        "scale_qa": {
+          "state": "MANUFACTURER_SCALE_QA_PASS",
+          "pass": true,
+          "expected_dimensions_mm": [
+            1320,
+            740,
+            750
+          ],
+          "sorted_actual_mm": [
+            767.605834380447,
+            775.7274806499481,
+            1292.9904460906982
+          ],
+          "sorted_expected_mm": [
+            740,
+            750,
+            1320
+          ],
+          "relative_errors": [
+            0.037305181595198716,
+            0.03430330753326416,
+            0.020461783264622543
+          ],
+          "maximum_relative_error": 0.037305181595198716,
+          "allowed_relative_error": 0.05,
+          "dimension_source": "https://norr11.com/products/man-two-seater",
+          "source_note": "NORR11 publishes L132 x D74 x H75 cm. Five-percent tolerance allows cushion and export-envelope differences."
+        }
+      },
+      "materials": {
+        "material_count": 3,
+        "texture_count": 3,
+        "image_count": 3,
+        "materials": [
+          {
+            "index": 0,
+            "name": "Stainless Steel",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0.699999988079071,
+            "roughness_factor": 0.30000001192092896,
+            "normal_texture_present": false
+          },
+          {
+            "index": 1,
+            "name": "canvas",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": null,
+            "base_color_texture_present": true,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": true
+          },
+          {
+            "index": 2,
+            "name": "Material 1",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": false
+          }
+        ]
+      },
+      "variants": {
+        "count_returned": 8,
+        "available_count": 8,
+        "binding_state": "PRODUCT_LEVEL_MODEL_MULTIPLE_VARIANTS_UNRESOLVED"
+      },
+      "rights": {
+        "state": "REVIEW",
+        "render_scope": "UNRESOLVED",
+        "derivative_storage": "RUNTIME_INSPECTION_ONLY",
+        "redistribution": false
+      },
+      "commerce": {
+        "destination_delivery_state": "UNVERIFIED_MERCHANT_CENSUS_NOT_CATALOG_DESTINATION_FILTERED",
+        "checkout_refresh_required": true
+      },
+      "promotion": {
+        "current_level": "G2_CANDIDATE",
+        "target_level": "G3",
+        "blocked_by": [
+          "exact selected-variant material binding",
+          "render and platform-display rights review",
+          "Shopify catalog destination join and checkout refresh"
+        ]
+      }
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852492",
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "identity": {
+        "product_title": "Man 3-Seater Sofa",
+        "vendor": "NORR11",
+        "product_type": "Sofas",
+        "handle": "humlevik-krojgaard-man-sofa-3-seater-sofas-norr11",
+        "merchant_product_gid": "gid://shopify/Product/10584852492",
+        "merchant_model3d_gid": "gid://shopify/Model3d/25288453587021"
+      },
+      "status": "LIVE_MODEL3D_INSPECTED_SCALE_AND_VARIANT_QA_REQUIRED",
+      "asset": {
+        "format": "glb",
+        "bytes": 3021820,
+        "sha256": "b1516c8965fe3dabe52d409af82a75ca70b608315fa0c3e6cbbc303dad094ff8",
+        "source_url_persisted": false,
+        "binary_committed": false,
+        "runtime_file_retained": true
+      },
+      "geometry": {
+        "dimensions_mm": [
+          1967.305064201355,
+          768.1414114776999,
+          775.7638394832611
+        ],
+        "position_accessor_count": 3,
+        "scale_state": "MANUFACTURER_SCALE_QA_PASS",
+        "scale_qa": {
+          "state": "MANUFACTURER_SCALE_QA_PASS",
+          "pass": true,
+          "expected_dimensions_mm": [
+            1970,
+            740,
+            750
+          ],
+          "sorted_actual_mm": [
+            768.1414114776999,
+            775.7638394832611,
+            1967.305064201355
+          ],
+          "sorted_expected_mm": [
+            740,
+            750,
+            1970
+          ],
+          "relative_errors": [
+            0.03802893442932416,
+            0.03435178597768148,
+            0.0013679877150482333
+          ],
+          "maximum_relative_error": 0.03802893442932416,
+          "allowed_relative_error": 0.05,
+          "dimension_source": "https://norr11.com/products/man-three-seater",
+          "source_note": "NORR11 publishes L197 x D74 x H75 cm. Five-percent tolerance allows cushion and export-envelope differences."
+        }
+      },
+      "materials": {
+        "material_count": 3,
+        "texture_count": 3,
+        "image_count": 3,
+        "materials": [
+          {
+            "index": 0,
+            "name": "Stainless Steel",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0.699999988079071,
+            "roughness_factor": 0.30000001192092896,
+            "normal_texture_present": false
+          },
+          {
+            "index": 1,
+            "name": "canvas",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": null,
+            "base_color_texture_present": true,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": true
+          },
+          {
+            "index": 2,
+            "name": "Material 1",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": false
+          }
+        ]
+      },
+      "variants": {
+        "count_returned": 8,
+        "available_count": 8,
+        "binding_state": "PRODUCT_LEVEL_MODEL_MULTIPLE_VARIANTS_UNRESOLVED"
+      },
+      "rights": {
+        "state": "REVIEW",
+        "render_scope": "UNRESOLVED",
+        "derivative_storage": "RUNTIME_INSPECTION_ONLY",
+        "redistribution": false
+      },
+      "commerce": {
+        "destination_delivery_state": "UNVERIFIED_MERCHANT_CENSUS_NOT_CATALOG_DESTINATION_FILTERED",
+        "checkout_refresh_required": true
+      },
+      "promotion": {
+        "current_level": "G2_CANDIDATE",
+        "target_level": "G3",
+        "blocked_by": [
+          "exact selected-variant material binding",
+          "render and platform-display rights review",
+          "Shopify catalog destination join and checkout refresh"
+        ]
+      }
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584851276",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "room_role": "lounge_chair",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "identity": {
+        "product_title": "Man Lounge Chair",
+        "vendor": "NORR11",
+        "product_type": "Lounge Chairs",
+        "handle": "humlevik-krojgaard-man-lounge-chair-lounge-chairs-norr11",
+        "merchant_product_gid": "gid://shopify/Product/10584851276",
+        "merchant_model3d_gid": "gid://shopify/Model3d/25288453554253"
+      },
+      "status": "LIVE_MODEL3D_INSPECTED_SCALE_AND_VARIANT_QA_REQUIRED",
+      "asset": {
+        "format": "glb",
+        "bytes": 2466452,
+        "sha256": "05e55443d35945230c987506150ef044b266e9a4eea2a42ffa2352c032ad37ae",
+        "source_url_persisted": false,
+        "binary_committed": false,
+        "runtime_file_retained": true
+      },
+      "geometry": {
+        "dimensions_mm": [
+          680.8608174324036,
+          767.6215992805737,
+          775.7702767848969
+        ],
+        "position_accessor_count": 3,
+        "scale_state": "MANUFACTURER_SCALE_QA_PASS",
+        "scale_qa": {
+          "state": "MANUFACTURER_SCALE_QA_PASS",
+          "pass": true,
+          "expected_dimensions_mm": [
+            670,
+            740,
+            750
+          ],
+          "sorted_actual_mm": [
+            680.8608174324036,
+            767.6215992805737,
+            775.7702767848969
+          ],
+          "sorted_expected_mm": [
+            670,
+            740,
+            750
+          ],
+          "relative_errors": [
+            0.016210175272244127,
+            0.03732648551428881,
+            0.034360369046529136
+          ],
+          "maximum_relative_error": 0.03732648551428881,
+          "allowed_relative_error": 0.05,
+          "dimension_source": "https://norr11.com/products/man-lounge-chair",
+          "source_note": "NORR11 publishes W67 x D74 x H75 cm. Five-percent tolerance allows cushion and export-envelope differences."
+        }
+      },
+      "materials": {
+        "material_count": 3,
+        "texture_count": 3,
+        "image_count": 3,
+        "materials": [
+          {
+            "index": 0,
+            "name": "Stainless Steel",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0.699999988079071,
+            "roughness_factor": 0.30000001192092896,
+            "normal_texture_present": false
+          },
+          {
+            "index": 1,
+            "name": "canvas",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": null,
+            "base_color_texture_present": true,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": true
+          },
+          {
+            "index": 2,
+            "name": "Material 1",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": false
+          }
+        ]
+      },
+      "variants": {
+        "count_returned": 8,
+        "available_count": 8,
+        "binding_state": "PRODUCT_LEVEL_MODEL_MULTIPLE_VARIANTS_UNRESOLVED"
+      },
+      "rights": {
+        "state": "REVIEW",
+        "render_scope": "UNRESOLVED",
+        "derivative_storage": "RUNTIME_INSPECTION_ONLY",
+        "redistribution": false
+      },
+      "commerce": {
+        "destination_delivery_state": "UNVERIFIED_MERCHANT_CENSUS_NOT_CATALOG_DESTINATION_FILTERED",
+        "checkout_refresh_required": true
+      },
+      "promotion": {
+        "current_level": "G2_CANDIDATE",
+        "target_level": "G3",
+        "blocked_by": [
+          "exact selected-variant material binding",
+          "render and platform-display rights review",
+          "Shopify catalog destination join and checkout refresh"
+        ]
+      }
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_35853729804",
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "identity": {
+        "product_title": "Mammoth Sofa",
+        "vendor": "NORR11",
+        "product_type": "Sofas",
+        "handle": "knut-bendik-humlevik-rune-krojgaard-mammoth-sofa-norr11",
+        "merchant_product_gid": "gid://shopify/Product/35853729804",
+        "merchant_model3d_gid": "gid://shopify/Model3d/25282467102797"
+      },
+      "status": "LIVE_MODEL3D_INSPECTED_SCALE_AND_VARIANT_QA_REQUIRED",
+      "asset": {
+        "format": "glb",
+        "bytes": 2440540,
+        "sha256": "4432390fe70c0fc980c3b4893b82bef4d2a816fa0fb7a656c53c6016f503ebdc",
+        "source_url_persisted": false,
+        "binary_committed": false,
+        "runtime_file_retained": true
+      },
+      "geometry": {
+        "dimensions_mm": [
+          1508.4084272384644,
+          1037.8710680218019,
+          886.0666285686307
+        ],
+        "position_accessor_count": 3,
+        "scale_state": "MANUFACTURER_SCALE_QA_PASS",
+        "scale_qa": {
+          "state": "MANUFACTURER_SCALE_QA_PASS",
+          "pass": true,
+          "expected_dimensions_mm": [
+            1510,
+            870,
+            1040
+          ],
+          "sorted_actual_mm": [
+            886.0666285686307,
+            1037.8710680218019,
+            1508.4084272384644
+          ],
+          "sorted_expected_mm": [
+            870,
+            1040,
+            1510
+          ],
+          "relative_errors": [
+            0.018467389159345603,
+            0.0020470499790366586,
+            0.0010540216963812216
+          ],
+          "maximum_relative_error": 0.018467389159345603,
+          "allowed_relative_error": 0.05,
+          "dimension_source": "https://norr11.com/products/mammoth-sofa",
+          "source_note": "NORR11 publishes W151 x D87 x H104 cm. Five-percent tolerance allows cushion and export-envelope differences."
+        }
+      },
+      "materials": {
+        "material_count": 3,
+        "texture_count": 0,
+        "image_count": 0,
+        "materials": [
+          {
+            "index": 0,
+            "name": "Material 2",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": 0.5,
+            "normal_texture_present": false
+          },
+          {
+            "index": 1,
+            "name": "Black Metal",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0.8051947951316833,
+            "roughness_factor": 0.5,
+            "normal_texture_present": false
+          },
+          {
+            "index": 2,
+            "name": "Material 1",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": false
+          }
+        ]
+      },
+      "variants": {
+        "count_returned": 32,
+        "available_count": 32,
+        "binding_state": "PRODUCT_LEVEL_MODEL_MULTIPLE_VARIANTS_UNRESOLVED"
+      },
+      "rights": {
+        "state": "REVIEW",
+        "render_scope": "UNRESOLVED",
+        "derivative_storage": "RUNTIME_INSPECTION_ONLY",
+        "redistribution": false
+      },
+      "commerce": {
+        "destination_delivery_state": "UNVERIFIED_MERCHANT_CENSUS_NOT_CATALOG_DESTINATION_FILTERED",
+        "checkout_refresh_required": true
+      },
+      "promotion": {
+        "current_level": "G2_CANDIDATE",
+        "target_level": "G3",
+        "blocked_by": [
+          "exact selected-variant material binding",
+          "render and platform-display rights review",
+          "Shopify catalog destination join and checkout refresh"
+        ]
+      }
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_782311161966",
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "identity": {
+        "product_title": "Lobby Sofa",
+        "vendor": "Wendelbo",
+        "product_type": "Sofas",
+        "handle": "sarah-rousselle-lobby-sofa-wendelbo",
+        "merchant_product_gid": "gid://shopify/Product/782311161966",
+        "merchant_model3d_gid": "gid://shopify/Model3d/25424738615373"
+      },
+      "status": "LIVE_MODEL3D_INSPECTED_SCALE_AND_VARIANT_QA_REQUIRED",
+      "asset": {
+        "format": "glb",
+        "bytes": 108328,
+        "sha256": "9c9f350d87250a46223893d12896719ee47d4c5f038af5d45c7fa44ee3dbf714",
+        "source_url_persisted": false,
+        "binary_committed": false,
+        "runtime_file_retained": true
+      },
+      "geometry": {
+        "dimensions_mm": [
+          1500.9307861328125,
+          772.1994128078222,
+          848.5972583293915
+        ],
+        "position_accessor_count": 2,
+        "scale_state": "EXPECTED_DIMENSIONS_NOT_CONFIGURED",
+        "scale_qa": {
+          "state": "EXPECTED_DIMENSIONS_NOT_CONFIGURED",
+          "pass": false
+        }
+      },
+      "materials": {
+        "material_count": 2,
+        "texture_count": 0,
+        "image_count": 0,
+        "materials": [
+          {
+            "index": 0,
+            "name": "Material 1",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": false
+          },
+          {
+            "index": 1,
+            "name": "Black Powder Coated Steel",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": false
+          }
+        ]
+      },
+      "variants": {
+        "count_returned": 12,
+        "available_count": 12,
+        "binding_state": "PRODUCT_LEVEL_MODEL_MULTIPLE_VARIANTS_UNRESOLVED"
+      },
+      "rights": {
+        "state": "REVIEW",
+        "render_scope": "UNRESOLVED",
+        "derivative_storage": "RUNTIME_INSPECTION_ONLY",
+        "redistribution": false
+      },
+      "commerce": {
+        "destination_delivery_state": "UNVERIFIED_MERCHANT_CENSUS_NOT_CATALOG_DESTINATION_FILTERED",
+        "checkout_refresh_required": true
+      },
+      "promotion": {
+        "current_level": "G2_CANDIDATE",
+        "target_level": "G3",
+        "blocked_by": [
+          "manufacturer dimension scale QA",
+          "exact selected-variant material binding",
+          "render and platform-display rights review",
+          "Shopify catalog destination join and checkout refresh"
+        ]
+      }
+    }
+  ]
+}

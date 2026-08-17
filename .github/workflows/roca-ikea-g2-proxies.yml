@@ -3,10 +3,14 @@ name: Build Roca and IKEA G2 House Proxies
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     paths:
       - 'config/geometry/roca-a32727500b-basin-target.json'
       - 'config/geometry/ikea-skurup-80407114-target.json'
+      - 'config/geometry/ikea-melodi-60386527-target.json'
       - 'scripts/build-roca-ikea-g2-proxies.py'
+      - 'scripts/build-ikea-melodi-g2-proxy.py'
       - '.github/workflows/roca-ikea-g2-proxies.yml'
 
 permissions:
@@ -30,7 +34,9 @@ jobs:
       - name: Install geometry tools
         run: pip install trimesh==4.7.4
       - name: Build and QA bathroom + lighting proxies
-        run: python scripts/build-roca-ikea-g2-proxies.py
+        run: |
+          python scripts/build-roca-ikea-g2-proxies.py
+          python scripts/build-ikea-melodi-g2-proxy.py
       - name: Commit Product Twin-owned proxies + QA metadata
         shell: bash
         run: |
@@ -39,10 +45,12 @@ jobs:
           git config user.email "product-twin-bot@users.noreply.github.com"
           git add data/geometry/avatars/roca-a32727500b-g2-basin-proxy.glb \
                   data/geometry/avatars/ikea-skurup-80407114-g2-pendant-proxy.glb \
+                  data/geometry/avatars/ikea-melodi-60386527-g2-pendant-proxy.glb \
                   data/metrics/roca-a32727500b-g2-proxy-latest.json \
-                  data/metrics/ikea-skurup-80407114-g2-proxy-latest.json
+                  data/metrics/ikea-skurup-80407114-g2-proxy-latest.json \
+                  data/metrics/ikea-melodi-60386527-g2-proxy-latest.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "geometry: build Roca basin and IKEA SKURUP G2 proxies"
+          git commit -m "geometry: build Roca and IKEA G2 proxies"
           for attempt in 1 2 3; do
             if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
             git rebase --abort 2>/dev/null || true

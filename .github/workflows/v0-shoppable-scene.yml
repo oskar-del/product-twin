@@ -1,0 +1,30 @@
+name: Validate V0 Shoppable Scene
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'data/showrooms/v0-shoppable-dining-scene.json'
+      - 'data/geometry/avatar-index.json'
+      - 'data/geometry/avatars/ikea-*-g2-pendant-proxy.glb'
+      - 'scripts/validate-v0-shoppable-scene.mjs'
+      - 'scripts/refresh-v0-shoppable-scene-offers.mjs'
+      - 'scripts/test-refresh-v0-shoppable-scene-offers.mjs'
+      - '.github/workflows/v0-shoppable-scene.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test official-offer parser
+        run: npm run scene:v0:refresh:test
+      - name: Validate scene contract
+        run: npm run scene:v0:validate

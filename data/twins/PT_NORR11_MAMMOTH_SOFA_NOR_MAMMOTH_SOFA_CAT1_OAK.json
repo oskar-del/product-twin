@@ -1,0 +1,109 @@
+{
+  "twin_id": "PT_NORR11_MAMMOTH_SOFA_NOR_MAMMOTH_SOFA_CAT1_OAK",
+  "kind": "object",
+  "category_id": "FFE.SEATING.SOFA",
+  "identity": {
+    "state": "exact_merchant_variant_and_manufacturer_product_family_verified_visible_finish_incomplete",
+    "manufacturer": "NORR11",
+    "product_family": "Mammoth Sofa",
+    "model": "Mammoth Sofa",
+    "merchant_sku": "NOR-MAMMOTH-SOFA-CAT1-OAK",
+    "configuration": "Upholstery Group: Cat 1 / Frame: Natural Oak",
+    "configuration_limit": "The Shopify variant identifies an upholstery group or route, not a selected visible fabric and colour."
+  },
+  "physical": {
+    "measured_model_axes_mm": [
+      1508.4084272384644,
+      1037.8710680218019,
+      886.0666285686307
+    ],
+    "expected_manufacturer_dimensions_mm": [
+      1510,
+      870,
+      1040
+    ],
+    "maximum_relative_scale_error": 0.018467389159345603,
+    "evidence_state": "manufacturer_scale_qa_pass"
+  },
+  "external_identities": [
+    {
+      "source_id": "shopify_merchant_storefront",
+      "role": "live_commerce_and_native_model3d_reference",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "merchant_product_gid": "gid://shopify/Product/35853729804",
+      "merchant_variant_gid": "gid://shopify/ProductVariant/33326743584845",
+      "merchant_model3d_gids": [
+        "gid://shopify/Model3d/25282467102797"
+      ],
+      "verification": {
+        "state": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+        "country_filter": {
+          "country": "ES",
+          "scope": "country_only"
+        },
+        "checkout_state": "exact_postcode_tax_freight_and_delivery_refresh_required"
+      },
+      "refresh_policy": "live_required",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "candidate_live_shopify_native_product_shape",
+    "source_media_type": "MODEL_3D",
+    "formats": [
+      "glb",
+      "usdz"
+    ],
+    "asset_storage": "runtime_inspection_only",
+    "asset_sha256": "4432390fe70c0fc980c3b4893b82bef4d2a816fa0fb7a656c53c6016f503ebdc",
+    "scale_state": "MANUFACTURER_SCALE_QA_PASS",
+    "appearance": {
+      "material_count": 3,
+      "texture_count": 0,
+      "normal_map_present": false,
+      "state": "generic_product_level_materials_selected_variant_not_bound",
+      "exact_selected_finish_claimed": false
+    },
+    "rights": {
+      "state": "review",
+      "render_scope": "unresolved",
+      "derivative_storage": "runtime_inspection_only",
+      "redistribution": false
+    },
+    "inspection_evidence": "data/metrics/shopify-design-public-model3d-inspection-latest.json"
+  },
+  "commerce": {
+    "source": "Shopify catalog and merchant Storefront API",
+    "dated_observation": {
+      "available_for_sale": true,
+      "price": {
+        "amount": "6200.0",
+        "currency": "USD"
+      },
+      "destination": {
+        "country": "ES",
+        "scope": "country_only"
+      }
+    },
+    "state": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+    "checkout_refresh_required": true
+  },
+  "readiness": {
+    "identity": "merchant_variant_verified_visible_finish_incomplete",
+    "commerce": "Spain_country_catalog_join_pass",
+    "dimensions": "verified",
+    "geometry": "G2_candidate",
+    "appearance": "blocked_generic_materials",
+    "room_placement": "runtime_candidate",
+    "render": "blocked_pending_material_and_rights",
+    "rights": "review"
+  },
+  "promotion_blockers": [
+    "select and bind an exact visible upholstery fabric and colour",
+    "validate the selected-variant appearance against the live GLB",
+    "confirm render and platform-display rights",
+    "refresh exact postcode tax, freight, stock allocation and delivery before quote or purchase"
+  ],
+  "policy": "Shopify proves a native product-level 3D model and an exact merchant commerce join. G3 is not claimed until scale, visible material, rights and final delivery gates all pass."
+}

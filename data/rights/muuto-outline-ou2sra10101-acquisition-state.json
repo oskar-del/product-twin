@@ -1,0 +1,98 @@
+{
+  "observed_at": "2026-08-17",
+  "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
+  "twin_id": "PT_MUUTO_OUTLINE_2S_OU2SRA10101",
+  "manufacturer": "Muuto",
+  "model": "Outline Sofa 2-Seater",
+  "configuration": "Refine Leather Cognac / Black, standard base",
+  "manufacturer_item_no": "OU2SRA10101",
+  "legacy_item_no": "27003-COGN",
+  "gtin_ean": "5713222210793",
+  "identity": {
+    "state": "EXACT_MANUFACTURER_IDENTITY_VERIFIED",
+    "official_product_page": "https://www.muuto.com/product/outline-sofa-2-seater-p9391/p9391/",
+    "official_professional_product_page": "https://professionals.muuto.com/product/Outline-Sofa-2-Seater-p9391/97504-4/",
+    "evidence": "Official Muuto pages expose the exact new and legacy item numbers, Refine Leather Cognac finish, black base and 1700 x 840 x 710 mm envelope."
+  },
+  "geometry": {
+    "state": "EXACT_ARCHITECT_ASSET_ADVERTISED_NOT_CAPTURED",
+    "official_download_page": "https://professionals.muuto.com/toolbox/product-information/download-ad-files/",
+    "download_hub": "https://download.muuto.com/digitalshowroom/",
+    "advertised_groups": ["2D", "3D", "Revit"],
+    "product_page_link_state": "official product page links to architect files",
+    "binary_policy": "do not capture, retain, convert or publish exact geometry until Muuto confirms the permitted scope"
+  },
+  "rights": {
+    "state": "WRITTEN_CLARIFICATION_REQUIRED",
+    "terms_url": "https://www.muuto.com/terms--agreements/",
+    "evidence_summary": "The public terms page did not expose a substantive licence for commercial rendering, conversion, derivative optimization, persistent storage or platform display.",
+    "commercial_rendering": "review",
+    "format_conversion": "review",
+    "derivative_optimization": "review",
+    "persistent_storage": "review",
+    "redistribution": "not_requested",
+    "ai_training": "not_requested"
+  },
+  "supply": {
+    "state": "EXACT_SPANISH_STOREFRONT_LISTING_FOUND_POSTCODE_DELIVERY_UNVERIFIED",
+    "mutable_data_policy": "price, stock, lead time, tax and delivery must be refreshed at decision time",
+    "references": [
+      {
+        "role": "existing_exact_shopify_reference",
+        "merchant_domain": "top3au.myshopify.com",
+        "territory": "Australia",
+        "identity_state": "exact SKU and GTIN match",
+        "procurement_fit": "not Spain-appropriate without a separately verified delivery route"
+      },
+      {
+        "role": "exact_eu_offer_lead",
+        "merchant": "DesignVille",
+        "url": "https://www.designville.eu/outline-2-seater-sofa-cognac-leather",
+        "territory": "European Union",
+        "identity_state": "exact product code MUU-OU2SRA10101 and EAN 5713222210793",
+        "observation": "listed at EUR 5,395 including local VAT with a stated made-to-order availability of 3-4 weeks",
+        "spain_delivery_state": "requires checkout or written merchant confirmation"
+      },
+      {
+        "role": "exact_spanish_storefront_lead",
+        "merchant": "AndLight",
+        "url": "https://www.andlight.com/es/p/outline-sofa-2-plazas-cuero-conac-negro_304447/",
+        "territory": "Spanish-language storefront",
+        "identity_state": "exact supplier number OU2SRA10101 and EAN 5713222210793",
+        "observation": "add-to-cart control observed; public extraction did not expose a stable price or lead time",
+        "spain_delivery_state": "general Spain customer route supported; postcode 29660 requires checkout or written confirmation"
+      },
+      {
+        "role": "local_brand_lead",
+        "merchant": "High End Homes",
+        "url": "https://www.high-endhomes.com/muuto-overview",
+        "territory": "Marbella, Malaga, Spain 29660",
+        "identity_state": "Muuto brand represented; exact OU2SRA10101 stock or RFQ not yet verified",
+        "next_action": "request an exact-SKU quotation, lead time, delivery and installation terms"
+      }
+    ]
+  },
+  "contact": {
+    "official_page": "https://www.muuto.com/content/contact2/",
+    "official_contract_sales_page": "https://www.muuto.com/content/contact2/sales---contract/",
+    "primary_route": "lkl@muuto.com",
+    "primary_recipient": "Louis Kleimberg",
+    "published_territory": "Barcelona, Spain South & East, Islands",
+    "cc_route": "customercare@muuto.com",
+    "routing_request": "Please coordinate with the team responsible for architect files and digital-asset licensing.",
+    "manufacturer_request_file": "docs/requests/MUUTO-OUTLINE-OU2SRA10101-ASSET-RIGHTS-SUPPLY-REQUEST.md"
+  },
+  "companion_set_file": "config/geometry/muuto-residential-hero-set-v0.1.json",
+  "commerce_evidence_file": "data/commerce/muuto-residential-hero-set-spain-offers-2026-08-17.json",
+  "promotion": {
+    "current_level": "G0",
+    "target_level": "G3",
+    "fully_promoted": false,
+    "next_gates": [
+      "receive the exact product-bound 3D asset through an authorized Muuto route",
+      "receive written permission covering commercial rendering and format conversion",
+      "validate identity, dimensions, orientation, materials and exact Cognac/Black configuration",
+      "verify a Spain-deliverable exact offer or exact local RFQ route"
+    ]
+  }
+}

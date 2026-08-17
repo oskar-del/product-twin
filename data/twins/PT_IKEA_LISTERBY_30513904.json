@@ -1,0 +1,88 @@
+{
+  "twin_id": "PT_IKEA_LISTERBY_30513904",
+  "kind": "object",
+  "category_id": "FFE.TABLE.COFFEE",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "LISTERBY",
+    "model": "Coffee table, oak veneer",
+    "article_no": "305.139.04",
+    "configuration": "Coffee table, oak veneer"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1400,
+      "depth": 600,
+      "height": 370
+    },
+    "secondary_dimensions_mm": {
+      "free_height_under_furniture": 120,
+      "maximum_load_kg": 20,
+      "maximum_shelf_load_kg": 10
+    },
+    "evidence_state": "official_retailer_dimensions_and_glb_envelope_verified"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "305.139.04",
+        "postcode_delivery_state": "currently_unavailable_29660_observed_2026_08_17",
+        "IKEA_Malaga_state": "not_sold_observed_2026_08_17"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_realistic_planning_proxy",
+    "avatar_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+    "asset_path": "data/geometry/avatars/ikea-listerby-30513904-g2-coffee-table-proxy.glb",
+    "scale_state": "verified 1400x600x370mm envelope",
+    "shape_claim": "product-bound oak-veneer planning reconstruction; exact IKEA industrial-design geometry and veneer artwork are not claimed",
+    "placement": {
+      "origin": "floor_center",
+      "recommended_sofa_gap_mm": 420,
+      "recommended_circulation_clearance_mm": 600
+    },
+    "appearance": {
+      "material_cues": [
+        "natural oak veneer",
+        "solid oak slatted shelf and legs",
+        "clear tinted lacquer"
+      ],
+      "pbr_state": "variant_specific_base_colour_and_roughness_cues",
+      "embedded_textures": false,
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "qa_metric": "data/metrics/ikea-listerby-30513904-g2-coffee-table-proxy-latest.json",
+    "rights": {
+      "geometry_owner": "Product Twin planning proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false,
+      "exact_likeness_claimed": false
+    }
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "official_product_page_verified_destination_unavailable_29660_observed_2026_08_17",
+    "dimensions": "verified",
+    "geometry": "G2_promoted_planning_proxy",
+    "appearance": "variant_colour_and_roughness_cues_only_no_exact_texture",
+    "room_placement": "ready_for_planning_and_circulation",
+    "render": "planning_preview_only",
+    "rights": "product_twin_owned_proxy_no_manufacturer_asset_redistribution",
+    "next_gate": "retain the selected design transparently while testing the exact VALNAS substitution candidate; refresh availability again before any purchase decision"
+  },
+  "promotion_blockers": [
+    "authorized exact product geometry or independently validated exact reconstruction",
+    "exact selected-variant material and texture QA",
+    "destination availability recovery or an approved fit-safe substitute"
+  ],
+  "policy": "This is a real, exact retail product identity with a verified-scale G2 planning avatar. It remains the selected room object but is currently unavailable for delivery to 29660. It is usable for room fit and circulation, but is not a G3 claim of exact visual likeness or finish and is not silently replaced."
+}

@@ -1,0 +1,109 @@
+{
+  "twin_id": "PT_NORR11_MAN_LOUNGE_CHAIR_NOR_MAN_LNG_CAT1",
+  "kind": "object",
+  "category_id": "FFE.SEATING.LOUNGE",
+  "identity": {
+    "state": "exact_merchant_variant_and_manufacturer_product_family_verified_visible_finish_incomplete",
+    "manufacturer": "NORR11",
+    "product_family": "Man Lounge Chair",
+    "model": "Man Lounge Chair",
+    "merchant_sku": "NOR-MAN-LNG-CAT1",
+    "configuration": "Upholstery Group: Cat 1",
+    "configuration_limit": "The Shopify variant identifies an upholstery group or route, not a selected visible fabric and colour."
+  },
+  "physical": {
+    "measured_model_axes_mm": [
+      680.8608174324036,
+      767.6215992805737,
+      775.7702767848969
+    ],
+    "expected_manufacturer_dimensions_mm": [
+      670,
+      740,
+      750
+    ],
+    "maximum_relative_scale_error": 0.03732648551428881,
+    "evidence_state": "manufacturer_scale_qa_pass"
+  },
+  "external_identities": [
+    {
+      "source_id": "shopify_merchant_storefront",
+      "role": "live_commerce_and_native_model3d_reference",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "merchant_product_gid": "gid://shopify/Product/10584851276",
+      "merchant_variant_gid": "gid://shopify/ProductVariant/33326754529357",
+      "merchant_model3d_gids": [
+        "gid://shopify/Model3d/25288453554253"
+      ],
+      "verification": {
+        "state": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+        "country_filter": {
+          "country": "ES",
+          "scope": "country_only"
+        },
+        "checkout_state": "exact_postcode_tax_freight_and_delivery_refresh_required"
+      },
+      "refresh_policy": "live_required",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "candidate_live_shopify_native_product_shape",
+    "source_media_type": "MODEL_3D",
+    "formats": [
+      "glb",
+      "usdz"
+    ],
+    "asset_storage": "runtime_inspection_only",
+    "asset_sha256": "05e55443d35945230c987506150ef044b266e9a4eea2a42ffa2352c032ad37ae",
+    "scale_state": "MANUFACTURER_SCALE_QA_PASS",
+    "appearance": {
+      "material_count": 3,
+      "texture_count": 3,
+      "normal_map_present": true,
+      "state": "textured_product_level_model_selected_variant_not_bound",
+      "exact_selected_finish_claimed": false
+    },
+    "rights": {
+      "state": "review",
+      "render_scope": "unresolved",
+      "derivative_storage": "runtime_inspection_only",
+      "redistribution": false
+    },
+    "inspection_evidence": "data/metrics/shopify-design-public-model3d-inspection-latest.json"
+  },
+  "commerce": {
+    "source": "Shopify catalog and merchant Storefront API",
+    "dated_observation": {
+      "available_for_sale": true,
+      "price": {
+        "amount": "4300.0",
+        "currency": "USD"
+      },
+      "destination": {
+        "country": "ES",
+        "scope": "country_only"
+      }
+    },
+    "state": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+    "checkout_refresh_required": true
+  },
+  "readiness": {
+    "identity": "merchant_variant_verified_visible_finish_incomplete",
+    "commerce": "Spain_country_catalog_join_pass",
+    "dimensions": "verified",
+    "geometry": "G2_candidate",
+    "appearance": "textured_candidate_exact_variant_not_bound",
+    "room_placement": "runtime_candidate",
+    "render": "blocked_pending_material_and_rights",
+    "rights": "review"
+  },
+  "promotion_blockers": [
+    "select and bind an exact visible upholstery fabric and colour",
+    "validate the selected-variant appearance against the live GLB",
+    "confirm render and platform-display rights",
+    "refresh exact postcode tax, freight, stock allocation and delivery before quote or purchase"
+  ],
+  "policy": "Shopify proves a native product-level 3D model and an exact merchant commerce join. G3 is not claimed until scale, visible material, rights and final delivery gates all pass."
+}

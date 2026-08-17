@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-08-16T23:25:33.901Z",
+  "avatar_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+  "status": "G2_REALISTIC_PROXY_SCALE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-lauters-30405042-g2-floor-lamp-proxy.glb",
+  "asset_bytes": 15876,
+  "identity": {
+    "merchant": "IKEA Spain",
+    "product_family": "LAUTERS",
+    "article_no": "304.050.42",
+    "official_url": "https://www.ikea.com/es/en/p/lauters-floor-lamp-ash-white-30405042/"
+  },
+  "expected_mm": {
+    "width": 620,
+    "depth": 620,
+    "height": 1510
+  },
+  "measured_xyz_mm": {
+    "width": 620,
+    "height": 1510,
+    "depth": 620
+  },
+  "relative_error_max": 0,
+  "material_cues": [
+    "clear-lacquered solid ash tripod",
+    "white recycled-polyester shade"
+  ],
+  "placement": {
+    "origin": "floor_center",
+    "service_clearance_mm": 100,
+    "cord_length_mm": 3500
+  },
+  "disclosure": "Product Twin-owned realistic planning geometry at verified scale. Product identity and dimensions are exact; proprietary manufacturer geometry and texture artwork are not claimed.",
+  "commerce": {
+    "state": "OFFICIAL_PRODUCT_PAGE_VERIFIED_LIVE_AVAILABILITY_REFRESH_REQUIRED",
+    "observed_at": "2026-08-17"
+  }
+}

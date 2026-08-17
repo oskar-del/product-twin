@@ -1,0 +1,138 @@
+{
+  "summary": {
+    "generated_at": "2026-08-17T00:52:08.766Z",
+    "destination": {
+      "country": "ES",
+      "postal_code": "29660",
+      "currency": "EUR"
+    },
+    "catalog_queries": 24,
+    "unique_merchant_variants_discovered": 1062,
+    "storefront_probes_attempted": 500,
+    "storefront_probe_failures": 9,
+    "model3d_candidates": 2,
+    "single_variant_strong_binding": 0,
+    "categories_with_model3d": 1,
+    "complete_room_role_coverage": false,
+    "policy": "No Shopify catalog payload or Model3d source URL persisted; only stable merchant references, identity evidence and dated minimal commerce observations."
+  },
+  "category_search": [
+    {
+      "category_id": "FFE.SEATING.SOFA",
+      "queries": 5,
+      "products_returned": 250
+    },
+    {
+      "category_id": "FFE.SEATING.LOUNGE",
+      "queries": 5,
+      "products_returned": 250
+    },
+    {
+      "category_id": "FFE.TABLE.COFFEE",
+      "queries": 5,
+      "products_returned": 250
+    },
+    {
+      "category_id": "FFE.TABLE.SIDE",
+      "queries": 5,
+      "products_returned": 250
+    },
+    {
+      "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
+      "queries": 4,
+      "products_returned": 200
+    }
+  ],
+  "by_category": [
+    {
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "target_count": 1,
+      "model3d_candidates": 0,
+      "single_variant_strong_binding": 0,
+      "top_candidate_ids": []
+    },
+    {
+      "category_id": "FFE.SEATING.LOUNGE",
+      "room_role": "lounge_chair",
+      "target_count": 2,
+      "model3d_candidates": 2,
+      "single_variant_strong_binding": 0,
+      "top_candidate_ids": [
+        "SHOPIFY_FURNITURE_MODEL3D_b163aea21fdf6542",
+        "SHOPIFY_FURNITURE_MODEL3D_c78c9916e34465e8"
+      ]
+    },
+    {
+      "category_id": "FFE.TABLE.COFFEE",
+      "room_role": "coffee_table",
+      "target_count": 1,
+      "model3d_candidates": 0,
+      "single_variant_strong_binding": 0,
+      "top_candidate_ids": []
+    },
+    {
+      "category_id": "FFE.TABLE.SIDE",
+      "room_role": "side_table",
+      "target_count": 1,
+      "model3d_candidates": 0,
+      "single_variant_strong_binding": 0,
+      "top_candidate_ids": []
+    },
+    {
+      "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
+      "room_role": "floor_lamp",
+      "target_count": 1,
+      "model3d_candidates": 0,
+      "single_variant_strong_binding": 0,
+      "top_candidate_ids": []
+    }
+  ],
+  "probe_failures": [
+    {
+      "merchant_origin": "https://thecoolrepublic.com",
+      "status": "STOREFRONT_PROBE_FAILED",
+      "error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><m"
+    },
+    {
+      "merchant_origin": "https://thecoolrepublic.com",
+      "status": "STOREFRONT_PROBE_FAILED",
+      "error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><m"
+    },
+    {
+      "merchant_origin": "https://thecoolrepublic.com",
+      "status": "STOREFRONT_PROBE_FAILED",
+      "error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><m"
+    },
+    {
+      "merchant_origin": "https://thecoolrepublic.com",
+      "status": "STOREFRONT_PROBE_FAILED",
+      "error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><m"
+    },
+    {
+      "merchant_origin": "https://thecoolrepublic.com",
+      "status": "STOREFRONT_PROBE_FAILED",
+      "error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><m"
+    },
+    {
+      "merchant_origin": "https://thecoolrepublic.com",
+      "status": "STOREFRONT_PROBE_FAILED",
+      "error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><m"
+    },
+    {
+      "merchant_origin": "https://thecoolrepublic.com",
+      "status": "STOREFRONT_PROBE_FAILED",
+      "error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><m"
+    },
+    {
+      "merchant_origin": "https://thecoolrepublic.com",
+      "status": "STOREFRONT_PROBE_FAILED",
+      "error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><m"
+    },
+    {
+      "merchant_origin": "https://thecoolrepublic.com",
+      "status": "STOREFRONT_PROBE_FAILED",
+      "error": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><m"
+    }
+  ]
+}

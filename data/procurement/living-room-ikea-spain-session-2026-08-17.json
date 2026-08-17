@@ -1,0 +1,95 @@
+{
+  "session_id": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+  "observed_at": "2026-08-17",
+  "source": {
+    "seller_id": "ikea_spain",
+    "seller_name": "IKEA Spain storefront",
+    "seller_country": null,
+    "dispatch_country": null,
+    "retailer_territory_country": "ES"
+  },
+  "destination": {
+    "country": "ES",
+    "postal_code": "29660",
+    "store": "IKEA Málaga"
+  },
+  "policy": {
+    "no_purchase_or_checkout_completed": true,
+    "seller_or_dispatch_origin_unresolved": true,
+    "refresh_before_approval_or_purchase": true,
+    "substitutions_require_client_approval": true
+  },
+  "exact_room_products": [
+    {"twin_id":"PT_IKEA_KIVIK_49440597","article_no":"494.405.97","price":{"amount":"499.00","currency":"EUR"},"home_delivery_29660":"AVAILABLE","IKEA_Malaga_click_collect":"AVAILABLE","IKEA_Malaga_store":"IN_STOCK"},
+    {"twin_id":"PT_IKEA_POANG_39240787","article_no":"392.407.87","price":{"amount":"89.00","currency":"EUR"},"home_delivery_29660":"AVAILABLE","IKEA_Malaga_click_collect":"AVAILABLE","IKEA_Malaga_store":"IN_STOCK"},
+    {"twin_id":"PT_IKEA_LISTERBY_30513904","article_no":"305.139.04","price":{"amount":"199.00","currency":"EUR"},"home_delivery_29660":"CURRENTLY_UNAVAILABLE","IKEA_Malaga_click_collect":"NOT_SOLD","IKEA_Malaga_store":"NOT_SOLD"},
+    {"twin_id":"PT_IKEA_GLADOM_70578451","article_no":"705.784.51","price":{"amount":"19.99","currency":"EUR"},"home_delivery_29660":"AVAILABLE","IKEA_Malaga_click_collect":"AVAILABLE","IKEA_Malaga_store":"IN_STOCK"},
+    {"twin_id":"PT_IKEA_LAUTERS_30405042","article_no":"304.050.42","price":{"amount":"59.99","currency":"EUR"},"home_delivery_29660":"AVAILABLE","IKEA_Malaga_click_collect":"AVAILABLE","IKEA_Malaga_store":"IN_STOCK"},
+    {"twin_id":"PT_IKEA_LOHALS_30511288","article_no":"305.112.88","price":{"amount":"49.99","currency":"EUR"},"home_delivery_29660":"AVAILABLE","IKEA_Malaga_click_collect":"AVAILABLE","IKEA_Malaga_store":"IN_STOCK"},
+    {"twin_id":"PT_IKEA_BESTA_89330691","article_no":"893.306.91","price":{"amount":"150.00","currency":"EUR"},"home_delivery_29660":"AVAILABLE","IKEA_Malaga_click_collect":"AVAILABLE","IKEA_Malaga_store":"IN_STOCK"},
+    {"twin_id":"PT_IKEA_BILLY_00263850","article_no":"002.638.50","price":{"amount":"59.99","currency":"EUR"},"home_delivery_29660":"AVAILABLE","IKEA_Malaga_click_collect":"AVAILABLE","IKEA_Malaga_store":"IN_STOCK"}
+  ],
+  "coverage_result": {
+    "placement_lines": 8,
+    "placed_units": 8,
+    "destination_delivery_available_lines": 7,
+    "destination_delivery_available_percentage": 87.5,
+    "destination_unavailable_lines": 1,
+    "destination_unavailable_percentage": 12.5,
+    "supplier_or_dispatch_origin_confirmed_percentage": 0,
+    "seven_available_exact_products_subtotal": {"amount":"927.96","currency":"EUR"},
+    "all_eight_current_product_page_subtotal": {"amount":"1126.96","currency":"EUR"}
+  },
+  "combined_cart_evidence": {
+    "exact_room_products_in_cart": 7,
+    "accidental_accessories_in_cart": ["STOPP FILT rug underlay","SOLHETTA bulb"],
+    "cart_left_unchanged": true,
+    "home_delivery_29660": {
+      "state": "AVAILABLE",
+      "delivery_date_min": "2026-08-21",
+      "delivery_date_max": "2026-08-24",
+      "lead_time_days_min": 4,
+      "lead_time_days_max": 7,
+      "standard_delivery_charge": {"amount":"79.90","currency":"EUR"},
+      "IKEA_Family_or_Business_delivery_charge": {"amount":"69.90","currency":"EUR"}
+    },
+    "landed_cost_state": "NOT_CLEAN_ENOUGH_TO_EMIT",
+    "landed_cost_blocker": "The freight quote covers seven exact room products plus two accidental accessories; tax, handling, assembly and installation are not fully joined."
+  },
+  "adapter_lesson": {
+    "failure": "The first generic Add to cart text match may target an accessory rather than the displayed Product Twin.",
+    "required_rule": "Bind cart handoff to the exact product, variant and article context and use the exact main-product aria-label action; never use the first text match."
+  },
+  "coffee_table_alternatives": [
+    {
+      "twin_id": "PT_IKEA_VALNAS_20628038",
+      "article_no": "206.280.38",
+      "product_url": "https://www.ikea.com/es/en/p/valnas-coffee-table-oak-veneer-20628038/",
+      "configuration": "Coffee table, oak veneer",
+      "dimensions_mm": {"width":1180,"depth":720,"height":500},
+      "maximum_load_kg": 20,
+      "price": {"amount":"249.00","currency":"EUR"},
+      "home_delivery_29660": "AVAILABLE",
+      "IKEA_Malaga_click_collect": "AVAILABLE",
+      "IKEA_Malaga_store": "IN_STOCK",
+      "main_product_cart_action": "ENABLED",
+      "evidence_note": "The page title snippet contained 118x50 cm, while the visible product heading and opened Measurements panel resolve length 118 cm, width 72 cm and height 50 cm.",
+      "avatar_id": "AVATAR_IKEA_VALNAS_20628038_G2_COFFEE_TABLE_PROXY",
+      "avatar_state": "G2_PROMOTED_VERIFIED_SCALE_PLANNING_PROXY",
+      "substitution_state": "CLIENT_APPROVAL_AND_PLACEMENT_FIT_REQUIRED"
+    },
+    {
+      "twin_id": null,
+      "article_no": "705.876.05",
+      "product_url": "https://www.ikea.com/es/en/p/tarsele-coffee-table-oak-veneer-black-70587605/",
+      "configuration": "Coffee table, oak veneer/black",
+      "dimensions_mm": {"width":1140,"depth":720,"height":450},
+      "price": {"amount":"299.00","currency":"EUR"},
+      "home_delivery_29660": "AVAILABLE",
+      "IKEA_Malaga_click_collect": "NOT_SOLD",
+      "IKEA_Malaga_store": "OUT_OF_STOCK_CENTRAL_WAREHOUSE_ORDER_SUBJECT_TO_AVAILABILITY",
+      "main_product_cart_action": "ENABLED",
+      "substitution_state": "SECONDARY_CANDIDATE_CLIENT_APPROVAL_AND_AVATAR_REQUIRED"
+    }
+  ]
+}

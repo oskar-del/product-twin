@@ -27,7 +27,21 @@
     "source": "Roca Spain",
     "route": "manufacturer_direct_online",
     "product_url": "https://www.roca.es/productos/lavabo-encimera-327275..B",
+    "last_observed_price_eur": 225.06,
+    "price_observed_at": "2026-08-16",
+    "online_purchase_route_observed": true,
     "refresh_policy": "live_required"
+  },
+  "live_source_verification": {
+    "observed_at": "2026-08-16",
+    "official_page_identity": "A32727500B",
+    "official_page_dimensions_mm": {"length":600,"width":380,"height":70},
+    "official_page_cad_statement": "2D and 3D CAD resources are advertised in different formats",
+    "bim_links": ["ARCHICAD", "REVIT"],
+    "bim_route": "https://www.bimobject.com/en/roca/product/327275XXB",
+    "bimobject_unique_ref": "327275XXB",
+    "binary_capture_state": "not_captured; BIMobject account/login still required for download",
+    "promotion_effect": "evidence strengthened; no G4 promotion without authorized product-bound geometry capture and QA"
   },
   "rights": {
     "source": "BIMobject current user terms + Roca professional BIM statements",

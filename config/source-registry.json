@@ -1,5 +1,5 @@
 {
-  "version": "0.3",
+  "version": "0.6",
   "principle": "A source counts as live Product Twin coverage only after a real test succeeds. Sources map into the canonical graph; they never redefine Product Twin identity or taxonomy.",
   "sources": [
     {
@@ -48,6 +48,44 @@
       "rights_state": "public_download_geometry_usage_review"
     },
     {
+      "source_id": "sweet_home_3d_free_models",
+      "type": "licensed_generic_design_geometry",
+      "state": "DOCUMENTED_CANDIDATE_INTAKE_MAPPED_NOT_DOWNLOADED",
+      "territories": ["global"],
+      "capabilities": ["generic_low_poly_geometry", "obj_mtl", "sh3f_libraries", "room_composition", "design_placeholder"],
+      "authority": "generic_design_asset_geometry_and_published_license",
+      "access": "public download",
+      "official_reference": "https://www.sweethome3d.com/free-3d-models/",
+      "published_model_count": 1602,
+      "rights_state": "per_asset_or_library_license_and_attribution_required; CC0, CC-BY and Free Art sources must remain separate",
+      "scope_note": "Generic Design Assets only. They may not inherit a retailer/manufacturer identity, SKU, GTIN, offer, stock, logistics or exact-product likeness claim. The first 12-candidate CC-BY pilot is mapped in config/geometry/sweet-home-3d-design-asset-pilot-v0.1.json."
+    },
+    {
+      "source_id": "sweet_home_3d_mcp_plugin",
+      "type": "community_scene_authoring_mcp",
+      "state": "DOCUMENTED_NOT_INSTALLED_OR_SECURITY_REVIEWED",
+      "territories": ["local_desktop"],
+      "capabilities": ["walls", "rooms", "furniture_placement", "camera_control", "rendering", "scene_checkpoints", "custom_shapes"],
+      "authority": "scene_authoring_operations",
+      "access": "open-source Sweet Home 3D desktop plugin exposing local HTTP JSON-RPC/MCP",
+      "official_reference": "https://github.com/grimashevich/sweethome3d-mcp-server",
+      "advertised_tool_count": 42,
+      "scope_note": "Candidate offline room compiler and render harness. It does not provide product identity, commerce, logistics or model rights."
+    },
+    {
+      "source_id": "ai_furniture_hub_mcp",
+      "type": "community_furniture_search_mcp",
+      "state": "DOCUMENTED_NOT_LIVE_TESTED",
+      "territories": ["JP"],
+      "capabilities": ["millimetre_product_search", "rotation_aware_fit", "replacement_fit_score", "curated_sets", "rakuten_search", "amazon_affiliate_urls"],
+      "authority": "community_curated_and_live_market_search",
+      "access": "remote MCP or npm package",
+      "official_reference": "https://github.com/ONE8943/ai-furniture-hub",
+      "published_product_count": 355,
+      "advertised_tool_count": 15,
+      "scope_note": "Useful external schema reference for fit-ranked replacement. Japan focus does not satisfy the first benchmark markets ES, SE, GB and US, and it does not supply exact 3D geometry."
+    },
+    {
       "source_id": "gs1_verified",
       "type": "neutral_identity_registry",
       "state": "PUBLIC_UI_BLOCKED_API_ACCESS_REQUIRED",
@@ -79,6 +117,69 @@
       "mapping_file": "config/source-mappings/woocommerce-store.json",
       "live_test": {"stores_tested":3,"stores_live":2,"non_demo_stores_live":1,"candidate_references":16},
       "scope_note": "Per-merchant commerce adapter, not a single cross-merchant global catalog."
+    },
+    {
+      "source_id": "shopify_storefront_mcp_ucp",
+      "type": "merchant_platform_adapter",
+      "state": "OFFICIAL_INTERFACE_DOCUMENTED_NOT_SEPARATELY_LIVE_TESTED_IN_REPO",
+      "territories": ["merchant_defined"],
+      "capabilities": ["per_store_catalog_search", "product_lookup", "cart"],
+      "authority": "merchant_commerce",
+      "access": "per-store official MCP/UCP endpoint",
+      "official_reference": "https://shopify.dev/docs/apps/build/storefront-mcp",
+      "scope_note": "Agent-ready commerce for a selected Shopify store; not a universal cross-merchant identity, geometry, rights or project-logistics layer."
+    },
+    {
+      "source_id": "ikea_spain_official_product_routes",
+      "type": "retailer_storefront",
+      "state": "LIVE_PROVEN_EXACT_DESTINATION_EVIDENCE_PARTIAL_ROOM",
+      "territories": ["ES"],
+      "capabilities": ["exact_retail_article", "selected_configuration", "official_price", "product_media", "dimensions", "materials", "assembly_documents", "destination_delivery", "store_stock", "lead_time_window", "cart"],
+      "authority": "retailer_product_and_dated_price",
+      "access": "public official product pages; location availability and delivery require a JavaScript location-aware session",
+      "live_test": {"articles_checked":8,"exact_articles_resolved":8,"current_eur_prices_resolved":8,"destination_postal_code":"29660","destination_delivery_confirmed":7,"destination_unavailable_confirmed":1,"confirmed_delivery_window_days":{"min":4,"max":7,"scope":"seven exact room products in one cart plus two accessories"},"observed_at":"2026-08-17"},
+      "scope_note": "The Spain storefront is a local catalogue route. Seven selected room products are destination-deliverable and one is unavailable, but seller/dispatch origin remains unknown. The mixed cart freight quote is not clean landed-cost evidence."
+    },
+    {
+      "source_id": "leroy_merlin_adeo_mirakl_seller_api",
+      "type": "marketplace_seller_channel",
+      "state": "DOCUMENTED_APPROVED_SELLER_ACCOUNT_AND_API_KEY_REQUIRED",
+      "territories": ["ES", "FR", "IT", "PT"],
+      "capabilities": ["seller_owned_catalog_publication", "seller_offer_publication", "seller_price_sync", "seller_stock_sync", "seller_orders", "seller_shipments", "seller_tracking", "category_and_attribute_mapping"],
+      "authority": "authorized_seller_operations",
+      "access": "Leroy Merlin/ADEO Mirakl seller approval, Shop ID and API key; access is scoped to the authorized seller/shop",
+      "official_reference": "https://developer.mirakl.com/content/product/mmp/rest/seller/openapi3",
+      "integration_routes": [
+        {"name":"BeezUP","state":"DOCUMENTED","reference":"https://help.beezup.com/en/articles/5685474-leroy-merlin-products-publication"},
+        {"name":"Koongo","state":"DOCUMENTED","reference":"https://www.koongo.com/channels/leroy-merlin/"},
+        {"name":"Poleepo","state":"DOCUMENTED","reference":"https://poleepo.cloud/en/selling-at-leroy-merlin-how-to-do-it-and-the-advantages/"},
+        {"name":"Oceges","state":"DOCUMENTED","reference":"https://oceges.com/integraciones/leroy-merlin/"},
+        {"name":"BigBuy","state":"USER_REFERENCE_FOUND_OFFICIAL_PAGE_NOT_INDEPENDENTLY_READABLE","reference":"https://www.bigbuy.eu/academy/fr/comment-synchroniser-leroy-merlin-via-la-plateforme-dintegration-multicanal/"}
+      ],
+      "scope_note": "This is not public buyer-side access to Leroy Merlin's complete catalogue, store inventory or destination delivery. It becomes valuable when Product Twin or an authorized supplier operates a seller account: we can normalize the supplier's own products, offers, stock, orders and shipment events and syndicate enriched Twin content into Mirakl marketplaces."
+    },
+    {
+      "source_id": "leroy_merlin_fr_parsebot_wrapper",
+      "type": "third_party_public_catalog_wrapper",
+      "state": "DOCUMENTED_NOT_LIVE_TESTED_IN_REPO",
+      "territories": ["FR"],
+      "capabilities": ["keyword_search", "product_detail", "price", "seller_identity", "marketplace_seller_flag", "product_sitemap_enumeration", "category_hierarchy"],
+      "authority": "third_party_wrapper_over_public_storefront_data",
+      "access": "Parse.bot account/API key; REST, generated SDK, OpenAPI and MCP interfaces advertised",
+      "official": false,
+      "reference": "https://parse.bot/marketplace/5bbd6f67-2778-4942-9382-059e573f661d/leroymerlin-fr-api",
+      "scope_note": "Useful as a France discovery/indexing candidate, not authoritative Leroy Merlin API access. It explicitly does not expose real-time stock or availability, and it does not solve Spain destination logistics, geometry, media rights or procurement."
+    },
+    {
+      "source_id": "home_depot_pro_integrations",
+      "type": "retailer_partner_integration",
+      "state": "PARTNER_ACCESS_RESEARCH_REQUIRED",
+      "territories": ["US"],
+      "capabilities": ["pro_account_integrations", "quoting", "ordering", "reconciliation"],
+      "authority": "retailer_partner_commerce",
+      "access": "selected Pro Xtra integration partners; integration enquiries supported",
+      "official_reference": "https://www.homedepot.com/c/pro-integrations",
+      "scope_note": "An official partner route exists, but no open public Product Twin, full-catalogue, geometry and destination-logistics MCP is assumed."
     },
     {
       "source_id": "ebay_browse_api",

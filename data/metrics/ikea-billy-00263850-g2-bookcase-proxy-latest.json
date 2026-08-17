@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-08-16T23:25:33.893Z",
+  "avatar_id": "AVATAR_IKEA_BILLY_00263850_G2_BOOKCASE_PROXY",
+  "status": "G2_REALISTIC_PROXY_SCALE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-billy-00263850-g2-bookcase-proxy.glb",
+  "asset_bytes": 15328,
+  "identity": {
+    "merchant": "IKEA Spain",
+    "product_family": "BILLY",
+    "article_no": "002.638.50",
+    "official_url": "https://www.ikea.com/es/es/p/billy-libreria-blanco-00263850/"
+  },
+  "expected_mm": {
+    "width": 800,
+    "depth": 280,
+    "height": 2020
+  },
+  "measured_xyz_mm": {
+    "width": 800,
+    "height": 2020,
+    "depth": 280
+  },
+  "relative_error_max": 0,
+  "material_cues": [
+    "warm white melamine",
+    "paper foil backing"
+  ],
+  "placement": {
+    "origin": "floor_center",
+    "back_to_wall_anchor": true,
+    "wall_fixing_required": true
+  },
+  "disclosure": "Product Twin-owned realistic planning geometry at verified scale. Product identity and dimensions are exact; proprietary manufacturer geometry and texture artwork are not claimed.",
+  "commerce": {
+    "state": "OFFICIAL_PRODUCT_PAGE_VERIFIED_LIVE_AVAILABILITY_REFRESH_REQUIRED",
+    "observed_at": "2026-08-17"
+  }
+}

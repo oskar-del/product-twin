@@ -1,0 +1,1477 @@
+{
+  "version": "0.1",
+  "summary": {
+    "generated_at": "2026-08-17T10:54:00.990Z",
+    "contract_id": "PRODUCT_TWIN_READINESS_CARD_V0_1",
+    "twins_evaluated": 8,
+    "exact_merchant_offers_with_dated_price": 8,
+    "available_for_sale_at_observation": 8,
+    "Spain_country_catalog_candidates": 8,
+    "postcode_catalog_candidates": 2,
+    "exact_postcode_checkout_confirmed": 0,
+    "Spanish_supplier_or_dispatch_origin_proven": 0,
+    "known_lead_time": 0,
+    "known_landed_cost": 0,
+    "procurement_ready": 0,
+    "policy": "Counts preserve independent evidence lanes. Spain deliverability is not Spanish supplier proof; catalog filters are not authoritative checkout logistics."
+  },
+  "cards": [
+    {
+      "twin_id": "PT_NORR11_MAN_DAY_BED_NOR_MAN_DAYBED_CAT1",
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584850764",
+      "product": {
+        "manufacturer": "NORR11",
+        "model": "Man Day Bed",
+        "sku": "NOR-MAN-DAYBED-CAT1"
+      },
+      "destination": {
+        "project_id": "PROJECT_MARBELLA_VILLA_001",
+        "country": "ES",
+        "region": "Malaga",
+        "postal_code": "29660",
+        "construction_phase": "ffe"
+      },
+      "headline": {
+        "design_state": "DESIGN_EVIDENCE_REVIEW",
+        "presentation_state": "PUBLIC_PRESENTATION_BLOCKED",
+        "Spain_supply_state": "SPAIN_COUNTRY_CATALOG_CANDIDATE",
+        "Spanish_supplier_state": "NOT_PROVEN",
+        "procurement_state": "NOT_PROCUREMENT_READY"
+      },
+      "lanes": {
+        "identity": {
+          "state": "PASS",
+          "detail": "Stable Product Twin and exact merchant product identity are joined.",
+          "evidence": {
+            "twin_id": "PT_NORR11_MAN_DAY_BED_NOR_MAN_DAYBED_CAT1",
+            "merchant_product_gid": "gid://shopify/Product/10584850764",
+            "sku": "NOR-MAN-DAYBED-CAT1"
+          }
+        },
+        "configuration_and_finish": {
+          "state": "REVIEW",
+          "detail": "Merchant variant/price group exists, but exact visible fabric and colour are not bound.",
+          "evidence": {
+            "configuration": "Upholstery Group: Cat 1",
+            "limit": "The Shopify variant identifies an upholstery group or route, not a selected visible fabric and colour."
+          }
+        },
+        "avatar_and_geometry": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "USABLE_P2_INPUT_WITH_LIMITS; NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST.",
+          "evidence": {
+            "geometry_level": "G2",
+            "photo_input_band": "USABLE_P2_INPUT_WITH_LIMITS",
+            "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW"
+          }
+        },
+        "dimensions_and_fit": {
+          "state": "REVIEW",
+          "detail": "Complete authoritative dimensions or scale QA remain incomplete.",
+          "evidence": {
+            "physical": {
+              "measured_model_axes_mm": [
+                843.815803527832,
+                505.3018638232061,
+                2009.0655088424683
+              ],
+              "expected_manufacturer_dimensions_mm": null,
+              "maximum_relative_scale_error": null,
+              "evidence_state": "EXPECTED_DIMENSIONS_NOT_CONFIGURED"
+            }
+          }
+        },
+        "technical_evidence": {
+          "state": "UNKNOWN",
+          "detail": "Spatial and technical fit are incomplete."
+        },
+        "rights_and_provenance": {
+          "state": "REVIEW",
+          "detail": "Source provenance is recorded, but reconstruction/render/platform-display rights remain under review.",
+          "evidence": {
+            "rights": {
+              "state": "review",
+              "render_scope": "unresolved",
+              "derivative_storage": "runtime_inspection_only",
+              "redistribution": false
+            }
+          }
+        },
+        "supplier_and_offer": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "An exact merchant variant has a dated sale/price observation for Spain discovery.",
+          "evidence": {
+            "seller_id": "design_public_group_trade",
+            "seller_name": "Design Public Group Trade",
+            "seller_or_dispatch_country": null,
+            "Spanish_supplier_state": "NOT_PROVEN",
+            "price": {
+              "amount": "7500.0",
+              "currency": "USD"
+            },
+            "available_for_sale_at_observation": true,
+            "observed_at": "2026-08-17T01:14:34.896Z",
+            "freshness_state": "LIVE_REFRESH_REQUIRED"
+          }
+        },
+        "Spain_and_postcode_delivery": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Spain country eligibility passed; exact postcode delivery is unverified.",
+          "evidence": {
+            "destination": {
+              "project_id": "PROJECT_MARBELLA_VILLA_001",
+              "country": "ES",
+              "region": "Malaga",
+              "postal_code": "29660",
+              "construction_phase": "ffe"
+            },
+            "country_catalog_filter_passed": true,
+            "postcode_catalog_filter_passed": false,
+            "exact_postcode_checkout_verified": false
+          }
+        },
+        "logistics_and_landed_cost": {
+          "state": "UNKNOWN",
+          "detail": "Origin, carrier, shipping mode, packaging, freight, tax, lead time, unloading, storage and installation remain unresolved.",
+          "evidence": {
+            "origin_location": null,
+            "shipping_mode": null,
+            "carrier_or_3pl": null,
+            "lead_time_days": null,
+            "delivery_cost": null,
+            "tax": null,
+            "landed_cost": null,
+            "palletization": null,
+            "site_unloading": null,
+            "installation": null
+          }
+        },
+        "procurement_route": {
+          "state": "REVIEW",
+          "detail": "Merchant-cart/external-checkout route exists structurally but still needs exact configuration, live offer refresh and authoritative logistics.",
+          "evidence": {
+            "route_type": "merchant_cart",
+            "state": "needs_address_and_logistics",
+            "cart_created": false,
+            "checkout_total_verified": false,
+            "quote_or_order_id": null
+          }
+        },
+        "attribution_and_affiliate": {
+          "state": "UNKNOWN",
+          "detail": "Affiliate programme, attribution ID, commission and disclosure are not configured for this merchant/product."
+        }
+      },
+      "offer_snapshot": {
+        "offer_id": "OFFER_SHOPIFY_MERCHANT_MODEL3D_10584850764_20260817",
+        "product_twin_id": "PT_NORR11_MAN_DAY_BED_NOR_MAN_DAYBED_CAT1",
+        "seller_id": "design_public_group_trade",
+        "external_product_id": "gid://shopify/Product/10584850764",
+        "external_variant_id": "gid://shopify/ProductVariant/33326751023181",
+        "sku": "NOR-MAN-DAYBED-CAT1",
+        "price": {
+          "amount": "7500.0",
+          "currency": "USD"
+        },
+        "quantity_basis": "one listed item",
+        "tax_disclosure": "unknown_until_checkout",
+        "shipping_disclosure": "unknown_until_checkout_or_quote",
+        "stock_state": "available_for_sale_at_observation",
+        "lead_time": null,
+        "territory": "ES",
+        "checkout_route": "merchant_cart_or_external_checkout_live_refresh_required",
+        "observed_at": "2026-08-17T01:14:34.896Z",
+        "expires_at": null,
+        "freshness_state": "LIVE_REFRESH_REQUIRED"
+      },
+      "procurement_ready": false,
+      "blockers": [
+        "bind the exact visible fabric/colour configuration",
+        "clear reconstruction and commercial render/platform rights",
+        "confirm tax, freight, allocation and delivery to 29660 through checkout or live quote",
+        "verify lead time",
+        "calculate landed and installed cost",
+        "Spanish supplier or Spanish dispatch origin is not proven"
+      ],
+      "policy": "Avatar, product identity, selected configuration, supplier locality, offer freshness, Spain/postcode delivery and landed logistics are independent evidence lanes. No global readiness score is emitted."
+    },
+    {
+      "twin_id": "PT_NORR11_MAN_2_SEATER_SOFA_NOR_MAN_2_SEAT_SOFA_CAT2",
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852108",
+      "product": {
+        "manufacturer": "NORR11",
+        "model": "Man 2-Seater Sofa",
+        "sku": "NOR-MAN-2-SEAT-SOFA-CAT2"
+      },
+      "destination": {
+        "project_id": "PROJECT_MARBELLA_VILLA_001",
+        "country": "ES",
+        "region": "Malaga",
+        "postal_code": "29660",
+        "construction_phase": "ffe"
+      },
+      "headline": {
+        "design_state": "DESIGN_CANDIDATE",
+        "presentation_state": "PUBLIC_PRESENTATION_BLOCKED",
+        "Spain_supply_state": "SPAIN_COUNTRY_CATALOG_CANDIDATE",
+        "Spanish_supplier_state": "NOT_PROVEN",
+        "procurement_state": "NOT_PROCUREMENT_READY"
+      },
+      "lanes": {
+        "identity": {
+          "state": "PASS",
+          "detail": "Stable Product Twin and exact merchant product identity are joined.",
+          "evidence": {
+            "twin_id": "PT_NORR11_MAN_2_SEATER_SOFA_NOR_MAN_2_SEAT_SOFA_CAT2",
+            "merchant_product_gid": "gid://shopify/Product/10584852108",
+            "sku": "NOR-MAN-2-SEAT-SOFA-CAT2"
+          }
+        },
+        "configuration_and_finish": {
+          "state": "REVIEW",
+          "detail": "Merchant variant/price group exists, but exact visible fabric and colour are not bound.",
+          "evidence": {
+            "configuration": "Upholstery Group: Cat 2",
+            "limit": "The Shopify variant identifies an upholstery group or route, not a selected visible fabric and colour."
+          }
+        },
+        "avatar_and_geometry": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "STRONG_P2_MULTI_VIEW_INPUT; NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST.",
+          "evidence": {
+            "geometry_level": "G2",
+            "photo_input_band": "STRONG_P2_MULTI_VIEW_INPUT",
+            "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW"
+          }
+        },
+        "dimensions_and_fit": {
+          "state": "PASS",
+          "detail": "Manufacturer-scale QA passed for placement and fit.",
+          "evidence": {
+            "physical": {
+              "measured_model_axes_mm": [
+                1292.9904460906982,
+                767.605834380447,
+                775.7274806499481
+              ],
+              "expected_manufacturer_dimensions_mm": [
+                1320,
+                740,
+                750
+              ],
+              "maximum_relative_scale_error": 0.037305181595198716,
+              "evidence_state": "manufacturer_scale_qa_pass"
+            }
+          }
+        },
+        "technical_evidence": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Furniture envelope supports spatial fit; weight, care, fire, durability and installation evidence are not complete."
+        },
+        "rights_and_provenance": {
+          "state": "REVIEW",
+          "detail": "Source provenance is recorded, but reconstruction/render/platform-display rights remain under review.",
+          "evidence": {
+            "rights": {
+              "state": "review",
+              "render_scope": "unresolved",
+              "derivative_storage": "runtime_inspection_only",
+              "redistribution": false
+            }
+          }
+        },
+        "supplier_and_offer": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "An exact merchant variant has a dated sale/price observation for Spain discovery.",
+          "evidence": {
+            "seller_id": "design_public_group_trade",
+            "seller_name": "Design Public Group Trade",
+            "seller_or_dispatch_country": null,
+            "Spanish_supplier_state": "NOT_PROVEN",
+            "price": {
+              "amount": "7800.0",
+              "currency": "USD"
+            },
+            "available_for_sale_at_observation": true,
+            "observed_at": "2026-08-17T01:14:34.896Z",
+            "freshness_state": "LIVE_REFRESH_REQUIRED"
+          }
+        },
+        "Spain_and_postcode_delivery": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Spain country eligibility passed; exact postcode delivery is unverified.",
+          "evidence": {
+            "destination": {
+              "project_id": "PROJECT_MARBELLA_VILLA_001",
+              "country": "ES",
+              "region": "Malaga",
+              "postal_code": "29660",
+              "construction_phase": "ffe"
+            },
+            "country_catalog_filter_passed": true,
+            "postcode_catalog_filter_passed": false,
+            "exact_postcode_checkout_verified": false
+          }
+        },
+        "logistics_and_landed_cost": {
+          "state": "UNKNOWN",
+          "detail": "Origin, carrier, shipping mode, packaging, freight, tax, lead time, unloading, storage and installation remain unresolved.",
+          "evidence": {
+            "origin_location": null,
+            "shipping_mode": null,
+            "carrier_or_3pl": null,
+            "lead_time_days": null,
+            "delivery_cost": null,
+            "tax": null,
+            "landed_cost": null,
+            "palletization": null,
+            "site_unloading": null,
+            "installation": null
+          }
+        },
+        "procurement_route": {
+          "state": "REVIEW",
+          "detail": "Merchant-cart/external-checkout route exists structurally but still needs exact configuration, live offer refresh and authoritative logistics.",
+          "evidence": {
+            "route_type": "merchant_cart",
+            "state": "needs_address_and_logistics",
+            "cart_created": false,
+            "checkout_total_verified": false,
+            "quote_or_order_id": null
+          }
+        },
+        "attribution_and_affiliate": {
+          "state": "UNKNOWN",
+          "detail": "Affiliate programme, attribution ID, commission and disclosure are not configured for this merchant/product."
+        }
+      },
+      "offer_snapshot": {
+        "offer_id": "OFFER_SHOPIFY_MERCHANT_MODEL3D_10584852108_20260817",
+        "product_twin_id": "PT_NORR11_MAN_2_SEATER_SOFA_NOR_MAN_2_SEAT_SOFA_CAT2",
+        "seller_id": "design_public_group_trade",
+        "external_product_id": "gid://shopify/Product/10584852108",
+        "external_variant_id": "gid://shopify/ProductVariant/33326759673933",
+        "sku": "NOR-MAN-2-SEAT-SOFA-CAT2",
+        "price": {
+          "amount": "7800.0",
+          "currency": "USD"
+        },
+        "quantity_basis": "one listed item",
+        "tax_disclosure": "unknown_until_checkout",
+        "shipping_disclosure": "unknown_until_checkout_or_quote",
+        "stock_state": "available_for_sale_at_observation",
+        "lead_time": null,
+        "territory": "ES",
+        "checkout_route": "merchant_cart_or_external_checkout_live_refresh_required",
+        "observed_at": "2026-08-17T01:14:34.896Z",
+        "expires_at": null,
+        "freshness_state": "LIVE_REFRESH_REQUIRED"
+      },
+      "procurement_ready": false,
+      "blockers": [
+        "bind the exact visible fabric/colour configuration",
+        "clear reconstruction and commercial render/platform rights",
+        "confirm tax, freight, allocation and delivery to 29660 through checkout or live quote",
+        "verify lead time",
+        "calculate landed and installed cost",
+        "Spanish supplier or Spanish dispatch origin is not proven"
+      ],
+      "policy": "Avatar, product identity, selected configuration, supplier locality, offer freshness, Spain/postcode delivery and landed logistics are independent evidence lanes. No global readiness score is emitted."
+    },
+    {
+      "twin_id": "PT_NORR11_MAN_3_SEATER_SOFA_NOR_MAN_3_SEAT_SOFA_CAT3",
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852492",
+      "product": {
+        "manufacturer": "NORR11",
+        "model": "Man 3-Seater Sofa",
+        "sku": "NOR-MAN-3-SEAT-SOFA-CAT3"
+      },
+      "destination": {
+        "project_id": "PROJECT_MARBELLA_VILLA_001",
+        "country": "ES",
+        "region": "Malaga",
+        "postal_code": "29660",
+        "construction_phase": "ffe"
+      },
+      "headline": {
+        "design_state": "DESIGN_CANDIDATE",
+        "presentation_state": "PUBLIC_PRESENTATION_BLOCKED",
+        "Spain_supply_state": "SPAIN_COUNTRY_CATALOG_CANDIDATE",
+        "Spanish_supplier_state": "NOT_PROVEN",
+        "procurement_state": "NOT_PROCUREMENT_READY"
+      },
+      "lanes": {
+        "identity": {
+          "state": "PASS",
+          "detail": "Stable Product Twin and exact merchant product identity are joined.",
+          "evidence": {
+            "twin_id": "PT_NORR11_MAN_3_SEATER_SOFA_NOR_MAN_3_SEAT_SOFA_CAT3",
+            "merchant_product_gid": "gid://shopify/Product/10584852492",
+            "sku": "NOR-MAN-3-SEAT-SOFA-CAT3"
+          }
+        },
+        "configuration_and_finish": {
+          "state": "REVIEW",
+          "detail": "Merchant variant/price group exists, but exact visible fabric and colour are not bound.",
+          "evidence": {
+            "configuration": "Upholstery Group: Cat 3",
+            "limit": "The Shopify variant identifies an upholstery group or route, not a selected visible fabric and colour."
+          }
+        },
+        "avatar_and_geometry": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "STRONG_P2_MULTI_VIEW_INPUT; NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST.",
+          "evidence": {
+            "geometry_level": "G2",
+            "photo_input_band": "STRONG_P2_MULTI_VIEW_INPUT",
+            "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW"
+          }
+        },
+        "dimensions_and_fit": {
+          "state": "PASS",
+          "detail": "Manufacturer-scale QA passed for placement and fit.",
+          "evidence": {
+            "physical": {
+              "measured_model_axes_mm": [
+                1967.305064201355,
+                768.1414114776999,
+                775.7638394832611
+              ],
+              "expected_manufacturer_dimensions_mm": [
+                1970,
+                740,
+                750
+              ],
+              "maximum_relative_scale_error": 0.03802893442932416,
+              "evidence_state": "manufacturer_scale_qa_pass"
+            }
+          }
+        },
+        "technical_evidence": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Furniture envelope supports spatial fit; weight, care, fire, durability and installation evidence are not complete."
+        },
+        "rights_and_provenance": {
+          "state": "REVIEW",
+          "detail": "Source provenance is recorded, but reconstruction/render/platform-display rights remain under review.",
+          "evidence": {
+            "rights": {
+              "state": "review",
+              "render_scope": "unresolved",
+              "derivative_storage": "runtime_inspection_only",
+              "redistribution": false
+            }
+          }
+        },
+        "supplier_and_offer": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "An exact merchant variant has a dated sale/price observation for Spain discovery.",
+          "evidence": {
+            "seller_id": "design_public_group_trade",
+            "seller_name": "Design Public Group Trade",
+            "seller_or_dispatch_country": null,
+            "Spanish_supplier_state": "NOT_PROVEN",
+            "price": {
+              "amount": "11500.0",
+              "currency": "USD"
+            },
+            "available_for_sale_at_observation": true,
+            "observed_at": "2026-08-17T01:14:34.896Z",
+            "freshness_state": "LIVE_REFRESH_REQUIRED"
+          }
+        },
+        "Spain_and_postcode_delivery": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Spain country eligibility passed; exact postcode delivery is unverified.",
+          "evidence": {
+            "destination": {
+              "project_id": "PROJECT_MARBELLA_VILLA_001",
+              "country": "ES",
+              "region": "Malaga",
+              "postal_code": "29660",
+              "construction_phase": "ffe"
+            },
+            "country_catalog_filter_passed": true,
+            "postcode_catalog_filter_passed": false,
+            "exact_postcode_checkout_verified": false
+          }
+        },
+        "logistics_and_landed_cost": {
+          "state": "UNKNOWN",
+          "detail": "Origin, carrier, shipping mode, packaging, freight, tax, lead time, unloading, storage and installation remain unresolved.",
+          "evidence": {
+            "origin_location": null,
+            "shipping_mode": null,
+            "carrier_or_3pl": null,
+            "lead_time_days": null,
+            "delivery_cost": null,
+            "tax": null,
+            "landed_cost": null,
+            "palletization": null,
+            "site_unloading": null,
+            "installation": null
+          }
+        },
+        "procurement_route": {
+          "state": "REVIEW",
+          "detail": "Merchant-cart/external-checkout route exists structurally but still needs exact configuration, live offer refresh and authoritative logistics.",
+          "evidence": {
+            "route_type": "merchant_cart",
+            "state": "needs_address_and_logistics",
+            "cart_created": false,
+            "checkout_total_verified": false,
+            "quote_or_order_id": null
+          }
+        },
+        "attribution_and_affiliate": {
+          "state": "UNKNOWN",
+          "detail": "Affiliate programme, attribution ID, commission and disclosure are not configured for this merchant/product."
+        }
+      },
+      "offer_snapshot": {
+        "offer_id": "OFFER_SHOPIFY_MERCHANT_MODEL3D_10584852492_20260817",
+        "product_twin_id": "PT_NORR11_MAN_3_SEATER_SOFA_NOR_MAN_3_SEAT_SOFA_CAT3",
+        "seller_id": "design_public_group_trade",
+        "external_product_id": "gid://shopify/Product/10584852492",
+        "external_variant_id": "gid://shopify/ProductVariant/33326758264909",
+        "sku": "NOR-MAN-3-SEAT-SOFA-CAT3",
+        "price": {
+          "amount": "11500.0",
+          "currency": "USD"
+        },
+        "quantity_basis": "one listed item",
+        "tax_disclosure": "unknown_until_checkout",
+        "shipping_disclosure": "unknown_until_checkout_or_quote",
+        "stock_state": "available_for_sale_at_observation",
+        "lead_time": null,
+        "territory": "ES",
+        "checkout_route": "merchant_cart_or_external_checkout_live_refresh_required",
+        "observed_at": "2026-08-17T01:14:34.896Z",
+        "expires_at": null,
+        "freshness_state": "LIVE_REFRESH_REQUIRED"
+      },
+      "procurement_ready": false,
+      "blockers": [
+        "bind the exact visible fabric/colour configuration",
+        "clear reconstruction and commercial render/platform rights",
+        "confirm tax, freight, allocation and delivery to 29660 through checkout or live quote",
+        "verify lead time",
+        "calculate landed and installed cost",
+        "Spanish supplier or Spanish dispatch origin is not proven"
+      ],
+      "policy": "Avatar, product identity, selected configuration, supplier locality, offer freshness, Spain/postcode delivery and landed logistics are independent evidence lanes. No global readiness score is emitted."
+    },
+    {
+      "twin_id": "PT_NORR11_MAN_LOUNGE_CHAIR_NOR_MAN_LNG_CAT1",
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584851276",
+      "product": {
+        "manufacturer": "NORR11",
+        "model": "Man Lounge Chair",
+        "sku": "NOR-MAN-LNG-CAT1"
+      },
+      "destination": {
+        "project_id": "PROJECT_MARBELLA_VILLA_001",
+        "country": "ES",
+        "region": "Malaga",
+        "postal_code": "29660",
+        "construction_phase": "ffe"
+      },
+      "headline": {
+        "design_state": "DESIGN_CANDIDATE",
+        "presentation_state": "PUBLIC_PRESENTATION_BLOCKED",
+        "Spain_supply_state": "SPAIN_COUNTRY_CATALOG_CANDIDATE",
+        "Spanish_supplier_state": "NOT_PROVEN",
+        "procurement_state": "NOT_PROCUREMENT_READY"
+      },
+      "lanes": {
+        "identity": {
+          "state": "PASS",
+          "detail": "Stable Product Twin and exact merchant product identity are joined.",
+          "evidence": {
+            "twin_id": "PT_NORR11_MAN_LOUNGE_CHAIR_NOR_MAN_LNG_CAT1",
+            "merchant_product_gid": "gid://shopify/Product/10584851276",
+            "sku": "NOR-MAN-LNG-CAT1"
+          }
+        },
+        "configuration_and_finish": {
+          "state": "REVIEW",
+          "detail": "Merchant variant/price group exists, but exact visible fabric and colour are not bound.",
+          "evidence": {
+            "configuration": "Upholstery Group: Cat 1",
+            "limit": "The Shopify variant identifies an upholstery group or route, not a selected visible fabric and colour."
+          }
+        },
+        "avatar_and_geometry": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "STRONG_P2_MULTI_VIEW_INPUT; NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST.",
+          "evidence": {
+            "geometry_level": "G2",
+            "photo_input_band": "STRONG_P2_MULTI_VIEW_INPUT",
+            "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW"
+          }
+        },
+        "dimensions_and_fit": {
+          "state": "PASS",
+          "detail": "Manufacturer-scale QA passed for placement and fit.",
+          "evidence": {
+            "physical": {
+              "measured_model_axes_mm": [
+                680.8608174324036,
+                767.6215992805737,
+                775.7702767848969
+              ],
+              "expected_manufacturer_dimensions_mm": [
+                670,
+                740,
+                750
+              ],
+              "maximum_relative_scale_error": 0.03732648551428881,
+              "evidence_state": "manufacturer_scale_qa_pass"
+            }
+          }
+        },
+        "technical_evidence": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Furniture envelope supports spatial fit; weight, care, fire, durability and installation evidence are not complete."
+        },
+        "rights_and_provenance": {
+          "state": "REVIEW",
+          "detail": "Source provenance is recorded, but reconstruction/render/platform-display rights remain under review.",
+          "evidence": {
+            "rights": {
+              "state": "review",
+              "render_scope": "unresolved",
+              "derivative_storage": "runtime_inspection_only",
+              "redistribution": false
+            }
+          }
+        },
+        "supplier_and_offer": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "An exact merchant variant has a dated sale/price observation for Spain discovery.",
+          "evidence": {
+            "seller_id": "design_public_group_trade",
+            "seller_name": "Design Public Group Trade",
+            "seller_or_dispatch_country": null,
+            "Spanish_supplier_state": "NOT_PROVEN",
+            "price": {
+              "amount": "4300.0",
+              "currency": "USD"
+            },
+            "available_for_sale_at_observation": true,
+            "observed_at": "2026-08-17T01:14:34.896Z",
+            "freshness_state": "LIVE_REFRESH_REQUIRED"
+          }
+        },
+        "Spain_and_postcode_delivery": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Spain country eligibility passed; exact postcode delivery is unverified.",
+          "evidence": {
+            "destination": {
+              "project_id": "PROJECT_MARBELLA_VILLA_001",
+              "country": "ES",
+              "region": "Malaga",
+              "postal_code": "29660",
+              "construction_phase": "ffe"
+            },
+            "country_catalog_filter_passed": true,
+            "postcode_catalog_filter_passed": false,
+            "exact_postcode_checkout_verified": false
+          }
+        },
+        "logistics_and_landed_cost": {
+          "state": "UNKNOWN",
+          "detail": "Origin, carrier, shipping mode, packaging, freight, tax, lead time, unloading, storage and installation remain unresolved.",
+          "evidence": {
+            "origin_location": null,
+            "shipping_mode": null,
+            "carrier_or_3pl": null,
+            "lead_time_days": null,
+            "delivery_cost": null,
+            "tax": null,
+            "landed_cost": null,
+            "palletization": null,
+            "site_unloading": null,
+            "installation": null
+          }
+        },
+        "procurement_route": {
+          "state": "REVIEW",
+          "detail": "Merchant-cart/external-checkout route exists structurally but still needs exact configuration, live offer refresh and authoritative logistics.",
+          "evidence": {
+            "route_type": "merchant_cart",
+            "state": "needs_address_and_logistics",
+            "cart_created": false,
+            "checkout_total_verified": false,
+            "quote_or_order_id": null
+          }
+        },
+        "attribution_and_affiliate": {
+          "state": "UNKNOWN",
+          "detail": "Affiliate programme, attribution ID, commission and disclosure are not configured for this merchant/product."
+        }
+      },
+      "offer_snapshot": {
+        "offer_id": "OFFER_SHOPIFY_MERCHANT_MODEL3D_10584851276_20260817",
+        "product_twin_id": "PT_NORR11_MAN_LOUNGE_CHAIR_NOR_MAN_LNG_CAT1",
+        "seller_id": "design_public_group_trade",
+        "external_product_id": "gid://shopify/Product/10584851276",
+        "external_variant_id": "gid://shopify/ProductVariant/33326754529357",
+        "sku": "NOR-MAN-LNG-CAT1",
+        "price": {
+          "amount": "4300.0",
+          "currency": "USD"
+        },
+        "quantity_basis": "one listed item",
+        "tax_disclosure": "unknown_until_checkout",
+        "shipping_disclosure": "unknown_until_checkout_or_quote",
+        "stock_state": "available_for_sale_at_observation",
+        "lead_time": null,
+        "territory": "ES",
+        "checkout_route": "merchant_cart_or_external_checkout_live_refresh_required",
+        "observed_at": "2026-08-17T01:14:34.896Z",
+        "expires_at": null,
+        "freshness_state": "LIVE_REFRESH_REQUIRED"
+      },
+      "procurement_ready": false,
+      "blockers": [
+        "bind the exact visible fabric/colour configuration",
+        "clear reconstruction and commercial render/platform rights",
+        "confirm tax, freight, allocation and delivery to 29660 through checkout or live quote",
+        "verify lead time",
+        "calculate landed and installed cost",
+        "Spanish supplier or Spanish dispatch origin is not proven"
+      ],
+      "policy": "Avatar, product identity, selected configuration, supplier locality, offer freshness, Spain/postcode delivery and landed logistics are independent evidence lanes. No global readiness score is emitted."
+    },
+    {
+      "twin_id": "PT_NORR11_MAMMOTH_SOFA_NOR_MAMMOTH_SOFA_CAT1_OAK",
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_35853729804",
+      "product": {
+        "manufacturer": "NORR11",
+        "model": "Mammoth Sofa",
+        "sku": "NOR-MAMMOTH-SOFA-CAT1-OAK"
+      },
+      "destination": {
+        "project_id": "PROJECT_MARBELLA_VILLA_001",
+        "country": "ES",
+        "region": "Malaga",
+        "postal_code": "29660",
+        "construction_phase": "ffe"
+      },
+      "headline": {
+        "design_state": "DESIGN_CANDIDATE",
+        "presentation_state": "PUBLIC_PRESENTATION_BLOCKED",
+        "Spain_supply_state": "SPAIN_COUNTRY_CATALOG_CANDIDATE",
+        "Spanish_supplier_state": "NOT_PROVEN",
+        "procurement_state": "NOT_PROCUREMENT_READY"
+      },
+      "lanes": {
+        "identity": {
+          "state": "PASS",
+          "detail": "Stable Product Twin and exact merchant product identity are joined.",
+          "evidence": {
+            "twin_id": "PT_NORR11_MAMMOTH_SOFA_NOR_MAMMOTH_SOFA_CAT1_OAK",
+            "merchant_product_gid": "gid://shopify/Product/35853729804",
+            "sku": "NOR-MAMMOTH-SOFA-CAT1-OAK"
+          }
+        },
+        "configuration_and_finish": {
+          "state": "REVIEW",
+          "detail": "Merchant variant/price group exists, but exact visible fabric and colour are not bound.",
+          "evidence": {
+            "configuration": "Upholstery Group: Cat 1 / Frame: Natural Oak",
+            "limit": "The Shopify variant identifies an upholstery group or route, not a selected visible fabric and colour."
+          }
+        },
+        "avatar_and_geometry": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "STRONG_P2_MULTI_VIEW_INPUT; NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST.",
+          "evidence": {
+            "geometry_level": "G2",
+            "photo_input_band": "STRONG_P2_MULTI_VIEW_INPUT",
+            "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW"
+          }
+        },
+        "dimensions_and_fit": {
+          "state": "PASS",
+          "detail": "Manufacturer-scale QA passed for placement and fit.",
+          "evidence": {
+            "physical": {
+              "measured_model_axes_mm": [
+                1508.4084272384644,
+                1037.8710680218019,
+                886.0666285686307
+              ],
+              "expected_manufacturer_dimensions_mm": [
+                1510,
+                870,
+                1040
+              ],
+              "maximum_relative_scale_error": 0.018467389159345603,
+              "evidence_state": "manufacturer_scale_qa_pass"
+            }
+          }
+        },
+        "technical_evidence": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Furniture envelope supports spatial fit; weight, care, fire, durability and installation evidence are not complete."
+        },
+        "rights_and_provenance": {
+          "state": "REVIEW",
+          "detail": "Source provenance is recorded, but reconstruction/render/platform-display rights remain under review.",
+          "evidence": {
+            "rights": {
+              "state": "review",
+              "render_scope": "unresolved",
+              "derivative_storage": "runtime_inspection_only",
+              "redistribution": false
+            }
+          }
+        },
+        "supplier_and_offer": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "An exact merchant variant has a dated sale/price observation for Spain discovery.",
+          "evidence": {
+            "seller_id": "design_public_group_trade",
+            "seller_name": "Design Public Group Trade",
+            "seller_or_dispatch_country": null,
+            "Spanish_supplier_state": "NOT_PROVEN",
+            "price": {
+              "amount": "6200.0",
+              "currency": "USD"
+            },
+            "available_for_sale_at_observation": true,
+            "observed_at": "2026-08-17T01:14:34.896Z",
+            "freshness_state": "LIVE_REFRESH_REQUIRED"
+          }
+        },
+        "Spain_and_postcode_delivery": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Spain country eligibility passed; exact postcode delivery is unverified.",
+          "evidence": {
+            "destination": {
+              "project_id": "PROJECT_MARBELLA_VILLA_001",
+              "country": "ES",
+              "region": "Malaga",
+              "postal_code": "29660",
+              "construction_phase": "ffe"
+            },
+            "country_catalog_filter_passed": true,
+            "postcode_catalog_filter_passed": false,
+            "exact_postcode_checkout_verified": false
+          }
+        },
+        "logistics_and_landed_cost": {
+          "state": "UNKNOWN",
+          "detail": "Origin, carrier, shipping mode, packaging, freight, tax, lead time, unloading, storage and installation remain unresolved.",
+          "evidence": {
+            "origin_location": null,
+            "shipping_mode": null,
+            "carrier_or_3pl": null,
+            "lead_time_days": null,
+            "delivery_cost": null,
+            "tax": null,
+            "landed_cost": null,
+            "palletization": null,
+            "site_unloading": null,
+            "installation": null
+          }
+        },
+        "procurement_route": {
+          "state": "REVIEW",
+          "detail": "Merchant-cart/external-checkout route exists structurally but still needs exact configuration, live offer refresh and authoritative logistics.",
+          "evidence": {
+            "route_type": "merchant_cart",
+            "state": "needs_address_and_logistics",
+            "cart_created": false,
+            "checkout_total_verified": false,
+            "quote_or_order_id": null
+          }
+        },
+        "attribution_and_affiliate": {
+          "state": "UNKNOWN",
+          "detail": "Affiliate programme, attribution ID, commission and disclosure are not configured for this merchant/product."
+        }
+      },
+      "offer_snapshot": {
+        "offer_id": "OFFER_SHOPIFY_MERCHANT_MODEL3D_35853729804_20260817",
+        "product_twin_id": "PT_NORR11_MAMMOTH_SOFA_NOR_MAMMOTH_SOFA_CAT1_OAK",
+        "seller_id": "design_public_group_trade",
+        "external_product_id": "gid://shopify/Product/35853729804",
+        "external_variant_id": "gid://shopify/ProductVariant/33326743584845",
+        "sku": "NOR-MAMMOTH-SOFA-CAT1-OAK",
+        "price": {
+          "amount": "6200.0",
+          "currency": "USD"
+        },
+        "quantity_basis": "one listed item",
+        "tax_disclosure": "unknown_until_checkout",
+        "shipping_disclosure": "unknown_until_checkout_or_quote",
+        "stock_state": "available_for_sale_at_observation",
+        "lead_time": null,
+        "territory": "ES",
+        "checkout_route": "merchant_cart_or_external_checkout_live_refresh_required",
+        "observed_at": "2026-08-17T01:14:34.896Z",
+        "expires_at": null,
+        "freshness_state": "LIVE_REFRESH_REQUIRED"
+      },
+      "procurement_ready": false,
+      "blockers": [
+        "bind the exact visible fabric/colour configuration",
+        "clear reconstruction and commercial render/platform rights",
+        "confirm tax, freight, allocation and delivery to 29660 through checkout or live quote",
+        "verify lead time",
+        "calculate landed and installed cost",
+        "Spanish supplier or Spanish dispatch origin is not proven"
+      ],
+      "policy": "Avatar, product identity, selected configuration, supplier locality, offer freshness, Spain/postcode delivery and landed logistics are independent evidence lanes. No global readiness score is emitted."
+    },
+    {
+      "twin_id": "PT_WENDELBO_LOBBY_SOFA_WEN_LBY_SOF_COM",
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_782311161966",
+      "product": {
+        "manufacturer": "Wendelbo",
+        "model": "Lobby Sofa",
+        "sku": "WEN-LBY-SOF-COM"
+      },
+      "destination": {
+        "project_id": "PROJECT_MARBELLA_VILLA_001",
+        "country": "ES",
+        "region": "Malaga",
+        "postal_code": "29660",
+        "construction_phase": "ffe"
+      },
+      "headline": {
+        "design_state": "DESIGN_EVIDENCE_REVIEW",
+        "presentation_state": "PUBLIC_PRESENTATION_BLOCKED",
+        "Spain_supply_state": "SPAIN_COUNTRY_CATALOG_CANDIDATE",
+        "Spanish_supplier_state": "NOT_PROVEN",
+        "procurement_state": "NOT_PROCUREMENT_READY"
+      },
+      "lanes": {
+        "identity": {
+          "state": "PASS",
+          "detail": "Stable Product Twin and exact merchant product identity are joined.",
+          "evidence": {
+            "twin_id": "PT_WENDELBO_LOBBY_SOFA_WEN_LBY_SOF_COM",
+            "merchant_product_gid": "gid://shopify/Product/782311161966",
+            "sku": "WEN-LBY-SOF-COM"
+          }
+        },
+        "configuration_and_finish": {
+          "state": "REVIEW",
+          "detail": "Merchant variant/price group exists, but exact visible fabric and colour are not bound.",
+          "evidence": {
+            "configuration": "Upholstery Group: _COM",
+            "limit": "The Shopify variant identifies an upholstery group or route, not a selected visible fabric and colour."
+          }
+        },
+        "avatar_and_geometry": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "P1_VISUAL_REFERENCE_ONLY; NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST.",
+          "evidence": {
+            "geometry_level": "G2",
+            "photo_input_band": "P1_VISUAL_REFERENCE_ONLY",
+            "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW"
+          }
+        },
+        "dimensions_and_fit": {
+          "state": "REVIEW",
+          "detail": "Complete authoritative dimensions or scale QA remain incomplete.",
+          "evidence": {
+            "physical": {
+              "measured_model_axes_mm": [
+                1500.9307861328125,
+                772.1994128078222,
+                848.5972583293915
+              ],
+              "expected_manufacturer_dimensions_mm": null,
+              "maximum_relative_scale_error": null,
+              "evidence_state": "EXPECTED_DIMENSIONS_NOT_CONFIGURED"
+            }
+          }
+        },
+        "technical_evidence": {
+          "state": "UNKNOWN",
+          "detail": "Spatial and technical fit are incomplete."
+        },
+        "rights_and_provenance": {
+          "state": "REVIEW",
+          "detail": "Source provenance is recorded, but reconstruction/render/platform-display rights remain under review.",
+          "evidence": {
+            "rights": {
+              "state": "review",
+              "render_scope": "unresolved",
+              "derivative_storage": "runtime_inspection_only",
+              "redistribution": false
+            }
+          }
+        },
+        "supplier_and_offer": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "An exact merchant variant has a dated sale/price observation for Spain discovery.",
+          "evidence": {
+            "seller_id": "design_public_group_trade",
+            "seller_name": "Design Public Group Trade",
+            "seller_or_dispatch_country": null,
+            "Spanish_supplier_state": "NOT_PROVEN",
+            "price": {
+              "amount": "2918.0",
+              "currency": "USD"
+            },
+            "available_for_sale_at_observation": true,
+            "observed_at": "2026-08-17T01:14:34.896Z",
+            "freshness_state": "LIVE_REFRESH_REQUIRED"
+          }
+        },
+        "Spain_and_postcode_delivery": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Spain country eligibility passed; exact postcode delivery is unverified.",
+          "evidence": {
+            "destination": {
+              "project_id": "PROJECT_MARBELLA_VILLA_001",
+              "country": "ES",
+              "region": "Malaga",
+              "postal_code": "29660",
+              "construction_phase": "ffe"
+            },
+            "country_catalog_filter_passed": true,
+            "postcode_catalog_filter_passed": false,
+            "exact_postcode_checkout_verified": false
+          }
+        },
+        "logistics_and_landed_cost": {
+          "state": "UNKNOWN",
+          "detail": "Origin, carrier, shipping mode, packaging, freight, tax, lead time, unloading, storage and installation remain unresolved.",
+          "evidence": {
+            "origin_location": null,
+            "shipping_mode": null,
+            "carrier_or_3pl": null,
+            "lead_time_days": null,
+            "delivery_cost": null,
+            "tax": null,
+            "landed_cost": null,
+            "palletization": null,
+            "site_unloading": null,
+            "installation": null
+          }
+        },
+        "procurement_route": {
+          "state": "REVIEW",
+          "detail": "Merchant-cart/external-checkout route exists structurally but still needs exact configuration, live offer refresh and authoritative logistics.",
+          "evidence": {
+            "route_type": "merchant_cart",
+            "state": "needs_address_and_logistics",
+            "cart_created": false,
+            "checkout_total_verified": false,
+            "quote_or_order_id": null
+          }
+        },
+        "attribution_and_affiliate": {
+          "state": "UNKNOWN",
+          "detail": "Affiliate programme, attribution ID, commission and disclosure are not configured for this merchant/product."
+        }
+      },
+      "offer_snapshot": {
+        "offer_id": "OFFER_SHOPIFY_MERCHANT_MODEL3D_782311161966_20260817",
+        "product_twin_id": "PT_WENDELBO_LOBBY_SOFA_WEN_LBY_SOF_COM",
+        "seller_id": "design_public_group_trade",
+        "external_product_id": "gid://shopify/Product/782311161966",
+        "external_variant_id": "gid://shopify/ProductVariant/28677264474189",
+        "sku": "WEN-LBY-SOF-COM",
+        "price": {
+          "amount": "2918.0",
+          "currency": "USD"
+        },
+        "quantity_basis": "one listed item",
+        "tax_disclosure": "unknown_until_checkout",
+        "shipping_disclosure": "unknown_until_checkout_or_quote",
+        "stock_state": "available_for_sale_at_observation",
+        "lead_time": null,
+        "territory": "ES",
+        "checkout_route": "merchant_cart_or_external_checkout_live_refresh_required",
+        "observed_at": "2026-08-17T01:14:34.896Z",
+        "expires_at": null,
+        "freshness_state": "LIVE_REFRESH_REQUIRED"
+      },
+      "procurement_ready": false,
+      "blockers": [
+        "bind the exact visible fabric/colour configuration",
+        "clear reconstruction and commercial render/platform rights",
+        "confirm tax, freight, allocation and delivery to 29660 through checkout or live quote",
+        "verify lead time",
+        "calculate landed and installed cost",
+        "Spanish supplier or Spanish dispatch origin is not proven"
+      ],
+      "policy": "Avatar, product identity, selected configuration, supplier locality, offer freshness, Spain/postcode delivery and landed logistics are independent evidence lanes. No global readiness score is emitted."
+    },
+    {
+      "twin_id": "PT_WENDELBO_ATLI_WEN_333_1_COM",
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_b163aea21fdf6542",
+      "product": {
+        "manufacturer": "Wendelbo",
+        "model": "Atli Lounge Chair",
+        "sku": "WEN-333-1-COM"
+      },
+      "destination": {
+        "project_id": "PROJECT_MARBELLA_VILLA_001",
+        "country": "ES",
+        "region": "Malaga",
+        "postal_code": "29660",
+        "construction_phase": "ffe"
+      },
+      "headline": {
+        "design_state": "DESIGN_CANDIDATE",
+        "presentation_state": "PUBLIC_PRESENTATION_BLOCKED",
+        "Spain_supply_state": "POSTCODE_CATALOG_CANDIDATE",
+        "Spanish_supplier_state": "NOT_PROVEN",
+        "procurement_state": "NOT_PROCUREMENT_READY"
+      },
+      "lanes": {
+        "identity": {
+          "state": "PASS",
+          "detail": "Stable Product Twin and exact merchant product identity are joined.",
+          "evidence": {
+            "twin_id": "PT_WENDELBO_ATLI_WEN_333_1_COM",
+            "merchant_product_gid": "gid://shopify/Product/7516727246925",
+            "sku": "WEN-333-1-COM"
+          }
+        },
+        "configuration_and_finish": {
+          "state": "REVIEW",
+          "detail": "Merchant variant/price group exists, but exact visible fabric and colour are not bound.",
+          "evidence": {
+            "configuration": "Customer's own material upholstery group / Chrome legs",
+            "limit": "_COM identifies an upholstery route, not a selected visible fabric or colour"
+          }
+        },
+        "avatar_and_geometry": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "STRONG_P2_MULTI_VIEW_INPUT; NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST.",
+          "evidence": {
+            "geometry_level": "G2",
+            "photo_input_band": "STRONG_P2_MULTI_VIEW_INPUT",
+            "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW"
+          }
+        },
+        "dimensions_and_fit": {
+          "state": "PASS",
+          "detail": "Manufacturer-scale QA passed for placement and fit.",
+          "evidence": {
+            "physical": {
+              "dimensions_mm": {
+                "width": 790,
+                "depth": 800,
+                "height": 770
+              },
+              "measured_model_axes_mm": [
+                786.9983017444611,
+                768.9534723758698,
+                803.8680851459503
+              ],
+              "maximum_relative_scale_error": 0.004835106432437897,
+              "evidence_state": "manufacturer_dimensions_and_live_model_scale_qa_pass"
+            }
+          }
+        },
+        "technical_evidence": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Furniture envelope supports spatial fit; weight, care, fire, durability and installation evidence are not complete."
+        },
+        "rights_and_provenance": {
+          "state": "REVIEW",
+          "detail": "Source provenance is recorded, but reconstruction/render/platform-display rights remain under review.",
+          "evidence": {
+            "rights": {
+              "state": "review",
+              "render_scope": "unresolved",
+              "derivative_storage": "runtime_inspection_only",
+              "redistribution": false
+            }
+          }
+        },
+        "supplier_and_offer": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "An exact merchant variant has a dated sale/price observation for Spain discovery.",
+          "evidence": {
+            "seller_id": "design_public_group_trade",
+            "seller_name": "Design Public Group Trade",
+            "seller_or_dispatch_country": null,
+            "Spanish_supplier_state": "NOT_PROVEN",
+            "price": {
+              "amount": "3100.0",
+              "currency": "USD"
+            },
+            "available_for_sale_at_observation": true,
+            "observed_at": "2026-08-17T00:52:08.766Z",
+            "freshness_state": "LIVE_REFRESH_REQUIRED"
+          }
+        },
+        "Spain_and_postcode_delivery": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Catalog filtering included 29660, but checkout, allocation and delivery promise are not authoritative.",
+          "evidence": {
+            "destination": {
+              "project_id": "PROJECT_MARBELLA_VILLA_001",
+              "country": "ES",
+              "region": "Malaga",
+              "postal_code": "29660",
+              "construction_phase": "ffe"
+            },
+            "country_catalog_filter_passed": true,
+            "postcode_catalog_filter_passed": true,
+            "exact_postcode_checkout_verified": false
+          }
+        },
+        "logistics_and_landed_cost": {
+          "state": "UNKNOWN",
+          "detail": "Origin, carrier, shipping mode, packaging, freight, tax, lead time, unloading, storage and installation remain unresolved.",
+          "evidence": {
+            "origin_location": null,
+            "shipping_mode": null,
+            "carrier_or_3pl": null,
+            "lead_time_days": null,
+            "delivery_cost": null,
+            "tax": null,
+            "landed_cost": null,
+            "palletization": null,
+            "site_unloading": null,
+            "installation": null
+          }
+        },
+        "procurement_route": {
+          "state": "REVIEW",
+          "detail": "Merchant-cart/external-checkout route exists structurally but still needs exact configuration, live offer refresh and authoritative logistics.",
+          "evidence": {
+            "route_type": "merchant_cart",
+            "state": "needs_address_and_logistics",
+            "cart_created": false,
+            "checkout_total_verified": false,
+            "quote_or_order_id": null
+          }
+        },
+        "attribution_and_affiliate": {
+          "state": "UNKNOWN",
+          "detail": "Affiliate programme, attribution ID, commission and disclosure are not configured for this merchant/product."
+        }
+      },
+      "offer_snapshot": {
+        "offer_id": "OFFER_SHOPIFY_FURNITURE_MODEL3D_b163aea21fdf6542_20260817",
+        "product_twin_id": "PT_WENDELBO_ATLI_WEN_333_1_COM",
+        "seller_id": "design_public_group_trade",
+        "external_product_id": "gid://shopify/Product/7516727246925",
+        "external_variant_id": "gid://shopify/ProductVariant/41899315429453",
+        "sku": "WEN-333-1-COM",
+        "price": {
+          "amount": "3100.0",
+          "currency": "USD"
+        },
+        "quantity_basis": "one listed item",
+        "tax_disclosure": "unknown_until_checkout",
+        "shipping_disclosure": "unknown_until_checkout_or_quote",
+        "stock_state": "available_for_sale_at_observation",
+        "lead_time": null,
+        "territory": "ES",
+        "checkout_route": "merchant_cart_or_external_checkout_live_refresh_required",
+        "observed_at": "2026-08-17T00:52:08.766Z",
+        "expires_at": null,
+        "freshness_state": "LIVE_REFRESH_REQUIRED"
+      },
+      "procurement_ready": false,
+      "blockers": [
+        "bind the exact visible fabric/colour configuration",
+        "clear reconstruction and commercial render/platform rights",
+        "confirm tax, freight, allocation and delivery to 29660 through checkout or live quote",
+        "verify lead time",
+        "calculate landed and installed cost",
+        "Spanish supplier or Spanish dispatch origin is not proven"
+      ],
+      "policy": "Avatar, product identity, selected configuration, supplier locality, offer freshness, Spain/postcode delivery and landed logistics are independent evidence lanes. No global readiness score is emitted."
+    },
+    {
+      "twin_id": "PT_NORR11_FAVE_NOR_FAVE_CHR_CHRME_CAT0",
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_c78c9916e34465e8",
+      "product": {
+        "manufacturer": "NORR11",
+        "model": "Fave Chair",
+        "sku": "NOR-FAVE-CHR-CHRME-CAT0"
+      },
+      "destination": {
+        "project_id": "PROJECT_MARBELLA_VILLA_001",
+        "country": "ES",
+        "region": "Malaga",
+        "postal_code": "29660",
+        "construction_phase": "ffe"
+      },
+      "headline": {
+        "design_state": "DESIGN_CANDIDATE",
+        "presentation_state": "PUBLIC_PRESENTATION_BLOCKED",
+        "Spain_supply_state": "POSTCODE_CATALOG_CANDIDATE",
+        "Spanish_supplier_state": "NOT_PROVEN",
+        "procurement_state": "NOT_PROCUREMENT_READY"
+      },
+      "lanes": {
+        "identity": {
+          "state": "PASS",
+          "detail": "Stable Product Twin and exact merchant product identity are joined.",
+          "evidence": {
+            "twin_id": "PT_NORR11_FAVE_NOR_FAVE_CHR_CHRME_CAT0",
+            "merchant_product_gid": "gid://shopify/Product/7304676474957",
+            "sku": "NOR-FAVE-CHR-CHRME-CAT0"
+          }
+        },
+        "configuration_and_finish": {
+          "state": "REVIEW",
+          "detail": "Merchant variant/price group exists, but exact visible fabric and colour are not bound.",
+          "evidence": {
+            "configuration": "Category 0 upholstery / Chrome Steel",
+            "limit": "Cat 0 identifies an upholstery price group, not a selected visible fabric or colour"
+          }
+        },
+        "avatar_and_geometry": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "USABLE_P2_INPUT_WITH_LIMITS; NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST.",
+          "evidence": {
+            "geometry_level": "G2",
+            "photo_input_band": "USABLE_P2_INPUT_WITH_LIMITS",
+            "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW"
+          }
+        },
+        "dimensions_and_fit": {
+          "state": "PASS",
+          "detail": "Manufacturer-scale QA passed for placement and fit.",
+          "evidence": {
+            "physical": {
+              "dimensions_mm": {
+                "width": 650,
+                "depth": 920,
+                "height": 720,
+                "seat_height": 420
+              },
+              "measured_model_axes_mm": [
+                650.1545310020447,
+                710.6590866421659,
+                916.3353443145752
+              ],
+              "maximum_relative_scale_error": 0.012973490774769579,
+              "evidence_state": "manufacturer_dimensions_and_live_model_scale_qa_pass"
+            }
+          }
+        },
+        "technical_evidence": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Furniture envelope supports spatial fit; weight, care, fire, durability and installation evidence are not complete."
+        },
+        "rights_and_provenance": {
+          "state": "REVIEW",
+          "detail": "Source provenance is recorded, but reconstruction/render/platform-display rights remain under review.",
+          "evidence": {
+            "rights": {
+              "state": "review",
+              "render_scope": "unresolved",
+              "derivative_storage": "runtime_inspection_only",
+              "redistribution": false
+            }
+          }
+        },
+        "supplier_and_offer": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "An exact merchant variant has a dated sale/price observation for Spain discovery.",
+          "evidence": {
+            "seller_id": "design_public_group_trade",
+            "seller_name": "Design Public Group Trade",
+            "seller_or_dispatch_country": null,
+            "Spanish_supplier_state": "NOT_PROVEN",
+            "price": {
+              "amount": "2700.0",
+              "currency": "USD"
+            },
+            "available_for_sale_at_observation": true,
+            "observed_at": "2026-08-17T00:52:08.766Z",
+            "freshness_state": "LIVE_REFRESH_REQUIRED"
+          }
+        },
+        "Spain_and_postcode_delivery": {
+          "state": "PASS_WITH_LIMITS",
+          "detail": "Catalog filtering included 29660, but checkout, allocation and delivery promise are not authoritative.",
+          "evidence": {
+            "destination": {
+              "project_id": "PROJECT_MARBELLA_VILLA_001",
+              "country": "ES",
+              "region": "Malaga",
+              "postal_code": "29660",
+              "construction_phase": "ffe"
+            },
+            "country_catalog_filter_passed": true,
+            "postcode_catalog_filter_passed": true,
+            "exact_postcode_checkout_verified": false
+          }
+        },
+        "logistics_and_landed_cost": {
+          "state": "UNKNOWN",
+          "detail": "Origin, carrier, shipping mode, packaging, freight, tax, lead time, unloading, storage and installation remain unresolved.",
+          "evidence": {
+            "origin_location": null,
+            "shipping_mode": null,
+            "carrier_or_3pl": null,
+            "lead_time_days": null,
+            "delivery_cost": null,
+            "tax": null,
+            "landed_cost": null,
+            "palletization": null,
+            "site_unloading": null,
+            "installation": null
+          }
+        },
+        "procurement_route": {
+          "state": "REVIEW",
+          "detail": "Merchant-cart/external-checkout route exists structurally but still needs exact configuration, live offer refresh and authoritative logistics.",
+          "evidence": {
+            "route_type": "merchant_cart",
+            "state": "needs_address_and_logistics",
+            "cart_created": false,
+            "checkout_total_verified": false,
+            "quote_or_order_id": null
+          }
+        },
+        "attribution_and_affiliate": {
+          "state": "UNKNOWN",
+          "detail": "Affiliate programme, attribution ID, commission and disclosure are not configured for this merchant/product."
+        }
+      },
+      "offer_snapshot": {
+        "offer_id": "OFFER_SHOPIFY_FURNITURE_MODEL3D_c78c9916e34465e8_20260817",
+        "product_twin_id": "PT_NORR11_FAVE_NOR_FAVE_CHR_CHRME_CAT0",
+        "seller_id": "design_public_group_trade",
+        "external_product_id": "gid://shopify/Product/7304676474957",
+        "external_variant_id": "gid://shopify/ProductVariant/41207876845645",
+        "sku": "NOR-FAVE-CHR-CHRME-CAT0",
+        "price": {
+          "amount": "2700.0",
+          "currency": "USD"
+        },
+        "quantity_basis": "one listed item",
+        "tax_disclosure": "unknown_until_checkout",
+        "shipping_disclosure": "unknown_until_checkout_or_quote",
+        "stock_state": "available_for_sale_at_observation",
+        "lead_time": null,
+        "territory": "ES",
+        "checkout_route": "merchant_cart_or_external_checkout_live_refresh_required",
+        "observed_at": "2026-08-17T00:52:08.766Z",
+        "expires_at": null,
+        "freshness_state": "LIVE_REFRESH_REQUIRED"
+      },
+      "procurement_ready": false,
+      "blockers": [
+        "bind the exact visible fabric/colour configuration",
+        "clear reconstruction and commercial render/platform rights",
+        "confirm tax, freight, allocation and delivery to 29660 through checkout or live quote",
+        "verify lead time",
+        "calculate landed and installed cost",
+        "Spanish supplier or Spanish dispatch origin is not proven"
+      ],
+      "policy": "Avatar, product identity, selected configuration, supplier locality, offer freshness, Spain/postcode delivery and landed logistics are independent evidence lanes. No global readiness score is emitted."
+    }
+  ]
+}

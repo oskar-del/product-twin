@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-08-16",
+  "request_id": "ARPER_PLY_3853_PRODUCT_TWIN_PERMISSION_V0_1",
+  "target_id": "ARPER_PLY_3853_G3_V0_1",
+  "state": "READY_TO_SEND_NOT_SENT",
+  "recipient": "press@arper.com",
+  "recipient_basis": "Arper Terms and Conditions of Use permission-request route",
+  "terms_url": "https://www.arper.com/es_ES/terminos-y-condiciones-de-uso",
+  "request_document": "docs/requests/ARPER-PLY-3853-PERMISSION-REQUEST.md",
+  "product": {
+    "manufacturer": "Arper",
+    "model": "Ply Table #3853",
+    "article_no": "3853",
+    "source_page": "https://www.arper.com/es_ES/3853-20article-203853.html",
+    "source_asset_sha256": "056266beb2cbea1af1cc91bcab74dccb46620ebc55464276d1d22f90f8977e9a"
+  },
+  "requested_permissions": [
+    "commercial architectural project rendering",
+    "transient 3DS-to-GLB conversion",
+    "rendering derivatives including normalization, material mapping, optimization and LOD",
+    "display in a Product Twin inspection/procurement interface"
+  ],
+  "proposed_controls": {
+    "manufacturer_binary": "external_or_ephemeral",
+    "converted_binary": "external_or_ephemeral_until_explicitly_approved",
+    "redistribution": "none",
+    "sublicensing": "none",
+    "ai_training": "none",
+    "persistent_platform_data": ["official reference", "product identity", "source hash", "QA", "placement metadata", "required attribution"]
+  },
+  "missing_before_send": [
+    "project owner legal name",
+    "contact name and role",
+    "reply email",
+    "project/platform description or URL if applicable"
+  ],
+  "promotion_rule": "No G3 promotion until a written Arper reply explicitly covers commercial rendering and conversion/derivative scope."
+}

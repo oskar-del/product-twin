@@ -1,0 +1,217 @@
+{
+  "version": "0.2",
+  "generated_at": "2026-08-17",
+  "room_id": "ROOM_LAB_LIVING_V0",
+  "location_context": {"country": "ES", "postal_code": "29660", "currency": "EUR"},
+  "strategy": "Use the existing Product Twin source graph. Commerce, canonical identity, geometry, appearance and rights remain independent evidence lanes; no supplier email outreach is part of this checkpoint.",
+  "summary": {
+    "build_now_product_twins": 8,
+    "build_now_promoted_g2_assets": 8,
+    "supply_recovery_promoted_g2_candidates": 1,
+    "shopify_native_model3d_candidates": 8,
+    "shopify_product_media_galleries_audited": 8,
+    "shopify_product_media_unique_images": 180,
+    "photo_reconstruction_strong_p2_inputs": 5,
+    "photo_reconstruction_usable_p2_inputs_with_limits": 2,
+    "photo_reconstruction_p1_only_inputs": 1,
+    "photo_reconstruction_jobs_publicly_queued": 0,
+    "full_product_twin_readiness_cards": 8,
+    "Spain_country_catalog_candidates": 8,
+    "postcode_catalog_candidates": 2,
+    "exact_postcode_checkout_confirmed": 0,
+    "Spanish_supplier_or_dispatch_origin_proven": 0,
+    "known_lead_time": 0,
+    "known_landed_cost": 0,
+    "procurement_ready_twins": 0,
+    "design_supply_coverage_placed_lines": 8,
+    "design_supply_coverage_placed_units": 8,
+    "Spain_exact_retail_routes_live_destination_checked": 8,
+    "Spain_destination_delivery_confirmed": 7,
+    "Spain_destination_unavailable_confirmed": 1,
+    "Spain_up_to_10_day_delivery_window_confirmed": 7,
+    "current_Spain_official_product_page_prices": 8,
+    "current_design_merchandise_subtotal_eur": 1126.96,
+    "current_available_exact_products_subtotal_eur": 927.96,
+    "current_design_confirmed_deliverable_percentage": 87.5,
+    "conditional_deliverable_percentage_after_valnas_approval": 100,
+    "conditional_merchandise_subtotal_after_valnas_approval_eur": 1176.96,
+    "conditional_scenario_counted_as_current_coverage": false,
+    "candidate_substitution_roles": 3,
+    "confirmed_client_approved_substitution_roles": 0,
+    "first_market_benchmarks": 4,
+    "shopify_native_scale_qa_passes": 6,
+    "shopify_native_textured_candidates": 4,
+    "shopify_native_roles_covered": 2,
+    "shopify_native_candidates_promoted_g3": 0,
+    "exact_muuto_upgrade_targets": 4,
+    "arper_exact_geometry_candidates": 1,
+    "living_room_roles_covered_for_planning": 8,
+    "living_room_roles_covered_with_exact_visual_g3": 0
+  },
+  "shopify_native_geometry_gap_census": {
+    "merchant_id": "design_public_group_trade",
+    "coffee_tables_checked": 604,
+    "coffee_table_model3d_hits": 0,
+    "side_tables_checked": 385,
+    "side_table_model3d_hits": 0,
+    "floor_lamps_checked": 121,
+    "floor_lamp_model3d_hits": 0,
+    "rugs_checked": 212,
+    "rug_model3d_hits": 0,
+    "state": "CLOSED_NO_NATIVE_MODEL3D_IN_RELEVANT_MERCHANT_CATALOGUE_SLICE"
+  },
+  "shopify_product_media_census": {
+    "products_audited": 8,
+    "gallery_and_variant_image_records": 188,
+    "unique_binary_images": 180,
+    "image_dimensions": "1080x1080",
+    "images_1600px_or_larger": 0,
+    "variant_bound_images": 8,
+    "native_glb_usdz_products": 8,
+    "products_with_embedded_glb_textures": 4,
+    "video_media": 0,
+    "coverage": [
+      {"product":"NORR11 Man Day Bed","unique_images":24,"visual_evidence":"isolated multi-colour views, oblique/side views and room context","reconstruction_kit":"GOOD_WITH_NATIVE_MODEL"},
+      {"product":"NORR11 Man 2-Seater Sofa","unique_images":28,"visual_evidence":"front, oblique, rear, frame/cushion details, multiple finishes and room context","reconstruction_kit":"STRONG_WITH_NATIVE_MODEL"},
+      {"product":"NORR11 Man 3-Seater Sofa","unique_images":17,"visual_evidence":"front, oblique, rear, frame detail, multiple finishes and room context","reconstruction_kit":"STRONG_WITH_NATIVE_MODEL"},
+      {"product":"NORR11 Man Lounge Chair","unique_images":30,"visual_evidence":"front, side, rear, frame/cushion details, multiple finishes and room context","reconstruction_kit":"STRONG_WITH_NATIVE_MODEL"},
+      {"product":"NORR11 Mammoth Sofa","unique_images":44,"visual_evidence":"isolated variants, oblique/rear views, upholstery/wood close-ups and room context","reconstruction_kit":"STRONG_WITH_NATIVE_MODEL"},
+      {"product":"Wendelbo Lobby Sofa","unique_images":20,"visual_evidence":"front, oblique, rear/top form, fabric close-ups and room context","reconstruction_kit":"STRONG_WITH_NATIVE_MODEL"},
+      {"product":"Wendelbo Atli Lounge Chair","unique_images":11,"visual_evidence":"front, rear, side/low view, frame/upholstery close-ups and room context","reconstruction_kit":"GOOD_WITH_NATIVE_MODEL"},
+      {"product":"NORR11 Fave Chair","unique_images":6,"visual_evidence":"front/oblique variants and room context; sparse close/rear coverage","reconstruction_kit":"THIN_IMAGE_SET_NATIVE_MODEL_REQUIRED"}
+    ],
+    "rights_note": "Product photography can support reconstruction and QA, but public texture extraction, display and redistribution remain separate rights gates."
+  },
+  "build_now": [
+    {"role":"sofa","twin_id":"PT_IKEA_KIVIK_49440597","avatar_id":"AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY","state":"G2_PROMOTED","appearance":"colour_and_roughness_cues_no_exact_texture"},
+    {"role":"armchair","twin_id":"PT_IKEA_POANG_39240787","avatar_id":"AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY","state":"G2_PROMOTED","appearance":"colour_and_roughness_cues_no_exact_texture"},
+    {"role":"coffee_table","twin_id":"PT_IKEA_LISTERBY_30513904","avatar_id":"AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY","state":"G2_PROMOTED","appearance":"colour_and_roughness_cues_no_exact_wood_texture"},
+    {"role":"side_table","twin_id":"PT_IKEA_GLADOM_70578451","avatar_id":"AVATAR_IKEA_GLADOM_70578451_G2_TRAY_TABLE_PROXY","state":"G2_PROMOTED","appearance":"variant_colour_cue_no_exact_finish_validation"},
+    {"role":"floor_lamp","twin_id":"PT_IKEA_LAUTERS_30405042","avatar_id":"AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY","state":"G2_PROMOTED","appearance":"colour_and_roughness_cues_no_exact_wood_or_textile_texture"},
+    {"role":"rug","twin_id":"PT_IKEA_LOHALS_30511288","avatar_id":"AVATAR_IKEA_LOHALS_30511288_G2_RUG_PROXY","state":"G2_PROMOTED","appearance":"jute_colour_cues_no_exact_fibre_texture"},
+    {"role":"media_unit","twin_id":"PT_IKEA_BESTA_89330691","avatar_id":"AVATAR_IKEA_BESTA_89330691_G2_MEDIA_UNIT_PROXY","state":"G2_PROMOTED","appearance":"variant_colour_cues_no_exact_surface_texture"},
+    {"role":"bookcase","twin_id":"PT_IKEA_BILLY_00263850","avatar_id":"AVATAR_IKEA_BILLY_00263850_G2_BOOKCASE_PROXY","state":"G2_PROMOTED","appearance":"variant_colour_cues_no_exact_surface_texture"}
+  ],
+  "live_supply_recovery": {
+    "blocked_placement_id": "LR_COFFEE_TABLE_01",
+    "selected_product_twin": "PT_IKEA_LISTERBY_30513904",
+    "selected_product_state": "DESTINATION_UNAVAILABLE_CONFIRMED_29660",
+    "candidate_twin": "PT_IKEA_VALNAS_20628038",
+    "candidate_avatar_id": "AVATAR_IKEA_VALNAS_20628038_G2_COFFEE_TABLE_PROXY",
+    "candidate_state": "G2_PROMOTED_VERIFIED_SCALE_PLANNING_PROXY_AND_DESTINATION_COMMERCE",
+    "candidate_offer": {"price_eur":249,"home_delivery_29660":"AVAILABLE","IKEA_Malaga_store":"IN_STOCK"},
+    "design_delta": {"width_mm":-220,"depth_mm":120,"height_mm":130,"price_delta_eur":50},
+    "same_center_transform_effect": {"sofa_side_clearance_reduction_mm":60,"opposite_side_clearance_reduction_mm":60},
+    "conditional_coverage_scenario": {
+      "state": "CONDITIONAL_NOT_APPROVED",
+      "current_confirmed_deliverable_percentage": 87.5,
+      "if_approved_confirmed_deliverable_percentage": 100,
+      "coverage_lift_percentage_points": 12.5,
+      "current_merchandise_subtotal_eur": 1126.96,
+      "if_approved_merchandise_subtotal_eur": 1176.96,
+      "price_delta_eur": 50,
+      "counted_as_current_coverage": false,
+      "remaining_gates": [
+        "dimension and circulation fit review",
+        "technical compatibility limits review",
+        "colour, finish and material review",
+        "client design approval"
+      ]
+    },
+    "decision": "CLIENT_APPROVAL_AND_PLACEMENT_FIT_REQUIRED_BEFORE_SWAP"
+  },
+  "shopify_native_geometry_lane": [
+    {
+      "role": "lounge_chair",
+      "twin_id": "PT_WENDELBO_ATLI_WEN_333_1_COM",
+      "avatar_id": "SHOPIFY_FURNITURE_MODEL3D_b163aea21fdf6542",
+      "state": "G2_CANDIDATE_SCALE_PASS_RUNTIME_ONLY",
+      "use_now": "shape and scale study",
+      "blocked_for_room_render": ["visible upholstery not selected", "GLB has generic grey materials and no textures", "platform-display rights unresolved"]
+    },
+    {
+      "role": "lounge_chair",
+      "twin_id": "PT_NORR11_FAVE_NOR_FAVE_CHR_CHRME_CAT0",
+      "avatar_id": "SHOPIFY_FURNITURE_MODEL3D_c78c9916e34465e8",
+      "state": "G2_CANDIDATE_SCALE_PASS_RUNTIME_ONLY",
+      "use_now": "shape and scale study",
+      "blocked_for_room_render": ["visible upholstery not selected", "GLB has generic grey/black materials and no textures", "platform-display rights unresolved"]
+    },
+    {
+      "role": "sofa",
+      "twin_id": "PT_NORR11_MAN_2_SEATER_SOFA_NOR_MAN_2_SEAT_SOFA_CAT2",
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_10584852108",
+      "state": "G2_CANDIDATE_SCALE_PASS_TEXTURED_ES_COUNTRY_JOIN",
+      "use_now": "highest-ranked runtime sofa shape/material study",
+      "blocked_for_room_render": ["Cat 2 does not select a visible fabric and colour", "product-level GLB is not bound to the selected variant", "platform-display rights unresolved", "exact postcode checkout not refreshed"]
+    },
+    {
+      "role": "sofa",
+      "twin_id": "PT_NORR11_MAN_3_SEATER_SOFA_NOR_MAN_3_SEAT_SOFA_CAT3",
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_10584852492",
+      "state": "G2_CANDIDATE_SCALE_PASS_TEXTURED_ES_COUNTRY_JOIN",
+      "use_now": "runtime three-seat sofa shape/material study",
+      "blocked_for_room_render": ["Cat 3 does not select a visible fabric and colour", "product-level GLB is not bound to the selected variant", "platform-display rights unresolved", "exact postcode checkout not refreshed"]
+    },
+    {
+      "role": "lounge_chair",
+      "twin_id": "PT_NORR11_MAN_LOUNGE_CHAIR_NOR_MAN_LNG_CAT1",
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_10584851276",
+      "state": "G2_CANDIDATE_SCALE_PASS_TEXTURED_ES_COUNTRY_JOIN",
+      "use_now": "runtime lounge-chair shape/material study",
+      "blocked_for_room_render": ["Cat 1 does not select a visible fabric and colour", "product-level GLB is not bound to the selected variant", "platform-display rights unresolved", "exact postcode checkout not refreshed"]
+    },
+    {
+      "role": "sofa",
+      "twin_id": "PT_NORR11_MAMMOTH_SOFA_NOR_MAMMOTH_SOFA_CAT1_OAK",
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_35853729804",
+      "state": "G2_CANDIDATE_SCALE_PASS_UNTEXTURED_ES_COUNTRY_JOIN",
+      "use_now": "shape and scale study",
+      "blocked_for_room_render": ["GLB has no textures", "Cat 1 does not select a visible fabric and colour", "platform-display rights unresolved", "exact postcode checkout not refreshed"]
+    },
+    {
+      "role": "daybed",
+      "twin_id": "PT_NORR11_MAN_DAY_BED_NOR_MAN_DAYBED_CAT1",
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_10584850764",
+      "state": "G2_CANDIDATE_TEXTURED_SCALE_REVIEW_ES_COUNTRY_JOIN",
+      "use_now": "runtime appearance study only",
+      "blocked_for_room_render": ["unambiguous manufacturer overall-height target missing", "Cat 1 does not select a visible fabric and colour", "platform-display rights unresolved", "exact postcode checkout not refreshed"]
+    },
+    {
+      "role": "sofa",
+      "twin_id": "PT_WENDELBO_LOBBY_SOFA_WEN_LBY_SOF_COM",
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_782311161966",
+      "state": "G2_CANDIDATE_UNTEXTURED_SCALE_REVIEW_ES_COUNTRY_JOIN",
+      "use_now": "shape study only",
+      "blocked_for_room_render": ["authoritative dimension set not captured", "GLB has no textures", "_COM does not select a visible fabric and colour", "platform-display rights unresolved", "exact postcode checkout not refreshed"]
+    }
+  ],
+  "upgrade_targets": [
+    {"role":"sofa","twin_id":"PT_MUUTO_OUTLINE_2S_OU2SRA10101","current":"G0 exact identity and commerce","target":"G3 exact visual","blocker":"authorized product-bound geometry/material/right gates"},
+    {"role":"lounge_chair","twin_id":"PT_MUUTO_FIBER_LOUNGE_FILOUWON04041","current":"G0 exact identity with commerce conflict","target":"G3 exact visual","blocker":"geometry, colour/material, rights and Spain identity conflict"},
+    {"role":"coffee_table","twin_id":"PT_MUUTO_AROUND_SMALL_AROTABSM01","current":"G0 exact identity and commerce","target":"G3 exact visual","blocker":"authorized product-bound geometry/material/right gates"},
+    {"role":"floor_lamp","twin_id":"PT_MUUTO_LEAF_FLOOR_LEAFLR01","current":"G0 exact identity and commerce","target":"G3 exact visual","blocker":"authorized geometry/material/right gates and EU electrical refresh"},
+    {"role":"side_table","avatar_id":"ARPER_PLY_3853_G3_V0_1","current":"exact manufacturer geometry and scale QA pass","target":"G3 promoted","blocker":"commercial rendering/derivative rights"}
+  ],
+  "source_decisions": {
+    "shopify": "Keep as the broad commerce and discovery layer. A focused merchant census found six additional native MODEL_3D products, including textured sofas. Country-level Spain joins are verified without disclosing the project postcode during bulk discovery. The same merchant was exhaustively checked for 604 coffee tables, 385 side tables, 121 floor lamps and 212 rugs with zero native-3D hits, so this source's native geometry lane is closed for those roles.",
+    "woocommerce": "Adapter remains live, but current non-demo inventory is industrial lighting and is excluded from the residential room until a real residential merchant is discovered.",
+    "mirakl_multichannel": "The Leroy Merlin/ADEO Mirakl seller API and BeezUP, Koongo, Poleepo and Oceges routes are documented seller-side systems. They are not buyer access to the complete marketplace, but they create a strong supplier-onboarding and outbound-syndication lane: Product Twin can enrich authorized supplier records with identity, media evidence, scored avatars and AI-readable attributes, publish them across Mirakl channels, then ingest the supplier's dated offers, stock, orders and shipment events. BigBuy remains independently unverified and no credentialed seller test has run.",
+    "manufacturer_geometry": "Continue automated public/gated source resolution already represented in the repository; exact assets remain rights- and material-gated.",
+    "avatar_factory": "Use the eight promoted G2 Product Twins to design and test the room now while deeper avatars are promoted independently. The new evidence factory scores identity, dimensions, view coverage, image quality, material evidence, geometry prior and rights separately; five audited Shopify seating kits are strong P2 inputs, two are usable with limits and one is P1-only. Public generation remains gated by reconstruction/render rights and post-generation QA.",
+    "product_twin_readiness": "The avatar score is now joined back to the full Product Twin graph: identity, selected configuration, geometry, dimensions/fit, technical evidence, rights, supplier/offer, Spain/postcode delivery, logistics/landed cost, procurement route and attribution. Eight exact merchant offers have dated prices and availability; all eight are Spain catalogue candidates, two passed postcode-level catalogue filtering, but none has authoritative checkout delivery, Spanish supplier/dispatch-origin proof, lead time, landed cost or procurement-ready state.",
+    "design_supply_coverage": "The eight placed living-room Twins now produce client-specific coverage by line item and quantity, with geography and delivery time kept separate. A live IKEA Spain check for postcode 29660 confirms seven of eight exact room products as destination-deliverable with a four-to-seven-day combined-cart window; LISTERBY is confirmed unavailable. Supplier or dispatch origin remains unresolved for all eight. VALNÄS now has an exact identity, live destination offer and verified-scale G2 planning avatar, but it does not count as confirmed coverage until the changed footprint/height and client approval gates pass. The same room is benchmarked independently against Spain, Sweden, the UK and the USA.",
+    "local_anchor_network": "Each benchmark market must connect at least one home/furniture, building-materials, trade/MEP and manufacturer-BIM/identity route. Candidate retailers are research targets, not assumed API access. Spain is currently partial; supplier email outreach remains parked.",
+    "supplier_outreach": "PARKED"
+  },
+  "next_actions": [
+    "keep the LISTERBY G2 avatar in the selected scene while it is visibly flagged destination-unavailable; fit-check the new VALNÄS G2 planning avatar before asking for a design swap",
+    "promote only candidates that pass product identity, millimetre scale, selected-variant material, rights and destination-commerce gates",
+    "keep the eight build-now Twins active for layout, quantities, circulation and budget experiments",
+    "replace one G2 room object at a time when a higher-fidelity Twin actually clears its gates",
+    "run every new product media kit through avatar:reconstruction:score; queue only rights-cleared strong/usable P2 kits, then publish only after source-view, surface-coverage and physical-scale QA",
+    "run every avatar candidate through twin:readiness:evaluate so design selection never loses supplier, Spain delivery, logistics, landed-cost, procurement and attribution gates",
+    "run design:supply:coverage after each offer refresh so the client sees local supply, confirmed delivery bands, unresolved remainder and gated alternatives on the actual placed quantities",
+    "build the local anchor network in this order: Spain, Sweden through Munin, United Kingdom, United States"
+  ]
+}

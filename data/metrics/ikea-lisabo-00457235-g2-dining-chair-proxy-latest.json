@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-08-16T23:25:33.890Z",
+  "avatar_id": "AVATAR_IKEA_LISABO_00457235_G2_DINING_CHAIR_PROXY",
+  "status": "G2_REALISTIC_PROXY_SCALE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-lisabo-00457235-g2-dining-chair-proxy.glb",
+  "asset_bytes": 61436,
+  "identity": {
+    "merchant": "IKEA Spain",
+    "product_family": "LISABO",
+    "article_no": "004.572.35",
+    "official_url": "https://www.ikea.com/es/es/p/lisabo-silla-fresno-00457235/"
+  },
+  "expected_mm": {
+    "width": 460,
+    "depth": 510,
+    "height": 800
+  },
+  "measured_xyz_mm": {
+    "width": 460,
+    "height": 800,
+    "depth": 515
+  },
+  "relative_error_max": 0.00980392156862745,
+  "material_cues": [
+    "natural ash veneer",
+    "solid birch frame"
+  ],
+  "placement": {
+    "origin": "floor_center",
+    "table_anchor": "seat_center_at_table_edge"
+  },
+  "disclosure": "Product Twin-owned realistic planning geometry at verified scale. Product identity and dimensions are exact; proprietary manufacturer geometry and texture artwork are not claimed.",
+  "commerce": {
+    "state": "OFFICIAL_PRODUCT_PAGE_VERIFIED_LIVE_AVAILABILITY_REFRESH_REQUIRED",
+    "observed_at": "2026-08-17"
+  }
+}

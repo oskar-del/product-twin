@@ -1,0 +1,22 @@
+{
+  "version": "0.1",
+  "maximum_relative_error": 0.02,
+  "targets": [
+    {
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_b163aea21fdf6542",
+      "manufacturer": "Wendelbo",
+      "product": "Atli Lounge Chair",
+      "expected_dimensions_mm": [790,800,770],
+      "dimension_source": "https://wendelbo.com/products/atli-lounge-chair",
+      "source_note": "Manufacturer product family and merchant specification agree on approximately W790 x D800 x H770 mm."
+    },
+    {
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_c78c9916e34465e8",
+      "manufacturer": "NORR11",
+      "product": "Fave Chair",
+      "expected_dimensions_mm": [650,920,720],
+      "dimension_source": "https://norr11.com/products/fave-chair",
+      "source_note": "NORR11 publishes W650 x D920 x H720 mm and seat height 420 mm."
+    }
+  ]
+}

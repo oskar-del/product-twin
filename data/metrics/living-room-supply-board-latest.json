@@ -1,0 +1,125 @@
+{
+  "generated_at": "2026-08-17T13:21:45.009Z",
+  "status": "LIVING_ROOM_SUPPLY_BOARD_PASS",
+  "checks_total": 18,
+  "checks_passed": 18,
+  "blocked_check_ids": [],
+  "summary": {
+    "build_now_product_twins": 8,
+    "build_now_promoted_g2_assets": 8,
+    "supply_recovery_promoted_g2_candidates": 1,
+    "shopify_native_model3d_candidates": 8,
+    "shopify_product_media_galleries_audited": 8,
+    "shopify_product_media_unique_images": 180,
+    "photo_reconstruction_strong_p2_inputs": 5,
+    "photo_reconstruction_usable_p2_inputs_with_limits": 2,
+    "photo_reconstruction_p1_only_inputs": 1,
+    "photo_reconstruction_jobs_publicly_queued": 0,
+    "full_product_twin_readiness_cards": 8,
+    "Spain_country_catalog_candidates": 8,
+    "postcode_catalog_candidates": 2,
+    "exact_postcode_checkout_confirmed": 0,
+    "Spanish_supplier_or_dispatch_origin_proven": 0,
+    "known_lead_time": 0,
+    "known_landed_cost": 0,
+    "procurement_ready_twins": 0,
+    "design_supply_coverage_placed_lines": 8,
+    "design_supply_coverage_placed_units": 8,
+    "Spain_exact_retail_routes_live_destination_checked": 8,
+    "Spain_destination_delivery_confirmed": 7,
+    "Spain_destination_unavailable_confirmed": 1,
+    "Spain_up_to_10_day_delivery_window_confirmed": 7,
+    "current_Spain_official_product_page_prices": 8,
+    "current_design_merchandise_subtotal_eur": 1126.96,
+    "current_available_exact_products_subtotal_eur": 927.96,
+    "current_design_confirmed_deliverable_percentage": 87.5,
+    "conditional_deliverable_percentage_after_valnas_approval": 100,
+    "conditional_merchandise_subtotal_after_valnas_approval_eur": 1176.96,
+    "conditional_scenario_counted_as_current_coverage": false,
+    "candidate_substitution_roles": 3,
+    "confirmed_client_approved_substitution_roles": 0,
+    "first_market_benchmarks": 4,
+    "shopify_native_scale_qa_passes": 6,
+    "shopify_native_textured_candidates": 4,
+    "shopify_native_roles_covered": 2,
+    "shopify_native_candidates_promoted_g3": 0,
+    "exact_muuto_upgrade_targets": 4,
+    "arper_exact_geometry_candidates": 1,
+    "living_room_roles_covered_for_planning": 8,
+    "living_room_roles_covered_with_exact_visual_g3": 0
+  },
+  "checks": [
+    {
+      "id": "build_now_count",
+      "pass": true
+    },
+    {
+      "id": "build_now_promoted_avatar_count",
+      "pass": true
+    },
+    {
+      "id": "build_now_twin_records",
+      "pass": true
+    },
+    {
+      "id": "shopify_candidate_count",
+      "pass": true
+    },
+    {
+      "id": "shopify_candidate_index_entries",
+      "pass": true
+    },
+    {
+      "id": "shopify_candidate_twin_records",
+      "pass": true
+    },
+    {
+      "id": "shopify_scale_pass_summary",
+      "pass": true
+    },
+    {
+      "id": "shopify_texture_summary",
+      "pass": true
+    },
+    {
+      "id": "no_premature_g3",
+      "pass": true
+    },
+    {
+      "id": "supplier_outreach_parked",
+      "pass": true
+    },
+    {
+      "id": "coffee_table_gap_closed",
+      "pass": true
+    },
+    {
+      "id": "side_table_gap_closed",
+      "pass": true
+    },
+    {
+      "id": "floor_lamp_gap_closed",
+      "pass": true
+    },
+    {
+      "id": "rug_gap_closed",
+      "pass": true
+    },
+    {
+      "id": "current_supply_coverage_preserved",
+      "pass": true
+    },
+    {
+      "id": "valnas_conditional_supply_rescue",
+      "pass": true
+    },
+    {
+      "id": "conditional_scenario_not_current",
+      "pass": true
+    },
+    {
+      "id": "valnas_conditional_budget_delta",
+      "pass": true
+    }
+  ]
+}

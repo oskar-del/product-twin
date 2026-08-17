@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-08-16T23:25:33.895Z",
+  "avatar_id": "AVATAR_IKEA_BESTA_89330691_G2_MEDIA_UNIT_PROXY",
+  "status": "G2_REALISTIC_PROXY_SCALE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-besta-89330691-g2-media-unit-proxy.glb",
+  "asset_bytes": 24352,
+  "identity": {
+    "merchant": "IKEA Spain",
+    "product_family": "BESTÅ",
+    "article_no": "893.306.91",
+    "official_url": "https://www.ikea.com/es/es/p/besta-mueble-tv-blanco-lappviken-blanco-s89330691/"
+  },
+  "expected_mm": {
+    "width": 1800,
+    "depth": 420,
+    "height": 380
+  },
+  "measured_xyz_mm": {
+    "width": 1800,
+    "height": 380,
+    "depth": 420.00000000000006
+  },
+  "relative_error_max": 1.3534147347811433e-16,
+  "material_cues": [
+    "warm white laminate",
+    "shadowed door reveals"
+  ],
+  "placement": {
+    "origin": "floor_center",
+    "back_to_wall_anchor": true,
+    "rear_service_zone_mm": 80
+  },
+  "disclosure": "Product Twin-owned realistic planning geometry at verified scale. Product identity and dimensions are exact; proprietary manufacturer geometry and texture artwork are not claimed.",
+  "commerce": {
+    "state": "OFFICIAL_PRODUCT_PAGE_VERIFIED_LIVE_AVAILABILITY_REFRESH_REQUIRED",
+    "observed_at": "2026-08-17"
+  }
+}

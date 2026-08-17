@@ -1,0 +1,46 @@
+{
+  "version": "0.1",
+  "destination": {"country":"ES","postal_code":"29660","currency":"EUR"},
+  "storefront_api_version": "2026-07",
+  "search_limit_per_query": 50,
+  "maximum_storefront_probes": 500,
+  "probe_concurrency": 8,
+  "probe_delay_ms": 120,
+  "categories": [
+    {
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "target_count": 1,
+      "queries": ["modern residential sofa 3D AR", "contemporary sofa view in room", "Design Public sofa", "Wendelbo sofa", "NORR11 sofa"]
+    },
+    {
+      "category_id": "FFE.SEATING.LOUNGE",
+      "room_role": "lounge_chair",
+      "target_count": 2,
+      "queries": ["modern lounge chair 3D AR", "residential accent chair view in room", "Design Public lounge chair", "Wendelbo lounge chair", "NORR11 lounge chair"]
+    },
+    {
+      "category_id": "FFE.TABLE.COFFEE",
+      "room_role": "coffee_table",
+      "target_count": 1,
+      "queries": ["modern coffee table 3D AR", "oak coffee table view in room", "Design Public coffee table", "Wendelbo coffee table", "NORR11 coffee table"]
+    },
+    {
+      "category_id": "FFE.TABLE.SIDE",
+      "room_role": "side_table",
+      "target_count": 1,
+      "queries": ["modern side table 3D AR", "oak side table view in room", "Design Public side table", "Wendelbo side table", "NORR11 side table"]
+    },
+    {
+      "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
+      "room_role": "floor_lamp",
+      "target_count": 1,
+      "queries": ["modern floor lamp 3D AR", "floor lamp view in room", "Design Public floor lamp", "Ferm Living floor lamp"]
+    }
+  ],
+  "selection_policy": {
+    "required": ["merchant storefront resolves", "native Shopify MODEL_3D media exists", "available merchant variant exists", "stable product, variant and model identifiers exist"],
+    "preferred": ["single-variant product", "SKU or barcode present", "vendor present", "EUR price present", "Spain-deliverable catalog result"],
+    "disclosures": ["product-level Model3d is not assumed to match every color or material variant", "scale remains unverified until the live asset is inspected", "render, derivative and redistribution rights remain review gates", "price and availability are dated observations and must refresh live"]
+  }
+}

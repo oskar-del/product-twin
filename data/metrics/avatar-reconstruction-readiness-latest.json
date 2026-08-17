@@ -1,0 +1,487 @@
+{
+  "summary": {
+    "generated_at": "2026-08-17T10:35:49.851Z",
+    "contract_id": "AVATAR_RECONSTRUCTION_READINESS_V0_1",
+    "kits_evaluated": 8,
+    "strong_p2_inputs": 5,
+    "usable_p2_inputs_with_limits": 2,
+    "p1_visual_reference_only": 1,
+    "insufficient_inputs": 0,
+    "ready_for_g2_generation_preflight": 0,
+    "blocked_by_reconstruction_rights_review": 8,
+    "public_presentation_allowed": 0,
+    "scoring_policy": "Separate axis scores only; no global confidence score. Input readiness never substitutes for post-generation fidelity QA."
+  },
+  "kits": [
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584850764",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/10584850764",
+        "product_title": "Man Day Bed",
+        "vendor": "NORR11",
+        "handle": "humlevik-krojgaard-man-day-bed-sofabeds-norr11"
+      },
+      "photo_input_band": "USABLE_P2_INPUT_WITH_LIMITS",
+      "route": "NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST",
+      "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW",
+      "scorecard": {
+        "identity": 100,
+        "dimensions": 55,
+        "view_coverage": 75,
+        "image_quality": 90,
+        "material_evidence": 80,
+        "geometry_prior": 75,
+        "rights": 25
+      },
+      "observed_views": [
+        "front",
+        "left",
+        "right",
+        "three_quarter",
+        "detail"
+      ],
+      "evidence": {
+        "unique_images": 24,
+        "reconstruction_resolution_images": 25,
+        "images_1600px_or_larger": 0,
+        "native_model_present": true,
+        "manufacturer_scale_qa_pass": false,
+        "embedded_texture_count": 3,
+        "embedded_normal_map_present": true,
+        "dimension_evidence_state": "partial_authoritative",
+        "variant_visual_binding_state": "present_unresolved",
+        "rights": {
+          "reconstruction_allowed": "review",
+          "render_allowed": "review",
+          "redistribution_allowed": "no"
+        }
+      },
+      "presentation": {
+        "current_state": "NO_NEW_PHOTO_RECONSTRUCTION_OUTPUT_YET",
+        "maximum_claim_before_generation_qa": "G1",
+        "maximum_claim_after_v0_qa": "G2",
+        "public_presentation_allowed": false,
+        "disclosure": "Input readiness is not output fidelity. Public presentation requires a generated asset, source-view rerender QA, physical-scale QA and cleared render rights."
+      },
+      "blockers": [
+        "reconstruction rights are not cleared",
+        "public render rights are not cleared",
+        "complete authoritative width/depth/height missing",
+        "exact visible material/colour is not bound to the selected variant"
+      ],
+      "notes": [
+        "overall height remains ambiguous because the bolster is dimensioned separately"
+      ]
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852108",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/10584852108",
+        "product_title": "Man 2-Seater Sofa",
+        "vendor": "NORR11",
+        "handle": "humlevik-krojgaard-man-sofa-2-seater-sofas-norr11"
+      },
+      "photo_input_band": "STRONG_P2_MULTI_VIEW_INPUT",
+      "route": "NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST",
+      "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW",
+      "scorecard": {
+        "identity": 100,
+        "dimensions": 100,
+        "view_coverage": 80,
+        "image_quality": 90,
+        "material_evidence": 80,
+        "geometry_prior": 100,
+        "rights": 25
+      },
+      "observed_views": [
+        "front",
+        "rear",
+        "right",
+        "three_quarter",
+        "detail"
+      ],
+      "evidence": {
+        "unique_images": 28,
+        "reconstruction_resolution_images": 29,
+        "images_1600px_or_larger": 0,
+        "native_model_present": true,
+        "manufacturer_scale_qa_pass": true,
+        "embedded_texture_count": 3,
+        "embedded_normal_map_present": true,
+        "dimension_evidence_state": "manufacturer_verified",
+        "variant_visual_binding_state": "present_unresolved",
+        "rights": {
+          "reconstruction_allowed": "review",
+          "render_allowed": "review",
+          "redistribution_allowed": "no"
+        }
+      },
+      "presentation": {
+        "current_state": "NO_NEW_PHOTO_RECONSTRUCTION_OUTPUT_YET",
+        "maximum_claim_before_generation_qa": "G1",
+        "maximum_claim_after_v0_qa": "G2",
+        "public_presentation_allowed": false,
+        "disclosure": "Input readiness is not output fidelity. Public presentation requires a generated asset, source-view rerender QA, physical-scale QA and cleared render rights."
+      },
+      "blockers": [
+        "reconstruction rights are not cleared",
+        "public render rights are not cleared",
+        "exact visible material/colour is not bound to the selected variant"
+      ],
+      "notes": [
+        "strongest first photo-reconstruction hero kit"
+      ]
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852492",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/10584852492",
+        "product_title": "Man 3-Seater Sofa",
+        "vendor": "NORR11",
+        "handle": "humlevik-krojgaard-man-sofa-3-seater-sofas-norr11"
+      },
+      "photo_input_band": "STRONG_P2_MULTI_VIEW_INPUT",
+      "route": "NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST",
+      "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW",
+      "scorecard": {
+        "identity": 100,
+        "dimensions": 100,
+        "view_coverage": 80,
+        "image_quality": 90,
+        "material_evidence": 80,
+        "geometry_prior": 100,
+        "rights": 25
+      },
+      "observed_views": [
+        "front",
+        "rear",
+        "right",
+        "three_quarter",
+        "detail"
+      ],
+      "evidence": {
+        "unique_images": 17,
+        "reconstruction_resolution_images": 18,
+        "images_1600px_or_larger": 0,
+        "native_model_present": true,
+        "manufacturer_scale_qa_pass": true,
+        "embedded_texture_count": 3,
+        "embedded_normal_map_present": true,
+        "dimension_evidence_state": "manufacturer_verified",
+        "variant_visual_binding_state": "present_unresolved",
+        "rights": {
+          "reconstruction_allowed": "review",
+          "render_allowed": "review",
+          "redistribution_allowed": "no"
+        }
+      },
+      "presentation": {
+        "current_state": "NO_NEW_PHOTO_RECONSTRUCTION_OUTPUT_YET",
+        "maximum_claim_before_generation_qa": "G1",
+        "maximum_claim_after_v0_qa": "G2",
+        "public_presentation_allowed": false,
+        "disclosure": "Input readiness is not output fidelity. Public presentation requires a generated asset, source-view rerender QA, physical-scale QA and cleared render rights."
+      },
+      "blockers": [
+        "reconstruction rights are not cleared",
+        "public render rights are not cleared",
+        "exact visible material/colour is not bound to the selected variant"
+      ],
+      "notes": []
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584851276",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/10584851276",
+        "product_title": "Man Lounge Chair",
+        "vendor": "NORR11",
+        "handle": "humlevik-krojgaard-man-lounge-chair-lounge-chairs-norr11"
+      },
+      "photo_input_band": "STRONG_P2_MULTI_VIEW_INPUT",
+      "route": "NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST",
+      "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW",
+      "scorecard": {
+        "identity": 100,
+        "dimensions": 100,
+        "view_coverage": 90,
+        "image_quality": 90,
+        "material_evidence": 80,
+        "geometry_prior": 100,
+        "rights": 25
+      },
+      "observed_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "detail"
+      ],
+      "evidence": {
+        "unique_images": 30,
+        "reconstruction_resolution_images": 31,
+        "images_1600px_or_larger": 0,
+        "native_model_present": true,
+        "manufacturer_scale_qa_pass": true,
+        "embedded_texture_count": 3,
+        "embedded_normal_map_present": true,
+        "dimension_evidence_state": "manufacturer_verified",
+        "variant_visual_binding_state": "present_unresolved",
+        "rights": {
+          "reconstruction_allowed": "review",
+          "render_allowed": "review",
+          "redistribution_allowed": "no"
+        }
+      },
+      "presentation": {
+        "current_state": "NO_NEW_PHOTO_RECONSTRUCTION_OUTPUT_YET",
+        "maximum_claim_before_generation_qa": "G1",
+        "maximum_claim_after_v0_qa": "G2",
+        "public_presentation_allowed": false,
+        "disclosure": "Input readiness is not output fidelity. Public presentation requires a generated asset, source-view rerender QA, physical-scale QA and cleared render rights."
+      },
+      "blockers": [
+        "reconstruction rights are not cleared",
+        "public render rights are not cleared",
+        "exact visible material/colour is not bound to the selected variant"
+      ],
+      "notes": []
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_35853729804",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/35853729804",
+        "product_title": "Mammoth Sofa",
+        "vendor": "NORR11",
+        "handle": "knut-bendik-humlevik-rune-krojgaard-mammoth-sofa-norr11"
+      },
+      "photo_input_band": "STRONG_P2_MULTI_VIEW_INPUT",
+      "route": "NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST",
+      "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW",
+      "scorecard": {
+        "identity": 100,
+        "dimensions": 100,
+        "view_coverage": 75,
+        "image_quality": 90,
+        "material_evidence": 35,
+        "geometry_prior": 75,
+        "rights": 25
+      },
+      "observed_views": [
+        "front",
+        "left",
+        "right",
+        "three_quarter",
+        "detail"
+      ],
+      "evidence": {
+        "unique_images": 44,
+        "reconstruction_resolution_images": 45,
+        "images_1600px_or_larger": 0,
+        "native_model_present": true,
+        "manufacturer_scale_qa_pass": true,
+        "embedded_texture_count": 0,
+        "embedded_normal_map_present": false,
+        "dimension_evidence_state": "manufacturer_verified",
+        "variant_visual_binding_state": "present_unresolved",
+        "rights": {
+          "reconstruction_allowed": "review",
+          "render_allowed": "review",
+          "redistribution_allowed": "no"
+        }
+      },
+      "presentation": {
+        "current_state": "NO_NEW_PHOTO_RECONSTRUCTION_OUTPUT_YET",
+        "maximum_claim_before_generation_qa": "G1",
+        "maximum_claim_after_v0_qa": "G2",
+        "public_presentation_allowed": false,
+        "disclosure": "Input readiness is not output fidelity. Public presentation requires a generated asset, source-view rerender QA, physical-scale QA and cleared render rights."
+      },
+      "blockers": [
+        "reconstruction rights are not cleared",
+        "public render rights are not cleared",
+        "exact visible material/colour is not bound to the selected variant"
+      ],
+      "notes": [
+        "strong upholstery and timber close-up coverage; rear coverage is not authoritative"
+      ]
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_782311161966",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/782311161966",
+        "product_title": "Lobby Sofa",
+        "vendor": "Wendelbo",
+        "handle": "sarah-rousselle-lobby-sofa-wendelbo"
+      },
+      "photo_input_band": "P1_VISUAL_REFERENCE_ONLY",
+      "route": "NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST",
+      "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW",
+      "scorecard": {
+        "identity": 100,
+        "dimensions": 0,
+        "view_coverage": 90,
+        "image_quality": 90,
+        "material_evidence": 35,
+        "geometry_prior": 50,
+        "rights": 25
+      },
+      "observed_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "detail"
+      ],
+      "evidence": {
+        "unique_images": 20,
+        "reconstruction_resolution_images": 21,
+        "images_1600px_or_larger": 0,
+        "native_model_present": true,
+        "manufacturer_scale_qa_pass": false,
+        "embedded_texture_count": 0,
+        "embedded_normal_map_present": false,
+        "dimension_evidence_state": "unknown",
+        "variant_visual_binding_state": "present_unresolved",
+        "rights": {
+          "reconstruction_allowed": "review",
+          "render_allowed": "review",
+          "redistribution_allowed": "no"
+        }
+      },
+      "presentation": {
+        "current_state": "NO_NEW_PHOTO_RECONSTRUCTION_OUTPUT_YET",
+        "maximum_claim_before_generation_qa": "G1",
+        "maximum_claim_after_v0_qa": "G2",
+        "public_presentation_allowed": false,
+        "disclosure": "Input readiness is not output fidelity. Public presentation requires a generated asset, source-view rerender QA, physical-scale QA and cleared render rights."
+      },
+      "blockers": [
+        "reconstruction rights are not cleared",
+        "public render rights are not cleared",
+        "complete authoritative width/depth/height missing",
+        "exact visible material/colour is not bound to the selected variant",
+        "image evidence is below P2 reconstruction threshold"
+      ],
+      "notes": [
+        "strong image kit but authoritative current overall dimensions were not captured"
+      ]
+    },
+    {
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_b163aea21fdf6542",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/7516727246925",
+        "product_title": "Atli Lounge Chair",
+        "vendor": "Wendelbo",
+        "handle": "atlason-studio-atli-lounge-chair-wendelbo"
+      },
+      "photo_input_band": "STRONG_P2_MULTI_VIEW_INPUT",
+      "route": "NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST",
+      "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW",
+      "scorecard": {
+        "identity": 100,
+        "dimensions": 100,
+        "view_coverage": 80,
+        "image_quality": 90,
+        "material_evidence": 35,
+        "geometry_prior": 75,
+        "rights": 25
+      },
+      "observed_views": [
+        "front",
+        "rear",
+        "right",
+        "three_quarter",
+        "detail"
+      ],
+      "evidence": {
+        "unique_images": 11,
+        "reconstruction_resolution_images": 12,
+        "images_1600px_or_larger": 0,
+        "native_model_present": true,
+        "manufacturer_scale_qa_pass": true,
+        "embedded_texture_count": 0,
+        "embedded_normal_map_present": false,
+        "dimension_evidence_state": "manufacturer_verified",
+        "variant_visual_binding_state": "present_unresolved",
+        "rights": {
+          "reconstruction_allowed": "review",
+          "render_allowed": "review",
+          "redistribution_allowed": "no"
+        }
+      },
+      "presentation": {
+        "current_state": "NO_NEW_PHOTO_RECONSTRUCTION_OUTPUT_YET",
+        "maximum_claim_before_generation_qa": "G1",
+        "maximum_claim_after_v0_qa": "G2",
+        "public_presentation_allowed": false,
+        "disclosure": "Input readiness is not output fidelity. Public presentation requires a generated asset, source-view rerender QA, physical-scale QA and cleared render rights."
+      },
+      "blockers": [
+        "reconstruction rights are not cleared",
+        "public render rights are not cleared",
+        "exact visible material/colour is not bound to the selected variant"
+      ],
+      "notes": []
+    },
+    {
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_c78c9916e34465e8",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/7304676474957",
+        "product_title": "Fave Chair",
+        "vendor": "NORR11",
+        "handle": "hansen-hyldahl-fave-chair-norr11"
+      },
+      "photo_input_band": "USABLE_P2_INPUT_WITH_LIMITS",
+      "route": "NATIVE_MODEL_QA_AND_PHOTO_MATERIAL_ENRICHMENT_FIRST",
+      "queue_state": "NOT_QUEUED_RECONSTRUCTION_RIGHTS_REVIEW",
+      "scorecard": {
+        "identity": 100,
+        "dimensions": 100,
+        "view_coverage": 50,
+        "image_quality": 74,
+        "material_evidence": 10,
+        "geometry_prior": 75,
+        "rights": 25
+      },
+      "observed_views": [
+        "front",
+        "right",
+        "three_quarter"
+      ],
+      "evidence": {
+        "unique_images": 6,
+        "reconstruction_resolution_images": 7,
+        "images_1600px_or_larger": 0,
+        "native_model_present": true,
+        "manufacturer_scale_qa_pass": true,
+        "embedded_texture_count": 0,
+        "embedded_normal_map_present": false,
+        "dimension_evidence_state": "manufacturer_verified",
+        "variant_visual_binding_state": "present_unresolved",
+        "rights": {
+          "reconstruction_allowed": "review",
+          "render_allowed": "review",
+          "redistribution_allowed": "no"
+        }
+      },
+      "presentation": {
+        "current_state": "NO_NEW_PHOTO_RECONSTRUCTION_OUTPUT_YET",
+        "maximum_claim_before_generation_qa": "G1",
+        "maximum_claim_after_v0_qa": "G2",
+        "public_presentation_allowed": false,
+        "disclosure": "Input readiness is not output fidelity. Public presentation requires a generated asset, source-view rerender QA, physical-scale QA and cleared render rights."
+      },
+      "blockers": [
+        "reconstruction rights are not cleared",
+        "public render rights are not cleared",
+        "multi-view coverage below strong P2 threshold",
+        "exact visible material/colour is not bound to the selected variant"
+      ],
+      "notes": [
+        "sparse image set; native model or additional rear/detail evidence remains important"
+      ]
+    }
+  ]
+}

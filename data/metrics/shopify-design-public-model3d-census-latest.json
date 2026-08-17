@@ -1,0 +1,123 @@
+{
+  "summary": {
+    "generated_at": "2026-08-17T01:19:04.680Z",
+    "merchant_id": "design_public_group_trade",
+    "merchant_origin": "https://trade.designpublicgroup.com",
+    "product_sitemaps": 26,
+    "relevant_products_discovered": 4625,
+    "product_probes_attempted": 1594,
+    "probe_failures": 0,
+    "model3d_candidates": 6,
+    "single_variant_candidates": 0,
+    "roles_with_model3d": 2,
+    "destination_delivery_verified": 0,
+    "persistence_policy": "Persist only stable merchant IDs, minimal identity, role classification and native MODEL_3D evidence. Do not persist model source URLs or the merchant catalogue mirror."
+  },
+  "by_role": [
+    {
+      "room_role": "sofa",
+      "category_id": "FFE.SEATING.SOFA",
+      "sitemap_candidates": 1409,
+      "probed": 136,
+      "model3d_candidates": 5,
+      "single_variant_candidates": 0
+    },
+    {
+      "room_role": "lounge_chair",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "sitemap_candidates": 1894,
+      "probed": 136,
+      "model3d_candidates": 1,
+      "single_variant_candidates": 0
+    },
+    {
+      "room_role": "coffee_table",
+      "category_id": "FFE.TABLE.COFFEE",
+      "sitemap_candidates": 604,
+      "probed": 604,
+      "model3d_candidates": 0,
+      "single_variant_candidates": 0
+    },
+    {
+      "room_role": "side_table",
+      "category_id": "FFE.TABLE.SIDE",
+      "sitemap_candidates": 385,
+      "probed": 385,
+      "model3d_candidates": 0,
+      "single_variant_candidates": 0
+    },
+    {
+      "room_role": "floor_lamp",
+      "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
+      "sitemap_candidates": 121,
+      "probed": 121,
+      "model3d_candidates": 0,
+      "single_variant_candidates": 0
+    },
+    {
+      "room_role": "rug",
+      "category_id": "FFE.TEXTILES.RUG",
+      "sitemap_candidates": 212,
+      "probed": 212,
+      "model3d_candidates": 0,
+      "single_variant_candidates": 0
+    }
+  ],
+  "failure_sample": [],
+  "top_candidates": [
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584850764",
+      "room_role": "sofa",
+      "title": "Man Day Bed",
+      "vendor": "NORR11",
+      "variants": 8,
+      "single_variant": false,
+      "model3d_count": 1
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852108",
+      "room_role": "sofa",
+      "title": "Man 2-Seater Sofa",
+      "vendor": "NORR11",
+      "variants": 8,
+      "single_variant": false,
+      "model3d_count": 1
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852492",
+      "room_role": "sofa",
+      "title": "Man 3-Seater Sofa",
+      "vendor": "NORR11",
+      "variants": 8,
+      "single_variant": false,
+      "model3d_count": 1
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584851276",
+      "room_role": "lounge_chair",
+      "title": "Man Lounge Chair",
+      "vendor": "NORR11",
+      "variants": 8,
+      "single_variant": false,
+      "model3d_count": 1
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_35853729804",
+      "room_role": "sofa",
+      "title": "Mammoth Sofa",
+      "vendor": "NORR11",
+      "variants": 32,
+      "single_variant": false,
+      "model3d_count": 1
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_782311161966",
+      "room_role": "sofa",
+      "title": "Lobby Sofa",
+      "vendor": "Wendelbo",
+      "variants": 12,
+      "single_variant": false,
+      "model3d_count": 1
+    }
+  ]
+}

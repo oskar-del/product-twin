@@ -1,0 +1,85 @@
+{
+  "twin_id": "PT_IKEA_BILLY_00263850",
+  "kind": "object",
+  "category_id": "FFE.STORAGE.BOOKCASE",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "BILLY",
+    "model": "Bookcase, white",
+    "article_no": "002.638.50",
+    "configuration": "Bookcase, white"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 800,
+      "depth": 280,
+      "height": 2020
+    },
+    "secondary_dimensions_mm": {
+      "maximum_load_per_shelf_kg": 30,
+      "adjustable_shelves": 4
+    },
+    "evidence_state": "official_retailer_dimensions_and_glb_envelope_verified"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/es/p/billy-libreria-blanco-00263850/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "002.638.50",
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_realistic_planning_proxy",
+    "avatar_id": "AVATAR_IKEA_BILLY_00263850_G2_BOOKCASE_PROXY",
+    "asset_path": "data/geometry/avatars/ikea-billy-00263850-g2-bookcase-proxy.glb",
+    "scale_state": "verified 800x280x2020mm envelope; 30kg maximum per shelf",
+    "shape_claim": "realistic warm-white shelf proxy; exact IKEA construction details are not claimed",
+    "placement": {
+      "origin": "floor_center",
+      "back_to_wall_anchor": true,
+      "wall_fixing_required": true
+    },
+    "appearance": {
+      "material_cues": [
+        "warm white melamine",
+        "paper foil backing"
+      ],
+      "pbr_state": "variant_specific_base_colour_and_roughness_cues",
+      "embedded_textures": false,
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "qa_metric": "data/metrics/ikea-billy-00263850-g2-bookcase-proxy-latest.json",
+    "rights": {
+      "geometry_owner": "Product Twin planning proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false,
+      "exact_likeness_claimed": false
+    }
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "official_product_page_verified_live_postcode_refresh_required",
+    "dimensions": "verified",
+    "geometry": "G2_promoted_planning_proxy",
+    "appearance": "variant_colour_and_roughness_cues_only_no_exact_texture",
+    "room_placement": "ready_for_planning_and_circulation",
+    "render": "planning_preview_only",
+    "rights": "product_twin_owned_proxy_no_manufacturer_asset_redistribution",
+    "next_gate": "wall-fixing rule test, authorized exact geometry/appearance and live postcode availability"
+  },
+  "promotion_blockers": [
+    "authorized exact product geometry or independently validated exact reconstruction",
+    "exact selected-variant material and texture QA",
+    "live postcode 29660 price, stock and delivery refresh"
+  ],
+  "policy": "This is a real, exact retail product identity with a verified-scale G2 planning avatar. It is usable for room fit and circulation, but is not a G3 claim of exact visual likeness or finish."
+}

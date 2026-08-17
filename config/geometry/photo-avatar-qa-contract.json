@@ -1,0 +1,31 @@
+{
+  "version": "0.1",
+  "contract_id": "PHOTO_AVATAR_QA_V0_1",
+  "required_views": ["front", "rear", "left", "right", "three_quarter"],
+  "thresholds": {
+    "maximum_per_view_silhouette_error_percent": 12,
+    "maximum_mean_silhouette_error_percent": 8,
+    "maximum_per_view_landmark_error_percent": 15,
+    "maximum_mean_landmark_error_percent": 10,
+    "maximum_axis_dimension_error_percent": 3,
+    "minimum_observed_surface_percent": 70,
+    "maximum_unresolved_surface_percent": 10,
+    "coverage_sum_tolerance_percent": 0.5
+  },
+  "required_states": {
+    "generation": "SUCCEEDED_REQUIRES_QA",
+    "human_review": "accepted",
+    "per_view_review": "accepted",
+    "render_allowed": "yes",
+    "maximum_claim_level": "G2",
+    "exact_product_claim_allowed": false,
+    "engineering_interface_claim_allowed": false
+  },
+  "asset_policy": {
+    "required_format": "glb",
+    "required_magic": "glTF",
+    "location": ".runtime/avatars/<job_id>/model.glb",
+    "publication": "remains runtime-only unless redistribution rights are separately yes"
+  },
+  "pass_meaning": "The visual/scale reconstruction experiment passed V0 evidence QA. It does not establish exact manufacturer or engineering geometry."
+}

@@ -1,0 +1,191 @@
+{
+  "version": "0.3",
+  "asset_policy": {
+    "required_extension": ".glb",
+    "required_magic": "glTF",
+    "required_version": 2,
+    "unit": "metre",
+    "location": ".runtime",
+    "persistence": "hash_and_qa_metric_only"
+  },
+  "rights_policy": {
+    "allowed_render_scopes": ["project_only", "project_and_internal_review", "platform_public_rendering"],
+    "required_derivative_storage_scope": "ephemeral_only",
+    "asset_redistribution_allowed": false,
+    "manufacturer_binary_committed": false,
+    "converted_asset_committed": false
+  },
+  "forbidden_evidence_key_patterns": ["email", "phone", "street_address", "payment", "cookie", "session_id", "cart_id", "auth_token", "password"],
+  "targets": [
+    {
+      "target_id": "MUUTO_OUTLINE_2S_OU2SRA10101_G3_V0_1",
+      "intake_manifest_path": "config/geometry/intake/muuto-outline-ou2sra10101-authorized-intake.json",
+      "intake_metric_path": "data/metrics/muuto-outline-ou2sra10101-authorized-capture-intake-latest.json",
+      "qa_metric_path": "data/metrics/muuto-outline-ou2sra10101-authorized-geometry-qa-latest.json",
+      "success_status": "AUTHORIZED_EXACT_G3_VISUAL_QA_PASS",
+      "identity_fields": [
+        {"path": "identity.manufacturer_item_no", "equals": "OU2SRA10101"},
+        {"path": "identity.legacy_item_no", "equals": "27003-COGN"},
+        {"path": "identity.ean", "equals": "5713222210793"},
+        {"path": "identity.manufacturer", "equals": "Muuto"},
+        {"path": "identity.product_family", "equals": "Outline Sofa"}
+      ],
+      "bounds_rule": {
+        "mode": "unordered_axes_tolerance",
+        "expected_mm": [1700, 840, 710],
+        "maximum_relative_error": 0.02
+      },
+      "measurement_fields": [
+        {"path": "measurements_mm.seat_height", "expected": 400, "tolerance_mm": 10},
+        {"path": "measurements_mm.seat_depth", "expected": 620, "tolerance_mm": 10}
+      ],
+      "interface_fields": [
+        {"path": "interfaces.object_role", "equals": "seating_sofa"},
+        {"path": "interfaces.seat_finish", "equals": "Refine Leather - Cognac"},
+        {"path": "interfaces.base_color", "equals": "Black"},
+        {"path": "interfaces.base_type", "equals": "Standard Base"}
+      ]
+    },
+    {
+      "target_id": "MUUTO_FIBER_LOUNGE_FILOUWON04041_G3_V0_1",
+      "intake_manifest_path": "config/geometry/intake/muuto-fiber-lounge-filouwon04041-authorized-intake.json",
+      "intake_metric_path": "data/metrics/muuto-fiber-lounge-filouwon04041-authorized-capture-intake-latest.json",
+      "qa_metric_path": "data/metrics/muuto-fiber-lounge-filouwon04041-authorized-geometry-qa-latest.json",
+      "success_status": "AUTHORIZED_EXACT_G3_VISUAL_QA_PASS",
+      "identity_fields": [
+        {"path": "identity.manufacturer_item_no", "equals": "FILOUWON04041"},
+        {"path": "identity.legacy_item_no", "equals": "25513"},
+        {"path": "identity.ean", "equals": "5713295826631"},
+        {"path": "identity.manufacturer", "equals": "Muuto"},
+        {"path": "identity.product_family", "equals": "Fiber Lounge Chair"}
+      ],
+      "bounds_rule": {
+        "mode": "unordered_axes_tolerance",
+        "expected_mm": [600, 690, 744],
+        "maximum_relative_error": 0.02
+      },
+      "measurement_fields": [
+        {"path": "measurements_mm.seat_height", "expected": 380, "tolerance_mm": 10},
+        {"path": "measurements_mm.seat_depth", "expected": 490, "tolerance_mm": 10}
+      ],
+      "interface_fields": [
+        {"path": "interfaces.object_role", "equals": "seating_lounge"},
+        {"path": "interfaces.shell_color", "equals": "Natural White"},
+        {"path": "interfaces.base_material", "equals": "Oak"},
+        {"path": "interfaces.upholstery", "equals": "None"}
+      ]
+    },
+    {
+      "target_id": "MUUTO_AROUND_SMALL_AROTABSM01_G3_V0_1",
+      "intake_manifest_path": "config/geometry/intake/muuto-around-small-arotabsm01-authorized-intake.json",
+      "intake_metric_path": "data/metrics/muuto-around-small-arotabsm01-authorized-capture-intake-latest.json",
+      "qa_metric_path": "data/metrics/muuto-around-small-arotabsm01-authorized-geometry-qa-latest.json",
+      "success_status": "AUTHORIZED_EXACT_G3_VISUAL_QA_PASS",
+      "identity_fields": [
+        {"path": "identity.manufacturer_item_no", "equals": "AROTABSM01"},
+        {"path": "identity.legacy_item_no", "equals": "60012"},
+        {"path": "identity.ean", "equals": "5713294887800"},
+        {"path": "identity.manufacturer", "equals": "Muuto"},
+        {"path": "identity.product_family", "equals": "Around Coffee Table"}
+      ],
+      "bounds_rule": {
+        "mode": "unordered_axes_tolerance",
+        "expected_mm": [450, 450, 460],
+        "maximum_relative_error": 0.02
+      },
+      "measurement_fields": [
+        {"path": "measurements_mm.diameter", "expected": 450, "tolerance_mm": 5},
+        {"path": "measurements_mm.height", "expected": 460, "tolerance_mm": 5}
+      ],
+      "interface_fields": [
+        {"path": "interfaces.object_role", "equals": "coffee_table"},
+        {"path": "interfaces.size", "equals": "Small"},
+        {"path": "interfaces.material_finish", "equals": "Oak"}
+      ]
+    },
+    {
+      "target_id": "MUUTO_LEAF_FLOOR_LEAFLR01_G3_V0_1",
+      "intake_manifest_path": "config/geometry/intake/muuto-leaf-floor-leaflr01-authorized-intake.json",
+      "intake_metric_path": "data/metrics/muuto-leaf-floor-leaflr01-authorized-capture-intake-latest.json",
+      "qa_metric_path": "data/metrics/muuto-leaf-floor-leaflr01-authorized-geometry-qa-latest.json",
+      "success_status": "AUTHORIZED_EXACT_G3_VISUAL_QA_PASS",
+      "identity_fields": [
+        {"path": "identity.manufacturer_item_no", "equals": "LEAFLR01"},
+        {"path": "identity.legacy_item_no", "equals": "13431"},
+        {"path": "identity.ean", "equals": "5710562134314"},
+        {"path": "identity.manufacturer", "equals": "Muuto"},
+        {"path": "identity.product_family", "equals": "Leaf Lamp"}
+      ],
+      "bounds_rule": {
+        "mode": "unordered_axes_tolerance",
+        "expected_mm": [433, 433, 1190],
+        "maximum_relative_error": 0.02
+      },
+      "measurement_fields": [
+        {"path": "measurements_mm.base_diameter", "expected": 220, "tolerance_mm": 5},
+        {"path": "measurements_mm.cord_length", "expected": 1800, "tolerance_mm": 20}
+      ],
+      "interface_fields": [
+        {"path": "interfaces.object_role", "equals": "floor_lamp"},
+        {"path": "interfaces.color", "equals": "White"},
+        {"path": "interfaces.electrical_territory", "equals": "EU/non-US"}
+      ]
+    },
+    {
+      "target_id": "ROCA_A32727500B_G4_V0_1",
+      "intake_manifest_path": "config/geometry/intake/roca-a32727500b-authorized-intake.json",
+      "intake_metric_path": "data/metrics/roca-a32727500b-authorized-capture-intake-latest.json",
+      "qa_metric_path": "data/metrics/roca-a32727500b-authorized-geometry-qa-latest.json",
+      "success_status": "AUTHORIZED_EXACT_G4_PROJECT_USE_QA_PASS",
+      "identity_fields": [
+        {"path": "identity.reference", "one_of": ["A32727500B", "327275XXB"]},
+        {"path": "identity.manufacturer", "equals": "Roca"},
+        {"path": "identity.product_family", "equals": "Horizon"}
+      ],
+      "bounds_rule": {
+        "mode": "unordered_axes_tolerance",
+        "expected_mm": [600, 380, 70],
+        "maximum_relative_error": 0.02
+      },
+      "measurement_fields": [],
+      "interface_fields": [
+        {"path": "interfaces.installation", "equals": "countertop"},
+        {"path": "interfaces.drain_geometry_observed", "equals": true},
+        {"path": "interfaces.overflow", "equals": false},
+        {"path": "interfaces.ifc_classification", "equals": "Sanitary Terminal"}
+      ]
+    },
+    {
+      "target_id": "GF_SANIPEX_MT_1158140_G4_V0_1",
+      "intake_manifest_path": "config/geometry/intake/gf-sanipex-1158140-authorized-intake.json",
+      "intake_metric_path": "data/metrics/gf-sanipex-1158140-authorized-capture-intake-latest.json",
+      "qa_metric_path": "data/metrics/gf-sanipex-1158140-authorized-geometry-qa-latest.json",
+      "success_status": "AUTHORIZED_EXACT_G4_INTERFACE_QA_PASS",
+      "identity_fields": [
+        {"path": "identity.manufacturer_part_no", "equals": "1158140"},
+        {"path": "identity.gf_item_no", "equals": "351616990"},
+        {"path": "identity.ean", "equals": "7613263030184"},
+        {"path": "identity.gtin14", "equals": "07613263030184"},
+        {"path": "identity.etim_class", "equals": "EC003024"}
+      ],
+      "bounds_rule": {
+        "mode": "long_and_short_axes",
+        "long_axis_range_mm": [45, 56],
+        "short_axis_expected_mm": 25,
+        "short_axis_tolerance_mm": 2
+      },
+      "measurement_fields": [
+        {"path": "measurements_mm.l1", "expected": 54, "tolerance_mm": 1},
+        {"path": "measurements_mm.z1", "expected": 34, "tolerance_mm": 1},
+        {"path": "measurements_mm.inner_diameter", "expected": 16, "tolerance_mm": 0.5},
+        {"path": "measurements_mm.z_d2", "expected": 12, "tolerance_mm": 1}
+      ],
+      "interface_fields": [
+        {"path": "interfaces.component_type", "equals": "IfcPipeFittingType"},
+        {"path": "interfaces.nominal_system", "equals": "JRG Sanipex MT"},
+        {"path": "interfaces.nominal_diameter_mm", "equals": 16},
+        {"path": "interfaces.connection_role", "equals": "adapter"}
+      ]
+    }
+  ]
+}

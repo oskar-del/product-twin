@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-08-16T23:25:33.892Z",
+  "avatar_id": "AVATAR_IKEA_MALM_09929373_G2_BED_FRAME_PROXY",
+  "status": "G2_REALISTIC_PROXY_SCALE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-malm-09929373-g2-bed-frame-proxy.glb",
+  "asset_bytes": 26496,
+  "identity": {
+    "merchant": "IKEA Spain",
+    "product_family": "MALM",
+    "article_no": "099.293.73",
+    "official_url": "https://www.ikea.com/es/es/p/malm-estructura-cama-blanco-s09929373/"
+  },
+  "expected_mm": {
+    "width": 1760,
+    "depth": 2090,
+    "height": 1000
+  },
+  "measured_xyz_mm": {
+    "width": 1760,
+    "height": 1000,
+    "depth": 2090
+  },
+  "relative_error_max": 0,
+  "material_cues": [
+    "warm white laminate",
+    "galvanized centre beam"
+  ],
+  "placement": {
+    "origin": "floor_center",
+    "headboard_wall_anchor": true,
+    "recommended_side_clearance_mm": 600
+  },
+  "disclosure": "Product Twin-owned realistic planning geometry at verified scale. Product identity and dimensions are exact; proprietary manufacturer geometry and texture artwork are not claimed.",
+  "commerce": {
+    "state": "OFFICIAL_PRODUCT_PAGE_VERIFIED_LIVE_AVAILABILITY_REFRESH_REQUIRED",
+    "observed_at": "2026-08-17"
+  }
+}

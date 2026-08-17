@@ -1,0 +1,107 @@
+{
+  "version": "0.1",
+  "scene_id": "MUUTO_RESIDENTIAL_HERO_ROOM_V0_1",
+  "name": "Marbella Warm Modern exact-product living room",
+  "status": "TARGET_SET_DEFINED_EXACT_AVATARS_LOCKED_PENDING_G3",
+  "location_context": {
+    "country": "ES",
+    "region": "Andalucia",
+    "municipality": "Marbella",
+    "postal_code": "29660"
+  },
+  "purpose": "The first coherent residential room in which every visible sellable object is bound to an exact Product Twin, authorized render avatar and current Spain supply route.",
+  "room_lab_envelope": {
+    "width_mm": 5800,
+    "depth_mm": 4400,
+    "coordinate_system": "right_handed_y_up_metres",
+    "origin": "room_floor_center",
+    "construction_status": "planning_lab_only_not_a_construction_room"
+  },
+  "design_direction": {
+    "style": "Marbella Warm Modern",
+    "palette": ["cognac leather", "black metal", "natural white", "oak", "soft white"],
+    "material_rule": "Every visible product finish remains bound to its exact manufacturer configuration. No convenience recoloring is permitted."
+  },
+  "placements": [
+    {
+      "placement_id": "MUUTO_LIVING_SOFA_01",
+      "twin_id": "PT_MUUTO_OUTLINE_2S_OU2SRA10101",
+      "target_avatar_id": "AVATAR_MUUTO_OUTLINE_2S_OU2SRA10101_G3",
+      "category_id": "FFE.SEATING.SOFA",
+      "role": "primary sofa",
+      "transform": {"position_m": [0, 0, 1.55], "rotation_euler_rad": [0, 3.141593, 0], "scale": 1},
+      "display_state": "LOCKED_UNTIL_G3",
+      "exact_configuration": "Refine Leather Cognac / Black, standard base"
+    },
+    {
+      "placement_id": "MUUTO_LIVING_CHAIR_01",
+      "twin_id": "PT_MUUTO_FIBER_LOUNGE_FILOUWON04041",
+      "target_avatar_id": "AVATAR_MUUTO_FIBER_LOUNGE_FILOUWON04041_G3",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "role": "left lounge chair",
+      "transform": {"position_m": [-1.55, 0, -0.9], "rotation_euler_rad": [0, 0.35, 0], "scale": 1},
+      "display_state": "LOCKED_UNTIL_G3_AND_COMMERCE_IDENTITY_RESOLVED",
+      "exact_configuration": "Natural White shell / Oak wood base / no upholstery"
+    },
+    {
+      "placement_id": "MUUTO_LIVING_CHAIR_02",
+      "twin_id": "PT_MUUTO_FIBER_LOUNGE_FILOUWON04041",
+      "target_avatar_id": "AVATAR_MUUTO_FIBER_LOUNGE_FILOUWON04041_G3",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "role": "right lounge chair",
+      "transform": {"position_m": [1.55, 0, -0.9], "rotation_euler_rad": [0, -0.35, 0], "scale": 1},
+      "display_state": "LOCKED_UNTIL_G3_AND_COMMERCE_IDENTITY_RESOLVED",
+      "exact_configuration": "Natural White shell / Oak wood base / no upholstery"
+    },
+    {
+      "placement_id": "MUUTO_LIVING_TABLE_01",
+      "twin_id": "PT_MUUTO_AROUND_SMALL_AROTABSM01",
+      "target_avatar_id": "AVATAR_MUUTO_AROUND_SMALL_AROTABSM01_G3",
+      "category_id": "FFE.TABLE.COFFEE",
+      "role": "central coffee table",
+      "transform": {"position_m": [0, 0, 0.15], "rotation_euler_rad": [0, 0, 0], "scale": 1},
+      "display_state": "LOCKED_UNTIL_G3",
+      "exact_configuration": "Oak"
+    },
+    {
+      "placement_id": "MUUTO_LIVING_LAMP_01",
+      "twin_id": "PT_MUUTO_LEAF_FLOOR_LEAFLR01",
+      "target_avatar_id": "AVATAR_MUUTO_LEAF_FLOOR_LEAFLR01_G3",
+      "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
+      "role": "sofa-side floor lamp",
+      "transform": {"position_m": [2.3, 0, 1.45], "rotation_euler_rad": [0, -0.5, 0], "scale": 1},
+      "display_state": "LOCKED_UNTIL_G3_AND_ELECTRICAL_REFRESH",
+      "exact_configuration": "White, EU/non-US item"
+    }
+  ],
+  "quantity_summary": {
+    "unique_product_twins": 4,
+    "placed_product_instances": 5,
+    "sofas": 1,
+    "lounge_chairs": 2,
+    "coffee_tables": 1,
+    "floor_lamps": 1
+  },
+  "spatial_checks": {
+    "sofa_to_table_nominal_clearance_mm": 755,
+    "table_to_chair_nominal_clearance_mm": 530,
+    "perimeter_circulation_target_mm": 700,
+    "state": "TARGET_LAYOUT_REQUIRES_FINAL_COLLISION_AND_CIRCULATION_QA_WITH_AUTHORIZED_MESHES"
+  },
+  "activation_gates": [
+    "each target has a product-bound authorized source asset",
+    "each source asset passes identity, scale, orientation and material QA",
+    "each exact avatar reaches G3 without geometry or finish substitution",
+    "render, conversion and platform-display rights are recorded",
+    "Spain supply route is refreshed and delivery to 29660 is confirmed",
+    "Leaf electrical compatibility is refreshed before specification or purchase",
+    "final meshes pass collision and circulation QA in this placement set"
+  ],
+  "preview_policy": {
+    "current_room_lab": "May continue to use explicitly disclosed planning proxies for interaction testing.",
+    "exact_product_claim": "No Muuto target may be shown as an exact visual avatar until its G3 activation gate passes.",
+    "site_scope": "This target scene does not authorize further dashboard or Room Lab UI expansion."
+  },
+  "set_definition": "config/geometry/muuto-residential-hero-set-v0.1.json",
+  "commerce_evidence": "data/commerce/muuto-residential-hero-set-spain-offers-2026-08-17.json"
+}

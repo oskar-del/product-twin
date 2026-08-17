@@ -1,0 +1,26 @@
+{
+  "version": "0.1",
+  "intake_id": "ROCA_A32727500B_AUTHORIZED_GEOMETRY_INTAKE_V0_1",
+  "target_id": "ROCA_A32727500B_G4_V0_1",
+  "manufacturer": "Roca",
+  "product": "Horizon countertop basin",
+  "expected_identity_values": ["A32727500B", "327275XXB"],
+  "official_source_urls": [
+    "https://www.roca.es/productos/lavabo-encimera-327275..B",
+    "https://www.bimobject.com/en/roca/product/327275XXB"
+  ],
+  "allowed_extensions": [".rfa", ".rvt", ".gsm", ".zip"],
+  "allowed_access_bases": ["authorized_project_use", "authorized_professional_account"],
+  "minimum_bytes": 10000,
+  "expected_scale_mm": {"length":600,"width":380,"height":70},
+  "binary_policy": "source file remains outside Git or under gitignored .runtime; intake persists hash and evidence only",
+  "metric_path": "data/metrics/roca-a32727500b-authorized-capture-intake-latest.json",
+  "post_intake_gates": [
+    "extract or convert geometry through a rights-compatible project tool",
+    "verify product identity inside the BIM/CAD metadata",
+    "validate physical scale against 600 x 380 x 70 mm",
+    "validate drain/installation interface geometry",
+    "record exact project-use/render scope",
+    "do not publish the manufacturer binary or converted exact asset"
+  ]
+}

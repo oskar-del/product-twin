@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-08-16T23:25:33.900Z",
+  "avatar_id": "AVATAR_IKEA_LOHALS_30511288_G2_RUG_PROXY",
+  "status": "G2_REALISTIC_PROXY_SCALE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-lohals-30511288-g2-rug-proxy.glb",
+  "asset_bytes": 101288,
+  "identity": {
+    "merchant": "IKEA Spain",
+    "product_family": "LOHALS",
+    "article_no": "305.112.88",
+    "official_url": "https://www.ikea.com/es/en/p/lohals-rug-flatwoven-natural-30511288/"
+  },
+  "expected_mm": {
+    "width": 1330,
+    "depth": 1950,
+    "height": 13
+  },
+  "measured_xyz_mm": {
+    "width": 1330,
+    "height": 13.000000000000002,
+    "depth": 1950
+  },
+  "relative_error_max": 1.3664283380001927e-16,
+  "material_cues": [
+    "natural jute",
+    "flatwoven texture cue",
+    "natural colour variation"
+  ],
+  "placement": {
+    "origin": "floor_center",
+    "underlay_required": true,
+    "floor_contact": true
+  },
+  "disclosure": "Product Twin-owned realistic planning geometry at verified scale. Product identity and dimensions are exact; proprietary manufacturer geometry and texture artwork are not claimed.",
+  "commerce": {
+    "state": "OFFICIAL_PRODUCT_PAGE_VERIFIED_LIVE_AVAILABILITY_REFRESH_REQUIRED",
+    "observed_at": "2026-08-17"
+  }
+}

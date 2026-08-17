@@ -31,7 +31,9 @@
     "evidence_state": "manufacturer_verified"
   },
   "manufacturer_evidence": {
-    "product_page": "https://www.muuto.com/product/Outline-Sofa-2-Seater--OU2S/OU2SRA10101/?configure=true",
+    "product_page": "https://www.muuto.com/product/outline-sofa-2-seater-p9391/p9391/",
+    "professional_product_page": "https://professionals.muuto.com/product/Outline-Sofa-2-Seater-p9391/97504-4/",
+    "architect_download_page": "https://professionals.muuto.com/toolbox/product-information/download-ad-files/",
     "architect_download_hub": "https://download.muuto.com/digitalshowroom/",
     "geometry_formats_advertised": ["DWG", "3DS", "OBJ", "SketchUp", "Revit"],
     "authority": "A_MANUFACTURER"
@@ -55,6 +57,21 @@
       },
       "refresh_policy": "live_required",
       "mutable_catalog_data_persisted": false
+    },
+    {
+      "source_id": "andlight_es",
+      "role": "live_commerce_reference",
+      "product_url": "https://www.andlight.com/es/p/outline-sofa-2-plazas-cuero-conac-negro_304447/",
+      "verification": {
+        "state": "exact_supplier_no_and_gtin_verified",
+        "merchant_reference": "304447",
+        "merchant_supplier_no": "OU2SRA10101",
+        "merchant_gtin_ean": "5713222210793",
+        "configuration_match": true,
+        "postcode_delivery_state": "checkout_or_written_confirmation_required"
+      },
+      "refresh_policy": "live_required",
+      "mutable_catalog_data_persisted": false
     }
   ],
   "geometry": {
@@ -74,7 +91,7 @@
   },
   "readiness": {
     "identity": "verified",
-    "commerce": "exact_live_reference_verified",
+    "commerce": "exact_spanish_storefront_listing_postcode_unverified",
     "dimensions": "verified",
     "geometry": "candidate",
     "render": "blocked",
@@ -82,10 +99,14 @@
     "rights": "review"
   },
   "promotion_blockers": [
-    "resolve exact manufacturer 3D asset",
+    "receive exact manufacturer 3D asset through an authorized Muuto route",
     "validate asset scale against 1700 x 840 x 710 mm manufacturer dimensions",
-    "confirm render / derivative conversion rights",
-    "resolve live Spain-appropriate offer when project procurement executes"
+    "receive written commercial-render and derivative-conversion rights",
+    "verify exact-SKU delivery or RFQ to postcode 29660"
   ],
+  "acquisition_state_file": "data/rights/muuto-outline-ou2sra10101-acquisition-state.json",
+  "commerce_evidence_file": "data/commerce/muuto-residential-hero-set-spain-offers-2026-08-17.json",
+  "authorized_intake_manifest": "config/geometry/intake/muuto-outline-ou2sra10101-authorized-intake.json",
+  "qa_evidence_template": "config/geometry/qa-evidence-templates/muuto-outline-ou2sra10101-geometry-qa.example.json",
   "policy": "Exact identity does not imply exact geometry. Mutable marketplace price, stock and imagery are resolved live and are not stored in this Twin."
 }

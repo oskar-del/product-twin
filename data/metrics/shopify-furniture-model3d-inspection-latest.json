@@ -1,0 +1,284 @@
+{
+  "summary": {
+    "generated_at": "2026-08-17T01:00:33.592Z",
+    "candidates": 2,
+    "inspected": 2,
+    "failed": 0,
+    "exact_variant_material_bindings": 0,
+    "manufacturer_scale_qa_passes": 2,
+    "promoted_g3": 0,
+    "policy": "GLB source URLs are not persisted. Resolved binaries remain only under gitignored runtime for inspection; stable hashes, measurements and QA states are persisted."
+  },
+  "inspections": [
+    {
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_b163aea21fdf6542",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "identity": {
+        "product_title": "Atli Lounge Chair",
+        "vendor": "Wendelbo",
+        "variant_title": "_COM / Chrome",
+        "sku": "WEN-333-1-COM",
+        "selected_options": {
+          "Upholstery Group": "_COM",
+          "Legs": "Chrome"
+        },
+        "merchant_product_gid": "gid://shopify/Product/7516727246925",
+        "merchant_variant_gid": "gid://shopify/ProductVariant/41899315429453",
+        "merchant_model3d_gid": "gid://shopify/Model3d/25428850638925"
+      },
+      "status": "LIVE_MODEL3D_INSPECTED_VARIANT_QA_REQUIRED",
+      "asset": {
+        "format": "glb",
+        "bytes": 1236404,
+        "sha256": "0787188f3f430755f3a65c35b107b40c6dcc364c5cc4505a2a1d285d4c22fe46",
+        "source_url_persisted": false,
+        "binary_committed": false,
+        "runtime_file_retained": true
+      },
+      "geometry": {
+        "dimensions_mm": [
+          786.9983017444611,
+          768.9534723758698,
+          803.8680851459503
+        ],
+        "position_accessor_count": 2,
+        "scale_state": "MANUFACTURER_SCALE_QA_PASS",
+        "scale_qa": {
+          "state": "MANUFACTURER_SCALE_QA_PASS",
+          "pass": true,
+          "expected_dimensions_mm": [
+            790,
+            800,
+            770
+          ],
+          "sorted_actual_mm": [
+            768.9534723758698,
+            786.9983017444611,
+            803.8680851459503
+          ],
+          "sorted_expected_mm": [
+            770,
+            790,
+            800
+          ],
+          "relative_errors": [
+            0.001359126784584739,
+            0.0037996180449860004,
+            0.004835106432437897
+          ],
+          "maximum_relative_error": 0.004835106432437897,
+          "allowed_relative_error": 0.02,
+          "dimension_source": "https://wendelbo.com/products/atli-lounge-chair",
+          "source_note": "Manufacturer product family and merchant specification agree on approximately W790 x D800 x H770 mm."
+        }
+      },
+      "materials": {
+        "material_count": 2,
+        "texture_count": 0,
+        "image_count": 0,
+        "materials": [
+          {
+            "index": 0,
+            "name": "Material 1",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": false
+          },
+          {
+            "index": 1,
+            "name": "Material 2",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": 0.5,
+            "normal_texture_present": false
+          }
+        ]
+      },
+      "variant_material_binding": {
+        "state": "UNRESOLVED_PRODUCT_LEVEL_MODEL",
+        "selected_option_values": [
+          "_com",
+          "chrome"
+        ],
+        "matched_values": [],
+        "note": "Material-name matching is supporting evidence only; visual QA and exact variant binding remain required."
+      },
+      "rights": {
+        "state": "REVIEW",
+        "render_scope": "UNRESOLVED",
+        "derivative_storage": "RUNTIME_INSPECTION_ONLY",
+        "redistribution": false
+      },
+      "promotion": {
+        "current_level": "G2_CANDIDATE",
+        "target_level": "G3",
+        "blocked_by": [
+          "exact selected-variant material binding",
+          "render and platform-display rights review",
+          "live checkout refresh for project destination"
+        ]
+      }
+    },
+    {
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_c78c9916e34465e8",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "identity": {
+        "product_title": "Fave Chair",
+        "vendor": "NORR11",
+        "variant_title": "Cat 0 / Chrome Steel",
+        "sku": "NOR-FAVE-CHR-CHRME-CAT0",
+        "selected_options": {
+          "Upholstery Group": "Cat 0",
+          "Finish": "Chrome Steel"
+        },
+        "merchant_product_gid": "gid://shopify/Product/7304676474957",
+        "merchant_variant_gid": "gid://shopify/ProductVariant/41207876845645",
+        "merchant_model3d_gid": "gid://shopify/Model3d/25288453292109"
+      },
+      "status": "LIVE_MODEL3D_INSPECTED_VARIANT_QA_REQUIRED",
+      "asset": {
+        "format": "glb",
+        "bytes": 1297772,
+        "sha256": "2f47f610c4e5fdaf399a12487983c8a1e5f66939496575a2909009ce4c6182c8",
+        "source_url_persisted": false,
+        "binary_committed": false,
+        "runtime_file_retained": true
+      },
+      "geometry": {
+        "dimensions_mm": [
+          650.1545310020447,
+          710.6590866421659,
+          916.3353443145752
+        ],
+        "position_accessor_count": 3,
+        "scale_state": "MANUFACTURER_SCALE_QA_PASS",
+        "scale_qa": {
+          "state": "MANUFACTURER_SCALE_QA_PASS",
+          "pass": true,
+          "expected_dimensions_mm": [
+            650,
+            920,
+            720
+          ],
+          "sorted_actual_mm": [
+            650.1545310020447,
+            710.6590866421659,
+            916.3353443145752
+          ],
+          "sorted_expected_mm": [
+            650,
+            720,
+            920
+          ],
+          "relative_errors": [
+            0.00023774000314565806,
+            0.012973490774769579,
+            0.003983321397200874
+          ],
+          "maximum_relative_error": 0.012973490774769579,
+          "allowed_relative_error": 0.02,
+          "dimension_source": "https://norr11.com/products/fave-chair",
+          "source_note": "NORR11 publishes W650 x D920 x H720 mm and seat height 420 mm."
+        }
+      },
+      "materials": {
+        "material_count": 3,
+        "texture_count": 0,
+        "image_count": 0,
+        "materials": [
+          {
+            "index": 0,
+            "name": "Material 1",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": null,
+            "normal_texture_present": false
+          },
+          {
+            "index": 1,
+            "name": "Material 2",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": 0.5,
+            "normal_texture_present": false
+          },
+          {
+            "index": 2,
+            "name": "black_rough",
+            "alpha_mode": "OPAQUE",
+            "double_sided": true,
+            "base_color_factor": [
+              0.011300856247544289,
+              0.011300856247544289,
+              0.011300856247544289,
+              1
+            ],
+            "base_color_texture_present": false,
+            "metallic_factor": 0,
+            "roughness_factor": 0.7842105627059937,
+            "normal_texture_present": false
+          }
+        ]
+      },
+      "variant_material_binding": {
+        "state": "UNRESOLVED_PRODUCT_LEVEL_MODEL",
+        "selected_option_values": [
+          "cat 0",
+          "chrome steel"
+        ],
+        "matched_values": [],
+        "note": "Material-name matching is supporting evidence only; visual QA and exact variant binding remain required."
+      },
+      "rights": {
+        "state": "REVIEW",
+        "render_scope": "UNRESOLVED",
+        "derivative_storage": "RUNTIME_INSPECTION_ONLY",
+        "redistribution": false
+      },
+      "promotion": {
+        "current_level": "G2_CANDIDATE",
+        "target_level": "G3",
+        "blocked_by": [
+          "exact selected-variant material binding",
+          "render and platform-display rights review",
+          "live checkout refresh for project destination"
+        ]
+      }
+    }
+  ]
+}

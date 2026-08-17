@@ -25,6 +25,18 @@ GitHub → Actions → **Shopify Product Twin Ingest** → Run workflow.
 
 No local Terminal is required.
 
+## Product Twin MCP
+
+The repository now exposes a local stdio MCP server:
+
+```bash
+npm run mcp:serve
+```
+
+The contract deliberately separates `search_product_twins` / `get_product_twin` from `search_design_assets` / `get_design_asset`. Product Twins may carry exact identity, offer and logistics evidence; generic Design Assets may support composition and fit only and never inherit SKU, GTIN, price, stock, supplier or checkout claims.
+
+The rights-safe Design Asset factory accepts Sweet Home 3D SH3F/OBJ libraries through `design:asset:intake`, then emits scale-normalized, material-aware GLBs through `design:asset:convert`. Conversion reaches G1; visual QA is required for generic G2.
+
 ## Current scope
 
 This first workflow only proves:
@@ -35,4 +47,4 @@ This first workflow only proves:
 4. repeatable ingestion,
 5. GitHub-backed product graph seed.
 
-3D, rights, dimension enrichment, merchant-specific resolution, substitution scoring, and room placement remain subsequent gates.
+The first living-room proof now includes exact Product Twin identities, verified-scale G2 planning avatars, destination supply evidence, substitution scoring and Room Lab placement. Exact visual likeness, rights-cleared photo reconstruction, authoritative checkout logistics across all four benchmark markets, and G3+ geometry remain active gates.

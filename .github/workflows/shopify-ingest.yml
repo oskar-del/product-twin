@@ -36,7 +36,7 @@ jobs:
       - name: Build aggregate canonical coverage
         run: npm run coverage
       - name: Resolve project context
-        run: npm run context:test > data/tests/project-context.latest.json
+        run: node scripts/project-context-resolve.mjs > data/tests/project-context.latest.json
       - name: Resolve exact project offers live
         run: npm run offers:resolve
       - name: Persist selected external references only

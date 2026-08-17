@@ -1,0 +1,28 @@
+{
+  "version": "0.1",
+  "intake_id": "MUUTO_FIBER_LOUNGE_FILOUWON04041_AUTHORIZED_GEOMETRY_INTAKE_V0_1",
+  "target_id": "MUUTO_FIBER_LOUNGE_FILOUWON04041_G3_V0_1",
+  "manufacturer": "Muuto",
+  "product": "Fiber Lounge Chair Wood Base, Natural White shell / Oak base / no upholstery",
+  "expected_identity_values": ["FILOUWON04041", "25513", "5713295826631"],
+  "official_source_urls": [
+    "https://www.muuto.com/product/Fiber-Lounge-Chair-Wood-Base?configure=true",
+    "https://professionals.muuto.com/toolbox/product-information/download-ad-files/",
+    "https://download.muuto.com/digitalshowroom/"
+  ],
+  "allowed_extensions": [".obj", ".dwg", ".rfa", ".rvt", ".zip"],
+  "allowed_access_bases": ["manufacturer_written_permission", "authorized_professional_account", "manufacturer_direct_delivery"],
+  "minimum_bytes": 10000,
+  "expected_scale_mm": {"width":600,"depth":690,"height":744,"seat_height":380,"seat_depth":490},
+  "binary_policy": "source file remains outside Git or under gitignored .runtime; intake persists hash and authorization evidence only",
+  "metric_path": "data/metrics/muuto-fiber-lounge-filouwon04041-authorized-capture-intake-latest.json",
+  "post_intake_gates": [
+    "bind the file or archive metadata to exact item FILOUWON04041 or legacy item 25513",
+    "convert geometry through the written Muuto permission scope",
+    "validate the 600 x 690 x 744 mm physical envelope and seat measurements",
+    "verify Natural White shell, Oak wood base and no-upholstery configuration mapping",
+    "record commercial render, conversion, persistence, attribution and territory scope",
+    "resolve the conflicting Spain merchant item and EAN before any commerce join",
+    "do not publish or redistribute the manufacturer binary or converted exact asset outside the permitted scope"
+  ]
+}

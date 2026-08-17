@@ -1,0 +1,143 @@
+{
+  "version": "0.1",
+  "scene_id": "V0_SHOPPABLE_DINING_001",
+  "name": "Marbella dining pendant swap",
+  "status": "STRUCTURAL_PROOF_READY_LIVE_AVAILABILITY_AND_CHECKOUT_REFRESH_REQUIRED",
+  "evidence_observed_at": "2026-08-16",
+  "location_context": {
+    "country": "ES",
+    "region": "Andalucia",
+    "municipality": "Marbella",
+    "postal_code": "29660"
+  },
+  "room": {
+    "type": "dining_room",
+    "currency": "EUR",
+    "target_budget_eur": 25
+  },
+  "anchor": {
+    "transform_id": "DINING_PENDANT_ANCHOR_01",
+    "position_m": [0, 2.27, -10.9],
+    "rotation_euler_rad": [0, 0, 0],
+    "scale": 1,
+    "mounting": "ceiling_hook",
+    "adjustable_drop": true
+  },
+  "products": [
+    {
+      "twin_id": "PT_IKEA_SKURUP_80407114",
+      "role": "primary",
+      "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+      "identity": {
+        "state": "verified_exact_retail_article",
+        "manufacturer": "IKEA",
+        "product_family": "SKURUP",
+        "article_no": "804.071.14"
+      },
+      "avatar": {
+        "avatar_id": "AVATAR_IKEA_SKURUP_80407114_G2_PENDANT_PROXY",
+        "level": "G2",
+        "asset_path": "data/geometry/avatars/ikea-skurup-80407114-g2-pendant-proxy.glb",
+        "claim": "dimension_verified_neutral_proxy",
+        "disclosure": "The fixed shade envelope is verified at 380 x 290 mm. The Product Twin-owned mesh is a generic proxy and does not claim IKEA's exact industrial-design geometry."
+      },
+      "placement": {
+        "transform_ref": "DINING_PENDANT_ANCHOR_01",
+        "cord_length_mm": 1500
+      },
+      "technical_gate": {
+        "state": "CONDITIONAL_PASS",
+        "verified": ["E27 lamp base", "22 W maximum", "ceiling-hook mounting"],
+        "conditions": ["select compatible E27 lamp", "verify ceiling hook/load", "qualified electrical installation"]
+      },
+      "regulatory_gate": {
+        "state": "CONDITIONAL_PASS",
+        "verified": ["CE marked by retailer"],
+        "conditions": ["project electrical circuit and installation compliance are not yet modeled"]
+      },
+      "offer_snapshot": {
+        "merchant": "IKEA Spain",
+        "currency": "EUR",
+        "unit_price": 19.99,
+        "observed_at": "2026-08-16",
+        "product_url": "https://www.ikea.com/es/es/p/skurup-lampara-techo-negro-80407114/",
+        "price_state": "LIVE_PAGE_VERIFIED",
+        "availability_state": "LIVE_LOCATION_REFRESH_REQUIRED",
+        "handoff_state": "DIRECT_PRODUCT_PAGE_ADD_TO_CART_OBSERVED",
+        "checkout_state": "MERCHANT_REPORTED_TEMPORARY_SALES_AND_PAYMENT_ISSUES"
+      }
+    },
+    {
+      "twin_id": "PT_IKEA_MELODI_60386527",
+      "role": "lower_cost_substitute",
+      "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+      "identity": {
+        "state": "verified_exact_retail_article",
+        "manufacturer": "IKEA",
+        "product_family": "MELODI",
+        "article_no": "603.865.27"
+      },
+      "avatar": {
+        "avatar_id": "AVATAR_IKEA_MELODI_60386527_G2_PENDANT_PROXY",
+        "level": "G2",
+        "asset_path": "data/geometry/avatars/ikea-melodi-60386527-g2-pendant-proxy.glb",
+        "claim": "dimension_verified_neutral_proxy",
+        "disclosure": "The fixed shade envelope is verified at 280 x 260 mm. The Product Twin-owned mesh is a generic proxy and does not claim IKEA's exact industrial-design geometry."
+      },
+      "placement": {
+        "transform_ref": "DINING_PENDANT_ANCHOR_01",
+        "cord_length_mm": 1600
+      },
+      "technical_gate": {
+        "state": "CONDITIONAL_PASS",
+        "verified": ["E27 lamp base", "22 W maximum", "ceiling-hook mounting"],
+        "conditions": ["select compatible E27 lamp", "verify ceiling hook/load", "qualified electrical installation"]
+      },
+      "regulatory_gate": {
+        "state": "CONDITIONAL_PASS",
+        "verified": ["CE marked by retailer"],
+        "conditions": ["project electrical circuit and installation compliance are not yet modeled"]
+      },
+      "offer_snapshot": {
+        "merchant": "IKEA Spain",
+        "currency": "EUR",
+        "unit_price": 5.99,
+        "observed_at": "2026-08-16",
+        "product_url": "https://www.ikea.com/es/es/p/melodi-lampara-techo-blanco-60386527/",
+        "price_state": "LIVE_PAGE_VERIFIED",
+        "availability_state": "LIVE_LOCATION_REFRESH_REQUIRED",
+        "handoff_state": "DIRECT_PRODUCT_PAGE_AVAILABLE",
+        "checkout_state": "MERCHANT_REPORTED_TEMPORARY_SALES_AND_PAYMENT_ISSUES"
+      }
+    }
+  ],
+  "swap_proof": {
+    "from_twin_id": "PT_IKEA_SKURUP_80407114",
+    "to_twin_id": "PT_IKEA_MELODI_60386527",
+    "same_transform_ref": "DINING_PENDANT_ANCHOR_01",
+    "same_category_required": true,
+    "budget_delta_eur": -14,
+    "resulting_total_eur": 5.99
+  },
+  "persistence_policy": {
+    "persist": ["canonical product identity", "official URL", "avatar reference", "placement transform", "minimal dated price observation", "gate states"],
+    "do_not_persist": ["retailer page payload", "retailer imagery", "stock payload", "cart/session data"],
+    "mutable_commerce_refresh": "required before quote or purchase"
+  },
+  "exit_evidence": {
+    "discovery": "PASS",
+    "canonical_identity": "PASS",
+    "verified_avatar": "PASS_G2_PROXY_DISCLOSED",
+    "project_placement": "PASS",
+    "technical_compatibility": "CONDITIONAL_PASS",
+    "regulatory_location": "CONDITIONAL_PASS",
+    "live_price_refresh": "PASS_2026_08_16",
+    "live_availability_refresh": "BLOCKED_LOCATION_SESSION_REQUIRED",
+    "substitute_compare": "PASS",
+    "same_transform_swap": "PASS",
+    "budget_update": "PASS",
+    "cart_or_rfq_handoff": "CONDITIONAL_PASS_DIRECT_PRODUCT_PAGE",
+    "persistent_reference_policy": "PASS",
+    "overall": "PARTIAL_PASS_LIVE_AVAILABILITY_AND_CHECKOUT_BLOCKED"
+  }
+}

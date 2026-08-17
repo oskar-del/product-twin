@@ -1,0 +1,55 @@
+{
+  "benchmark_id": "PRODUCT_TWIN_FIRST_FOUR_MARKETS_V0_1",
+  "version": "0.1",
+  "principle": "Product identity and avatar remain global; configuration, technical compatibility, offer, supplier geography, delivery, tax, landed cost and procurement readiness are evaluated independently for each destination market.",
+  "local_anchor_suppliers_ref": "config/market-anchor-suppliers-v0.1.json",
+  "markets": [
+    {
+      "country": "ES",
+      "name": "Spain",
+      "currency": "EUR",
+      "priority": 1,
+      "current_pilot": "Marbella / Costa del Sol client rooms and houses",
+      "integration_context": "Primary operating and supplier-discovery market",
+      "destination_input_required": "postal_code and site access"
+    },
+    {
+      "country": "SE",
+      "name": "Sweden",
+      "currency": "SEK",
+      "priority": 2,
+      "current_pilot": "Munin real-estate stack and HouseKit H30/H50",
+      "integration_context": "Product Twin brain below the Munin property and infrastructure graph",
+      "destination_input_required": "postal_code, municipality, project type and site context"
+    },
+    {
+      "country": "GB",
+      "name": "United Kingdom",
+      "currency": "GBP",
+      "priority": 3,
+      "current_pilot": "UK real-estate stack mapping",
+      "integration_context": "Property-to-design and procurement benchmark",
+      "destination_input_required": "postcode, nation and site access"
+    },
+    {
+      "country": "US",
+      "name": "United States",
+      "currency": "USD",
+      "priority": 4,
+      "current_pilot": "Large-market Product Twin benchmark",
+      "integration_context": "State- and ZIP-specific commerce, compatibility and logistics benchmark",
+      "destination_input_required": "ZIP code, state and site access"
+    }
+  ],
+  "per_market_evidence_lanes": [
+    "exact configuration offered in market",
+    "technical and regulatory compatibility",
+    "seller and dispatch geography",
+    "destination stock and delivery confirmation",
+    "lead-time band",
+    "freight, tax, duties and landed or installed cost",
+    "retail, trade, RFQ or tender route",
+    "rights, attribution and affiliate state"
+  ],
+  "policy": "A pass in one benchmark market never implies a pass in another. Missing destination-specific evidence remains unresolved."
+}

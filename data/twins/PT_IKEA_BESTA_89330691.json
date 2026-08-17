@@ -1,0 +1,85 @@
+{
+  "twin_id": "PT_IKEA_BESTA_89330691",
+  "kind": "object",
+  "category_id": "FFE.STORAGE.MEDIA_UNIT",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "BESTÅ",
+    "model": "TV bench, white/Lappviken white",
+    "article_no": "893.306.91",
+    "configuration": "TV bench, white/Lappviken white"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1800,
+      "depth": 420,
+      "height": 380
+    },
+    "secondary_dimensions_mm": {
+      "door_count": 3,
+      "cable_management": true
+    },
+    "evidence_state": "official_retailer_dimensions_and_glb_envelope_verified"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/es/p/besta-mueble-tv-blanco-lappviken-blanco-s89330691/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "893.306.91",
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_realistic_planning_proxy",
+    "avatar_id": "AVATAR_IKEA_BESTA_89330691_G2_MEDIA_UNIT_PROXY",
+    "asset_path": "data/geometry/avatars/ikea-besta-89330691-g2-media-unit-proxy.glb",
+    "scale_state": "verified 1800x420x380mm envelope",
+    "shape_claim": "realistic warm-white three-front media-unit proxy; exact IKEA hardware and panel construction are not claimed",
+    "placement": {
+      "origin": "floor_center",
+      "back_to_wall_anchor": true,
+      "rear_service_zone_mm": 80
+    },
+    "appearance": {
+      "material_cues": [
+        "warm white laminate",
+        "shadowed door reveals"
+      ],
+      "pbr_state": "variant_specific_base_colour_and_roughness_cues",
+      "embedded_textures": false,
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "qa_metric": "data/metrics/ikea-besta-89330691-g2-media-unit-proxy-latest.json",
+    "rights": {
+      "geometry_owner": "Product Twin planning proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false,
+      "exact_likeness_claimed": false
+    }
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "official_product_page_verified_live_postcode_refresh_required",
+    "dimensions": "verified",
+    "geometry": "G2_promoted_planning_proxy",
+    "appearance": "variant_colour_and_roughness_cues_only_no_exact_texture",
+    "room_placement": "ready_for_planning_and_circulation",
+    "render": "planning_preview_only",
+    "rights": "product_twin_owned_proxy_no_manufacturer_asset_redistribution",
+    "next_gate": "cable/service rule test, authorized exact geometry/appearance and live postcode availability"
+  },
+  "promotion_blockers": [
+    "authorized exact product geometry or independently validated exact reconstruction",
+    "exact selected-variant material and texture QA",
+    "live postcode 29660 price, stock and delivery refresh"
+  ],
+  "policy": "This is a real, exact retail product identity with a verified-scale G2 planning avatar. It is usable for room fit and circulation, but is not a G3 claim of exact visual likeness or finish."
+}

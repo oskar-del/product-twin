@@ -1,0 +1,39 @@
+{
+  "target_id": "MUUTO_OUTLINE_2S_OU2SRA10101_G3_V0_1",
+  "source_sha256": "<copy source.sha256 from the authorized intake metric>",
+  "converted_asset_path": ".runtime/geometry/muuto-outline-ou2sra10101/model.glb",
+  "converted_asset_sha256": "<sha256 of the converted GLB>",
+  "conversion": {
+    "tool": "<tool permitted by the written Muuto scope>",
+    "tool_version": "<version>"
+  },
+  "identity": {
+    "manufacturer_item_no": "OU2SRA10101",
+    "legacy_item_no": "27003-COGN",
+    "ean": "5713222210793",
+    "manufacturer": "Muuto",
+    "product_family": "Outline Sofa"
+  },
+  "measurements_mm": {
+    "seat_height": 400,
+    "seat_depth": 620
+  },
+  "interfaces": {
+    "object_role": "seating_sofa",
+    "seat_finish": "Refine Leather - Cognac",
+    "base_color": "Black",
+    "base_type": "Standard Base"
+  },
+  "rights": {
+    "access_basis": "<copy from the authorized intake metric>",
+    "terms_reference": "<copy from the authorized intake metric>",
+    "project_reference": "<copy from the authorized intake metric>",
+    "project_use_scope_confirmed": true,
+    "render_scope": "project_only",
+    "derivative_storage_scope": "ephemeral_only",
+    "asset_redistribution_allowed": false,
+    "manufacturer_binary_committed": false,
+    "converted_asset_committed": false
+  },
+  "operator_confirmation": "<confirm that exact identity, physical scale, orientation, materials, configuration and written rights were personally checked>"
+}

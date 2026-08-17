@@ -1,0 +1,115 @@
+{
+  "twin_id": "PT_MUUTO_FIBER_LOUNGE_FILOUWON04041",
+  "kind": "object",
+  "category_id": "FFE.SEATING.LOUNGE",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "Muuto",
+    "product_family": "Fiber Lounge Chair",
+    "model": "Fiber Lounge Chair Wood Base",
+    "configuration": "Natural White shell / Oak wood base / no upholstery",
+    "manufacturer_item_no": "FILOUWON04041",
+    "legacy_item_no": "25513",
+    "gtin_ean": "5713295826631"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 600,
+      "depth": 690,
+      "height": 744,
+      "seat_height": 380,
+      "seat_depth": 490
+    },
+    "evidence_state": "manufacturer_verified"
+  },
+  "manufacturer_evidence": {
+    "product_page": "https://www.muuto.com/product/Fiber-Lounge-Chair-Wood-Base?configure=true",
+    "architect_download_page": "https://professionals.muuto.com/toolbox/product-information/download-ad-files/",
+    "architect_download_hub": "https://download.muuto.com/digitalshowroom/",
+    "geometry_formats_advertised": ["DWG", "3DS", "OBJ", "SketchUp", "Revit"],
+    "authority": "A_MANUFACTURER"
+  },
+  "external_identities": [
+    {
+      "source_id": "scandinavia_design_fr",
+      "role": "live_commerce_reference",
+      "product_url": "https://www.scandinavia-design.fr/shop/en/muuto-fiber-wood-longe-chair/34300-oakwhite-wood-base-fiber-lounge-5713295826631.html",
+      "verification": {
+        "state": "exact_manufacturer_item_and_gtin_verified",
+        "merchant_reference": "FILOUWON04041",
+        "merchant_gtin_ean": "5713295826631",
+        "configuration_match": true,
+        "dimension_match": true,
+        "postcode_delivery_state": "unverified"
+      },
+      "refresh_policy": "live_required",
+      "mutable_catalog_data_persisted": false
+    },
+    {
+      "source_id": "someday_designs_shopify",
+      "role": "live_commerce_reference",
+      "product_url": "https://www.somedaydesigns.co.uk/products/muuto-fiber-lounge-chair-wood-base",
+      "verification": {
+        "state": "exact_shopify_variant_identity_verified",
+        "merchant_sku": "58949",
+        "merchant_barcode": "5713295826631",
+        "shopify_variant_id": "39614605492295",
+        "configuration_match": true,
+        "postcode_delivery_state": "unverified"
+      },
+      "refresh_policy": "live_required",
+      "mutable_catalog_data_persisted": false
+    },
+    {
+      "source_id": "andlight_es",
+      "role": "rejected_exact_commerce_candidate",
+      "product_url": "https://andlight.es/shop/sillon-muuto-de-21804p.html",
+      "verification": {
+        "state": "identity_conflict_exact_join_rejected",
+        "configuration_match": true,
+        "dimension_match": true,
+        "target_manufacturer_item_no": "FILOUWON04041",
+        "target_gtin_ean": "5713295826631",
+        "merchant_item_no": "58949",
+        "merchant_gtin_ean": "5710562255132"
+      },
+      "refresh_policy": "resolve_with_manufacturer_before_join",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "exact_product_bound_asset_unresolved",
+    "preferred_source": "Muuto architect file",
+    "advertised_formats": ["OBJ", "3DS", "DWG", "SketchUp", "Revit"],
+    "runtime_target": "GLB",
+    "scale_state": "manufacturer_dimensions_known_asset_not_validated",
+    "exact_likeness_state": "pending_asset_resolution",
+    "rights": {
+      "space_planning_use": "manufacturer_professional_files_available",
+      "render_use": "review",
+      "derivative_conversion": "review",
+      "redistribution": "review"
+    }
+  },
+  "readiness": {
+    "identity": "verified",
+    "commerce": "exact_non_spain_references_verified_spain_join_blocked_by_identity_conflict",
+    "dimensions": "verified",
+    "geometry": "candidate",
+    "render": "blocked",
+    "specification": "partial_verified",
+    "rights": "review"
+  },
+  "promotion_blockers": [
+    "receive exact product-bound manufacturer 3D asset through an authorized Muuto route",
+    "validate asset scale against 600 x 690 x 744 mm manufacturer dimensions",
+    "validate Natural White shell, Oak base and no-upholstery material configuration",
+    "receive written commercial-render and derivative-conversion rights",
+    "resolve the Spain merchant item and EAN conflict before any exact commerce join"
+  ],
+  "commerce_evidence_file": "data/commerce/muuto-residential-hero-set-spain-offers-2026-08-17.json",
+  "authorized_intake_manifest": "config/geometry/intake/muuto-fiber-lounge-filouwon04041-authorized-intake.json",
+  "qa_evidence_template": "config/geometry/qa-evidence-templates/muuto-fiber-lounge-filouwon04041-geometry-qa.example.json",
+  "policy": "Exact identity does not imply exact geometry. The conflicting Spain listing is evidence to investigate, not an accepted commerce identity. Mutable price, stock and delivery data are resolved live."
+}

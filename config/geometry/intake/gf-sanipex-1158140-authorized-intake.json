@@ -1,0 +1,44 @@
+{
+  "version": "0.1",
+  "intake_id": "GF_SANIPEX_1158140_AUTHORIZED_GEOMETRY_INTAKE_V0_1",
+  "target_id": "GF_SANIPEX_MT_1158140_G4_V0_1",
+  "manufacturer": "GF Building Flow Solutions / Uponor",
+  "product": "GF JRG Sanipex MT adapter d16",
+  "expected_identity_values": ["1158140", "351616990", "7613263030184", "07613263030184"],
+  "identity_match_requirements": {
+    "manufacturer_part_no": "1158140",
+    "gf_item_no": "351616990",
+    "ean": "7613263030184",
+    "gtin14": "07613263030184",
+    "etim_class": "EC003024",
+    "ifc_type": "IfcPipeFittingType"
+  },
+  "official_source_urls": [
+    "https://www.uponor.com/en-gb/s/gf-jrg-sanipex-mt-adapter-d16-1158140",
+    "https://bim.uponor.com/BLDE/DE/de_DE/library/product/GF_Adapter_SanipexMT_Sanipex?path=%2Fmaster%2FOneBFS_Cat_Hot_Cold_Water_Supply%2FOneBFS_Sys_Composite_Plumbing_Systems%2FOneBFS_PrG_Sanipex_MT%2FSanipex_MT%2FGF_Adapter_SanipexMT_Sanipex"
+  ],
+  "allowed_extensions": [".obj", ".ifc", ".rfa", ".rvt", ".dwg", ".dxf", ".sat", ".fbx", ".zip"],
+  "allowed_access_bases": ["authorized_project_use", "authorized_professional_account"],
+  "minimum_bytes": 1000,
+  "expected_scale_mm": {
+    "unit_envelope": {"length": 45, "width": 25, "height": 25},
+    "reference_dimensions": {"l1": 54, "z1": 34, "inner_diameter": 16, "z_d2": 12}
+  },
+  "expected_interface": {
+    "component_type": "IfcPipeFittingType",
+    "nominal_system": "JRG Sanipex MT",
+    "nominal_diameter_mm": 16,
+    "connection_role": "adapter"
+  },
+  "binary_policy": "source file remains outside Git or under gitignored .runtime; intake persists hash and evidence only",
+  "metric_path": "data/metrics/gf-sanipex-1158140-authorized-capture-intake-latest.json",
+  "post_intake_gates": [
+    "verify all product, GF item, EAN/GTIN and ETIM identity fields against the official product record",
+    "extract or convert geometry through a rights-compatible project tool",
+    "validate long and short physical axes against the official dimension envelope",
+    "validate d16 connection and IfcPipeFittingType interface metadata",
+    "record exact project-use, render, derivative and storage scope",
+    "resolve an EU/Spain live offer or RFQ",
+    "do not publish the manufacturer binary or converted exact asset"
+  ]
+}

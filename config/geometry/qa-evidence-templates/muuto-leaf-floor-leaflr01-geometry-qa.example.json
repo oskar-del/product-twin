@@ -1,0 +1,28 @@
+{
+  "target_id": "MUUTO_LEAF_FLOOR_LEAFLR01_G3_V0_1",
+  "source_sha256": "<copy source.sha256 from the authorized intake metric>",
+  "converted_asset_path": ".runtime/geometry/muuto-leaf-floor-leaflr01/model.glb",
+  "converted_asset_sha256": "<sha256 of the converted GLB>",
+  "conversion": {"tool": "<tool permitted by the written Muuto scope>", "tool_version": "<version>"},
+  "identity": {
+    "manufacturer_item_no": "LEAFLR01",
+    "legacy_item_no": "13431",
+    "ean": "5710562134314",
+    "manufacturer": "Muuto",
+    "product_family": "Leaf Lamp"
+  },
+  "measurements_mm": {"base_diameter":220,"cord_length":1800},
+  "interfaces": {"object_role":"floor_lamp","color":"White","electrical_territory":"EU/non-US"},
+  "rights": {
+    "access_basis": "<copy from the authorized intake metric>",
+    "terms_reference": "<copy from the authorized intake metric>",
+    "project_reference": "<copy from the authorized intake metric>",
+    "project_use_scope_confirmed": true,
+    "render_scope": "project_only",
+    "derivative_storage_scope": "ephemeral_only",
+    "asset_redistribution_allowed": false,
+    "manufacturer_binary_committed": false,
+    "converted_asset_committed": false
+  },
+  "operator_confirmation": "<confirm that exact identity, physical scale, orientation, materials, configuration and written rights were personally checked>"
+}

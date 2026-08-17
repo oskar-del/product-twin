@@ -1,0 +1,46 @@
+{
+  "version": "0.1",
+  "capture_id": "PHOTO_AVATAR_CONTROLLED_CAPTURE_V0_1",
+  "purpose": "Close the V0 photo-to-avatar multi-view QA gate with one rights-cleared owned product of known physical scale.",
+  "required_views": ["front", "rear", "left", "right", "three_quarter"],
+  "minimum_cleared_images": 5,
+  "capture_requirements": {
+    "subject": "one stationary opaque product with visually distinct features and no transparent or highly reflective dominant surfaces",
+    "background": "plain, non-reflective and visually separated from the object",
+    "lighting": "soft, even and fixed across views; avoid moving cast shadows",
+    "camera": "fixed focal length where possible; keep the full object in frame",
+    "overlap": "capture additional orbit frames for QA even though the Meshy generation request uses at most four inputs",
+    "scale": "measure width, depth and height in millimetres and photograph or reference the measurement evidence"
+  },
+  "rights_requirements": {
+    "source": "user-owned capture or another source explicitly cleared for reconstruction",
+    "reconstruction_allowed": "yes",
+    "render_allowed": "yes",
+    "redistribution_allowed": "may remain no; generated output then stays ephemeral",
+    "evidence_refs_required": true
+  },
+  "reconstruction": {
+    "engine": "meshy",
+    "mode": "multi_image_ai",
+    "target_format": "glb",
+    "credential_environment_variable": "MESHY_API_KEY",
+    "credential_policy": "secret only; never place the key in a job file, chat message, metric or Git"
+  },
+  "input_policy": {
+    "job_environment_variable": "AVATAR_JOB",
+    "image_references": "temporary HTTPS URLs readable by the reconstruction service",
+    "source_images_copied_to_repository": false,
+    "generated_asset_location": ".runtime/avatars/<job_id>/model.glb"
+  },
+  "promotion_policy": {
+    "pre_qa_maximum": "G2",
+    "exact_product_claim_allowed": false,
+    "required_qa": [
+      "source-view silhouette and landmark rerender comparison",
+      "width/depth/height scale comparison",
+      "observed, inferred and unresolved surface percentages totalling 100",
+      "human acceptance",
+      "rights review before any generated-asset publication"
+    ]
+  }
+}

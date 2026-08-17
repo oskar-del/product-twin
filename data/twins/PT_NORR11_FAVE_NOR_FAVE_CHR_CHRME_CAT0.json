@@ -1,0 +1,81 @@
+{
+  "twin_id": "PT_NORR11_FAVE_NOR_FAVE_CHR_CHRME_CAT0",
+  "kind": "object",
+  "category_id": "FFE.SEATING.LOUNGE",
+  "identity": {
+    "state": "merchant_variant_verified_manufacturer_family_verified_configuration_incomplete",
+    "manufacturer": "NORR11",
+    "product_family": "Fave Chair",
+    "model": "Fave Chair",
+    "merchant_sku": "NOR-FAVE-CHR-CHRME-CAT0",
+    "configuration": "Category 0 upholstery / Chrome Steel",
+    "configuration_limit": "Cat 0 identifies an upholstery price group, not a selected visible fabric or colour"
+  },
+  "physical": {
+    "dimensions_mm": {"width": 650, "depth": 920, "height": 720, "seat_height": 420},
+    "measured_model_axes_mm": [650.1545310020447, 710.6590866421659, 916.3353443145752],
+    "maximum_relative_scale_error": 0.012973490774769579,
+    "evidence_state": "manufacturer_dimensions_and_live_model_scale_qa_pass"
+  },
+  "external_identities": [
+    {
+      "source_id": "shopify_merchant_storefront",
+      "role": "live_commerce_and_native_model3d_reference",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "merchant_product_gid": "gid://shopify/Product/7304676474957",
+      "merchant_variant_gid": "gid://shopify/ProductVariant/41207876845645",
+      "merchant_model3d_gid": "gid://shopify/Model3d/25288453292109",
+      "verification": {
+        "state": "exact_merchant_variant_and_product_level_model3d_verified",
+        "catalog_delivery_filter": "passed_ES_29660",
+        "checkout_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "candidate_live_shopify_native_exact_shape_scale_verified",
+    "source_media_type": "MODEL_3D",
+    "formats": ["GLB", "USDZ"],
+    "asset_storage": "runtime_inspection_only",
+    "asset_sha256": "2f47f610c4e5fdaf399a12487983c8a1e5f66939496575a2909009ce4c6182c8",
+    "scale_state": "manufacturer_scale_qa_pass",
+    "appearance": {
+      "material_count": 3,
+      "texture_count": 0,
+      "state": "generic_grey_and_black_materials_selected_variant_not_bound",
+      "exact_selected_finish_claimed": false
+    },
+    "rights": {
+      "state": "review",
+      "render_scope": "unresolved",
+      "derivative_storage": "runtime_inspection_only",
+      "redistribution": false
+    },
+    "inspection_evidence": "data/metrics/shopify-furniture-model3d-inspection-latest.json"
+  },
+  "commerce": {
+    "source": "Shopify catalog and merchant Storefront API",
+    "dated_observation": {"available_for_sale": true, "amount": "2700.0", "currency": "USD", "destination": "ES-29660"},
+    "state": "catalog_delivery_filter_passed_checkout_and_total_landed_cost_refresh_required"
+  },
+  "readiness": {
+    "identity": "partial_exact_configuration_incomplete",
+    "commerce": "live_candidate",
+    "dimensions": "verified",
+    "geometry": "G2_candidate",
+    "appearance": "blocked",
+    "room_placement": "runtime_shape_study_only",
+    "render": "blocked",
+    "rights": "review"
+  },
+  "promotion_blockers": [
+    "select and bind an exact visible Category 0 upholstery fabric and colour",
+    "validate the exact selected-variant material against the live GLB",
+    "confirm render and platform-display rights",
+    "refresh checkout, tax, freight and delivery to 29660"
+  ],
+  "policy": "Shopify proves that this merchant carries a native product-level 3D model and a commerce variant. Scale and shape are credible for planning; the current generic materials do not prove the selected visible product finish."
+}

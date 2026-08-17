@@ -1,0 +1,54 @@
+{
+  "version": "0.1",
+  "contract_id": "PRODUCT_TWIN_READINESS_CARD_V0_1",
+  "purpose": "Join a Product Twin's visual avatar to identity, configuration, technical, commerce, supplier, logistics, procurement, rights and attribution evidence without treating any one lane as proof of another.",
+  "project_destination": {
+    "project_id": "PROJECT_MARBELLA_VILLA_001",
+    "country": "ES",
+    "region": "Malaga",
+    "postal_code": "29660",
+    "construction_phase": "ffe"
+  },
+  "lanes": [
+    "identity",
+    "configuration_and_finish",
+    "avatar_and_geometry",
+    "dimensions_and_fit",
+    "technical_evidence",
+    "rights_and_provenance",
+    "supplier_and_offer",
+    "Spain_and_postcode_delivery",
+    "logistics_and_landed_cost",
+    "procurement_route",
+    "attribution_and_affiliate"
+  ],
+  "states": ["PASS", "PASS_WITH_LIMITS", "REVIEW", "UNKNOWN", "BLOCKED", "STALE"],
+  "procurement_ready_requires": [
+    "exact_product_and_selected_configuration",
+    "technical_fit_for_project",
+    "current_offer_or_quote",
+    "stock_or_allocated_availability",
+    "destination_delivery_confirmation",
+    "known_lead_time",
+    "known_landed_cost_or_authoritative_checkout_total",
+    "ready_cart_trade_or_rfq_route"
+  ],
+  "Spanish_supplier_rule": "A merchant that is discoverable for Spain or passes a Spain delivery filter is not automatically a Spanish supplier. Spanish supplier requires verified seller or dispatch origin in Spain.",
+  "offer_freshness_rule": "Dated price, stock and delivery observations must refresh before quote, room budget commitment or purchase.",
+  "selection_priority": [
+    "technical_and_spatial_fit",
+    "exact_configuration",
+    "project_destination_and_delivery",
+    "availability_and_lead_time",
+    "landed_and_installed_cost",
+    "supplier_reliability",
+    "commercial_and_affiliate_economics"
+  ],
+  "policy": {
+    "single_global_confidence_score_allowed": false,
+    "geometry_proves_procurement": false,
+    "commerce_proves_geometry": false,
+    "Spain_catalog_filter_proves_Spanish_supplier": false,
+    "unknown_must_remain_unknown": true
+  }
+}

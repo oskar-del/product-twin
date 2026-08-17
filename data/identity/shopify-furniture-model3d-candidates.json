@@ -1,0 +1,128 @@
+{
+  "version": "0.1",
+  "summary": {
+    "generated_at": "2026-08-17T00:52:08.766Z",
+    "destination": {
+      "country": "ES",
+      "postal_code": "29660",
+      "currency": "EUR"
+    },
+    "catalog_queries": 24,
+    "unique_merchant_variants_discovered": 1062,
+    "storefront_probes_attempted": 500,
+    "storefront_probe_failures": 9,
+    "model3d_candidates": 2,
+    "single_variant_strong_binding": 0,
+    "categories_with_model3d": 1,
+    "complete_room_role_coverage": false,
+    "policy": "No Shopify catalog payload or Model3d source URL persisted; only stable merchant references, identity evidence and dated minimal commerce observations."
+  },
+  "candidates": [
+    {
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_b163aea21fdf6542",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "room_role": "lounge_chair",
+      "source_id": "shopify_merchant_storefront",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/7516727246925",
+        "merchant_variant_gid": "gid://shopify/ProductVariant/41899315429453",
+        "merchant_model3d_gid": "gid://shopify/Model3d/25428850638925",
+        "product_title": "Atli Lounge Chair",
+        "vendor": "Wendelbo",
+        "handle": "atlason-studio-atli-lounge-chair-wendelbo",
+        "product_type": "Lounge Chairs",
+        "variant_title": "_COM / Chrome",
+        "sku": "WEN-333-1-COM",
+        "barcode": null,
+        "selected_options": {
+          "Upholstery Group": "_COM",
+          "Legs": "Chrome"
+        }
+      },
+      "geometry": {
+        "media_type": "MODEL_3D",
+        "formats": [
+          "glb",
+          "usdz"
+        ],
+        "source_count": 2,
+        "asset_urls_persisted": false,
+        "scale_state": "UNVERIFIED_LIVE_ASSET_INSPECTION_REQUIRED",
+        "rights_state": "REVIEW",
+        "promotion_state": "G3_CANDIDATE_NOT_PROMOTED"
+      },
+      "commerce": {
+        "available_for_sale": true,
+        "price_amount": "3100.0",
+        "price_currency": "USD",
+        "destination_country": "ES",
+        "destination_postal_code": "29660",
+        "catalog_delivery_filter_passed": true,
+        "checkout_refresh_required": true
+      },
+      "merchant_variant_count": 24,
+      "variant_binding_state": "PRODUCT_LEVEL_MODEL_VARIANT_MATERIAL_BINDING_UNRESOLVED",
+      "discovery_queries": [
+        "modern lounge chair 3D AR",
+        "Wendelbo lounge chair"
+      ],
+      "observed_at": "2026-08-17T00:52:08.766Z",
+      "policy": "Stable merchant identity and dated commerce observation only. Model source URLs are resolved live and not persisted.",
+      "rank_score": 67
+    },
+    {
+      "candidate_id": "SHOPIFY_FURNITURE_MODEL3D_c78c9916e34465e8",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "room_role": "lounge_chair",
+      "source_id": "shopify_merchant_storefront",
+      "merchant_origin": "https://trade.designpublicgroup.com",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/7304676474957",
+        "merchant_variant_gid": "gid://shopify/ProductVariant/41207876845645",
+        "merchant_model3d_gid": "gid://shopify/Model3d/25288453292109",
+        "product_title": "Fave Chair",
+        "vendor": "NORR11",
+        "handle": "hansen-hyldahl-fave-chair-norr11",
+        "product_type": "Lounge Chairs",
+        "variant_title": "Cat 0 / Chrome Steel",
+        "sku": "NOR-FAVE-CHR-CHRME-CAT0",
+        "barcode": null,
+        "selected_options": {
+          "Upholstery Group": "Cat 0",
+          "Finish": "Chrome Steel"
+        }
+      },
+      "geometry": {
+        "media_type": "MODEL_3D",
+        "formats": [
+          "glb",
+          "usdz"
+        ],
+        "source_count": 2,
+        "asset_urls_persisted": false,
+        "scale_state": "UNVERIFIED_LIVE_ASSET_INSPECTION_REQUIRED",
+        "rights_state": "REVIEW",
+        "promotion_state": "G3_CANDIDATE_NOT_PROMOTED"
+      },
+      "commerce": {
+        "available_for_sale": true,
+        "price_amount": "2700.0",
+        "price_currency": "USD",
+        "destination_country": "ES",
+        "destination_postal_code": "29660",
+        "catalog_delivery_filter_passed": true,
+        "checkout_refresh_required": true
+      },
+      "merchant_variant_count": 18,
+      "variant_binding_state": "PRODUCT_LEVEL_MODEL_VARIANT_MATERIAL_BINDING_UNRESOLVED",
+      "discovery_queries": [
+        "modern lounge chair 3D AR",
+        "NORR11 lounge chair"
+      ],
+      "observed_at": "2026-08-17T00:52:08.766Z",
+      "policy": "Stable merchant identity and dated commerce observation only. Model source URLs are resolved live and not persisted.",
+      "rank_score": 67
+    }
+  ]
+}

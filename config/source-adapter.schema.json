@@ -1,11 +1,20 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "purpose": "Describe how any external source can contribute identity, technical evidence, commerce, logistics or procurement to Product Twin without redefining the canonical taxonomy.",
   "source_adapter": {
     "source_id": "string",
     "name": "string",
     "source_type": "global_catalog | merchant_storefront | manufacturer | distributor | trade_portal | bim_library | material_library | logistics_provider | other",
     "territories": "array",
+    "interfaces": [
+      {
+        "kind": "mcp | ucp_mcp | rest | graphql | storefront_web | partner_feed | file_feed | other",
+        "endpoint_or_reference": "string|null",
+        "access_state": "public | credentials_required | partner_only | account_session | research_required",
+        "official": "boolean",
+        "live_test_state": "proven | partial | not_tested | blocked"
+      }
+    ],
     "authentication": {
       "catalog": "none | api_key | oauth | account | other",
       "pricing": "none | account | quote | unavailable",
@@ -24,7 +33,15 @@
       "quote": "boolean",
       "invoice": "boolean",
       "delivery_tracking": "boolean",
-      "physical_locations": "boolean"
+      "physical_locations": "boolean",
+      "variant_configuration": "boolean",
+      "product_media": "boolean",
+      "media_rights_metadata": "boolean",
+      "destination_delivery": "boolean",
+      "lead_time": "boolean",
+      "freight_quote": "boolean",
+      "landed_cost": "boolean",
+      "trade_or_rfq": "boolean"
     },
     "taxonomy_mappings": "array",
     "locations": "array",
@@ -33,6 +50,7 @@
   },
   "principles": [
     "A source can be excellent for one graph and weak for another.",
+    "MCP or API availability is an interface fact, not evidence that the source contains identity, geometry, rights, local stock, delivery or project-procurement data.",
     "Manufacturer technical truth and commercial availability remain independently versioned.",
     "Authentication requirements are explicit so Product Twin can distinguish public discovery from trade-account procurement.",
     "Physical locations are stored only when they are evidenced as relevant supply/service nodes, not inferred from a corporate headquarters."

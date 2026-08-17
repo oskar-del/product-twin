@@ -1,0 +1,28 @@
+{
+  "version": "0.1",
+  "intake_id": "MUUTO_LEAF_FLOOR_LEAFLR01_AUTHORIZED_GEOMETRY_INTAKE_V0_1",
+  "target_id": "MUUTO_LEAF_FLOOR_LEAFLR01_G3_V0_1",
+  "manufacturer": "Muuto",
+  "product": "Leaf Floor Lamp, White, EU/non-US item",
+  "expected_identity_values": ["LEAFLR01", "13431", "5710562134314"],
+  "official_source_urls": [
+    "https://www.muuto.com/product/Leaf-Floor-Lamp--p2227/p2227/",
+    "https://professionals.muuto.com/toolbox/product-information/download-ad-files/",
+    "https://download.muuto.com/digitalshowroom/"
+  ],
+  "allowed_extensions": [".obj", ".dwg", ".rfa", ".rvt", ".zip"],
+  "allowed_access_bases": ["manufacturer_written_permission", "authorized_professional_account", "manufacturer_direct_delivery"],
+  "minimum_bytes": 10000,
+  "expected_scale_mm": {"width":433,"depth":433,"height":1190,"base_diameter":220,"cord_length":1800},
+  "binary_policy": "source file remains outside Git or under gitignored .runtime; intake persists hash and authorization evidence only",
+  "metric_path": "data/metrics/muuto-leaf-floor-leaflr01-authorized-capture-intake-latest.json",
+  "post_intake_gates": [
+    "bind the file or archive metadata to exact item LEAFLR01 or legacy item 13431",
+    "convert geometry through the written Muuto permission scope",
+    "validate the 433 x 433 x 1190 mm physical envelope and 220 mm base diameter",
+    "verify exact White finish and EU/non-US product configuration mapping",
+    "record commercial render, conversion, persistence, attribution and territory scope",
+    "refresh the exact Spain electrical specification and verify delivery to postcode 29660",
+    "do not publish or redistribute the manufacturer binary or converted exact asset outside the permitted scope"
+  ]
+}

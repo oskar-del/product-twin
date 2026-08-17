@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-08-16T23:25:33.897Z",
+  "avatar_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+  "status": "G2_REALISTIC_PROXY_SCALE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-listerby-30513904-g2-coffee-table-proxy.glb",
+  "asset_bytes": 28020,
+  "identity": {
+    "merchant": "IKEA Spain",
+    "product_family": "LISTERBY",
+    "article_no": "305.139.04",
+    "official_url": "https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/"
+  },
+  "expected_mm": {
+    "width": 1400,
+    "depth": 600,
+    "height": 370
+  },
+  "measured_xyz_mm": {
+    "width": 1400,
+    "height": 370,
+    "depth": 600
+  },
+  "relative_error_max": 0,
+  "material_cues": [
+    "natural oak veneer",
+    "solid oak slatted shelf and legs",
+    "clear tinted lacquer"
+  ],
+  "placement": {
+    "origin": "floor_center",
+    "recommended_sofa_gap_mm": 420,
+    "recommended_circulation_clearance_mm": 600
+  },
+  "disclosure": "Product Twin-owned realistic planning geometry at verified scale. Product identity and dimensions are exact; proprietary manufacturer geometry and texture artwork are not claimed.",
+  "commerce": {
+    "state": "OFFICIAL_PRODUCT_PAGE_VERIFIED_LIVE_AVAILABILITY_REFRESH_REQUIRED",
+    "observed_at": "2026-08-17"
+  }
+}

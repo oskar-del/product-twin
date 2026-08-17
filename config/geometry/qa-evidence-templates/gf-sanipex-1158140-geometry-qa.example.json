@@ -1,0 +1,41 @@
+{
+  "target_id": "GF_SANIPEX_MT_1158140_G4_V0_1",
+  "source_sha256": "<copy source.sha256 from the authorized intake metric>",
+  "converted_asset_path": ".runtime/geometry/gf-sanipex-1158140/model.glb",
+  "converted_asset_sha256": "<sha256 of the converted GLB>",
+  "conversion": {
+    "tool": "<rights-compatible project conversion tool>",
+    "tool_version": "<version>"
+  },
+  "identity": {
+    "manufacturer_part_no": "1158140",
+    "gf_item_no": "351616990",
+    "ean": "7613263030184",
+    "gtin14": "07613263030184",
+    "etim_class": "EC003024"
+  },
+  "measurements_mm": {
+    "l1": 54,
+    "z1": 34,
+    "inner_diameter": 16,
+    "z_d2": 12
+  },
+  "interfaces": {
+    "component_type": "IfcPipeFittingType",
+    "nominal_system": "JRG Sanipex MT",
+    "nominal_diameter_mm": 16,
+    "connection_role": "adapter"
+  },
+  "rights": {
+    "access_basis": "<copy from the authorized intake metric>",
+    "terms_reference": "<copy from the authorized intake metric>",
+    "project_reference": "<copy from the authorized intake metric>",
+    "project_use_scope_confirmed": true,
+    "render_scope": "project_only",
+    "derivative_storage_scope": "ephemeral_only",
+    "asset_redistribution_allowed": false,
+    "manufacturer_binary_committed": false,
+    "converted_asset_committed": false
+  },
+  "operator_confirmation": "<confirm that the product-bound conversion, identity, measured dimensions, interfaces and rights declarations were personally checked>"
+}

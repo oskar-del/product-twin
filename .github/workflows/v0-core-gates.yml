@@ -1,0 +1,60 @@
+name: Validate Product Twin V0 Core Gates
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'config/geometry/intake/**'
+      - 'config/geometry/authorized-geometry-qa-contract.json'
+      - 'config/geometry/photo-avatar-*.json'
+      - 'config/commerce/ikea-v0-live-session-contract.json'
+      - 'data/geometry/avatar-index.json'
+      - 'data/showrooms/v0-shoppable-dining-scene.json'
+      - 'scripts/evaluate-v0-exit-gates.mjs'
+      - 'scripts/intake-authorized-geometry.mjs'
+      - 'scripts/validate-authorized-geometry-qa.mjs'
+      - 'scripts/preflight-photo-avatar-job.mjs'
+      - 'scripts/run-meshy-avatar-job.mjs'
+      - 'scripts/validate-photo-avatar-qa.mjs'
+      - 'scripts/validate-v0-shoppable-scene.mjs'
+      - 'scripts/record-v0-merchant-session.mjs'
+      - 'scripts/test-intake-authorized-geometry.mjs'
+      - 'scripts/test-validate-authorized-geometry-qa.mjs'
+      - 'scripts/test-preflight-photo-avatar-job.mjs'
+      - 'scripts/test-refresh-v0-shoppable-scene-offers.mjs'
+      - 'scripts/test-record-v0-merchant-session.mjs'
+      - 'scripts/test-validate-photo-avatar-qa.mjs'
+      - 'package.json'
+      - '.github/workflows/v0-core-gates.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test live-offer parser
+        run: npm run scene:v0:refresh:test
+      - name: Validate shoppable scene contract
+        run: npm run scene:v0:validate
+      - name: Test private live-session evidence gate
+        run: npm run scene:v0:session:test
+      - name: Test authorized geometry intake
+        run: npm run geometry:intake:test
+      - name: Test post-intake exact geometry QA
+        run: npm run geometry:qa:test
+      - name: Test photo reconstruction preflight
+        run: npm run avatar:photo:preflight:test
+      - name: Test photo reconstruction QA
+        run: npm run avatar:photo:qa:test
+      - name: Evaluate V0 exit board
+        run: npm run v0:gates
+      - name: Assert honest blocked state until external evidence lands
+        run: |
+          node -e "const m=require('./data/metrics/v0-exit-gates-latest.json'); if(!['V0_BLOCKED_EXTERNAL_GATES_REMAIN','V0_EXIT_CRITERIA_PASS'].includes(m.status)) process.exit(1)"

@@ -1,0 +1,156 @@
+{
+  "generated_at": "2026-08-17T13:21:45.099Z",
+  "scene_id": "V0_SHOPPABLE_DINING_001",
+  "contract_status": "PASS",
+  "end_to_end_status": "PARTIAL_PASS_LIVE_AVAILABILITY_AND_CHECKOUT_BLOCKED",
+  "checks_total": 28,
+  "checks_passed": 28,
+  "checks_failed": 0,
+  "blockers": [
+    "Live delivery/store availability requires a location-aware IKEA session.",
+    "IKEA currently reports sales/payment-area issues; checkout must be refreshed before purchase.",
+    "Ceiling hook, lamp and project electrical installation remain conditional technical gates."
+  ],
+  "checks": [
+    {
+      "id": "one_primary",
+      "pass": true,
+      "detail": "PT_IKEA_SKURUP_80407114"
+    },
+    {
+      "id": "one_lower_cost_substitute",
+      "pass": true,
+      "detail": "PT_IKEA_MELODI_60386527"
+    },
+    {
+      "id": "same_category",
+      "pass": true,
+      "detail": "ELECTRICAL.LUMINAIRES.PENDANT / ELECTRICAL.LUMINAIRES.PENDANT"
+    },
+    {
+      "id": "same_transform",
+      "pass": true,
+      "detail": "DINING_PENDANT_ANCHOR_01"
+    },
+    {
+      "id": "PT_IKEA_SKURUP_80407114:identity_exact",
+      "pass": true,
+      "detail": "verified_exact_retail_article"
+    },
+    {
+      "id": "PT_IKEA_SKURUP_80407114:avatar_indexed",
+      "pass": true,
+      "detail": "AVATAR_IKEA_SKURUP_80407114_G2_PENDANT_PROXY"
+    },
+    {
+      "id": "PT_IKEA_SKURUP_80407114:avatar_promoted",
+      "pass": true,
+      "detail": "G2/promoted_proxy"
+    },
+    {
+      "id": "PT_IKEA_SKURUP_80407114:asset_exists",
+      "pass": true,
+      "detail": "data/geometry/avatars/ikea-skurup-80407114-g2-pendant-proxy.glb"
+    },
+    {
+      "id": "PT_IKEA_SKURUP_80407114:proxy_disclosed",
+      "pass": true,
+      "detail": "dimension_verified_neutral_proxy"
+    },
+    {
+      "id": "PT_IKEA_SKURUP_80407114:technical_gate",
+      "pass": true,
+      "detail": "CONDITIONAL_PASS"
+    },
+    {
+      "id": "PT_IKEA_SKURUP_80407114:regulatory_gate",
+      "pass": true,
+      "detail": "CONDITIONAL_PASS"
+    },
+    {
+      "id": "PT_IKEA_SKURUP_80407114:dated_offer",
+      "pass": true,
+      "detail": "19.99 EUR @ 2026-08-16"
+    },
+    {
+      "id": "PT_IKEA_SKURUP_80407114:live_refresh_policy",
+      "pass": true,
+      "detail": "LIVE_LOCATION_REFRESH_REQUIRED"
+    },
+    {
+      "id": "PT_IKEA_SKURUP_80407114:handoff",
+      "pass": true,
+      "detail": "DIRECT_PRODUCT_PAGE_ADD_TO_CART_OBSERVED"
+    },
+    {
+      "id": "PT_IKEA_MELODI_60386527:identity_exact",
+      "pass": true,
+      "detail": "verified_exact_retail_article"
+    },
+    {
+      "id": "PT_IKEA_MELODI_60386527:avatar_indexed",
+      "pass": true,
+      "detail": "AVATAR_IKEA_MELODI_60386527_G2_PENDANT_PROXY"
+    },
+    {
+      "id": "PT_IKEA_MELODI_60386527:avatar_promoted",
+      "pass": true,
+      "detail": "G2/promoted_proxy"
+    },
+    {
+      "id": "PT_IKEA_MELODI_60386527:asset_exists",
+      "pass": true,
+      "detail": "data/geometry/avatars/ikea-melodi-60386527-g2-pendant-proxy.glb"
+    },
+    {
+      "id": "PT_IKEA_MELODI_60386527:proxy_disclosed",
+      "pass": true,
+      "detail": "dimension_verified_neutral_proxy"
+    },
+    {
+      "id": "PT_IKEA_MELODI_60386527:technical_gate",
+      "pass": true,
+      "detail": "CONDITIONAL_PASS"
+    },
+    {
+      "id": "PT_IKEA_MELODI_60386527:regulatory_gate",
+      "pass": true,
+      "detail": "CONDITIONAL_PASS"
+    },
+    {
+      "id": "PT_IKEA_MELODI_60386527:dated_offer",
+      "pass": true,
+      "detail": "5.99 EUR @ 2026-08-16"
+    },
+    {
+      "id": "PT_IKEA_MELODI_60386527:live_refresh_policy",
+      "pass": true,
+      "detail": "LIVE_LOCATION_REFRESH_REQUIRED"
+    },
+    {
+      "id": "PT_IKEA_MELODI_60386527:handoff",
+      "pass": true,
+      "detail": "DIRECT_PRODUCT_PAGE_AVAILABLE"
+    },
+    {
+      "id": "budget_delta",
+      "pass": true,
+      "detail": "-14 calculated / -14 declared"
+    },
+    {
+      "id": "resulting_total",
+      "pass": true,
+      "detail": "5.99 calculated / 5.99 declared"
+    },
+    {
+      "id": "lower_cost",
+      "pass": true,
+      "detail": "-14 EUR"
+    },
+    {
+      "id": "no_retained_mutable_payload",
+      "pass": true,
+      "detail": "stock/cart payload exclusion"
+    }
+  ]
+}

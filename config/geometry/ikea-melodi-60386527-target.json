@@ -1,0 +1,44 @@
+{
+  "version": "0.1",
+  "target_id": "IKEA_MELODI_60386527_G2_V0_1",
+  "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+  "type": "luminaire",
+  "manufacturer": "IKEA",
+  "product_family": "MELODI",
+  "article_no": "603.865.27",
+  "official_spain_page": "https://www.ikea.com/es/es/p/melodi-lampara-techo-blanco-60386527/",
+  "evidence_observed_at": "2026-08-16",
+  "dimensions_mm": {
+    "diameter": 280,
+    "shade_height": 260,
+    "cord_length": 1600
+  },
+  "specification": {
+    "max_power_w": 22,
+    "lamp_base": "E27",
+    "shade_material": "polystyrene_plastic",
+    "ce_marked": true,
+    "mounting": "ceiling_hook"
+  },
+  "commerce_reference": {
+    "merchant": "IKEA Spain",
+    "type": "retailer_direct_online",
+    "product_url": "https://www.ikea.com/es/es/p/melodi-lampara-techo-blanco-60386527/",
+    "last_observed_price_eur": 5.99,
+    "price_observed_at": "2026-08-16",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "availability_state": "delivery_and_store_availability_require_live_location_refresh",
+    "cart_handoff_state": "direct_product_page_available; checkout health requires live refresh"
+  },
+  "avatar_plan": {
+    "target_level": "G2",
+    "geometry": "Product Twin-owned pendant-shade envelope proxy using the official fixed shade dimensions",
+    "appearance": "generic white pendant proxy; exact IKEA industrial-design geometry and product imagery are not copied",
+    "scale_gate": "280 mm diameter x 260 mm shade height; cord is parametric/adjustable"
+  },
+  "next_gates": [
+    "authorized exact geometry/render rights",
+    "photometric data if available",
+    "live stock/delivery refresh"
+  ]
+}

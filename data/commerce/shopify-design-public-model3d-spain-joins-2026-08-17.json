@@ -1,0 +1,234 @@
+{
+  "version": "0.1",
+  "summary": {
+    "generated_at": "2026-08-17T01:14:34.896Z",
+    "candidates": 6,
+    "exact_country_filtered_product_joins": 6,
+    "exact_country_filtered_variants": 6,
+    "complete_candidate_join_coverage": true,
+    "destination": {
+      "country": "ES",
+      "scope": "country_only",
+      "currency": "EUR"
+    }
+  },
+  "joins": [
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584850764",
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/10584850764",
+        "product_title": "Man Day Bed",
+        "vendor": "NORR11",
+        "handle": "humlevik-krojgaard-man-day-bed-sofabeds-norr11",
+        "product_type": "Sofa Beds & Daybeds"
+      },
+      "status": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+      "destination": {
+        "country": "ES",
+        "scope": "country_only"
+      },
+      "exact_variant_matches": [
+        {
+          "merchant_variant_gid": "gid://shopify/ProductVariant/33326751023181",
+          "variant_title": "Cat 1",
+          "sku": "NOR-MAN-DAYBED-CAT1",
+          "barcode": null,
+          "selected_options": {
+            "Upholstery Group": "Cat 1"
+          },
+          "available_for_sale": true,
+          "dated_price": {
+            "amount": "7500.0",
+            "currency": "USD"
+          }
+        }
+      ],
+      "checkout_refresh_required": true,
+      "observed_at": "2026-08-17T01:14:34.896Z",
+      "policy": "The country-filtered catalog result proves Spain discovery eligibility, not exact postcode delivery, final tax, freight, stock allocation or delivery promise. Refresh checkout before quoting or purchase."
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852108",
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/10584852108",
+        "product_title": "Man 2-Seater Sofa",
+        "vendor": "NORR11",
+        "handle": "humlevik-krojgaard-man-sofa-2-seater-sofas-norr11",
+        "product_type": "Sofas"
+      },
+      "status": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+      "destination": {
+        "country": "ES",
+        "scope": "country_only"
+      },
+      "exact_variant_matches": [
+        {
+          "merchant_variant_gid": "gid://shopify/ProductVariant/33326759673933",
+          "variant_title": "Cat 2",
+          "sku": "NOR-MAN-2-SEAT-SOFA-CAT2",
+          "barcode": null,
+          "selected_options": {
+            "Upholstery Group": "Cat 2"
+          },
+          "available_for_sale": true,
+          "dated_price": {
+            "amount": "7800.0",
+            "currency": "USD"
+          }
+        }
+      ],
+      "checkout_refresh_required": true,
+      "observed_at": "2026-08-17T01:14:34.896Z",
+      "policy": "The country-filtered catalog result proves Spain discovery eligibility, not exact postcode delivery, final tax, freight, stock allocation or delivery promise. Refresh checkout before quoting or purchase."
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852492",
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/10584852492",
+        "product_title": "Man 3-Seater Sofa",
+        "vendor": "NORR11",
+        "handle": "humlevik-krojgaard-man-sofa-3-seater-sofas-norr11",
+        "product_type": "Sofas"
+      },
+      "status": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+      "destination": {
+        "country": "ES",
+        "scope": "country_only"
+      },
+      "exact_variant_matches": [
+        {
+          "merchant_variant_gid": "gid://shopify/ProductVariant/33326758264909",
+          "variant_title": "Cat 3",
+          "sku": "NOR-MAN-3-SEAT-SOFA-CAT3",
+          "barcode": null,
+          "selected_options": {
+            "Upholstery Group": "Cat 3"
+          },
+          "available_for_sale": true,
+          "dated_price": {
+            "amount": "11500.0",
+            "currency": "USD"
+          }
+        }
+      ],
+      "checkout_refresh_required": true,
+      "observed_at": "2026-08-17T01:14:34.896Z",
+      "policy": "The country-filtered catalog result proves Spain discovery eligibility, not exact postcode delivery, final tax, freight, stock allocation or delivery promise. Refresh checkout before quoting or purchase."
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584851276",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "room_role": "lounge_chair",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/10584851276",
+        "product_title": "Man Lounge Chair",
+        "vendor": "NORR11",
+        "handle": "humlevik-krojgaard-man-lounge-chair-lounge-chairs-norr11",
+        "product_type": "Lounge Chairs"
+      },
+      "status": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+      "destination": {
+        "country": "ES",
+        "scope": "country_only"
+      },
+      "exact_variant_matches": [
+        {
+          "merchant_variant_gid": "gid://shopify/ProductVariant/33326754529357",
+          "variant_title": "Cat 1",
+          "sku": "NOR-MAN-LNG-CAT1",
+          "barcode": null,
+          "selected_options": {
+            "Upholstery Group": "Cat 1"
+          },
+          "available_for_sale": true,
+          "dated_price": {
+            "amount": "4300.0",
+            "currency": "USD"
+          }
+        }
+      ],
+      "checkout_refresh_required": true,
+      "observed_at": "2026-08-17T01:14:34.896Z",
+      "policy": "The country-filtered catalog result proves Spain discovery eligibility, not exact postcode delivery, final tax, freight, stock allocation or delivery promise. Refresh checkout before quoting or purchase."
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_35853729804",
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/35853729804",
+        "product_title": "Mammoth Sofa",
+        "vendor": "NORR11",
+        "handle": "knut-bendik-humlevik-rune-krojgaard-mammoth-sofa-norr11",
+        "product_type": "Sofas"
+      },
+      "status": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+      "destination": {
+        "country": "ES",
+        "scope": "country_only"
+      },
+      "exact_variant_matches": [
+        {
+          "merchant_variant_gid": "gid://shopify/ProductVariant/33326743584845",
+          "variant_title": "Cat 1 / Natural Oak",
+          "sku": "NOR-MAMMOTH-SOFA-CAT1-OAK",
+          "barcode": null,
+          "selected_options": {
+            "Upholstery Group": "Cat 1",
+            "Frame": "Natural Oak"
+          },
+          "available_for_sale": true,
+          "dated_price": {
+            "amount": "6200.0",
+            "currency": "USD"
+          }
+        }
+      ],
+      "checkout_refresh_required": true,
+      "observed_at": "2026-08-17T01:14:34.896Z",
+      "policy": "The country-filtered catalog result proves Spain discovery eligibility, not exact postcode delivery, final tax, freight, stock allocation or delivery promise. Refresh checkout before quoting or purchase."
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_782311161966",
+      "category_id": "FFE.SEATING.SOFA",
+      "room_role": "sofa",
+      "identity": {
+        "merchant_product_gid": "gid://shopify/Product/782311161966",
+        "product_title": "Lobby Sofa",
+        "vendor": "Wendelbo",
+        "handle": "sarah-rousselle-lobby-sofa-wendelbo",
+        "product_type": "Sofas"
+      },
+      "status": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+      "destination": {
+        "country": "ES",
+        "scope": "country_only"
+      },
+      "exact_variant_matches": [
+        {
+          "merchant_variant_gid": "gid://shopify/ProductVariant/28677264474189",
+          "variant_title": "_COM",
+          "sku": "WEN-LBY-SOF-COM",
+          "barcode": null,
+          "selected_options": {
+            "Upholstery Group": "_COM"
+          },
+          "available_for_sale": true,
+          "dated_price": {
+            "amount": "2918.0",
+            "currency": "USD"
+          }
+        }
+      ],
+      "checkout_refresh_required": true,
+      "observed_at": "2026-08-17T01:14:34.896Z",
+      "policy": "The country-filtered catalog result proves Spain discovery eligibility, not exact postcode delivery, final tax, freight, stock allocation or delivery promise. Refresh checkout before quoting or purchase."
+    }
+  ]
+}

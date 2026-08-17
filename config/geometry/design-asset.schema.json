@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/design-asset.schema.json",
+  "title": "Product Twin generic design asset",
+  "type": "object",
+  "required": [
+    "design_asset_id",
+    "source_id",
+    "source_model_name",
+    "identity_scope",
+    "category_id",
+    "asset_state",
+    "dimensions_state",
+    "license",
+    "target_geometry_level",
+    "not_a_product_twin",
+    "replacement_search_required"
+  ],
+  "properties": {
+    "design_asset_id": {"type": "string", "pattern": "^DA_[A-Z0-9_]+$"},
+    "source_id": {"type": "string"},
+    "source_model_name": {"type": "string", "minLength": 1},
+    "identity_scope": {"const": "GENERIC_DESIGN_ASSET"},
+    "category_id": {"type": "string"},
+    "style_tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "room_roles": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "asset_state": {"enum": ["CANDIDATE_NOT_DOWNLOADED", "DOWNLOADED_UNVERIFIED", "G2_READY"]},
+    "dimensions_state": {"enum": ["UNVERIFIED_LIBRARY_METADATA", "MEASURED_NOT_AUTHORED", "VERIFIED_AUTHORED_SCALE"]},
+    "license": {
+      "type": "object",
+      "required": ["spdx_like", "attribution_required", "attribution_text", "source_reference"],
+      "properties": {
+        "spdx_like": {"type": "string"},
+        "attribution_required": {"type": "boolean"},
+        "attribution_text": {"type": "string"},
+        "source_reference": {"type": "string", "format": "uri"}
+      },
+      "additionalProperties": false
+    },
+    "target_geometry_level": {"const": "G2"},
+    "not_a_product_twin": {"const": true},
+    "replacement_search_required": {"const": true},
+    "replacement_benchmarks": {
+      "type": "array",
+      "items": {"enum": ["ES", "SE", "GB", "US"]},
+      "uniqueItems": true,
+      "minItems": 4
+    }
+  },
+  "not": {
+    "anyOf": [
+      {"required": ["product_twin_id"]},
+      {"required": ["sku"]},
+      {"required": ["gtin"]},
+      {"required": ["price"]},
+      {"required": ["stock"]},
+      {"required": ["offer"]},
+      {"required": ["supplier"]}
+    ]
+  },
+  "additionalProperties": false
+}

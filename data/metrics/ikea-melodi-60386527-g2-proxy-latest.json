@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-08-16T21:06:00.207472+00:00",
+  "target_id": "IKEA_MELODI_60386527_G2_V0_1",
+  "avatar_id": "AVATAR_IKEA_MELODI_60386527_G2_PENDANT_PROXY",
+  "status": "G2_PROXY_SCALE_COMMERCE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-melodi-60386527-g2-pendant-proxy.glb",
+  "asset_bytes": 6120,
+  "verified_fixed_envelope_mm": {
+    "diameter": 280,
+    "height": 260
+  },
+  "measured_fixed_envelope_mm": {
+    "diameter": 280.0000011920929,
+    "height": 259.99999046325684
+  },
+  "relative_error": {
+    "diameter": 4.257474626813616e-09,
+    "height": 3.6679781400240387e-08
+  },
+  "parametric_placement": {
+    "cord_length_mm": 1600,
+    "note": "Cord/drop is adjustable placement metadata and is not part of the fixed shade mesh."
+  },
+  "specification": {
+    "max_power_w": 22,
+    "lamp_base": "E27",
+    "shade_material": "polystyrene_plastic",
+    "ce_marked": true,
+    "mounting": "ceiling_hook"
+  },
+  "commerce_reference": {
+    "merchant": "IKEA Spain",
+    "type": "retailer_direct_online",
+    "product_url": "https://www.ikea.com/es/es/p/melodi-lampara-techo-blanco-60386527/",
+    "last_observed_price_eur": 5.99,
+    "price_observed_at": "2026-08-16",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "availability_state": "delivery_and_store_availability_require_live_location_refresh",
+    "cart_handoff_state": "direct_product_page_available; checkout health requires live refresh"
+  },
+  "disclosure": "Exact IKEA MELODI article identity, Spain commerce reference and official dimensions/specification. Product Twin-owned G2 geometry is a neutral rotational envelope proxy; exact IKEA industrial-design shape is not claimed.",
+  "next_gate": "authorized exact geometry/render rights + photometric data + live stock/delivery refresh"
+}

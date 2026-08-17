@@ -1,0 +1,85 @@
+{
+  "twin_id": "PT_MUUTO_LEAF_FLOOR_LEAFLR01",
+  "kind": "object",
+  "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "Muuto",
+    "product_family": "Leaf Lamp",
+    "model": "Leaf Floor Lamp",
+    "configuration": "White, EU/non-US item",
+    "manufacturer_item_no": "LEAFLR01",
+    "legacy_item_no": "13431",
+    "gtin_ean": "5710562134314"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 433,
+      "depth": 433,
+      "height": 1190,
+      "base_diameter": 220,
+      "cord_length": 1800
+    },
+    "electrical_state": "manufacturer_configuration_verified_retailer_electrical_observation_requires_refresh",
+    "evidence_state": "manufacturer_verified"
+  },
+  "manufacturer_evidence": {
+    "product_page": "https://www.muuto.com/product/Leaf-Floor-Lamp--p2227/p2227/",
+    "architect_download_page": "https://professionals.muuto.com/toolbox/product-information/download-ad-files/",
+    "architect_download_hub": "https://download.muuto.com/digitalshowroom/",
+    "geometry_formats_advertised": ["DWG", "3DS", "OBJ", "SketchUp", "Revit"],
+    "authority": "A_MANUFACTURER"
+  },
+  "external_identities": [
+    {
+      "source_id": "andlight_es",
+      "role": "live_commerce_reference",
+      "product_url": "https://andlight.es/shop/muuto-leaf-lampara-3963p.html",
+      "verification": {
+        "state": "exact_legacy_identity_and_gtin_verified",
+        "merchant_legacy_item_no": "13431",
+        "merchant_gtin_ean": "5710562134314",
+        "configuration_match": true,
+        "electrical_observation": "LED 12V, maximum supply 230V",
+        "postcode_delivery_state": "checkout_or_written_confirmation_required"
+      },
+      "refresh_policy": "live_required",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "exact_product_bound_asset_unresolved",
+    "preferred_source": "Muuto architect file",
+    "advertised_formats": ["OBJ", "3DS", "DWG", "SketchUp", "Revit"],
+    "runtime_target": "GLB",
+    "scale_state": "manufacturer_dimensions_known_asset_not_validated",
+    "exact_likeness_state": "pending_asset_resolution",
+    "rights": {
+      "space_planning_use": "manufacturer_professional_files_available",
+      "render_use": "review",
+      "derivative_conversion": "review",
+      "redistribution": "review"
+    }
+  },
+  "readiness": {
+    "identity": "verified",
+    "commerce": "exact_spain_listing_postcode_and_electrical_refresh_required",
+    "dimensions": "verified",
+    "geometry": "candidate",
+    "render": "blocked",
+    "specification": "partial_verified",
+    "rights": "review"
+  },
+  "promotion_blockers": [
+    "receive exact product-bound manufacturer 3D asset through an authorized Muuto route",
+    "validate asset scale against 433 x 433 x 1190 mm manufacturer dimensions",
+    "validate exact White material and finish",
+    "receive written commercial-render and derivative-conversion rights",
+    "refresh electrical specification and verify delivery to postcode 29660"
+  ],
+  "commerce_evidence_file": "data/commerce/muuto-residential-hero-set-spain-offers-2026-08-17.json",
+  "authorized_intake_manifest": "config/geometry/intake/muuto-leaf-floor-leaflr01-authorized-intake.json",
+  "qa_evidence_template": "config/geometry/qa-evidence-templates/muuto-leaf-floor-leaflr01-geometry-qa.example.json",
+  "policy": "Exact identity and a Spain listing do not imply exact geometry, electrical compatibility or deliverability. Mutable price, stock and delivery data are resolved live before procurement."
+}

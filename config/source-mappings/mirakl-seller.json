@@ -1,0 +1,50 @@
+{
+  "source_id": "mirakl_marketplace_seller",
+  "version": "0.1",
+  "access_state": "APPROVED_SELLER_INSTANCE_REQUIRED",
+  "scope": "Authorized seller/shop records only; never treat this adapter as public full-marketplace catalogue access.",
+  "canonical_identity": {
+    "gtin": ["ean", "gtin", "barcode"],
+    "seller_sku": ["shop_sku", "sku"],
+    "marketplace_product_sku": ["product_sku"],
+    "manufacturer": ["brand", "manufacturer"],
+    "model": ["manufacturer_part_number", "model", "mpn"],
+    "title": ["title", "product_title"],
+    "description": ["description", "long_description"],
+    "attributes": ["category_code", "category_attributes"]
+  },
+  "media": {
+    "images": ["image_1", "image_2", "additional_images"],
+    "documents": ["documents", "attachments"],
+    "geometry": [],
+    "rule": "Marketplace media fields do not establish reconstruction, texture, display or redistribution rights."
+  },
+  "offer": {
+    "price": ["price", "discount_price"],
+    "currency": ["currency_iso_code"],
+    "quantity": ["quantity"],
+    "condition": ["state_code"],
+    "lead_time_to_ship_days": ["leadtime_to_ship"],
+    "logistic_class": ["logistic_class"],
+    "sales_channels": ["channels", "exclusive_channels"]
+  },
+  "order_and_fulfilment": {
+    "order_id": ["order_id", "commercial_id"],
+    "order_lines": ["order_lines"],
+    "quantity": ["quantity"],
+    "unit_price": ["price_unit"],
+    "shipping_deadline": ["shipping_deadline"],
+    "carrier": ["carrier_name"],
+    "tracking": ["tracking_number", "tracking_url"],
+    "status": ["order_state"]
+  },
+  "preserve_as_unknown_unless_explicit": [
+    "physical inventory location",
+    "seller or dispatch country",
+    "destination delivery promise",
+    "freight and landed cost",
+    "manufacturer geometry",
+    "media and derivative rights"
+  ],
+  "product_twin_write_policy": "Seller-authorized records may update identity, offer, stock and fulfilment lanes. They never overwrite manufacturer technical truth, geometry QA, rights or client approval."
+}

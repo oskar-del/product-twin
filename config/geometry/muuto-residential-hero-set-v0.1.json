@@ -1,0 +1,85 @@
+{
+  "version": "0.1",
+  "set_id": "MUUTO_RESIDENTIAL_HERO_SET_V0_1",
+  "design_direction": "Marbella Warm Modern",
+  "project_location": "29660 Marbella, Malaga, Spain",
+  "purpose": "small exact residential furniture set for the first coherent G3 Product Twin room",
+  "supplier_strategy": "one manufacturer rights and Spain contract-sales conversation, with exact identity and offer verification per item",
+  "products": [
+    {
+      "role": "primary_sofa",
+      "target_id": "MUUTO_OUTLINE_2S_OU2SRA10101_G3_V0_1",
+      "manufacturer_item_no": "OU2SRA10101",
+      "legacy_item_no": "27003-COGN",
+      "gtin_ean": "5713222210793",
+      "product": "Outline Sofa 2-Seater",
+      "configuration": "Refine Leather Cognac / Black, standard base",
+      "dimensions_mm": {"width":1700,"depth":840,"height":710,"seat_height":400,"seat_depth":620},
+      "official_page": "https://www.muuto.com/product/outline-sofa-2-seater-p9391/p9391/",
+      "current_level": "G0",
+      "identity_state": "exact manufacturer and merchant identity verified",
+      "commerce_state": "exact Shopify reference, exact EU offer and exact Spanish storefront listing found; postcode 29660 delivery still requires checkout or written confirmation",
+      "geometry_state": "official architect-file route found; exact authorized binary required"
+    },
+    {
+      "role": "lounge_chair",
+      "target_id": "MUUTO_FIBER_LOUNGE_FILOUWON04041_G3_V0_1",
+      "manufacturer_item_no": "FILOUWON04041",
+      "legacy_item_no": "25513",
+      "gtin_ean": "5713295826631",
+      "product": "Fiber Lounge Chair Wood Base",
+      "configuration": "Natural White shell / Oak wood base / no upholstery",
+      "dimensions_mm": {"width":600,"depth":690,"height":744,"seat_height":380,"seat_depth":490},
+      "official_page": "https://www.muuto.com/product/Fiber-Lounge-Chair-Wood-Base?configure=true",
+      "current_level": "G0",
+      "identity_state": "exact manufacturer item and configuration verified",
+      "commerce_state": "exact EU listing and exact UK Shopify variant found; Spain listing matches configuration but conflicts on EAN, so the Spain join remains rejected pending Muuto confirmation",
+      "geometry_state": "exact product-bound architect asset and rights required"
+    },
+    {
+      "role": "side_table",
+      "target_id": "MUUTO_AROUND_SMALL_AROTABSM01_G3_V0_1",
+      "manufacturer_item_no": "AROTABSM01",
+      "legacy_item_no": "60012",
+      "gtin_ean": "5713294887800",
+      "product": "Around Coffee Table Small",
+      "configuration": "Oak",
+      "dimensions_mm": {"diameter":450,"height":460},
+      "official_page": "https://professionals.muuto.com/product/around-coffee-table--p1920/60019/",
+      "current_level": "G0",
+      "identity_state": "exact manufacturer item and Oak configuration verified",
+      "commerce_state": "exact Spain retailer listing found through legacy item and EAN; postcode 29660 delivery requires checkout or written confirmation",
+      "geometry_state": "exact product-bound architect asset and rights required"
+    },
+    {
+      "role": "floor_lamp",
+      "target_id": "MUUTO_LEAF_FLOOR_LEAFLR01_G3_V0_1",
+      "manufacturer_item_no": "LEAFLR01",
+      "legacy_item_no": "13431",
+      "gtin_ean": "5710562134314",
+      "product": "Leaf Floor Lamp",
+      "configuration": "White, EU/non-US item",
+      "dimensions_mm": {"width":433,"depth":433,"height":1190,"base_diameter":220,"cord_length":1800},
+      "official_page": "https://www.muuto.com/product/Leaf-Floor-Lamp--p2227/p2227/",
+      "current_level": "G0",
+      "identity_state": "exact manufacturer item and White configuration verified",
+      "commerce_state": "exact Spain retailer listing found through legacy item and EAN with 230V observation; postcode delivery and final electrical specification require refresh/confirmation",
+      "geometry_state": "exact product-bound architect asset and rights required"
+    }
+  ],
+  "palette_logic": {
+    "anchor": "Cognac leather and black sofa base",
+    "secondary": "natural white and oak lounge chair",
+    "wood_link": "oak side table",
+    "light": "white floor lamp",
+    "rule": "do not recolor models; each displayed material must remain bound to its exact manufacturer item/configuration"
+  },
+  "set_exit_gates": [
+    "written Muuto scope for exact assets, GLB conversion, rendering and platform display",
+    "authorized product-bound architect asset for every displayed item",
+    "identity, scale, material and orientation QA per item",
+    "exact quote or authorized dealer route to 29660 per item",
+    "current lead time, delivery and electrical compatibility refreshed before procurement"
+  ],
+  "commerce_evidence_file": "data/commerce/muuto-residential-hero-set-spain-offers-2026-08-17.json"
+}

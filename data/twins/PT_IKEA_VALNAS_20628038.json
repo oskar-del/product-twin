@@ -1,0 +1,90 @@
+{
+  "twin_id": "PT_IKEA_VALNAS_20628038",
+  "kind": "object",
+  "category_id": "FFE.TABLE.COFFEE",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "VALNÄS",
+    "model": "Coffee table, oak veneer",
+    "article_no": "206.280.38",
+    "configuration": "Coffee table, oak veneer"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1180,
+      "depth": 720,
+      "height": 500
+    },
+    "secondary_dimensions_mm": {
+      "maximum_load_kg": 20
+    },
+    "evidence_state": "official_retailer_measurements_verified_live"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/valnas-coffee-table-oak-veneer-20628038/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "206.280.38",
+        "postcode_delivery_state": "available_29660_observed_2026_08_17",
+        "IKEA_Malaga_state": "in_stock_observed_2026_08_17"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": true,
+      "evidence_ref": "data/procurement/living-room-ikea-spain-session-2026-08-17.json"
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_realistic_planning_proxy",
+    "avatar_id": "AVATAR_IKEA_VALNAS_20628038_G2_COFFEE_TABLE_PROXY",
+    "asset_path": "data/geometry/avatars/ikea-valnas-20628038-g2-coffee-table-proxy.glb",
+    "scale_state": "verified 1180x720x500mm envelope",
+    "shape_claim": "product-bound oak-veneer planning reconstruction; exact IKEA industrial-design geometry and veneer artwork are not claimed",
+    "placement": {"origin":"floor_center","recommended_sofa_gap_mm":420,"recommended_circulation_clearance_mm":600},
+    "appearance": {
+      "material_cues": [
+        "oak veneer"
+      ],
+      "exact_selected_variant_bound": true,
+      "pbr_state": "variant_specific_base_colour_and_roughness_cues",
+      "texture_evidence_state": "no_exact_manufacturer_texture"
+    },
+    "rights": {
+      "geometry_owner": null,
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false,
+      "exact_likeness_claimed": false
+    },
+    "qa_metric": "data/metrics/ikea-valnas-20628038-g2-coffee-table-proxy-latest.json"
+  },
+  "offer": {
+    "offer_ref": "OFFER_ROUTE_IKEA_ES_VALNAS_20628038",
+    "price_observed": {"amount":"249.00","currency":"EUR","observed_at":"2026-08-17"},
+    "destination_delivery": "AVAILABLE_29660",
+    "store_stock": "IKEA_MALAGA_IN_STOCK",
+    "seller_country": null,
+    "dispatch_country": null
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "official_product_page_and_destination_availability_verified_live",
+    "dimensions": "verified",
+    "geometry": "G2_promoted_planning_proxy",
+    "appearance": "variant_colour_and_roughness_cues_only_no_exact_texture",
+    "room_placement": "review_required_against_existing_LISTERBY_transform",
+    "render": "planning_preview_only",
+    "rights": "product_twin_owned_proxy_no_manufacturer_asset_redistribution",
+    "next_gate": "review the changed footprint and height at the LISTERBY transform, then obtain client design approval"
+  },
+  "promotion_blockers": [
+    "same-position circulation and sofa-gap review",
+    "selected finish visual QA",
+    "client design approval",
+    "live price and delivery refresh before purchase"
+  ],
+  "policy": "This is a real exact retail product with a verified-scale G2 planning avatar and live destination availability. It can be compared in the room but cannot silently replace the LISTERBY placement or claim G3 visual exactness."
+}

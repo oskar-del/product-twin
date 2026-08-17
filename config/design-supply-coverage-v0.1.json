@@ -1,0 +1,60 @@
+{
+  "contract_id": "DESIGN_SUPPLY_COVERAGE_V0_1",
+  "version": "0.1",
+  "purpose": "Turn a placed design into an evidence-backed client supply report without detaching its Product Twins or avatars.",
+  "graph": "PROJECT -> SPACE -> PLACEMENT -> PRODUCT_TWIN -> CONFIGURATION -> AVATAR + OFFER -> LOGISTICS_ROUTE",
+  "percentage_bases": {
+    "line_items": "Each distinct placement line has equal weight.",
+    "unit_quantity": "Each placed unit is weighted by placement quantity.",
+    "merchandise_value": "Quantity times current unit price; emitted only when every included line has a current comparable-currency price.",
+    "landed_value": "Quantity times current landed or installed unit cost; emitted only when every included line has comparable-currency evidence."
+  },
+  "client_panels": {
+    "outcome": [
+      "LOCAL_MARKET_CONFIRMED",
+      "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+      "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+      "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+      "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+      "DESTINATION_UNAVAILABLE_CONFIRMED",
+      "ROUTE_REFRESH_REQUIRED",
+      "UNRESOLVED"
+    ],
+    "supplier_geography": [
+      "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+      "NON_LOCAL_ORIGIN_CONFIRMED",
+      "ORIGIN_UNRESOLVED"
+    ],
+    "delivery_timeline": [
+      "UP_TO_10_DAYS_CONFIRMED",
+      "11_TO_30_DAYS_CONFIRMED",
+      "OVER_30_DAYS_CONFIRMED",
+      "DESTINATION_UNAVAILABLE_CONFIRMED",
+      "DELIVERY_UNCONFIRMED"
+    ]
+  },
+  "classification_rules": [
+    "A Spain-language or Spain-territory catalogue is not proof of a Spanish supplier or Spanish dispatch origin.",
+    "LOCAL_MARKET_CONFIRMED requires seller_country or dispatch_country to match the destination country plus authoritative delivery confirmation to the project destination.",
+    "A delivery-time bucket requires authoritative destination delivery confirmation and a dated minimum/maximum lead-time promise.",
+    "An authoritative unavailable result for the exact destination is DESTINATION_UNAVAILABLE_CONFIRMED; it is not silently reduced to a generic unresolved state.",
+    "A known exact catalogue route that still needs address, stock, checkout or quote refresh is ROUTE_REFRESH_REQUIRED, not confirmed delivery.",
+    "No joined offer or usable route is UNRESOLVED.",
+    "All panels retain unknown states and must total 100 percent on their stated basis."
+  ],
+  "substitution_rules": {
+    "automatic_swap_allowed": false,
+    "conditional_scenario_counted_as_current_coverage": false,
+    "required_gates": [
+      "same design role or explicitly approved role change",
+      "dimension and circulation fit",
+      "technical and regulatory compatibility",
+      "selected colour, finish and material review",
+      "client design approval",
+      "current destination offer and delivery evidence"
+    ],
+    "principle": "An alternative can improve candidate coverage, but it cannot be counted as confirmed coverage until every gate passes and the client approves the design change.",
+    "conditional_scenario_rule": "A confirmed alternative offer may be evaluated as a separate what-if coverage scenario. The scenario must retain all open gates, price and fit deltas and can never replace current design coverage before approval."
+  },
+  "freshness_policy": "Offer, stock, price and delivery evidence must carry observed_at and expires_at or be labelled LIVE_REFRESH_REQUIRED before quote, approval or purchase."
+}

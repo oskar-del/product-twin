@@ -1,0 +1,168 @@
+{
+  "observed_at": "2026-08-17",
+  "set_id": "MUUTO_RESIDENTIAL_HERO_SET_V0_1",
+  "target_postcode": "29660",
+  "policy": "Retail price, stock, lead time, discount and delivery are mutable observations. Refresh them live and complete a postcode-aware checkout or written RFQ before procurement.",
+  "delivery_policy_evidence": [
+    {
+      "merchant": "AndLight",
+      "url": "https://www.andlight.com/es/condiciones-de-entrega/",
+      "state": "GENERAL_SPAIN_CUSTOMER_ROUTE_SUPPORTED_EXACT_POSTCODE_UNVERIFIED",
+      "evidence": "Spanish storefront and Spain-specific delivery/returns infrastructure are published; bulky-item charges and exact 29660 delivery still require cart or written confirmation."
+    },
+    {
+      "merchant": "DesignVille",
+      "url": "https://www.designville.eu/shipping-payment",
+      "state": "GENERAL_EU_FREIGHT_ROUTE_SUPPORTED_EXACT_POSTCODE_UNVERIFIED",
+      "evidence": "The retailer states that it ships to most EU countries and uses DHL or Raben freight for bulky items; destination charges, remote-region handling and exact 29660 acceptance remain checkout-dependent."
+    }
+  ],
+  "offers": [
+    {
+      "manufacturer_item_no": "OU2SRA10101",
+      "product": "Outline Sofa 2-Seater, Refine Leather Cognac / Black",
+      "merchant": "DesignVille",
+      "url": "https://www.designville.eu/outline-2-seater-sofa-cognac-leather",
+      "territory": "EU storefront",
+      "identity_evidence": {
+        "merchant_product_code": "MUU-OU2SRA10101",
+        "merchant_ean": "5713222210793",
+        "state": "EXACT"
+      },
+      "mutable_observation": {
+        "price_eur_including_vat": 5395,
+        "availability_text": "made to order, 3-4 weeks"
+      },
+      "postcode_delivery_state": "UNVERIFIED"
+    },
+    {
+      "manufacturer_item_no": "OU2SRA10101",
+      "product": "Outline Sofa 2-Seater, Refine Leather Cognac / Black",
+      "merchant": "AndLight Spanish storefront",
+      "url": "https://www.andlight.com/es/p/outline-sofa-2-plazas-cuero-conac-negro_304447/",
+      "territory": "Spanish-language storefront",
+      "identity_evidence": {
+        "merchant_reference": "304447",
+        "merchant_supplier_no": "OU2SRA10101",
+        "merchant_ean": "5713222210793",
+        "configuration_match": true,
+        "state": "EXACT_SUPPLIER_NO_AND_EAN"
+      },
+      "mutable_observation": {
+        "add_to_cart_control_observed": true,
+        "price_and_lead_time_state": "NOT_EXTRACTED"
+      },
+      "postcode_delivery_state": "CHECKOUT_OR_WRITTEN_CONFIRMATION_REQUIRED"
+    },
+    {
+      "manufacturer_item_no": "FILOUWON04041",
+      "product": "Fiber Lounge Chair Wood Base, Natural White / Oak",
+      "merchant": "AndLight Spain",
+      "url": "https://andlight.es/shop/sillon-muuto-de-21804p.html",
+      "territory": "Spain storefront",
+      "identity_evidence": {
+        "target_manufacturer_item_no": "FILOUWON04041",
+        "target_ean": "5713295826631",
+        "merchant_item_no": "58949",
+        "merchant_ean": "5710562255132",
+        "configuration_match": true,
+        "dimension_match": true,
+        "state": "IDENTITY_CONFLICT_REJECT_EXACT_JOIN"
+      },
+      "mutable_observation": {
+        "price_eur": 617,
+        "availability_text": "ready for delivery in 15-20 days",
+        "authorized_distributor_claim": true
+      },
+      "postcode_delivery_state": "NOT_TESTED_BECAUSE_IDENTITY_CONFLICT"
+    },
+    {
+      "manufacturer_item_no": "FILOUWON04041",
+      "product": "Fiber Lounge Chair Wood Base, Natural White / Oak",
+      "merchant": "Scandinavia Design",
+      "url": "https://www.scandinavia-design.fr/shop/en/muuto-fiber-wood-longe-chair/34300-oakwhite-wood-base-fiber-lounge-5713295826631.html",
+      "territory": "France / EU storefront",
+      "identity_evidence": {
+        "merchant_reference": "FILOUWON04041",
+        "merchant_ean": "5713295826631",
+        "configuration_match": true,
+        "dimension_match": true,
+        "state": "EXACT_MANUFACTURER_ITEM_AND_EAN"
+      },
+      "mutable_observation": {
+        "price_eur": 619,
+        "availability_text": "in stock within approximately 2 weeks"
+      },
+      "postcode_delivery_state": "UNVERIFIED"
+    },
+    {
+      "manufacturer_item_no": "FILOUWON04041",
+      "product": "Fiber Lounge Chair Wood Base, Natural White / Oak",
+      "merchant": "Someday Designs",
+      "url": "https://www.somedaydesigns.co.uk/products/muuto-fiber-lounge-chair-wood-base",
+      "territory": "UK Shopify storefront",
+      "identity_evidence": {
+        "merchant_sku": "58949",
+        "merchant_barcode": "5713295826631",
+        "configuration_match": true,
+        "shopify_variant_id": "39614605492295",
+        "state": "EXACT_SHOPIFY_VARIANT_IDENTITY"
+      },
+      "mutable_observation": {
+        "price_gbp": 559,
+        "availability_flag": true
+      },
+      "postcode_delivery_state": "UNVERIFIED"
+    },
+    {
+      "manufacturer_item_no": "AROTABSM01",
+      "product": "Around Coffee Table Small, Oak",
+      "merchant": "AndLight Spain",
+      "url": "https://andlight.es/shop/mesa-de-centro-21632p.html",
+      "territory": "Spain storefront",
+      "identity_evidence": {
+        "merchant_legacy_item_no": "60012",
+        "merchant_ean": "5713294887800",
+        "configuration_match": true,
+        "dimension_match": true,
+        "state": "EXACT_LEGACY_IDENTITY_AND_EAN"
+      },
+      "mutable_observation": {
+        "price_eur": 322,
+        "previous_price_eur": 429,
+        "availability_text": "ready for delivery in 15-20 days",
+        "authorized_distributor_claim": true
+      },
+      "postcode_delivery_state": "CHECKOUT_OR_WRITTEN_CONFIRMATION_REQUIRED"
+    },
+    {
+      "manufacturer_item_no": "LEAFLR01",
+      "product": "Leaf Floor Lamp, White",
+      "merchant": "AndLight Spain",
+      "url": "https://andlight.es/shop/muuto-leaf-lampara-3963p.html",
+      "territory": "Spain storefront",
+      "identity_evidence": {
+        "merchant_legacy_item_no": "13431",
+        "merchant_ean": "5710562134314",
+        "configuration_match": true,
+        "electrical_observation": "LED 12V, maximum supply 230V",
+        "state": "EXACT_LEGACY_IDENTITY_AND_EAN"
+      },
+      "mutable_observation": {
+        "price_eur": 280,
+        "previous_price_eur": 399,
+        "availability_text": "in stock, delivery in 3-5 days, only 1 unit",
+        "authorized_distributor_claim": true
+      },
+      "postcode_delivery_state": "CHECKOUT_OR_WRITTEN_CONFIRMATION_REQUIRED"
+    }
+  ],
+  "summary": {
+    "exact_spain_listing_count": 3,
+    "exact_eu_listing_spain_delivery_unverified_count": 2,
+    "exact_non_eu_shopify_identity_reference_count": 1,
+    "configuration_match_rejected_for_identity_conflict_count": 1,
+    "postcode_verified_count": 0,
+    "next_action": "request a combined exact-SKU quote from Muuto Spain contract sales and independently refresh the Spanish storefront delivery route to postcode 29660 for OU2SRA10101, AROTABSM01 and LEAFLR01; retain the Fiber Spain page as a rejected join until Muuto resolves its EAN conflict"
+  }
+}

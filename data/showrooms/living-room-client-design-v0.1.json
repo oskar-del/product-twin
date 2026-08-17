@@ -1,0 +1,91 @@
+{
+  "version": "0.1",
+  "design_id": "DESIGN_ROOM_LAB_LIVING_V0_1",
+  "project_id": "PROJECT_MARBELLA_VILLA_001",
+  "space_id": "ROOM_LAB_LIVING_V0",
+  "name": "Room Lab living room — eight-object baseline",
+  "destination": {
+    "country": "ES",
+    "region": "Malaga",
+    "postal_code": "29660",
+    "construction_phase": "ffe"
+  },
+  "benchmark_markets_ref": "config/market-benchmarks-v0.1.json",
+  "benchmark_markets": ["ES", "SE", "GB", "US"],
+  "percentage_bases_requested": ["line_items", "unit_quantity", "merchandise_value", "landed_value"],
+  "placement_note": "This supply manifest records one unit of each currently active room object. Scene coordinates remain owned by the Room Lab placement state and are not changed by supply refreshes.",
+  "placements": [
+    {
+      "placement_id": "LR_SOFA_01",
+      "role": "sofa",
+      "twin_id": "PT_IKEA_KIVIK_49440597",
+      "avatar_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+      "selected_configuration": "3-seat sofa, Tibbleby beige/grey",
+      "quantity": 1,
+      "offer_ref": "OFFER_ROUTE_IKEA_ES_KIVIK_49440597"
+    },
+    {
+      "placement_id": "LR_ARMCHAIR_01",
+      "role": "armchair",
+      "twin_id": "PT_IKEA_POANG_39240787",
+      "avatar_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+      "selected_configuration": "Armchair, birch veneer/Knisa light beige",
+      "quantity": 1,
+      "offer_ref": "OFFER_ROUTE_IKEA_ES_POANG_39240787"
+    },
+    {
+      "placement_id": "LR_COFFEE_TABLE_01",
+      "role": "coffee_table",
+      "twin_id": "PT_IKEA_LISTERBY_30513904",
+      "avatar_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+      "selected_configuration": "Coffee table, oak veneer",
+      "quantity": 1,
+      "offer_ref": "OFFER_ROUTE_IKEA_ES_LISTERBY_30513904"
+    },
+    {
+      "placement_id": "LR_SIDE_TABLE_01",
+      "role": "side_table",
+      "twin_id": "PT_IKEA_GLADOM_70578451",
+      "avatar_id": "AVATAR_IKEA_GLADOM_70578451_G2_TRAY_TABLE_PROXY",
+      "selected_configuration": "Tray table, dark grey-green",
+      "quantity": 1,
+      "offer_ref": "OFFER_ROUTE_IKEA_ES_GLADOM_70578451"
+    },
+    {
+      "placement_id": "LR_FLOOR_LAMP_01",
+      "role": "floor_lamp",
+      "twin_id": "PT_IKEA_LAUTERS_30405042",
+      "avatar_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+      "selected_configuration": "Floor lamp, ash/white",
+      "quantity": 1,
+      "offer_ref": "OFFER_ROUTE_IKEA_ES_LAUTERS_30405042"
+    },
+    {
+      "placement_id": "LR_RUG_01",
+      "role": "rug",
+      "twin_id": "PT_IKEA_LOHALS_30511288",
+      "avatar_id": "AVATAR_IKEA_LOHALS_30511288_G2_RUG_PROXY",
+      "selected_configuration": "Rug, flatwoven, natural, 133×195 cm",
+      "quantity": 1,
+      "offer_ref": "OFFER_ROUTE_IKEA_ES_LOHALS_30511288"
+    },
+    {
+      "placement_id": "LR_MEDIA_UNIT_01",
+      "role": "media_unit",
+      "twin_id": "PT_IKEA_BESTA_89330691",
+      "avatar_id": "AVATAR_IKEA_BESTA_89330691_G2_MEDIA_UNIT_PROXY",
+      "selected_configuration": "TV bench, white/Lappviken white",
+      "quantity": 1,
+      "offer_ref": "OFFER_ROUTE_IKEA_ES_BESTA_89330691"
+    },
+    {
+      "placement_id": "LR_BOOKCASE_01",
+      "role": "bookcase",
+      "twin_id": "PT_IKEA_BILLY_00263850",
+      "avatar_id": "AVATAR_IKEA_BILLY_00263850_G2_BOOKCASE_PROXY",
+      "selected_configuration": "Bookcase, white",
+      "quantity": 1,
+      "offer_ref": "OFFER_ROUTE_IKEA_ES_BILLY_00263850"
+    }
+  ]
+}

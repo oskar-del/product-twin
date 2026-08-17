@@ -1,0 +1,1926 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-08-17T12:19:05.943Z",
+  "contract_id": "DESIGN_SUPPLY_COVERAGE_V0_1",
+  "design": {
+    "design_id": "DESIGN_ROOM_LAB_LIVING_V0_1",
+    "project_id": "PROJECT_MARBELLA_VILLA_001",
+    "space_id": "ROOM_LAB_LIVING_V0",
+    "name": "Room Lab living room — eight-object baseline",
+    "destination": {
+      "country": "ES",
+      "region": "Malaga",
+      "postal_code": "29660",
+      "construction_phase": "ffe"
+    },
+    "placement_line_items": 8,
+    "placed_units": 8,
+    "avatar_rule": "Every placement keeps its Product Twin, exact selected configuration and avatar; supply evidence refreshes independently."
+  },
+  "current_design_coverage": {
+    "country": "ES",
+    "name": "Spain",
+    "currency": "EUR",
+    "destination": {
+      "country": "ES",
+      "region": "Malaga",
+      "postal_code": "29660",
+      "construction_phase": "ffe"
+    },
+    "headline": {
+      "confirmed_deliverable_percentage_by_units": 87.5,
+      "confirmed_unavailable_percentage_by_units": 12.5,
+      "exact_route_refresh_required_percentage_by_units": 0,
+      "unresolved_or_incomplete_percentage_by_units": 0
+    },
+    "local_anchor_network": {
+      "candidates": [
+        {
+          "name": "IKEA Spain",
+          "role": "home_and_furniture_anchor",
+          "connection_state": "EXACT_PRODUCT_ROUTES_CONNECTED_DESTINATION_EVIDENCE_PARTIAL_ROOM"
+        },
+        {
+          "name": "Leroy Merlin Spain",
+          "role": "building_materials_anchor",
+          "connection_state": "MIRAKL_SELLER_STACK_DOCUMENTED_BUYER_CATALOGUE_NOT_CONNECTED"
+        },
+        {
+          "name": "OBRAMAT",
+          "role": "trade_mep_anchor",
+          "connection_state": "DISCOVERY_CANDIDATE_NOT_CONNECTED"
+        }
+      ],
+      "connected_anchor_roles": [
+        "home_and_furniture_anchor"
+      ],
+      "required_anchor_roles": [
+        "home_and_furniture_anchor",
+        "building_materials_anchor",
+        "trade_mep_anchor",
+        "manufacturer_bim_and_identity_routes"
+      ],
+      "state": "PARTIAL"
+    },
+    "coverage": {
+      "by_line_item": {
+        "outcome": {
+          "total_weight": 8,
+          "buckets": [
+            {
+              "bucket": "LOCAL_MARKET_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+              "weight": 7,
+              "percentage": 87.5
+            },
+            {
+              "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+              "weight": 1,
+              "percentage": 12.5
+            },
+            {
+              "bucket": "ROUTE_REFRESH_REQUIRED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "UNRESOLVED",
+              "weight": 0,
+              "percentage": 0
+            }
+          ]
+        },
+        "supplier_geography": {
+          "total_weight": 8,
+          "buckets": [
+            {
+              "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "ORIGIN_UNRESOLVED",
+              "weight": 8,
+              "percentage": 100
+            }
+          ]
+        },
+        "delivery_timeline": {
+          "total_weight": 8,
+          "buckets": [
+            {
+              "bucket": "UP_TO_10_DAYS_CONFIRMED",
+              "weight": 7,
+              "percentage": 87.5
+            },
+            {
+              "bucket": "11_TO_30_DAYS_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "OVER_30_DAYS_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+              "weight": 1,
+              "percentage": 12.5
+            },
+            {
+              "bucket": "DELIVERY_UNCONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            }
+          ]
+        }
+      },
+      "by_unit_quantity": {
+        "outcome": {
+          "total_weight": 8,
+          "buckets": [
+            {
+              "bucket": "LOCAL_MARKET_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+              "weight": 7,
+              "percentage": 87.5
+            },
+            {
+              "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+              "weight": 1,
+              "percentage": 12.5
+            },
+            {
+              "bucket": "ROUTE_REFRESH_REQUIRED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "UNRESOLVED",
+              "weight": 0,
+              "percentage": 0
+            }
+          ]
+        },
+        "supplier_geography": {
+          "total_weight": 8,
+          "buckets": [
+            {
+              "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "ORIGIN_UNRESOLVED",
+              "weight": 8,
+              "percentage": 100
+            }
+          ]
+        },
+        "delivery_timeline": {
+          "total_weight": 8,
+          "buckets": [
+            {
+              "bucket": "UP_TO_10_DAYS_CONFIRMED",
+              "weight": 7,
+              "percentage": 87.5
+            },
+            {
+              "bucket": "11_TO_30_DAYS_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "OVER_30_DAYS_CONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            },
+            {
+              "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+              "weight": 1,
+              "percentage": 12.5
+            },
+            {
+              "bucket": "DELIVERY_UNCONFIRMED",
+              "weight": 0,
+              "percentage": 0
+            }
+          ]
+        }
+      }
+    },
+    "placements": [
+      {
+        "placement_id": "LR_SOFA_01",
+        "role": "sofa",
+        "twin_id": "PT_IKEA_KIVIK_49440597",
+        "avatar_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+        "selected_configuration": "3-seat sofa, Tibbleby beige/grey",
+        "quantity": 1,
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_KIVIK_49440597",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront"
+        },
+        "outcome": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+        "supplier_geography": "ORIGIN_UNRESOLVED",
+        "delivery_timeline": "UP_TO_10_DAYS_CONFIRMED",
+        "evidence": {
+          "destination": {
+            "country": "ES",
+            "region": "Malaga",
+            "postal_code": "29660",
+            "construction_phase": "ffe"
+          },
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "exact_destination_confirmed": true,
+          "destination_state": "AVAILABLE",
+          "lead_time_days": {
+            "min": 4,
+            "max": 7
+          },
+          "price": {
+            "amount": "499.00",
+            "currency": "EUR"
+          },
+          "price_state": "LIVE_OFFICIAL_PRODUCT_PAGE_REFRESHED",
+          "landed_value": null,
+          "stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "live_refresh_required": false
+        }
+      },
+      {
+        "placement_id": "LR_ARMCHAIR_01",
+        "role": "armchair",
+        "twin_id": "PT_IKEA_POANG_39240787",
+        "avatar_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+        "selected_configuration": "Armchair, birch veneer/Knisa light beige",
+        "quantity": 1,
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_POANG_39240787",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront"
+        },
+        "outcome": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+        "supplier_geography": "ORIGIN_UNRESOLVED",
+        "delivery_timeline": "UP_TO_10_DAYS_CONFIRMED",
+        "evidence": {
+          "destination": {
+            "country": "ES",
+            "region": "Malaga",
+            "postal_code": "29660",
+            "construction_phase": "ffe"
+          },
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "exact_destination_confirmed": true,
+          "destination_state": "AVAILABLE",
+          "lead_time_days": {
+            "min": 4,
+            "max": 7
+          },
+          "price": {
+            "amount": "89.00",
+            "currency": "EUR"
+          },
+          "price_state": "LIVE_OFFICIAL_PRODUCT_PAGE_REFRESHED",
+          "landed_value": null,
+          "stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "live_refresh_required": false
+        }
+      },
+      {
+        "placement_id": "LR_COFFEE_TABLE_01",
+        "role": "coffee_table",
+        "twin_id": "PT_IKEA_LISTERBY_30513904",
+        "avatar_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+        "selected_configuration": "Coffee table, oak veneer",
+        "quantity": 1,
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_LISTERBY_30513904",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront"
+        },
+        "outcome": "DESTINATION_UNAVAILABLE_CONFIRMED",
+        "supplier_geography": "ORIGIN_UNRESOLVED",
+        "delivery_timeline": "DESTINATION_UNAVAILABLE_CONFIRMED",
+        "evidence": {
+          "destination": {
+            "country": "ES",
+            "region": "Malaga",
+            "postal_code": "29660",
+            "construction_phase": "ffe"
+          },
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "exact_destination_confirmed": false,
+          "destination_state": "UNAVAILABLE",
+          "lead_time_days": null,
+          "price": {
+            "amount": "199.00",
+            "currency": "EUR"
+          },
+          "price_state": "LIVE_OFFICIAL_PRODUCT_PAGE_REFRESHED",
+          "landed_value": null,
+          "stock_state": "DESTINATION_DELIVERY_UNAVAILABLE_AND_IKEA_MALAGA_NOT_SOLD",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "live_refresh_required": false
+        }
+      },
+      {
+        "placement_id": "LR_SIDE_TABLE_01",
+        "role": "side_table",
+        "twin_id": "PT_IKEA_GLADOM_70578451",
+        "avatar_id": "AVATAR_IKEA_GLADOM_70578451_G2_TRAY_TABLE_PROXY",
+        "selected_configuration": "Tray table, dark grey-green",
+        "quantity": 1,
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_GLADOM_70578451",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront"
+        },
+        "outcome": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+        "supplier_geography": "ORIGIN_UNRESOLVED",
+        "delivery_timeline": "UP_TO_10_DAYS_CONFIRMED",
+        "evidence": {
+          "destination": {
+            "country": "ES",
+            "region": "Malaga",
+            "postal_code": "29660",
+            "construction_phase": "ffe"
+          },
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "exact_destination_confirmed": true,
+          "destination_state": "AVAILABLE",
+          "lead_time_days": {
+            "min": 4,
+            "max": 7
+          },
+          "price": {
+            "amount": "19.99",
+            "currency": "EUR"
+          },
+          "price_state": "LIVE_OFFICIAL_PRODUCT_PAGE_REFRESHED",
+          "landed_value": null,
+          "stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "live_refresh_required": false
+        }
+      },
+      {
+        "placement_id": "LR_FLOOR_LAMP_01",
+        "role": "floor_lamp",
+        "twin_id": "PT_IKEA_LAUTERS_30405042",
+        "avatar_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+        "selected_configuration": "Floor lamp, ash/white",
+        "quantity": 1,
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_LAUTERS_30405042",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront"
+        },
+        "outcome": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+        "supplier_geography": "ORIGIN_UNRESOLVED",
+        "delivery_timeline": "UP_TO_10_DAYS_CONFIRMED",
+        "evidence": {
+          "destination": {
+            "country": "ES",
+            "region": "Malaga",
+            "postal_code": "29660",
+            "construction_phase": "ffe"
+          },
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "exact_destination_confirmed": true,
+          "destination_state": "AVAILABLE",
+          "lead_time_days": {
+            "min": 4,
+            "max": 7
+          },
+          "price": {
+            "amount": "59.99",
+            "currency": "EUR"
+          },
+          "price_state": "LIVE_OFFICIAL_PRODUCT_PAGE_REFRESHED",
+          "landed_value": null,
+          "stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "live_refresh_required": false
+        }
+      },
+      {
+        "placement_id": "LR_RUG_01",
+        "role": "rug",
+        "twin_id": "PT_IKEA_LOHALS_30511288",
+        "avatar_id": "AVATAR_IKEA_LOHALS_30511288_G2_RUG_PROXY",
+        "selected_configuration": "Rug, flatwoven, natural, 133×195 cm",
+        "quantity": 1,
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_LOHALS_30511288",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront"
+        },
+        "outcome": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+        "supplier_geography": "ORIGIN_UNRESOLVED",
+        "delivery_timeline": "UP_TO_10_DAYS_CONFIRMED",
+        "evidence": {
+          "destination": {
+            "country": "ES",
+            "region": "Malaga",
+            "postal_code": "29660",
+            "construction_phase": "ffe"
+          },
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "exact_destination_confirmed": true,
+          "destination_state": "AVAILABLE",
+          "lead_time_days": {
+            "min": 4,
+            "max": 7
+          },
+          "price": {
+            "amount": "49.99",
+            "currency": "EUR"
+          },
+          "price_state": "LIVE_OFFICIAL_PRODUCT_PAGE_REFRESHED",
+          "landed_value": null,
+          "stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "live_refresh_required": false
+        }
+      },
+      {
+        "placement_id": "LR_MEDIA_UNIT_01",
+        "role": "media_unit",
+        "twin_id": "PT_IKEA_BESTA_89330691",
+        "avatar_id": "AVATAR_IKEA_BESTA_89330691_G2_MEDIA_UNIT_PROXY",
+        "selected_configuration": "TV bench, white/Lappviken white",
+        "quantity": 1,
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_BESTA_89330691",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront"
+        },
+        "outcome": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+        "supplier_geography": "ORIGIN_UNRESOLVED",
+        "delivery_timeline": "UP_TO_10_DAYS_CONFIRMED",
+        "evidence": {
+          "destination": {
+            "country": "ES",
+            "region": "Malaga",
+            "postal_code": "29660",
+            "construction_phase": "ffe"
+          },
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "exact_destination_confirmed": true,
+          "destination_state": "AVAILABLE",
+          "lead_time_days": {
+            "min": 4,
+            "max": 7
+          },
+          "price": {
+            "amount": "150.00",
+            "currency": "EUR"
+          },
+          "price_state": "LIVE_OFFICIAL_PRODUCT_PAGE_REFRESHED",
+          "landed_value": null,
+          "stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "live_refresh_required": false
+        }
+      },
+      {
+        "placement_id": "LR_BOOKCASE_01",
+        "role": "bookcase",
+        "twin_id": "PT_IKEA_BILLY_00263850",
+        "avatar_id": "AVATAR_IKEA_BILLY_00263850_G2_BOOKCASE_PROXY",
+        "selected_configuration": "Bookcase, white",
+        "quantity": 1,
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_BILLY_00263850",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront"
+        },
+        "outcome": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+        "supplier_geography": "ORIGIN_UNRESOLVED",
+        "delivery_timeline": "UP_TO_10_DAYS_CONFIRMED",
+        "evidence": {
+          "destination": {
+            "country": "ES",
+            "region": "Malaga",
+            "postal_code": "29660",
+            "construction_phase": "ffe"
+          },
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "exact_destination_confirmed": true,
+          "destination_state": "AVAILABLE",
+          "lead_time_days": {
+            "min": 4,
+            "max": 7
+          },
+          "price": {
+            "amount": "59.99",
+            "currency": "EUR"
+          },
+          "price_state": "LIVE_OFFICIAL_PRODUCT_PAGE_REFRESHED",
+          "landed_value": null,
+          "stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "live_refresh_required": false
+        }
+      }
+    ]
+  },
+  "value_coverage": {
+    "merchandise_value": {
+      "available": true,
+      "currency": "EUR",
+      "total_value": 1126.96,
+      "outcome": {
+        "total_weight": 1126.96,
+        "buckets": [
+          {
+            "bucket": "LOCAL_MARKET_CONFIRMED",
+            "weight": 0,
+            "percentage": 0
+          },
+          {
+            "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+            "weight": 0,
+            "percentage": 0
+          },
+          {
+            "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+            "weight": 0,
+            "percentage": 0
+          },
+          {
+            "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+            "weight": 0,
+            "percentage": 0
+          },
+          {
+            "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+            "weight": 927.96,
+            "percentage": 82.34
+          },
+          {
+            "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+            "weight": 199,
+            "percentage": 17.66
+          },
+          {
+            "bucket": "ROUTE_REFRESH_REQUIRED",
+            "weight": 0,
+            "percentage": 0
+          },
+          {
+            "bucket": "UNRESOLVED",
+            "weight": 0,
+            "percentage": 0
+          }
+        ]
+      },
+      "supplier_geography": {
+        "total_weight": 1126.96,
+        "buckets": [
+          {
+            "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+            "weight": 0,
+            "percentage": 0
+          },
+          {
+            "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+            "weight": 0,
+            "percentage": 0
+          },
+          {
+            "bucket": "ORIGIN_UNRESOLVED",
+            "weight": 1126.96,
+            "percentage": 100
+          }
+        ]
+      },
+      "delivery_timeline": {
+        "total_weight": 1126.96,
+        "buckets": [
+          {
+            "bucket": "UP_TO_10_DAYS_CONFIRMED",
+            "weight": 927.96,
+            "percentage": 82.34
+          },
+          {
+            "bucket": "11_TO_30_DAYS_CONFIRMED",
+            "weight": 0,
+            "percentage": 0
+          },
+          {
+            "bucket": "OVER_30_DAYS_CONFIRMED",
+            "weight": 0,
+            "percentage": 0
+          },
+          {
+            "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+            "weight": 199,
+            "percentage": 17.66
+          },
+          {
+            "bucket": "DELIVERY_UNCONFIRMED",
+            "weight": 0,
+            "percentage": 0
+          }
+        ]
+      }
+    },
+    "landed_value": {
+      "available": false,
+      "reason": "Every placement needs a current landed_value before this percentage basis can be emitted."
+    }
+  },
+  "substitutions": {
+    "candidates": [
+      {
+        "substitution_id": "SUB_LISTERBY_TO_VALNAS",
+        "source_placement_id": "LR_COFFEE_TABLE_01",
+        "source_twin_id": "PT_IKEA_LISTERBY_30513904",
+        "alternative_twin_id": "PT_IKEA_VALNAS_20628038",
+        "alternative_avatar_id": "AVATAR_IKEA_VALNAS_20628038_G2_COFFEE_TABLE_PROXY",
+        "alternative_configuration": "Coffee table, oak veneer",
+        "alternative_offer_ref": "OFFER_ROUTE_IKEA_ES_VALNAS_20628038",
+        "role_match": "PASS",
+        "dimension_and_circulation_fit": "REVIEW",
+        "technical_compatibility": "PASS_WITH_LIMITS",
+        "colour_finish_material_match": "PASS_WITH_LIMITS",
+        "client_design_approval": "REQUIRED",
+        "destination_offer_state": "DESTINATION_DELIVERY_CONFIRMED_29660_IKEA_MALAGA_IN_STOCK",
+        "avatar_state": "G2_PROMOTED_VERIFIED_SCALE_PLANNING_PROXY",
+        "price_delta_eur": "50.00",
+        "dimension_delta_mm": {
+          "width": -220,
+          "depth": 120,
+          "height": 130
+        },
+        "same_center_transform_effect": {
+          "sofa_side_clearance_reduction_mm": 60,
+          "opposite_side_clearance_reduction_mm": 60,
+          "height_increase_mm": 130
+        },
+        "reason": "Exact oak-veneer alternative with a verified-scale G2 planning avatar, live delivery to 29660 and IKEA Málaga stock. It is 220 mm shorter, 120 mm deeper and 130 mm taller than LISTERBY and costs EUR 50 more. At the same center transform its near and far clearances each reduce by 60 mm, so placement and client design approval are required before any swap.",
+        "coverage_rescue_state": "CANDIDATE_ONLY",
+        "blockers": [
+          "dimension and circulation fit needs review",
+          "technical compatibility is not fully passed",
+          "colour, finish and material need review",
+          "client design approval is required"
+        ]
+      },
+      {
+        "substitution_id": "SUB_KIVIK_TO_NORR11_MAN_2S",
+        "source_placement_id": "LR_SOFA_01",
+        "source_twin_id": "PT_IKEA_KIVIK_49440597",
+        "alternative_twin_id": "PT_NORR11_MAN_2_SEATER_SOFA_NOR_MAN_2_SEAT_SOFA_CAT2",
+        "role_match": "PASS",
+        "dimension_and_circulation_fit": "REVIEW",
+        "technical_compatibility": "PASS_WITH_LIMITS",
+        "colour_finish_material_match": "REVIEW",
+        "client_design_approval": "REQUIRED",
+        "destination_offer_state": "SPAIN_COUNTRY_CATALOG_CANDIDATE_LIVE_REFRESH_REQUIRED",
+        "avatar_state": "G2_CANDIDATE_SCALE_PASS_TEXTURED_RIGHTS_REVIEW",
+        "reason": "Real two-seat sofa with strong geometry evidence, but it is materially smaller than KIVIK and exact upholstery, rights and destination logistics are not cleared.",
+        "coverage_rescue_state": "CANDIDATE_ONLY",
+        "blockers": [
+          "dimension and circulation fit needs review",
+          "technical compatibility is not fully passed",
+          "colour, finish and material need review",
+          "client design approval is required",
+          "destination offer and delivery are not confirmed"
+        ]
+      },
+      {
+        "substitution_id": "SUB_POANG_TO_NORR11_MAN_LOUNGE",
+        "source_placement_id": "LR_ARMCHAIR_01",
+        "source_twin_id": "PT_IKEA_POANG_39240787",
+        "alternative_twin_id": "PT_NORR11_MAN_LOUNGE_CHAIR_NOR_MAN_LNG_CAT1",
+        "role_match": "PASS",
+        "dimension_and_circulation_fit": "REVIEW",
+        "technical_compatibility": "PASS_WITH_LIMITS",
+        "colour_finish_material_match": "REVIEW",
+        "client_design_approval": "REQUIRED",
+        "destination_offer_state": "SPAIN_COUNTRY_CATALOG_CANDIDATE_LIVE_REFRESH_REQUIRED",
+        "avatar_state": "G2_CANDIDATE_SCALE_PASS_TEXTURED_RIGHTS_REVIEW",
+        "reason": "Real lounge-chair candidate with strong geometry evidence; exact upholstery, dimensional swap fit, rights and destination logistics remain unresolved.",
+        "coverage_rescue_state": "CANDIDATE_ONLY",
+        "blockers": [
+          "dimension and circulation fit needs review",
+          "technical compatibility is not fully passed",
+          "colour, finish and material need review",
+          "client design approval is required",
+          "destination offer and delivery are not confirmed"
+        ]
+      }
+    ],
+    "placements_with_candidate_alternatives": 3,
+    "candidate_alternative_coverage_percentage_by_line_item": 37.5,
+    "placements_with_confirmed_eligible_alternatives": 0,
+    "confirmed_alternative_coverage_percentage_by_line_item": 0,
+    "conditional_scenarios": [
+      {
+        "substitution_id": "SUB_LISTERBY_TO_VALNAS",
+        "scenario_state": "CONDITIONAL_NOT_APPROVED",
+        "counted_in_current_design_coverage": false,
+        "source": {
+          "placement_id": "LR_COFFEE_TABLE_01",
+          "twin_id": "PT_IKEA_LISTERBY_30513904",
+          "outcome": "DESTINATION_UNAVAILABLE_CONFIRMED"
+        },
+        "alternative": {
+          "twin_id": "PT_IKEA_VALNAS_20628038",
+          "avatar_id": "AVATAR_IKEA_VALNAS_20628038_G2_COFFEE_TABLE_PROXY",
+          "selected_configuration": "Coffee table, oak veneer",
+          "offer_ref": "OFFER_ROUTE_IKEA_ES_VALNAS_20628038",
+          "outcome": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+          "price": {
+            "amount": "249.00",
+            "currency": "EUR"
+          },
+          "delivery_timeline": "DELIVERY_UNCONFIRMED"
+        },
+        "current_headline": {
+          "confirmed_deliverable_percentage_by_units": 87.5,
+          "confirmed_unavailable_percentage_by_units": 12.5,
+          "exact_route_refresh_required_percentage_by_units": 0,
+          "unresolved_or_incomplete_percentage_by_units": 0
+        },
+        "conditional_headline": {
+          "confirmed_deliverable_percentage_by_units": 100,
+          "confirmed_unavailable_percentage_by_units": 0,
+          "exact_route_refresh_required_percentage_by_units": 0,
+          "unresolved_or_incomplete_percentage_by_units": 0
+        },
+        "confirmed_deliverable_lift_percentage_points": 12.5,
+        "conditional_merchandise_value": {
+          "available": true,
+          "currency": "EUR",
+          "total_value": 1176.96,
+          "outcome": {
+            "total_weight": 1176.96,
+            "buckets": [
+              {
+                "bucket": "LOCAL_MARKET_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+                "weight": 1176.96,
+                "percentage": 100
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ROUTE_REFRESH_REQUIRED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "UNRESOLVED",
+                "weight": 0,
+                "percentage": 0
+              }
+            ]
+          },
+          "supplier_geography": {
+            "total_weight": 1176.96,
+            "buckets": [
+              {
+                "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ORIGIN_UNRESOLVED",
+                "weight": 1176.96,
+                "percentage": 100
+              }
+            ]
+          },
+          "delivery_timeline": {
+            "total_weight": 1176.96,
+            "buckets": [
+              {
+                "bucket": "UP_TO_10_DAYS_CONFIRMED",
+                "weight": 927.96,
+                "percentage": 78.84
+              },
+              {
+                "bucket": "11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DELIVERY_UNCONFIRMED",
+                "weight": 249,
+                "percentage": 21.16
+              }
+            ]
+          }
+        },
+        "remaining_gates": [
+          "dimension and circulation fit needs review",
+          "technical compatibility is not fully passed",
+          "colour, finish and material need review",
+          "client design approval is required"
+        ],
+        "policy": "This is a what-if supply scenario only. It does not alter the selected design or current coverage until every remaining gate passes and the client approves the swap."
+      },
+      {
+        "substitution_id": "SUB_KIVIK_TO_NORR11_MAN_2S",
+        "scenario_state": "NO_CONFIRMED_SUPPLY_RESCUE",
+        "counted_in_current_design_coverage": false,
+        "reason": "The source placement or exact alternative offer evidence is missing."
+      },
+      {
+        "substitution_id": "SUB_POANG_TO_NORR11_MAN_LOUNGE",
+        "scenario_state": "NO_CONFIRMED_SUPPLY_RESCUE",
+        "counted_in_current_design_coverage": false,
+        "reason": "The source placement or exact alternative offer evidence is missing."
+      }
+    ],
+    "policy": "An alternative can improve candidate coverage, but it cannot be counted as confirmed coverage until every gate passes and the client approves the design change."
+  },
+  "benchmark_markets": [
+    {
+      "country": "ES",
+      "name": "Spain",
+      "currency": "EUR",
+      "destination": {
+        "country": "ES",
+        "region": "Malaga",
+        "postal_code": "29660",
+        "construction_phase": "ffe"
+      },
+      "headline": {
+        "confirmed_deliverable_percentage_by_units": 87.5,
+        "confirmed_unavailable_percentage_by_units": 12.5,
+        "exact_route_refresh_required_percentage_by_units": 0,
+        "unresolved_or_incomplete_percentage_by_units": 0
+      },
+      "local_anchor_network": {
+        "candidates": [
+          {
+            "name": "IKEA Spain",
+            "role": "home_and_furniture_anchor",
+            "connection_state": "EXACT_PRODUCT_ROUTES_CONNECTED_DESTINATION_EVIDENCE_PARTIAL_ROOM"
+          },
+          {
+            "name": "Leroy Merlin Spain",
+            "role": "building_materials_anchor",
+            "connection_state": "MIRAKL_SELLER_STACK_DOCUMENTED_BUYER_CATALOGUE_NOT_CONNECTED"
+          },
+          {
+            "name": "OBRAMAT",
+            "role": "trade_mep_anchor",
+            "connection_state": "DISCOVERY_CANDIDATE_NOT_CONNECTED"
+          }
+        ],
+        "connected_anchor_roles": [
+          "home_and_furniture_anchor"
+        ],
+        "required_anchor_roles": [
+          "home_and_furniture_anchor",
+          "building_materials_anchor",
+          "trade_mep_anchor",
+          "manufacturer_bim_and_identity_routes"
+        ],
+        "state": "PARTIAL"
+      },
+      "coverage": {
+        "by_line_item": {
+          "outcome": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_MARKET_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+                "weight": 7,
+                "percentage": 87.5
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 1,
+                "percentage": 12.5
+              },
+              {
+                "bucket": "ROUTE_REFRESH_REQUIRED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "UNRESOLVED",
+                "weight": 0,
+                "percentage": 0
+              }
+            ]
+          },
+          "supplier_geography": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ORIGIN_UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "delivery_timeline": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "UP_TO_10_DAYS_CONFIRMED",
+                "weight": 7,
+                "percentage": 87.5
+              },
+              {
+                "bucket": "11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 1,
+                "percentage": 12.5
+              },
+              {
+                "bucket": "DELIVERY_UNCONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              }
+            ]
+          }
+        },
+        "by_unit_quantity": {
+          "outcome": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_MARKET_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+                "weight": 7,
+                "percentage": 87.5
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 1,
+                "percentage": 12.5
+              },
+              {
+                "bucket": "ROUTE_REFRESH_REQUIRED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "UNRESOLVED",
+                "weight": 0,
+                "percentage": 0
+              }
+            ]
+          },
+          "supplier_geography": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ORIGIN_UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "delivery_timeline": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "UP_TO_10_DAYS_CONFIRMED",
+                "weight": 7,
+                "percentage": 87.5
+              },
+              {
+                "bucket": "11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 1,
+                "percentage": 12.5
+              },
+              {
+                "bucket": "DELIVERY_UNCONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              }
+            ]
+          }
+        }
+      },
+      "evidence_line_count": 8
+    },
+    {
+      "country": "SE",
+      "name": "Sweden",
+      "currency": "SEK",
+      "destination": {
+        "country": "SE",
+        "postal_code": null,
+        "destination_state": "BENCHMARK_ADDRESS_REQUIRED"
+      },
+      "headline": {
+        "confirmed_deliverable_percentage_by_units": 0,
+        "confirmed_unavailable_percentage_by_units": 0,
+        "exact_route_refresh_required_percentage_by_units": 0,
+        "unresolved_or_incomplete_percentage_by_units": 100
+      },
+      "local_anchor_network": {
+        "candidates": [
+          {
+            "name": "IKEA Sweden",
+            "role": "home_and_furniture_anchor",
+            "connection_state": "DISCOVERY_CANDIDATE_NOT_CONNECTED"
+          },
+          {
+            "name": "Byggmax or Beijer Byggmaterial",
+            "role": "building_materials_anchor",
+            "connection_state": "MUNIN_SOURCE_RESEARCH_REQUIRED"
+          },
+          {
+            "name": "Ahlsell Sweden",
+            "role": "trade_mep_anchor",
+            "connection_state": "MUNIN_SOURCE_RESEARCH_REQUIRED"
+          }
+        ],
+        "connected_anchor_roles": [],
+        "required_anchor_roles": [
+          "home_and_furniture_anchor",
+          "building_materials_anchor",
+          "trade_mep_anchor",
+          "manufacturer_bim_and_identity_routes"
+        ],
+        "state": "NOT_CONNECTED"
+      },
+      "coverage": {
+        "by_line_item": {
+          "outcome": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_MARKET_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ROUTE_REFRESH_REQUIRED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "supplier_geography": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ORIGIN_UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "delivery_timeline": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DELIVERY_UNCONFIRMED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          }
+        },
+        "by_unit_quantity": {
+          "outcome": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_MARKET_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ROUTE_REFRESH_REQUIRED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "supplier_geography": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ORIGIN_UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "delivery_timeline": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DELIVERY_UNCONFIRMED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          }
+        }
+      },
+      "evidence_line_count": 8
+    },
+    {
+      "country": "GB",
+      "name": "United Kingdom",
+      "currency": "GBP",
+      "destination": {
+        "country": "GB",
+        "postal_code": null,
+        "destination_state": "BENCHMARK_ADDRESS_REQUIRED"
+      },
+      "headline": {
+        "confirmed_deliverable_percentage_by_units": 0,
+        "confirmed_unavailable_percentage_by_units": 0,
+        "exact_route_refresh_required_percentage_by_units": 0,
+        "unresolved_or_incomplete_percentage_by_units": 100
+      },
+      "local_anchor_network": {
+        "candidates": [
+          {
+            "name": "IKEA UK",
+            "role": "home_and_furniture_anchor",
+            "connection_state": "DISCOVERY_CANDIDATE_NOT_CONNECTED"
+          },
+          {
+            "name": "B&Q",
+            "role": "building_materials_anchor",
+            "connection_state": "UK_STACK_SOURCE_RESEARCH_REQUIRED"
+          },
+          {
+            "name": "Screwfix or Travis Perkins",
+            "role": "trade_mep_anchor",
+            "connection_state": "UK_STACK_SOURCE_RESEARCH_REQUIRED"
+          }
+        ],
+        "connected_anchor_roles": [],
+        "required_anchor_roles": [
+          "home_and_furniture_anchor",
+          "building_materials_anchor",
+          "trade_mep_anchor",
+          "manufacturer_bim_and_identity_routes"
+        ],
+        "state": "NOT_CONNECTED"
+      },
+      "coverage": {
+        "by_line_item": {
+          "outcome": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_MARKET_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ROUTE_REFRESH_REQUIRED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "supplier_geography": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ORIGIN_UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "delivery_timeline": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DELIVERY_UNCONFIRMED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          }
+        },
+        "by_unit_quantity": {
+          "outcome": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_MARKET_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ROUTE_REFRESH_REQUIRED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "supplier_geography": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ORIGIN_UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "delivery_timeline": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DELIVERY_UNCONFIRMED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          }
+        }
+      },
+      "evidence_line_count": 8
+    },
+    {
+      "country": "US",
+      "name": "United States",
+      "currency": "USD",
+      "destination": {
+        "country": "US",
+        "postal_code": null,
+        "destination_state": "BENCHMARK_ADDRESS_REQUIRED"
+      },
+      "headline": {
+        "confirmed_deliverable_percentage_by_units": 0,
+        "confirmed_unavailable_percentage_by_units": 0,
+        "exact_route_refresh_required_percentage_by_units": 0,
+        "unresolved_or_incomplete_percentage_by_units": 100
+      },
+      "local_anchor_network": {
+        "candidates": [
+          {
+            "name": "IKEA US",
+            "role": "home_and_furniture_anchor",
+            "connection_state": "DISCOVERY_CANDIDATE_NOT_CONNECTED"
+          },
+          {
+            "name": "The Home Depot",
+            "role": "building_materials_anchor",
+            "connection_state": "OFFICIAL_PRO_PARTNER_INTEGRATION_RESEARCH_REQUIRED"
+          },
+          {
+            "name": "Lowe's",
+            "role": "trade_mep_anchor",
+            "connection_state": "PARTNER_OR_PUBLIC_ACCESS_RESEARCH_REQUIRED"
+          }
+        ],
+        "connected_anchor_roles": [],
+        "required_anchor_roles": [
+          "home_and_furniture_anchor",
+          "building_materials_anchor",
+          "trade_mep_anchor",
+          "manufacturer_bim_and_identity_routes"
+        ],
+        "state": "NOT_CONNECTED"
+      },
+      "coverage": {
+        "by_line_item": {
+          "outcome": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_MARKET_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ROUTE_REFRESH_REQUIRED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "supplier_geography": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ORIGIN_UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "delivery_timeline": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DELIVERY_UNCONFIRMED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          }
+        },
+        "by_unit_quantity": {
+          "outcome": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_MARKET_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_CONFIRMED_ORIGIN_OR_LEAD_UNKNOWN",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ROUTE_REFRESH_REQUIRED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "supplier_geography": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "LOCAL_SELLER_OR_DISPATCH_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "NON_LOCAL_ORIGIN_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "ORIGIN_UNRESOLVED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          },
+          "delivery_timeline": {
+            "total_weight": 8,
+            "buckets": [
+              {
+                "bucket": "UP_TO_10_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "11_TO_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "OVER_30_DAYS_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DESTINATION_UNAVAILABLE_CONFIRMED",
+                "weight": 0,
+                "percentage": 0
+              },
+              {
+                "bucket": "DELIVERY_UNCONFIRMED",
+                "weight": 8,
+                "percentage": 100
+              }
+            ]
+          }
+        }
+      },
+      "evidence_line_count": 8
+    }
+  ],
+  "client_language": {
+    "current_truth": "87.5% of placed units currently have confirmed delivery evidence in Spain; 12.5% are confirmed unavailable at the destination; 0% still await live destination refresh.",
+    "unresolved_rule": "Percentages never silently normalize away missing evidence; any remainder is shown as route refresh required or unresolved.",
+    "alternative_rule": "Similar products are shown beside the design impact and cannot be counted as confirmed coverage until fit, finish, technical, client-approval and destination-delivery gates pass.",
+    "scenario_rule": "A conditional scenario may show the supply coverage available after a proposed swap, but it is always separate from current design coverage and never implies approval."
+  }
+}

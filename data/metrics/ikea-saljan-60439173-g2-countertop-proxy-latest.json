@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-08-16T23:25:33.896Z",
+  "avatar_id": "AVATAR_IKEA_SALJAN_60439173_G2_COUNTERTOP_PROXY",
+  "status": "G2_REALISTIC_PROXY_SCALE_PASS",
+  "promotion_level": "G2",
+  "asset_path": "data/geometry/avatars/ikea-saljan-60439173-g2-countertop-proxy.glb",
+  "asset_bytes": 32476,
+  "identity": {
+    "merchant": "IKEA Spain",
+    "product_family": "SÄLJAN",
+    "article_no": "604.391.73",
+    "official_url": "https://www.ikea.com/es/es/p/saljan-encimera-efecto-roble-laminado-60439173/"
+  },
+  "expected_mm": {
+    "width": 1860,
+    "depth": 635,
+    "height": 38
+  },
+  "measured_xyz_mm": {
+    "width": 1860,
+    "height": 38,
+    "depth": 635
+  },
+  "relative_error_max": 0,
+  "material_cues": [
+    "natural oak-effect laminate",
+    "subtle procedural grain cue"
+  ],
+  "placement": {
+    "origin": "underside_center",
+    "base_cabinet_anchor": true,
+    "nominal_installed_height_mm": 900
+  },
+  "disclosure": "Product Twin-owned realistic planning geometry at verified scale. Product identity and dimensions are exact; proprietary manufacturer geometry and texture artwork are not claimed.",
+  "commerce": {
+    "state": "OFFICIAL_PRODUCT_PAGE_VERIFIED_LIVE_AVAILABILITY_REFRESH_REQUIRED",
+    "observed_at": "2026-08-17"
+  }
+}

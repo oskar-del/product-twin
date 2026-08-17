@@ -1,0 +1,75 @@
+{
+  "version": "0.1",
+  "researched_at": "2026-08-17",
+  "trigger": "Concrete Spain building-materials anchor gap and user-provided Leroy Merlin marketplace integration routes.",
+  "conclusion": "The Leroy Merlin Mirakl API and the reviewed multichannel tools are real, but their primary direction is authorized seller operations rather than public buyer-side catalogue access.",
+  "directionality": {
+    "supplier_to_marketplace": ["product publication", "images", "offers", "prices", "stock"],
+    "marketplace_to_supplier": ["seller orders", "messages where supported", "shipment obligations", "returns where supported"],
+    "supplier_to_marketplace_after_order": ["acceptance", "shipment status", "carrier", "tracking", "invoice where supported"],
+    "not_proven": ["read access to every Leroy Merlin product", "Leroy Merlin store inventory", "buyer-specific destination promise", "manufacturer geometry", "media or derivative rights"]
+  },
+  "platforms": [
+    {
+      "name": "Leroy Merlin/ADEO Mirakl seller API",
+      "state": "DOCUMENTED_APPROVED_SELLER_ACCOUNT_REQUIRED",
+      "access": ["approved marketplace seller", "Mirakl Shop ID", "API key"],
+      "fit": "Canonical reusable seller adapter and eventual authorized supplier operations route.",
+      "reference": "https://developer.mirakl.com/content/product/mmp/rest/seller/openapi3"
+    },
+    {
+      "name": "BeezUP",
+      "state": "DOCUMENTED",
+      "capabilities": ["Leroy Merlin/ADEO category and attribute mapping", "daily product publication", "offer publication up to every five minutes depending on plan", "seller order management API"],
+      "fit": "Potential normalized multichannel supplier hub once an authorized seller account and supplier catalogue are connected.",
+      "reference": "https://help.beezup.com/en/articles/5685474-leroy-merlin-products-publication"
+    },
+    {
+      "name": "Koongo",
+      "state": "DOCUMENTED",
+      "capabilities": ["seller product-feed management", "listing automation", "inventory synchronization", "multichannel seller operations"],
+      "fit": "Alternative supplier-side hub; not public marketplace search.",
+      "reference": "https://www.koongo.com/channels/leroy-merlin/"
+    },
+    {
+      "name": "Poleepo",
+      "state": "DOCUMENTED",
+      "capabilities": ["seller API-token connection", "product publication", "order download", "shipping preparation data"],
+      "fit": "Supplier-side ERP/OMS bridge; not buyer catalogue access.",
+      "reference": "https://poleepo.cloud/en/selling-at-leroy-merlin-how-to-do-it-and-the-advantages/"
+    },
+    {
+      "name": "Oceges",
+      "state": "DOCUMENTED",
+      "capabilities": ["seller catalogue", "stock", "orders", "invoices", "shipments", "tracking", "ERP and warehouse operations"],
+      "fit": "Spain-relevant seller operations bridge; not buyer catalogue access.",
+      "reference": "https://oceges.com/integraciones/leroy-merlin/"
+    },
+    {
+      "name": "BigBuy",
+      "state": "USER_REFERENCE_FOUND_OFFICIAL_PAGE_NOT_INDEPENDENTLY_READABLE",
+      "capabilities": ["reported seller-side multichannel synchronization"],
+      "fit": "Do not count until official documentation is independently readable and a real account-scoped test succeeds.",
+      "reference": "https://www.bigbuy.eu/academy/fr/comment-synchroniser-leroy-merlin-via-la-plateforme-dintegration-multicanal/"
+    },
+    {
+      "name": "Parse.bot Leroy Merlin France wrapper",
+      "state": "THIRD_PARTY_DOCUMENTED_NOT_TESTED",
+      "capabilities": ["search", "product detail", "price", "seller identity", "marketplace seller flag", "sitemap enumeration", "category hierarchy", "REST", "OpenAPI", "MCP"],
+      "fit": "Fast France discovery prototype only; no stock and no Spain destination procurement.",
+      "reference": "https://parse.bot/marketplace/5bbd6f67-2778-4942-9382-059e573f661d/leroymerlin-fr-api"
+    }
+  ],
+  "product_twin_opportunity": {
+    "core": "Turn Product Twin into the neutral enrichment and syndication layer between supplier PIM/ERP and many marketplace seller channels.",
+    "supplier_value": ["one canonical product identity", "better attributes and taxonomy mapping", "2D media evidence", "generated and scored planning avatars", "rights metadata", "AI-readable content", "multi-market publication", "stock and order reconciliation"],
+    "project_value": ["authorized supplier records", "dated offers and stock", "seller identity", "order and shipment evidence", "stronger local substitutions"],
+    "flywheel": "Suppliers receive AI-ready listings and marketplace distribution; the Product Twin network receives authorized, better-structured product, media, stock and logistics evidence.",
+    "important_limit": "A seller-channel connection improves authorized supplier coverage. It does not make every product on a marketplace available to Product Twin."
+  },
+  "adapter_gate": {
+    "now": "Map the Mirakl seller schema and keep access state explicit.",
+    "credentialed_pilot": "Requires an approved seller or an authorized supplier/multichannel account; do not initiate individual supplier email outreach.",
+    "promotion": "Count as live only after one real seller-authorized catalogue, offer, stock and order/ship test passes."
+  }
+}

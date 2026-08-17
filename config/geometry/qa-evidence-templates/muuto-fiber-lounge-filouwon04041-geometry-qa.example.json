@@ -1,0 +1,33 @@
+{
+  "target_id": "MUUTO_FIBER_LOUNGE_FILOUWON04041_G3_V0_1",
+  "source_sha256": "<copy source.sha256 from the authorized intake metric>",
+  "converted_asset_path": ".runtime/geometry/muuto-fiber-lounge-filouwon04041/model.glb",
+  "converted_asset_sha256": "<sha256 of the converted GLB>",
+  "conversion": {"tool": "<tool permitted by the written Muuto scope>", "tool_version": "<version>"},
+  "identity": {
+    "manufacturer_item_no": "FILOUWON04041",
+    "legacy_item_no": "25513",
+    "ean": "5713295826631",
+    "manufacturer": "Muuto",
+    "product_family": "Fiber Lounge Chair"
+  },
+  "measurements_mm": {"seat_height":380,"seat_depth":490},
+  "interfaces": {
+    "object_role": "seating_lounge",
+    "shell_color": "Natural White",
+    "base_material": "Oak",
+    "upholstery": "None"
+  },
+  "rights": {
+    "access_basis": "<copy from the authorized intake metric>",
+    "terms_reference": "<copy from the authorized intake metric>",
+    "project_reference": "<copy from the authorized intake metric>",
+    "project_use_scope_confirmed": true,
+    "render_scope": "project_only",
+    "derivative_storage_scope": "ephemeral_only",
+    "asset_redistribution_allowed": false,
+    "manufacturer_binary_committed": false,
+    "converted_asset_committed": false
+  },
+  "operator_confirmation": "<confirm that exact identity, physical scale, orientation, materials, configuration and written rights were personally checked>"
+}

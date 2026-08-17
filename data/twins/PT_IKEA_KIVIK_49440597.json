@@ -1,0 +1,86 @@
+{
+  "twin_id": "PT_IKEA_KIVIK_49440597",
+  "kind": "object",
+  "category_id": "FFE.SEATING.SOFA",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "KIVIK",
+    "model": "3-seat sofa, Tibbleby beige/grey",
+    "article_no": "494.405.97",
+    "configuration": "3-seat sofa, Tibbleby beige/grey"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 2280,
+      "depth": 950,
+      "height": 830
+    },
+    "secondary_dimensions_mm": {
+      "seat_width": 1800,
+      "seat_depth": 600,
+      "seat_height": 450
+    },
+    "evidence_state": "official_retailer_dimensions_and_glb_envelope_verified"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/es/p/kivik-sofa-3-plazas-tibbleby-beis-gris-s49440597/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "494.405.97",
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_realistic_planning_proxy",
+    "avatar_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+    "asset_path": "data/geometry/avatars/ikea-kivik-49440597-g2-sofa-proxy.glb",
+    "scale_state": "verified 2280x950x830mm envelope; 1800x600mm seat at 450mm height",
+    "shape_claim": "realistic upholstered planning proxy; exact IKEA industrial-design geometry and fabric texture are not claimed",
+    "placement": {
+      "origin": "floor_center",
+      "back_to_wall_anchor": true,
+      "recommended_front_clearance_mm": 700
+    },
+    "appearance": {
+      "material_cues": [
+        "warm beige-grey woven upholstery",
+        "dark low-profile feet"
+      ],
+      "pbr_state": "variant_specific_base_colour_and_roughness_cues",
+      "embedded_textures": false,
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "qa_metric": "data/metrics/ikea-kivik-49440597-g2-sofa-proxy-latest.json",
+    "rights": {
+      "geometry_owner": "Product Twin planning proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false,
+      "exact_likeness_claimed": false
+    }
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "official_product_page_verified_live_postcode_refresh_required",
+    "dimensions": "verified",
+    "geometry": "G2_promoted_planning_proxy",
+    "appearance": "variant_colour_and_roughness_cues_only_no_exact_texture",
+    "room_placement": "ready_for_planning_and_circulation",
+    "render": "planning_preview_only",
+    "rights": "product_twin_owned_proxy_no_manufacturer_asset_redistribution",
+    "next_gate": "authorized exact geometry/appearance and live postcode availability"
+  },
+  "promotion_blockers": [
+    "authorized exact product geometry or independently validated exact reconstruction",
+    "exact selected-variant material and texture QA",
+    "live postcode 29660 price, stock and delivery refresh"
+  ],
+  "policy": "This is a real, exact retail product identity with a verified-scale G2 planning avatar. It is usable for room fit and circulation, but is not a G3 claim of exact visual likeness or finish."
+}

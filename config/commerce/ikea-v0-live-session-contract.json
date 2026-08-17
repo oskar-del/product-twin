@@ -1,0 +1,25 @@
+{
+  "version": "0.1",
+  "contract_id": "IKEA_V0_LIVE_SESSION_EVIDENCE_V0_1",
+  "scene_id": "V0_SHOPPABLE_DINING_001",
+  "merchant": "IKEA Spain",
+  "location": {"country":"ES","postal_code":"29660"},
+  "maximum_observation_age_minutes": 30,
+  "maximum_future_clock_skew_minutes": 5,
+  "products": [
+    {"twin_id":"PT_IKEA_SKURUP_80407114","article_no":"804.071.14","official_url":"https://www.ikea.com/es/es/p/skurup-lampara-techo-negro-80407114/"},
+    {"twin_id":"PT_IKEA_MELODI_60386527","article_no":"603.865.27","official_url":"https://www.ikea.com/es/es/p/melodi-lampara-techo-blanco-60386527/"}
+  ],
+  "allowed_states": {
+    "availability": ["delivery_available", "store_available", "unavailable", "not_offered"],
+    "cart": ["added", "not_added"],
+    "checkout": ["healthy_to_final_review", "blocked", "not_checked"]
+  },
+  "procurement_ready_rule": "At least one exact configured article is delivery/store available, was added to cart and reached healthy checkout final review in the same fresh 29660 session.",
+  "privacy_policy": {
+    "required_false_declarations": ["contains_personal_data", "contains_session_identifier", "contains_cart_identifier", "contains_cart_payload", "contains_payment_data"],
+    "forbidden_key_patterns": ["session_id", "session_token", "cart_id", "checkout_id", "email", "phone", "street_address", "payment", "cookie", "authorization"],
+    "persist": ["scene/twin/article identity", "country/postal code", "observation time", "price/currency", "availability/cart/checkout states", "official product URL", "operator declaration"],
+    "do_not_persist": ["session or cart identifiers", "cart contents/payload", "personal address/contact details", "payment details", "cookies/tokens", "retailer response payload"]
+  }
+}

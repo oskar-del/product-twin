@@ -1,21 +1,27 @@
 {
-  "generated_at": "2026-08-16",
+  "generated_at": "2026-08-17",
   "summary": {
-    "promoted_avatars": 9,
-    "candidates": 1,
-    "indexed_total": 10,
+    "promoted_avatars": 23,
+    "candidates": 9,
+    "indexed_total": 32,
     "G0": 0,
     "G1": 0,
-    "G2": 9,
+    "G2": 23,
+    "G2_candidates": 8,
     "G3_promoted": 0,
     "G3_candidates": 1,
     "G4_promoted": 0,
     "G5_promoted": 0,
-    "promoted_object_avatars": 5,
-    "promoted_material_or_material_system_avatars": 2,
+    "promoted_object_avatars": 18,
+    "promoted_material_or_material_system_avatars": 3,
     "promoted_system_or_component_avatars": 3,
     "exact_manufacturer_geometry_candidates": 1,
-    "dimension_verified_proxies": 9,
+    "merchant_native_model3d_candidates": 8,
+    "merchant_native_scale_qa_passes": 6,
+    "textured_merchant_native_model3d_candidates": 4,
+    "dimension_verified_proxies": 23,
+    "residential_room_ready_avatars": 13,
+    "realistic_material_proxies": 13,
     "material_repeat_takeoff_pipeline_passed": true,
     "v0_mixed_avatar_index_count_met": true
   },
@@ -164,6 +170,244 @@
       "specification": {"max_power_w":22,"lamp_base":"E27","shade_material":"steel","ce_marked":true,"mounting":"ceiling hook"},
       "commerce": {"merchant":"IKEA Spain","type":"retailer_direct_online","refresh_policy":"live_required_before_quote_or_purchase"},
       "next_gate": "authorized exact geometry/render rights + photometric data + live stock/delivery refresh"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_MELODI_60386527_G2_PENDANT_PROXY",
+      "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+      "manufacturer": "IKEA",
+      "product_family": "MELODI",
+      "article_no": "603.865.27",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_proxy",
+      "asset_path": "data/geometry/avatars/ikea-melodi-60386527-g2-pendant-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 280mm diameter x 260mm fixed shade envelope; 1600mm cord is parametric placement metadata",
+      "shape": "generic rotational pendant proxy; exact IKEA industrial-design geometry not claimed",
+      "specification": {"max_power_w":22,"lamp_base":"E27","shade_material":"polystyrene plastic","ce_marked":true,"mounting":"ceiling hook"},
+      "commerce": {"merchant":"IKEA Spain","type":"retailer_direct_online","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized exact geometry/render rights + photometric data + live stock/delivery refresh"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+      "category_id": "FFE.SEATING.SOFA",
+      "manufacturer": "IKEA",
+      "product_family": "KIVIK",
+      "article_no": "494.405.97",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-kivik-49440597-g2-sofa-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 2280x950x830mm envelope; 1800x600mm seat at 450mm height",
+      "shape": "realistic upholstered planning proxy; exact IKEA industrial-design geometry and fabric texture are not claimed",
+      "placement": {"origin":"floor_center","back_to_wall_anchor":true,"recommended_front_clearance_mm":700},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/kivik-sofa-3-plazas-tibbleby-beis-gris-s49440597/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized exact geometry/appearance and live postcode availability"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+      "category_id": "FFE.SEATING.ARMCHAIR",
+      "manufacturer": "IKEA",
+      "product_family": "POÄNG",
+      "article_no": "392.407.87",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-poang-39240787-g2-armchair-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 680x820x1000mm envelope; 560x500mm seat at 420mm height",
+      "shape": "realistic birch-frame/upholstery planning proxy; exact IKEA curved-frame geometry and fabric texture are not claimed",
+      "placement": {"origin":"floor_center","recommended_front_clearance_mm":600},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/poang-sillon-chapa-abedul-knisa-beige-claro-s39240787/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized exact geometry/appearance and live postcode availability"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_LISABO_70294339_G2_DINING_TABLE_PROXY",
+      "category_id": "FFE.TABLE.DINING",
+      "manufacturer": "IKEA",
+      "product_family": "LISABO",
+      "article_no": "702.943.39",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-lisabo-70294339-g2-dining-table-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 1400x780x740mm envelope",
+      "shape": "realistic ash/birch planning proxy; exact IKEA joinery and industrial-design geometry are not claimed",
+      "placement": {"origin":"floor_center","recommended_chair_zone_mm":750},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/lisabo-mesa-chapa-fresno-70294339/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized exact geometry/appearance and live postcode availability"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_LISABO_00457235_G2_DINING_CHAIR_PROXY",
+      "category_id": "FFE.SEATING.DINING_CHAIR",
+      "manufacturer": "IKEA",
+      "product_family": "LISABO",
+      "article_no": "004.572.35",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-lisabo-00457235-g2-dining-chair-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 460x510x800mm envelope; 440x390mm seat at 450mm height",
+      "shape": "realistic ash/birch planning proxy; exact IKEA curved shell and joinery are not claimed",
+      "placement": {"origin":"floor_center","table_anchor":"seat_center_at_table_edge"},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/lisabo-silla-fresno-00457235/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized exact geometry/appearance and live postcode availability"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_MALM_09929373_G2_BED_FRAME_PROXY",
+      "category_id": "FFE.BEDROOM.BED_FRAME",
+      "manufacturer": "IKEA",
+      "product_family": "MALM",
+      "article_no": "099.293.73",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-malm-09929373-g2-bed-frame-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 1760x2090x1000mm frame envelope for 1600x2000mm mattress",
+      "shape": "realistic warm-white frame/slat proxy; mattress, bedding and exact IKEA panel construction are not included or claimed",
+      "placement": {"origin":"floor_center","headboard_wall_anchor":true,"recommended_side_clearance_mm":600},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/malm-estructura-cama-blanco-s09929373/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized exact geometry/appearance and live postcode availability"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_BILLY_00263850_G2_BOOKCASE_PROXY",
+      "category_id": "FFE.STORAGE.BOOKCASE",
+      "manufacturer": "IKEA",
+      "product_family": "BILLY",
+      "article_no": "002.638.50",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-billy-00263850-g2-bookcase-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 800x280x2020mm envelope; 30kg maximum per shelf",
+      "shape": "realistic warm-white shelf proxy; exact IKEA construction details are not claimed",
+      "placement": {"origin":"floor_center","back_to_wall_anchor":true,"wall_fixing_required":true},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/billy-libreria-blanco-00263850/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "wall-fixing rule test, authorized exact geometry/appearance and live postcode availability"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_BESTA_89330691_G2_MEDIA_UNIT_PROXY",
+      "category_id": "FFE.STORAGE.MEDIA_UNIT",
+      "manufacturer": "IKEA",
+      "product_family": "BESTÅ",
+      "article_no": "893.306.91",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-besta-89330691-g2-media-unit-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 1800x420x380mm envelope",
+      "shape": "realistic warm-white three-front media-unit proxy; exact IKEA hardware and panel construction are not claimed",
+      "placement": {"origin":"floor_center","back_to_wall_anchor":true,"rear_service_zone_mm":80},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/besta-mueble-tv-blanco-lappviken-blanco-s89330691/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "cable/service rule test, authorized exact geometry/appearance and live postcode availability"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_SALJAN_60439173_G2_COUNTERTOP_PROXY",
+      "category_id": "FINISHES.COUNTERTOP.LAMINATE",
+      "manufacturer": "IKEA",
+      "product_family": "SÄLJAN",
+      "article_no": "604.391.73",
+      "type": "material",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-saljan-60439173-g2-countertop-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 1860x635x38mm module",
+      "appearance": "natural oak-effect PBR colour with a neutral procedural grain cue; manufacturer laminate artwork is not copied",
+      "placement": {"origin":"underside_center","base_cabinet_anchor":true,"nominal_installed_height_mm":900},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/saljan-encimera-efecto-roble-laminado-60439173/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "cut/join/sink rules, authorized decor texture and live postcode availability"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+      "category_id": "FFE.TABLE.COFFEE",
+      "manufacturer": "IKEA",
+      "product_family": "LISTERBY",
+      "article_no": "305.139.04",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-listerby-30513904-g2-coffee-table-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 1400x600x370mm envelope",
+      "shape": "product-bound oak-veneer planning reconstruction; exact IKEA industrial-design geometry and veneer artwork are not claimed",
+      "placement": {"origin":"floor_center","recommended_sofa_gap_mm":420,"recommended_circulation_clearance_mm":600},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized exact geometry/appearance and live postcode availability"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_VALNAS_20628038_G2_COFFEE_TABLE_PROXY",
+      "category_id": "FFE.TABLE.COFFEE",
+      "manufacturer": "IKEA",
+      "product_family": "VALNÄS",
+      "article_no": "206.280.38",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-valnas-20628038-g2-coffee-table-proxy.glb",
+      "identity": "exact_retail_article",
+      "scale": "verified 1180x720x500mm envelope",
+      "shape": "product-bound oak-veneer planning reconstruction; exact IKEA industrial-design geometry and veneer artwork are not claimed",
+      "placement": {"origin":"floor_center","recommended_sofa_gap_mm":420,"recommended_circulation_clearance_mm":600},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/en/p/valnas-coffee-table-oak-veneer-20628038/","destination":"29660 available and IKEA Málaga in stock observed 2026-08-17","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "same-position fit and circulation review, exact appearance validation and client design approval"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_LOHALS_30511288_G2_RUG_PROXY",
+      "category_id": "FFE.TEXTILES.RUG",
+      "manufacturer": "IKEA",
+      "product_family": "LOHALS",
+      "article_no": "305.112.88",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-lohals-30511288-g2-rug-proxy.glb",
+      "identity": "exact_retail_article_and_size",
+      "scale": "verified 1330x1950x13mm envelope",
+      "appearance": "natural-jute flatweave cue; exact fibre variation and manufacturer photography are not copied",
+      "placement": {"origin":"floor_center","underlay_required":true,"floor_contact":true},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/en/p/lohals-rug-flatwoven-natural-30511288/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized appearance validation and live postcode availability"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_GLADOM_70578451_G2_TRAY_TABLE_PROXY",
+      "category_id": "FFE.TABLE.SIDE",
+      "manufacturer": "IKEA",
+      "product_family": "GLADOM",
+      "article_no": "705.784.51",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-gladom-70578451-g2-tray-table-proxy.glb",
+      "identity": "exact_retail_article_and_dark_grey_green_variant",
+      "scale": "verified 450mm diameter x 530mm height envelope",
+      "shape": "product-bound powder-coated-steel planning reconstruction; exact tray/frame geometry is not claimed",
+      "placement": {"origin":"floor_center","recommended_seating_gap_mm":120},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/en/p/gladom-tray-table-dark-grey-green-70578451/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized exact geometry/colour validation and live postcode availability"
+    },
+    {
+      "avatar_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+      "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
+      "manufacturer": "IKEA",
+      "product_family": "LAUTERS",
+      "article_no": "304.050.42",
+      "type": "object",
+      "level": "G2",
+      "promotion_state": "promoted_realistic_proxy",
+      "asset_path": "data/geometry/avatars/ikea-lauters-30405042-g2-floor-lamp-proxy.glb",
+      "identity": "exact_retail_article_and_ash_white_variant",
+      "scale": "verified 620mm base diameter x 1510mm maximum height envelope",
+      "shape": "product-bound ash-tripod/textile-shade planning reconstruction; exact joinery and shade texture are not claimed",
+      "placement": {"origin":"floor_center","service_clearance_mm":100,"cord_length_mm":3500},
+      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/en/p/lauters-floor-lamp-ash-white-30405042/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "next_gate": "authorized exact geometry/material validation, photometric data and live postcode availability"
     }
   ],
   "candidates": [
@@ -186,6 +430,370 @@
       "procurement": {"state":"manufacturer_rfq_route_verified","route":"https://www.arper.com/es_ES/request-product-information","purpose":"availability and prices","rfq_context":"Ply Table #3853 / article 3853"},
       "rights": {"state":"commercial_use_requires_written_permission","evidence_file":"data/rights/arper-ply-3853-rights-and-rfq.json"},
       "blockers": ["obtain written Arper permission for Product Twin commercial rendering/derivative use"]
+    },
+    {
+      "avatar_id": "SHOPIFY_FURNITURE_MODEL3D_b163aea21fdf6542",
+      "twin_id": "PT_WENDELBO_ATLI_WEN_333_1_COM",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "manufacturer": "Wendelbo",
+      "model": "Atli Lounge Chair",
+      "merchant_sku": "WEN-333-1-COM",
+      "type": "object",
+      "candidate_level": "G2",
+      "target_level": "G3",
+      "promotion_state": "candidate_material_binding_and_rights_blocked",
+      "identity": "exact merchant variant; visible upholstery configuration incomplete",
+      "geometry": "live Shopify merchant-native product-level GLB/USDZ",
+      "scale": "PASS",
+      "expected_mm": [
+        790,
+        800,
+        770
+      ],
+      "measured_mm": [
+        786.9983017444611,
+        768.9534723758698,
+        803.8680851459503
+      ],
+      "max_relative_error": 0.004835106432437897,
+      "asset_sha256": "0787188f3f430755f3a65c35b107b40c6dcc364c5cc4505a2a1d285d4c22fe46",
+      "persistent_binary": false,
+      "appearance": "2 generic grey materials, 0 textures; selected _COM / Chrome variant not bound",
+      "commerce": {
+        "source": "Shopify catalog + merchant Storefront API",
+        "destination_filter": "ES-29660 passed",
+        "checkout_refresh_required": true
+      },
+      "rights": {
+        "state": "review",
+        "derivative_storage": "runtime inspection only",
+        "redistribution": false
+      },
+      "blockers": [
+        "exact visible upholstery selection and material binding",
+        "platform-display rights",
+        "live landed-cost checkout refresh"
+      ]
+    },
+    {
+      "avatar_id": "SHOPIFY_FURNITURE_MODEL3D_c78c9916e34465e8",
+      "twin_id": "PT_NORR11_FAVE_NOR_FAVE_CHR_CHRME_CAT0",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "manufacturer": "NORR11",
+      "model": "Fave Chair",
+      "merchant_sku": "NOR-FAVE-CHR-CHRME-CAT0",
+      "type": "object",
+      "candidate_level": "G2",
+      "target_level": "G3",
+      "promotion_state": "candidate_material_binding_and_rights_blocked",
+      "identity": "exact merchant variant; visible upholstery configuration incomplete",
+      "geometry": "live Shopify merchant-native product-level GLB/USDZ",
+      "scale": "PASS",
+      "expected_mm": [
+        650,
+        920,
+        720
+      ],
+      "measured_mm": [
+        650.1545310020447,
+        710.6590866421659,
+        916.3353443145752
+      ],
+      "max_relative_error": 0.012973490774769579,
+      "asset_sha256": "2f47f610c4e5fdaf399a12487983c8a1e5f66939496575a2909009ce4c6182c8",
+      "persistent_binary": false,
+      "appearance": "3 generic grey/black materials, 0 textures; selected Cat 0 / Chrome Steel variant not bound",
+      "commerce": {
+        "source": "Shopify catalog + merchant Storefront API",
+        "destination_filter": "ES-29660 passed",
+        "checkout_refresh_required": true
+      },
+      "rights": {
+        "state": "review",
+        "derivative_storage": "runtime inspection only",
+        "redistribution": false
+      },
+      "blockers": [
+        "exact visible upholstery selection and material binding",
+        "platform-display rights",
+        "live landed-cost checkout refresh"
+      ]
+    },
+    {
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_10584850764",
+      "twin_id": "PT_NORR11_MAN_DAY_BED_NOR_MAN_DAYBED_CAT1",
+      "category_id": "FFE.SEATING.SOFA",
+      "manufacturer": "NORR11",
+      "model": "Man Day Bed",
+      "type": "object",
+      "candidate_level": "G2",
+      "target_level": "G3",
+      "promotion_state": "candidate_scale_material_binding_and_rights_blocked",
+      "identity": "exact merchant variant; visible upholstery group does not select a fabric and colour",
+      "geometry": "live Shopify merchant-native product-level GLB/USDZ",
+      "scale": "EXPECTED_DIMENSIONS_NOT_CONFIGURED",
+      "expected_mm": null,
+      "measured_mm": [
+        843.815803527832,
+        505.3018638232061,
+        2009.0655088424683
+      ],
+      "max_relative_error": null,
+      "asset_sha256": "ea809c9ac5dfe69cedf0a4a9e44d8916d8e8ec762b314f83f43b0babe98f3a41",
+      "persistent_binary": false,
+      "appearance": "3 materials, 3 textures; product-level appearance not bound to selected merchant variant",
+      "commerce": {
+        "source": "Shopify catalog + merchant Storefront API",
+        "country_filter": {
+          "country": "ES",
+          "scope": "country_only"
+        },
+        "exact_product_join": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+        "checkout_refresh_required": true
+      },
+      "rights": {
+        "state": "review",
+        "derivative_storage": "runtime inspection only",
+        "redistribution": false
+      },
+      "blockers": [
+        "manufacturer dimension scale QA",
+        "exact visible upholstery selection and material binding",
+        "platform-display rights",
+        "exact postcode landed-cost checkout refresh"
+      ]
+    },
+    {
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_10584852108",
+      "twin_id": "PT_NORR11_MAN_2_SEATER_SOFA_NOR_MAN_2_SEAT_SOFA_CAT2",
+      "category_id": "FFE.SEATING.SOFA",
+      "manufacturer": "NORR11",
+      "model": "Man 2-Seater Sofa",
+      "type": "object",
+      "candidate_level": "G2",
+      "target_level": "G3",
+      "promotion_state": "candidate_material_binding_and_rights_blocked",
+      "identity": "exact merchant variant; visible upholstery group does not select a fabric and colour",
+      "geometry": "live Shopify merchant-native product-level GLB/USDZ",
+      "scale": "PASS",
+      "expected_mm": [
+        1320,
+        740,
+        750
+      ],
+      "measured_mm": [
+        1292.9904460906982,
+        767.605834380447,
+        775.7274806499481
+      ],
+      "max_relative_error": 0.037305181595198716,
+      "asset_sha256": "5d384b82e9fe09e98ed5cd33a95fea2c0be352b501948c9873b2011199915712",
+      "persistent_binary": false,
+      "appearance": "3 materials, 3 textures; product-level appearance not bound to selected merchant variant",
+      "commerce": {
+        "source": "Shopify catalog + merchant Storefront API",
+        "country_filter": {
+          "country": "ES",
+          "scope": "country_only"
+        },
+        "exact_product_join": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+        "checkout_refresh_required": true
+      },
+      "rights": {
+        "state": "review",
+        "derivative_storage": "runtime inspection only",
+        "redistribution": false
+      },
+      "blockers": [
+        "exact visible upholstery selection and material binding",
+        "platform-display rights",
+        "exact postcode landed-cost checkout refresh"
+      ]
+    },
+    {
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_10584852492",
+      "twin_id": "PT_NORR11_MAN_3_SEATER_SOFA_NOR_MAN_3_SEAT_SOFA_CAT3",
+      "category_id": "FFE.SEATING.SOFA",
+      "manufacturer": "NORR11",
+      "model": "Man 3-Seater Sofa",
+      "type": "object",
+      "candidate_level": "G2",
+      "target_level": "G3",
+      "promotion_state": "candidate_material_binding_and_rights_blocked",
+      "identity": "exact merchant variant; visible upholstery group does not select a fabric and colour",
+      "geometry": "live Shopify merchant-native product-level GLB/USDZ",
+      "scale": "PASS",
+      "expected_mm": [
+        1970,
+        740,
+        750
+      ],
+      "measured_mm": [
+        1967.305064201355,
+        768.1414114776999,
+        775.7638394832611
+      ],
+      "max_relative_error": 0.03802893442932416,
+      "asset_sha256": "b1516c8965fe3dabe52d409af82a75ca70b608315fa0c3e6cbbc303dad094ff8",
+      "persistent_binary": false,
+      "appearance": "3 materials, 3 textures; product-level appearance not bound to selected merchant variant",
+      "commerce": {
+        "source": "Shopify catalog + merchant Storefront API",
+        "country_filter": {
+          "country": "ES",
+          "scope": "country_only"
+        },
+        "exact_product_join": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+        "checkout_refresh_required": true
+      },
+      "rights": {
+        "state": "review",
+        "derivative_storage": "runtime inspection only",
+        "redistribution": false
+      },
+      "blockers": [
+        "exact visible upholstery selection and material binding",
+        "platform-display rights",
+        "exact postcode landed-cost checkout refresh"
+      ]
+    },
+    {
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_10584851276",
+      "twin_id": "PT_NORR11_MAN_LOUNGE_CHAIR_NOR_MAN_LNG_CAT1",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "manufacturer": "NORR11",
+      "model": "Man Lounge Chair",
+      "type": "object",
+      "candidate_level": "G2",
+      "target_level": "G3",
+      "promotion_state": "candidate_material_binding_and_rights_blocked",
+      "identity": "exact merchant variant; visible upholstery group does not select a fabric and colour",
+      "geometry": "live Shopify merchant-native product-level GLB/USDZ",
+      "scale": "PASS",
+      "expected_mm": [
+        670,
+        740,
+        750
+      ],
+      "measured_mm": [
+        680.8608174324036,
+        767.6215992805737,
+        775.7702767848969
+      ],
+      "max_relative_error": 0.03732648551428881,
+      "asset_sha256": "05e55443d35945230c987506150ef044b266e9a4eea2a42ffa2352c032ad37ae",
+      "persistent_binary": false,
+      "appearance": "3 materials, 3 textures; product-level appearance not bound to selected merchant variant",
+      "commerce": {
+        "source": "Shopify catalog + merchant Storefront API",
+        "country_filter": {
+          "country": "ES",
+          "scope": "country_only"
+        },
+        "exact_product_join": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+        "checkout_refresh_required": true
+      },
+      "rights": {
+        "state": "review",
+        "derivative_storage": "runtime inspection only",
+        "redistribution": false
+      },
+      "blockers": [
+        "exact visible upholstery selection and material binding",
+        "platform-display rights",
+        "exact postcode landed-cost checkout refresh"
+      ]
+    },
+    {
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_35853729804",
+      "twin_id": "PT_NORR11_MAMMOTH_SOFA_NOR_MAMMOTH_SOFA_CAT1_OAK",
+      "category_id": "FFE.SEATING.SOFA",
+      "manufacturer": "NORR11",
+      "model": "Mammoth Sofa",
+      "type": "object",
+      "candidate_level": "G2",
+      "target_level": "G3",
+      "promotion_state": "candidate_material_binding_and_rights_blocked",
+      "identity": "exact merchant variant; visible upholstery group does not select a fabric and colour",
+      "geometry": "live Shopify merchant-native product-level GLB/USDZ",
+      "scale": "PASS",
+      "expected_mm": [
+        1510,
+        870,
+        1040
+      ],
+      "measured_mm": [
+        1508.4084272384644,
+        1037.8710680218019,
+        886.0666285686307
+      ],
+      "max_relative_error": 0.018467389159345603,
+      "asset_sha256": "4432390fe70c0fc980c3b4893b82bef4d2a816fa0fb7a656c53c6016f503ebdc",
+      "persistent_binary": false,
+      "appearance": "3 materials, 0 textures; product-level appearance not bound to selected merchant variant",
+      "commerce": {
+        "source": "Shopify catalog + merchant Storefront API",
+        "country_filter": {
+          "country": "ES",
+          "scope": "country_only"
+        },
+        "exact_product_join": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+        "checkout_refresh_required": true
+      },
+      "rights": {
+        "state": "review",
+        "derivative_storage": "runtime inspection only",
+        "redistribution": false
+      },
+      "blockers": [
+        "exact visible upholstery selection and material binding",
+        "platform-display rights",
+        "exact postcode landed-cost checkout refresh"
+      ]
+    },
+    {
+      "avatar_id": "SHOPIFY_MERCHANT_MODEL3D_782311161966",
+      "twin_id": "PT_WENDELBO_LOBBY_SOFA_WEN_LBY_SOF_COM",
+      "category_id": "FFE.SEATING.SOFA",
+      "manufacturer": "Wendelbo",
+      "model": "Lobby Sofa",
+      "type": "object",
+      "candidate_level": "G2",
+      "target_level": "G3",
+      "promotion_state": "candidate_scale_material_binding_and_rights_blocked",
+      "identity": "exact merchant variant; visible upholstery group does not select a fabric and colour",
+      "geometry": "live Shopify merchant-native product-level GLB/USDZ",
+      "scale": "EXPECTED_DIMENSIONS_NOT_CONFIGURED",
+      "expected_mm": null,
+      "measured_mm": [
+        1500.9307861328125,
+        772.1994128078222,
+        848.5972583293915
+      ],
+      "max_relative_error": null,
+      "asset_sha256": "9c9f350d87250a46223893d12896719ee47d4c5f038af5d45c7fa44ee3dbf714",
+      "persistent_binary": false,
+      "appearance": "2 materials, 0 textures; product-level appearance not bound to selected merchant variant",
+      "commerce": {
+        "source": "Shopify catalog + merchant Storefront API",
+        "country_filter": {
+          "country": "ES",
+          "scope": "country_only"
+        },
+        "exact_product_join": "EXACT_MERCHANT_PRODUCT_JOIN_COUNTRY_FILTER_PASS",
+        "checkout_refresh_required": true
+      },
+      "rights": {
+        "state": "review",
+        "derivative_storage": "runtime inspection only",
+        "redistribution": false
+      },
+      "blockers": [
+        "manufacturer dimension scale QA",
+        "exact visible upholstery selection and material binding",
+        "platform-display rights",
+        "exact postcode landed-cost checkout refresh"
+      ]
     }
   ],
   "technical_g4_leads": [

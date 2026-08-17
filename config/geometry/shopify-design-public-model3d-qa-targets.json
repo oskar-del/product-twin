@@ -1,0 +1,34 @@
+{
+  "version": "0.1",
+  "maximum_relative_error": 0.05,
+  "targets": [
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852108",
+      "expected_dimensions_mm": [1320, 740, 750],
+      "dimension_source": "https://norr11.com/products/man-two-seater",
+      "source_note": "NORR11 publishes L132 x D74 x H75 cm. Five-percent tolerance allows cushion and export-envelope differences."
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584852492",
+      "expected_dimensions_mm": [1970, 740, 750],
+      "dimension_source": "https://norr11.com/products/man-three-seater",
+      "source_note": "NORR11 publishes L197 x D74 x H75 cm. Five-percent tolerance allows cushion and export-envelope differences."
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_10584851276",
+      "expected_dimensions_mm": [670, 740, 750],
+      "dimension_source": "https://norr11.com/products/man-lounge-chair",
+      "source_note": "NORR11 publishes W67 x D74 x H75 cm. Five-percent tolerance allows cushion and export-envelope differences."
+    },
+    {
+      "candidate_id": "SHOPIFY_MERCHANT_MODEL3D_35853729804",
+      "expected_dimensions_mm": [1510, 870, 1040],
+      "dimension_source": "https://norr11.com/products/mammoth-sofa",
+      "source_note": "NORR11 publishes W151 x D87 x H104 cm. Five-percent tolerance allows cushion and export-envelope differences."
+    }
+  ],
+  "excluded_from_scale_promotion": [
+    {"candidate_id":"SHOPIFY_MERCHANT_MODEL3D_10584850764","reason":"The official Man Daybed page separates base height and cylindrical cushion dimensions; an unambiguous overall-height target is not published."},
+    {"candidate_id":"SHOPIFY_MERCHANT_MODEL3D_782311161966","reason":"An authoritative current Lobby Sofa overall dimension set was not captured in this checkpoint."}
+  ]
+}

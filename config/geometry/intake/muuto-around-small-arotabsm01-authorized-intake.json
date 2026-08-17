@@ -1,0 +1,29 @@
+{
+  "version": "0.1",
+  "intake_id": "MUUTO_AROUND_SMALL_AROTABSM01_AUTHORIZED_GEOMETRY_INTAKE_V0_1",
+  "target_id": "MUUTO_AROUND_SMALL_AROTABSM01_G3_V0_1",
+  "manufacturer": "Muuto",
+  "product": "Around Coffee Table Small, Oak",
+  "expected_identity_values": ["AROTABSM01", "60012", "5713294887800"],
+  "official_source_urls": [
+    "https://www.muuto.com/product/Around-Coffee-Table--AROTABSM/AROTABSM01/",
+    "https://professionals.muuto.com/product/around-coffee-table--p1920/60019/",
+    "https://professionals.muuto.com/toolbox/product-information/download-ad-files/",
+    "https://download.muuto.com/digitalshowroom/"
+  ],
+  "allowed_extensions": [".obj", ".dwg", ".rfa", ".rvt", ".zip"],
+  "allowed_access_bases": ["manufacturer_written_permission", "authorized_professional_account", "manufacturer_direct_delivery"],
+  "minimum_bytes": 10000,
+  "expected_scale_mm": {"diameter":450,"height":460},
+  "binary_policy": "source file remains outside Git or under gitignored .runtime; intake persists hash and authorization evidence only",
+  "metric_path": "data/metrics/muuto-around-small-arotabsm01-authorized-capture-intake-latest.json",
+  "post_intake_gates": [
+    "bind the file or archive metadata to exact item AROTABSM01 or legacy item 60012",
+    "convert geometry through the written Muuto permission scope",
+    "validate the 450 mm diameter x 460 mm physical envelope",
+    "verify exact Oak material and finish mapping",
+    "record commercial render, conversion, persistence, attribution and territory scope",
+    "refresh the exact Spain offer and verify delivery to postcode 29660",
+    "do not publish or redistribute the manufacturer binary or converted exact asset outside the permitted scope"
+  ]
+}
