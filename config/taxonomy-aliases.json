@@ -1,0 +1,11 @@
+{
+  "version": "0.1",
+  "principle": "Aliases normalize legacy or source-facing category IDs into the source-neutral canonical taxonomy; they never create a new category.",
+  "aliases": {
+    "FFE.SEATING.ARMCHAIR": "FFE.SEATING.LOUNGE",
+    "FFE.SEATING.DINING_CHAIR": "FFE.SEATING.DINING",
+    "FFE.STORAGE.BOOKCASE": "FFE.STORAGE",
+    "FFE.STORAGE.MEDIA_UNIT": "FFE.STORAGE",
+    "FFE.TEXTILES.RUG": "FFE.RUGS"
+  }
+}

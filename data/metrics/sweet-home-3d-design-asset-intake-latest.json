@@ -1,0 +1,1197 @@
+{
+  "generated_at": "2026-08-17T14:04:20.471Z",
+  "status": "DESIGN_ASSET_INTAKE_COMPLETE_CONVERSION_QA_REQUIRED",
+  "source": {
+    "source_id": "sweet_home_3d_kator_legaz_library",
+    "archive_file": "3DModels-KatorLegaz-1.9.3.zip",
+    "archive_bytes": 8945617,
+    "archive_sha256": "9aa9c6befc3da59c20e4bb1e0d7caadef8d99773a8aedba173cb284c9db838c5",
+    "outer_library_entry": "KatorLegaz.sh3f",
+    "library_file": "KatorLegaz.sh3f",
+    "library_property_entry": "PluginFurnitureCatalog.properties",
+    "library_entry_count": 393,
+    "furniture_record_count": 90,
+    "raw_binary_persisted_in_repository": false
+  },
+  "policy": {
+    "identity_scope": "GENERIC_DESIGN_ASSET",
+    "maximum_geometry_level": "G2",
+    "exact_product_claim_allowed": false,
+    "commerce_fields_allowed": false,
+    "benchmark_markets": [
+      "ES",
+      "SE",
+      "GB",
+      "US"
+    ]
+  },
+  "summary": {
+    "requested_candidates": 12,
+    "matched_candidates": 12,
+    "blocked_candidates": 0,
+    "unmatched_candidates": 0,
+    "missing_or_invalid_dependencies": 0,
+    "extracted_runtime_files": 29
+  },
+  "assets": [
+    {
+      "design_asset_id": "DA_SH3D_KL_MID_CENTURY_SOFA",
+      "source_model_name": "Mid-century-sofa",
+      "category_id": "FFE.SEATING.SOFA",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 57,
+      "source_library_id": "Kator Legaz#mid-century-sofa",
+      "library_name": "Sofa",
+      "library_category": "Living room",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 199,
+        "depth_cm": 84,
+        "height_cm": 80,
+        "derived_mm": {
+          "width": 1990,
+          "depth": 840,
+          "height": 800
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/mid-century-sofa/mid-century-sofa.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_MID_CENTURY_SOFA/katorlegaz/mid-century-sofa/mid-century-sofa.obj",
+        "bytes": 143721,
+        "sha256": "e4bd3388acff985773d6f050802d5a64e9f1f6462f9657e1e8ccf79cd7dfa46e",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "mid-century-sofa.mtl",
+            "entry": "katorlegaz/mid-century-sofa/mid-century-sofa.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_MID_CENTURY_SOFA/katorlegaz/mid-century-sofa/mid-century-sofa.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 380,
+            "sha256": "dd9ecaa808786f6601a50b1eaf73d1773d5da86b124a93445cae9257a664ac29"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_MID_CENTURY_CHAIR",
+      "source_model_name": "Mid-century-chair",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 47,
+      "source_library_id": "Kator Legaz#mid-century-chair",
+      "library_name": "Armchair",
+      "library_category": "Living room",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 73.5,
+        "depth_cm": 84.4,
+        "height_cm": 80,
+        "derived_mm": {
+          "width": 735,
+          "depth": 844,
+          "height": 800
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/mid-century-chair/mid-century-chair.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_MID_CENTURY_CHAIR/katorlegaz/mid-century-chair/mid-century-chair.obj",
+        "bytes": 235791,
+        "sha256": "e5dd4f5bb236e87ea609d7f9add22d7c5196c2244eebe85d8eca15285d998459",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "mid-century-chair.mtl",
+            "entry": "katorlegaz/mid-century-chair/mid-century-chair.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_MID_CENTURY_CHAIR/katorlegaz/mid-century-chair/mid-century-chair.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 381,
+            "sha256": "3c957272c61e898d6cbef199ec005368f98a185b6f7cada0ea4ffb49a91c0918"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CHAIR_OTTOMAN",
+      "source_model_name": "Chair-ottoman",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 48,
+      "source_library_id": "Kator Legaz#chair-ottoman",
+      "library_name": "Armchair ottoman",
+      "library_category": "Living room",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 77,
+        "depth_cm": 155.2,
+        "height_cm": 100,
+        "derived_mm": {
+          "width": 770,
+          "depth": 1552,
+          "height": 1000
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/chair-ottoman/chair-ottoman.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_CHAIR_OTTOMAN/katorlegaz/chair-ottoman/chair-ottoman.obj",
+        "bytes": 102705,
+        "sha256": "a8ccad96a4679a4df11514499b12dbf127da3ba4be2e48f0ba7e4f0da4e79a4d",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "chair-ottoman.mtl",
+            "entry": "katorlegaz/chair-ottoman/chair-ottoman.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_CHAIR_OTTOMAN/katorlegaz/chair-ottoman/chair-ottoman.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 367,
+            "sha256": "9ca45feccd926d9305711a24c0dfc46bcf81d6a780213dfcddb5f03ebe396798"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_DINING_CHAIR",
+      "source_model_name": "Dining-chair",
+      "category_id": "FFE.SEATING.DINING",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 51,
+      "source_library_id": "Kator Legaz#dining-chair",
+      "library_name": "Chair",
+      "library_category": "Living room",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 42.3,
+        "depth_cm": 57.3,
+        "height_cm": 100,
+        "derived_mm": {
+          "width": 423,
+          "depth": 573,
+          "height": 1000
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/dining-chair/dining-chair.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_DINING_CHAIR/katorlegaz/dining-chair/dining-chair.obj",
+        "bytes": 37644,
+        "sha256": "b633959c0dc677d939317ea7c6c9677e2c72cfda07a898a1b162181964c02313",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "dining-chair.mtl",
+            "entry": "katorlegaz/dining-chair/dining-chair.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_DINING_CHAIR/katorlegaz/dining-chair/dining-chair.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 368,
+            "sha256": "56ae7d85bfa084e7e8454ac70d0d8c212d23fac32cafdacb3feeb3b50a41ee21"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CAFE_TABLE",
+      "source_model_name": "Cafe-table",
+      "category_id": "FFE.TABLE.DINING",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 15,
+      "source_library_id": "Kator Legaz#cafe-table",
+      "library_name": "Cafe table",
+      "library_category": "Exterior",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 74.2,
+        "depth_cm": 74.2,
+        "height_cm": 70,
+        "derived_mm": {
+          "width": 742,
+          "depth": 742,
+          "height": 700
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/cafe-table/cafe-table.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_CAFE_TABLE/katorlegaz/cafe-table/cafe-table.obj",
+        "bytes": 143878,
+        "sha256": "07d52f858880dcc5f37c31c79b7da2b2004999a3f49bb680bbc07d2189721ee5",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "cafe-table.mtl",
+            "entry": "katorlegaz/cafe-table/cafe-table.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_CAFE_TABLE/katorlegaz/cafe-table/cafe-table.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 370,
+            "sha256": "0724d0e85adedc8d7852bd2616d64670ccb575ee01228caea5d3a84c20285481"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_GLASS_DINING_TABLE",
+      "source_model_name": "Glass-dining-table",
+      "category_id": "FFE.TABLE.DINING",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 53,
+      "source_library_id": "Kator Legaz#glass-dining-table",
+      "library_name": "Glass table",
+      "library_category": "Living room",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 161.8,
+        "depth_cm": 97.6,
+        "height_cm": 75,
+        "derived_mm": {
+          "width": 1618,
+          "depth": 976,
+          "height": 750
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/glass-dining-table/glass-dining-table.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_GLASS_DINING_TABLE/katorlegaz/glass-dining-table/glass-dining-table.obj",
+        "bytes": 9627,
+        "sha256": "03dfa2a283e03d1abc6a75e17ec92e51752913a7a3354ce347976fb696ecec68",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "glass-dining-table.mtl",
+            "entry": "katorlegaz/glass-dining-table/glass-dining-table.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_GLASS_DINING_TABLE/katorlegaz/glass-dining-table/glass-dining-table.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 376,
+            "sha256": "020adebff09dae24afbc709524f150908d260579cdb23f94f6ab9aed5b4763b5"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_FULL_BOOKCASE",
+      "source_model_name": "Full bookcase",
+      "category_id": "FFE.STORAGE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 80,
+      "source_library_id": "Kator Legaz#full-bookcase",
+      "library_name": "Full bookcase",
+      "library_category": "Living room",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 89.8,
+        "depth_cm": 34.7,
+        "height_cm": 221,
+        "derived_mm": {
+          "width": 898,
+          "depth": 347,
+          "height": 2210
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/full-bookcase/full-bookcase.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_FULL_BOOKCASE/katorlegaz/full-bookcase/full-bookcase.obj",
+        "bytes": 98952,
+        "sha256": "d02d19fd0091f7cd10a390152e4b4de32b7d26ad9010c9ca043aed7203082490",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "full-bookcase.mtl",
+            "entry": "katorlegaz/full-bookcase/full-bookcase.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_FULL_BOOKCASE/katorlegaz/full-bookcase/full-bookcase.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 889,
+            "sha256": "43784cf9f1ed5fd8ab57773ecaa463dbfee3515aa24fabd4ee0f268644188336"
+          },
+          {
+            "type": "texture",
+            "reference": "books1.jpg",
+            "parent_entry": "katorlegaz/full-bookcase/full-bookcase.mtl",
+            "entry": "katorlegaz/full-bookcase/books1.jpg",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_FULL_BOOKCASE/katorlegaz/full-bookcase/books1.jpg",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 27780,
+            "sha256": "8f701d7684c9b7b5a8c917d6fbbf160e3d198b3c4b83d4c1f90d7fb89c52503f"
+          },
+          {
+            "type": "texture",
+            "reference": "books2.jpg",
+            "parent_entry": "katorlegaz/full-bookcase/full-bookcase.mtl",
+            "entry": "katorlegaz/full-bookcase/books2.jpg",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_FULL_BOOKCASE/katorlegaz/full-bookcase/books2.jpg",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 39959,
+            "sha256": "c26c0c47674599f8f68957139569f9f30f0cc924d54a5ac38cbf8d3bad89abac"
+          },
+          {
+            "type": "texture",
+            "reference": "books3.jpg",
+            "parent_entry": "katorlegaz/full-bookcase/full-bookcase.mtl",
+            "entry": "katorlegaz/full-bookcase/books3.jpg",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_FULL_BOOKCASE/katorlegaz/full-bookcase/books3.jpg",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 50089,
+            "sha256": "22ab077f7201abf3492d453097567ca9e8cd5076b09b0f89f44d996d07d6b78d"
+          },
+          {
+            "type": "texture",
+            "reference": "books4.jpg",
+            "parent_entry": "katorlegaz/full-bookcase/full-bookcase.mtl",
+            "entry": "katorlegaz/full-bookcase/books4.jpg",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_FULL_BOOKCASE/katorlegaz/full-bookcase/books4.jpg",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 55505,
+            "sha256": "cde2a90cb9095a53115a440b26adb86cefe4550147c60c8fcaf9423f0910edd4"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_ORIENTAL_RUG",
+      "source_model_name": "Oriental rug",
+      "category_id": "FFE.RUGS",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 85,
+      "source_library_id": "Kator Legaz#oriental-rug",
+      "library_name": "Oriental rug",
+      "library_category": "Living room",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 185.8,
+        "depth_cm": 257.7,
+        "height_cm": 2.5,
+        "derived_mm": {
+          "width": 1858,
+          "depth": 2577,
+          "height": 25
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/oriental-rug/oriental-rug.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_ORIENTAL_RUG/katorlegaz/oriental-rug/oriental-rug.obj",
+        "bytes": 1730,
+        "sha256": "89856616dc2f1bb1fda64f664b2d4beae4de3392b71a7f2ca3abe14ef6c9e833",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "oriental-rug.mtl",
+            "entry": "katorlegaz/oriental-rug/oriental-rug.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_ORIENTAL_RUG/katorlegaz/oriental-rug/oriental-rug.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 334,
+            "sha256": "d81bb7eb1fd94bf9030ecc4ddc5c7e165f39e643cfd508120b01a5600372b6e0"
+          },
+          {
+            "type": "texture",
+            "reference": "rug.jpg",
+            "parent_entry": "katorlegaz/oriental-rug/oriental-rug.mtl",
+            "entry": "katorlegaz/oriental-rug/rug.jpg",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_ORIENTAL_RUG/katorlegaz/oriental-rug/rug.jpg",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 121610,
+            "sha256": "d72842ebdcfa25588c824aa0f9ab060fc14aa697585dbea5deb54bf80fd908a2"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_OFFICE_CHAIR",
+      "source_model_name": "Office-chair",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 72,
+      "source_library_id": "Kator Legaz#office-chair",
+      "library_name": "Chair",
+      "library_category": "Office",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 64.3,
+        "depth_cm": 64.3,
+        "height_cm": 91,
+        "derived_mm": {
+          "width": 643,
+          "depth": 643,
+          "height": 910
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/office-chair/office-chair.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_OFFICE_CHAIR/katorlegaz/office-chair/office-chair.obj",
+        "bytes": 667684,
+        "sha256": "bab6d9ae810b15ca916fb03e8e7e49669fe33853a70d1a1818ae0fc4946d8623",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "office-chair.mtl",
+            "entry": "katorlegaz/office-chair/office-chair.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_OFFICE_CHAIR/katorlegaz/office-chair/office-chair.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 541,
+            "sha256": "26fdab404d3c16480d95cc1bd4713d072d104ef38451640cf651eb20565f67db"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CUSTOM_DESK",
+      "source_model_name": "Custom-desk",
+      "category_id": "FFE.TABLE.DESK",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 73,
+      "source_library_id": "Kator Legaz#custom-desk",
+      "library_name": "Desk",
+      "library_category": "Office",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 235.1,
+        "depth_cm": 83.8,
+        "height_cm": 180,
+        "derived_mm": {
+          "width": 2351,
+          "depth": 838,
+          "height": 1800
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/custom-desk/custom-desk.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_CUSTOM_DESK/katorlegaz/custom-desk/custom-desk.obj",
+        "bytes": 33753,
+        "sha256": "f1c4c77e9c2cd161416ad5f9dca35a454b2169d7294be47452b7376288e3864d",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "custom-desk.mtl",
+            "entry": "katorlegaz/custom-desk/custom-desk.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_CUSTOM_DESK/katorlegaz/custom-desk/custom-desk.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 355,
+            "sha256": "1b9d5b832b21e696bbe22e6f9bef48b46ab85e8ec31251e8a29342e5730347d2"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_FRIDGE",
+      "source_model_name": "Fridge",
+      "category_id": "KITCHEN.REFRIGERATION",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 29,
+      "source_library_id": "Kator Legaz#fridge",
+      "library_name": "Fridge",
+      "library_category": "Kitchen",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 60,
+        "depth_cm": 59.1,
+        "height_cm": 126.2,
+        "derived_mm": {
+          "width": 600,
+          "depth": 591,
+          "height": 1262
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/fridge/fridge.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_FRIDGE/katorlegaz/fridge/fridge.obj",
+        "bytes": 27699,
+        "sha256": "bb20a3080b17f47246b6f422c78dfd6812a7ae82bc42da370fa9efecde9a5406",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "fridge.mtl",
+            "entry": "katorlegaz/fridge/fridge.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_FRIDGE/katorlegaz/fridge/fridge.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 675,
+            "sha256": "52dfe1be03ef3878e59a7207ab3f788482a9bb6806f605507bbb4475abec8e6c"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_PEDESTAL_VASE_LAMP",
+      "source_model_name": "Pedestal-vase-lamp",
+      "category_id": "ELECTRICAL.LUMINAIRES.TABLE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "intake_state": "DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED",
+      "blockers": [],
+      "library_index": 42,
+      "source_library_id": "Kator Legaz#pedestal-vase-lamp",
+      "library_name": "Pedestal vase lamp",
+      "library_category": "Lights",
+      "library_creator": "Kator Legaz",
+      "source_dimensions": {
+        "source_unit": "centimetres_as_declared_by_sweet_home_3d_library",
+        "width_cm": 28.2,
+        "depth_cm": 28.2,
+        "height_cm": 80,
+        "derived_mm": {
+          "width": 282,
+          "depth": 282,
+          "height": 800
+        },
+        "verification_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "model": {
+        "source_entry": "katorlegaz/pedestal-vase-lamp/pedestal-vase-lamp.obj",
+        "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_PEDESTAL_VASE_LAMP/katorlegaz/pedestal-vase-lamp/pedestal-vase-lamp.obj",
+        "bytes": 170172,
+        "sha256": "7921c31c1bb106eb3abe310e116a3777cac85b2dc58d1dadc6ae48dc770d11c4",
+        "dependencies": [
+          {
+            "type": "material",
+            "reference": "pedestal-vase-lamp.mtl",
+            "entry": "katorlegaz/pedestal-vase-lamp/pedestal-vase-lamp.mtl",
+            "runtime_path": ".runtime/design-assets/sweet-home-3d/9aa9c6befc3da59c/DA_SH3D_KL_PEDESTAL_VASE_LAMP/katorlegaz/pedestal-vase-lamp/pedestal-vase-lamp.mtl",
+            "required": true,
+            "state": "RESOLVED",
+            "bytes": 1152,
+            "sha256": "86a4149897ea465913a4bfe68749e4a9d79624fbc6eb0fc052ce25811a2f4f58"
+          }
+        ]
+      },
+      "license": {
+        "spdx_like": "CC-BY-3.0-US",
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "source_reference": "https://www.sweethome3d.com/free-3d-models/"
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "promotion": {
+        "current_level": "G0",
+        "level_after_conversion": "G1",
+        "maximum_after_independent_scale_and_visual_qa": "G2",
+        "required_gates": [
+          "archive and per-model licence retained",
+          "OBJ/MTL dependencies complete",
+          "authoring units and orientation resolved",
+          "bounds measured in metres",
+          "floor anchor and pivot normalized",
+          "materials and textures render without missing references",
+          "GLB generated with attribution metadata",
+          "visual QA passed"
+        ]
+      }
+    }
+  ]
+}

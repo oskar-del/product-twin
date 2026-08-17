@@ -1,0 +1,1200 @@
+{
+  "generated_at": "2026-08-17T14:04:20.940Z",
+  "status": "CONVERSION_PASS_COMPLETE_VISUAL_QA_REQUIRED",
+  "policy": "Converted assets remain generic Design Assets. Applying a library-declared target envelope produces G1 only and is not independent scale verification. G2 requires independent scale and visual QA. Product identity and commerce fields remain forbidden.",
+  "summary": {
+    "eligible_assets": 12,
+    "converted": 12,
+    "blocked_or_failed": 0
+  },
+  "assets": [
+    {
+      "design_asset_id": "DA_SH3D_KL_MID_CENTURY_SOFA",
+      "source_model_name": "Mid-century-sofa",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_mid_century_sofa.glb",
+      "bytes": 135148,
+      "sha256": "8f2b829c421128ac44d14e719660da3a5aab9682d8d6ae77189b21c067dc9dcf",
+      "declared_mm": {
+        "width": 1990,
+        "depth": 840,
+        "height": 800
+      },
+      "measured_mm": {
+        "width": 1990,
+        "height": 800,
+        "depth": 840
+      },
+      "envelope_normalization_error_max": 0,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -7.167385,
+          -2.748352,
+          -3.000001
+        ],
+        "max": [
+          7.167385,
+          3.013885,
+          3.047554
+        ],
+        "size": [
+          14.33477,
+          5.762237000000001,
+          6.047555
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 1990,
+          "depth": 840,
+          "height": 800
+        },
+        "scale_xyz": [
+          0.1388232946883696,
+          0.13883496982161614,
+          0.13889910881339648
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 2872,
+        "source_triangles": 5244,
+        "primitives": 2
+      },
+      "materials": {
+        "count": 2,
+        "embedded_textures": 0,
+        "source_mtl_materials": 3
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_MID_CENTURY_CHAIR",
+      "source_model_name": "Mid-century-chair",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_mid_century_chair.glb",
+      "bytes": 221340,
+      "sha256": "60e843a04216c6656611c0072537e04690adb690b1bd48d3de95715986420a8f",
+      "declared_mm": {
+        "width": 735,
+        "depth": 844,
+        "height": 800
+      },
+      "measured_mm": {
+        "width": 734.9999999999999,
+        "height": 800,
+        "depth": 844
+      },
+      "envelope_normalization_error_max": 1.546759696892735e-16,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -2.63325,
+          -2.748352,
+          -3.000001
+        ],
+        "max": [
+          2.63325,
+          2.984881,
+          3.047554
+        ],
+        "size": [
+          5.2665,
+          5.733233,
+          6.047555
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 735,
+          "depth": 844,
+          "height": 800
+        },
+        "scale_xyz": [
+          0.13956137852463685,
+          0.13953732562412866,
+          0.13956053314107933
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 4668,
+        "source_triangles": 8832,
+        "primitives": 2
+      },
+      "materials": {
+        "count": 2,
+        "embedded_textures": 0,
+        "source_mtl_materials": 3
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CHAIR_OTTOMAN",
+      "source_model_name": "Chair-ottoman",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_chair_ottoman.glb",
+      "bytes": 92868,
+      "sha256": "1e59157e506b34dbb435ea5192c9756c49c5395ab66a1f62368f92da8cac703c",
+      "declared_mm": {
+        "width": 770,
+        "depth": 1552,
+        "height": 1000
+      },
+      "measured_mm": {
+        "width": 770,
+        "height": 1000,
+        "depth": 1552
+      },
+      "envelope_normalization_error_max": 0,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -2.41526,
+          -3.002954,
+          -2.706847
+        ],
+        "max": [
+          2.41526,
+          3.267376,
+          7.025601
+        ],
+        "size": [
+          4.83052,
+          6.2703299999999995,
+          9.732448
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 770,
+          "depth": 1552,
+          "height": 1000
+        },
+        "scale_xyz": [
+          0.15940312844165846,
+          0.15948123942440032,
+          0.1594665596980328
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 2220,
+        "source_triangles": 3280,
+        "primitives": 2
+      },
+      "materials": {
+        "count": 2,
+        "embedded_textures": 0,
+        "source_mtl_materials": 3
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_DINING_CHAIR",
+      "source_model_name": "Dining-chair",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_dining_chair.glb",
+      "bytes": 39756,
+      "sha256": "15687421b592e19ddd9932660a5321f773a79059c22ee98eb87ac6d17c01212b",
+      "declared_mm": {
+        "width": 423,
+        "depth": 573,
+        "height": 1000
+      },
+      "measured_mm": {
+        "width": 423,
+        "height": 1000,
+        "depth": 573
+      },
+      "envelope_normalization_error_max": 0,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -0.720893,
+          -1.103851,
+          -0.891625
+        ],
+        "max": [
+          0.720893,
+          2.298094,
+          1.059583
+        ],
+        "size": [
+          1.441786,
+          3.4019449999999996,
+          1.9512079999999998
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 423,
+          "depth": 573,
+          "height": 1000
+        },
+        "scale_xyz": [
+          0.2933861197154085,
+          0.2939494906590201,
+          0.29366423261897245
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 814,
+        "source_triangles": 1404,
+        "primitives": 2
+      },
+      "materials": {
+        "count": 2,
+        "embedded_textures": 0,
+        "source_mtl_materials": 3
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CAFE_TABLE",
+      "source_model_name": "Cafe-table",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_cafe_table.glb",
+      "bytes": 136924,
+      "sha256": "5ec39883732f242343cdc90d985d29da9ba3c3f2d12cf78830127d7bfef9ee1e",
+      "declared_mm": {
+        "width": 742,
+        "depth": 742,
+        "height": 700
+      },
+      "measured_mm": {
+        "width": 742,
+        "height": 700,
+        "depth": 742
+      },
+      "envelope_normalization_error_max": 0,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -3.10013,
+          -2.945889,
+          -3.10013
+        ],
+        "max": [
+          3.10013,
+          2.903792,
+          3.10013
+        ],
+        "size": [
+          6.20026,
+          5.849681,
+          6.20026
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 742,
+          "depth": 742,
+          "height": 700
+        },
+        "scale_xyz": [
+          0.1196724008348037,
+          0.11966464496098161,
+          0.1196724008348037
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 2838,
+        "source_triangles": 5456,
+        "primitives": 2
+      },
+      "materials": {
+        "count": 2,
+        "embedded_textures": 0,
+        "source_mtl_materials": 3
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_GLASS_DINING_TABLE",
+      "source_model_name": "Glass-dining-table",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_glass_dining_table.glb",
+      "bytes": 12208,
+      "sha256": "56211148564e9a6af796fd20f43b165ee04f4f36b39b4c28b1572fae30ce1b02",
+      "declared_mm": {
+        "width": 1618,
+        "depth": 976,
+        "height": 750
+      },
+      "measured_mm": {
+        "width": 1618,
+        "height": 750,
+        "depth": 976
+      },
+      "envelope_normalization_error_max": 0,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -4.956433,
+          -2.26504,
+          -2.989647
+        ],
+        "max": [
+          4.956433,
+          2.33009,
+          2.989647
+        ],
+        "size": [
+          9.912866,
+          4.59513,
+          5.979294
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 1618,
+          "depth": 976,
+          "height": 750
+        },
+        "scale_xyz": [
+          0.1632222204960705,
+          0.16321627462117502,
+          0.16322997330454062
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 196,
+        "source_triangles": 352,
+        "primitives": 2
+      },
+      "materials": {
+        "count": 2,
+        "embedded_textures": 0,
+        "source_mtl_materials": 3
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_FULL_BOOKCASE",
+      "source_model_name": "Full bookcase",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_full_bookcase.glb",
+      "bytes": 246512,
+      "sha256": "f762c3ee82226f2fbb758620dd2bd3a24fb7fb6431359ebca07cda5cd5511717",
+      "declared_mm": {
+        "width": 898,
+        "depth": 347,
+        "height": 2210
+      },
+      "measured_mm": {
+        "width": 898,
+        "height": 2210,
+        "depth": 347
+      },
+      "envelope_normalization_error_max": 0,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -40.039471,
+          -83.80825,
+          -9.664202
+        ],
+        "max": [
+          40.039471,
+          113.374733,
+          21.336712
+        ],
+        "size": [
+          80.078942,
+          197.182983,
+          31.000913999999998
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 898,
+          "depth": 347,
+          "height": 2210
+        },
+        "scale_xyz": [
+          0.01121393436991213,
+          0.011207863713066963,
+          0.011193218367690707
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 1210,
+        "source_triangles": 2348,
+        "primitives": 5
+      },
+      "materials": {
+        "count": 5,
+        "embedded_textures": 4,
+        "source_mtl_materials": 6
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_ORIENTAL_RUG",
+      "source_model_name": "Oriental rug",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_oriental_rug.glb",
+      "bytes": 125664,
+      "sha256": "2591937087884c19cdd9a5e89753810efaa63c67ad29347b224d11660a9e65cd",
+      "declared_mm": {
+        "width": 1858,
+        "depth": 2577,
+        "height": 25
+      },
+      "measured_mm": {
+        "width": 1858,
+        "height": 25,
+        "depth": 2577
+      },
+      "envelope_normalization_error_max": 0,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -122.62281,
+          -1.036775,
+          -170.014099
+        ],
+        "max": [
+          122.649513,
+          2.269351,
+          170.091339
+        ],
+        "size": [
+          245.272323,
+          3.306126,
+          340.105438
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 1858,
+          "depth": 2577,
+          "height": 25
+        },
+        "scale_xyz": [
+          0.007575253405171198,
+          0.007561720273214028,
+          0.007577062028628899
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 24,
+        "source_triangles": 44,
+        "primitives": 1
+      },
+      "materials": {
+        "count": 1,
+        "embedded_textures": 1,
+        "source_mtl_materials": 2
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_OFFICE_CHAIR",
+      "source_model_name": "Office-chair",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_office_chair.glb",
+      "bytes": 596352,
+      "sha256": "faea5fa3ea0ae2e27c8f0abb64d696a16d56a228df2b3cfd2ea5b70198f1b85b",
+      "declared_mm": {
+        "width": 643,
+        "depth": 643,
+        "height": 910
+      },
+      "measured_mm": {
+        "width": 643,
+        "height": 910.0000000000001,
+        "depth": 643
+      },
+      "envelope_normalization_error_max": 1.2493059090287476e-16,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -4.203569,
+          -4.177718,
+          -4.35917
+        ],
+        "max": [
+          4.206459,
+          7.698965,
+          4.048094
+        ],
+        "size": [
+          8.410028,
+          11.876683,
+          8.407264
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 643,
+          "depth": 643,
+          "height": 910
+        },
+        "scale_xyz": [
+          0.0764563447351186,
+          0.07662071977504158,
+          0.07648148077662364
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 13263,
+        "source_triangles": 22830,
+        "primitives": 3
+      },
+      "materials": {
+        "count": 3,
+        "embedded_textures": 0,
+        "source_mtl_materials": 4
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CUSTOM_DESK",
+      "source_model_name": "Custom-desk",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_custom_desk.glb",
+      "bytes": 35948,
+      "sha256": "a1c1c33e38bdb44dbab2ef4ab8aeb2866f4aae68ada305cc1d8fe054cd1ce2bc",
+      "declared_mm": {
+        "width": 2351,
+        "depth": 838,
+        "height": 1800
+      },
+      "measured_mm": {
+        "width": 2351,
+        "height": 1800,
+        "depth": 838
+      },
+      "envelope_normalization_error_max": 0,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -8.513977,
+          0.013303,
+          -3.115172
+        ],
+        "max": [
+          8.51134,
+          13.042554,
+          2.952212
+        ],
+        "size": [
+          17.025317,
+          13.029251,
+          6.067384
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 2351,
+          "depth": 838,
+          "height": 1800
+        },
+        "scale_xyz": [
+          0.13808847142170685,
+          0.1381506887847966,
+          0.13811553710792
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 706,
+        "source_triangles": 1316,
+        "primitives": 2
+      },
+      "materials": {
+        "count": 2,
+        "embedded_textures": 0,
+        "source_mtl_materials": 3
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_FRIDGE",
+      "source_model_name": "Fridge",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_fridge.glb",
+      "bytes": 29604,
+      "sha256": "c73a4d36d4a12c0bef9fa164cb9575c0d73597eea02199031a859538196601d9",
+      "declared_mm": {
+        "width": 600,
+        "depth": 591,
+        "height": 1262
+      },
+      "measured_mm": {
+        "width": 600,
+        "height": 1262.0000000000002,
+        "depth": 591
+      },
+      "envelope_normalization_error_max": 1.801693149312457e-16,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -2.309169,
+          -4.961339,
+          -2.052554
+        ],
+        "max": [
+          2.308026,
+          4.74851,
+          2.496233
+        ],
+        "size": [
+          4.617195,
+          9.709848999999998,
+          4.548787000000001
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 600,
+          "depth": 591,
+          "height": 1262
+        },
+        "scale_xyz": [
+          0.1299490274939655,
+          0.12997112519463488,
+          0.12992474697100564
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 704,
+        "source_triangles": 676,
+        "primitives": 4
+      },
+      "materials": {
+        "count": 4,
+        "embedded_textures": 0,
+        "source_mtl_materials": 5
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_PEDESTAL_VASE_LAMP",
+      "source_model_name": "Pedestal-vase-lamp",
+      "status": "GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED",
+      "current_geometry_level": "G1",
+      "maximum_after_visual_and_scale_qa": "G2",
+      "exact_product_claim_allowed": false,
+      "independent_scale_qa_passed": false,
+      "runtime_glb_path": ".runtime/design-assets/converted/da_sh3d_kl_pedestal_vase_lamp.glb",
+      "bytes": 175940,
+      "sha256": "5d6877e8c7da9d79bacd884e247d38c0f2f4ad62e8ced5fb84ade789c224ced5",
+      "declared_mm": {
+        "width": 282,
+        "depth": 282,
+        "height": 800
+      },
+      "measured_mm": {
+        "width": 282,
+        "height": 800,
+        "depth": 282
+      },
+      "envelope_normalization_error_max": 0,
+      "source_geometry_bounds_after_orientation": {
+        "min": [
+          -1.414214,
+          0,
+          -1.414214
+        ],
+        "max": [
+          1.414214,
+          8.012909,
+          1.414213
+        ],
+        "size": [
+          2.828428,
+          8.012909,
+          2.828427
+        ]
+      },
+      "normalization": {
+        "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+        "target_dimensions_mm": {
+          "width": 282,
+          "depth": 282,
+          "height": 800
+        },
+        "scale_xyz": [
+          0.09970202529461593,
+          0.09983889745908758,
+          0.09970206054460659
+        ],
+        "source_scale_independently_verified": false
+      },
+      "source_transform": {
+        "model_rotation": {
+          "declared": false,
+          "matrix3_row_major": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "back_face_shown": false,
+        "back_face_declared": false,
+        "multi_part_model": true,
+        "axis_contract": "SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION"
+      },
+      "mesh": {
+        "source_vertices": 3497,
+        "source_triangles": 6228,
+        "primitives": 7
+      },
+      "materials": {
+        "count": 7,
+        "embedded_textures": 0,
+        "source_mtl_materials": 8
+      },
+      "attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true
+      },
+      "remaining_gates": [
+        "independently verify physical scale",
+        "render from canonical views",
+        "confirm material/texture appearance",
+        "confirm floor contact and orientation",
+        "retain visible attribution",
+        "match to local Product Twins before procurement"
+      ]
+    }
+  ]
+}

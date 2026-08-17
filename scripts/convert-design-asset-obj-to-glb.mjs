@@ -92,19 +92,44 @@ function subtract(a, b) {
   return a.map((value, index) => value - b[index]);
 }
 
-function transformMesh(parsed, declaredMm) {
-  const raw = bounds(parsed.vertices);
+function applyMatrix3(vector, matrix) {
+  return [
+    matrix[0] * vector[0] + matrix[1] * vector[1] + matrix[2] * vector[2],
+    matrix[3] * vector[0] + matrix[4] * vector[1] + matrix[5] * vector[2],
+    matrix[6] * vector[0] + matrix[7] * vector[1] + matrix[8] * vector[2],
+  ];
+}
+
+function transformMesh(parsed, declaredMm, sourceTransform = {}) {
+  const matrix = sourceTransform.model_rotation?.matrix3_row_major ?? [1, 0, 0, 0, 1, 0, 0, 0, 1];
+  if (!Array.isArray(matrix) || matrix.length !== 9 || matrix.some((value) => !Number.isFinite(value))) throw new Error('source model rotation must be a finite 3x3 row-major matrix');
+  const orientedVertices = parsed.vertices.map((vertex) => applyMatrix3(vertex, matrix));
+  const raw = bounds(orientedVertices);
   if (raw.size.some((value) => !(value > 1e-9))) throw new Error('OBJ has a degenerate axis and cannot be dimension-normalized');
   const target = [declaredMm.width, declaredMm.height, declaredMm.depth].map((value) => value / 1000);
   const scale = target.map((value, axis) => value / raw.size[axis]);
   const centerX = (raw.min[0] + raw.max[0]) / 2;
   const centerZ = (raw.min[2] + raw.max[2]) / 2;
-  const transformed = parsed.vertices.map((vertex) => [
+  const transformed = orientedVertices.map((vertex) => [
     (vertex[0] - centerX) * scale[0],
     (vertex[1] - raw.min[1]) * scale[1],
     (vertex[2] - centerZ) * scale[2],
   ]);
-  return {vertices: transformed, scale, raw_bounds: raw, measured_bounds: bounds(transformed)};
+  const normals = parsed.normals.map((normal) => normalized(applyMatrix3(normal, matrix).map((value, axis) => value / scale[axis])));
+  return {
+    vertices: transformed,
+    normals,
+    scale,
+    source_orientation_matrix3_row_major: matrix,
+    source_bounds_after_orientation: raw,
+    measured_bounds: bounds(transformed),
+    normalization: {
+      kind: 'DECLARED_ENVELOPE_NON_UNIFORM',
+      target_dimensions_mm: declaredMm,
+      scale_xyz: scale,
+      source_scale_independently_verified: false,
+    },
+  };
 }
 
 function componentMinMax(values, stride) {
@@ -126,7 +151,7 @@ function mimeForTexture(filePath, bytes) {
   return null;
 }
 
-function encodeGlb({parsed, transformed, materials, textures, metadata}) {
+function encodeGlb({parsed, transformed, materials, textures, metadata, doubleSided}) {
   const document = {
     asset: {version: '2.0', generator: 'Product Twin Design Asset Factory 0.1', extras: metadata},
     scene: 0,
@@ -199,8 +224,7 @@ function encodeGlb({parsed, transformed, materials, textures, metadata}) {
           vertexMap.set(key, index);
           positions.push(...transformed.vertices[corner.v]);
           if (corner.vn !== null && parsed.normals[corner.vn]) {
-            const source = parsed.normals[corner.vn];
-            normals.push(...normalized(source.map((value, axis) => value / transformed.scale[axis])));
+            normals.push(...transformed.normals[corner.vn]);
           } else {
             normals.push(...faceNormal);
             hasAllNormals = false;
@@ -222,7 +246,7 @@ function encodeGlb({parsed, transformed, materials, textures, metadata}) {
         metallicFactor: 0,
         roughnessFactor: sourceMaterial.roughness,
       },
-      doubleSided: true,
+      doubleSided,
     };
     if (sourceMaterial.opacity < 1) material.alphaMode = 'BLEND';
     if (hasAllUvs && textureIndexByMaterial.has(materialName)) material.pbrMetallicRoughness.baseColorTexture = {index: textureIndexByMaterial.get(materialName)};
@@ -254,7 +278,7 @@ function encodeGlb({parsed, transformed, materials, textures, metadata}) {
   return Buffer.concat([header, jsonHeader, json, binHeader, binary]);
 }
 
-function inspectGlb(buffer) {
+export function inspectGlb(buffer) {
   if (buffer.subarray(0, 4).toString('ascii') !== 'glTF' || buffer.readUInt32LE(4) !== 2 || buffer.readUInt32LE(8) !== buffer.length) throw new Error('generated GLB is invalid');
   const jsonLength = buffer.readUInt32LE(12);
   return JSON.parse(buffer.subarray(20, 20 + jsonLength).toString('utf8'));
@@ -263,25 +287,24 @@ function inspectGlb(buffer) {
 async function loadMaterials(asset, root) {
   const materials = new Map([['default', {name: 'default', color: [0.72, 0.72, 0.72], opacity: 1, roughness: 0.72, texture: null}]]);
   const textures = new Map();
-  const modelPath = path.resolve(root, asset.model.runtime_path);
+  const required = (asset.model.dependencies ?? []).filter((dependency) => dependency.required !== false);
+  const unresolved = required.filter((dependency) => dependency.state !== 'RESOLVED' || !dependency.runtime_path);
+  if (unresolved.length) throw new Error(`required model dependencies unresolved: ${unresolved.map((item) => item.entry ?? item.reference).join(', ')}`);
   for (const dependency of asset.model.dependencies ?? []) {
     if (dependency.type !== 'material') continue;
-    const mtlPath = path.resolve(path.dirname(modelPath), path.basename(dependency.entry));
-    let parsed;
-    try {
-      parsed = parseMtl(await fsp.readFile(mtlPath, 'utf8'));
-    } catch {
-      continue;
-    }
+    const mtlPath = path.resolve(root, dependency.runtime_path);
+    const parsed = parseMtl(await fsp.readFile(mtlPath, 'utf8'));
     for (const [name, material] of parsed) {
       materials.set(name, material);
       if (!material.texture) continue;
-      const texturePath = path.resolve(path.dirname(mtlPath), material.texture);
-      try {
-        textures.set(name, {path: texturePath, bytes: await fsp.readFile(texturePath)});
-      } catch {
-        // Missing texture remains an explicit QA issue; MTL base colour is preserved.
-      }
+      const textureDependency = required.find((item) => item.type === 'texture'
+        && item.parent_entry === dependency.entry
+        && (item.reference === material.texture || path.basename(item.entry) === path.basename(material.texture)));
+      if (!textureDependency) throw new Error(`MTL texture has no intake dependency record: ${dependency.entry} -> ${material.texture}`);
+      const texturePath = path.resolve(root, textureDependency.runtime_path);
+      const bytes = await fsp.readFile(texturePath);
+      if (!mimeForTexture(texturePath, bytes)) throw new Error(`unsupported required texture encoding: ${textureDependency.entry}`);
+      textures.set(name, {path: texturePath, bytes});
     }
   }
   return {materials, textures};
@@ -300,20 +323,32 @@ export async function convertDesignAssets({root = process.cwd(), env = process.e
       results.push({design_asset_id: asset.design_asset_id, status: 'BLOCKED_NO_DECLARED_DIMENSIONS'});
       continue;
     }
-    const modelPath = path.resolve(root, asset.model.runtime_path);
-    const parsed = parseObj(await fsp.readFile(modelPath, 'utf8'));
-    const transformed = transformMesh(parsed, declared);
-    const {materials, textures} = await loadMaterials(asset, root);
+    let parsed;
+    let transformed;
+    let materials;
+    let textures;
+    try {
+      const modelPath = path.resolve(root, asset.model.runtime_path);
+      parsed = parseObj(await fsp.readFile(modelPath, 'utf8'));
+      transformed = transformMesh(parsed, declared, asset.source_transform);
+      ({materials, textures} = await loadMaterials(asset, root));
+    } catch (error) {
+      results.push({design_asset_id: asset.design_asset_id, status: 'BLOCKED_CONVERSION_INPUT_INVALID', blockers: [error.message]});
+      continue;
+    }
     const metadata = {
       design_asset_id: asset.design_asset_id,
       source_model_name: asset.source_model_name,
       identity_scope: 'GENERIC_DESIGN_ASSET',
       not_a_product_twin: true,
       maximum_geometry_level: 'G2',
-      licence: asset.licence,
-      physical_scale_basis: 'Sweet Home 3D library-declared dimensions; mesh bounds normalized; independent visual/scale QA pending',
+      license: asset.license ?? asset.licence,
+      attribution: asset.attribution ?? null,
+      source_transform: asset.source_transform ?? null,
+      physical_scale_basis: 'Sweet Home 3D library-declared target envelope applied by non-uniform normalization; this is not independent source-scale verification',
+      independent_scale_qa_passed: false,
     };
-    const glb = encodeGlb({parsed, transformed, materials, textures, metadata});
+    const glb = encodeGlb({parsed, transformed, materials, textures, metadata, doubleSided: asset.source_transform?.back_face_shown === true});
     const runtimeDir = path.resolve(root, '.runtime/design-assets/converted');
     const glbPath = path.join(runtimeDir, `${asset.design_asset_id.toLowerCase()}.glb`);
     await fsp.mkdir(runtimeDir, {recursive: true});
@@ -328,29 +363,34 @@ export async function convertDesignAssets({root = process.cwd(), env = process.e
     results.push({
       design_asset_id: asset.design_asset_id,
       source_model_name: asset.source_model_name,
-      status: Math.max(...relativeErrors) <= 0.001 ? 'GLB_SCALE_PASS_VISUAL_QA_REQUIRED' : 'GLB_SCALE_FAIL',
+      status: 'GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED',
       current_geometry_level: 'G1',
-      maximum_after_visual_qa: 'G2',
+      maximum_after_visual_and_scale_qa: 'G2',
       exact_product_claim_allowed: false,
+      independent_scale_qa_passed: false,
       runtime_glb_path: path.relative(root, glbPath),
       bytes: glb.length,
       sha256: crypto.createHash('sha256').update(glb).digest('hex'),
       declared_mm: declared,
       measured_mm: measuredMm,
-      relative_error_max: Math.max(...relativeErrors),
+      envelope_normalization_error_max: Math.max(...relativeErrors),
+      source_geometry_bounds_after_orientation: transformed.source_bounds_after_orientation,
+      normalization: transformed.normalization,
+      source_transform: asset.source_transform ?? null,
       mesh: {source_vertices: parsed.vertices.length, source_triangles: parsed.faces.length, primitives: document.meshes[0].primitives.length},
       materials: {count: document.materials.length, embedded_textures: document.textures?.length ?? 0, source_mtl_materials: materials.size},
-      remaining_gates: ['render from canonical views', 'confirm material/texture appearance', 'confirm floor contact and orientation', 'retain visible attribution', 'match to local Product Twins before procurement'],
+      attribution: asset.attribution ?? null,
+      remaining_gates: ['independently verify physical scale', 'render from canonical views', 'confirm material/texture appearance', 'confirm floor contact and orientation', 'retain visible attribution', 'match to local Product Twins before procurement'],
     });
   }
   const output = {
     generated_at: new Date().toISOString(),
     status: results.length ? 'CONVERSION_PASS_COMPLETE_VISUAL_QA_REQUIRED' : 'NO_ELIGIBLE_ASSETS',
-    policy: 'Converted assets remain generic Design Assets. Scale pass alone promotes to G1; G2 requires visual QA. Product identity and commerce fields remain forbidden.',
+    policy: 'Converted assets remain generic Design Assets. Applying a library-declared target envelope produces G1 only and is not independent scale verification. G2 requires independent scale and visual QA. Product identity and commerce fields remain forbidden.',
     summary: {
       eligible_assets: eligible.length,
-      converted: results.filter((item) => item.status === 'GLB_SCALE_PASS_VISUAL_QA_REQUIRED').length,
-      blocked_or_failed: results.filter((item) => item.status !== 'GLB_SCALE_PASS_VISUAL_QA_REQUIRED').length,
+      converted: results.filter((item) => item.status === 'GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED').length,
+      blocked_or_failed: results.filter((item) => item.status !== 'GLB_CONVERTED_DECLARED_ENVELOPE_APPLIED_VISUAL_QA_REQUIRED').length,
     },
     assets: results,
   };

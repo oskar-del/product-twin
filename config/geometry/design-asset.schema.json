@@ -24,7 +24,7 @@
     "category_id": {"type": "string"},
     "style_tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "room_roles": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
-    "asset_state": {"enum": ["CANDIDATE_NOT_DOWNLOADED", "DOWNLOADED_UNVERIFIED", "G2_READY"]},
+    "asset_state": {"enum": ["CANDIDATE_NOT_DOWNLOADED", "DOWNLOADED_UNVERIFIED", "BLOCKED_MISSING_OR_INVALID_DEPENDENCIES", "G1_CONVERTED_VISUAL_QA_REQUIRED", "G2_READY"]},
     "dimensions_state": {"enum": ["UNVERIFIED_LIBRARY_METADATA", "MEASURED_NOT_AUTHORED", "VERIFIED_AUTHORED_SCALE"]},
     "license": {
       "type": "object",
@@ -50,12 +50,24 @@
   "not": {
     "anyOf": [
       {"required": ["product_twin_id"]},
+      {"required": ["twin_id"]},
       {"required": ["sku"]},
       {"required": ["gtin"]},
+      {"required": ["ean"]},
+      {"required": ["upc"]},
       {"required": ["price"]},
       {"required": ["stock"]},
       {"required": ["offer"]},
-      {"required": ["supplier"]}
+      {"required": ["offers"]},
+      {"required": ["supplier"]},
+      {"required": ["seller"]},
+      {"required": ["commerce"]},
+      {"required": ["procurement"]},
+      {"required": ["logistics"]},
+      {"required": ["checkout"]},
+      {"required": ["cart"]},
+      {"required": ["merchant_product_gid"]},
+      {"required": ["merchant_variant_gid"]}
     ]
   },
   "additionalProperties": false

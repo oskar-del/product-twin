@@ -16,7 +16,7 @@ assert.equal(valid.summary.product_identity_fields,0);
 
 const tempDir=await fs.mkdtemp(path.join(os.tmpdir(),"design-asset-pilot-"));
 const invalid=JSON.parse(await fs.readFile(sourceFile,"utf8"));
-invalid.candidates[0].sku="FAKE-SKU";
+invalid.candidates[0].nested={commerce:{price:10}};
 invalid.candidates[0].asset_state="G2_READY";
 const invalidFile=path.join(tempDir,"invalid.json");
 await fs.writeFile(invalidFile,JSON.stringify(invalid));

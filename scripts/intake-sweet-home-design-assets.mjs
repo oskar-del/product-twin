@@ -134,6 +134,30 @@ function textureReferences(mtlText) {
   return references;
 }
 
+export function parseModelRotation(value) {
+  if (value === undefined || value === null || String(value).trim() === '') return {
+    declared: false,
+    matrix3_row_major: [1, 0, 0, 0, 1, 0, 0, 0, 1],
+  };
+  const matrix = String(value).trim().split(/[\s,;]+/).map(Number);
+  if (matrix.length !== 9 || matrix.some((item) => !Number.isFinite(item))) throw new Error(`invalid Sweet Home 3D modelRotation: ${value}`);
+  const determinant = matrix[0] * (matrix[4] * matrix[8] - matrix[5] * matrix[7])
+    - matrix[1] * (matrix[3] * matrix[8] - matrix[5] * matrix[6])
+    + matrix[2] * (matrix[3] * matrix[7] - matrix[4] * matrix[6]);
+  if (Math.abs(determinant) < 1e-8) throw new Error(`degenerate Sweet Home 3D modelRotation: ${value}`);
+  return {declared: true, matrix3_row_major: matrix, determinant};
+}
+
+function sourceTransform(record) {
+  return {
+    model_rotation: parseModelRotation(record.modelRotation),
+    back_face_shown: /^true$/i.test(record.backFaceShown ?? 'false'),
+    back_face_declared: record.backFaceShown !== undefined,
+    multi_part_model: /^true$/i.test(record.multiPartModel ?? 'false'),
+    axis_contract: 'SH3D_MODEL_ROTATION_APPLIED_BEFORE_WIDTH_HEIGHT_DEPTH_ENVELOPE_NORMALIZATION',
+  };
+}
+
 async function sha256File(filePath) {
   const hash = crypto.createHash('sha256');
   await new Promise((resolve, reject) => fs.createReadStream(filePath).on('data', (chunk) => hash.update(chunk)).on('end', resolve).on('error', reject));
@@ -183,7 +207,7 @@ function sourceDimensions(record) {
     depth_cm: depth,
     height_cm: height,
     derived_mm: { width: width * 10, depth: depth * 10, height: height * 10 },
-    verification_state: 'LIBRARY_AUTHORED_DECLARATION_REQUIRES_MESH_BOUNDS_QA',
+    verification_state: 'LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE',
   };
 }
 
@@ -227,7 +251,9 @@ export async function intakeSweetHomeDesignAssets({ root = process.cwd(), env = 
 
   const matched = [];
   for (const candidate of pilot.candidates ?? []) {
-    const record = furniture.find((item) => normalizedName(item.name) === normalizedName(candidate.source_model_name));
+    const record = furniture.find((item) => candidate.source_library_id && item.id === candidate.source_library_id)
+      ?? furniture.find((item) => normalizedName(path.posix.basename(archiveModelPath(item.model), path.posix.extname(item.model))) === normalizedName(candidate.source_model_name))
+      ?? furniture.find((item) => normalizedName(item.name) === normalizedName(candidate.source_model_name));
     if (!record) {
       matched.push({
         design_asset_id: candidate.design_asset_id,
@@ -252,20 +278,54 @@ export async function intakeSweetHomeDesignAssets({ root = process.cwd(), env = 
     const modelDestination = path.join(assetRoot, ...modelEntry.split('/'));
     const objBytes = await extractEntry(libraryPath, modelEntry, modelDestination);
     const dependencies = [];
-    if (path.extname(modelEntry).toLowerCase() === '.obj') {
-      for (const reference of mtllibReferences(objBytes.toString('utf8'))) {
+    const dependencyBlockers = [];
+    const modelExtension = path.extname(modelEntry).toLowerCase();
+    if (modelExtension === '.obj') {
+      const objText = objBytes.toString('utf8');
+      const mtlReferences = mtllibReferences(objText);
+      const usedMaterials = [...objText.matchAll(/^\s*usemtl\s+(.+)$/gim)].map((match) => match[1].trim());
+      if (usedMaterials.length && !mtlReferences.length) dependencyBlockers.push('OBJ_USES_MATERIALS_WITHOUT_MTLLIB');
+      for (const reference of mtlReferences) {
         const mtlEntry = resolveArchiveReference(modelEntry, reference);
-        if (!safeZipEntry(mtlEntry) || !entrySet.has(mtlEntry)) continue;
+        if (!safeZipEntry(mtlEntry)) {
+          dependencies.push({type: 'material', reference, entry: mtlEntry, required: true, state: 'UNSAFE_REFERENCE'});
+          dependencyBlockers.push(`UNSAFE_MTL_REFERENCE:${reference}`);
+          continue;
+        }
+        if (!entrySet.has(mtlEntry)) {
+          dependencies.push({type: 'material', reference, entry: mtlEntry, required: true, state: 'MISSING'});
+          dependencyBlockers.push(`MISSING_MTL:${mtlEntry}`);
+          continue;
+        }
         const mtlDestination = path.join(assetRoot, ...mtlEntry.split('/'));
         const mtlBytes = await extractEntry(libraryPath, mtlEntry, mtlDestination);
-        dependencies.push({ type: 'material', entry: mtlEntry, bytes: mtlBytes.length });
+        dependencies.push({type: 'material', reference, entry: mtlEntry, runtime_path: path.relative(root, mtlDestination), required: true, state: 'RESOLVED', bytes: mtlBytes.length, sha256: crypto.createHash('sha256').update(mtlBytes).digest('hex')});
         for (const texture of textureReferences(mtlBytes.toString('utf8'))) {
           const textureEntry = resolveArchiveReference(mtlEntry, texture);
-          if (!safeZipEntry(textureEntry) || !entrySet.has(textureEntry)) continue;
-          const textureBytes = await extractEntry(libraryPath, textureEntry, path.join(assetRoot, ...textureEntry.split('/')));
-          dependencies.push({ type: 'texture', entry: textureEntry, bytes: textureBytes.length });
+          if (!safeZipEntry(textureEntry)) {
+            dependencies.push({type: 'texture', reference: texture, parent_entry: mtlEntry, entry: textureEntry, required: true, state: 'UNSAFE_REFERENCE'});
+            dependencyBlockers.push(`UNSAFE_TEXTURE_REFERENCE:${texture}`);
+            continue;
+          }
+          if (!entrySet.has(textureEntry)) {
+            dependencies.push({type: 'texture', reference: texture, parent_entry: mtlEntry, entry: textureEntry, required: true, state: 'MISSING'});
+            dependencyBlockers.push(`MISSING_TEXTURE:${textureEntry}`);
+            continue;
+          }
+          const textureDestination = path.join(assetRoot, ...textureEntry.split('/'));
+          const textureBytes = await extractEntry(libraryPath, textureEntry, textureDestination);
+          dependencies.push({type: 'texture', reference: texture, parent_entry: mtlEntry, entry: textureEntry, runtime_path: path.relative(root, textureDestination), required: true, state: 'RESOLVED', bytes: textureBytes.length, sha256: crypto.createHash('sha256').update(textureBytes).digest('hex')});
         }
       }
+    } else {
+      dependencyBlockers.push(`UNSUPPORTED_MODEL_FORMAT:${modelExtension || 'NONE'}`);
+    }
+    let transform;
+    try {
+      transform = sourceTransform(record);
+    } catch (error) {
+      dependencyBlockers.push(`INVALID_SOURCE_TRANSFORM:${error.message}`);
+      transform = null;
     }
     matched.push({
       design_asset_id: candidate.design_asset_id,
@@ -273,12 +333,15 @@ export async function intakeSweetHomeDesignAssets({ root = process.cwd(), env = 
       category_id: candidate.category_id,
       identity_scope: 'GENERIC_DESIGN_ASSET',
       not_a_product_twin: true,
-      intake_state: 'DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED',
+      intake_state: dependencyBlockers.length ? 'BLOCKED_MISSING_OR_INVALID_DEPENDENCIES' : 'DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED',
+      blockers: dependencyBlockers,
       library_index: record.library_index,
+      source_library_id: record.id ?? null,
       library_name: record.name,
       library_category: record.category ?? null,
       library_creator: record.creator ?? null,
       source_dimensions: sourceDimensions(record),
+      source_transform: transform,
       model: {
         source_entry: modelEntry,
         runtime_path: path.relative(root, modelDestination),
@@ -286,16 +349,25 @@ export async function intakeSweetHomeDesignAssets({ root = process.cwd(), env = 
         sha256: crypto.createHash('sha256').update(objBytes).digest('hex'),
         dependencies,
       },
-      licence: candidate.license,
+      license: candidate.license,
+      attribution: {
+        creator: record.creator ?? pilot.source?.creators?.join(' & ') ?? null,
+        text: candidate.license?.attribution_text ?? null,
+        license_id: candidate.license?.spdx_like ?? null,
+        source_url: candidate.license?.source_reference ?? pilot.source?.source_page ?? null,
+        display_required: candidate.license?.attribution_required === true,
+      },
       promotion: {
         current_level: 'G0',
-        maximum_after_conversion: 'G2',
+        level_after_conversion: 'G1',
+        maximum_after_independent_scale_and_visual_qa: 'G2',
         required_gates: pilot.intake_rules?.required_conversion_checks ?? [],
       },
     });
   }
 
   const found = matched.filter((item) => item.intake_state === 'DOWNLOADED_UNVERIFIED_CONVERSION_REQUIRED').length;
+  const blocked = matched.filter((item) => item.intake_state === 'BLOCKED_MISSING_OR_INVALID_DEPENDENCIES').length;
   const metric = {
     generated_at: new Date().toISOString(),
     status: found ? 'DESIGN_ASSET_INTAKE_COMPLETE_CONVERSION_QA_REQUIRED' : 'NO_PILOT_ASSETS_MATCHED',
@@ -321,8 +393,10 @@ export async function intakeSweetHomeDesignAssets({ root = process.cwd(), env = 
     summary: {
       requested_candidates: pilot.candidates?.length ?? 0,
       matched_candidates: found,
-      unmatched_candidates: matched.length - found,
-      extracted_runtime_files: matched.reduce((sum, item) => sum + (item.model ? 1 + item.model.dependencies.length : 0), 0),
+      blocked_candidates: blocked,
+      unmatched_candidates: matched.length - found - blocked,
+      missing_or_invalid_dependencies: matched.reduce((sum, item) => sum + (item.blockers?.length ?? 0), 0),
+      extracted_runtime_files: matched.reduce((sum, item) => sum + (item.model ? 1 + item.model.dependencies.filter((dependency) => dependency.state === 'RESOLVED').length : 0), 0),
     },
     assets: matched,
   };

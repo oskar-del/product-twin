@@ -1,0 +1,28 @@
+{
+  "version": "0.1",
+  "record_lane": "GENERIC_DESIGN_ASSET",
+  "principle": "A converted generic asset stays runtime-only until rights, dependencies, orientation, appearance and independent scale checks pass. Publication never creates a Product Twin or commerce claim.",
+  "visible_attribution": {
+    "required_fields": ["creator", "text", "license_id", "source_url"],
+    "display_surfaces": ["asset_card", "asset_detail", "room_selection", "export_manifest"],
+    "may_be_hidden_in_three_dimensional_viewport": true,
+    "must_be_one_action_away_from_viewport": true
+  },
+  "publication_gates": [
+    "rights_source_verified",
+    "redistribution_allowed",
+    "all_model_dependencies_resolved",
+    "source_orientation_applied",
+    "back_face_policy_applied",
+    "texture_embedding_verified",
+    "canonical_view_visual_qa_passed",
+    "independent_scale_qa_passed",
+    "attribution_display_verified"
+  ],
+  "forbidden_publication_shortcuts": [
+    "declared-envelope normalization treated as independent scale QA",
+    "missing MTL or texture replaced silently",
+    "generic asset joined to merchant commerce fields",
+    "runtime binary path exposed as a public asset URL"
+  ]
+}

@@ -3,7 +3,7 @@ import fsp from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
-import { indexedFurniture, intakeSweetHomeDesignAssets, parseJavaProperties, safeZipEntry } from './intake-sweet-home-design-assets.mjs';
+import { indexedFurniture, intakeSweetHomeDesignAssets, parseJavaProperties, parseModelRotation, safeZipEntry } from './intake-sweet-home-design-assets.mjs';
 
 function zip(args, cwd) {
   return new Promise((resolve, reject) => {
@@ -25,6 +25,8 @@ assert.deepEqual(parseJavaProperties('name#1=Mid-century\\\n sofa\nwidth#1:180\n
   unicode: 'Vås',
 });
 assert.equal(indexedFurniture(parseJavaProperties('name#1=Chair\nmodel#1=models/chair.obj\n')).length, 1);
+assert.deepEqual(parseModelRotation('-1 0 0 0 1 0 0 0 -1').matrix3_row_major, [-1, 0, 0, 0, 1, 0, 0, 0, -1]);
+assert.throws(() => parseModelRotation('1 0'), /invalid/);
 
 const tempRoot = await fsp.mkdtemp(path.join(os.tmpdir(), 'sweet-home-design-intake-'));
 try {
@@ -42,9 +44,19 @@ try {
     'width#1=180',
     'depth#1=80',
     'height#1=75',
+    'modelRotation#1=0 0 1 0 1 0 -1 0 0',
+    'backFaceShown#1=true',
+    'multiPartModel#1=true',
     'creator#1=Fixture Creator',
+    'name#2=Broken chair',
+    'category#2=Living room',
+    'model#2=models/broken-chair.obj',
+    'width#2=60',
+    'depth#2=60',
+    'height#2=90',
     '',
   ].join('\n'));
+  await fsp.writeFile(path.join(modelDir, 'broken-chair.obj'), 'mtllib absent.mtl\nv 0 0 0\nv 1 0 0\nv 0 1 0\nf 1 2 3\n');
   await fsp.writeFile(path.join(modelDir, 'Mid-century-sofa.obj'), [
     'mtllib Mid-century-sofa.mtl',
     'o sofa',
@@ -54,7 +66,8 @@ try {
     'f 1 2 3',
     '',
   ].join('\n'));
-  await fsp.writeFile(path.join(modelDir, 'Mid-century-sofa.mtl'), 'newmtl fabric\nKd 0.4 0.2 0.1\n');
+  await fsp.writeFile(path.join(modelDir, 'Mid-century-sofa.mtl'), 'newmtl fabric\nKd 0.4 0.2 0.1\nmap_Kd fabric.png\n');
+  await fsp.writeFile(path.join(modelDir, 'fabric.png'), Buffer.from('89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c4890000000d49444154789c6360f8cfc00000040101005f3f6fea0000000049454e44ae426082', 'hex'));
 
   const sh3fPath = path.join(runtime, 'Fixture.sh3f');
   await zip(['-q', '-r', sh3fPath, '.'], inner);
@@ -72,6 +85,11 @@ try {
       source_model_name: 'Mid-century-sofa',
       category_id: 'FFE.SEATING.SOFA',
       license: { spdx_like: 'CC-BY-3.0', attribution_required: true, attribution_text: 'Fixture', source_reference: 'https://example.com' },
+    }, {
+      design_asset_id: 'DA_FIXTURE_BROKEN_CHAIR',
+      source_model_name: 'Broken chair',
+      category_id: 'FFE.SEATING.LOUNGE',
+      license: { spdx_like: 'CC-BY-3.0', attribution_required: true, attribution_text: 'Fixture', source_reference: 'https://example.com' },
     }],
   }, null, 2));
 
@@ -84,17 +102,26 @@ try {
   });
   assert.equal(metric.status, 'DESIGN_ASSET_INTAKE_COMPLETE_CONVERSION_QA_REQUIRED');
   assert.equal(metric.summary.matched_candidates, 1);
-  assert.equal(metric.summary.extracted_runtime_files, 2);
+  assert.equal(metric.summary.blocked_candidates, 1);
+  assert.equal(metric.summary.extracted_runtime_files, 4);
   assert.equal(metric.assets[0].identity_scope, 'GENERIC_DESIGN_ASSET');
   assert.equal(metric.assets[0].not_a_product_twin, true);
   assert.equal(metric.assets[0].promotion.current_level, 'G0');
-  assert.equal(metric.assets[0].promotion.maximum_after_conversion, 'G2');
+  assert.equal(metric.assets[0].promotion.level_after_conversion, 'G1');
+  assert.equal(metric.assets[0].promotion.maximum_after_independent_scale_and_visual_qa, 'G2');
   assert.deepEqual(metric.assets[0].source_dimensions.derived_mm, { width: 1800, depth: 800, height: 750 });
   assert.equal(metric.assets[0].model.dependencies[0].type, 'material');
+  assert.equal(metric.assets[0].model.dependencies[0].state, 'RESOLVED');
+  assert.equal(metric.assets[0].model.dependencies[1].type, 'texture');
+  assert.equal(metric.assets[0].source_transform.back_face_shown, true);
+  assert.deepEqual(metric.assets[0].source_transform.model_rotation.matrix3_row_major, [0, 0, 1, 0, 1, 0, -1, 0, 0]);
+  assert.equal(metric.assets[0].attribution.display_required, true);
+  assert.equal(metric.assets[1].intake_state, 'BLOCKED_MISSING_OR_INVALID_DEPENDENCIES');
+  assert.match(metric.assets[1].blockers[0], /MISSING_MTL/);
   assert.equal((await fsp.stat(path.join(tempRoot, metric.assets[0].model.runtime_path))).isFile(), true);
   assert.equal(JSON.parse(await fsp.readFile(path.join(tempRoot, 'data/metrics/sweet-home-3d-design-asset-intake-latest.json'), 'utf8')).summary.matched_candidates, 1);
 } finally {
   await fsp.rm(tempRoot, { recursive: true, force: true });
 }
 
-console.log(JSON.stringify({ status: 'PASS', checks: 17, lane: 'GENERIC_DESIGN_ASSET_TO_G2_ONLY' }, null, 2));
+console.log(JSON.stringify({ status: 'PASS', checks: 25, lane: 'GENERIC_DESIGN_ASSET_G1_THEN_G2_AFTER_INDEPENDENT_QA' }, null, 2));
