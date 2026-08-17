@@ -4,9 +4,9 @@
 
 - Repository: `oskar-del/product-twin`
 - Worktree: `product-twin-visual-media`
-- Branch: `agent/visual-media-studio-v1`
-- HEAD/base commit: `4a32e4cc397bffb3a665ceae2d4fe3e4d5c12143`
-- State: dirty; all Living Room Alpha files are uncommitted and nothing is pushed, merged, deployed or published.
+- Branch: `agent/visual-media-studio`
+- Source base commit: `4a32e4cc397bffb3a665ceae2d4fe3e4d5c12143`
+- Publication state: checkpoint committed to `agent/visual-media-studio`; resolve that branch HEAD as the immutable review coordinate. Nothing is merged, deployed or published as customer-facing media.
 - Brain control board: `agent/product-twin-integration` commit `ef1d52d53aa4d6c3b8cbd5f99c456c5d219a1a4c`, `data/dashboard/project-control.json`, SHA-256 `f5850d8ed3df1db60d1708e6492cc9513c7c34fbebb950d14b70a8d2126049c5`.
 - Frozen Room Lab authority: source commit `3d36f07c32e42b168a74c5bc03a263e8c63e6eab`; scene manifest SHA-256 `fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181`.
 

@@ -4,7 +4,7 @@
 
 This is the long-lived workstream for truthful, repeatable imagery and video from Site, Design, Room, Product Twin and Design Asset scenes. It owns visual direction, deterministic media contracts and provider-backed generation when the evidence and rights gates allow it.
 
-Repository branch: `agent/visual-media-studio-v1`
+Repository branch: `agent/visual-media-studio`
 
 Isolated worktree baseline: Product Twin `4a32e4cc397bffb3a665ceae2d4fe3e4d5c12143`. The originally named checkpoint `c90c72c` could not be resolved locally or on the repository remote; it must not be claimed as the base.
 
