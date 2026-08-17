@@ -84,6 +84,10 @@
     "site:sweden:validate:test": "node scripts/test-sweden-plot-intelligence.mjs",
     "site:sweden:sources:probe": "node scripts/probe-sweden-plot-sources.mjs",
     "site:sweden:gate": "npm run site:sweden:validate && npm run site:sweden:validate:test",
+    "site:sweden:saterdalsvagen14:validate": "node scripts/validate-saterdalsvagen14-plot-intelligence.mjs",
+    "site:sweden:saterdalsvagen14:source:validate": "node scripts/validate-saterdalsvagen14-plot-intelligence.mjs --require-runtime",
+    "site:sweden:saterdalsvagen14:mutations": "node scripts/test-saterdalsvagen14-plot-intelligence.mjs",
+    "site:sweden:saterdalsvagen14:gate": "npm run site:sweden:saterdalsvagen14:validate && npm run site:sweden:saterdalsvagen14:source:validate && npm run site:sweden:saterdalsvagen14:mutations",
     "summarize": "node scripts/summarize.mjs"
   }
 }

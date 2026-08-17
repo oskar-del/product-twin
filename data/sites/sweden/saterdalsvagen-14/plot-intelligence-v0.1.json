@@ -1,0 +1,332 @@
+{
+  "schema_version": "0.1",
+  "entity_type": "SwedenPlotIntelligence",
+  "profile": "SE_NATIONAL_PLOT_INTELLIGENCE_V0_1",
+  "country": "SE",
+  "status": "DISCOVERY",
+  "canonical_crs": "EPSG:3006",
+  "source_registry_ref": {
+    "id": "SE_PLOT_SOURCE_REGISTRY_V0_1",
+    "version": "0.1",
+    "path": "data/sites/sweden/source-registry-v0.1.json",
+    "content_sha256": "f309154628ad77c396bd4de86028dc6a7dce54a1c181854b480d148a2adfa956"
+  },
+  "site_twin_ref": null,
+  "identity": {
+    "municipality": "Norrköping",
+    "property_designation": "SVÄRTINGE 54:28",
+    "address": "Säterdalsvägen 14, 605 70 Svärtinge",
+    "coordinate_wgs84": [16.0317063331, 58.6522414431],
+    "intake_ready": true
+  },
+  "project_context": {
+    "project_id": "PRJ_SE_SATERDALSVAGEN14",
+    "requested_house_profiles": ["HOUSEKIT_H30", "HOUSEKIT_H50"],
+    "scenario_refs": [],
+    "no_site_evidence_override": true
+  },
+  "source_receipts": [
+    {
+      "receipt_id": "RCPT_SE_LM_HEIGHT_ITEM_650_55",
+      "source_id": "SE_LM_HEIGHT_1M_STAC",
+      "retrieved_at": "2026-08-17T17:33:25Z",
+      "request_or_record_ref": "https://api.lantmateriet.se/stac-hojd/v1/collections/dtm-cog/items/650_55",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/lm-height-item.json",
+      "sha256": "c8c99c78dd1db2915bb3abd3e56a91013724807a1015f2fb105bfecc15eba94a",
+      "scope": "Current 1 m terrain STAC item covering the market locator.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_SGU_SOIL_PIN",
+      "source_id": "SE_SGU_SOIL_25_100K",
+      "retrieved_at": "2026-08-17T17:33:09Z",
+      "request_or_record_ref": "SGU WMS GetFeatureInfo for SE.GOV.SGU.JORD.GRUNDLAGER.25K at the market locator",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/sgu-soil.json",
+      "sha256": "c8069b83126a52e0f8d7c2f85c59c57628b9d8d1ac85c2b8eaccc05fb768c790",
+      "scope": "Overview surficial soil class at the market locator.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_SGU_SOIL_DEPTH_PIN",
+      "source_id": "SE_SGU_SOIL_DEPTH",
+      "retrieved_at": "2026-08-17T17:33:09Z",
+      "request_or_record_ref": "SGU WMS GetFeatureInfo for SE.GOV.SGU.MISC.JORDDJUPSMODELL.RASTER_INTERVALL at the market locator",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/sgu-soil-depth.json",
+      "sha256": "dc2a7acf48e105032df855d561fbb76b0f8decacab701f346442ac5cf234834e",
+      "scope": "Modelled 10 m soil-depth value at the market locator.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_SGU_SOIL_DEPTH_OBSERVATIONS",
+      "source_id": "SE_SGU_SOIL_DEPTH",
+      "retrieved_at": "2026-08-17T17:33:10Z",
+      "request_or_record_ref": "https://api.sgu.se/oppnadata/jorddjupsmodell/ogc/features/v1/collections/underlag-jorddjup/items?bbox=16.02,58.64,16.04,58.66",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/sgu-soil-depth-observations.geojson",
+      "sha256": "bc048d009077f13fbf41169918dba9c0d37b1976802d5e1f9e10086c94d02c30",
+      "scope": "Nearby observations used by SGU's soil-depth model.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_SGU_WELLS_CONTEXT",
+      "source_id": "SE_SGU_WELLS",
+      "retrieved_at": "2026-08-17T17:34:30Z",
+      "request_or_record_ref": "https://api.sgu.se/oppnadata/brunnar/ogc/features/v1/collections/brunnar/items?bbox=16.02,58.64,16.04,58.66",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/sgu-wells.geojson",
+      "sha256": "e6ae31e474abcf183c840f4895d35ec18d942aace70e38267a8d4805038a51ad",
+      "scope": "Public well records around the market locator.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_RAA_HERITAGE_500M",
+      "source_id": "SE_RAA_FORNSOK",
+      "retrieved_at": "2026-08-17T17:35:42Z",
+      "request_or_record_ref": "RAÄ WFS publicerade_lamningar_centrumpunkt, EPSG:3006 bbox 559369,6501290,560369,6502290",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/raa-heritage.geojson",
+      "sha256": "55fe734d1eeaa1700aad342e2f07038da64fd59a523e7c8c754b75bfd8ecc4cf",
+      "scope": "Published cultural-heritage points in a 500 m square-radius context.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_NV_PROTECTED_SERVICE",
+      "source_id": "SE_NATURVARD_PROTECTED_AREAS",
+      "retrieved_at": "2026-08-17T17:36:38Z",
+      "request_or_record_ref": "Naturvårdsregistret WFS SkyddadeOmraden, 3 km EPSG:3006 context bbox",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/nv-protected-areas.gml",
+      "sha256": "75d54307725171f60791aeb8262c3f23adf34d67d6e6b8a8fce824278044f36b",
+      "scope": "Protected-area service response retained to document an inconclusive zero-result response.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_NV_NATURA_SERVICE",
+      "source_id": "SE_NATURVARD_NATURA2000",
+      "retrieved_at": "2026-08-17T17:36:38Z",
+      "request_or_record_ref": "Natura 2000 WFS N2000, 3 km EPSG:3006 context bbox",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/nv-natura2000.gml",
+      "sha256": "e02f905ebe0291aa2ccd14b99973f0570e9eaf6e379affaeab33afaa81c835ef",
+      "scope": "Natura 2000 service response retained to document an inconclusive zero-result response.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_NORRKOPING_NOKA_INFO",
+      "source_id": "SE_MUNICIPAL_PLAN_AND_PERMIT_ARCHIVE",
+      "retrieved_at": "2026-08-17T17:37:00Z",
+      "request_or_record_ref": "https://norrkoping.se/boende-trafik-och-miljo/lantmateri-och-kartor/norrkopingskartan-noka",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/municipal-noka-info.html",
+      "sha256": "590c7bd201d42e6491ee6c6c851355d7f0d19b84c574166a74b5fd198cdac42d",
+      "scope": "Municipal map-service instructions and legal-use limitations.",
+      "evidence_class": "MUNICIPAL_RECORD"
+    },
+    {
+      "receipt_id": "RCPT_SE_NORRKOPING_SVARTINGE_UDDE_PLAN",
+      "source_id": "SE_MUNICIPAL_PLAN_AND_PERMIT_ARCHIVE",
+      "retrieved_at": "2026-08-17T17:20:00Z",
+      "request_or_record_ref": "Norrköping plan record 0581K-P25/6 / base act 22A:5029, legal-force plan map",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/municipal-svartinge-udde-plan-map.pdf",
+      "sha256": "122fde82ab5e32d608af984d173e341097df84bf2d30fe22a9b6dda5bfce14aa",
+      "scope": "Plan map inspected to prevent misapplication of the Svärtinge Udde shoreline amendment.",
+      "evidence_class": "MUNICIPAL_RECORD"
+    },
+    {
+      "receipt_id": "RCPT_SE_NORRKOPING_SVARTINGE_UDDE_SUPPLEMENT",
+      "source_id": "SE_MUNICIPAL_PLAN_AND_PERMIT_ARCHIVE",
+      "retrieved_at": "2026-08-17T17:20:00Z",
+      "request_or_record_ref": "Norrköping Svärtinge Udde amendment description, legal force 2025-05-21",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/municipal-svartinge-udde-plan-supplement.pdf",
+      "sha256": "f216d22597fe77dbb03ff27eeac13e43e1eb7e45b38284567a0580f5f47e1b54",
+      "scope": "Official amendment description stating that the change concerns shoreline protection and not building rights or land use.",
+      "evidence_class": "MUNICIPAL_RECORD"
+    },
+    {
+      "receipt_id": "RCPT_SE_NORRKOPING_SVARTINGE_FOP_2026",
+      "source_id": "SE_MUNICIPAL_PLAN_AND_PERMIT_ARCHIVE",
+      "retrieved_at": "2026-08-17T17:20:00Z",
+      "request_or_record_ref": "Norrköping proposed detailed comprehensive plan for Svärtinge, 5 May 2026",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/municipal-svartinge-fop-2026.pdf",
+      "sha256": "86e10c9ebaf17e8378646ee97d6baecf4d6d78cbd7586a7a24f878d60f108e96",
+      "scope": "Strategic municipal context only; not a property-level entitlement record.",
+      "evidence_class": "MUNICIPAL_RECORD"
+    },
+    {
+      "receipt_id": "RCPT_SE_BOVERKET_CURRENT_LAW",
+      "source_id": "SE_BOVERKET_CURRENT_PBL",
+      "retrieved_at": "2026-08-17T17:37:00Z",
+      "request_or_record_ref": "https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/anmalningsplikt/byggnader/nybyggnad/komplementbostadshus/",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/boverket-current-complementary-house.html",
+      "sha256": "228c55ea105fb05a75beff976ef4b6da24daf749b77be440c82d075ac541da0c",
+      "scope": "Current national H30/H50 law profile effective 2025-12-01.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_GLAN_WATER_PROTECTION_DECISION",
+      "source_id": "SE_LST_GEODATA_CATALOG",
+      "retrieved_at": "2026-08-17T17:37:00Z",
+      "request_or_record_ref": "Östergötland county decision 05 FS 2012:22 for the Glan surface-water protection area",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/glan-water-protection-decision-2012.pdf",
+      "sha256": "0ba9865c9e2e075a88bf93858aca4e8c2bc1b800ca6ca4a17823a7aa2e3d8b24",
+      "scope": "Official protection decision and zone rules; exact plot-zone intersection remains unresolved.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "FINDING_SE_HEIGHT_ITEM_AVAILABLE_NOT_FETCHED",
+      "domain": "terrain",
+      "value": {"item_id": "650_55", "grid_resolution_m": 1, "crs": "EPSG:5845", "horizontal_crs": "EPSG:3006", "vertical_datum": "RH2000", "asset_size_bytes": 246140605, "asset_access": "HTTP_401_WITHOUT_CREDENTIALS"},
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_LM_HEIGHT_ITEM_650_55"],
+      "method": "Read the official STAC item and separately tested the advertised raster asset URL.",
+      "observed_at": "2026-08-17T17:33:25Z",
+      "verification": "PARTIAL",
+      "limitations": ["The raster bytes were not acquired, so no elevation, slope, contour, drainage or plot clip has been derived.", "The item is context terrain and would not replace a field topographic survey."]
+    },
+    {
+      "finding_id": "FINDING_SE_SOIL_GLACIOFLUVIAL",
+      "domain": "ground_screening",
+      "value": "Isälvssediment",
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_SGU_SOIL_PIN"],
+      "method": "SGU 1:25,000–1:100,000 overview soil-map GetFeatureInfo at the market locator.",
+      "observed_at": "2026-08-17T17:33:09Z",
+      "verification": "VERIFIED",
+      "limitations": ["Overview mapping cannot establish bearing capacity, groundwater, excavation class, contamination or infiltration design."]
+    },
+    {
+      "finding_id": "FINDING_SE_MODELLED_SOIL_DEPTH_9M",
+      "domain": "ground_screening",
+      "value": 9,
+      "unit": "m to bedrock",
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_SGU_SOIL_DEPTH_PIN"],
+      "method": "SGU 10 m soil-depth model GetFeatureInfo at the market locator.",
+      "observed_at": "2026-08-17T17:33:09Z",
+      "verification": "VERIFIED",
+      "limitations": ["This is a modelled integer value, not a borehole on the plot.", "SGU warns that uncertainty increases with distance to observations."]
+    },
+    {
+      "finding_id": "FINDING_SE_NEARBY_SOIL_DEPTH_VARIABILITY",
+      "domain": "ground_screening",
+      "value": {"nearest_observation_distance_m": 58.9, "selected_distance_range_m": [58.9, 121.3], "selected_depth_range_m": [0, 22], "examples": [{"distance_m": 58.9, "depth_m": 10}, {"distance_m": 78.1, "depth_m": 1.5}, {"distance_m": 83.7, "depth_m": 16}, {"distance_m": 106.6, "depth_m": 22}]},
+      "unit": null,
+      "evidence_class": "DERIVED_VERIFIED",
+      "source_receipt_refs": ["RCPT_SE_SGU_SOIL_DEPTH_OBSERVATIONS"],
+      "method": "Sorted official soil-depth observations by great-circle distance from the market locator without changing source coordinates or depths.",
+      "observed_at": "2026-08-17T17:34:00Z",
+      "verification": "VERIFIED",
+      "limitations": ["Nearby observations do not identify conditions inside the legal parcel.", "The large local range is a risk signal, not a foundation recommendation."]
+    },
+    {
+      "finding_id": "FINDING_SE_WELL_CONTEXT_VARIABILITY",
+      "domain": "groundwater_and_drilling_screening",
+      "value": {"records_in_bbox": 140, "nearest_record_distance_m": 58.9, "nearest_five_soil_depth_range_m": [1.5, 22], "nearest_five_total_bore_depth_range_m": [150, 204], "nearest_five_reported_groundwater_level_range_m": [15, 25]},
+      "unit": null,
+      "evidence_class": "DERIVED_VERIFIED",
+      "source_receipt_refs": ["RCPT_SE_SGU_WELLS_CONTEXT"],
+      "method": "Queried the official well archive in a bounded WGS84 box and sorted returned records by distance from the market locator.",
+      "observed_at": "2026-08-17T17:34:30Z",
+      "verification": "VERIFIED",
+      "limitations": ["The nearest records are mostly energy wells and their stated position accuracy is less than 100 m.", "Historic water levels and drilling logs do not prove present plot groundwater or construction dewatering conditions."]
+    },
+    {
+      "finding_id": "FINDING_SE_HERITAGE_POINTS_500M",
+      "domain": "cultural_heritage_screening",
+      "value": [{"record": "L2009:6551", "type": "Fångstgrop", "assessment": "Möjlig fornlämning", "distance_m": 471.4}, {"record": "L2009:6612", "type": "Fångstgrop", "assessment": "Fornlämning", "distance_m": 471.9}],
+      "unit": null,
+      "evidence_class": "DERIVED_VERIFIED",
+      "source_receipt_refs": ["RCPT_SE_RAA_HERITAGE_500M"],
+      "method": "Queried published RAÄ points in a 500 m EPSG:3006 context and measured planar distance from the derived market locator coordinate.",
+      "observed_at": "2026-08-17T17:35:42Z",
+      "verification": "VERIFIED",
+      "limitations": ["The screen uses centre points and an unverified market locator, not legal parcel geometry or each record's full protection/uncertainty geometry.", "Register coverage cannot exclude unknown remains."]
+    },
+    {
+      "finding_id": "FINDING_SE_PROTECTED_SERVICE_INCONCLUSIVE",
+      "domain": "environmental_screening",
+      "value": {"protected_area_number_returned": 0, "natura2000_number_returned": 0, "number_matched": "unknown", "conclusion": "NO_ABSENCE_INFERENCE"},
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_NV_PROTECTED_SERVICE", "RCPT_SE_NV_NATURA_SERVICE"],
+      "method": "Ran supported GML32 WFS queries over a 3 km context and retained the exact responses.",
+      "observed_at": "2026-08-17T17:36:38Z",
+      "verification": "PARTIAL",
+      "limitations": ["The services returned zero features with numberMatched unknown despite independent official evidence that the Svärtinge Natura 2000 site exists in the wider locality.", "No claim of protected-area absence is permitted from these responses."]
+    },
+    {
+      "finding_id": "FINDING_SE_SVARTINGE_NATURA_CONTEXT",
+      "domain": "environmental_screening",
+      "value": {"site_code": "SE0230206", "name": "Svärtinge", "municipal_map_location": "Svärtinge Udde by Lake Glan"},
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_NORRKOPING_SVARTINGE_FOP_2026"],
+      "method": "Inspected the municipal strategic-plan text and figure 36.",
+      "observed_at": "2026-08-17T17:20:00Z",
+      "verification": "PARTIAL",
+      "limitations": ["The proposed comprehensive plan is strategic context, not the legal parcel overlay.", "The exact distance and non-intersection with the listing parcel are not yet proven."]
+    },
+    {
+      "finding_id": "FINDING_SE_SVARTINGE_UDDE_AMENDMENT_SCOPE",
+      "domain": "planning_screening",
+      "value": {"plan_record": "0581K-P25/6", "legal_force_date": "2025-05-21", "amendment_scope": "shoreline protection on private/block land", "building_right_changed": false, "land_use_changed": false},
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_NORRKOPING_SVARTINGE_UDDE_PLAN", "RCPT_SE_NORRKOPING_SVARTINGE_UDDE_SUPPLEMENT"],
+      "method": "Inspected the legal-force map and amendment description together.",
+      "observed_at": "2026-08-17T17:20:00Z",
+      "verification": "VERIFIED",
+      "limitations": ["The plan map is for Svärtinge Udde south of the town; it has not been proven to govern SVÄRTINGE 54:28.", "Its dimensional provisions must not be applied to this listing until NOKA or a municipal record confirms intersection."]
+    },
+    {
+      "finding_id": "FINDING_SE_CURRENT_H30_H50_PROFILE",
+      "domain": "current_law",
+      "value": {"effective_from": "2025-12-01", "inside_detail_plan_max_individual_m2": 30, "inside_detail_plan_max_cumulative_m2": 45, "inside_detail_plan_max_ridge_m": 4, "outside_detail_plan_max_individual_m2": 50, "outside_detail_plan_max_cumulative_m2": 65, "outside_detail_plan_max_ridge_m": 4.5},
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_BOVERKET_CURRENT_LAW"],
+      "method": "Captured the current Boverket guidance and bound it to the Sweden v0.1 law profile.",
+      "observed_at": "2026-08-17T17:37:00Z",
+      "verification": "VERIFIED",
+      "limitations": ["The rules are conditional and do not make either profile eligible on this plot.", "Detail-plan status, a qualifying principal building, aggregate areas, placement and special protections remain unresolved."]
+    },
+    {
+      "finding_id": "FINDING_SE_GLAN_WATER_PROTECTION_UNRESOLVED",
+      "domain": "water_protection",
+      "value": {"decision": "05 FS 2012:22", "zones": ["primary", "secondary", "tertiary"], "plot_zone": null},
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "source_receipt_refs": ["RCPT_SE_GLAN_WATER_PROTECTION_DECISION"],
+      "method": "Read the official county protection decision and compared its described zone system with the unresolved plot overlay.",
+      "observed_at": "2026-08-17T17:37:00Z",
+      "verification": "PARTIAL",
+      "limitations": ["The exact plot-zone intersection has not been established from an authoritative vector or municipal response.", "Zone-specific permit and notification requirements cannot yet be evaluated."]
+    }
+  ],
+  "gates": [
+    {"gate_id": "GATE_SE_PLOT_IDENTITY", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "SVÄRTINGE 54:28 is a high-confidence market locator, but no authoritative property-register record has confirmed identity or the 1,938/1,939 m² area discrepancy."},
+    {"gate_id": "GATE_SE_MUNICIPAL_JURISDICTION", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Norrköping is the working jurisdiction; a property-level official locator or municipal map record is still required for formal closure."},
+    {"gate_id": "GATE_SE_PROPERTY_DIVISION_CONTEXT", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No approved Lantmäteriet property-division vector item has been acquired."},
+    {"gate_id": "GATE_SE_PROPERTY_REGISTER", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No property-register extract has been requested; explicit permission is absent."},
+    {"gate_id": "GATE_SE_RIGHTS_AND_JOINT_FACILITIES", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Servitudes, joint facilities, cadastral acts, road rights and mortgages remain unresolved."},
+    {"gate_id": "GATE_SE_BOUNDARY_FOR_DESIGN", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The seller map is nonbinding and no field survey or boundary determination exists."},
+    {"gate_id": "GATE_SE_DETAIL_PLAN_AND_STATUS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The Svärtinge Udde plan was screened to prevent misapplication, but the governing plan or outside-plan status for SVÄRTINGE 54:28 is not yet established."},
+    {"gate_id": "GATE_SE_CURRENT_LAW_PROFILE", "status": "SATISFIED", "evidence_refs": ["RCPT_SE_BOVERKET_CURRENT_LAW", "FINDING_SE_CURRENT_H30_H50_PROFILE"], "decided_at": "2026-08-17T17:37:00Z", "reason": "Current Boverket guidance and the 2025-12-01 effective profile are bound for this assessment date."},
+    {"gate_id": "GATE_SE_H30_H50_ELIGIBILITY", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Neither H30 nor H50 eligibility can be determined before plan status, principal-building facts, aggregate areas, placement and protections are resolved."},
+    {"gate_id": "GATE_SE_BUILDABLE_ENVELOPE", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No authoritative buildable envelope may be drawn while boundary, planning, rights, environmental and access gates remain open."},
+    {"gate_id": "GATE_SE_TERRAIN", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The exact 1 m STAC item is identified, but its raster asset returned HTTP 401 and no plot clip or deterministic derivations exist."},
+    {"gate_id": "GATE_SE_GROUND_CONDITIONS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Official screening shows glaciofluvial sediment and strong nearby depth variability; plot-specific geotechnical, groundwater, radon, contamination and infiltration evidence is absent."},
+    {"gate_id": "GATE_SE_FLOOD_AND_GEOHAZARDS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Terrain bytes, municipal cloudburst/flood layers and plot drainage review are incomplete."},
+    {"gate_id": "GATE_SE_ENVIRONMENTAL_RESTRICTIONS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The national WFS responses are inconclusive, the Svärtinge Natura context is known, and Glan water-protection zone plus shoreline status remain unresolved."},
+    {"gate_id": "GATE_SE_CULTURAL_AND_CONTAMINATION", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Two published heritage points occur about 472 m from the market locator, but full geometry/uncertainty, contamination and historic-use screening remain incomplete."},
+    {"gate_id": "GATE_SE_LEGAL_ACCESS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Road proximity and the seller listing cannot prove legal or permitted access, road manager approval, gradients or construction access."},
+    {"gate_id": "GATE_SE_UTILITIES_AND_CAPACITY", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The seller statement that municipal VA is paid is not a provider-confirmed capacity, connection-point, cost or lead-time response."},
+    {"gate_id": "GATE_SE_CONSTRUCTION_CLEARANCE", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No Ledningskollen case, provider line response, permit, notification or start clearance has been requested."}
+  ],
+  "separation_rules": {
+    "site_evidence_is_immutable": true,
+    "scenario_cannot_redefine_boundary": true,
+    "screening_cannot_become_entitlement": true,
+    "road_geometry_cannot_prove_legal_access": true,
+    "overview_geology_cannot_replace_field_investigation": true,
+    "utility_map_cannot_prove_capacity": true
+  }
+}

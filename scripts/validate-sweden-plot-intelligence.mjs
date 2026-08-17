@@ -247,10 +247,14 @@ export function validateSwedenPlotIntelligence({
   const height = sourceById.get("SE_LM_HEIGHT_1M_STAC") ?? {};
   check(height.endpoint_url === "https://api.lantmateriet.se/stac-hojd/v1", "height-model STAC endpoint changed unexpectedly");
   check(height.name.includes("Markhöjdmodell"), "height source identity is wrong");
+  check(height.access_mode === "ACCESS_SETUP" && height.automation_state === "DIRECT_AFTER_ACCESS", "height raster access is falsely represented as credentialless");
+  check(includesText(height.limitations, "HTTP 401"), "height raster access limitation is absent");
   check(includesText(height.cannot_prove, "survey-grade"), "height model is being treated as field survey evidence");
 
   const ngp = sourceById.get("SE_NGP_DETAIL_PLAN") ?? {};
   check(ngp.can_close_gates?.length === 0, "NGP discovery data must not alone close the plan gate");
+  check(ngp.access_mode === "LEGAL_REVIEW_AND_ACCESS" && ngp.automation_state === "DIRECT_AFTER_ACCESS", "NGP detail-plan access is falsely represented as credentialless");
+  check(includesText(ngp.limitations, "HTTP 401"), "NGP authenticated-access limitation is absent");
   check(includesText(ngp.limitations, "before 2022-01-01"), "NGP historical-coverage limitation is absent");
   check(includesText(ngp.limitations, "legal force"), "NGP legal-force limitation is absent");
 

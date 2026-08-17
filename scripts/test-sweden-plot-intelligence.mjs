@@ -19,6 +19,11 @@ const attacks = [
   ["missing national source", ({ registry }) => { registry.sources.pop(); }],
   ["non-official endpoint", ({ registry }) => { registry.sources[0].endpoint_url = "https://example.com/height"; }],
   ["height source identity drift", ({ registry }) => { registry.sources.find((source) => source.source_id === "SE_LM_HEIGHT_1M_STAC").endpoint_url = "https://api.lantmateriet.se/stac-hojd/v2"; }],
+  ["height raster falsely credentialless", ({ registry }) => {
+    const source = registry.sources.find((item) => item.source_id === "SE_LM_HEIGHT_1M_STAC");
+    source.access_mode = "OPEN_API";
+    source.automation_state = "DIRECT";
+  }],
   ["property map promoted to legal boundary", ({ registry }) => {
     const source = registry.sources.find((item) => item.source_id === "SE_LM_PROPERTY_DIVISION_VECTOR");
     source.can_close_gates.push("GATE_SE_BOUNDARY_FOR_DESIGN");
@@ -28,6 +33,11 @@ const attacks = [
   ["NGP historical gap erased", ({ registry }) => {
     const source = registry.sources.find((item) => item.source_id === "SE_NGP_DETAIL_PLAN");
     source.limitations = source.limitations.filter((value) => !value.includes("before 2022-01-01"));
+  }],
+  ["NGP falsely credentialless", ({ registry }) => {
+    const source = registry.sources.find((item) => item.source_id === "SE_NGP_DETAIL_PLAN");
+    source.access_mode = "OPEN_API";
+    source.automation_state = "DIRECT";
   }],
   ["old PBL profile date", ({ registry }) => { registry.current_rule_profile.effective_from = "2014-07-02"; }],
   ["inside-plan H30 limit inflated", ({ registry }) => { registry.current_rule_profile.inside_detail_plan.max_individual_area_m2 = 31; }],

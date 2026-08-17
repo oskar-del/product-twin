@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1",
+  "entity_type": "SwedenDesignScenario",
+  "scenario_id": "SCN_SE_SATERDALSVAGEN14_BASELINE",
+  "status": "BLOCKED_PENDING_SITE_BASIS",
+  "site_twin_ref": {
+    "id": "SITE_SE_SATERDALSVAGEN14_DISCOVERY",
+    "version": "0.1",
+    "path": "data/sites/sweden/saterdalsvagen-14/plot-intelligence-v0.1.json",
+    "content_sha256": "8a0e654e80f7367d5e14d69b7b15f0436e92cc0179e93fba2a2c99b532988501"
+  },
+  "requested_house_profiles": ["HOUSEKIT_H30", "HOUSEKIT_H50"],
+  "selected_house_profile": null,
+  "site_boundary": null,
+  "buildable_envelope": null,
+  "building_geometry": null,
+  "access_point": null,
+  "finished_floor_level": null,
+  "blockers": [
+    "Authoritative property identity and design boundary are absent.",
+    "Governing detailed-plan or outside-plan status is unresolved.",
+    "Legal access, terrain, ground, environmental and utility-capacity gates remain open.",
+    "H30/H50 are comparison profiles only and neither is established as eligible."
+  ],
+  "separation_rules": {
+    "cannot_redefine_site_boundary": true,
+    "cannot_promote_screening_to_entitlement": true,
+    "cannot_convert_seller_claims_to_verified_facts": true
+  }
+}
