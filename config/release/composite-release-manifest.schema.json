@@ -1,0 +1,385 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/composite-release-manifest.schema.json",
+  "title": "Product Twin composite release evidence manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "manifest_id",
+    "generated_at",
+    "release_state",
+    "release_blockers",
+    "checkpoints",
+    "asset_records",
+    "site_evidence",
+    "room_placement",
+    "market_supply",
+    "procurement_readiness",
+    "deployment_state"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "manifest_id": {"type": "string", "minLength": 1},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "release_state": {"enum": ["READY", "BLOCKED"]},
+    "release_blockers": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "checkpoints": {"type": "array", "items": {"$ref": "#/$defs/checkpoint"}},
+    "asset_records": {"type": "array", "items": {"$ref": "#/$defs/asset"}},
+    "site_evidence": {"$ref": "#/$defs/site"},
+    "room_placement": {"$ref": "#/$defs/room"},
+    "market_supply": {"type": "array", "items": {"$ref": "#/$defs/supply"}},
+    "procurement_readiness": {"$ref": "#/$defs/procurement"},
+    "deployment_state": {"$ref": "#/$defs/deployment"}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "destination": {
+      "type": "object",
+      "required": ["country", "region", "postal_code"],
+      "properties": {
+        "country": {"type": "string", "minLength": 2},
+        "region": {"type": ["string", "null"]},
+        "postal_code": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["source_ref", "observed_at", "freshness_state", "valid_until", "market", "destination"],
+      "properties": {
+        "source_ref": {"type": ["string", "null"]},
+        "observed_at": {"type": ["string", "null"], "format": "date-time"},
+        "freshness_state": {"enum": ["SNAPSHOT", "CURRENT", "STALE", "RECHECK_REQUIRED", "MISSING"]},
+        "valid_until": {"type": ["string", "null"], "format": "date-time"},
+        "market": {"type": ["string", "null"]},
+        "content_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "destination": {
+          "oneOf": [
+            {"$ref": "#/$defs/destination"},
+            {"type": "null"}
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "checkpoint": {
+      "type": "object",
+      "required": ["workstream", "branch", "commit_sha", "relationship", "artifact_state", "verification", "evidence"],
+      "properties": {
+        "workstream": {"type": "string", "minLength": 1},
+        "branch": {"type": "string", "pattern": "^agent/"},
+        "commit_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "relationship": {"const": "HEAD_AT_OBSERVATION"},
+        "artifact_state": {"enum": ["IMPLEMENTATION_CHECKPOINT", "HANDOFF_ONLY", "DEPLOYMENT_HANDOFF"]},
+        "verification": {
+          "type": "object",
+          "required": ["state", "checks_passed", "mutation_scenarios_passed", "notes"],
+          "properties": {
+            "state": {"enum": ["REPRODUCED", "NOT_REPRODUCED", "EXTERNAL_STATUS_ONLY", "NOT_APPLICABLE"]},
+            "checks_passed": {"type": ["integer", "null"], "minimum": 0},
+            "mutation_scenarios_passed": {"type": ["integer", "null"], "minimum": 0},
+            "notes": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": false
+        },
+        "evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "additionalProperties": false
+    },
+    "identity": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["state", "evidence"],
+          "properties": {
+            "state": {"const": "GENERIC"},
+            "evidence": {"$ref": "#/$defs/evidence"}
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["state", "manufacturer", "model", "identifiers", "evidence"],
+          "properties": {
+            "state": {"const": "VERIFIED_PRODUCT"},
+            "manufacturer": {"type": "string", "minLength": 1},
+            "model": {"type": "string", "minLength": 1},
+            "identifiers": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string"}},
+            "evidence": {"$ref": "#/$defs/evidence"}
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "geometry": {
+      "type": "object",
+      "required": [
+        "claimed_level",
+        "verified_level",
+        "promotion_state",
+        "verified_dimensions",
+        "verified_units",
+        "verified_orientation",
+        "floor_contact_verified",
+        "clearance_verified",
+        "anchor_pivot_verified",
+        "recognizable_form_verified",
+        "independent_scale_verified",
+        "proxy_disclosed",
+        "exact_form_verified",
+        "technical_interfaces_verified",
+        "manufacturing_authority_verified",
+        "evidence"
+      ],
+      "properties": {
+        "claimed_level": {"enum": ["G0", "G1", "G2", "G3", "G4", "G5"]},
+        "verified_level": {"enum": ["G0", "G1", "G2", "G3", "G4", "G5"]},
+        "promotion_state": {"enum": ["ACCEPTED", "BLOCKED"]},
+        "verified_dimensions": {"type": "boolean"},
+        "verified_units": {"type": "boolean"},
+        "verified_orientation": {"type": "boolean"},
+        "floor_contact_verified": {"type": "boolean"},
+        "clearance_verified": {"type": "boolean"},
+        "anchor_pivot_verified": {"type": "boolean"},
+        "recognizable_form_verified": {"type": "boolean"},
+        "independent_scale_verified": {"type": "boolean"},
+        "proxy_disclosed": {"type": "boolean"},
+        "exact_form_verified": {"type": "boolean"},
+        "technical_interfaces_verified": {"type": "boolean"},
+        "manufacturing_authority_verified": {"type": "boolean"},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "additionalProperties": false
+    },
+    "appearance": {
+      "type": "object",
+      "required": ["state", "canonical_views_verified", "materials_verified", "exact_likeness_verified", "evidence"],
+      "properties": {
+        "state": {"enum": ["UNVERIFIED", "PROXY_DISCLOSED", "EXACT_VERIFIED"]},
+        "canonical_views_verified": {"type": "boolean"},
+        "materials_verified": {"type": "boolean"},
+        "exact_likeness_verified": {"type": "boolean"},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "additionalProperties": false
+    },
+    "rights": {
+      "type": "object",
+      "required": ["state", "display_allowed", "derivatives_allowed", "redistribution_allowed", "evidence"],
+      "properties": {
+        "state": {"enum": ["UNKNOWN", "BLOCKED", "LIMITED", "CLEARED"]},
+        "display_allowed": {"type": "boolean"},
+        "derivatives_allowed": {"type": "boolean"},
+        "redistribution_allowed": {"type": "boolean"},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "additionalProperties": false
+    },
+    "attribution": {
+      "type": "object",
+      "required": ["required", "creator", "text", "license_id", "source_url", "display_verified", "evidence"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "creator": {"type": ["string", "null"]},
+        "text": {"type": ["string", "null"]},
+        "license_id": {"type": ["string", "null"]},
+        "source_url": {"type": ["string", "null"]},
+        "display_verified": {"type": "boolean"},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "additionalProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "required": ["record_id", "source_lane", "required_for_release", "inventory", "identity", "geometry", "appearance", "rights", "attribution", "publication"],
+      "properties": {
+        "record_id": {"type": "string", "minLength": 1},
+        "source_lane": {"enum": ["PRODUCT_TWIN", "DESIGN_ASSET"]},
+        "required_for_release": {"type": "boolean"},
+        "inventory": {
+          "type": "object",
+          "required": ["record_count", "publishable_count"],
+          "properties": {
+            "record_count": {"type": "integer", "minimum": 1},
+            "publishable_count": {"type": "integer", "minimum": 0}
+          },
+          "additionalProperties": false
+        },
+        "identity": {"$ref": "#/$defs/identity"},
+        "geometry": {"$ref": "#/$defs/geometry"},
+        "appearance": {"$ref": "#/$defs/appearance"},
+        "rights": {"$ref": "#/$defs/rights"},
+        "attribution": {"$ref": "#/$defs/attribution"},
+        "publication": {
+          "type": "object",
+          "required": ["state", "exact_product_claim", "evidence"],
+          "properties": {
+            "state": {"enum": ["UNPUBLISHED", "PLANNING_ONLY", "PUBLISHABLE"]},
+            "exact_product_claim": {"type": "boolean"},
+            "evidence": {"$ref": "#/$defs/evidence"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "site": {
+      "type": "object",
+      "required": ["site_twin_id", "required_for_release", "state", "source_count", "assertion_count", "hard_gates_open", "claims", "evidence"],
+      "properties": {
+        "site_twin_id": {"type": "string"},
+        "required_for_release": {"type": "boolean"},
+        "state": {"enum": ["READY", "BLOCKED"]},
+        "source_count": {"type": "integer", "minimum": 0},
+        "assertion_count": {"type": "integer", "minimum": 0},
+        "hard_gates_open": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "claims": {
+          "type": "object",
+          "required": ["boundary", "crs", "terrain", "planning_entitlement", "legal_access", "sun_and_views"],
+          "properties": {
+            "boundary": {"enum": ["ABSENT", "OFFICIAL_VERIFIED"]},
+            "crs": {"enum": ["UNRESOLVED", "VERIFIED"]},
+            "terrain": {"enum": ["ABSENT", "AUTHORITATIVE_VERIFIED"]},
+            "planning_entitlement": {"enum": ["UNRESOLVED", "ENTITLED"]},
+            "legal_access": {"enum": ["UNRESOLVED", "LEGAL_VERIFIED"]},
+            "sun_and_views": {"enum": ["CONDITIONAL", "VERIFIED"]}
+          },
+          "additionalProperties": false
+        },
+        "evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "additionalProperties": false
+    },
+    "transform": {
+      "type": "object",
+      "required": ["position_m", "rotation_deg"],
+      "properties": {
+        "position_m": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3},
+        "rotation_deg": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3}
+      },
+      "additionalProperties": false
+    },
+    "placement": {
+      "type": "object",
+      "required": ["placement_id", "source_lane", "reference_id", "transform", "reset_transform", "fallback_transform", "collision_state", "fit_state", "bundle"],
+      "properties": {
+        "placement_id": {"type": "string"},
+        "source_lane": {"enum": ["PRODUCT_TWIN", "DESIGN_ASSET"]},
+        "reference_id": {"type": "string"},
+        "transform": {"$ref": "#/$defs/transform"},
+        "reset_transform": {"$ref": "#/$defs/transform"},
+        "fallback_transform": {"$ref": "#/$defs/transform"},
+        "collision_state": {"enum": ["CLEAR", "COLLISION", "UNVERIFIED"]},
+        "fit_state": {"enum": ["INSIDE", "COLLISION", "OUTSIDE", "UNVERIFIED"]},
+        "bundle": {
+          "type": "object",
+          "required": ["bundle_id", "item_quantity", "visible_avatar_count"],
+          "properties": {
+            "bundle_id": {"type": ["string", "null"]},
+            "item_quantity": {"type": "integer", "minimum": 1},
+            "visible_avatar_count": {"type": "integer", "minimum": 1}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "room": {
+      "type": "object",
+      "required": ["scene_id", "required_for_release", "state", "source_commit", "expected_placement_count", "fallback_consistency_verified", "collision_state_verified", "placements", "evidence"],
+      "properties": {
+        "scene_id": {"type": "string"},
+        "required_for_release": {"type": "boolean"},
+        "state": {"enum": ["VERIFIED", "BLOCKED_MISSING_EXPORTED_MANIFEST", "BLOCKED_TEST_FAILURE"]},
+        "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "expected_placement_count": {"type": "integer", "minimum": 0},
+        "fallback_consistency_verified": {"type": "boolean"},
+        "collision_state_verified": {"type": "boolean"},
+        "placements": {"type": "array", "items": {"$ref": "#/$defs/placement"}},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "additionalProperties": false
+    },
+    "supply": {
+      "type": "object",
+      "required": ["supply_id", "required_for_release", "market", "destination", "claim_state", "current_claim", "coverage", "local_supplier_claim", "seller_or_dispatch_country", "conditional_substitution", "evidence"],
+      "properties": {
+        "supply_id": {"type": "string"},
+        "required_for_release": {"type": "boolean"},
+        "market": {"type": "string"},
+        "destination": {"$ref": "#/$defs/destination"},
+        "claim_state": {"enum": ["CURRENT", "OBSERVED_REFRESH_REQUIRED", "STALE", "UNKNOWN"]},
+        "current_claim": {"type": "boolean"},
+        "coverage": {
+          "type": "object",
+          "required": ["confirmed_deliverable_percentage", "confirmed_unavailable_percentage"],
+          "properties": {
+            "confirmed_deliverable_percentage": {"type": "number", "minimum": 0, "maximum": 100},
+            "confirmed_unavailable_percentage": {"type": "number", "minimum": 0, "maximum": 100}
+          },
+          "additionalProperties": false
+        },
+        "local_supplier_claim": {"type": "boolean"},
+        "seller_or_dispatch_country": {"type": ["string", "null"]},
+        "conditional_substitution": {
+          "type": "object",
+          "required": ["approved", "counted_as_current", "current_percentage", "conditional_percentage"],
+          "properties": {
+            "approved": {"type": "boolean"},
+            "counted_as_current": {"type": "boolean"},
+            "current_percentage": {"type": "number"},
+            "conditional_percentage": {"type": "number"}
+          },
+          "additionalProperties": false
+        },
+        "evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "additionalProperties": false
+    },
+    "procurement": {
+      "type": "object",
+      "required": ["contract_id", "required_for_release", "state", "ready", "destination", "gates", "evidence"],
+      "properties": {
+        "contract_id": {"type": "string"},
+        "required_for_release": {"type": "boolean"},
+        "state": {"enum": ["READY", "BLOCKED"]},
+        "ready": {"type": "boolean"},
+        "destination": {"$ref": "#/$defs/destination"},
+        "gates": {
+          "type": "object",
+          "required": [
+            "exact_product_and_selected_configuration",
+            "technical_fit_for_project",
+            "current_offer_or_quote",
+            "stock_or_allocated_availability",
+            "destination_delivery_confirmation",
+            "known_lead_time",
+            "known_landed_cost_or_authoritative_checkout_total",
+            "ready_cart_trade_or_rfq_route"
+          ],
+          "additionalProperties": {"type": "boolean"}
+        },
+        "evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "additionalProperties": false
+    },
+    "deployment": {
+      "type": "object",
+      "required": ["required_for_release", "state", "current_claim", "platform", "project_id", "version_number", "version_id", "deployment_id", "source_commit", "url", "evidence"],
+      "properties": {
+        "required_for_release": {"type": "boolean"},
+        "state": {"enum": ["SUCCEEDED", "FAILED", "UNKNOWN"]},
+        "current_claim": {"type": "boolean"},
+        "platform": {"type": "string"},
+        "project_id": {"type": "string"},
+        "version_number": {"type": "integer", "minimum": 1},
+        "version_id": {"type": "string"},
+        "deployment_id": {"type": "string"},
+        "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "url": {"type": "string", "format": "uri"},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,46 @@
+name: Composite release evidence
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      require_ready:
+        description: Fail unless the deterministic release decision is READY
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  verification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch pinned specialist evidence commits
+        run: git fetch --no-tags origin agent/avatar-factory-source-graph agent/plot-to-project-spatial-studio
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate honest manifest state
+        run: npm run release:composite:validate
+      - name: Prove critical rules fail under mutation
+        run: npm run release:composite:test
+      - name: Replay checkpoint artifacts into the manifest
+        run: npm run release:artifacts:verify
+      - name: Prove checkpoint artifact poisoning fails
+        run: npm run release:artifacts:test
+      - name: Validate Manifest-Driven Room Alpha
+        run: npm run room:alpha:validate
+      - name: Prove Room Alpha contract and spatial attacks fail
+        run: npm run room:alpha:test
+      - name: Independently inspect Avatar Factory Package 2
+        run: npm run verification:avatar:package2
+      - name: Prove Avatar Package 2 attacks fail
+        run: npm run verification:avatar:package2:test
+      - name: Cast release vote
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.require_ready }}
+        run: npm run release:composite:gate

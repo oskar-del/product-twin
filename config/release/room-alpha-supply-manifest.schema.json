@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/room-alpha-supply-manifest.schema.json",
+  "title": "Room Alpha destination-specific supply manifest v0.1",
+  "type": "object",
+  "required": ["schema_version", "manifest_id", "generated_at", "market", "destination", "offers"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "manifest_id": {"$ref": "#/$defs/id"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "market": {"enum": ["ES", "SE", "GB", "US"]},
+    "destination": {"$ref": "#/$defs/destination"},
+    "offers": {"type": "array", "items": {"$ref": "#/$defs/offer"}}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Z][A-Z0-9_:-]{2,127}$"},
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "destination": {
+      "type": "object", "required": ["country", "region", "postal_code"],
+      "properties": {"country": {"enum": ["ES", "SE", "GB", "US"]}, "region": {"type": ["string", "null"]}, "postal_code": {"type": "string", "minLength": 1}}, "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["evidence_id", "source_uri", "observed_at", "content_sha256", "freshness_state", "valid_until", "market", "destination"],
+      "properties": {
+        "evidence_id": {"$ref": "#/$defs/id"}, "source_uri": {"type": "string", "format": "uri"}, "observed_at": {"type": "string", "format": "date-time"},
+        "content_sha256": {"$ref": "#/$defs/hash"}, "freshness_state": {"enum": ["SNAPSHOT", "CURRENT", "STALE", "RECHECK_REQUIRED"]},
+        "valid_until": {"type": ["string", "null"], "format": "date-time"}, "market": {"enum": ["ES", "SE", "GB", "US"]}, "destination": {"$ref": "#/$defs/destination"}
+      },
+      "additionalProperties": false
+    },
+    "offer": {
+      "type": "object",
+      "required": ["offer_id", "product_twin_id", "market", "destination", "price", "currency", "stock_state", "delivery_state", "merchant", "evidence"],
+      "properties": {
+        "offer_id": {"$ref": "#/$defs/id"}, "product_twin_id": {"$ref": "#/$defs/id"}, "market": {"enum": ["ES", "SE", "GB", "US"]},
+        "destination": {"$ref": "#/$defs/destination"}, "price": {"type": "number", "minimum": 0}, "currency": {"type": "string", "minLength": 3, "maxLength": 3},
+        "stock_state": {"enum": ["IN_STOCK", "OUT_OF_STOCK", "UNKNOWN"]}, "delivery_state": {"enum": ["CONFIRMED", "UNCONFIRMED", "UNAVAILABLE"]},
+        "merchant": {"type": "string", "minLength": 1}, "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}}
+      },
+      "additionalProperties": false
+    }
+  }
+}

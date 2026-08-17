@@ -1,0 +1,238 @@
+{
+  "schema_version": "0.1",
+  "result_id": "INDEPENDENT_FURNITURE_AVATAR_PACKAGE_2_RESULT",
+  "evaluated_at": "2026-08-18T12:00:00+02:00",
+  "verifier": "VERIFICATION_EVIDENCE_MONITORING",
+  "four_party_roles": {
+    "contract_proposer": "AVATAR_FACTORY",
+    "contract_executor": "AVATAR_FACTORY",
+    "independent_judge": "VERIFICATION_EVIDENCE_MONITORING",
+    "release_vote": "scripts/verify-furniture-avatar-package-2.mjs"
+  },
+  "source": {
+    "repository": "oskar-del/product-twin",
+    "branch": "agent/avatar-factory-source-graph",
+    "commit_sha": "c6b227654f312561415388efb0fe06d1401f8b86",
+    "commit_observed_at": "2026-08-18T00:14:51+02:00",
+    "package_path": "data/verification/packages/furniture-avatar-manifest-v0.1-package-2.json",
+    "package_sha256": "574da680aa6e94da302da1c9498497c19e6ba9854564de3ce45545c77f863198"
+  },
+  "decision": "BLOCK",
+  "eligibility": {
+    "package_acceptance": "BLOCK",
+    "internal_room_alpha": "BLOCK",
+    "public_publication": "BLOCK"
+  },
+  "observed_passes": {
+    "package_artifact_hashes": "46/46",
+    "primary_glb_hash_byte_and_world_bounds": "4/4",
+    "primary_floor_contact_and_centre_pivot": "4/4",
+    "canonical_view_hashes": "28/28",
+    "contact_sheet_hashes": "5/5",
+    "producer_package_tests": "3/3",
+    "deterministic_render_reproduction": "PASS_BYTE_CLEAN",
+    "json_parse": "240/240",
+    "producer_branch_test_files": "22_PASS_1_UNREPRODUCIBLE_MISSING_GITIGNORED_DESIGN_ASSET_RUNTIME_INPUT",
+    "independent_mutation_scenarios": "22/22_REJECTED"
+  },
+  "failed_gates": {
+    "SOURCE_COMMIT_UNDECLARED": 1,
+    "EVIDENCE_OBSERVED_AT_MISSING": 1,
+    "EVIDENCE_FRESHNESS_STATE_MISSING": 1,
+    "MANIFEST_SCHEMA_ASSET_PROPERTIES_MISNESTED": 1,
+    "UNKNOWN_FIELD": 40,
+    "QA_RENDERER_DEPENDENCY_UNBOUND": 1,
+    "G2_DIMENSION_SOURCE_OBSERVATION_UNBOUND": 5,
+    "G2_DIMENSION_SOURCE_FRESHNESS_UNBOUND": 5,
+    "VISUAL_QA_AXIS_MISSING": 24,
+    "ORIENTATION_VIEW_CAMERA_EVIDENCE_MISSING": 2,
+    "CANONICAL_FRONT_REAR_LABEL_REVERSED": 2,
+    "FUNCTIONAL_CLEARANCE_UNVERIFIED": 4,
+    "FUNCTIONAL_CLEARANCE_ENVELOPE_INCOMPLETE": 5
+  },
+  "failed_gate_details": [
+    {
+      "code": "SOURCE_COMMIT_UNDECLARED",
+      "owner": "AVATAR_FACTORY",
+      "required_change": "Add the exact 40-character source commit to the package and schema."
+    },
+    {
+      "code": "EVIDENCE_OBSERVED_AT_MISSING",
+      "owner": "AVATAR_FACTORY",
+      "required_change": "Add package and evidence observation timestamps."
+    },
+    {
+      "code": "EVIDENCE_FRESHNESS_STATE_MISSING",
+      "owner": "AVATAR_FACTORY",
+      "required_change": "Declare SNAPSHOT, CURRENT, STALE, or RECHECK_REQUIRED for each evidence record; do not imply current supply."
+    },
+    {
+      "code": "MANIFEST_SCHEMA_ASSET_PROPERTIES_MISNESTED",
+      "owner": "AVATAR_FACTORY",
+      "required_change": "Move placement, dimensional_confidence, appearance, provenance, rights, attribution, publication, and verification_required into $defs.asset.properties. The current schema requires but rejects them."
+    },
+    {
+      "code": "QA_RENDERER_DEPENDENCY_UNBOUND",
+      "owner": "AVATAR_FACTORY",
+      "required_change": "Hash and package scripts/render-design-asset-qa-pack.py or remove the unbound renderer dependency."
+    },
+    {
+      "code": "G2_DIMENSION_SOURCE_OBSERVATION_UNBOUND",
+      "owner": "AVATAR_FACTORY",
+      "required_change": "Bind the official dimension observation, observed_at, source URL, content hash, and freshness state into each Product Twin record and manifest provenance. A declared envelope alone is not G2 evidence."
+    },
+    {
+      "code": "VISUAL_QA_AXIS_MISSING",
+      "owner": "AVATAR_FACTORY",
+      "required_change": "Record structured results for silhouette, colour, transparency, texture/UV quality, roughness, and visible defects in addition to orientation and floor contact."
+    },
+    {
+      "code": "CANONICAL_FRONT_REAR_LABEL_REVERSED",
+      "owner": "AVATAR_FACTORY",
+      "affected_assets": [
+        "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+        "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY"
+      ],
+      "required_change": "Place the front camera on the declared front_vector side, record camera_side_vector in the metric, re-render, and repeat independent visual review. The current sofa sheet visibly labels the smooth back as front and cushions as rear."
+    },
+    {
+      "code": "FUNCTIONAL_CLEARANCE_UNVERIFIED",
+      "owner": "AVATAR_FACTORY",
+      "required_change": "Replace DECLARED_PLANNING distances with verified clearance envelopes containing shape, reference frame, anchor/direction, and dimensions usable by Room Lab hard constraints."
+    }
+  ],
+  "public_failed_gates": {
+    "PUBLIC_RIGHTS_APPROVAL_MISSING": 4,
+    "PUBLIC_ATTRIBUTION_DISPLAY_UNVERIFIED": 4
+  },
+  "asset_decisions": [
+    {
+      "asset_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+      "role": "SOFA",
+      "lane": "PRODUCT_TWIN",
+      "claimed_geometry_level": "G2",
+      "binary_geometry": "PASS",
+      "room_alpha_promotion": "BLOCK",
+      "public_publication": "BLOCK"
+    },
+    {
+      "asset_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+      "role": "LOUNGE_CHAIR",
+      "lane": "PRODUCT_TWIN",
+      "claimed_geometry_level": "G2",
+      "binary_geometry": "PASS",
+      "room_alpha_promotion": "BLOCK",
+      "public_publication": "BLOCK"
+    },
+    {
+      "asset_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+      "role": "COFFEE_SIDE_TABLE",
+      "lane": "PRODUCT_TWIN",
+      "claimed_geometry_level": "G2",
+      "binary_geometry": "PASS",
+      "room_alpha_promotion": "BLOCK",
+      "public_publication": "BLOCK"
+    },
+    {
+      "asset_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+      "role": "FLOOR_LAMP",
+      "lane": "PRODUCT_TWIN",
+      "claimed_geometry_level": "G2",
+      "binary_geometry": "PASS",
+      "room_alpha_promotion": "BLOCK",
+      "public_publication": "BLOCK"
+    },
+    {
+      "asset_id": "AVATAR_ARPER_PLY_3853_EXACT_GEOMETRY_CANDIDATE",
+      "role": "COFFEE_SIDE_TABLE",
+      "lane": "PRODUCT_TWIN",
+      "claimed_geometry_level": "G2",
+      "binary_geometry": "BLOCK_NO_PERSISTENT_RUNTIME_BINARY",
+      "room_alpha_promotion": "BLOCK",
+      "public_publication": "BLOCK_RIGHTS_ATTRIBUTION_APPEARANCE_CLEARANCE"
+    }
+  ],
+  "lane_counts": {
+    "PRODUCT_TWIN": 5,
+    "DESIGN_ASSET": 0,
+    "G2": 5,
+    "internal_room_alpha_eligible": 0,
+    "publicly_publishable": 0
+  },
+  "evidence_freshness": [
+    {
+      "scope": "SOURCE_COMMIT",
+      "observed_at": "2026-08-18T00:14:51+02:00",
+      "freshness_state": "SNAPSHOT"
+    },
+    {
+      "scope": "PACKAGE",
+      "observed_at": null,
+      "freshness_state": "UNDECLARED"
+    },
+    {
+      "scope": "DIMENSION_SOURCE_RECORDS",
+      "observed_at": null,
+      "freshness_state": "UNDECLARED"
+    },
+    {
+      "scope": "SUPPLY",
+      "observed_at": null,
+      "freshness_state": "NOT_IN_AVATAR_MANIFEST_AND_NOT_INHERITED"
+    }
+  ],
+  "evidence_files_inspected": {
+    "count": 61,
+    "core": [
+      "data/verification/packages/furniture-avatar-manifest-v0.1-package-2.json",
+      "data/geometry/manifests/furniture-avatar-manifest-v0.1.json",
+      "config/geometry/furniture-avatar-manifest-v0.1.schema.json",
+      "config/verification/furniture-avatar-verification-package-v0.1.schema.json",
+      "data/metrics/furniture-avatar-manifest-v0.1-qa.json",
+      "data/evidence/furniture-avatar-manifest-v0.1-visual-review.json",
+      "scripts/build-furniture-avatar-manifest.mjs",
+      "scripts/render-furniture-avatar-manifest-qa.py",
+      "scripts/render-design-asset-qa-pack.py",
+      "scripts/test-build-furniture-avatar-manifest.mjs",
+      "scripts/test-render-furniture-avatar-manifest-qa.mjs",
+      "data/rights/arper-ply-3853-rights-and-rfq.json",
+      "config/geometry/avatar-levels.json",
+      "docs/handoffs/AVATAR-FACTORY.md",
+      "docs/handoffs/FURNITURE-AVATAR-MANIFEST-V0.1.md"
+    ],
+    "product_twins": [
+      "data/twins/PT_IKEA_KIVIK_49440597.json",
+      "data/twins/PT_IKEA_POANG_39240787.json",
+      "data/twins/PT_IKEA_LISTERBY_30513904.json",
+      "data/twins/PT_IKEA_LAUTERS_30405042.json"
+    ],
+    "geometry_and_metrics": [
+      "data/geometry/avatars/ikea-kivik-49440597-g2-sofa-proxy.glb",
+      "data/geometry/avatars/ikea-poang-39240787-g2-armchair-proxy.glb",
+      "data/geometry/avatars/ikea-listerby-30513904-g2-coffee-table-proxy.glb",
+      "data/geometry/avatars/ikea-lauters-30405042-g2-floor-lamp-proxy.glb",
+      "data/metrics/ikea-kivik-49440597-g2-sofa-proxy-latest.json",
+      "data/metrics/ikea-poang-39240787-g2-armchair-proxy-latest.json",
+      "data/metrics/ikea-listerby-30513904-g2-coffee-table-proxy-latest.json",
+      "data/metrics/ikea-lauters-30405042-g2-floor-lamp-proxy-latest.json",
+      "data/metrics/arper-ply-3853-g3-v0-1-glb-qa-latest.json"
+    ],
+    "canonical_pngs": {
+      "directory": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack",
+      "views": 28,
+      "contact_sheets": 5
+    }
+  },
+  "reproduction_commands": [
+    "git fetch --no-tags origin c6b227654f312561415388efb0fe06d1401f8b86",
+    "npm run verification:avatar:package2",
+    "npm run verification:avatar:package2:test",
+    "npm run verification:avatar:package2:gate",
+    "git diff --check"
+  ],
+  "release_vote_exit_codes": {
+    "report_mode": 0,
+    "require_approve_mode": 2
+  },
+  "policy": "No verifier, model, workstream, build pass, or prose judgement may waive a failed scripted gate."
+}

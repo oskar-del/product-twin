@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/furniture-avatar-package-2-independent-result.schema.json",
+  "title": "Independent Furniture Avatar Package #2 result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "result_id",
+    "evaluated_at",
+    "verifier",
+    "four_party_roles",
+    "source",
+    "decision",
+    "eligibility",
+    "observed_passes",
+    "failed_gates",
+    "failed_gate_details",
+    "public_failed_gates",
+    "asset_decisions",
+    "lane_counts",
+    "evidence_freshness",
+    "evidence_files_inspected",
+    "reproduction_commands",
+    "release_vote_exit_codes",
+    "policy"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "result_id": {"const": "INDEPENDENT_FURNITURE_AVATAR_PACKAGE_2_RESULT"},
+    "evaluated_at": {"type": "string", "minLength": 1},
+    "verifier": {"const": "VERIFICATION_EVIDENCE_MONITORING"},
+    "four_party_roles": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contract_proposer", "contract_executor", "independent_judge", "release_vote"],
+      "properties": {
+        "contract_proposer": {"const": "AVATAR_FACTORY"},
+        "contract_executor": {"const": "AVATAR_FACTORY"},
+        "independent_judge": {"const": "VERIFICATION_EVIDENCE_MONITORING"},
+        "release_vote": {"type": "string", "minLength": 1}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "branch", "commit_sha", "commit_observed_at", "package_path", "package_sha256"],
+      "properties": {
+        "repository": {"const": "oskar-del/product-twin"},
+        "branch": {"const": "agent/avatar-factory-source-graph"},
+        "commit_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "commit_observed_at": {"type": "string", "minLength": 1},
+        "package_path": {"type": "string", "minLength": 1},
+        "package_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "decision": {"enum": ["APPROVE", "BLOCK"]},
+    "eligibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["package_acceptance", "internal_room_alpha", "public_publication"],
+      "properties": {
+        "package_acceptance": {"enum": ["PASS", "BLOCK"]},
+        "internal_room_alpha": {"enum": ["PASS", "BLOCK"]},
+        "public_publication": {"enum": ["PASS", "BLOCK"]}
+      }
+    },
+    "observed_passes": {"type": "object", "minProperties": 1},
+    "failed_gates": {"type": "object", "minProperties": 1},
+    "failed_gate_details": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "public_failed_gates": {"type": "object", "minProperties": 1},
+    "asset_decisions": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["asset_id", "role", "lane", "claimed_geometry_level", "binary_geometry", "room_alpha_promotion", "public_publication"],
+        "properties": {
+          "asset_id": {"type": "string", "pattern": "^[A-Z0-9_]+$"},
+          "role": {"type": "string", "minLength": 1},
+          "lane": {"enum": ["PRODUCT_TWIN", "DESIGN_ASSET"]},
+          "claimed_geometry_level": {"enum": ["G0", "G1", "G2", "G3", "G4", "G5"]},
+          "binary_geometry": {"type": "string", "minLength": 1},
+          "room_alpha_promotion": {"enum": ["PASS", "BLOCK"]},
+          "public_publication": {"type": "string", "pattern": "^BLOCK"}
+        }
+      }
+    },
+    "lane_counts": {"type": "object", "minProperties": 1},
+    "evidence_freshness": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "evidence_files_inspected": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count", "core", "product_twins", "geometry_and_metrics", "canonical_pngs"],
+      "properties": {
+        "count": {"const": 61},
+        "core": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "product_twins": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "string"}},
+        "geometry_and_metrics": {"type": "array", "minItems": 9, "items": {"type": "string"}},
+        "canonical_pngs": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["directory", "views", "contact_sheets"],
+          "properties": {
+            "directory": {"type": "string", "minLength": 1},
+            "views": {"const": 28},
+            "contact_sheets": {"const": 5}
+          }
+        }
+      }
+    },
+    "reproduction_commands": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "release_vote_exit_codes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["report_mode", "require_approve_mode"],
+      "properties": {"report_mode": {"const": 0}, "require_approve_mode": {"const": 2}}
+    },
+    "policy": {"type": "string", "minLength": 1}
+  }
+}

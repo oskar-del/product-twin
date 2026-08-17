@@ -1,0 +1,41 @@
+{
+  "status": "BLOCK",
+  "candidate_id": "ROOM_ALPHA_V14",
+  "publication_target": "INTEGRATION_TEST",
+  "eligibility": {
+    "integration_testing": "BLOCK",
+    "public_deployment": "BLOCK"
+  },
+  "checks_total": 149,
+  "checks_passed": 141,
+  "failed_gates": [
+    {"code": "ROOM_SOURCE_COMMIT_UNREACHABLE", "path": "candidate.room_source.commit_sha", "message": "source commit must be independently reachable in the repository"},
+    {"code": "ROOM_SCENE_MANIFEST_MISSING", "path": "candidate.manifest_refs.scene", "message": "required manifest reference is missing"},
+    {"code": "AVATAR_MANIFEST_MISSING", "path": "candidate.manifest_refs.furniture_avatar", "message": "required manifest reference is missing"},
+    {"code": "BUILD_CHECK_UNVERIFIED", "path": "candidate.checks.build", "message": "reported, missing, or failed checks do not satisfy independent verification"},
+    {"code": "LINT_CHECK_UNVERIFIED", "path": "candidate.checks.lint", "message": "reported, missing, or failed checks do not satisfy independent verification"},
+    {"code": "ARTIFACT_CHECK_UNVERIFIED", "path": "candidate.checks.artifact_validation", "message": "reported, missing, or failed checks do not satisfy independent verification"},
+    {"code": "DETERMINISTIC_TESTS_UNVERIFIED", "path": "candidate.checks.deterministic_tests", "message": "reported, missing, or failed checks do not satisfy independent verification"}
+  ],
+  "public_failed_gates": [
+    {"code": "ROOM_SOURCE_COMMIT_UNREACHABLE", "path": "candidate.room_source.commit_sha", "message": "source commit must be independently reachable in the repository"},
+    {"code": "ROOM_SCENE_MANIFEST_MISSING", "path": "candidate.manifest_refs.scene", "message": "required manifest reference is missing"},
+    {"code": "AVATAR_MANIFEST_MISSING", "path": "candidate.manifest_refs.furniture_avatar", "message": "required manifest reference is missing"},
+    {"code": "BUILD_CHECK_UNVERIFIED", "path": "candidate.checks.build", "message": "reported, missing, or failed checks do not satisfy independent verification"},
+    {"code": "LINT_CHECK_UNVERIFIED", "path": "candidate.checks.lint", "message": "reported, missing, or failed checks do not satisfy independent verification"},
+    {"code": "ARTIFACT_CHECK_UNVERIFIED", "path": "candidate.checks.artifact_validation", "message": "reported, missing, or failed checks do not satisfy independent verification"},
+    {"code": "DETERMINISTIC_TESTS_UNVERIFIED", "path": "candidate.checks.deterministic_tests", "message": "reported, missing, or failed checks do not satisfy independent verification"},
+    {"code": "PUBLIC_BROWSER_MANUAL_QA_REQUIRED", "path": "candidate.checks.browser_manual_interaction_qa", "message": "public deployment requires browser/manual interaction QA"}
+  ],
+  "evidence_files_inspected": [
+    {"path": "data/releases/room-alpha-candidate-v0.1.json", "sha256": "0970e7f5e33aa4b1347d7af597e9c1a89c4b76363cebaa1d05df543ebb72a6a1", "state": "INSPECTED"}
+  ],
+  "evidence_freshness": [
+    {"evidence_id": "EVIDENCE_ROOM_ALPHA_V14_SITES", "freshness_state": "SNAPSHOT", "observed_at": "2026-08-17T17:25:00Z", "valid_until": null}
+  ],
+  "reproduction_commands": [
+    "npm run room:alpha:validate",
+    "npm run room:alpha:test",
+    "npm run room:alpha:gate"
+  ]
+}

@@ -1,0 +1,503 @@
+{
+  "schema_version": "0.1",
+  "manifest_id": "COMPOSITE_RELEASE_MILESTONE_2026_08_17_01",
+  "generated_at": "2026-08-17T14:29:00Z",
+  "release_state": "BLOCKED",
+  "release_blockers": [
+    "ASSET_PROMOTION_BLOCKED:DA_SH3D_KATOR_LEGAZ_BATCH_12",
+    "DEPLOYMENT_NOT_CURRENT:appgprj_6a822d27eeb08191ab5be5783925f742",
+    "MARKET_SUPPLY_NOT_CURRENT:ES:29660",
+    "PROCUREMENT_NOT_READY:PRODUCT_TWIN_READINESS_CARD_V0_1",
+    "ROOM_PLACEMENT_BLOCKED:ROOM_LAB_LIVING_V0",
+    "SITE_EVIDENCE_BLOCKED:SITE_CANOPUS_5410501UF2451S"
+  ],
+  "checkpoints": [
+    {
+      "workstream": "Brain / Product Twin Integration",
+      "branch": "agent/product-twin-integration",
+      "commit_sha": "ef1d52d53aa4d6c3b8cbd5f99c456c5d219a1a4c",
+      "relationship": "HEAD_AT_OBSERVATION",
+      "artifact_state": "HANDOFF_ONLY",
+      "verification": {
+        "state": "NOT_APPLICABLE",
+        "checks_passed": null,
+        "mutation_scenarios_passed": null,
+        "notes": "The checkpoint adds the persistent-chat topology document only."
+      },
+      "evidence": {
+        "source_ref": "https://github.com/oskar-del/product-twin/commit/ef1d52d53aa4d6c3b8cbd5f99c456c5d219a1a4c",
+        "observed_at": "2026-08-17T14:29:00Z",
+        "freshness_state": "SNAPSHOT",
+        "valid_until": null,
+        "market": null,
+        "destination": null
+      }
+    },
+    {
+      "workstream": "Avatar Factory & Source Graph",
+      "branch": "agent/avatar-factory-source-graph",
+      "commit_sha": "2a959d4f8e270d150b74e3f43daf624a4ed06c9c",
+      "relationship": "HEAD_AT_OBSERVATION",
+      "artifact_state": "IMPLEMENTATION_CHECKPOINT",
+      "verification": {
+        "state": "REPRODUCED",
+        "checks_passed": 17,
+        "mutation_scenarios_passed": null,
+        "notes": "All 17 repository test files passed independently. The reported 105-attack aggregate is not emitted by a machine-readable repository test result and is not independently promoted here. Runtime source archives and converted GLBs are absent by policy, so visual and independent-scale QA remain blocked."
+      },
+      "evidence": {
+        "source_ref": "https://github.com/oskar-del/product-twin/commit/2a959d4f8e270d150b74e3f43daf624a4ed06c9c",
+        "observed_at": "2026-08-17T14:29:00Z",
+        "freshness_state": "SNAPSHOT",
+        "valid_until": null,
+        "market": null,
+        "destination": null
+      }
+    },
+    {
+      "workstream": "Plot-to-Project Spatial Studio",
+      "branch": "agent/plot-to-project-spatial-studio",
+      "commit_sha": "656d9aebf1ac0410df2b1382e6e82663d6f49c23",
+      "relationship": "HEAD_AT_OBSERVATION",
+      "artifact_state": "IMPLEMENTATION_CHECKPOINT",
+      "verification": {
+        "state": "REPRODUCED",
+        "checks_passed": 5092,
+        "mutation_scenarios_passed": 16,
+        "notes": "The validator reproduced 5,092/5,092 checks over 72 assertions and 11 open hard gates; all 16 mutation scenarios failed as intended."
+      },
+      "evidence": {
+        "source_ref": "https://github.com/oskar-del/product-twin/commit/656d9aebf1ac0410df2b1382e6e82663d6f49c23",
+        "observed_at": "2026-08-17T14:29:00Z",
+        "freshness_state": "SNAPSHOT",
+        "valid_until": null,
+        "market": null,
+        "destination": null
+      }
+    },
+    {
+      "workstream": "Room Lab & Commerce Showroom",
+      "branch": "agent/room-lab-commerce-showroom",
+      "commit_sha": "eb02c51ef35fec438ef3f0da29b5a39b43ed7791",
+      "relationship": "HEAD_AT_OBSERVATION",
+      "artifact_state": "DEPLOYMENT_HANDOFF",
+      "verification": {
+        "state": "EXTERNAL_STATUS_ONLY",
+        "checks_passed": null,
+        "mutation_scenarios_passed": null,
+        "notes": "GitHub contains handoff metadata only. Sites independently confirms live version 10 and its source commit, but this checkpoint does not contain the exported placement manifest needed for a composite room gate."
+      },
+      "evidence": {
+        "source_ref": "https://github.com/oskar-del/product-twin/commit/eb02c51ef35fec438ef3f0da29b5a39b43ed7791",
+        "observed_at": "2026-08-17T14:29:00Z",
+        "freshness_state": "SNAPSHOT",
+        "valid_until": null,
+        "market": null,
+        "destination": null
+      }
+    },
+    {
+      "workstream": "Build, Procurement & Logistics",
+      "branch": "agent/build-procurement-logistics",
+      "commit_sha": "89001ce03cd8b85587cba385f1519637474bd724",
+      "relationship": "HEAD_AT_OBSERVATION",
+      "artifact_state": "HANDOFF_ONLY",
+      "verification": {
+        "state": "NOT_APPLICABLE",
+        "checks_passed": null,
+        "mutation_scenarios_passed": null,
+        "notes": "The checkpoint contains a handoff document and no executable procurement-plan implementation."
+      },
+      "evidence": {
+        "source_ref": "https://github.com/oskar-del/product-twin/commit/89001ce03cd8b85587cba385f1519637474bd724",
+        "observed_at": "2026-08-17T14:29:00Z",
+        "freshness_state": "SNAPSHOT",
+        "valid_until": null,
+        "market": null,
+        "destination": null
+      }
+    },
+    {
+      "workstream": "Visual Media Studio",
+      "branch": "agent/visual-media-studio",
+      "commit_sha": "1ee74f18a3af3a81978c9de64967313f8e32f48e",
+      "relationship": "HEAD_AT_OBSERVATION",
+      "artifact_state": "HANDOFF_ONLY",
+      "verification": {
+        "state": "NOT_APPLICABLE",
+        "checks_passed": null,
+        "mutation_scenarios_passed": null,
+        "notes": "The checkpoint contains a handoff document and no render or media proof implementation."
+      },
+      "evidence": {
+        "source_ref": "https://github.com/oskar-del/product-twin/commit/1ee74f18a3af3a81978c9de64967313f8e32f48e",
+        "observed_at": "2026-08-17T14:29:00Z",
+        "freshness_state": "SNAPSHOT",
+        "valid_until": null,
+        "market": null,
+        "destination": null
+      }
+    }
+  ],
+  "asset_records": [
+    {
+      "record_id": "DA_SH3D_KATOR_LEGAZ_BATCH_12",
+      "source_lane": "DESIGN_ASSET",
+      "required_for_release": true,
+      "inventory": {
+        "record_count": 12,
+        "publishable_count": 0
+      },
+      "identity": {
+        "state": "GENERIC",
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/2a959d4f8e270d150b74e3f43daf624a4ed06c9c/data/metrics/design-asset-index-latest.json",
+          "content_sha256": "9c70c6cf18771f31cf9d42ffb7479e56d5da89f5789a371294dbb6974c55a887",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      },
+      "geometry": {
+        "claimed_level": "G1",
+        "verified_level": "G0",
+        "promotion_state": "BLOCKED",
+        "verified_dimensions": false,
+        "verified_units": false,
+        "verified_orientation": false,
+        "floor_contact_verified": false,
+        "clearance_verified": false,
+        "anchor_pivot_verified": false,
+        "recognizable_form_verified": false,
+        "independent_scale_verified": false,
+        "proxy_disclosed": true,
+        "exact_form_verified": false,
+        "technical_interfaces_verified": false,
+        "manufacturing_authority_verified": false,
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/2a959d4f8e270d150b74e3f43daf624a4ed06c9c/data/metrics/sweet-home-3d-design-asset-conversion-latest.json",
+          "content_sha256": "39626a6da635c7e324fb03250694078fd4fc9e60700f03c962f3944e5b131a61",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      },
+      "appearance": {
+        "state": "UNVERIFIED",
+        "canonical_views_verified": false,
+        "materials_verified": false,
+        "exact_likeness_verified": false,
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/2a959d4f8e270d150b74e3f43daf624a4ed06c9c/data/metrics/design-asset-index-latest.json",
+          "content_sha256": "9c70c6cf18771f31cf9d42ffb7479e56d5da89f5789a371294dbb6974c55a887",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      },
+      "rights": {
+        "state": "BLOCKED",
+        "display_allowed": false,
+        "derivatives_allowed": false,
+        "redistribution_allowed": false,
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/2a959d4f8e270d150b74e3f43daf624a4ed06c9c/data/metrics/design-asset-index-latest.json",
+          "content_sha256": "9c70c6cf18771f31cf9d42ffb7479e56d5da89f5789a371294dbb6974c55a887",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      },
+      "attribution": {
+        "required": true,
+        "creator": "Andrew Kator and Jennifer Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_verified": false,
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/2a959d4f8e270d150b74e3f43daf624a4ed06c9c/data/metrics/design-asset-index-latest.json",
+          "content_sha256": "9c70c6cf18771f31cf9d42ffb7479e56d5da89f5789a371294dbb6974c55a887",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      },
+      "publication": {
+        "state": "UNPUBLISHED",
+        "exact_product_claim": false,
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/2a959d4f8e270d150b74e3f43daf624a4ed06c9c/data/metrics/design-asset-index-latest.json",
+          "content_sha256": "9c70c6cf18771f31cf9d42ffb7479e56d5da89f5789a371294dbb6974c55a887",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      }
+    },
+    {
+      "record_id": "PT_IKEA_KIVIK_49440597",
+      "source_lane": "PRODUCT_TWIN",
+      "required_for_release": true,
+      "inventory": {
+        "record_count": 1,
+        "publishable_count": 0
+      },
+      "identity": {
+        "state": "VERIFIED_PRODUCT",
+        "manufacturer": "IKEA",
+        "model": "KIVIK 3-seat sofa, Tibbleby beige/grey",
+        "identifiers": {
+          "article_no": "494.405.97"
+        },
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/d2687728ac5383bd9b621dfc354c0b53dec8929c/data/twins/PT_IKEA_KIVIK_49440597.json",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      },
+      "geometry": {
+        "claimed_level": "G2",
+        "verified_level": "G2",
+        "promotion_state": "ACCEPTED",
+        "verified_dimensions": true,
+        "verified_units": true,
+        "verified_orientation": true,
+        "floor_contact_verified": true,
+        "clearance_verified": true,
+        "anchor_pivot_verified": true,
+        "recognizable_form_verified": true,
+        "independent_scale_verified": true,
+        "proxy_disclosed": true,
+        "exact_form_verified": false,
+        "technical_interfaces_verified": false,
+        "manufacturing_authority_verified": false,
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/d2687728ac5383bd9b621dfc354c0b53dec8929c/data/metrics/ikea-kivik-49440597-g2-sofa-proxy-latest.json",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      },
+      "appearance": {
+        "state": "PROXY_DISCLOSED",
+        "canonical_views_verified": false,
+        "materials_verified": false,
+        "exact_likeness_verified": false,
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/d2687728ac5383bd9b621dfc354c0b53dec8929c/data/twins/PT_IKEA_KIVIK_49440597.json",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      },
+      "rights": {
+        "state": "LIMITED",
+        "display_allowed": true,
+        "derivatives_allowed": true,
+        "redistribution_allowed": false,
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/d2687728ac5383bd9b621dfc354c0b53dec8929c/data/twins/PT_IKEA_KIVIK_49440597.json",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      },
+      "attribution": {
+        "required": false,
+        "creator": null,
+        "text": null,
+        "license_id": null,
+        "source_url": null,
+        "display_verified": false,
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/d2687728ac5383bd9b621dfc354c0b53dec8929c/data/twins/PT_IKEA_KIVIK_49440597.json",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      },
+      "publication": {
+        "state": "PLANNING_ONLY",
+        "exact_product_claim": false,
+        "evidence": {
+          "source_ref": "https://github.com/oskar-del/product-twin/blob/d2687728ac5383bd9b621dfc354c0b53dec8929c/data/twins/PT_IKEA_KIVIK_49440597.json",
+          "observed_at": "2026-08-17T14:29:00Z",
+          "freshness_state": "SNAPSHOT",
+          "valid_until": null,
+          "market": null,
+          "destination": null
+        }
+      }
+    }
+  ],
+  "site_evidence": {
+    "site_twin_id": "SITE_CANOPUS_5410501UF2451S",
+    "required_for_release": true,
+    "state": "BLOCKED",
+    "source_count": 4,
+    "assertion_count": 72,
+    "hard_gates_open": [
+      "OFFICIAL_CATASTRO_BOUNDARY",
+      "OFFICIAL_IGN_TERRAIN_VERTICAL_DATUM",
+      "CONTEXT_OBSTRUCTION_SURFACE",
+      "CURRENT_PLANNING_CERTIFICATE",
+      "GOVERNING_PLANNING_INSTRUMENT",
+      "A7_BUILDING_LINE_AND_ACCESS",
+      "AUTHORITY_CONFIRMED_ENTRANCE",
+      "ROOFTOP_CORNICE_RULES",
+      "TITLE_AND_CHARGES",
+      "FLOOD_ENVIRONMENTAL_OVERLAYS",
+      "UTILITY_CAPACITY"
+    ],
+    "claims": {
+      "boundary": "ABSENT",
+      "crs": "UNRESOLVED",
+      "terrain": "ABSENT",
+      "planning_entitlement": "UNRESOLVED",
+      "legal_access": "UNRESOLVED",
+      "sun_and_views": "CONDITIONAL"
+    },
+    "evidence": {
+      "source_ref": "https://github.com/oskar-del/product-twin/commit/656d9aebf1ac0410df2b1382e6e82663d6f49c23",
+      "content_sha256": "fe04b92b794a8b94de8da130ea34d896ec15bbfc9b4f6e10e80dd5d1e831fc37",
+      "observed_at": "2026-08-17T14:29:00Z",
+      "freshness_state": "SNAPSHOT",
+      "valid_until": null,
+      "market": null,
+      "destination": null
+    }
+  },
+  "room_placement": {
+    "scene_id": "ROOM_LAB_LIVING_V0",
+    "required_for_release": true,
+    "state": "BLOCKED_MISSING_EXPORTED_MANIFEST",
+    "source_commit": "04cc6237ba6aeaf4a15f47d9cf5b5e2632abd1c0",
+    "expected_placement_count": 8,
+    "fallback_consistency_verified": false,
+    "collision_state_verified": false,
+    "placements": [],
+    "evidence": {
+      "source_ref": "https://product-twin-avatar-gallery.adored-elm-4393.chatgpt.site/room",
+      "observed_at": "2026-08-17T14:29:00Z",
+      "freshness_state": "SNAPSHOT",
+      "valid_until": null,
+      "market": null,
+      "destination": null
+    }
+  },
+  "market_supply": [
+    {
+      "supply_id": "ROOM_LAB_LIVING_ES_29660_2026_08_17",
+      "required_for_release": true,
+      "market": "ES",
+      "destination": {
+        "country": "ES",
+        "region": "Malaga",
+        "postal_code": "29660"
+      },
+      "claim_state": "OBSERVED_REFRESH_REQUIRED",
+      "current_claim": false,
+      "coverage": {
+        "confirmed_deliverable_percentage": 87.5,
+        "confirmed_unavailable_percentage": 12.5
+      },
+      "local_supplier_claim": false,
+      "seller_or_dispatch_country": null,
+      "conditional_substitution": {
+        "approved": false,
+        "counted_as_current": false,
+        "current_percentage": 87.5,
+        "conditional_percentage": 100
+      },
+      "evidence": {
+        "source_ref": "https://github.com/oskar-del/product-twin/blob/d2687728ac5383bd9b621dfc354c0b53dec8929c/data/procurement/living-room-design-supply-coverage-v0.1.json",
+        "observed_at": "2026-08-17T12:19:05.943Z",
+        "freshness_state": "RECHECK_REQUIRED",
+        "valid_until": null,
+        "market": "ES",
+        "destination": {
+          "country": "ES",
+          "region": "Malaga",
+          "postal_code": "29660"
+        }
+      }
+    }
+  ],
+  "procurement_readiness": {
+    "contract_id": "PRODUCT_TWIN_READINESS_CARD_V0_1",
+    "required_for_release": true,
+    "state": "BLOCKED",
+    "ready": false,
+    "destination": {
+      "country": "ES",
+      "region": "Malaga",
+      "postal_code": "29660"
+    },
+    "gates": {
+      "exact_product_and_selected_configuration": false,
+      "technical_fit_for_project": false,
+      "current_offer_or_quote": false,
+      "stock_or_allocated_availability": false,
+      "destination_delivery_confirmation": false,
+      "known_lead_time": false,
+      "known_landed_cost_or_authoritative_checkout_total": false,
+      "ready_cart_trade_or_rfq_route": false
+    },
+    "evidence": {
+      "source_ref": "https://github.com/oskar-del/product-twin/blob/d2687728ac5383bd9b621dfc354c0b53dec8929c/data/procurement/living-room-furniture-twin-readiness-v0.1.json",
+      "observed_at": "2026-08-17T10:54:00.990Z",
+      "freshness_state": "RECHECK_REQUIRED",
+      "valid_until": null,
+      "market": "ES",
+      "destination": {
+        "country": "ES",
+        "region": "Malaga",
+        "postal_code": "29660"
+      }
+    }
+  },
+  "deployment_state": {
+    "required_for_release": true,
+    "state": "SUCCEEDED",
+    "current_claim": false,
+    "platform": "OPENAI_SITES",
+    "project_id": "appgprj_6a822d27eeb08191ab5be5783925f742",
+    "version_number": 10,
+    "version_id": "appgprj_6a822d27eeb08191ab5be5783925f742~appgver_81fcf39b3d5081918aa7f1126c1d872c",
+    "deployment_id": "appgdep_6a8314641d24819192bce5da824b5749",
+    "source_commit": "04cc6237ba6aeaf4a15f47d9cf5b5e2632abd1c0",
+    "url": "https://product-twin-avatar-gallery.adored-elm-4393.chatgpt.site/room",
+    "evidence": {
+      "source_ref": "OPENAI_SITES_DEPLOYMENT_STATUS:appgdep_6a8314641d24819192bce5da824b5749",
+      "observed_at": "2026-08-17T14:29:00Z",
+      "freshness_state": "RECHECK_REQUIRED",
+      "valid_until": null,
+      "market": null,
+      "destination": null
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/room-alpha-release-candidate.schema.json",
+  "title": "Manifest-Driven Room Alpha release candidate",
+  "type": "object",
+  "required": ["schema_version", "candidate_id", "evaluated_at", "publication_target", "room_source", "manifest_refs", "checks"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "candidate_id": {"$ref": "#/$defs/id"},
+    "evaluated_at": {"type": "string", "format": "date-time"},
+    "publication_target": {"enum": ["INTEGRATION_TEST", "PUBLIC"]},
+    "room_source": {
+      "type": "object",
+      "required": ["branch", "commit_sha", "sites_project_id", "sites_version_id", "sites_version_number", "sites_archive_sha256", "sites_archive_file_count", "saved", "deployed", "public_version_number", "public_deployment_qa_state", "source_evidence"],
+      "properties": {
+        "branch": {"const": "agent/room-lab-commerce-showroom"},
+        "commit_sha": {"$ref": "#/$defs/commit"},
+        "sites_project_id": {"type": "string", "minLength": 1},
+        "sites_version_id": {"type": "string", "minLength": 1},
+        "sites_version_number": {"type": "integer", "minimum": 1},
+        "sites_archive_sha256": {"$ref": "#/$defs/hash"},
+        "sites_archive_file_count": {"type": "integer", "minimum": 1},
+        "saved": {"type": "boolean"},
+        "deployed": {"type": "boolean"},
+        "public_version_number": {"type": "integer", "minimum": 1},
+        "public_deployment_qa_state": {"enum": ["VERIFIED", "REPORTED", "UNVERIFIED"]},
+        "source_evidence": {"$ref": "#/$defs/evidence"}
+      },
+      "additionalProperties": false
+    },
+    "manifest_refs": {
+      "type": "object",
+      "required": ["scene", "furniture_avatar", "supply"],
+      "properties": {
+        "scene": {"anyOf": [{"$ref": "#/$defs/manifest_ref"}, {"type": "null"}]},
+        "furniture_avatar": {"anyOf": [{"$ref": "#/$defs/manifest_ref"}, {"type": "null"}]},
+        "supply": {"anyOf": [{"$ref": "#/$defs/manifest_ref"}, {"type": "null"}]}
+      },
+      "additionalProperties": false
+    },
+    "checks": {
+      "type": "object",
+      "required": ["build", "lint", "artifact_validation", "deterministic_tests", "browser_manual_interaction_qa"],
+      "properties": {
+        "build": {"$ref": "#/$defs/check"},
+        "lint": {"$ref": "#/$defs/check"},
+        "artifact_validation": {"$ref": "#/$defs/check"},
+        "deterministic_tests": {"$ref": "#/$defs/test_check"},
+        "browser_manual_interaction_qa": {"$ref": "#/$defs/check"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Z][A-Z0-9_:-]{2,127}$"},
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "manifest_ref": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"},
+        "sha256": {"$ref": "#/$defs/hash"}
+      },
+      "additionalProperties": false
+    },
+    "destination": {
+      "type": "object",
+      "required": ["country", "region", "postal_code"],
+      "properties": {
+        "country": {"enum": ["ES", "SE", "GB", "US"]},
+        "region": {"type": ["string", "null"]},
+        "postal_code": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["evidence_id", "source_uri", "observed_at", "content_sha256", "freshness_state", "valid_until", "market", "destination"],
+      "properties": {
+        "evidence_id": {"$ref": "#/$defs/id"},
+        "source_uri": {"type": "string", "format": "uri"},
+        "observed_at": {"type": "string", "format": "date-time"},
+        "content_sha256": {"$ref": "#/$defs/hash"},
+        "freshness_state": {"enum": ["SNAPSHOT", "CURRENT", "STALE", "RECHECK_REQUIRED"]},
+        "valid_until": {"type": ["string", "null"], "format": "date-time"},
+        "market": {"type": ["string", "null"]},
+        "destination": {"anyOf": [{"$ref": "#/$defs/destination"}, {"type": "null"}]}
+      },
+      "additionalProperties": false
+    },
+    "check": {
+      "type": "object",
+      "required": ["state", "evidence"],
+      "properties": {
+        "state": {"enum": ["PASS", "FAIL", "REPORTED", "MISSING"]},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+      },
+      "additionalProperties": false
+    },
+    "test_check": {
+      "type": "object",
+      "required": ["state", "passed", "total", "evidence"],
+      "properties": {
+        "state": {"enum": ["PASS", "FAIL", "REPORTED", "MISSING"]},
+        "passed": {"type": "integer", "minimum": 0},
+        "total": {"type": "integer", "minimum": 1},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+      },
+      "additionalProperties": false
+    }
+  }
+}

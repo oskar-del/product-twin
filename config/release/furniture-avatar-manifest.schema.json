@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/furniture-avatar-manifest.schema.json",
+  "title": "Furniture Avatar Manifest v0.1",
+  "type": "object",
+  "required": ["schema_version", "manifest_id", "generated_at", "source", "asset_set_sha256", "assets"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "manifest_id": {"$ref": "#/$defs/id"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "source": {
+      "type": "object",
+      "required": ["workstream", "branch", "commit_sha", "pipeline_version"],
+      "properties": {
+        "workstream": {"const": "AVATAR_FACTORY"},
+        "branch": {"const": "agent/avatar-factory-source-graph"},
+        "commit_sha": {"$ref": "#/$defs/commit"},
+        "pipeline_version": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "asset_set_sha256": {"$ref": "#/$defs/hash"},
+    "assets": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/asset"}}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Z][A-Z0-9_:-]{2,127}$"},
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "vec3": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+    "positive_vec3": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number", "exclusiveMinimum": 0}},
+    "destination": {
+      "type": "object",
+      "required": ["country", "region", "postal_code"],
+      "properties": {"country": {"enum": ["ES", "SE", "GB", "US"]}, "region": {"type": ["string", "null"]}, "postal_code": {"type": "string", "minLength": 1}},
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["evidence_id", "source_uri", "observed_at", "content_sha256", "freshness_state", "valid_until", "market", "destination"],
+      "properties": {
+        "evidence_id": {"$ref": "#/$defs/id"},
+        "source_uri": {"type": "string", "format": "uri"},
+        "observed_at": {"type": "string", "format": "date-time"},
+        "content_sha256": {"$ref": "#/$defs/hash"},
+        "freshness_state": {"enum": ["SNAPSHOT", "CURRENT", "STALE", "RECHECK_REQUIRED"]},
+        "valid_until": {"type": ["string", "null"], "format": "date-time"},
+        "market": {"type": ["string", "null"]},
+        "destination": {"anyOf": [{"$ref": "#/$defs/destination"}, {"type": "null"}]}
+      },
+      "additionalProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "required": ["asset_id", "source_lane", "asset_uri", "asset_sha256", "identity", "geometry", "appearance", "rights", "attribution", "spatial_semantics", "qa_records", "publication"],
+      "properties": {
+        "asset_id": {"$ref": "#/$defs/id"},
+        "source_lane": {"enum": ["PRODUCT_TWIN", "DESIGN_ASSET"]},
+        "asset_uri": {"type": "string", "format": "uri-reference"},
+        "asset_sha256": {"$ref": "#/$defs/hash"},
+        "identity": {
+          "type": "object",
+          "required": ["state", "canonical_id", "evidence"],
+          "properties": {
+            "state": {"enum": ["VERIFIED_PRODUCT", "GENERIC", "UNVERIFIED"]},
+            "canonical_id": {"anyOf": [{"$ref": "#/$defs/id"}, {"type": "null"}]},
+            "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+          },
+          "additionalProperties": false
+        },
+        "geometry": {
+          "type": "object",
+          "required": ["claimed_level", "verified_level", "dimensions_m", "orientation", "floor_anchor", "confidence", "evidence_flags", "evidence"],
+          "properties": {
+            "claimed_level": {"enum": ["G0", "G1", "G2", "G3", "G4", "G5"]},
+            "verified_level": {"enum": ["G0", "G1", "G2", "G3", "G4", "G5"]},
+            "dimensions_m": {"$ref": "#/$defs/positive_vec3"},
+            "orientation": {
+              "type": "object",
+              "required": ["up_axis", "forward_axis"],
+              "properties": {"up_axis": {"const": "+Y"}, "forward_axis": {"enum": ["+Z", "-Z", "+X", "-X"]}},
+              "additionalProperties": false
+            },
+            "floor_anchor": {
+              "type": "object",
+              "required": ["type", "local_point_m", "surface_normal"],
+              "properties": {"type": {"const": "FLOOR"}, "local_point_m": {"$ref": "#/$defs/vec3"}, "surface_normal": {"const": [0, 1, 0]}},
+              "additionalProperties": false
+            },
+            "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+            "evidence_flags": {
+              "type": "object",
+              "required": ["dimensions_verified", "units_verified", "orientation_verified", "floor_anchor_verified", "clearance_verified", "anchor_pivot_verified", "recognizable_form_verified", "independent_scale_verified", "proxy_disclosed", "exact_form_verified", "technical_interfaces_verified", "manufacturing_authority_verified"],
+              "properties": {
+                "dimensions_verified": {"type": "boolean"}, "units_verified": {"type": "boolean"}, "orientation_verified": {"type": "boolean"},
+                "floor_anchor_verified": {"type": "boolean"}, "clearance_verified": {"type": "boolean"}, "anchor_pivot_verified": {"type": "boolean"},
+                "recognizable_form_verified": {"type": "boolean"}, "independent_scale_verified": {"type": "boolean"}, "proxy_disclosed": {"type": "boolean"},
+                "exact_form_verified": {"type": "boolean"}, "technical_interfaces_verified": {"type": "boolean"}, "manufacturing_authority_verified": {"type": "boolean"}
+              },
+              "additionalProperties": false
+            },
+            "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}}
+          },
+          "additionalProperties": false
+        },
+        "appearance": {
+          "type": "object",
+          "required": ["state", "confidence", "evidence"],
+          "properties": {"state": {"enum": ["UNVERIFIED", "APPROXIMATE", "EXACT_VERIFIED"]}, "confidence": {"type": "number", "minimum": 0, "maximum": 1}, "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}},
+          "additionalProperties": false
+        },
+        "rights": {
+          "type": "object",
+          "required": ["state", "display_allowed", "derivatives_allowed", "redistribution_allowed", "attribution_required", "evidence"],
+          "properties": {
+            "state": {"enum": ["CLEARED", "UNRESOLVED", "RESTRICTED"]}, "display_allowed": {"type": "boolean"}, "derivatives_allowed": {"type": "boolean"},
+            "redistribution_allowed": {"type": "boolean"}, "attribution_required": {"type": "boolean"}, "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+          },
+          "additionalProperties": false
+        },
+        "attribution": {
+          "type": "object",
+          "required": ["required", "creator", "license_id", "source_uri", "display_text"],
+          "properties": {"required": {"type": "boolean"}, "creator": {"type": ["string", "null"]}, "license_id": {"type": ["string", "null"]}, "source_uri": {"type": ["string", "null"], "format": "uri"}, "display_text": {"type": ["string", "null"]}},
+          "additionalProperties": false
+        },
+        "spatial_semantics": {
+          "type": "object",
+          "required": ["footprint_m", "collision_envelope_m", "functional_clearance_m", "anchors", "unknown_product_fallback"],
+          "properties": {
+            "footprint_m": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "number", "exclusiveMinimum": 0}},
+            "collision_envelope_m": {"$ref": "#/$defs/envelope"},
+            "functional_clearance_m": {"$ref": "#/$defs/clearance"},
+            "anchors": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/anchor"}},
+            "unknown_product_fallback": {"$ref": "#/$defs/fallback"}
+          },
+          "additionalProperties": false
+        },
+        "qa_records": {"type": "array", "items": {"$ref": "#/$defs/qa"}},
+        "publication": {
+          "type": "object",
+          "required": ["promoted", "public_allowed"],
+          "properties": {"promoted": {"type": "boolean"}, "public_allowed": {"type": "boolean"}},
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "envelope": {
+      "type": "object", "required": ["width", "height", "depth"],
+      "properties": {"width": {"type": "number", "exclusiveMinimum": 0}, "height": {"type": "number", "exclusiveMinimum": 0}, "depth": {"type": "number", "exclusiveMinimum": 0}}, "additionalProperties": false
+    },
+    "clearance": {
+      "type": "object", "required": ["front", "back", "left", "right"],
+      "properties": {"front": {"type": "number", "minimum": 0}, "back": {"type": "number", "minimum": 0}, "left": {"type": "number", "minimum": 0}, "right": {"type": "number", "minimum": 0}}, "additionalProperties": false
+    },
+    "anchor": {
+      "type": "object", "required": ["anchor_id", "type", "local_point_m"],
+      "properties": {"anchor_id": {"$ref": "#/$defs/id"}, "type": {"enum": ["FLOOR", "WALL", "CEILING"]}, "local_point_m": {"$ref": "#/$defs/vec3"}}, "additionalProperties": false
+    },
+    "fallback": {
+      "type": "object", "required": ["policy", "dimensions_m", "clearance_m", "public_allowed"],
+      "properties": {"policy": {"enum": ["REJECT", "CONSERVATIVE_BOX"]}, "dimensions_m": {"$ref": "#/$defs/positive_vec3"}, "clearance_m": {"type": "number", "minimum": 0.3}, "public_allowed": {"const": false}}, "additionalProperties": false
+    },
+    "qa": {
+      "type": "object", "required": ["qa_id", "type", "state", "observed_at", "evidence"],
+      "properties": {"qa_id": {"$ref": "#/$defs/id"}, "type": {"enum": ["VISUAL", "ORIENTATION", "FLOOR_ANCHOR"]}, "state": {"enum": ["PASS", "FAIL"]}, "observed_at": {"type": "string", "format": "date-time"}, "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}}},
+      "additionalProperties": false
+    }
+  }
+}

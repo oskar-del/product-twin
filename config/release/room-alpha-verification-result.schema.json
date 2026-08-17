@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/room-alpha-verification-result.schema.json",
+  "title": "Room Alpha independent verification result",
+  "type": "object",
+  "required": ["status", "candidate_id", "publication_target", "eligibility", "checks_total", "checks_passed", "failed_gates", "public_failed_gates", "evidence_files_inspected", "evidence_freshness", "reproduction_commands"],
+  "properties": {
+    "status": {"enum": ["PASS", "BLOCK"]},
+    "candidate_id": {"type": "string"},
+    "publication_target": {"enum": ["INTEGRATION_TEST", "PUBLIC"]},
+    "eligibility": {
+      "type": "object", "required": ["integration_testing", "public_deployment"],
+      "properties": {"integration_testing": {"enum": ["PASS", "BLOCK"]}, "public_deployment": {"enum": ["PASS", "BLOCK"]}}, "additionalProperties": false
+    },
+    "checks_total": {"type": "integer", "minimum": 0},
+    "checks_passed": {"type": "integer", "minimum": 0},
+    "failed_gates": {"type": "array", "items": {"$ref": "#/$defs/failure"}},
+    "public_failed_gates": {"type": "array", "items": {"$ref": "#/$defs/failure"}},
+    "evidence_files_inspected": {"type": "array", "items": {"$ref": "#/$defs/file"}},
+    "evidence_freshness": {"type": "array", "items": {"$ref": "#/$defs/freshness"}},
+    "reproduction_commands": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "failure": {
+      "type": "object", "required": ["code", "path", "message"],
+      "properties": {"code": {"type": "string", "pattern": "^[A-Z0-9_]+$"}, "path": {"type": "string"}, "message": {"type": "string", "minLength": 1}}, "additionalProperties": false
+    },
+    "file": {
+      "type": "object", "required": ["path", "sha256", "state"],
+      "properties": {"path": {"type": "string", "minLength": 1}, "sha256": {"$ref": "#/$defs/hash"}, "state": {"enum": ["INSPECTED", "MISSING"]}}, "additionalProperties": false
+    },
+    "freshness": {
+      "type": "object", "required": ["evidence_id", "freshness_state", "observed_at", "valid_until"],
+      "properties": {"evidence_id": {"type": "string"}, "freshness_state": {"enum": ["SNAPSHOT", "CURRENT", "STALE", "RECHECK_REQUIRED"]}, "observed_at": {"type": "string", "format": "date-time"}, "valid_until": {"type": ["string", "null"], "format": "date-time"}}, "additionalProperties": false
+    }
+  }
+}

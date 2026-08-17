@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1",
+  "candidate_id": "ROOM_ALPHA_V14",
+  "evaluated_at": "2026-08-17T17:25:00Z",
+  "publication_target": "INTEGRATION_TEST",
+  "room_source": {
+    "branch": "agent/room-lab-commerce-showroom",
+    "commit_sha": "a2e4b206742f4a742e8770cf71e7ca25a91cd674",
+    "sites_project_id": "appgprj_6a822d27eeb08191ab5be5783925f742",
+    "sites_version_id": "appgprj_6a822d27eeb08191ab5be5783925f742~appgver_50147c0b4e3c81919b0aff384d853998",
+    "sites_version_number": 14,
+    "sites_archive_sha256": "2df0b20d3012f2342d61eb310a7e217f0f3c752163762bbce724c1b431e70a1f",
+    "sites_archive_file_count": 79,
+    "saved": true,
+    "deployed": false,
+    "public_version_number": 11,
+    "public_deployment_qa_state": "REPORTED",
+    "source_evidence": {
+      "evidence_id": "EVIDENCE_ROOM_ALPHA_V14_SITES",
+      "source_uri": "urn:openai:sites:version:appgprj_6a822d27eeb08191ab5be5783925f742~appgver_50147c0b4e3c81919b0aff384d853998",
+      "observed_at": "2026-08-17T17:25:00Z",
+      "content_sha256": "2df0b20d3012f2342d61eb310a7e217f0f3c752163762bbce724c1b431e70a1f",
+      "freshness_state": "SNAPSHOT",
+      "valid_until": null,
+      "market": null,
+      "destination": null
+    }
+  },
+  "manifest_refs": {
+    "scene": null,
+    "furniture_avatar": null,
+    "supply": null
+  },
+  "checks": {
+    "build": {"state": "REPORTED", "evidence": []},
+    "lint": {"state": "REPORTED", "evidence": []},
+    "artifact_validation": {"state": "REPORTED", "evidence": []},
+    "deterministic_tests": {"state": "REPORTED", "passed": 11, "total": 11, "evidence": []},
+    "browser_manual_interaction_qa": {"state": "MISSING", "evidence": []}
+  }
+}
