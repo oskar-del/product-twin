@@ -12,6 +12,13 @@ Canonical procurement artifact:
 - Schema: `config/room-commerce-procurement-manifest.schema.json`
 - Room Lab read-only adapter: `data/exports/room-lab/marbella-commerce-es-29660.v1.json`
 
+Checkpoint identifiers:
+
+- Producer commit: `0a044388bfff525179e59227d1dd6aa0e62f1120`
+- Canonical content hash: `175191fc18b942c6683ff8131207fd06cb2e0e3757547c103549cd88abbe3089`
+- Room Lab adapter canonical hash: `0236892efe82318798f451bcdff9f4875854f67db87f03f9fee784f2f41cf4bc`
+- Hash basis: sorted canonical JSON; the canonical manifest excludes only its own `content_hash` object.
+
 The adapter includes all 14 Product Twin catalogue identities because the current Room Lab importer requires one offer record per Product Twin. Only eight are frozen selected lines, VALNÄS is a conditional unselected substitution, and the other five are explicit out-of-scope placeholders with no destination-supply claim. Design Assets are never emitted.
 
 ## Preserved truth
@@ -78,7 +85,7 @@ Blocked substitution gates:
 From the Product Twin repository:
 
 ```sh
-npm run procurement:room-commerce:build
+npm run procurement:room-commerce:build -- --producer-commit=0a044388bfff525179e59227d1dd6aa0e62f1120
 npm run procurement:room-commerce:test
 npm run procurement:room-commerce:validate -- --current-at=2026-08-17T20:00:00+02:00
 ```
@@ -118,4 +125,3 @@ Verification, Evidence & Monitoring needs:
 - For VALNÄS promotion: placement/circulation review, technical and finish approval, explicit client design approval, complete lead time, landed cost, and exact checkout/RFQ evidence.
 
 No purchase, cart creation, checkout, RFQ, supplier contact, merge, publish, or deployment is authorized by this checkpoint.
-
