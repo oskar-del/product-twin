@@ -1,8 +1,8 @@
 {
   "summary": {
-    "generated_at": "2026-08-16T17:19:58.862Z",
-    "targets": 2,
-    "targets_with_candidates": 2,
+    "generated_at": "2026-08-17T13:50:23.810Z",
+    "targets": 5,
+    "targets_with_candidates": 5,
     "strong_identity_candidates": 0,
     "policy": "Search payload ephemeral; persist stable external references and match evidence only."
   },
@@ -116,26 +116,6 @@
         {
           "source_id": "shopify_global_catalog",
           "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
-          "product_id": "gid://shopify/p/3amVQAj74exXQ4lfkkjiwm",
-          "variant_id": "gid://shopify/ProductVariant/43382365683866",
-          "seller_domain": "themodernshop.myshopify.com",
-          "seller_id": "gid://shopify/Shop/830842",
-          "matched_queries": [
-            "Muuto Outline Sofa 2-Seater",
-            "Muuto Outline 2 Seater"
-          ],
-          "identity_match_score": 0.5,
-          "identity_match_reasons": [
-            "manufacturer_name",
-            "family_name"
-          ],
-          "identity_state": "provisional_candidate",
-          "refresh_policy": "live_required",
-          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
-        },
-        {
-          "source_id": "shopify_global_catalog",
-          "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
           "product_id": "gid://shopify/p/4wwZCX7Y5hd5wAkgmcsyHB",
           "variant_id": "gid://shopify/ProductVariant/41177310003367",
           "seller_domain": "top3au.myshopify.com",
@@ -174,13 +154,293 @@
         {
           "source_id": "shopify_global_catalog",
           "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
-          "product_id": "gid://shopify/p/O11sLLGGp7gNPPJMtOss7",
-          "variant_id": "gid://shopify/ProductVariant/32394338140196",
-          "seller_domain": "really-well-made.myshopify.com",
-          "seller_id": "gid://shopify/Shop/8527752",
+          "product_id": "gid://shopify/p/1CKiyoVLEtTCehCxk7vzra",
+          "variant_id": "gid://shopify/ProductVariant/43383846633626",
+          "seller_domain": "themodernshop.myshopify.com",
+          "seller_id": "gid://shopify/Shop/830842",
           "matched_queries": [
             "Muuto Outline Sofa 2-Seater",
             "Muuto Outline 2 Seater"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
+          "product_id": "gid://shopify/p/2Bwm3VctfHngwQPQp2pQjd",
+          "variant_id": "gid://shopify/ProductVariant/42946754609301",
+          "seller_domain": "laatukaluste.myshopify.com",
+          "seller_id": "gid://shopify/Shop/63126044821",
+          "matched_queries": [
+            "Muuto Outline Sofa 2-Seater",
+            "Muuto Outline 2 Seater"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
+          "product_id": "gid://shopify/p/5z8SOhJJHoaHneBhkGg7Li",
+          "variant_id": "gid://shopify/ProductVariant/42946756673685",
+          "seller_domain": "laatukaluste.myshopify.com",
+          "seller_id": "gid://shopify/Shop/63126044821",
+          "matched_queries": [
+            "Muuto Outline Sofa 2-Seater",
+            "Muuto Outline 2 Seater"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        }
+      ]
+    },
+    {
+      "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+      "manufacturer": "Muuto",
+      "model": "Fiber Lounge Chair Wood Base",
+      "queries_run": 4,
+      "candidate_references": [
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+          "product_id": "gid://shopify/p/4UyN6ellqVEw7vvy85dbi6",
+          "variant_id": "gid://shopify/ProductVariant/15225615712301",
+          "seller_domain": "themodernshop.myshopify.com",
+          "seller_id": "gid://shopify/Shop/830842",
+          "matched_queries": [
+            "Muuto Fiber Lounge Chair Wood Base"
+          ],
+          "identity_match_score": 0.7,
+          "identity_match_reasons": [
+            "manufacturer_name",
+            "family_name",
+            "model_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+          "product_id": "gid://shopify/p/6HDa0EwsznJHFepNITNU8D",
+          "variant_id": "gid://shopify/ProductVariant/15225783156781",
+          "seller_domain": "themodernshop.myshopify.com",
+          "seller_id": "gid://shopify/Shop/830842",
+          "matched_queries": [
+            "Muuto Fiber Lounge Chair Wood Base"
+          ],
+          "identity_match_score": 0.5,
+          "identity_match_reasons": [
+            "manufacturer_name",
+            "family_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+          "product_id": "gid://shopify/p/64JPOTAroqsWdumycyLWxM",
+          "variant_id": "gid://shopify/ProductVariant/42378953556135",
+          "seller_domain": "top3au.myshopify.com",
+          "seller_id": "gid://shopify/Shop/57430180007",
+          "matched_queries": [
+            "Muuto Fiber Lounge Chair Wood Base"
+          ],
+          "identity_match_score": 0.5,
+          "identity_match_reasons": [
+            "manufacturer_name",
+            "family_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+          "product_id": "gid://shopify/p/1sMhtaZWfDTFPRbqvXQqNC",
+          "variant_id": "gid://shopify/ProductVariant/33732304863277",
+          "seller_domain": "themodernshop.myshopify.com",
+          "seller_id": "gid://shopify/Shop/830842",
+          "matched_queries": [
+            "Muuto Fiber 25513"
+          ],
+          "identity_match_score": 0.5,
+          "identity_match_reasons": [
+            "manufacturer_name",
+            "family_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+          "product_id": "gid://shopify/p/lC54YQ1DzChu8noktm2tB",
+          "variant_id": "gid://shopify/ProductVariant/46486948511883",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Fiber Lounge Chair Wood Base",
+            "Muuto Fiber 25513"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+          "product_id": "gid://shopify/p/5RcSRbs1dWB84HOlbseRos",
+          "variant_id": "gid://shopify/ProductVariant/46493612572811",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Fiber Lounge Chair Wood Base",
+            "Muuto Fiber 25513"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+          "product_id": "gid://shopify/p/5RfOWjAk5SOFluKWjzoJhn",
+          "variant_id": "gid://shopify/ProductVariant/46486937075851",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Fiber Lounge Chair Wood Base",
+            "Muuto Fiber 25513"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+          "product_id": "gid://shopify/p/7sSV7916ECQvyUgKadyFwS",
+          "variant_id": "gid://shopify/ProductVariant/46493612507275",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Fiber Lounge Chair Wood Base",
+            "Muuto Fiber 25513"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+          "product_id": "gid://shopify/p/25Yqd0vc8m9jUObTGwJNO6",
+          "variant_id": "gid://shopify/ProductVariant/46426738884747",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Fiber Lounge Chair Wood Base"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+          "product_id": "gid://shopify/p/kcvw4CG0q0kCYgbEDOgzm",
+          "variant_id": "gid://shopify/ProductVariant/46484574568587",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Fiber Lounge Chair Wood Base"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        }
+      ]
+    },
+    {
+      "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+      "manufacturer": "Muuto",
+      "model": "Around Coffee Table Small",
+      "queries_run": 4,
+      "candidate_references": [
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+          "product_id": "gid://shopify/p/6i9XiU0KQkajBtpr0lC3pr",
+          "variant_id": "gid://shopify/ProductVariant/55575219634559",
+          "seller_domain": "future-and-found.myshopify.com",
+          "seller_id": "gid://shopify/Shop/11473916",
+          "matched_queries": [
+            "Muuto Around Coffee Table Small Oak"
+          ],
+          "identity_match_score": 0.45,
+          "identity_match_reasons": [
+            "family_name",
+            "model_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+          "product_id": "gid://shopify/p/3gepFJV7Nxsg63ZgvQQ68X",
+          "variant_id": "gid://shopify/ProductVariant/52381376315728",
+          "seller_domain": "industrial-konzept.myshopify.com",
+          "seller_id": "gid://shopify/Shop/61797859493",
+          "matched_queries": [
+            "Muuto Around Coffee Table Small Oak"
           ],
           "identity_match_score": 0.25,
           "identity_match_reasons": [
@@ -192,14 +452,342 @@
         },
         {
           "source_id": "shopify_global_catalog",
-          "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
-          "product_id": "gid://shopify/p/1CKiyoVLEtTCehCxk7vzra",
-          "variant_id": "gid://shopify/ProductVariant/43383846633626",
+          "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+          "product_id": "gid://shopify/p/6OHq0ZN4NEouxlDqZuvvoR",
+          "variant_id": "gid://shopify/ProductVariant/46493653762187",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Around Coffee Table Small Oak",
+            "Muuto Around 60012"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+          "product_id": "gid://shopify/p/3tCTEYzheROzspT21GQZrs",
+          "variant_id": "gid://shopify/ProductVariant/46493653893259",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Around Coffee Table Small Oak",
+            "Muuto Around 60012"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+          "product_id": "gid://shopify/p/nvgmnJSPP6x31sjJL0H6O",
+          "variant_id": "gid://shopify/ProductVariant/53428775059799",
+          "seller_domain": "project-enky.myshopify.com",
+          "seller_id": "gid://shopify/Shop/96758694231",
+          "matched_queries": [
+            "Muuto Around Coffee Table Small Oak"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "family_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+          "product_id": "gid://shopify/p/5JqhK5niVMXeg0tzvqpvmd",
+          "variant_id": "gid://shopify/ProductVariant/46493670736011",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Around Coffee Table Small Oak",
+            "Muuto Around 60012"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+          "product_id": "gid://shopify/p/6sobLb7OTISgxGLiwI3CZP",
+          "variant_id": "gid://shopify/ProductVariant/46493653729419",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Around Coffee Table Small Oak"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+          "product_id": "gid://shopify/p/3AkrorrQ3fXoS1tSs4gyfm",
+          "variant_id": "gid://shopify/ProductVariant/46493653860491",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Around Coffee Table Small Oak"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+          "product_id": "gid://shopify/p/53Is9ljkjky1D4mMBKecOj",
+          "variant_id": "gid://shopify/ProductVariant/46493670539403",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Around Coffee Table Small Oak",
+            "Muuto Around 60012"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+          "product_id": "gid://shopify/p/5ERTLlpmef4bUnZ1clwZ4S",
+          "variant_id": "gid://shopify/ProductVariant/46491072037003",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Around Coffee Table Small Oak",
+            "Muuto Around 60012"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        }
+      ]
+    },
+    {
+      "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+      "manufacturer": "Muuto",
+      "model": "Leaf Floor Lamp",
+      "queries_run": 4,
+      "candidate_references": [
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+          "product_id": "gid://shopify/p/7taD7QfYbkmqIG9LFtywzy",
+          "variant_id": "gid://shopify/ProductVariant/257302832",
           "seller_domain": "themodernshop.myshopify.com",
           "seller_id": "gid://shopify/Shop/830842",
           "matched_queries": [
-            "Muuto Outline Sofa 2-Seater",
-            "Muuto Outline 2 Seater"
+            "Muuto Leaf Floor Lamp White",
+            "Muuto Leaf 13431"
+          ],
+          "identity_match_score": 0.45,
+          "identity_match_reasons": [
+            "manufacturer_name",
+            "model_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+          "product_id": "gid://shopify/p/5GaJc7GymMeJBBEMvsuCYx",
+          "variant_id": "gid://shopify/ProductVariant/41177232244903",
+          "seller_domain": "top3au.myshopify.com",
+          "seller_id": "gid://shopify/Shop/57430180007",
+          "matched_queries": [
+            "Muuto Leaf Floor Lamp White"
+          ],
+          "identity_match_score": 0.45,
+          "identity_match_reasons": [
+            "manufacturer_name",
+            "model_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+          "product_id": "gid://shopify/p/4gmpe2twz8BE76WHZ2aoRk",
+          "variant_id": "gid://shopify/ProductVariant/46492065431691",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Leaf Floor Lamp White",
+            "Muuto Leaf 13431"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+          "product_id": "gid://shopify/p/1cM5Ns5DhrYhwx8peXTA26",
+          "variant_id": "gid://shopify/ProductVariant/46493729030283",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Leaf Floor Lamp White",
+            "Muuto Leaf 13431"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+          "product_id": "gid://shopify/p/7smuvVb6nUD55adv2FejnN",
+          "variant_id": "gid://shopify/ProductVariant/46492057239691",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Leaf Floor Lamp White",
+            "Muuto Leaf 13431"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+          "product_id": "gid://shopify/p/6Mt3DmpLCyex6weKng69Aa",
+          "variant_id": "gid://shopify/ProductVariant/46486977872011",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Leaf Floor Lamp White",
+            "Muuto Leaf 13431"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+          "product_id": "gid://shopify/p/3BTttfB1BDKuUnaD0Ul5HR",
+          "variant_id": "gid://shopify/ProductVariant/44326096044278",
+          "seller_domain": "lamptwist-live.myshopify.com",
+          "seller_id": "gid://shopify/Shop/65926463734",
+          "matched_queries": [
+            "Muuto Leaf Floor Lamp White"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+          "product_id": "gid://shopify/p/40Ju4JltMfydwB7Ml7H74z",
+          "variant_id": "gid://shopify/ProductVariant/46486968467595",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Leaf Floor Lamp White",
+            "Muuto Leaf 13431"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+          "product_id": "gid://shopify/p/4pDCNcjrdrgoVn1J9zeeMJ",
+          "variant_id": "gid://shopify/ProductVariant/46486977904779",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Leaf Floor Lamp White",
+            "Muuto Leaf 13431"
+          ],
+          "identity_match_score": 0.25,
+          "identity_match_reasons": [
+            "manufacturer_name"
+          ],
+          "identity_state": "provisional_candidate",
+          "refresh_policy": "live_required",
+          "persisted_fields_policy": "stable_reference_and_match_evidence_only"
+        },
+        {
+          "source_id": "shopify_global_catalog",
+          "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+          "product_id": "gid://shopify/p/5O2pSBGDGQ7thDFzkwcLLB",
+          "variant_id": "gid://shopify/ProductVariant/46486962110603",
+          "seller_domain": "we5bmp-yw.myshopify.com",
+          "seller_id": "gid://shopify/Shop/72440053899",
+          "matched_queries": [
+            "Muuto Leaf Floor Lamp White",
+            "Muuto Leaf 13431"
           ],
           "identity_match_score": 0.25,
           "identity_match_reasons": [
@@ -389,7 +977,8 @@
           "seller_domain": "honest-ppe-supply.myshopify.com",
           "seller_id": "gid://shopify/Shop/4519592065",
           "matched_queries": [
-            "Arper Ply Table 3853"
+            "Arper Ply Table 3853",
+            "Ply Table 3853 Arper"
           ],
           "identity_match_score": 0,
           "identity_match_reasons": [],
