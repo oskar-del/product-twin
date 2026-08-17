@@ -1,10 +1,10 @@
 {
   "summary": {
-    "generated_at": "2026-08-17T13:50:05.231Z",
-    "candidates_checked": 20,
-    "exact_identity_verified": 1,
-    "family_model_verified": 9,
-    "unresolved_or_not_exact": 10
+    "generated_at": "2026-08-17T22:55:29.044Z",
+    "candidates_checked": 50,
+    "exact_identity_verified": 4,
+    "family_model_verified": 7,
+    "unresolved_or_not_exact": 39
   },
   "results": [
     {
@@ -105,25 +105,6 @@
     {
       "source_id": "shopify_global_catalog",
       "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
-      "product_id": "gid://shopify/p/3amVQAj74exXQ4lfkkjiwm",
-      "variant_id": "gid://shopify/ProductVariant/43382365683866",
-      "seller_domain": "themodernshop.myshopify.com",
-      "seller_id": "gid://shopify/Shop/830842",
-      "verification_state": "FAMILY_MODEL_VERIFIED_CONFIGURATION_UNRESOLVED",
-      "evidence": {
-        "manufacturer_item_match": false,
-        "gtin_match": false,
-        "vendor_match": true,
-        "model_family_match": true,
-        "merchant_sku": "M-OUT-SF-3-BLCK",
-        "merchant_barcode": null
-      },
-      "refresh_policy": "live_required_for_commerce",
-      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
-    },
-    {
-      "source_id": "shopify_global_catalog",
-      "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
       "product_id": "gid://shopify/p/4wwZCX7Y5hd5wAkgmcsyHB",
       "variant_id": "gid://shopify/ProductVariant/41177310003367",
       "seller_domain": "top3au.myshopify.com",
@@ -162,10 +143,10 @@
     {
       "source_id": "shopify_global_catalog",
       "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
-      "product_id": "gid://shopify/p/O11sLLGGp7gNPPJMtOss7",
-      "variant_id": "gid://shopify/ProductVariant/32394338140196",
-      "seller_domain": "really-well-made.myshopify.com",
-      "seller_id": "gid://shopify/Shop/8527752",
+      "product_id": "gid://shopify/p/1CKiyoVLEtTCehCxk7vzra",
+      "variant_id": "gid://shopify/ProductVariant/43383846633626",
+      "seller_domain": "themodernshop.myshopify.com",
+      "seller_id": "gid://shopify/Shop/830842",
       "verification_state": "FAMILY_MODEL_VERIFIED_CONFIGURATION_UNRESOLVED",
       "evidence": {
         "manufacturer_item_match": false,
@@ -181,18 +162,607 @@
     {
       "source_id": "shopify_global_catalog",
       "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
-      "product_id": "gid://shopify/p/1CKiyoVLEtTCehCxk7vzra",
-      "variant_id": "gid://shopify/ProductVariant/43383846633626",
-      "seller_domain": "themodernshop.myshopify.com",
-      "seller_id": "gid://shopify/Shop/830842",
-      "verification_state": "FAMILY_MODEL_VERIFIED_CONFIGURATION_UNRESOLVED",
+      "product_id": "gid://shopify/p/2Bwm3VctfHngwQPQp2pQjd",
+      "variant_id": "gid://shopify/ProductVariant/42946754609301",
+      "seller_domain": "laatukaluste.myshopify.com",
+      "seller_id": "gid://shopify/Shop/63126044821",
+      "verification_state": "NOT_EXACT",
       "evidence": {
         "manufacturer_item_match": false,
         "gtin_match": false,
         "vendor_match": true,
-        "model_family_match": true,
+        "model_family_match": false,
+        "merchant_sku": "67223",
+        "merchant_barcode": null
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_OUTLINE_2S_001",
+      "product_id": "gid://shopify/p/5z8SOhJJHoaHneBhkGg7Li",
+      "variant_id": "gid://shopify/ProductVariant/42946756673685",
+      "seller_domain": "laatukaluste.myshopify.com",
+      "seller_id": "gid://shopify/Shop/63126044821",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "27028-163",
+        "merchant_barcode": "5713222216672"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+      "product_id": "gid://shopify/p/4UyN6ellqVEw7vvy85dbi6",
+      "variant_id": "gid://shopify/ProductVariant/15225615712301",
+      "seller_domain": "themodernshop.myshopify.com",
+      "seller_id": "gid://shopify/Shop/830842",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
         "merchant_sku": null,
         "merchant_barcode": null
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+      "product_id": "gid://shopify/p/6HDa0EwsznJHFepNITNU8D",
+      "variant_id": "gid://shopify/ProductVariant/15225783156781",
+      "seller_domain": "themodernshop.myshopify.com",
+      "seller_id": "gid://shopify/Shop/830842",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": null,
+        "merchant_barcode": null
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+      "product_id": "gid://shopify/p/64JPOTAroqsWdumycyLWxM",
+      "variant_id": "gid://shopify/ProductVariant/42378953556135",
+      "seller_domain": "top3au.myshopify.com",
+      "seller_id": "gid://shopify/Shop/57430180007",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "25482-blck_cogn",
+        "merchant_barcode": null
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+      "product_id": "gid://shopify/p/1sMhtaZWfDTFPRbqvXQqNC",
+      "variant_id": "gid://shopify/ProductVariant/33732304863277",
+      "seller_domain": "themodernshop.myshopify.com",
+      "seller_id": "gid://shopify/Shop/830842",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": null,
+        "merchant_barcode": null
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+      "product_id": "gid://shopify/p/lC54YQ1DzChu8noktm2tB",
+      "variant_id": "gid://shopify/ProductVariant/46486948511883",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "FISIDSWN051011",
+        "merchant_barcode": "5713295826518"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+      "product_id": "gid://shopify/p/5RcSRbs1dWB84HOlbseRos",
+      "variant_id": "gid://shopify/ProductVariant/46493612572811",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "FIARMSWN051011",
+        "merchant_barcode": "5713295826907"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+      "product_id": "gid://shopify/p/5RfOWjAk5SOFluKWjzoJhn",
+      "variant_id": "gid://shopify/ProductVariant/46486937075851",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "FISIDSWN054041",
+        "merchant_barcode": "5713295826556"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+      "product_id": "gid://shopify/p/7sSV7916ECQvyUgKadyFwS",
+      "variant_id": "gid://shopify/ProductVariant/46493612507275",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "FIARMSWN054041",
+        "merchant_barcode": "5713295826945"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+      "product_id": "gid://shopify/p/25Yqd0vc8m9jUObTGwJNO6",
+      "variant_id": "gid://shopify/ProductVariant/46426738884747",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "FILARWOUEB08041",
+        "merchant_barcode": "5713292827129"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_FIBER_LOUNGE_001",
+      "product_id": "gid://shopify/p/kcvw4CG0q0kCYgbEDOgzm",
+      "variant_id": "gid://shopify/ProductVariant/46484574568587",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "FILOUWON04051",
+        "merchant_barcode": "5713295826648"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+      "product_id": "gid://shopify/p/6i9XiU0KQkajBtpr0lC3pr",
+      "variant_id": "gid://shopify/ProductVariant/55575219634559",
+      "seller_domain": "future-and-found.myshopify.com",
+      "seller_id": "gid://shopify/Shop/11473916",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "FF001692",
+        "merchant_barcode": "1576103"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+      "product_id": "gid://shopify/p/3gepFJV7Nxsg63ZgvQQ68X",
+      "variant_id": "gid://shopify/ProductVariant/52381376315728",
+      "seller_domain": "industrial-konzept.myshopify.com",
+      "seller_id": "gid://shopify/Shop/61797859493",
+      "verification_state": "EXACT_IDENTITY_VERIFIED",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": true,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "MUUTO-60012",
+        "merchant_barcode": "5713294887800"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "Exact product identity joined through merchant SKU/GTIN."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+      "product_id": "gid://shopify/p/6OHq0ZN4NEouxlDqZuvvoR",
+      "variant_id": "gid://shopify/ProductVariant/46493653762187",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "AROTABXL01",
+        "merchant_barcode": "5713294888012"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+      "product_id": "gid://shopify/p/3tCTEYzheROzspT21GQZrs",
+      "variant_id": "gid://shopify/ProductVariant/46493653893259",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "AROTABLR01",
+        "merchant_barcode": "5713294887916"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+      "product_id": "gid://shopify/p/nvgmnJSPP6x31sjJL0H6O",
+      "variant_id": "gid://shopify/ProductVariant/53428775059799",
+      "seller_domain": "project-enky.myshopify.com",
+      "seller_id": "gid://shopify/Shop/96758694231",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "0004460",
+        "merchant_barcode": null
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+      "product_id": "gid://shopify/p/5JqhK5niVMXeg0tzvqpvmd",
+      "variant_id": "gid://shopify/ProductVariant/46493670736011",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "AROTABLR06",
+        "merchant_barcode": "5713294887947"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+      "product_id": "gid://shopify/p/6sobLb7OTISgxGLiwI3CZP",
+      "variant_id": "gid://shopify/ProductVariant/46493653729419",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "AROTABLR05",
+        "merchant_barcode": "5713294887930"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+      "product_id": "gid://shopify/p/3AkrorrQ3fXoS1tSs4gyfm",
+      "variant_id": "gid://shopify/ProductVariant/46493653860491",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "AROTABXL07",
+        "merchant_barcode": "5713294888050"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+      "product_id": "gid://shopify/p/53Is9ljkjky1D4mMBKecOj",
+      "variant_id": "gid://shopify/ProductVariant/46493670539403",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "AROTABLR04",
+        "merchant_barcode": "5713294887923"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_AROUND_SMALL_001",
+      "product_id": "gid://shopify/p/5ERTLlpmef4bUnZ1clwZ4S",
+      "variant_id": "gid://shopify/ProductVariant/46491072037003",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "AROTABSM08",
+        "merchant_barcode": "5713294887862"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+      "product_id": "gid://shopify/p/7taD7QfYbkmqIG9LFtywzy",
+      "variant_id": "gid://shopify/ProductVariant/257302832",
+      "seller_domain": "themodernshop.myshopify.com",
+      "seller_id": "gid://shopify/Shop/830842",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "MLEAFLLP-WHIT",
+        "merchant_barcode": null
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+      "product_id": "gid://shopify/p/5GaJc7GymMeJBBEMvsuCYx",
+      "variant_id": "gid://shopify/ProductVariant/41177232244903",
+      "seller_domain": "top3au.myshopify.com",
+      "seller_id": "gid://shopify/Shop/57430180007",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "LEAFLRSA01",
+        "merchant_barcode": "5710562142722"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+      "product_id": "gid://shopify/p/4gmpe2twz8BE76WHZ2aoRk",
+      "variant_id": "gid://shopify/ProductVariant/46492065431691",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "EXACT_IDENTITY_VERIFIED",
+      "evidence": {
+        "manufacturer_item_match": true,
+        "gtin_match": true,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "LEAFLR01",
+        "merchant_barcode": "5710562134314"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "Exact product identity joined through merchant SKU/GTIN."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+      "product_id": "gid://shopify/p/1cM5Ns5DhrYhwx8peXTA26",
+      "variant_id": "gid://shopify/ProductVariant/46493729030283",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "LEAFLR02",
+        "merchant_barcode": "5710562134321"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+      "product_id": "gid://shopify/p/7smuvVb6nUD55adv2FejnN",
+      "variant_id": "gid://shopify/ProductVariant/46492057239691",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "PULFLR01",
+        "merchant_barcode": "5713294321151"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+      "product_id": "gid://shopify/p/6Mt3DmpLCyex6weKng69Aa",
+      "variant_id": "gid://shopify/ProductVariant/46486977872011",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "LEAFLR04",
+        "merchant_barcode": "5713294338357"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+      "product_id": "gid://shopify/p/3BTttfB1BDKuUnaD0Ul5HR",
+      "variant_id": "gid://shopify/ProductVariant/44326096044278",
+      "seller_domain": "lamptwist-live.myshopify.com",
+      "seller_id": "gid://shopify/Shop/65926463734",
+      "verification_state": "EXACT_IDENTITY_VERIFIED",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": true,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "MLLFL-065802",
+        "merchant_barcode": "5710562134314"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "Exact product identity joined through merchant SKU/GTIN."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+      "product_id": "gid://shopify/p/40Ju4JltMfydwB7Ml7H74z",
+      "variant_id": "gid://shopify/ProductVariant/46486968467595",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "13420",
+        "merchant_barcode": "5710562134208"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+      "product_id": "gid://shopify/p/4pDCNcjrdrgoVn1J9zeeMJ",
+      "variant_id": "gid://shopify/ProductVariant/46486977904779",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "LEAFLR03",
+        "merchant_barcode": "5713294338364"
+      },
+      "refresh_policy": "live_required_for_commerce",
+      "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
+    },
+    {
+      "source_id": "shopify_global_catalog",
+      "target_id": "EXACT_MUUTO_LEAF_FLOOR_001",
+      "product_id": "gid://shopify/p/5O2pSBGDGQ7thDFzkwcLLB",
+      "variant_id": "gid://shopify/ProductVariant/46486962110603",
+      "seller_domain": "we5bmp-yw.myshopify.com",
+      "seller_id": "gid://shopify/Shop/72440053899",
+      "verification_state": "NOT_EXACT",
+      "evidence": {
+        "manufacturer_item_match": false,
+        "gtin_match": false,
+        "vendor_match": true,
+        "model_family_match": false,
+        "merchant_sku": "LEATBL01",
+        "merchant_barcode": "5710562134215"
       },
       "refresh_policy": "live_required_for_commerce",
       "note": "No exact manufacturer item/GTIN match; do not join as exact configuration."
