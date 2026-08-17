@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/spatial/space-twin-v1.schema.json",
+  "title": "Space Twin v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "entity_type", "space_twin_id", "version", "lifecycle_state", "existing_condition_twin_id", "space_type", "intended_use", "frame", "space_geometry", "room_twin_ref", "semantic_anchor_refs", "munin_reference_ids", "external_evidence_refs", "blockers"],
+  "properties": {
+    "manifest_version": {"const": "space-twin/v1"},
+    "entity_type": {"const": "SpaceTwin"},
+    "space_twin_id": {"type": "string", "pattern": "^SPACE_[A-Z0-9_]+$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "lifecycle_state": {"enum": ["UNBOUND", "REFERENCE_ONLY", "SPATIAL_BASIS", "VERIFIED"]},
+    "existing_condition_twin_id": {"type": "string", "pattern": "^ECOND_[A-Z0-9_]+$"},
+    "space_type": {"type": "string", "minLength": 1},
+    "intended_use": {"type": "string", "minLength": 1},
+    "frame": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/frame"},
+    "space_geometry": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/geometryBinding"},
+    "room_twin_ref": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/immutableTwinRef"},
+    "semantic_anchor_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "munin_reference_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "external_evidence_refs": {"type": "array", "items": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/externalEvidenceBinding"}},
+    "blockers": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/blockers"}
+  }
+}

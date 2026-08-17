@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/spatial/existing-property-design-scenario-v1.schema.json",
+  "title": "Existing-property Design Scenario v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "entity_type", "scenario_id", "project_id", "site_twin_id", "existing_condition_twin_id", "mode", "status", "scope_refs", "transformation_operations", "external_evidence_refs", "blockers"],
+  "properties": {
+    "manifest_version": {"const": "existing-property-design-scenario/v1"},
+    "entity_type": {"const": "ExistingPropertyDesignScenario"},
+    "scenario_id": {"type": "string", "pattern": "^SCN_[A-Z0-9_]+$"},
+    "project_id": {"type": "string", "pattern": "^PRJ_[A-Z0-9_]+$"},
+    "site_twin_id": {"type": "string", "minLength": 3},
+    "existing_condition_twin_id": {"type": "string", "pattern": "^ECOND_[A-Z0-9_]+$"},
+    "mode": {
+      "enum": ["AS_IS", "COSMETIC_RENOVATION", "FULL_RENOVATION", "RECONFIGURATION", "ENERGY_RETROFIT", "EXTENSION"]
+    },
+    "status": {"enum": ["BLOCKED_NO_EXISTING_PROPERTY_EVIDENCE", "DRAFT_SPATIAL_ONLY", "READY_FOR_VERIFICATION", "VERIFIED"]},
+    "scope_refs": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "transformation_operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["operation_id", "operation_type", "target_twin_id", "source_geometry_ref", "result_geometry", "evidence_state", "evidence_refs"],
+        "properties": {
+          "operation_id": {"type": "string", "minLength": 1},
+          "operation_type": {"enum": ["KEEP", "REMOVE", "ADD", "MOVE", "REPLACE", "RECONFIGURE", "RETROFIT_ENVELOPE", "EXTEND"]},
+          "target_twin_id": {"type": "string", "minLength": 1},
+          "source_geometry_ref": {"type": ["string", "null"]},
+          "result_geometry": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/geometryBinding"},
+          "evidence_state": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/evidenceState"},
+          "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+        }
+      }
+    },
+    "external_evidence_refs": {"type": "array", "items": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/externalEvidenceBinding"}},
+    "blockers": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/blockers"}
+  }
+}

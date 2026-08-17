@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/spatial/unit-twin-v1.schema.json",
+  "title": "Unit Twin v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "entity_type", "unit_twin_id", "version", "lifecycle_state", "building_twin_id", "frame", "unit_geometry", "existing_condition_twin_ids", "munin_reference_ids", "external_evidence_refs", "blockers"],
+  "properties": {
+    "manifest_version": {"const": "unit-twin/v1"},
+    "entity_type": {"const": "UnitTwin"},
+    "unit_twin_id": {"type": "string", "pattern": "^UNIT_[A-Z0-9_]+$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "lifecycle_state": {"enum": ["UNBOUND", "REFERENCE_ONLY", "SPATIAL_BASIS", "VERIFIED"]},
+    "building_twin_id": {"type": "string", "pattern": "^BLDG_[A-Z0-9_]+$"},
+    "frame": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/frame"},
+    "unit_geometry": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/geometryBinding"},
+    "existing_condition_twin_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "munin_reference_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "external_evidence_refs": {"type": "array", "items": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/externalEvidenceBinding"}},
+    "blockers": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/blockers"}
+  }
+}

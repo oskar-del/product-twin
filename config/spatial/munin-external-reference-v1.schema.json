@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/spatial/munin-external-reference-v1.schema.json",
+  "title": "External Munin reference interface v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "entity_type", "interface_id", "provider", "consumer", "mode", "evidence_states", "supported_reference_types", "references", "ownership"],
+  "properties": {
+    "manifest_version": {"const": "munin-external-reference/v1"},
+    "entity_type": {"const": "MuninExternalReferenceInterface"},
+    "interface_id": {"type": "string", "pattern": "^MUNIN_IF_[A-Z0-9_]+$"},
+    "provider": {"const": "MUNIN"},
+    "consumer": {"const": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3"},
+    "mode": {"const": "REFERENCE_ONLY_NO_PAYLOAD"},
+    "evidence_states": {"const": ["RECORDED", "LISTED", "INFERRED", "FORECAST"]},
+    "supported_reference_types": {"const": ["PROPERTY", "BUILDING", "UNIT", "BRF", "HISTORIC_SALES", "CURRENT_LISTING", "COMPARABLE_SET"]},
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["reference_id", "reference_type", "external_id", "record_version", "canonical_uri", "content_sha256", "evidence_state", "observed_at", "source_system", "payload_persisted"],
+        "properties": {
+          "reference_id": {"type": "string", "pattern": "^MREF_[A-Z0-9_]+$"},
+          "reference_type": {"enum": ["PROPERTY", "BUILDING", "UNIT", "BRF", "HISTORIC_SALES", "CURRENT_LISTING", "COMPARABLE_SET"]},
+          "external_id": {"type": "string", "minLength": 1},
+          "record_version": {"type": "string", "minLength": 1},
+          "canonical_uri": {"type": ["string", "null"]},
+          "content_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+          "evidence_state": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/evidenceState"},
+          "observed_at": {"type": "string", "format": "date-time"},
+          "source_system": {"const": "MUNIN"},
+          "payload_persisted": {"const": false}
+        }
+      }
+    },
+    "ownership": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["identity_and_market_facts", "spatial_applicability", "transformation_geometry", "final_acceptance"],
+      "properties": {
+        "identity_and_market_facts": {"const": "MUNIN"},
+        "spatial_applicability": {"const": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3"},
+        "transformation_geometry": {"const": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3"},
+        "final_acceptance": {"const": "VERIFICATION"}
+      }
+    }
+  }
+}

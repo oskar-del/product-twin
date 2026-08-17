@@ -92,6 +92,9 @@
     "room:twin:mutations": "node scripts/test-room-twin-manifest.mjs",
     "room:twin:compat": "node scripts/validate-room-twins.mjs --room-lab-root ../room-lab-site --require-room-lab",
     "room:twin:gate": "npm run room:twin:validate && npm run room:twin:mutations",
+    "spatial:compiler:validate": "node scripts/validate-plot-to-project-spatial-contract.mjs",
+    "spatial:compiler:mutations": "node scripts/test-plot-to-project-spatial-contract.mjs",
+    "spatial:compiler:gate": "npm run spatial:compiler:validate && npm run spatial:compiler:mutations",
     "summarize": "node scripts/summarize.mjs"
   }
 }
