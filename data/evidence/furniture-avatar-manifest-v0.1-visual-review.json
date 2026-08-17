@@ -1,0 +1,63 @@
+{
+  "version": "0.1",
+  "record_type": "FURNITURE_AVATAR_PRE_VERIFICATION_VISUAL_REVIEW",
+  "reviewer_role": "AVATAR_FACTORY_PRE_VERIFICATION",
+  "independent_verification_state": "PENDING_PACKAGE_2_REVIEW",
+  "qa_metric": "data/metrics/furniture-avatar-manifest-v0.1-qa.json",
+  "review_scope": "Four primary Room Alpha planning proxies; Arper manufacturer binary excluded because rights forbid persistent commercial rendering.",
+  "policy": "A visual pass proves only the stated inspectable behavior. It does not grant rights, prove exact product likeness, prove exact finish, or approve public publication.",
+  "assets": [
+    {
+      "asset_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+      "overall": "PASS_G2_PLANNING_QA",
+      "orientation": "PASS_DECLARED_FRONT_NEGATIVE_Z_VISUALLY_DISTINCT_FROM_REAR",
+      "floor_contact": "PASS_MIN_Y_ZERO",
+      "dimensions": "PASS_OFFICIAL_ENVELOPE_VS_WORLD_TRANSFORMED_GLB_BOUNDS",
+      "materials_textures": "PASS_MATERIAL_CUES_ONLY_NO_EMBEDDED_TEXTURES_NO_EXACT_FINISH_CLAIM",
+      "front_back": "PASS_DISTINCT",
+      "collision_envelope": "PASS_MATCHES_VERIFIED_DIMENSION_ENVELOPE",
+      "attribution_display": "PARTIAL_SOURCE_LINK_DISCLOSURE_EXISTS_FULL_SURFACE_QA_REQUIRED",
+      "rights_publication": "INTERNAL_PROJECT_PROXY_ALLOWED_PUBLIC_BLOCKED_PENDING_INDEPENDENT_APPROVAL",
+      "blockers": ["exact likeness not verified", "exact fabric texture not verified", "all-surface attribution display not verified", "independent public-rights approval not recorded"]
+    },
+    {
+      "asset_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+      "overall": "PASS_G2_PLANNING_QA",
+      "orientation": "PASS_DECLARED_FRONT_NEGATIVE_Z_VISUALLY_DISTINCT_FROM_REAR",
+      "floor_contact": "PASS_MIN_Y_ZERO",
+      "dimensions": "PASS_OFFICIAL_ENVELOPE_VS_WORLD_TRANSFORMED_GLB_BOUNDS",
+      "materials_textures": "PASS_MATERIAL_CUES_ONLY_NO_EMBEDDED_TEXTURES_NO_EXACT_FINISH_CLAIM",
+      "front_back": "PASS_DISTINCT",
+      "collision_envelope": "PASS_MATCHES_VERIFIED_DIMENSION_ENVELOPE",
+      "attribution_display": "PARTIAL_SOURCE_LINK_DISCLOSURE_EXISTS_FULL_SURFACE_QA_REQUIRED",
+      "rights_publication": "INTERNAL_PROJECT_PROXY_ALLOWED_PUBLIC_BLOCKED_PENDING_INDEPENDENT_APPROVAL",
+      "blockers": ["exact likeness not verified", "exact upholstery/wood finish not verified", "all-surface attribution display not verified", "independent public-rights approval not recorded"]
+    },
+    {
+      "asset_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+      "overall": "PASS_G2_PLANNING_QA",
+      "orientation": "PASS_NON_DIRECTIONAL_PLACEMENT_CONTRACT",
+      "floor_contact": "PASS_MIN_Y_ZERO",
+      "dimensions": "PASS_OFFICIAL_ENVELOPE_VS_WORLD_TRANSFORMED_GLB_BOUNDS",
+      "materials_textures": "PASS_MATERIAL_CUES_ONLY_NO_EMBEDDED_TEXTURES_NO_EXACT_FINISH_CLAIM",
+      "front_back": "NOT_APPLICABLE_NON_DIRECTIONAL",
+      "collision_envelope": "PASS_MATCHES_VERIFIED_DIMENSION_ENVELOPE",
+      "attribution_display": "PARTIAL_SOURCE_LINK_DISCLOSURE_EXISTS_FULL_SURFACE_QA_REQUIRED",
+      "rights_publication": "INTERNAL_PROJECT_PROXY_ALLOWED_PUBLIC_BLOCKED_PENDING_INDEPENDENT_APPROVAL",
+      "blockers": ["exact likeness not verified", "exact veneer artwork not verified", "all-surface attribution display not verified", "independent public-rights approval not recorded"]
+    },
+    {
+      "asset_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+      "overall": "PASS_G2_PLANNING_QA",
+      "orientation": "PASS_NON_DIRECTIONAL_PLACEMENT_CONTRACT",
+      "floor_contact": "PASS_MIN_Y_ZERO",
+      "dimensions": "PASS_OFFICIAL_ENVELOPE_VS_WORLD_TRANSFORMED_GLB_BOUNDS",
+      "materials_textures": "PASS_MATERIAL_CUES_ONLY_NO_EMBEDDED_TEXTURES_NO_EXACT_FINISH_CLAIM",
+      "front_back": "NOT_APPLICABLE_NON_DIRECTIONAL",
+      "collision_envelope": "PASS_MATCHES_VERIFIED_DIMENSION_ENVELOPE",
+      "attribution_display": "PARTIAL_SOURCE_LINK_DISCLOSURE_EXISTS_FULL_SURFACE_QA_REQUIRED",
+      "rights_publication": "INTERNAL_PROJECT_PROXY_ALLOWED_PUBLIC_BLOCKED_PENDING_INDEPENDENT_APPROVAL",
+      "blockers": ["exact likeness not verified", "exact wood/textile finish not verified", "photometric behavior not verified", "all-surface attribution display not verified", "independent public-rights approval not recorded"]
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "package_id": "VERIFICATION_PACKAGE_2_FURNITURE_AVATAR_MANIFEST_V0_1",
+  "package_number": 2,
+  "version": "0.1",
+  "status": "READY_FOR_INDEPENDENT_VERIFICATION",
+  "subject": "LIVING_ROOM_ALPHA_FURNITURE_MANIFEST",
+  "source_branch": "agent/avatar-factory-source-graph",
+  "merge_authorized": false,
+  "publication_authorized": false,
+  "scope": {
+    "primary_assets": 4,
+    "supplemental_blocked_assets": 1,
+    "roles": [
+      "SOFA",
+      "LOUNGE_CHAIR",
+      "COFFEE_SIDE_TABLE",
+      "FLOOR_LAMP"
+    ]
+  },
+  "artifacts": [
+    {
+      "role": "MANIFEST",
+      "path": "data/geometry/manifests/furniture-avatar-manifest-v0.1.json",
+      "sha256": "a6d6ff1c005dcf14f2cf91bccf1890494b12b99f9eb101751c0560ba6b94fb62",
+      "required": true
+    },
+    {
+      "role": "MANIFEST_SCHEMA",
+      "path": "config/geometry/furniture-avatar-manifest-v0.1.schema.json",
+      "sha256": "d2e59bd28e3a3b8742989adb941502b48b30ea9d6d88ce51f48759c889b9e557",
+      "required": true
+    },
+    {
+      "role": "CANONICAL_QA_METRIC",
+      "path": "data/metrics/furniture-avatar-manifest-v0.1-qa.json",
+      "sha256": "1d87a58168440d5cd75389f63231cbf14955cf1a379491aba936d646a7df9d5b",
+      "required": true
+    },
+    {
+      "role": "VISUAL_REVIEW",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-visual-review.json",
+      "sha256": "819e2d5a38c4cc973d2f74758a453a13310352540e1afb6efc24fe0b62d69537",
+      "required": true
+    },
+    {
+      "role": "MANIFEST_BUILDER",
+      "path": "scripts/build-furniture-avatar-manifest.mjs",
+      "sha256": "7a79b7fef8c097afb561fc1c5fbbefea00f19d5bb5965e7945335e9ee0bc06d9",
+      "required": true
+    },
+    {
+      "role": "MANIFEST_MUTATION_TEST",
+      "path": "scripts/test-build-furniture-avatar-manifest.mjs",
+      "sha256": "f68dae681e2ae717b373eac55c80f9d3cf9f568a066ffb77a24e5c0e0b77736b",
+      "required": true
+    },
+    {
+      "role": "QA_RENDERER",
+      "path": "scripts/render-furniture-avatar-manifest-qa.py",
+      "sha256": "8a91778df2066a54a21adf54c4cca202f89337b567d2d727a122d3ece12d2ee7",
+      "required": true
+    },
+    {
+      "role": "QA_TEST",
+      "path": "scripts/test-render-furniture-avatar-manifest-qa.mjs",
+      "sha256": "19af1e3db7e5760d0ca4472c0c05308e9446a08c73cd0db3332ccb9ad22b8a2c",
+      "required": true
+    },
+    {
+      "role": "BRAIN_CHECKPOINT",
+      "path": "docs/handoffs/FURNITURE-AVATAR-MANIFEST-V0.1.md",
+      "sha256": "91e158ed2533a60dda3205f6def0b45319d18facb6aaeec7a573ff96db996dba",
+      "required": true
+    },
+    {
+      "role": "PERMANENT_AVATAR_FACTORY_HANDOFF",
+      "path": "docs/handoffs/AVATAR-FACTORY.md",
+      "sha256": "dda10affffc8d52e6d64c5bcc912ce02abb474c30c0f0daac1e0fcaeb6e3a7e0",
+      "required": true
+    },
+    {
+      "role": "PACKAGE_SCHEMA",
+      "path": "config/verification/furniture-avatar-verification-package-v0.1.schema.json",
+      "sha256": "f86319690a738d5bb3f5860849290248b361665b19e6a2736547d87709d06422",
+      "required": true
+    },
+    {
+      "role": "GEOMETRY_LEVEL_CONTRACT",
+      "path": "config/geometry/avatar-levels.json",
+      "sha256": "3271a34b51c7f83808e4835c2ab7f36c0f565f55ac73a1cd780671475b9a3082",
+      "required": true
+    },
+    {
+      "role": "ARPER_RIGHTS_REVIEW",
+      "path": "data/rights/arper-ply-3853-rights-and-rfq.json",
+      "sha256": "f2085ff0131af66e73bbfafe2aff08ff39ec85c861b1147dda8e7f3ec2c92e23",
+      "required": true
+    }
+  ],
+  "runtime_evidence": {
+    "git_policy": "RUNTIME_ONLY_NOT_COMMITTED",
+    "directory": ".runtime/furniture-avatar-qa/v0.1",
+    "views": 28,
+    "contact_sheets": 5,
+    "master_contact_sheet_sha256": "ff27529a18f02addf3c3e6cbb06ae16d38f59c2736b2edacf84c145dfe4ab861",
+    "reproducible": true
+  },
+  "asset_decisions": [
+    {
+      "asset_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+      "role": "SOFA",
+      "geometry_level": "G2",
+      "internal_ingest": "PASS",
+      "public_publication": "BLOCKED",
+      "pass_reasons": [
+        "VERIFIED_EXACT_PRODUCT_IDENTITY",
+        "PROJECT_AUTHORED_G2_PROXY_DISCLOSED_AS_NON_EXACT",
+        "INDEPENDENT_SCALE_PASS",
+        "CANONICAL_VISUAL_QA_PASS",
+        "FLOOR_ANCHOR_AND_COLLISION_ENVELOPE_PASS"
+      ],
+      "block_reasons": [
+        "INDEPENDENT_RIGHTS_APPROVAL_NOT_RECORDED",
+        "ATTRIBUTION_DISPLAY_NOT_VERIFIED_ON_ALL_REQUIRED_SURFACES"
+      ]
+    },
+    {
+      "asset_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+      "role": "LOUNGE_CHAIR",
+      "geometry_level": "G2",
+      "internal_ingest": "PASS",
+      "public_publication": "BLOCKED",
+      "pass_reasons": [
+        "VERIFIED_EXACT_PRODUCT_IDENTITY",
+        "PROJECT_AUTHORED_G2_PROXY_DISCLOSED_AS_NON_EXACT",
+        "INDEPENDENT_SCALE_PASS",
+        "CANONICAL_VISUAL_QA_PASS",
+        "FLOOR_ANCHOR_AND_COLLISION_ENVELOPE_PASS"
+      ],
+      "block_reasons": [
+        "INDEPENDENT_RIGHTS_APPROVAL_NOT_RECORDED",
+        "ATTRIBUTION_DISPLAY_NOT_VERIFIED_ON_ALL_REQUIRED_SURFACES"
+      ]
+    },
+    {
+      "asset_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+      "role": "COFFEE_SIDE_TABLE",
+      "geometry_level": "G2",
+      "internal_ingest": "PASS",
+      "public_publication": "BLOCKED",
+      "pass_reasons": [
+        "VERIFIED_EXACT_PRODUCT_IDENTITY",
+        "PROJECT_AUTHORED_G2_PROXY_DISCLOSED_AS_NON_EXACT",
+        "INDEPENDENT_SCALE_PASS",
+        "CANONICAL_VISUAL_QA_PASS",
+        "FLOOR_ANCHOR_AND_COLLISION_ENVELOPE_PASS"
+      ],
+      "block_reasons": [
+        "INDEPENDENT_RIGHTS_APPROVAL_NOT_RECORDED",
+        "ATTRIBUTION_DISPLAY_NOT_VERIFIED_ON_ALL_REQUIRED_SURFACES"
+      ]
+    },
+    {
+      "asset_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+      "role": "FLOOR_LAMP",
+      "geometry_level": "G2",
+      "internal_ingest": "PASS",
+      "public_publication": "BLOCKED",
+      "pass_reasons": [
+        "VERIFIED_EXACT_PRODUCT_IDENTITY",
+        "PROJECT_AUTHORED_G2_PROXY_DISCLOSED_AS_NON_EXACT",
+        "INDEPENDENT_SCALE_PASS",
+        "CANONICAL_VISUAL_QA_PASS",
+        "FLOOR_ANCHOR_AND_COLLISION_ENVELOPE_PASS"
+      ],
+      "block_reasons": [
+        "INDEPENDENT_RIGHTS_APPROVAL_NOT_RECORDED",
+        "ATTRIBUTION_DISPLAY_NOT_VERIFIED_ON_ALL_REQUIRED_SURFACES"
+      ]
+    },
+    {
+      "asset_id": "AVATAR_ARPER_PLY_3853_EXACT_GEOMETRY_CANDIDATE",
+      "role": "COFFEE_SIDE_TABLE",
+      "geometry_level": "G2",
+      "internal_ingest": "BLOCKED",
+      "public_publication": "BLOCKED",
+      "pass_reasons": [
+        "EXACT_MANUFACTURER_IDENTITY_VERIFIED",
+        "TRANSIENT_GEOMETRY_SCALE_QA_PASS"
+      ],
+      "block_reasons": [
+        "WRITTEN_COMMERCIAL_RENDERING_PERMISSION_MISSING",
+        "REDISTRIBUTION_PERMISSION_MISSING",
+        "PERSISTENT_BINARY_FORBIDDEN",
+        "APPROVED_PBR_MATERIAL_MISSING",
+        "FUNCTIONAL_CLEARANCE_UNVERIFIED"
+      ]
+    }
+  ],
+  "claims_for_verification": [
+    {
+      "id": "MANIFEST_CONTRACT",
+      "expected": "PASS",
+      "reason": "Versioned strict schema and deterministic builder define every required furniture-avatar axis.",
+      "evidence": [
+        "data/geometry/manifests/furniture-avatar-manifest-v0.1.json",
+        "config/geometry/furniture-avatar-manifest-v0.1.schema.json"
+      ]
+    },
+    {
+      "id": "FOUR_PRIMARY_ROLE_SELECTION",
+      "expected": "PASS",
+      "reason": "Exactly one sofa, lounge chair, coffee/side table and floor lamp are marked primary.",
+      "evidence": [
+        "data/geometry/manifests/furniture-avatar-manifest-v0.1.json"
+      ]
+    },
+    {
+      "id": "PRODUCT_IDENTITY_SEPARATE_FROM_PROXY_LIKENESS",
+      "expected": "PASS",
+      "reason": "Exact retail identities are verified separately while every project proxy sets exact_likeness_claimed false.",
+      "evidence": [
+        "scripts/test-build-furniture-avatar-manifest.mjs"
+      ]
+    },
+    {
+      "id": "PRODUCT_TWIN_DESIGN_ASSET_LEAKAGE_DEFENCE",
+      "expected": "PASS",
+      "reason": "Mutations injecting exact identity or commerce into the Design Asset lane fail deterministically.",
+      "evidence": [
+        "scripts/test-build-furniture-avatar-manifest.mjs"
+      ]
+    },
+    {
+      "id": "WORLD_TRANSFORMED_DIMENSIONS_AND_FLOOR_CONTACT",
+      "expected": "PASS",
+      "reason": "Parsed node transforms yield exact declared envelopes, zero floor-contact error and centred X/Z pivots for all four primaries.",
+      "evidence": [
+        "data/metrics/furniture-avatar-manifest-v0.1-qa.json"
+      ]
+    },
+    {
+      "id": "CANONICAL_SEVEN_VIEW_QA",
+      "expected": "PASS",
+      "reason": "All four primaries have front, rear, left, right, three-quarter, top and floor-contact evidence with recorded pre-Verification review.",
+      "evidence": [
+        "data/metrics/furniture-avatar-manifest-v0.1-qa.json",
+        "data/evidence/furniture-avatar-manifest-v0.1-visual-review.json"
+      ]
+    },
+    {
+      "id": "G2_ONLY_APPEARANCE_DISCLOSURE",
+      "expected": "PASS",
+      "reason": "Appearance remains medium-confidence material cues without embedded exact textures, so no primary is promoted beyond G2.",
+      "evidence": [
+        "data/geometry/manifests/furniture-avatar-manifest-v0.1.json"
+      ]
+    },
+    {
+      "id": "INTERNAL_ROOM_ALPHA_INGEST",
+      "expected": "PASS",
+      "reason": "Four project-authored G2 planning proxies have scale, anchor, collision, clearance and disclosure records required for internal planning.",
+      "evidence": [
+        "data/geometry/manifests/furniture-avatar-manifest-v0.1.json"
+      ]
+    },
+    {
+      "id": "PUBLIC_PUBLICATION",
+      "expected": "BLOCKED",
+      "reason": "Independent public-rights approval and complete attribution-display verification are not recorded for the four primaries.",
+      "evidence": [
+        "data/geometry/manifests/furniture-avatar-manifest-v0.1.json"
+      ]
+    },
+    {
+      "id": "ARPER_RIGHTS_AND_PUBLICATION",
+      "expected": "BLOCKED",
+      "reason": "Written commercial-rendering and redistribution permission, persistent-binary permission, approved PBR and functional clearance are missing.",
+      "evidence": [
+        "data/rights/arper-ply-3853-rights-and-rfq.json",
+        "data/geometry/manifests/furniture-avatar-manifest-v0.1.json"
+      ]
+    }
+  ],
+  "claims_explicitly_not_made": [
+    "G3 render-grade fidelity",
+    "exact manufacturer geometry for the four primary proxies",
+    "exact product texture or finish",
+    "public redistribution approval",
+    "complete customer-facing attribution verification",
+    "procurement readiness",
+    "destination availability"
+  ],
+  "expected_gate_state": {
+    "internal_room_alpha_ingestible": 4,
+    "publicly_publishable": 0,
+    "arper_runtime_ingestible": false,
+    "arper_publicly_publishable": false
+  },
+  "verification_requests": [
+    "Recompute every required artifact SHA-256",
+    "Run the manifest mutation suite",
+    "Re-render the canonical pack and compare metric invariants",
+    "Inspect front/rear orientation and floor contact from runtime contact sheets",
+    "Independently assess project-proxy derivative/public rendering rights",
+    "Verify attribution on every required Room Lab surface",
+    "Confirm Arper remains blocked without written permission",
+    "Confirm commerce and destination-supply data remain absent"
+  ],
+  "reproduction": {
+    "commands": [
+      "npm run furniture:avatar:manifest",
+      "npm run furniture:avatar:manifest:test",
+      "npm run furniture:avatar:qa:render",
+      "npm run furniture:avatar:qa:test",
+      "npm run furniture:avatar:verification:package",
+      "npm run furniture:avatar:verification:test",
+      "git diff --check"
+    ],
+    "expected": [
+      "5 manifest records: 4 primary plus 1 blocked Arper candidate",
+      "4 internal-ingestible primary assets",
+      "0 publicly publishable assets",
+      "28 canonical views and 5 contact sheets",
+      "all mutation tests pass",
+      "all 238 or more config/data JSON files parse",
+      "clean whitespace diff gate"
+    ]
+  },
+  "mutation_coverage": [
+    "Design Asset exact-product identity injection",
+    "Design Asset commerce-field injection",
+    "unverified Product Twin identity",
+    "G1 public promotion",
+    "unresolved-rights public promotion",
+    "proxy exact-likeness escalation",
+    "appearance/dimensional-confidence collapse",
+    "geometry hash corruption",
+    "Arper publication bypass",
+    "package authority escalation",
+    "package gate-count escalation",
+    "package artifact hash corruption",
+    "runtime evidence count mutation"
+  ]
+}

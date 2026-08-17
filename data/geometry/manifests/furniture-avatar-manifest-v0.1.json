@@ -1,0 +1,752 @@
+{
+  "manifest_id": "FURNITURE_AVATAR_MANIFEST_V0_1",
+  "version": "0.1",
+  "record_type": "FURNITURE_AVATAR_MANIFEST",
+  "consumer": "MANIFEST_DRIVEN_ROOM_ALPHA",
+  "policy": {
+    "commerce_separate": true,
+    "destination_supply_separate": true,
+    "exact_identity_rule": "Exact product identity is independent evidence; project-authored approximate geometry never claims exact likeness.",
+    "public_fail_closed": true
+  },
+  "selected_roles": [
+    "SOFA",
+    "LOUNGE_CHAIR",
+    "COFFEE_SIDE_TABLE",
+    "FLOOR_LAMP"
+  ],
+  "summary": {
+    "primary_assets": 4,
+    "supplemental_blocked_assets": 1,
+    "internal_ingestible": 4,
+    "publicly_publishable": 0
+  },
+  "assets": [
+    {
+      "asset_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+      "primary_selection": true,
+      "role": "SOFA",
+      "record_lane": "PRODUCT_TWIN",
+      "product_identity": {
+        "verification_state": "VERIFIED_EXACT",
+        "twin_id": "PT_IKEA_KIVIK_49440597",
+        "manufacturer": "IKEA",
+        "family": "KIVIK",
+        "model": "3-seat sofa, Tibbleby beige/grey",
+        "article_no": "494.405.97",
+        "source_url": "https://www.ikea.com/es/es/p/kivik-sofa-3-plazas-tibbleby-beis-gris-s49440597/"
+      },
+      "geometry": {
+        "uri": "data/geometry/avatars/ikea-kivik-49440597-g2-sofa-proxy.glb",
+        "sha256": "a765cb6ddf0bd6b670c0b1add8e3d6a1546bffac23ba31736f850ce98e81d392",
+        "format": "GLB",
+        "bytes": 162076,
+        "level": "G2",
+        "level_state": "PROMOTED_REALISTIC_PLANNING_PROXY",
+        "persistent_binary": true,
+        "runtime_ingestible": true,
+        "exact_likeness_claimed": false,
+        "disclosure": "realistic upholstered planning proxy; exact IKEA industrial-design geometry and fabric texture are not claimed"
+      },
+      "independent_scale": {
+        "state": "PASS",
+        "method": "OFFICIAL_DIMENSIONS_VS_PARSED_GLB_BOUNDS",
+        "evidence": [
+          "data/twins/PT_IKEA_KIVIK_49440597.json",
+          "data/metrics/ikea-kivik-49440597-g2-sofa-proxy-latest.json"
+        ],
+        "max_relative_error": 1.9945059249406321e-16
+      },
+      "dimensions": {
+        "width": 2280,
+        "depth": 950,
+        "height": 830,
+        "unit": "mm"
+      },
+      "orientation": {
+        "up_axis": "Y",
+        "handedness": "RIGHT_HANDED",
+        "origin": "FLOOR_CENTER",
+        "floor_anchor": "MIN_Y_EQ_0",
+        "front_state": "DECLARED",
+        "front_vector": [
+          0,
+          0,
+          -1
+        ]
+      },
+      "collision_envelope": {
+        "width": 2280,
+        "depth": 950,
+        "height": 830,
+        "unit": "mm"
+      },
+      "functional_clearance": {
+        "state": "DECLARED_PLANNING",
+        "zones": [
+          {
+            "role": "FRONT_APPROACH",
+            "distance_mm": 700
+          }
+        ]
+      },
+      "placement": {
+        "roles": [
+          "SOFA",
+          "RESIDENTIAL_LOUNGE"
+        ],
+        "wall_preference": "BACK_TO_WALL_PREFERRED",
+        "centre_preference": "ALLOWED",
+        "furniture_relationships": [
+          "FACE_COFFEE_TABLE",
+          "ANCHOR_LOUNGE_GROUP"
+        ]
+      },
+      "dimensional_confidence": "HIGH_INDEPENDENT_SCALE_PASS",
+      "appearance": {
+        "confidence": "MEDIUM",
+        "state": "VARIANT_COLOUR_AND_ROUGHNESS_CUES_ONLY",
+        "materials": [
+          "warm beige-grey woven upholstery",
+          "dark low-profile feet"
+        ],
+        "exact_finish_claimed": false,
+        "pbr_state": "variant_specific_base_colour_and_roughness_cues",
+        "texture_evidence": [
+          "NO_EMBEDDED_TEXTURES",
+          "NO_MANUFACTURER_TEXTURE_ARTWORK_COPIED"
+        ]
+      },
+      "provenance": [
+        {
+          "kind": "PRODUCT_TWIN_RECORD",
+          "uri": "data/twins/PT_IKEA_KIVIK_49440597.json",
+          "sha256": "bed1930352a61a7833c2b2fdc68d0bdc13bcef3297034c83f8e72fc3a58577d9"
+        },
+        {
+          "kind": "GEOMETRY_QA_METRIC",
+          "uri": "data/metrics/ikea-kivik-49440597-g2-sofa-proxy-latest.json",
+          "sha256": "bc9296d812e37a506de5bc160771c2be6a1af1432dbf8dde7f9504ce7921dfd1"
+        },
+        {
+          "kind": "CANONICAL_VISUAL_REVIEW",
+          "uri": "data/evidence/furniture-avatar-manifest-v0.1-visual-review.json",
+          "sha256": "819e2d5a38c4cc973d2f74758a453a13310352540e1afb6efc24fe0b62d69537"
+        }
+      ],
+      "rights": {
+        "source_state": "PROJECT_AUTHORED_GEOMETRY",
+        "derivative_state": "NO_MANUFACTURER_GEOMETRY_OR_TEXTURE_COPIED",
+        "redistribution_state": "PROJECT_PROXY_ALLOWED",
+        "rendering_state": "INTERNAL_PROJECT_PROXY_ALLOWED",
+        "evidence": [
+          "data/twins/PT_IKEA_KIVIK_49440597.json",
+          "data/metrics/ikea-kivik-49440597-g2-sofa-proxy-latest.json"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "display_text": "IKEA KIVIK 494.405.97; Product Twin planning proxy, not manufacturer geometry.",
+        "source_url": "https://www.ikea.com/es/es/p/kivik-sofa-3-plazas-tibbleby-beis-gris-s49440597/",
+        "display_state": "PARTIAL_IDENTITY_SOURCE_DISCLOSURE",
+        "required_surfaces": [
+          "ROOM_OBJECT_DETAILS",
+          "AVATAR_GALLERY",
+          "EXPORTED_SCENE_CREDITS"
+        ]
+      },
+      "publication": {
+        "state": "INTERNAL_ROOM_ALPHA_READY_PUBLIC_BLOCKED",
+        "internal_ingest_allowed": true,
+        "public_allowed": false,
+        "blockers": [
+          "INDEPENDENT_RIGHTS_APPROVAL_NOT_RECORDED",
+          "ATTRIBUTION_DISPLAY_NOT_VERIFIED_ON_ALL_REQUIRED_SURFACES"
+        ]
+      },
+      "verification_required": [
+        "Approve project-authored proxy derivative/right status",
+        "Verify canonical-view QA evidence",
+        "Verify attribution on every required Room Lab surface"
+      ]
+    },
+    {
+      "asset_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+      "primary_selection": true,
+      "role": "LOUNGE_CHAIR",
+      "record_lane": "PRODUCT_TWIN",
+      "product_identity": {
+        "verification_state": "VERIFIED_EXACT",
+        "twin_id": "PT_IKEA_POANG_39240787",
+        "manufacturer": "IKEA",
+        "family": "POÄNG",
+        "model": "Armchair, birch veneer/Knisa light beige",
+        "article_no": "392.407.87",
+        "source_url": "https://www.ikea.com/es/es/p/poang-sillon-chapa-abedul-knisa-beige-claro-s39240787/"
+      },
+      "geometry": {
+        "uri": "data/geometry/avatars/ikea-poang-39240787-g2-armchair-proxy.glb",
+        "sha256": "7d1e5659d9f34247aefe65399859d1f7adfc2ed000e1ade9a38a0498fd93cb85",
+        "format": "GLB",
+        "bytes": 55396,
+        "level": "G2",
+        "level_state": "PROMOTED_REALISTIC_PLANNING_PROXY",
+        "persistent_binary": true,
+        "runtime_ingestible": true,
+        "exact_likeness_claimed": false,
+        "disclosure": "realistic birch-frame/upholstery planning proxy; exact IKEA curved-frame geometry and fabric texture are not claimed"
+      },
+      "independent_scale": {
+        "state": "PASS",
+        "method": "OFFICIAL_DIMENSIONS_VS_PARSED_GLB_BOUNDS",
+        "evidence": [
+          "data/twins/PT_IKEA_POANG_39240787.json",
+          "data/metrics/ikea-poang-39240787-g2-armchair-proxy-latest.json"
+        ],
+        "max_relative_error": 1.38642485026361e-16
+      },
+      "dimensions": {
+        "width": 680,
+        "depth": 820,
+        "height": 1000,
+        "unit": "mm"
+      },
+      "orientation": {
+        "up_axis": "Y",
+        "handedness": "RIGHT_HANDED",
+        "origin": "FLOOR_CENTER",
+        "floor_anchor": "MIN_Y_EQ_0",
+        "front_state": "DECLARED",
+        "front_vector": [
+          0,
+          0,
+          -1
+        ]
+      },
+      "collision_envelope": {
+        "width": 680,
+        "depth": 820,
+        "height": 1000,
+        "unit": "mm"
+      },
+      "functional_clearance": {
+        "state": "DECLARED_PLANNING",
+        "zones": [
+          {
+            "role": "FRONT_APPROACH",
+            "distance_mm": 600
+          }
+        ]
+      },
+      "placement": {
+        "roles": [
+          "LOUNGE_CHAIR",
+          "RESIDENTIAL_LOUNGE"
+        ],
+        "wall_preference": "NEUTRAL",
+        "centre_preference": "PREFERRED",
+        "furniture_relationships": [
+          "FACE_SOFA_OR_COFFEE_TABLE",
+          "KEEP_FRONT_APPROACH_CLEAR"
+        ]
+      },
+      "dimensional_confidence": "HIGH_INDEPENDENT_SCALE_PASS",
+      "appearance": {
+        "confidence": "MEDIUM",
+        "state": "VARIANT_COLOUR_AND_ROUGHNESS_CUES_ONLY",
+        "materials": [
+          "light birch veneer",
+          "light beige upholstery"
+        ],
+        "exact_finish_claimed": false,
+        "pbr_state": "variant_specific_base_colour_and_roughness_cues",
+        "texture_evidence": [
+          "NO_EMBEDDED_TEXTURES",
+          "NO_MANUFACTURER_TEXTURE_ARTWORK_COPIED"
+        ]
+      },
+      "provenance": [
+        {
+          "kind": "PRODUCT_TWIN_RECORD",
+          "uri": "data/twins/PT_IKEA_POANG_39240787.json",
+          "sha256": "c38c1a3e986464f5edb9bb9396bbd1c68ad73a02e0156fe3de50fac65b2aab16"
+        },
+        {
+          "kind": "GEOMETRY_QA_METRIC",
+          "uri": "data/metrics/ikea-poang-39240787-g2-armchair-proxy-latest.json",
+          "sha256": "8cc8b6ff90e04ba716e528eab41d7992259bfa0bd1761fec3a2c0f960bf01ff3"
+        },
+        {
+          "kind": "CANONICAL_VISUAL_REVIEW",
+          "uri": "data/evidence/furniture-avatar-manifest-v0.1-visual-review.json",
+          "sha256": "819e2d5a38c4cc973d2f74758a453a13310352540e1afb6efc24fe0b62d69537"
+        }
+      ],
+      "rights": {
+        "source_state": "PROJECT_AUTHORED_GEOMETRY",
+        "derivative_state": "NO_MANUFACTURER_GEOMETRY_OR_TEXTURE_COPIED",
+        "redistribution_state": "PROJECT_PROXY_ALLOWED",
+        "rendering_state": "INTERNAL_PROJECT_PROXY_ALLOWED",
+        "evidence": [
+          "data/twins/PT_IKEA_POANG_39240787.json",
+          "data/metrics/ikea-poang-39240787-g2-armchair-proxy-latest.json"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "display_text": "IKEA POÄNG 392.407.87; Product Twin planning proxy, not manufacturer geometry.",
+        "source_url": "https://www.ikea.com/es/es/p/poang-sillon-chapa-abedul-knisa-beige-claro-s39240787/",
+        "display_state": "PARTIAL_IDENTITY_SOURCE_DISCLOSURE",
+        "required_surfaces": [
+          "ROOM_OBJECT_DETAILS",
+          "AVATAR_GALLERY",
+          "EXPORTED_SCENE_CREDITS"
+        ]
+      },
+      "publication": {
+        "state": "INTERNAL_ROOM_ALPHA_READY_PUBLIC_BLOCKED",
+        "internal_ingest_allowed": true,
+        "public_allowed": false,
+        "blockers": [
+          "INDEPENDENT_RIGHTS_APPROVAL_NOT_RECORDED",
+          "ATTRIBUTION_DISPLAY_NOT_VERIFIED_ON_ALL_REQUIRED_SURFACES"
+        ]
+      },
+      "verification_required": [
+        "Approve project-authored proxy derivative/right status",
+        "Verify canonical-view QA evidence",
+        "Verify attribution on every required Room Lab surface"
+      ]
+    },
+    {
+      "asset_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+      "primary_selection": true,
+      "role": "COFFEE_SIDE_TABLE",
+      "record_lane": "PRODUCT_TWIN",
+      "product_identity": {
+        "verification_state": "VERIFIED_EXACT",
+        "twin_id": "PT_IKEA_LISTERBY_30513904",
+        "manufacturer": "IKEA",
+        "family": "LISTERBY",
+        "model": "Coffee table, oak veneer",
+        "article_no": "305.139.04",
+        "source_url": "https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/"
+      },
+      "geometry": {
+        "uri": "data/geometry/avatars/ikea-listerby-30513904-g2-coffee-table-proxy.glb",
+        "sha256": "d5294a8b83d5173179a75f54f371346b26577fe54425dfbe0f9ab2264cc8d37f",
+        "format": "GLB",
+        "bytes": 28020,
+        "level": "G2",
+        "level_state": "PROMOTED_REALISTIC_PLANNING_PROXY",
+        "persistent_binary": true,
+        "runtime_ingestible": true,
+        "exact_likeness_claimed": false,
+        "disclosure": "product-bound oak-veneer planning reconstruction; exact IKEA industrial-design geometry and veneer artwork are not claimed"
+      },
+      "independent_scale": {
+        "state": "PASS",
+        "method": "OFFICIAL_DIMENSIONS_VS_PARSED_GLB_BOUNDS",
+        "evidence": [
+          "data/twins/PT_IKEA_LISTERBY_30513904.json",
+          "data/metrics/ikea-listerby-30513904-g2-coffee-table-proxy-latest.json"
+        ],
+        "max_relative_error": 0
+      },
+      "dimensions": {
+        "width": 1400,
+        "depth": 600,
+        "height": 370,
+        "unit": "mm"
+      },
+      "orientation": {
+        "up_axis": "Y",
+        "handedness": "RIGHT_HANDED",
+        "origin": "FLOOR_CENTER",
+        "floor_anchor": "MIN_Y_EQ_0",
+        "front_state": "NON_DIRECTIONAL",
+        "front_vector": null
+      },
+      "collision_envelope": {
+        "width": 1400,
+        "depth": 600,
+        "height": 370,
+        "unit": "mm"
+      },
+      "functional_clearance": {
+        "state": "DECLARED_PLANNING",
+        "zones": [
+          {
+            "role": "SOFA_GAP",
+            "distance_mm": 420
+          },
+          {
+            "role": "CIRCULATION",
+            "distance_mm": 600
+          }
+        ]
+      },
+      "placement": {
+        "roles": [
+          "COFFEE_SIDE_TABLE",
+          "RESIDENTIAL_LOUNGE"
+        ],
+        "wall_preference": "AVOID",
+        "centre_preference": "PREFERRED",
+        "furniture_relationships": [
+          "CENTRE_ON_SOFA",
+          "MAINTAIN_SOFA_GAP"
+        ]
+      },
+      "dimensional_confidence": "HIGH_INDEPENDENT_SCALE_PASS",
+      "appearance": {
+        "confidence": "MEDIUM",
+        "state": "VARIANT_COLOUR_AND_ROUGHNESS_CUES_ONLY",
+        "materials": [
+          "natural oak veneer",
+          "solid oak slatted shelf and legs",
+          "clear tinted lacquer"
+        ],
+        "exact_finish_claimed": false,
+        "pbr_state": "variant_specific_base_colour_and_roughness_cues",
+        "texture_evidence": [
+          "NO_EMBEDDED_TEXTURES",
+          "NO_MANUFACTURER_TEXTURE_ARTWORK_COPIED"
+        ]
+      },
+      "provenance": [
+        {
+          "kind": "PRODUCT_TWIN_RECORD",
+          "uri": "data/twins/PT_IKEA_LISTERBY_30513904.json",
+          "sha256": "25194e552d075f3150357d69435fa9a82bacb3eb1440780e2cec3f82351610a4"
+        },
+        {
+          "kind": "GEOMETRY_QA_METRIC",
+          "uri": "data/metrics/ikea-listerby-30513904-g2-coffee-table-proxy-latest.json",
+          "sha256": "3f3338769a3feb4fbaff9148a36b5fb637086c503a55c8893fdc91deeaead702"
+        },
+        {
+          "kind": "CANONICAL_VISUAL_REVIEW",
+          "uri": "data/evidence/furniture-avatar-manifest-v0.1-visual-review.json",
+          "sha256": "819e2d5a38c4cc973d2f74758a453a13310352540e1afb6efc24fe0b62d69537"
+        }
+      ],
+      "rights": {
+        "source_state": "PROJECT_AUTHORED_GEOMETRY",
+        "derivative_state": "NO_MANUFACTURER_GEOMETRY_OR_TEXTURE_COPIED",
+        "redistribution_state": "PROJECT_PROXY_ALLOWED",
+        "rendering_state": "INTERNAL_PROJECT_PROXY_ALLOWED",
+        "evidence": [
+          "data/twins/PT_IKEA_LISTERBY_30513904.json",
+          "data/metrics/ikea-listerby-30513904-g2-coffee-table-proxy-latest.json"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "display_text": "IKEA LISTERBY 305.139.04; Product Twin planning proxy, not manufacturer geometry.",
+        "source_url": "https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/",
+        "display_state": "PARTIAL_IDENTITY_SOURCE_DISCLOSURE",
+        "required_surfaces": [
+          "ROOM_OBJECT_DETAILS",
+          "AVATAR_GALLERY",
+          "EXPORTED_SCENE_CREDITS"
+        ]
+      },
+      "publication": {
+        "state": "INTERNAL_ROOM_ALPHA_READY_PUBLIC_BLOCKED",
+        "internal_ingest_allowed": true,
+        "public_allowed": false,
+        "blockers": [
+          "INDEPENDENT_RIGHTS_APPROVAL_NOT_RECORDED",
+          "ATTRIBUTION_DISPLAY_NOT_VERIFIED_ON_ALL_REQUIRED_SURFACES"
+        ]
+      },
+      "verification_required": [
+        "Approve project-authored proxy derivative/right status",
+        "Verify canonical-view QA evidence",
+        "Verify attribution on every required Room Lab surface"
+      ]
+    },
+    {
+      "asset_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+      "primary_selection": true,
+      "role": "FLOOR_LAMP",
+      "record_lane": "PRODUCT_TWIN",
+      "product_identity": {
+        "verification_state": "VERIFIED_EXACT",
+        "twin_id": "PT_IKEA_LAUTERS_30405042",
+        "manufacturer": "IKEA",
+        "family": "LAUTERS",
+        "model": "Floor lamp, ash/white",
+        "article_no": "304.050.42",
+        "source_url": "https://www.ikea.com/es/en/p/lauters-floor-lamp-ash-white-30405042/"
+      },
+      "geometry": {
+        "uri": "data/geometry/avatars/ikea-lauters-30405042-g2-floor-lamp-proxy.glb",
+        "sha256": "b276fc15e90b0e380a335fe965253a486a2f40d08a6e0005433f99d05bb13f3e",
+        "format": "GLB",
+        "bytes": 15876,
+        "level": "G2",
+        "level_state": "PROMOTED_REALISTIC_PLANNING_PROXY",
+        "persistent_binary": true,
+        "runtime_ingestible": true,
+        "exact_likeness_claimed": false,
+        "disclosure": "product-bound ash-tripod/textile-shade planning reconstruction; exact joinery and shade texture are not claimed"
+      },
+      "independent_scale": {
+        "state": "PASS",
+        "method": "OFFICIAL_DIMENSIONS_VS_PARSED_GLB_BOUNDS",
+        "evidence": [
+          "data/twins/PT_IKEA_LAUTERS_30405042.json",
+          "data/metrics/ikea-lauters-30405042-g2-floor-lamp-proxy-latest.json"
+        ],
+        "max_relative_error": 0
+      },
+      "dimensions": {
+        "width": 620,
+        "depth": 620,
+        "height": 1510,
+        "unit": "mm"
+      },
+      "orientation": {
+        "up_axis": "Y",
+        "handedness": "RIGHT_HANDED",
+        "origin": "FLOOR_CENTER",
+        "floor_anchor": "MIN_Y_EQ_0",
+        "front_state": "NON_DIRECTIONAL",
+        "front_vector": null
+      },
+      "collision_envelope": {
+        "width": 620,
+        "depth": 620,
+        "height": 1510,
+        "unit": "mm"
+      },
+      "functional_clearance": {
+        "state": "DECLARED_PLANNING",
+        "zones": [
+          {
+            "role": "SERVICE",
+            "distance_mm": 100
+          }
+        ]
+      },
+      "placement": {
+        "roles": [
+          "FLOOR_LAMP",
+          "RESIDENTIAL_LOUNGE"
+        ],
+        "wall_preference": "NEAR_WALL_ALLOWED",
+        "centre_preference": "AVOID",
+        "furniture_relationships": [
+          "PLACE_BESIDE_SOFA_OR_LOUNGE_CHAIR",
+          "KEEP_CORD_ROUTE_CLEAR"
+        ]
+      },
+      "dimensional_confidence": "HIGH_INDEPENDENT_SCALE_PASS",
+      "appearance": {
+        "confidence": "MEDIUM",
+        "state": "VARIANT_COLOUR_AND_ROUGHNESS_CUES_ONLY",
+        "materials": [
+          "clear-lacquered solid ash tripod",
+          "white recycled-polyester shade"
+        ],
+        "exact_finish_claimed": false,
+        "pbr_state": "variant_specific_base_colour_and_roughness_cues",
+        "texture_evidence": [
+          "NO_EMBEDDED_TEXTURES",
+          "NO_MANUFACTURER_TEXTURE_ARTWORK_COPIED"
+        ]
+      },
+      "provenance": [
+        {
+          "kind": "PRODUCT_TWIN_RECORD",
+          "uri": "data/twins/PT_IKEA_LAUTERS_30405042.json",
+          "sha256": "2fd48d1d31e985e2d150cbac76687335926e52e64c331f660fc19923f47fa7e5"
+        },
+        {
+          "kind": "GEOMETRY_QA_METRIC",
+          "uri": "data/metrics/ikea-lauters-30405042-g2-floor-lamp-proxy-latest.json",
+          "sha256": "7705950d8ce4b18fec49583d3c801350dbf3240816dcc2008ac6a2f6059d9a10"
+        },
+        {
+          "kind": "CANONICAL_VISUAL_REVIEW",
+          "uri": "data/evidence/furniture-avatar-manifest-v0.1-visual-review.json",
+          "sha256": "819e2d5a38c4cc973d2f74758a453a13310352540e1afb6efc24fe0b62d69537"
+        }
+      ],
+      "rights": {
+        "source_state": "PROJECT_AUTHORED_GEOMETRY",
+        "derivative_state": "NO_MANUFACTURER_GEOMETRY_OR_TEXTURE_COPIED",
+        "redistribution_state": "PROJECT_PROXY_ALLOWED",
+        "rendering_state": "INTERNAL_PROJECT_PROXY_ALLOWED",
+        "evidence": [
+          "data/twins/PT_IKEA_LAUTERS_30405042.json",
+          "data/metrics/ikea-lauters-30405042-g2-floor-lamp-proxy-latest.json"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "display_text": "IKEA LAUTERS 304.050.42; Product Twin planning proxy, not manufacturer geometry.",
+        "source_url": "https://www.ikea.com/es/en/p/lauters-floor-lamp-ash-white-30405042/",
+        "display_state": "PARTIAL_IDENTITY_SOURCE_DISCLOSURE",
+        "required_surfaces": [
+          "ROOM_OBJECT_DETAILS",
+          "AVATAR_GALLERY",
+          "EXPORTED_SCENE_CREDITS"
+        ]
+      },
+      "publication": {
+        "state": "INTERNAL_ROOM_ALPHA_READY_PUBLIC_BLOCKED",
+        "internal_ingest_allowed": true,
+        "public_allowed": false,
+        "blockers": [
+          "INDEPENDENT_RIGHTS_APPROVAL_NOT_RECORDED",
+          "ATTRIBUTION_DISPLAY_NOT_VERIFIED_ON_ALL_REQUIRED_SURFACES"
+        ]
+      },
+      "verification_required": [
+        "Approve project-authored proxy derivative/right status",
+        "Verify canonical-view QA evidence",
+        "Verify attribution on every required Room Lab surface"
+      ]
+    },
+    {
+      "asset_id": "AVATAR_ARPER_PLY_3853_EXACT_GEOMETRY_CANDIDATE",
+      "primary_selection": false,
+      "role": "COFFEE_SIDE_TABLE",
+      "record_lane": "PRODUCT_TWIN",
+      "product_identity": {
+        "verification_state": "VERIFIED_EXACT",
+        "twin_id": "PT_ARPER_PLY_3853",
+        "manufacturer": "Arper",
+        "family": "Ply Table",
+        "model": "Ply Table low table, small top, wood legs",
+        "article_no": "3853",
+        "source_url": "https://www.arper.com/es_ES/3853-20article-203853.html"
+      },
+      "geometry": {
+        "uri": "https://arper-cdn.thron.com/delivery/public/document/arper/e7270421-ade5-487d-85fd-8d6a80c3db5f/jd4oic/WEB/Arper_Ply_3D_table_h36cm_55x54cm_3853.3DS",
+        "sha256": "056266beb2cbea1af1cc91bcab74dccb46620ebc55464276d1d22f90f8977e9a",
+        "format": "3DS",
+        "bytes": null,
+        "level": "G2",
+        "level_state": "G3_CANDIDATE_NOT_PROMOTED",
+        "persistent_binary": false,
+        "runtime_ingestible": false,
+        "exact_likeness_claimed": true,
+        "disclosure": "Exact manufacturer geometry candidate; no persistent binary, approved PBR finish, or commercial rendering right."
+      },
+      "independent_scale": {
+        "state": "PASS",
+        "method": "MANUFACTURER_DIMENSIONS_VS_TRANSIENT_CONVERTED_BOUNDS",
+        "evidence": [
+          "config/geometry/arper-ply-3853-target.json",
+          "data/metrics/arper-ply-3853-g3-v0-1-glb-qa-latest.json"
+        ],
+        "max_relative_error": 0.001255
+      },
+      "dimensions": {
+        "width": 550,
+        "depth": 540,
+        "height": 360,
+        "unit": "mm"
+      },
+      "orientation": {
+        "up_axis": "Y",
+        "handedness": "RIGHT_HANDED",
+        "origin": "FLOOR_CENTER",
+        "floor_anchor": "MIN_Y_EQ_0",
+        "front_state": "NON_DIRECTIONAL",
+        "front_vector": null
+      },
+      "collision_envelope": {
+        "width": 550,
+        "depth": 540,
+        "height": 360,
+        "unit": "mm"
+      },
+      "functional_clearance": {
+        "state": "UNVERIFIED",
+        "zones": []
+      },
+      "placement": {
+        "roles": [
+          "COFFEE_SIDE_TABLE",
+          "RESIDENTIAL_LOUNGE"
+        ],
+        "wall_preference": "NEUTRAL",
+        "centre_preference": "ALLOWED",
+        "furniture_relationships": [
+          "CLEARANCE_NOT_VERIFIED"
+        ]
+      },
+      "dimensional_confidence": "HIGH_MANUFACTURER_SCALE_PASS",
+      "appearance": {
+        "confidence": "LOW",
+        "state": "GEOMETRY_ONLY_FINISH_UNAPPROVED",
+        "materials": [
+          "WOOD_LEGS_DECLARED_BY_MODEL_NAME"
+        ],
+        "exact_finish_claimed": false,
+        "pbr_state": "NO_APPROVED_PBR",
+        "texture_evidence": [
+          "NO_APPROVED_TEXTURE_EVIDENCE"
+        ]
+      },
+      "provenance": [
+        {
+          "kind": "MANUFACTURER_3DS_SOURCE",
+          "uri": "https://arper-cdn.thron.com/delivery/public/document/arper/e7270421-ade5-487d-85fd-8d6a80c3db5f/jd4oic/WEB/Arper_Ply_3D_table_h36cm_55x54cm_3853.3DS",
+          "sha256": "056266beb2cbea1af1cc91bcab74dccb46620ebc55464276d1d22f90f8977e9a"
+        },
+        {
+          "kind": "TRANSIENT_GEOMETRY_QA",
+          "uri": "data/metrics/arper-ply-3853-g3-v0-1-glb-qa-latest.json",
+          "sha256": "5c055d56b10ce84aa91d6b0e5720b42d593278be06bd134653b38c90af2d293b"
+        },
+        {
+          "kind": "RIGHTS_REVIEW",
+          "uri": "data/rights/arper-ply-3853-rights-and-rfq.json",
+          "sha256": "f2085ff0131af66e73bbfafe2aff08ff39ec85c861b1147dda8e7f3ec2c92e23"
+        }
+      ],
+      "rights": {
+        "source_state": "MANUFACTURER_PROTECTED_CONTENT",
+        "derivative_state": "BLOCKED_WITHOUT_WRITTEN_PERMISSION",
+        "redistribution_state": "BLOCKED_WITHOUT_PERMISSION",
+        "rendering_state": "BLOCKED_WITHOUT_PERMISSION",
+        "evidence": [
+          "data/rights/arper-ply-3853-rights-and-rfq.json"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "display_text": "Arper Ply Table #3853 — manufacturer geometry; use blocked pending written permission.",
+        "source_url": "https://www.arper.com/es_ES/3853-20article-203853.html",
+        "display_state": "BLOCKED_NO_AUTHORIZED_DISPLAY",
+        "required_surfaces": [
+          "NOT_PUBLIC_UNTIL_PERMISSION"
+        ]
+      },
+      "publication": {
+        "state": "BLOCKED_RIGHTS",
+        "internal_ingest_allowed": false,
+        "public_allowed": false,
+        "blockers": [
+          "WRITTEN_COMMERCIAL_RENDERING_PERMISSION_MISSING",
+          "REDISTRIBUTION_PERMISSION_MISSING",
+          "PERSISTENT_BINARY_FORBIDDEN",
+          "APPROVED_PBR_MATERIAL_MISSING",
+          "FUNCTIONAL_CLEARANCE_UNVERIFIED"
+        ]
+      },
+      "verification_required": [
+        "Obtain and ingest written Arper permission",
+        "Approve persistent storage and derivative terms",
+        "Approve exact material/PBR configuration",
+        "Verify functional clearance and attribution display"
+      ]
+    }
+  ]
+}

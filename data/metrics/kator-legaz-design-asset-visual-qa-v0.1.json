@@ -1,0 +1,2330 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-08-17T18:06:15.812408Z",
+  "record_lane": "DESIGN_ASSET",
+  "renderer": {
+    "script": "scripts/render-design-asset-qa-pack.py",
+    "script_sha256": "e33d9010b791a5a559bc736ae930742ce19e7f162e120a163e80854eb2a7cd77",
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "pillow": "11.3.0",
+    "requirements": "requirements-design-asset-qa.txt"
+  },
+  "status": "CANONICAL_RENDER_PACK_COMPLETE_INDEPENDENT_REVIEW_REQUIRED",
+  "policy": "Renders are runtime-only QA evidence. They do not prove independent scale, rights clearance, publication readiness, Product Twin identity, or procurement readiness.",
+  "view_contract": [
+    "front",
+    "rear",
+    "left",
+    "right",
+    "three_quarter",
+    "top",
+    "floor_contact"
+  ],
+  "summary": {
+    "assets": 12,
+    "views_per_asset": 7,
+    "rendered_views": 84,
+    "g2_promoted": 0,
+    "publication_allowed": 0
+  },
+  "runtime_pack": {
+    "directory": ".runtime/design-assets/qa-pack/v0.1",
+    "master_contact_sheet": "all-assets-contact-sheet.png",
+    "master_contact_sheet_sha256": "cb225f54f0eb84128a749a652a4a2dddc97b5e59f39e91ddb5058f491b439974"
+  },
+  "assets": [
+    {
+      "design_asset_id": "DA_SH3D_KL_MID_CENTURY_SOFA",
+      "source_model_name": "Mid-century-sofa",
+      "asset_directory": "da_sh3d_kl_mid_century_sofa",
+      "runtime_glb_sha256": "8f2b829c421128ac44d14e719660da3a5aab9682d8d6ae77189b21c067dc9dcf",
+      "declared_mm": {
+        "width": 1990,
+        "depth": 840,
+        "height": 800
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 5244,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "material_count": 2,
+        "embedded_texture_count": 0,
+        "alpha_material_count": 0,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "d0dcb2534903d8c431cc4729b899a0e789033ea64a86fd1ebe4ef015f56ab97c",
+          "bytes": 20665,
+          "silhouette_pixel_coverage": 0.17686,
+          "visible_triangles": 2932,
+          "degenerate_triangles": 48,
+          "front_facing_triangles": 2932,
+          "back_facing_triangles": 2264,
+          "culled_back_faces": 2264,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "5ab72b7596574b2bf3243340def446b685b25f76cff102d9c4405797a93f5e45",
+          "bytes": 11906,
+          "silhouette_pixel_coverage": 0.176865,
+          "visible_triangles": 1654,
+          "degenerate_triangles": 48,
+          "front_facing_triangles": 1654,
+          "back_facing_triangles": 3542,
+          "culled_back_faces": 3542,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "7357280860c138715274bccceec7a346615e053b81dc32080289712c66e4a536",
+          "bytes": 14591,
+          "silhouette_pixel_coverage": 0.296289,
+          "visible_triangles": 2092,
+          "degenerate_triangles": 48,
+          "front_facing_triangles": 2092,
+          "back_facing_triangles": 3104,
+          "culled_back_faces": 3104,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "1fed7b8d872eeb23db3c7b3845d92288923d4c67e671e88997448d84f25c6768",
+          "bytes": 15281,
+          "silhouette_pixel_coverage": 0.296289,
+          "visible_triangles": 2092,
+          "degenerate_triangles": 48,
+          "front_facing_triangles": 2092,
+          "back_facing_triangles": 3104,
+          "culled_back_faces": 3104,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "972166a43ce839d4654bad3da27f97353a68cf40e2a7ed3d28908468363171d2",
+          "bytes": 41075,
+          "silhouette_pixel_coverage": 0.212129,
+          "visible_triangles": 3528,
+          "degenerate_triangles": 48,
+          "front_facing_triangles": 3528,
+          "back_facing_triangles": 1668,
+          "culled_back_faces": 1668,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "cf11bbde50767d908b5a6dec16407c1d09d835c6027bf558abf63e0e07a752f1",
+          "bytes": 22900,
+          "silhouette_pixel_coverage": 0.231208,
+          "visible_triangles": 3360,
+          "degenerate_triangles": 48,
+          "front_facing_triangles": 3360,
+          "back_facing_triangles": 1836,
+          "culled_back_faces": 1836,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "0856f3b3291e84d5936796bfd14419f5593ddcec43123ff67cc9fc1265a7aa40",
+          "bytes": 30531,
+          "silhouette_pixel_coverage": 0.181917,
+          "visible_triangles": 3206,
+          "degenerate_triangles": 48,
+          "front_facing_triangles": 3206,
+          "back_facing_triangles": 1990,
+          "culled_back_faces": 1990,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "8b2295a8a3a835e392cabbd4b243d0302a24420c0a818545598acc73fd31ca19",
+        "bytes": 298181
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_MID_CENTURY_CHAIR",
+      "source_model_name": "Mid-century-chair",
+      "asset_directory": "da_sh3d_kl_mid_century_chair",
+      "runtime_glb_sha256": "60e843a04216c6656611c0072537e04690adb690b1bd48d3de95715986420a8f",
+      "declared_mm": {
+        "width": 735,
+        "depth": 844,
+        "height": 800
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 8832,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "material_count": 2,
+        "embedded_texture_count": 0,
+        "alpha_material_count": 0,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "183dd37f82aca86bfe1b2ad5db2c64b12aae4e6e336f46097bf75c54550b9596",
+          "bytes": 41346,
+          "silhouette_pixel_coverage": 0.381643,
+          "visible_triangles": 4406,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 4406,
+          "back_facing_triangles": 4426,
+          "culled_back_faces": 4426,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "6b93897dae6363fedde50a4c4ba84532c4c798fc16e1fc68500d8dcac365d074",
+          "bytes": 18230,
+          "silhouette_pixel_coverage": 0.381675,
+          "visible_triangles": 2802,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2802,
+          "back_facing_triangles": 6030,
+          "culled_back_faces": 6030,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "7798e8898dee112aeae733894bc9648cfeb76f09e56d5e017b6c0928a6da8653",
+          "bytes": 18215,
+          "silhouette_pixel_coverage": 0.295049,
+          "visible_triangles": 3691,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 3691,
+          "back_facing_triangles": 5141,
+          "culled_back_faces": 5141,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "c65c07239d9c8e9ed892a81a19a6f6b39d0f3cc52164c2f7b7d78d42bc2df12b",
+          "bytes": 19836,
+          "silhouette_pixel_coverage": 0.295049,
+          "visible_triangles": 3691,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 3691,
+          "back_facing_triangles": 5141,
+          "culled_back_faces": 5141,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "20ddb28144e5ab76997d86714499f82e1842642ce9bc13ad4307b6bd9940774a",
+          "bytes": 55446,
+          "silhouette_pixel_coverage": 0.316416,
+          "visible_triangles": 5333,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 5333,
+          "back_facing_triangles": 3499,
+          "culled_back_faces": 3499,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "484e4359d1ff20a157699631bf9d7a3164056ec1b964a1c2221acec956b80d84",
+          "bytes": 45286,
+          "silhouette_pixel_coverage": 0.476423,
+          "visible_triangles": 4856,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 4856,
+          "back_facing_triangles": 3976,
+          "culled_back_faces": 3976,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "3cad1467985d51981f917feb1094f8218676897777b526f6179e34b1d212f108",
+          "bytes": 41533,
+          "silhouette_pixel_coverage": 0.284885,
+          "visible_triangles": 4887,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 4887,
+          "back_facing_triangles": 3945,
+          "culled_back_faces": 3945,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "88201e81c0d389c855681d09a4df523f60247ecbe9d7cf01126fd4f0c0b1f234",
+        "bytes": 461073
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CHAIR_OTTOMAN",
+      "source_model_name": "Chair-ottoman",
+      "asset_directory": "da_sh3d_kl_chair_ottoman",
+      "runtime_glb_sha256": "1e59157e506b34dbb435ea5192c9756c49c5395ab66a1f62368f92da8cac703c",
+      "declared_mm": {
+        "width": 770,
+        "depth": 1552,
+        "height": 1000
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 3280,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.265241,
+          "z": 0.0
+        },
+        "material_count": 2,
+        "embedded_texture_count": 0,
+        "alpha_material_count": 0,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "a16f3e542b3c6a12ff869d5c9e81084fed72d9a6b40871f75781c881a66a23b2",
+          "bytes": 27083,
+          "silhouette_pixel_coverage": 0.350315,
+          "visible_triangles": 1588,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 1588,
+          "back_facing_triangles": 1692,
+          "culled_back_faces": 1692,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "9e1f5377022ba3b54b8738c7736fe5fc3a1cb8a33ecc241d81d38cc474e001bd",
+          "bytes": 16819,
+          "silhouette_pixel_coverage": 0.350315,
+          "visible_triangles": 1618,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 1618,
+          "back_facing_triangles": 1662,
+          "culled_back_faces": 1662,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "c93a71d80043e2a3c6c64d7f14cb02fec77c93158b00e0224eb857fe6d180660",
+          "bytes": 17435,
+          "silhouette_pixel_coverage": 0.056135,
+          "visible_triangles": 1536,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 1536,
+          "back_facing_triangles": 1744,
+          "culled_back_faces": 1744,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "f34148c04f1fa03f480dc0b8a6255652f99342e5b1fc7b036d84885c442e202f",
+          "bytes": 17778,
+          "silhouette_pixel_coverage": 0.05615,
+          "visible_triangles": 1536,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 1536,
+          "back_facing_triangles": 1744,
+          "culled_back_faces": 1744,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "03c101d45c8c8a629cecf67157f5ee5e017ca8d7948a8f76c66b1397ac81e7ce",
+          "bytes": 41051,
+          "silhouette_pixel_coverage": 0.203018,
+          "visible_triangles": 1586,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 1586,
+          "back_facing_triangles": 1694,
+          "culled_back_faces": 1694,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "d942fbed45bd6b9af81d8652aa7b97e6ad01a8e0380ca8527f6a9bf4036e7306",
+          "bytes": 22990,
+          "silhouette_pixel_coverage": 0.263806,
+          "visible_triangles": 1650,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 1650,
+          "back_facing_triangles": 1630,
+          "culled_back_faces": 1630,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "11064dd4c79dd594c1aaa094777866e85fa00f1de38850138c4c5deb3fde773d",
+          "bytes": 33050,
+          "silhouette_pixel_coverage": 0.170391,
+          "visible_triangles": 1610,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 1610,
+          "back_facing_triangles": 1670,
+          "culled_back_faces": 1670,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "64422fb4aaaa5af6fcdd646c0848570ff987deceb991d6b0b87e078af24e018b",
+        "bytes": 278729
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_DINING_CHAIR",
+      "source_model_name": "Dining-chair",
+      "asset_directory": "da_sh3d_kl_dining_chair",
+      "runtime_glb_sha256": "15687421b592e19ddd9932660a5321f773a79059c22ee98eb87ac6d17c01212b",
+      "declared_mm": {
+        "width": 423,
+        "depth": 573,
+        "height": 1000
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 1404,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "material_count": 2,
+        "embedded_texture_count": 0,
+        "alpha_material_count": 0,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "bddc398753e043e74552f3dbef42d705dc5eab26e63ca4679b0dd9a105dff048",
+          "bytes": 16355,
+          "silhouette_pixel_coverage": 0.107778,
+          "visible_triangles": 694,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 694,
+          "back_facing_triangles": 710,
+          "culled_back_faces": 710,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "3f12608e5634656328ed51bae4a46ea117182675bd8e1670176ff794bb6f9ea5",
+          "bytes": 14571,
+          "silhouette_pixel_coverage": 0.107456,
+          "visible_triangles": 646,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 646,
+          "back_facing_triangles": 758,
+          "culled_back_faces": 758,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "d67934d68064229454efecab7b59ddaf5336b37b2c0db311c05845f3aafb57e0",
+          "bytes": 14181,
+          "silhouette_pixel_coverage": 0.026812,
+          "visible_triangles": 662,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 662,
+          "back_facing_triangles": 742,
+          "culled_back_faces": 742,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "8332757599618538685a7b6aba54fd29d16bbff9472b7cd90b8d667b8e41dbed",
+          "bytes": 15115,
+          "silhouette_pixel_coverage": 0.026755,
+          "visible_triangles": 662,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 662,
+          "back_facing_triangles": 742,
+          "culled_back_faces": 742,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "96ead18b25cac4cd064172f8f4516f04dec1eef271d5d86e39a71720ba367c8c",
+          "bytes": 26197,
+          "silhouette_pixel_coverage": 0.080747,
+          "visible_triangles": 659,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 659,
+          "back_facing_triangles": 745,
+          "culled_back_faces": 745,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "d123ba9053104d8a686f4718b89d2061180fc88637799b67d9bd107f8efcff8f",
+          "bytes": 21059,
+          "silhouette_pixel_coverage": 0.267681,
+          "visible_triangles": 590,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 590,
+          "back_facing_triangles": 814,
+          "culled_back_faces": 814,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "dbd4efd57950e1f9d0bec47b1ba9bdfbd2de03c6d60f25eb4f7bf31efb5ce897",
+          "bytes": 21928,
+          "silhouette_pixel_coverage": 0.08219,
+          "visible_triangles": 646,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 646,
+          "back_facing_triangles": 758,
+          "culled_back_faces": 758,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "9c401041de8837a88d835512da6f9017411ac2a7ab15a697676d25b7372d084d",
+        "bytes": 200727
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CAFE_TABLE",
+      "source_model_name": "Cafe-table",
+      "asset_directory": "da_sh3d_kl_cafe_table",
+      "runtime_glb_sha256": "5ec39883732f242343cdc90d985d29da9ba3c3f2d12cf78830127d7bfef9ee1e",
+      "declared_mm": {
+        "width": 742,
+        "depth": 742,
+        "height": 700
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 5456,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "material_count": 2,
+        "embedded_texture_count": 0,
+        "alpha_material_count": 0,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "7aa1d6bcf3bf5ac475d09d31b40e214d682a0ca7c945dadf5de373a7e6c75be7",
+          "bytes": 21547,
+          "silhouette_pixel_coverage": 0.052764,
+          "visible_triangles": 2708,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2708,
+          "back_facing_triangles": 2748,
+          "culled_back_faces": 2748,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "3e4e4dc79bdcf750559f8c867270cf8698d3eb452f86c55f4742f8211a6d7e21",
+          "bytes": 18925,
+          "silhouette_pixel_coverage": 0.052764,
+          "visible_triangles": 2708,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2708,
+          "back_facing_triangles": 2748,
+          "culled_back_faces": 2748,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "f3f44ffe0478f782cc1697d6c951872ef5e46b574a73db9c8c09acc776c39919",
+          "bytes": 18457,
+          "silhouette_pixel_coverage": 0.05252,
+          "visible_triangles": 2708,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2708,
+          "back_facing_triangles": 2748,
+          "culled_back_faces": 2748,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "97934b7bc6a0bd1daa9d521738c12e637f2e8a336d06e21bfabb7c995ef3f2bc",
+          "bytes": 20407,
+          "silhouette_pixel_coverage": 0.05252,
+          "visible_triangles": 2708,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2708,
+          "back_facing_triangles": 2748,
+          "culled_back_faces": 2748,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "038ed339a0c24c9a6c0e499520f35903d26c8b708cc888f16bd983c1e82f1d8d",
+          "bytes": 32320,
+          "silhouette_pixel_coverage": 0.132092,
+          "visible_triangles": 2700,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2700,
+          "back_facing_triangles": 2756,
+          "culled_back_faces": 2756,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "647f5597690710c50fdb2035c336e5806714e0b30a6668dff1956ae7511d79c6",
+          "bytes": 24639,
+          "silhouette_pixel_coverage": 0.429678,
+          "visible_triangles": 2648,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2648,
+          "back_facing_triangles": 2808,
+          "culled_back_faces": 2808,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "2d1a1840ee85a90d4c86945a432cc856d92e1630214bf8deb8e18f9e858a85f0",
+          "bytes": 28913,
+          "silhouette_pixel_coverage": 0.088496,
+          "visible_triangles": 2712,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2712,
+          "back_facing_triangles": 2744,
+          "culled_back_faces": 2744,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "64722599d79180b437c3b78ecab019b17ef38449ebff2c814eb7547575eb5265",
+        "bytes": 262597
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_GLASS_DINING_TABLE",
+      "source_model_name": "Glass-dining-table",
+      "asset_directory": "da_sh3d_kl_glass_dining_table",
+      "runtime_glb_sha256": "56211148564e9a6af796fd20f43b165ee04f4f36b39b4c28b1572fae30ce1b02",
+      "declared_mm": {
+        "width": 1618,
+        "depth": 976,
+        "height": 750
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 352,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "material_count": 2,
+        "embedded_texture_count": 0,
+        "alpha_material_count": 1,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "78ef7f162f79e2733a8b736a14c7475ed572090213f145d07f2f1dff7559b8e6",
+          "bytes": 10559,
+          "silhouette_pixel_coverage": 0.032358,
+          "visible_triangles": 98,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 98,
+          "back_facing_triangles": 254,
+          "culled_back_faces": 254,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "b0f9d3ed4b6e3706331036458d15017b6b2588583ea3eee08674362368ebb914",
+          "bytes": 10397,
+          "silhouette_pixel_coverage": 0.032358,
+          "visible_triangles": 98,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 98,
+          "back_facing_triangles": 254,
+          "culled_back_faces": 254,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "7006bde1d4958ea9d8428a0dd075a0adc6f35374588d27d3ad842adeebdd2423",
+          "bytes": 10749,
+          "silhouette_pixel_coverage": 0.076582,
+          "visible_triangles": 122,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 122,
+          "back_facing_triangles": 230,
+          "culled_back_faces": 230,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "67844d8350988b44bd21d9793a5642d5a3e1209c27526ff58ae936d58740a23b",
+          "bytes": 10900,
+          "silhouette_pixel_coverage": 0.076582,
+          "visible_triangles": 122,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 122,
+          "back_facing_triangles": 230,
+          "culled_back_faces": 230,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "1c5e71b5ceb2a107740f20f18028443ed3d3ba0e99f2795986f29c105edf197a",
+          "bytes": 22564,
+          "silhouette_pixel_coverage": 0.101677,
+          "visible_triangles": 176,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 176,
+          "back_facing_triangles": 176,
+          "culled_back_faces": 176,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "37e84ebd8faa63060958a6b811ba15bd93b643e4d52bf98276c16756b140c2ad",
+          "bytes": 12135,
+          "silhouette_pixel_coverage": 0.330937,
+          "visible_triangles": 144,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 144,
+          "back_facing_triangles": 208,
+          "culled_back_faces": 208,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "ae501744b28e821fb096496cfe09b6eb011b43f99ad5d6c8ae65d65527c9d1b7",
+          "bytes": 17216,
+          "silhouette_pixel_coverage": 0.067205,
+          "visible_triangles": 174,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 174,
+          "back_facing_triangles": 178,
+          "culled_back_faces": 178,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "1030ce83a993c593ee74231b3cd5527d1ad8e22bf1c4fbec74b5d7dea291cc2e",
+        "bytes": 126275
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_FULL_BOOKCASE",
+      "source_model_name": "Full bookcase",
+      "asset_directory": "da_sh3d_kl_full_bookcase",
+      "runtime_glb_sha256": "f762c3ee82226f2fbb758620dd2bd3a24fb7fb6431359ebca07cda5cd5511717",
+      "declared_mm": {
+        "width": 898,
+        "depth": 347,
+        "height": 2210
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 2348,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "material_count": 5,
+        "embedded_texture_count": 4,
+        "alpha_material_count": 0,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "9db16463ea3fc200b75e2af641a59ffc9cc2c1ec462cb5f56f72acf0bf18e9ef",
+          "bytes": 25639,
+          "silhouette_pixel_coverage": 0.222212,
+          "visible_triangles": 6168,
+          "degenerate_triangles": 20,
+          "front_facing_triangles": 1046,
+          "back_facing_triangles": 1282,
+          "culled_back_faces": 1282,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "97bd672023a139ed9329111749ea66c50c611c3c17c032f22ec89b15e8b37f33",
+          "bytes": 10454,
+          "silhouette_pixel_coverage": 0.222212,
+          "visible_triangles": 4790,
+          "degenerate_triangles": 20,
+          "front_facing_triangles": 914,
+          "back_facing_triangles": 1414,
+          "culled_back_faces": 1414,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "08e1c183f031470bc18dbe6c6a2ed71e8a1d63bcc24455d4a1825c106f53b0c6",
+          "bytes": 10211,
+          "silhouette_pixel_coverage": 0.066624,
+          "visible_triangles": 5814,
+          "degenerate_triangles": 20,
+          "front_facing_triangles": 692,
+          "back_facing_triangles": 1636,
+          "culled_back_faces": 1636,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "88b1d6c1b90073be174990a62dd64ad2197badc8fb330f3eb7d6662d75be48fe",
+          "bytes": 10408,
+          "silhouette_pixel_coverage": 0.066624,
+          "visible_triangles": 5251,
+          "degenerate_triangles": 20,
+          "front_facing_triangles": 636,
+          "back_facing_triangles": 1692,
+          "culled_back_faces": 1692,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "6231fab7989ad2493ff8de7340e4cb2c9243c1fd3bfbea45ef9ecd07c0c2efa7",
+          "bytes": 32138,
+          "silhouette_pixel_coverage": 0.1777,
+          "visible_triangles": 7464,
+          "degenerate_triangles": 20,
+          "front_facing_triangles": 1356,
+          "back_facing_triangles": 972,
+          "culled_back_faces": 972,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "1ab851e4c88a2efd92487d62a6e172c93549dfdfd567ece7e3210ee9df566857",
+          "bytes": 10559,
+          "silhouette_pixel_coverage": 0.212827,
+          "visible_triangles": 24032,
+          "degenerate_triangles": 20,
+          "front_facing_triangles": 980,
+          "back_facing_triangles": 1348,
+          "culled_back_faces": 1348,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "7b4d7074c3178f9d2678e940e515cf3702b520d547074e67d2fd1986794d986b",
+          "bytes": 27467,
+          "silhouette_pixel_coverage": 0.188547,
+          "visible_triangles": 6661,
+          "degenerate_triangles": 20,
+          "front_facing_triangles": 1038,
+          "back_facing_triangles": 1290,
+          "culled_back_faces": 1290,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "f4d52a74efbfff5aa2592b06ea2836279d86c5769a183fa54e7c9bda1223063b",
+        "bytes": 156349
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_ORIENTAL_RUG",
+      "source_model_name": "Oriental rug",
+      "asset_directory": "da_sh3d_kl_oriental_rug",
+      "runtime_glb_sha256": "2591937087884c19cdd9a5e89753810efaa63c67ad29347b224d11660a9e65cd",
+      "declared_mm": {
+        "width": 1858,
+        "depth": 2577,
+        "height": 25
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 44,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "material_count": 1,
+        "embedded_texture_count": 1,
+        "alpha_material_count": 0,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "6ebeabe1086e241c47a25ffcd677ae1fae4fea8b535eded323ed9ddd7b9d9962",
+          "bytes": 9743,
+          "silhouette_pixel_coverage": 0.00917,
+          "visible_triangles": 3464,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 14,
+          "back_facing_triangles": 30,
+          "culled_back_faces": 30,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "471206add284fd765c5342053f43836f470824a96d3f8e361b891e161daed712",
+          "bytes": 9623,
+          "silhouette_pixel_coverage": 0.00917,
+          "visible_triangles": 3464,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 14,
+          "back_facing_triangles": 30,
+          "culled_back_faces": 30,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "ccc772d02f94d0907bd17eecbce6ad7f1313c256a73869e7307bb094fbeb7d6d",
+          "bytes": 9268,
+          "silhouette_pixel_coverage": 0.006885,
+          "visible_triangles": 3464,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 14,
+          "back_facing_triangles": 30,
+          "culled_back_faces": 30,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "0199832148d0d841d2843500c4a344751392155a4e684de769009e13d679415d",
+          "bytes": 9571,
+          "silhouette_pixel_coverage": 0.006885,
+          "visible_triangles": 3464,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 14,
+          "back_facing_triangles": 30,
+          "culled_back_faces": 30,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "96b64293a8d7743f1097250e4f1b2beb5322c2cf4a2ed9408c1e5c8462132637",
+          "bytes": 34581,
+          "silhouette_pixel_coverage": 0.079929,
+          "visible_triangles": 3558,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 20,
+          "back_facing_triangles": 24,
+          "culled_back_faces": 24,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "72131f292f5f66afb01eeb7829aeb6881b3b1574566e8c2c585cd7116d660631",
+          "bytes": 25829,
+          "silhouette_pixel_coverage": 0.395645,
+          "visible_triangles": 4904,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 14,
+          "back_facing_triangles": 30,
+          "culled_back_faces": 30,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "d629e818d505169aea8372067663613eac87281abe164052a67d6e8a12445211",
+          "bytes": 16831,
+          "silhouette_pixel_coverage": 0.034739,
+          "visible_triangles": 3466,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 20,
+          "back_facing_triangles": 24,
+          "culled_back_faces": 24,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "236e67bdd1ac28d52de96f2475f770c4b304dc6e9658f4c7d9821464c04f7cf5",
+        "bytes": 171847
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_OFFICE_CHAIR",
+      "source_model_name": "Office-chair",
+      "asset_directory": "da_sh3d_kl_office_chair",
+      "runtime_glb_sha256": "faea5fa3ea0ae2e27c8f0abb64d696a16d56a228df2b3cfd2ea5b70198f1b85b",
+      "declared_mm": {
+        "width": 643,
+        "depth": 643,
+        "height": 910
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 22830,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "material_count": 3,
+        "embedded_texture_count": 0,
+        "alpha_material_count": 0,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "c6c118facaa486c20e886ea6b9ee4f8dd6e998799f9a4d64ed08add3b2778389",
+          "bytes": 46653,
+          "silhouette_pixel_coverage": 0.206934,
+          "visible_triangles": 9935,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 9935,
+          "back_facing_triangles": 12895,
+          "culled_back_faces": 12895,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "4c0f3380a05ee830d637ab23167c5c4d12f5469cce5549ef636d1c0ef785cfa6",
+          "bytes": 35671,
+          "silhouette_pixel_coverage": 0.20606,
+          "visible_triangles": 10434,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 10434,
+          "back_facing_triangles": 12396,
+          "culled_back_faces": 12396,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "96e83a72ec4f2e8eeb2bde7ac5fad3f58f6c67fbe15f3b30ecbfe1e1256f8b88",
+          "bytes": 31550,
+          "silhouette_pixel_coverage": 0.148945,
+          "visible_triangles": 10355,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 10355,
+          "back_facing_triangles": 12475,
+          "culled_back_faces": 12475,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "79981f0975f382d6be69f0d15c6ba41862ba017bd0398b4615b8457645e7c7f7",
+          "bytes": 36866,
+          "silhouette_pixel_coverage": 0.149312,
+          "visible_triangles": 10272,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 10272,
+          "back_facing_triangles": 12558,
+          "culled_back_faces": 12558,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "dc9bb50206cef3a2043a9be58bc299dc1e51361f58ebcf65fc3f4a745ba14fc1",
+          "bytes": 59940,
+          "silhouette_pixel_coverage": 0.192305,
+          "visible_triangles": 11337,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 11337,
+          "back_facing_triangles": 11493,
+          "culled_back_faces": 11493,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "a181891f53a4b3c4c50b161464c41a28d1adf332ee6b53ff2164c6bec1394adc",
+          "bytes": 72932,
+          "silhouette_pixel_coverage": 0.435381,
+          "visible_triangles": 10957,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 10957,
+          "back_facing_triangles": 11873,
+          "culled_back_faces": 11873,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "8c86dcbafa3493553b4fb1290c29ca899178ef4b2ab3ff3e2b41d95d52d00070",
+          "bytes": 55652,
+          "silhouette_pixel_coverage": 0.200007,
+          "visible_triangles": 11151,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 11151,
+          "back_facing_triangles": 11679,
+          "culled_back_faces": 11679,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "6de52496aff914a515409d1f28b3a10fcec50f38e2b71e9cfc7f4c0ac9eaa16c",
+        "bytes": 366131
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CUSTOM_DESK",
+      "source_model_name": "Custom-desk",
+      "asset_directory": "da_sh3d_kl_custom_desk",
+      "runtime_glb_sha256": "a1c1c33e38bdb44dbab2ef4ab8aeb2866f4aae68ada305cc1d8fe054cd1ce2bc",
+      "declared_mm": {
+        "width": 2351,
+        "depth": 838,
+        "height": 1800
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 1316,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "material_count": 2,
+        "embedded_texture_count": 0,
+        "alpha_material_count": 0,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "2ddb33f81e40b255d875579d022f6c34227cb0951c158a43ffb9d7909fd26331",
+          "bytes": 11824,
+          "silhouette_pixel_coverage": 0.28269,
+          "visible_triangles": 582,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 582,
+          "back_facing_triangles": 734,
+          "culled_back_faces": 734,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "8442cf8067d2990c95a9cf714d102c77d26944a26e7823e85d5960dd1fc8e351",
+          "bytes": 11078,
+          "silhouette_pixel_coverage": 0.28269,
+          "visible_triangles": 578,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 578,
+          "back_facing_triangles": 738,
+          "culled_back_faces": 738,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "eaa98732a3258006737bf0e77fb9233dc42d3bac7042281b4840641b769c04fd",
+          "bytes": 10996,
+          "silhouette_pixel_coverage": 0.097341,
+          "visible_triangles": 572,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 572,
+          "back_facing_triangles": 744,
+          "culled_back_faces": 744,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "01f3b2a35063c4f6a05d5b83ed1f9934d5cdc2f420a289dbc016d84799915983",
+          "bytes": 11253,
+          "silhouette_pixel_coverage": 0.097341,
+          "visible_triangles": 572,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 572,
+          "back_facing_triangles": 744,
+          "culled_back_faces": 744,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "090de9e26f89a303a0ee0421c7a6f8ae0a221e0d8fb2153b649ceb38f5b78157",
+          "bytes": 30218,
+          "silhouette_pixel_coverage": 0.303909,
+          "visible_triangles": 642,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 642,
+          "back_facing_triangles": 674,
+          "culled_back_faces": 674,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "aa6f138df206a8505dd571e342fc9fbdce8aba4b4489e8a1d1d832a6afd55733",
+          "bytes": 10987,
+          "silhouette_pixel_coverage": 0.190903,
+          "visible_triangles": 504,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 504,
+          "back_facing_triangles": 812,
+          "culled_back_faces": 812,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "3b3f6f221aec90ee736d708445ea317771b3e8e5a6ae45c15183c3dac1dad1c6",
+          "bytes": 24448,
+          "silhouette_pixel_coverage": 0.309668,
+          "visible_triangles": 640,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 640,
+          "back_facing_triangles": 676,
+          "culled_back_faces": 676,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "6e5290ad89afb404ccd452d43e40383c5d6aa8548d696b032be95b0d86cd391e",
+        "bytes": 184927
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_FRIDGE",
+      "source_model_name": "Fridge",
+      "asset_directory": "da_sh3d_kl_fridge",
+      "runtime_glb_sha256": "c73a4d36d4a12c0bef9fa164cb9575c0d73597eea02199031a859538196601d9",
+      "declared_mm": {
+        "width": 600,
+        "depth": 591,
+        "height": 1262
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 676,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "material_count": 4,
+        "embedded_texture_count": 0,
+        "alpha_material_count": 0,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "eb6a52dc8ef1b3c8c23f4b962391e593b2710d73fa8f135e839ec4aefd683cbd",
+          "bytes": 11270,
+          "silhouette_pixel_coverage": 0.254639,
+          "visible_triangles": 294,
+          "degenerate_triangles": 56,
+          "front_facing_triangles": 294,
+          "back_facing_triangles": 326,
+          "culled_back_faces": 326,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "af9e2bbcff546b85144f86ee410beafb85c9f944d17c8a7c931b463c900c206d",
+          "bytes": 10547,
+          "silhouette_pixel_coverage": 0.254639,
+          "visible_triangles": 254,
+          "degenerate_triangles": 56,
+          "front_facing_triangles": 254,
+          "back_facing_triangles": 366,
+          "culled_back_faces": 366,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "c2443838bec909d6eadaf16e8f9e133702eacbde340294deac463f50dc2c251b",
+          "bytes": 11111,
+          "silhouette_pixel_coverage": 0.231489,
+          "visible_triangles": 302,
+          "degenerate_triangles": 56,
+          "front_facing_triangles": 302,
+          "back_facing_triangles": 318,
+          "culled_back_faces": 318,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "c9572bb2c21ae723ffa5bede493b66c2944c49c84f343301dc2c64173fdf1a55",
+          "bytes": 11278,
+          "silhouette_pixel_coverage": 0.231489,
+          "visible_triangles": 302,
+          "degenerate_triangles": 56,
+          "front_facing_triangles": 302,
+          "back_facing_triangles": 318,
+          "culled_back_faces": 318,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "bfd23e56cc23f278ae0cda4a10e57efef04eea018f0acdded068e8d0f6a8db8e",
+          "bytes": 18722,
+          "silhouette_pixel_coverage": 0.293547,
+          "visible_triangles": 314,
+          "degenerate_triangles": 56,
+          "front_facing_triangles": 314,
+          "back_facing_triangles": 306,
+          "culled_back_faces": 306,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "f630ccc5562568bc9dab5a07e0aa0f57948d3a7964747d49954ca069fcf9bf50",
+          "bytes": 12127,
+          "silhouette_pixel_coverage": 0.490952,
+          "visible_triangles": 258,
+          "degenerate_triangles": 56,
+          "front_facing_triangles": 258,
+          "back_facing_triangles": 362,
+          "culled_back_faces": 362,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "cb182c771a6b373232ca14c68be12f697b650c97c4aaf5cd90deff7886b579c2",
+          "bytes": 16059,
+          "silhouette_pixel_coverage": 0.312979,
+          "visible_triangles": 304,
+          "degenerate_triangles": 56,
+          "front_facing_triangles": 304,
+          "back_facing_triangles": 316,
+          "culled_back_faces": 316,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "eb5bb0cf8d054c756330aad1237a39c6caa28ec1284d2e7cc03fe831a9580b4d",
+        "bytes": 136281
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_PEDESTAL_VASE_LAMP",
+      "source_model_name": "Pedestal-vase-lamp",
+      "asset_directory": "da_sh3d_kl_pedestal_vase_lamp",
+      "runtime_glb_sha256": "5d6877e8c7da9d79bacd884e247d38c0f2f4ad62e8ced5fb84ade789c224ced5",
+      "declared_mm": {
+        "width": 282,
+        "depth": 282,
+        "height": 800
+      },
+      "geometry_level_before_review": "G1",
+      "source_scale_independently_verified": false,
+      "automated_checks": {
+        "finite_geometry": true,
+        "triangle_count": 6228,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "material_count": 7,
+        "embedded_texture_count": 0,
+        "alpha_material_count": 1,
+        "double_sided_material_count": 0,
+        "all_seven_views_rendered": true
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "4beee2bbca4d3c9ad4bee60e7235ab6b08d74871528727fbed100e0c74050ce1",
+          "bytes": 19735,
+          "silhouette_pixel_coverage": 0.096143,
+          "visible_triangles": 2958,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2958,
+          "back_facing_triangles": 3270,
+          "culled_back_faces": 3270,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "600c776f152e6de2df0dd74cc9db2655876c49231331c37eca458c7e943a8245",
+          "bytes": 17479,
+          "silhouette_pixel_coverage": 0.096143,
+          "visible_triangles": 2946,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2946,
+          "back_facing_triangles": 3282,
+          "culled_back_faces": 3282,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "6ad14857cc083abe80c392082dc3b4b39c5740d908162205b4945921ab1c6fd6",
+          "bytes": 17601,
+          "silhouette_pixel_coverage": 0.096143,
+          "visible_triangles": 2940,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2940,
+          "back_facing_triangles": 3288,
+          "culled_back_faces": 3288,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "1b3f8e5405c8b98a88adfe9d69673337b2f712d7a898c527f59a2141f83c5646",
+          "bytes": 19525,
+          "silhouette_pixel_coverage": 0.096143,
+          "visible_triangles": 2940,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2940,
+          "back_facing_triangles": 3288,
+          "culled_back_faces": 3288,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "d216fc8064629148d646b0017b859ed950240d1e91617ff742cfbfa167ebdd3a",
+          "bytes": 28338,
+          "silhouette_pixel_coverage": 0.100088,
+          "visible_triangles": 3203,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 3203,
+          "back_facing_triangles": 3025,
+          "culled_back_faces": 3025,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "49f5a8bcb418edf85476760493d6c1322330770a6badb897b18b3602ec4fe1e4",
+          "bytes": 30594,
+          "silhouette_pixel_coverage": 0.426499,
+          "visible_triangles": 2899,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2899,
+          "back_facing_triangles": 3329,
+          "culled_back_faces": 3329,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "8f6219582dad9421916ddef617b05af9dda52a8419c44f99807aeb3ee0a3ce93",
+          "bytes": 24829,
+          "silhouette_pixel_coverage": 0.09717,
+          "visible_triangles": 2960,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2960,
+          "back_facing_triangles": 3268,
+          "culled_back_faces": 3268,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "b918ff780ca7e6db74d49d4ba3367f2a5ae92207db5c79080166d39ce83bac34",
+        "bytes": 230854
+      },
+      "manual_review": {
+        "state": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+        "orientation": null,
+        "silhouette": null,
+        "proportions": null,
+        "floor_contact": null,
+        "centre_pivot": null,
+        "normals_back_faces": null,
+        "texture_embedding": null,
+        "glass_alpha": null,
+        "material_colours": null,
+        "attribution": null,
+        "blockers": [
+          "independent visual review not yet recorded",
+          "independent physical scale evidence absent",
+          "customer-facing attribution display not yet verified"
+        ]
+      },
+      "promotion": {
+        "geometry_level": "G1",
+        "canonical_view_visual_qa_passed": false,
+        "independent_scale_qa_passed": false,
+        "publication_allowed": false
+      }
+    }
+  ]
+}

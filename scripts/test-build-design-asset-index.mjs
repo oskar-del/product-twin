@@ -11,6 +11,12 @@ for (const asset of index.assets) {
   assert.equal(asset.identity_scope, 'GENERIC_DESIGN_ASSET');
   assert.equal(asset.not_a_product_twin, true);
   assert.equal(asset.publication_allowed, false);
+  assert.equal(asset.geometry_state, 'G1');
+  assert.equal(asset.public_asset_reference, null);
+  assert.equal(Object.keys(asset.gates).length, REQUIRED_PUBLICATION_GATES.length);
+  assert.equal(asset.gates.all_model_dependencies_resolved, true);
+  assert.equal(asset.promotion_evidence_state.independent_scale_qa_passed, 'PENDING');
+  assert.ok(asset.promotion_blockers.includes('independent_scale_qa_passed'));
   assert.equal(asset.attribution.display_required, true);
   assert.deepEqual(findForbiddenDesignAssetFields(asset), []);
 }

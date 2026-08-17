@@ -1,22 +1,9 @@
 {
-  "generated_at": "2026-08-17T22:01:28.013Z",
-  "record_lane": "GENERIC_DESIGN_ASSET",
-  "visible_attribution_contract": {
-    "required_fields": [
-      "creator",
-      "text",
-      "license_id",
-      "source_url"
-    ],
-    "display_surfaces": [
-      "asset_card",
-      "asset_detail",
-      "room_selection",
-      "export_manifest"
-    ],
-    "may_be_hidden_in_three_dimensional_viewport": true,
-    "must_be_one_action_away_from_viewport": true
-  },
+  "version": "0.1",
+  "generated_at": "2026-08-17T16:00:00.000Z",
+  "record_lane": "DESIGN_ASSET",
+  "publication_surface": "ROOM_LAB",
+  "policy": "Promotion is computed from hash-bound durable evidence. Missing claims fail closed. G2 never creates Product Twin identity or commerce evidence.",
   "publication_gates": [
     "rights_source_verified",
     "redistribution_allowed",
@@ -30,27 +17,20 @@
   ],
   "summary": {
     "assets": 12,
-    "publishable": 0,
-    "runtime_only_or_unpublished": 12
+    "g1_blocked": 12,
+    "g2_ready": 0,
+    "publication_allowed": 0
   },
   "assets": [
     {
       "design_asset_id": "DA_SH3D_KL_MID_CENTURY_SOFA",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Mid-century-sofa",
-      "category_id": "FFE.SEATING.SOFA",
+      "geometry_sha256": "8f2b829c421128ac44d14e719660da3a5aab9682d8d6ae77189b21c067dc9dcf",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -62,7 +42,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -72,7 +52,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -86,26 +66,17 @@
         "visual_review:source rotation and semantic centre pivot not proven",
         "visual_review:material appearance not established",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     },
     {
       "design_asset_id": "DA_SH3D_KL_MID_CENTURY_CHAIR",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Mid-century-chair",
-      "category_id": "FFE.SEATING.LOUNGE",
+      "geometry_sha256": "60e843a04216c6656611c0072537e04690adb690b1bd48d3de95715986420a8f",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -117,7 +88,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -127,7 +98,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -141,26 +112,17 @@
         "visual_review:source rotation and semantic centre pivot not proven",
         "visual_review:material appearance not established",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     },
     {
       "design_asset_id": "DA_SH3D_KL_CHAIR_OTTOMAN",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Chair-ottoman",
-      "category_id": "FFE.SEATING.LOUNGE",
+      "geometry_sha256": "1e59157e506b34dbb435ea5192c9756c49c5395ab66a1f62368f92da8cac703c",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -172,7 +134,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -182,7 +144,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -195,26 +157,17 @@
         "visual_review:independent physical scale evidence absent",
         "visual_review:source rotation and chair-plus-ottoman group pivot not proven",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     },
     {
       "design_asset_id": "DA_SH3D_KL_DINING_CHAIR",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Dining-chair",
-      "category_id": "FFE.SEATING.DINING",
+      "geometry_sha256": "15687421b592e19ddd9932660a5321f773a79059c22ee98eb87ac6d17c01212b",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -226,7 +179,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -236,7 +189,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -250,26 +203,17 @@
         "visual_review:source rotation and semantic centre pivot not proven",
         "visual_review:real source colour fidelity unproven",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     },
     {
       "design_asset_id": "DA_SH3D_KL_CAFE_TABLE",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Cafe-table",
-      "category_id": "FFE.TABLE.DINING",
+      "geometry_sha256": "5ec39883732f242343cdc90d985d29da9ba3c3f2d12cf78830127d7bfef9ee1e",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -281,7 +225,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -291,7 +235,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -304,26 +248,17 @@
         "visual_review:independent physical scale evidence absent",
         "visual_review:source rotation and semantic centre pivot not proven",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     },
     {
       "design_asset_id": "DA_SH3D_KL_GLASS_DINING_TABLE",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Glass-dining-table",
-      "category_id": "FFE.TABLE.DINING",
+      "geometry_sha256": "56211148564e9a6af796fd20f43b165ee04f4f36b39b4c28b1572fae30ce1b02",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -335,7 +270,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -345,7 +280,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -359,26 +294,17 @@
         "visual_review:independent physical scale evidence absent",
         "visual_review:source rotation and semantic centre pivot not proven",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     },
     {
       "design_asset_id": "DA_SH3D_KL_FULL_BOOKCASE",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Full bookcase",
-      "category_id": "FFE.STORAGE",
+      "geometry_sha256": "f762c3ee82226f2fbb758620dd2bd3a24fb7fb6431359ebca07cda5cd5511717",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -390,7 +316,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -400,7 +326,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -414,26 +340,17 @@
         "visual_review:source rotation and semantic centre pivot not proven",
         "visual_review:book texture and material legibility need review",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     },
     {
       "design_asset_id": "DA_SH3D_KL_ORIENTAL_RUG",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Oriental rug",
-      "category_id": "FFE.RUGS",
+      "geometry_sha256": "2591937087884c19cdd9a5e89753810efaa63c67ad29347b224d11660a9e65cd",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -445,7 +362,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -455,7 +372,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -468,26 +385,17 @@
         "visual_review:independent physical scale evidence absent",
         "visual_review:source rotation and semantic centre pivot not proven",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     },
     {
       "design_asset_id": "DA_SH3D_KL_OFFICE_CHAIR",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Office-chair",
-      "category_id": "FFE.SEATING.LOUNGE",
+      "geometry_sha256": "faea5fa3ea0ae2e27c8f0abb64d696a16d56a228df2b3cfd2ea5b70198f1b85b",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -499,7 +407,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -509,7 +417,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -522,26 +430,17 @@
         "visual_review:independent physical scale evidence absent",
         "visual_review:actual rotational pivot and source rotation not proven",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     },
     {
       "design_asset_id": "DA_SH3D_KL_CUSTOM_DESK",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Custom-desk",
-      "category_id": "FFE.TABLE.DESK",
+      "geometry_sha256": "a1c1c33e38bdb44dbab2ef4ab8aeb2866f4aae68ada305cc1d8fe054cd1ce2bc",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -553,7 +452,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -563,7 +462,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -576,26 +475,17 @@
         "visual_review:independent physical scale evidence absent",
         "visual_review:source rotation and semantic centre pivot not proven",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     },
     {
       "design_asset_id": "DA_SH3D_KL_FRIDGE",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Fridge",
-      "category_id": "KITCHEN.REFRIGERATION",
+      "geometry_sha256": "c73a4d36d4a12c0bef9fa164cb9575c0d73597eea02199031a859538196601d9",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -607,7 +497,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -617,7 +507,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -630,26 +520,17 @@
         "visual_review:independent physical scale evidence absent",
         "visual_review:source rotation and semantic centre pivot not proven",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     },
     {
       "design_asset_id": "DA_SH3D_KL_PEDESTAL_VASE_LAMP",
       "identity_scope": "GENERIC_DESIGN_ASSET",
       "not_a_product_twin": true,
-      "source_model_name": "Pedestal-vase-lamp",
-      "category_id": "ELECTRICAL.LUMINAIRES.TABLE",
+      "geometry_sha256": "5d6877e8c7da9d79bacd884e247d38c0f2f4ad62e8ced5fb84ade789c224ced5",
       "geometry_state": "G1",
       "publication_state": "G1_PROMOTION_BLOCKED",
       "publication_allowed": false,
       "public_asset_reference": null,
-      "attribution": {
-        "creator": "Kator Legaz",
-        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
-        "license_id": "CC-BY-3.0-US",
-        "source_url": "https://www.sweethome3d.com/free-3d-models/",
-        "display_required": true
-      },
       "gates": {
         "rights_source_verified": false,
         "redistribution_allowed": false,
@@ -661,7 +542,7 @@
         "independent_scale_qa_passed": false,
         "attribution_display_verified": false
       },
-      "promotion_evidence_state": {
+      "evidence_claim_status": {
         "rights_source_verified": "PENDING",
         "redistribution_allowed": "PENDING",
         "source_orientation_applied": "PENDING",
@@ -671,7 +552,7 @@
         "independent_scale_qa_passed": "PENDING",
         "attribution_display_verified": "PENDING"
       },
-      "promotion_blockers": [
+      "blockers": [
         "rights_source_verified",
         "redistribution_allowed",
         "source_orientation_applied",
@@ -684,8 +565,7 @@
         "visual_review:independent physical scale evidence absent",
         "visual_review:source rotation and semantic centre pivot not proven",
         "visual_review:customer-facing attribution display not verified"
-      ],
-      "runtime_binary_retained_outside_repository": true
+      ]
     }
   ]
 }

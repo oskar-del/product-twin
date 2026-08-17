@@ -1,0 +1,1501 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-08-17T22:01:28.092Z",
+  "record_lane": "DESIGN_ASSET",
+  "consumer": "ROOM_LAB",
+  "policy": "This manifest contains generic Design Assets only. Blocked runtime geometry has no consumer asset reference and carries no Product Twin, commerce, or purchasing evidence.",
+  "visible_attribution_contract": {
+    "required_fields": [
+      "creator",
+      "text",
+      "license_id",
+      "source_url"
+    ],
+    "display_surfaces": [
+      "asset_card",
+      "asset_detail",
+      "room_selection",
+      "export_manifest"
+    ],
+    "may_be_hidden_in_three_dimensional_viewport": true,
+    "must_be_one_action_away_from_viewport": true
+  },
+  "summary": {
+    "assets": 12,
+    "living_dining": 9,
+    "g1_blocked": 12,
+    "g2_ready": 0,
+    "publication_allowed": 0
+  },
+  "assets": [
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_MID_CENTURY_SOFA",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Mid-century-sofa",
+      "category_id": "FFE.SEATING.SOFA",
+      "catalogue_scope": "LIVING_DINING",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 135148,
+        "sha256": "8f2b829c421128ac44d14e719660da3a5aab9682d8d6ae77189b21c067dc9dcf",
+        "source_vertices": 2872,
+        "triangles": 5244,
+        "primitives": 2,
+        "materials": 2,
+        "embedded_textures": 0,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 1990,
+        "depth_mm": 840,
+        "height_mm": 800,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.1388232946883696,
+            0.13883496982161614,
+            0.13889910881339648
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_REVIEW_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "NO_SOURCE_TEXTURE_EXPECTED_MATERIAL_ONLY",
+        "glass_alpha_state": "NOT_APPLICABLE",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:source rotation and semantic centre pivot not proven",
+          "visual_review:material appearance not established",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    },
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_MID_CENTURY_CHAIR",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Mid-century-chair",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "catalogue_scope": "LIVING_DINING",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 221340,
+        "sha256": "60e843a04216c6656611c0072537e04690adb690b1bd48d3de95715986420a8f",
+        "source_vertices": 4668,
+        "triangles": 8832,
+        "primitives": 2,
+        "materials": 2,
+        "embedded_textures": 0,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 735,
+        "depth_mm": 844,
+        "height_mm": 800,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.13956137852463685,
+            0.13953732562412866,
+            0.13956053314107933
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_REVIEW_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "NO_SOURCE_TEXTURE_EXPECTED_MATERIAL_ONLY",
+        "glass_alpha_state": "NOT_APPLICABLE",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:source rotation and semantic centre pivot not proven",
+          "visual_review:material appearance not established",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    },
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_CHAIR_OTTOMAN",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Chair-ottoman",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "catalogue_scope": "LIVING_DINING",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 92868,
+        "sha256": "1e59157e506b34dbb435ea5192c9756c49c5395ab66a1f62368f92da8cac703c",
+        "source_vertices": 2220,
+        "triangles": 3280,
+        "primitives": 2,
+        "materials": 2,
+        "embedded_textures": 0,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 770,
+        "depth_mm": 1552,
+        "height_mm": 1000,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.15940312844165846,
+            0.15948123942440032,
+            0.1594665596980328
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_PASS_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "NO_SOURCE_TEXTURE_EXPECTED_MATERIAL_ONLY",
+        "glass_alpha_state": "NOT_APPLICABLE",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0.265241,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:source rotation and chair-plus-ottoman group pivot not proven",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    },
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_DINING_CHAIR",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Dining-chair",
+      "category_id": "FFE.SEATING.DINING",
+      "catalogue_scope": "LIVING_DINING",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 39756,
+        "sha256": "15687421b592e19ddd9932660a5321f773a79059c22ee98eb87ac6d17c01212b",
+        "source_vertices": 814,
+        "triangles": 1404,
+        "primitives": 2,
+        "materials": 2,
+        "embedded_textures": 0,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 423,
+        "depth_mm": 573,
+        "height_mm": 1000,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.2933861197154085,
+            0.2939494906590201,
+            0.29366423261897245
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_PASS_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "NO_SOURCE_TEXTURE_EXPECTED_MATERIAL_ONLY",
+        "glass_alpha_state": "NOT_APPLICABLE",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:source rotation and semantic centre pivot not proven",
+          "visual_review:real source colour fidelity unproven",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    },
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_CAFE_TABLE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Cafe-table",
+      "category_id": "FFE.TABLE.DINING",
+      "catalogue_scope": "LIVING_DINING",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 136924,
+        "sha256": "5ec39883732f242343cdc90d985d29da9ba3c3f2d12cf78830127d7bfef9ee1e",
+        "source_vertices": 2838,
+        "triangles": 5456,
+        "primitives": 2,
+        "materials": 2,
+        "embedded_textures": 0,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 742,
+        "depth_mm": 742,
+        "height_mm": 700,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.1196724008348037,
+            0.11966464496098161,
+            0.1196724008348037
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_PASS_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "NO_SOURCE_TEXTURE_EXPECTED_MATERIAL_ONLY",
+        "glass_alpha_state": "NOT_APPLICABLE",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:source rotation and semantic centre pivot not proven",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    },
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_GLASS_DINING_TABLE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Glass-dining-table",
+      "category_id": "FFE.TABLE.DINING",
+      "catalogue_scope": "LIVING_DINING",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 12208,
+        "sha256": "56211148564e9a6af796fd20f43b165ee04f4f36b39b4c28b1572fae30ce1b02",
+        "source_vertices": 196,
+        "triangles": 352,
+        "primitives": 2,
+        "materials": 2,
+        "embedded_textures": 0,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 1618,
+        "depth_mm": 976,
+        "height_mm": 750,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.1632222204960705,
+            0.16321627462117502,
+            0.16322997330454062
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_BLOCKED_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "NO_SOURCE_TEXTURE_EXPECTED_MATERIAL_ONLY",
+        "glass_alpha_state": "BLOCKED_OPAQUE_TOP",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:glass alpha or transmission appearance fails visual QA",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:source rotation and semantic centre pivot not proven",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    },
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_FULL_BOOKCASE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Full bookcase",
+      "category_id": "FFE.STORAGE",
+      "catalogue_scope": "LIVING_DINING",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 246512,
+        "sha256": "f762c3ee82226f2fbb758620dd2bd3a24fb7fb6431359ebca07cda5cd5511717",
+        "source_vertices": 1210,
+        "triangles": 2348,
+        "primitives": 5,
+        "materials": 5,
+        "embedded_textures": 4,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 898,
+        "depth_mm": 347,
+        "height_mm": 2210,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.01121393436991213,
+            0.011207863713066963,
+            0.011193218367690707
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_REVIEW_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "PASS_GLTF_EMBEDDED_AND_RENDERED",
+        "glass_alpha_state": "NOT_APPLICABLE",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:source rotation and semantic centre pivot not proven",
+          "visual_review:book texture and material legibility need review",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    },
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_ORIENTAL_RUG",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Oriental rug",
+      "category_id": "FFE.RUGS",
+      "catalogue_scope": "LIVING_DINING",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 125664,
+        "sha256": "2591937087884c19cdd9a5e89753810efaa63c67ad29347b224d11660a9e65cd",
+        "source_vertices": 24,
+        "triangles": 44,
+        "primitives": 1,
+        "materials": 1,
+        "embedded_textures": 1,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 1858,
+        "depth_mm": 2577,
+        "height_mm": 25,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.007575253405171198,
+            0.007561720273214028,
+            0.007577062028628899
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_PASS_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "PASS_GLTF_EMBEDDED_AND_RENDERED",
+        "glass_alpha_state": "NOT_APPLICABLE",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:source rotation and semantic centre pivot not proven",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    },
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_OFFICE_CHAIR",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Office-chair",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "catalogue_scope": "FUTURE_CATEGORY_BREADTH",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 596352,
+        "sha256": "faea5fa3ea0ae2e27c8f0abb64d696a16d56a228df2b3cfd2ea5b70198f1b85b",
+        "source_vertices": 13263,
+        "triangles": 22830,
+        "primitives": 3,
+        "materials": 3,
+        "embedded_textures": 0,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 643,
+        "depth_mm": 643,
+        "height_mm": 910,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.0764563447351186,
+            0.07662071977504158,
+            0.07648148077662364
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_PASS_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "NO_SOURCE_TEXTURE_EXPECTED_MATERIAL_ONLY",
+        "glass_alpha_state": "NOT_APPLICABLE",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:actual rotational pivot and source rotation not proven",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    },
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_CUSTOM_DESK",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Custom-desk",
+      "category_id": "FFE.TABLE.DESK",
+      "catalogue_scope": "FUTURE_CATEGORY_BREADTH",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 35948,
+        "sha256": "a1c1c33e38bdb44dbab2ef4ab8aeb2866f4aae68ada305cc1d8fe054cd1ce2bc",
+        "source_vertices": 706,
+        "triangles": 1316,
+        "primitives": 2,
+        "materials": 2,
+        "embedded_textures": 0,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 2351,
+        "depth_mm": 838,
+        "height_mm": 1800,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.13808847142170685,
+            0.1381506887847966,
+            0.13811553710792
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_PASS_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "NO_SOURCE_TEXTURE_EXPECTED_MATERIAL_ONLY",
+        "glass_alpha_state": "NOT_APPLICABLE",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:source rotation and semantic centre pivot not proven",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    },
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_FRIDGE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Fridge",
+      "category_id": "KITCHEN.REFRIGERATION",
+      "catalogue_scope": "FUTURE_CATEGORY_BREADTH",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 29604,
+        "sha256": "c73a4d36d4a12c0bef9fa164cb9575c0d73597eea02199031a859538196601d9",
+        "source_vertices": 704,
+        "triangles": 676,
+        "primitives": 4,
+        "materials": 4,
+        "embedded_textures": 0,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 600,
+        "depth_mm": 591,
+        "height_mm": 1262,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.1299490274939655,
+            0.12997112519463488,
+            0.12992474697100564
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_PASS_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "NO_SOURCE_TEXTURE_EXPECTED_MATERIAL_ONLY",
+        "glass_alpha_state": "NOT_APPLICABLE",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:source rotation and semantic centre pivot not proven",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    },
+    {
+      "record_lane": "DESIGN_ASSET",
+      "design_asset_id": "DA_SH3D_KL_PEDESTAL_VASE_LAMP",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "not_a_product_twin": true,
+      "source_model_name": "Pedestal-vase-lamp",
+      "category_id": "ELECTRICAL.LUMINAIRES.TABLE",
+      "catalogue_scope": "LIVING_DINING",
+      "geometry_level": "G1",
+      "geometry": {
+        "format": "GLB_2_0",
+        "byte_size": 175940,
+        "sha256": "5d6877e8c7da9d79bacd884e247d38c0f2f4ad62e8ced5fb84ade789c224ced5",
+        "source_vertices": 3497,
+        "triangles": 6228,
+        "primitives": 7,
+        "materials": 7,
+        "embedded_textures": 0,
+        "runtime_binary_retained_outside_repository": true
+      },
+      "dimensions": {
+        "width_mm": 282,
+        "depth_mm": 282,
+        "height_mm": 800,
+        "evidence_state": "LIBRARY_AUTHORED_TARGET_ENVELOPE_NOT_INDEPENDENT_PHYSICAL_SCALE"
+      },
+      "transform": {
+        "units": "metres",
+        "up_axis": "Y",
+        "front_axis": "UNVERIFIED",
+        "origin": {
+          "x_mm": 0,
+          "y_mm": 0,
+          "z_mm": 0
+        },
+        "pivot": "MECHANICAL_BOUNDS_CENTER_XZ_MIN_Y_0_SEMANTIC_PIVOT_UNVERIFIED",
+        "source_model_rotation_matrix3_row_major": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "back_face_shown": false,
+        "normalization": {
+          "kind": "DECLARED_ENVELOPE_NON_UNIFORM",
+          "scale_xyz": [
+            0.09970202529461593,
+            0.09983889745908758,
+            0.09970206054460659
+          ],
+          "source_scale_independently_verified": false
+        }
+      },
+      "visible_attribution": {
+        "creator": "Kator Legaz",
+        "text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "license_id": "CC-BY-3.0-US",
+        "source_url": "https://www.sweethome3d.com/free-3d-models/",
+        "display_required": true,
+        "display_state": "REQUIRED_NOT_YET_CUSTOMER_UI_VERIFIED"
+      },
+      "canonical_views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "three_quarter",
+        "top",
+        "floor_contact"
+      ],
+      "qa": {
+        "visual_review_state": "RENDER_PASS_G2_BLOCKED",
+        "independent_scale_state": "BLOCKED_NO_INDEPENDENT_SOURCE",
+        "texture_state": "NO_SOURCE_TEXTURE_EXPECTED_MATERIAL_ONLY",
+        "glass_alpha_state": "NOT_APPLICABLE",
+        "floor_contact_error_mm": 0,
+        "centre_pivot_offset_mm": {
+          "x": 0,
+          "z": 0
+        },
+        "blockers": [
+          "rights_source_verified",
+          "redistribution_allowed",
+          "source_orientation_applied",
+          "back_face_policy_applied",
+          "texture_embedding_verified",
+          "canonical_view_visual_qa_passed",
+          "independent_scale_qa_passed",
+          "attribution_display_verified",
+          "stable_public_asset_reference_absent",
+          "visual_review:independent physical scale evidence absent",
+          "visual_review:source rotation and semantic centre pivot not proven",
+          "visual_review:customer-facing attribution display not verified"
+        ]
+      },
+      "publication_state": "G1_PROMOTION_BLOCKED",
+      "publication_allowed": false,
+      "geometry_asset_reference": null,
+      "replacement_search_requirement": {
+        "required": true,
+        "state": "SEPARATE_PRODUCT_TWIN_SEARCH_REQUIRED",
+        "benchmarks": [
+          "ES",
+          "SE",
+          "GB",
+          "US"
+        ],
+        "match_axes": [
+          "category",
+          "dimensions",
+          "rotation_aware_fit",
+          "style",
+          "silhouette",
+          "material_intent"
+        ]
+      }
+    }
+  ]
+}

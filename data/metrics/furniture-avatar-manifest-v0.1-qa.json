@@ -1,0 +1,841 @@
+{
+  "version": "0.1",
+  "record_type": "FURNITURE_AVATAR_CANONICAL_QA",
+  "manifest": "data/geometry/manifests/furniture-avatar-manifest-v0.1.json",
+  "renderer": "scripts/render-furniture-avatar-manifest-qa.py",
+  "review_evidence": "data/evidence/furniture-avatar-manifest-v0.1-visual-review.json",
+  "review_evidence_sha256": "819e2d5a38c4cc973d2f74758a453a13310352540e1afb6efc24fe0b62d69537",
+  "policy": "Canonical renders prove inspectable geometry behavior only; rights, exact finish, attribution UI, and public publication remain independent gates.",
+  "view_contract": [
+    "front",
+    "rear",
+    "left",
+    "right",
+    "three_quarter",
+    "top",
+    "floor_contact"
+  ],
+  "summary": {
+    "assets": 4,
+    "views_per_asset": 7,
+    "rendered_views": 28,
+    "reviewed_assets": 4,
+    "publicly_publishable": 0
+  },
+  "runtime_pack": {
+    "directory": ".runtime/furniture-avatar-qa/v0.1",
+    "master_contact_sheet": "all-assets-contact-sheet.png",
+    "master_contact_sheet_sha256": "ff27529a18f02addf3c3e6cbb06ae16d38f59c2736b2edacf84c145dfe4ab861"
+  },
+  "assets": [
+    {
+      "asset_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+      "role": "SOFA",
+      "asset_directory": "avatar_ikea_kivik_49440597_g2_sofa_proxy",
+      "geometry_sha256": "a765cb6ddf0bd6b670c0b1add8e3d6a1546bffac23ba31736f850ce98e81d392",
+      "declared_dimensions": {
+        "width": 2280,
+        "depth": 950,
+        "height": 830,
+        "unit": "mm"
+      },
+      "measured_dimensions": {
+        "width": 2280.0000000000005,
+        "depth": 950.0,
+        "height": 830.0000000000001,
+        "unit": "mm"
+      },
+      "automated_checks": {
+        "all_seven_views_rendered": true,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "max_dimension_relative_error": 1.9945059249406321e-16,
+        "material_count": 3,
+        "embedded_texture_count": 0
+      },
+      "orientation_contract": {
+        "up_axis": "Y",
+        "handedness": "RIGHT_HANDED",
+        "origin": "FLOOR_CENTER",
+        "floor_anchor": "MIN_Y_EQ_0",
+        "front_state": "DECLARED",
+        "front_vector": [
+          0,
+          0,
+          -1
+        ]
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "c7254c00a59a53b5af8aa433d81785f78416d93b88bbed50cef2990d828cd58a",
+          "bytes": 14009,
+          "silhouette_pixel_coverage": 0.177964,
+          "visible_triangles": 2470,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2470,
+          "back_facing_triangles": 3314,
+          "culled_back_faces": 3314,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "3931fb8df2aed9acdb2e406278d0b201f5fe00e4025f1ba4af3da69ae0e6e57c",
+          "bytes": 16544,
+          "silhouette_pixel_coverage": 0.177964,
+          "visible_triangles": 2462,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2462,
+          "back_facing_triangles": 3322,
+          "culled_back_faces": 3322,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "5435aa35773d77f567510f0e02647ba5492ecd6b33428bff0f226a4d22ccac2e",
+          "bytes": 19068,
+          "silhouette_pixel_coverage": 0.401675,
+          "visible_triangles": 2416,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2416,
+          "back_facing_triangles": 3368,
+          "culled_back_faces": 3368,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "87e74a68acec8ff44fe91f78af04b51e5ca9dc9ae5158d1fc5d0acec0795361e",
+          "bytes": 20941,
+          "silhouette_pixel_coverage": 0.401687,
+          "visible_triangles": 2416,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2416,
+          "back_facing_triangles": 3368,
+          "culled_back_faces": 3368,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "c3d8143f28ed5c13d1bfb6ea704db500d5487d82ac00596e88e5ef977965cb27",
+          "bytes": 25114,
+          "silhouette_pixel_coverage": 0.17614,
+          "visible_triangles": 2804,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2804,
+          "back_facing_triangles": 2980,
+          "culled_back_faces": 2980,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "f7a253dc2ca5cd39b2e1fdca2f8e6f7dab4e189fd33b3f3abadfc2a1403fbf9d",
+          "bytes": 28667,
+          "silhouette_pixel_coverage": 0.218071,
+          "visible_triangles": 2782,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2782,
+          "back_facing_triangles": 3002,
+          "culled_back_faces": 3002,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "457e320d04c949dd78e3fb1bcbbf7bcc6ef1c23fb22a777a8ef92cfc842fba62",
+          "bytes": 20987,
+          "silhouette_pixel_coverage": 0.170525,
+          "visible_triangles": 2534,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 2534,
+          "back_facing_triangles": 3250,
+          "culled_back_faces": 3250,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "89ba9b6c66aedc2b5bd62884d6f3d51d59eb1077247fb377a736894170144a8c",
+        "bytes": 236104
+      },
+      "manual_review": {
+        "asset_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+        "overall": "PASS_G2_PLANNING_QA",
+        "orientation": "PASS_DECLARED_FRONT_NEGATIVE_Z_VISUALLY_DISTINCT_FROM_REAR",
+        "floor_contact": "PASS_MIN_Y_ZERO",
+        "dimensions": "PASS_OFFICIAL_ENVELOPE_VS_WORLD_TRANSFORMED_GLB_BOUNDS",
+        "materials_textures": "PASS_MATERIAL_CUES_ONLY_NO_EMBEDDED_TEXTURES_NO_EXACT_FINISH_CLAIM",
+        "front_back": "PASS_DISTINCT",
+        "collision_envelope": "PASS_MATCHES_VERIFIED_DIMENSION_ENVELOPE",
+        "attribution_display": "PARTIAL_SOURCE_LINK_DISCLOSURE_EXISTS_FULL_SURFACE_QA_REQUIRED",
+        "rights_publication": "INTERNAL_PROJECT_PROXY_ALLOWED_PUBLIC_BLOCKED_PENDING_INDEPENDENT_APPROVAL",
+        "blockers": [
+          "exact likeness not verified",
+          "exact fabric texture not verified",
+          "all-surface attribution display not verified",
+          "independent public-rights approval not recorded"
+        ]
+      },
+      "publication": {
+        "public_allowed": false,
+        "rights_state": "INTERNAL_PROJECT_PROXY_ALLOWED",
+        "attribution_display_state": "PARTIAL_IDENTITY_SOURCE_DISCLOSURE"
+      }
+    },
+    {
+      "asset_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+      "role": "LOUNGE_CHAIR",
+      "asset_directory": "avatar_ikea_poang_39240787_g2_armchair_proxy",
+      "geometry_sha256": "7d1e5659d9f34247aefe65399859d1f7adfc2ed000e1ade9a38a0498fd93cb85",
+      "declared_dimensions": {
+        "width": 680,
+        "depth": 820,
+        "height": 1000,
+        "unit": "mm"
+      },
+      "measured_dimensions": {
+        "width": 680.0,
+        "depth": 820.0000000000001,
+        "height": 1000.0,
+        "unit": "mm"
+      },
+      "automated_checks": {
+        "all_seven_views_rendered": true,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "max_dimension_relative_error": 1.38642485026361e-16,
+        "material_count": 2,
+        "embedded_texture_count": 0
+      },
+      "orientation_contract": {
+        "up_axis": "Y",
+        "handedness": "RIGHT_HANDED",
+        "origin": "FLOOR_CENTER",
+        "floor_anchor": "MIN_Y_EQ_0",
+        "front_state": "DECLARED",
+        "front_vector": [
+          0,
+          0,
+          -1
+        ]
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "949df2568140f2a259f511f05305519f6a0c5a919f1e512e0cb308a43e88fcab",
+          "bytes": 18475,
+          "silhouette_pixel_coverage": 0.263965,
+          "visible_triangles": 692,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 692,
+          "back_facing_triangles": 940,
+          "culled_back_faces": 940,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "2188312e2820365dd2ce53bb19587826c7e2808e2f11568690c237f03b3f4b6a",
+          "bytes": 16949,
+          "silhouette_pixel_coverage": 0.263965,
+          "visible_triangles": 696,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 696,
+          "back_facing_triangles": 936,
+          "culled_back_faces": 936,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "0a84e080e46de695f362bcb882d06f78d3080306c8d79cdb3d49e002a9fa32cd",
+          "bytes": 14259,
+          "silhouette_pixel_coverage": 0.137654,
+          "visible_triangles": 608,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 608,
+          "back_facing_triangles": 1024,
+          "culled_back_faces": 1024,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "dfc8aaf6a1e64a6e980a750c8ab82ec7ae9b5c9cdac6715971b416d6186877a8",
+          "bytes": 14953,
+          "silhouette_pixel_coverage": 0.137661,
+          "visible_triangles": 608,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 608,
+          "back_facing_triangles": 1024,
+          "culled_back_faces": 1024,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "2f98d7ed20b18d76365d0170a45acdbb637a9442fdb2d203e7494aa3b2e6c81f",
+          "bytes": 30727,
+          "silhouette_pixel_coverage": 0.321057,
+          "visible_triangles": 798,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 798,
+          "back_facing_triangles": 834,
+          "culled_back_faces": 834,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "2417382906e8abb85f5ee1fe651349afb2dc0b20f2336d7040798f741928d296",
+          "bytes": 27584,
+          "silhouette_pixel_coverage": 0.365498,
+          "visible_triangles": 776,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 776,
+          "back_facing_triangles": 856,
+          "culled_back_faces": 856,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "e330ee284c5b2361e0d4a40cd31ad35deef17f5c612416ddc7554df9437e2783",
+          "bytes": 25666,
+          "silhouette_pixel_coverage": 0.31074,
+          "visible_triangles": 720,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 720,
+          "back_facing_triangles": 912,
+          "culled_back_faces": 912,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "cb7f39972758408eeb85b4084a2204935459cdd9e3f6e4d51a5c2e277ed9fe4d",
+        "bytes": 284169
+      },
+      "manual_review": {
+        "asset_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+        "overall": "PASS_G2_PLANNING_QA",
+        "orientation": "PASS_DECLARED_FRONT_NEGATIVE_Z_VISUALLY_DISTINCT_FROM_REAR",
+        "floor_contact": "PASS_MIN_Y_ZERO",
+        "dimensions": "PASS_OFFICIAL_ENVELOPE_VS_WORLD_TRANSFORMED_GLB_BOUNDS",
+        "materials_textures": "PASS_MATERIAL_CUES_ONLY_NO_EMBEDDED_TEXTURES_NO_EXACT_FINISH_CLAIM",
+        "front_back": "PASS_DISTINCT",
+        "collision_envelope": "PASS_MATCHES_VERIFIED_DIMENSION_ENVELOPE",
+        "attribution_display": "PARTIAL_SOURCE_LINK_DISCLOSURE_EXISTS_FULL_SURFACE_QA_REQUIRED",
+        "rights_publication": "INTERNAL_PROJECT_PROXY_ALLOWED_PUBLIC_BLOCKED_PENDING_INDEPENDENT_APPROVAL",
+        "blockers": [
+          "exact likeness not verified",
+          "exact upholstery/wood finish not verified",
+          "all-surface attribution display not verified",
+          "independent public-rights approval not recorded"
+        ]
+      },
+      "publication": {
+        "public_allowed": false,
+        "rights_state": "INTERNAL_PROJECT_PROXY_ALLOWED",
+        "attribution_display_state": "PARTIAL_IDENTITY_SOURCE_DISCLOSURE"
+      }
+    },
+    {
+      "asset_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+      "role": "COFFEE_SIDE_TABLE",
+      "asset_directory": "avatar_ikea_listerby_30513904_g2_coffee_table_proxy",
+      "geometry_sha256": "d5294a8b83d5173179a75f54f371346b26577fe54425dfbe0f9ab2264cc8d37f",
+      "declared_dimensions": {
+        "width": 1400,
+        "depth": 600,
+        "height": 370,
+        "unit": "mm"
+      },
+      "measured_dimensions": {
+        "width": 1400.0,
+        "depth": 600.0,
+        "height": 370.0,
+        "unit": "mm"
+      },
+      "automated_checks": {
+        "all_seven_views_rendered": true,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "max_dimension_relative_error": 0.0,
+        "material_count": 2,
+        "embedded_texture_count": 0
+      },
+      "orientation_contract": {
+        "up_axis": "Y",
+        "handedness": "RIGHT_HANDED",
+        "origin": "FLOOR_CENTER",
+        "floor_anchor": "MIN_Y_EQ_0",
+        "front_state": "NON_DIRECTIONAL",
+        "front_vector": null
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "da7398fb94821ca09590999872dc101c6a37ee1adb97c3dfd14af4bf66879e55",
+          "bytes": 10078,
+          "silhouette_pixel_coverage": 0.070908,
+          "visible_triangles": 80,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 80,
+          "back_facing_triangles": 160,
+          "culled_back_faces": 160,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "5e84511045196c484bcd5e21d916671aa67f8f20ecca7ba7eaaae8699d1bdda0",
+          "bytes": 9904,
+          "silhouette_pixel_coverage": 0.070908,
+          "visible_triangles": 80,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 80,
+          "back_facing_triangles": 160,
+          "culled_back_faces": 160,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "a963b40da04bff2f65b28f50b3920278bf9526fe1479a9d8275e8119bb016344",
+          "bytes": 10244,
+          "silhouette_pixel_coverage": 0.120889,
+          "visible_triangles": 108,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 108,
+          "back_facing_triangles": 132,
+          "culled_back_faces": 132,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "52ab0a082f8f23599ac0077e300013d12643c7a435f574c28f4de6007a8cc00c",
+          "bytes": 10495,
+          "silhouette_pixel_coverage": 0.120889,
+          "visible_triangles": 108,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 108,
+          "back_facing_triangles": 132,
+          "culled_back_faces": 132,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "7f8ffd29f4b24112e71e4a5535ada84ec48d50c295c61f2376b592ebe2c2fe11",
+          "bytes": 18146,
+          "silhouette_pixel_coverage": 0.121829,
+          "visible_triangles": 120,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 120,
+          "back_facing_triangles": 120,
+          "culled_back_faces": 120,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "56b577a293e163c74fa9000d6b929219cd03c899f4146204b077ba9e4d8cb4f2",
+          "bytes": 9898,
+          "silhouette_pixel_coverage": 0.236074,
+          "visible_triangles": 84,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 84,
+          "back_facing_triangles": 156,
+          "culled_back_faces": 156,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "432efdc71c76c35d6850aba413cbffe868768acbd3ea41d99e178a9fc780f0d8",
+          "bytes": 14775,
+          "silhouette_pixel_coverage": 0.095181,
+          "visible_triangles": 120,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 120,
+          "back_facing_triangles": 120,
+          "culled_back_faces": 120,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "e1a73a1ae30be8e76da1c47b266f88603e650cedb23ea863bedd06a2d470711c",
+        "bytes": 124829
+      },
+      "manual_review": {
+        "asset_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+        "overall": "PASS_G2_PLANNING_QA",
+        "orientation": "PASS_NON_DIRECTIONAL_PLACEMENT_CONTRACT",
+        "floor_contact": "PASS_MIN_Y_ZERO",
+        "dimensions": "PASS_OFFICIAL_ENVELOPE_VS_WORLD_TRANSFORMED_GLB_BOUNDS",
+        "materials_textures": "PASS_MATERIAL_CUES_ONLY_NO_EMBEDDED_TEXTURES_NO_EXACT_FINISH_CLAIM",
+        "front_back": "NOT_APPLICABLE_NON_DIRECTIONAL",
+        "collision_envelope": "PASS_MATCHES_VERIFIED_DIMENSION_ENVELOPE",
+        "attribution_display": "PARTIAL_SOURCE_LINK_DISCLOSURE_EXISTS_FULL_SURFACE_QA_REQUIRED",
+        "rights_publication": "INTERNAL_PROJECT_PROXY_ALLOWED_PUBLIC_BLOCKED_PENDING_INDEPENDENT_APPROVAL",
+        "blockers": [
+          "exact likeness not verified",
+          "exact veneer artwork not verified",
+          "all-surface attribution display not verified",
+          "independent public-rights approval not recorded"
+        ]
+      },
+      "publication": {
+        "public_allowed": false,
+        "rights_state": "INTERNAL_PROJECT_PROXY_ALLOWED",
+        "attribution_display_state": "PARTIAL_IDENTITY_SOURCE_DISCLOSURE"
+      }
+    },
+    {
+      "asset_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+      "role": "FLOOR_LAMP",
+      "asset_directory": "avatar_ikea_lauters_30405042_g2_floor_lamp_proxy",
+      "geometry_sha256": "b276fc15e90b0e380a335fe965253a486a2f40d08a6e0005433f99d05bb13f3e",
+      "declared_dimensions": {
+        "width": 620,
+        "depth": 620,
+        "height": 1510,
+        "unit": "mm"
+      },
+      "measured_dimensions": {
+        "width": 620.0,
+        "depth": 620.0,
+        "height": 1510.0,
+        "unit": "mm"
+      },
+      "automated_checks": {
+        "all_seven_views_rendered": true,
+        "floor_contact_error_mm": 0.0,
+        "centre_pivot_offset_mm": {
+          "x": 0.0,
+          "z": 0.0
+        },
+        "max_dimension_relative_error": 0.0,
+        "material_count": 2,
+        "embedded_texture_count": 0
+      },
+      "orientation_contract": {
+        "up_axis": "Y",
+        "handedness": "RIGHT_HANDED",
+        "origin": "FLOOR_CENTER",
+        "floor_anchor": "MIN_Y_EQ_0",
+        "front_state": "NON_DIRECTIONAL",
+        "front_vector": null
+      },
+      "views": [
+        {
+          "view": "front",
+          "file": "front.png",
+          "sha256": "aa4682bf77dc3f6b35d2a09d15e6b8e23c250f09ec6427636ed0adee4f10985d",
+          "bytes": 12081,
+          "silhouette_pixel_coverage": 0.076533,
+          "visible_triangles": 140,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 140,
+          "back_facing_triangles": 112,
+          "culled_back_faces": 112,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "rear",
+          "file": "rear.png",
+          "sha256": "dd89b64fefabf7145e8f35f31d1ecc133133cb2fb0be1750478377342695408d",
+          "bytes": 11679,
+          "silhouette_pixel_coverage": 0.076533,
+          "visible_triangles": 140,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 140,
+          "back_facing_triangles": 112,
+          "culled_back_faces": 112,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "left",
+          "file": "left.png",
+          "sha256": "88f27381a73be933c6d8321def95a0fcefa7b758a7bb3a9f2de9f6dd741707b6",
+          "bytes": 10725,
+          "silhouette_pixel_coverage": 0.065637,
+          "visible_triangles": 140,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 140,
+          "back_facing_triangles": 112,
+          "culled_back_faces": 112,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "right",
+          "file": "right.png",
+          "sha256": "8319c64b550e51341ba5d85b2f3c4116fab9cd288bf6cda66557a89c41c21adc",
+          "bytes": 11286,
+          "silhouette_pixel_coverage": 0.065637,
+          "visible_triangles": 140,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 140,
+          "back_facing_triangles": 112,
+          "culled_back_faces": 112,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "three_quarter",
+          "file": "three_quarter.png",
+          "sha256": "b9823f26927782ca7688bdadb76debaa3aac7b21a1799b6b063456e5f89a9d9f",
+          "bytes": 19611,
+          "silhouette_pixel_coverage": 0.081963,
+          "visible_triangles": 124,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 124,
+          "back_facing_triangles": 128,
+          "culled_back_faces": 128,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "top",
+          "file": "top.png",
+          "sha256": "eeb49b6ba3f324c5656faaa102ba84d48dcf126ffa9dcc71630300f878fa85b9",
+          "bytes": 14976,
+          "silhouette_pixel_coverage": 0.189436,
+          "visible_triangles": 64,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 64,
+          "back_facing_triangles": 188,
+          "culled_back_faces": 188,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        },
+        {
+          "view": "floor_contact",
+          "file": "floor_contact.png",
+          "sha256": "b7e6ce3684ff85207b140c755dc381eba87e652a5c40e8fecbcb5bedf444bb7f",
+          "bytes": 17430,
+          "silhouette_pixel_coverage": 0.08655,
+          "visible_triangles": 150,
+          "degenerate_triangles": 0,
+          "front_facing_triangles": 150,
+          "back_facing_triangles": 102,
+          "culled_back_faces": 102,
+          "diagnostic_overlays": [
+            "canonical_axes",
+            "mechanical_origin_pivot",
+            "bounds",
+            "sampled_face_normals",
+            "back_face_counts"
+          ]
+        }
+      ],
+      "contact_sheet": {
+        "file": "contact-sheet.png",
+        "sha256": "4e579633c9e4fce17f505b856316e7ee29400fb1f8152537a675a608df1026ec",
+        "bytes": 170439
+      },
+      "manual_review": {
+        "asset_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+        "overall": "PASS_G2_PLANNING_QA",
+        "orientation": "PASS_NON_DIRECTIONAL_PLACEMENT_CONTRACT",
+        "floor_contact": "PASS_MIN_Y_ZERO",
+        "dimensions": "PASS_OFFICIAL_ENVELOPE_VS_WORLD_TRANSFORMED_GLB_BOUNDS",
+        "materials_textures": "PASS_MATERIAL_CUES_ONLY_NO_EMBEDDED_TEXTURES_NO_EXACT_FINISH_CLAIM",
+        "front_back": "NOT_APPLICABLE_NON_DIRECTIONAL",
+        "collision_envelope": "PASS_MATCHES_VERIFIED_DIMENSION_ENVELOPE",
+        "attribution_display": "PARTIAL_SOURCE_LINK_DISCLOSURE_EXISTS_FULL_SURFACE_QA_REQUIRED",
+        "rights_publication": "INTERNAL_PROJECT_PROXY_ALLOWED_PUBLIC_BLOCKED_PENDING_INDEPENDENT_APPROVAL",
+        "blockers": [
+          "exact likeness not verified",
+          "exact wood/textile finish not verified",
+          "photometric behavior not verified",
+          "all-surface attribution display not verified",
+          "independent public-rights approval not recorded"
+        ]
+      },
+      "publication": {
+        "public_allowed": false,
+        "rights_state": "INTERNAL_PROJECT_PROXY_ALLOWED",
+        "attribution_display_state": "PARTIAL_IDENTITY_SOURCE_DISCLOSURE"
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/furniture-avatar-verification-package-v0.1.schema.json",
+  "title": "Furniture Avatar Verification Package v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "package_id", "package_number", "version", "status", "subject",
+    "source_branch", "merge_authorized", "publication_authorized",
+    "scope", "artifacts", "runtime_evidence", "asset_decisions", "claims_for_verification",
+    "claims_explicitly_not_made", "expected_gate_state", "verification_requests",
+    "reproduction", "mutation_coverage"
+  ],
+  "properties": {
+    "package_id": {"const": "VERIFICATION_PACKAGE_2_FURNITURE_AVATAR_MANIFEST_V0_1"},
+    "package_number": {"const": 2},
+    "version": {"const": "0.1"},
+    "status": {"const": "READY_FOR_INDEPENDENT_VERIFICATION"},
+    "subject": {"const": "LIVING_ROOM_ALPHA_FURNITURE_MANIFEST"},
+    "source_branch": {"const": "agent/avatar-factory-source-graph"},
+    "merge_authorized": {"const": false},
+    "publication_authorized": {"const": false},
+    "scope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["primary_assets", "supplemental_blocked_assets", "roles"],
+      "properties": {
+        "primary_assets": {"const": 4},
+        "supplemental_blocked_assets": {"const": 1},
+        "roles": {"type": "array", "minItems": 4, "maxItems": 4, "uniqueItems": true, "items": {"type": "string"}}
+      }
+    },
+    "artifacts": {"type": "array", "minItems": 8, "items": {"$ref": "#/$defs/artifact"}},
+    "runtime_evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["git_policy", "directory", "views", "contact_sheets", "master_contact_sheet_sha256", "reproducible"],
+      "properties": {
+        "git_policy": {"const": "RUNTIME_ONLY_NOT_COMMITTED"},
+        "directory": {"type": "string"},
+        "views": {"const": 28},
+        "contact_sheets": {"const": 5},
+        "master_contact_sheet_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "reproducible": {"const": true}
+      }
+    },
+    "asset_decisions": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"$ref": "#/$defs/assetDecision"}},
+    "claims_for_verification": {"type": "array", "minItems": 8, "items": {"$ref": "#/$defs/claim"}},
+    "claims_explicitly_not_made": {"type": "array", "minItems": 5, "items": {"type": "string"}},
+    "expected_gate_state": {
+      "type": "object", "additionalProperties": false,
+      "required": ["internal_room_alpha_ingestible", "publicly_publishable", "arper_runtime_ingestible", "arper_publicly_publishable"],
+      "properties": {
+        "internal_room_alpha_ingestible": {"const": 4},
+        "publicly_publishable": {"const": 0},
+        "arper_runtime_ingestible": {"const": false},
+        "arper_publicly_publishable": {"const": false}
+      }
+    },
+    "verification_requests": {"type": "array", "minItems": 6, "items": {"type": "string"}},
+    "reproduction": {"type": "object", "additionalProperties": false, "required": ["commands", "expected"], "properties": {"commands": {"type": "array", "minItems": 5, "items": {"type": "string"}}, "expected": {"type": "array", "minItems": 5, "items": {"type": "string"}}}},
+    "mutation_coverage": {"type": "array", "minItems": 10, "items": {"type": "string"}}
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["role", "path", "sha256", "required"],
+      "properties": {
+        "role": {"type": "string"},
+        "path": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "required": {"const": true}
+      }
+    },
+    "claim": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "expected", "reason", "evidence"],
+      "properties": {
+        "id": {"type": "string"},
+        "expected": {"enum": ["PASS", "BLOCKED"]},
+        "reason": {"type": "string", "minLength": 1},
+        "evidence": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    },
+    "assetDecision": {
+      "type": "object", "additionalProperties": false,
+      "required": ["asset_id", "role", "geometry_level", "internal_ingest", "public_publication", "pass_reasons", "block_reasons"],
+      "properties": {
+        "asset_id": {"type": "string"},
+        "role": {"type": "string"},
+        "geometry_level": {"enum": ["G0", "G1", "G2", "G3", "G4", "G5"]},
+        "internal_ingest": {"enum": ["PASS", "BLOCKED"]},
+        "public_publication": {"const": "BLOCKED"},
+        "pass_reasons": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "block_reasons": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    }
+  }
+}

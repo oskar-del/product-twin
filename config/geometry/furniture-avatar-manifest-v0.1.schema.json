@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/furniture-avatar-manifest-v0.1.schema.json",
+  "title": "Furniture Avatar Manifest v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_id", "version", "record_type", "consumer", "policy", "selected_roles", "summary", "assets"],
+  "properties": {
+    "manifest_id": {"const": "FURNITURE_AVATAR_MANIFEST_V0_1"},
+    "version": {"const": "0.1"},
+    "record_type": {"const": "FURNITURE_AVATAR_MANIFEST"},
+    "consumer": {"const": "MANIFEST_DRIVEN_ROOM_ALPHA"},
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["commerce_separate", "destination_supply_separate", "exact_identity_rule", "public_fail_closed"],
+      "properties": {
+        "commerce_separate": {"const": true},
+        "destination_supply_separate": {"const": true},
+        "exact_identity_rule": {"type": "string", "minLength": 1},
+        "public_fail_closed": {"const": true}
+      }
+    },
+    "selected_roles": {"type": "array", "minItems": 4, "maxItems": 4, "uniqueItems": true, "items": {"enum": ["SOFA", "LOUNGE_CHAIR", "COFFEE_SIDE_TABLE", "FLOOR_LAMP"]}},
+    "summary": {
+      "type": "object", "additionalProperties": false,
+      "required": ["primary_assets", "supplemental_blocked_assets", "internal_ingestible", "publicly_publishable"],
+      "properties": {
+        "primary_assets": {"const": 4}, "supplemental_blocked_assets": {"const": 1},
+        "internal_ingestible": {"type": "integer", "minimum": 0}, "publicly_publishable": {"type": "integer", "minimum": 0}
+      }
+    },
+    "assets": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"$ref": "#/$defs/asset"}}
+  },
+  "$defs": {
+    "vec3": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+    "dimensions": {
+      "type": "object", "additionalProperties": false, "required": ["width", "depth", "height", "unit"],
+      "properties": {"width": {"type": "number", "exclusiveMinimum": 0}, "depth": {"type": "number", "exclusiveMinimum": 0}, "height": {"type": "number", "exclusiveMinimum": 0}, "unit": {"const": "mm"}}
+    },
+    "asset": {
+      "type": "object", "additionalProperties": false,
+      "required": ["asset_id", "primary_selection", "role", "record_lane", "product_identity", "geometry", "independent_scale", "dimensions", "orientation", "collision_envelope", "functional_clearance", "placement", "dimensional_confidence", "appearance", "provenance", "rights", "attribution", "publication", "verification_required"],
+      "properties": {
+        "asset_id": {"type": "string", "pattern": "^[A-Z0-9_]+$"},
+        "primary_selection": {"type": "boolean"},
+        "role": {"enum": ["SOFA", "LOUNGE_CHAIR", "COFFEE_SIDE_TABLE", "FLOOR_LAMP"]},
+        "record_lane": {"enum": ["PRODUCT_TWIN", "DESIGN_ASSET"]},
+        "product_identity": {"anyOf": [{"type": "null"}, {"type": "object", "additionalProperties": false, "required": ["verification_state", "twin_id", "manufacturer", "family", "model", "article_no", "source_url"], "properties": {"verification_state": {"const": "VERIFIED_EXACT"}, "twin_id": {"type": "string"}, "manufacturer": {"type": "string"}, "family": {"type": "string"}, "model": {"type": "string"}, "article_no": {"type": "string"}, "source_url": {"type": "string", "format": "uri"}}}]},
+        "geometry": {"type": "object", "additionalProperties": false, "required": ["uri", "sha256", "format", "bytes", "level", "level_state", "persistent_binary", "runtime_ingestible", "exact_likeness_claimed", "disclosure"], "properties": {"uri": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "format": {"enum": ["GLB", "3DS"]}, "bytes": {"type": ["integer", "null"], "minimum": 1}, "level": {"enum": ["G0", "G1", "G2", "G3", "G4", "G5"]}, "level_state": {"type": "string"}, "persistent_binary": {"type": "boolean"}, "runtime_ingestible": {"type": "boolean"}, "exact_likeness_claimed": {"type": "boolean"}, "disclosure": {"type": "string", "minLength": 1}}},
+        "independent_scale": {"type": "object", "additionalProperties": false, "required": ["state", "method", "evidence", "max_relative_error"], "properties": {"state": {"enum": ["PASS", "BLOCKED"]}, "method": {"type": "string"}, "evidence": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "max_relative_error": {"type": ["number", "null"], "minimum": 0}}},
+        "dimensions": {"$ref": "#/$defs/dimensions"},
+        "orientation": {"type": "object", "additionalProperties": false, "required": ["up_axis", "handedness", "origin", "floor_anchor", "front_state", "front_vector"], "properties": {"up_axis": {"const": "Y"}, "handedness": {"const": "RIGHT_HANDED"}, "origin": {"const": "FLOOR_CENTER"}, "floor_anchor": {"const": "MIN_Y_EQ_0"}, "front_state": {"enum": ["DECLARED", "NON_DIRECTIONAL"]}, "front_vector": {"anyOf": [{"$ref": "#/$defs/vec3"}, {"type": "null"}]}}},
+        "collision_envelope": {"$ref": "#/$defs/dimensions"},
+        "functional_clearance": {"type": "object", "additionalProperties": false, "required": ["state", "zones"], "properties": {"state": {"enum": ["DECLARED_PLANNING", "UNVERIFIED"]}, "zones": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["role", "distance_mm"], "properties": {"role": {"type": "string"}, "distance_mm": {"type": "number", "minimum": 0}}}}},
+        "placement": {"type": "object", "additionalProperties": false, "required": ["roles", "wall_preference", "centre_preference", "furniture_relationships"], "properties": {"roles": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "wall_preference": {"type": "string"}, "centre_preference": {"type": "string"}, "furniture_relationships": {"type": "array", "items": {"type": "string"}}}},
+        "dimensional_confidence": {"enum": ["HIGH_INDEPENDENT_SCALE_PASS", "HIGH_MANUFACTURER_SCALE_PASS"]},
+        "appearance": {"type": "object", "additionalProperties": false, "required": ["confidence", "state", "materials", "exact_finish_claimed", "pbr_state", "texture_evidence"], "properties": {"confidence": {"enum": ["LOW", "MEDIUM", "HIGH"]}, "state": {"type": "string"}, "materials": {"type": "array", "items": {"type": "string"}}, "exact_finish_claimed": {"type": "boolean"}, "pbr_state": {"type": "string"}, "texture_evidence": {"type": "array", "items": {"type": "string"}}}},
+        "provenance": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["kind", "uri", "sha256"], "properties": {"kind": {"type": "string"}, "uri": {"type": "string"}, "sha256": {"anyOf": [{"type": "string", "pattern": "^[a-f0-9]{64}$"}, {"type": "null"}]}}}},
+        "rights": {"type": "object", "additionalProperties": false, "required": ["source_state", "derivative_state", "redistribution_state", "rendering_state", "evidence"], "properties": {"source_state": {"type": "string"}, "derivative_state": {"type": "string"}, "redistribution_state": {"enum": ["PROJECT_PROXY_ALLOWED", "BLOCKED_WITHOUT_PERMISSION"]}, "rendering_state": {"enum": ["INTERNAL_PROJECT_PROXY_ALLOWED", "BLOCKED_WITHOUT_PERMISSION"]}, "evidence": {"type": "array", "minItems": 1, "items": {"type": "string"}}}},
+        "attribution": {"type": "object", "additionalProperties": false, "required": ["required", "display_text", "source_url", "display_state", "required_surfaces"], "properties": {"required": {"type": "boolean"}, "display_text": {"type": "string"}, "source_url": {"type": "string"}, "display_state": {"enum": ["PARTIAL_IDENTITY_SOURCE_DISCLOSURE", "BLOCKED_NO_AUTHORIZED_DISPLAY"]}, "required_surfaces": {"type": "array", "items": {"type": "string"}}}},
+        "publication": {"type": "object", "additionalProperties": false, "required": ["state", "internal_ingest_allowed", "public_allowed", "blockers"], "properties": {"state": {"enum": ["INTERNAL_ROOM_ALPHA_READY_PUBLIC_BLOCKED", "BLOCKED_RIGHTS"]}, "internal_ingest_allowed": {"type": "boolean"}, "public_allowed": {"type": "boolean"}, "blockers": {"type": "array", "minItems": 1, "items": {"type": "string"}}}},
+        "verification_required": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    }
+  }
+}
+}

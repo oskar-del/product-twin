@@ -11,6 +11,35 @@ This workstream turns rights-safe source geometry and product media into correct
 
 The next useful outcome is a visually checked living-room pack, not another dashboard expansion.
 
+## Living Room Alpha furniture manifest checkpoint (2026-08-18)
+
+`furniture-avatar-manifest-v0.1` and Verification Package #2 are complete on `agent/avatar-factory-source-graph` and ready for independent review. Nothing in this checkpoint authorizes merge or public publication.
+
+The four primary internal Room Alpha assets are:
+
+| Role | Asset | Geometry | Appearance | Internal ingest | Public publication |
+|---|---|---|---|---|---|
+| Sofa | IKEA KIVIK 494.405.97 planning proxy | G2; independent scale and canonical QA pass | Medium; material cues, no exact texture | PASS | BLOCKED |
+| Lounge chair | IKEA POÄNG 392.407.87 planning proxy | G2; independent scale and canonical QA pass | Medium; material cues, no exact texture | PASS | BLOCKED |
+| Coffee/side table | IKEA LISTERBY 305.139.04 planning proxy | G2; independent scale and canonical QA pass | Medium; material cues, no exact veneer artwork | PASS | BLOCKED |
+| Floor lamp | IKEA LAUTERS 304.050.42 planning proxy | G2; independent scale and canonical QA pass | Medium; material cues, no exact wood/textile finish | PASS | BLOCKED |
+
+Arper Ply #3853 is included only as a supplemental exact-geometry candidate at G2 with `G3_CANDIDATE_NOT_PROMOTED`. It is not runtime-ingestible or publishable. Written commercial-rendering and redistribution permission, persistent-binary permission, approved PBR and functional-clearance evidence remain missing.
+
+Canonical QA comprises 28 runtime-only views plus four per-asset contact sheets and one master sheet. The renderer applies GLB scene/node transforms before testing bounds, floor contact and pivot; all four primary assets match their independently sourced official envelopes, sit at min-Y zero and remain centred on X/Z. Sofa and chair use declared negative-Z fronts; table and lamp are non-directional. This proves G2 planning behavior only, not exact likeness, exact finish, public rights or attribution UI completion.
+
+Authoritative package:
+
+- manifest: `data/geometry/manifests/furniture-avatar-manifest-v0.1.json`
+- manifest schema: `config/geometry/furniture-avatar-manifest-v0.1.schema.json`
+- QA metric: `data/metrics/furniture-avatar-manifest-v0.1-qa.json`
+- pre-Verification visual review: `data/evidence/furniture-avatar-manifest-v0.1-visual-review.json`
+- Verification Package #2: `data/verification/packages/furniture-avatar-manifest-v0.1-package-2.json`
+- package schema: `config/verification/furniture-avatar-verification-package-v0.1.schema.json`
+- detailed Brain checkpoint: `docs/handoffs/FURNITURE-AVATAR-MANIFEST-V0.1.md`
+
+Package #2 enumerates each asset's PASS and BLOCK reasons, hashes every required committed artifact, records the runtime image inventory and fails closed on authority, gate-count, Arper, evidence-count or artifact-hash mutations. Verification must independently recompute hashes, rerun the deterministic builders/render/tests, inspect canonical views, assess proxy derivative/public-rendering rights and verify attribution across every required Room Lab surface.
+
 ## Exact checkpoint (2026-08-17)
 
 Independent review blocked publication twice while probing fail-closed boundaries. The first review identified gate/semantic/MCP-envelope weaknesses; the second identified value-type and compact-alias bypasses. Both sets are corrected in the worktree and awaiting re-review; publication remains blocked throughout.

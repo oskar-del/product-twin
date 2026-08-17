@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/design-asset-promotion-evidence-v0.1.json",
+  "title": "Design Asset promotion evidence",
+  "type": "object",
+  "required": ["version", "record_lane", "publication_surface", "evidence_policy", "assets"],
+  "properties": {
+    "version": {"const": "0.1"},
+    "record_lane": {"const": "DESIGN_ASSET"},
+    "publication_surface": {"const": "ROOM_LAB"},
+    "evidence_policy": {"type": "string", "minLength": 1},
+    "assets": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/asset"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "baseClaim": {
+      "type": "object",
+      "required": ["status", "reviewer", "reviewed_at", "evidence_refs", "note"],
+      "properties": {
+        "status": {"enum": ["PASS", "FAIL"]},
+        "reviewer": {"type": "string", "minLength": 1},
+        "reviewed_at": {"type": "string", "format": "date-time"},
+        "evidence_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "note": {"type": "string", "minLength": 20}
+      }
+    },
+    "plainClaim": {
+      "allOf": [{"$ref": "#/$defs/baseClaim"}],
+      "unevaluatedProperties": false
+    },
+    "rightsClaim": {
+      "allOf": [
+        {"$ref": "#/$defs/baseClaim"},
+        {
+          "type": "object",
+          "required": ["license_id", "source_url"],
+          "properties": {
+            "license_id": {"type": "string", "minLength": 1},
+            "source_url": {"type": "string", "format": "uri"}
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "redistributionClaim": {
+      "allOf": [
+        {"$ref": "#/$defs/baseClaim"},
+        {
+          "type": "object",
+          "required": ["distribution_scope"],
+          "properties": {"distribution_scope": {"const": "ROOM_LAB_PUBLIC_ASSET_REDISTRIBUTION"}}
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "dimensions": {
+      "type": "object",
+      "required": ["width", "depth", "height"],
+      "properties": {
+        "width": {"type": "number", "exclusiveMinimum": 0},
+        "depth": {"type": "number", "exclusiveMinimum": 0},
+        "height": {"type": "number", "exclusiveMinimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "scaleClaim": {
+      "allOf": [
+        {"$ref": "#/$defs/baseClaim"},
+        {
+          "type": "object",
+          "required": ["method", "reference_uri", "reference_dimensions_mm", "maximum_axis_error_mm"],
+          "properties": {
+            "method": {"type": "string", "minLength": 1},
+            "reference_uri": {"type": "string", "minLength": 1},
+            "reference_dimensions_mm": {"$ref": "#/$defs/dimensions"},
+            "maximum_axis_error_mm": {"type": "number", "minimum": 0}
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "attributionClaim": {
+      "allOf": [
+        {"$ref": "#/$defs/baseClaim"},
+        {
+          "type": "object",
+          "required": ["display_surfaces"],
+          "properties": {
+            "display_surfaces": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {"enum": ["asset_card", "asset_detail", "room_selection", "export_manifest"]}
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "claims": {
+      "type": "object",
+      "properties": {
+        "rights_source_verified": {"$ref": "#/$defs/rightsClaim"},
+        "redistribution_allowed": {"$ref": "#/$defs/redistributionClaim"},
+        "source_orientation_applied": {"$ref": "#/$defs/plainClaim"},
+        "back_face_policy_applied": {"$ref": "#/$defs/plainClaim"},
+        "texture_embedding_verified": {"$ref": "#/$defs/plainClaim"},
+        "canonical_view_visual_qa_passed": {"$ref": "#/$defs/plainClaim"},
+        "independent_scale_qa_passed": {"$ref": "#/$defs/scaleClaim"},
+        "attribution_display_verified": {"$ref": "#/$defs/attributionClaim"}
+      },
+      "additionalProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "required": ["design_asset_id", "geometry_sha256", "public_asset_reference", "claims"],
+      "properties": {
+        "design_asset_id": {"type": "string", "pattern": "^DA_[A-Z0-9_]+$"},
+        "geometry_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "public_asset_reference": {"type": ["string", "null"], "format": "uri"},
+        "claims": {"$ref": "#/$defs/claims"}
+      },
+      "additionalProperties": false
+    }
+  }
+}
