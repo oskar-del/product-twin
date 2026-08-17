@@ -80,6 +80,10 @@
     "site:canopus:spatial:mutations": "node scripts/test-canopus-spatial-v0.2.mjs",
     "site:canopus:separation:test": "node scripts/test-canopus-spatial-v0.2.mjs",
     "site:canopus:gate": "npm run site:canopus:validate && npm run site:canopus:validate:test && npm run site:canopus:spatial:validate && npm run site:canopus:spatial:mutations",
+    "site:sweden:validate": "node scripts/validate-sweden-plot-intelligence.mjs",
+    "site:sweden:validate:test": "node scripts/test-sweden-plot-intelligence.mjs",
+    "site:sweden:sources:probe": "node scripts/probe-sweden-plot-sources.mjs",
+    "site:sweden:gate": "npm run site:sweden:validate && npm run site:sweden:validate:test",
     "summarize": "node scripts/summarize.mjs"
   }
 }

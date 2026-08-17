@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/site/sweden-plot-intake-v0.1.schema.json",
+  "title": "Sweden plot intake v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "entity_type", "country", "intake_id", "submitted_at", "locator", "project_intent", "permissions", "ready_for_automated_discovery", "blockers"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "entity_type": {"const": "SwedenPlotIntake"},
+    "country": {"const": "SE"},
+    "intake_id": {"type": ["string", "null"]},
+    "submitted_at": {"type": ["string", "null"], "format": "date-time"},
+    "locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["municipality", "property_designation", "address", "coordinate_wgs84", "listing_url"],
+      "properties": {
+        "municipality": {"type": ["string", "null"]},
+        "property_designation": {"type": ["string", "null"]},
+        "address": {"type": ["string", "null"]},
+        "coordinate_wgs84": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "array", "minItems": 2, "maxItems": 2, "prefixItems": [{"type": "number", "minimum": 10, "maximum": 25}, {"type": "number", "minimum": 54, "maximum": 70}], "items": false}
+          ]
+        },
+        "listing_url": {"type": ["string", "null"]}
+      }
+    },
+    "project_intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["journey", "house_profiles", "target_use", "notes"],
+      "properties": {
+        "journey": {"enum": ["PLOT_FIRST", "HOUSE_FIRST"]},
+        "house_profiles": {"type": "array", "items": {"enum": ["HOUSEKIT_H30", "HOUSEKIT_H50", "OTHER"]}, "uniqueItems": true},
+        "target_use": {"type": ["string", "null"]},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["may_request_property_register_extract", "may_create_ledningskollen_case", "may_contact_municipality", "may_order_field_work"],
+      "properties": {
+        "may_request_property_register_extract": {"type": "boolean"},
+        "may_create_ledningskollen_case": {"type": "boolean"},
+        "may_contact_municipality": {"type": "boolean"},
+        "may_order_field_work": {"type": "boolean"}
+      }
+    },
+    "ready_for_automated_discovery": {"type": "boolean"},
+    "blockers": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  }
+}
