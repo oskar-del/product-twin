@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "room_manifest_id": "ROOM_MANIFEST_LIVING_ROOM_ALPHA_V0_1",
+  "revision": "0.1.0",
+  "name": "Manifest-Driven Living Room Alpha",
+  "evidence_state": "ASSUMED_DEMO_NOT_SURVEYED",
+  "brain_control_binding": {
+    "repository": "oskar-del/product-twin",
+    "commit": "ef1d52d53aa4d6c3b8cbd5f99c456c5d219a1a4c",
+    "path": "data/dashboard/project-control.json",
+    "sha256": "f5850d8ed3df1db60d1708e6492cc9513c7c34fbebb950d14b70a8d2126049c5"
+  },
+  "room_lab_binding": {
+    "repository": "room-lab-site",
+    "commit": "3d36f07c32e42b168a74c5bc03a263e8c63e6eab",
+    "release": "ROOM_LAB_INTERACTION_V9",
+    "scene_manifest_uri": "data/media/room-lab/v0.1/scene-manifest.json",
+    "scene_manifest_id": "MEDIA_SCENE_ROOM_LAB_MARBELLA_V0_1",
+    "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+    "scene_manifest_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+    "source_files": [
+      {"path": "app/room/room-contract.ts", "sha256": "21f06ca70a098797cb174c8c73459442bc3074bf070a6c387bb136c727c3a821"},
+      {"path": "app/room/room-data.ts", "sha256": "fcc9763789a2cab4f5fd9ba020e55436fe10be9d449997f1936f9b2d4015f204"},
+      {"path": "app/room/room-lab.tsx", "sha256": "65a85a7ce53867fbdf9e08558d8c7775a5e2fb8b4e7b9a79eaee5d1a08b66c9e"},
+      {"path": "app/room/room-state.mjs", "sha256": "5e718883c64470c3c7988a88546b85993c84cab476d41d06c78064b1912c254e"}
+    ]
+  },
+  "coordinate_frame": {
+    "id": "ROOM_LAB_LOCAL_V9",
+    "units": "metres",
+    "handedness": "RIGHT_HANDED",
+    "up_axis": "+Y",
+    "origin": "room floor centre"
+  },
+  "shell": {
+    "width_m": 6,
+    "depth_m": 4.6,
+    "height_m": 2.8,
+    "authoritative_opening_count": 0,
+    "assumed_overlay_ids": ["OVERLAY_GARDEN_WINDOW_ASSUMED"]
+  },
+  "freeze": {
+    "shell_changes_allowed": false,
+    "opening_changes_allowed": false,
+    "placement_changes_allowed": false,
+    "geometry_substitution_allowed": false,
+    "camera_logic_owned_by_media_pack": true
+  }
+}

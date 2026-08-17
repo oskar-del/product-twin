@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "market_manifest_id": "MARKET_MANIFEST_LIVING_ROOM_ALPHA_ES_29660_V0_1",
+  "revision": "0.1.0",
+  "destination": {"country": "ES", "postal_code": "29660", "store": "IKEA Málaga"},
+  "source_binding": {
+    "uri": "data/procurement/living-room-ikea-spain-session-2026-08-17.json",
+    "sha256": "72859925c42dc30f76883cbeaddd51416236b30e51e28c4f58ea646e61336538",
+    "session_id": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+    "observed_at": "2026-08-17"
+  },
+  "state": "DATED_SNAPSHOT_REFRESH_BEFORE_APPROVAL_OR_PURCHASE",
+  "placement_supply": [
+    {"placement_id": "kivik-placement-01", "product_twin_id": "PT_IKEA_KIVIK_49440597", "destination_state": "AVAILABLE"},
+    {"placement_id": "poang-placement-01", "product_twin_id": "PT_IKEA_POANG_39240787", "destination_state": "AVAILABLE"},
+    {"placement_id": "listerby-placement-01", "product_twin_id": "PT_IKEA_LISTERBY_30513904", "destination_state": "CURRENTLY_UNAVAILABLE"},
+    {"placement_id": "lohals-placement-01", "product_twin_id": "PT_IKEA_LOHALS_30511288", "destination_state": "AVAILABLE"},
+    {"placement_id": "gladom-placement-01", "product_twin_id": "PT_IKEA_GLADOM_70578451", "destination_state": "AVAILABLE"},
+    {"placement_id": "lauters-placement-01", "product_twin_id": "PT_IKEA_LAUTERS_30405042", "destination_state": "AVAILABLE"},
+    {"placement_id": "besta-placement-01", "product_twin_id": "PT_IKEA_BESTA_89330691", "destination_state": "AVAILABLE"},
+    {"placement_id": "billy-placement-01", "product_twin_id": "PT_IKEA_BILLY_00263850", "destination_state": "AVAILABLE"}
+  ],
+  "policy": {
+    "alters_scene_or_camera": false,
+    "silent_substitution_allowed": false,
+    "listerby_substitution_approved": false,
+    "procurement_claim_allowed": false
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/media/render-job.schema.json",
+  "title": "Deterministic render job",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "job_id", "scene_id", "scene_manifest_ref", "camera_pack_ref", "storyboard_ref", "input_digests", "shot_ids", "renderer", "deterministic", "mutation_policy", "rights_ref", "cost_ref", "status", "output_refs"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "job_id": {"type": "string"},
+    "scene_id": {"type": "string"},
+    "scene_manifest_ref": {"type": "string"},
+    "camera_pack_ref": {"type": "string"},
+    "storyboard_ref": {"type": "string"},
+    "input_digests": {
+      "type": "object", "additionalProperties": false,
+      "required": ["scene_sha256", "camera_pack_sha256", "storyboard_sha256"],
+      "properties": {
+        "scene_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "camera_pack_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "storyboard_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "shot_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "renderer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["engine", "engine_version", "runner_state", "runner_version", "runner_sha256", "pixel_ratio", "colour_space", "tone_mapping", "exposure", "shadow_map"],
+      "properties": {
+        "engine": {"const": "THREE_WEBGL"},
+        "engine_version": {"type": "string"},
+        "runner_state": {"enum": ["NOT_IMPLEMENTED", "IMPLEMENTED", "VERIFIED"]},
+        "runner_version": {"type": ["string", "null"]},
+        "runner_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+        "pixel_ratio": {"type": "number", "exclusiveMinimum": 0},
+        "colour_space": {"const": "SRGB"},
+        "tone_mapping": {"const": "ACES_FILMIC"},
+        "exposure": {"type": "number"},
+        "shadow_map": {"const": "PCF_SOFT"}
+      }
+    },
+    "deterministic": {"const": true},
+    "mutation_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["geometry_overrides", "material_overrides", "placement_overrides", "light_overrides"],
+      "properties": {
+        "geometry_overrides": {"type": "array", "maxItems": 0},
+        "material_overrides": {"type": "array", "maxItems": 0},
+        "placement_overrides": {"type": "array", "maxItems": 0},
+        "light_overrides": {"type": "array", "maxItems": 0}
+      }
+    },
+    "rights_ref": {"type": "string"},
+    "cost_ref": {"type": "string"},
+    "status": {"enum": ["PLANNED", "READY", "RUNNING", "SUCCEEDED", "FAILED", "REJECTED"]},
+    "output_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+  }
+}

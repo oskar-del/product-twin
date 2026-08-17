@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/media/fidelity-qa.schema.json",
+  "title": "Media fidelity QA record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "qa_id", "scene_id", "scope", "expected", "thresholds", "sampling", "checks", "reviewer_independence_required", "executor", "reviewer", "status", "approval_state"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "qa_id": {"type": "string"},
+    "scene_id": {"type": "string"},
+    "scope": {"type": "string"},
+    "expected": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["placement_count", "instance_count", "product_twin_count", "design_asset_count", "opening_claim_count", "garden_window_overlay_count", "fidelity_class", "exact_product_claim_allowed"],
+      "properties": {
+        "placement_count": {"type": "integer"}, "instance_count": {"type": "integer"}, "product_twin_count": {"type": "integer"}, "design_asset_count": {"type": "integer"}, "opening_claim_count": {"type": "integer"}, "garden_window_overlay_count": {"type": "integer"}, "fidelity_class": {"type": "string"}, "exact_product_claim_allowed": {"const": false}
+      }
+    },
+    "thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["deterministic_transform_drift_m", "deterministic_rotation_drift_rad", "generative_centroid_drift_percent", "generative_bbox_drift_percent", "identity_changes", "quantity_changes", "material_overclaims", "invented_openings", "sample_interval_s"],
+      "properties": {
+        "deterministic_transform_drift_m": {"const": 0}, "deterministic_rotation_drift_rad": {"const": 0}, "generative_centroid_drift_percent": {"type": "number", "minimum": 0}, "generative_bbox_drift_percent": {"type": "number", "minimum": 0}, "identity_changes": {"const": 0}, "quantity_changes": {"const": 0}, "material_overclaims": {"const": 0}, "invented_openings": {"const": 0}, "sample_interval_s": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "sampling": {
+      "type": "object", "additionalProperties": false, "required": ["direct_3d", "generative"],
+      "properties": {"direct_3d": {"type": "string"}, "generative": {"type": "string"}}
+    },
+    "checks": {
+      "type": "array", "minItems": 7, "maxItems": 7, "uniqueItems": true,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["check_id", "result", "finding_count"],
+        "properties": {"check_id": {"enum": ["PLACEMENT_IDENTITY", "TRANSFORM_RETENTION", "ASSET_HASH_RETENTION", "AVATAR_ORIENTATION", "SHELL_AND_OPENING_RETENTION", "MATERIAL_AND_CLAIM_RETENTION", "DISCLOSURE_AND_RIGHTS"]}, "result": {"enum": ["NOT_RUN", "PASS", "FAIL"]}, "finding_count": {"type": ["integer", "null"], "minimum": 0}}
+      }
+    },
+    "reviewer_independence_required": {"const": true},
+    "executor": {"$ref": "#/$defs/principal"},
+    "reviewer": {"$ref": "#/$defs/principal"},
+    "status": {"enum": ["NOT_RUN", "RUNNING", "PASS", "FAIL", "REJECTED"]},
+    "approval_state": {"enum": ["PENDING", "APPROVED", "REJECTED"]}
+  },
+  "$defs": {
+    "principal": {
+      "type": "object", "additionalProperties": false, "required": ["role", "id"],
+      "properties": {"role": {"enum": ["VISUAL_MEDIA", "VERIFICATION"]}, "id": {"type": ["string", "null"]}}
+    }
+  }
+}

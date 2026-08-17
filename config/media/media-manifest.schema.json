@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/media/media-manifest.schema.json",
+  "title": "Reusable media manifest index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "media_manifest_id", "scene_id", "generated_from_commit", "artifacts", "hero_output_id", "release", "status"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "media_manifest_id": {"type": "string"},
+    "scene_id": {"type": "string"},
+    "generated_from_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "artifacts": {
+      "type": "array", "minItems": 13, "uniqueItems": true,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["kind", "path", "sha256"],
+        "properties": {"kind": {"type": "string"}, "path": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}
+      }
+    },
+    "hero_output_id": {"type": ["string", "null"]},
+    "release": {
+      "type": "object", "additionalProperties": false, "required": ["state", "room_lab_consumption_allowed", "blockers"],
+      "properties": {"state": {"enum": ["CONTRACT_READY_OUTPUTS_PENDING", "OUTPUTS_RENDERED_QA_PENDING", "OUTPUTS_VERIFIED_PUBLICATION_RIGHTS_PENDING", "APPROVED"]}, "room_lab_consumption_allowed": {"type": "boolean"}, "blockers": {"type": "array", "items": {"type": "string"}}}
+    },
+    "status": {"enum": ["CONTRACT_READY_OUTPUTS_PENDING", "OUTPUTS_RENDERED_QA_PENDING", "OUTPUTS_VERIFIED_PUBLICATION_RIGHTS_PENDING", "APPROVED"]}
+  }
+}

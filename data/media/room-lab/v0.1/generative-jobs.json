@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.0",
+  "jobs": [
+    {
+      "schema_version": "0.1.0",
+      "job_id": "GEN_ROOM_LAB_PVIDEO_TEST_V0_1",
+      "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+      "provider": "REPLICATE",
+      "model": {
+        "identifier": "prunaai/p-video",
+        "version": null,
+        "version_capture_policy": "Resolve and persist the immutable version before READY or SUBMITTED; a moving slug is insufficient.",
+        "pricing_source": "https://replicate.com/prunaai/p-video"
+      },
+      "input_refs": [
+        "OUTPUT_ROOM_CONTROL_VIDEO_V0_1:first_frame",
+        "OUTPUT_ROOM_CONTROL_VIDEO_V0_1:last_frame"
+      ],
+      "prompt": "A restrained warm-modern living room camera move. Preserve the exact supplied room layout, the same eight furniture identities, quantities, positions, scale envelopes, colours, materials and assumed shell. Camera motion only.",
+      "negative_constraints": [
+        "no object additions or removals",
+        "no placement drift",
+        "no identity substitution",
+        "no material or colour changes",
+        "no invented doors or openings",
+        "no text, labels, logos or people",
+        "no exact-product or photoreal manufacturer claim"
+      ],
+      "seed": 184205,
+      "settings": {
+        "duration_s": 5,
+        "resolution": "720p",
+        "quality": "draft",
+        "start_end_frame_conditioning": true
+      },
+      "mutation_policy": {
+        "camera_motion_only": true,
+        "verification_authority": false,
+        "must_compare_against_direct_3d_control": true
+      },
+      "rights_ref": "RIGHTS_ROOM_LAB_G2_V0_1",
+      "cost_ref": "COST_ROOM_LAB_PVIDEO_TEST_V0_1",
+      "credential_state": "NOT_CONFIGURED",
+      "provider_prediction_id": null,
+      "status": "BLOCKED",
+      "blocked_reasons": [
+        "provider_processing rights are REVIEW, not YES",
+        "immutable model version has not been captured",
+        "Replicate credential is not configured",
+        "direct 3D control frames do not exist"
+      ],
+      "output_refs": ["OUTPUT_ROOM_PVIDEO_TEST_V0_1"]
+    }
+  ]
+}

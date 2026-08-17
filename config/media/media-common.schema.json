@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/media/media-common.schema.json",
+  "title": "Product Twin media common definitions",
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Z][A-Z0-9_:-]+$"},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "vector3": {
+      "type": "array",
+      "items": {"type": "number"},
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "uriOrPath": {"type": "string", "minLength": 1},
+    "state": {
+      "enum": ["PLANNED", "BLOCKED", "READY", "RUNNING", "SUCCEEDED", "FAILED", "REJECTED", "APPROVED"]
+    },
+    "evidenceLane": {"enum": ["PRODUCT_TWIN", "DESIGN_ASSET"]},
+    "geometryLevel": {"enum": ["G0", "G1", "G2", "G3", "G4", "G5"]},
+    "fidelityClass": {
+      "enum": ["CONCEPT", "G1_BOUNDING_PROXY", "G2_PLANNING_PROXY", "G3_RENDER_AVATAR", "EXACT_PRODUCT", "SURVEYED_OR_AS_BUILT"]
+    }
+  }
+}

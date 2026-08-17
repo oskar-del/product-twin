@@ -1,0 +1,538 @@
+{
+  "schema_version": "0.1.0",
+  "orientation_evidence_id": "ORIENTATION_ROOM_LAB_G2_V0_1",
+  "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+  "method_version": "ROOM_LAB_ORIENTATION_EVALUATOR_V2",
+  "builder_sha256": "76329695c85c448e32387717f005a98a52bb560a64c797dc1c1ff6bfa5386039",
+  "method": "GLB v2 world-bounds, verified-height, JSON-node landmark and symmetry inspection; no vertex or source record is modified.",
+  "records": [
+    {
+      "twin_ref": "PT_IKEA_KIVIK_49440597",
+      "avatar_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+      "asset_path": "data/geometry/avatars/ikea-kivik-49440597-g2-sofa-proxy.glb",
+      "asset_sha256": "a765cb6ddf0bd6b670c0b1add8e3d6a1546bffac23ba31736f850ce98e81d392",
+      "glb_version": 2,
+      "glb_generator": "Product Twin verified G2 builder",
+      "bounds_m": {
+        "min": [
+          -1.14,
+          0,
+          -0.475
+        ],
+        "max": [
+          1.14,
+          0.83,
+          0.475
+        ],
+        "size": [
+          2.28,
+          0.83,
+          0.95
+        ]
+      },
+      "verified_height_m": 0.83,
+      "up_axis": "+Y",
+      "visual_front_axis": "-Z",
+      "orientation_mode": "LANDMARK_FRONT",
+      "symmetry_class": "DIRECTIONAL_LANDMARK",
+      "symmetry_tolerance_m": null,
+      "symmetry_observed_max_residual_m": null,
+      "up_axis_checks": [
+        {
+          "check_id": "FLOOR_ORIGIN_MIN_Y",
+          "pass": true,
+          "observed_m": 0,
+          "expected_m": 0,
+          "tolerance_m": 0.000001
+        },
+        {
+          "check_id": "VERIFIED_HEIGHT",
+          "pass": true,
+          "observed_m": 0.83,
+          "expected_m": 0.83,
+          "tolerance_m": 0.000001
+        }
+      ],
+      "landmark_checks": [
+        {
+          "rule": "back_frame:Z_POSITIVE",
+          "pass": true,
+          "observed": 0.375
+        },
+        {
+          "rule": "seat_cushion_2:Z_NEGATIVE",
+          "pass": true,
+          "observed": -0.08
+        }
+      ],
+      "automated_result": "PASS"
+    },
+    {
+      "twin_ref": "PT_IKEA_POANG_39240787",
+      "avatar_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+      "asset_path": "data/geometry/avatars/ikea-poang-39240787-g2-armchair-proxy.glb",
+      "asset_sha256": "7d1e5659d9f34247aefe65399859d1f7adfc2ed000e1ade9a38a0498fd93cb85",
+      "glb_version": 2,
+      "glb_generator": "Product Twin verified G2 builder",
+      "bounds_m": {
+        "min": [
+          -0.34,
+          0,
+          -0.41
+        ],
+        "max": [
+          0.34,
+          1,
+          0.41
+        ],
+        "size": [
+          0.68,
+          1,
+          0.82
+        ]
+      },
+      "verified_height_m": 1,
+      "up_axis": "+Y",
+      "visual_front_axis": "-Z",
+      "orientation_mode": "LANDMARK_FRONT",
+      "symmetry_class": "DIRECTIONAL_LANDMARK",
+      "symmetry_tolerance_m": null,
+      "symmetry_observed_max_residual_m": null,
+      "up_axis_checks": [
+        {
+          "check_id": "FLOOR_ORIGIN_MIN_Y",
+          "pass": true,
+          "observed_m": 0,
+          "expected_m": 0,
+          "tolerance_m": 0.000001
+        },
+        {
+          "check_id": "VERIFIED_HEIGHT",
+          "pass": true,
+          "observed_m": 1,
+          "expected_m": 1,
+          "tolerance_m": 0.000001
+        }
+      ],
+      "landmark_checks": [
+        {
+          "rule": "back_cushion:Z_POSITIVE",
+          "pass": true,
+          "observed": 0.2
+        },
+        {
+          "rule": "front_crossbar:Z_NEGATIVE",
+          "pass": true,
+          "observed": -0.3825
+        }
+      ],
+      "automated_result": "PASS"
+    },
+    {
+      "twin_ref": "PT_IKEA_LISTERBY_30513904",
+      "avatar_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+      "asset_path": "data/geometry/avatars/ikea-listerby-30513904-g2-coffee-table-proxy.glb",
+      "asset_sha256": "d5294a8b83d5173179a75f54f371346b26577fe54425dfbe0f9ab2264cc8d37f",
+      "glb_version": 2,
+      "glb_generator": "Product Twin verified G2 builder",
+      "bounds_m": {
+        "min": [
+          -0.7,
+          0,
+          -0.3
+        ],
+        "max": [
+          0.7,
+          0.37,
+          0.3
+        ],
+        "size": [
+          1.4,
+          0.37,
+          0.6
+        ]
+      },
+      "verified_height_m": 0.37,
+      "up_axis": "+Y",
+      "visual_front_axis": "NOT_APPLICABLE",
+      "orientation_mode": "TWO_FOLD_SYMMETRY",
+      "symmetry_class": "GEOMETRIC_C2",
+      "symmetry_tolerance_m": 1e-9,
+      "symmetry_observed_max_residual_m": 0,
+      "up_axis_checks": [
+        {
+          "check_id": "FLOOR_ORIGIN_MIN_Y",
+          "pass": true,
+          "observed_m": 0,
+          "expected_m": 0,
+          "tolerance_m": 0.000001
+        },
+        {
+          "check_id": "VERIFIED_HEIGHT",
+          "pass": true,
+          "observed_m": 0.37,
+          "expected_m": 0.37,
+          "tolerance_m": 0.000001
+        }
+      ],
+      "landmark_checks": [
+        {
+          "rule": "front_rail:HAS_OPPOSITE_Z:rear_rail",
+          "pass": true,
+          "observed": [
+            -0.265,
+            0.265
+          ]
+        },
+        {
+          "rule": "solid_oak_leg:FOUR_QUADRANTS",
+          "pass": true,
+          "observed": [
+            "-1,-1",
+            "-1,1",
+            "1,-1",
+            "1,1"
+          ]
+        }
+      ],
+      "automated_result": "PASS"
+    },
+    {
+      "twin_ref": "PT_IKEA_LOHALS_30511288",
+      "avatar_id": "AVATAR_IKEA_LOHALS_30511288_G2_RUG_PROXY",
+      "asset_path": "data/geometry/avatars/ikea-lohals-30511288-g2-rug-proxy.glb",
+      "asset_sha256": "f3b28a885db303121e69ac0dd2d94089cb3d5f8791d58170852ea52ef916b572",
+      "glb_version": 2,
+      "glb_generator": "Product Twin verified G2 builder",
+      "bounds_m": {
+        "min": [
+          -0.665,
+          0,
+          -0.975
+        ],
+        "max": [
+          0.665,
+          0.013,
+          0.975
+        ],
+        "size": [
+          1.33,
+          0.013,
+          1.95
+        ]
+      },
+      "verified_height_m": 0.013,
+      "up_axis": "+Y",
+      "visual_front_axis": "NOT_APPLICABLE",
+      "orientation_mode": "TWO_FOLD_SYMMETRY",
+      "symmetry_class": "SEMANTIC_ENVELOPE_C2",
+      "symmetry_tolerance_m": 0.01,
+      "symmetry_observed_max_residual_m": 0.008,
+      "up_axis_checks": [
+        {
+          "check_id": "FLOOR_ORIGIN_MIN_Y",
+          "pass": true,
+          "observed_m": 0,
+          "expected_m": 0,
+          "tolerance_m": 0.000001
+        },
+        {
+          "check_id": "VERIFIED_HEIGHT",
+          "pass": true,
+          "observed_m": 0.013,
+          "expected_m": 0.013,
+          "tolerance_m": 0.000001
+        }
+      ],
+      "landmark_checks": [
+        {
+          "rule": "jute_base:LONG_AXIS_Z",
+          "pass": true,
+          "observed": [
+            1.33,
+            1.95
+          ]
+        },
+        {
+          "rule": "weft_cue_1:HAS_OPPOSITE_Z:weft_cue_43",
+          "pass": true,
+          "observed": [
+            -0.945,
+            0.945
+          ]
+        }
+      ],
+      "automated_result": "PASS"
+    },
+    {
+      "twin_ref": "PT_IKEA_GLADOM_70578451",
+      "avatar_id": "AVATAR_IKEA_GLADOM_70578451_G2_TRAY_TABLE_PROXY",
+      "asset_path": "data/geometry/avatars/ikea-gladom-70578451-g2-tray-table-proxy.glb",
+      "asset_sha256": "36e5c3da0c1b24147f0aa777373dff3ced49badde8c2295e061d99e565e6b4c9",
+      "glb_version": 2,
+      "glb_generator": "Product Twin verified G2 builder",
+      "bounds_m": {
+        "min": [
+          -0.225,
+          0,
+          -0.225
+        ],
+        "max": [
+          0.225,
+          0.53,
+          0.225
+        ],
+        "size": [
+          0.45,
+          0.53,
+          0.45
+        ]
+      },
+      "verified_height_m": 0.53,
+      "up_axis": "+Y",
+      "visual_front_axis": "NOT_APPLICABLE",
+      "orientation_mode": "FOUR_FOLD_SYMMETRY",
+      "symmetry_class": "NODE_TRANSFORM_C4",
+      "symmetry_tolerance_m": 1e-9,
+      "symmetry_observed_max_residual_m": 0,
+      "up_axis_checks": [
+        {
+          "check_id": "FLOOR_ORIGIN_MIN_Y",
+          "pass": true,
+          "observed_m": 0,
+          "expected_m": 0,
+          "tolerance_m": 0.000001
+        },
+        {
+          "check_id": "VERIFIED_HEIGHT",
+          "pass": true,
+          "observed_m": 0.53,
+          "expected_m": 0.53,
+          "tolerance_m": 0.000001
+        }
+      ],
+      "landmark_checks": [
+        {
+          "rule": "removable_tray:XZ_EQUAL",
+          "pass": true,
+          "observed": [
+            0.45,
+            0.45
+          ]
+        },
+        {
+          "rule": "lower_ring:XZ_EQUAL",
+          "pass": true,
+          "observed": [
+            0.37,
+            0.37
+          ]
+        },
+        {
+          "rule": "slender_leg:FOUR_QUADRANTS",
+          "pass": true,
+          "observed": [
+            "-1,-1",
+            "-1,1",
+            "1,-1",
+            "1,1"
+          ]
+        }
+      ],
+      "automated_result": "PASS"
+    },
+    {
+      "twin_ref": "PT_IKEA_LAUTERS_30405042",
+      "avatar_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+      "asset_path": "data/geometry/avatars/ikea-lauters-30405042-g2-floor-lamp-proxy.glb",
+      "asset_sha256": "b276fc15e90b0e380a335fe965253a486a2f40d08a6e0005433f99d05bb13f3e",
+      "glb_version": 2,
+      "glb_generator": "Product Twin verified G2 builder",
+      "bounds_m": {
+        "min": [
+          -0.31,
+          0,
+          -0.31
+        ],
+        "max": [
+          0.31,
+          1.51,
+          0.31
+        ],
+        "size": [
+          0.62,
+          1.51,
+          0.62
+        ]
+      },
+      "verified_height_m": 1.51,
+      "up_axis": "+Y",
+      "visual_front_axis": "-Z",
+      "orientation_mode": "LANDMARK_FRONT",
+      "symmetry_class": "DIRECTIONAL_LANDMARK",
+      "symmetry_tolerance_m": null,
+      "symmetry_observed_max_residual_m": null,
+      "up_axis_checks": [
+        {
+          "check_id": "FLOOR_ORIGIN_MIN_Y",
+          "pass": true,
+          "observed_m": 0,
+          "expected_m": 0,
+          "tolerance_m": 0.000001
+        },
+        {
+          "check_id": "VERIFIED_HEIGHT",
+          "pass": true,
+          "observed_m": 1.51,
+          "expected_m": 1.51,
+          "tolerance_m": 0.000001
+        }
+      ],
+      "landmark_checks": [
+        {
+          "rule": "rear_leg:Z_POSITIVE",
+          "pass": true,
+          "observed": 0.13
+        },
+        {
+          "rule": "shade:CENTRED_XZ",
+          "pass": true,
+          "observed": [
+            0,
+            0
+          ]
+        }
+      ],
+      "automated_result": "PASS"
+    },
+    {
+      "twin_ref": "PT_IKEA_BESTA_89330691",
+      "avatar_id": "AVATAR_IKEA_BESTA_89330691_G2_MEDIA_UNIT_PROXY",
+      "asset_path": "data/geometry/avatars/ikea-besta-89330691-g2-media-unit-proxy.glb",
+      "asset_sha256": "71081ab6bcd0238652cdaa7b9495b2ab29041f94c2caf856da2bfacd93f3582e",
+      "glb_version": 2,
+      "glb_generator": "Product Twin verified G2 builder",
+      "bounds_m": {
+        "min": [
+          -0.9,
+          0,
+          -0.21
+        ],
+        "max": [
+          0.9,
+          0.38,
+          0.21
+        ],
+        "size": [
+          1.8,
+          0.38,
+          0.42
+        ]
+      },
+      "verified_height_m": 0.38,
+      "up_axis": "+Y",
+      "visual_front_axis": "-Z",
+      "orientation_mode": "LANDMARK_FRONT",
+      "symmetry_class": "DIRECTIONAL_LANDMARK",
+      "symmetry_tolerance_m": null,
+      "symmetry_observed_max_residual_m": null,
+      "up_axis_checks": [
+        {
+          "check_id": "FLOOR_ORIGIN_MIN_Y",
+          "pass": true,
+          "observed_m": 0,
+          "expected_m": 0,
+          "tolerance_m": 0.000001
+        },
+        {
+          "check_id": "VERIFIED_HEIGHT",
+          "pass": true,
+          "observed_m": 0.38,
+          "expected_m": 0.38,
+          "tolerance_m": 0.000001
+        }
+      ],
+      "landmark_checks": [
+        {
+          "rule": "front_shadow:Z_NEGATIVE",
+          "pass": true,
+          "observed": -0.195
+        },
+        {
+          "rule": "front_1:Z_NEGATIVE",
+          "pass": true,
+          "observed": -0.203
+        }
+      ],
+      "automated_result": "PASS"
+    },
+    {
+      "twin_ref": "PT_IKEA_BILLY_00263850",
+      "avatar_id": "AVATAR_IKEA_BILLY_00263850_G2_BOOKCASE_PROXY",
+      "asset_path": "data/geometry/avatars/ikea-billy-00263850-g2-bookcase-proxy.glb",
+      "asset_sha256": "04b826a4e1f534a9a415b31402b5c46ef44e35bf503f2ed099b541ac71f54258",
+      "glb_version": 2,
+      "glb_generator": "Product Twin verified G2 builder",
+      "bounds_m": {
+        "min": [
+          -0.4,
+          0,
+          -0.14
+        ],
+        "max": [
+          0.4,
+          2.02,
+          0.14
+        ],
+        "size": [
+          0.8,
+          2.02,
+          0.28
+        ]
+      },
+      "verified_height_m": 2.02,
+      "up_axis": "+Y",
+      "visual_front_axis": "-Z",
+      "orientation_mode": "LANDMARK_FRONT",
+      "symmetry_class": "DIRECTIONAL_LANDMARK",
+      "symmetry_tolerance_m": null,
+      "symmetry_observed_max_residual_m": null,
+      "up_axis_checks": [
+        {
+          "check_id": "FLOOR_ORIGIN_MIN_Y",
+          "pass": true,
+          "observed_m": 0,
+          "expected_m": 0,
+          "tolerance_m": 0.000001
+        },
+        {
+          "check_id": "VERIFIED_HEIGHT",
+          "pass": true,
+          "observed_m": 2.02,
+          "expected_m": 2.02,
+          "tolerance_m": 0.000001
+        }
+      ],
+      "landmark_checks": [
+        {
+          "rule": "back:Z_POSITIVE",
+          "pass": true,
+          "observed": 0.134
+        },
+        {
+          "rule": "shelf_1:Z_ZERO",
+          "pass": true,
+          "observed": 0
+        }
+      ],
+      "automated_result": "PASS"
+    }
+  ],
+  "status": "VERIFIED",
+  "approval": {
+    "executor_id": "CODEX_PRIMARY_EXECUTOR",
+    "reviewer_role_required": "VERIFICATION",
+    "reviewer_id": "CODEX_ORIENTATION_VERIFIER_GOODALL",
+    "state": "APPROVED"
+  }
+}

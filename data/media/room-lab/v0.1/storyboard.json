@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "storyboard_id": "STORY_ROOM_LAB_20S_V0_1",
+  "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+  "scene_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+  "camera_path_ref": "SHOT_ROOM_PATH_20S_V0_1",
+  "camera_pack_sha256": "78b23f1676d1f2d9e632025b54656772be88a76e7f40c7e9aab3cc7c44a80d4c",
+  "duration_s": 20,
+  "frame_rate_fps": 24,
+  "frame_count": 480,
+  "fidelity_class": "G2_PLANNING_PROXY",
+  "disclosure_ref": "RIGHTS_ROOM_LAB_G2_V0_1",
+  "audio": {"included": false, "reason": "Geometry-retention proof does not need generated sound."},
+  "beats": [
+    {"start_s": 0, "end_s": 4, "name": "Low-eye establish", "visual_intent": "Begin at seated eye height near the open side, reading the living group at human scale.", "truth_check": "Eight placements remain visible or spatially accounted for."},
+    {"start_s": 4, "end_s": 8, "name": "Rightward drift", "visual_intent": "Drift toward +X and rise slightly while holding the sofa, rug and tables in relation.", "truth_check": "No placement, quantity or material mutation."},
+    {"start_s": 8, "end_s": 12, "name": "Measured lift", "visual_intent": "Continue rising and moving right, preserving level verticals and verified furniture envelopes.", "truth_check": "Furniture scale remains consistent with the frozen G2 evidence."},
+    {"start_s": 12, "end_s": 16, "name": "Whole-room pullback", "visual_intent": "Pull toward +Z and upward to reveal the complete assumed shell and cross-room relationships.", "truth_check": "No invented door, opening or fixture."},
+    {"start_s": 16, "end_s": 20, "name": "Source-camera finish", "visual_intent": "Finish at the Room Lab v9 default wide camera, with the assumed garden-window overlay and full living group coherent.", "truth_check": "End frame remains source-scene traceable and disclosure-ready."}
+  ],
+  "edit_policy": {
+    "cuts_allowed": false,
+    "speed_ramps_allowed": false,
+    "generative_insert_shots_allowed": false,
+    "text_inside_clean_frames": false,
+    "disclosure_carried_in_manifest_and_caption": true
+  },
+  "animation_policy": {
+    "placement_animation": [],
+    "light_animation": [],
+    "material_animation": [],
+    "camera_animation_only": true
+  },
+  "approval_state": "DEFINED_NOT_RENDERED"
+}

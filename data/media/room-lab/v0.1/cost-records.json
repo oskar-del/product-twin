@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1.0",
+  "costs": [
+    {
+      "schema_version": "0.1.0",
+      "cost_id": "COST_ROOM_LAB_DIRECT3D_V0_1",
+      "job_id": "RENDER_ROOM_LAB_DIRECT3D_V0_1",
+      "provider": "LOCAL",
+      "currency": "USD",
+      "pricing_observed_at": "2026-08-17",
+      "pricing_source": "local://no-provider-charge",
+      "unit": "render_batch",
+      "quantity": 1,
+      "estimate": 0,
+      "actual": 0,
+      "experiment_cap": 0,
+      "approval_required_above": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "schema_version": "0.1.0",
+      "cost_id": "COST_ROOM_LAB_PVIDEO_TEST_V0_1",
+      "job_id": "GEN_ROOM_LAB_PVIDEO_TEST_V0_1",
+      "provider": "REPLICATE",
+      "currency": "USD",
+      "pricing_observed_at": "2026-08-17",
+      "pricing_source": "https://replicate.com/prunaai/p-video",
+      "unit": "five_second_draft_video",
+      "quantity": 1,
+      "estimate": 0.025,
+      "actual": 0,
+      "experiment_cap": 0.135,
+      "approval_required_above": 0.135,
+      "status": "ESTIMATE"
+    }
+  ]
+}

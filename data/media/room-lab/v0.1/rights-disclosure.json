@@ -1,0 +1,67 @@
+{
+  "schema_version": "0.1.0",
+  "rights_id": "RIGHTS_ROOM_LAB_G2_V0_1",
+  "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+  "source_assets": [
+    {
+      "source_lane": "PRODUCT_TWIN",
+      "asset_count": 8,
+      "rights_basis": "Product Twin-owned planning proxies; manufacturer geometry and texture artwork are not copied.",
+      "render": "YES",
+      "provider_processing": "REVIEW",
+      "derivative_creation": "REVIEW",
+      "public_publication": "REVIEW",
+      "redistribution": "NO",
+      "evidence_refs": [
+        "data/twins/PT_IKEA_KIVIK_49440597.json",
+        "data/twins/PT_IKEA_POANG_39240787.json",
+        "data/twins/PT_IKEA_LISTERBY_30513904.json",
+        "data/twins/PT_IKEA_LOHALS_30511288.json",
+        "data/twins/PT_IKEA_GLADOM_70578451.json",
+        "data/twins/PT_IKEA_LAUTERS_30405042.json",
+        "data/twins/PT_IKEA_BESTA_89330691.json",
+        "data/twins/PT_IKEA_BILLY_00263850.json"
+      ]
+    }
+  ],
+  "render_scope": {
+    "state": "YES",
+    "allowed_channels": ["INTERNAL_QA", "PLANNING_PREVIEW"],
+    "exact_product_claim_allowed": false,
+    "clean_image_text_required": false
+  },
+  "provider_processing": {
+    "state": "REVIEW",
+    "blocked_until": [
+      "Explicit provider-processing approval is recorded as YES.",
+      "An immutable provider model version is captured.",
+      "A credential is configured outside version control."
+    ]
+  },
+  "maximum_claim": "G2_PLANNING_PROXY",
+  "required_disclosure": "Planning visualisation using verified-scale G2 Product Twin proxies. It does not claim exact product geometry, texture, finish, room survey dimensions, or authoritative openings.",
+  "forbidden_claims": [
+    "exact manufacturer likeness",
+    "exact manufacturer texture or finish",
+    "surveyed room geometry",
+    "authoritative garden-window opening",
+    "unqualified photoreal product representation"
+  ],
+  "attribution": {
+    "required": false,
+    "text": null
+  },
+  "monitor": {
+    "owner_role": "VERIFICATION",
+    "trigger": "Before provider submission or publication-state promotion",
+    "failure_destination": "data/metrics/room-lab-media-proof-latest.json",
+    "stop_condition": "Any source state is NO/REVIEW for the requested action, or the required disclosure is missing."
+  },
+  "approval": {
+    "executor_role": "VISUAL_MEDIA",
+    "executor_id": "CODEX_PRIMARY_EXECUTOR",
+    "reviewer_role_required": "VERIFICATION",
+    "reviewer_id": null,
+    "state": "PENDING_INDEPENDENT_REVIEW"
+  }
+}

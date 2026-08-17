@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/media/camera-shot.schema.json",
+  "title": "Camera and shot record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "shot_id", "scene_id", "scene_sha256", "role", "projection", "camera", "framing", "path", "continuity"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "shot_id": {"type": "string"},
+    "scene_id": {"type": "string"},
+    "scene_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "role": {"enum": ["QA_FRONT", "QA_REAR", "QA_LEFT", "QA_RIGHT", "QA_TOP", "QA_LOW_EYE", "HERO", "CAMERA_PATH"]},
+    "projection": {"enum": ["PERSPECTIVE", "ORTHOGRAPHIC"]},
+    "camera": {
+      "type": "object", "additionalProperties": false,
+      "required": ["position_m", "target_m", "up_vector", "near_m", "far_m", "vertical_fov_deg", "sensor_height_mm", "focal_length_mm", "orthographic_bounds_m"],
+      "properties": {
+        "position_m": {"$ref": "#/$defs/vector3"},
+        "target_m": {"$ref": "#/$defs/vector3"},
+        "up_vector": {"$ref": "#/$defs/vector3"},
+        "near_m": {"type": "number", "exclusiveMinimum": 0},
+        "far_m": {"type": "number", "exclusiveMinimum": 0},
+        "vertical_fov_deg": {"type": ["number", "null"]},
+        "sensor_height_mm": {"type": ["number", "null"]},
+        "focal_length_mm": {"type": ["number", "null"]},
+        "orthographic_height_m": {"type": "number", "exclusiveMinimum": 0},
+        "orthographic_bounds_m": {
+          "type": ["object", "null"], "additionalProperties": false,
+          "required": ["left", "right", "top", "bottom"],
+          "properties": {"left": {"type": "number"}, "right": {"type": "number"}, "top": {"type": "number"}, "bottom": {"type": "number"}}
+        }
+      }
+    },
+    "framing": {
+      "type": "object", "additionalProperties": false, "required": ["aspect_ratio", "safe_margin_percent", "intent"],
+      "properties": {"aspect_ratio": {"type": "string"}, "safe_margin_percent": {"type": "number", "minimum": 0}, "intent": {"type": "string"}}
+    },
+    "path": {
+      "type": ["object", "null"], "additionalProperties": false,
+      "required": ["duration_s", "frame_rate_fps", "frame_count", "interpolation", "easing", "keyframes"],
+      "properties": {
+        "duration_s": {"type": "number", "minimum": 15, "maximum": 30},
+        "frame_rate_fps": {"type": "integer", "minimum": 1},
+        "frame_count": {"type": "integer", "minimum": 1},
+        "interpolation": {"type": "string"},
+        "easing": {"type": "string"},
+        "keyframes": {
+          "type": "array", "minItems": 2,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["frame", "time_s", "position_m", "target_m", "vertical_fov_deg"],
+            "properties": {"frame": {"type": "integer", "minimum": 0}, "time_s": {"type": "number", "minimum": 0}, "position_m": {"$ref": "#/$defs/vector3"}, "target_m": {"$ref": "#/$defs/vector3"}, "vertical_fov_deg": {"type": "number"}}
+          }
+        }
+      }
+    },
+    "continuity": {
+      "type": "object", "additionalProperties": false,
+      "required": ["scene_mutation_allowed", "camera_only_change", "approval_state"],
+      "properties": {"scene_mutation_allowed": {"const": false}, "camera_only_change": {"const": true}, "object_motion_allowed": {"const": false}, "approval_state": {"type": "string"}}
+    }
+  },
+  "$defs": {
+    "vector3": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}}
+  }
+}

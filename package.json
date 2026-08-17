@@ -3,7 +3,9 @@
   "version": "2.1.0",
   "private": true,
   "type": "module",
-  "engines": {"node": ">=22"},
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "ingest:shopify": "node scripts/shopify-ingest.mjs",
     "triage:shopify": "node scripts/shopify-triage.mjs",
@@ -69,6 +71,16 @@
     "pool:requirement": "node scripts/pool-requirement.mjs",
     "concrete:requirement": "node scripts/concrete-requirement.mjs",
     "climate:cte": "node scripts/cte-climate.mjs",
+    "media:room-lab:manifest": "node scripts/build-room-lab-media-manifest.mjs",
+    "media:room-lab:orientation": "node scripts/build-room-lab-orientation-evidence.mjs",
+    "media:room-lab:validate": "node scripts/validate-room-lab-media-proof.mjs",
+    "media:room-lab:test": "node scripts/test-room-lab-media-proof.mjs",
+    "media:room-lab:render:stills": "node scripts/render-room-lab-media.mjs --stills",
+    "media:room-lab:render:video": "node scripts/render-room-lab-media.mjs --video",
     "summarize": "node scripts/summarize.mjs"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "three": "0.185.0"
   }
 }

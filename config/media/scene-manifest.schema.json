@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/media/scene-manifest.schema.json",
+  "title": "Versioned media scene manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "manifest_id", "scene_id", "source", "coordinate_frame", "shell", "lighting", "rendering", "placements", "twin_evidence", "freeze"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "manifest_id": {"type": "string"},
+    "scene_id": {"type": "string"},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["repository", "commit", "release", "deployment_version_id", "source_files"],
+      "properties": {
+        "repository": {"type": "string"},
+        "commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "release": {"type": "string"},
+        "deployment_version_id": {"type": ["string", "null"]},
+        "source_files": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["path", "sha256"],
+            "properties": {"path": {"type": "string"}, "sha256": {"$ref": "#/$defs/sha256"}}
+          }
+        }
+      }
+    },
+    "coordinate_frame": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "units", "origin", "axes", "true_north"],
+      "properties": {
+        "id": {"type": "string"}, "units": {"const": "metres"}, "origin": {"type": "string"},
+        "axes": {
+          "type": "object", "additionalProperties": false, "required": ["+X", "+Y", "+Z"],
+          "properties": {"+X": {"type": "string"}, "+Y": {"type": "string"}, "+Z": {"type": "string"}}
+        },
+        "true_north": {"type": ["number", "null"]}
+      }
+    },
+    "shell": {
+      "type": "object", "additionalProperties": false,
+      "required": ["evidence_state", "width_m", "depth_m", "height_m", "floor", "walls", "opening_claims", "visual_overlays", "fixed_fixtures"],
+      "properties": {
+        "evidence_state": {"const": "ASSUMED_DEMO_NOT_SURVEYED"},
+        "width_m": {"type": "number"}, "depth_m": {"type": "number"}, "height_m": {"type": "number"},
+        "floor": {"$ref": "#/$defs/meshBox"},
+        "walls": {
+          "type": "array", "items": {
+            "type": "object", "additionalProperties": false, "required": ["id", "centre_m", "size_m", "material", "cast_shadow", "receive_shadow"],
+            "properties": {"id": {"type": "string"}, "centre_m": {"$ref": "#/$defs/vector3"}, "size_m": {"$ref": "#/$defs/vector3"}, "material": {"$ref": "#/$defs/standardMaterial"}, "cast_shadow": {"type": "boolean"}, "receive_shadow": {"type": "boolean"}}
+          }
+        },
+        "opening_claims": {"type": "array", "maxItems": 0},
+        "visual_overlays": {
+          "type": "array", "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["id", "kind", "centre_m", "size_m", "evidence_state", "source_wall_remains_intact", "material", "frame_material", "frame_bars"],
+            "properties": {
+              "id": {"type": "string"}, "kind": {"type": "string"}, "centre_m": {"$ref": "#/$defs/vector3"}, "size_m": {"$ref": "#/$defs/vector3"}, "evidence_state": {"type": "string"}, "source_wall_remains_intact": {"const": true},
+              "material": {"$ref": "#/$defs/physicalMaterial"}, "frame_material": {"$ref": "#/$defs/standardMaterial"},
+              "frame_bars": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"$ref": "#/$defs/meshBox"}}
+            }
+          }
+        },
+        "fixed_fixtures": {
+          "type": "array", "items": {
+            "type": "object", "additionalProperties": false, "required": ["id", "centre_m", "size_m", "evidence_state", "material", "cast_shadow", "receive_shadow"],
+            "properties": {"id": {"type": "string"}, "centre_m": {"$ref": "#/$defs/vector3"}, "size_m": {"$ref": "#/$defs/vector3"}, "evidence_state": {"type": "string"}, "material": {"$ref": "#/$defs/standardMaterial"}, "cast_shadow": {"type": "boolean"}, "receive_shadow": {"type": "boolean"}}
+          }
+        }
+      }
+    },
+    "lighting": {
+      "type": "object", "additionalProperties": false,
+      "required": ["evidence_state", "background_hex", "fog", "tone_mapping", "exposure", "lights"],
+      "properties": {
+        "evidence_state": {"type": "string"}, "background_hex": {"type": "string"}, "tone_mapping": {"type": "string"}, "exposure": {"type": "number"},
+        "fog": {
+          "type": "object", "additionalProperties": false, "required": ["colour_hex", "near_m", "far_m"],
+          "properties": {"colour_hex": {"type": "string"}, "near_m": {"type": "number"}, "far_m": {"type": "number"}}
+        },
+        "lights": {
+          "type": "array", "items": {
+            "type": "object", "additionalProperties": false, "required": ["id", "kind", "intensity"],
+            "properties": {
+              "id": {"type": "string"}, "kind": {"enum": ["hemisphere", "directional"]}, "sky_hex": {"type": "string"}, "ground_hex": {"type": "string"}, "colour_hex": {"type": "string"}, "intensity": {"type": "number"}, "position_m": {"$ref": "#/$defs/vector3"}, "casts_shadow": {"type": "boolean"},
+              "shadow": {
+                "type": "object", "additionalProperties": false, "required": ["map_size_px", "camera_bounds_m"],
+                "properties": {
+                  "map_size_px": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "integer"}},
+                  "camera_bounds_m": {"type": "object", "additionalProperties": false, "required": ["left", "right", "top", "bottom"], "properties": {"left": {"type": "number"}, "right": {"type": "number"}, "top": {"type": "number"}, "bottom": {"type": "number"}}}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "rendering": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_engine", "webgl", "source_pixel_ratio_policy", "media_runner_pixel_ratio", "loader_floor_contact_contract"],
+      "properties": {
+        "source_engine": {"type": "object", "additionalProperties": false, "required": ["name", "package_constraint", "resolved_contract_version"], "properties": {"name": {"const": "three"}, "package_constraint": {"type": "string"}, "resolved_contract_version": {"type": "string"}}},
+        "webgl": {"type": "object", "additionalProperties": false, "required": ["antialias", "output_colour_space", "tone_mapping", "exposure", "shadow_map_enabled", "shadow_map_type"], "properties": {"antialias": {"type": "boolean"}, "output_colour_space": {"type": "string"}, "tone_mapping": {"type": "string"}, "exposure": {"type": "number"}, "shadow_map_enabled": {"type": "boolean"}, "shadow_map_type": {"type": "string"}}},
+        "source_pixel_ratio_policy": {"type": "string"},
+        "media_runner_pixel_ratio": {"type": "number", "exclusiveMinimum": 0},
+        "loader_floor_contact_contract": {
+          "type": "object", "additionalProperties": false,
+          "required": ["apply_y_rotation_before_bounds", "avatar_up_axis", "avatar_visual_front_axis", "rotation_semantics", "orientation_evidence_state", "orientation_gate_status", "recenter_xz_to_world_transform", "floor_mode_contact", "ceiling_mode_contact", "recompute_bounds_after_each_transform_stage", "mesh_cast_shadow", "mesh_receive_shadow"],
+          "properties": {"apply_y_rotation_before_bounds": {"const": true}, "avatar_up_axis": {"const": "+Y"}, "avatar_visual_front_axis": {"const": "-Z"}, "rotation_semantics": {"type": "string"}, "orientation_evidence_state": {"enum": ["ROOM_LAB_V9_SOURCE_VISUAL_CONVENTION_NOT_INDEPENDENTLY_VERIFIED", "BOUND_G2_ORIENTATION_QA_VERIFIED"]}, "orientation_gate_status": {"enum": ["BLOCKED_PENDING_BOUND_G2_ORIENTATION_QA", "PASS"]}, "recenter_xz_to_world_transform": {"const": true}, "floor_mode_contact": {"type": "string"}, "ceiling_mode_contact": {"type": "string"}, "recompute_bounds_after_each_transform_stage": {"const": true}, "mesh_cast_shadow": {"const": true}, "mesh_receive_shadow": {"const": true}}
+        }
+      }
+    },
+    "placements": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["placement_id", "source_lane", "twin_ref", "avatar", "transform", "quantity", "fidelity_class", "disclosure_ref"],
+        "properties": {
+          "placement_id": {"type": "string"},
+          "source_lane": {"enum": ["PRODUCT_TWIN", "DESIGN_ASSET"]},
+          "twin_ref": {"type": ["string", "null"]},
+          "design_asset_ref": {"type": ["string", "null"]},
+          "avatar": {
+            "type": "object", "additionalProperties": false, "required": ["avatar_id", "level", "asset_path", "sha256"],
+            "properties": {"avatar_id": {"type": "string"}, "level": {"enum": ["G0", "G1", "G2", "G3", "G4", "G5"]}, "asset_path": {"type": "string"}, "sha256": {"$ref": "#/$defs/sha256"}}
+          },
+          "transform": {
+            "type": "object", "additionalProperties": false, "required": ["translation_m", "rotation_y_rad", "scale"],
+            "properties": {"translation_m": {"$ref": "#/$defs/vector3"}, "rotation_y_rad": {"type": "number"}, "scale": {"$ref": "#/$defs/vector3"}}
+          },
+          "quantity": {"type": "integer", "minimum": 1},
+          "fidelity_class": {"type": "string"},
+          "disclosure_ref": {"type": "string"}
+        },
+        "allOf": [
+          {"if": {"properties": {"source_lane": {"const": "PRODUCT_TWIN"}}}, "then": {"properties": {"twin_ref": {"type": "string"}, "design_asset_ref": {"type": "null"}}}},
+          {"if": {"properties": {"source_lane": {"const": "DESIGN_ASSET"}}}, "then": {"required": ["design_asset_ref"], "properties": {"twin_ref": {"type": "null"}, "design_asset_ref": {"type": "string"}}}}
+        ]
+      }
+    },
+    "twin_evidence": {
+      "type": "array", "minItems": 8, "maxItems": 8, "uniqueItems": true,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["twin_ref", "twin_record_path", "twin_record_sha256", "qa_path", "qa_sha256"],
+        "properties": {"twin_ref": {"type": "string"}, "twin_record_path": {"type": "string"}, "twin_record_sha256": {"$ref": "#/$defs/sha256"}, "qa_path": {"type": "string"}, "qa_sha256": {"$ref": "#/$defs/sha256"}}
+      }
+    },
+    "freeze": {
+      "type": "object", "additionalProperties": false,
+      "required": ["placement_count", "allow_dynamic_additions", "allow_product_overrides", "allow_geometry_substitution", "allow_opening_changes", "allow_shell_changes", "commerce_payload_copied", "source_lane_copied_without_promotion"],
+      "properties": {
+        "placement_count": {"type": "integer", "minimum": 1}, "allow_dynamic_additions": {"const": false}, "allow_product_overrides": {"const": false}, "allow_geometry_substitution": {"const": false}, "allow_opening_changes": {"const": false}, "allow_shell_changes": {"const": false}, "commerce_payload_copied": {"const": false}, "source_lane_copied_without_promotion": {"const": true}
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "vector3": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+    "standardMaterial": {
+      "type": "object", "additionalProperties": false, "required": ["kind", "colour_hex", "roughness"],
+      "properties": {"kind": {"const": "MeshStandardMaterial"}, "colour_hex": {"type": "string"}, "roughness": {"type": "number", "minimum": 0, "maximum": 1}}
+    },
+    "physicalMaterial": {
+      "type": "object", "additionalProperties": false, "required": ["kind", "colour_hex", "roughness", "transmission", "transparent", "opacity"],
+      "properties": {"kind": {"const": "MeshPhysicalMaterial"}, "colour_hex": {"type": "string"}, "roughness": {"type": "number", "minimum": 0, "maximum": 1}, "transmission": {"type": "number", "minimum": 0, "maximum": 1}, "transparent": {"type": "boolean"}, "opacity": {"type": "number", "minimum": 0, "maximum": 1}}
+    },
+    "meshBox": {
+      "type": "object", "additionalProperties": false, "required": ["centre_m", "size_m"],
+      "properties": {"centre_m": {"$ref": "#/$defs/vector3"}, "size_m": {"$ref": "#/$defs/vector3"}, "material": {"$ref": "#/$defs/standardMaterial"}, "cast_shadow": {"type": "boolean"}, "receive_shadow": {"type": "boolean"}}
+    }
+  }
+}

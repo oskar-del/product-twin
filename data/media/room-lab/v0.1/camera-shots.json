@@ -1,0 +1,124 @@
+{
+  "schema_version": "0.1.0",
+  "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+  "scene_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+  "camera_convention": {
+    "world_units": "metres",
+    "sensor_height_mm": 24,
+    "perspective_vertical_fov_deg": 39,
+    "derived_focal_length_mm": 33.9,
+    "level_verticals_preferred": true,
+    "true_north_available": false
+  },
+  "shots": [
+    {
+      "schema_version": "0.1.0",
+      "shot_id": "SHOT_ROOM_QA_FRONT_V0_1",
+      "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+      "scene_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+      "role": "QA_FRONT",
+      "projection": "PERSPECTIVE",
+      "camera": {"position_m": [5.4, 3.2, 5.2], "target_m": [0, 0.72, -0.15], "up_vector": [0, 1, 0], "near_m": 0.02, "far_m": 100, "vertical_fov_deg": 39, "sensor_height_mm": 24, "focal_length_mm": 33.9, "orthographic_bounds_m": null},
+      "framing": {"aspect_ratio": "16:10", "safe_margin_percent": 5, "intent": "front-right whole-room perspective with every placement legible"},
+      "path": null,
+      "continuity": {"scene_mutation_allowed": false, "camera_only_change": true, "approval_state": "DEFINED_NOT_RENDERED"}
+    },
+    {
+      "schema_version": "0.1.0",
+      "shot_id": "SHOT_ROOM_QA_REAR_V0_1",
+      "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+      "scene_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+      "role": "QA_REAR",
+      "projection": "PERSPECTIVE",
+      "camera": {"position_m": [2.55, 2.25, -1.95], "target_m": [-0.25, 0.7, 1], "up_vector": [0, 1, 0], "near_m": 0.02, "far_m": 100, "vertical_fov_deg": 45, "sensor_height_mm": 24, "focal_length_mm": 28.97, "orthographic_bounds_m": null},
+      "framing": {"aspect_ratio": "16:10", "safe_margin_percent": 5, "intent": "window-wall interior reverse view toward media storage"},
+      "path": null,
+      "continuity": {"scene_mutation_allowed": false, "camera_only_change": true, "approval_state": "DEFINED_NOT_RENDERED"}
+    },
+    {
+      "schema_version": "0.1.0",
+      "shot_id": "SHOT_ROOM_QA_LEFT_V0_1",
+      "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+      "scene_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+      "role": "QA_LEFT",
+      "projection": "PERSPECTIVE",
+      "camera": {"position_m": [2.75, 2.7, 1.7], "target_m": [-1, 0.7, -0.25], "up_vector": [0, 1, 0], "near_m": 0.02, "far_m": 100, "vertical_fov_deg": 42, "sensor_height_mm": 24, "focal_length_mm": 31.26, "orthographic_bounds_m": null},
+      "framing": {"aspect_ratio": "16:10", "safe_margin_percent": 5, "intent": "left interior perspective across seating and coffee-table group"},
+      "path": null,
+      "continuity": {"scene_mutation_allowed": false, "camera_only_change": true, "approval_state": "DEFINED_NOT_RENDERED"}
+    },
+    {
+      "schema_version": "0.1.0",
+      "shot_id": "SHOT_ROOM_QA_RIGHT_V0_1",
+      "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+      "scene_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+      "role": "QA_RIGHT",
+      "projection": "PERSPECTIVE",
+      "camera": {"position_m": [-2.55, 2.2, 1.65], "target_m": [1, 0.72, -0.2], "up_vector": [0, 1, 0], "near_m": 0.02, "far_m": 100, "vertical_fov_deg": 42, "sensor_height_mm": 24, "focal_length_mm": 31.26, "orthographic_bounds_m": null},
+      "framing": {"aspect_ratio": "16:10", "safe_margin_percent": 5, "intent": "open-side perspective toward sofa and assumed garden window"},
+      "path": null,
+      "continuity": {"scene_mutation_allowed": false, "camera_only_change": true, "approval_state": "DEFINED_NOT_RENDERED"}
+    },
+    {
+      "schema_version": "0.1.0",
+      "shot_id": "SHOT_ROOM_QA_TOP_V0_1",
+      "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+      "scene_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+      "role": "QA_TOP",
+      "projection": "ORTHOGRAPHIC",
+      "camera": {"position_m": [0, 9, 0.01], "target_m": [0, 0, 0], "up_vector": [0, 0, -1], "near_m": 0.02, "far_m": 100, "vertical_fov_deg": null, "sensor_height_mm": null, "focal_length_mm": null, "orthographic_height_m": 5.2, "orthographic_bounds_m": {"left": -3.4666666667, "right": 3.4666666667, "top": 2.6, "bottom": -2.6}},
+      "framing": {"aspect_ratio": "4:3", "safe_margin_percent": 4, "intent": "dimensionally stable top plan with complete shell"},
+      "path": null,
+      "continuity": {"scene_mutation_allowed": false, "camera_only_change": true, "approval_state": "DEFINED_NOT_RENDERED"}
+    },
+    {
+      "schema_version": "0.1.0",
+      "shot_id": "SHOT_ROOM_QA_LOW_EYE_V0_1",
+      "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+      "scene_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+      "role": "QA_LOW_EYE",
+      "projection": "PERSPECTIVE",
+      "camera": {"position_m": [2.55, 1.25, 2.05], "target_m": [-0.15, 0.65, -0.5], "up_vector": [0, 1, 0], "near_m": 0.02, "far_m": 100, "vertical_fov_deg": 42, "sensor_height_mm": 24, "focal_length_mm": 31.26, "orthographic_bounds_m": null},
+      "framing": {"aspect_ratio": "16:10", "safe_margin_percent": 5, "intent": "seated eye-level check of furniture scale and occlusion"},
+      "path": null,
+      "continuity": {"scene_mutation_allowed": false, "camera_only_change": true, "approval_state": "DEFINED_NOT_RENDERED"}
+    },
+    {
+      "schema_version": "0.1.0",
+      "shot_id": "SHOT_ROOM_HERO_V0_1",
+      "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+      "scene_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+      "role": "HERO",
+      "projection": "PERSPECTIVE",
+      "camera": {"position_m": [7.2, 5.5, 7.5], "target_m": [0, 0.75, 0], "up_vector": [0, 1, 0], "near_m": 0.02, "far_m": 100, "vertical_fov_deg": 39, "sensor_height_mm": 24, "focal_length_mm": 33.9, "orthographic_bounds_m": null},
+      "framing": {"aspect_ratio": "16:10", "safe_margin_percent": 6, "intent": "quiet warm-modern hero with all major living-room placements readable and no labels in-frame"},
+      "path": null,
+      "continuity": {"scene_mutation_allowed": false, "camera_only_change": true, "approval_state": "PENDING_RENDER_AND_INDEPENDENT_QA"}
+    },
+    {
+      "schema_version": "0.1.0",
+      "shot_id": "SHOT_ROOM_PATH_20S_V0_1",
+      "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+      "scene_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+      "role": "CAMERA_PATH",
+      "projection": "PERSPECTIVE",
+      "camera": {"position_m": [2.55, 1.25, 2.05], "target_m": [-0.15, 0.65, -0.5], "up_vector": [0, 1, 0], "near_m": 0.02, "far_m": 100, "vertical_fov_deg": 42, "sensor_height_mm": 24, "focal_length_mm": 31.26, "orthographic_bounds_m": null},
+      "framing": {"aspect_ratio": "16:9", "safe_margin_percent": 6, "intent": "continuous level-camera living-room reveal without cuts or object motion"},
+      "path": {
+        "duration_s": 20,
+        "frame_rate_fps": 24,
+        "frame_count": 480,
+        "interpolation": "THREE_CATMULLROM_CHORDAL_R0_185",
+        "easing": "CUBIC_EASE_IN_OUT_V1",
+        "keyframes": [
+          {"frame": 0, "time_s": 0, "position_m": [2.55, 1.25, 2.05], "target_m": [-0.15, 0.65, -0.5], "vertical_fov_deg": 42},
+          {"frame": 120, "time_s": 5, "position_m": [3.6, 1.45, 1.65], "target_m": [-0.12, 0.68, -0.5], "vertical_fov_deg": 40},
+          {"frame": 240, "time_s": 10, "position_m": [4.75, 1.95, 1.25], "target_m": [-0.1, 0.72, -0.35], "vertical_fov_deg": 39},
+          {"frame": 360, "time_s": 15, "position_m": [5.9, 3.2, 4.8], "target_m": [0, 0.75, -0.15], "vertical_fov_deg": 39},
+          {"frame": 479, "time_s": 19.9583333333, "position_m": [7.2, 5.5, 7.5], "target_m": [0, 0.75, 0], "vertical_fov_deg": 39}
+        ]
+      },
+      "continuity": {"scene_mutation_allowed": false, "camera_only_change": true, "object_motion_allowed": false, "approval_state": "DEFINED_COLLISION_AND_RENDER_QA_PENDING"}
+    }
+  ]
+}

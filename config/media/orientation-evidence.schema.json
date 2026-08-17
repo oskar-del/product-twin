@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/media/orientation-evidence.schema.json",
+  "title": "Room Lab avatar orientation evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "orientation_evidence_id", "scene_id", "method_version", "builder_sha256", "method", "records", "status", "approval"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "orientation_evidence_id": {"type": "string"},
+    "scene_id": {"type": "string"},
+    "method_version": {"const": "ROOM_LAB_ORIENTATION_EVALUATOR_V2"},
+    "builder_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "method": {"type": "string", "minLength": 1},
+    "records": {
+      "type": "array", "minItems": 8, "maxItems": 8, "uniqueItems": true,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["twin_ref", "avatar_id", "asset_path", "asset_sha256", "glb_version", "glb_generator", "bounds_m", "verified_height_m", "up_axis", "visual_front_axis", "orientation_mode", "symmetry_class", "symmetry_tolerance_m", "symmetry_observed_max_residual_m", "up_axis_checks", "landmark_checks", "automated_result"],
+        "properties": {
+          "twin_ref": {"type": "string"}, "avatar_id": {"type": "string"}, "asset_path": {"type": "string"}, "asset_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "glb_version": {"const": 2}, "glb_generator": {"const": "Product Twin verified G2 builder"},
+          "bounds_m": {
+            "type": "object", "additionalProperties": false, "required": ["min", "max", "size"],
+            "properties": {
+              "min": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+              "max": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+              "size": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}}
+            }
+          },
+          "verified_height_m": {"type": "number", "exclusiveMinimum": 0},
+          "up_axis": {"const": "+Y"},
+          "visual_front_axis": {"enum": ["-Z", "NOT_APPLICABLE"]}, "orientation_mode": {"enum": ["LANDMARK_FRONT", "TWO_FOLD_SYMMETRY", "FOUR_FOLD_SYMMETRY"]},
+          "symmetry_class": {"enum": ["DIRECTIONAL_LANDMARK", "GEOMETRIC_C2", "SEMANTIC_ENVELOPE_C2", "NODE_TRANSFORM_C4"]},
+          "symmetry_tolerance_m": {"type": ["number", "null"], "minimum": 0},
+          "symmetry_observed_max_residual_m": {"type": ["number", "null"], "minimum": 0},
+          "up_axis_checks": {
+            "type": "array", "minItems": 2, "maxItems": 2,
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["check_id", "pass", "observed_m", "expected_m", "tolerance_m"],
+              "properties": {"check_id": {"enum": ["FLOOR_ORIGIN_MIN_Y", "VERIFIED_HEIGHT"]}, "pass": {"type": "boolean"}, "observed_m": {"type": "number"}, "expected_m": {"type": "number"}, "tolerance_m": {"type": "number", "exclusiveMinimum": 0}}
+            }
+          },
+          "landmark_checks": {
+            "type": "array", "minItems": 2,
+            "items": {"type": "object", "additionalProperties": false, "required": ["rule", "pass", "observed"], "properties": {"rule": {"type": "string"}, "pass": {"type": "boolean"}, "observed": {}}}
+          },
+          "automated_result": {"enum": ["PASS", "FAIL"]}
+        }
+      }
+    },
+    "status": {"enum": ["EVIDENCE_READY_PENDING_INDEPENDENT_VERIFICATION", "VERIFIED", "FAIL"]},
+    "approval": {
+      "type": "object", "additionalProperties": false, "required": ["executor_id", "reviewer_role_required", "reviewer_id", "state"],
+      "properties": {"executor_id": {"type": "string"}, "reviewer_role_required": {"const": "VERIFICATION"}, "reviewer_id": {"type": ["string", "null"]}, "state": {"enum": ["PENDING", "APPROVED", "REJECTED"]}}
+    }
+  }
+}

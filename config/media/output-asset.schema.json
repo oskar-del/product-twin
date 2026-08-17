@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/media/output-asset.schema.json",
+  "title": "Media output asset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "output_asset_id", "scene_id", "job_id", "shot_id", "status", "media_type", "uri", "sha256", "bytes", "dimensions_px", "duration_s", "source_lane_summary", "fidelity_class", "exact_product_claim_allowed", "rights_ref", "disclosure_ref", "qa_ref", "cost_ref", "approval", "publication_state"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "output_asset_id": {"type": "string"},
+    "scene_id": {"type": "string"},
+    "job_id": {"type": "string"},
+    "shot_id": {"type": "string"},
+    "status": {"enum": ["PLANNED", "RUNNING", "SUCCEEDED", "FAILED", "REJECTED", "APPROVED"]},
+    "media_type": {"enum": ["image/png", "image/jpeg", "video/mp4", "application/json"]},
+    "uri": {"type": ["string", "null"]},
+    "sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "bytes": {"type": ["integer", "null"], "minimum": 1},
+    "dimensions_px": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["width", "height"],
+      "properties": {
+        "width": {"type": "integer", "minimum": 1},
+        "height": {"type": "integer", "minimum": 1}
+      }
+    },
+    "duration_s": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "source_lane_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["PRODUCT_TWIN", "DESIGN_ASSET"],
+      "properties": {
+        "PRODUCT_TWIN": {"type": "integer", "minimum": 0},
+        "DESIGN_ASSET": {"type": "integer", "minimum": 0}
+      }
+    },
+    "fidelity_class": {"type": "string"},
+    "exact_product_claim_allowed": {"const": false},
+    "rights_ref": {"type": "string"},
+    "disclosure_ref": {"type": "string"},
+    "qa_ref": {"type": "string"},
+    "cost_ref": {"type": "string"},
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["executor_role", "reviewer_role_required", "reviewer_id"],
+      "properties": {
+        "executor_role": {"const": "VISUAL_MEDIA"},
+        "reviewer_role_required": {"const": "VERIFICATION"},
+        "reviewer_id": {"type": ["string", "null"]}
+      }
+    },
+    "publication_state": {"enum": ["NOT_READY", "INTERNAL_QA_ONLY", "APPROVED_WITH_DISCLOSURE", "PUBLISHED"]}
+  }
+}
