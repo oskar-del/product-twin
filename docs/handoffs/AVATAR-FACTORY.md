@@ -26,7 +26,7 @@ The four primary internal Room Alpha assets are:
 
 Arper Ply #3853 is included only as a supplemental exact-geometry candidate at G2 with `G3_CANDIDATE_NOT_PROMOTED`. It is not runtime-ingestible or publishable. Written commercial-rendering and redistribution permission, persistent-binary permission, approved PBR and functional-clearance evidence remain missing.
 
-Canonical QA comprises 28 runtime-only views plus four per-asset contact sheets and one master sheet. The renderer applies GLB scene/node transforms before testing bounds, floor contact and pivot; all four primary assets match their independently sourced official envelopes, sit at min-Y zero and remain centred on X/Z. Sofa and chair use declared negative-Z fronts; table and lamp are non-directional. This proves G2 planning behavior only, not exact likeness, exact finish, public rights or attribution UI completion.
+Canonical QA comprises 28 committed review views plus four per-asset contact sheets and one master sheet at `data/evidence/furniture-avatar-manifest-v0.1-qa-pack`. The renderer applies GLB scene/node transforms before testing bounds, floor contact and pivot; all four primary assets match their independently sourced official envelopes, sit at min-Y zero and remain centred on X/Z. Sofa and chair use declared negative-Z fronts; table and lamp are non-directional. This proves G2 planning behavior only, not exact likeness, exact finish, public rights or attribution UI completion.
 
 Authoritative package:
 
@@ -38,7 +38,7 @@ Authoritative package:
 - package schema: `config/verification/furniture-avatar-verification-package-v0.1.schema.json`
 - detailed Brain checkpoint: `docs/handoffs/FURNITURE-AVATAR-MANIFEST-V0.1.md`
 
-Package #2 enumerates each asset's PASS and BLOCK reasons, hashes every required committed artifact, records the runtime image inventory and fails closed on authority, gate-count, Arper, evidence-count or artifact-hash mutations. Verification must independently recompute hashes, rerun the deterministic builders/render/tests, inspect canonical views, assess proxy derivative/public-rendering rights and verify attribution across every required Room Lab surface.
+Package #2 enumerates each asset's PASS and BLOCK reasons, hashes every required committed artifact and all 33 QA images, and fails closed on authority, gate-count, Arper, evidence-count or artifact-hash mutations. Verification must independently recompute hashes, rerun the deterministic builders/render/tests, inspect canonical views, assess proxy derivative/public-rendering rights and verify attribution across every required Room Lab surface.
 
 ## Exact checkpoint (2026-08-17)
 

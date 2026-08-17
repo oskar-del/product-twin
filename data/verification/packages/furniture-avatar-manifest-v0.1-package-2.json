@@ -33,7 +33,7 @@
     {
       "role": "CANONICAL_QA_METRIC",
       "path": "data/metrics/furniture-avatar-manifest-v0.1-qa.json",
-      "sha256": "1d87a58168440d5cd75389f63231cbf14955cf1a379491aba936d646a7df9d5b",
+      "sha256": "3359d2a46e6776868f5d77e42950d28e79e62860644e0c41c494a783077a8ce4",
       "required": true
     },
     {
@@ -57,7 +57,7 @@
     {
       "role": "QA_RENDERER",
       "path": "scripts/render-furniture-avatar-manifest-qa.py",
-      "sha256": "8a91778df2066a54a21adf54c4cca202f89337b567d2d727a122d3ece12d2ee7",
+      "sha256": "2c04fc30c53429bd78ecc1227899460d55166ec52cac08f03ef447c2e11d7055",
       "required": true
     },
     {
@@ -69,19 +69,19 @@
     {
       "role": "BRAIN_CHECKPOINT",
       "path": "docs/handoffs/FURNITURE-AVATAR-MANIFEST-V0.1.md",
-      "sha256": "91e158ed2533a60dda3205f6def0b45319d18facb6aaeec7a573ff96db996dba",
+      "sha256": "0ec07826c3d9745a8d6716b387303097bcf9035f339dcfa28aa4738ee11a9fcc",
       "required": true
     },
     {
       "role": "PERMANENT_AVATAR_FACTORY_HANDOFF",
       "path": "docs/handoffs/AVATAR-FACTORY.md",
-      "sha256": "dda10affffc8d52e6d64c5bcc912ce02abb474c30c0f0daac1e0fcaeb6e3a7e0",
+      "sha256": "5ea724212ad5bb28284cd9e091c4f8e569a7f2ceb4fa54cb677e4e1c3965427c",
       "required": true
     },
     {
       "role": "PACKAGE_SCHEMA",
       "path": "config/verification/furniture-avatar-verification-package-v0.1.schema.json",
-      "sha256": "f86319690a738d5bb3f5860849290248b361665b19e6a2736547d87709d06422",
+      "sha256": "f60248b3cb95d92835c666b386376c8b0fec779dd52d02c2d547a792e3936bd9",
       "required": true
     },
     {
@@ -95,11 +95,209 @@
       "path": "data/rights/arper-ply-3853-rights-and-rfq.json",
       "sha256": "f2085ff0131af66e73bbfafe2aff08ff39ec85c861b1147dda8e7f3ec2c92e23",
       "required": true
+    },
+    {
+      "role": "QA_MASTER_CONTACT_SHEET",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/all-assets-contact-sheet.png",
+      "sha256": "ff27529a18f02addf3c3e6cbb06ae16d38f59c2736b2edacf84c145dfe4ab861",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_SOFA_front",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_kivik_49440597_g2_sofa_proxy/front.png",
+      "sha256": "c7254c00a59a53b5af8aa433d81785f78416d93b88bbed50cef2990d828cd58a",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_SOFA_rear",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_kivik_49440597_g2_sofa_proxy/rear.png",
+      "sha256": "3931fb8df2aed9acdb2e406278d0b201f5fe00e4025f1ba4af3da69ae0e6e57c",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_SOFA_left",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_kivik_49440597_g2_sofa_proxy/left.png",
+      "sha256": "5435aa35773d77f567510f0e02647ba5492ecd6b33428bff0f226a4d22ccac2e",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_SOFA_right",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_kivik_49440597_g2_sofa_proxy/right.png",
+      "sha256": "87e74a68acec8ff44fe91f78af04b51e5ca9dc9ae5158d1fc5d0acec0795361e",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_SOFA_three_quarter",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_kivik_49440597_g2_sofa_proxy/three_quarter.png",
+      "sha256": "c3d8143f28ed5c13d1bfb6ea704db500d5487d82ac00596e88e5ef977965cb27",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_SOFA_top",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_kivik_49440597_g2_sofa_proxy/top.png",
+      "sha256": "f7a253dc2ca5cd39b2e1fdca2f8e6f7dab4e189fd33b3f3abadfc2a1403fbf9d",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_SOFA_floor_contact",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_kivik_49440597_g2_sofa_proxy/floor_contact.png",
+      "sha256": "457e320d04c949dd78e3fb1bcbbf7bcc6ef1c23fb22a777a8ef92cfc842fba62",
+      "required": true
+    },
+    {
+      "role": "QA_CONTACT_SHEET_SOFA",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_kivik_49440597_g2_sofa_proxy/contact-sheet.png",
+      "sha256": "89ba9b6c66aedc2b5bd62884d6f3d51d59eb1077247fb377a736894170144a8c",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_LOUNGE_CHAIR_front",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_poang_39240787_g2_armchair_proxy/front.png",
+      "sha256": "949df2568140f2a259f511f05305519f6a0c5a919f1e512e0cb308a43e88fcab",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_LOUNGE_CHAIR_rear",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_poang_39240787_g2_armchair_proxy/rear.png",
+      "sha256": "2188312e2820365dd2ce53bb19587826c7e2808e2f11568690c237f03b3f4b6a",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_LOUNGE_CHAIR_left",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_poang_39240787_g2_armchair_proxy/left.png",
+      "sha256": "0a84e080e46de695f362bcb882d06f78d3080306c8d79cdb3d49e002a9fa32cd",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_LOUNGE_CHAIR_right",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_poang_39240787_g2_armchair_proxy/right.png",
+      "sha256": "dfc8aaf6a1e64a6e980a750c8ab82ec7ae9b5c9cdac6715971b416d6186877a8",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_LOUNGE_CHAIR_three_quarter",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_poang_39240787_g2_armchair_proxy/three_quarter.png",
+      "sha256": "2f98d7ed20b18d76365d0170a45acdbb637a9442fdb2d203e7494aa3b2e6c81f",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_LOUNGE_CHAIR_top",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_poang_39240787_g2_armchair_proxy/top.png",
+      "sha256": "2417382906e8abb85f5ee1fe651349afb2dc0b20f2336d7040798f741928d296",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_LOUNGE_CHAIR_floor_contact",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_poang_39240787_g2_armchair_proxy/floor_contact.png",
+      "sha256": "e330ee284c5b2361e0d4a40cd31ad35deef17f5c612416ddc7554df9437e2783",
+      "required": true
+    },
+    {
+      "role": "QA_CONTACT_SHEET_LOUNGE_CHAIR",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_poang_39240787_g2_armchair_proxy/contact-sheet.png",
+      "sha256": "cb7f39972758408eeb85b4084a2204935459cdd9e3f6e4d51a5c2e277ed9fe4d",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_COFFEE_SIDE_TABLE_front",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_listerby_30513904_g2_coffee_table_proxy/front.png",
+      "sha256": "da7398fb94821ca09590999872dc101c6a37ee1adb97c3dfd14af4bf66879e55",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_COFFEE_SIDE_TABLE_rear",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_listerby_30513904_g2_coffee_table_proxy/rear.png",
+      "sha256": "5e84511045196c484bcd5e21d916671aa67f8f20ecca7ba7eaaae8699d1bdda0",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_COFFEE_SIDE_TABLE_left",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_listerby_30513904_g2_coffee_table_proxy/left.png",
+      "sha256": "a963b40da04bff2f65b28f50b3920278bf9526fe1479a9d8275e8119bb016344",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_COFFEE_SIDE_TABLE_right",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_listerby_30513904_g2_coffee_table_proxy/right.png",
+      "sha256": "52ab0a082f8f23599ac0077e300013d12643c7a435f574c28f4de6007a8cc00c",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_COFFEE_SIDE_TABLE_three_quarter",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_listerby_30513904_g2_coffee_table_proxy/three_quarter.png",
+      "sha256": "7f8ffd29f4b24112e71e4a5535ada84ec48d50c295c61f2376b592ebe2c2fe11",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_COFFEE_SIDE_TABLE_top",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_listerby_30513904_g2_coffee_table_proxy/top.png",
+      "sha256": "56b577a293e163c74fa9000d6b929219cd03c899f4146204b077ba9e4d8cb4f2",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_COFFEE_SIDE_TABLE_floor_contact",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_listerby_30513904_g2_coffee_table_proxy/floor_contact.png",
+      "sha256": "432efdc71c76c35d6850aba413cbffe868768acbd3ea41d99e178a9fc780f0d8",
+      "required": true
+    },
+    {
+      "role": "QA_CONTACT_SHEET_COFFEE_SIDE_TABLE",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_listerby_30513904_g2_coffee_table_proxy/contact-sheet.png",
+      "sha256": "e1a73a1ae30be8e76da1c47b266f88603e650cedb23ea863bedd06a2d470711c",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_FLOOR_LAMP_front",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_lauters_30405042_g2_floor_lamp_proxy/front.png",
+      "sha256": "aa4682bf77dc3f6b35d2a09d15e6b8e23c250f09ec6427636ed0adee4f10985d",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_FLOOR_LAMP_rear",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_lauters_30405042_g2_floor_lamp_proxy/rear.png",
+      "sha256": "dd89b64fefabf7145e8f35f31d1ecc133133cb2fb0be1750478377342695408d",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_FLOOR_LAMP_left",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_lauters_30405042_g2_floor_lamp_proxy/left.png",
+      "sha256": "88f27381a73be933c6d8321def95a0fcefa7b758a7bb3a9f2de9f6dd741707b6",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_FLOOR_LAMP_right",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_lauters_30405042_g2_floor_lamp_proxy/right.png",
+      "sha256": "8319c64b550e51341ba5d85b2f3c4116fab9cd288bf6cda66557a89c41c21adc",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_FLOOR_LAMP_three_quarter",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_lauters_30405042_g2_floor_lamp_proxy/three_quarter.png",
+      "sha256": "b9823f26927782ca7688bdadb76debaa3aac7b21a1799b6b063456e5f89a9d9f",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_FLOOR_LAMP_top",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_lauters_30405042_g2_floor_lamp_proxy/top.png",
+      "sha256": "eeb49b6ba3f324c5656faaa102ba84d48dcf126ffa9dcc71630300f878fa85b9",
+      "required": true
+    },
+    {
+      "role": "QA_VIEW_FLOOR_LAMP_floor_contact",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_lauters_30405042_g2_floor_lamp_proxy/floor_contact.png",
+      "sha256": "b7e6ce3684ff85207b140c755dc381eba87e652a5c40e8fecbcb5bedf444bb7f",
+      "required": true
+    },
+    {
+      "role": "QA_CONTACT_SHEET_FLOOR_LAMP",
+      "path": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack/avatar_ikea_lauters_30405042_g2_floor_lamp_proxy/contact-sheet.png",
+      "sha256": "4e579633c9e4fce17f505b856316e7ee29400fb1f8152537a675a608df1026ec",
+      "required": true
     }
   ],
-  "runtime_evidence": {
-    "git_policy": "RUNTIME_ONLY_NOT_COMMITTED",
-    "directory": ".runtime/furniture-avatar-qa/v0.1",
+  "canonical_evidence": {
+    "git_policy": "COMMITTED_REVIEW_EVIDENCE",
+    "directory": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack",
     "views": 28,
     "contact_sheets": 5,
     "master_contact_sheet_sha256": "ff27529a18f02addf3c3e6cbb06ae16d38f59c2736b2edacf84c145dfe4ab861",
@@ -340,6 +538,6 @@
     "package authority escalation",
     "package gate-count escalation",
     "package artifact hash corruption",
-    "runtime evidence count mutation"
+    "canonical evidence count mutation"
   ]
 }

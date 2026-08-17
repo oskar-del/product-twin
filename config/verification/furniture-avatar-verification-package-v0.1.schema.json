@@ -7,7 +7,7 @@
   "required": [
     "package_id", "package_number", "version", "status", "subject",
     "source_branch", "merge_authorized", "publication_authorized",
-    "scope", "artifacts", "runtime_evidence", "asset_decisions", "claims_for_verification",
+    "scope", "artifacts", "canonical_evidence", "asset_decisions", "claims_for_verification",
     "claims_explicitly_not_made", "expected_gate_state", "verification_requests",
     "reproduction", "mutation_coverage"
   ],
@@ -30,11 +30,11 @@
       }
     },
     "artifacts": {"type": "array", "minItems": 8, "items": {"$ref": "#/$defs/artifact"}},
-    "runtime_evidence": {
+    "canonical_evidence": {
       "type": "object", "additionalProperties": false,
       "required": ["git_policy", "directory", "views", "contact_sheets", "master_contact_sheet_sha256", "reproducible"],
       "properties": {
-        "git_policy": {"const": "RUNTIME_ONLY_NOT_COMMITTED"},
+        "git_policy": {"const": "COMMITTED_REVIEW_EVIDENCE"},
         "directory": {"type": "string"},
         "views": {"const": 28},
         "contact_sheets": {"const": 5},

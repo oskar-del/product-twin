@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "data/geometry/manifests/furniture-avatar-manifest-v0.1.json"
-OUT = ROOT / ".runtime/furniture-avatar-qa/v0.1"
+OUT = ROOT / "data/evidence/furniture-avatar-manifest-v0.1-qa-pack"
 METRIC = ROOT / "data/metrics/furniture-avatar-manifest-v0.1-qa.json"
 REVIEW = ROOT / "data/evidence/furniture-avatar-manifest-v0.1-visual-review.json"
 
@@ -75,7 +75,7 @@ def main():
             "manual_review":reviews.get(asset["asset_id"], {"state":"PENDING_INDEPENDENT_REVIEW"}),"publication":{"public_allowed":False,"rights_state":asset["rights"]["rendering_state"],"attribution_display_state":asset["attribution"]["display_state"]}
         })
     master = master_sheet(records)
-    metric={"version":"0.1","record_type":"FURNITURE_AVATAR_CANONICAL_QA","manifest":"data/geometry/manifests/furniture-avatar-manifest-v0.1.json","renderer":"scripts/render-furniture-avatar-manifest-qa.py","review_evidence":str(REVIEW.relative_to(ROOT)) if review else None,"review_evidence_sha256":sha(REVIEW) if review else None,"policy":"Canonical renders prove inspectable geometry behavior only; rights, exact finish, attribution UI, and public publication remain independent gates.","view_contract":list(renderer.VIEW_SPECS),"summary":{"assets":len(records),"views_per_asset":7,"rendered_views":sum(len(r["views"]) for r in records),"reviewed_assets":sum(1 for r in records if r["manual_review"].get("overall")=="PASS_G2_PLANNING_QA"),"publicly_publishable":0},"runtime_pack":{"directory":str(OUT.relative_to(ROOT)),"master_contact_sheet":master.name,"master_contact_sheet_sha256":sha(master)},"assets":records}
+    metric={"version":"0.1","record_type":"FURNITURE_AVATAR_CANONICAL_QA","manifest":"data/geometry/manifests/furniture-avatar-manifest-v0.1.json","renderer":"scripts/render-furniture-avatar-manifest-qa.py","review_evidence":str(REVIEW.relative_to(ROOT)) if review else None,"review_evidence_sha256":sha(REVIEW) if review else None,"policy":"Committed canonical renders prove inspectable geometry behavior only; rights, exact finish, attribution UI, and public publication remain independent gates.","view_contract":list(renderer.VIEW_SPECS),"summary":{"assets":len(records),"views_per_asset":7,"rendered_views":sum(len(r["views"]) for r in records),"reviewed_assets":sum(1 for r in records if r["manual_review"].get("overall")=="PASS_G2_PLANNING_QA"),"publicly_publishable":0},"qa_pack":{"git_policy":"COMMITTED_REVIEW_EVIDENCE","directory":str(OUT.relative_to(ROOT)),"master_contact_sheet":master.name,"master_contact_sheet_sha256":sha(master)},"assets":records}
     METRIC.write_text(json.dumps(metric,indent=2)+"\n")
     print(json.dumps(metric["summary"],indent=2))
 

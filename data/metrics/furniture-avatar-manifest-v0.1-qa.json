@@ -5,7 +5,7 @@
   "renderer": "scripts/render-furniture-avatar-manifest-qa.py",
   "review_evidence": "data/evidence/furniture-avatar-manifest-v0.1-visual-review.json",
   "review_evidence_sha256": "819e2d5a38c4cc973d2f74758a453a13310352540e1afb6efc24fe0b62d69537",
-  "policy": "Canonical renders prove inspectable geometry behavior only; rights, exact finish, attribution UI, and public publication remain independent gates.",
+  "policy": "Committed canonical renders prove inspectable geometry behavior only; rights, exact finish, attribution UI, and public publication remain independent gates.",
   "view_contract": [
     "front",
     "rear",
@@ -22,8 +22,9 @@
     "reviewed_assets": 4,
     "publicly_publishable": 0
   },
-  "runtime_pack": {
-    "directory": ".runtime/furniture-avatar-qa/v0.1",
+  "qa_pack": {
+    "git_policy": "COMMITTED_REVIEW_EVIDENCE",
+    "directory": "data/evidence/furniture-avatar-manifest-v0.1-qa-pack",
     "master_contact_sheet": "all-assets-contact-sheet.png",
     "master_contact_sheet_sha256": "ff27529a18f02addf3c3e6cbb06ae16d38f59c2736b2edacf84c145dfe4ab861"
   },

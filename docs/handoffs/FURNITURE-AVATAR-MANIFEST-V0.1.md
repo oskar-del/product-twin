@@ -20,7 +20,7 @@ The first Room Alpha furniture contract contains four primary, internally ingest
 - Schema: `config/geometry/furniture-avatar-manifest-v0.1.schema.json`
 - Canonical QA metric: `data/metrics/furniture-avatar-manifest-v0.1-qa.json`
 - Pre-Verification visual review: `data/evidence/furniture-avatar-manifest-v0.1-visual-review.json`
-- Runtime-only image pack: `.runtime/furniture-avatar-qa/v0.1` (28 views plus contact sheets)
+- Committed image pack: `data/evidence/furniture-avatar-manifest-v0.1-qa-pack` (28 views plus contact sheets)
 - Verification Package #2: `data/verification/packages/furniture-avatar-manifest-v0.1-package-2.json`
 - Verification package schema: `config/verification/furniture-avatar-verification-package-v0.1.schema.json`
 

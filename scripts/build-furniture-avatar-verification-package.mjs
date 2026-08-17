@@ -22,6 +22,15 @@ const artifactPaths=[
   ["GEOMETRY_LEVEL_CONTRACT","config/geometry/avatar-levels.json"],
   ["ARPER_RIGHTS_REVIEW","data/rights/arper-ply-3853-rights-and-rfq.json"]
 ];
+function qaArtifactPaths(qa){
+  const base=qa.qa_pack.directory;
+  const paths=[["QA_MASTER_CONTACT_SHEET",`${base}/${qa.qa_pack.master_contact_sheet}`]];
+  for(const asset of qa.assets){
+    for(const view of asset.views)paths.push([`QA_VIEW_${asset.role}_${view.view}`,`${base}/${asset.asset_directory}/${view.file}`]);
+    paths.push([`QA_CONTACT_SHEET_${asset.role}`,`${base}/${asset.asset_directory}/${asset.contact_sheet.file}`]);
+  }
+  return paths;
+}
 
 export function validateVerificationPackage(p,{checkFiles=false}={}){
   const errors=[];
@@ -30,7 +39,7 @@ export function validateVerificationPackage(p,{checkFiles=false}={}){
   if(p.expected_gate_state.internal_room_alpha_ingestible!==4||p.expected_gate_state.publicly_publishable!==0)errors.push("gate_counts");
   if(p.expected_gate_state.arper_runtime_ingestible!==false||p.expected_gate_state.arper_publicly_publishable!==false)errors.push("arper_gate");
   if(new Set(p.artifacts.map(a=>a.path)).size!==p.artifacts.length)errors.push("duplicate_artifact");
-  if(p.runtime_evidence.views!==28||p.runtime_evidence.contact_sheets!==5)errors.push("runtime_inventory");
+  if(p.canonical_evidence.views!==28||p.canonical_evidence.contact_sheets!==5||p.canonical_evidence.git_policy!=="COMMITTED_REVIEW_EVIDENCE")errors.push("canonical_inventory");
   if(p.asset_decisions.length!==5||p.asset_decisions.some(a=>!a.pass_reasons.length||!a.block_reasons.length))errors.push("asset_decisions");
   if(p.asset_decisions.some(a=>a.public_publication!=="BLOCKED"))errors.push("asset_publication");
   if(p.claims_for_verification.some(c=>typeof c.reason!=="string"||!c.reason.trim()))errors.push("claim_reason");
@@ -46,8 +55,8 @@ export function buildVerificationPackage(){
   const p={
     package_id:"VERIFICATION_PACKAGE_2_FURNITURE_AVATAR_MANIFEST_V0_1",package_number:2,version:"0.1",status:"READY_FOR_INDEPENDENT_VERIFICATION",subject:"LIVING_ROOM_ALPHA_FURNITURE_MANIFEST",source_branch:"agent/avatar-factory-source-graph",merge_authorized:false,publication_authorized:false,
     scope:{primary_assets:manifest.summary.primary_assets,supplemental_blocked_assets:manifest.summary.supplemental_blocked_assets,roles:manifest.selected_roles},
-    artifacts:artifactPaths.map(([role,p])=>({role,path:p,sha256:hash(p),required:true})),
-    runtime_evidence:{git_policy:"RUNTIME_ONLY_NOT_COMMITTED",directory:qa.runtime_pack.directory,views:qa.summary.rendered_views,contact_sheets:qa.summary.assets+1,master_contact_sheet_sha256:qa.runtime_pack.master_contact_sheet_sha256,reproducible:true},
+    artifacts:[...artifactPaths,...qaArtifactPaths(qa)].map(([role,p])=>({role,path:p,sha256:hash(p),required:true})),
+    canonical_evidence:{git_policy:"COMMITTED_REVIEW_EVIDENCE",directory:qa.qa_pack.directory,views:qa.summary.rendered_views,contact_sheets:qa.summary.assets+1,master_contact_sheet_sha256:qa.qa_pack.master_contact_sheet_sha256,reproducible:true},
     asset_decisions:manifest.assets.map(a=>({asset_id:a.asset_id,role:a.role,geometry_level:a.geometry.level,internal_ingest:a.publication.internal_ingest_allowed?"PASS":"BLOCKED",public_publication:"BLOCKED",pass_reasons:a.publication.internal_ingest_allowed?["VERIFIED_EXACT_PRODUCT_IDENTITY","PROJECT_AUTHORED_G2_PROXY_DISCLOSED_AS_NON_EXACT","INDEPENDENT_SCALE_PASS","CANONICAL_VISUAL_QA_PASS","FLOOR_ANCHOR_AND_COLLISION_ENVELOPE_PASS"]:["EXACT_MANUFACTURER_IDENTITY_VERIFIED","TRANSIENT_GEOMETRY_SCALE_QA_PASS"],block_reasons:a.publication.blockers})),
     claims_for_verification:[
       {id:"MANIFEST_CONTRACT",expected:"PASS",reason:"Versioned strict schema and deterministic builder define every required furniture-avatar axis.",evidence:["data/geometry/manifests/furniture-avatar-manifest-v0.1.json","config/geometry/furniture-avatar-manifest-v0.1.schema.json"]},
@@ -65,7 +74,7 @@ export function buildVerificationPackage(){
     expected_gate_state:{internal_room_alpha_ingestible:manifest.summary.internal_ingestible,publicly_publishable:manifest.summary.publicly_publishable,arper_runtime_ingestible:false,arper_publicly_publishable:false},
     verification_requests:["Recompute every required artifact SHA-256","Run the manifest mutation suite","Re-render the canonical pack and compare metric invariants","Inspect front/rear orientation and floor contact from runtime contact sheets","Independently assess project-proxy derivative/public rendering rights","Verify attribution on every required Room Lab surface","Confirm Arper remains blocked without written permission","Confirm commerce and destination-supply data remain absent"],
     reproduction:{commands:["npm run furniture:avatar:manifest","npm run furniture:avatar:manifest:test","npm run furniture:avatar:qa:render","npm run furniture:avatar:qa:test","npm run furniture:avatar:verification:package","npm run furniture:avatar:verification:test","git diff --check"],expected:["5 manifest records: 4 primary plus 1 blocked Arper candidate","4 internal-ingestible primary assets","0 publicly publishable assets","28 canonical views and 5 contact sheets","all mutation tests pass","all 238 or more config/data JSON files parse","clean whitespace diff gate"]},
-    mutation_coverage:["Design Asset exact-product identity injection","Design Asset commerce-field injection","unverified Product Twin identity","G1 public promotion","unresolved-rights public promotion","proxy exact-likeness escalation","appearance/dimensional-confidence collapse","geometry hash corruption","Arper publication bypass","package authority escalation","package gate-count escalation","package artifact hash corruption","runtime evidence count mutation"]
+    mutation_coverage:["Design Asset exact-product identity injection","Design Asset commerce-field injection","unverified Product Twin identity","G1 public promotion","unresolved-rights public promotion","proxy exact-likeness escalation","appearance/dimensional-confidence collapse","geometry hash corruption","Arper publication bypass","package authority escalation","package gate-count escalation","package artifact hash corruption","canonical evidence count mutation"]
   };
   const errors=validateVerificationPackage(p,{checkFiles:true});if(errors.length)throw new Error(errors.join(", "));return p;
 }
