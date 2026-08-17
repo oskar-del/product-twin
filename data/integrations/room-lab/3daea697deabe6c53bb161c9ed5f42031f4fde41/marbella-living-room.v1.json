@@ -1,0 +1,28 @@
+{
+  "manifest_version": "room-scene/v1",
+  "scene": {
+    "id": "marbella-living-room-v1",
+    "label": "Assumed 6.0 × 4.6 m Marbella living room",
+    "bounds": { "minX": -3, "maxX": 3, "minZ": -2.3, "maxZ": 2.3 },
+    "floor": { "id": "main-floor", "label": "Main floor plane", "y": 0 },
+    "surfaces": [
+      { "id": "left-wall", "label": "Along the left wall", "side": "left", "rotation": -1.5707963267948966, "gap": 0.08 },
+      { "id": "right-edge", "label": "Along the right room edge", "side": "right", "rotation": 1.5707963267948966, "gap": 0.08 },
+      { "id": "window-wall", "label": "Along the window wall", "side": "min-z", "rotation": 3.141592653589793, "gap": 0.08 },
+      { "id": "room-edge", "label": "Along the room edge", "side": "max-z", "rotation": 0, "gap": 0.08 }
+    ],
+    "openings": [{ "id": "garden-window", "label": "Garden window", "surfaceId": "window-wall", "width": 1.9, "sill": 1.05, "height": 1.2 }],
+    "protectedPaths": [{ "id": "room-entry", "label": "room entry circulation", "x": -0.4, "z": 1.25, "width": 2.1, "depth": 0.38 }],
+    "anchors": [{ "id": "room-centre", "label": "Room-centred arrangement", "x": 0, "z": 0, "rotations": [0, 1.5707963267948966, 3.141592653589793, -1.5707963267948966] }],
+    "baseline_placements": [
+      { "product_id": "kivik", "x": 0, "y": 0, "z": -1.78, "rotation": 3.141592653589793 },
+      { "product_id": "poang", "x": -1.88, "y": 0, "z": 0.05, "rotation": -1.5707963267948966 },
+      { "product_id": "listerby", "x": 0, "y": 0, "z": -0.22, "rotation": 0 },
+      { "product_id": "lohals", "x": 0, "y": 0, "z": -0.18, "rotation": 0 },
+      { "product_id": "gladom", "x": 1.58, "y": 0, "z": -1.55, "rotation": 0 },
+      { "product_id": "lauters", "x": -1.72, "y": 0, "z": -1.55, "rotation": 0.2 },
+      { "product_id": "besta", "x": 0, "y": 0, "z": 2.05, "rotation": 0 },
+      { "product_id": "billy", "x": 2.84, "y": 0, "z": 1.15, "rotation": 1.5707963267948966 }
+    ]
+  }
+}
