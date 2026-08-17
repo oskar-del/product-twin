@@ -61,7 +61,7 @@ export function validateSaterdalsvagen14({
   check(project.site_twin_ref?.content_sha256 === digestRelative(root, SITE_REL), "project Site Twin content hash is stale");
   check(scenario.site_twin_ref?.path === SITE_REL, "scenario points to the wrong Site Twin path");
   check(scenario.site_twin_ref?.content_sha256 === digestRelative(root, SITE_REL), "scenario Site Twin content hash is stale");
-  check(scenario.status === "BLOCKED_PENDING_SITE_BASIS", "scenario was promoted without a design basis");
+  check(scenario.status === "CONCEPT_VISUALISATION_ACTIVE_LEGAL_GATES_OPEN", "scenario concept/legal-gate state drift");
   check(exactSet(scenario.requested_house_profiles, ["HOUSEKIT_H30", "HOUSEKIT_H50"]), "scenario comparison profiles changed");
   for (const field of ["selected_house_profile", "site_boundary", "buildable_envelope", "building_geometry", "access_point", "finished_floor_level"]) {
     check(scenario[field] === null, `scenario ${field} must remain null`);
@@ -197,7 +197,7 @@ function runCli() {
     process.exitCode = 1;
     return;
   }
-  console.log(`Säterdalsvägen 14 validation passed (${result.assertions} assertions; Project → Site Twin → blocked Design Scenario).`);
+  console.log(`Säterdalsvägen 14 validation passed (${result.assertions} assertions; Project → Site Twin → concept visualisation active / legal gates open).`);
 }
 
 const mainFile = process.argv[1] ? path.resolve(process.argv[1]) : null;

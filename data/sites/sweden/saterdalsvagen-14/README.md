@@ -6,7 +6,7 @@ Assessment date: 2026-08-17. Working locator: `SVÄRTINGE 54:28`, Norrköping, u
 
 - `project-v0.1.json` retains price, area, seller statements, the market pin and working designation as `REPORTED_UNVERIFIED`.
 - `plot-intelligence-v0.1.json` contains only source-bound Site Twin discovery evidence, limitations and stage gates.
-- `design-scenario-v0.1.json` is deliberately blocked with all geometry, envelope, access and finished-floor fields null.
+- `design-scenario-v0.1.json` keeps all authoritative boundary, envelope, access and finished-floor fields null while allowing a separately labelled concept visualisation.
 - `intake-v0.1.json` records the locator and keeps all permissions for external requests, contacts, cases and field orders false.
 
 The Project and Design Scenario pin the exact Site Twin file hash. Seller claims cannot close Site Twin gates.
@@ -15,7 +15,9 @@ The Project and Design Scenario pin the exact Site Twin file hash. Seller claims
 
 `neighbourhood-twin-alpha-v0.1.json` binds the current Site Twin discovery record to a truthful first neighbourhood interface. It provides an explicit coordinate anchor, a source-hashed area-equivalent uncertainty disc, a source/date/method-labelled locality-service register, the seven-stage spatial interface and a camera/LOD contract. The disc is not parcel geometry and cannot be used for boundary, setback or buildable-envelope work.
 
-The prototype may show locality labels, the verified locator, the translucent uncertainty disc, planning chronology and gate overlays. Terrain, source-bound buildings, road geometry, legal access, utilities, entitlement and all Building → Unit → Room transitions remain blocked. Run `npm run site:sweden:svartinge:neighbourhood:gate` to rebuild and validate the bundle.
+The v0.1 alpha remains the conservative evidentiary checkpoint. The v0.2 concept prototype adds a viewable, reproducible 3D scene using an indicative municipal-map trace, derived terrain/roads/context massing, reported view direction and concept house/room geometry. The full `NEIGHBOURHOOD VIEW → STREET VIEW → PLOT ORBIT → CONCEPT HOUSE ON PLOT → BUILDING ORBIT → ENTER BUILDING → ROOM` progression is available without closing legal, entitlement, access, utility or surveyed-terrain gates.
+
+Run `npm run site:sweden:svartinge:prototype:gate` to rebuild and validate the v0.2 export. Run `npm run site:sweden:svartinge:prototype:serve` and open `http://127.0.0.1:4173/prototype/svartinge-neighbourhood/` to use the viewer.
 
 ## Material discovery findings
 
