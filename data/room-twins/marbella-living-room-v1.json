@@ -1,0 +1,328 @@
+{
+  "manifest_version": "room-twin/v1",
+  "entity_type": "RoomTwin",
+  "room_state": "ASSUMED_DESIGN_ROOM",
+  "identity": {
+    "project_id": "PRJ_MARBELLA_ROOM_LAB_ALPHA",
+    "site_twin_id": "SITE_MARBELLA_ROOM_LAB_ASSUMED",
+    "design_scenario_id": "SCN_MARBELLA_ROOM_LAB_ASSUMED",
+    "building_id": "BLDG_MARBELLA_ROOM_LAB_ASSUMED",
+    "level_id": "LVL_MARBELLA_ROOM_LAB_ASSUMED",
+    "room_id": "ROOM_MARBELLA_LIVING_ALPHA",
+    "room_version": "1.0",
+    "room_type": "LIVING_ROOM",
+    "intended_use": "RESIDENTIAL_LIVING_AND_FURNITURE_PLACEMENT_DEMONSTRATION",
+    "label": "Assumed 6.0 × 4.6 m Marbella living room"
+  },
+  "coordinate_systems": {
+    "linear_units": "m",
+    "angle_units": "rad",
+    "room_axis_convention": "+X right/east in room, +Y up, +Z toward max-z",
+    "site_frame": {
+      "frame_id": "SITE",
+      "crs": null,
+      "origin": null,
+      "north_definition": null,
+      "evidence_ref": "E_MARBELLA_UNKNOWN_SITE"
+    },
+    "building_local": {
+      "frame_id": "BUILDING",
+      "parent_frame_id": "SITE",
+      "transform": null,
+      "evidence_ref": "E_MARBELLA_UNKNOWN_TRANSFORMS",
+      "gate_id": "GATE_MARBELLA_BUILDING_TRANSFORM"
+    },
+    "level_local": {
+      "frame_id": "LEVEL",
+      "parent_frame_id": "BUILDING",
+      "transform": null,
+      "evidence_ref": "E_MARBELLA_UNKNOWN_TRANSFORMS",
+      "gate_id": "GATE_MARBELLA_LEVEL_TRANSFORM"
+    },
+    "room_local": {
+      "frame_id": "ROOM",
+      "parent_frame_id": "LEVEL",
+      "transform": null,
+      "evidence_ref": "E_MARBELLA_UNKNOWN_TRANSFORMS",
+      "gate_id": "GATE_MARBELLA_ROOM_TRANSFORM"
+    },
+    "room_true_north_yaw_rad": null
+  },
+  "spatial_geometry": {
+    "bounds": {
+      "minX": -3,
+      "maxX": 3,
+      "minZ": -2.3,
+      "maxZ": 2.3,
+      "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+    },
+    "floor": {
+      "id": "main-floor",
+      "label": "Main floor plane",
+      "y": 0,
+      "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+    },
+    "ceiling": null,
+    "walls": null,
+    "surfaces": [
+      {
+        "id": "left-wall",
+        "label": "Along the left wall",
+        "side": "left",
+        "rotation_rad": -1.5707963267948966,
+        "gap_m": 0.08,
+        "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+      },
+      {
+        "id": "right-edge",
+        "label": "Along the right room edge",
+        "side": "right",
+        "rotation_rad": 1.5707963267948966,
+        "gap_m": 0.08,
+        "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+      },
+      {
+        "id": "window-wall",
+        "label": "Along the window wall",
+        "side": "min-z",
+        "rotation_rad": 3.141592653589793,
+        "gap_m": 0.08,
+        "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+      },
+      {
+        "id": "room-edge",
+        "label": "Along the room edge",
+        "side": "max-z",
+        "rotation_rad": 0,
+        "gap_m": 0.08,
+        "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+      }
+    ],
+    "openings": [
+      {
+        "id": "garden-window",
+        "label": "Garden window",
+        "opening_type": "WINDOW",
+        "surface_id": "window-wall",
+        "width_m": 1.9,
+        "sill_m": 1.05,
+        "height_m": 1.2,
+        "offset_along_surface_m": null,
+        "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+      }
+    ],
+    "columns": null,
+    "fixed_elements": null,
+    "service_zones": null,
+    "protected_paths": [
+      {
+        "id": "room-entry",
+        "label": "room entry circulation",
+        "x": -0.4,
+        "z": 1.25,
+        "width_m": 2.1,
+        "depth_m": 0.38,
+        "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+      }
+    ],
+    "required_clearances": null
+  },
+  "semantic_anchors": [
+    {
+      "id": "room-centre",
+      "label": "Room-centred arrangement",
+      "anchor_type": "ROOM_CENTRE",
+      "target_ref": null,
+      "point": [0, 0, 0],
+      "direction": null,
+      "cone_half_angle_rad": null,
+      "rotations_rad": [0, 1.5707963267948966, 3.141592653589793, -1.5707963267948966],
+      "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+    },
+    {
+      "id": "left-wall-anchor",
+      "label": "Left wall relationship",
+      "anchor_type": "WALL",
+      "target_ref": "left-wall",
+      "point": null,
+      "direction": null,
+      "cone_half_angle_rad": null,
+      "rotations_rad": null,
+      "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+    },
+    {
+      "id": "right-edge-anchor",
+      "label": "Right room-edge relationship",
+      "anchor_type": "WALL",
+      "target_ref": "right-edge",
+      "point": null,
+      "direction": null,
+      "cone_half_angle_rad": null,
+      "rotations_rad": null,
+      "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+    },
+    {
+      "id": "window-wall-anchor",
+      "label": "Window wall relationship",
+      "anchor_type": "WALL",
+      "target_ref": "window-wall",
+      "point": null,
+      "direction": null,
+      "cone_half_angle_rad": null,
+      "rotations_rad": null,
+      "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+    },
+    {
+      "id": "room-edge-anchor",
+      "label": "Max-z room-edge relationship",
+      "anchor_type": "WALL",
+      "target_ref": "room-edge",
+      "point": null,
+      "direction": null,
+      "cone_half_angle_rad": null,
+      "rotations_rad": null,
+      "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+    },
+    {
+      "id": "garden-window-anchor",
+      "label": "Garden window relationship",
+      "anchor_type": "WINDOW",
+      "target_ref": "garden-window",
+      "point": null,
+      "direction": null,
+      "cone_half_angle_rad": null,
+      "rotations_rad": null,
+      "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+    },
+    {
+      "id": "garden-relationship",
+      "label": "Relationship toward the named garden window",
+      "anchor_type": "GARDEN_TERRACE_RELATIONSHIP",
+      "target_ref": "garden-window",
+      "point": null,
+      "direction": [0, 0, -1],
+      "cone_half_angle_rad": null,
+      "rotations_rad": null,
+      "evidence_ref": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE"
+    }
+  ],
+  "evidence_records": [
+    {
+      "evidence_id": "E_MARBELLA_ROOM_LAB_ASSUMED_SCENE",
+      "state": "ASSUMED",
+      "source": {
+        "kind": "REPOSITORY_RECORD",
+        "ref": "3daea697deabe6c53bb161c9ed5f42031f4fde41",
+        "locator": "app/room/manifests/marbella-living-room.v1.json",
+        "authority": "Room Lab workstream",
+        "sha256": "361c172dabe595353635112cda066e96efce8cb6e7da13972929cd8feb85c64c"
+      },
+      "observation_date": "2026-08-17",
+      "confidence": { "label": "HIGH", "value": 1 },
+      "method": "Preserved the frozen Room Lab alpha scene values exactly while retaining their assumed-design status.",
+      "limitations": [
+        "The room is not surveyed, approved BIM or as-built geometry.",
+        "Ceiling, wall assemblies, opening offset, site orientation, services and accessible clearances are unknown."
+      ]
+    },
+    {
+      "evidence_id": "E_MARBELLA_UNKNOWN_SITE",
+      "state": "UNKNOWN",
+      "source": { "kind": "NONE", "ref": null, "locator": null, "authority": null, "sha256": null },
+      "observation_date": null,
+      "confidence": { "label": "UNKNOWN", "value": 0 },
+      "method": "No site CRS, origin or north evidence was supplied with the Room Lab alpha scene.",
+      "limitations": ["The room cannot be located on a Site Twin."]
+    },
+    {
+      "evidence_id": "E_MARBELLA_UNKNOWN_TRANSFORMS",
+      "state": "UNKNOWN",
+      "source": { "kind": "NONE", "ref": null, "locator": null, "authority": null, "sha256": null },
+      "observation_date": null,
+      "confidence": { "label": "UNKNOWN", "value": 0 },
+      "method": "No building, level or room-to-parent transforms were supplied.",
+      "limitations": ["Room-local interaction coordinates cannot be composed into a building or site frame."]
+    }
+  ],
+  "hard_gates": [
+    { "gate_id": "GATE_MARBELLA_ROOM_SURVEY", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "No survey, approved BIM or as-built record." },
+    { "gate_id": "GATE_MARBELLA_SITE_FRAME", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "Site CRS, origin and north are unknown." },
+    { "gate_id": "GATE_MARBELLA_BUILDING_TRANSFORM", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "Building-to-site transform is unknown." },
+    { "gate_id": "GATE_MARBELLA_LEVEL_TRANSFORM", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "Level-to-building transform is unknown." },
+    { "gate_id": "GATE_MARBELLA_ROOM_TRANSFORM", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "Room-to-level transform is unknown." },
+    { "gate_id": "GATE_MARBELLA_ACCESSIBLE_CLEARANCES", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "No verified regulatory or project accessibility basis." },
+    { "gate_id": "GATE_MARBELLA_SERVICES", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "Power, water, drainage and ventilation points are unknown." }
+  ],
+  "blockers": [
+    "No surveyed or approved building/level/room geometry.",
+    "No site orientation or environmental-anchor basis.",
+    "No verified ceiling, services or accessible clearance schedule."
+  ],
+  "upstream_context": {
+    "site_twin_ref": { "id": "SITE_MARBELLA_ROOM_LAB_ASSUMED", "version": "0.0", "path": null, "sha256": null },
+    "design_scenario_ref": { "id": "SCN_MARBELLA_ROOM_LAB_ASSUMED", "version": "0.0", "path": null, "sha256": null },
+    "site_boundary_geometry": null,
+    "terrain_dem": null,
+    "permitted_access_point": null,
+    "planning_entitlement": null,
+    "buildable_envelope": null
+  },
+  "spatial_intents": [
+    {
+      "intent_id": "INTENT_MARBELLA_GARDEN_RELATIONSHIP",
+      "intent_type": "VIEW_PRESERVE",
+      "scope": "ROOM",
+      "user_design_intent": "Preserve the room's semantic relationship to the named garden window without inventing a verified view or orientation.",
+      "hard_constraints": [
+        {
+          "constraint_id": "NO_VERIFIED_VIEW_INFERENCE",
+          "statement": "Do not rank a view direction until site north, opening position and external context are verified.",
+          "evidence_refs": ["E_MARBELLA_UNKNOWN_SITE"],
+          "gate_ids": ["GATE_MARBELLA_SITE_FRAME"]
+        }
+      ],
+      "soft_objectives": [
+        { "objective_id": "RELATE_TO_GARDEN_WINDOW", "statement": "Prefer clear candidates that acknowledge the garden-window side.", "weight": 0.7 }
+      ],
+      "candidate_generation": {
+        "method": "DETERMINISTIC",
+        "status": "BLOCKED",
+        "input_refs": ["garden-window"],
+        "blockers": ["Opening offset, room north and external view geometry are unknown."]
+      },
+      "ranking": {
+        "method": "EVIDENCE_BACKED",
+        "status": "BLOCKED",
+        "required_evidence_refs": ["E_MARBELLA_UNKNOWN_SITE"]
+      },
+      "selection": { "status": "UNSELECTED", "selected_candidate_id": null, "selected_by": null, "selected_at": null }
+    }
+  ],
+  "domain_ownership": {
+    "spatial_studio": "site/building/level/room geometry and environmental anchors",
+    "avatar_factory": "furniture geometry and product spatial semantics",
+    "procurement": "destination-specific supply",
+    "room_lab": "interaction and explicit placements",
+    "verification": "final acceptance"
+  },
+  "room_lab_compatibility": {
+    "target_manifest_version": "room-scene/v1",
+    "source_commit": "3daea697deabe6c53bb161c9ed5f42031f4fde41",
+    "source_manifest_path": "app/room/manifests/marbella-living-room.v1.json",
+    "source_manifest_sha256": "361c172dabe595353635112cda066e96efce8cb6e7da13972929cd8feb85c64c",
+    "source_importer_sha256": "9ebcd0f264d9e8e86b5e8a41170bdbbe075792c7cd6fdb44728e115ca2b8d836",
+    "scene_id": "marbella-living-room-v1",
+    "scene_label": "Assumed 6.0 × 4.6 m Marbella living room",
+    "domain_owner": "ROOM_LAB",
+    "baseline_placements": [
+      { "product_id": "kivik", "x": 0, "y": 0, "z": -1.78, "rotation": 3.141592653589793 },
+      { "product_id": "poang", "x": -1.88, "y": 0, "z": 0.05, "rotation": -1.5707963267948966 },
+      { "product_id": "listerby", "x": 0, "y": 0, "z": -0.22, "rotation": 0 },
+      { "product_id": "lohals", "x": 0, "y": 0, "z": -0.18, "rotation": 0 },
+      { "product_id": "gladom", "x": 1.58, "y": 0, "z": -1.55, "rotation": 0 },
+      { "product_id": "lauters", "x": -1.72, "y": 0, "z": -1.55, "rotation": 0.2 },
+      { "product_id": "besta", "x": 0, "y": 0, "z": 2.05, "rotation": 0 },
+      { "product_id": "billy", "x": 2.84, "y": 0, "z": 1.15, "rotation": 1.5707963267948966 }
+    ]
+  }
+}
