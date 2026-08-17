@@ -4,6 +4,8 @@
 
 One long-lived Brain chat coordinates six long-lived specialist chats. Specialist chats preserve their own design history and may launch bounded subagents for parallel research, tests or implementation. Subagents do not replace the persistent chat.
 
+The current cross-workstream milestone and numbered directives are recorded in `docs/BRAIN-CONTROL-BOARD.md` on branch `agent/product-twin-integration`. Each specialist reads that board at milestone start and after returning a checkpoint.
+
 | Chat | Persistent branch / project | Handoff |
 | --- | --- | --- |
 | Brain / Product Twin Integration | `agent/product-twin-integration` | `docs/handoffs/INTEGRATION.md` |
@@ -65,4 +67,3 @@ Create a new specialist only when all three are true:
 3. keeping it in an existing chat repeatedly causes context or ownership conflicts.
 
 Do not create separate persistent chats yet for garden intelligence, SEO, market expansion or render style. Keep them within Spatial, Commerce/Procurement and Visual Media until they meet the three tests.
-
