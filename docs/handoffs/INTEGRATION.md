@@ -4,6 +4,8 @@
 
 This is the long-lived coordination chat for Product Twin, Room Lab, Avatar Factory and Plot-to-Project/Site Twin work. It owns shared contracts, priorities, cross-workstream review, merge order and promotion decisions. It does not replace the specialist chats.
 
+The current numbered workstream directives and integrated milestone are maintained in `docs/BRAIN-CONTROL-BOARD.md`.
+
 ## Canonical repository state
 
 - Repository: `oskar-del/product-twin`
@@ -78,4 +80,3 @@ The supply gate remains honest: `0` procurement-ready furniture Twins because le
 1. Review the three specialist checkpoints and decide merge order.
 2. Choose whether to migrate Room Lab into the canonical monorepo or keep the Sites repository as a versioned delivery shell for the next milestone.
 3. Select the first complete proof: residential living room, one CANOPUS guest room, or both sharing the same manifest contract.
-
