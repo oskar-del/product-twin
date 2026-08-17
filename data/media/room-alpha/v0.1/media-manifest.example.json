@@ -1,0 +1,854 @@
+{
+  "schema_version": "0.1.0",
+  "media_manifest_id": "MEDIA_MANIFEST_LIVING_ROOM_ALPHA_V0_1",
+  "revision": "0.1.0",
+  "status": "REVIEW_PENDING",
+  "generation_date": "2026-08-17",
+  "governance_bindings": [
+    {
+      "role": "BRAIN_CONTROL_BOARD",
+      "repository": "oskar-del/product-twin",
+      "commit": "ef1d52d53aa4d6c3b8cbd5f99c456c5d219a1a4c",
+      "path": "data/dashboard/project-control.json",
+      "git_blob_oid": "03b70508e3db9897263647f6ea24c3dfeb0124c7",
+      "sha256": "f5850d8ed3df1db60d1708e6492cc9513c7c34fbebb950d14b70a8d2126049c5"
+    },
+    {
+      "role": "PERSISTENT_CHAT_TOPOLOGY",
+      "repository": "oskar-del/product-twin",
+      "commit": "ef1d52d53aa4d6c3b8cbd5f99c456c5d219a1a4c",
+      "path": "docs/PERSISTENT-CHAT-TOPOLOGY.md",
+      "git_blob_oid": "69e07eb135371ee6192f4cfa2ba59d7f5d8d32c9",
+      "sha256": "48c334e96a9a437547e69f22503ee7d358d358ad14259a55d018430f243ecec4"
+    },
+    {
+      "role": "ROOM_LAB_HANDOFF",
+      "repository": "oskar-del/product-twin",
+      "commit": "eb02c51ef35fec438ef3f0da29b5a39b43ed7791",
+      "path": "docs/handoffs/ROOM-LAB.md",
+      "git_blob_oid": "a1e11f16db199526038dc57faa95e518a3f2b31b",
+      "sha256": "1b94bd57e0e514581cd3a9700beb328739f9f0baeff7916962ea3fee71af8419"
+    },
+    {
+      "role": "AVATAR_FACTORY_HANDOFF",
+      "repository": "oskar-del/product-twin",
+      "commit": "2a959d4f8e270d150b74e3f43daf624a4ed06c9c",
+      "path": "docs/handoffs/AVATAR-FACTORY.md",
+      "git_blob_oid": "413602ec2d057fbe284db3a9461f075c10acb3a5",
+      "sha256": "de53069107ac988e5bee22436acd488b2fe1c56c3d018a77993562c7ca3b581c"
+    },
+    {
+      "role": "VERIFICATION_HANDOFF",
+      "repository": "oskar-del/product-twin",
+      "commit": "d2687728ac5383bd9b621dfc354c0b53dec8929c",
+      "path": "docs/handoffs/VERIFICATION-EVIDENCE-MONITORING.md",
+      "git_blob_oid": "30074faf665aa51db09cc7bc0dfad585b9a3ac12",
+      "sha256": "6795fc1940b5777ed7cf2ef0b09e1668f852b3bf365e105c64e91356846d2614"
+    }
+  ],
+  "source_bindings": {
+    "room": {
+      "manifest_id": "ROOM_MANIFEST_LIVING_ROOM_ALPHA_V0_1",
+      "revision": "0.1.0",
+      "uri": "data/media/room-alpha/v0.1/room-manifest.json",
+      "sha256": "38125f43734f749ef55a75993fdcaa6489f35c9acb2d3c05e7ee88040fac3cae"
+    },
+    "furniture": {
+      "manifest_id": "FURNITURE_MANIFEST_LIVING_ROOM_ALPHA_V0_1",
+      "revision": "0.1.0",
+      "uri": "data/media/room-alpha/v0.1/furniture-manifest.json",
+      "sha256": "61cea81978b2c55cacbd639ca8696c4aeb5036d34b01a3d8a5160a45f3f36a91"
+    },
+    "market": {
+      "manifest_id": "MARKET_MANIFEST_LIVING_ROOM_ALPHA_ES_29660_V0_1",
+      "revision": "0.1.0",
+      "uri": "data/media/room-alpha/v0.1/es-29660-manifest.json",
+      "sha256": "6e6a746618c0d17654fac5f5b514381030e138195b8c7a2d1d64bb0a7e52b5fe"
+    }
+  },
+  "camera_pack_binding": {
+    "manifest_id": "CAMERA_PACK_LIVING_ROOM_ALPHA_V0_1",
+    "revision": "0.1.0",
+    "uri": "data/media/room-alpha/v0.1/camera-pack.json",
+    "sha256": "4c28c446ccb375be2158964b4e33ca206872d598b97cdae7222a76069c590b31"
+  },
+  "placement_bindings": [
+    {
+      "placement_id": "kivik-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_KIVIK_49440597",
+      "design_asset_id": null,
+      "translation_m": [
+        0,
+        0,
+        -1.78
+      ],
+      "rotation_y_rad": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "asset_uri": "data/geometry/avatars/ikea-kivik-49440597-g2-sofa-proxy.glb",
+      "asset_revision": "sha256:a765cb6ddf0bd6b670c0b1add8e3d6a1546bffac23ba31736f850ce98e81d392",
+      "asset_sha256": "a765cb6ddf0bd6b670c0b1add8e3d6a1546bffac23ba31736f850ce98e81d392",
+      "geometry_level": "G2",
+      "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY",
+      "rights_publication_state": "REVIEW"
+    },
+    {
+      "placement_id": "poang-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_POANG_39240787",
+      "design_asset_id": null,
+      "translation_m": [
+        -1.88,
+        0,
+        0.05
+      ],
+      "rotation_y_rad": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "asset_uri": "data/geometry/avatars/ikea-poang-39240787-g2-armchair-proxy.glb",
+      "asset_revision": "sha256:7d1e5659d9f34247aefe65399859d1f7adfc2ed000e1ade9a38a0498fd93cb85",
+      "asset_sha256": "7d1e5659d9f34247aefe65399859d1f7adfc2ed000e1ade9a38a0498fd93cb85",
+      "geometry_level": "G2",
+      "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY",
+      "rights_publication_state": "REVIEW"
+    },
+    {
+      "placement_id": "listerby-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_LISTERBY_30513904",
+      "design_asset_id": null,
+      "translation_m": [
+        0,
+        0,
+        -0.22
+      ],
+      "rotation_y_rad": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "asset_uri": "data/geometry/avatars/ikea-listerby-30513904-g2-coffee-table-proxy.glb",
+      "asset_revision": "sha256:d5294a8b83d5173179a75f54f371346b26577fe54425dfbe0f9ab2264cc8d37f",
+      "asset_sha256": "d5294a8b83d5173179a75f54f371346b26577fe54425dfbe0f9ab2264cc8d37f",
+      "geometry_level": "G2",
+      "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY",
+      "rights_publication_state": "REVIEW"
+    },
+    {
+      "placement_id": "lohals-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_LOHALS_30511288",
+      "design_asset_id": null,
+      "translation_m": [
+        0,
+        0,
+        -0.18
+      ],
+      "rotation_y_rad": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "asset_uri": "data/geometry/avatars/ikea-lohals-30511288-g2-rug-proxy.glb",
+      "asset_revision": "sha256:f3b28a885db303121e69ac0dd2d94089cb3d5f8791d58170852ea52ef916b572",
+      "asset_sha256": "f3b28a885db303121e69ac0dd2d94089cb3d5f8791d58170852ea52ef916b572",
+      "geometry_level": "G2",
+      "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY",
+      "rights_publication_state": "REVIEW"
+    },
+    {
+      "placement_id": "gladom-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_GLADOM_70578451",
+      "design_asset_id": null,
+      "translation_m": [
+        1.58,
+        0,
+        -1.55
+      ],
+      "rotation_y_rad": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "asset_uri": "data/geometry/avatars/ikea-gladom-70578451-g2-tray-table-proxy.glb",
+      "asset_revision": "sha256:36e5c3da0c1b24147f0aa777373dff3ced49badde8c2295e061d99e565e6b4c9",
+      "asset_sha256": "36e5c3da0c1b24147f0aa777373dff3ced49badde8c2295e061d99e565e6b4c9",
+      "geometry_level": "G2",
+      "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY",
+      "rights_publication_state": "REVIEW"
+    },
+    {
+      "placement_id": "lauters-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_LAUTERS_30405042",
+      "design_asset_id": null,
+      "translation_m": [
+        -1.72,
+        0,
+        -1.55
+      ],
+      "rotation_y_rad": 0.2,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "asset_uri": "data/geometry/avatars/ikea-lauters-30405042-g2-floor-lamp-proxy.glb",
+      "asset_revision": "sha256:b276fc15e90b0e380a335fe965253a486a2f40d08a6e0005433f99d05bb13f3e",
+      "asset_sha256": "b276fc15e90b0e380a335fe965253a486a2f40d08a6e0005433f99d05bb13f3e",
+      "geometry_level": "G2",
+      "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY",
+      "rights_publication_state": "REVIEW"
+    },
+    {
+      "placement_id": "besta-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_BESTA_89330691",
+      "design_asset_id": null,
+      "translation_m": [
+        0,
+        0,
+        2.05
+      ],
+      "rotation_y_rad": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "asset_uri": "data/geometry/avatars/ikea-besta-89330691-g2-media-unit-proxy.glb",
+      "asset_revision": "sha256:71081ab6bcd0238652cdaa7b9495b2ab29041f94c2caf856da2bfacd93f3582e",
+      "asset_sha256": "71081ab6bcd0238652cdaa7b9495b2ab29041f94c2caf856da2bfacd93f3582e",
+      "geometry_level": "G2",
+      "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY",
+      "rights_publication_state": "REVIEW"
+    },
+    {
+      "placement_id": "billy-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_BILLY_00263850",
+      "design_asset_id": null,
+      "translation_m": [
+        2.84,
+        0,
+        1.15
+      ],
+      "rotation_y_rad": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "asset_uri": "data/geometry/avatars/ikea-billy-00263850-g2-bookcase-proxy.glb",
+      "asset_revision": "sha256:04b826a4e1f534a9a415b31402b5c46ef44e35bf503f2ed099b541ac71f54258",
+      "asset_sha256": "04b826a4e1f534a9a415b31402b5c46ef44e35bf503f2ed099b541ac71f54258",
+      "geometry_level": "G2",
+      "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY",
+      "rights_publication_state": "REVIEW"
+    }
+  ],
+  "placement_set_sha256": "33f9b160e2c5000abaefd733a3ea0d6e1e62e816b401de40fe1adf5e59ac20d7",
+  "output_classes": [
+    {
+      "class": "VERIFICATION_RENDER",
+      "state": "AVAILABLE_INTERNAL_QA",
+      "allowed_channel": "INTERNAL_QA",
+      "visible_disclosure_required": false,
+      "description": "Neutral, repeatable local renders for geometry, scale, orientation, contact, collision, clearance and visual-defect review."
+    },
+    {
+      "class": "CONCEPT_MARKETING_RENDER",
+      "state": "BLOCKED_RIGHTS",
+      "allowed_channel": "NONE",
+      "visible_disclosure_required": true,
+      "description": "Presentation imagery remains unrendered until appearance, derivative and publication rights permit the target channel."
+    }
+  ],
+  "outputs": [
+    {
+      "output_id": "OUTPUT_ROOM_ALPHA_TOP_PLAN_V0_1",
+      "output_class": "VERIFICATION_RENDER",
+      "status": "AVAILABLE_INTERNAL_QA",
+      "camera_id": "CAM_ROOM_ALPHA_TOP_PLAN_V0_1",
+      "input_bindings": {
+        "room_manifest_sha256": "38125f43734f749ef55a75993fdcaa6489f35c9acb2d3c05e7ee88040fac3cae",
+        "furniture_manifest_sha256": "61cea81978b2c55cacbd639ca8696c4aeb5036d34b01a3d8a5160a45f3f36a91",
+        "market_manifest_sha256": "6e6a746618c0d17654fac5f5b514381030e138195b8c7a2d1d64bb0a7e52b5fe",
+        "camera_pack_sha256": "4c28c446ccb375be2158964b4e33ca206872d598b97cdae7222a76069c590b31"
+      },
+      "placement_ids": [
+        "kivik-placement-01",
+        "poang-placement-01",
+        "listerby-placement-01",
+        "lohals-placement-01",
+        "gladom-placement-01",
+        "lauters-placement-01",
+        "besta-placement-01",
+        "billy-placement-01"
+      ],
+      "placement_set_sha256": "33f9b160e2c5000abaefd733a3ea0d6e1e62e816b401de40fe1adf5e59ac20d7",
+      "source_lane_summary": {
+        "PRODUCT_TWIN": 8,
+        "DESIGN_ASSET": 0
+      },
+      "geometry_level": "G2_PLANNING_PROXY",
+      "appearance_level": "A1_CUE_ONLY_NO_EXACT_TEXTURE",
+      "rights_publication_state": "REVIEW",
+      "render_method": {
+        "method": "LOCAL_DETERMINISTIC_3D",
+        "engine": "THREE_WEBGL",
+        "engine_version": "0.185.0",
+        "model": null,
+        "runner_version": "ROOM_LAB_MEDIA_RUNNER_V1",
+        "runner_sha256": "89efdfcf586a7cdd5bff0fbdb3a07316d45cd9fb6bf78a4d434a364b97054131",
+        "settings": {
+          "pixel_ratio": 1,
+          "colour_space": "SRGB",
+          "tone_mapping": "ACES_FILMIC",
+          "exposure": 1.18,
+          "shadow_map": "PCF_SOFT",
+          "environment_id": "VERIFICATION_FROZEN_ROOM_LAB_V9",
+          "network_policy": "LOOPBACK_ONLY"
+        }
+      },
+      "media": {
+        "uri": "data/media/room-alpha/v0.1/outputs/verification/top-plan.png",
+        "sha256": "421bd408aac3154f8bdd6c67c3b4f00f113d3d1940c6a74277df4fd2b63adbd7",
+        "bytes": 203569,
+        "media_type": "image/png",
+        "dimensions_px": {
+          "width": 1600,
+          "height": 1200
+        }
+      },
+      "disclosure": {
+        "class": "G2_INTERNAL_QA_METADATA",
+        "visible_in_frame": false,
+        "text": "Internal verification visual using verified-scale G2 planning proxies; no exact product texture, finish, surveyed room, opening or publication claim."
+      },
+      "generation_date": "2026-08-17",
+      "cost": {
+        "currency": "USD",
+        "expected": 0,
+        "actual": 0
+      },
+      "publication_state": "INTERNAL_QA_ONLY",
+      "blockers": []
+    },
+    {
+      "output_id": "OUTPUT_ROOM_ALPHA_WIDE_V0_1",
+      "output_class": "VERIFICATION_RENDER",
+      "status": "AVAILABLE_INTERNAL_QA",
+      "camera_id": "CAM_ROOM_ALPHA_WIDE_V0_1",
+      "input_bindings": {
+        "room_manifest_sha256": "38125f43734f749ef55a75993fdcaa6489f35c9acb2d3c05e7ee88040fac3cae",
+        "furniture_manifest_sha256": "61cea81978b2c55cacbd639ca8696c4aeb5036d34b01a3d8a5160a45f3f36a91",
+        "market_manifest_sha256": "6e6a746618c0d17654fac5f5b514381030e138195b8c7a2d1d64bb0a7e52b5fe",
+        "camera_pack_sha256": "4c28c446ccb375be2158964b4e33ca206872d598b97cdae7222a76069c590b31"
+      },
+      "placement_ids": [
+        "kivik-placement-01",
+        "poang-placement-01",
+        "listerby-placement-01",
+        "lohals-placement-01",
+        "gladom-placement-01",
+        "lauters-placement-01",
+        "besta-placement-01",
+        "billy-placement-01"
+      ],
+      "placement_set_sha256": "33f9b160e2c5000abaefd733a3ea0d6e1e62e816b401de40fe1adf5e59ac20d7",
+      "source_lane_summary": {
+        "PRODUCT_TWIN": 8,
+        "DESIGN_ASSET": 0
+      },
+      "geometry_level": "G2_PLANNING_PROXY",
+      "appearance_level": "A1_CUE_ONLY_NO_EXACT_TEXTURE",
+      "rights_publication_state": "REVIEW",
+      "render_method": {
+        "method": "LOCAL_DETERMINISTIC_3D",
+        "engine": "THREE_WEBGL",
+        "engine_version": "0.185.0",
+        "model": null,
+        "runner_version": "ROOM_LAB_MEDIA_RUNNER_V1",
+        "runner_sha256": "89efdfcf586a7cdd5bff0fbdb3a07316d45cd9fb6bf78a4d434a364b97054131",
+        "settings": {
+          "pixel_ratio": 1,
+          "colour_space": "SRGB",
+          "tone_mapping": "ACES_FILMIC",
+          "exposure": 1.18,
+          "shadow_map": "PCF_SOFT",
+          "environment_id": "VERIFICATION_FROZEN_ROOM_LAB_V9",
+          "network_policy": "LOOPBACK_ONLY"
+        }
+      },
+      "media": {
+        "uri": "data/media/room-alpha/v0.1/outputs/verification/wide-room.png",
+        "sha256": "3f2c266359cf0182e7f8ef45b73eaef3153072e4dda5f77748f4cdaea5de94db",
+        "bytes": 131723,
+        "media_type": "image/png",
+        "dimensions_px": {
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      "disclosure": {
+        "class": "G2_INTERNAL_QA_METADATA",
+        "visible_in_frame": false,
+        "text": "Internal verification visual using verified-scale G2 planning proxies; no exact product texture, finish, surveyed room, opening or publication claim."
+      },
+      "generation_date": "2026-08-17",
+      "cost": {
+        "currency": "USD",
+        "expected": 0,
+        "actual": 0
+      },
+      "publication_state": "INTERNAL_QA_ONLY",
+      "blockers": []
+    },
+    {
+      "output_id": "OUTPUT_ROOM_ALPHA_SEATING_V0_1",
+      "output_class": "VERIFICATION_RENDER",
+      "status": "AVAILABLE_INTERNAL_QA",
+      "camera_id": "CAM_ROOM_ALPHA_SEATING_V0_1",
+      "input_bindings": {
+        "room_manifest_sha256": "38125f43734f749ef55a75993fdcaa6489f35c9acb2d3c05e7ee88040fac3cae",
+        "furniture_manifest_sha256": "61cea81978b2c55cacbd639ca8696c4aeb5036d34b01a3d8a5160a45f3f36a91",
+        "market_manifest_sha256": "6e6a746618c0d17654fac5f5b514381030e138195b8c7a2d1d64bb0a7e52b5fe",
+        "camera_pack_sha256": "4c28c446ccb375be2158964b4e33ca206872d598b97cdae7222a76069c590b31"
+      },
+      "placement_ids": [
+        "kivik-placement-01",
+        "poang-placement-01",
+        "listerby-placement-01",
+        "lohals-placement-01",
+        "gladom-placement-01",
+        "lauters-placement-01",
+        "besta-placement-01",
+        "billy-placement-01"
+      ],
+      "placement_set_sha256": "33f9b160e2c5000abaefd733a3ea0d6e1e62e816b401de40fe1adf5e59ac20d7",
+      "source_lane_summary": {
+        "PRODUCT_TWIN": 8,
+        "DESIGN_ASSET": 0
+      },
+      "geometry_level": "G2_PLANNING_PROXY",
+      "appearance_level": "A1_CUE_ONLY_NO_EXACT_TEXTURE",
+      "rights_publication_state": "REVIEW",
+      "render_method": {
+        "method": "LOCAL_DETERMINISTIC_3D",
+        "engine": "THREE_WEBGL",
+        "engine_version": "0.185.0",
+        "model": null,
+        "runner_version": "ROOM_LAB_MEDIA_RUNNER_V1",
+        "runner_sha256": "89efdfcf586a7cdd5bff0fbdb3a07316d45cd9fb6bf78a4d434a364b97054131",
+        "settings": {
+          "pixel_ratio": 1,
+          "colour_space": "SRGB",
+          "tone_mapping": "ACES_FILMIC",
+          "exposure": 1.18,
+          "shadow_map": "PCF_SOFT",
+          "environment_id": "VERIFICATION_FROZEN_ROOM_LAB_V9",
+          "network_policy": "LOOPBACK_ONLY"
+        }
+      },
+      "media": {
+        "uri": "data/media/room-alpha/v0.1/outputs/verification/seating-relationship.png",
+        "sha256": "323784e3a5af8f24fc64c1df80e00e60c5ef660b183ed2e4b6f46feef6dbdd06",
+        "bytes": 281772,
+        "media_type": "image/png",
+        "dimensions_px": {
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      "disclosure": {
+        "class": "G2_INTERNAL_QA_METADATA",
+        "visible_in_frame": false,
+        "text": "Internal verification visual using verified-scale G2 planning proxies; no exact product texture, finish, surveyed room, opening or publication claim."
+      },
+      "generation_date": "2026-08-17",
+      "cost": {
+        "currency": "USD",
+        "expected": 0,
+        "actual": 0
+      },
+      "publication_state": "INTERNAL_QA_ONLY",
+      "blockers": []
+    },
+    {
+      "output_id": "OUTPUT_ROOM_ALPHA_HERO_V0_1",
+      "output_class": "VERIFICATION_RENDER",
+      "status": "AVAILABLE_INTERNAL_QA",
+      "camera_id": "CAM_ROOM_ALPHA_HERO_V0_1",
+      "input_bindings": {
+        "room_manifest_sha256": "38125f43734f749ef55a75993fdcaa6489f35c9acb2d3c05e7ee88040fac3cae",
+        "furniture_manifest_sha256": "61cea81978b2c55cacbd639ca8696c4aeb5036d34b01a3d8a5160a45f3f36a91",
+        "market_manifest_sha256": "6e6a746618c0d17654fac5f5b514381030e138195b8c7a2d1d64bb0a7e52b5fe",
+        "camera_pack_sha256": "4c28c446ccb375be2158964b4e33ca206872d598b97cdae7222a76069c590b31"
+      },
+      "placement_ids": [
+        "kivik-placement-01",
+        "poang-placement-01",
+        "listerby-placement-01",
+        "lohals-placement-01",
+        "gladom-placement-01",
+        "lauters-placement-01",
+        "besta-placement-01",
+        "billy-placement-01"
+      ],
+      "placement_set_sha256": "33f9b160e2c5000abaefd733a3ea0d6e1e62e816b401de40fe1adf5e59ac20d7",
+      "source_lane_summary": {
+        "PRODUCT_TWIN": 8,
+        "DESIGN_ASSET": 0
+      },
+      "geometry_level": "G2_PLANNING_PROXY",
+      "appearance_level": "A1_CUE_ONLY_NO_EXACT_TEXTURE",
+      "rights_publication_state": "REVIEW",
+      "render_method": {
+        "method": "LOCAL_DETERMINISTIC_3D",
+        "engine": "THREE_WEBGL",
+        "engine_version": "0.185.0",
+        "model": null,
+        "runner_version": "ROOM_LAB_MEDIA_RUNNER_V1",
+        "runner_sha256": "89efdfcf586a7cdd5bff0fbdb3a07316d45cd9fb6bf78a4d434a364b97054131",
+        "settings": {
+          "pixel_ratio": 1,
+          "colour_space": "SRGB",
+          "tone_mapping": "ACES_FILMIC",
+          "exposure": 1.18,
+          "shadow_map": "PCF_SOFT",
+          "environment_id": "VERIFICATION_FROZEN_ROOM_LAB_V9",
+          "network_policy": "LOOPBACK_ONLY"
+        }
+      },
+      "media": {
+        "uri": "data/media/room-alpha/v0.1/outputs/verification/hero-composition.png",
+        "sha256": "951f5f4e2b569df08d8cee9211ccbf35bc8555ff1cd0b385622f8539d06a4042",
+        "bytes": 139712,
+        "media_type": "image/png",
+        "dimensions_px": {
+          "width": 1920,
+          "height": 1200
+        }
+      },
+      "disclosure": {
+        "class": "G2_INTERNAL_QA_METADATA",
+        "visible_in_frame": false,
+        "text": "Internal verification visual using verified-scale G2 planning proxies; no exact product texture, finish, surveyed room, opening or publication claim."
+      },
+      "generation_date": "2026-08-17",
+      "cost": {
+        "currency": "USD",
+        "expected": 0,
+        "actual": 0
+      },
+      "publication_state": "INTERNAL_QA_ONLY",
+      "blockers": []
+    },
+    {
+      "output_id": "OUTPUT_ROOM_ALPHA_CLEARANCE_V0_1",
+      "output_class": "VERIFICATION_RENDER",
+      "status": "AVAILABLE_INTERNAL_QA",
+      "camera_id": "CAM_ROOM_ALPHA_CLEARANCE_V0_1",
+      "input_bindings": {
+        "room_manifest_sha256": "38125f43734f749ef55a75993fdcaa6489f35c9acb2d3c05e7ee88040fac3cae",
+        "furniture_manifest_sha256": "61cea81978b2c55cacbd639ca8696c4aeb5036d34b01a3d8a5160a45f3f36a91",
+        "market_manifest_sha256": "6e6a746618c0d17654fac5f5b514381030e138195b8c7a2d1d64bb0a7e52b5fe",
+        "camera_pack_sha256": "4c28c446ccb375be2158964b4e33ca206872d598b97cdae7222a76069c590b31"
+      },
+      "placement_ids": [
+        "kivik-placement-01",
+        "poang-placement-01",
+        "listerby-placement-01",
+        "lohals-placement-01",
+        "gladom-placement-01",
+        "lauters-placement-01",
+        "besta-placement-01",
+        "billy-placement-01"
+      ],
+      "placement_set_sha256": "33f9b160e2c5000abaefd733a3ea0d6e1e62e816b401de40fe1adf5e59ac20d7",
+      "source_lane_summary": {
+        "PRODUCT_TWIN": 8,
+        "DESIGN_ASSET": 0
+      },
+      "geometry_level": "G2_PLANNING_PROXY",
+      "appearance_level": "A1_CUE_ONLY_NO_EXACT_TEXTURE",
+      "rights_publication_state": "REVIEW",
+      "render_method": {
+        "method": "LOCAL_DETERMINISTIC_3D",
+        "engine": "THREE_WEBGL",
+        "engine_version": "0.185.0",
+        "model": null,
+        "runner_version": "LIVING_ROOM_ALPHA_RENDERER_V1",
+        "runner_sha256": "2271309d99d3f9804508de4f0821a5b25d80dab0335db7518c426da060304ee2",
+        "settings": {
+          "pixel_ratio": 1,
+          "colour_space": "SRGB",
+          "tone_mapping": "ACES_FILMIC",
+          "exposure": 1.18,
+          "shadow_map": "PCF_SOFT",
+          "environment_id": "VERIFICATION_FROZEN_ROOM_LAB_V9",
+          "network_policy": "LOOPBACK_ONLY"
+        }
+      },
+      "media": {
+        "uri": "data/media/room-alpha/v0.1/outputs/verification/side-clearance.png",
+        "sha256": "88f6f060c1b0af0bdbdc782f36890b5d61722beed42b588bfe0f9448500e556e",
+        "bytes": 37204,
+        "media_type": "image/png",
+        "dimensions_px": {
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      "disclosure": {
+        "class": "G2_INTERNAL_QA_METADATA",
+        "visible_in_frame": false,
+        "text": "Internal verification visual using verified-scale G2 planning proxies; no exact product texture, finish, surveyed room, opening or publication claim."
+      },
+      "generation_date": "2026-08-17",
+      "cost": {
+        "currency": "USD",
+        "expected": 0,
+        "actual": 0
+      },
+      "publication_state": "INTERNAL_QA_ONLY",
+      "blockers": []
+    },
+    {
+      "output_id": "OUTPUT_ROOM_ALPHA_SELECTED_KIVIK_V0_1",
+      "output_class": "VERIFICATION_RENDER",
+      "status": "AVAILABLE_INTERNAL_QA",
+      "camera_id": "CAM_ROOM_ALPHA_SELECTED_KIVIK_V0_1",
+      "input_bindings": {
+        "room_manifest_sha256": "38125f43734f749ef55a75993fdcaa6489f35c9acb2d3c05e7ee88040fac3cae",
+        "furniture_manifest_sha256": "61cea81978b2c55cacbd639ca8696c4aeb5036d34b01a3d8a5160a45f3f36a91",
+        "market_manifest_sha256": "6e6a746618c0d17654fac5f5b514381030e138195b8c7a2d1d64bb0a7e52b5fe",
+        "camera_pack_sha256": "4c28c446ccb375be2158964b4e33ca206872d598b97cdae7222a76069c590b31"
+      },
+      "placement_ids": [
+        "kivik-placement-01",
+        "poang-placement-01",
+        "listerby-placement-01",
+        "lohals-placement-01",
+        "gladom-placement-01",
+        "lauters-placement-01",
+        "besta-placement-01",
+        "billy-placement-01"
+      ],
+      "placement_set_sha256": "33f9b160e2c5000abaefd733a3ea0d6e1e62e816b401de40fe1adf5e59ac20d7",
+      "source_lane_summary": {
+        "PRODUCT_TWIN": 8,
+        "DESIGN_ASSET": 0
+      },
+      "geometry_level": "G2_PLANNING_PROXY",
+      "appearance_level": "A1_CUE_ONLY_NO_EXACT_TEXTURE",
+      "rights_publication_state": "REVIEW",
+      "render_method": {
+        "method": "LOCAL_DETERMINISTIC_3D",
+        "engine": "THREE_WEBGL",
+        "engine_version": "0.185.0",
+        "model": null,
+        "runner_version": "LIVING_ROOM_ALPHA_RENDERER_V1",
+        "runner_sha256": "2271309d99d3f9804508de4f0821a5b25d80dab0335db7518c426da060304ee2",
+        "settings": {
+          "pixel_ratio": 1,
+          "colour_space": "SRGB",
+          "tone_mapping": "ACES_FILMIC",
+          "exposure": 1.18,
+          "shadow_map": "PCF_SOFT",
+          "environment_id": "VERIFICATION_FROZEN_ROOM_LAB_V9",
+          "network_policy": "LOOPBACK_ONLY"
+        }
+      },
+      "media": {
+        "uri": "data/media/room-alpha/v0.1/outputs/verification/selected-kivik.png",
+        "sha256": "d5c9078f55fc33743ef1bc75ea03890380f86df2548d17d898b703ef5546ccfd",
+        "bytes": 152793,
+        "media_type": "image/png",
+        "dimensions_px": {
+          "width": 1600,
+          "height": 1000
+        }
+      },
+      "disclosure": {
+        "class": "G2_INTERNAL_QA_METADATA",
+        "visible_in_frame": false,
+        "text": "Internal verification visual using verified-scale G2 planning proxies; no exact product texture, finish, surveyed room, opening or publication claim."
+      },
+      "generation_date": "2026-08-17",
+      "cost": {
+        "currency": "USD",
+        "expected": 0,
+        "actual": 0
+      },
+      "publication_state": "INTERNAL_QA_ONLY",
+      "blockers": []
+    },
+    {
+      "output_id": "OUTPUT_ROOM_ALPHA_CONCEPT_HERO_V0_1",
+      "output_class": "CONCEPT_MARKETING_RENDER",
+      "status": "BLOCKED_RIGHTS",
+      "camera_id": "CAM_ROOM_ALPHA_HERO_V0_1",
+      "input_bindings": {
+        "room_manifest_sha256": "38125f43734f749ef55a75993fdcaa6489f35c9acb2d3c05e7ee88040fac3cae",
+        "furniture_manifest_sha256": "61cea81978b2c55cacbd639ca8696c4aeb5036d34b01a3d8a5160a45f3f36a91",
+        "market_manifest_sha256": "6e6a746618c0d17654fac5f5b514381030e138195b8c7a2d1d64bb0a7e52b5fe",
+        "camera_pack_sha256": "4c28c446ccb375be2158964b4e33ca206872d598b97cdae7222a76069c590b31"
+      },
+      "placement_ids": [
+        "kivik-placement-01",
+        "poang-placement-01",
+        "listerby-placement-01",
+        "lohals-placement-01",
+        "gladom-placement-01",
+        "lauters-placement-01",
+        "besta-placement-01",
+        "billy-placement-01"
+      ],
+      "placement_set_sha256": "33f9b160e2c5000abaefd733a3ea0d6e1e62e816b401de40fe1adf5e59ac20d7",
+      "source_lane_summary": {
+        "PRODUCT_TWIN": 8,
+        "DESIGN_ASSET": 0
+      },
+      "geometry_level": "G2_PLANNING_PROXY",
+      "appearance_level": "A1_CUE_ONLY_NO_EXACT_TEXTURE",
+      "rights_publication_state": "REVIEW",
+      "render_method": {
+        "method": "PLANNED_LOCAL_DETERMINISTIC_3D",
+        "engine": "THREE_WEBGL",
+        "engine_version": "0.185.0",
+        "model": null,
+        "runner_version": "LIVING_ROOM_ALPHA_RENDERER_V1",
+        "runner_sha256": "2271309d99d3f9804508de4f0821a5b25d80dab0335db7518c426da060304ee2",
+        "settings": {
+          "pixel_ratio": 1,
+          "colour_space": "SRGB",
+          "tone_mapping": "ACES_FILMIC",
+          "exposure": 1.18,
+          "shadow_map": "PCF_SOFT",
+          "environment_id": "VERIFICATION_FROZEN_ROOM_LAB_V9",
+          "network_policy": "LOOPBACK_ONLY"
+        }
+      },
+      "media": {
+        "uri": null,
+        "sha256": null,
+        "bytes": null,
+        "media_type": "image/png",
+        "dimensions_px": null
+      },
+      "disclosure": {
+        "class": "G2_VISIBLE_APPROXIMATION_REQUIRED",
+        "visible_in_frame": false,
+        "text": "Concept visual using approximate G2 planning proxies and an assumed room; exact products, finishes, textures and surveyed geometry are not claimed."
+      },
+      "generation_date": null,
+      "cost": {
+        "currency": "USD",
+        "expected": 0,
+        "actual": 0
+      },
+      "publication_state": "BLOCKED_RIGHTS",
+      "blockers": [
+        "public publication rights are REVIEW",
+        "derivative rights are REVIEW",
+        "provider-processing rights are REVIEW",
+        "redistribution is NO",
+        "independent rights reviewer is absent",
+        "visible approximation disclosure is not rendered"
+      ]
+    }
+  ],
+  "contact_sheet": {
+    "artifact_id": "CONTACT_SHEET_LIVING_ROOM_ALPHA_V0_1",
+    "uri": "data/media/room-alpha/v0.1/outputs/verification-contact-sheet.png",
+    "sha256": "d440992fd12244d2d00e4f9480b8f421f04e052648b819a15d0ba2ef6f5adcde",
+    "bytes": 412568,
+    "dimensions_px": {
+      "width": 2400,
+      "height": 1200
+    },
+    "tile_order": [
+      "CAM_ROOM_ALPHA_TOP_PLAN_V0_1",
+      "CAM_ROOM_ALPHA_WIDE_V0_1",
+      "CAM_ROOM_ALPHA_SEATING_V0_1",
+      "CAM_ROOM_ALPHA_CLEARANCE_V0_1",
+      "CAM_ROOM_ALPHA_SELECTED_KIVIK_V0_1",
+      "CAM_ROOM_ALPHA_HERO_V0_1"
+    ],
+    "input_sha256": [
+      "421bd408aac3154f8bdd6c67c3b4f00f113d3d1940c6a74277df4fd2b63adbd7",
+      "3f2c266359cf0182e7f8ef45b73eaef3153072e4dda5f77748f4cdaea5de94db",
+      "323784e3a5af8f24fc64c1df80e00e60c5ef660b183ed2e4b6f46feef6dbdd06",
+      "88f6f060c1b0af0bdbdc782f36890b5d61722beed42b588bfe0f9448500e556e",
+      "d5c9078f55fc33743ef1bc75ea03890380f86df2548d17d898b703ef5546ccfd",
+      "951f5f4e2b569df08d8cee9211ccbf35bc8555ff1cd0b385622f8539d06a4042"
+    ],
+    "method": "FFMPEG_XSTACK_3X2_V0_1",
+    "deterministic_duplicate_pass": true,
+    "cost": {
+      "currency": "USD",
+      "expected": 0,
+      "actual": 0
+    }
+  },
+  "cost_summary": {
+    "currency": "USD",
+    "expected": 0,
+    "actual": 0,
+    "provider_calls": 0
+  },
+  "avatar_manifest_adapter": {
+    "expected_manifest_id": "FURNITURE_AVATAR_MANIFEST_V0_1",
+    "expected_uri": "data/geometry/furniture-avatar-manifest-v0.1.json",
+    "state": "ABSENT_NOT_CONSUMED",
+    "active_adapter": "INLINE_FROZEN_SCENE_PLACEMENTS_V0_1",
+    "allowed_replacements": [
+      "asset_uri",
+      "asset_revision",
+      "asset_sha256",
+      "geometry_level",
+      "appearance_level",
+      "rights_ref"
+    ],
+    "forbidden_changes": [
+      "camera",
+      "scene",
+      "placement_id",
+      "transform",
+      "product_twin_id",
+      "source_lane"
+    ]
+  },
+  "blockers": [
+    "CONCEPT_MARKETING_RENDER rights and visible-disclosure gates are blocked",
+    "furniture-avatar-manifest-v0.1 is absent and not consumed",
+    "ES-29660 evidence is dated context only and must be refreshed before approval or purchase",
+    "Room Lab integration requires Brain approval"
+  ],
+  "verification_handoff": {
+    "owner": "VISUAL_MEDIA",
+    "executor_id": "CODEX_PRIMARY_EXECUTOR",
+    "reviewer_role": "VERIFICATION",
+    "reviewer_id": null,
+    "review_state": "PENDING",
+    "package_uri": "docs/handoffs/LIVING-ROOM-ALPHA-VERIFICATION.md",
+    "required_commands": [
+      "node scripts/test-living-room-alpha.mjs",
+      "node scripts/validate-living-room-alpha.mjs",
+      "git diff --check"
+    ]
+  }
+}

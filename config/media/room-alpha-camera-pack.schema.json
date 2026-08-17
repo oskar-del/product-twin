@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/media/room-alpha-camera-pack.schema.json",
+  "title": "Living Room Alpha six-camera pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "camera_pack_id", "revision", "room_manifest_id", "scene_id", "scene_sha256", "environment", "cameras", "freeze"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "camera_pack_id": {"const": "CAMERA_PACK_LIVING_ROOM_ALPHA_V0_1"},
+    "revision": {"const": "0.1.0"},
+    "room_manifest_id": {"const": "ROOM_MANIFEST_LIVING_ROOM_ALPHA_V0_1"},
+    "scene_id": {"const": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1"},
+    "scene_sha256": {"$ref": "#/$defs/sha256"},
+    "environment": {"$ref": "#/$defs/environment"},
+    "cameras": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"$ref": "#/$defs/camera"}},
+    "freeze": {
+      "type": "object", "additionalProperties": false,
+      "required": ["camera_count", "scene_logic_changes_allowed", "avatar_adapter_changes_camera_logic"],
+      "properties": {"camera_count": {"const": 6}, "scene_logic_changes_allowed": {"const": false}, "avatar_adapter_changes_camera_logic": {"const": false}}
+    }
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "vec3": {"type": "array", "prefixItems": [{"type": "number"}, {"type": "number"}, {"type": "number"}], "items": false},
+    "resolution": {
+      "type": "object", "additionalProperties": false, "required": ["width", "height"],
+      "properties": {"width": {"type": "integer", "minimum": 1}, "height": {"type": "integer", "minimum": 1}}
+    },
+    "environment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["environment_id", "engine", "engine_version", "pixel_ratio", "colour_space", "tone_mapping", "exposure", "shadow_map", "background_hex", "fog", "lighting_ref", "geometry_overrides", "material_overrides", "placement_overrides"],
+      "properties": {
+        "environment_id": {"const": "VERIFICATION_FROZEN_ROOM_LAB_V9"},
+        "engine": {"const": "THREE_WEBGL"},
+        "engine_version": {"const": "0.185.0"},
+        "pixel_ratio": {"const": 1},
+        "colour_space": {"const": "SRGB"},
+        "tone_mapping": {"const": "ACES_FILMIC"},
+        "exposure": {"const": 1.18},
+        "shadow_map": {"const": "PCF_SOFT"},
+        "background_hex": {"const": "#e9e6dc"},
+        "fog": {"type": "object", "additionalProperties": false, "required": ["colour_hex", "near_m", "far_m"], "properties": {"colour_hex": {"const": "#e9e6dc"}, "near_m": {"const": 10}, "far_m": {"const": 23}}},
+        "lighting_ref": {"type": "string"},
+        "geometry_overrides": {"type": "array", "maxItems": 0},
+        "material_overrides": {"type": "array", "maxItems": 0},
+        "placement_overrides": {"type": "array", "maxItems": 0}
+      }
+    },
+    "camera": {
+      "type": "object", "additionalProperties": false,
+      "required": ["camera_id", "role", "source_shot_id", "projection", "position_m", "target_m", "up_vector", "near_m", "far_m", "vertical_fov_deg", "sensor_height_mm", "focal_length_mm", "orthographic_height_m", "orthographic_bounds_m", "aspect_ratio", "resolution_px", "lighting_environment_id", "purpose", "verification_focus", "selected_placement_id", "visibility_policy", "expected_clearance_m", "allowed_output_classes"],
+      "properties": {
+        "camera_id": {"type": "string", "pattern": "^CAM_ROOM_ALPHA_[A-Z0-9_]+_V0_1$"},
+        "role": {"enum": ["TOP_PLAN_PLACEMENT_CIRCULATION", "WIDE_ROOM_PERSPECTIVE", "PRINCIPAL_SEATING_RELATIONSHIP", "SIDE_CLEARANCE_VIEW", "SELECTED_PRODUCT_CANONICAL_INSPECTION", "FINAL_ROOM_HERO_COMPOSITION"]},
+        "source_shot_id": {"type": "string"},
+        "projection": {"enum": ["PERSPECTIVE", "ORTHOGRAPHIC"]},
+        "position_m": {"$ref": "#/$defs/vec3"},
+        "target_m": {"$ref": "#/$defs/vec3"},
+        "up_vector": {"$ref": "#/$defs/vec3"},
+        "near_m": {"type": "number", "exclusiveMinimum": 0},
+        "far_m": {"type": "number", "exclusiveMinimum": 0},
+        "vertical_fov_deg": {"type": ["number", "null"]},
+        "sensor_height_mm": {"type": ["number", "null"]},
+        "focal_length_mm": {"type": ["number", "null"]},
+        "orthographic_height_m": {"type": ["number", "null"]},
+        "orthographic_bounds_m": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "object", "additionalProperties": false, "required": ["left", "right", "top", "bottom"], "properties": {"left": {"type": "number"}, "right": {"type": "number"}, "top": {"type": "number"}, "bottom": {"type": "number"}}}
+          ]
+        },
+        "aspect_ratio": {"enum": ["4:3", "16:10"]},
+        "resolution_px": {"$ref": "#/$defs/resolution"},
+        "lighting_environment_id": {"const": "VERIFICATION_FROZEN_ROOM_LAB_V9"},
+        "purpose": {"type": "string", "minLength": 1},
+        "verification_focus": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["geometry", "scale", "orientation", "floor_contact", "collision", "clearance", "placement", "material", "texture", "visual_defect"]}},
+        "selected_placement_id": {"type": ["string", "null"]},
+        "visibility_policy": {"enum": ["ALL_PLACEMENTS", "CLEARANCE_PAIR_PLUS_SHELL", "SELECTED_ONLY_PLUS_SHELL"]},
+        "expected_clearance_m": {"type": ["number", "null"], "minimum": 0},
+        "allowed_output_classes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["VERIFICATION_RENDER", "CONCEPT_MARKETING_RENDER"]}}
+      }
+    }
+  }
+}

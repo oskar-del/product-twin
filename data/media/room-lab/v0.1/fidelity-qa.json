@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "qa_id": "QA_ROOM_LAB_MEDIA_V0_1",
+  "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+  "scope": "Six canonical stills, one hero still, one 20-second direct-3D control, and any optional generative comparison.",
+  "expected": {
+    "placement_count": 8,
+    "instance_count": 8,
+    "product_twin_count": 8,
+    "design_asset_count": 0,
+    "opening_claim_count": 0,
+    "garden_window_overlay_count": 1,
+    "fidelity_class": "G2_PLANNING_PROXY",
+    "exact_product_claim_allowed": false
+  },
+  "thresholds": {
+    "deterministic_transform_drift_m": 0,
+    "deterministic_rotation_drift_rad": 0,
+    "generative_centroid_drift_percent": 2,
+    "generative_bbox_drift_percent": 5,
+    "identity_changes": 0,
+    "quantity_changes": 0,
+    "material_overclaims": 0,
+    "invented_openings": 0,
+    "sample_interval_s": 1
+  },
+  "sampling": {
+    "direct_3d": "Every rendered output and its source manifest.",
+    "generative": "First frame, last frame, and at least once per second."
+  },
+  "checks": [
+    {"check_id": "PLACEMENT_IDENTITY", "result": "PASS", "finding_count": 0},
+    {"check_id": "TRANSFORM_RETENTION", "result": "PASS", "finding_count": 0},
+    {"check_id": "ASSET_HASH_RETENTION", "result": "PASS", "finding_count": 0},
+    {"check_id": "AVATAR_ORIENTATION", "result": "PASS", "finding_count": 0},
+    {"check_id": "SHELL_AND_OPENING_RETENTION", "result": "PASS", "finding_count": 0},
+    {"check_id": "MATERIAL_AND_CLAIM_RETENTION", "result": "PASS", "finding_count": 0},
+    {"check_id": "DISCLOSURE_AND_RIGHTS", "result": "PASS", "finding_count": 0}
+  ],
+  "reviewer_independence_required": true,
+  "executor": {"role": "VISUAL_MEDIA", "id": "CODEX_PRIMARY_EXECUTOR"},
+  "reviewer": {"role": "VERIFICATION", "id": "CODEX_MEDIA_VERIFIER_VOLTA"},
+  "status": "PASS",
+  "approval_state": "APPROVED"
+}

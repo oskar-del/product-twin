@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/media/room-alpha-media-manifest.schema.json",
+  "title": "Living Room Alpha media manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "media_manifest_id", "revision", "status", "generation_date", "governance_bindings", "source_bindings", "camera_pack_binding", "placement_bindings", "placement_set_sha256", "output_classes", "outputs", "contact_sheet", "cost_summary", "avatar_manifest_adapter", "blockers", "verification_handoff"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "media_manifest_id": {"const": "MEDIA_MANIFEST_LIVING_ROOM_ALPHA_V0_1"},
+    "revision": {"const": "0.1.0"},
+    "status": {"enum": ["REVIEW_PENDING", "VERIFIED_INTERNAL_QA", "BLOCKED"]},
+    "generation_date": {"type": "string", "format": "date"},
+    "governance_bindings": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"$ref": "#/$defs/governanceBinding"}},
+    "source_bindings": {
+      "type": "object", "additionalProperties": false, "required": ["room", "furniture", "market"],
+      "properties": {"room": {"$ref": "#/$defs/sourceBinding"}, "furniture": {"$ref": "#/$defs/sourceBinding"}, "market": {"$ref": "#/$defs/sourceBinding"}}
+    },
+    "camera_pack_binding": {"$ref": "#/$defs/sourceBinding"},
+    "placement_bindings": {"type": "array", "minItems": 8, "maxItems": 8, "items": {"$ref": "#/$defs/placementBinding"}},
+    "placement_set_sha256": {"$ref": "#/$defs/sha256"},
+    "output_classes": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["class", "state", "allowed_channel", "visible_disclosure_required", "description"],
+        "properties": {
+          "class": {"enum": ["VERIFICATION_RENDER", "CONCEPT_MARKETING_RENDER"]},
+          "state": {"enum": ["AVAILABLE_INTERNAL_QA", "BLOCKED_RIGHTS"]},
+          "allowed_channel": {"enum": ["INTERNAL_QA", "NONE"]},
+          "visible_disclosure_required": {"type": "boolean"},
+          "description": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "outputs": {"type": "array", "minItems": 7, "maxItems": 7, "items": {"$ref": "#/$defs/output"}},
+    "contact_sheet": {"$ref": "#/$defs/contactSheet"},
+    "cost_summary": {
+      "type": "object", "additionalProperties": false, "required": ["currency", "expected", "actual", "provider_calls"],
+      "properties": {"currency": {"const": "USD"}, "expected": {"const": 0}, "actual": {"const": 0}, "provider_calls": {"const": 0}}
+    },
+    "avatar_manifest_adapter": {
+      "type": "object", "additionalProperties": false,
+      "required": ["expected_manifest_id", "expected_uri", "state", "active_adapter", "allowed_replacements", "forbidden_changes"],
+      "properties": {
+        "expected_manifest_id": {"const": "FURNITURE_AVATAR_MANIFEST_V0_1"},
+        "expected_uri": {"type": "string"},
+        "state": {"const": "ABSENT_NOT_CONSUMED"},
+        "active_adapter": {"const": "INLINE_FROZEN_SCENE_PLACEMENTS_V0_1"},
+        "allowed_replacements": {"type": "array", "uniqueItems": true, "items": {"enum": ["asset_uri", "asset_revision", "asset_sha256", "geometry_level", "appearance_level", "rights_ref"]}},
+        "forbidden_changes": {"type": "array", "minItems": 3, "uniqueItems": true, "items": {"enum": ["camera", "scene", "placement_id", "transform", "product_twin_id", "source_lane"]}}
+      }
+    },
+    "blockers": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "verification_handoff": {
+      "type": "object", "additionalProperties": false, "required": ["owner", "executor_id", "reviewer_role", "reviewer_id", "review_state", "package_uri", "required_commands"],
+      "properties": {
+        "owner": {"const": "VISUAL_MEDIA"},
+        "executor_id": {"type": "string", "minLength": 1},
+        "reviewer_role": {"const": "VERIFICATION"},
+        "reviewer_id": {"type": ["string", "null"]},
+        "review_state": {"enum": ["PENDING", "APPROVED", "REJECTED"]},
+        "package_uri": {"type": "string"},
+        "required_commands": {"type": "array", "minItems": 3, "items": {"type": "string"}}
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "vec3": {"type": "array", "prefixItems": [{"type": "number"}, {"type": "number"}, {"type": "number"}], "items": false},
+    "governanceBinding": {
+      "type": "object", "additionalProperties": false, "required": ["role", "repository", "commit", "path", "git_blob_oid", "sha256"],
+      "properties": {
+        "role": {"enum": ["BRAIN_CONTROL_BOARD", "PERSISTENT_CHAT_TOPOLOGY", "ROOM_LAB_HANDOFF", "AVATAR_FACTORY_HANDOFF", "VERIFICATION_HANDOFF"]},
+        "repository": {"const": "oskar-del/product-twin"},
+        "commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "path": {"type": "string"},
+        "git_blob_oid": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "sourceBinding": {
+      "type": "object", "additionalProperties": false, "required": ["manifest_id", "revision", "uri", "sha256"],
+      "properties": {"manifest_id": {"type": "string"}, "revision": {"const": "0.1.0"}, "uri": {"type": "string"}, "sha256": {"$ref": "#/$defs/sha256"}}
+    },
+    "placementBinding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["placement_id", "source_lane", "product_twin_id", "design_asset_id", "translation_m", "rotation_y_rad", "scale", "asset_uri", "asset_revision", "asset_sha256", "geometry_level", "appearance_level", "rights_publication_state"],
+      "properties": {
+        "placement_id": {"type": "string"},
+        "source_lane": {"enum": ["PRODUCT_TWIN", "DESIGN_ASSET"]},
+        "product_twin_id": {"type": ["string", "null"]},
+        "design_asset_id": {"type": ["string", "null"]},
+        "translation_m": {"$ref": "#/$defs/vec3"},
+        "rotation_y_rad": {"type": "number"},
+        "scale": {"$ref": "#/$defs/vec3"},
+        "asset_uri": {"type": "string"},
+        "asset_revision": {"type": "string"},
+        "asset_sha256": {"$ref": "#/$defs/sha256"},
+        "geometry_level": {"type": "string"},
+        "appearance_level": {"type": "string"},
+        "rights_publication_state": {"enum": ["YES", "NO", "REVIEW"]}
+      }
+    },
+    "renderMethod": {
+      "type": "object", "additionalProperties": false,
+      "required": ["method", "engine", "engine_version", "model", "runner_version", "runner_sha256", "settings"],
+      "properties": {
+        "method": {"enum": ["LOCAL_DETERMINISTIC_3D", "PLANNED_LOCAL_DETERMINISTIC_3D"]},
+        "engine": {"const": "THREE_WEBGL"},
+        "engine_version": {"const": "0.185.0"},
+        "model": {"type": "null"},
+        "runner_version": {"type": "string"},
+        "runner_sha256": {"$ref": "#/$defs/sha256"},
+        "settings": {
+          "type": "object", "additionalProperties": false, "required": ["pixel_ratio", "colour_space", "tone_mapping", "exposure", "shadow_map", "environment_id", "network_policy"],
+          "properties": {"pixel_ratio": {"const": 1}, "colour_space": {"const": "SRGB"}, "tone_mapping": {"const": "ACES_FILMIC"}, "exposure": {"const": 1.18}, "shadow_map": {"const": "PCF_SOFT"}, "environment_id": {"const": "VERIFICATION_FROZEN_ROOM_LAB_V9"}, "network_policy": {"const": "LOOPBACK_ONLY"}}
+        }
+      }
+    },
+    "output": {
+      "type": "object", "additionalProperties": false,
+      "required": ["output_id", "output_class", "status", "camera_id", "input_bindings", "placement_ids", "placement_set_sha256", "source_lane_summary", "geometry_level", "appearance_level", "rights_publication_state", "render_method", "media", "disclosure", "generation_date", "cost", "publication_state", "blockers"],
+      "properties": {
+        "output_id": {"type": "string"},
+        "output_class": {"enum": ["VERIFICATION_RENDER", "CONCEPT_MARKETING_RENDER"]},
+        "status": {"enum": ["AVAILABLE_INTERNAL_QA", "BLOCKED_RIGHTS"]},
+        "camera_id": {"type": "string"},
+        "input_bindings": {"type": "object", "additionalProperties": false, "required": ["room_manifest_sha256", "furniture_manifest_sha256", "market_manifest_sha256", "camera_pack_sha256"], "properties": {"room_manifest_sha256": {"$ref": "#/$defs/sha256"}, "furniture_manifest_sha256": {"$ref": "#/$defs/sha256"}, "market_manifest_sha256": {"$ref": "#/$defs/sha256"}, "camera_pack_sha256": {"$ref": "#/$defs/sha256"}}},
+        "placement_ids": {"type": "array", "minItems": 8, "maxItems": 8, "uniqueItems": true, "items": {"type": "string"}},
+        "placement_set_sha256": {"$ref": "#/$defs/sha256"},
+        "source_lane_summary": {"type": "object", "additionalProperties": false, "required": ["PRODUCT_TWIN", "DESIGN_ASSET"], "properties": {"PRODUCT_TWIN": {"const": 8}, "DESIGN_ASSET": {"const": 0}}},
+        "geometry_level": {"const": "G2_PLANNING_PROXY"},
+        "appearance_level": {"const": "A1_CUE_ONLY_NO_EXACT_TEXTURE"},
+        "rights_publication_state": {"const": "REVIEW"},
+        "render_method": {"$ref": "#/$defs/renderMethod"},
+        "media": {"type": "object", "additionalProperties": false, "required": ["uri", "sha256", "bytes", "media_type", "dimensions_px"], "properties": {"uri": {"type": ["string", "null"]}, "sha256": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/sha256"}]}, "bytes": {"type": ["integer", "null"], "minimum": 1}, "media_type": {"const": "image/png"}, "dimensions_px": {"oneOf": [{"type": "null"}, {"type": "object", "additionalProperties": false, "required": ["width", "height"], "properties": {"width": {"type": "integer", "minimum": 1}, "height": {"type": "integer", "minimum": 1}}}]}}},
+        "disclosure": {"type": "object", "additionalProperties": false, "required": ["class", "visible_in_frame", "text"], "properties": {"class": {"enum": ["G2_INTERNAL_QA_METADATA", "G2_VISIBLE_APPROXIMATION_REQUIRED"]}, "visible_in_frame": {"type": "boolean"}, "text": {"type": "string", "minLength": 1}}},
+        "generation_date": {"type": ["string", "null"], "format": "date"},
+        "cost": {"type": "object", "additionalProperties": false, "required": ["currency", "expected", "actual"], "properties": {"currency": {"const": "USD"}, "expected": {"const": 0}, "actual": {"const": 0}}},
+        "publication_state": {"enum": ["INTERNAL_QA_ONLY", "BLOCKED_RIGHTS"]},
+        "blockers": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "contactSheet": {
+      "type": "object", "additionalProperties": false,
+      "required": ["artifact_id", "uri", "sha256", "bytes", "dimensions_px", "tile_order", "input_sha256", "method", "deterministic_duplicate_pass", "cost"],
+      "properties": {
+        "artifact_id": {"const": "CONTACT_SHEET_LIVING_ROOM_ALPHA_V0_1"},
+        "uri": {"type": "string"},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "dimensions_px": {"type": "object", "additionalProperties": false, "required": ["width", "height"], "properties": {"width": {"const": 2400}, "height": {"const": 1200}}},
+        "tile_order": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"type": "string"}},
+        "input_sha256": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"$ref": "#/$defs/sha256"}},
+        "method": {"const": "FFMPEG_XSTACK_3X2_V0_1"},
+        "deterministic_duplicate_pass": {"const": true},
+        "cost": {"type": "object", "additionalProperties": false, "required": ["currency", "expected", "actual"], "properties": {"currency": {"const": "USD"}, "expected": {"const": 0}, "actual": {"const": 0}}}
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1.0",
+  "jobs": [
+    {
+      "schema_version": "0.1.0",
+      "job_id": "RENDER_ROOM_LAB_DIRECT3D_V0_1",
+      "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+      "scene_manifest_ref": "data/media/room-lab/v0.1/scene-manifest.json",
+      "camera_pack_ref": "data/media/room-lab/v0.1/camera-shots.json",
+      "storyboard_ref": "data/media/room-lab/v0.1/storyboard.json",
+      "input_digests": {
+        "scene_sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181",
+        "camera_pack_sha256": "78b23f1676d1f2d9e632025b54656772be88a76e7f40c7e9aab3cc7c44a80d4c",
+        "storyboard_sha256": "3ffd61a331b42b96d07e1b24efdb22fed9463130814400f2d7792c8bd0c4eb00"
+      },
+      "shot_ids": [
+        "SHOT_ROOM_QA_FRONT_V0_1",
+        "SHOT_ROOM_QA_REAR_V0_1",
+        "SHOT_ROOM_QA_LEFT_V0_1",
+        "SHOT_ROOM_QA_RIGHT_V0_1",
+        "SHOT_ROOM_QA_TOP_V0_1",
+        "SHOT_ROOM_QA_LOW_EYE_V0_1",
+        "SHOT_ROOM_HERO_V0_1",
+        "SHOT_ROOM_PATH_20S_V0_1"
+      ],
+      "renderer": {
+        "engine": "THREE_WEBGL",
+        "engine_version": "0.185.0",
+        "runner_state": "IMPLEMENTED",
+        "runner_version": "ROOM_LAB_MEDIA_RUNNER_V1",
+        "runner_sha256": "89efdfcf586a7cdd5bff0fbdb3a07316d45cd9fb6bf78a4d434a364b97054131",
+        "pixel_ratio": 1,
+        "colour_space": "SRGB",
+        "tone_mapping": "ACES_FILMIC",
+        "exposure": 1.18,
+        "shadow_map": "PCF_SOFT"
+      },
+      "deterministic": true,
+      "mutation_policy": {
+        "geometry_overrides": [],
+        "material_overrides": [],
+        "placement_overrides": [],
+        "light_overrides": []
+      },
+      "rights_ref": "RIGHTS_ROOM_LAB_G2_V0_1",
+      "cost_ref": "COST_ROOM_LAB_DIRECT3D_V0_1",
+      "status": "SUCCEEDED",
+      "output_refs": [
+        "OUTPUT_ROOM_QA_FRONT_V0_1",
+        "OUTPUT_ROOM_QA_REAR_V0_1",
+        "OUTPUT_ROOM_QA_LEFT_V0_1",
+        "OUTPUT_ROOM_QA_RIGHT_V0_1",
+        "OUTPUT_ROOM_QA_TOP_V0_1",
+        "OUTPUT_ROOM_QA_LOW_EYE_V0_1",
+        "OUTPUT_ROOM_HERO_V0_1",
+        "OUTPUT_ROOM_CONTROL_VIDEO_V0_1"
+      ]
+    }
+  ]
+}

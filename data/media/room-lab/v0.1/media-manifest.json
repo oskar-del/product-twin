@@ -1,0 +1,83 @@
+{
+  "schema_version": "0.1.0",
+  "media_manifest_id": "MEDIA_MANIFEST_ROOM_LAB_V0_1",
+  "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+  "generated_from_commit": "3d36f07c32e42b168a74c5bc03a263e8c63e6eab",
+  "artifacts": [
+    {
+      "kind": "SCENE_MANIFEST",
+      "path": "data/media/room-lab/v0.1/scene-manifest.json",
+      "sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181"
+    },
+    {
+      "kind": "CAMERA_PACK",
+      "path": "data/media/room-lab/v0.1/camera-shots.json",
+      "sha256": "78b23f1676d1f2d9e632025b54656772be88a76e7f40c7e9aab3cc7c44a80d4c"
+    },
+    {
+      "kind": "STORYBOARD",
+      "path": "data/media/room-lab/v0.1/storyboard.json",
+      "sha256": "3ffd61a331b42b96d07e1b24efdb22fed9463130814400f2d7792c8bd0c4eb00"
+    },
+    {
+      "kind": "ORIENTATION_EVIDENCE",
+      "path": "data/media/room-lab/v0.1/orientation-evidence.json",
+      "sha256": "b88ee009d6fefd37dc216bfce9b371672d0fd88e399b49e7593345604837659e"
+    },
+    {
+      "kind": "RIGHTS_DISCLOSURE",
+      "path": "data/media/room-lab/v0.1/rights-disclosure.json",
+      "sha256": "2836119d3f1b57021b61a646a0e4be6102f663c4b9b83642640d052962313efc"
+    },
+    {
+      "kind": "RENDER_JOBS",
+      "path": "data/media/room-lab/v0.1/render-jobs.json",
+      "sha256": "c458d571226d37097902fa017a3578afd64030d590d3e1b8d42ad2cda9c2de1d"
+    },
+    {
+      "kind": "GENERATIVE_JOBS",
+      "path": "data/media/room-lab/v0.1/generative-jobs.json",
+      "sha256": "32749521f1ef237d60d5c5a77478b4396313642b6878e6be4790138f52123776"
+    },
+    {
+      "kind": "OUTPUT_ASSETS",
+      "path": "data/media/room-lab/v0.1/output-assets.json",
+      "sha256": "e32d2a7f04c8682865a6555737356b96b6d796b62026d300e0ba7df1333dd827"
+    },
+    {
+      "kind": "FIDELITY_QA",
+      "path": "data/media/room-lab/v0.1/fidelity-qa.json",
+      "sha256": "dd11253d1f979aa081e00d2ca78a6e24346aedd4afd9a7aeb4747c9c40f5986e"
+    },
+    {
+      "kind": "COST_RECORDS",
+      "path": "data/media/room-lab/v0.1/cost-records.json",
+      "sha256": "7c9823a5eb54cd0f99e9a3fa47083447545277a2b1b067a7d3493c0b33f49891"
+    },
+    {
+      "kind": "RENDER_ENVIRONMENT",
+      "path": "data/media/room-lab/v0.1/render-environment.json",
+      "sha256": "4e598dd0c3bbbf27dcfccdfef2a8c38d4bd8c9986a35bed9a5cc27920785a802"
+    },
+    {
+      "kind": "STILLS_RUN_EVIDENCE",
+      "path": "data/media/room-lab/v0.1/outputs/room-lab-stills-run.json",
+      "sha256": "29b073db3faf46c253e9669b26db61b12a7b4c6524632921175b73b5158111f0"
+    },
+    {
+      "kind": "VIDEO_RUN_EVIDENCE",
+      "path": "data/media/room-lab/v0.1/outputs/room-lab-video-run.json",
+      "sha256": "038b62e4d9d23f9e182e652af4e5b02bb162d5408ee94648a702410aa7ba9e7a"
+    }
+  ],
+  "hero_output_id": null,
+  "release": {
+    "state": "OUTPUTS_VERIFIED_PUBLICATION_RIGHTS_PENDING",
+    "room_lab_consumption_allowed": false,
+    "blockers": [
+      "public-publication and redistribution rights remain unapproved",
+      "Room Lab integration requires an explicit follow-on approval"
+    ]
+  },
+  "status": "OUTPUTS_VERIFIED_PUBLICATION_RIGHTS_PENDING"
+}

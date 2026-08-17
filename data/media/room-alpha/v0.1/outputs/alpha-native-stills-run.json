@@ -1,0 +1,378 @@
+{
+  "schema_version": "0.1.0",
+  "run_id": "LIVING_ROOM_ALPHA_NATIVE_STILLS_RUN_V0_1",
+  "runner_version": "LIVING_ROOM_ALPHA_RENDERER_V1",
+  "runner_sha256": "2271309d99d3f9804508de4f0821a5b25d80dab0335db7518c426da060304ee2",
+  "deterministic_duplicate_pass": true,
+  "network_policy": "LOOPBACK_ONLY",
+  "cost_usd": 0,
+  "environment": {
+    "node": {
+      "version": "v22.14.0"
+    },
+    "chrome": {
+      "version": "Google Chrome 151.0.7922.138",
+      "path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "sha256": "ee37661755341e9fc1babf9c20ec09d6a36e50aa8713ceb08082f8bbe2d8217d"
+    },
+    "three": {
+      "version": "0.185.0",
+      "module_sha256": "bbf5ed13fe4373f5bd38b14ea8e62e9f157327da5638edc6d3863e08b167c9c7",
+      "core_sha256": "78b2c4218834ca8670547ed2315bfc21a00ff4dc3403bbffc8c31493d31d14de",
+      "gltf_loader_sha256": "97642d720f16cc9a0c9844934198e4d0c023bea8e89576d0f7545d03b2d103d2"
+    },
+    "ffmpeg": {
+      "version_prefix": "ffmpeg version 8.1.2",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "sha256": "882dc3dcaabd4262465def19f4eb0a2968f23ab9bbaeb8f2566a61c603e4ed43"
+    },
+    "ffprobe": {
+      "version_prefix": "ffprobe version 8.1.2",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "sha256": "1f87f6c4bf4f48b25000a1e0a0eb70dca93d17d3d6628749c69cff481d13cc78"
+    }
+  },
+  "outputs": [
+    {
+      "camera_id": "CAM_ROOM_ALPHA_CLEARANCE_V0_1",
+      "role": "SIDE_CLEARANCE_VIEW",
+      "visibility_policy": "CLEARANCE_PAIR_PLUS_SHELL",
+      "uri": "data/media/room-alpha/v0.1/outputs/verification/side-clearance.png",
+      "sha256": "88f6f060c1b0af0bdbdc782f36890b5d61722beed42b588bfe0f9448500e556e",
+      "rgba_sha256": "16738354395e9a099f0a9b6ac6e652127099a66feca2ea6a8b4ec3096e282cc6",
+      "bytes": 37204,
+      "dimensions_px": {
+        "width": 1600,
+        "height": 1000
+      },
+      "duplicate_render_sha256": "88f6f060c1b0af0bdbdc782f36890b5d61722beed42b588bfe0f9448500e556e",
+      "visible_placement_ids": [
+        "kivik-placement-01",
+        "listerby-placement-01"
+      ],
+      "camera_collision": {
+        "pass": true,
+        "inside_placement_ids": []
+      },
+      "audit": {
+        "pass": true,
+        "failures": [],
+        "placement_count": 8,
+        "unique_twin_count": 8,
+        "placements": [
+          {
+            "placement_id": "kivik-placement-01",
+            "twin_ref": "PT_IKEA_KIVIK_49440597",
+            "rotation_y_rad": 3.14159265359,
+            "bounds_centre_xz_m": [
+              0,
+              -1.78
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              0,
+              0,
+              -1.78
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "poang-placement-01",
+            "twin_ref": "PT_IKEA_POANG_39240787",
+            "rotation_y_rad": -1.570796326795,
+            "bounds_centre_xz_m": [
+              -1.88,
+              0.05
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              -1.88,
+              0,
+              0.05
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "listerby-placement-01",
+            "twin_ref": "PT_IKEA_LISTERBY_30513904",
+            "rotation_y_rad": 0,
+            "bounds_centre_xz_m": [
+              0,
+              -0.22
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              0,
+              0,
+              -0.22
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "lohals-placement-01",
+            "twin_ref": "PT_IKEA_LOHALS_30511288",
+            "rotation_y_rad": 0,
+            "bounds_centre_xz_m": [
+              0,
+              -0.18
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              0,
+              0,
+              -0.18
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "gladom-placement-01",
+            "twin_ref": "PT_IKEA_GLADOM_70578451",
+            "rotation_y_rad": 0,
+            "bounds_centre_xz_m": [
+              1.58,
+              -1.55
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              1.58,
+              0,
+              -1.55
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "lauters-placement-01",
+            "twin_ref": "PT_IKEA_LAUTERS_30405042",
+            "rotation_y_rad": 0.2,
+            "bounds_centre_xz_m": [
+              -1.72,
+              -1.55
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              -1.72,
+              0,
+              -1.55
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "besta-placement-01",
+            "twin_ref": "PT_IKEA_BESTA_89330691",
+            "rotation_y_rad": 0,
+            "bounds_centre_xz_m": [
+              0,
+              2.05
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              0,
+              0,
+              2.05
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "billy-placement-01",
+            "twin_ref": "PT_IKEA_BILLY_00263850",
+            "rotation_y_rad": 1.570796326795,
+            "bounds_centre_xz_m": [
+              2.84,
+              1.15
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              2.84,
+              0,
+              1.15
+            ],
+            "geometry_and_material_unchanged": true
+          }
+        ],
+        "shell_dimensions_m": [
+          6,
+          4.6,
+          2.8
+        ],
+        "authoritative_opening_count": 0,
+        "assumed_overlay_count": 1,
+        "mutation_counts": {
+          "geometry": 0,
+          "material": 0,
+          "placement": 0,
+          "light": 0
+        }
+      }
+    },
+    {
+      "camera_id": "CAM_ROOM_ALPHA_SELECTED_KIVIK_V0_1",
+      "role": "SELECTED_PRODUCT_CANONICAL_INSPECTION",
+      "visibility_policy": "SELECTED_ONLY_PLUS_SHELL",
+      "uri": "data/media/room-alpha/v0.1/outputs/verification/selected-kivik.png",
+      "sha256": "d5c9078f55fc33743ef1bc75ea03890380f86df2548d17d898b703ef5546ccfd",
+      "rgba_sha256": "e69f3523ac72e43615eeaffd2258d573c63c647203ff8210e2e45f8c91ee113a",
+      "bytes": 152793,
+      "dimensions_px": {
+        "width": 1600,
+        "height": 1000
+      },
+      "duplicate_render_sha256": "d5c9078f55fc33743ef1bc75ea03890380f86df2548d17d898b703ef5546ccfd",
+      "visible_placement_ids": [
+        "kivik-placement-01"
+      ],
+      "camera_collision": {
+        "pass": true,
+        "inside_placement_ids": []
+      },
+      "audit": {
+        "pass": true,
+        "failures": [],
+        "placement_count": 8,
+        "unique_twin_count": 8,
+        "placements": [
+          {
+            "placement_id": "kivik-placement-01",
+            "twin_ref": "PT_IKEA_KIVIK_49440597",
+            "rotation_y_rad": 3.14159265359,
+            "bounds_centre_xz_m": [
+              0,
+              -1.78
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              0,
+              0,
+              -1.78
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "poang-placement-01",
+            "twin_ref": "PT_IKEA_POANG_39240787",
+            "rotation_y_rad": -1.570796326795,
+            "bounds_centre_xz_m": [
+              -1.88,
+              0.05
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              -1.88,
+              0,
+              0.05
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "listerby-placement-01",
+            "twin_ref": "PT_IKEA_LISTERBY_30513904",
+            "rotation_y_rad": 0,
+            "bounds_centre_xz_m": [
+              0,
+              -0.22
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              0,
+              0,
+              -0.22
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "lohals-placement-01",
+            "twin_ref": "PT_IKEA_LOHALS_30511288",
+            "rotation_y_rad": 0,
+            "bounds_centre_xz_m": [
+              0,
+              -0.18
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              0,
+              0,
+              -0.18
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "gladom-placement-01",
+            "twin_ref": "PT_IKEA_GLADOM_70578451",
+            "rotation_y_rad": 0,
+            "bounds_centre_xz_m": [
+              1.58,
+              -1.55
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              1.58,
+              0,
+              -1.55
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "lauters-placement-01",
+            "twin_ref": "PT_IKEA_LAUTERS_30405042",
+            "rotation_y_rad": 0.2,
+            "bounds_centre_xz_m": [
+              -1.72,
+              -1.55
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              -1.72,
+              0,
+              -1.55
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "besta-placement-01",
+            "twin_ref": "PT_IKEA_BESTA_89330691",
+            "rotation_y_rad": 0,
+            "bounds_centre_xz_m": [
+              0,
+              2.05
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              0,
+              0,
+              2.05
+            ],
+            "geometry_and_material_unchanged": true
+          },
+          {
+            "placement_id": "billy-placement-01",
+            "twin_ref": "PT_IKEA_BILLY_00263850",
+            "rotation_y_rad": 1.570796326795,
+            "bounds_centre_xz_m": [
+              2.84,
+              1.15
+            ],
+            "bounds_min_y_m": 0,
+            "expected_translation_m": [
+              2.84,
+              0,
+              1.15
+            ],
+            "geometry_and_material_unchanged": true
+          }
+        ],
+        "shell_dimensions_m": [
+          6,
+          4.6,
+          2.8
+        ],
+        "authoritative_opening_count": 0,
+        "assumed_overlay_count": 1,
+        "mutation_counts": {
+          "geometry": 0,
+          "material": 0,
+          "placement": 0,
+          "light": 0
+        }
+      }
+    }
+  ]
+}

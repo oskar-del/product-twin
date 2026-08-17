@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/media/rights-disclosure.schema.json",
+  "title": "Media rights and disclosure record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "rights_id", "scene_id", "source_assets", "render_scope", "provider_processing", "maximum_claim", "required_disclosure", "forbidden_claims", "attribution", "monitor", "approval"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "rights_id": {"type": "string"},
+    "scene_id": {"type": "string"},
+    "source_assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_lane", "asset_count", "rights_basis", "render", "provider_processing", "derivative_creation", "public_publication", "redistribution", "evidence_refs"],
+        "properties": {
+          "source_lane": {"enum": ["PRODUCT_TWIN", "DESIGN_ASSET"]},
+          "asset_count": {"type": "integer", "minimum": 1},
+          "rights_basis": {"type": "string"},
+          "render": {"enum": ["YES", "NO", "REVIEW"]},
+          "provider_processing": {"enum": ["YES", "NO", "REVIEW"]},
+          "derivative_creation": {"enum": ["YES", "NO", "REVIEW"]},
+          "public_publication": {"enum": ["YES", "NO", "REVIEW"]},
+          "redistribution": {"enum": ["YES", "NO", "REVIEW"]},
+          "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+        }
+      }
+    },
+    "render_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "allowed_channels", "exact_product_claim_allowed", "clean_image_text_required"],
+      "properties": {
+        "state": {"enum": ["YES", "NO", "REVIEW"]},
+        "allowed_channels": {"type": "array", "items": {"type": "string"}},
+        "exact_product_claim_allowed": {"const": false},
+        "clean_image_text_required": {"type": "boolean"}
+      }
+    },
+    "provider_processing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "blocked_until"],
+      "properties": {
+        "state": {"enum": ["YES", "NO", "REVIEW"]},
+        "blocked_until": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "maximum_claim": {"const": "G2_PLANNING_PROXY"},
+    "required_disclosure": {"type": "string", "minLength": 1},
+    "forbidden_claims": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "attribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "text"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "text": {"type": ["string", "null"]}
+      }
+    },
+    "monitor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner_role", "trigger", "failure_destination", "stop_condition"],
+      "properties": {
+        "owner_role": {"const": "VERIFICATION"},
+        "trigger": {"type": "string"},
+        "failure_destination": {"type": "string"},
+        "stop_condition": {"type": "string"}
+      }
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["executor_role", "executor_id", "reviewer_role_required", "reviewer_id", "state"],
+      "properties": {
+        "executor_role": {"const": "VISUAL_MEDIA"},
+        "executor_id": {"type": "string"},
+        "reviewer_role_required": {"const": "VERIFICATION"},
+        "reviewer_id": {"type": ["string", "null"]},
+        "state": {"enum": ["PENDING_INDEPENDENT_REVIEW", "APPROVED", "REJECTED"]}
+      }
+    }
+  }
+}

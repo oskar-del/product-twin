@@ -1,0 +1,103 @@
+{
+  "schema_version": "0.1.0",
+  "furniture_manifest_id": "FURNITURE_MANIFEST_LIVING_ROOM_ALPHA_V0_1",
+  "revision": "0.1.0",
+  "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+  "source_bindings": [
+    {"kind": "FROZEN_SCENE", "uri": "data/media/room-lab/v0.1/scene-manifest.json", "sha256": "fc47dadcf08c4e8172d93b07397c4325851560da57d3c713f99a18065ee2b181"},
+    {"kind": "FURNITURE_DESIGN", "uri": "data/showrooms/living-room-client-design-v0.1.json", "sha256": "c06e2537e402abb39df0412b9a963ec15e6d10ad8edcc19788c43d7ca4f4ed23"},
+    {"kind": "FURNITURE_READINESS", "uri": "data/showrooms/living-room-supply-board-v0.2.json", "sha256": "600bba5533c285b799bec2d462b33d46ba2fb99ceb8b5565b0707d6b69019df6"}
+  ],
+  "avatar_manifest_adapter": {
+    "expected_manifest_id": "FURNITURE_AVATAR_MANIFEST_V0_1",
+    "expected_uri": "data/geometry/furniture-avatar-manifest-v0.1.json",
+    "state": "AWAITING_AVATAR_FACTORY",
+    "accepts_asset_uri_revision_and_fidelity_only": true,
+    "camera_changes_allowed": false,
+    "placement_changes_allowed": false,
+    "silent_fallback_allowed": false
+  },
+  "placements": [
+    {
+      "placement_id": "kivik-placement-01",
+      "source_placement_alias": "LR_SOFA_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_KIVIK_49440597",
+      "design_asset_id": null,
+      "transform": {"translation_m": [0, 0, -1.78], "rotation_y_rad": 3.141592653589793, "scale": [1, 1, 1]},
+      "asset": {"avatar_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY", "uri": "data/geometry/avatars/ikea-kivik-49440597-g2-sofa-proxy.glb", "revision": "sha256:a765cb6ddf0bd6b670c0b1add8e3d6a1546bffac23ba31736f850ce98e81d392", "sha256": "a765cb6ddf0bd6b670c0b1add8e3d6a1546bffac23ba31736f850ce98e81d392", "geometry_level": "G2", "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"},
+      "rights": {"internal_render": "YES", "provider_processing": "REVIEW", "public_publication": "REVIEW", "redistribution": "NO"}
+    },
+    {
+      "placement_id": "poang-placement-01",
+      "source_placement_alias": "LR_ARMCHAIR_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_POANG_39240787",
+      "design_asset_id": null,
+      "transform": {"translation_m": [-1.88, 0, 0.05], "rotation_y_rad": -1.5707963267948966, "scale": [1, 1, 1]},
+      "asset": {"avatar_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY", "uri": "data/geometry/avatars/ikea-poang-39240787-g2-armchair-proxy.glb", "revision": "sha256:7d1e5659d9f34247aefe65399859d1f7adfc2ed000e1ade9a38a0498fd93cb85", "sha256": "7d1e5659d9f34247aefe65399859d1f7adfc2ed000e1ade9a38a0498fd93cb85", "geometry_level": "G2", "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"},
+      "rights": {"internal_render": "YES", "provider_processing": "REVIEW", "public_publication": "REVIEW", "redistribution": "NO"}
+    },
+    {
+      "placement_id": "listerby-placement-01",
+      "source_placement_alias": "LR_COFFEE_TABLE_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_LISTERBY_30513904",
+      "design_asset_id": null,
+      "transform": {"translation_m": [0, 0, -0.22], "rotation_y_rad": 0, "scale": [1, 1, 1]},
+      "asset": {"avatar_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY", "uri": "data/geometry/avatars/ikea-listerby-30513904-g2-coffee-table-proxy.glb", "revision": "sha256:d5294a8b83d5173179a75f54f371346b26577fe54425dfbe0f9ab2264cc8d37f", "sha256": "d5294a8b83d5173179a75f54f371346b26577fe54425dfbe0f9ab2264cc8d37f", "geometry_level": "G2", "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"},
+      "rights": {"internal_render": "YES", "provider_processing": "REVIEW", "public_publication": "REVIEW", "redistribution": "NO"}
+    },
+    {
+      "placement_id": "lohals-placement-01",
+      "source_placement_alias": "LR_RUG_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_LOHALS_30511288",
+      "design_asset_id": null,
+      "transform": {"translation_m": [0, 0, -0.18], "rotation_y_rad": 0, "scale": [1, 1, 1]},
+      "asset": {"avatar_id": "AVATAR_IKEA_LOHALS_30511288_G2_RUG_PROXY", "uri": "data/geometry/avatars/ikea-lohals-30511288-g2-rug-proxy.glb", "revision": "sha256:f3b28a885db303121e69ac0dd2d94089cb3d5f8791d58170852ea52ef916b572", "sha256": "f3b28a885db303121e69ac0dd2d94089cb3d5f8791d58170852ea52ef916b572", "geometry_level": "G2", "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"},
+      "rights": {"internal_render": "YES", "provider_processing": "REVIEW", "public_publication": "REVIEW", "redistribution": "NO"}
+    },
+    {
+      "placement_id": "gladom-placement-01",
+      "source_placement_alias": "LR_SIDE_TABLE_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_GLADOM_70578451",
+      "design_asset_id": null,
+      "transform": {"translation_m": [1.58, 0, -1.55], "rotation_y_rad": 0, "scale": [1, 1, 1]},
+      "asset": {"avatar_id": "AVATAR_IKEA_GLADOM_70578451_G2_TRAY_TABLE_PROXY", "uri": "data/geometry/avatars/ikea-gladom-70578451-g2-tray-table-proxy.glb", "revision": "sha256:36e5c3da0c1b24147f0aa777373dff3ced49badde8c2295e061d99e565e6b4c9", "sha256": "36e5c3da0c1b24147f0aa777373dff3ced49badde8c2295e061d99e565e6b4c9", "geometry_level": "G2", "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"},
+      "rights": {"internal_render": "YES", "provider_processing": "REVIEW", "public_publication": "REVIEW", "redistribution": "NO"}
+    },
+    {
+      "placement_id": "lauters-placement-01",
+      "source_placement_alias": "LR_FLOOR_LAMP_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_LAUTERS_30405042",
+      "design_asset_id": null,
+      "transform": {"translation_m": [-1.72, 0, -1.55], "rotation_y_rad": 0.2, "scale": [1, 1, 1]},
+      "asset": {"avatar_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY", "uri": "data/geometry/avatars/ikea-lauters-30405042-g2-floor-lamp-proxy.glb", "revision": "sha256:b276fc15e90b0e380a335fe965253a486a2f40d08a6e0005433f99d05bb13f3e", "sha256": "b276fc15e90b0e380a335fe965253a486a2f40d08a6e0005433f99d05bb13f3e", "geometry_level": "G2", "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"},
+      "rights": {"internal_render": "YES", "provider_processing": "REVIEW", "public_publication": "REVIEW", "redistribution": "NO"}
+    },
+    {
+      "placement_id": "besta-placement-01",
+      "source_placement_alias": "LR_MEDIA_UNIT_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_BESTA_89330691",
+      "design_asset_id": null,
+      "transform": {"translation_m": [0, 0, 2.05], "rotation_y_rad": 0, "scale": [1, 1, 1]},
+      "asset": {"avatar_id": "AVATAR_IKEA_BESTA_89330691_G2_MEDIA_UNIT_PROXY", "uri": "data/geometry/avatars/ikea-besta-89330691-g2-media-unit-proxy.glb", "revision": "sha256:71081ab6bcd0238652cdaa7b9495b2ab29041f94c2caf856da2bfacd93f3582e", "sha256": "71081ab6bcd0238652cdaa7b9495b2ab29041f94c2caf856da2bfacd93f3582e", "geometry_level": "G2", "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"},
+      "rights": {"internal_render": "YES", "provider_processing": "REVIEW", "public_publication": "REVIEW", "redistribution": "NO"}
+    },
+    {
+      "placement_id": "billy-placement-01",
+      "source_placement_alias": "LR_BOOKCASE_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_BILLY_00263850",
+      "design_asset_id": null,
+      "transform": {"translation_m": [2.84, 0, 1.15], "rotation_y_rad": 1.5707963267948966, "scale": [1, 1, 1]},
+      "asset": {"avatar_id": "AVATAR_IKEA_BILLY_00263850_G2_BOOKCASE_PROXY", "uri": "data/geometry/avatars/ikea-billy-00263850-g2-bookcase-proxy.glb", "revision": "sha256:04b826a4e1f534a9a415b31402b5c46ef44e35bf503f2ed099b541ac71f54258", "sha256": "04b826a4e1f534a9a415b31402b5c46ef44e35bf503f2ed099b541ac71f54258", "geometry_level": "G2", "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"},
+      "rights": {"internal_render": "YES", "provider_processing": "REVIEW", "public_publication": "REVIEW", "redistribution": "NO"}
+    }
+  ],
+  "freeze": {"placement_count": 8, "instance_count": 8, "substitution_count": 0, "unresolved_count": 0}
+}

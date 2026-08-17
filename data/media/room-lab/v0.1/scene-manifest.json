@@ -1,0 +1,195 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_id": "MEDIA_SCENE_ROOM_LAB_MARBELLA_V0_1",
+  "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+  "source": {
+    "repository": "room-lab-site",
+    "commit": "3d36f07c32e42b168a74c5bc03a263e8c63e6eab",
+    "release": "ROOM_LAB_INTERACTION_V9",
+    "deployment_version_id": "appgprj_6a822d27eeb08191ab5be5783925f742~appgver_8519495f2a3481918d74bf8832393550",
+    "source_files": [
+      {"path": "app/room/room-data.ts", "sha256": "fcc9763789a2cab4f5fd9ba020e55436fe10be9d449997f1936f9b2d4015f204"},
+      {"path": "app/room/room-contract.ts", "sha256": "21f06ca70a098797cb174c8c73459442bc3074bf070a6c387bb136c727c3a821"},
+      {"path": "app/room/room-state.mjs", "sha256": "5e718883c64470c3c7988a88546b85993c84cab476d41d06c78064b1912c254e"},
+      {"path": "app/room/room-lab.tsx", "sha256": "65a85a7ce53867fbdf9e08558d8c7775a5e2fb8b4e7b9a79eaee5d1a08b66c9e"}
+    ]
+  },
+  "coordinate_frame": {
+    "id": "ROOM_LAB_LOCAL_V9",
+    "units": "metres",
+    "origin": "room floor centre",
+    "axes": {
+      "+X": "right in the Room Lab plan",
+      "+Y": "up",
+      "+Z": "from the garden/window wall into the room"
+    },
+    "true_north": null
+  },
+  "shell": {
+    "evidence_state": "ASSUMED_DEMO_NOT_SURVEYED",
+    "width_m": 6,
+    "depth_m": 4.6,
+    "height_m": 2.8,
+    "floor": {"centre_m": [0, -0.04, 0], "size_m": [6, 0.08, 4.6], "material": {"kind": "MeshStandardMaterial", "colour_hex": "#cbb99c", "roughness": 0.88}, "cast_shadow": false, "receive_shadow": true},
+    "walls": [
+      {"id": "WALL_WINDOW", "centre_m": [0, 1.4, -2.34], "size_m": [6, 2.8, 0.08], "material": {"kind": "MeshStandardMaterial", "colour_hex": "#eee9df", "roughness": 0.95}, "cast_shadow": false, "receive_shadow": true},
+      {"id": "WALL_LEFT", "centre_m": [-3.04, 1.4, 0], "size_m": [0.08, 2.8, 4.6], "material": {"kind": "MeshStandardMaterial", "colour_hex": "#e4dfd4", "roughness": 0.95}, "cast_shadow": false, "receive_shadow": true}
+    ],
+    "opening_claims": [],
+    "visual_overlays": [
+      {
+        "id": "OVERLAY_GARDEN_WINDOW_ASSUMED",
+        "kind": "window_glass_and_frame",
+        "centre_m": [-0.45, 1.65, -2.285],
+        "size_m": [1.9, 1.2, 0.035],
+        "evidence_state": "ASSUMED_VISUAL_OVERLAY_NOT_AN_AUTHORITATIVE_OPENING",
+        "source_wall_remains_intact": true,
+        "material": {"kind": "MeshPhysicalMaterial", "colour_hex": "#a9c9c4", "roughness": 0.12, "transmission": 0.55, "transparent": true, "opacity": 0.52},
+        "frame_material": {"kind": "MeshStandardMaterial", "colour_hex": "#4c514d", "roughness": 0.55},
+        "frame_bars": [
+          {"centre_m": [0, 1.25, -2.25], "size_m": [2, 0.06, 0.07]},
+          {"centre_m": [0, 2.05, -2.25], "size_m": [2, 0.06, 0.07]},
+          {"centre_m": [-1.42, 1.65, -2.25], "size_m": [0.06, 0.86, 0.07]},
+          {"centre_m": [0.52, 1.65, -2.25], "size_m": [0.06, 0.86, 0.07]}
+        ]
+      }
+    ],
+    "fixed_fixtures": [
+      {"id": "FIXTURE_CABINET_BASE", "centre_m": [2.68, 0.43, 0.65], "size_m": [0.6, 0.86, 1.82], "evidence_state": "ASSUMED_DEMO", "material": {"kind": "MeshStandardMaterial", "colour_hex": "#d8d5cc", "roughness": 0.75}, "cast_shadow": true, "receive_shadow": true}
+    ]
+  },
+  "lighting": {
+    "evidence_state": "CREATIVE_ROOM_LAB_V9",
+    "background_hex": "#e9e6dc",
+    "fog": {"colour_hex": "#e9e6dc", "near_m": 10, "far_m": 23},
+    "tone_mapping": "ACES_FILMIC",
+    "exposure": 1.18,
+    "lights": [
+      {"id": "HEMISPHERE", "kind": "hemisphere", "sky_hex": "#fff7e8", "ground_hex": "#8ca295", "intensity": 2.4},
+      {"id": "SUN", "kind": "directional", "colour_hex": "#ffe2bd", "intensity": 4.8, "position_m": [-4, 7, 5], "casts_shadow": true, "shadow": {"map_size_px": [2048, 2048], "camera_bounds_m": {"left": -6, "right": 6, "top": 6, "bottom": -6}}},
+      {"id": "FILL", "kind": "directional", "colour_hex": "#9fc8bb", "intensity": 1.5, "position_m": [5, 3, -3], "casts_shadow": false}
+    ]
+  },
+  "rendering": {
+    "source_engine": {"name": "three", "package_constraint": "^0.185.0", "resolved_contract_version": "0.185.0"},
+    "webgl": {"antialias": true, "output_colour_space": "SRGB", "tone_mapping": "ACES_FILMIC", "exposure": 1.18, "shadow_map_enabled": true, "shadow_map_type": "PCF_SOFT"},
+    "source_pixel_ratio_policy": "min(devicePixelRatio, 2)",
+    "media_runner_pixel_ratio": 1,
+    "loader_floor_contact_contract": {
+      "apply_y_rotation_before_bounds": true,
+      "avatar_up_axis": "+Y",
+      "avatar_visual_front_axis": "-Z",
+      "rotation_semantics": "positive radians about +Y, applied before XZ recentering and floor contact",
+      "orientation_evidence_state": "BOUND_G2_ORIENTATION_QA_VERIFIED",
+      "orientation_gate_status": "PASS",
+      "recenter_xz_to_world_transform": true,
+      "floor_mode_contact": "translated bounding-box min Y equals world Y",
+      "ceiling_mode_contact": "translated bounding-box max Y equals world Y",
+      "recompute_bounds_after_each_transform_stage": true,
+      "mesh_cast_shadow": true,
+      "mesh_receive_shadow": true
+    }
+  },
+  "placements": [
+    {
+      "placement_id": "kivik-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "twin_ref": "PT_IKEA_KIVIK_49440597",
+      "avatar": {"avatar_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY", "level": "G2", "asset_path": "data/geometry/avatars/ikea-kivik-49440597-g2-sofa-proxy.glb", "sha256": "a765cb6ddf0bd6b670c0b1add8e3d6a1546bffac23ba31736f850ce98e81d392"},
+      "transform": {"translation_m": [0, 0, -1.78], "rotation_y_rad": 3.141592653589793, "scale": [1, 1, 1]},
+      "quantity": 1,
+      "fidelity_class": "G2_PLANNING_PROXY",
+      "disclosure_ref": "RIGHTS_ROOM_LAB_G2_V0_1"
+    },
+    {
+      "placement_id": "poang-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "twin_ref": "PT_IKEA_POANG_39240787",
+      "avatar": {"avatar_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY", "level": "G2", "asset_path": "data/geometry/avatars/ikea-poang-39240787-g2-armchair-proxy.glb", "sha256": "7d1e5659d9f34247aefe65399859d1f7adfc2ed000e1ade9a38a0498fd93cb85"},
+      "transform": {"translation_m": [-1.88, 0, 0.05], "rotation_y_rad": -1.5707963267948966, "scale": [1, 1, 1]},
+      "quantity": 1,
+      "fidelity_class": "G2_PLANNING_PROXY",
+      "disclosure_ref": "RIGHTS_ROOM_LAB_G2_V0_1"
+    },
+    {
+      "placement_id": "listerby-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "twin_ref": "PT_IKEA_LISTERBY_30513904",
+      "avatar": {"avatar_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY", "level": "G2", "asset_path": "data/geometry/avatars/ikea-listerby-30513904-g2-coffee-table-proxy.glb", "sha256": "d5294a8b83d5173179a75f54f371346b26577fe54425dfbe0f9ab2264cc8d37f"},
+      "transform": {"translation_m": [0, 0, -0.22], "rotation_y_rad": 0, "scale": [1, 1, 1]},
+      "quantity": 1,
+      "fidelity_class": "G2_PLANNING_PROXY",
+      "disclosure_ref": "RIGHTS_ROOM_LAB_G2_V0_1"
+    },
+    {
+      "placement_id": "lohals-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "twin_ref": "PT_IKEA_LOHALS_30511288",
+      "avatar": {"avatar_id": "AVATAR_IKEA_LOHALS_30511288_G2_RUG_PROXY", "level": "G2", "asset_path": "data/geometry/avatars/ikea-lohals-30511288-g2-rug-proxy.glb", "sha256": "f3b28a885db303121e69ac0dd2d94089cb3d5f8791d58170852ea52ef916b572"},
+      "transform": {"translation_m": [0, 0, -0.18], "rotation_y_rad": 0, "scale": [1, 1, 1]},
+      "quantity": 1,
+      "fidelity_class": "G2_PLANNING_PROXY",
+      "disclosure_ref": "RIGHTS_ROOM_LAB_G2_V0_1"
+    },
+    {
+      "placement_id": "gladom-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "twin_ref": "PT_IKEA_GLADOM_70578451",
+      "avatar": {"avatar_id": "AVATAR_IKEA_GLADOM_70578451_G2_TRAY_TABLE_PROXY", "level": "G2", "asset_path": "data/geometry/avatars/ikea-gladom-70578451-g2-tray-table-proxy.glb", "sha256": "36e5c3da0c1b24147f0aa777373dff3ced49badde8c2295e061d99e565e6b4c9"},
+      "transform": {"translation_m": [1.58, 0, -1.55], "rotation_y_rad": 0, "scale": [1, 1, 1]},
+      "quantity": 1,
+      "fidelity_class": "G2_PLANNING_PROXY",
+      "disclosure_ref": "RIGHTS_ROOM_LAB_G2_V0_1"
+    },
+    {
+      "placement_id": "lauters-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "twin_ref": "PT_IKEA_LAUTERS_30405042",
+      "avatar": {"avatar_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY", "level": "G2", "asset_path": "data/geometry/avatars/ikea-lauters-30405042-g2-floor-lamp-proxy.glb", "sha256": "b276fc15e90b0e380a335fe965253a486a2f40d08a6e0005433f99d05bb13f3e"},
+      "transform": {"translation_m": [-1.72, 0, -1.55], "rotation_y_rad": 0.2, "scale": [1, 1, 1]},
+      "quantity": 1,
+      "fidelity_class": "G2_PLANNING_PROXY",
+      "disclosure_ref": "RIGHTS_ROOM_LAB_G2_V0_1"
+    },
+    {
+      "placement_id": "besta-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "twin_ref": "PT_IKEA_BESTA_89330691",
+      "avatar": {"avatar_id": "AVATAR_IKEA_BESTA_89330691_G2_MEDIA_UNIT_PROXY", "level": "G2", "asset_path": "data/geometry/avatars/ikea-besta-89330691-g2-media-unit-proxy.glb", "sha256": "71081ab6bcd0238652cdaa7b9495b2ab29041f94c2caf856da2bfacd93f3582e"},
+      "transform": {"translation_m": [0, 0, 2.05], "rotation_y_rad": 0, "scale": [1, 1, 1]},
+      "quantity": 1,
+      "fidelity_class": "G2_PLANNING_PROXY",
+      "disclosure_ref": "RIGHTS_ROOM_LAB_G2_V0_1"
+    },
+    {
+      "placement_id": "billy-placement-01",
+      "source_lane": "PRODUCT_TWIN",
+      "twin_ref": "PT_IKEA_BILLY_00263850",
+      "avatar": {"avatar_id": "AVATAR_IKEA_BILLY_00263850_G2_BOOKCASE_PROXY", "level": "G2", "asset_path": "data/geometry/avatars/ikea-billy-00263850-g2-bookcase-proxy.glb", "sha256": "04b826a4e1f534a9a415b31402b5c46ef44e35bf503f2ed099b541ac71f54258"},
+      "transform": {"translation_m": [2.84, 0, 1.15], "rotation_y_rad": 1.5707963267948966, "scale": [1, 1, 1]},
+      "quantity": 1,
+      "fidelity_class": "G2_PLANNING_PROXY",
+      "disclosure_ref": "RIGHTS_ROOM_LAB_G2_V0_1"
+    }
+  ],
+  "twin_evidence": [
+    {"twin_ref": "PT_IKEA_KIVIK_49440597", "twin_record_path": "data/twins/PT_IKEA_KIVIK_49440597.json", "twin_record_sha256": "bed1930352a61a7833c2b2fdc68d0bdc13bcef3297034c83f8e72fc3a58577d9", "qa_path": "data/metrics/ikea-kivik-49440597-g2-sofa-proxy-latest.json", "qa_sha256": "bc9296d812e37a506de5bc160771c2be6a1af1432dbf8dde7f9504ce7921dfd1"},
+    {"twin_ref": "PT_IKEA_POANG_39240787", "twin_record_path": "data/twins/PT_IKEA_POANG_39240787.json", "twin_record_sha256": "c38c1a3e986464f5edb9bb9396bbd1c68ad73a02e0156fe3de50fac65b2aab16", "qa_path": "data/metrics/ikea-poang-39240787-g2-armchair-proxy-latest.json", "qa_sha256": "8cc8b6ff90e04ba716e528eab41d7992259bfa0bd1761fec3a2c0f960bf01ff3"},
+    {"twin_ref": "PT_IKEA_LISTERBY_30513904", "twin_record_path": "data/twins/PT_IKEA_LISTERBY_30513904.json", "twin_record_sha256": "25194e552d075f3150357d69435fa9a82bacb3eb1440780e2cec3f82351610a4", "qa_path": "data/metrics/ikea-listerby-30513904-g2-coffee-table-proxy-latest.json", "qa_sha256": "3f3338769a3feb4fbaff9148a36b5fb637086c503a55c8893fdc91deeaead702"},
+    {"twin_ref": "PT_IKEA_LOHALS_30511288", "twin_record_path": "data/twins/PT_IKEA_LOHALS_30511288.json", "twin_record_sha256": "2df7326cdf1d81bedb69f58828c1524368a47d5e55254e6be182a9c0b69e92c3", "qa_path": "data/metrics/ikea-lohals-30511288-g2-rug-proxy-latest.json", "qa_sha256": "0e9e081a313fa3495d752d54efcb5383f528d9befa46fc24245608e1e45fc11b"},
+    {"twin_ref": "PT_IKEA_GLADOM_70578451", "twin_record_path": "data/twins/PT_IKEA_GLADOM_70578451.json", "twin_record_sha256": "a69dccbfab36a5661eed7afe4a3ca5411dba87e1bae5d5ce390a76773d188d22", "qa_path": "data/metrics/ikea-gladom-70578451-g2-tray-table-proxy-latest.json", "qa_sha256": "f3f1f856b4e92b30e1f4631ccf2bed9887c7f8818edfa285170bfc1cbcc35496"},
+    {"twin_ref": "PT_IKEA_LAUTERS_30405042", "twin_record_path": "data/twins/PT_IKEA_LAUTERS_30405042.json", "twin_record_sha256": "2fd48d1d31e985e2d150cbac76687335926e52e64c331f660fc19923f47fa7e5", "qa_path": "data/metrics/ikea-lauters-30405042-g2-floor-lamp-proxy-latest.json", "qa_sha256": "7705950d8ce4b18fec49583d3c801350dbf3240816dcc2008ac6a2f6059d9a10"},
+    {"twin_ref": "PT_IKEA_BESTA_89330691", "twin_record_path": "data/twins/PT_IKEA_BESTA_89330691.json", "twin_record_sha256": "9f65d30322426d13d97ef5b40ae1f21029a09c35dbf9d1a5e218c5a347434f1a", "qa_path": "data/metrics/ikea-besta-89330691-g2-media-unit-proxy-latest.json", "qa_sha256": "ecd89355426c5eef5875244d177138ae7f99281cc48f3b13f9ba3b610ff0198b"},
+    {"twin_ref": "PT_IKEA_BILLY_00263850", "twin_record_path": "data/twins/PT_IKEA_BILLY_00263850.json", "twin_record_sha256": "3b373350cd1ccc931f74964a38a47a275f24b6fd6ec4c83e16576bd942f0b3e5", "qa_path": "data/metrics/ikea-billy-00263850-g2-bookcase-proxy-latest.json", "qa_sha256": "70f260bd5b345ea4c263a7eb0eee91d9b9d371a0a07cc164ecbbccdc2b72db3f"}
+  ],
+  "freeze": {
+    "placement_count": 8,
+    "allow_dynamic_additions": false,
+    "allow_product_overrides": false,
+    "allow_geometry_substitution": false,
+    "allow_opening_changes": false,
+    "allow_shell_changes": false,
+    "commerce_payload_copied": false,
+    "source_lane_copied_without_promotion": true
+  }
+}
