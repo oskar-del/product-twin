@@ -9,7 +9,7 @@ The current numbered workstream directives and integrated milestone are maintain
 ## Canonical repository state
 
 - Repository: `oskar-del/product-twin`
-- Integration branch: `agent/v0-shoppable-dining-scene`
+- Integration branch: `agent/product-twin-integration`
 - Tested continuation baseline: `e2b528f`
 - Work-protocol commit: `64d0316`
 - Plot-to-Project architecture commit: `beb014b`
@@ -21,10 +21,13 @@ The tested continuation baseline contains the Shopify/native-model census, resid
 
 | Chat | Branch / repository | Owns |
 | --- | --- | --- |
-| Product Twin Integration | `agent/v0-shoppable-dining-scene` | shared contracts, decisions, reviews and merge order |
-| Avatar Factory | `agent/avatar-factory-v1` | geometry intake, materials, rights, attribution, QA, G-level and source-lane separation |
-| CANOPUS Site Twin | `agent/canopus-site-twin-v0` | parcel/site evidence, terrain, solar, views, planning gates and Design Scenarios |
-| Room Lab | Sites repository | product/3D UX, placement state, fit feedback, manifests and deployment |
+| Product Twin Integration | `agent/product-twin-integration` | shared contracts, decisions, reviews and merge order |
+| Avatar Factory & Source Graph | `agent/avatar-factory-source-graph` | identity, geometry intake, materials, rights, attribution, QA, G-level and source-lane separation |
+| Plot-to-Project Spatial Studio | `agent/plot-to-project-spatial-studio` | parcel/site evidence, terrain, solar, views, planning gates, Design Scenarios and Room Twin export |
+| Room Lab & Commerce Showroom | Sites project `appgprj_6a822d27eeb08191ab5be5783925f742` | product/3D UX, placement state, fit feedback, manifests and deployment |
+| Build, Procurement & Logistics OS | `agent/build-procurement-logistics` | BoM, destination supply, substitutions, cost, logistics and construction packages |
+| Visual Media Studio | `agent/visual-media-studio` | reproducible stills, walkthroughs, video, cost and generation provenance |
+| Verification, Evidence & Monitoring | `agent/verification-evidence-monitoring` | independent review, release gates, evidence freshness and monitoring |
 
 Each persistent chat may launch bounded subagents, but it keeps the ongoing product/design conversation and its own decision history.
 
