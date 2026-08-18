@@ -1,15 +1,17 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateContextProviders,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateContextProviders,validateOfficialContextGeometrySources,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
 const streetBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/street-context-v0.1.json","utf8"));
 const terrainBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/terrain-source-metadata-v0.1.json","utf8"));
+const officialGeometryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/official-context-geometry-sources-v0.1.json","utf8"));
 assert.equal(validateSvartingePrototype(baseline).ok,true,"baseline scene must validate");
 assert.equal(validateContextProviders(providerBaseline).ok,true,"baseline provider registry must validate");
 assert.equal(validateStreetContext(streetBaseline).ok,true,"baseline street context must validate");
 assert.equal(validateTerrainSourceMetadata(terrainBaseline).ok,true,"baseline terrain source metadata must validate");
+assert.equal(validateOfficialContextGeometrySources(officialGeometryBaseline).ok,true,"baseline official context geometry sources must validate");
 
 const attacks=[
   ["identity promoted",m=>m.subject.identity_scope="PROPERTY_REGISTER_VERIFIED","identity scope promoted"],
@@ -97,4 +99,20 @@ for(const [name,mutate,needle] of terrainAttacks){
   const changed=structuredClone(terrainBaseline);mutate(changed);const result=validateTerrainSourceMetadata(changed);
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length} attacks)`);
+const officialGeometryAttacks=[
+  ["building item changed",m=>m.datasets.buildings.item_id="0582","official geometry dataset identity drift"],
+  ["building locator excluded",m=>m.datasets.buildings.wgs84_bbox=[10,50,11,51],"official geometry dataset does not cover locator"],
+  ["building bytes promoted",m=>m.datasets.buildings.asset_access.bytes_acquired=true,"official geometry asset falsely promoted"],
+  ["property asset status changed",m=>m.datasets.property_division.asset_access.http_status_without_credentials=200,"official geometry asset falsely promoted"],
+  ["building heights invented",m=>m.import_contract.building_heights_may_be_invented=true,"official geometry derivation scope promoted"],
+  ["road width invented",m=>m.import_contract.road_width_may_be_invented=true,"official geometry derivation scope promoted"],
+  ["legal access inferred",m=>m.import_contract.legal_access_may_be_inferred=true,"official geometry derivation scope promoted"],
+  ["road geometry promoted",m=>m.road_source.geometry_available=true,"official road geometry falsely promoted"],
+  ["topography collection invented",m=>m.catalogue.topography_10_collection_present=true,"official geometry catalogue collection claim drift"],
+  ["geometry gate closed",m=>m.promotion_gates[0].status="SATISFIED","official context geometry gate closed or incomplete"]
+];
+for(const [name,mutate,needle] of officialGeometryAttacks){
+  const changed=structuredClone(officialGeometryBaseline);mutate(changed);const result=validateOfficialContextGeometrySources(changed);
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length} attacks)`);

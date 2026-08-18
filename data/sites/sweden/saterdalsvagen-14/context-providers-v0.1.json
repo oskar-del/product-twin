@@ -65,6 +65,39 @@
       "limitations": ["The municipality states that displayed boundaries have no legal effect and may be spatially misleading.", "Rights and joint facilities may be incomplete; legal boundary gate remains open."]
     },
     {
+      "provider_id": "LANTMATERIET_BUILDINGS_0581",
+      "label": "Lantmäteriet Buildings · Norrköping 0581",
+      "capability": "Exact official municipal building package identified in the vector STAC catalogue; GeoPackage asset updated 2026-08-14",
+      "state": "KEY_REQUIRED",
+      "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
+      "delivery_mode": "DOWNLOAD_OR_WMS",
+      "credential_configured": false,
+      "source_url": "https://api.lantmateriet.se/stac-vektor/v1/collections/byggnader/items/0581",
+      "limitations": ["The protected 14.1 MB asset returned HTTP 401 without approved Geotorget access; no footprint bytes or local clip are present.", "Building heights, roof forms, façades and use may not be invented from the footprint product."]
+    },
+    {
+      "provider_id": "LANTMATERIET_PROPERTY_DIVISION_0581",
+      "label": "Lantmäteriet Property Division · Norrköping 0581",
+      "capability": "Exact official municipal property-division package identified in the vector STAC catalogue; GeoPackage asset updated 2026-08-15",
+      "state": "KEY_REQUIRED",
+      "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
+      "delivery_mode": "DOWNLOAD_OR_WMS",
+      "credential_configured": false,
+      "source_url": "https://api.lantmateriet.se/stac-vektor/v1/collections/fastighetsindelning/items/0581",
+      "limitations": ["The protected 44.4 MB asset returned HTTP 401 without approved Geotorget access; the SVÄRTINGE 54:28 feature is not yet acquired.", "Map geometry alone cannot close the legal-boundary gate without feature identity, cadastral acts and acceptance."]
+    },
+    {
+      "provider_id": "TRAFIKVERKET_NVDB_ROAD_NETWORK",
+      "label": "Trafikverket NVDB Vägtrafiknät",
+      "capability": "Current official road-network source for a source-bound Säterdalsvägen centreline and road attributes",
+      "state": "KEY_REQUIRED",
+      "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
+      "delivery_mode": "DOWNLOAD_OR_WMS",
+      "credential_configured": false,
+      "source_url": "https://bransch.trafikverket.se/tjanster/data-kartor-och-geodatjanster/nyheter-om-trafikverkets-data/2025/nvdb-vagdata-tillgangliga-i-trafikverkets-datautbytesportal-for-anvandning-i-oppet-api/",
+      "limitations": ["Metadata is public, but the exact registered-account road extract has not been acquired.", "Road-network geometry cannot establish road ownership, legal access, driveway permission, construction access or an exact carriageway width."]
+    },
+    {
       "provider_id": "MAPBOX_STANDARD_SATELLITE",
       "label": "Mapbox Standard Satellite and Terrain-DEM",
       "capability": "Live satellite, terrain, 3D buildings, lighting and shadows behind the Product Twin overlay",

@@ -21,6 +21,8 @@ The viewer now presents that one scene graph through synchronized `INTELLIGENCE`
 
 The realistic-detail scope is now the immediate `Säterdalsvägen Street Room`, not a fully modelled neighbourhood. `street-context-v0.1.json` records exact-point NOKA aerial-cache coverage and a live Google Street View observation dated July 2022. Google snapped the address search to `8 Säterdalsvägen`, so its road, vegetation, utility and building character is `REFERENCE_ONLY_NEARBY`, not exact number-14 frontage evidence. No provider pixels, panorama identifiers or provider-derived geometry are committed. The viewer uses this record only for an 80 m high-detail visual zone; wider context remains lightweight.
 
+The next official geometry sources are now resolved exactly. Lantmäteriet vector STAC items `byggnader/0581` and `fastighetsindelning/0581` are the current Norrköping-wide EPSG:3006 packages and both catalogue bboxes cover the locator. Trafikverket NVDB `Vägtrafiknät` is the current official road source. Their protected asset bytes or exact road extract are not acquired, so `official-context-geometry-sources-v0.1.json` keeps all three promotion gates open and the Street Room continues to show diagrammatic context. The viewer Sources panel exposes this distinction directly.
+
 Run `npm run site:sweden:svartinge:prototype:gate` to rebuild and validate the v0.2 export and synchronized viewer. Run `npm run site:sweden:svartinge:prototype:serve` and open `http://127.0.0.1:4173/prototype/svartinge-neighbourhood/` to use it.
 
 ## Material discovery findings

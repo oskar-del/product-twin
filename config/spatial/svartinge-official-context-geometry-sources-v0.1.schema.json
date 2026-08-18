@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/svartinge-official-context-geometry-sources-v0.1.schema.json",
+  "title": "Svärtinge Official Context Geometry Source Receipts v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "entity_type", "subject", "authority", "catalogue", "datasets", "access_guide", "road_source", "import_contract", "promotion_gates"],
+  "properties": {
+    "schema_version": {"const": "svartinge-official-context-geometry-sources/v0.1"},
+    "entity_type": {"const": "OfficialContextGeometrySourceReceiptSet"},
+    "subject": {"const": "SVÄRTINGE 54:28"},
+    "authority": {"const": "Lantmäteriet"},
+    "catalogue": {"$ref": "#/$defs/catalogue"},
+    "datasets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["buildings", "property_division"],
+      "properties": {
+        "buildings": {"$ref": "#/$defs/dataset"},
+        "property_division": {"$ref": "#/$defs/dataset"}
+      }
+    },
+    "access_guide": {"$ref": "#/$defs/accessGuide"},
+    "road_source": {"$ref": "#/$defs/roadSource"},
+    "import_contract": {"$ref": "#/$defs/importContract"},
+    "promotion_gates": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["gate_id", "status", "reason"],
+        "properties": {
+          "gate_id": {"enum": ["GATE_SE_EXISTING_BUILDINGS", "GATE_SE_PROPERTY_DIVISION_CONTEXT", "GATE_SE_ROAD_GEOMETRY"]},
+          "status": {"const": "OPEN"},
+          "reason": {"type": "string", "minLength": 20}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["runtime_locator", "byte_count", "sha256", "content_persisted_in_repository"],
+      "properties": {
+        "runtime_locator": {"type": "string", "pattern": "^\\.runtime/"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "byte_count": {"type": "integer", "minimum": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "content_persisted_in_repository": {"const": false}
+      }
+    },
+    "catalogue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["api_url", "license", "special_terms_review_required", "collections_observed", "topography_10_collection_present", "retrieved_at", "receipt"],
+      "properties": {
+        "api_url": {"const": "https://api.lantmateriet.se/stac-vektor/v1/"},
+        "license": {"const": "CC-BY-4.0"},
+        "special_terms_review_required": {"const": true},
+        "collections_observed": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string"}},
+        "topography_10_collection_present": {"const": false},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "receipt": {"$ref": "#/$defs/receipt"}
+      }
+    },
+    "dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["collection", "item_id", "title", "item_url", "created_at", "updated_at", "horizontal_crs", "wgs84_bbox", "projected_bbox", "asset_url", "asset_media_type", "asset_size_bytes", "asset_format", "locator_covered", "metadata_state", "metadata_receipt", "asset_access"],
+      "properties": {
+        "collection": {"enum": ["byggnader", "fastighetsindelning"]},
+        "item_id": {"const": "0581"},
+        "title": {"type": "string", "minLength": 10},
+        "item_url": {"type": "string", "pattern": "^https://api\\.lantmateriet\\.se/stac-vektor/v1/"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "updated_at": {"type": "string", "format": "date-time"},
+        "horizontal_crs": {"const": "EPSG:3006"},
+        "wgs84_bbox": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number"}},
+        "projected_bbox": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number"}},
+        "asset_url": {"type": "string", "pattern": "^https://dl1\\.lantmateriet\\.se/"},
+        "asset_media_type": {"const": "application/zip"},
+        "asset_size_bytes": {"type": "integer", "minimum": 1000000},
+        "asset_format": {"const": "GeoPackage in ZIP"},
+        "locator_covered": {"const": true},
+        "metadata_state": {"const": "OFFICIAL_METADATA_VERIFIED"},
+        "metadata_receipt": {"allOf": [{"$ref": "#/$defs/receipt"}], "required": ["retrieved_at"]},
+        "asset_access": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["state", "http_status_without_credentials", "bytes_acquired", "geometry_available", "credential_persisted"],
+          "properties": {
+            "state": {"const": "KEY_REQUIRED"},
+            "http_status_without_credentials": {"const": 401},
+            "bytes_acquired": {"const": false},
+            "geometry_available": {"const": false},
+            "credential_persisted": {"const": false}
+          }
+        }
+      }
+    },
+    "accessGuide": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_url", "document_created_at", "states_product_must_be_ordered", "states_authorization_required", "runtime_locator", "byte_count", "sha256", "content_persisted_in_repository"],
+      "properties": {
+        "source_url": {"type": "string", "pattern": "^https://www\\.lantmateriet\\.se/"},
+        "document_created_at": {"type": "string", "format": "date-time"},
+        "states_product_must_be_ordered": {"const": true},
+        "states_authorization_required": {"const": true},
+        "runtime_locator": {"type": "string", "pattern": "^\\.runtime/"},
+        "byte_count": {"const": 161318},
+        "sha256": {"const": "d6fcbd7a86ff522998b505b58e61119ab3eff0e268240beeb035b9c620098da9"},
+        "content_persisted_in_repository": {"const": false}
+      }
+    },
+    "roadSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authority", "product", "source_url", "documented_current_data", "metadata_read_without_login", "download_requires_registered_account", "exact_extract_acquired", "geometry_available", "state", "limitations"],
+      "properties": {
+        "authority": {"const": "Trafikverket"},
+        "product": {"const": "NVDB Vägtrafiknät"},
+        "source_url": {"type": "string", "pattern": "^https://bransch\\.trafikverket\\.se/"},
+        "documented_current_data": {"const": true},
+        "metadata_read_without_login": {"const": true},
+        "download_requires_registered_account": {"const": true},
+        "exact_extract_acquired": {"const": false},
+        "geometry_available": {"const": false},
+        "state": {"const": "KEY_REQUIRED"},
+        "limitations": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 10}}
+      }
+    },
+    "importContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["runtime_credentials_only", "committed_credentials_forbidden", "raw_asset_sha256_required", "raw_asset_byte_count_required", "zip_entry_manifest_required", "geopackage_integrity_check_required", "source_crs_must_be_parsed", "clip_buffer_m", "local_transform_method", "derived_geometry_hash_required", "source_object_ids_must_be_preserved", "building_heights_may_be_invented", "road_width_may_be_invented", "legal_access_may_be_inferred"],
+      "properties": {
+        "runtime_credentials_only": {"const": true},
+        "committed_credentials_forbidden": {"const": true},
+        "raw_asset_sha256_required": {"const": true},
+        "raw_asset_byte_count_required": {"const": true},
+        "zip_entry_manifest_required": {"const": true},
+        "geopackage_integrity_check_required": {"const": true},
+        "source_crs_must_be_parsed": {"const": true},
+        "clip_buffer_m": {"const": 250},
+        "local_transform_method": {"type": "string", "minLength": 20},
+        "derived_geometry_hash_required": {"const": true},
+        "source_object_ids_must_be_preserved": {"const": true},
+        "building_heights_may_be_invented": {"const": false},
+        "road_width_may_be_invented": {"const": false},
+        "legal_access_may_be_inferred": {"const": false}
+      }
+    }
+  }
+}

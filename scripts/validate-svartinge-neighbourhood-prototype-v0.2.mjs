@@ -13,6 +13,8 @@ const streetPath="data/sites/sweden/saterdalsvagen-14/street-context-v0.1.json";
 const streetSchemaPath="config/spatial/svartinge-street-context-v0.1.schema.json";
 const terrainMetadataPath="data/sites/sweden/saterdalsvagen-14/terrain-source-metadata-v0.1.json";
 const terrainMetadataSchemaPath="config/spatial/svartinge-terrain-source-metadata-v0.1.schema.json";
+const officialGeometryPath="data/sites/sweden/saterdalsvagen-14/official-context-geometry-sources-v0.1.json";
+const officialGeometrySchemaPath="config/spatial/svartinge-official-context-geometry-sources-v0.1.schema.json";
 const viewerPath="prototype/svartinge-neighbourhood/index.html";
 const liveAdapterPath="prototype/svartinge-neighbourhood/live-context-adapter.mjs";
 const CLASSES=["AUTHORITATIVE","INDICATIVE","DERIVED","REPORTED_UNVERIFIED","CONCEPT"];
@@ -30,6 +32,7 @@ function walk(value,name="scene",errors=[]){
   for(const [k,v] of Object.entries(value)){if(FORBIDDEN_LOCAL_KEYS.has(k.toLowerCase()))errors.push(`${name}.${k}: forbidden external fact payload`);walk(v,`${name}.${k}`,errors);}return errors;
 }
 function polygonArea(points){let twice=0;for(let i=0;i<points.length;i++){const a=points[i],b=points[(i+1)%points.length];twice+=a[0]*b[1]-b[0]*a[1];}return Math.abs(twice)/2;}
+function bboxContains(bbox,point){return Array.isArray(bbox)&&bbox.length===4&&point[0]>=bbox[0]&&point[0]<=bbox[2]&&point[1]>=bbox[1]&&point[1]<=bbox[3];}
 
 export function validateContextProviders(registry){
   const errors=[];let assertions=0;const check=(ok,msg)=>{assertions++;if(!ok)errors.push(msg);};
@@ -50,7 +53,47 @@ export function validateContextProviders(registry){
   check(providers.find(x=>x.provider_id==="MAPBOX_STANDARD_SATELLITE")?.state==="KEY_REQUIRED","Mapbox access state promoted");
   check(providers.find(x=>x.provider_id==="GOOGLE_STREET_VIEW")?.state==="RESEARCH_ONLY","Street View reference state promoted");
   check(providers.find(x=>x.provider_id==="GOOGLE_PHOTOREALISTIC_3D_TILES")?.state==="KEY_REQUIRED","Google 3D Tiles access state promoted");
+  check(providers.find(x=>x.provider_id==="LANTMATERIET_BUILDINGS_0581")?.state==="KEY_REQUIRED","official building access state promoted");
+  check(providers.find(x=>x.provider_id==="LANTMATERIET_PROPERTY_DIVISION_0581")?.state==="KEY_REQUIRED","official property-division access state promoted");
+  check(providers.find(x=>x.provider_id==="TRAFIKVERKET_NVDB_ROAD_NETWORK")?.state==="KEY_REQUIRED","official road access state promoted");
   check(!/(api[_-]?key|access[_-]?token|password|connection[_-]?string|client[_-]?secret)\s*[\":=]+\s*[\"']?(?!required|false|null)/i.test(JSON.stringify(registry)),"provider registry contains a possible credential payload");
+  return {ok:errors.length===0,assertions,errors};
+}
+
+export function validateOfficialContextGeometrySources(sourceSet,{repoRoot=root}={}){
+  const errors=[];let assertions=0;const check=(ok,msg)=>{assertions++;if(!ok)errors.push(msg);};
+  exactKeys(sourceSet,["schema_version","entity_type","subject","authority","catalogue","datasets","access_guide","road_source","import_contract","promotion_gates"],"official context geometry sources",check);
+  check(sourceSet.schema_version==="svartinge-official-context-geometry-sources/v0.1"&&sourceSet.entity_type==="OfficialContextGeometrySourceReceiptSet"&&sourceSet.subject==="SVÄRTINGE 54:28","official geometry source identity drift");
+  const catalogue=sourceSet.catalogue??{};
+  check(catalogue.api_url==="https://api.lantmateriet.se/stac-vektor/v1/"&&catalogue.license==="CC-BY-4.0"&&catalogue.special_terms_review_required===true,"official geometry catalogue policy drift");
+  check(JSON.stringify(catalogue.collections_observed)===JSON.stringify(["kommun-lan-rike","fastighetsindelning","belagenhetsadresser","byggnader","marktacke","ortnamn"])&&catalogue.topography_10_collection_present===false,"official geometry catalogue collection claim drift");
+  const locatorWgs=[16.0317063331,58.6522414431],locatorProjected=[559868.9999,6501790.311];
+  const expected={buildings:{collection:"byggnader",title:"Byggnader för Norrköpings kommun",updated_at:"2026-08-14T23:30:00.889000Z",asset_size_bytes:14122089,sha256:"c4c98db79320b39f6430d79c004924de9b849c7f38f17738923ddf6e5c67b827"},property_division:{collection:"fastighetsindelning",title:"Fastighetsindelning i Norrköpings kommun",updated_at:"2026-08-15T00:14:50.028000Z",asset_size_bytes:44443839,sha256:"4b3754293bed4951194b97f47c7e4e9ac1a53a0098a09445b1e831db734b1554"}};
+  for(const [key,spec] of Object.entries(expected)){
+    const dataset=sourceSet.datasets?.[key]??{};
+    check(dataset.collection===spec.collection&&dataset.item_id==="0581"&&dataset.title===spec.title&&dataset.updated_at===spec.updated_at,"official geometry dataset identity drift");
+    check(dataset.horizontal_crs==="EPSG:3006"&&dataset.asset_media_type==="application/zip"&&dataset.asset_format==="GeoPackage in ZIP"&&dataset.asset_size_bytes===spec.asset_size_bytes,"official geometry dataset format or size drift");
+    check(bboxContains(dataset.wgs84_bbox,locatorWgs)&&bboxContains(dataset.projected_bbox,locatorProjected)&&dataset.locator_covered===true,"official geometry dataset does not cover locator");
+    check(dataset.metadata_state==="OFFICIAL_METADATA_VERIFIED"&&dataset.metadata_receipt?.sha256===spec.sha256,"official geometry metadata receipt drift");
+    check(dataset.asset_access?.state==="KEY_REQUIRED"&&dataset.asset_access?.http_status_without_credentials===401&&dataset.asset_access?.bytes_acquired===false&&dataset.asset_access?.geometry_available===false&&dataset.asset_access?.credential_persisted===false,"official geometry asset falsely promoted");
+    const receipt=dataset.metadata_receipt??{},runtimePath=path.join(repoRoot,receipt.runtime_locator??"");
+    if(receipt.runtime_locator&&fs.existsSync(runtimePath)){check(fs.statSync(runtimePath).size===receipt.byte_count,`${key}: runtime metadata byte count mismatch`);check(shaAt(repoRoot,receipt.runtime_locator)===receipt.sha256,`${key}: runtime metadata hash mismatch`);}
+  }
+  const receipt=sourceSet.catalogue?.receipt??{},catalogueRuntime=path.join(repoRoot,receipt.runtime_locator??"");
+  check(receipt.sha256==="1d19a0f3b9a4b143027bfa92506d68da520b787505971def659e68f75b5c669d"&&receipt.byte_count===6868&&receipt.content_persisted_in_repository===false,"official catalogue receipt drift");
+  if(receipt.runtime_locator&&fs.existsSync(catalogueRuntime)){check(fs.statSync(catalogueRuntime).size===receipt.byte_count,"official catalogue runtime byte count mismatch");check(shaAt(repoRoot,receipt.runtime_locator)===receipt.sha256,"official catalogue runtime hash mismatch");}
+  const guide=sourceSet.access_guide??{},guideRuntime=path.join(repoRoot,guide.runtime_locator??"");
+  check(guide.states_product_must_be_ordered===true&&guide.states_authorization_required===true&&guide.byte_count===161318&&guide.sha256==="d6fcbd7a86ff522998b505b58e61119ab3eff0e268240beeb035b9c620098da9","official access guide receipt drift");
+  if(guide.runtime_locator&&fs.existsSync(guideRuntime)){check(fs.statSync(guideRuntime).size===guide.byte_count,"official access guide runtime byte count mismatch");check(shaAt(repoRoot,guide.runtime_locator)===guide.sha256,"official access guide runtime hash mismatch");}
+  const road=sourceSet.road_source??{};
+  check(road.authority==="Trafikverket"&&road.product==="NVDB Vägtrafiknät"&&road.documented_current_data===true&&road.download_requires_registered_account===true,"official road source identity drift");
+  check(road.state==="KEY_REQUIRED"&&road.exact_extract_acquired===false&&road.geometry_available===false,"official road geometry falsely promoted");
+  const contract=sourceSet.import_contract??{};
+  check(contract.runtime_credentials_only===true&&contract.committed_credentials_forbidden===true&&contract.raw_asset_sha256_required===true&&contract.geopackage_integrity_check_required===true&&contract.source_crs_must_be_parsed===true&&contract.derived_geometry_hash_required===true,"official geometry import safety contract weakened");
+  check(contract.clip_buffer_m===250&&contract.source_object_ids_must_be_preserved===true&&contract.building_heights_may_be_invented===false&&contract.road_width_may_be_invented===false&&contract.legal_access_may_be_inferred===false,"official geometry derivation scope promoted");
+  const gates=sourceSet.promotion_gates??[];
+  check(gates.length===3&&new Set(gates.map(g=>g.gate_id)).size===3&&gates.every(g=>g.status==="OPEN"),"official context geometry gate closed or incomplete");
+  check(!/(api[_-]?key|access[_-]?token|password|connection[_-]?string|client[_-]?secret)\s*[\":=]+\s*[\"']?(?!required|false|null)/i.test(JSON.stringify(sourceSet)),"official geometry receipts contain a possible credential payload");
   return {ok:errors.length===0,assertions,errors};
 }
 
@@ -175,9 +218,11 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
     check(fs.existsSync(path.join(repoRoot,streetSchemaPath)),"street context schema missing");
     check(fs.existsSync(path.join(repoRoot,terrainMetadataPath)),"terrain source metadata missing");
     check(fs.existsSync(path.join(repoRoot,terrainMetadataSchemaPath)),"terrain source metadata schema missing");
+    check(fs.existsSync(path.join(repoRoot,officialGeometryPath)),"official context geometry source receipts missing");
+    check(fs.existsSync(path.join(repoRoot,officialGeometrySchemaPath)),"official context geometry source schema missing");
     check(fs.existsSync(path.join(repoRoot,viewerPath)),"viewable prototype missing");
     check(fs.existsSync(path.join(repoRoot,liveAdapterPath)),"live context adapter missing");
-    if(fs.existsSync(path.join(repoRoot,viewerPath))){const html=fs.readFileSync(path.join(repoRoot,viewerPath),"utf8");check(html.includes("neighbourhood-scene-v0.2.json")&&html.includes("OrbitControls")&&html.includes("CONCEPT MODE · LEGAL GATES OPEN"),"viewer is not bound to the scene/evidence UI");check(html.includes("INTELLIGENCE")&&html.includes("REALISTIC")&&html.includes("COMPARE")&&html.includes("renderPass")&&html.includes("context-providers-v0.1.json"),"synchronized renderer modes or provider interface missing");check(html.includes("street-context-v0.1.json")&&html.includes("street_room_high_detail")&&html.includes("buildExactListingCharacter")&&html.includes("Exact-address listing character"),"Street Room rendering or source disclosure missing");check(html.includes("addStreetDetail")&&html.includes("addHouseDetails")&&html.includes("addExactPlotWorkingCharacter")&&html.includes("proceduralTexture"),"higher-fidelity Street Room character layer is incomplete");check(html.includes("realismDecor.visible=realistic")&&html.includes("stageLabelsAllowed"),"visual-only street character or close-view label isolation is missing");check(html.includes("applyStageVisibility")&&html.includes("visible_groups"),"navigation stages do not enforce their geometry visibility contract");check(html.includes("One geometry graph")&&html.includes("Realism changes presentation—not evidence"),"one-Twin evidence separation missing");check(html.includes("terrain-source-metadata-v0.1.json")&&html.includes("createMapboxRuntimeAdapter")&&html.includes("syncLiveStage")&&html.includes("LIVE VISUAL CONTEXT · NO EVIDENCE EFFECT"),"live context or official terrain disclosure is not mounted");check(html.includes("v3.25.0")&&html.includes("Disconnect & forget")&&html.includes("TOKEN STAYS IN THIS PAGE MEMORY ONLY"),"credential-safe live provider controls are incomplete");check(!/(localStorage|sessionStorage|document\.cookie|URLSearchParams)/.test(html),"viewer persists or transports runtime credentials unsafely");for(const step of STEPS)check(scene.navigation.some(x=>x.id===step),`viewer step source missing ${step}`);}
+    if(fs.existsSync(path.join(repoRoot,viewerPath))){const html=fs.readFileSync(path.join(repoRoot,viewerPath),"utf8");check(html.includes("neighbourhood-scene-v0.2.json")&&html.includes("OrbitControls")&&html.includes("CONCEPT MODE · LEGAL GATES OPEN"),"viewer is not bound to the scene/evidence UI");check(html.includes("INTELLIGENCE")&&html.includes("REALISTIC")&&html.includes("COMPARE")&&html.includes("renderPass")&&html.includes("context-providers-v0.1.json"),"synchronized renderer modes or provider interface missing");check(html.includes("street-context-v0.1.json")&&html.includes("street_room_high_detail")&&html.includes("buildExactListingCharacter")&&html.includes("Exact-address listing character"),"Street Room rendering or source disclosure missing");check(html.includes("addStreetDetail")&&html.includes("addHouseDetails")&&html.includes("addExactPlotWorkingCharacter")&&html.includes("proceduralTexture"),"higher-fidelity Street Room character layer is incomplete");check(html.includes("realismDecor.visible=realistic")&&html.includes("stageLabelsAllowed"),"visual-only street character or close-view label isolation is missing");check(html.includes("applyStageVisibility")&&html.includes("visible_groups"),"navigation stages do not enforce their geometry visibility contract");check(html.includes("One geometry graph")&&html.includes("Realism changes presentation—not evidence"),"one-Twin evidence separation missing");check(html.includes("terrain-source-metadata-v0.1.json")&&html.includes("createMapboxRuntimeAdapter")&&html.includes("syncLiveStage")&&html.includes("LIVE VISUAL CONTEXT · NO EVIDENCE EFFECT"),"live context or official terrain disclosure is not mounted");check(html.includes("official-context-geometry-sources-v0.1.json")&&html.includes("Exact official geometry packages")&&html.includes("protected geometry bytes are absent"),"official geometry source disclosure is not mounted");check(html.includes("v3.25.0")&&html.includes("Disconnect & forget")&&html.includes("TOKEN STAYS IN THIS PAGE MEMORY ONLY"),"credential-safe live provider controls are incomplete");check(!/(localStorage|sessionStorage|document\.cookie|URLSearchParams)/.test(html),"viewer persists or transports runtime credentials unsafely");for(const step of STEPS)check(scene.navigation.some(x=>x.id===step),`viewer step source missing ${step}`);}
     for(const binding of scene.source_bindings.filter(x=>x.sha256!=="RUNTIME_ONLY_NOT_COMMITTED")){check(fs.existsSync(path.join(repoRoot,binding.path)),`source binding missing ${binding.path}`);if(fs.existsSync(path.join(repoRoot,binding.path)))check(shaAt(repoRoot,binding.path)===binding.sha256,`source binding hash mismatch ${binding.path}`);}
     const schema=read(schemaPath,repoRoot);check(schema.additionalProperties===false&&schema.properties?.scene_version?.const==="svartinge-neighbourhood-scene/v0.2","strict versioned schema missing");
     if(fs.existsSync(path.join(repoRoot,providerPath))){const providerResult=validateContextProviders(read(providerPath,repoRoot));assertions+=providerResult.assertions;errors.push(...providerResult.errors);}
@@ -186,6 +231,8 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
     if(fs.existsSync(path.join(repoRoot,streetSchemaPath))){const streetSchema=read(streetSchemaPath,repoRoot);check(streetSchema.additionalProperties===false&&streetSchema.properties?.schema_version?.const==="svartinge-street-context/v0.1","strict street context schema missing");}
     if(fs.existsSync(path.join(repoRoot,terrainMetadataPath))){const terrainResult=validateTerrainSourceMetadata(read(terrainMetadataPath,repoRoot),{repoRoot});assertions+=terrainResult.assertions;errors.push(...terrainResult.errors);}
     if(fs.existsSync(path.join(repoRoot,terrainMetadataSchemaPath))){const terrainSchema=read(terrainMetadataSchemaPath,repoRoot);check(terrainSchema.additionalProperties===false&&terrainSchema.properties?.schema_version?.const==="svartinge-terrain-source-metadata/v0.1","strict terrain metadata schema missing");}
+    if(fs.existsSync(path.join(repoRoot,officialGeometryPath))){const geometryResult=validateOfficialContextGeometrySources(read(officialGeometryPath,repoRoot),{repoRoot});assertions+=geometryResult.assertions;errors.push(...geometryResult.errors);}
+    if(fs.existsSync(path.join(repoRoot,officialGeometrySchemaPath))){const geometrySchema=read(officialGeometrySchemaPath,repoRoot);check(geometrySchema.additionalProperties===false&&geometrySchema.properties?.schema_version?.const==="svartinge-official-context-geometry-sources/v0.1","strict official geometry source schema missing");}
     if(fs.existsSync(path.join(repoRoot,liveAdapterPath))){const adapter=fs.readFileSync(path.join(repoRoot,liveAdapterPath),"utf8");check(adapter.includes("EXPLICIT_RUNTIME_CONFIG_ONLY")&&adapter.includes("LIVE_ONLY_NO_PERSISTENCE")&&adapter.includes("evidence_promotion_allowed: false")&&adapter.includes("runtime_token_cleared_on_destroy: true"),"live adapter safety contract weakened");check(adapter.includes("syncStage")&&adapter.includes("LOCAL_EAST_UP_NORTH_STAGE_REFERENCE")&&adapter.includes('evidence_effect !== "NONE"'),"stage synchronization could promote or drift live context");check(!/(localStorage|sessionStorage|document\.cookie|URLSearchParams)/.test(adapter),"live adapter persists or transports runtime credentials unsafely");}
   }
   return {ok:errors.length===0,assertions,errors};
