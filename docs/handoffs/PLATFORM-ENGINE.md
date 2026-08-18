@@ -27,3 +27,12 @@ One checkout = one executor. Deliverable-first: every block ends with something 
 
 ## Current state
 - 2026-08-19: seeded by Brain. Nothing built.
+
+## Efficiency & cost mandate (Oskar, 2026-08-19 — core responsibility, not an afterthought)
+This session also owns making the whole operation CHEAP to run:
+- **Templates over regeneration**: base scene/page templates parameterized by data — an agent should never rewrite viewer code per plot/room; a SCRIPT fills a template. (Registry-extraction lesson: mechanical deep-mapping is a script, not an agent.)
+- **Token discipline**: agents design once; scripts execute at scale. Bulk per-record AI work = Haiku/Batch API, never the conversation model. Every pipeline that runs per-plot/per-product must have a zero-LLM steady-state path.
+- **Data reuse & caching**: terrain tiles, avatars, OSM pulls, receipts fetched ONCE into shared storage; downstream surfaces consume the cache. No session re-downloads what .runtime already holds.
+- **Load-while-work / progressive delivery**: LOD tiers, lazy-loaded chunks, skeleton-first pages, streamed tiles — perceived speed is part of the design system.
+- **Render budget**: define per-surface budgets (bundle KB, poly count, texture MB, time-to-first-frame on a mid phone) and gate builds on them.
+- **Compute placement**: batch heavy work (mosaics, viewsheds, bundles) in scheduled scripts/CI, not interactive sessions.
