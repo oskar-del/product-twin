@@ -49,9 +49,22 @@ The public GeoWebCache WMS capabilities endpoint was observed on 2026-08-18. It 
 - CRS: `EPSG:3010`;
 - advertised bounds: `[76800.0, 6320025.6, 286515.2, 7001600.0]`.
 
-The capabilities record is not sufficient for promotion: the layer title is only its machine name, and no acquisition date or meaningful attribution is provided. A target GetMap request around the recorded municipal point `[122807, 6504014]` returned HTTP 200 with zero bytes. No image was stored in the repository and no coverage claim was accepted.
+The capabilities record is not sufficient for promotion: the layer title is only its machine name, and no acquisition date or meaningful attribution is provided. An arbitrary target GetMap request around the recorded municipal point `[122807, 6504014]` returned HTTP 200 with zero bytes because the endpoint is a tile cache. A subsequent grid-aligned request returned a valid 256 × 256 PNG covering the point:
 
-Norrköping's official published material describes municipal orthophoto and oblique-image products, but the exposed cache layer name suggests a Lantmäteriet source. The exact source, date, coverage and reuse terms must therefore be reconciled before the WMS is used in the viewer.
+- EPSG:3010 tile bounds: `[122675.2, 6503526.4, 123494.4, 6504345.6]`;
+- GeoWebCache tile index: `[56, 189, 6]`;
+- byte count: `123575`;
+- SHA-256: `bb67a2ecefe1f5bdb9aaa6b1fc0695cab72fdb4c726e6b1f73e704bf71902c3f`.
+
+A closer aligned tile also returned valid imagery at bounds `[122777.6, 6503936.0, 122880.0, 6504038.4]`. These observations prove exact-point cache coverage, not acquisition date, legal provenance or permission to embed the tile. No provider image is stored in the repository.
+
+Norrköping's official published material describes municipal orthophoto and oblique-image products, but the exposed cache layer name suggests a Lantmäteriet source. The exact source, date and reuse terms must therefore be reconciled before the WMS is used in the viewer.
+
+## Immediate Street Room observation
+
+Google Maps resolved the number-14 address but its Street View action snapped to a panorama labelled `8 Säterdalsvägen`, dated July 2022. Four live directions were inspected without persisting imagery or panorama identifiers. The nearby context shows a narrow uncurbed local road, asphalt with gravel shoulders and driveways, mature birch/pine woodland, overhead lines on timber poles, informal vegetation-led frontages, detached timber houses with gable roofs, and a downhill long-view opening.
+
+`street-context-v0.1.json` records these only as `REFERENCE_ONLY_NEARBY`. It explicitly does not confirm the exact number-14 frontage, current condition, dimensions, plot access, building positions or provider-derived geometry. The realistic renderer may use the species mix, palette, material character and archetypes, while Product Twin remains the sole owner of geometry.
 
 ## Evidence state
 

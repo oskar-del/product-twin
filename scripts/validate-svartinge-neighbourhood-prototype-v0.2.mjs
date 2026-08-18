@@ -8,6 +8,8 @@ const scenePath="data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.js
 const schemaPath="config/spatial/svartinge-neighbourhood-scene-v0.2.schema.json";
 const providerPath="data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json";
 const providerSchemaPath="config/spatial/svartinge-context-providers-v0.1.schema.json";
+const streetPath="data/sites/sweden/saterdalsvagen-14/street-context-v0.1.json";
+const streetSchemaPath="config/spatial/svartinge-street-context-v0.1.schema.json";
 const viewerPath="prototype/svartinge-neighbourhood/index.html";
 const liveAdapterPath="prototype/svartinge-neighbourhood/live-context-adapter.mjs";
 const CLASSES=["AUTHORITATIVE","INDICATIVE","DERIVED","REPORTED_UNVERIFIED","CONCEPT"];
@@ -46,6 +48,41 @@ export function validateContextProviders(registry){
   check(providers.find(x=>x.provider_id==="GOOGLE_STREET_VIEW")?.state==="RESEARCH_ONLY","Street View reference state promoted");
   check(providers.find(x=>x.provider_id==="GOOGLE_PHOTOREALISTIC_3D_TILES")?.state==="KEY_REQUIRED","Google 3D Tiles access state promoted");
   check(!/(api[_-]?key|access[_-]?token|password|connection[_-]?string|client[_-]?secret)\s*[\":=]+\s*[\"']?(?!required|false|null)/i.test(JSON.stringify(registry)),"provider registry contains a possible credential payload");
+  return {ok:errors.length===0,assertions,errors};
+}
+
+export function validateStreetContext(street){
+  const errors=[];let assertions=0;const check=(ok,msg)=>{assertions++;if(!ok)errors.push(msg);};
+  exactKeys(street,["schema_version","entity_type","subject","focus","observations","character","rendering_policy"],"street context",check);
+  check(street.schema_version==="svartinge-street-context/v0.1","street context schema version drift");
+  check(street.entity_type==="StreetContextObservationSet"&&street.subject==="SVÄRTINGE 54:28","street context subject drift");
+  exactKeys(street.focus,["name","detail_radius_m","wider_context_policy","geometry_policy"],"street focus",check);
+  check(street.focus?.detail_radius_m===80&&street.focus?.wider_context_policy==="LIGHTWEIGHT_CONTEXT_ONLY","street room focus drift");
+  check(street.focus?.geometry_policy==="PRODUCT_TWIN_GEOMETRY_ONLY_NO_PROVIDER_TRACING","provider tracing enabled");
+  const observations=street.observations??[],ids=new Set();check(observations.length===2,"street source observation set changed");
+  for(const observation of observations){
+    exactKeys(observation,["observation_id","provider_id","evidence_role","relationship_to_subject","source_url","observed_label","imagery_date","observed_at","artifact_receipt","content_persisted","geometry_extraction_allowed","exact_plot_frontage_confirmed","attribution","limitations"],observation.observation_id??"street observation",check);
+    check(Boolean(observation.observation_id&&!ids.has(observation.observation_id)),`${observation.observation_id||"street observation"}: duplicate or missing id`);ids.add(observation.observation_id);
+    check(/^https:\/\//.test(observation.source_url??""),`${observation.observation_id}: source URL missing`);
+    check(observation.content_persisted===false&&observation.geometry_extraction_allowed===false&&observation.exact_plot_frontage_confirmed===false,`${observation.observation_id}: provider content or geometry promoted`);
+    check(Array.isArray(observation.limitations)&&observation.limitations.length>=2,`${observation.observation_id}: limitations missing`);
+  }
+  const google=observations.find(x=>x.provider_id==="GOOGLE_STREET_VIEW");
+  check(google?.evidence_role==="REFERENCE_ONLY"&&google?.relationship_to_subject==="NEARBY_SAME_STREET_NOT_EXACT_PLOT_FRONTAGE","Google Street View scope promoted");
+  check(google?.observed_label==="8 Säterdalsvägen"&&google?.imagery_date==="2022-07","Google Street View observation identity/date drift");
+  const ortho=observations.find(x=>x.provider_id==="NORRKOPING_ORTHOPHOTO");
+  check(ortho?.relationship_to_subject==="EXACT_RECORDED_MUNICIPAL_POINT_TILE"&&ortho?.imagery_date===null,"orthophoto coverage or unresolved date misrepresented");
+  exactKeys(ortho?.artifact_receipt,["request_method","canonical_request","response_status","content_type","byte_count","sha256","crs","bounds","cache_tile_index","cache_last_modified","cache_last_modified_is_acquisition_date"],"orthophoto artifact receipt",check);
+  check(ortho?.artifact_receipt?.response_status===200&&ortho?.artifact_receipt?.content_type==="image/png"&&ortho?.artifact_receipt?.byte_count===123575,"orthophoto response receipt drift");
+  check(ortho?.artifact_receipt?.sha256==="bb67a2ecefe1f5bdb9aaa6b1fc0695cab72fdb4c726e6b1f73e704bf71902c3f"&&ortho?.artifact_receipt?.crs==="EPSG:3010","orthophoto hash or CRS drift");
+  check(JSON.stringify(ortho?.artifact_receipt?.bounds)===JSON.stringify([122675.2,6503526.4,123494.4,6504345.6])&&JSON.stringify(ortho?.artifact_receipt?.cache_tile_index)===JSON.stringify([56,189,6]),"orthophoto tile bounds/index drift");
+  check(ortho?.artifact_receipt?.cache_last_modified_is_acquisition_date===false,"cache timestamp promoted as imagery acquisition date");
+  check(google?.artifact_receipt===null,"Google provider artifact receipt persisted");
+  exactKeys(street.character,["road","terrain_and_view","vegetation","utilities","buildings","frontage"],"street character",check);
+  for(const [name,item] of Object.entries(street.character??{})){exactKeys(item,["state","observed","render_use"],`street character ${name}`,check);check(item.state==="REFERENCE_ONLY_NEARBY"&&Array.isArray(item.observed)&&item.observed.length>0,`street character ${name} promoted or empty`);}
+  exactKeys(street.rendering_policy,["street_room_high_detail","exact_provider_geometry","provider_pixels_in_repository","legal_or_survey_promotion","live_attribution_required","street_view_live_reference_only"],"street rendering policy",check);
+  check(street.rendering_policy?.street_room_high_detail===true&&street.rendering_policy?.exact_provider_geometry===false&&street.rendering_policy?.provider_pixels_in_repository===false&&street.rendering_policy?.legal_or_survey_promotion===false&&street.rendering_policy?.live_attribution_required===true&&street.rendering_policy?.street_view_live_reference_only===true,"street rendering evidence separation weakened");
+  check(!/(data:image|image_key|pano(?:rama)?[_-]?id|base64)/i.test(JSON.stringify(street)),"provider image or panorama identifier persisted");
   return {ok:errors.length===0,assertions,errors};
 }
 
@@ -93,13 +130,17 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
     check(fs.existsSync(path.join(repoRoot,schemaPath)),"scene schema missing");
     check(fs.existsSync(path.join(repoRoot,providerPath)),"context provider registry missing");
     check(fs.existsSync(path.join(repoRoot,providerSchemaPath)),"context provider schema missing");
+    check(fs.existsSync(path.join(repoRoot,streetPath)),"street context observations missing");
+    check(fs.existsSync(path.join(repoRoot,streetSchemaPath)),"street context schema missing");
     check(fs.existsSync(path.join(repoRoot,viewerPath)),"viewable prototype missing");
     check(fs.existsSync(path.join(repoRoot,liveAdapterPath)),"live context adapter missing");
-    if(fs.existsSync(path.join(repoRoot,viewerPath))){const html=fs.readFileSync(path.join(repoRoot,viewerPath),"utf8");check(html.includes("neighbourhood-scene-v0.2.json")&&html.includes("OrbitControls")&&html.includes("CONCEPT MODE · LEGAL GATES OPEN"),"viewer is not bound to the scene/evidence UI");check(html.includes("INTELLIGENCE")&&html.includes("REALISTIC")&&html.includes("COMPARE")&&html.includes("renderPass")&&html.includes("context-providers-v0.1.json"),"synchronized renderer modes or provider interface missing");check(html.includes("One geometry graph")&&html.includes("Realism changes presentation—not evidence"),"one-Twin evidence separation missing");for(const step of STEPS)check(scene.navigation.some(x=>x.id===step),`viewer step source missing ${step}`);}
+    if(fs.existsSync(path.join(repoRoot,viewerPath))){const html=fs.readFileSync(path.join(repoRoot,viewerPath),"utf8");check(html.includes("neighbourhood-scene-v0.2.json")&&html.includes("OrbitControls")&&html.includes("CONCEPT MODE · LEGAL GATES OPEN"),"viewer is not bound to the scene/evidence UI");check(html.includes("INTELLIGENCE")&&html.includes("REALISTIC")&&html.includes("COMPARE")&&html.includes("renderPass")&&html.includes("context-providers-v0.1.json"),"synchronized renderer modes or provider interface missing");check(html.includes("street-context-v0.1.json")&&html.includes("street_room_high_detail")&&html.includes("Nearby street character observed July 2022"),"Street Room rendering or source disclosure missing");check(html.includes("One geometry graph")&&html.includes("Realism changes presentation—not evidence"),"one-Twin evidence separation missing");for(const step of STEPS)check(scene.navigation.some(x=>x.id===step),`viewer step source missing ${step}`);}
     for(const binding of scene.source_bindings.filter(x=>x.sha256!=="RUNTIME_ONLY_NOT_COMMITTED")){check(fs.existsSync(path.join(repoRoot,binding.path)),`source binding missing ${binding.path}`);if(fs.existsSync(path.join(repoRoot,binding.path)))check(shaAt(repoRoot,binding.path)===binding.sha256,`source binding hash mismatch ${binding.path}`);}
     const schema=read(schemaPath,repoRoot);check(schema.additionalProperties===false&&schema.properties?.scene_version?.const==="svartinge-neighbourhood-scene/v0.2","strict versioned schema missing");
     if(fs.existsSync(path.join(repoRoot,providerPath))){const providerResult=validateContextProviders(read(providerPath,repoRoot));assertions+=providerResult.assertions;errors.push(...providerResult.errors);}
     if(fs.existsSync(path.join(repoRoot,providerSchemaPath))){const providerSchema=read(providerSchemaPath,repoRoot);check(providerSchema.additionalProperties===false&&providerSchema.properties?.schema_version?.const==="svartinge-context-providers/v0.1","strict provider schema missing");}
+    if(fs.existsSync(path.join(repoRoot,streetPath))){const streetResult=validateStreetContext(read(streetPath,repoRoot));assertions+=streetResult.assertions;errors.push(...streetResult.errors);}
+    if(fs.existsSync(path.join(repoRoot,streetSchemaPath))){const streetSchema=read(streetSchemaPath,repoRoot);check(streetSchema.additionalProperties===false&&streetSchema.properties?.schema_version?.const==="svartinge-street-context/v0.1","strict street context schema missing");}
     if(fs.existsSync(path.join(repoRoot,liveAdapterPath))){const adapter=fs.readFileSync(path.join(repoRoot,liveAdapterPath),"utf8");check(adapter.includes("EXPLICIT_RUNTIME_CONFIG_ONLY")&&adapter.includes("LIVE_ONLY_NO_PERSISTENCE")&&adapter.includes("evidence_promotion_allowed: false"),"live adapter safety contract weakened");check(!/(localStorage|sessionStorage|document\.cookie|URLSearchParams)/.test(adapter),"live adapter persists or transports runtime credentials unsafely");}
   }
   return {ok:errors.length===0,assertions,errors};

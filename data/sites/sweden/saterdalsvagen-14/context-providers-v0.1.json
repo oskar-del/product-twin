@@ -33,14 +33,14 @@
     },
     {
       "provider_id": "NORRKOPING_ORTHOPHOTO",
-      "label": "Norrköping municipal orthophoto",
-      "capability": "8–10 cm ground texture and contextual plan reference",
+      "label": "Norrköping orthophoto cache · source date unresolved",
+      "capability": "Exact-point aerial coverage observed through the public EPSG:3010 tile cache; candidate ground texture and contextual plan reference",
       "state": "DOCUMENTED_NOT_CONNECTED",
       "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
       "delivery_mode": "MUNICIPAL_ORDER",
       "credential_configured": false,
       "source_url": "https://norrkoping.se/boende-trafik-och-miljo/lantmateri-och-kartor/flygbilder",
-      "limitations": ["Coverage, acquisition date, price and reuse terms must be confirmed for the exact plot.", "Orthophoto does not establish legal boundary or entitlement."]
+      "limitations": ["A grid-aligned tile at the recorded municipal point returned valid imagery, but acquisition date, imagery origin and layer-specific reuse terms remain unresolved.", "The layer name suggests an external Lantmäteriet orthophoto source; the municipal UI attribution alone is insufficient for promotion.", "Orthophoto does not establish legal boundary, surveyed terrain, access or entitlement."]
     },
     {
       "provider_id": "NORRKOPING_3D_CITY_MODEL",

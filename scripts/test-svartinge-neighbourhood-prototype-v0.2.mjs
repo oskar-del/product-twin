@@ -1,11 +1,13 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateContextProviders,validateSvartingePrototype} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateContextProviders,validateStreetContext,validateSvartingePrototype} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
+const streetBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/street-context-v0.1.json","utf8"));
 assert.equal(validateSvartingePrototype(baseline).ok,true,"baseline scene must validate");
 assert.equal(validateContextProviders(providerBaseline).ok,true,"baseline provider registry must validate");
+assert.equal(validateStreetContext(streetBaseline).ok,true,"baseline street context must validate");
 
 const attacks=[
   ["identity promoted",m=>m.subject.identity_scope="PROPERTY_REGISTER_VERIFIED","identity scope promoted"],
@@ -52,4 +54,21 @@ for(const [name,mutate,needle] of providerAttacks){
   const changed=structuredClone(providerBaseline);mutate(changed);const result=validateContextProviders(changed);
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length} attacks)`);
+const streetAttacks=[
+  ["Street View promoted",m=>m.observations.find(x=>x.provider_id==="GOOGLE_STREET_VIEW").evidence_role="AUTHORITATIVE_CONTEXT_CANDIDATE","Google Street View scope promoted"],
+  ["exact frontage invented",m=>m.observations.find(x=>x.provider_id==="GOOGLE_STREET_VIEW").exact_plot_frontage_confirmed=true,"provider content or geometry promoted"],
+  ["provider image persisted",m=>m.observations.find(x=>x.provider_id==="GOOGLE_STREET_VIEW").content_persisted=true,"provider content or geometry promoted"],
+  ["provider geometry extraction enabled",m=>m.observations.find(x=>x.provider_id==="GOOGLE_STREET_VIEW").geometry_extraction_allowed=true,"provider content or geometry promoted"],
+  ["Street View date promoted",m=>m.observations.find(x=>x.provider_id==="GOOGLE_STREET_VIEW").imagery_date="2026-08","Google Street View observation identity/date drift"],
+  ["orthophoto date invented",m=>m.observations.find(x=>x.provider_id==="NORRKOPING_ORTHOPHOTO").imagery_date="2025","orthophoto coverage or unresolved date misrepresented"],
+  ["orthophoto hash drift",m=>m.observations.find(x=>x.provider_id==="NORRKOPING_ORTHOPHOTO").artifact_receipt.sha256="0".repeat(64),"orthophoto hash or CRS drift"],
+  ["cache date promoted",m=>m.observations.find(x=>x.provider_id==="NORRKOPING_ORTHOPHOTO").artifact_receipt.cache_last_modified_is_acquisition_date=true,"cache timestamp promoted"],
+  ["Google provider receipt invented",m=>m.observations.find(x=>x.provider_id==="GOOGLE_STREET_VIEW").artifact_receipt={sha256:"0".repeat(64)},"Google provider artifact receipt persisted"],
+  ["street character promoted",m=>m.character.road.state="AUTHORITATIVE","street character road promoted or empty"],
+  ["street unknown field",m=>m.dashboard=true,"street context: unknown or missing fields"]
+];
+for(const [name,mutate,needle] of streetAttacks){
+  const changed=structuredClone(streetBaseline);mutate(changed);const result=validateStreetContext(changed);
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length} attacks)`);

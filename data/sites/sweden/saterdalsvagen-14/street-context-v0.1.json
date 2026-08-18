@@ -1,0 +1,105 @@
+{
+  "schema_version": "svartinge-street-context/v0.1",
+  "entity_type": "StreetContextObservationSet",
+  "subject": "SVÄRTINGE 54:28",
+  "focus": {
+    "name": "Säterdalsvägen immediate Street Room",
+    "detail_radius_m": 80,
+    "wider_context_policy": "LIGHTWEIGHT_CONTEXT_ONLY",
+    "geometry_policy": "PRODUCT_TWIN_GEOMETRY_ONLY_NO_PROVIDER_TRACING"
+  },
+  "observations": [
+    {
+      "observation_id": "OBS_SE_NOKA_ORTHO_TARGET_TILE",
+      "provider_id": "NORRKOPING_ORTHOPHOTO",
+      "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
+      "relationship_to_subject": "EXACT_RECORDED_MUNICIPAL_POINT_TILE",
+      "source_url": "https://kartor-cache.norrkoping.se/geowebcache/service/wms",
+      "observed_label": "extwms_lm_ortofoto",
+      "imagery_date": null,
+      "observed_at": "2026-08-18T01:18:17Z",
+      "artifact_receipt": {
+        "request_method": "GET",
+        "canonical_request": "https://kartor-cache.norrkoping.se/geowebcache/service/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&LAYERS=extwms_lm_ortofoto&WIDTH=256&HEIGHT=256&SRS=EPSG%3A3010&STYLES=&BBOX=122675.2%2C6503526.4%2C123494.4%2C6504345.6",
+        "response_status": 200,
+        "content_type": "image/png",
+        "byte_count": 123575,
+        "sha256": "bb67a2ecefe1f5bdb9aaa6b1fc0695cab72fdb4c726e6b1f73e704bf71902c3f",
+        "crs": "EPSG:3010",
+        "bounds": [122675.2, 6503526.4, 123494.4, 6504345.6],
+        "cache_tile_index": [56, 189, 6],
+        "cache_last_modified": "2026-07-18T14:56:17Z",
+        "cache_last_modified_is_acquisition_date": false
+      },
+      "content_persisted": false,
+      "geometry_extraction_allowed": false,
+      "exact_plot_frontage_confirmed": false,
+      "attribution": "NOKA UI displays © Norrköpings Kommun; exact imagery origin and layer-specific reuse terms remain unresolved.",
+      "limitations": [
+        "Grid-aligned EPSG:3010 tile coverage at the recorded municipal point was observed, but the layer title and capabilities do not establish acquisition date.",
+        "The machine name suggests an external Lantmäteriet orthophoto source; provenance must be reconciled before viewer integration.",
+        "The tile is not legal-boundary, terrain, height, access or entitlement evidence."
+      ]
+    },
+    {
+      "observation_id": "OBS_SE_GOOGLE_STREETVIEW_NEARBY_2022_07",
+      "provider_id": "GOOGLE_STREET_VIEW",
+      "evidence_role": "REFERENCE_ONLY",
+      "relationship_to_subject": "NEARBY_SAME_STREET_NOT_EXACT_PLOT_FRONTAGE",
+      "source_url": "https://www.google.com/maps/search/?api=1&query=S%C3%A4terdalsv%C3%A4gen%2014%2C%20Sv%C3%A4rtinge%2C%20Sweden",
+      "observed_label": "8 Säterdalsvägen",
+      "imagery_date": "2022-07",
+      "observed_at": "2026-08-18T01:23:00Z",
+      "artifact_receipt": null,
+      "content_persisted": false,
+      "geometry_extraction_allowed": false,
+      "exact_plot_frontage_confirmed": false,
+      "attribution": "Google Street View · imagery July 2022 · live attributed reference only",
+      "limitations": [
+        "Google snapped the address search to a panorama labelled 8 Säterdalsvägen, not an exact number-14 frontage confirmation.",
+        "The imagery is historical visual context and cannot establish current condition after July 2022.",
+        "No image, panorama, provider geometry or derived provider dataset is stored in Product Twin."
+      ]
+    }
+  ],
+  "character": {
+    "road": {
+      "state": "REFERENCE_ONLY_NEARBY",
+      "observed": ["narrow uncurbed local road", "asphalt carriageway with gravel shoulders and driveways", "no continuous pavement or urban kerb"],
+      "render_use": "MATERIAL_AND_CHARACTER_ONLY"
+    },
+    "terrain_and_view": {
+      "state": "REFERENCE_ONLY_NEARBY",
+      "observed": ["street corridor falls toward a lower distant landscape", "filtered long view between trees"],
+      "render_use": "ATMOSPHERE_AND_VIEW_CORRIDOR_ONLY"
+    },
+    "vegetation": {
+      "state": "REFERENCE_ONLY_NEARBY",
+      "observed": ["mixed mature birch and pine", "dense woodland edges", "informal grass and low scrub"],
+      "render_use": "SPECIES_MIX_AND_DENSITY_ONLY"
+    },
+    "utilities": {
+      "state": "REFERENCE_ONLY_NEARBY",
+      "observed": ["overhead lines on timber poles"],
+      "render_use": "ILLUSTRATIVE_STREET_CHARACTER_ONLY"
+    },
+    "buildings": {
+      "state": "REFERENCE_ONLY_NEARBY",
+      "observed": ["detached low-rise timber houses", "gable roofs", "red and pale painted timber façades", "dark and weathered roof finishes"],
+      "render_use": "PALETTE_AND_ARCHETYPES_ONLY"
+    },
+    "frontage": {
+      "state": "REFERENCE_ONLY_NEARBY",
+      "observed": ["individual informal driveways", "gravel and block-paved forecourts", "vegetation-led boundaries with occasional low posts or fences"],
+      "render_use": "ILLUSTRATIVE_STREET_CHARACTER_ONLY"
+    }
+  },
+  "rendering_policy": {
+    "street_room_high_detail": true,
+    "exact_provider_geometry": false,
+    "provider_pixels_in_repository": false,
+    "legal_or_survey_promotion": false,
+    "live_attribution_required": true,
+    "street_view_live_reference_only": true
+  }
+}

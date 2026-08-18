@@ -19,6 +19,8 @@ The v0.1 alpha remains the conservative evidentiary checkpoint. The v0.2 concept
 
 The viewer now presents that one scene graph through synchronized `INTELLIGENCE`, `REALISTIC` and `COMPARE` render profiles. The realistic profile changes materials, vegetation, atmosphere, roofs, roads, light and shadows only; it does not add spatial evidence or promote any source. `context-providers-v0.1.json` records the credential-safe path to municipal imagery/3D data, Mapbox, Google reference surfaces and Lantmäteriet terrain. Only local procedural realism is currently `CONNECTED`; external providers remain explicitly key-gated, documented-not-connected or research-only.
 
+The realistic-detail scope is now the immediate `Säterdalsvägen Street Room`, not a fully modelled neighbourhood. `street-context-v0.1.json` records exact-point NOKA aerial-cache coverage and a live Google Street View observation dated July 2022. Google snapped the address search to `8 Säterdalsvägen`, so its road, vegetation, utility and building character is `REFERENCE_ONLY_NEARBY`, not exact number-14 frontage evidence. No provider pixels, panorama identifiers or provider-derived geometry are committed. The viewer uses this record only for an 80 m high-detail visual zone; wider context remains lightweight.
+
 Run `npm run site:sweden:svartinge:prototype:gate` to rebuild and validate the v0.2 export and synchronized viewer. Run `npm run site:sweden:svartinge:prototype:serve` and open `http://127.0.0.1:4173/prototype/svartinge-neighbourhood/` to use it.
 
 ## Material discovery findings
