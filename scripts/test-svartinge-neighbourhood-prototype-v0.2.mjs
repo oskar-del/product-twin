@@ -64,6 +64,12 @@ const streetAttacks=[
   ["orthophoto hash drift",m=>m.observations.find(x=>x.provider_id==="NORRKOPING_ORTHOPHOTO").artifact_receipt.sha256="0".repeat(64),"orthophoto hash or CRS drift"],
   ["cache date promoted",m=>m.observations.find(x=>x.provider_id==="NORRKOPING_ORTHOPHOTO").artifact_receipt.cache_last_modified_is_acquisition_date=true,"cache timestamp promoted"],
   ["Google provider receipt invented",m=>m.observations.find(x=>x.provider_id==="GOOGLE_STREET_VIEW").artifact_receipt={sha256:"0".repeat(64)},"Google provider artifact receipt persisted"],
+  ["listing promoted",m=>m.observations.find(x=>x.provider_id==="HEMNET_LISTING").evidence_role="AUTHORITATIVE_CONTEXT_CANDIDATE","exact-address listing visual scope promoted"],
+  ["listing capture date invented",m=>m.observations.find(x=>x.provider_id==="HEMNET_LISTING").imagery_date="2026-08","listing gallery identity, date or artifact state drift"],
+  ["listing pixels persisted",m=>m.observations.find(x=>x.provider_id==="HEMNET_LISTING").content_persisted=true,"provider content or geometry promoted"],
+  ["listing geometry extraction",m=>m.observations.find(x=>x.provider_id==="HEMNET_LISTING").geometry_extraction_allowed=true,"provider content or geometry promoted"],
+  ["listing character promoted",m=>m.character.exact_plot_visual.state="AUTHORITATIVE","street character exact_plot_visual promoted or empty"],
+  ["listing pixels policy weakened",m=>m.rendering_policy.listing_pixels_in_repository=true,"street rendering evidence separation weakened"],
   ["street character promoted",m=>m.character.road.state="AUTHORITATIVE","street character road promoted or empty"],
   ["street unknown field",m=>m.dashboard=true,"street context: unknown or missing fields"]
 ];

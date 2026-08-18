@@ -29,9 +29,9 @@
         "required": ["observation_id", "provider_id", "evidence_role", "relationship_to_subject", "source_url", "observed_label", "imagery_date", "observed_at", "artifact_receipt", "content_persisted", "geometry_extraction_allowed", "exact_plot_frontage_confirmed", "attribution", "limitations"],
         "properties": {
           "observation_id": {"type": "string"},
-          "provider_id": {"enum": ["NORRKOPING_ORTHOPHOTO", "GOOGLE_STREET_VIEW"]},
-          "evidence_role": {"enum": ["AUTHORITATIVE_CONTEXT_CANDIDATE", "REFERENCE_ONLY"]},
-          "relationship_to_subject": {"enum": ["EXACT_RECORDED_MUNICIPAL_POINT_TILE", "NEARBY_SAME_STREET_NOT_EXACT_PLOT_FRONTAGE"]},
+          "provider_id": {"enum": ["NORRKOPING_ORTHOPHOTO", "GOOGLE_STREET_VIEW", "HEMNET_LISTING"]},
+          "evidence_role": {"enum": ["AUTHORITATIVE_CONTEXT_CANDIDATE", "REFERENCE_ONLY", "LISTED_REFERENCE"]},
+          "relationship_to_subject": {"enum": ["EXACT_RECORDED_MUNICIPAL_POINT_TILE", "NEARBY_SAME_STREET_NOT_EXACT_PLOT_FRONTAGE", "EXACT_ADDRESS_LISTING_GALLERY_NOT_SURVEY"]},
           "source_url": {"type": "string", "pattern": "^https://"},
           "observed_label": {"type": "string"},
           "imagery_date": {"type": ["string", "null"]},
@@ -70,27 +70,29 @@
     "character": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["road", "terrain_and_view", "vegetation", "utilities", "buildings", "frontage"],
+      "required": ["road", "terrain_and_view", "vegetation", "utilities", "buildings", "frontage", "exact_plot_visual"],
       "properties": {
         "road": {"$ref": "#/$defs/characterItem"},
         "terrain_and_view": {"$ref": "#/$defs/characterItem"},
         "vegetation": {"$ref": "#/$defs/characterItem"},
         "utilities": {"$ref": "#/$defs/characterItem"},
         "buildings": {"$ref": "#/$defs/characterItem"},
-        "frontage": {"$ref": "#/$defs/characterItem"}
+        "frontage": {"$ref": "#/$defs/characterItem"},
+        "exact_plot_visual": {"$ref": "#/$defs/characterItem"}
       }
     },
     "rendering_policy": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["street_room_high_detail", "exact_provider_geometry", "provider_pixels_in_repository", "legal_or_survey_promotion", "live_attribution_required", "street_view_live_reference_only"],
+      "required": ["street_room_high_detail", "exact_provider_geometry", "provider_pixels_in_repository", "legal_or_survey_promotion", "live_attribution_required", "street_view_live_reference_only", "listing_pixels_in_repository"],
       "properties": {
         "street_room_high_detail": {"const": true},
         "exact_provider_geometry": {"const": false},
         "provider_pixels_in_repository": {"const": false},
         "legal_or_survey_promotion": {"const": false},
         "live_attribution_required": {"const": true},
-        "street_view_live_reference_only": {"const": true}
+        "street_view_live_reference_only": {"const": true},
+        "listing_pixels_in_repository": {"const": false}
       }
     }
   },
@@ -100,9 +102,9 @@
       "additionalProperties": false,
       "required": ["state", "observed", "render_use"],
       "properties": {
-        "state": {"const": "REFERENCE_ONLY_NEARBY"},
+        "state": {"enum": ["REFERENCE_ONLY_NEARBY", "LISTED_REFERENCE"]},
         "observed": {"type": "array", "minItems": 1, "items": {"type": "string"}},
-        "render_use": {"enum": ["MATERIAL_AND_CHARACTER_ONLY", "ATMOSPHERE_AND_VIEW_CORRIDOR_ONLY", "SPECIES_MIX_AND_DENSITY_ONLY", "ILLUSTRATIVE_STREET_CHARACTER_ONLY", "PALETTE_AND_ARCHETYPES_ONLY"]}
+        "render_use": {"enum": ["MATERIAL_AND_CHARACTER_ONLY", "ATMOSPHERE_AND_VIEW_CORRIDOR_ONLY", "SPECIES_MIX_AND_DENSITY_ONLY", "ILLUSTRATIVE_STREET_CHARACTER_ONLY", "PALETTE_AND_ARCHETYPES_ONLY", "EXACT_LISTING_CHARACTER_ONLY"]}
       }
     }
   }

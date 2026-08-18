@@ -60,6 +60,27 @@
         "The imagery is historical visual context and cannot establish current condition after July 2022.",
         "No image, panorama, provider geometry or derived provider dataset is stored in Product Twin."
       ]
+    },
+    {
+      "observation_id": "OBS_SE_HEMNET_EXACT_ADDRESS_GALLERY",
+      "provider_id": "HEMNET_LISTING",
+      "evidence_role": "LISTED_REFERENCE",
+      "relationship_to_subject": "EXACT_ADDRESS_LISTING_GALLERY_NOT_SURVEY",
+      "source_url": "https://www.hemnet.se/bostad/tomt-svartinge-norrkopings-kommun-saterdalsvagen-14-20444697",
+      "observed_label": "Säterdalsvägen 14 · five-image listing gallery",
+      "imagery_date": null,
+      "observed_at": "2026-08-18T02:01:00Z",
+      "artifact_receipt": null,
+      "content_persisted": false,
+      "geometry_extraction_allowed": false,
+      "exact_plot_frontage_confirmed": false,
+      "attribution": "Hemnet listing 20444697 · seller/agent marketing evidence · live visual reference only",
+      "limitations": [
+        "The gallery is associated with the exact address listing but provides no capture dates, survey control, camera metadata or dimensional scale.",
+        "Visible ground works, road surfacing, conduits, vegetation and neighbouring buildings may have changed since photography.",
+        "The gallery cannot verify legal access, utility identity/capacity, boundary position, slope, elevation, entitlement or buildable area.",
+        "No listing image pixels or extracted listing geometry are stored in Product Twin."
+      ]
     }
   ],
   "character": {
@@ -92,6 +113,19 @@
       "state": "REFERENCE_ONLY_NEARBY",
       "observed": ["individual informal driveways", "gravel and block-paved forecourts", "vegetation-led boundaries with occasional low posts or fences"],
       "render_use": "ILLUSTRATIVE_STREET_CHARACTER_ONLY"
+    },
+    "exact_plot_visual": {
+      "state": "LISTED_REFERENCE",
+      "observed": [
+        "broad open panorama toward Glan",
+        "substantially cleared descending ground with exposed soil and rock",
+        "retained pine and birch woodland at plot edges",
+        "neighbouring low-rise roofs generally below the principal view line",
+        "freshly surfaced road edge and gravelled working area visible",
+        "brush and cut-timber piles visible",
+        "overhead lines and capped conduits visible but utility function and status unknown"
+      ],
+      "render_use": "EXACT_LISTING_CHARACTER_ONLY"
     }
   },
   "rendering_policy": {
@@ -100,6 +134,7 @@
     "provider_pixels_in_repository": false,
     "legal_or_survey_promotion": false,
     "live_attribution_required": true,
-    "street_view_live_reference_only": true
+    "street_view_live_reference_only": true,
+    "listing_pixels_in_repository": false
   }
 }

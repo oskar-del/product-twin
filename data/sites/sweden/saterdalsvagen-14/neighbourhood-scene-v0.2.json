@@ -115,45 +115,43 @@
       "id": "STREET_VIEW",
       "label": "Street room",
       "camera": [
-        -66,
-        2.6,
-        -48
+        -76,
+        3.1,
+        -62
       ],
       "target": [
-        -28,
-        1.2,
-        -16
+        0,
+        1.4,
+        -5
       ],
       "visible_groups": [
         "TERRAIN",
         "PLOT",
         "ROAD",
         "CONTEXT_BUILDING",
-        "POI",
-        "CONCEPT_BUILDING"
+        "POI"
       ],
       "cutaway": false
     },
     {
       "id": "PLOT_ORBIT",
-      "label": "Plot orbit",
+      "label": "Plot outlook",
       "camera": [
-        58,
-        46,
-        66
+        36,
+        28,
+        62
       ],
       "target": [
-        0,
-        1,
-        0
+        -14,
+        -3,
+        -170
       ],
       "visible_groups": [
         "TERRAIN",
         "PLOT",
         "ROAD",
         "CONTEXT_BUILDING",
-        "VIEW_DIRECTION",
-        "CONCEPT_BUILDING"
+        "VIEW_DIRECTION"
       ],
       "cutaway": false
     },

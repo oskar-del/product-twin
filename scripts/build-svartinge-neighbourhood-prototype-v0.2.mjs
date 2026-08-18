@@ -96,8 +96,8 @@ function buildScene(){
 
   const navigation=[
     {id:"NEIGHBOURHOOD_VIEW",label:"Neighbourhood view",camera:[150,125,185],target:[0,0,0],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","POI","CONCEPT_BUILDING"],cutaway:false},
-    {id:"STREET_VIEW",label:"Street room",camera:[-66,2.6,-48],target:[-28,1.2,-16],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","POI","CONCEPT_BUILDING"],cutaway:false},
-    {id:"PLOT_ORBIT",label:"Plot orbit",camera:[58,46,66],target:[0,1,0],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION","CONCEPT_BUILDING"],cutaway:false},
+    {id:"STREET_VIEW",label:"Street room",camera:[-76,3.1,-62],target:[0,1.4,-5],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
+    {id:"PLOT_ORBIT",label:"Plot outlook",camera:[36,28,62],target:[-14,-3,-170],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION"],cutaway:false},
     {id:"CONCEPT_HOUSE_ON_PLOT",label:"Concept house on plot",camera:[34,24,36],target:[1,2,1],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION","CONCEPT_BUILDING","OPENING"],cutaway:false},
     {id:"BUILDING_ORBIT",label:"Building orbit",camera:[18,11,17],target:[1,2,1],visible_groups:["PLOT","CONCEPT_BUILDING","OPENING","VIEW_DIRECTION"],cutaway:false},
     {id:"ENTER_BUILDING",label:"Enter building",camera:[-3.5,2.1,0.7],target:[3,1.6,-0.5],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE"],cutaway:true},

@@ -66,6 +66,10 @@ Google Maps resolved the number-14 address but its Street View action snapped to
 
 `street-context-v0.1.json` records these only as `REFERENCE_ONLY_NEARBY`. It explicitly does not confirm the exact number-14 frontage, current condition, dimensions, plot access, building positions or provider-derived geometry. The realistic renderer may use the species mix, palette, material character and archetypes, while Product Twin remains the sole owner of geometry.
 
+The exact-address Hemnet gallery was also inspected live on 2026-08-18. Its five listing images show a cleared descending plot with exposed soil and rock, retained pine/birch edges, neighbouring low-rise roofs below the main view line, a surfaced road edge and gravelled working area, overhead lines, brush/cut-timber piles and a broad outlook over Lake Glan. Capped conduits are visible, but their function, connection and capacity are unknown.
+
+This second observation is `LISTED_REFERENCE`, not survey or official-source evidence. No listing pixels, image URLs or extracted geometry are stored. The renderer uses only the qualitative character—clearing, scattered rock, vegetation edges, pitched-roof context and lake-facing outlook—and keeps the visual plot line, road geometry, building positions, access and utilities unverified.
+
 ## Evidence state
 
 Still not verified:
@@ -76,7 +80,7 @@ Still not verified:
 - legal access point;
 - utility capacity;
 - current entitlement and buildable envelope;
-- exact municipal imagery source/date/coverage;
+- exact municipal imagery source/date and reuse terms;
 - exact contextual building geometry and heights.
 
 The current procedural terrain, roads, trees and building massing remain `DERIVED` or local visualisation context. The house and room remain `CONCEPT`.
@@ -87,7 +91,7 @@ The current procedural terrain, roads, trees and building massing remain `DERIVE
 2. Obtain the accepted Lantmäteriet 1 m terrain asset and bind its byte hash, horizontal CRS and RH2000 vertical datum.
 3. Transform every accepted source into the common site origin while preserving the source artifact and lineage.
 4. Mount Mapbox as live licensed context and synchronize its camera with the seven-stage Product Twin navigation.
-5. Add Google Street View only as a live attributed reference panel; do not cache it or derive geometry from it.
+5. Add Google Street View and the listing gallery only as live attributed reference panels; do not cache them or derive geometry from them.
 6. Run alignment checks at neighbourhood, street, plot, building and room scales.
 7. Submit visual/evidence separation and source licences to Verification before promotion.
 
