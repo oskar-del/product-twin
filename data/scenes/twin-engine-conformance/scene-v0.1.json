@@ -1,0 +1,680 @@
+{
+  "scene_version": "twin-scene/v0.1",
+  "entity_type": "ConformanceSceneExport",
+  "scene_id": "SCENE_TWIN_ENGINE_CONFORMANCE_V01",
+  "generated_at": "2026-08-19T00:00:00Z",
+  "subject": {
+    "label": "twin-engine conformance fixture",
+    "identity_evidence_class": "CONCEPT",
+    "identity_scope": "SYNTHETIC_FIXTURE_NOT_A_REAL_SUBJECT"
+  },
+  "coordinate_system": {
+    "frame": "LOCAL_ENU",
+    "axes": {
+      "x": "EAST",
+      "y": "UP",
+      "z": "NORTH"
+    },
+    "origin_wgs84": [
+      0,
+      0
+    ],
+    "horizontal_reference": "EPSG:4326 origin (null island — deliberately not a real site)",
+    "vertical_reference": "LOCAL_RELATIVE_UNCALIBRATED",
+    "linear_units": "metre",
+    "evidence_class": "CONCEPT",
+    "limitations": [
+      "Origin is null island so the fixture can never be mistaken for a site."
+    ]
+  },
+  "source_bindings": [
+    {
+      "path": "scripts/build-twin-engine-conformance-scene.mjs",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "FIXTURE_GENERATOR"
+    }
+  ],
+  "evidence_classes": [
+    "AUTHORITATIVE",
+    "INDICATIVE",
+    "DERIVED",
+    "REPORTED_UNVERIFIED",
+    "CONCEPT"
+  ],
+  "legal_claim_policy": {
+    "visualisation_allowed": true,
+    "concept_design_allowed": true,
+    "blocked_claims": [
+      "LEGAL_BOUNDARY",
+      "REGISTERED_AREA",
+      "ENTITLEMENT",
+      "BUILDABLE_ENVELOPE",
+      "LEGAL_ACCESS",
+      "UTILITY_CAPACITY",
+      "SURVEYED_TERRAIN",
+      "FINISHED_FLOOR_LEVEL"
+    ],
+    "rule": "A fixture may claim nothing. It exists to exercise the renderer."
+  },
+  "presentation": {
+    "profiles": [
+      "INTELLIGENCE",
+      "REALISTIC",
+      "COMPARE"
+    ],
+    "default_profile": "INTELLIGENCE",
+    "default_stage": "SITE"
+  },
+  "navigation": [
+    {
+      "id": "SITE",
+      "label": "Site",
+      "camera": [
+        52,
+        40,
+        64
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "PLOT",
+        "ROAD",
+        "CONTEXT_BUILDING",
+        "POI",
+        "CONCEPT_BUILDING",
+        "VIEW_DIRECTION",
+        "ENVIRONMENTAL_ANCHOR"
+      ],
+      "cutaway": false,
+      "labels": true
+    },
+    {
+      "id": "PLOT",
+      "label": "Plot",
+      "camera": [
+        22,
+        15,
+        26
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "PLOT",
+        "ROAD",
+        "CONCEPT_BUILDING",
+        "POI"
+      ],
+      "cutaway": false,
+      "labels": true
+    },
+    {
+      "id": "BUILDING",
+      "label": "Building",
+      "camera": [
+        11,
+        7,
+        13
+      ],
+      "target": [
+        0,
+        2.5,
+        0
+      ],
+      "visible_groups": [
+        "CONCEPT_BUILDING",
+        "OPENING",
+        "TERRAIN"
+      ],
+      "cutaway": false,
+      "labels": false
+    },
+    {
+      "id": "ROOM",
+      "label": "Room",
+      "camera": [
+        2.4,
+        1.7,
+        3.2
+      ],
+      "target": [
+        0,
+        1.4,
+        0
+      ],
+      "visible_groups": [
+        "ROOM",
+        "OPENING",
+        "FURNITURE"
+      ],
+      "cutaway": true,
+      "labels": false,
+      "on_enter_open_element": "ROOM_MAIN"
+    }
+  ],
+  "studies": {
+    "solar": {
+      "evidence_class": "DERIVED",
+      "coordinate": [
+        0,
+        0
+      ],
+      "date": "2026-06-21",
+      "interactive_hour_range": [
+        5,
+        21
+      ],
+      "utc_offset_hours": 0,
+      "limitations": [
+        "Analytical sun direction only."
+      ]
+    }
+  },
+  "elements": [
+    {
+      "id": "TERRAIN_FIXTURE",
+      "type": "TERRAIN",
+      "label": "Fixture terrain",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 80,
+        "segments": 4,
+        "vertices": [
+          [
+            -40,
+            -2.2182,
+            -40
+          ],
+          [
+            -20,
+            -1.9293,
+            -40
+          ],
+          [
+            0,
+            -0.667,
+            -40
+          ],
+          [
+            20,
+            0.5954,
+            -40
+          ],
+          [
+            40,
+            0.8843,
+            -40
+          ],
+          [
+            -40,
+            -1.0633,
+            -20
+          ],
+          [
+            -20,
+            -0.7743,
+            -20
+          ],
+          [
+            0,
+            0.488,
+            -20
+          ],
+          [
+            20,
+            1.7503,
+            -20
+          ],
+          [
+            40,
+            2.0393,
+            -20
+          ],
+          [
+            -40,
+            -0.4513,
+            0
+          ],
+          [
+            -20,
+            -0.1623,
+            0
+          ],
+          [
+            0,
+            1.1,
+            0
+          ],
+          [
+            20,
+            2.3623,
+            0
+          ],
+          [
+            40,
+            2.6513,
+            0
+          ],
+          [
+            -40,
+            -1.0633,
+            20
+          ],
+          [
+            -20,
+            -0.7743,
+            20
+          ],
+          [
+            0,
+            0.488,
+            20
+          ],
+          [
+            20,
+            1.7503,
+            20
+          ],
+          [
+            40,
+            2.0393,
+            20
+          ],
+          [
+            -40,
+            -2.2182,
+            40
+          ],
+          [
+            -20,
+            -1.9293,
+            40
+          ],
+          [
+            0,
+            -0.667,
+            40
+          ],
+          [
+            20,
+            0.5954,
+            40
+          ],
+          [
+            40,
+            0.8843,
+            40
+          ]
+        ],
+        "method": "ANALYTIC_SURFACE",
+        "height_reference": "LOCAL_RELATIVE"
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
+      ]
+    },
+    {
+      "id": "PLOT_FIXTURE",
+      "type": "PLOT",
+      "label": "Fixture plot outline",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "EXTRUDED_POLYGON",
+        "points_xz": [
+          [
+            -16,
+            -13
+          ],
+          [
+            17,
+            -14
+          ],
+          [
+            18,
+            14
+          ],
+          [
+            -15,
+            13
+          ]
+        ],
+        "height": 0.35,
+        "base_y": 0.1,
+        "area_m2": 900
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
+      ]
+    },
+    {
+      "id": "ROAD_FIXTURE",
+      "type": "ROAD",
+      "label": "Fixture road",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            -40,
+            0.05,
+            -19
+          ],
+          [
+            -6,
+            0.05,
+            -17
+          ],
+          [
+            24,
+            0.05,
+            -15
+          ],
+          [
+            40,
+            0.05,
+            -14
+          ]
+        ],
+        "width_m": 5.5
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
+      ]
+    },
+    {
+      "id": "CONTEXT_BUILDING_A",
+      "type": "CONTEXT_BUILDING",
+      "label": "Neighbour A",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          9,
+          5,
+          7
+        ],
+        "position": [
+          -27,
+          2.5,
+          6
+        ],
+        "rotation_y_deg": 12
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
+      ]
+    },
+    {
+      "id": "CONTEXT_BUILDING_B",
+      "type": "CONTEXT_BUILDING",
+      "label": "Neighbour B",
+      "evidence_class": "REPORTED_UNVERIFIED",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          8,
+          4.5,
+          8
+        ],
+        "position": [
+          28,
+          2.25,
+          -2
+        ],
+        "rotation_y_deg": -8
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building.",
+        "Volume reported by a third party and never checked."
+      ]
+    },
+    {
+      "id": "HOUSE_BODY",
+      "type": "CONCEPT_BUILDING",
+      "label": "Concept house body",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          11,
+          5.6,
+          8
+        ],
+        "position": [
+          0,
+          2.8,
+          0
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
+      ]
+    },
+    {
+      "id": "HOUSE_WING",
+      "type": "CONCEPT_BUILDING",
+      "label": "Concept house wing",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          5,
+          3.2,
+          5
+        ],
+        "position": [
+          7.4,
+          1.6,
+          2.6
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
+      ]
+    },
+    {
+      "id": "OPENING_SOUTH",
+      "type": "OPENING",
+      "label": "South glazing",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4.2,
+          2.1,
+          0.16
+        ],
+        "position": [
+          0,
+          2.2,
+          4.02
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
+      ]
+    },
+    {
+      "id": "ROOM_MAIN",
+      "type": "ROOM",
+      "label": "Main room volume",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          6.5,
+          2.7,
+          5.4
+        ],
+        "position": [
+          -1.4,
+          1.4,
+          0
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "LIVING"
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
+      ]
+    },
+    {
+      "id": "FURNITURE_SOFA",
+      "type": "FURNITURE",
+      "label": "Sofa placeholder",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.3,
+          0.75,
+          0.95
+        ],
+        "position": [
+          -2.1,
+          0.38,
+          1.4
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
+      ]
+    },
+    {
+      "id": "ADDRESS_ANCHOR",
+      "type": "ANCHOR",
+      "label": "Coordinate anchor",
+      "evidence_class": "AUTHORITATIVE",
+      "geometry": {
+        "primitive": "MARKER",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building.",
+        "Marks the frame origin, nothing else."
+      ]
+    },
+    {
+      "id": "POI_SCHOOL",
+      "type": "POI",
+      "label": "Fixture point of interest",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "DIAGRAMMATIC_MARKER",
+        "position": [
+          -34,
+          0,
+          28
+        ],
+        "distance_m": 44,
+        "placement_method": "DIAGRAMMATIC_BEARING_AND_DISTANCE"
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
+      ]
+    },
+    {
+      "id": "VIEW_SOUTHWEST",
+      "type": "VIEW_DIRECTION",
+      "label": "Fixture view direction",
+      "evidence_class": "REPORTED_UNVERIFIED",
+      "geometry": {
+        "primitive": "DIRECTION_CONE",
+        "origin": [
+          0,
+          3.4,
+          0
+        ],
+        "azimuth_deg": 225,
+        "length_m": 38,
+        "spread_deg": 26
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building.",
+        "Direction only; no visibility analysis."
+      ]
+    },
+    {
+      "id": "SOLAR_PATH",
+      "type": "ENVIRONMENTAL_ANCHOR",
+      "label": "Fixture solar path",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "SOLAR_ARC",
+        "latitude_deg": 0,
+        "longitude_deg": 0,
+        "study_date": "2026-06-21",
+        "hours": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18
+        ]
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
+      ]
+    }
+  ]
+}
