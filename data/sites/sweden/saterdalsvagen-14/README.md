@@ -17,7 +17,9 @@ The Project and Design Scenario pin the exact Site Twin file hash. Seller claims
 
 The v0.1 alpha remains the conservative evidentiary checkpoint. The v0.2 concept prototype adds a viewable, reproducible 3D scene using an indicative municipal-map trace, derived terrain/roads/context massing, reported view direction and concept house/room geometry. The full `NEIGHBOURHOOD VIEW → STREET VIEW → PLOT ORBIT → CONCEPT HOUSE ON PLOT → BUILDING ORBIT → ENTER BUILDING → ROOM` progression is available without closing legal, entitlement, access, utility or surveyed-terrain gates.
 
-Run `npm run site:sweden:svartinge:prototype:gate` to rebuild and validate the v0.2 export. Run `npm run site:sweden:svartinge:prototype:serve` and open `http://127.0.0.1:4173/prototype/svartinge-neighbourhood/` to use the viewer.
+The viewer now presents that one scene graph through synchronized `INTELLIGENCE`, `REALISTIC` and `COMPARE` render profiles. The realistic profile changes materials, vegetation, atmosphere, roofs, roads, light and shadows only; it does not add spatial evidence or promote any source. `context-providers-v0.1.json` records the credential-safe path to municipal imagery/3D data, Mapbox, Google reference surfaces and Lantmäteriet terrain. Only local procedural realism is currently `CONNECTED`; external providers remain explicitly key-gated, documented-not-connected or research-only.
+
+Run `npm run site:sweden:svartinge:prototype:gate` to rebuild and validate the v0.2 export and synchronized viewer. Run `npm run site:sweden:svartinge:prototype:serve` and open `http://127.0.0.1:4173/prototype/svartinge-neighbourhood/` to use it.
 
 ## Material discovery findings
 

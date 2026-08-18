@@ -1,0 +1,112 @@
+{
+  "schema_version": "svartinge-context-providers/v0.1",
+  "entity_type": "SpatialContextProviderRegistry",
+  "subject": "SVÄRTINGE 54:28",
+  "policy": {
+    "no_committed_credentials": true,
+    "no_provider_content_reclassified": true,
+    "restricted_tiles_live_only": true,
+    "attribution_required": true
+  },
+  "providers": [
+    {
+      "provider_id": "LOCAL_PROCEDURAL_REALISM",
+      "label": "Spatial Studio procedural context",
+      "capability": "Naturalistic materials, trees, atmosphere, roofs, roads and lighting from the existing scene graph",
+      "state": "CONNECTED",
+      "evidence_role": "LOCAL_VISUALISATION",
+      "delivery_mode": "LOCAL_PROCEDURAL",
+      "credential_configured": false,
+      "source_url": "https://github.com/oskar-del/product-twin",
+      "limitations": ["Visual treatment only; it does not add or promote spatial evidence.", "Vegetation species, façade materials and roof appearance are contextual design language unless separately sourced."]
+    },
+    {
+      "provider_id": "NORRKOPING_OBLIQUE_IMAGERY",
+      "label": "Norrköping oblique aerial imagery 2016–2025",
+      "capability": "Downloadable local visual reference for roofs, vegetation, roads and neighbourhood character",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
+      "delivery_mode": "DOWNLOAD_OR_WMS",
+      "credential_configured": false,
+      "source_url": "https://norrkoping.se/boende-trafik-och-miljo/lantmateri-och-kartor/flygbilder",
+      "limitations": ["Must be captured with date, coverage, licence and immutable receipt before evidence promotion.", "Image interpretation remains separate from surveyed geometry."]
+    },
+    {
+      "provider_id": "NORRKOPING_ORTHOPHOTO",
+      "label": "Norrköping municipal orthophoto",
+      "capability": "8–10 cm ground texture and contextual plan reference",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
+      "delivery_mode": "MUNICIPAL_ORDER",
+      "credential_configured": false,
+      "source_url": "https://norrkoping.se/boende-trafik-och-miljo/lantmateri-och-kartor/flygbilder",
+      "limitations": ["Coverage, acquisition date, price and reuse terms must be confirmed for the exact plot.", "Orthophoto does not establish legal boundary or entitlement."]
+    },
+    {
+      "provider_id": "NORRKOPING_3D_CITY_MODEL",
+      "label": "Norrköping municipal 3D city model",
+      "capability": "Terrain, draped orthophoto and contextual building models",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
+      "delivery_mode": "MUNICIPAL_ORDER",
+      "credential_configured": false,
+      "source_url": "https://norrkoping.se/boende-trafik-och-miljo/lantmateri-och-kartor/oppna-kartdata-och-tjanster",
+      "limitations": ["Exact Svärtinge coverage, level of detail, date, licence and delivery format remain unverified.", "Model heights must retain municipal source metadata and cannot be treated as survey set-out without acceptance."]
+    },
+    {
+      "provider_id": "NORRKOPING_PROPERTY_EXTRACT",
+      "label": "Norrköping property-boundary DWG extract",
+      "capability": "Municipal property geometry in SWEREF 99 16 30",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
+      "delivery_mode": "DOWNLOAD_OR_WMS",
+      "credential_configured": false,
+      "source_url": "https://norrkoping.se/boende-trafik-och-miljo/lantmateri-och-kartor/oppna-kartdata-och-tjanster",
+      "limitations": ["The municipality states that displayed boundaries have no legal effect and may be spatially misleading.", "Rights and joint facilities may be incomplete; legal boundary gate remains open."]
+    },
+    {
+      "provider_id": "MAPBOX_STANDARD_SATELLITE",
+      "label": "Mapbox Standard Satellite and Terrain-DEM",
+      "capability": "Live satellite, terrain, 3D buildings, lighting and shadows behind the Product Twin overlay",
+      "state": "KEY_REQUIRED",
+      "evidence_role": "LIVE_VISUAL_CONTEXT",
+      "delivery_mode": "LIVE_TILES",
+      "credential_configured": false,
+      "source_url": "https://docs.mapbox.com/mapbox-gl-js/example/add-terrain/",
+      "limitations": ["Requires a runtime-restricted public token and Mapbox attribution.", "Tiles remain live visual context; no tracing or derivative commercial vector dataset without appropriate licence."]
+    },
+    {
+      "provider_id": "GOOGLE_STREET_VIEW",
+      "label": "Google Street View",
+      "capability": "Synchronized street-level reference panel",
+      "state": "RESEARCH_ONLY",
+      "evidence_role": "REFERENCE_ONLY",
+      "delivery_mode": "LIVE_EMBED",
+      "credential_configured": false,
+      "source_url": "https://developers.google.com/maps/documentation/streetview/policies",
+      "limitations": ["Must remain a live, attributed Google Maps surface with required privacy and terms treatment.", "Imagery cannot be prefetched, stored or used to extract geometry."]
+    },
+    {
+      "provider_id": "GOOGLE_PHOTOREALISTIC_3D_TILES",
+      "label": "Google Photorealistic 3D Tiles",
+      "capability": "Live photorealistic neighbourhood background with custom concept overlay",
+      "state": "KEY_REQUIRED",
+      "evidence_role": "LIVE_VISUAL_CONTEXT",
+      "delivery_mode": "LIVE_TILES",
+      "credential_configured": false,
+      "source_url": "https://developers.google.com/maps/documentation/tile/policies",
+      "limitations": ["Requires API access, billing, visible dynamic attribution and compliance with EEA terms.", "Custom geometry may be overlaid but cannot be traced or derived from Google tiles; offline storage is prohibited."]
+    },
+    {
+      "provider_id": "LANTMATERIET_TERRAIN_GRID_1_PLUS",
+      "label": "Lantmäteriet Terrain Model grid 1+",
+      "capability": "Airborne-laser-derived national terrain grid",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
+      "delivery_mode": "DOWNLOAD_OR_WMS",
+      "credential_configured": false,
+      "source_url": "https://www.lantmateriet.se/globalassets/geodata/geodataprodukter/hojddata/e_mhm1_plus.pdf",
+      "limitations": ["Exact tile, acquisition/processing date, horizontal CRS, vertical datum, licence and coverage must be bound before use.", "The current prototype retains LOCAL_RELATIVE_UNCALIBRATED terrain until an accepted source is attached."]
+    }
+  ]
+}

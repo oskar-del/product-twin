@@ -6,10 +6,13 @@ import {fileURLToPath} from "node:url";
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const scenePath="data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json";
 const schemaPath="config/spatial/svartinge-neighbourhood-scene-v0.2.schema.json";
+const providerPath="data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json";
+const providerSchemaPath="config/spatial/svartinge-context-providers-v0.1.schema.json";
 const viewerPath="prototype/svartinge-neighbourhood/index.html";
 const CLASSES=["AUTHORITATIVE","INDICATIVE","DERIVED","REPORTED_UNVERIFIED","CONCEPT"];
 const STEPS=["NEIGHBOURHOOD_VIEW","STREET_VIEW","PLOT_ORBIT","CONCEPT_HOUSE_ON_PLOT","BUILDING_ORBIT","ENTER_BUILDING","ROOM"];
 const BLOCKED=["LEGAL_BOUNDARY","REGISTERED_AREA","ENTITLEMENT","BUILDABLE_ENVELOPE","LEGAL_ACCESS","UTILITY_CAPACITY","SURVEYED_TERRAIN","FINISHED_FLOOR_LEVEL"];
+const PROVIDER_STATES=["CONNECTED","EXECUTABLE_NOT_TESTED","DOCUMENTED_NOT_CONNECTED","KEY_REQUIRED","RESEARCH_ONLY"];
 const FORBIDDEN_LOCAL_KEYS=new Set(["owner","owners","asking_price","sale_price","price","transaction","transactions","valuation","comparables","utility_capacity_verified","legal_access_verified","entitled"]);
 const read=(p,r=root)=>JSON.parse(fs.readFileSync(path.join(r,p),"utf8"));
 const shaAt=(r,p)=>crypto.createHash("sha256").update(fs.readFileSync(path.join(r,p))).digest("hex");
@@ -21,6 +24,29 @@ function walk(value,name="scene",errors=[]){
   for(const [k,v] of Object.entries(value)){if(FORBIDDEN_LOCAL_KEYS.has(k.toLowerCase()))errors.push(`${name}.${k}: forbidden external fact payload`);walk(v,`${name}.${k}`,errors);}return errors;
 }
 function polygonArea(points){let twice=0;for(let i=0;i<points.length;i++){const a=points[i],b=points[(i+1)%points.length];twice+=a[0]*b[1]-b[0]*a[1];}return Math.abs(twice)/2;}
+
+export function validateContextProviders(registry){
+  const errors=[];let assertions=0;const check=(ok,msg)=>{assertions++;if(!ok)errors.push(msg);};
+  exactKeys(registry,["schema_version","entity_type","subject","policy","providers"],"provider registry",check);
+  check(registry.schema_version==="svartinge-context-providers/v0.1","provider schema version drift");
+  check(registry.entity_type==="SpatialContextProviderRegistry"&&registry.subject==="SVÄRTINGE 54:28","provider subject drift");
+  check(registry.policy?.no_committed_credentials===true&&registry.policy?.no_provider_content_reclassified===true&&registry.policy?.restricted_tiles_live_only===true&&registry.policy?.attribution_required===true,"provider safety policy weakened");
+  const providers=registry.providers??[],ids=new Set();check(providers.length>=8,"provider stack incomplete");
+  for(const provider of providers){
+    exactKeys(provider,["provider_id","label","capability","state","evidence_role","delivery_mode","credential_configured","source_url","limitations"],provider.provider_id??"provider",check);
+    check(Boolean(provider.provider_id&&!ids.has(provider.provider_id)),`${provider.provider_id||"provider"}: missing or duplicate provider id`);ids.add(provider.provider_id);
+    check(PROVIDER_STATES.includes(provider.state),`${provider.provider_id}: invalid provider state`);
+    check(provider.credential_configured===false,`${provider.provider_id}: credential state must remain redacted false`);
+    check(/^https:\/\//.test(provider.source_url??""),`${provider.provider_id}: authoritative documentation URL missing`);
+    check(Array.isArray(provider.limitations)&&provider.limitations.length>0,`${provider.provider_id}: provider limitations missing`);
+  }
+  check(providers.filter(x=>x.state==="CONNECTED").length===1&&providers.find(x=>x.state==="CONNECTED")?.provider_id==="LOCAL_PROCEDURAL_REALISM","external provider falsely marked connected");
+  check(providers.find(x=>x.provider_id==="MAPBOX_STANDARD_SATELLITE")?.state==="KEY_REQUIRED","Mapbox access state promoted");
+  check(providers.find(x=>x.provider_id==="GOOGLE_STREET_VIEW")?.state==="RESEARCH_ONLY","Street View reference state promoted");
+  check(providers.find(x=>x.provider_id==="GOOGLE_PHOTOREALISTIC_3D_TILES")?.state==="KEY_REQUIRED","Google 3D Tiles access state promoted");
+  check(!/(api[_-]?key|access[_-]?token|password|connection[_-]?string|client[_-]?secret)\s*[\":=]+\s*[\"']?(?!required|false|null)/i.test(JSON.stringify(registry)),"provider registry contains a possible credential payload");
+  return {ok:errors.length===0,assertions,errors};
+}
 
 export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}={}){
   const errors=[];let assertions=0;const check=(ok,msg)=>{assertions++;if(!ok)errors.push(msg);};
@@ -64,10 +90,14 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
   walk(scene).forEach(e=>errors.push(e));
   if(checkFiles){
     check(fs.existsSync(path.join(repoRoot,schemaPath)),"scene schema missing");
+    check(fs.existsSync(path.join(repoRoot,providerPath)),"context provider registry missing");
+    check(fs.existsSync(path.join(repoRoot,providerSchemaPath)),"context provider schema missing");
     check(fs.existsSync(path.join(repoRoot,viewerPath)),"viewable prototype missing");
-    if(fs.existsSync(path.join(repoRoot,viewerPath))){const html=fs.readFileSync(path.join(repoRoot,viewerPath),"utf8");check(html.includes("neighbourhood-scene-v0.2.json")&&html.includes("OrbitControls")&&html.includes("CONCEPT MODE · LEGAL GATES OPEN"),"viewer is not bound to the scene/evidence UI");for(const step of STEPS)check(scene.navigation.some(x=>x.id===step),`viewer step source missing ${step}`);}
+    if(fs.existsSync(path.join(repoRoot,viewerPath))){const html=fs.readFileSync(path.join(repoRoot,viewerPath),"utf8");check(html.includes("neighbourhood-scene-v0.2.json")&&html.includes("OrbitControls")&&html.includes("CONCEPT MODE · LEGAL GATES OPEN"),"viewer is not bound to the scene/evidence UI");check(html.includes("INTELLIGENCE")&&html.includes("REALISTIC")&&html.includes("COMPARE")&&html.includes("renderPass")&&html.includes("context-providers-v0.1.json"),"synchronized renderer modes or provider interface missing");check(html.includes("One geometry graph")&&html.includes("Realism changes presentation—not evidence"),"one-Twin evidence separation missing");for(const step of STEPS)check(scene.navigation.some(x=>x.id===step),`viewer step source missing ${step}`);}
     for(const binding of scene.source_bindings.filter(x=>x.sha256!=="RUNTIME_ONLY_NOT_COMMITTED")){check(fs.existsSync(path.join(repoRoot,binding.path)),`source binding missing ${binding.path}`);if(fs.existsSync(path.join(repoRoot,binding.path)))check(shaAt(repoRoot,binding.path)===binding.sha256,`source binding hash mismatch ${binding.path}`);}
     const schema=read(schemaPath,repoRoot);check(schema.additionalProperties===false&&schema.properties?.scene_version?.const==="svartinge-neighbourhood-scene/v0.2","strict versioned schema missing");
+    if(fs.existsSync(path.join(repoRoot,providerPath))){const providerResult=validateContextProviders(read(providerPath,repoRoot));assertions+=providerResult.assertions;errors.push(...providerResult.errors);}
+    if(fs.existsSync(path.join(repoRoot,providerSchemaPath))){const providerSchema=read(providerSchemaPath,repoRoot);check(providerSchema.additionalProperties===false&&providerSchema.properties?.schema_version?.const==="svartinge-context-providers/v0.1","strict provider schema missing");}
   }
   return {ok:errors.length===0,assertions,errors};
 }

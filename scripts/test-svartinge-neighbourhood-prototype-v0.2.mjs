@@ -1,9 +1,11 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateSvartingePrototype} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateContextProviders,validateSvartingePrototype} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
+const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
 assert.equal(validateSvartingePrototype(baseline).ok,true,"baseline scene must validate");
+assert.equal(validateContextProviders(providerBaseline).ok,true,"baseline provider registry must validate");
 
 const attacks=[
   ["identity promoted",m=>m.subject.identity_scope="PROPERTY_REGISTER_VERIFIED","identity scope promoted"],
@@ -36,4 +38,18 @@ for(const [name,mutate,needle] of attacks){
   const changed=structuredClone(baseline);mutate(changed);const result=validateSvartingePrototype(changed);
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length} attacks)`);
+
+const providerAttacks=[
+  ["provider schema mutated",m=>m.schema_version="svartinge-context-providers/v9","provider schema version drift"],
+  ["external source marked connected",m=>m.providers.find(x=>x.provider_id==="MAPBOX_STANDARD_SATELLITE").state="CONNECTED","external provider falsely marked connected"],
+  ["Mapbox key gate removed",m=>m.providers.find(x=>x.provider_id==="MAPBOX_STANDARD_SATELLITE").state="EXECUTABLE_NOT_TESTED","Mapbox access state promoted"],
+  ["Street View promoted",m=>m.providers.find(x=>x.provider_id==="GOOGLE_STREET_VIEW").state="CONNECTED","Street View reference state promoted"],
+  ["credential flag promoted",m=>m.providers[0].credential_configured=true,"credential state must remain redacted false"],
+  ["provider limitation erased",m=>m.providers[0].limitations=[],"provider limitations missing"],
+  ["unknown provider field",m=>m.providers[0].token="secret","unknown or missing fields"]
+];
+for(const [name,mutate,needle] of providerAttacks){
+  const changed=structuredClone(providerBaseline);mutate(changed);const result=validateContextProviders(changed);
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length} attacks)`);
