@@ -1,0 +1,92 @@
+{
+  "name": "product-twin-mcp",
+  "version": "0.4",
+  "tools": [
+    {
+      "name": "search_twins",
+      "purpose": "Search curated Product/Material Twins by design, dimensional, commercial and readiness constraints.",
+      "input": {
+        "query": "string",
+        "kind": "object|material|fixture|appliance|system?",
+        "space_type": "string?",
+        "country": "string?",
+        "max_price_minor": "number?",
+        "currency": "string?",
+        "max_width_mm": "number?",
+        "max_depth_mm": "number?",
+        "available_only": "boolean?",
+        "render_ready_only": "boolean?",
+        "rights_ready_only": "boolean?"
+      }
+    },
+    {
+      "name": "find_substitutes",
+      "purpose": "Find cheaper/similar replacements for a placed Twin.",
+      "input": {
+        "twin_id": "string",
+        "project_id": "string?",
+        "placement_id": "string?",
+        "max_price_minor": "number?",
+        "require_same_fit": "boolean?",
+        "country": "string?",
+        "mode": "designer|value|sale|available_now"
+      }
+    },
+    {
+      "name": "swap_placement",
+      "purpose": "Replace one placed Product Twin while preserving project/space/transform and record the behavioural event.",
+      "input": {
+        "placement_id": "string",
+        "to_twin_id": "string",
+        "reason": "string?"
+      }
+    },
+    {
+      "name": "get_project_budget",
+      "purpose": "Return current room/project product and material totals plus unresolved lines.",
+      "input": {
+        "project_id": "string",
+        "space_id": "string?"
+      }
+    },
+    {
+      "name": "create_renovation_plan",
+      "purpose": "Create an existing\u2192proposed plan over a Spatial Twin.",
+      "input": {
+        "project_id": "string",
+        "spatial_twin_id": "string",
+        "instruction": "string"
+      }
+    },
+    {
+      "name": "apply_renovation_intervention",
+      "purpose": "Retain/remove/replace/add a spatial element or Product/Material Twin.",
+      "input": {
+        "renovation_plan_id": "string",
+        "kind": "retain|remove|replace|add",
+        "target_kind": "surface|opening|existing_object|placement|space",
+        "target_id": "string?",
+        "replacement_twin_id": "string?",
+        "quantity": "number?",
+        "unit": "ea|m2|lm|m3?"
+      }
+    },
+    {
+      "name": "generate_bom",
+      "purpose": "Generate procurement-ready product/material lines from project placements and renovation interventions.",
+      "input": {
+        "project_id": "string",
+        "renovation_plan_id": "string?"
+      }
+    },
+    {
+      "name": "ingest_spatial_capture",
+      "purpose": "Attach a Polycam/RoomPlan/manual capture to a project as a Spatial Twin.",
+      "input": {
+        "project_id": "string",
+        "source": "polycam|roomplan|manual",
+        "source_capture_id": "string?"
+      }
+    }
+  ]
+}
