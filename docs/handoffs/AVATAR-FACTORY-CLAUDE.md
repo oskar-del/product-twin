@@ -67,9 +67,34 @@ Baseline tests still green: `avatar:photo:preflight:test` (6), `avatar:photo:qa:
 
 ---
 
-## P2–P5 — STATUS: not started
+## P2 — Shopify MODEL_3D census 1 → ~20 · STATUS: viability proven, harvest deferred
 
-See `docs/handoffs/AVATAR-FACTORY-CLAUDE.md` updates and task list. Landmines to respect from the audit: agent-authored visual QA (e.g. Furniture Avatar Package #2) must be independently re-derived or human-viewed before any PASS; Kator/Legaz is independently G0 (0/12 publishable) despite doc claims.
+- `npm run avatar:shopify:model3d:capability` — live-probed 22 candidate merchants; **11 census-viable** (token-less Storefront + Shopify product sitemaps), 11 not (headless/non-Shopify/bot-blocked), each with a recorded reason. Configs: `shopify-merchant-model3d-candidates.json`.
+- `npm run avatar:shopify:model3d:multi-census` — generalizes the proven DPG discovery+detect over the viable set (`shopify-multi-merchant-model3d-census.json`); leaves the single-merchant baseline untouched; reports `coverage_capped`.
+- **Live proof:** discovery generalizes (blu_dot 491, DPG 6470 discovered); detection correct end-to-end (**4/4 known-3D DPG handles → 3D-DETECTED**, glb+usdz). Capped sweeps found 0 by sampling depth (native 3D ~0.1–0.5%/catalogue), not a bug.
+- **NOT done:** actual 3D harvest across the 11 needs an unthrottled env (sandbox 45 s/cmd). Command: `CENSUS_MAX_SITEMAPS=999 CENSUS_MAX_PROBES=100000 npm run avatar:shopify:model3d:multi-census`. Doc: `docs/SHOPIFY-MODEL3D-CENSUS-EXPANSION-2026-08-18.md`. Commit `18befb1`.
+
+## P3 — BIMobject + pCon applications · STATUS: drafted, held for Oskar's go
+
+`docs/requests/PLATFORM-ACCESS-BIMOBJECT-PCON.md`. Researched live access mechanics 2026-08-18 (BIMobject: developer.bimobject.com app + OAuth2 + Search/Embed API; pCon: EasternGraphics partner + pCon.login per-manufacturer OFML + EAIWS/PI-API/basket). Scopes, data-use commitments, response-ingestion checklists. Nothing submitted. Commit `7b4b16c`.
+
+## P4 — Kator/Legaz review claims · STATUS: rights review complete, geometry blocked
+
+On main none of the 12 pilot assets had review records. Completed the **rights half** for all 12 (licence **CC BY 3.0 US** verified live 2026-08-18) in `data/rights/sweet-home-3d-kator-legaz-design-asset-review.json`. **Geometry half stays BLOCKED** (assets not downloaded, no visual QA) → **0/12 publishable stays honest** per the audit landmine. Deterministic gate `npm run avatar:design-asset:review:validate` (PASS 12/12 rights, 0 publishable) with proven negative tests. Commit `e7ee032`.
+
+## P5 — Manufacturer value-offer · STATUS: written
+
+`docs/MANUFACTURER-VALUE-OFFER.md` — one page, reward-not-dependency framing (audit §1.5). "Already running" claims trace to `data/geometry/avatar-index.json` + exact-cart proof; internal notes cap over-claiming. Held for Oskar's go with a named manufacturer + proof scene.
+
+## Landmines respected (from audit §2)
+Agent-authored visual QA (e.g. Furniture Avatar Package #2) must be independently re-derived or human-viewed before any PASS — I did **not** promote any avatar or assert visual-QA PASS. Kator/Legaz kept at G0/0-publishable. No live price/stock/rights asserted as current.
+
+## Session state
+Branch `agent/avatar-factory-claude`, 6 commits ahead of `origin/main`. **Not pushed** — `git push` denied this session; Oskar pushes from terminal:
+```sh
+cd "…/repo-avatar-factory" && git push -u origin agent/avatar-factory-claude
+```
+No merge/deploy performed.
 
 ## Handoff contract (per AGENTS.md §5)
 
