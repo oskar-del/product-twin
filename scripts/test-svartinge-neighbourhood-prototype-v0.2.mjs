@@ -1,17 +1,19 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateContextProviders,validateOfficialContextGeometrySources,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateContextProviders,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
 const streetBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/street-context-v0.1.json","utf8"));
 const terrainBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/terrain-source-metadata-v0.1.json","utf8"));
 const officialGeometryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/official-context-geometry-sources-v0.1.json","utf8"));
+const aerialHistoryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/municipal-aerial-history-v0.1.json","utf8"));
 assert.equal(validateSvartingePrototype(baseline).ok,true,"baseline scene must validate");
 assert.equal(validateContextProviders(providerBaseline).ok,true,"baseline provider registry must validate");
 assert.equal(validateStreetContext(streetBaseline).ok,true,"baseline street context must validate");
 assert.equal(validateTerrainSourceMetadata(terrainBaseline).ok,true,"baseline terrain source metadata must validate");
 assert.equal(validateOfficialContextGeometrySources(officialGeometryBaseline).ok,true,"baseline official context geometry sources must validate");
+assert.equal(validateMunicipalAerialHistory(aerialHistoryBaseline).ok,true,"baseline municipal aerial history must validate");
 
 const attacks=[
   ["identity promoted",m=>m.subject.identity_scope="PROPERTY_REGISTER_VERIFIED","identity scope promoted"],
@@ -50,7 +52,8 @@ for(const [name,mutate,needle] of attacks){
 
 const providerAttacks=[
   ["provider schema mutated",m=>m.schema_version="svartinge-context-providers/v9","provider schema version drift"],
-  ["external source marked connected",m=>m.providers.find(x=>x.provider_id==="MAPBOX_STANDARD_SATELLITE").state="CONNECTED","external provider falsely marked connected"],
+  ["external source marked connected",m=>m.providers.find(x=>x.provider_id==="MAPBOX_STANDARD_SATELLITE").state="CONNECTED","provider connection set drift"],
+  ["municipal live source disconnected",m=>m.providers.find(x=>x.provider_id==="NORRKOPING_ORTHOPHOTO").state="DOCUMENTED_NOT_CONNECTED","provider connection set drift"],
   ["Mapbox key gate removed",m=>m.providers.find(x=>x.provider_id==="MAPBOX_STANDARD_SATELLITE").state="EXECUTABLE_NOT_TESTED","Mapbox access state promoted"],
   ["Street View promoted",m=>m.providers.find(x=>x.provider_id==="GOOGLE_STREET_VIEW").state="CONNECTED","Street View reference state promoted"],
   ["credential flag promoted",m=>m.providers[0].credential_configured=true,"credential state must remain redacted false"],
@@ -115,4 +118,19 @@ for(const [name,mutate,needle] of officialGeometryAttacks){
   const changed=structuredClone(officialGeometryBaseline);mutate(changed);const result=validateOfficialContextGeometrySources(changed);
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length} attacks)`);
+const aerialHistoryAttacks=[
+  ["aerial axis swapped",m=>m.service.axis_order="EASTING_NORTHING","municipal aerial WMS axis order drift"],
+  ["aerial layer removed",m=>m.live_layers.pop(),"municipal aerial history layer set incomplete"],
+  ["aerial title changed",m=>m.live_layers[0].service_title="Aerial 2008","municipal aerial layer identity drift"],
+  ["year promoted to capture date",m=>m.live_layers[0].year_label_is_verified_capture_date=true,"municipal aerial layer over-promoted or persisted"],
+  ["provider pixels persisted",m=>m.live_layers[0].response_persisted=true,"municipal aerial layer over-promoted or persisted"],
+  ["aerial response hash changed",m=>m.live_layers[0].response_sha256="0".repeat(64),"municipal aerial response receipt drift"],
+  ["aerial tracing enabled",m=>m.rendering_policy.geometry_extraction_allowed=true,"municipal aerial evidence policy promoted"],
+  ["aerial evidence promoted",m=>m.rendering_policy.evidence_promotion_allowed=true,"municipal aerial evidence policy promoted"],
+  ["aerial gate closed",m=>m.gate.status="SATISFIED","municipal aerial provenance gate closed or changed"]
+];
+for(const [name,mutate,needle] of aerialHistoryAttacks){
+  const changed=structuredClone(aerialHistoryBaseline);mutate(changed);const result=validateMunicipalAerialHistory(changed);
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length} attacks)`);

@@ -23,6 +23,8 @@ The realistic-detail scope is now the immediate `Säterdalsvägen Street Room`, 
 
 The next official geometry sources are now resolved exactly. Lantmäteriet vector STAC items `byggnader/0581` and `fastighetsindelning/0581` are the current Norrköping-wide EPSG:3006 packages and both catalogue bboxes cover the locator. Trafikverket NVDB `Vägtrafiknät` is the current official road source. Their protected asset bytes or exact road extract are not acquired, so `official-context-geometry-sources-v0.1.json` keeps all three promotion gates open and the Street Room continues to show diagrammatic context. The viewer Sources panel exposes this distinction directly.
 
+The viewer also exposes a credential-free `Aerial history` drawer backed by `municipal-aerial-history-v0.1.json`. Exact-point WMS responses were verified for Norrköping's municipal layer labels 2008, 2010 and 2017; the existing exact-point GeoWebCache tile is now tied to the parent service title `Flygfoto 2025`. Images load live from the municipal service only after the drawer is opened. No provider pixels are committed or traced, and the year labels are not asserted as independently verified capture dates.
+
 Run `npm run site:sweden:svartinge:prototype:gate` to rebuild and validate the v0.2 export and synchronized viewer. Run `npm run site:sweden:svartinge:prototype:serve` and open `http://127.0.0.1:4173/prototype/svartinge-neighbourhood/` to use it.
 
 ## Material discovery findings

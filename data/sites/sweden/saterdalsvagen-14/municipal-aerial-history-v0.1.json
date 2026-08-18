@@ -1,0 +1,103 @@
+{
+  "schema_version": "svartinge-municipal-aerial-history/v0.1",
+  "entity_type": "MunicipalAerialHistoryReferenceSet",
+  "subject": "SVÄRTINGE 54:28",
+  "authority": "Norrköpings kommun",
+  "service": {
+    "endpoint": "https://kartdata.norrkoping.se/wms?servicename=kartor",
+    "protocol": "WMS 1.3.0",
+    "service_title": "SpatialMap 4.3.0",
+    "crs": "EPSG:3010",
+    "axis_order": "NORTHING_EASTING_FOR_WMS_1_3_0",
+    "capabilities_retrieved_at": "2026-08-18T03:18:00Z",
+    "capabilities_receipt": {
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/norrkoping-kartor-wms-capabilities-2026-08-18.xml",
+      "byte_count": 609850,
+      "sha256": "de938fb1cd269fed257e66ee32bfaa79c06912a076f1c3cbb80f07747339cd03",
+      "content_persisted_in_repository": false
+    }
+  },
+  "locator": {
+    "coordinate_epsg3010_easting_northing": [122807, 6504014],
+    "source": "Municipal NOKA address/property point query",
+    "scope": "Address/property locator only; not survey control or a legal boundary coordinate"
+  },
+  "live_layers": [
+    {
+      "layer_id": "AERIAL_2008",
+      "wms_layer": "ortofoto_aldre_norrkoping_2008",
+      "service_title": "Norrköping, Åby, Svärtinge 2008",
+      "year_label": 2008,
+      "year_label_is_verified_capture_date": false,
+      "live_request_url": "https://kartdata.norrkoping.se/wms?servicename=kartor&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG%3A3010&BBOX=6503500%2C122300%2C6504500%2C123300&WIDTH=512&HEIGHT=512&FORMAT=image%2Fpng&LAYERS=ortofoto_aldre_norrkoping_2008",
+      "request_bbox_axis_order": [6503500, 122300, 6504500, 123300],
+      "response_observed_at": "2026-08-18T03:22:00Z",
+      "response_status": 200,
+      "response_byte_count": 767978,
+      "response_sha256": "c4a205bfb082d0c41833af118cc8569ba070690f126b8f0369f141ed728e07a1",
+      "response_persisted": false,
+      "exact_locator_covered": true
+    },
+    {
+      "layer_id": "AERIAL_2010",
+      "wms_layer": "ortofoto_aldre_norrkoping_2010",
+      "service_title": "Norrköping, Åby, Svärtinge 2010",
+      "year_label": 2010,
+      "year_label_is_verified_capture_date": false,
+      "live_request_url": "https://kartdata.norrkoping.se/wms?servicename=kartor&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG%3A3010&BBOX=6503500%2C122300%2C6504500%2C123300&WIDTH=512&HEIGHT=512&FORMAT=image%2Fpng&LAYERS=ortofoto_aldre_norrkoping_2010",
+      "request_bbox_axis_order": [6503500, 122300, 6504500, 123300],
+      "response_observed_at": "2026-08-18T03:22:00Z",
+      "response_status": 200,
+      "response_byte_count": 804720,
+      "response_sha256": "5b687e5f372aee18044efbe60a269b487858a5060c0f2051fbf4fed54664d8e4",
+      "response_persisted": false,
+      "exact_locator_covered": true
+    },
+    {
+      "layer_id": "AERIAL_2017",
+      "wms_layer": "ortofoto_orter_lm",
+      "service_title": "Hela kommunen 2017",
+      "year_label": 2017,
+      "year_label_is_verified_capture_date": false,
+      "live_request_url": "https://kartdata.norrkoping.se/wms?servicename=kartor&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG%3A3010&BBOX=6503500%2C122300%2C6504500%2C123300&WIDTH=512&HEIGHT=512&FORMAT=image%2Fpng&LAYERS=ortofoto_orter_lm",
+      "request_bbox_axis_order": [6503500, 122300, 6504500, 123300],
+      "response_observed_at": "2026-08-18T03:22:00Z",
+      "response_status": 200,
+      "response_byte_count": 686340,
+      "response_sha256": "d9e3298846736dbe2374358ba06ae6e24cb464579785660906e2e84d80952516",
+      "response_persisted": false,
+      "exact_locator_covered": true
+    },
+    {
+      "layer_id": "AERIAL_2025",
+      "wms_layer": "extwms_lm_ortofoto",
+      "service_title": "Flygfoto 2025",
+      "year_label": 2025,
+      "year_label_is_verified_capture_date": false,
+      "live_request_url": "https://kartor-cache.norrkoping.se/geowebcache/service/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&LAYERS=extwms_lm_ortofoto&WIDTH=256&HEIGHT=256&SRS=EPSG%3A3010&STYLES=&BBOX=122675.2%2C6503526.4%2C123494.4%2C6504345.6",
+      "request_bbox_axis_order": [122675.2, 6503526.4, 123494.4, 6504345.6],
+      "response_observed_at": "2026-08-18T01:18:17Z",
+      "response_status": 200,
+      "response_byte_count": 123575,
+      "response_sha256": "bb67a2ecefe1f5bdb9aaa6b1fc0695cab72fdb4c726e6b1f73e704bf71902c3f",
+      "response_persisted": false,
+      "exact_locator_covered": true
+    }
+  ],
+  "rendering_policy": {
+    "mode": "LIVE_REFERENCE_ONLY",
+    "provider_pixels_in_repository": false,
+    "browser_cache_is_provider_controlled": true,
+    "attribution_required": true,
+    "geometry_extraction_allowed": false,
+    "evidence_promotion_allowed": false,
+    "legal_boundary_effect": "NONE",
+    "source_year_labels_are_capture_dates": false,
+    "attribution": "Norrköpings kommun public map service · imagery-origin and layer-specific reuse terms require reconciliation before publication"
+  },
+  "gate": {
+    "gate_id": "GATE_SE_AERIAL_PROVENANCE_AND_PUBLICATION_RIGHTS",
+    "status": "OPEN",
+    "reason": "Exact-point live coverage and municipal layer titles are verified, but capture dates, underlying imagery origin and publication/reuse terms are not fully stated by the WMS metadata."
+  }
+}
