@@ -1,258 +1,331 @@
-[
-  {
-    "refcat": "9475412BC4897N",
-    "plot_area_m2_catastro": 1126.0,
-    "centroid_etrs89_utm30n": [
-      771169.6,
-      4288098.4
-    ],
-    "centroid_wgs84_lonlat": [
-      0.118291410173408,
-      38.6999690642356
-    ],
-    "cadastral_address": "CL BENICOLET 11(A) 03724 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 225.0,
-    "record_year": 1995
+{
+  "schema_version": "0.1",
+  "as_of": "2026-08-18",
+  "street": "CL BENICOLET, Teulada-Moraira (Alicante) — postal 03724/03725",
+  "catastro_block_primary": "95784",
+  "cluster_centroid_wgs84": [
+    0.119172,
+    38.700505
+  ],
+  "crs": {
+    "geometry": "EPSG:25830 (ETRS89/UTM30N)",
+    "centroid_wgs84": "EPSG:4326 lon,lat"
   },
-  {
-    "refcat": "9475413BC4897N",
-    "plot_area_m2_catastro": 853.0,
-    "centroid_etrs89_utm30n": [
-      771174.8,
-      4288120.5
-    ],
-    "centroid_wgs84_lonlat": [
-      0.118380173968703,
-      38.7001321594542
-    ],
-    "cadastral_address": "CL BENICOLET 13(A) 03725 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 205.0,
-    "record_year": 1995
-  },
-  {
-    "refcat": "9475414BC4897N",
-    "plot_area_m2_catastro": 1184.0,
-    "centroid_etrs89_utm30n": [
-      771189.7,
-      4288143.4
-    ],
-    "centroid_wgs84_lonlat": [
-      0.118508423022977,
-      38.7002625339918
-    ],
-    "cadastral_address": "CL BENICOLET 15 03724 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 253.0,
-    "record_year": 1970
-  },
-  {
-    "refcat": "9575901BC4897N",
-    "plot_area_m2_catastro": 752.0,
-    "centroid_etrs89_utm30n": [
-      771311.9,
-      4288065.3
-    ],
-    "centroid_wgs84_lonlat": [
-      0.119841359264372,
-      38.6995994412913
-    ],
-    "cadastral_address": "CL BENICOLET 1 Es:1 Pl:BJ Pt:01 03724 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 168.0,
-    "record_year": 1975
-  },
-  {
-    "refcat": "9575914BC4897N",
-    "plot_area_m2_catastro": 833.0,
-    "centroid_etrs89_utm30n": [
-      771253.1,
-      4288100.2
-    ],
-    "centroid_wgs84_lonlat": [
-      0.119237957832007,
-      38.6999438516006
-    ],
-    "cadastral_address": "CL BENICOLET 7 03724 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 167.0,
-    "record_year": 1975
-  },
-  {
-    "refcat": "9576515BC4897N",
-    "plot_area_m2_catastro": 1613.0,
-    "centroid_etrs89_utm30n": [
-      771267.2,
-      4288139.7
-    ],
-    "centroid_wgs84_lonlat": [
-      0.119260790782484,
-      38.7003001906523
-    ],
-    "cadastral_address": "CL BENICOLET 8(A) 03725 TEULADA (ALICANTE)",
-    "current_use": "Deportivo",
-    "built_m2_on_record": 699.0,
-    "record_year": 1995
-  },
-  {
-    "refcat": "9578413BC4897N",
-    "plot_area_m2_catastro": 943.0,
-    "centroid_etrs89_utm30n": [
-      771194.3,
-      4288182.3
-    ],
-    "centroid_wgs84_lonlat": [
-      0.118363529016556,
-      38.7006898727527
-    ],
-    "cadastral_address": "CL BENICOLET 12(A) 03725 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 272.0,
-    "record_year": 1976
-  },
-  {
-    "refcat": "9578414BC4897N",
-    "plot_area_m2_catastro": 2653.0,
-    "centroid_etrs89_utm30n": [
-      771241.1,
-      4288172.3
-    ],
-    "centroid_wgs84_lonlat": [
-      0.118933553768565,
-      38.7006129399566
-    ],
-    "cadastral_address": "CL BENICOLET 10(A) Es:1 Pl:BJ Pt:01 03725 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 606.0,
-    "record_year": 1950
-  },
-  {
-    "refcat": "9578416BC4897N",
-    "plot_area_m2_catastro": 763.0,
-    "centroid_etrs89_utm30n": [
-      771270.4,
-      4288191.3
-    ],
-    "centroid_wgs84_lonlat": [
-      0.119315666379982,
-      38.7007261507004
-    ],
-    "cadastral_address": "CL BENICOLET 11 03725 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 272.0,
-    "record_year": 1987
-  },
-  {
-    "refcat": "9578417BC4897N",
-    "plot_area_m2_catastro": 805.0,
-    "centroid_etrs89_utm30n": [
-      771272.7,
-      4288217.7
-    ],
-    "centroid_wgs84_lonlat": [
-      0.11935608199093,
-      38.7010082365062
-    ],
-    "cadastral_address": "CL BENICOLET 13 03725 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 230.0,
-    "record_year": 1986
-  },
-  {
-    "refcat": "9578418BC4897N",
-    "plot_area_m2_catastro": 752.0,
-    "centroid_etrs89_utm30n": [
-      771300.1,
-      4288201.6
-    ],
-    "centroid_wgs84_lonlat": [
-      0.119689543663405,
-      38.7008068138799
-    ],
-    "cadastral_address": "CL BENICOLET 10 03724 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 141.0,
-    "record_year": 1987
-  },
-  {
-    "refcat": "9578419BC4897N",
-    "plot_area_m2_catastro": 922.0,
-    "centroid_etrs89_utm30n": [
-      771307.6,
-      4288182.5
-    ],
-    "centroid_wgs84_lonlat": [
-      0.11976806798916,
-      38.7006837014771
-    ],
-    "cadastral_address": "CL BENICOLET 8 03725 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 246.0,
-    "record_year": 1997
-  },
-  {
-    "refcat": "9578420BC4897N",
-    "plot_area_m2_catastro": 750.0,
-    "centroid_etrs89_utm30n": [
-      771297.7,
-      4288172.5
-    ],
-    "centroid_wgs84_lonlat": [
-      0.119523012885323,
-      38.7004843199296
-    ],
-    "cadastral_address": "CL BENICOLET 6(A) 03725 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 223.0,
-    "record_year": 2000
-  },
-  {
+  "method": "Catastro INSPIRE WFS GetParcel (area+polygon) + OVC Consulta_DNPRC (address/use/year) + Consulta_CPMRC (WGS84). Parcel number = refcat chars 6-7. Never eyeballed.",
+  "villa4_lock": {
     "refcat": "9578421BC4897N",
-    "plot_area_m2_catastro": 4510.0,
-    "centroid_etrs89_utm30n": [
-      771320.5,
-      4288122.2
-    ],
-    "centroid_wgs84_lonlat": [
-      0.119546990462508,
-      38.7000043568618
-    ],
-    "cadastral_address": "CL BENICOLET 6 03724 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 136.0,
-    "record_year": 1994
+    "confidence": "high",
+    "corroboration": [
+      "largest plot",
+      "southern/lowest position",
+      "stamped plan floor level +70.5-71.4 m = lowest villa"
+    ]
   },
-  {
-    "refcat": "9578425BC4897N",
-    "plot_area_m2_catastro": 1000.0,
-    "centroid_etrs89_utm30n": [
-      771267.0,
-      4288263.9
-    ],
-    "centroid_wgs84_lonlat": [
-      0.119214797426962,
-      38.7014402601015
-    ],
-    "cadastral_address": "CL BENICOLET 14 Suelo 03724 TEULADA (ALICANTE)",
-    "current_use": "Obras de urbanización y jardineria, suelos sin edificar",
-    "built_m2_on_record": 0.0,
-    "record_year": null
-  },
-  {
-    "refcat": "9578426BC4897N",
-    "plot_area_m2_catastro": 1923.0,
-    "centroid_etrs89_utm30n": [
-      771287.8,
-      4288244.0
-    ],
-    "centroid_wgs84_lonlat": [
-      0.119517314498828,
-      38.701416908801
-    ],
-    "cadastral_address": "CL BENICOLET 12 6H17001YH7800G - 03724 TEULADA (ALICANTE)",
-    "current_use": "Residencial",
-    "built_m2_on_record": 112.0,
-    "record_year": 1993
-  }
-]
+  "villas_1_3_status": "On CL Benicolet block 95784 adjacent to parcel 21; exact refcats NOT locked — the 4 Essence plots are a reparcelación not yet propagated into Catastro. Needs developer parcelación plan.",
+  "parcels": [
+    {
+      "refcat": "9475412BC4897N",
+      "plot_area_m2_catastro": 1126.0,
+      "centroid_etrs89_utm30n": [
+        771169.6,
+        4288098.4
+      ],
+      "centroid_wgs84_lonlat": [
+        0.118291410173408,
+        38.6999690642356
+      ],
+      "cadastral_address": "CL BENICOLET 11(A) 03724 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 225.0,
+      "record_year": 1995,
+      "catastro_block": "94754",
+      "catastro_parcel_no": "12",
+      "essence_note": ""
+    },
+    {
+      "refcat": "9475413BC4897N",
+      "plot_area_m2_catastro": 853.0,
+      "centroid_etrs89_utm30n": [
+        771174.8,
+        4288120.5
+      ],
+      "centroid_wgs84_lonlat": [
+        0.118380173968703,
+        38.7001321594542
+      ],
+      "cadastral_address": "CL BENICOLET 13(A) 03725 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 205.0,
+      "record_year": 1995,
+      "catastro_block": "94754",
+      "catastro_parcel_no": "13",
+      "essence_note": ""
+    },
+    {
+      "refcat": "9475414BC4897N",
+      "plot_area_m2_catastro": 1184.0,
+      "centroid_etrs89_utm30n": [
+        771189.7,
+        4288143.4
+      ],
+      "centroid_wgs84_lonlat": [
+        0.118508423022977,
+        38.7002625339918
+      ],
+      "cadastral_address": "CL BENICOLET 15 03724 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 253.0,
+      "record_year": 1970,
+      "catastro_block": "94754",
+      "catastro_parcel_no": "14",
+      "essence_note": ""
+    },
+    {
+      "refcat": "9575901BC4897N",
+      "plot_area_m2_catastro": 752.0,
+      "centroid_etrs89_utm30n": [
+        771311.9,
+        4288065.3
+      ],
+      "centroid_wgs84_lonlat": [
+        0.119841359264372,
+        38.6995994412913
+      ],
+      "cadastral_address": "CL BENICOLET 1 Es:1 Pl:BJ Pt:01 03724 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 168.0,
+      "record_year": 1975,
+      "catastro_block": "95759",
+      "catastro_parcel_no": "01",
+      "essence_note": ""
+    },
+    {
+      "refcat": "9575914BC4897N",
+      "plot_area_m2_catastro": 833.0,
+      "centroid_etrs89_utm30n": [
+        771253.1,
+        4288100.2
+      ],
+      "centroid_wgs84_lonlat": [
+        0.119237957832007,
+        38.6999438516006
+      ],
+      "cadastral_address": "CL BENICOLET 7 03724 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 167.0,
+      "record_year": 1975,
+      "catastro_block": "95759",
+      "catastro_parcel_no": "14",
+      "essence_note": ""
+    },
+    {
+      "refcat": "9576515BC4897N",
+      "plot_area_m2_catastro": 1613.0,
+      "centroid_etrs89_utm30n": [
+        771267.2,
+        4288139.7
+      ],
+      "centroid_wgs84_lonlat": [
+        0.119260790782484,
+        38.7003001906523
+      ],
+      "cadastral_address": "CL BENICOLET 8(A) 03725 TEULADA (ALICANTE)",
+      "current_use": "Deportivo",
+      "built_m2_on_record": 699.0,
+      "record_year": 1995,
+      "catastro_block": "95765",
+      "catastro_parcel_no": "15",
+      "essence_note": ""
+    },
+    {
+      "refcat": "9578413BC4897N",
+      "plot_area_m2_catastro": 943.0,
+      "centroid_etrs89_utm30n": [
+        771194.3,
+        4288182.3
+      ],
+      "centroid_wgs84_lonlat": [
+        0.118363529016556,
+        38.7006898727527
+      ],
+      "cadastral_address": "CL BENICOLET 12(A) 03725 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 272.0,
+      "record_year": 1976,
+      "catastro_block": "95784",
+      "catastro_parcel_no": "13",
+      "essence_note": ""
+    },
+    {
+      "refcat": "9578414BC4897N",
+      "plot_area_m2_catastro": 2653.0,
+      "centroid_etrs89_utm30n": [
+        771241.1,
+        4288172.3
+      ],
+      "centroid_wgs84_lonlat": [
+        0.118933553768565,
+        38.7006129399566
+      ],
+      "cadastral_address": "CL BENICOLET 10(A) Es:1 Pl:BJ Pt:01 03725 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 606.0,
+      "record_year": 1950,
+      "catastro_block": "95784",
+      "catastro_parcel_no": "14",
+      "essence_note": ""
+    },
+    {
+      "refcat": "9578416BC4897N",
+      "plot_area_m2_catastro": 763.0,
+      "centroid_etrs89_utm30n": [
+        771270.4,
+        4288191.3
+      ],
+      "centroid_wgs84_lonlat": [
+        0.119315666379982,
+        38.7007261507004
+      ],
+      "cadastral_address": "CL BENICOLET 11 03725 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 272.0,
+      "record_year": 1987,
+      "catastro_block": "95784",
+      "catastro_parcel_no": "16",
+      "essence_note": "Essence Villas 1-3 possible (block 95784 N of parcel 21)."
+    },
+    {
+      "refcat": "9578417BC4897N",
+      "plot_area_m2_catastro": 805.0,
+      "centroid_etrs89_utm30n": [
+        771272.7,
+        4288217.7
+      ],
+      "centroid_wgs84_lonlat": [
+        0.11935608199093,
+        38.7010082365062
+      ],
+      "cadastral_address": "CL BENICOLET 13 03725 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 230.0,
+      "record_year": 1986,
+      "catastro_block": "95784",
+      "catastro_parcel_no": "17",
+      "essence_note": "Essence Villas 1-3 possible (block 95784 N of parcel 21)."
+    },
+    {
+      "refcat": "9578418BC4897N",
+      "plot_area_m2_catastro": 752.0,
+      "centroid_etrs89_utm30n": [
+        771300.1,
+        4288201.6
+      ],
+      "centroid_wgs84_lonlat": [
+        0.119689543663405,
+        38.7008068138799
+      ],
+      "cadastral_address": "CL BENICOLET 10 03724 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 141.0,
+      "record_year": 1987,
+      "catastro_block": "95784",
+      "catastro_parcel_no": "18",
+      "essence_note": "Essence Villas 1-3 candidate (adjacent, ~+75 m terrace)."
+    },
+    {
+      "refcat": "9578419BC4897N",
+      "plot_area_m2_catastro": 922.0,
+      "centroid_etrs89_utm30n": [
+        771307.6,
+        4288182.5
+      ],
+      "centroid_wgs84_lonlat": [
+        0.11976806798916,
+        38.7006837014771
+      ],
+      "cadastral_address": "CL BENICOLET 8 03725 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 246.0,
+      "record_year": 1997,
+      "catastro_block": "95784",
+      "catastro_parcel_no": "19",
+      "essence_note": "Essence Villas 1-3 candidate (adjacent, ~+75 m terrace)."
+    },
+    {
+      "refcat": "9578420BC4897N",
+      "plot_area_m2_catastro": 750.0,
+      "centroid_etrs89_utm30n": [
+        771297.7,
+        4288172.5
+      ],
+      "centroid_wgs84_lonlat": [
+        0.119523012885323,
+        38.7004843199296
+      ],
+      "cadastral_address": "CL BENICOLET 6(A) 03725 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 223.0,
+      "record_year": 2000,
+      "catastro_block": "95784",
+      "catastro_parcel_no": "20",
+      "essence_note": "Essence Villas 1-3 candidate (adjacent, ~+75 m terrace)."
+    },
+    {
+      "refcat": "9578421BC4897N",
+      "plot_area_m2_catastro": 4510.0,
+      "centroid_etrs89_utm30n": [
+        771320.5,
+        4288122.2
+      ],
+      "centroid_wgs84_lonlat": [
+        0.119546990462508,
+        38.7000043568618
+      ],
+      "cadastral_address": "CL BENICOLET 6 03724 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 136.0,
+      "record_year": 1994,
+      "catastro_block": "95784",
+      "catastro_parcel_no": "21",
+      "essence_note": "ESSENCE VILLA 4 'Essence Patio' — HIGH confidence: largest plot (5147 builder-stated vs 4510 current), southernmost/lowest, plan floor level +70.5-71.4 m (lowest of the four)."
+    },
+    {
+      "refcat": "9578425BC4897N",
+      "plot_area_m2_catastro": 1000.0,
+      "centroid_etrs89_utm30n": [
+        771267.0,
+        4288263.9
+      ],
+      "centroid_wgs84_lonlat": [
+        0.119214797426962,
+        38.7014402601015
+      ],
+      "cadastral_address": "CL BENICOLET 14 Suelo 03724 TEULADA (ALICANTE)",
+      "current_use": "Obras de urbanización y jardineria, suelos sin edificar",
+      "built_m2_on_record": 0.0,
+      "record_year": null,
+      "catastro_block": "95784",
+      "catastro_parcel_no": "25",
+      "essence_note": ""
+    },
+    {
+      "refcat": "9578426BC4897N",
+      "plot_area_m2_catastro": 1923.0,
+      "centroid_etrs89_utm30n": [
+        771287.8,
+        4288244.0
+      ],
+      "centroid_wgs84_lonlat": [
+        0.119517314498828,
+        38.701416908801
+      ],
+      "cadastral_address": "CL BENICOLET 12 6H17001YH7800G - 03724 TEULADA (ALICANTE)",
+      "current_use": "Residencial",
+      "built_m2_on_record": 112.0,
+      "record_year": 1993,
+      "catastro_block": "95784",
+      "catastro_parcel_no": "26",
+      "essence_note": "Essence Villas 1-3 possible (block 95784 N of parcel 21)."
+    }
+  ]
+}

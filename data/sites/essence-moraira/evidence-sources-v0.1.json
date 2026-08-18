@@ -27,6 +27,26 @@
       "authority": "Grupo Turis Promociones"
     },
     {
+      "source_id": "SRC_ESSENCE_PLANS",
+      "title": "Essence Moraira — stamped municipal floorplan PDFs (9)",
+      "request_url_template": "https://www.essencemoraira.com/_files/ugd/4ea4aa_{HASH}.pdf",
+      "finding": "9 floorplan sheets covering Parcelas 1-4 (sotano/baja/alta), architect Jose Giner Ivars (Benissa), promoter ORANGE VILLAS DEVELOPMENT S.L., Teulada permit exps 21-25/29-25/31-25/32-25 (2025), absolute floor levels +70.55..+78.50 m. NO coordinates / cadastral refs / situacion sheet. Parsed into plans-manifest-v0.1.json. PDFs vaulted.",
+      "authority": "Grupo Turis Promociones / Jose Giner Ivars Arquitecto"
+    },
+    {
+      "source_id": "SRC_ESSENCE_DRONE_AERIAL",
+      "title": "Essence Moraira site drone photo (2025-10-28)",
+      "request_url": "https://static.wixstatic.com/media/4ea4aa_4d47ecbee7154c8bbb0c2dbd12aedd29~mv2.jpg",
+      "finding": "Aerial from the site looking NE to the sea; Torre del Cap d'Or on the horizon; cleared plot + wooded assembled land. Confirms the Benicolet hillside site. Vaulted as essence-site-drone-2025-10-28.jpg."
+    },
+    {
+      "source_id": "SRC_CATASTRO_WMS + SRC_PNOA_WMS",
+      "title": "Catastro cadastral WMS + IGN PNOA orthophoto WMS (locator)",
+      "request_url_catastro": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?LAYERS=Catastro&SRS=EPSG:25830&BBOX=771110,4288020,771380,4288300&...",
+      "request_url_pnoa": "https://www.ign.es/wms-inspire/pnoa-ma?LAYERS=OI.OrthoimageCoverage&CRS=EPSG:25830&BBOX=771110,4288020,771380,4288300&...",
+      "finding": "Confirmed block 95784 parcel numbering on CL Benicolet; images in locator/."
+    },
+    {
       "source_id": "SRC_GRUPO_TURIS_PROJECTS",
       "title": "Grupo Turis Promociones — projects page",
       "request_url": "https://www.grupoturispromociones.com/projects",

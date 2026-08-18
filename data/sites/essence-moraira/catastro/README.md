@@ -12,20 +12,34 @@
   from Catastro INSPIRE WFS `GetParcel` and OVC `Consulta_DNPRC` / `Consulta_CPMRC`.
 - **Cluster location**: centre ≈ **38.700505 N, 0.119172 E**; bbox lon 0.11829–0.11984, lat 38.69960–38.70144.
 
-## What is NOT yet locked — the gap (publish it, do not fake it)
+Parcel number = refcat chars 6–7, so the Catastro cartography labels map directly:
+`9578`**`421`**` = block 95784 parcel 21`, `9578420 = parcel 20`, etc. Locator images:
+`../locator/catastro-block-95784-benicolet.png` (parcels + labels) and `../locator/pnoa-ortho-benicolet.jpg`.
 
-The 4 Essence plots (builder-stated: **1 413 / 1 128 / 1 223 / 5 147 m²**, total **8 911 m²**) do **not**
-reconcile cleanly with the current Catastro parcels on Calle Benicolet:
+## Villa 4 — LOCKED (high confidence)
 
-- No current parcel matches the villa plot sizes within tolerance (closest single: 9578421 = 4 510 m²
-  vs Villa 4's 5 147 m²; a 637 m² / 14 % gap).
-- Every candidate Benicolet parcel still carries a **building recorded 1987–2000** on its Catastro record
-  (only 9578425 shows "suelos sin edificar"). Essence is **off-plan new-build**, so its plots are being
-  formed by **re-parcelling/assembly + demolition that has not yet propagated into Catastro**.
+**Villa 4 "Essence Patio" (Parcela 04, plot 5 147 m²) = Catastro `9578421BC4897N` (block 95784, parcel 21).**
+Three independent signals agree:
+1. **Size** — parcel 21 (4 510 m² current) is the single largest plot on Calle Benicolet; Villa 4 is by far
+   the largest villa (5 147 m² vs ~1.1–1.4k for V1–3). The 14 % gap is the pre-final re-parcelling.
+2. **Position** — parcel 21 is the southern/downslope plot; matches the drone aerial (site slopes NE to sea).
+3. **Elevation** — the stamped municipal plan puts Villa 4's ground floor at **+70.55 m**, the lowest of the
+   four (V1–3 ground = **+75.0 m**). Parcel 21 is the low plot. Measured, not eyeballed.
 
-**Conclusion:** the exact Essence parcel references cannot be locked from public Catastro alone at this
-date. Any 4-parcel assignment now would be arithmetic coincidence (assembling old parcels to hit ~8 911 m²)
-— which the pipeline's "measured, never eyeballed" rule forbids.
+## Villas 1–3 — NOT yet locked (the honest gap)
+
+The 4 Essence plots (builder-stated **1 413 / 1 128 / 1 223 / 5 147 m²**, total **8 911 m²**) do **not**
+reconcile 1:1 with current Catastro parcels:
+
+- Every Benicolet parcel still carries a **building recorded 1987–2000** on its Catastro record (only
+  9578425 shows "suelos sin edificar"). Essence is **off-plan new-build** (permits 2025), so its plots are a
+  **re-parcelación + demolition that has not yet propagated into Catastro**.
+- Villas 1–3 sit on block 95784 immediately N of parcel 21, on the **+75 m terrace** (candidate current
+  parcels 18/19/20 and possibly 16/17/26). Assigning exact refcats now would be arithmetic coincidence —
+  which the "measured, never eyeballed" rule forbids.
+
+**Conclusion:** Villa 4 is locked; the site area + block are locked; Villas 1–3 exact refcats need the
+developer's **plano de parcelación** (their "Parcela 01–04" is their own numbering, not Catastro parcels).
 
 ## To close the lock (any one of these)
 
