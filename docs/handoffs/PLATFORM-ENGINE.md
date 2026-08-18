@@ -27,3 +27,21 @@ One checkout = one executor. Deliverable-first: every block ends with something 
 
 ## Current state
 - 2026-08-19: seeded by Brain. Nothing built.
+- 2026-08-19 (Platform session, branch `agent/platform-engine`, worktree `../repo-platform`):
+  - **Milestone 1 DONE** — `docs/TWIN-ENGINE-AUDIT-2026-08-19.md`: measured capability matrix of
+    all five surfaces (`npm run engine:audit` re-derives it), what each surface actually is, the
+    seven welds tying the one real engine to Svärtinge, the v0.1 module map, and four decisions
+    escalated to Brain (D1 `main` is behind the spatial branches · D2 the Svärtinge validator
+    asserts on viewer source strings · D3 three.js CDN-vs-local drift · D4 `engine/` at repo root).
+    Headline finding: there is **one** engine (Svärtinge) and four single-purpose demos, three
+    with no scene contract at all.
+  - **twin-engine v0.1 BUILT and RUNNING** — `engine/` (see `engine/README.md`),
+    `config/spatial/twin-scene-v0.1.schema.json`, demo at `npm run engine:demo`.
+    Gates: `npm run engine:gate` → validate 93/93, mutations 35/35.
+    The generic schema is a structural superset of the Svärtinge site profile: the production
+    scene validates against it unmodified, and the gate cross-checks the engine's map-view
+    derivation against all 7 of that scene's stored `live_context_view` values.
+  - **NOT done:** Milestone 2 (Essence adoption — blocked on D1, the Essence and Svärtinge data
+    live on branches `main` does not contain), Milestone 3 (`engine:bundle`), Milestone 4 (perf
+    budget doc). Nothing pushed: `git push` was denied in that session; commits are local on
+    `agent/platform-engine` in `../repo-platform`.

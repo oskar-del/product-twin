@@ -1,0 +1,99 @@
+# twin-engine v0.1
+
+One engine for every twin surface: site twins, developer microsites, showrooms, embeds.
+A surface supplies a **twin-scene document** and a mount element; the engine supplies the rest.
+
+```js
+import {createTwinViewer} from "/engine/twin-engine.mjs";
+
+const viewer = await createTwinViewer({
+  mount: document.getElementById("stage"),
+  sceneUrl: "/data/scenes/twin-engine-conformance/scene-v0.1.json"
+});
+```
+
+Run the reference surface:
+
+```sh
+npm ci
+npm run engine:demo      # http://127.0.0.1:8181/prototype/twin-engine-demo/
+```
+
+## The contract
+
+A scene is a `twin-scene/v0.x` document validated by `config/spatial/twin-scene-v0.1.schema.json`
+and by `engine/core/scene-contract.mjs` — the schema for shape, the contract for the rules a
+schema cannot express (per-primitive geometry, id uniqueness, stage↔element integrity,
+degenerate cameras). A scene that violates either is refused with the full list of violations
+rather than rendered wrong.
+
+The schema is a structural **superset**: a per-site profile pins its own constants on top of it.
+The production Svärtinge scene (`svartinge-neighbourhood-scene/v0.2`) validates against it
+unmodified, and `npm run engine:validate` cross-checks against that scene whenever it is present
+in the checkout.
+
+| Concept | Where |
+|---|---|
+| Evidence classes (the honesty palette) | `core/evidence.mjs` |
+| Scene parsing and refusal | `core/scene-contract.mjs` |
+| Stages: visibility contract + camera keyframes | `core/stages.mjs` |
+| Render profiles + materials | `core/profiles.mjs` |
+| Renderer, camera, controls, split render | `core/viewer.mjs` |
+| Click picking (split-screen aware) | `core/picking.mjs` |
+| Nine geometry primitives | `geometry/primitives.mjs` |
+| Sprite labels, procedural textures | `geometry/labels.mjs`, `geometry/textures.mjs` |
+| Solar position (NOAA), light rig | `studies/sun.mjs` |
+| Local ENU ↔ WGS84, map-view derivation | `geo/local-enu.mjs` |
+| Panel, legend, dock, tools, stylesheet | `ui/*` |
+
+`core/evidence`, `core/scene-contract`, `core/stages`, `studies/sun` and `geo/local-enu` are
+**pure** — no DOM, no WebGL — and are importable by the Node gate. Everything else needs a browser.
+
+## Geometry primitives
+
+`GRID_SURFACE` · `EXTRUDED_POLYGON` · `POLYLINE_RIBBON` · `BOX` · `ROOM_VOLUME` · `MARKER` ·
+`DIAGRAMMATIC_MARKER` · `DIRECTION_CONE` · `SOLAR_ARC`
+
+## Options
+
+| Option | Meaning |
+|---|---|
+| `mount` | element the canvas and chrome are mounted into (required) |
+| `sceneUrl` / `sceneDocument` | where the scene comes from |
+| `realisticPalette` | element type → colour overrides for the REALISTIC profile |
+| `decor` | per-site realism plugin `({THREE, scene, group, viewer}) => void`; site-specific character (street furniture, trees, listing detail) belongs here, never in the engine |
+| `chrome` | `false` to suppress the engine's own dock/legend/panel/tools and drive it yourself |
+| `onElementOpen` | called with each opened element |
+
+## What the engine returns
+
+`scene` · `stages` · `viewer` (renderer/camera/controls) · `elements` (id → object3D) ·
+`profile` · `stage` · `hour` · `setProfile` · `setHour` · `goToStage` · `goToStageId` ·
+`openElementById` · `mapView(zoom)` · `evidenceProfile()` · `dispose()`
+
+## Rules the engine keeps
+
+- **Presentation changes; evidence does not.** A profile switch swaps materials and light. It
+  never changes geometry, position, or what a claim says.
+- **Nothing renders unsourced.** An element with no `source_refs` is a contract violation.
+- **Limitations are a titled section of the panel**, not fine print.
+- **A live map layer carries `evidence_effect: "NONE"`** and can never promote a claim.
+- **The engine does not invent geometry.** Site-specific character goes in a `decor` plugin.
+
+## Gates
+
+```sh
+npm run engine:gate        # build fixture → validate → mutations
+npm run engine:audit       # capability matrix across every browser surface
+```
+
+`engine:validate` also runs a headless scene-graph build (three.js constructs a graph fine
+without WebGL) and asserts the structural invariants that visual bugs hide behind — every
+element maps to exactly one object, and every pickable object is a descendant of its element's
+object.
+
+## Not in v0.1
+
+SYSTEMS profile · walk camera + glTF avatars · Mapbox live-context layer · availability-status
+colouring · viewshed overlay · terrain COG/DEM loader · OSM/vector extrusion · timeline scrubber.
+See `docs/TWIN-ENGINE-AUDIT-2026-08-19.md` §4.
