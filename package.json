@@ -24,6 +24,7 @@
     "whole-building:test": "node scripts/whole-building-test.mjs",
     "procurement:routes": "node scripts/select-procurement-routes.mjs",
     "dashboard:project": "node scripts/build-project-control.mjs",
+    "engine:audit": "node scripts/audit-viewer-surfaces.mjs",
     "scene:v0:validate": "node scripts/validate-v0-shoppable-scene.mjs",
     "scene:living:supply:validate": "node scripts/validate-living-room-supply-board.mjs",
     "scene:v0:refresh": "node scripts/refresh-v0-shoppable-scene-offers.mjs",
