@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>NORR11 living room · real Product Twins</title>
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;background:#15140f;color:#f3efe5;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
+  canvas{display:block}
+  #hud{position:fixed;inset:0;pointer-events:none}
+  .brand{position:absolute;left:22px;top:20px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}.brand b{font-size:15px;letter-spacing:.05em}
+  .sub{position:absolute;left:22px;top:60px;color:#c3bda9;font-size:12px;max-width:340px;line-height:1.5}
+  .proof{position:absolute;right:20px;top:20px;max-width:300px;background:rgba(22,20,15,.82);backdrop-filter:blur(10px);padding:11px 13px;border:1px solid rgba(255,255,255,.09);border-radius:12px;font-size:10px;line-height:1.55;color:#ded7c4}.proof b{color:#f0c987}
+  .help{position:absolute;left:22px;bottom:18px;background:rgba(22,20,15,.82);backdrop-filter:blur(10px);padding:10px 13px;border:1px solid rgba(255,255,255,.09);border-radius:12px;font-size:11px;line-height:1.6}
+  #panel{pointer-events:auto;position:absolute;right:16px;bottom:16px;width:330px;background:rgba(245,241,231,.97);color:#1c2016;border-radius:16px;padding:18px;box-sizing:border-box;transform:translateY(140%);transition:.22s}
+  #panel.open{transform:none}#panel .small{font-size:10px;color:#7a7358;text-transform:uppercase;letter-spacing:.12em}
+  #panel h2{font:500 23px/1.05 Georgia,serif;margin:6px 0 4px}#panel .mk{font-size:11px;color:#6a6450;margin-bottom:8px}
+  .offer{margin-top:10px;padding:11px;border:1px solid #dcd8c8;border-radius:11px;background:#fff}.offer strong{display:block;font:500 22px/1 Georgia,serif;margin:3px 0}.offer span{font-size:10px;color:#6a7360;line-height:1.45}
+  .pill{display:inline-block;background:#e6e3d5;padding:4px 8px;border-radius:999px;font-size:9px;margin:2px 2px 0 0}
+  .warn{margin-top:10px;padding:9px;background:#f0e6d1;border-radius:9px;font-size:10px;color:#6f5a34}
+  .close{float:right;border:0;background:none;color:#4a4636;font-size:18px;cursor:pointer}
+  #loading{position:absolute;inset:0;display:grid;place-items:center;background:#15140f;color:#e8e1cd;font-size:13px;letter-spacing:.04em}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="loading">Loading real NORR11 / Wendelbo product twins…</div>
+<div id="hud">
+  <div class="brand"><b>PRODUCT TWIN</b><br>LIVING ROOM · MARBELLA</div>
+  <div class="sub" id="sub">Real products from the MCP, shown with their native manufacturer 3D.</div>
+  <div class="proof" id="proofbox"><b>NATIVE MANUFACTURER 3D</b><br>loading…</div>
+  <div class="help">Drag to orbit · scroll to zoom · click a piece to inspect</div>
+  <aside id="panel"><button class="close" id="close">×</button>
+    <div class="small" id="p-src">Product Twin</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
+    <div id="p-pills"></div>
+    <div class="offer"><div class="small">Live trade offer</div><strong id="p-price">—</strong><span id="p-offerstate"></span></div>
+    <div class="warn" id="p-warn"></div>
+  </aside>
+</div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const SCENE_URL = '../../data/showrooms/norr11-marbella-living-room-v0.1.json';
+const scene_data = await fetch(SCENE_URL).then(r => { if (!r.ok) throw new Error('scene ' + r.status); return r.json(); });
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.shadowMap.enabled = true;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.05;
+document.body.prepend(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xccc3b0);
+const [rw, rh, rd] = scene_data.room.size_m;
+
+const camera = new THREE.PerspectiveCamera(55, innerWidth / innerHeight, 0.05, 100);
+camera.position.set(4.4, 2.4, 5.2);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 0.7, -1.6);
+controls.maxPolarAngle = Math.PI / 2 - 0.02;
+controls.minDistance = 2; controls.maxDistance = 14;
+
+scene.add(new THREE.HemisphereLight(0xfff5e2, 0x554b3a, 1.9));
+const sun = new THREE.DirectionalLight(0xffe9c4, 2.6);
+sun.position.set(6, 9, 4); sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048); sun.shadow.camera.top = 8; sun.shadow.camera.bottom = -8; sun.shadow.camera.left = -8; sun.shadow.camera.right = 8;
+scene.add(sun);
+scene.add(new THREE.AmbientLight(0xffffff, 0.25));
+
+// room shell (warm plaster + limestone)
+const floorMat = new THREE.MeshStandardMaterial({ color: 0xcabfa6, roughness: 0.9 });
+const wallMat = new THREE.MeshStandardMaterial({ color: 0xece4d3, roughness: 0.96 });
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(rw, rd), floorMat);
+floor.rotation.x = -Math.PI / 2; floor.position.z = -rd / 2 + 1; floor.receiveShadow = true; scene.add(floor);
+function wall(w, h, x, y, z, ry = 0) { const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.12), wallMat); m.position.set(x, y, z); m.rotation.y = ry; m.receiveShadow = true; scene.add(m); }
+wall(rw, rh, 0, rh / 2, -rd / 2 + 1);           // back
+wall(rd, rh, -rw / 2, rh / 2, -rd / 2 + 1 + rd / 2, Math.PI / 2); // left
+// a warm rug under the seating group
+const rug = new THREE.Mesh(new THREE.PlaneGeometry(4.2, 3.0), new THREE.MeshStandardMaterial({ color: 0xb8a07f, roughness: 1 }));
+rug.rotation.x = -Math.PI / 2; rug.position.set(0, 0.01, -1.9); rug.receiveShadow = true; scene.add(rug);
+
+const loader = new GLTFLoader();
+const picks = [];
+let loaded = 0;
+
+function groundAndPlace(root, p) {
+  // auto-ground: drop so the model's lowest point sits on the floor
+  const box = new THREE.Box3().setFromObject(root);
+  const size = new THREE.Vector3(); box.getSize(size);
+  const min = box.min;
+  root.position.x += p.position_m[0] - (box.min.x + size.x / 2);
+  root.position.z += p.position_m[2] - (box.min.z + size.z / 2);
+  root.position.y += -min.y + (p.position_m[1] || 0);
+  root.rotation.y = (p.rotation_deg_y || 0) * Math.PI / 180;
+  return size;
+}
+
+for (const product of scene_data.products) {
+  try {
+    const gltf = await loader.loadAsync('../../' + product.avatar.runtime_glb);
+    const root = gltf.scene;
+    root.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; o.userData.product = product; } });
+    scene.add(root);
+    groundAndPlace(root, product.placement);
+    picks.push(root);
+    loaded++;
+  } catch (e) { console.error('load failed', product.twin_id, e); }
+}
+
+document.getElementById('loading').style.display = 'none';
+document.getElementById('proofbox').innerHTML =
+  `<b>${loaded}/${scene_data.products.length} REAL PRODUCTS RENDERED</b><br>NORR11 + Wendelbo native manufacturer GLB<br>geometry rights: review · ES checkout: live gate`;
+document.getElementById('sub').textContent =
+  `${loaded} real Product Twins from the MCP — NORR11 & Wendelbo — shown with their own native manufacturer 3D. Prices are the live trade list (USD); ES/EUR checkout is a live gate.`;
+
+// picking
+const ray = new THREE.Raycaster(); const mouse = new THREE.Vector2();
+const panel = document.getElementById('panel');
+renderer.domElement.addEventListener('click', ev => {
+  mouse.set((ev.clientX / innerWidth) * 2 - 1, -(ev.clientY / innerHeight) * 2 + 1);
+  ray.setFromCamera(mouse, camera);
+  const hit = ray.intersectObjects(picks, true).find(h => h.object.userData.product || h.object.parent);
+  let obj = hit && hit.object;
+  while (obj && !obj.userData.product) obj = obj.parent;
+  if (!obj) return;
+  const p = obj.userData.product;
+  document.getElementById('p-src').textContent = 'Product Twin · native manufacturer 3D';
+  document.getElementById('p-title').textContent = `${p.identity.manufacturer} ${p.identity.model}`;
+  document.getElementById('p-mk').textContent = `SKU ${p.identity.merchant_sku || '—'} · ${p.identity.configuration || ''}`;
+  document.getElementById('p-pills').innerHTML =
+    [p.category_id, p.avatar.level, 'native MODEL_3D', 'ES join ✓'].map(t => `<span class="pill">${t}</span>`).join('');
+  const o = p.offer_snapshot;
+  document.getElementById('p-price').textContent = `$${o.unit_price.toLocaleString()} ${o.currency}`;
+  document.getElementById('p-offerstate').textContent = `${o.merchant} · ${o.available ? 'available' : 'unavailable'} · observed ${o.observed_at}`;
+  document.getElementById('p-warn').textContent =
+    `Exact finish not bound to variant. ${o.es_checkout_state}. Native GLB rights: review.`;
+  panel.classList.add('open');
+});
+document.getElementById('close').onclick = () => panel.classList.remove('open');
+
+addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
+(function animate() { requestAnimationFrame(animate); controls.update(); renderer.render(scene, camera); })();
+</script>
+</body>
+</html>
