@@ -92,6 +92,23 @@ The exact-address Hemnet gallery was also inspected live on 2026-08-18. Its five
 
 This second observation is `LISTED_REFERENCE`, not survey or official-source evidence. No listing pixels, image URLs or extracted geometry are stored. The renderer uses only the qualitative character—clearing, scattered rock, vegetation edges, pitched-roof context and lake-facing outlook—and keeps the visual plot line, road geometry, building positions, access and utilities unverified.
 
+## Street Room fidelity pass
+
+The Realistic profile now translates the recorded visual character into a denser, deterministic visual-only layer:
+
+- procedural grass, gravel and asphalt material variation;
+- an uncurbed road section with gravel shoulders and soft drainage/vegetation edges;
+- informal gravel driveways, mailboxes and occasional low roadside posts;
+- mixed birch/pine density at the immediate street scale;
+- timber utility poles and overhead lines;
+- detached-house archetypes with painted façades, gable roofs, windows and doors;
+- exact-listing character on the working plot: exposed soil, scattered rock, scrub, cut-timber piles and capped-conduit forms;
+- a diagrammatic Lake Glan outlook band used only to communicate the listing-reported view direction.
+
+These objects live exclusively in the viewer's `realismDecor` group and disappear in the Intelligence profile. They are not serialized into Product Twin geometry, cannot be selected as evidence and do not receive source identities. Street Room and Plot Outlook also suppress large spatial labels by default, while Compare widens the camera field of view so the evidence and visual profiles remain readable side by side.
+
+The visual layer intentionally remains architectural real-time context rather than photogrammetry. Exact road width/profile, ditch position, driveway geometry, pole position, house façade arrangement, vegetation inventory, plot works and lake visibility still require accepted source geometry or field verification.
+
 ## Evidence state
 
 Still not verified:

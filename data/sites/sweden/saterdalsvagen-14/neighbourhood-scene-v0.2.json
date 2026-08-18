@@ -132,14 +132,14 @@
       "id": "STREET_VIEW",
       "label": "Street room",
       "camera": [
-        -76,
-        3.1,
-        -62
+        -78,
+        2.25,
+        -52
       ],
       "target": [
-        0,
-        1.4,
-        -5
+        -27,
+        1.35,
+        20
       ],
       "visible_groups": [
         "TERRAIN",
@@ -151,12 +151,12 @@
       "cutaway": false,
       "live_context_view": {
         "center_wgs84": [
-          16.0317063331,
-          58.65219621060498
+          16.03124010955226,
+          58.6524223730801
         ],
         "zoom": 19.2,
         "pitch": 85,
-        "bearing": 53.1301,
+        "bearing": 35.3112,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }
@@ -165,14 +165,14 @@
       "id": "PLOT_ORBIT",
       "label": "Plot outlook",
       "camera": [
-        36,
-        28,
-        62
+        7,
+        9.5,
+        25
       ],
       "target": [
-        -14,
-        -3,
-        -170
+        0,
+        3.5,
+        -230
       ],
       "visible_groups": [
         "TERRAIN",
@@ -184,12 +184,12 @@
       "cutaway": false,
       "live_context_view": {
         "center_wgs84": [
-          16.03146458755673,
-          58.65070353826917
+          16.0317063331,
+          58.65016074832888
         ],
         "zoom": 17.8,
-        "pitch": 82.5581,
-        "bearing": 192.1622,
+        "pitch": 85,
+        "bearing": 181.5724,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }
