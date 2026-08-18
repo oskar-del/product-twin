@@ -98,6 +98,18 @@ check(!machine.transitioning, "a completed transition must clear itself");
 const halfway = tweenPose(stages[0], stages[3], 0.5);
 check(halfway.progress > 0.5, "ease-out must be ahead of linear at the midpoint");
 
+// A loop that misses the entire tween window — backgrounded tab, paused rAF, one long frame —
+// must still land the camera on the stage it was sent to.
+const missed = createStageMachine({stages, durationMs: 900});
+missed.goTo(3, {now: 0});
+const late = missed.pose(60_000);
+check(late.apply && late.done, "a pose read after the tween window must still ask to be applied");
+check(late.camera.every((value, index) => value === stages[3].camera[index]), "a missed tween must land exactly on the target camera");
+check(missed.pose(60_100).apply === false, "once applied, a settled pose must stop overriding the user's camera");
+const instant = createStageMachine({stages, durationMs: 900});
+instant.goTo(2, {instant: true});
+check(instant.pose(0).apply === true, "an instant stage change must ask to be applied");
+
 // ── local ENU geodesy ───────────────────────────────────────────────────────────────────────
 const origin = [16.0317063331, 58.6522414431];
 const roundTrip = wgs84ToLocal({originWgs84: origin, lonLat: localToWgs84({originWgs84: origin, eastNorthM: [123.4, -56.7]})});
@@ -128,6 +140,35 @@ check(direction[1] > 0, "the sun must be above the horizon at solar noon");
 const offset = localHourToUtc({hour: 13, longitude: origin[0]});
 check(offset.offset_source === "DERIVED_FROM_LONGITUDE" && offset.utc_offset_hours === 1, "an undeclared UTC offset must be derived from longitude and disclosed");
 check(localHourToUtc({hour: 13, utcOffsetHours: 2, longitude: origin[0]}).offset_source === "SCENE_DECLARED", "a scene-declared offset must win over the derived one");
+
+// ── scene graph invariants (built headless: no canvas textures, no sprite labels) ───────────
+// three.js constructs a scene graph fine without WebGL, so the structural contract between
+// elements and objects is gateable. This is what catches an element rendering as two objects
+// where only one of them answers to the element's visibility.
+const {createSceneBuilder} = await import("../engine/geometry/primitives.mjs");
+const {createMaterialFactory} = await import("../engine/core/profiles.mjs");
+const headless = createSceneBuilder({materials: createMaterialFactory({}), textures: null, labels: false});
+const built = headless.build(fixture);
+
+check(built.byId.size === fixture.elements.length, `every element must map to exactly one object — ${built.byId.size} objects for ${fixture.elements.length} elements`);
+for (const element of fixture.elements) {
+  const object = built.byId.get(element.id);
+  check(Boolean(object), `element ${element.id} produced no object`);
+}
+check(built.clickable.length >= fixture.elements.length, "every element must contribute at least one pickable object");
+
+// Every pickable object must sit UNDER the object registered for its element, or hiding the
+// element leaves part of it on screen — a roof over a building that is no longer there.
+const orphans = built.clickable.filter(object => {
+  const owner = built.byId.get(object.userData.element.id);
+  if (!owner) return true;
+  for (let node = object; node; node = node.parent) if (node === owner) return false;
+  return true;
+});
+check(orphans.length === 0, `${orphans.length} pickable object(s) are not descendants of their element's object: ${orphans.map(o => o.userData.element.id).join(", ")}`);
+check(built.terrain !== null, "the fixture's GRID_SURFACE must register as the terrain mesh");
+const solarGroup = built.byId.get("SOLAR_PATH");
+check((solarGroup?.userData.solarMarks?.length ?? 0) > 0, "SOLAR_ARC must produce hour marks rather than being silently dropped");
 
 // ── cross-check against a scene the engine did not author ───────────────────────────────────
 const crossCheckPath = CROSS_CHECK_SCENES.find(candidate => fs.existsSync(path.join(root, candidate)));

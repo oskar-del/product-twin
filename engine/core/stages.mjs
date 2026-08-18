@@ -88,6 +88,10 @@ export function createStageMachine({stages, durationMs = DEFAULT_TWEEN_MS, onSta
   if (!Array.isArray(stages) || !stages.length) throw new RangeError("createStageMachine requires at least one stage");
   let currentIndex = 0;
   let transition = null;
+  // True while the caller still owes the camera a write. Without it, a loop that misses the
+  // entire tween window — a backgrounded tab, a long frame, a paused rAF — reads a settled
+  // pose, skips it as "done", and leaves the camera at the stage it was asked to leave.
+  let pendingApply = true;
 
   function stageAt(index) {
     if (!Number.isInteger(index) || index < 0 || index >= stages.length) throw new RangeError(`stage index ${index} out of range`);
@@ -99,6 +103,7 @@ export function createStageMachine({stages, durationMs = DEFAULT_TWEEN_MS, onSta
     const next = stageAt(index);
     currentIndex = index;
     transition = instant ? null : {from: previous, to: next, start: now};
+    pendingApply = true;
     onStage?.(next, {instant});
     return next;
   }
@@ -112,14 +117,25 @@ export function createStageMachine({stages, durationMs = DEFAULT_TWEEN_MS, onSta
     goToId(id, options) { return goTo(stageIndexById(stages, id), options); },
     next(options) { return goTo(Math.min(stages.length - 1, currentIndex + 1), options); },
     previous(options) { return goTo(Math.max(0, currentIndex - 1), options); },
-    /** Pose for the current instant. Returns the settled stage pose when no transition is running. */
+    /**
+     * Pose for the current instant, plus `apply`: whether the caller must write it to the
+     * camera. `apply` stays true until a settled pose has been handed out once, so a missed
+     * tween still lands, and false afterwards so it never fights a user orbiting the scene.
+     */
     pose(now = 0) {
       const stage = stages[currentIndex];
-      if (!transition) return Object.freeze({camera: stage.camera, target: stage.target, progress: 1, done: true});
+      if (!transition) {
+        const settled = Object.freeze({camera: stage.camera, target: stage.target, progress: 1, done: true, apply: pendingApply});
+        pendingApply = false;
+        return settled;
+      }
       const t = durationMs <= 0 ? 1 : (now - transition.start) / durationMs;
       const pose = tweenPose(transition.from, transition.to, t);
-      if (pose.done) transition = null;
-      return pose;
+      if (pose.done) {
+        transition = null;
+        pendingApply = false;
+      }
+      return Object.freeze({...pose, apply: true});
     }
   };
 }

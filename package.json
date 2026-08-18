@@ -29,6 +29,7 @@
     "engine:validate": "node scripts/validate-twin-engine.mjs",
     "engine:mutations": "node scripts/test-twin-engine.mjs",
     "engine:gate": "npm run engine:scene:build && npm run engine:validate && npm run engine:mutations",
+    "engine:demo": "node scripts/serve-twin-engine-demo.mjs",
     "scene:v0:validate": "node scripts/validate-v0-shoppable-scene.mjs",
     "scene:living:supply:validate": "node scripts/validate-living-room-supply-board.mjs",
     "scene:v0:refresh": "node scripts/refresh-v0-shoppable-scene-offers.mjs",
