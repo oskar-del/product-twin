@@ -3,35 +3,44 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>NORR11 living room · real Product Twins</title>
+<title>NORR11 in a Marbella villa · real Product Twins</title>
 <style>
-  html,body{margin:0;height:100%;overflow:hidden;background:#15140f;color:#f3efe5;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
+  html,body{margin:0;height:100%;overflow:hidden;background:#0e0d0a;color:#f4efe4;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
   canvas{display:block}
   #hud{position:fixed;inset:0;pointer-events:none}
-  .brand{position:absolute;left:22px;top:20px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}.brand b{font-size:15px;letter-spacing:.05em}
-  .sub{position:absolute;left:22px;top:60px;color:#c3bda9;font-size:12px;max-width:340px;line-height:1.5}
-  .proof{position:absolute;right:20px;top:20px;max-width:300px;background:rgba(22,20,15,.82);backdrop-filter:blur(10px);padding:11px 13px;border:1px solid rgba(255,255,255,.09);border-radius:12px;font-size:10px;line-height:1.55;color:#ded7c4}.proof b{color:#f0c987}
-  .help{position:absolute;left:22px;bottom:18px;background:rgba(22,20,15,.82);backdrop-filter:blur(10px);padding:10px 13px;border:1px solid rgba(255,255,255,.09);border-radius:12px;font-size:11px;line-height:1.6}
-  #panel{pointer-events:auto;position:absolute;right:16px;bottom:16px;width:330px;background:rgba(245,241,231,.97);color:#1c2016;border-radius:16px;padding:18px;box-sizing:border-box;transform:translateY(140%);transition:.22s}
-  #panel.open{transform:none}#panel .small{font-size:10px;color:#7a7358;text-transform:uppercase;letter-spacing:.12em}
-  #panel h2{font:500 23px/1.05 Georgia,serif;margin:6px 0 4px}#panel .mk{font-size:11px;color:#6a6450;margin-bottom:8px}
-  .offer{margin-top:10px;padding:11px;border:1px solid #dcd8c8;border-radius:11px;background:#fff}.offer strong{display:block;font:500 22px/1 Georgia,serif;margin:3px 0}.offer span{font-size:10px;color:#6a7360;line-height:1.45}
-  .pill{display:inline-block;background:#e6e3d5;padding:4px 8px;border-radius:999px;font-size:9px;margin:2px 2px 0 0}
-  .warn{margin-top:10px;padding:9px;background:#f0e6d1;border-radius:9px;font-size:10px;color:#6f5a34}
-  .close{float:right;border:0;background:none;color:#4a4636;font-size:18px;cursor:pointer}
-  #loading{position:absolute;inset:0;display:grid;place-items:center;background:#15140f;color:#e8e1cd;font-size:13px;letter-spacing:.04em}
+  .topline{position:absolute;left:26px;top:22px}
+  .topline .k{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#d8b98a}
+  .topline h1{margin:5px 0 0;font:500 26px/1.05 Georgia,serif;color:#fbf7ee;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+  .topline .loc{font-size:12px;color:#e9e2d2;margin-top:4px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+  .price{position:absolute;right:24px;top:22px;text-align:right}
+  .price .k{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#e7dcc4;opacity:.85}
+  .price .v{font:500 22px/1 Georgia,serif;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+  .price .note{font-size:9px;color:#e7dcc4;opacity:.8;max-width:210px;margin-top:4px}
+  .help{position:absolute;left:26px;bottom:20px;font-size:11px;color:#efe8d7;background:rgba(20,17,12,.5);backdrop-filter:blur(8px);padding:8px 12px;border-radius:999px;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+  .tag{position:absolute;pointer-events:auto;transform:translate(-50%,-50%);cursor:pointer}
+  .tag .dot{width:26px;height:26px;border-radius:50%;background:rgba(250,246,238,.92);border:2px solid rgba(0,0,0,.15);box-shadow:0 3px 12px rgba(0,0,0,.35);display:grid;place-items:center;font-size:13px;color:#1c2016;transition:.15s}
+  .tag:hover .dot{transform:scale(1.12);background:#fff}
+  #panel{pointer-events:auto;position:absolute;right:18px;bottom:18px;width:326px;background:rgba(247,243,233,.98);color:#1c2016;border-radius:16px;padding:18px;box-sizing:border-box;transform:translateY(160%);transition:.24s cubic-bezier(.2,.7,.2,1);box-shadow:0 18px 50px rgba(0,0,0,.35)}
+  #panel.open{transform:none}
+  #panel .small{font-size:10px;color:#7a7358;text-transform:uppercase;letter-spacing:.12em}
+  #panel h2{font:500 22px/1.05 Georgia,serif;margin:6px 0 3px}#panel .mk{font-size:11px;color:#6a6450;margin-bottom:8px}
+  .offer{margin-top:10px;padding:11px 12px;border:1px solid #e0dccb;border-radius:11px;background:#fff}
+  .offer strong{display:block;font:500 21px/1 Georgia,serif;margin:2px 0}.offer span{font-size:10px;color:#6a7360}
+  .pill{display:inline-block;background:#eae7d8;padding:4px 8px;border-radius:999px;font-size:9px;margin:2px 2px 0 0}
+  .warn{margin-top:9px;padding:9px;background:#f1e7d2;border-radius:9px;font-size:10px;color:#6f5a34;line-height:1.45}
+  .close{float:right;border:0;background:none;color:#4a4636;font-size:18px;cursor:pointer;line-height:1}
+  #loading{position:absolute;inset:0;display:grid;place-items:center;background:#0e0d0a;color:#e8e1cd;font-size:13px;letter-spacing:.03em;z-index:5}
 </style>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"}}</script>
 </head>
 <body>
-<div id="loading">Loading real NORR11 / Wendelbo product twins…</div>
+<div id="loading">Furnishing the villa with real product twins…</div>
 <div id="hud">
-  <div class="brand"><b>PRODUCT TWIN</b><br>LIVING ROOM · MARBELLA</div>
-  <div class="sub" id="sub">Real products from the MCP, shown with their native manufacturer 3D.</div>
-  <div class="proof" id="proofbox"><b>NATIVE MANUFACTURER 3D</b><br>loading…</div>
-  <div class="help">Drag to orbit · scroll to zoom · click a piece to inspect</div>
+  <div class="topline"><div class="k">Product Twin · client preview</div><h1 id="villa-name">Marbella villa</h1><div class="loc" id="villa-loc">Costa del Sol · furnished with real, purchasable pieces</div></div>
+  <div class="price"><div class="k">Property</div><div class="v" id="villa-price">—</div><div class="note" id="villa-note"></div></div>
+  <div class="help">Drag to look around · scroll to zoom · tap a product</div>
   <aside id="panel"><button class="close" id="close">×</button>
-    <div class="small" id="p-src">Product Twin</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
+    <div class="small">Product Twin · native manufacturer 3D</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
     <div id="p-pills"></div>
     <div class="offer"><div class="small">Live trade offer</div><strong id="p-price">—</strong><span id="p-offerstate"></span></div>
     <div class="warn" id="p-warn"></div>
@@ -41,60 +50,107 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-const SCENE_URL = '../../data/showrooms/norr11-marbella-living-room-v0.1.json';
-const scene_data = await fetch(SCENE_URL).then(r => { if (!r.ok) throw new Error('scene ' + r.status); return r.json(); });
+const scene_data = await fetch('../../data/showrooms/norr11-marbella-living-room-v0.1.json').then(r => r.json());
+const property = scene_data.property || { name: 'Marbella villa (placeholder)', location: 'Costa del Sol, Spain', price_display: 'bind a real H&H listing', note: 'Property identity is a placeholder — swap in a real for-sale villa.' };
+document.getElementById('villa-name').textContent = property.name;
+document.getElementById('villa-loc').textContent = property.location + ' · furnished with real, purchasable pieces';
+document.getElementById('villa-price').textContent = property.price_display;
+document.getElementById('villa-note').textContent = property.note || '';
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.setSize(innerWidth, innerHeight);
-renderer.shadowMap.enabled = true;
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.05;
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
 document.body.prepend(renderer.domElement);
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xccc3b0);
-const [rw, rh, rd] = scene_data.room.size_m;
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
 
-const camera = new THREE.PerspectiveCamera(55, innerWidth / innerHeight, 0.05, 100);
-camera.position.set(4.4, 2.4, 5.2);
+// warm daylight sky seen through the window
+scene.background = new THREE.Color(0xbfd4dd);
+
+const [RW, RH, RD] = scene_data.room.size_m;
+
+// Room spans z = +1 (open front) to z = -(RD-1) (back wall); x = -RW/2 .. RW/2.
+const BACK_Z = -(RD - 1);
+const CENTER_Z = (1 + BACK_Z) / 2;
+const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.05, 200);
+camera.position.set(3.6, 1.55, 3.3);
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.target.set(0, 0.7, -1.6);
-controls.maxPolarAngle = Math.PI / 2 - 0.02;
-controls.minDistance = 2; controls.maxDistance = 14;
+controls.target.set(0, 0.55, -2.6);
+controls.enableDamping = true; controls.dampingFactor = 0.08;
+controls.maxPolarAngle = Math.PI / 2 - 0.03; controls.minDistance = 2.4; controls.maxDistance = 12;
 
-scene.add(new THREE.HemisphereLight(0xfff5e2, 0x554b3a, 1.9));
-const sun = new THREE.DirectionalLight(0xffe9c4, 2.6);
-sun.position.set(6, 9, 4); sun.castShadow = true;
-sun.shadow.mapSize.set(2048, 2048); sun.shadow.camera.top = 8; sun.shadow.camera.bottom = -8; sun.shadow.camera.left = -8; sun.shadow.camera.right = 8;
+// ---- procedural textures (no external assets) ----
+function makeCanvas(w, h, draw) { const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; }
+const oakTex = makeCanvas(1024, 1024, (x, w, h) => {
+  x.fillStyle = '#b48a5b'; x.fillRect(0, 0, w, h);
+  for (let i = 0; i < 8; i++) { // planks
+    const y = i * h / 8; x.fillStyle = `rgba(${120 + Math.round(Math.sin(i) * 18)},${90},${55},1)`; x.fillRect(0, y, w, h / 8 - 2);
+    for (let g = 0; g < 40; g++) { x.strokeStyle = `rgba(90,62,35,${0.05 + Math.random() * 0.08})`; x.beginPath(); const gy = y + Math.random() * h / 8; x.moveTo(0, gy); x.bezierCurveTo(w / 3, gy + (Math.random() - .5) * 10, 2 * w / 3, gy + (Math.random() - .5) * 10, w, gy); x.stroke(); }
+  }
+});
+oakTex.wrapS = oakTex.wrapT = THREE.RepeatWrapping; oakTex.repeat.set(4, 4);
+const plasterTex = makeCanvas(512, 512, (x, w, h) => { x.fillStyle = '#efe7d8'; x.fillRect(0, 0, w, h); for (let i = 0; i < 9000; i++) { x.fillStyle = `rgba(${200 + Math.random() * 40},${190 + Math.random() * 30},${170},${Math.random() * 0.05})`; x.fillRect(Math.random() * w, Math.random() * h, 2, 2); } });
+plasterTex.wrapS = plasterTex.wrapT = THREE.RepeatWrapping; plasterTex.repeat.set(3, 2);
+
+const floorMat = new THREE.MeshStandardMaterial({ map: oakTex, roughness: 0.62, metalness: 0 });
+const wallMat = new THREE.MeshStandardMaterial({ map: plasterTex, roughness: 0.95 });
+const ceilMat = new THREE.MeshStandardMaterial({ color: 0xf3ede1, roughness: 1 });
+
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(RW, RD), floorMat);
+floor.rotation.x = -Math.PI / 2; floor.position.z = CENTER_Z; floor.receiveShadow = true; scene.add(floor);
+const ceil = new THREE.Mesh(new THREE.PlaneGeometry(RW, RD), ceilMat);
+ceil.rotation.x = Math.PI / 2; ceil.position.set(0, RH, CENTER_Z); scene.add(ceil);
+function wall(w, h, x, y, z, ry = 0) { const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.14), wallMat); m.position.set(x, y, z); m.rotation.y = ry; m.receiveShadow = true; scene.add(m); return m; }
+wall(RW, RH, 0, RH / 2, BACK_Z);                       // back wall (far)
+wall(RD, RH, -RW / 2, RH / 2, CENTER_Z, Math.PI / 2);  // left wall
+wall(RD, RH, RW / 2, RH / 2, CENTER_Z, Math.PI / 2);   // right wall
+
+// large window opening on the back wall -> Mediterranean view + light
+const view = makeCanvas(1024, 512, (x, w, h) => {
+  const g = x.createLinearGradient(0, 0, 0, h); g.addColorStop(0, '#aed2e6'); g.addColorStop(0.54, '#dcedf2'); g.addColorStop(0.56, '#4585a9'); g.addColorStop(1, '#2f6f97'); x.fillStyle = g; x.fillRect(0, 0, w, h);
+  x.fillStyle = 'rgba(255,255,255,.5)'; for (let i = 0; i < 30; i++) x.fillRect(Math.random() * w, h * 0.58 + Math.random() * h * 0.4, 40 + Math.random() * 90, 1.5);
+  x.fillStyle = '#7fae6b'; x.fillRect(0, h * 0.53, w, 10); // planting line
+});
+const windowPane = new THREE.Mesh(new THREE.PlaneGeometry(RW * 0.64, RH * 0.66), new THREE.MeshBasicMaterial({ map: view }));
+windowPane.position.set(0.2, RH * 0.52, BACK_Z + 0.08); scene.add(windowPane);
+const frameMat = new THREE.MeshStandardMaterial({ color: 0x2a2723, roughness: 0.5, metalness: 0.3 });
+function bar(w, h, x, y) { const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.06), frameMat); m.position.set(x, y, BACK_Z + 0.12); scene.add(m); }
+bar(RW * 0.66, 0.06, 0.2, RH * 0.52 + RH * 0.33); bar(RW * 0.66, 0.06, 0.2, RH * 0.52 - RH * 0.33); bar(0.06, RH * 0.66, 0.2 - RW * 0.32, RH * 0.52); bar(0.06, RH * 0.66, 0.2 + RW * 0.32, RH * 0.52); bar(0.05, RH * 0.66, 0.2, RH * 0.52);
+
+// warm sun coming in from the front-side, so product fronts face the light
+const sun = new THREE.DirectionalLight(0xffe6bd, 3.0);
+sun.position.set(3.5, 6.5, 3.0); sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048); const s = sun.shadow.camera; s.near = 0.5; s.far = 30; s.left = -8; s.right = 8; s.top = 8; s.bottom = -8; sun.shadow.bias = -0.0004;
 scene.add(sun);
-scene.add(new THREE.AmbientLight(0xffffff, 0.25));
+scene.add(new THREE.HemisphereLight(0xdfeaf2, 0x6b5a44, 0.45));
 
-// room shell (warm plaster + limestone)
-const floorMat = new THREE.MeshStandardMaterial({ color: 0xcabfa6, roughness: 0.9 });
-const wallMat = new THREE.MeshStandardMaterial({ color: 0xece4d3, roughness: 0.96 });
-const floor = new THREE.Mesh(new THREE.PlaneGeometry(rw, rd), floorMat);
-floor.rotation.x = -Math.PI / 2; floor.position.z = -rd / 2 + 1; floor.receiveShadow = true; scene.add(floor);
-function wall(w, h, x, y, z, ry = 0) { const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.12), wallMat); m.position.set(x, y, z); m.rotation.y = ry; m.receiveShadow = true; scene.add(m); }
-wall(rw, rh, 0, rh / 2, -rd / 2 + 1);           // back
-wall(rd, rh, -rw / 2, rh / 2, -rd / 2 + 1 + rd / 2, Math.PI / 2); // left
-// a warm rug under the seating group
-const rug = new THREE.Mesh(new THREE.PlaneGeometry(4.2, 3.0), new THREE.MeshStandardMaterial({ color: 0xb8a07f, roughness: 1 }));
-rug.rotation.x = -Math.PI / 2; rug.position.set(0, 0.01, -1.9); rug.receiveShadow = true; scene.add(rug);
+// rug + a simple bronze coffee table for context (clearly scene props, not products)
+const rug = new THREE.Mesh(new THREE.PlaneGeometry(3.6, 2.6), new THREE.MeshStandardMaterial({ color: 0xc3ad88, roughness: 1 }));
+rug.rotation.x = -Math.PI / 2; rug.position.set(0, 0.012, -2.4); rug.receiveShadow = true; scene.add(rug);
+const table = new THREE.Mesh(new THREE.BoxGeometry(1.1, 0.32, 0.6), new THREE.MeshStandardMaterial({ color: 0x6f5a3c, roughness: 0.4, metalness: 0.35 }));
+table.position.set(0, 0.16, -2.4); table.castShadow = table.receiveShadow = true; scene.add(table);
+
+// soft contact-shadow blob under each product
+const blobTex = makeCanvas(256, 256, (x, w, h) => { const g = x.createRadialGradient(w / 2, h / 2, 4, w / 2, h / 2, w / 2); g.addColorStop(0, 'rgba(0,0,0,.42)'); g.addColorStop(1, 'rgba(0,0,0,0)'); x.fillStyle = g; x.fillRect(0, 0, w, h); });
+function contactShadow(cx, cz, sx, sz) { const m = new THREE.Mesh(new THREE.PlaneGeometry(sx, sz), new THREE.MeshBasicMaterial({ map: blobTex, transparent: true, depthWrite: false })); m.rotation.x = -Math.PI / 2; m.position.set(cx, 0.015, cz); scene.add(m); }
 
 const loader = new GLTFLoader();
 const picks = [];
+const tagEls = [];
 let loaded = 0;
 
-function groundAndPlace(root, p) {
-  // auto-ground: drop so the model's lowest point sits on the floor
-  const box = new THREE.Box3().setFromObject(root);
-  const size = new THREE.Vector3(); box.getSize(size);
-  const min = box.min;
+function placeProduct(root, p) {
+  const box = new THREE.Box3().setFromObject(root); const size = new THREE.Vector3(); box.getSize(size);
   root.position.x += p.position_m[0] - (box.min.x + size.x / 2);
   root.position.z += p.position_m[2] - (box.min.z + size.z / 2);
-  root.position.y += -min.y + (p.position_m[1] || 0);
+  root.position.y += -box.min.y + (p.position_m[1] || 0);
   root.rotation.y = (p.rotation_deg_y || 0) * Math.PI / 180;
   return size;
 }
@@ -105,45 +161,54 @@ for (const product of scene_data.products) {
     const root = gltf.scene;
     root.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; o.userData.product = product; } });
     scene.add(root);
-    groundAndPlace(root, product.placement);
-    picks.push(root);
-    loaded++;
+    const size = placeProduct(root, product.placement);
+    contactShadow(product.placement.position_m[0], product.placement.position_m[2], Math.max(size.x, size.z) * 1.25, Math.max(size.x, size.z) * 1.25);
+    // floating tag anchored to the product top
+    const anchor = new THREE.Vector3(product.placement.position_m[0], size.y * 0.9, product.placement.position_m[2]);
+    const el = document.createElement('div'); el.className = 'tag'; el.innerHTML = '<div class="dot">+</div>';
+    el.onclick = () => showPanel(product);
+    document.getElementById('hud').appendChild(el);
+    tagEls.push({ el, anchor });
+    picks.push(root); loaded++;
   } catch (e) { console.error('load failed', product.twin_id, e); }
 }
 
 document.getElementById('loading').style.display = 'none';
-document.getElementById('proofbox').innerHTML =
-  `<b>${loaded}/${scene_data.products.length} REAL PRODUCTS RENDERED</b><br>NORR11 + Wendelbo native manufacturer GLB<br>geometry rights: review · ES checkout: live gate`;
-document.getElementById('sub').textContent =
-  `${loaded} real Product Twins from the MCP — NORR11 & Wendelbo — shown with their own native manufacturer 3D. Prices are the live trade list (USD); ES/EUR checkout is a live gate.`;
 
-// picking
-const ray = new THREE.Raycaster(); const mouse = new THREE.Vector2();
-const panel = document.getElementById('panel');
-renderer.domElement.addEventListener('click', ev => {
-  mouse.set((ev.clientX / innerWidth) * 2 - 1, -(ev.clientY / innerHeight) * 2 + 1);
-  ray.setFromCamera(mouse, camera);
-  const hit = ray.intersectObjects(picks, true).find(h => h.object.userData.product || h.object.parent);
-  let obj = hit && hit.object;
-  while (obj && !obj.userData.product) obj = obj.parent;
-  if (!obj) return;
-  const p = obj.userData.product;
-  document.getElementById('p-src').textContent = 'Product Twin · native manufacturer 3D';
+function showPanel(p) {
   document.getElementById('p-title').textContent = `${p.identity.manufacturer} ${p.identity.model}`;
-  document.getElementById('p-mk').textContent = `SKU ${p.identity.merchant_sku || '—'} · ${p.identity.configuration || ''}`;
-  document.getElementById('p-pills').innerHTML =
-    [p.category_id, p.avatar.level, 'native MODEL_3D', 'ES join ✓'].map(t => `<span class="pill">${t}</span>`).join('');
+  document.getElementById('p-mk').textContent = `SKU ${p.identity.merchant_sku || '—'}${p.identity.configuration ? ' · ' + p.identity.configuration : ''}`;
+  document.getElementById('p-pills').innerHTML = [p.category_id, p.avatar.level, 'native MODEL_3D', 'ES join ✓'].map(t => `<span class="pill">${t}</span>`).join('');
   const o = p.offer_snapshot;
   document.getElementById('p-price').textContent = `$${o.unit_price.toLocaleString()} ${o.currency}`;
-  document.getElementById('p-offerstate').textContent = `${o.merchant} · ${o.available ? 'available' : 'unavailable'} · observed ${o.observed_at}`;
-  document.getElementById('p-warn').textContent =
-    `Exact finish not bound to variant. ${o.es_checkout_state}. Native GLB rights: review.`;
-  panel.classList.add('open');
+  document.getElementById('p-offerstate').textContent = `${o.merchant} · ${o.available ? 'available' : 'unavailable'} · ${o.observed_at}`;
+  document.getElementById('p-warn').textContent = `Exact finish not bound to variant. ${o.es_checkout_state}. Native GLB rights: review.`;
+  document.getElementById('panel').classList.add('open');
+}
+document.getElementById('close').onclick = () => document.getElementById('panel').classList.remove('open');
+
+// project tags to screen each frame
+const v = new THREE.Vector3();
+function updateTags() {
+  for (const { el, anchor } of tagEls) {
+    v.copy(anchor).project(camera);
+    const behind = v.z > 1;
+    el.style.display = behind ? 'none' : 'block';
+    el.style.left = (v.x * 0.5 + 0.5) * innerWidth + 'px';
+    el.style.top = (-v.y * 0.5 + 0.5) * innerHeight + 'px';
+  }
+}
+// click products directly too
+const ray = new THREE.Raycaster(); const m2 = new THREE.Vector2();
+renderer.domElement.addEventListener('click', ev => {
+  m2.set((ev.clientX / innerWidth) * 2 - 1, -(ev.clientY / innerHeight) * 2 + 1);
+  ray.setFromCamera(m2, camera);
+  let o = ray.intersectObjects(picks, true)[0]?.object; while (o && !o.userData.product) o = o.parent;
+  if (o) showPanel(o.userData.product);
 });
-document.getElementById('close').onclick = () => panel.classList.remove('open');
 
 addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
-(function animate() { requestAnimationFrame(animate); controls.update(); renderer.render(scene, camera); })();
+(function animate() { requestAnimationFrame(animate); controls.update(); updateTags(); renderer.render(scene, camera); })();
 </script>
 </body>
 </html>
