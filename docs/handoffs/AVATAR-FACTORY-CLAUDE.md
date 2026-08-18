@@ -89,6 +89,18 @@ On main none of the 12 pilot assets had review records. Completed the **rights h
 ## Landmines respected (from audit §2)
 Agent-authored visual QA (e.g. Furniture Avatar Package #2) must be independently re-derived or human-viewed before any PASS — I did **not** promote any avatar or assert visual-QA PASS. Kator/Legaz kept at G0/0-publishable. No live price/stock/rights asserted as current.
 
+## COURSE CORRECTION (2026-08-18, later) — the real job: showcase MCP products in a real house
+
+The Anatomic SITT / census / paperwork work above was the WRONG track (Oskar: "anatomic sitt has nothing to do with this project… we need the products from the mcp to showcase"). The real job: take the real purchasable products the Product Twin MCP already holds and showcase them **staged in a real for-sale house, client-pitch quality**.
+
+Delivered + verified in-browser:
+- `scripts/resolve-native-3d-showcase.mjs` → pulls the 8 NORR11/Wendelbo twins' **native manufacturer GLB** from Shopify by the gid each twin stores; 8/8 resolved to gitignored `.runtime` (rights review; Man Day Bed sha matches the twin record). Manifest: `data/geometry/native-3d-showcase-manifest.json`.
+- `data/showrooms/norr11-marbella-living-room-v0.1.json` → shoppable scene; `property` block bound to a **real live H&H listing**: Villa in Altea Hills, ref **R5355265**, **€6,490,000**, 5 bed/6 bath/470 m², sea views (pulled from hanssonhertzell.com 2026-08-18).
+- `prototype/showroom-living/index.html` → three.js villa living room (oak floor, plaster, sea-view window, IBL + soft shadows) with the real products staged; real villa hero photo + specs in the pitch card; tap a piece → real identity + live trade offer ($10,500 Man 3-Seater) + honest gates.
+- Serve locally: `python3 -m http.server 8756 --directory "$(pwd)"` → `http://127.0.0.1:8756/prototype/showroom-living/index.html`. GLBs + villa photos live only in `.runtime` (regenerate via the resolver + the referer'd photo download; not committed).
+
+Honest gaps: products render in pale default finish (variant fabric not bound); the "room" is a built 3D villa interior matched to the listing's style, NOT the listing's actual interior photo (compositing into the real photo is the un-taken next step); EUR/ES checkout is a live gate; native-GLB redistribution rights are review. Commits `15fac40`, `e791aec`, `cee027e`.
+
 ## Session state
 Branch `agent/avatar-factory-claude`, 6 commits ahead of `origin/main`. **Not pushed** — `git push` denied this session; Oskar pushes from terminal:
 ```sh
