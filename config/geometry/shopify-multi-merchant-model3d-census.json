@@ -1,0 +1,51 @@
+{
+  "version": "0.1",
+  "purpose": "Multi-merchant MODEL_3D census over merchants PROVEN census-viable by the live capability probe (data/metrics/shopify-merchant-model3d-capability-latest.json). Membership requires a passing probe verdict, not assertion.",
+  "storefront_api_version": "2026-07",
+  "concurrency": 6,
+  "default_caps": {
+    "max_product_sitemaps_per_merchant": 6,
+    "max_probes_per_merchant": 240,
+    "note": "Caps keep a sweep inside a tight compute budget. Raise or remove them (env CENSUS_MAX_SITEMAPS / CENSUS_MAX_PROBES) for a full run outside the sandbox. A capped run reports coverage_capped:true so partial 3D counts are never read as complete."
+  },
+  "roles": [
+    {"room_role": "sofa", "category_id": "FFE.SEATING.SOFA", "patterns": ["sofa", "sectional", "loveseat", "settee"]},
+    {"room_role": "lounge_chair", "category_id": "FFE.SEATING.LOUNGE", "patterns": ["lounge chair", "armchair", "easy chair", "club chair", "accent chair"]},
+    {"room_role": "dining_chair", "category_id": "FFE.SEATING.DINING", "patterns": ["dining chair", "side chair"]},
+    {"room_role": "coffee_table", "category_id": "FFE.TABLE.COFFEE", "patterns": ["coffee table", "cocktail table"]},
+    {"room_role": "side_table", "category_id": "FFE.TABLE.SIDE", "patterns": ["side table", "end table", "occasional table", "nightstand"]},
+    {"room_role": "dining_table", "category_id": "FFE.TABLE.DINING", "patterns": ["dining table"]},
+    {"room_role": "floor_lamp", "category_id": "ELECTRICAL.LUMINAIRES.FLOOR", "patterns": ["floor lamp", "standing lamp"]},
+    {"room_role": "table_lamp", "category_id": "ELECTRICAL.LUMINAIRES.TABLE", "patterns": ["table lamp"]},
+    {"room_role": "rug", "category_id": "FFE.TEXTILES.RUG", "patterns": ["area rug", "rug"]},
+    {"room_role": "bed", "category_id": "FFE.BED.FRAME", "patterns": ["bed frame", "platform bed", "bed"]}
+  ],
+  "exclusion_patterns": ["cover only", "replacement cover", "slipcover", "protective cover", "spare part", "replacement part", "swatch", "sample", "gift card", "fabric by the yard"],
+  "merchants": [
+    {"merchant_id": "design_public_group_trade", "origin": "https://trade.designpublicgroup.com", "probe_verdict": "viable", "note": "baseline; native-3D finds already proven here"},
+    {"merchant_id": "maiden_home", "origin": "https://www.maidenhome.com", "probe_verdict": "viable"},
+    {"merchant_id": "benchmade_modern", "origin": "https://benchmademodern.com", "probe_verdict": "viable"},
+    {"merchant_id": "sabai", "origin": "https://sabai.design", "probe_verdict": "viable"},
+    {"merchant_id": "inside_weather", "origin": "https://insideweather.com", "probe_verdict": "viable"},
+    {"merchant_id": "lulu_and_georgia", "origin": "https://www.luluandgeorgia.com", "probe_verdict": "viable"},
+    {"merchant_id": "the_citizenry", "origin": "https://www.the-citizenry.com", "probe_verdict": "viable"},
+    {"merchant_id": "branch", "origin": "https://www.branchfurniture.com", "probe_verdict": "viable"},
+    {"merchant_id": "medley", "origin": "https://medleyhome.com", "probe_verdict": "viable"},
+    {"merchant_id": "gus_modern", "origin": "https://gusmodern.com", "probe_verdict": "viable"},
+    {"merchant_id": "blu_dot", "origin": "https://www.bludot.com", "probe_verdict": "viable"}
+  ],
+  "not_yet_viable": [
+    {"merchant_id": "burrow", "origin": "https://burrow.com", "reason": "no shopify product sitemaps (headless/custom)"},
+    {"merchant_id": "industry_west", "origin": "https://www.industrywest.com", "reason": "no shopify product sitemaps"},
+    {"merchant_id": "hem", "origin": "https://www.hem.com", "reason": "no shopify product sitemaps"},
+    {"merchant_id": "joybird", "origin": "https://joybird.com", "reason": "no shopify product sitemaps"},
+    {"merchant_id": "rove_concepts", "origin": "https://www.roveconcepts.com", "reason": "no shopify product sitemaps"},
+    {"merchant_id": "castlery", "origin": "https://www.castlery.com", "reason": "no shopify product sitemaps"},
+    {"merchant_id": "thuma", "origin": "https://www.thuma.co", "reason": "no shopify product sitemaps"},
+    {"merchant_id": "poly_and_bark", "origin": "https://www.polyandbark.com", "reason": "no shopify product sitemaps"},
+    {"merchant_id": "floyd", "origin": "https://floyddetroit.com", "reason": "sitemap fetch timed out repeatedly"},
+    {"merchant_id": "kardiel", "origin": "https://www.kardiel.com", "reason": "sitemap 403 (bot block)"},
+    {"merchant_id": "campaign", "origin": "https://www.campaignliving.com", "reason": "sitemap fetch failed"}
+  ],
+  "persistence_policy": "Persist only stable merchant IDs, minimal identity, role classification and native MODEL_3D evidence. Never persist model source URLs or a catalogue mirror."
+}
