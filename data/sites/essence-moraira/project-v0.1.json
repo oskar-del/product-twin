@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1",
+  "entity_type": "Project",
+  "project_id": "PRJ_ESSENCE_MORAIRA",
+  "codename": "Essence Moraira",
+  "developer": "Grupo Turis Promociones",
+  "architect": "Pepe Giner",
+  "we_are": "sales agent (Hansson & Hertzell)",
+  "evidence_source_manifest": "data/sites/essence-moraira/evidence-sources-v0.1.json",
+  "location_label": {
+    "value": "Calle Benicolet, Teulada-Moraira, Alicante, Spain (postal 03724 / 03725)",
+    "evidence_class": "primary_source_reported",
+    "source": "SRC_ESSENCE_MICROSITE + SRC_CATASTRO_CALLEJERO_VIA",
+    "method": "Street named on the developer microsite and the Grupo Turis projects page; street existence + codes confirmed against Catastro Callejero (Teulada muni 03/128, via CL BENICOLET code 767).",
+    "as_of": "2026-08-18",
+    "confidence": "high"
+  },
+  "villa_count": {
+    "value": 4,
+    "evidence_class": "primary_source_reported",
+    "source": "SRC_ESSENCE_MICROSITE",
+    "as_of": "2026-08-18",
+    "confidence": "high"
+  },
+  "villas_builder_stated": [
+    {"villa": "Villa 1", "parcela_label": "PARCELA 01", "bedrooms": 4, "built_m2": 346, "plot_m2": 1413, "status": "for sale"},
+    {"villa": "Villa 2", "parcela_label": "PARCELA 02", "bedrooms": 4, "built_m2": 410, "plot_m2": 1128, "status": "for sale"},
+    {"villa": "Villa 3", "parcela_label": "PARCELA 03", "bedrooms": 4, "built_m2": 373, "plot_m2": 1223, "status": "for sale"},
+    {"villa": "Villa 4", "parcela_label": "PARCELA 04", "name": "Essence Patio", "bedrooms": 4, "built_m2": 443, "plot_m2": 5147, "status": "reserved"}
+  ],
+  "villas_note": "Built + plot figures are BUILDER-STATED, transcribed verbatim from the developer microsite (essencemoraira.com) spec cards. Plot total = 8,911 m2. NOT independently re-measured. Villa 4 'Essence Patio' features a private green area of almost 4,000 m2 (developer blog).",
+  "off_plan": {
+    "value": true,
+    "evidence_class": "primary_source_reported",
+    "note": "New-build off-plan cluster. Render filenames on the microsite are dated 13/12/2024 and 31/10/2025 (recent). Villa 4 already reserved."
+  },
+  "site_twin_ref": "SITE_ESSENCE_MORAIRA_BENICOLET (not yet locked — see catastro/README)",
+  "limitations": [
+    "Exact Catastro parcel references for the 4 Essence plots are NOT yet locked from public data — see data/sites/essence-moraira/catastro/README.md.",
+    "Prices per villa not published on the microsite; not captured."
+  ]
+}

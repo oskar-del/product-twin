@@ -1,0 +1,68 @@
+{
+  "schema_version": "0.1",
+  "source_set_id": "SRCSET_ESSENCE_MORAIRA_2026_08_18",
+  "storage_policy": "Raw HTML/XML sources are not committed. URLs + SHA-256 + retrieved_at bind assertions to the retrieved bytes. Catastro records are re-fetchable live via the request URLs.",
+  "retrieved_at": "2026-08-18",
+  "sources": [
+    {
+      "source_id": "SRC_HH_JANELA_FEED",
+      "title": "Hansson & Hertzell property feed (Janela Digital transporter)",
+      "request_url": "http://feeds.transporter.janeladigital.com/423E0F5F-30FC-4E01-8FE1-99BD7E14B021/0500015622.xml",
+      "sha256_prefix": "1568398220db76bbf9bc30f2",
+      "byte_count": 528493,
+      "finding": "36 properties. No 'Turis', no 'Benicolet', no titled 'Essence' project. 'essence' appears only as a marketing word in descriptions. All <location> lat/long = 0. No floorplans in schema (images only). CONCLUSION: Essence Moraira is NOT carried in this feed.",
+      "moraira_area_records_present": [
+        {"ref": "MRD5-215", "town": "Moraira", "location_detail": "Benimeit - Tabaira", "type": "Villa", "beds": 3, "built_m2": 235, "plot_m2": 816, "price_eur": 2250000, "new_build": 0, "note": "resale, not Essence"},
+        {"ref": "MIR0168", "town": "Moraira", "location_detail": "Pinar del Advocat - Cometa", "type": "Villa", "beds": 4, "built_m2": 246, "plot_m2": 1153, "price_eur": 2085000, "new_build": 1, "note": "not Essence (wrong urbanisation)"},
+        {"ref": "MRD5-231", "town": "Benitachell", "location_detail": "Cumbre del Sol", "type": "Villa", "beds": 4, "built_m2": 177, "plot_m2": 838, "price_eur": 1429000, "new_build": 0, "note": "resale, not Essence"}
+      ]
+    },
+    {
+      "source_id": "SRC_ESSENCE_MICROSITE",
+      "title": "Essence Moraira official project microsite (Wix)",
+      "request_url": "https://www.essencemoraira.com/",
+      "sha256_prefix": "21ec1c28a3fb02c60e3ff3d5",
+      "byte_count": 1847539,
+      "finding": "PRIMARY SOURCE. 4 villas (PARCELA 01-04), all 4-bed. Villa specs transcribed into project-v0.1.json. No map pin / lat-long embedded server-side.",
+      "authority": "Grupo Turis Promociones"
+    },
+    {
+      "source_id": "SRC_GRUPO_TURIS_PROJECTS",
+      "title": "Grupo Turis Promociones — projects page",
+      "request_url": "https://www.grupoturispromociones.com/projects",
+      "sha256_prefix": "f89ef948d6ffbd97c26b3e45",
+      "byte_count": 1091390,
+      "finding": "Links Essence Moraira to essencemoraira.com; 'promotion of four exclusive homes'."
+    },
+    {
+      "source_id": "SRC_CATASTRO_CALLEJERO_MUNI",
+      "title": "Catastro OVC Callejero — municipality lookup",
+      "request_url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCallejero.asmx/ConsultaMunicipio?Provincia=ALICANTE&Municipio=TEULADA",
+      "finding": "TEULADA = province code 03 (cd=3), municipio catastro cmc=128."
+    },
+    {
+      "source_id": "SRC_CATASTRO_CALLEJERO_VIA",
+      "title": "Catastro OVC Callejero — street lookup",
+      "request_url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCallejero.asmx/ConsultaVia?Provincia=ALICANTE&Municipio=TEULADA&TipoVia=&NombreVia=BENICOLET",
+      "finding": "CL BENICOLET exists, via code cv=767."
+    },
+    {
+      "source_id": "SRC_CATASTRO_INSPIRE_WFS_PARCEL",
+      "title": "Catastro INSPIRE WFS — GetParcel (per refcat, EPSG:25830)",
+      "request_url_template": "https://ovc.catastro.meh.es/INSPIRE/wfsCP.aspx?service=wfs&version=2&request=getfeature&STOREDQUERIE_ID=GetParcel&refcat={REFCAT}&srsname=EPSG::25830",
+      "finding": "Authoritative parcel polygons + areaValue for all 16 Calle Benicolet parcels — see catastro/benicolet-parcel-inventory-v0.1.json."
+    },
+    {
+      "source_id": "SRC_CATASTRO_DNPRC",
+      "title": "Catastro OVC Callejero — Consulta_DNPRC (per-parcel record)",
+      "request_url_template": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCallejero.asmx/Consulta_DNPRC?Provincia=&Municipio=&RC={REFCAT}",
+      "finding": "Cadastral address, use, built-m2-on-record and record year per parcel. Benicolet parcels carry buildings recorded 1950-2000 — i.e. current parcels predate the Essence subdivision."
+    },
+    {
+      "source_id": "SRC_CATASTRO_CPMRC",
+      "title": "Catastro OVC — Consulta_CPMRC (WGS84 centroid per refcat)",
+      "request_url_template": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/rest/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat={REFCAT}",
+      "finding": "WGS84 lon/lat centroid per parcel. Cluster centre ~ 38.700505 N, 0.119172 E."
+    }
+  ]
+}

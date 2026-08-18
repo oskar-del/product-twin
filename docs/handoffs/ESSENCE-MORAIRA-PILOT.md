@@ -66,6 +66,21 @@ Pull Essence Moraira from the H&H feed (floorplans, specs, photos, price list) +
 exact parcels via Catastro; confirm villa count and positions. **Open input from Oskar: exact address/urbanisation
 if the listing is ambiguous.**
 
+> **M1 progress (2026-08-18) — evidence in `data/sites/essence-moraira/`:**
+> - Feed pull **DONE (negative):** Essence Moraira is *not* in the current H&H Janela feed
+>   (`0500015622.xml`, 36 props; no Turis/Benicolet/titled Essence). Primary source = the developer
+>   microsite `essencemoraira.com`: **4 villas**, Calle Benicolet Teulada-Moraira, architect Pepe Giner.
+>   Builder-stated plots/builts: V1 1413/346 · V2 1128/410 · V3 1223/373 · V4 "Essence Patio" 5147/443 m²
+>   (Villa 4 reserved). All 4-bed.
+> - Parcel lock **PARTIAL:** street + all 16 Calle Benicolet parcels locked with authoritative Catastro
+>   geometry (area, WGS84+ETRS89 centroids, use, build year). Cluster centre ≈ 38.700505 N, 0.119172 E.
+>   Exact 4 Essence parcels **NOT** locked — the villa plot sizes don't reconcile with current parcels and
+>   every candidate still carries a 1987–2000 building; the re-parcelling/demolition hasn't propagated into
+>   Catastro. See `data/sites/essence-moraira/catastro/README.md`.
+> - **Close-out input needed:** Turis plot plan / cadastral refs, or a geolocated plot boundary
+>   (point-in-polygon closes it deterministically). Until then, M2 site envelope = the Benicolet block;
+>   per-villa boundaries PROVISIONAL.
+
 ### M2 · Site twin
 Survey pack (terrain, aerials, boundaries) + all villas massed on the real street. Sightline/sun/privacy matrix
 computed. This alone is showable.
