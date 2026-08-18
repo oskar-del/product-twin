@@ -16,15 +16,18 @@ Parcel number = refcat chars 6–7, so the Catastro cartography labels map direc
 `9578`**`421`**` = block 95784 parcel 21`, `9578420 = parcel 20`, etc. Locator images:
 `../locator/catastro-block-95784-benicolet.png` (parcels + labels) and `../locator/pnoa-ortho-benicolet.jpg`.
 
-## Villa 4 — LOCKED (high confidence)
+## Villa 4 — candidate lock (MEDIUM confidence)
 
-**Villa 4 "Essence Patio" (Parcela 04, plot 5 147 m²) = Catastro `9578421BC4897N` (block 95784, parcel 21).**
-Three independent signals agree:
-1. **Size** — parcel 21 (4 510 m² current) is the single largest plot on Calle Benicolet; Villa 4 is by far
+**Villa 4 "Essence Patio" (Parcela 04, plot 5 147 m²) ≈ Catastro `9578421BC4897N` (block 95784, parcel 21).**
+Two signals support it; the elevation signal was tested and did **not**:
+1. **Size** ✅ — parcel 21 (4 510 m² current) is the single largest plot on Calle Benicolet; Villa 4 is by far
    the largest villa (5 147 m² vs ~1.1–1.4k for V1–3). The 14 % gap is the pre-final re-parcelling.
-2. **Position** — parcel 21 is the southern/downslope plot; matches the drone aerial (site slopes NE to sea).
-3. **Elevation** — the stamped municipal plan puts Villa 4's ground floor at **+70.55 m**, the lowest of the
-   four (V1–3 ground = **+75.0 m**). Parcel 21 is the low plot. Measured, not eyeballed.
+2. **Position** ✅ — parcel 21 is the southernmost of the 95784 sub-cluster; matches the drone aerial.
+3. **Elevation** ❌ — I sampled IGN MDT05 (`../spatial/v0.1/terrain-mdt05-samples-v0.1.json`): parcel 21 =
+   64.7 m, but parcels 19 (63.8) and 01 (62.3) are **lower**. The plans' +70.55/+75.0 m are finished-floor
+   platforms (cut/fill on sloping plots), not natural ground, so absolute floor level does **not** discriminate
+   the parcel. This is left as an explicit negative — not a corroborator. A georeferenced developer plot plan
+   would confirm parcel 21 outright.
 
 ## Villas 1–3 — NOT yet locked (the honest gap)
 

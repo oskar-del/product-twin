@@ -24,8 +24,11 @@ Client media (9 plan PDFs + the 2025-10-28 drone aerial) are in the vault:
 - **Location — LOCKED:** CL Benicolet, Teulada-Moraira, **Catastro block 95784**; centre ≈ 38.700505 N,
   0.119172 E. Architect José Giner Ivars (Pepe Giner); promoter SPV Orange Villas Development S.L.;
   Teulada permits 21/29/31/32-25 (2025).
-- **Parcel lock — Villa 4 LOCKED** (`9578421`, parcel 21) by size + position + stamped floor level.
-  **Villas 1–3 not yet locked** (re-parcelación not in Catastro). See `catastro/README.md`.
+- **Parcel lock — Villa 4 candidate** (`9578421`, parcel 21) at MEDIUM confidence by size + position
+  (IGN MDT05 elevation check did NOT corroborate — see `spatial/v0.1/`). **Villas 1–3 not yet locked**
+  (re-parcelación not in Catastro). See `catastro/README.md`.
+- **M2 survey pack (started):** parcel boundary polygons (WGS84 GeoJSON) + MDT05 terrain samples in
+  `spatial/v0.1/`.
 
 **Open input from Oskar (as anticipated in the handoff):** the developer's *plano de parcelación* / cadastral
 refs closes Villas 1–3 deterministically. Villa 4 + the site block are enough to start M2.
