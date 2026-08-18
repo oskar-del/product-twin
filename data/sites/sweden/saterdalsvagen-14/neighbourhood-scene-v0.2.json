@@ -12,6 +12,11 @@
   },
   "coordinate_system": {
     "frame": "LOCAL_ENU",
+    "axes": {
+      "x": "EAST",
+      "y": "UP",
+      "z": "NORTH"
+    },
     "origin_wgs84": [
       16.0317063331,
       58.6522414431
@@ -22,7 +27,8 @@
     "evidence_class": "AUTHORITATIVE",
     "limitations": [
       "Origin is a municipal locator, not survey control.",
-      "All Y values are relative prototype heights."
+      "All Y values are relative prototype heights.",
+      "Live context uses stage-level camera synchronization; it is not a pixel-aligned survey overlay."
     ]
   },
   "source_bindings": [
@@ -109,7 +115,18 @@
         "POI",
         "CONCEPT_BUILDING"
       ],
-      "cutaway": false
+      "cutaway": false,
+      "live_context_view": {
+        "center_wgs84": [
+          16.0317063331,
+          58.6522414431
+        ],
+        "zoom": 15.6,
+        "pitch": 62.3079,
+        "bearing": 219.0355,
+        "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
+        "evidence_effect": "NONE"
+      }
     },
     {
       "id": "STREET_VIEW",
@@ -131,7 +148,18 @@
         "CONTEXT_BUILDING",
         "POI"
       ],
-      "cutaway": false
+      "cutaway": false,
+      "live_context_view": {
+        "center_wgs84": [
+          16.0317063331,
+          58.65219621060498
+        ],
+        "zoom": 19.2,
+        "pitch": 85,
+        "bearing": 53.1301,
+        "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
+        "evidence_effect": "NONE"
+      }
     },
     {
       "id": "PLOT_ORBIT",
@@ -153,7 +181,18 @@
         "CONTEXT_BUILDING",
         "VIEW_DIRECTION"
       ],
-      "cutaway": false
+      "cutaway": false,
+      "live_context_view": {
+        "center_wgs84": [
+          16.03146458755673,
+          58.65070353826917
+        ],
+        "zoom": 17.8,
+        "pitch": 82.5581,
+        "bearing": 192.1622,
+        "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
+        "evidence_effect": "NONE"
+      }
     },
     {
       "id": "CONCEPT_HOUSE_ON_PLOT",
@@ -177,7 +216,18 @@
         "CONCEPT_BUILDING",
         "OPENING"
       ],
-      "cutaway": false
+      "cutaway": false,
+      "live_context_view": {
+        "center_wgs84": [
+          16.031723600638806,
+          58.652250489599005
+        ],
+        "zoom": 18.7,
+        "pitch": 65.4234,
+        "bearing": 223.3153,
+        "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
+        "evidence_effect": "NONE"
+      }
     },
     {
       "id": "BUILDING_ORBIT",
@@ -198,7 +248,18 @@
         "OPENING",
         "VIEW_DIRECTION"
       ],
-      "cutaway": false
+      "cutaway": false,
+      "live_context_view": {
+        "center_wgs84": [
+          16.031723600638806,
+          58.652250489599005
+        ],
+        "zoom": 19.4,
+        "pitch": 68.9175,
+        "bearing": 226.7357,
+        "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
+        "evidence_effect": "NONE"
+      }
     },
     {
       "id": "ENTER_BUILDING",
@@ -219,7 +280,18 @@
         "ROOM",
         "FURNITURE"
       ],
-      "cutaway": true
+      "cutaway": true,
+      "live_context_view": {
+        "center_wgs84": [
+          16.031758135716416,
+          58.6522369198505
+        ],
+        "zoom": 20,
+        "pitch": 85,
+        "bearing": 100.4599,
+        "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
+        "evidence_effect": "NONE"
+      }
     },
     {
       "id": "ROOM",
@@ -241,7 +313,18 @@
         "FURNITURE",
         "VIEW_DIRECTION"
       ],
-      "cutaway": true
+      "cutaway": true,
+      "live_context_view": {
+        "center_wgs84": [
+          16.031752955454774,
+          58.6522314919511
+        ],
+        "zoom": 20.5,
+        "pitch": 84.7354,
+        "bearing": 227.4896,
+        "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
+        "evidence_effect": "NONE"
+      }
     }
   ],
   "elements": [

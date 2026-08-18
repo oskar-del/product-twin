@@ -1,18 +1,21 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateContextProviders,validateStreetContext,validateSvartingePrototype} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateContextProviders,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
 const streetBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/street-context-v0.1.json","utf8"));
+const terrainBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/terrain-source-metadata-v0.1.json","utf8"));
 assert.equal(validateSvartingePrototype(baseline).ok,true,"baseline scene must validate");
 assert.equal(validateContextProviders(providerBaseline).ok,true,"baseline provider registry must validate");
 assert.equal(validateStreetContext(streetBaseline).ok,true,"baseline street context must validate");
+assert.equal(validateTerrainSourceMetadata(terrainBaseline).ok,true,"baseline terrain source metadata must validate");
 
 const attacks=[
   ["identity promoted",m=>m.subject.identity_scope="PROPERTY_REGISTER_VERIFIED","identity scope promoted"],
   ["evidence vocabulary changed",m=>m.evidence_classes.push("VERIFIED"),"evidence class vocabulary"],
   ["vertical datum invented",m=>m.coordinate_system.vertical_reference="RH2000","vertical reference promoted"],
+  ["axis convention changed",m=>m.coordinate_system.axes.z="SOUTH","local axis convention"],
   ["municipal area promoted",m=>m.measurements.municipal_map_area_m2.evidence_class="AUTHORITATIVE","municipal area over-promoted"],
   ["listing area promoted",m=>m.measurements.listing_area_m2.evidence_class="AUTHORITATIVE","listing area state"],
   ["legal boundary enabled",m=>m.legal_claim_policy.blocked_claims=m.legal_claim_policy.blocked_claims.filter(x=>x!=="LEGAL_BOUNDARY"),"missing blocked legal claim LEGAL_BOUNDARY"],
@@ -20,6 +23,8 @@ const attacks=[
   ["street stage removed",m=>m.navigation=m.navigation.filter(x=>x.id!=="STREET_VIEW"),"navigation progression"],
   ["room stage removed",m=>m.navigation=m.navigation.filter(x=>x.id!=="ROOM"),"navigation progression"],
   ["room cutaway disabled",m=>m.navigation.find(x=>x.id==="ROOM").cutaway=false,"interior cutaway missing"],
+  ["live camera drift",m=>m.navigation.find(x=>x.id==="STREET_VIEW").live_context_view.bearing+=5,"live context camera is not deterministically synchronized"],
+  ["live camera evidence promoted",m=>m.navigation.find(x=>x.id==="STREET_VIEW").live_context_view.evidence_effect="CLOSE_GATE","live context camera is not deterministically synchronized"],
   ["element evidence erased",m=>delete m.elements[0].evidence_class,"invalid or missing evidence class"],
   ["plot promoted",m=>m.elements.find(x=>x.id==="PLOT_54_28").evidence_class="AUTHORITATIVE","plot representation invalid"],
   ["plot area drift",m=>m.elements.find(x=>x.id==="PLOT_54_28").geometry.points_xz[0][0]+=8,"plot trace does not reproduce"],
@@ -77,4 +82,19 @@ for(const [name,mutate,needle] of streetAttacks){
   const changed=structuredClone(streetBaseline);mutate(changed);const result=validateStreetContext(changed);
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length} attacks)`);
+const terrainAttacks=[
+  ["terrain source changed",m=>m.source_item.item_id="650_56","terrain source item changed"],
+  ["terrain datum changed",m=>m.source_item.vertical_datum="UNKNOWN","terrain CRS, datum or resolution drift"],
+  ["terrain metadata hash changed",m=>m.public_metadata_receipts[1].sha256="0".repeat(64),"terrain receipt identity drift"],
+  ["terrain date invented",m=>m.source_at_plot.measurement_date="2026-08-18","terrain plot-area provenance drift"],
+  ["terrain raster promoted",m=>m.raster_access.raster_bytes_acquired=true,"terrain raster access falsely promoted"],
+  ["terrain value promoted",m=>m.raster_access.terrain_values_available=true,"terrain raster access falsely promoted"],
+  ["terrain gate closed",m=>m.terrain_gate.status="SATISFIED","terrain gate closed or weakened"],
+  ["municipal coverage invented",m=>m.municipal_alternative.exact_plot_coverage="CONFIRMED","municipal terrain alternative promoted"],
+  ["terrain unknown field",m=>m.elevation_m=42,"terrain metadata: unknown or missing fields"]
+];
+for(const [name,mutate,needle] of terrainAttacks){
+  const changed=structuredClone(terrainBaseline);mutate(changed);const result=validateTerrainSourceMetadata(changed);
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length} attacks)`);

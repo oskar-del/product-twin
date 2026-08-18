@@ -34,10 +34,32 @@ Each provider can be connected, removed or replaced without changing Product Twi
 - requires provider attribution;
 - binds the live map to the recorded WGS84 origin `[16.0317063331, 58.6522414431]`;
 - exposes deterministic camera synchronization inputs;
+- accepts only navigation stages carrying `LOCAL_EAST_UP_NORTH_STAGE_REFERENCE` and `evidence_effect: NONE`;
+- clears the runtime token when the map is disconnected and destroyed;
 - explicitly prohibits evidence promotion;
 - has no effect unless called with explicit runtime configuration.
 
-The adapter is not yet mounted inside the production viewer. Correct geographic camera alignment and overlay integration remain a separate acceptance step.
+The adapter is now mounted as an optional right-side reference window in the prototype viewer. The user must explicitly open it and provide a temporary Mapbox public token. Mapbox GL JS and its stylesheet are loaded only after that action. The token is cleared from the input immediately, remains in page memory only while the map is connected and is forgotten on disconnect. Provider attribution remains inside the live map.
+
+The reference camera follows all seven Product Twin navigation stages. It is intentionally a synchronized side reference rather than a pixel overlay: the local model can be compared with aerial/terrain character without implying that provider pixels, the indicative parcel trace or the local-relative terrain are surveyed or co-registered evidence.
+
+## Exact terrain-source metadata
+
+The exact WGS84 locator deterministically transforms to SWEREF 99 TM easting/northing `[559868.9999, 6501790.311]`. The transform is checked against Lantmäteriet's published SWEREF 99 TM control example.
+
+That locator lies in official Lantmäteriet DTM COG item `650_55`:
+
+- horizontal CRS: `EPSG:3006`;
+- vertical datum: `RH2000`;
+- compound CRS: `EPSG:5845`;
+- grid resolution: 1 m;
+- tile extent: 10 × 10 km;
+- exact-locator source measurement: airborne laser scan dated 2020-11-20;
+- reported source uncertainty: 0.3 m horizontal and 0.1 m vertical.
+
+The public STAC item, info, provenance and thumbnail artifacts have runtime receipts and SHA-256 hashes. The 246,140,605-byte terrain raster itself returns HTTP 401 without credentials and has not been acquired. Therefore the source identity/date are verified, but no RH2000 elevations, contours, slopes or drainage claims are available and the terrain gate remains `OPEN`.
+
+Norrköping's 2026 tariff separately documents municipal laser terrain data and a 1 × 1 m grid, with 5 cm published height accuracy where covered. Exact property coverage, currency and supply terms still require municipal confirmation; this alternative remains `DOCUMENTED_NOT_CONNECTED`.
 
 ## Norrköping source discovery
 
@@ -88,13 +110,13 @@ The current procedural terrain, roads, trees and building massing remain `DERIVE
 ## Next acceptance sequence
 
 1. Obtain source-qualified imagery coverage for the exact property and record date, licence, CRS, bounds and attribution.
-2. Obtain the accepted Lantmäteriet 1 m terrain asset and bind its byte hash, horizontal CRS and RH2000 vertical datum.
+2. Obtain the identified Lantmäteriet `650_55` 1 m terrain asset, verify its advertised byte hash, and clip it to the plot only after the legal boundary is accepted.
 3. Transform every accepted source into the common site origin while preserving the source artifact and lineage.
-4. Mount Mapbox as live licensed context and synchronize its camera with the seven-stage Product Twin navigation.
+4. Verification must inspect the mounted Mapbox reference at neighbourhood, street and plot stages and confirm that its side-reference treatment cannot be mistaken for survey evidence.
 5. Add Google Street View and the listing gallery only as live attributed reference panels; do not cache them or derive geometry from them.
 6. Run alignment checks at neighbourhood, street, plot, building and room scales.
 7. Submit visual/evidence separation and source licences to Verification before promotion.
 
 ## Verification
 
-`npm run site:sweden:svartinge:prototype:gate` now includes the adapter test. It rejects credential persistence, tile persistence, evidence promotion, invalid WGS84 origins and missing runtime configuration while preserving the existing scene, provider and mutation gates.
+`npm run site:sweden:svartinge:prototype:gate` now includes the adapter and geographic-alignment tests. It rejects credential persistence, token retention after disconnect, tile persistence, evidence promotion, invalid WGS84 origins, camera drift, invalid axis orientation and missing runtime configuration while preserving the existing scene, provider and mutation gates.

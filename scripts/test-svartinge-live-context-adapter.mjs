@@ -9,6 +9,7 @@ for (const forbidden of ["localStorage", "sessionStorage", "document.cookie", "U
 assert.equal(liveContextContract.activation, "EXPLICIT_RUNTIME_CONFIG_ONLY");
 assert.equal(liveContextContract.credential_persistence, false);
 assert.equal(liveContextContract.tile_persistence, false);
+assert.equal(liveContextContract.runtime_token_cleared_on_destroy, true);
 assert.equal(liveContextContract.evidence_promotion_allowed, false);
 
 const calls = [];
@@ -42,16 +43,28 @@ assert.equal(adapter.phase, "LOADING");
 map.handlers.get("load")();
 assert.equal(adapter.phase, "CONNECTED");
 assert.deepEqual(calls.find(call => call[0] === "terrain")?.[1], {source: "mapbox-dem", exaggeration: 1});
-adapter.syncView({zoom: 18, pitch: 64, bearing: 22});
+adapter.syncStage({
+  id: "STREET_ROOM",
+  live_context_view: {
+    center_wgs84: [16.0317063331, 58.6522414431],
+    zoom: 18,
+    pitch: 64,
+    bearing: 22,
+    synchronization: "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
+    evidence_effect: "NONE"
+  }
+});
 assert.deepEqual(calls.find(call => call[0] === "camera")?.[1].center, [16.0317063331, 58.6522414431]);
 adapter.destroy();
 assert.equal(adapter.phase, "DESTROYED");
+assert.equal(runtime.accessToken, "", "runtime token was not forgotten on destroy");
 assert.deepEqual(states, ["LOADING", "CONNECTED", "DESTROYED"]);
 
 for (const mutate of [
   () => createMapboxRuntimeAdapter({mapboxgl: runtime, publicToken: "", container: {}, originWgs84: [16, 58]}),
   () => createMapboxRuntimeAdapter({mapboxgl: runtime, publicToken: "runtime-public-token", container: {}, originWgs84: [181, 58]}),
-  () => createMapboxRuntimeAdapter({mapboxgl: {}, publicToken: "runtime-public-token", container: {}, originWgs84: [16, 58]})
+  () => createMapboxRuntimeAdapter({mapboxgl: {}, publicToken: "runtime-public-token", container: {}, originWgs84: [16, 58]}),
+  () => adapter.syncStage({live_context_view: {evidence_effect: "RECORDED"}})
 ]) assert.throws(mutate);
 
 console.log("Svärtinge live-context adapter PASS (runtime-only token, live-only tiles, attribution retained, evidence promotion blocked)");

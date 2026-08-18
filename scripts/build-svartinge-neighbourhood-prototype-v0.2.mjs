@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import {fileURLToPath} from "node:url";
+import {deriveLiveContextView} from "../prototype/svartinge-neighbourhood/geographic-alignment.mjs";
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const base="data/sites/sweden/saterdalsvagen-14";
@@ -94,6 +95,7 @@ function buildScene(){
   const poiNames=["Svärtinge Skogsbacke skola","Svärtingehus skola","Utsiktens förskola","Svärtinge skogsbacke stop","ICA Nära Svärtinge","Lake Glan context"];
   poiNames.forEach((label,i)=>elements.push(element(`POI_${String(i+1).padStart(2,"0")}`,"POI",label,"INDICATIVE",{primitive:"DIAGRAMMATIC_MARKER",position:[-145+i*52,8,145+(i%2)*18],placement_method:"DIAGRAMMATIC_NOT_GEOGRAPHIC",distance_m:null},[alpha.proximity_register.find(p=>p.name===label)?.source_url??"NEIGHBOURHOOD_ALPHA_PROXIMITY_REGISTER"],["Locality presence is source-bound, but the 3D marker position is indicative and diagrammatic.","No coordinate, distance, route or travel-time claim."])));
 
+  const liveZoom={NEIGHBOURHOOD_VIEW:15.6,STREET_VIEW:19.2,PLOT_ORBIT:17.8,CONCEPT_HOUSE_ON_PLOT:18.7,BUILDING_ORBIT:19.4,ENTER_BUILDING:20,ROOM:20.5};
   const navigation=[
     {id:"NEIGHBOURHOOD_VIEW",label:"Neighbourhood view",camera:[150,125,185],target:[0,0,0],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","POI","CONCEPT_BUILDING"],cutaway:false},
     {id:"STREET_VIEW",label:"Street room",camera:[-76,3.1,-62],target:[0,1.4,-5],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
@@ -102,7 +104,7 @@ function buildScene(){
     {id:"BUILDING_ORBIT",label:"Building orbit",camera:[18,11,17],target:[1,2,1],visible_groups:["PLOT","CONCEPT_BUILDING","OPENING","VIEW_DIRECTION"],cutaway:false},
     {id:"ENTER_BUILDING",label:"Enter building",camera:[-3.5,2.1,0.7],target:[3,1.6,-0.5],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE"],cutaway:true},
     {id:"ROOM",label:"Room",camera:[5.1,1.75,1.1],target:[2.7,1.45,-1.1],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE","VIEW_DIRECTION"],cutaway:true}
-  ];
+  ].map(step=>({...step,live_context_view:deriveLiveContextView({originWgs84:[lon,lat],camera:step.camera,target:step.target,zoom:liveZoom[step.id]})}));
 
   return {
     scene_version:"svartinge-neighbourhood-scene/v0.2",
@@ -110,7 +112,7 @@ function buildScene(){
     scene_id:"SCENE_SE_NORRKOPING_SVARTINGE_54_28_CONCEPT_V02",
     generated_at:"2026-08-18T00:00:00Z",
     subject:{working_property_identity:"SVÄRTINGE 54:28",address:source.identity.address,municipality:"Norrköping",identity_evidence_class:"AUTHORITATIVE",identity_scope:"MUNICIPAL_ADDRESS_TO_PROPERTY_OBSERVATION_NOT_PROPERTY_REGISTER"},
-    coordinate_system:{frame:"LOCAL_ENU",origin_wgs84:[lon,lat],horizontal_reference:"EPSG:4326 origin",vertical_reference:"LOCAL_RELATIVE_UNCALIBRATED",linear_units:"metre",evidence_class:"AUTHORITATIVE",limitations:["Origin is a municipal locator, not survey control.","All Y values are relative prototype heights."]},
+    coordinate_system:{frame:"LOCAL_ENU",axes:{x:"EAST",y:"UP",z:"NORTH"},origin_wgs84:[lon,lat],horizontal_reference:"EPSG:4326 origin",vertical_reference:"LOCAL_RELATIVE_UNCALIBRATED",linear_units:"metre",evidence_class:"AUTHORITATIVE",limitations:["Origin is a municipal locator, not survey control.","All Y values are relative prototype heights.","Live context uses stage-level camera synchronization; it is not a pixel-aligned survey overlay."]},
     source_bindings:[
       {path:sourcePath,sha256:sha(sourcePath),role:"OFFICIAL_AND_CONTEXT_EVIDENCE"},
       {path:projectPath,sha256:sha(projectPath),role:"LISTING_REPORTED_CONTEXT"},

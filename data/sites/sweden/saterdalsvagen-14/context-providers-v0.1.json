@@ -100,13 +100,24 @@
     {
       "provider_id": "LANTMATERIET_TERRAIN_GRID_1_PLUS",
       "label": "Lantmäteriet Terrain Model grid 1+",
-      "capability": "Airborne-laser-derived national terrain grid",
-      "state": "DOCUMENTED_NOT_CONNECTED",
+      "capability": "Exact 1 m item 650_55 identified; public provenance metadata resolves the plot-area source to airborne laser scanning dated 2020-11-20",
+      "state": "KEY_REQUIRED",
       "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
       "delivery_mode": "DOWNLOAD_OR_WMS",
       "credential_configured": false,
       "source_url": "https://www.lantmateriet.se/globalassets/geodata/geodataprodukter/hojddata/e_mhm1_plus.pdf",
-      "limitations": ["Exact tile, acquisition/processing date, horizontal CRS, vertical datum, licence and coverage must be bound before use.", "The current prototype retains LOCAL_RELATIVE_UNCALIBRATED terrain until an accepted source is attached."]
+      "limitations": ["The protected raster still returns HTTP 401 without approved download access, so no terrain value or mesh has been derived.", "The current prototype retains LOCAL_RELATIVE_UNCALIBRATED terrain until the raster is acquired and passes coverage, nodata, hash and derivation QA."]
+    },
+    {
+      "provider_id": "NORRKOPING_LASER_TERRAIN",
+      "label": "Norrköping municipal laser terrain model",
+      "capability": "Municipal laser data or a 1 × 1 m ground grid in LAS, DWG or GeoTIFF; the 2026 tariff reports 5 cm vertical accuracy for covered areas",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "evidence_role": "AUTHORITATIVE_CONTEXT_CANDIDATE",
+      "delivery_mode": "MUNICIPAL_ORDER",
+      "credential_configured": false,
+      "source_url": "https://norrkoping.se/download/18.505e551419540d1c3714633/1776090053908/Plantaxa%20inklusive%20kart-%20och%20m%C3%A4ttaxa.pdf",
+      "limitations": ["Exact SVÄRTINGE 54:28 coverage, scan date, CRS, datum, licence and quoted delivery must be confirmed by the municipality.", "The published minimum fee is SEK 500; no order has been placed and no coverage claim is made.", "Even accepted municipal terrain would remain separate from a property-specific boundary/topographic survey."]
     }
   ]
 }

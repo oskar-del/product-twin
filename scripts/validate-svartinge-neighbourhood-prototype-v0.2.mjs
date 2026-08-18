@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import {fileURLToPath} from "node:url";
+import {deriveLiveContextView} from "../prototype/svartinge-neighbourhood/geographic-alignment.mjs";
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const scenePath="data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json";
@@ -10,6 +11,8 @@ const providerPath="data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.j
 const providerSchemaPath="config/spatial/svartinge-context-providers-v0.1.schema.json";
 const streetPath="data/sites/sweden/saterdalsvagen-14/street-context-v0.1.json";
 const streetSchemaPath="config/spatial/svartinge-street-context-v0.1.schema.json";
+const terrainMetadataPath="data/sites/sweden/saterdalsvagen-14/terrain-source-metadata-v0.1.json";
+const terrainMetadataSchemaPath="config/spatial/svartinge-terrain-source-metadata-v0.1.schema.json";
 const viewerPath="prototype/svartinge-neighbourhood/index.html";
 const liveAdapterPath="prototype/svartinge-neighbourhood/live-context-adapter.mjs";
 const CLASSES=["AUTHORITATIVE","INDICATIVE","DERIVED","REPORTED_UNVERIFIED","CONCEPT"];
@@ -91,6 +94,36 @@ export function validateStreetContext(street){
   return {ok:errors.length===0,assertions,errors};
 }
 
+export function validateTerrainSourceMetadata(terrain,{repoRoot=root}={}){
+  const errors=[];let assertions=0;const check=(ok,msg)=>{assertions++;if(!ok)errors.push(msg);};
+  exactKeys(terrain,["schema_version","entity_type","subject","source_item","public_metadata_receipts","locator_projection","source_at_plot","raster_access","municipal_alternative","terrain_gate"],"terrain metadata",check);
+  check(terrain.schema_version==="svartinge-terrain-source-metadata/v0.1"&&terrain.entity_type==="TerrainSourceMetadataReceiptSet"&&terrain.subject==="SVÄRTINGE 54:28","terrain metadata identity drift");
+  const item=terrain.source_item??{};
+  exactKeys(item,["authority","collection","item_id","item_url","data_asset_url","data_asset_size_bytes","data_asset_multihash","projected_bbox","wgs84_bbox","compound_crs","horizontal_crs","vertical_datum","grid_resolution_m","nodata","grid_shape","updated_at","data_modified_at"],"terrain source item",check);
+  check(item.authority==="Lantmäteriet"&&item.collection==="dtm-cog"&&item.item_id==="650_55","terrain source item changed");
+  check(item.compound_crs==="EPSG:5845"&&item.horizontal_crs==="EPSG:3006"&&item.vertical_datum==="RH2000"&&item.grid_resolution_m===1,"terrain CRS, datum or resolution drift");
+  check(JSON.stringify(item.projected_bbox)===JSON.stringify([550000,6500000,560000,6510000])&&JSON.stringify(item.grid_shape)===JSON.stringify([10000,10000])&&item.nodata===-9999,"terrain grid metadata drift");
+  check(item.data_asset_size_bytes===246140605&&item.data_asset_multihash==="1220789c7144922ab546ff8c149f8f82fb6a144fb751b2ff599abb8e96a9f5e56de2","terrain raster identity drift");
+  const receipts=terrain.public_metadata_receipts??[],receiptIds=new Set();check(receipts.length===4,"terrain public metadata receipt set incomplete");
+  for(const receipt of receipts){exactKeys(receipt,["receipt_id","source_url","runtime_locator","retrieved_at","byte_count","sha256","content_persisted_in_repository"],receipt.receipt_id??"terrain receipt",check);check(Boolean(receipt.receipt_id&&!receiptIds.has(receipt.receipt_id)),`${receipt.receipt_id||"terrain receipt"}: duplicate receipt`);receiptIds.add(receipt.receipt_id);check(/^https:\/\//.test(receipt.source_url??"")&&/^\.runtime\//.test(receipt.runtime_locator??""),`${receipt.receipt_id}: invalid source or runtime locator`);check(/^[a-f0-9]{64}$/.test(receipt.sha256??"")&&receipt.content_persisted_in_repository===false,`${receipt.receipt_id}: invalid hash or repository persistence`);const runtimePath=path.join(repoRoot,receipt.runtime_locator);if(fs.existsSync(runtimePath)){check(fs.statSync(runtimePath).size===receipt.byte_count,`${receipt.receipt_id}: runtime byte count mismatch`);check(shaAt(repoRoot,receipt.runtime_locator)===receipt.sha256,`${receipt.receipt_id}: runtime hash mismatch`);}}
+  const expectedReceiptHashes={RCPT_SE_LM_TERRAIN_STAC_ITEM_650_55:"c8c99c78dd1db2915bb3abd3e56a91013724807a1015f2fb105bfecc15eba94a",RCPT_SE_LM_TERRAIN_INFO_650_55:"5a8aeebac1df53e4295eb5a6ec9dcd6c74d6e2854d36a640bfc2f2db2a685366",RCPT_SE_LM_TERRAIN_PROVENANCE_650_55:"c0c8a44a7088146a4a25c11531ffb47309f53d7dfea7123ad12a6897a55488ea",RCPT_SE_LM_TERRAIN_THUMBNAIL_650_55:"804ef951331d98912ec10f1eccbfa004d18cfdbac395848d4c8e68a9dea38edd"};
+  check(Object.entries(expectedReceiptHashes).every(([id,hash])=>receipts.find(receipt=>receipt.receipt_id===id)?.sha256===hash),"terrain receipt identity drift");
+  const projection=terrain.locator_projection??{};exactKeys(projection,["source_coordinate_wgs84","projected_coordinate_epsg3006","method","control_example_input_lat_lon","control_example_expected_northing_easting","control_error_m","scope"],"terrain locator projection",check);
+  check(Math.abs(projection.projected_coordinate_epsg3006?.[0]-559868.9999)<.001&&Math.abs(projection.projected_coordinate_epsg3006?.[1]-6501790.311)<.001,"terrain locator projection drift");
+  check(projection.control_error_m<.002&&projection.scope==="Municipal address locator transformation, not survey control","terrain projection control or scope invalid");
+  const sourceAtPlot=terrain.source_at_plot??{};exactKeys(sourceAtPlot,["provenance_feature_id","measurement_date","measurement_method","producer","reported_horizontal_uncertainty_m","reported_vertical_uncertainty_m","selection_method","verification_state"],"terrain source at plot",check);
+  check(sourceAtPlot.provenance_feature_id==="0"&&sourceAtPlot.measurement_date==="2020-11-20"&&sourceAtPlot.measurement_method==="Luftburen laserskanning","terrain plot-area provenance drift");
+  check(sourceAtPlot.reported_horizontal_uncertainty_m===.3&&sourceAtPlot.reported_vertical_uncertainty_m===.1&&sourceAtPlot.verification_state==="OFFICIAL_METADATA_VERIFIED_RASTER_NOT_ACQUIRED","terrain source uncertainty or verification state drift");
+  const access=terrain.raster_access??{};exactKeys(access,["state","last_checked_at","http_status_without_credentials","raster_bytes_acquired","terrain_values_available","runtime_credential_persisted"],"terrain raster access",check);
+  check(access.state==="KEY_REQUIRED"&&access.http_status_without_credentials===401&&access.raster_bytes_acquired===false&&access.terrain_values_available===false&&access.runtime_credential_persisted===false,"terrain raster access falsely promoted");
+  const alternative=terrain.municipal_alternative??{};exactKeys(alternative,["authority","product","document_url","document_date","reported_products","reported_vertical_accuracy_m","exact_plot_coverage","minimum_fee_sek","state"],"municipal terrain alternative",check);
+  check(alternative.authority==="Norrköpings kommun"&&alternative.reported_vertical_accuracy_m===.05&&alternative.exact_plot_coverage==="UNKNOWN_REQUIRES_MUNICIPAL_CONFIRMATION"&&alternative.minimum_fee_sek===500&&alternative.state==="DOCUMENTED_NOT_CONNECTED","municipal terrain alternative promoted or changed");
+  const gate=terrain.terrain_gate??{};exactKeys(gate,["gate_id","status","reason","forbidden_outputs_until_closed"],"terrain gate",check);
+  check(gate.gate_id==="GATE_SE_TERRAIN"&&gate.status==="OPEN"&&gate.forbidden_outputs_until_closed?.length>=5,"terrain gate closed or weakened without raster");
+  check(!/(api[_-]?key|access[_-]?token|password|connection[_-]?string|client[_-]?secret)\s*[\":=]+\s*[\"']?(?!required|false|null)/i.test(JSON.stringify(terrain)),"terrain metadata contains a possible credential payload");
+  return {ok:errors.length===0,assertions,errors};
+}
+
 export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}={}){
   const errors=[];let assertions=0;const check=(ok,msg)=>{assertions++;if(!ok)errors.push(msg);};
   exactKeys(scene,["scene_version","entity_type","scene_id","generated_at","subject","coordinate_system","source_bindings","evidence_classes","measurements","legal_claim_policy","navigation","elements","studies","prototype","project_status"],"scene",check);
@@ -99,6 +132,7 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
   check(scene.subject?.identity_scope==="MUNICIPAL_ADDRESS_TO_PROPERTY_OBSERVATION_NOT_PROPERTY_REGISTER","identity scope promoted");
   check(JSON.stringify(scene.evidence_classes)===JSON.stringify(CLASSES),"evidence class vocabulary drift");
   check(scene.coordinate_system?.frame==="LOCAL_ENU"&&scene.coordinate_system?.linear_units==="metre","coordinate frame or units invalid");
+  check(JSON.stringify(scene.coordinate_system?.axes)===JSON.stringify({x:"EAST",y:"UP",z:"NORTH"}),"local axis convention missing or changed");
   check(scene.coordinate_system?.vertical_reference==="LOCAL_RELATIVE_UNCALIBRATED","vertical reference promoted");
   check(scene.coordinate_system?.evidence_class==="AUTHORITATIVE","coordinate evidence class drift");
   check(scene.measurements?.municipal_map_area_m2?.evidence_class==="INDICATIVE","municipal area over-promoted");
@@ -109,6 +143,8 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
   for(const claim of BLOCKED)check(scene.legal_claim_policy?.blocked_claims?.includes(claim),`missing blocked legal claim ${claim}`);
   check(JSON.stringify(scene.navigation?.map(x=>x.id))===JSON.stringify(STEPS),"navigation progression incomplete or reordered");
   check(scene.navigation?.every(x=>x.camera?.length===3&&x.target?.length===3&&x.visible_groups?.length&&typeof x.cutaway==="boolean"),"navigation camera contract invalid");
+  check(scene.navigation?.every(step=>{const expected=deriveLiveContextView({originWgs84:scene.coordinate_system.origin_wgs84,camera:step.camera,target:step.target,zoom:step.live_context_view?.zoom});return JSON.stringify(step.live_context_view)===JSON.stringify(expected);}),"live context camera is not deterministically synchronized to the Twin stage");
+  check(scene.navigation?.every(step=>step.live_context_view?.evidence_effect==="NONE"&&step.live_context_view?.synchronization==="LOCAL_EAST_UP_NORTH_STAGE_REFERENCE"),"live context view promoted evidence or lost synchronization scope");
   check(scene.navigation?.find(x=>x.id==="ENTER_BUILDING")?.cutaway===true&&scene.navigation?.find(x=>x.id==="ROOM")?.cutaway===true,"interior cutaway missing");
   const elements=scene.elements??[],ids=new Set();check(elements.length>=30,"scene is not materially populated");
   for(const el of elements){
@@ -137,16 +173,20 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
     check(fs.existsSync(path.join(repoRoot,providerSchemaPath)),"context provider schema missing");
     check(fs.existsSync(path.join(repoRoot,streetPath)),"street context observations missing");
     check(fs.existsSync(path.join(repoRoot,streetSchemaPath)),"street context schema missing");
+    check(fs.existsSync(path.join(repoRoot,terrainMetadataPath)),"terrain source metadata missing");
+    check(fs.existsSync(path.join(repoRoot,terrainMetadataSchemaPath)),"terrain source metadata schema missing");
     check(fs.existsSync(path.join(repoRoot,viewerPath)),"viewable prototype missing");
     check(fs.existsSync(path.join(repoRoot,liveAdapterPath)),"live context adapter missing");
-    if(fs.existsSync(path.join(repoRoot,viewerPath))){const html=fs.readFileSync(path.join(repoRoot,viewerPath),"utf8");check(html.includes("neighbourhood-scene-v0.2.json")&&html.includes("OrbitControls")&&html.includes("CONCEPT MODE · LEGAL GATES OPEN"),"viewer is not bound to the scene/evidence UI");check(html.includes("INTELLIGENCE")&&html.includes("REALISTIC")&&html.includes("COMPARE")&&html.includes("renderPass")&&html.includes("context-providers-v0.1.json"),"synchronized renderer modes or provider interface missing");check(html.includes("street-context-v0.1.json")&&html.includes("street_room_high_detail")&&html.includes("buildExactListingCharacter")&&html.includes("Exact-address listing character"),"Street Room rendering or source disclosure missing");check(html.includes("applyStageVisibility")&&html.includes("visible_groups"),"navigation stages do not enforce their geometry visibility contract");check(html.includes("One geometry graph")&&html.includes("Realism changes presentation—not evidence"),"one-Twin evidence separation missing");for(const step of STEPS)check(scene.navigation.some(x=>x.id===step),`viewer step source missing ${step}`);}
+    if(fs.existsSync(path.join(repoRoot,viewerPath))){const html=fs.readFileSync(path.join(repoRoot,viewerPath),"utf8");check(html.includes("neighbourhood-scene-v0.2.json")&&html.includes("OrbitControls")&&html.includes("CONCEPT MODE · LEGAL GATES OPEN"),"viewer is not bound to the scene/evidence UI");check(html.includes("INTELLIGENCE")&&html.includes("REALISTIC")&&html.includes("COMPARE")&&html.includes("renderPass")&&html.includes("context-providers-v0.1.json"),"synchronized renderer modes or provider interface missing");check(html.includes("street-context-v0.1.json")&&html.includes("street_room_high_detail")&&html.includes("buildExactListingCharacter")&&html.includes("Exact-address listing character"),"Street Room rendering or source disclosure missing");check(html.includes("applyStageVisibility")&&html.includes("visible_groups"),"navigation stages do not enforce their geometry visibility contract");check(html.includes("One geometry graph")&&html.includes("Realism changes presentation—not evidence"),"one-Twin evidence separation missing");check(html.includes("terrain-source-metadata-v0.1.json")&&html.includes("createMapboxRuntimeAdapter")&&html.includes("syncLiveStage")&&html.includes("LIVE VISUAL CONTEXT · NO EVIDENCE EFFECT"),"live context or official terrain disclosure is not mounted");check(html.includes("v3.25.0")&&html.includes("Disconnect & forget")&&html.includes("TOKEN STAYS IN THIS PAGE MEMORY ONLY"),"credential-safe live provider controls are incomplete");check(!/(localStorage|sessionStorage|document\.cookie|URLSearchParams)/.test(html),"viewer persists or transports runtime credentials unsafely");for(const step of STEPS)check(scene.navigation.some(x=>x.id===step),`viewer step source missing ${step}`);}
     for(const binding of scene.source_bindings.filter(x=>x.sha256!=="RUNTIME_ONLY_NOT_COMMITTED")){check(fs.existsSync(path.join(repoRoot,binding.path)),`source binding missing ${binding.path}`);if(fs.existsSync(path.join(repoRoot,binding.path)))check(shaAt(repoRoot,binding.path)===binding.sha256,`source binding hash mismatch ${binding.path}`);}
     const schema=read(schemaPath,repoRoot);check(schema.additionalProperties===false&&schema.properties?.scene_version?.const==="svartinge-neighbourhood-scene/v0.2","strict versioned schema missing");
     if(fs.existsSync(path.join(repoRoot,providerPath))){const providerResult=validateContextProviders(read(providerPath,repoRoot));assertions+=providerResult.assertions;errors.push(...providerResult.errors);}
     if(fs.existsSync(path.join(repoRoot,providerSchemaPath))){const providerSchema=read(providerSchemaPath,repoRoot);check(providerSchema.additionalProperties===false&&providerSchema.properties?.schema_version?.const==="svartinge-context-providers/v0.1","strict provider schema missing");}
     if(fs.existsSync(path.join(repoRoot,streetPath))){const streetResult=validateStreetContext(read(streetPath,repoRoot));assertions+=streetResult.assertions;errors.push(...streetResult.errors);}
     if(fs.existsSync(path.join(repoRoot,streetSchemaPath))){const streetSchema=read(streetSchemaPath,repoRoot);check(streetSchema.additionalProperties===false&&streetSchema.properties?.schema_version?.const==="svartinge-street-context/v0.1","strict street context schema missing");}
-    if(fs.existsSync(path.join(repoRoot,liveAdapterPath))){const adapter=fs.readFileSync(path.join(repoRoot,liveAdapterPath),"utf8");check(adapter.includes("EXPLICIT_RUNTIME_CONFIG_ONLY")&&adapter.includes("LIVE_ONLY_NO_PERSISTENCE")&&adapter.includes("evidence_promotion_allowed: false"),"live adapter safety contract weakened");check(!/(localStorage|sessionStorage|document\.cookie|URLSearchParams)/.test(adapter),"live adapter persists or transports runtime credentials unsafely");}
+    if(fs.existsSync(path.join(repoRoot,terrainMetadataPath))){const terrainResult=validateTerrainSourceMetadata(read(terrainMetadataPath,repoRoot),{repoRoot});assertions+=terrainResult.assertions;errors.push(...terrainResult.errors);}
+    if(fs.existsSync(path.join(repoRoot,terrainMetadataSchemaPath))){const terrainSchema=read(terrainMetadataSchemaPath,repoRoot);check(terrainSchema.additionalProperties===false&&terrainSchema.properties?.schema_version?.const==="svartinge-terrain-source-metadata/v0.1","strict terrain metadata schema missing");}
+    if(fs.existsSync(path.join(repoRoot,liveAdapterPath))){const adapter=fs.readFileSync(path.join(repoRoot,liveAdapterPath),"utf8");check(adapter.includes("EXPLICIT_RUNTIME_CONFIG_ONLY")&&adapter.includes("LIVE_ONLY_NO_PERSISTENCE")&&adapter.includes("evidence_promotion_allowed: false")&&adapter.includes("runtime_token_cleared_on_destroy: true"),"live adapter safety contract weakened");check(adapter.includes("syncStage")&&adapter.includes("LOCAL_EAST_UP_NORTH_STAGE_REFERENCE")&&adapter.includes('evidence_effect !== "NONE"'),"stage synchronization could promote or drift live context");check(!/(localStorage|sessionStorage|document\.cookie|URLSearchParams)/.test(adapter),"live adapter persists or transports runtime credentials unsafely");}
   }
   return {ok:errors.length===0,assertions,errors};
 }

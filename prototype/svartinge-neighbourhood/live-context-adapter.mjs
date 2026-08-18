@@ -46,12 +46,27 @@ export function createMapboxRuntimeAdapter({
     evidence_promotion_allowed: false,
     storage_policy: "LIVE_ONLY_NO_PERSISTENCE",
     attribution_required: true,
+    runtime_token_cleared_on_destroy: true,
     origin_wgs84: Object.freeze([...origin])
   });
 
   const emit = (next, detail = null) => {
     phase = next;
     onState(Object.freeze({phase, detail, descriptor}));
+  };
+
+  const applyView = ({center = origin, zoom, pitch, bearing}) => {
+    if (!map) throw new Error("adapter must be mounted before synchronizing a view");
+    const nextCenter = requirePair(center, "center");
+    const camera = {
+      center: nextCenter,
+      zoom: requireFinite(zoom, "zoom"),
+      pitch: requireFinite(pitch, "pitch"),
+      bearing: requireFinite(bearing, "bearing"),
+      essential: true
+    };
+    map.jumpTo(camera);
+    return Object.freeze({...camera, center: Object.freeze([...nextCenter])});
   };
 
   return Object.freeze({
@@ -90,21 +105,19 @@ export function createMapboxRuntimeAdapter({
       return map;
     },
     syncView({center = origin, zoom, pitch, bearing}) {
-      if (!map) throw new Error("adapter must be mounted before syncView");
-      const nextCenter = requirePair(center, "center");
-      const camera = {
-        center: nextCenter,
-        zoom: requireFinite(zoom, "zoom"),
-        pitch: requireFinite(pitch, "pitch"),
-        bearing: requireFinite(bearing, "bearing"),
-        essential: true
-      };
-      map.jumpTo(camera);
-      return Object.freeze({...camera, center: Object.freeze([...nextCenter])});
+      return applyView({center, zoom, pitch, bearing});
+    },
+    syncStage(stage) {
+      if (!stage || typeof stage !== "object") throw new TypeError("stage is required");
+      const view = stage.live_context_view;
+      if (!view || view.evidence_effect !== "NONE") throw new Error("stage must preserve a NONE live-context evidence effect");
+      if (view.synchronization !== "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE") throw new Error("stage live-context synchronization contract is invalid");
+      return applyView({center: view.center_wgs84, zoom: view.zoom, pitch: view.pitch, bearing: view.bearing});
     },
     destroy() {
       if (map) map.remove();
       map = null;
+      if (mapboxgl.accessToken === token) mapboxgl.accessToken = "";
       emit("DESTROYED");
     }
   });
@@ -117,6 +130,7 @@ export const liveContextContract = Object.freeze({
   accepted_origin_crs: "EPSG:4326_LONGITUDE_LATITUDE",
   credential_persistence: false,
   tile_persistence: false,
+  runtime_token_cleared_on_destroy: true,
   evidence_promotion_allowed: false,
   attribution_required: true
 });
