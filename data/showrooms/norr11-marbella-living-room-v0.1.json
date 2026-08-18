@@ -6,13 +6,18 @@
   "generated_from": "data/geometry/native-3d-showcase-manifest.json",
   "principle": "Real Product Twins from the MCP, shown with their native manufacturer 3D in one room. Geometry is the merchant's own MODEL_3D (runtime-only, rights review). Prices are the live trade-merchant USD list; ES delivery and EUR checkout remain live gates per each twin's verification state.",
   "property": {
-    "state": "PLACEHOLDER_BIND_REAL_LISTING",
-    "name": "Marbella villa (placeholder)",
-    "location": "Costa del Sol, Spain",
-    "price_display": "bind a real H&H listing",
-    "note": "Property identity is a placeholder. For a client pitch, bind a real for-sale villa: name, town, EUR asking price, listing ref/URL and (ideally) an interior photo. Do not invent a price/ref."
+    "state": "BOUND_REAL_H&H_LISTING",
+    "source": "hanssonhertzell.com (live, pulled 2026-08-18)",
+    "name": "Villa in Altea Hills",
+    "location": "Altea Hills, Costa Blanca North",
+    "price_display": "€6,490,000",
+    "reference": "R5355265",
+    "specs": "5 bed · 6 bath · 470 m² · plot 1,560 m² · pool · panoramic Mediterranean sea views",
+    "listing_url": "https://hanssonhertzell.com/en/properties/R5355265",
+    "hero_image": ".runtime/showcase/property/R5355265_P1.jpg",
+    "note": "Real currently-listed H&H villa. Photos are H&H's own listing images, kept in gitignored .runtime, not committed. Price/ref are live and refresh-required before use."
   },
-  "location_context": {"country": "ES", "region": "Andalucia", "municipality": "Marbella", "postal_code": "29660"},
+  "location_context": {"country": "ES", "region": "Comunidad Valenciana", "municipality": "Altea", "area": "Altea Hills"},
   "room": {"type": "living_room", "size_m": [7.0, 3.0, 8.0], "palette": ["warm limestone", "cream plaster", "smoked oak", "bronze"], "currency_display": "USD_TRADE_LIST"},
   "geometry_source": {
     "merchant": "Design Public Group (trade)",

@@ -3,15 +3,18 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>NORR11 in a Marbella villa · real Product Twins</title>
+<title>Real products in a real villa · Product Twin client preview</title>
 <style>
   html,body{margin:0;height:100%;overflow:hidden;background:#0e0d0a;color:#f4efe4;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
   canvas{display:block}
   #hud{position:fixed;inset:0;pointer-events:none}
-  .topline{position:absolute;left:26px;top:22px}
-  .topline .k{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#d8b98a}
-  .topline h1{margin:5px 0 0;font:500 26px/1.05 Georgia,serif;color:#fbf7ee;text-shadow:0 2px 18px rgba(0,0,0,.5)}
-  .topline .loc{font-size:12px;color:#e9e2d2;margin-top:4px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+  .topline{position:absolute;left:22px;top:20px;display:flex;gap:14px;align-items:flex-start;background:rgba(18,15,10,.42);backdrop-filter:blur(10px);padding:12px 16px 12px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.1);max-width:430px}
+  .topline .hero{width:104px;height:78px;border-radius:9px;object-fit:cover;flex:none;box-shadow:0 3px 12px rgba(0,0,0,.4)}
+  .topline .k{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#e6c79a}
+  .topline h1{margin:3px 0 0;font:500 22px/1.05 Georgia,serif;color:#fbf7ee}
+  .topline .loc{font-size:11px;color:#e9e2d2;margin-top:3px}
+  .topline .specs{font-size:10px;color:#cfc7b6;margin-top:5px;line-height:1.4}
+  .topline .lst{font-size:9px;color:#d8b98a;margin-top:5px;letter-spacing:.06em}
   .price{position:absolute;right:24px;top:22px;text-align:right}
   .price .k{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#e7dcc4;opacity:.85}
   .price .v{font:500 22px/1 Georgia,serif;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.5)}
@@ -36,8 +39,8 @@
 <body>
 <div id="loading">Furnishing the villa with real product twins…</div>
 <div id="hud">
-  <div class="topline"><div class="k">Product Twin · client preview</div><h1 id="villa-name">Marbella villa</h1><div class="loc" id="villa-loc">Costa del Sol · furnished with real, purchasable pieces</div></div>
-  <div class="price"><div class="k">Property</div><div class="v" id="villa-price">—</div><div class="note" id="villa-note"></div></div>
+  <div class="topline"><img class="hero" id="villa-hero" alt="" hidden /><div><div class="k">Product Twin · client preview</div><h1 id="villa-name">Villa</h1><div class="loc" id="villa-loc"></div><div class="specs" id="villa-specs"></div><div class="lst" id="villa-lst"></div></div></div>
+  <div class="price"><div class="k">Asking price</div><div class="v" id="villa-price">—</div><div class="note" id="villa-note"></div></div>
   <div class="help">Drag to look around · scroll to zoom · tap a product</div>
   <aside id="panel"><button class="close" id="close">×</button>
     <div class="small">Product Twin · native manufacturer 3D</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
@@ -52,12 +55,15 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-const scene_data = await fetch('../../data/showrooms/norr11-marbella-living-room-v0.1.json').then(r => r.json());
-const property = scene_data.property || { name: 'Marbella villa (placeholder)', location: 'Costa del Sol, Spain', price_display: 'bind a real H&H listing', note: 'Property identity is a placeholder — swap in a real for-sale villa.' };
+const scene_data = await fetch('../../data/showrooms/norr11-marbella-living-room-v0.1.json', { cache: 'no-store' }).then(r => r.json());
+const property = scene_data.property || { name: 'Villa (placeholder)', location: 'Spain', price_display: '—', note: '' };
 document.getElementById('villa-name').textContent = property.name;
 document.getElementById('villa-loc').textContent = property.location + ' · furnished with real, purchasable pieces';
 document.getElementById('villa-price').textContent = property.price_display;
-document.getElementById('villa-note').textContent = property.note || '';
+document.getElementById('villa-specs').textContent = property.specs || '';
+document.getElementById('villa-lst').textContent = property.reference ? `H&H · ${property.reference} · live listing` : '';
+document.getElementById('villa-note').textContent = property.reference ? 'real for-sale listing · refresh before use' : (property.note || '');
+if (property.hero_image) { const h = document.getElementById('villa-hero'); h.src = '../../' + property.hero_image; h.hidden = false; }
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
