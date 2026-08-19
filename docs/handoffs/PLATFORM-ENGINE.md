@@ -41,7 +41,22 @@ One checkout = one executor. Deliverable-first: every block ends with something 
     The generic schema is a structural superset of the Svärtinge site profile: the production
     scene validates against it unmodified, and the gate cross-checks the engine's map-view
     derivation against all 7 of that scene's stored `live_context_view` values.
+  - **Milestone 3 DONE** — `npm run engine:bundle -- <scene.json>` → one self-contained HTML
+    (engine + three.js + scene + styles inline, zero network requests). Verified in a browser
+    served from an isolated directory where `/engine` and `/node_modules` both 404: exactly one
+    request, fully functional twin. Gated by `scripts/test-twin-scene-bundle.mjs` (18 checks,
+    context-aware self-containment, refusal of contract-violating scenes, byte-identical
+    rebuilds). esbuild 0.28.2 pinned, build-time only.
+  - **Milestone 4 DONE** — `docs/TWIN-ENGINE-PERF-BUDGET.md`: budgets for four surface classes
+    from real measurements of the production Svärtinge scene on the engine (worst stage 7,320
+    triangles / 98 draw calls / 0.71 ms; graph build 2.83 ms; bundle 803 KB ≈ 5–25 % of the Twin
+    budget). Names where headroom goes (1 m DEM terrain ≈ 259k triangles = over budget; OSM
+    extrusion at 500 buildings = 1,000 draw calls vs a 400 ceiling). Explicit that no phone was
+    used and no sustained frame rate was sampled.
+  - **The engine renders the real Svärtinge scene.** Bundled from the copy staged in `.runtime/`
+    (no cross-branch commit): all 37 elements, 7 stages, evidence layers, INTELLIGENCE/REALISTIC/
+    COMPARE, claim policy in the legend. The engine is ready for a consumer; only the branch base
+    (D1) is in the way.
   - **NOT done:** Milestone 2 (Essence adoption — blocked on D1, the Essence and Svärtinge data
-    live on branches `main` does not contain), Milestone 3 (`engine:bundle`), Milestone 4 (perf
-    budget doc). Nothing pushed: `git push` was denied in that session; commits are local on
-    `agent/platform-engine` in `../repo-platform`.
+    live on branches `main` does not contain). Nothing pushed: `git push` was denied in that
+    session; commits are local on `agent/platform-engine` in `../repo-platform`.

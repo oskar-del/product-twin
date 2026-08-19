@@ -80,6 +80,18 @@ in the checkout.
 - **A live map layer carries `evidence_effect: "NONE"`** and can never promote a claim.
 - **The engine does not invent geometry.** Site-specific character goes in a `decor` plugin.
 
+## Publishing
+
+```sh
+npm run engine:bundle -- data/scenes/twin-engine-conformance/scene-v0.1.json
+# → dist/twins/<scene_id>.html — engine, three.js, scene and styles inline, zero network requests
+```
+
+One file that works as an Artifact link, an email attachment, an iframe in a developer's own
+site, or a file opened offline. The bundler parses the scene against the contract first and
+refuses to publish anything the engine would refuse to render; every bundle carries its scene id,
+scene version, engine version and source bindings.
+
 ## Gates
 
 ```sh
