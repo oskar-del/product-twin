@@ -119,6 +119,57 @@ const coarse = sunHours({...equator, date: "2026-06-21", point: [3, 1.5, -4.2], 
 const fine = sunHours({...equator, date: "2026-06-21", point: [3, 1.5, -4.2], stepMinutes: 2});
 near(coarse.sunlit_hours, fine.sunlit_hours, 0.5, "a 20-minute step must agree with a 2-minute step to within half an hour");
 
+// ── viewshed: known geometry ────────────────────────────────────────────────────────────────
+const {viewshed} = await import("../engine/studies/viewshed.mjs");
+
+// High above everything, far away: nothing can block, so the whole hemisphere is sky.
+const clear = viewshed({index, from: [0, 60, 120], rays: 72});
+near(clear.open_sky_fraction, 1, 0.001, "an unobstructed observer sees a full hemisphere of sky");
+check(clear.unresolved_azimuths === 0, "an unobstructed sweep leaves no direction unresolved");
+check(clear.clear_sectors.length === 8, "all eight compass sectors must read clear");
+check(clear.principal_blockers.length === 0, "an unobstructed viewshed names no blockers");
+
+// Inside the concept house (centre [0, 3.8, 0], 11 x 5.6 x 8): enclosed on every side.
+const enclosed = viewshed({index, from: [0, 3.8, 0], rays: 72});
+near(enclosed.open_sky_fraction, 0, 1e-9, "an enclosed observer sees no sky at all");
+check(enclosed.unresolved_azimuths === 72, "every direction from inside a closed box is blocked past the search ceiling");
+check(enclosed.max_horizon_is_capped, "a capped horizon must say so rather than pass as a measurement");
+check(enclosed.limitations.some(text => text.includes("counted as no sky rather than guessed")),
+  "an unresolved sweep must disclose that it did not look higher");
+check(enclosed.clear_sectors.length === 0, "an enclosed observer has no clear sector");
+
+// On the roof of the tallest thing around: essentially open, and strictly better than beside it.
+const roofView = viewshed({index, from: [0, 7, 0], rays: 72});
+const besideView = viewshed({index, from: [7, 2, -6], rays: 72});
+check(roofView.open_sky_fraction > besideView.open_sky_fraction,
+  "raising the observer above the obstruction must increase open sky");
+check(besideView.open_sky_fraction > 0 && besideView.open_sky_fraction < 1,
+  "an observer beside a building is neither enclosed nor fully open");
+check(besideView.principal_blockers.length > 0, "a partly blocked view must name what blocks it");
+check(besideView.principal_blockers.every(blocker => blocker.share_of_compass > 0 && blocker.share_of_compass <= 1),
+  "each blocker's share of the compass must be a fraction");
+near(
+  besideView.principal_blockers.reduce((sum, blocker) => sum + blocker.azimuths, 0),
+  besideView.horizon.filter(sample => sample.blocked_by).length,
+  0,
+  "blocker azimuth counts must add up to the blocked directions"
+);
+check(besideView.horizon.length === 72, "the sweep must return one horizon sample per ray");
+check(besideView.sectors.length === 8, "the sweep must summarise eight compass sectors");
+check(besideView.evidence_class === "DERIVED", "a computed viewshed is DERIVED");
+
+// Monotonicity: a finer sweep must not change the answer much, or the sampling is too coarse.
+const coarseSweep = viewshed({index, from: [7, 2, -6], rays: 36});
+const fineSweep = viewshed({index, from: [7, 2, -6], rays: 144});
+near(coarseSweep.open_sky_fraction, fineSweep.open_sky_fraction, 0.05,
+  "a 36-ray sweep must agree with a 144-ray sweep to within 5 % of sky");
+
+let rejectedSweeps = 0;
+for (const bad of [{rays: 4}, {rays: 12.5}, {minElevationDeg: 70, maxElevationDeg: 60}]) {
+  try { viewshed({index, from: [0, 10, 0], ...bad}); } catch { rejectedSweeps += 1; }
+}
+check(rejectedSweeps === 3, `viewshed must reject all 3 malformed sweeps, rejected ${rejectedSweeps}`);
+
 index.dispose();
 console.log(`${checks - failures}/${checks} study checks passed`);
 if (failures) { console.error(`twin-engine studies gate FAILED with ${failures} failure(s)`); process.exit(1); }

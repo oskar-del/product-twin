@@ -29,6 +29,7 @@ import {sunLightRig, localHourToUtc} from "./studies/sun.mjs";
 import {createGeometryIndex} from "./studies/geometry-queries.mjs";
 import {sightline, sightlineMatrix} from "./studies/sightline.mjs";
 import {sunHours} from "./studies/sun-hours.mjs";
+import {viewshed} from "./studies/viewshed.mjs";
 import {deriveMapView} from "./geo/local-enu.mjs";
 import {installStyles, ENGINE_CLASS} from "./ui/styles.mjs";
 import {createPanel} from "./ui/panel.mjs";
@@ -43,6 +44,7 @@ export {deriveMapView} from "./geo/local-enu.mjs";
 export {solarPosition, solarDirection} from "./studies/sun.mjs";
 export {sightline, sightlineMatrix} from "./studies/sightline.mjs";
 export {sunHours} from "./studies/sun-hours.mjs";
+export {viewshed} from "./studies/viewshed.mjs";
 
 const DEFAULT_HOUR = 13;
 const TIME_CONTROL_LABEL = "Time of day";
@@ -317,6 +319,36 @@ export async function createTwinViewer({
           utcOffsetHours: solarStudy?.utc_offset_hours,
           ...options
         }),
+        viewshed: options => viewshed({index: ensureIndex(), ...options}),
+
+        /**
+         * Draw a viewshed's horizon as a ring around the observer: the ring rides at each
+         * azimuth's horizon angle, so a high skyline lifts it and open sky flattens it.
+         */
+        drawViewshed({from, radiusM = 60, ...options}) {
+          const result = viewshed({index: ensureIndex(), from, ...options});
+          const points = result.horizon.map(sample => {
+            const azimuth = (sample.azimuth_deg * Math.PI) / 180;
+            const elevation = (Math.max(0, sample.horizon_elevation_deg) * Math.PI) / 180;
+            return new THREE.Vector3(
+              from[0] + radiusM * Math.sin(azimuth),
+              from[1] + radiusM * Math.tan(elevation),
+              from[2] + radiusM * Math.cos(azimuth)
+            );
+          });
+          // A tube, for the same reason drawSightline uses one: THREE.Line ignores line width on
+          // most platforms, so a horizon drawn as a line is invisible at site scale.
+          const curve = new THREE.CatmullRomCurve3(points, true);
+          const ring = new THREE.Mesh(
+            new THREE.TubeGeometry(curve, Math.max(64, points.length), Math.max(0.15, radiusM * 0.006), 6, true),
+            new THREE.MeshBasicMaterial({color: 0x497aa2})
+          );
+          ring.userData.isMeasurement = true;
+          ring.renderOrder = 2;
+          measurementGroup.add(ring);
+          return result;
+        },
+
         /**
          * Draw a sightline into the scene: green when open, red as far as the blocker when not.
          *

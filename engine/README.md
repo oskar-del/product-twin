@@ -108,7 +108,12 @@ viewer.measure.sightline({from: [x, y, z], to: [x, y, z]});
 viewer.measure.sunHours({point: [x, y, z], date: "2026-03-21"});
 // → {sunlit_hours, daylight_hours, first_sun_local, last_sun_local, intervals, …}
 
+viewer.measure.viewshed({from: [x, y, z]});
+// → {open_sky_fraction, mean_horizon_deg, clear_sectors, sectors, principal_blockers,
+//    horizon: [{azimuth_deg, horizon_elevation_deg, blocked_by}], unresolved_azimuths, …}
+
 viewer.measure.drawSightline({from, to});   // same result, drawn into the scene
+viewer.measure.drawViewshed({from});        // horizon ring around the observer
 viewer.measure.sightlineMatrix(points);     // every pairwise relation
 ```
 
