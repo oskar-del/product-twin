@@ -1,0 +1,32 @@
+<!doctype html><meta charset=utf8><title>Villa 4 dollhouse</title>
+<style>html,body{margin:0;height:100%;background:#cfd6d8;overflow:hidden}</style>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';import{OrbitControls}from 'three/addons/controls/OrbitControls.js';
+const scene=new THREE.Scene();scene.background=new THREE.Color(0xcfd6d8);
+const cam=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,.1,2000);cam.position.set(18,30,34);
+const R=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});R.setPixelRatio(Math.min(devicePixelRatio,2));R.setSize(innerWidth,innerHeight);R.shadowMap.enabled=true;R.shadowMap.type=THREE.PCFSoftShadowMap;R.outputColorSpace=THREE.SRGBColorSpace;R.toneMapping=THREE.ACESFilmicToneMapping;document.body.append(R.domElement);
+const ctr=new OrbitControls(cam,R.domElement);ctr.enableDamping=true;
+scene.add(new THREE.HemisphereLight(0xffffff,0x9aa2a0,1.1));
+const sun=new THREE.DirectionalLight(0xfff0d8,2.4);sun.position.set(30,50,20);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);const s=sun.shadow.camera;s.left=-40;s.right=40;s.top=40;s.bottom=-40;s.far=200;scene.add(sun);
+const G=await (await fetch('v4grid.json')).json();
+const tex=await new THREE.TextureLoader().loadAsync('v4floor.png');tex.colorSpace=THREE.SRGBColorSpace;
+// floor plate with floorplan texture
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(G.w,G.h),new THREE.MeshStandardMaterial({map:tex,roughness:.9}));
+floor.rotateX(-Math.PI/2);floor.receiveShadow=true;scene.add(floor);
+// base slab
+const slab=new THREE.Mesh(new THREE.BoxGeometry(G.w+1,.4,G.h+1),new THREE.MeshStandardMaterial({color:0xd8d2c6,roughness:1}));slab.position.y=-.22;slab.receiveShadow=true;scene.add(slab);
+// walls: instanced boxes at cell centres
+const wh=3.0,cs=G.cell;
+const geo=new THREE.BoxGeometry(cs*1.05,wh,cs*1.05);
+const mat=new THREE.MeshStandardMaterial({color:0xeeeae1,roughness:.75});
+const inst=new THREE.InstancedMesh(geo,mat,G.cells.length);inst.castShadow=true;inst.receiveShadow=true;
+const M=new THREE.Matrix4();
+G.cells.forEach((c,k)=>{M.makeTranslation(c[0],wh/2,-c[1]);inst.setMatrixAt(k,M);}); // tex row(+y in json 'mz') -> depth; flip to -z
+inst.instanceMatrix.needsUpdate=true;scene.add(inst);
+ctr.target.set(0,1,0);
+addEventListener('resize',()=>{cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();R.setSize(innerWidth,innerHeight);});
+window.__twin={scene,camera:cam,renderer:R,controls:ctr};
+window.snap=(px)=>{const w=px||1000,h=Math.round(w*innerHeight/innerWidth);const o=document.createElement('canvas');o.width=w;o.height=h;R.render(scene,cam);o.getContext('2d').drawImage(R.domElement,0,0,w,h);return o.toDataURL('image/jpeg',.85).split(',')[1];};
+R.setAnimationLoop(()=>{ctr.update();R.render(scene,cam);});
+</script>
