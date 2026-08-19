@@ -29,6 +29,22 @@
   .offerbtn:hover{background:#c69b5c}
   .swapbtn{flex:none;border:0;border-radius:10px;padding:10px 14px;background:#1c2016;color:#f4efe4;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.02em}
   .swapbtn:hover{background:#2c3324}
+  .rfqbtn{pointer-events:auto;position:absolute;right:24px;bottom:74px;border:0;border-radius:999px;padding:11px 18px;background:#b3894f;color:#1c2016;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:.02em;box-shadow:0 4px 16px rgba(0,0,0,.35)}
+  .rfqbtn:hover{background:#c69b5c}
+  .modal{pointer-events:auto;position:absolute;inset:0;background:rgba(12,11,8,.62);backdrop-filter:blur(4px);display:grid;place-items:center;z-index:6}
+  .modal[hidden]{display:none}
+  .modal-card{width:min(560px,calc(100vw - 40px));max-height:calc(100vh - 60px);overflow:auto;background:#f7f3e9;color:#1c2016;border-radius:18px;padding:24px}
+  .modal-card h2{font:500 24px/1.1 Georgia,serif;margin:6px 0 2px}
+  .rfq-prop{font-size:12px;color:#5c6357;margin:6px 0 14px;padding-bottom:12px;border-bottom:1px solid #e2ddcc}
+  .rfq-row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #ece7d8;font-size:13px}
+  .rfq-row .n{color:#1c2016}.rfq-row .n small{display:block;color:#8a8368;font-size:10px;margin-top:1px}
+  .rfq-row .p{white-space:nowrap;font-weight:600}
+  .rfq-tot{display:flex;justify-content:space-between;padding:12px 0 2px;font:500 18px/1 Georgia,serif}
+  .rfq-tot .sub{font-size:10px;color:#8a8368;letter-spacing:.1em;text-transform:uppercase;align-self:center}
+  .rfq-actions{display:flex;gap:8px;margin-top:16px}
+  .rfq-actions button{flex:1;border:0;border-radius:10px;padding:11px;background:#1c2016;color:#f4efe4;font-size:12px;font-weight:700;cursor:pointer}
+  .rfq-actions button.secondary{background:#e0dccb;color:#26372d}
+  .rfq-note{margin-top:12px;font-size:10px;color:#7a7358;line-height:1.5}
   .tag{position:absolute;pointer-events:auto;transform:translate(-50%,-50%);cursor:pointer}
   .tag .dot{width:26px;height:26px;border-radius:50%;background:rgba(250,246,238,.92);border:2px solid rgba(0,0,0,.15);box-shadow:0 3px 12px rgba(0,0,0,.35);display:grid;place-items:center;font-size:13px;color:#1c2016;transition:.15s}
   .tag:hover .dot{transform:scale(1.12);background:#fff}
@@ -59,6 +75,18 @@
     <div class="actions"><a id="p-offer" class="offerbtn" target="_blank" rel="noopener" hidden>View live offer / RFQ →</a><button id="p-swap" class="swapbtn" hidden>⇄ Swap</button></div>
     <div class="warn" id="p-warn"></div>
   </aside>
+  <button id="rfq-btn" class="rfqbtn">Request room quote →</button>
+  <div id="rfq-modal" class="modal" hidden>
+    <div class="modal-card">
+      <button class="close" id="rfq-close">×</button>
+      <div class="small">Request for quote · furnished living room</div>
+      <h2 id="rfq-title">—</h2>
+      <div class="rfq-prop" id="rfq-prop"></div>
+      <div id="rfq-body"></div>
+      <div class="rfq-actions"><button id="rfq-copy">⧉ Copy RFQ</button><button id="rfq-print" class="secondary">Print / Save PDF</button></div>
+      <div class="rfq-note">Nothing is sent automatically — this is a bill of materials to review and send yourself. Prices, stock and ES delivery are live gates; native-3D rights are review.</div>
+    </div>
+  </div>
 </div>
 <script type="module">
 import * as THREE from 'three';
@@ -287,6 +315,47 @@ function swapRole(role) {
   showPanel(role); updateTotal();
 }
 document.getElementById('close').onclick = () => panel.classList.remove('open');
+
+// ---- room-level RFQ (bill of materials; nothing is sent) ----
+function activeList() { return [...cyclesByRole.values()].map(g => g.cycle[g.index]); }
+function totalsByCurrency() {
+  const sums = new Map();
+  for (const p of activeList()) { const o = p.offer_snapshot; if (typeof o.unit_price === 'number') sums.set(o.currency, (sums.get(o.currency) || 0) + o.unit_price); }
+  return sums;
+}
+function renderRfq() {
+  const pr = property;
+  document.getElementById('rfq-title').textContent = 'Furnished living room — 7-piece selection';
+  document.getElementById('rfq-prop').innerHTML = `<b>${pr.name}</b> · ${pr.location}${pr.reference ? ' · H&H ' + pr.reference : ''}${pr.price_display ? ' · ' + pr.price_display : ''}`;
+  const rows = activeList().map(p => {
+    const o = p.offer_snapshot; const url = o.product_url || (byTwin.get(p.twin_id)?.handle && scene_data.geometry_source?.merchant_origin ? `${scene_data.geometry_source.merchant_origin}/products/${byTwin.get(p.twin_id).handle}` : null);
+    return `<div class="rfq-row"><div class="n">${p.identity.manufacturer} ${p.identity.model}<small>${p.identity.merchant_sku ? 'SKU ' + p.identity.merchant_sku + ' · ' : ''}${o.merchant}${url ? ' · <a href="' + url + '" target="_blank" rel="noopener">offer ↗</a>' : ''}</small></div><div class="p">${money(o.unit_price, o.currency)}</div></div>`;
+  }).join('');
+  const totals = [...totalsByCurrency().entries()].map(([cur, v]) => `<div class="rfq-tot"><span class="sub">Subtotal ${cur}</span><span>${money(v, cur)} ${cur}</span></div>`).join('');
+  document.getElementById('rfq-body').innerHTML = rows + totals;
+}
+function buildRfqText() {
+  const pr = property;
+  const lines = [];
+  lines.push('REQUEST FOR QUOTE — furnished living room');
+  lines.push(`Property: ${pr.name} · ${pr.location}${pr.reference ? ' · H&H ' + pr.reference : ''}${pr.price_display ? ' · ' + pr.price_display : ''}`);
+  if (pr.listing_url) lines.push(`Listing: ${pr.listing_url}`);
+  lines.push('');
+  lines.push('Pieces:');
+  for (const p of activeList()) {
+    const o = p.offer_snapshot; const url = o.product_url || (byTwin.get(p.twin_id)?.handle && scene_data.geometry_source?.merchant_origin ? `${scene_data.geometry_source.merchant_origin}/products/${byTwin.get(p.twin_id).handle}` : '');
+    lines.push(`- ${p.identity.manufacturer} ${p.identity.model} | SKU ${p.identity.merchant_sku || '-'} | ${money(o.unit_price, o.currency)} ${o.currency} | ${o.merchant}${url ? ' | ' + url : ''}`);
+  }
+  lines.push('');
+  for (const [cur, v] of totalsByCurrency()) lines.push(`Subtotal ${cur}: ${money(v, cur)} ${cur}`);
+  lines.push('');
+  lines.push('Note: prices/stock and ES delivery require live refresh; native-3D geometry rights are under review; proxy items are dimension-verified, not exact manufacturer geometry.');
+  return lines.join('\n');
+}
+document.getElementById('rfq-btn').onclick = () => { renderRfq(); document.getElementById('rfq-modal').hidden = false; };
+document.getElementById('rfq-close').onclick = () => document.getElementById('rfq-modal').hidden = true;
+document.getElementById('rfq-copy').onclick = async () => { try { await navigator.clipboard.writeText(buildRfqText()); document.getElementById('rfq-copy').textContent = '✓ Copied'; setTimeout(() => document.getElementById('rfq-copy').textContent = '⧉ Copy RFQ', 1500); } catch (e) { console.error(e); } };
+document.getElementById('rfq-print').onclick = () => window.print();
 
 // project tags to screen each frame
 const v = new THREE.Vector3();
