@@ -38,7 +38,11 @@ const scene=new THREE.Scene();
 // sky gradient
 function skyTex(){const c=document.createElement('canvas');c.width=8;c.height=256;const g=c.getContext('2d').createLinearGradient(0,0,0,256);g.addColorStop(0,'#7fb0d6');g.addColorStop(.5,'#a9cadd');g.addColorStop(1,'#dfe9ea');const x=c.getContext('2d');x.fillStyle=g;x.fillRect(0,0,8,256);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t;}
 scene.background=skyTex();scene.fog=new THREE.Fog(0xcdd9de,500,1050);
-function stoneTex(){const c=document.createElement('canvas');c.width=c.height=256;const x=c.getContext('2d');x.fillStyle='#b8a586';x.fillRect(0,0,256,256);let s=99;const rnd=()=>{s=(s*16807)%2147483647;return s/2147483647;};for(let i=0;i<520;i++){x.fillStyle=rnd()<.5?'rgba(120,104,78,.25)':'rgba(214,201,170,.28)';const w=3+rnd()*10,h=2+rnd()*6;x.fillRect(rnd()*256,rnd()*256,w,h);}const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(2,2);t.colorSpace=THREE.SRGBColorSpace;return t;}
+function stoneTex(){const c=document.createElement('canvas');c.width=c.height=256;const x=c.getContext('2d');x.fillStyle='#cfc7b6';x.fillRect(0,0,256,256);let s=99;const rnd=()=>{s=(s*16807)%2147483647;return s/2147483647;};
+ // horizontal stacked-stone courses (natural stone cladding, not wood)
+ for(let cy=0;cy<256;cy+=14){x.strokeStyle='rgba(140,132,116,.35)';x.lineWidth=1;x.beginPath();x.moveTo(0,cy);x.lineTo(256,cy);x.stroke();}
+ for(let i=0;i<420;i++){const g=190+rnd()*45;x.fillStyle=rnd()<.5?`rgba(${g-40},${g-42},${g-52},.22)`:`rgba(${g},${g-4},${g-16},.22)`;const w=6+rnd()*16,h=3+rnd()*7;x.fillRect(rnd()*256,rnd()*256,w,h);}
+ const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(2,3);t.colorSpace=THREE.SRGBColorSpace;return t;}
 const camera=new THREE.PerspectiveCamera(46,innerWidth/innerHeight,.5,2200);
 const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);
 renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.02;document.body.prepend(renderer.domElement);
