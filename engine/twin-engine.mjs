@@ -31,7 +31,8 @@ import {createPanel} from "./ui/panel.mjs";
 import {createLegend} from "./ui/legend.mjs";
 import {createDock, createTools} from "./ui/dock.mjs";
 
-export const ENGINE_VERSION = "twin-engine/v0.1";
+export {ENGINE_VERSION_STRING as ENGINE_VERSION} from "./version.mjs";
+import {ENGINE_VERSION_STRING} from "./version.mjs";
 
 export {parseScene, evidenceProfile} from "./core/scene-contract.mjs";
 export {deriveMapView} from "./geo/local-enu.mjs";
@@ -254,7 +255,7 @@ export async function createTwinViewer({
   });
 
   return {
-    version: ENGINE_VERSION,
+    version: ENGINE_VERSION_STRING,
     scene,
     stages,
     viewer,
