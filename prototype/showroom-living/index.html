@@ -24,7 +24,10 @@
   .roomtotal .k{display:block;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#e6c79a}
   .roomtotal b{font:500 20px/1.1 Georgia,serif;color:#fff}
   .roomtotal .rt-note{display:block;font-size:9px;color:#cfc7b6;margin-top:2px}
-  .swapbtn{margin-top:10px;width:100%;border:0;border-radius:10px;padding:10px;background:#1c2016;color:#f4efe4;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.02em}
+  .actions{display:flex;gap:8px;margin-top:10px}
+  .offerbtn{flex:1;text-align:center;text-decoration:none;border-radius:10px;padding:10px;background:#b3894f;color:#1c2016;font-size:12px;font-weight:700;letter-spacing:.02em}
+  .offerbtn:hover{background:#c69b5c}
+  .swapbtn{flex:none;border:0;border-radius:10px;padding:10px 14px;background:#1c2016;color:#f4efe4;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.02em}
   .swapbtn:hover{background:#2c3324}
   .tag{position:absolute;pointer-events:auto;transform:translate(-50%,-50%);cursor:pointer}
   .tag .dot{width:26px;height:26px;border-radius:50%;background:rgba(250,246,238,.92);border:2px solid rgba(0,0,0,.15);box-shadow:0 3px 12px rgba(0,0,0,.35);display:grid;place-items:center;font-size:13px;color:#1c2016;transition:.15s}
@@ -53,7 +56,7 @@
     <div class="small">Product Twin · native manufacturer 3D</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
     <div id="p-pills"></div>
     <div class="offer"><div class="small">Live trade offer</div><strong id="p-price">—</strong><span id="p-offerstate"></span></div>
-    <button id="p-swap" class="swapbtn" hidden>⇄ Swap this piece</button>
+    <div class="actions"><a id="p-offer" class="offerbtn" target="_blank" rel="noopener" hidden>View live offer / RFQ →</a><button id="p-swap" class="swapbtn" hidden>⇄ Swap</button></div>
     <div class="warn" id="p-warn"></div>
   </aside>
 </div>
@@ -263,8 +266,14 @@ function showPanel(role) {
   document.getElementById('p-offerstate').textContent = `${o.merchant} · ${o.available ? 'available' : 'unavailable'} · ${o.observed_at}`;
   document.getElementById('p-warn').textContent = `Exact finish not bound to variant. ${o.es_checkout_state}. Native GLB rights: review.`;
   const swap = document.getElementById('p-swap');
-  if (g.cycle.length > 1) { swap.hidden = false; swap.textContent = `⇄ Swap this piece (${g.index + 1}/${g.cycle.length})`; swap.onclick = () => swapRole(role); }
+  if (g.cycle.length > 1) { swap.hidden = false; swap.textContent = `⇄ Swap (${g.index + 1}/${g.cycle.length})`; swap.onclick = () => swapRole(role); }
   else swap.hidden = true;
+  // real merchant offer / RFQ link from the product's live handle
+  const offer = document.getElementById('p-offer');
+  const handle = byTwin.get(p.twin_id)?.handle;
+  const origin = scene_data.geometry_source?.merchant_origin;
+  if (handle && origin) { offer.hidden = false; offer.href = `${origin}/products/${handle}`; }
+  else offer.hidden = true;
   panel.classList.add('open');
 }
 function swapRole(role) {
