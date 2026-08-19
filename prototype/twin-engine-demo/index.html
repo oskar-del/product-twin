@@ -7,8 +7,6 @@
 <style>
   html,body{margin:0;height:100%;overflow:hidden;background:#d9e0db;font-family:Inter,ui-sans-serif,system-ui,sans-serif}
   #stage{position:fixed;inset:0}
-  .brand{position:absolute;left:16px;top:14px;z-index:5;background:#14231d;color:#fff;border-radius:12px;padding:10px 13px;font-size:10px;letter-spacing:.12em}
-  .fixture-note{position:absolute;left:16px;top:58px;z-index:5;background:rgba(115,90,158,.92);color:#fff;border-radius:12px;padding:9px 12px;font-size:10px;line-height:1.5;max-width:280px}
   .loading{position:fixed;inset:0;display:grid;place-items:center;background:#d9e0db;font-size:11px;letter-spacing:.14em;z-index:9;text-align:center;padding:24px}
   .loading code{display:block;margin-top:10px;font-size:11px;letter-spacing:0}
 </style>
@@ -21,8 +19,6 @@
 </head>
 <body>
 <div id="stage">
-  <div class="brand">TWIN-ENGINE v0.1</div>
-  <div class="fixture-note"><b>Conformance fixture.</b> Synthetic geometry at null island — exercises every primitive and evidence class. Not a claim about any real place.</div>
 </div>
 <div class="loading" id="loading">LOADING TWIN-ENGINE…</div>
 <script type="module">
@@ -32,7 +28,8 @@ const loading = document.getElementById("loading");
 try {
   const viewer = await createTwinViewer({
     mount: document.getElementById("stage"),
-    sceneUrl: "/data/scenes/twin-engine-conformance/scene-v0.1.json"
+    sceneUrl: "/data/scenes/twin-engine-conformance/scene-v0.1.json",
+    brand: "twin-engine v0.1 · conformance fixture"
   });
   loading.remove();
   // Exposed so the headless check can drive and interrogate the running engine.

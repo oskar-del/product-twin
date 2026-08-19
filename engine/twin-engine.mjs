@@ -55,6 +55,7 @@ async function loadScene(sceneUrl, sceneDocument) {
  * @param {object}  [options.sceneDocument]    an already-loaded scene, instead of a URL
  * @param {object}  [options.realisticPalette] element type → colour overrides for REALISTIC
  * @param {function}[options.decor]            per-site realism plugin: ({THREE, scene, group}) => void
+ * @param {string}  [options.brand]            short label shown top-left (scene subject by default)
  * @param {boolean} [options.chrome=true]      mount the engine's own dock/legend/panel/tools
  * @param {function}[options.onElementOpen]    called with each opened element
  */
@@ -63,6 +64,7 @@ export async function createTwinViewer({
   sceneUrl,
   sceneDocument,
   realisticPalette,
+  brand,
   decor = null,
   chrome = true,
   onElementOpen = null,
@@ -179,8 +181,16 @@ export async function createTwinViewer({
     hud = document.createElement("div");
     hud.className = "twin-hud";
     mount.append(hud);
+    const brandLabel = brand ?? scene.subject?.label ?? scene.scene_id;
+    if (brandLabel) {
+      const chip = document.createElement("div");
+      chip.className = "twin-brand";
+      chip.textContent = brandLabel;
+      chip.title = brandLabel;
+      hud.append(chip);
+    }
     panel = createPanel({mount: hud});
-    createLegend({mount: hud});
+    createLegend({mount: hud, claimPolicy: scene.legal_claim_policy});
     dock = createDock({
       mount: hud,
       profiles: scene.presentation.profiles,

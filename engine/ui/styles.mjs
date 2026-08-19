@@ -31,6 +31,8 @@ const CSS = `
 .${ENGINE_CLASS} .twin-hud{position:absolute;inset:0;pointer-events:none;z-index:4}
 .${ENGINE_CLASS} .twin-hud > *{pointer-events:auto}
 
+.${ENGINE_CLASS} .twin-brand{position:absolute;left:16px;top:14px;background:var(--twin-ink);color:#fff;border-radius:12px;padding:10px 13px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;max-width:min(320px,32vw);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
 .${ENGINE_CLASS} .twin-dock{position:absolute;left:50%;top:14px;transform:translateX(-50%);display:flex;gap:4px;background:rgba(20,35,29,.9);padding:5px;border-radius:var(--twin-radius);box-shadow:0 8px 28px rgba(0,0,0,.18)}
 .${ENGINE_CLASS} .twin-dock button{border:0;background:transparent;color:rgba(255,255,255,.68);padding:8px 12px;border-radius:10px;font-size:9px;letter-spacing:.08em;cursor:pointer;font-family:inherit}
 .${ENGINE_CLASS} .twin-dock button[aria-pressed="true"]{background:#fff;color:var(--twin-ink)}
@@ -42,10 +44,18 @@ const CSS = `
 .${ENGINE_CLASS} .twin-caption{position:absolute;left:50%;top:110px;transform:translateX(-50%);background:var(--twin-glass);border:1px solid var(--twin-line);border-radius:999px;padding:7px 12px;font-size:10px;backdrop-filter:blur(12px);max-width:calc(100% - 32px);text-align:center}
 
 .${ENGINE_CLASS} .twin-legend{position:absolute;left:16px;bottom:16px;background:var(--twin-glass);border:1px solid var(--twin-line);border-radius:var(--twin-radius);padding:12px 14px;font-size:10px;line-height:1.7;backdrop-filter:blur(12px);max-width:290px}
-.${ENGINE_CLASS} .twin-legend b{display:block;margin-bottom:5px;letter-spacing:.06em;text-transform:uppercase;font-size:9px;color:var(--twin-muted)}
+.${ENGINE_CLASS} .twin-legend-body > summary{list-style:none;cursor:pointer;margin-bottom:5px;letter-spacing:.06em;text-transform:uppercase;font-size:9px;color:var(--twin-muted)}
+.${ENGINE_CLASS} .twin-legend-body > summary::-webkit-details-marker{display:none}
+.${ENGINE_CLASS} .twin-legend-body > summary::after{content:" ▾";opacity:.6}
+.${ENGINE_CLASS} .twin-legend-body[open] > summary::after{content:" ▴"}
 .${ENGINE_CLASS} .twin-legend .twin-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
 .${ENGINE_CLASS} .twin-legend li{list-style:none}
 .${ENGINE_CLASS} .twin-legend ul{margin:0;padding:0}
+.${ENGINE_CLASS} .twin-policy{margin-top:9px;border-top:1px solid var(--twin-line);padding-top:8px}
+.${ENGINE_CLASS} .twin-policy summary{cursor:pointer;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--twin-muted)}
+.${ENGINE_CLASS} .twin-policy ul.twin-blocked{margin:7px 0 0;padding-left:15px}
+.${ENGINE_CLASS} .twin-policy ul.twin-blocked li{list-style:disc;line-height:1.5}
+.${ENGINE_CLASS} .twin-policy p{margin:8px 0 0;line-height:1.5;color:var(--twin-muted)}
 
 .${ENGINE_CLASS} .twin-tools{position:absolute;right:16px;bottom:16px;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;max-width:60%}
 .${ENGINE_CLASS} .twin-tools button,.${ENGINE_CLASS} .twin-tools label{background:var(--twin-glass);border:1px solid var(--twin-line);border-radius:999px;padding:8px 11px;font-size:10px;cursor:pointer;backdrop-filter:blur(12px);font-family:inherit;color:var(--twin-ink);display:flex;align-items:center;gap:7px}
@@ -64,9 +74,22 @@ const CSS = `
 .${ENGINE_CLASS} .twin-panel .twin-close{float:right;border:0;background:none;font-size:20px;line-height:1;cursor:pointer;color:var(--twin-ink)}
 
 @media (max-width:900px){
-  .${ENGINE_CLASS} .twin-panel{top:auto;bottom:0;left:0;right:0;width:auto;max-height:52%;border-radius:18px 18px 0 0;transform:translateY(calc(100% + 24px))}
+  .${ENGINE_CLASS} .twin-panel{top:auto;bottom:0;left:0;right:0;width:auto;max-height:56%;border-radius:18px 18px 0 0;transform:translateY(calc(100% + 24px))}
   .${ENGINE_CLASS} .twin-panel[data-open="true"]{transform:none}
-  .${ENGINE_CLASS} .twin-legend{max-width:200px;font-size:9px}
+}
+
+/* Phone layout. Nothing overlaps anything: brand and dock share the top row, stages scroll on
+   the second, the legend collapses, and the tools own the bottom edge. */
+@media (max-width:760px){
+  .${ENGINE_CLASS} .twin-brand{left:12px;top:12px;max-width:44vw;font-size:9px;padding:8px 10px;letter-spacing:.08em}
+  .${ENGINE_CLASS} .twin-dock{left:auto;right:12px;top:12px;transform:none;padding:4px;gap:2px}
+  .${ENGINE_CLASS} .twin-dock button{padding:7px 8px;font-size:8px;letter-spacing:.04em}
+  .${ENGINE_CLASS} .twin-steps{left:12px;right:12px;top:56px;transform:none;max-width:none;justify-content:flex-start;-webkit-overflow-scrolling:touch}
+  .${ENGINE_CLASS} .twin-caption{display:none}
+  .${ENGINE_CLASS} .twin-legend{left:12px;right:auto;bottom:64px;max-width:min(260px,72vw);max-height:44vh;overflow:auto;font-size:9px}
+  .${ENGINE_CLASS} .twin-tools{left:12px;right:12px;bottom:12px;max-width:none;justify-content:space-between;gap:5px}
+  .${ENGINE_CLASS} .twin-tools button,.${ENGINE_CLASS} .twin-tools label{padding:8px 9px;font-size:9px;gap:5px}
+  .${ENGINE_CLASS} .twin-tools input[type="range"]{width:82px}
 }
 `;
 

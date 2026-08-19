@@ -7,7 +7,7 @@
  * meeting with no wifi.
  *
  *   node scripts/bundle-twin-scene.mjs <scene.json> [--out <file.html>]
- *                                      [--title "…"] [--eyebrow "…"] [--note "…"] [--no-minify]
+ *                                      [--title "…"] [--eyebrow "…"] [--no-minify]
  *
  * The scene is parsed against the twin-scene contract first: a bundle is a published artifact,
  * and publishing a scene the engine would refuse to render is worse than failing here.
@@ -42,7 +42,7 @@ const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({
 /** `</script>` inside the bundled JS would close the tag it is written into. */
 const escapeScript = value => value.replace(/<\/script/gi, "<\\/script");
 
-function shell({title, eyebrow, note, script, scene, generatedAt}) {
+function shell({title, script, scene, generatedAt}) {
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -55,17 +55,11 @@ function shell({title, eyebrow, note, script, scene, generatedAt}) {
 <style>
   html,body{margin:0;height:100%;overflow:hidden;background:#d9e0db;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#14231d}
   #twin-stage{position:fixed;inset:0}
-  .twin-brand{position:absolute;left:16px;top:14px;z-index:5;background:#14231d;color:#fff;border-radius:12px;padding:10px 13px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;max-width:min(320px,60vw)}
-  .twin-note{position:absolute;left:16px;top:58px;z-index:5;background:rgba(247,244,236,.94);border:1px solid rgba(20,35,29,.15);border-radius:12px;padding:9px 12px;font-size:10px;line-height:1.5;max-width:min(300px,60vw);backdrop-filter:blur(12px)}
   .twin-boot{position:fixed;inset:0;display:grid;place-items:center;background:#d9e0db;font-size:11px;letter-spacing:.14em;z-index:9;text-align:center;padding:24px}
-  @media(max-width:900px){.twin-note{display:none}}
 </style>
 </head>
 <body>
-<div id="twin-stage">
-  <div class="twin-brand">${escapeHtml(eyebrow)}</div>
-  ${note ? `<div class="twin-note">${escapeHtml(note)}</div>` : ""}
-</div>
+<div id="twin-stage"></div>
 <div class="twin-boot" id="twin-boot">LOADING TWIN…</div>
 <script type="module">
 ${escapeScript(script)}
@@ -77,7 +71,7 @@ ${escapeScript(script)}
 `;
 }
 
-export async function bundleTwinScene({scenePath, outPath, title, eyebrow, note, minify = true, generatedAt}) {
+export async function bundleTwinScene({scenePath, outPath, title, eyebrow, minify = true, generatedAt}) {
   const absoluteScene = path.resolve(root, scenePath);
   const document = JSON.parse(fs.readFileSync(absoluteScene, "utf8"));
   const scene = parseScene(document);
@@ -87,13 +81,16 @@ export async function bundleTwinScene({scenePath, outPath, title, eyebrow, note,
   const sceneCopy = path.join(workDir, "scene.json");
   fs.writeFileSync(sceneCopy, JSON.stringify(document));
 
+  const eyebrowLabel = eyebrow ?? scene.subject?.label ?? scene.scene_id;
   const entry = path.join(workDir, "entry.mjs");
   fs.writeFileSync(entry, `import sceneDocument from "./scene.json";
 import {createTwinViewer} from ${JSON.stringify(path.join(root, "engine/twin-engine.mjs"))};
 
+const BRAND = ${JSON.stringify(eyebrowLabel)};
+
 const boot = document.getElementById("twin-boot");
 try {
-  globalThis.twinViewer = await createTwinViewer({mount: document.getElementById("twin-stage"), sceneDocument});
+  globalThis.twinViewer = await createTwinViewer({mount: document.getElementById("twin-stage"), sceneDocument, brand: BRAND});
   boot.remove();
 } catch (error) {
   boot.textContent = "This twin could not start: " + error.message;
@@ -115,9 +112,7 @@ try {
 
   const script = result.outputFiles[0].text;
   const html = shell({
-    title: title ?? scene.subject?.label ?? scene.scene_id,
-    eyebrow: eyebrow ?? scene.subject?.label ?? scene.scene_id,
-    note: note ?? scene.legal_claim_policy?.rule ?? "",
+    title: title ?? eyebrowLabel,
     script,
     scene,
     generatedAt: generatedAt ?? "unstamped"
@@ -135,7 +130,7 @@ const invokedDirectly = process.argv[1] && fileURLToPath(import.meta.url) === pa
 if (invokedDirectly) {
   const options = parseArgs(process.argv.slice(2));
   if (!options.scene) {
-    console.error("usage: node scripts/bundle-twin-scene.mjs <scene.json> [--out <file.html>] [--title …] [--eyebrow …] [--note …] [--no-minify]");
+    console.error("usage: node scripts/bundle-twin-scene.mjs <scene.json> [--out <file.html>] [--title …] [--eyebrow …] [--no-minify]");
     process.exit(2);
   }
   const built = await bundleTwinScene({
@@ -143,7 +138,6 @@ if (invokedDirectly) {
     outPath: options.out,
     title: options.title,
     eyebrow: options.eyebrow,
-    note: options.note,
     minify: options.minify,
     generatedAt: new Date().toISOString()
   });
