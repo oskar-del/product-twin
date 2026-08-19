@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1",
+  "as_of": "2026-08-18",
+  "artifact": "locator/essence-provisional-plotmap.png",
+  "what": "Provisional plot map: verified Catastro parcels (cyan) over Esri satellite, with an UNVERIFIED Essence assignment overlay (parcel 21 = Villa 4 candidate; parcels 18/19/20/26 = Villas 1-3 zone).",
+  "verified": [
+    "Catastro parcel geometry + alignment to imagery (block 95784, CL Benicolet)",
+    "parcel 21 is the single largest plot (matches largest villa V4)"
+  ],
+  "NOT_verified": [
+    "Which Catastro parcels are the Essence holding, and the 4-way villa cut — the reparcelacion is not in Catastro.",
+    "Total-area matching is underdetermined: many parcel subsets sum to the developer total 8911 m2 (an exact 0-diff subset exists), so area alone does NOT identify the assembly.",
+    "Esri/PNOA imagery predates the 2025 construction; parcel 21 still shows the pre-demolition 1994 villas."
+  ],
+  "to_confirm": "Developer plano de parcelacion / 4 cadastral refs, OR current (post-2025) high-res satellite/drone showing the 4 building pads."
+}

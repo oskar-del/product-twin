@@ -1,0 +1,106 @@
+{
+  "schema_version": "0.1",
+  "as_of": "2026-08-18",
+  "source": "IGN MDT05 5m LiDAR via OGC API Coverages EL.ElevationGridCoverage_25830_5_PB (f=COG), 3x3-cell mean at parcel centroid.",
+  "request_url": "https://api-coverages.idee.es/collections/EL.ElevationGridCoverage_25830_5_PB/coverage?bbox=771100,4288010,771390,4288310&bbox-crs=25830&f=COG",
+  "datum": "terrain = natural ground, ETRS89 ellipsoidal→orthometric per IGN MDT05 (metres).",
+  "finding": "Benicolet parcels span ~62-77 m natural terrain. This does NOT uniquely confirm parcel 21 as Villa 4: parcel 21 centroid = 64.7 m, but parcels 19 (63.8) and 01 (62.3) are lower. The stamped plan floor levels (+70.55 V4 / +75.0 V1-3) are FINISHED-floor platforms after cut/fill on sloping plots, not natural ground, so absolute floor level is not a reliable parcel discriminator. Elevation is therefore NOT counted as a lock signal.",
+  "samples": [
+    {
+      "refcat": "9575901BC4897N",
+      "parcel": "01",
+      "area_m2": 752.0,
+      "terrain_m": 62.3
+    },
+    {
+      "refcat": "9578419BC4897N",
+      "parcel": "19",
+      "area_m2": 922.0,
+      "terrain_m": 63.8
+    },
+    {
+      "refcat": "9578418BC4897N",
+      "parcel": "18",
+      "area_m2": 752.0,
+      "terrain_m": 64.7
+    },
+    {
+      "refcat": "9578421BC4897N",
+      "parcel": "21",
+      "area_m2": 4510.0,
+      "terrain_m": 64.7
+    },
+    {
+      "refcat": "9578420BC4897N",
+      "parcel": "20",
+      "area_m2": 750.0,
+      "terrain_m": 65.3
+    },
+    {
+      "refcat": "9575914BC4897N",
+      "parcel": "14",
+      "area_m2": 833.0,
+      "terrain_m": 66.3
+    },
+    {
+      "refcat": "9576515BC4897N",
+      "parcel": "15",
+      "area_m2": 1613.0,
+      "terrain_m": 67.7
+    },
+    {
+      "refcat": "9578416BC4897N",
+      "parcel": "16",
+      "area_m2": 763.0,
+      "terrain_m": 68.6
+    },
+    {
+      "refcat": "9578417BC4897N",
+      "parcel": "17",
+      "area_m2": 805.0,
+      "terrain_m": 68.9
+    },
+    {
+      "refcat": "9578426BC4897N",
+      "parcel": "26",
+      "area_m2": 1923.0,
+      "terrain_m": 70.7
+    },
+    {
+      "refcat": "9578414BC4897N",
+      "parcel": "14",
+      "area_m2": 2653.0,
+      "terrain_m": 72.8
+    },
+    {
+      "refcat": "9475412BC4897N",
+      "parcel": "12",
+      "area_m2": 1126.0,
+      "terrain_m": 73.0
+    },
+    {
+      "refcat": "9475413BC4897N",
+      "parcel": "13",
+      "area_m2": 853.0,
+      "terrain_m": 73.5
+    },
+    {
+      "refcat": "9578425BC4897N",
+      "parcel": "25",
+      "area_m2": 1000.0,
+      "terrain_m": 73.5
+    },
+    {
+      "refcat": "9475414BC4897N",
+      "parcel": "14",
+      "area_m2": 1184.0,
+      "terrain_m": 73.7
+    },
+    {
+      "refcat": "9578413BC4897N",
+      "parcel": "13",
+      "area_m2": 943.0,
+      "terrain_m": 76.6
+    }
+  ]
+}

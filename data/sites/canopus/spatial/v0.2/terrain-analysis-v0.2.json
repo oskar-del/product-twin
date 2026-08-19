@@ -1,0 +1,69 @@
+{
+  "axis_reconciliation": "Numeric GeoTIFF model coordinates are easting,northing and are normalized to EPSG:25830 without coordinate swapping. The EPSG:3042 GeoKey axis-order discrepancy is preserved here.",
+  "boundary_sha256": "d5974de0843b250e647483033a1fc716f65c2bcfe85bb64364e0b1f48f5f164f",
+  "dataset": "IGN MDT05 first LiDAR coverage, 5 m",
+  "entity_type": "VerifiedTerrainAnalysis",
+  "horizontal_crs_canonical": "EPSG:25830 easting,northing",
+  "horizontal_crs_source_metadata": "Collection EPSG:25830; GeoTIFF GeoKey EPSG:3042 (same ETRS89/UTM 30 numeric grid with north/east axis declaration)",
+  "methods": {
+    "contours": "unsmoothed linear marching-squares segments at 1 m vertical interval",
+    "local_aspect": "downslope azimuth clockwise from true/grid north; slope-weighted circular aggregation",
+    "parcel_mask": "pixel-centre within authoritative polygon; all_touched=false",
+    "section": "east-west line through polygon centroid, bilinear DEM samples at 5 m",
+    "slope": "central finite differences on 5 m float32 DEM; percent rise",
+    "trend_plane": "ordinary least-squares z = ax + by + c over parcel pixel centres"
+  },
+  "nodata_value": -32767.0,
+  "pixel_size_m": [
+    5.0,
+    5.0
+  ],
+  "reported_comparison": {
+    "interpretation": "The dossier gradient/aspect reproduce as a least-squares parcel trend plane. Local 5 m cell slopes remain separately reported and are materially higher.",
+    "reported_aspect_deg": 80,
+    "reported_fall_m": 11,
+    "reported_max_m": 15,
+    "reported_mean_gradient_percent": 2.5,
+    "reported_min_m": 4
+  },
+  "schema_version": "0.2",
+  "site_twin_id": "SITE_CANOPUS_5410501UF2451S",
+  "source_bounds_model_coordinates": [
+    324169.39916010736,
+    4039730.070495259,
+    326509.39916010736,
+    4042050.070495259
+  ],
+  "source_sha256": "710b8ee75ab04353c06cce8e4633992bfebb7d49ec68687e51ef8c718e791020",
+  "statistics": {
+    "elevation_fall_m": 10.811321258544922,
+    "elevation_max_m": 14.811321258544922,
+    "elevation_mean_m": 9.543224539269744,
+    "elevation_min_m": 4.0,
+    "local_cell_aspect_weighted_circular_mean_deg": 61.365083100578005,
+    "local_cell_slope_mean_percent": 8.230404452013625,
+    "local_cell_slope_median_percent": 6.7765643004320575,
+    "local_cell_slope_p95_percent": 22.98174442716063,
+    "maximum_spot_epsg25830": [
+      325231.89916010736,
+      4040877.570495259,
+      14.811321258544922
+    ],
+    "minimum_spot_epsg25830": [
+      325421.89916010736,
+      4041007.570495259,
+      4.0
+    ],
+    "pixel_center_count": 2105,
+    "pixel_center_sample_area_m2": 52625.0,
+    "trend_plane_downslope_aspect_deg": 79.8295702430506,
+    "trend_plane_dz_dx_east": -0.02450390169158477,
+    "trend_plane_dz_dy_north": -0.004395893183411634,
+    "trend_plane_gradient_percent": 2.489508134131752
+  },
+  "units": {
+    "horizontal": "m",
+    "vertical": "m orthometric"
+  },
+  "vertical_datum": "Alicante orthometric datum realised by EGM2008-REDNAP"
+}

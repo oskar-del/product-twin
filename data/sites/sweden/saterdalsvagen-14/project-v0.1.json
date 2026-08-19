@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1",
+  "entity_type": "SwedenPlotProject",
+  "project_id": "PRJ_SE_SATERDALSVAGEN14",
+  "status": "DISCOVERY",
+  "market_source_receipts": [
+    {
+      "receipt_id": "RCPT_MARKET_BONEO_LISTING",
+      "source_role": "SELLER_MARKETING",
+      "url": "https://www.boneo.se/bostad/id-3376828-tomt-svartinge-saterdalsvagen-14",
+      "retrieved_at": "2026-08-17T17:37:00Z",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/boneo-listing.html",
+      "sha256": "2ce1af2ba03087d7d62dce056a614bcee5d2953cb74e49fe36618cb8ccb0fe19"
+    },
+    {
+      "receipt_id": "RCPT_MARKET_BONEO_PARCEL_MAP",
+      "source_role": "SELLER_MARKETING",
+      "url": "https://files.boneo.se/target_styles/properties/sizex2/1650x1100/3376828-img-CBILD5E629FFAIQLA9717.webp",
+      "retrieved_at": "2026-08-17T17:40:00Z",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/boneo-fastighetskarta.webp",
+      "sha256": "05be2946dcdb6c9a0e710cf638efe51a26e14b89e82076cca0dc5a686ef2871a"
+    }
+  ],
+  "reported_facts": [
+    {"fact_id": "MARKET_ADDRESS", "value": "Säterdalsvägen 14, 605 70 Svärtinge", "status": "REPORTED_UNVERIFIED", "source_receipt_refs": ["RCPT_MARKET_BONEO_LISTING"]},
+    {"fact_id": "MARKET_PRICE_SEK", "value": 2300000, "status": "REPORTED_UNVERIFIED", "source_receipt_refs": ["RCPT_MARKET_BONEO_LISTING"]},
+    {"fact_id": "MARKET_AREA_M2", "value": 1939, "status": "REPORTED_UNVERIFIED", "source_receipt_refs": ["RCPT_MARKET_BONEO_LISTING"]},
+    {"fact_id": "MARKET_OWNERSHIP", "value": "Friköpt / äganderätt", "status": "REPORTED_UNVERIFIED", "source_receipt_refs": ["RCPT_MARKET_BONEO_LISTING"]},
+    {"fact_id": "MARKET_RECENT_SUBDIVISION", "value": true, "status": "REPORTED_UNVERIFIED", "source_receipt_refs": ["RCPT_MARKET_BONEO_LISTING"]},
+    {"fact_id": "MARKET_VIEW_TOWARD_GLAN", "value": true, "status": "REPORTED_UNVERIFIED", "source_receipt_refs": ["RCPT_MARKET_BONEO_LISTING"]},
+    {"fact_id": "MARKET_EKSJOHUS_COOPERATION", "value": true, "status": "REPORTED_UNVERIFIED", "source_receipt_refs": ["RCPT_MARKET_BONEO_LISTING"]},
+    {"fact_id": "MARKET_MUNICIPAL_VA_PAID", "value": true, "status": "REPORTED_UNVERIFIED", "source_receipt_refs": ["RCPT_MARKET_BONEO_LISTING"]},
+    {"fact_id": "MARKET_COORDINATE_WGS84", "value": [16.0317063331, 58.6522414431], "status": "REPORTED_UNVERIFIED", "source_receipt_refs": ["RCPT_MARKET_BONEO_LISTING"]},
+    {"fact_id": "WORKING_PROPERTY_DESIGNATION", "value": "SVÄRTINGE 54:28", "status": "REPORTED_UNVERIFIED", "source_receipt_refs": ["RCPT_MARKET_BONEO_PARCEL_MAP"]}
+  ],
+  "comparisons": [
+    {
+      "comparison_id": "AREA_MARKET_VS_PUBLIC_LOCATOR",
+      "market_value_m2": 1939,
+      "public_locator_value_m2": 1938.1988442902577,
+      "delta_m2": 0.8011557097423,
+      "resolution": "OPEN_PENDING_AUTHORITATIVE_PROPERTY_RECORD"
+    }
+  ],
+  "site_twin_ref": {
+    "id": "SITE_SE_SATERDALSVAGEN14_DISCOVERY",
+    "version": "0.1",
+    "path": "data/sites/sweden/saterdalsvagen-14/plot-intelligence-v0.1.json",
+    "content_sha256": "e3ed2584a2caf5a1ad4895578c00f98439051c4ef6b1e1d306adf9af56d060aa"
+  },
+  "design_scenario_refs": [
+    {
+      "id": "SCN_SE_SATERDALSVAGEN14_BASELINE",
+      "version": "0.1",
+      "path": "data/sites/sweden/saterdalsvagen-14/design-scenario-v0.1.json"
+    }
+  ],
+  "separation_rules": {
+    "seller_claims_cannot_satisfy_site_gates": true,
+    "project_economics_cannot_redefine_site_evidence": true,
+    "scenario_geometry_requires_pinned_site_basis": true
+  }
+}

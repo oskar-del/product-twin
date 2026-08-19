@@ -1,0 +1,144 @@
+{
+  "access": {
+    "permitted_access_point": null,
+    "status": "UNVERIFIED_ANALYSIS_ONLY"
+  },
+  "base_site_twin": {
+    "path": "data/sites/canopus/site-twin-v0.1.json",
+    "preservation": "All reported dossier claims remain intact in the immutable base.",
+    "sha256": "badace1884551743bdd6dc8f0ebd0e220a9e6139456298f3d9640d293841a6bf"
+  },
+  "boundary": {
+    "artifact": "data/sites/canopus/spatial/v0.2/boundary-epsg25830-v0.2.json",
+    "observed": {
+      "computed_area_m2": 52732.1640625,
+      "extent_east_west_m": 328.1699999999837,
+      "extent_north_south_m": 307.4900000002235,
+      "registered_area_m2": 52733.0
+    },
+    "source_id": "SRC_CATASTRO_PARCEL_GML",
+    "status": "OFFICIAL_SOURCE_OBSERVED_HASH_VERIFIED",
+    "wgs84_artifact": "data/sites/canopus/spatial/v0.2/boundary-wgs84-v0.2.geojson"
+  },
+  "context": {
+    "access_candidates": "data/sites/canopus/spatial/v0.2/access-candidates-v0.2.geojson",
+    "buildings": "data/sites/canopus/spatial/v0.2/buildings-context-v0.2.geojson",
+    "roads": "data/sites/canopus/spatial/v0.2/roads-context-v0.2.geojson"
+  },
+  "entity_type": "SiteTwin",
+  "hard_gates": [
+    {
+      "check_profile": "CANOPUS_SPATIAL_V0_2",
+      "evidence_ids": [
+        "SRC_CATASTRO_PARCEL_GML"
+      ],
+      "gate_id": "GATE_CATASTRO_BOUNDARY",
+      "satisfied_at": "2026-08-17T18:01:52+02:00",
+      "severity": "HARD",
+      "status": "SATISFIED"
+    },
+    {
+      "check_profile": "CANOPUS_SPATIAL_V0_2",
+      "evidence_ids": [
+        "SRC_IGN_MDT05_COG"
+      ],
+      "gate_id": "GATE_IGN_TERRAIN",
+      "satisfied_at": "2026-08-17T18:01:52+02:00",
+      "severity": "HARD",
+      "status": "SATISFIED"
+    },
+    {
+      "check_profile": null,
+      "evidence_ids": [],
+      "gate_id": "GATE_CONTEXT_OBSTRUCTIONS",
+      "satisfied_at": null,
+      "severity": "HARD",
+      "status": "OPEN"
+    },
+    {
+      "check_profile": null,
+      "evidence_ids": [],
+      "gate_id": "GATE_CERTIFICADO_URBANISTICO",
+      "satisfied_at": null,
+      "severity": "HARD",
+      "status": "OPEN"
+    },
+    {
+      "check_profile": null,
+      "evidence_ids": [],
+      "gate_id": "GATE_GOVERNING_PLAN",
+      "satisfied_at": null,
+      "severity": "HARD",
+      "status": "OPEN"
+    },
+    {
+      "check_profile": null,
+      "evidence_ids": [],
+      "gate_id": "GATE_A7_BUILDING_LINE_AND_ACCESS",
+      "satisfied_at": null,
+      "severity": "HARD",
+      "status": "OPEN"
+    },
+    {
+      "check_profile": null,
+      "evidence_ids": [],
+      "gate_id": "GATE_PERMITTED_ACCESS",
+      "satisfied_at": null,
+      "severity": "HARD",
+      "status": "OPEN"
+    },
+    {
+      "check_profile": null,
+      "evidence_ids": [],
+      "gate_id": "GATE_ROOFTOP_RULES",
+      "satisfied_at": null,
+      "severity": "HARD",
+      "status": "OPEN"
+    },
+    {
+      "check_profile": null,
+      "evidence_ids": [],
+      "gate_id": "GATE_TITLE_AND_CHARGES",
+      "satisfied_at": null,
+      "severity": "HARD",
+      "status": "OPEN"
+    },
+    {
+      "check_profile": null,
+      "evidence_ids": [],
+      "gate_id": "GATE_FLOOD_AND_OVERLAYS",
+      "satisfied_at": null,
+      "severity": "HARD",
+      "status": "OPEN"
+    },
+    {
+      "check_profile": null,
+      "evidence_ids": [],
+      "gate_id": "GATE_UTILITY_CAPACITY",
+      "satisfied_at": null,
+      "severity": "HARD",
+      "status": "OPEN"
+    }
+  ],
+  "planning": {
+    "buildable_envelope": null,
+    "entitlement": null,
+    "status": "UNRESOLVED_NO_COMPLIANCE_CLAIM"
+  },
+  "project_id": "PRJ_CANOPUS",
+  "schema_version": "0.2",
+  "site_twin_id": "SITE_CANOPUS_5410501UF2451S",
+  "spatial_evidence_manifest": {
+    "path": "data/sites/canopus/spatial/v0.2/spatial-evidence-manifest-v0.2.json",
+    "sha256": "38ea6914da0478bd1e2b377c6bb9a04ea9df55f6bed9901f9034467bfb26526a"
+  },
+  "status": "OFFICIAL_BOUNDARY_AND_CONTEXT_TERRAIN_VERIFIED",
+  "terrain": {
+    "analysis_artifact": "data/sites/canopus/spatial/v0.2/terrain-analysis-v0.2.json",
+    "mesh_artifact": "data/sites/canopus/spatial/v0.2/terrain-context-v0.2.glb",
+    "scope_note": "Official 5 m context terrain; not a survey-grade topographic survey.",
+    "source_id": "SRC_IGN_MDT05_COG",
+    "status": "DERIVED_FROM_VERIFIED_OFFICIAL_SOURCE",
+    "vertical_datum": "Alicante orthometric datum realised by EGM2008-REDNAP"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/site/sweden-plot-intelligence-v0.1.schema.json",
+  "title": "Sweden evidence-first plot intelligence v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "entity_type", "profile", "country", "status", "canonical_crs", "source_registry_ref", "site_twin_ref", "identity", "project_context", "source_receipts", "findings", "gates", "separation_rules"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "entity_type": {"const": "SwedenPlotIntelligence"},
+    "profile": {"const": "SE_NATIONAL_PLOT_INTELLIGENCE_V0_1"},
+    "country": {"const": "SE"},
+    "status": {"enum": ["INTAKE_REQUIRED", "DISCOVERY", "DUE_DILIGENCE", "DESIGN_BASIS", "PRE_CONSTRUCTION"]},
+    "canonical_crs": {"const": "EPSG:3006"},
+    "source_registry_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "path", "content_sha256"],
+      "properties": {
+        "id": {"const": "SE_PLOT_SOURCE_REGISTRY_V0_1"},
+        "version": {"const": "0.1"},
+        "path": {"const": "data/sites/sweden/source-registry-v0.1.json"},
+        "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "site_twin_ref": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "version", "content_sha256"],
+          "properties": {
+            "id": {"type": "string", "minLength": 3},
+            "version": {"type": "string", "minLength": 1},
+            "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+          }
+        }
+      ]
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["municipality", "property_designation", "address", "coordinate_wgs84", "intake_ready"],
+      "properties": {
+        "municipality": {"type": ["string", "null"]},
+        "property_designation": {"type": ["string", "null"]},
+        "address": {"type": ["string", "null"]},
+        "coordinate_wgs84": {"type": ["array", "null"]},
+        "intake_ready": {"type": "boolean"}
+      }
+    },
+    "project_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project_id", "requested_house_profiles", "scenario_refs", "no_site_evidence_override"],
+      "properties": {
+        "project_id": {"type": ["string", "null"]},
+        "requested_house_profiles": {"type": "array", "items": {"enum": ["HOUSEKIT_H30", "HOUSEKIT_H50", "OTHER"]}, "uniqueItems": true},
+        "scenario_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "no_site_evidence_override": {"const": true}
+      }
+    },
+    "source_receipts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["receipt_id", "source_id", "retrieved_at", "request_or_record_ref", "runtime_locator", "sha256", "scope", "evidence_class"],
+        "properties": {
+          "receipt_id": {"type": "string"},
+          "source_id": {"type": "string"},
+          "retrieved_at": {"type": "string", "format": "date-time"},
+          "request_or_record_ref": {"type": "string"},
+          "runtime_locator": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "scope": {"type": "string"},
+          "evidence_class": {"enum": ["OFFICIAL_OPEN_SOURCE", "OFFICIAL_REQUESTED_RECORD", "MUNICIPAL_RECORD", "PROVIDER_RESPONSE", "COMMISSIONED_FIELD_EVIDENCE"]}
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["finding_id", "domain", "value", "unit", "evidence_class", "source_receipt_refs", "method", "observed_at", "verification", "limitations"],
+        "properties": {
+          "finding_id": {"type": "string"},
+          "domain": {"type": "string"},
+          "value": {},
+          "unit": {"type": ["string", "null"]},
+          "evidence_class": {"enum": ["OBSERVED_OFFICIAL", "DERIVED_VERIFIED", "MUNICIPAL_INTERPRETATION", "PROVIDER_CONFIRMED", "FIELD_VERIFIED", "REPORTED_UNVERIFIED", "INFERENCE"]},
+          "source_receipt_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+          "method": {"type": "string", "minLength": 3},
+          "observed_at": {"type": "string", "format": "date-time"},
+          "verification": {"enum": ["VERIFIED", "PARTIAL", "UNVERIFIED"]},
+          "limitations": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 15,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["gate_id", "status", "evidence_refs", "decided_at", "reason"],
+        "properties": {
+          "gate_id": {"type": "string"},
+          "status": {"enum": ["OPEN", "SATISFIED", "BLOCKED"]},
+          "evidence_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "decided_at": {"type": ["string", "null"], "format": "date-time"},
+          "reason": {"type": "string", "minLength": 3}
+        }
+      }
+    },
+    "separation_rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["site_evidence_is_immutable", "scenario_cannot_redefine_boundary", "screening_cannot_become_entitlement", "road_geometry_cannot_prove_legal_access", "overview_geology_cannot_replace_field_investigation", "utility_map_cannot_prove_capacity"],
+      "properties": {
+        "site_evidence_is_immutable": {"const": true},
+        "scenario_cannot_redefine_boundary": {"const": true},
+        "screening_cannot_become_entitlement": {"const": true},
+        "road_geometry_cannot_prove_legal_access": {"const": true},
+        "overview_geology_cannot_replace_field_investigation": {"const": true},
+        "utility_map_cannot_prove_capacity": {"const": true}
+      }
+    }
+  }
+}

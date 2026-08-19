@@ -1,0 +1,407 @@
+{
+  "schema_version": "0.1",
+  "entity_type": "DesignScenario",
+  "scenario_id": "SCN_LA_CONCHA_GARDENS_2026_08",
+  "project_id": "PRJ_CANOPUS",
+  "site_twin_id": "SITE_CANOPUS_5410501UF2451S",
+  "status": "CONCEPT_ONLY",
+  "planning_compliance_status": "NOT_ASSESSED_ENTITLEMENT_GATED",
+  "evidence_source_manifest": "data/sites/canopus/evidence-sources-v0.1.json",
+  "assertions": {
+    "scenario_name": {
+      "value": "La Concha Gardens",
+      "unit": null,
+      "evidence_class": "concept",
+      "source": {
+        "document_id": "DOC_LCG_MASTER_PRESENTATION",
+        "pdf_page": 1,
+        "printed_page": null,
+        "section": "Cover",
+        "authority": "Concept Casas"
+      },
+      "method": "Transcribed concept-scenario name.",
+      "as_of": "2026-08",
+      "verification": {
+        "status": "design_intent_only",
+        "note": "The scenario name does not alter the cadastral Site Twin identity."
+      },
+      "confidence": "high",
+      "limitations": []
+    },
+    "design_thesis": {
+      "value": "five-star inward-looking Andalusian water-garden resort organised around La Concha and western sunset views",
+      "unit": null,
+      "evidence_class": "concept",
+      "source": {
+        "document_id": "DOC_LCG_MASTER_PRESENTATION",
+        "pdf_page": 3,
+        "printed_page": null,
+        "section": "The Idea",
+        "authority": "Concept Casas"
+      },
+      "method": "Condensed stated design intent without treating it as a site fact.",
+      "as_of": "2026-08",
+      "verification": {
+        "status": "design_intent_only",
+        "note": "A design narrative is not evidence of planning or technical feasibility."
+      },
+      "confidence": "high",
+      "limitations": []
+    }
+  },
+  "programme": {
+    "assertions": {
+      "target_keys": {
+        "value": 250,
+        "unit": "keys",
+        "evidence_class": "seller_stated",
+        "source": {
+          "document_id": "DOC_LCG_MASTER_PRESENTATION",
+          "pdf_page": 14,
+          "printed_page": null,
+          "section": "The Plan",
+          "authority": "Seller brief repeated by Concept Casas"
+        },
+        "method": "Transcribed concept target inherited from the seller brief.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "seller_document_pending",
+          "note": "Key entitlement and detailed unit schedule remain unverified."
+        },
+        "confidence": "low",
+        "limitations": []
+      },
+      "target_hotel_area_m2": {
+        "value": 32000,
+        "unit": "m2",
+        "evidence_class": "seller_stated",
+        "source": {
+          "document_id": "DOC_LCG_MASTER_PRESENTATION",
+          "pdf_page": 14,
+          "printed_page": null,
+          "section": "The Plan",
+          "authority": "Seller brief repeated by Concept Casas"
+        },
+        "method": "Transcribed concept cap inherited from the seller brief.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "seller_document_pending",
+          "note": "No certificado urbanistico or approved area definition is attached."
+        },
+        "confidence": "low",
+        "limitations": []
+      },
+      "target_storeys": {
+        "value": 4,
+        "unit": "storeys",
+        "evidence_class": "seller_stated",
+        "source": {
+          "document_id": "DOC_LCG_MASTER_PRESENTATION",
+          "pdf_page": 14,
+          "printed_page": null,
+          "section": "The Plan",
+          "authority": "Seller brief repeated by Concept Casas"
+        },
+        "method": "Transcribed design target inherited from the seller brief.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "seller_document_pending",
+          "note": "Permitted height and rooftop structures remain unresolved."
+        },
+        "confidence": "low",
+        "limitations": []
+      },
+      "public_realm_area_m2": {
+        "value": 9000,
+        "unit": "m2",
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_MASTER_PRESENTATION",
+          "pdf_page": 12,
+          "printed_page": null,
+          "section": "The Paseo",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed public-realm design target.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "This concept field is intentionally separate from the seller-stated 9,000 m2 commercial allowance."
+        },
+        "confidence": "medium",
+        "limitations": []
+      },
+      "green_site_share_percent": {
+        "value": 50,
+        "unit": "percent_approximate",
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_MASTER_PRESENTATION",
+          "pdf_page": 14,
+          "printed_page": null,
+          "section": "The Plan",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed approximate green-site design target.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "No machine-readable area schedule is attached."
+        },
+        "confidence": "low",
+        "limitations": []
+      },
+      "reported_revised_massing_area_m2": {
+        "value": 29680,
+        "unit": "m2",
+        "evidence_class": "calculated",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 12,
+          "printed_page": "11",
+          "section": "11 - The Numbers",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed reported area after shortening ranges and removing outer flanks.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "underlying_source_pending",
+          "note": "No BIM model or floor-area schedule is attached to reproduce the total."
+        },
+        "confidence": "low",
+        "limitations": [
+          "Back-of-house and parking are assumed below grade for the reported fit."
+        ]
+      },
+      "spa_area_m2": {
+        "value": 2000,
+        "unit": "m2",
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_MASTER_PRESENTATION",
+          "pdf_page": 10,
+          "printed_page": null,
+          "section": "The Spa",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed concept programme.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "No departmental schedule or technical brief is attached."
+        },
+        "confidence": "low",
+        "limitations": []
+      },
+      "restaurant_count": {
+        "value": 3,
+        "unit": "restaurants",
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_MASTER_PRESENTATION",
+          "pdf_page": 11,
+          "printed_page": null,
+          "section": "Dining",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed concept programme.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "No operational or area schedule is attached."
+        },
+        "confidence": "low",
+        "limitations": []
+      },
+      "bar_count": {
+        "value": 2,
+        "unit": "bars",
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_MASTER_PRESENTATION",
+          "pdf_page": 11,
+          "printed_page": null,
+          "section": "Dining",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed concept programme.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "No operational or area schedule is attached."
+        },
+        "confidence": "low",
+        "limitations": []
+      },
+      "accommodation_area_range_m2": {
+        "value": [48, 260],
+        "unit": "m2_per_unit",
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_MASTER_PRESENTATION",
+          "pdf_page": 8,
+          "printed_page": null,
+          "section": "The Suites",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed stated room-to-suite area range.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "Unit mix, net-to-gross basis and room schedule are absent."
+        },
+        "confidence": "low",
+        "limitations": []
+      }
+    }
+  },
+  "design_rules": {
+    "assertions": {
+      "water_axis_length_m": {
+        "value": 165,
+        "unit": "m",
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_MASTER_PRESENTATION",
+          "pdf_page": 14,
+          "printed_page": null,
+          "section": "The Plan",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed concept-axis length.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "No survey-aligned centreline geometry is attached."
+        },
+        "confidence": "medium",
+        "limitations": []
+      },
+      "water_axis_bearing_deg": {
+        "value": 349.4,
+        "unit": "degrees_true",
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_MASTER_PRESENTATION",
+          "pdf_page": 14,
+          "printed_page": null,
+          "section": "The Plan",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed concept-axis bearing aligned to the reported mountain sightline.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "Axis origin and centreline geometry are absent."
+        },
+        "confidence": "medium",
+        "limitations": []
+      },
+      "axis_crossing_rule": {
+        "value": "nothing crosses the full 165 m water axis",
+        "unit": null,
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 9,
+          "printed_page": "08",
+          "section": "08 - The Laws",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed design rule L1.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "Rule has not been checked against machine-readable massing geometry."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "north_courtyard_edge_rule": {
+        "value": "two storeys maximum on every courtyard north side",
+        "unit": null,
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 9,
+          "printed_page": "08",
+          "section": "08 - The Laws",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed design rule L2.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "Rule is a sightline design response, not a planning entitlement."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "height_distribution_rule": {
+        "value": "height accumulates toward the south, with taller ranges behind lower north edges",
+        "unit": null,
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 9,
+          "printed_page": "08",
+          "section": "08 - The Laws",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed design rule L3.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "Rule remains subject to planning, structural, daylight and area-fit validation."
+        },
+        "confidence": "high",
+        "limitations": []
+      },
+      "arrival_location": {
+        "value": "northern tip at the reported local low point",
+        "unit": null,
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 15,
+          "printed_page": "14",
+          "section": "12 - The Section, Drawn",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed concept arrival position.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "No authority-approved access point is established."
+        },
+        "confidence": "medium",
+        "limitations": []
+      },
+      "public_edge_location": {
+        "value": "two-storey paseo along the southern boundary",
+        "unit": null,
+        "evidence_class": "concept",
+        "source": {
+          "document_id": "DOC_LCG_STUDY",
+          "pdf_page": 21,
+          "printed_page": "20",
+          "section": "18 - The Paseo",
+          "authority": "Concept Casas"
+        },
+        "method": "Transcribed concept public-edge position.",
+        "as_of": "2026-08",
+        "verification": {
+          "status": "design_intent_only",
+          "note": "A-7 building line, boundary and planning use remain gated."
+        },
+        "confidence": "low",
+        "limitations": []
+      }
+    }
+  },
+  "geometry": {
+    "status": "NO_MACHINE_READABLE_CONCEPT_GEOMETRY",
+    "survey_alignment": null,
+    "model_asset": null
+  }
+}

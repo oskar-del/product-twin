@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1",
+  "entity_type": "Project",
+  "project_id": "PRJ_ESSENCE_MORAIRA",
+  "codename": "Essence Moraira",
+  "developer": "Grupo Turis Promociones",
+  "promoter_spv_on_permits": "ORANGE VILLAS DEVELOPMENT S.L. (named as PROMOTOR on the stamped municipal plans)",
+  "architect": "Pepe Giner",
+  "architect_on_permits": "José Giner Ivars, Arquitecto — C/ Puríssima 26, 03720 Benissa (Pepe Giner = José Giner Ivars)",
+  "we_are": "sales agent (Hansson & Hertzell)",
+  "evidence_source_manifest": "data/sites/essence-moraira/evidence-sources-v0.1.json",
+  "location_label": {
+    "value": "Calle Benicolet, Teulada-Moraira, Alicante, Spain (postal 03724 / 03725)",
+    "evidence_class": "primary_source_reported",
+    "source": "SRC_ESSENCE_MICROSITE + SRC_CATASTRO_CALLEJERO_VIA",
+    "method": "Street named on the developer microsite and the Grupo Turis projects page; street existence + codes confirmed against Catastro Callejero (Teulada muni 03/128, via CL BENICOLET code 767).",
+    "as_of": "2026-08-18",
+    "confidence": "high"
+  },
+  "villa_count": {
+    "value": 4,
+    "evidence_class": "primary_source_reported",
+    "source": "SRC_ESSENCE_MICROSITE",
+    "as_of": "2026-08-18",
+    "confidence": "high"
+  },
+  "villas_builder_stated": [
+    {"villa": "Villa 1", "parcela_label": "PARCELA 01", "bedrooms": 4, "built_m2": 346, "plot_m2": 1413, "status": "for sale", "teulada_permit_exp": "29-25", "permit_date": "SEPTIEMBRE-25", "ground_floor_level_m": 75.0, "upper_floor_level_m": 78.5},
+    {"villa": "Villa 2", "parcela_label": "PARCELA 02", "bedrooms": 4, "built_m2": 410, "plot_m2": 1128, "status": "for sale", "teulada_permit_exp": "31-25", "permit_date": "OCTUBRE-25", "ground_floor_level_m": 75.0, "basement_level_m": 71.85},
+    {"villa": "Villa 3", "parcela_label": "PARCELA 03", "bedrooms": 4, "built_m2": 373, "plot_m2": 1223, "status": "for sale", "teulada_permit_exp": "32-25", "permit_date": "AGOSTO-25", "basement_level_m": 71.85, "ground_floor_level_m": 75.0, "upper_floor_level_m": 78.3},
+    {"villa": "Villa 4", "parcela_label": "PARCELA 04", "name": "Essence Patio", "bedrooms": 4, "built_m2": 443, "plot_m2": 5147, "status": "reserved", "teulada_permit_exp": "21-25", "permit_date": "SEPTIEMBRE-25", "ground_floor_level_m": 70.55, "upper_floor_level_m": 74.7, "catastro_parcel_lock": "9578421BC4897N (parcel 21, block 95784) — MEDIUM confidence, size+position only"}
+  ],
+  "villas_note": "Built + plot figures are BUILDER-STATED, transcribed verbatim from the developer microsite (essencemoraira.com) spec cards. Plot total = 8,911 m2. NOT independently re-measured. Villa 4 'Essence Patio' features a private green area of almost 4,000 m2 (developer blog). Permit exps, dates and floor levels are from the stamped municipal floorplan PDFs (see plans-manifest-v0.1.json). NOTE: the plan floor levels are finished-floor platforms (post cut/fill), NOT natural terrain — the IGN MDT05 check (spatial/v0.1) did NOT confirm parcel 21 as the lowest natural ground, so elevation is not a lock signal. Villa 4=parcel 21 rests on plot SIZE (parcel 21 is the one large plot, matching the one large villa) and southern position.",
+  "off_plan": {
+    "value": true,
+    "evidence_class": "primary_source_reported",
+    "note": "New-build off-plan cluster. Render filenames on the microsite are dated 13/12/2024 and 31/10/2025 (recent). Villa 4 already reserved."
+  },
+  "site_twin_ref": "SITE_ESSENCE_MORAIRA_BENICOLET_95784",
+  "limitations": [
+    "Villa 4 parcel = 9578421 at MEDIUM confidence (size+position; IGN MDT05 elevation check did NOT corroborate). Villas 1-3 exact refcats NOT locked — the 4 plots are a reparcelacion not yet propagated into Catastro. See data/sites/essence-moraira/catastro/README.md.",
+    "The website plans are floorplans only — no situacion/parcelacion sheet, no coordinates or cadastral refs published.",
+    "Prices per villa not published on the microsite; not captured."
+  ]
+}

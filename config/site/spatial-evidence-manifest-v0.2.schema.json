@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/site/spatial-evidence-manifest-v0.2.schema.json",
+  "title": "Official spatial source receipts and derived-artifact lineage",
+  "type": "object",
+  "required": ["schema_version", "entity_type", "site_twin_id", "generated_at", "raw_distribution", "sources", "derived_artifacts"],
+  "additionalProperties": false,
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "licence": {
+      "type": "object",
+      "required": ["name", "uri"],
+      "properties": {
+        "name": {"type": "string", "minLength": 3},
+        "uri": {"type": "string", "format": "uri"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["source_id", "authority", "request_url", "retrieved_at", "media_type", "http", "dataset", "licence", "byte_count", "sha256", "runtime_locator", "replay"],
+      "properties": {
+        "source_id": {"type": "string", "pattern": "^SRC_[A-Z0-9_]+$"},
+        "authority": {"type": "string", "minLength": 3},
+        "request_url": {"type": "string", "format": "uri"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "media_type": {"type": "string", "minLength": 3},
+        "http": {
+          "type": "object",
+          "required": ["status", "content_type", "etag", "last_modified"],
+          "additionalProperties": false,
+          "properties": {
+            "status": {"const": 200},
+            "content_type": {"type": "string", "minLength": 3},
+            "etag": {"type": ["string", "null"]},
+            "last_modified": {"type": ["string", "null"]}
+          }
+        },
+        "dataset": {"type": "string", "minLength": 3},
+        "licence": {"$ref": "#/$defs/licence"},
+        "byte_count": {"type": "integer", "minimum": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "runtime_locator": {"type": "string", "pattern": "^\\.runtime/sites/canopus/raw/"},
+        "replay": {"type": "string", "minLength": 20}
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": ["artifact_id", "path", "byte_count", "sha256", "generated_at", "deterministic", "inputs", "toolchain"],
+      "properties": {
+        "artifact_id": {"type": "string", "minLength": 3},
+        "path": {"type": "string", "minLength": 3},
+        "byte_count": {"type": "integer", "minimum": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "generated_at": {"type": "string", "format": "date-time"},
+        "deterministic": {"const": true},
+        "inputs": {"type": "object", "minProperties": 1, "additionalProperties": {"$ref": "#/$defs/sha256"}},
+        "toolchain": {"type": "object", "minProperties": 1}
+      }
+    }
+  },
+  "properties": {
+    "schema_version": {"const": "0.2"},
+    "entity_type": {"const": "SpatialEvidenceManifest"},
+    "site_twin_id": {"const": "SITE_CANOPUS_5410501UF2451S"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "raw_distribution": {"type": "string", "minLength": 3},
+    "sources": {"type": "array", "minItems": 9, "uniqueItems": true, "items": {"$ref": "#/$defs/source"}},
+    "derived_artifacts": {"type": "array", "minItems": 10, "uniqueItems": true, "items": {"$ref": "#/$defs/artifact"}}
+  }
+}
