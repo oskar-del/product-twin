@@ -26,6 +26,9 @@ import {createPicker} from "./core/picking.mjs";
 import {createSceneBuilder} from "./geometry/primitives.mjs";
 import {createTextureLibrary} from "./geometry/textures.mjs";
 import {sunLightRig, localHourToUtc} from "./studies/sun.mjs";
+import {createGeometryIndex} from "./studies/geometry-queries.mjs";
+import {sightline, sightlineMatrix} from "./studies/sightline.mjs";
+import {sunHours} from "./studies/sun-hours.mjs";
 import {deriveMapView} from "./geo/local-enu.mjs";
 import {installStyles, ENGINE_CLASS} from "./ui/styles.mjs";
 import {createPanel} from "./ui/panel.mjs";
@@ -38,6 +41,8 @@ import {ENGINE_VERSION_STRING} from "./version.mjs";
 export {parseScene, evidenceProfile} from "./core/scene-contract.mjs";
 export {deriveMapView} from "./geo/local-enu.mjs";
 export {solarPosition, solarDirection} from "./studies/sun.mjs";
+export {sightline, sightlineMatrix} from "./studies/sightline.mjs";
+export {sunHours} from "./studies/sun-hours.mjs";
 
 const DEFAULT_HOUR = 13;
 const TIME_CONTROL_LABEL = "Time of day";
@@ -96,7 +101,9 @@ export async function createTwinViewer({
   const realismDecor = new THREE.Group();
   realismDecor.name = "twin-realism-decor";
   realismDecor.visible = false;
-  viewer.scene.add(built.root, built.labelGroup, realismDecor);
+  const measurementGroup = new THREE.Group();
+  measurementGroup.name = "twin-measurements";
+  viewer.scene.add(built.root, built.labelGroup, realismDecor, measurementGroup);
   decor?.({THREE, scene, group: realismDecor, viewer});
 
   // ── state ────────────────────────────────────────────────────────────────────────────────
@@ -292,6 +299,77 @@ export async function createTwinViewer({
     goToStage: (index, options = {}) => machine.goTo(index, {now: performance.now(), ...options}),
     goToStageId: (id, options = {}) => machine.goToId(id, {now: performance.now(), ...options}),
     openElementById: id => openElement(scene.elements.find(element => element.id === id)),
+    /**
+     * Measured spatial claims, computed against the geometry on screen — not estimated, and not
+     * a second model that can drift from the picture. The ray index is built on first use.
+     */
+    measure: (() => {
+      let rayIndex = null;
+      const ensureIndex = () => (rayIndex ??= createGeometryIndex(scene));
+      return {
+        sightline: options => sightline({index: ensureIndex(), ...options}),
+        sightlineMatrix: points => sightlineMatrix({index: ensureIndex(), points}),
+        sunHours: options => sunHours({
+          index: ensureIndex(),
+          latitude,
+          longitude,
+          date: solarDate,
+          utcOffsetHours: solarStudy?.utc_offset_hours,
+          ...options
+        }),
+        /**
+         * Draw a sightline into the scene: green when open, red as far as the blocker when not.
+         *
+         * Drawn as a solid tube rather than a THREE.Line, because line width is ignored on most
+         * platforms and a one-pixel claim disappears at site scale — a measured relation the
+         * viewer cannot see is not evidence, it is trivia.
+         */
+        drawSightline({from, to, ignoreElementIds = [], radiusM}) {
+          const result = sightline({index: ensureIndex(), from, to, ignoreElementIds});
+          const start = new THREE.Vector3(...from);
+          const finish = result.blocked_by
+            ? start.clone().lerp(new THREE.Vector3(...to), result.blocked_by.at_m / result.distance_m)
+            : new THREE.Vector3(...to);
+
+          const span = finish.clone().sub(start);
+          const length = span.length();
+          const radius = radiusM ?? Math.max(0.12, length * 0.004);
+          const tube = new THREE.Mesh(
+            new THREE.CylinderGeometry(radius, radius, length, 8),
+            new THREE.MeshBasicMaterial({color: result.visible ? 0x2f8f63 : 0xa65b68})
+          );
+          tube.position.copy(start).add(span.clone().multiplyScalar(0.5));
+          tube.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), span.clone().normalize());
+          tube.userData.isMeasurement = true;
+          tube.renderOrder = 2;
+          measurementGroup.add(tube);
+
+          // A marker at the blocker, so "blocked" reads as a place rather than a colour.
+          if (result.blocked_by) {
+            const marker = new THREE.Mesh(
+              new THREE.SphereGeometry(radius * 3, 12, 8),
+              new THREE.MeshBasicMaterial({color: 0xa65b68})
+            );
+            marker.position.copy(finish);
+            marker.userData.isMeasurement = true;
+            measurementGroup.add(marker);
+          }
+          return result;
+        },
+        clear() {
+          for (const child of [...measurementGroup.children]) {
+            child.geometry?.dispose();
+            child.material?.dispose();
+            measurementGroup.remove(child);
+          }
+        },
+        dispose() {
+          rayIndex?.dispose();
+          rayIndex = null;
+        }
+      };
+    })(),
+
     /** Slippy-map camera for the current stage — for a live context layer that follows the twin. */
     mapView: (zoom = 15.5) => deriveMapView({
       originWgs84: scene.origin_wgs84,
@@ -300,6 +378,8 @@ export async function createTwinViewer({
       zoom
     }),
     dispose() {
+      this.measure.clear();
+      this.measure.dispose();
       globalThis.removeEventListener("keydown", onKey);
       viewer.dispose();
       builder.dispose();

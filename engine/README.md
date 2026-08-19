@@ -95,6 +95,32 @@ A **site adapter** does the joins only that site's owner can do and calls the as
 The assembler will not default an evidence class, a source, or a limitation: if a site cannot
 say where an element came from, the scene does not compile.
 
+## Measured claims
+
+The differentiator: spatial statements computed against the geometry on screen, never estimated
+and never held in a second model that can drift from the picture.
+
+```js
+viewer.measure.sightline({from: [x, y, z], to: [x, y, z]});
+// → {visible, distance_m, bearing_deg, elevation_deg, blocked_by: {element_id, label, at_m},
+//    evidence_class: "DERIVED", method, limitations}
+
+viewer.measure.sunHours({point: [x, y, z], date: "2026-03-21"});
+// → {sunlit_hours, daylight_hours, first_sun_local, last_sun_local, intervals, …}
+
+viewer.measure.drawSightline({from, to});   // same result, drawn into the scene
+viewer.measure.sightlineMatrix(points);     // every pairwise relation
+```
+
+Every result carries `evidence_class: "DERIVED"`, the method that produced it, and its own
+limitations — a sightline is a claim about the MODEL, so vegetation, fences and anything
+unmodelled cannot block it, and the result says so.
+
+three.js raycasting is pure maths, so these run headless: `engine/studies/geometry-queries.mjs`
+builds the ray index in Node, and `npm run engine:studies:test` checks the answers against known
+physics (12 h of daylight at the equator, a point in a building's own shadow gets none, a 20-min
+sampling step must agree with a 2-min one).
+
 ## Publishing
 
 ```sh

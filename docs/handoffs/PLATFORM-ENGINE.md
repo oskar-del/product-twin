@@ -73,6 +73,13 @@ One checkout = one executor. Deliverable-first: every block ends with something 
     derived with flat equator constants and are up to ~1.8 m off at 230 m from the origin. The
     engine's values are the corrected ones; the gate proves the difference is exactly the
     geodesy-model correction (±2 cm). Worth regenerating those stored values.
+  - **Measured claims (`engine/studies/`)** — the Essence showcase thesis, made real: sightlines
+    and sun-hours computed by raycasting the twin's own geometry. `viewer.measure.sightline()`,
+    `.sunHours()`, `.sightlineMatrix()`, `.drawSightline()`. Every result is DERIVED, names its
+    method, and ships limitations saying what the model cannot see. Runs headless (three.js
+    raycasting needs no WebGL), so `npm run engine:studies:test` gates 53 known-answer checks.
+    On the real Essence block: all 55 pairwise parcel relations computed, 51 open / 4 blocked by
+    terrain; 14.83 h of sun on parcel 13 on 21 June, 06:40→21:30 local.
   - **NOT done:** Milestone 2's formal exit (Essence consuming the engine *on a branch that has
     both*) is still blocked on D1. Nothing pushed: `git push` was denied in this session;
     commits are local on `agent/platform-engine` in `../repo-platform`.
