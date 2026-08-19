@@ -80,6 +80,21 @@ in the checkout.
 - **A live map layer carries `evidence_effect: "NONE"`** and can never promote a claim.
 - **The engine does not invent geometry.** Site-specific character goes in a `decor` plugin.
 
+## Compiling a scene
+
+The engine renders scenes; `engine/compile/` makes them.
+
+| Transform | Module |
+|---|---|
+| GeoJSON polygons → local ENU rings (+ area cross-check vs the authority's stated area) | `compile/geo-polygons.mjs` |
+| Scattered elevation samples → interpolated `GRID_SURFACE` (+ its own limitations) | `compile/terrain-interpolation.mjs` |
+| Scene envelope, camera framing from real extents, contract enforcement | `compile/scene-assembler.mjs` |
+
+A **site adapter** does the joins only that site's owner can do and calls the assembler.
+`scripts/compile-essence-site-scene.mjs` is the reference one — copy it to start a new site.
+The assembler will not default an evidence class, a source, or a limitation: if a site cannot
+say where an element came from, the scene does not compile.
+
 ## Publishing
 
 ```sh

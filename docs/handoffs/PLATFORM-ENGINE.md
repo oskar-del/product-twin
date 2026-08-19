@@ -57,6 +57,22 @@ One checkout = one executor. Deliverable-first: every block ends with something 
     (no cross-branch commit): all 37 elements, 7 stages, evidence layers, INTELLIGENCE/REALISTIC/
     COMPARE, claim policy in the legend. The engine is ready for a consumer; only the branch base
     (D1) is in the way.
-  - **NOT done:** Milestone 2 (Essence adoption — blocked on D1, the Essence and Svärtinge data
-    live on branches `main` does not contain). Nothing pushed: `git push` was denied in that
-    session; commits are local on `agent/platform-engine` in `../repo-platform`.
+  - **Scene compiler built (not in the original milestone list, but it is what Milestone 2
+    actually needed).** `engine/compile/` turns the evidence a site workstream holds into a
+    validated twin-scene: GeoJSON parcels → local ENU rings with an area cross-check against the
+    authority's own stated area; scattered elevation samples → an interpolated GRID_SURFACE that
+    ships its own limitations; an assembler that frames cameras from real extents and refuses
+    anything unsourced or unrenderable. Gate `engine:compiler:test`, 47 checks.
+  - **Essence compiles and renders TODAY.** `scripts/compile-essence-site-scene.mjs` (the
+    reference site adapter, ~40 lines of site-specific joins) compiles the pilot's real Catastro
+    + IGN data into a scene: 11 parcels AUTHORITATIVE, terrain DERIVED, every ring within 0.73 %
+    of Catastro's stated area, **no villa massing** because villa-to-parcel assignment is not
+    evidenced. Bundles to 805 KB and renders. It reads its inputs from a `--data` directory, so
+    the Essence session can run it the moment the data and this branch meet.
+  - **For the Spatial session:** the Svärtinge scene's stored `live_context_view` centres were
+    derived with flat equator constants and are up to ~1.8 m off at 230 m from the origin. The
+    engine's values are the corrected ones; the gate proves the difference is exactly the
+    geodesy-model correction (±2 cm). Worth regenerating those stored values.
+  - **NOT done:** Milestone 2's formal exit (Essence consuming the engine *on a branch that has
+    both*) is still blocked on D1. Nothing pushed: `git push` was denied in this session;
+    commits are local on `agent/platform-engine` in `../repo-platform`.
