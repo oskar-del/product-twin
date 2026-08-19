@@ -80,6 +80,14 @@ One checkout = one executor. Deliverable-first: every block ends with something 
     raycasting needs no WebGL), so `npm run engine:studies:test` gates 53 known-answer checks.
     On the real Essence block: all 55 pairwise parcel relations computed, 51 open / 4 blocked by
     terrain; 14.83 h of sun on parcel 13 on 21 June, 06:40→21:30 local.
+  - **Viewshed (`engine/studies/viewshed.mjs`)** — the compute half of the ledger's "view
+    certificate". Compass sweep + bisection for the horizon per azimuth → open-sky fraction
+    (exact, from the solid angle above the horizon), per-sector summary, clear sectors, and
+    principal blockers with their share of the compass. Directions still blocked at the top of
+    the search contribute zero sky and are reported as unresolved rather than credited.
+    `viewer.measure.viewshed()` / `.drawViewshed()`; 19 more known-answer checks in the studies
+    gate. On the Essence block from 1.6 m: parcel 21 = 98.7 % open sky, mean horizon 0.74°,
+    clear to N/NE/SW/W/NW, derived terrain accounting for 83 % of what blocks it.
   - **NOT done:** Milestone 2's formal exit (Essence consuming the engine *on a branch that has
     both*) is still blocked on D1. Nothing pushed: `git push` was denied in this session;
     commits are local on `agent/platform-engine` in `../repo-platform`.

@@ -121,8 +121,12 @@ split-screen compare · orbit camera · local-ENU ↔ WGS84.
 SYSTEMS profile (needs the House-inspector lens vocabulary promoted to scene data) · walk camera + glTF
 avatars (Showroom's contribution — v0.2, needed by Room/Showroom, not by Essence) · Mapbox live-context layer
 (stays a per-surface adapter until a second surface needs it) · availability-status colouring (needs the
-developer microsite unit model) · viewshed overlay · terrain COG/DEM loader · OSM/vector extrusion ·
-timeline scrubber.
+developer microsite unit model) · terrain COG/DEM loader · OSM/vector extrusion · timeline scrubber ·
+embed/iframe architecture.
+
+**Since delivered beyond this list:** the scene compiler (`engine/compile/`), the bundle command, and the
+measured-claims layer (`engine/studies/` — sightlines, sun hours, viewshed). Viewshed was on the deferred
+list and came early because the ray machinery the other studies needed made it nearly free.
 
 ### Gates (AGENTS.md §2 — every rule has a command that returns non-zero)
 1. `npm run engine:validate` — the pure modules against a committed conformance fixture: every primitive,
