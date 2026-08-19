@@ -9,7 +9,8 @@ const R=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});R.s
 const ctr=new OrbitControls(cam,R.domElement);ctr.enableDamping=true;ctr.target.set(0,3,0);
 scene.add(new THREE.HemisphereLight(0xeef4ff,0x8a9088,1.0));
 const sun=new THREE.DirectionalLight(0xfff0d8,2.6);sun.position.set(28,54,26);sun.castShadow=true;sun.shadow.mapSize.set(4096,4096);sun.shadow.bias=-0.0004;const s=sun.shadow.camera;s.left=-40;s.right=40;s.top=40;s.bottom=-40;s.far=200;scene.add(sun);
-const D=await (await fetch('v4floors.json')).json();
+const V=new URLSearchParams(location.search).get('v')||'4';
+const D=await (await fetch('v'+V+'floors.json')).json();
 const TL=new THREE.TextureLoader();
 const wallMat=new THREE.MeshStandardMaterial({color:0xeee9df,roughness:.8});
 const slabMat=(t)=>new THREE.MeshStandardMaterial({map:t,roughness:.9});
@@ -28,8 +29,8 @@ function buildFloor(f,y0,wallH,tex){
  f.cells.forEach((c,k)=>{M.makeTranslation(c[0],y0+wallH/2,c[1]);inst.setMatrixAt(k,M);});
  inst.instanceMatrix.needsUpdate=true;scene.add(inst);
 }
-buildFloor(D.baja,0,3.1,'v4baja.png');
-buildFloor(D.alta,3.4,2.8,'v4alta.png');
+buildFloor(D.baja,0,3.1,'v'+V+'baja.png');
+buildFloor(D.alta,3.4,2.8,'v'+V+'alta.png');
 // thin roof over upper (translucent so you can still see in from above)
 const rf=new THREE.Mesh(new THREE.BoxGeometry(D.alta.texw+1,.3,D.alta.texh+1),new THREE.MeshStandardMaterial({color:0xe7ded0,roughness:.6,transparent:true,opacity:.25}));
 rf.position.set(D.alta.texoffx+D.alta.texw/2,3.4+2.8+.15,D.alta.texoffy+D.alta.texh/2);scene.add(rf);
