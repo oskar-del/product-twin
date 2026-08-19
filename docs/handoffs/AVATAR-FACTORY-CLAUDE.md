@@ -99,7 +99,17 @@ Delivered + verified in-browser:
 - `prototype/showroom-living/index.html` → three.js villa living room (oak floor, plaster, sea-view window, IBL + soft shadows) with the real products staged; real villa hero photo + specs in the pitch card; tap a piece → real identity + live trade offer ($10,500 Man 3-Seater) + honest gates.
 - Serve locally: `python3 -m http.server 8756 --directory "$(pwd)"` → `http://127.0.0.1:8756/prototype/showroom-living/index.html`. GLBs + villa photos live only in `.runtime` (regenerate via the resolver + the referer'd photo download; not committed).
 
-Honest gaps: products render in pale default finish (variant fabric not bound); the "room" is a built 3D villa interior matched to the listing's style, NOT the listing's actual interior photo (compositing into the real photo is the un-taken next step); EUR/ES checkout is a live gate; native-GLB redistribution rights are review. Commits `15fac40`, `e791aec`, `cee027e`.
+### Full shoppable loop (built + verified in-browser, commits 15fac40 → bf8bed6)
+
+`prototype/showroom-living/index.html` is now a complete client pitch:
+- **Real house**: Villa in Altea Hills, H&H `R5355265`, €6,490,000, 470 m², sea views — real hero photo + specs in the pitch card (pulled live from hanssonhertzell.com; photos in gitignored `.runtime`, referer-header download).
+- **7 real products, two lanes**: NORR11 + Wendelbo (native manufacturer GLB, USD trade) + IKEA LISTERBY €199 / LOHALS €49.99 / LAUTERS €59.99 (committed G2 proxies, real IKEA.es offers). Native vs proxy disclosed on every card.
+- **Swap** (hero sofa: 3-Seater/2-Seater/Mammoth/Lobby; lounge: Man/Fave) with a **currency-aware furnished-room total** ($24,757 USD + €308.98 EUR) that recomputes live. Verified: 3-Seater→Mammoth moved total $24,757→$19,857.
+- **Per-product "View live offer / RFQ →"** to the real merchant page (verified 200) and a **whole-room "Request room quote"** BOM (all 7 pieces + subtotals + property, Copy/Print, nothing auto-sent).
+
+Serve: `python3 -m http.server 8756 --directory "$(pwd)"` → `/prototype/showroom-living/index.html`.
+
+Honest gaps: products in default finish (variant fabric not bound); room is a built 3D villa interior matched to the listing's style, NOT the listing's actual photo (composite blocked — every H&H luxury interior is furnished / new-builds are CGI, so no clean empty room; needs an empty-room image); EUR/ES checkout is a live gate; native-GLB redistribution rights are review (so this is an on-screen/internal pitch, not a public URL until rights clear). Data files: `data/showrooms/norr11-marbella-living-room-v0.1.json`, `data/geometry/native-3d-showcase-manifest.json`, resolver `scripts/resolve-native-3d-showcase.mjs`.
 
 ## Session state
 Branch `agent/avatar-factory-claude`, 6 commits ahead of `origin/main`. **Not pushed** — `git push` denied this session; Oskar pushes from terminal:
