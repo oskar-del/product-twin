@@ -189,10 +189,29 @@ if (!crossCheckPath) {
       target: stage.target,
       zoom: stage.live_context_view.zoom
     });
+    // Bearing and pitch are pure local geometry: they must reproduce the stored values exactly.
     near(derived.bearing, stage.live_context_view.bearing, 1e-3, `${stage.id}: engine bearing must reproduce the scene's stored value`);
     near(derived.pitch, stage.live_context_view.pitch, 1e-3, `${stage.id}: engine pitch must reproduce the scene's stored value`);
-    near(derived.center_wgs84[0], stage.live_context_view.center_wgs84[0], 1e-9, `${stage.id}: engine map centre longitude`);
-    near(derived.center_wgs84[1], stage.live_context_view.center_wgs84[1], 1e-9, `${stage.id}: engine map centre latitude`);
+
+    // Map CENTRE must differ, and by a precisely predictable amount. This scene's stored centres
+    // were derived with flat equator constants (110540 m/deg latitude, 111320·cos φ m/deg
+    // longitude); the engine uses the latitude-corrected WGS84 series. So rather than allowing a
+    // vague band, PREDICT the difference from the two models and require the observed difference
+    // to match it. Anything else is a projection bug wearing a model upgrade as a disguise.
+    const storedCentre = stage.live_context_view.center_wgs84;
+    const phi = real.origin_wgs84[1] * Math.PI / 180;
+    const newLat = 111132.92 - 559.82 * Math.cos(2 * phi) + 1.175 * Math.cos(4 * phi) - 0.0023 * Math.cos(6 * phi);
+    const newLon = 111412.84 * Math.cos(phi) - 93.5 * Math.cos(3 * phi) + 0.118 * Math.cos(5 * phi);
+    const predictedNorthM = stage.target[2] * (1 - newLat / 110540);
+    const predictedEastM = stage.target[0] * (1 - newLon / (111320 * Math.cos(phi)));
+    const predictedM = Math.hypot(predictedEastM, predictedNorthM);
+
+    const observedNorthM = (derived.center_wgs84[1] - storedCentre[1]) * newLat;
+    const observedEastM = (derived.center_wgs84[0] - storedCentre[0]) * newLon;
+    const observedM = Math.hypot(observedEastM, observedNorthM);
+
+    near(observedM, predictedM, 0.02,
+      `${stage.id}: map-centre difference from the stored value must be exactly the geodesy-model correction (m)`);
   }
   console.log(`cross-checked against ${crossCheckPath} (${real.elements.length} elements, ${real.stages.length} stages, ${withLiveView.length} live views reproduced)`);
 }

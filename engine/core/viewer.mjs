@@ -19,6 +19,7 @@ export function createViewer({
   far = 1400,
   minDistance = 0.7,
   maxDistance = 600,
+  shadowExtent = 180,
   pixelRatioCap = DEFAULT_PIXEL_RATIO_CAP
 } = {}) {
   if (!mount) throw new TypeError("createViewer requires a mount element");
@@ -44,7 +45,7 @@ export function createViewer({
   const sun = new THREE.DirectionalLight(0xfff1cf, 2.8);
   sun.castShadow = true;
   sun.shadow.mapSize.set(2048, 2048);
-  Object.assign(sun.shadow.camera, {left: -180, right: 180, top: 180, bottom: -180});
+  Object.assign(sun.shadow.camera, {left: -shadowExtent, right: shadowExtent, top: shadowExtent, bottom: -shadowExtent});
   // Without a bias, a low sun over a large terrain self-shadows into stripes (shadow acne).
   // normalBias offsets along the surface normal, which suits big flat ground planes.
   sun.shadow.bias = -0.0004;

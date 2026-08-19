@@ -121,13 +121,19 @@ export function createMaterialFactory({realisticPalette = {}} = {}) {
  * Apply a profile to a built scene graph. Meshes carry both materials from construction, so
  * switching is a pointer swap rather than a rebuild — profile changes must be free.
  */
-export function applyProfile(profileName, {scene, root, realismDecor, labelGroup, hemisphere, renderer, labelsVisible = true}) {
+export function applyProfile(profileName, {scene, root, realismDecor, labelGroup, hemisphere, renderer, labelsVisible = true, depth = null}) {
   const name = profileName === PROFILE_COMPARE ? PROFILE_INTELLIGENCE : profileName;
   const environment = PROFILE_ENVIRONMENTS[name] ?? PROFILE_ENVIRONMENTS.INTELLIGENCE;
   const realistic = name === PROFILE_REALISTIC;
 
   scene.background = new THREE.Color(environment.background);
-  scene.fog = new THREE.Fog(environment.fog.color, environment.fog.near, environment.fog.far);
+  // Fog distances come from the scene's own extents when it declares them: hardcoded distances
+  // tuned on one site turn a larger site into haze and give a smaller one no depth cue at all.
+  scene.fog = new THREE.Fog(
+    environment.fog.color,
+    depth?.fogNear ?? environment.fog.near,
+    depth?.fogFar ?? environment.fog.far
+  );
   hemisphere.color.set(environment.hemisphere.sky);
   hemisphere.groundColor.set(environment.hemisphere.ground);
   hemisphere.intensity = environment.hemisphere.intensity;

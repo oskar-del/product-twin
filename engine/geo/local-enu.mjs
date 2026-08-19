@@ -12,8 +12,24 @@
  * Pure module: no DOM, no WebGL.
  */
 
-const METRES_PER_DEGREE_LATITUDE = 110540;
-const METRES_PER_DEGREE_LONGITUDE_EQUATOR = 111320;
+/**
+ * Metres per degree, as a function of latitude, on the WGS84 ellipsoid.
+ *
+ * The flat constants this started with (110540 m/deg latitude, 111320·cos φ m/deg longitude)
+ * are equator-ish values, and using them at 38.7°N under-read every Catastro parcel area by a
+ * systematic ~0.6-0.7 % — small, but a bias in exactly the direction that makes a plot look
+ * cheaper per m² than it is. These series are the standard WGS84 expansions, good to about a
+ * centimetre per degree, and they remove the bias at every latitude we operate in.
+ */
+function metresPerDegreeLatitude(latitude) {
+  const phi = toRadians(latitude);
+  return 111132.92 - 559.82 * Math.cos(2 * phi) + 1.175 * Math.cos(4 * phi) - 0.0023 * Math.cos(6 * phi);
+}
+
+function metresPerDegreeLongitude(latitude) {
+  const phi = toRadians(latitude);
+  return 111412.84 * Math.cos(phi) - 93.5 * Math.cos(3 * phi) + 0.118 * Math.cos(5 * phi);
+}
 
 const toRadians = degrees => degrees * Math.PI / 180;
 const toDegrees = radians => radians * 180 / Math.PI;
@@ -36,10 +52,6 @@ export function assertVec3(value, label = "vector") {
   return value.map((number, index) => finite(number, `${label}[${index}]`));
 }
 
-function metresPerDegreeLongitude(latitude) {
-  return METRES_PER_DEGREE_LONGITUDE_EQUATOR * Math.cos(toRadians(latitude));
-}
-
 /** Local east/north metres → WGS84 [lon, lat]. */
 export function localToWgs84({originWgs84, eastNorthM}) {
   const [longitude, latitude] = assertLonLat(originWgs84, "originWgs84");
@@ -47,7 +59,7 @@ export function localToWgs84({originWgs84, eastNorthM}) {
   const [east, north] = eastNorthM.map((number, index) => finite(number, `eastNorthM[${index}]`));
   return Object.freeze([
     longitude + east / metresPerDegreeLongitude(latitude),
-    latitude + north / METRES_PER_DEGREE_LATITUDE
+    latitude + north / metresPerDegreeLatitude(latitude)
   ]);
 }
 
@@ -57,7 +69,7 @@ export function wgs84ToLocal({originWgs84, lonLat}) {
   const [longitude, latitude] = assertLonLat(lonLat, "lonLat");
   return Object.freeze([
     (longitude - originLongitude) * metresPerDegreeLongitude(originLatitude),
-    (latitude - originLatitude) * METRES_PER_DEGREE_LATITUDE
+    (latitude - originLatitude) * metresPerDegreeLatitude(originLatitude)
   ]);
 }
 

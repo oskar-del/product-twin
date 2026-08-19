@@ -18,6 +18,7 @@
 import * as THREE from "three";
 
 import {parseScene, evidenceProfile} from "./core/scene-contract.mjs";
+import {extentsOf, depthSettingsFor, maxStageDistance} from "./core/extents.mjs";
 import {compileStages, createStageMachine, DEFAULT_TWEEN_MS} from "./core/stages.mjs";
 import {createMaterialFactory, applyProfile, PROFILE_COMPARE, PROFILE_INTELLIGENCE, PROFILE_REALISTIC} from "./core/profiles.mjs";
 import {createViewer} from "./core/viewer.mjs";
@@ -77,7 +78,16 @@ export async function createTwinViewer({
   const scene = parseScene(await loadScene(sceneUrl, sceneDocument));
   const stages = compileStages(scene);
 
-  const viewer = createViewer({mount});
+  // The scene's real size decides clipping, fog and shadow coverage.
+  const extents = extentsOf(scene.elements);
+  const depth = depthSettingsFor(extents.radius_m, maxStageDistance(scene.stages));
+  const viewer = createViewer({
+    mount,
+    far: depth.cameraFar,
+    near: depth.cameraNear,
+    maxDistance: depth.maxDistance,
+    shadowExtent: depth.shadowExtent
+  });
   const textures = createTextureLibrary();
   const materials = createMaterialFactory({realisticPalette});
   const builder = createSceneBuilder({materials, textures});
@@ -130,7 +140,8 @@ export async function createTwinViewer({
       labelGroup: built.labelGroup,
       hemisphere: viewer.hemisphere,
       renderer: viewer.renderer,
-      labelsVisible: labelsEnabled && machine.current.labels
+      labelsVisible: labelsEnabled && machine.current.labels,
+      depth
     });
   }
 
@@ -142,7 +153,7 @@ export async function createTwinViewer({
       longitude
     });
     tools?.setRange(TIME_CONTROL_LABEL, hour);
-    const rig = sunLightRig({latitude, longitude, date: solarDate, utcHour, distance: 150});
+    const rig = sunLightRig({latitude, longitude, date: solarDate, utcHour, distance: Math.max(150, extents.radius_m * 1.2)});
     if (!rig) {
       viewer.sun.intensity = 0;
       return null;
@@ -267,6 +278,8 @@ export async function createTwinViewer({
   return {
     version: ENGINE_VERSION_STRING,
     scene,
+    extents,
+    depth,
     stages,
     viewer,
     elements: built.byId,
