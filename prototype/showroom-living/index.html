@@ -69,7 +69,7 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.setSize(innerWidth, innerHeight);
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.08;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 document.body.prepend(renderer.domElement);
 
@@ -86,9 +86,9 @@ const [RW, RH, RD] = scene_data.room.size_m;
 const BACK_Z = -(RD - 1);
 const CENTER_Z = (1 + BACK_Z) / 2;
 const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.05, 200);
-camera.position.set(3.6, 1.55, 3.3);
+camera.position.set(3.15, 1.42, 3.0);
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.target.set(0, 0.55, -2.6);
+controls.target.set(-0.2, 0.5, -3.0);
 controls.enableDamping = true; controls.dampingFactor = 0.08;
 controls.maxPolarAngle = Math.PI / 2 - 0.03; controls.minDistance = 2.4; controls.maxDistance = 12;
 
@@ -119,10 +119,17 @@ wall(RD, RH, -RW / 2, RH / 2, CENTER_Z, Math.PI / 2);  // left wall
 wall(RD, RH, RW / 2, RH / 2, CENTER_Z, Math.PI / 2);   // right wall
 
 // large window opening on the back wall -> Mediterranean view + light
+// golden-hour Mediterranean bay, matching the villa's real terrace hero (P1)
 const view = makeCanvas(1024, 512, (x, w, h) => {
-  const g = x.createLinearGradient(0, 0, 0, h); g.addColorStop(0, '#aed2e6'); g.addColorStop(0.54, '#dcedf2'); g.addColorStop(0.56, '#4585a9'); g.addColorStop(1, '#2f6f97'); x.fillStyle = g; x.fillRect(0, 0, w, h);
-  x.fillStyle = 'rgba(255,255,255,.5)'; for (let i = 0; i < 30; i++) x.fillRect(Math.random() * w, h * 0.58 + Math.random() * h * 0.4, 40 + Math.random() * 90, 1.5);
-  x.fillStyle = '#7fae6b'; x.fillRect(0, h * 0.53, w, 10); // planting line
+  const g = x.createLinearGradient(0, 0, 0, h);
+  g.addColorStop(0, '#cfe0e6'); g.addColorStop(0.32, '#f0e2cf'); g.addColorStop(0.5, '#f6ddbf'); g.addColorStop(0.52, '#7ba7c0'); g.addColorStop(1, '#3d7ea0');
+  x.fillStyle = g; x.fillRect(0, 0, w, h);
+  // distant headland silhouette across the bay
+  x.fillStyle = 'rgba(96,110,120,.55)'; x.beginPath(); x.moveTo(0, h * 0.52);
+  x.bezierCurveTo(w * 0.18, h * 0.36, w * 0.32, h * 0.34, w * 0.46, h * 0.5); x.lineTo(w * 0.46, h * 0.53); x.lineTo(0, h * 0.53); x.closePath(); x.fill();
+  // town glow on the far shore + sun glints on the water
+  x.fillStyle = 'rgba(255,238,205,.6)'; for (let i = 0; i < 60; i++) x.fillRect(w * 0.5 + Math.random() * w * 0.45, h * 0.5 + Math.random() * 3, 2, 2);
+  x.fillStyle = 'rgba(255,255,255,.45)'; for (let i = 0; i < 26; i++) x.fillRect(Math.random() * w, h * 0.6 + Math.random() * h * 0.35, 40 + Math.random() * 90, 1.4);
 });
 const windowPane = new THREE.Mesh(new THREE.PlaneGeometry(RW * 0.64, RH * 0.66), new THREE.MeshBasicMaterial({ map: view }));
 windowPane.position.set(0.2, RH * 0.52, BACK_Z + 0.08); scene.add(windowPane);
@@ -130,18 +137,34 @@ const frameMat = new THREE.MeshStandardMaterial({ color: 0x2a2723, roughness: 0.
 function bar(w, h, x, y) { const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.06), frameMat); m.position.set(x, y, BACK_Z + 0.12); scene.add(m); }
 bar(RW * 0.66, 0.06, 0.2, RH * 0.52 + RH * 0.33); bar(RW * 0.66, 0.06, 0.2, RH * 0.52 - RH * 0.33); bar(0.06, RH * 0.66, 0.2 - RW * 0.32, RH * 0.52); bar(0.06, RH * 0.66, 0.2 + RW * 0.32, RH * 0.52); bar(0.05, RH * 0.66, 0.2, RH * 0.52);
 
-// warm sun coming in from the front-side, so product fronts face the light
-const sun = new THREE.DirectionalLight(0xffe6bd, 3.0);
-sun.position.set(3.5, 6.5, 3.0); sun.castShadow = true;
+// warm golden-hour sun coming in from the front-side, so product fronts face the light
+const sun = new THREE.DirectionalLight(0xffdca6, 3.2);
+sun.position.set(3.5, 6.0, 3.2); sun.castShadow = true;
 sun.shadow.mapSize.set(2048, 2048); const s = sun.shadow.camera; s.near = 0.5; s.far = 30; s.left = -8; s.right = 8; s.top = 8; s.bottom = -8; sun.shadow.bias = -0.0004;
 scene.add(sun);
-scene.add(new THREE.HemisphereLight(0xdfeaf2, 0x6b5a44, 0.45));
+// soft warm bounce from the window side + cool sky fill
+scene.add(new THREE.HemisphereLight(0xf3e6cf, 0x6b5a44, 0.4));
+const bounce = new THREE.PointLight(0xffe4b8, 0.5, 18); bounce.position.set(0.2, 1.6, BACK_Z + 1.5); scene.add(bounce);
 
 // rug + a simple bronze coffee table for context (clearly scene props, not products)
 const rug = new THREE.Mesh(new THREE.PlaneGeometry(3.6, 2.6), new THREE.MeshStandardMaterial({ color: 0xc3ad88, roughness: 1 }));
 rug.rotation.x = -Math.PI / 2; rug.position.set(0, 0.012, -2.4); rug.receiveShadow = true; scene.add(rug);
 const table = new THREE.Mesh(new THREE.BoxGeometry(1.1, 0.32, 0.6), new THREE.MeshStandardMaterial({ color: 0x6f5a3c, roughness: 0.4, metalness: 0.35 }));
 table.position.set(0, 0.16, -2.4); table.castShadow = table.receiveShadow = true; scene.add(table);
+
+// warm scene props (clearly decor, not products): a potted plant + framed art
+(function plant(px, pz) {
+  const pot = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.17, 0.4, 20), new THREE.MeshStandardMaterial({ color: 0xb9b0a0, roughness: 0.9 }));
+  pot.position.set(px, 0.2, pz); pot.castShadow = pot.receiveShadow = true; scene.add(pot);
+  const foliage = new THREE.MeshStandardMaterial({ color: 0x5f7d4f, roughness: 0.85, flatShading: true });
+  for (let i = 0; i < 5; i++) { const leaf = new THREE.Mesh(new THREE.ConeGeometry(0.16, 0.9, 5), foliage); leaf.position.set(px + (Math.sin(i) * 0.12), 0.85 + i * 0.04, pz + Math.cos(i) * 0.12); leaf.rotation.z = (i - 2) * 0.28; leaf.castShadow = true; scene.add(leaf); }
+})(RW / 2 - 0.7, BACK_Z + 0.9);
+(function art(ax) {
+  const frame = new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.95, 0.05), new THREE.MeshStandardMaterial({ color: 0x2a2723, roughness: 0.5, metalness: 0.3 }));
+  frame.position.set(ax, 1.55, BACK_Z + 0.09); scene.add(frame);
+  const artTex = makeCanvas(512, 340, (x, w, h) => { const g = x.createLinearGradient(0, 0, w, h); g.addColorStop(0, '#c98f5a'); g.addColorStop(0.5, '#e7c79a'); g.addColorStop(1, '#8a5a3a'); x.fillStyle = g; x.fillRect(0, 0, w, h); x.strokeStyle = 'rgba(255,255,255,.25)'; for (let i = 0; i < 6; i++) { x.beginPath(); x.moveTo(0, h * (0.3 + i * 0.1)); x.bezierCurveTo(w / 3, h * (0.2 + i * 0.1), 2 * w / 3, h * (0.4 + i * 0.1), w, h * (0.3 + i * 0.1)); x.stroke(); } });
+  const canvasArt = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 0.86), new THREE.MeshBasicMaterial({ map: artTex })); canvasArt.position.set(ax, 1.55, BACK_Z + 0.12); scene.add(canvasArt);
+})(-RW / 2 + 1.4);
 
 // soft contact-shadow blob under each product
 const blobTex = makeCanvas(256, 256, (x, w, h) => { const g = x.createRadialGradient(w / 2, h / 2, 4, w / 2, h / 2, w / 2); g.addColorStop(0, 'rgba(0,0,0,.42)'); g.addColorStop(1, 'rgba(0,0,0,0)'); x.fillStyle = g; x.fillRect(0, 0, w, h); });
