@@ -53,7 +53,7 @@
   <div class="help">Drag to look around · scroll to zoom · tap a product</div>
   <div class="roomtotal" id="roomtotal"><span class="k">Room · furnished total</span><b id="roomtotal-v">—</b><span class="rt-note" id="roomtotal-n"></span></div>
   <aside id="panel"><button class="close" id="close">×</button>
-    <div class="small">Product Twin · native manufacturer 3D</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
+    <div class="small" id="p-src">Product Twin</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
     <div id="p-pills"></div>
     <div class="offer"><div class="small">Live trade offer</div><strong id="p-price">—</strong><span id="p-offerstate"></span></div>
     <div class="actions"><a id="p-offer" class="offerbtn" target="_blank" rel="noopener" hidden>View live offer / RFQ →</a><button id="p-swap" class="swapbtn" hidden>⇄ Swap</button></div>
@@ -157,11 +157,7 @@ scene.add(sun);
 scene.add(new THREE.HemisphereLight(0xf3e6cf, 0x6b5a44, 0.4));
 const bounce = new THREE.PointLight(0xffe4b8, 0.5, 18); bounce.position.set(0.2, 1.6, BACK_Z + 1.5); scene.add(bounce);
 
-// rug + a simple bronze coffee table for context (clearly scene props, not products)
-const rug = new THREE.Mesh(new THREE.PlaneGeometry(3.6, 2.6), new THREE.MeshStandardMaterial({ color: 0xc3ad88, roughness: 1 }));
-rug.rotation.x = -Math.PI / 2; rug.position.set(0, 0.012, -2.4); rug.receiveShadow = true; scene.add(rug);
-const table = new THREE.Mesh(new THREE.BoxGeometry(1.1, 0.32, 0.6), new THREE.MeshStandardMaterial({ color: 0x6f5a3c, roughness: 0.4, metalness: 0.35 }));
-table.position.set(0, 0.16, -2.4); table.castShadow = table.receiveShadow = true; scene.add(table);
+// (rug, coffee table and floor lamp are now REAL products loaded from the scene)
 
 // warm scene props (clearly decor, not products): a potted plant + framed art
 (function plant(px, pz) {
@@ -215,7 +211,7 @@ function placeProduct(root, p) {
 const cyclesByRole = new Map();
 for (const p of scene_data.products) {
   const alt = (scene_data.swap_alternates || []).find(a => a.role === p.role);
-  const cycle = [p, ...((alt?.twin_ids) || []).map(t => altProduct(t, p.placement, p.role, p.category_id))].filter(x => x.avatar?.runtime_glb);
+  const cycle = [p, ...((alt?.twin_ids) || []).map(t => altProduct(t, p.placement, p.role, p.category_id))].filter(x => x.avatar?.runtime_glb || x.avatar?.asset_path);
   cyclesByRole.set(p.role, { cycle, index: 0, roots: new Map() });
 }
 
@@ -223,7 +219,7 @@ for (const [role, g] of cyclesByRole) {
   for (let i = 0; i < g.cycle.length; i++) {
     const product = g.cycle[i];
     try {
-      const gltf = await loader.loadAsync('../../' + product.avatar.runtime_glb);
+      const gltf = await loader.loadAsync('../../' + (product.avatar.runtime_glb || product.avatar.asset_path));
       const root = gltf.scene;
       root.userData.role = role;
       root.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; o.userData.role = role; } });
@@ -233,8 +229,8 @@ for (const [role, g] of cyclesByRole) {
       g.roots.set(i, { root, size });
       picks.push(root);
       if (i === 0) {
-        contactShadow(product.placement.position_m[0], product.placement.position_m[2], Math.max(size.x, size.z) * 1.25, Math.max(size.x, size.z) * 1.25);
-        const anchor = new THREE.Vector3(product.placement.position_m[0], size.y * 0.9, product.placement.position_m[2]);
+        if (size.y > 0.12) contactShadow(product.placement.position_m[0], product.placement.position_m[2], Math.max(size.x, size.z) * 1.25, Math.max(size.x, size.z) * 1.25);
+        const anchor = new THREE.Vector3(product.placement.position_m[0], Math.max(size.y * 0.9, 0.35), product.placement.position_m[2]);
         const el = document.createElement('div'); el.className = 'tag'; el.innerHTML = '<div class="dot">+</div>';
         el.onclick = () => showPanel(role);
         document.getElementById('hud').appendChild(el);
@@ -247,32 +243,39 @@ for (const [role, g] of cyclesByRole) {
 
 document.getElementById('loading').style.display = 'none';
 
-const fmt = (v, cur) => v == null ? '—' : `$${Math.round(v).toLocaleString()} ${cur}`;
+const money = (v, cur) => cur === 'EUR' ? `€${Number(v).toLocaleString(undefined, { maximumFractionDigits: v % 1 ? 2 : 0 })}` : `$${Math.round(v).toLocaleString()}`;
+const fmt = (v, cur) => v == null ? '—' : `${money(v, cur)} ${cur}`;
 function updateTotal() {
-  let sum = 0, cur = 'USD', pending = false;
-  for (const [, g] of cyclesByRole) { const o = g.cycle[g.index].offer_snapshot; if (typeof o.unit_price === 'number') { sum += o.unit_price; cur = o.currency; } else pending = true; }
-  document.getElementById('roomtotal-v').textContent = fmt(sum, cur);
-  document.getElementById('roomtotal-n').textContent = `${cyclesByRole.size} pieces · live trade list${pending ? ' · some pending' : ''}`;
+  const sums = new Map();
+  for (const [, g] of cyclesByRole) { const o = g.cycle[g.index].offer_snapshot; if (typeof o.unit_price === 'number') sums.set(o.currency, (sums.get(o.currency) || 0) + o.unit_price); }
+  const parts = [...sums.entries()].map(([cur, v]) => money(v, cur));
+  document.getElementById('roomtotal-v').textContent = parts.join('  +  ') || '—';
+  document.getElementById('roomtotal-n').textContent = `${cyclesByRole.size} pieces · live trade + retail list`;
 }
 updateTotal();
 
 const panel = document.getElementById('panel');
 function showPanel(role) {
   const g = cyclesByRole.get(role); const p = g.cycle[g.index]; const o = p.offer_snapshot;
+  const isNative = p.avatar.source === 'native_manufacturer_model3d';
+  document.getElementById('p-src').textContent = isNative ? 'Product Twin · native manufacturer 3D' : 'Product Twin · dimension-verified proxy';
   document.getElementById('p-title').textContent = `${p.identity.manufacturer} ${p.identity.model}`;
   document.getElementById('p-mk').textContent = `SKU ${p.identity.merchant_sku || '—'}${p.identity.configuration ? ' · ' + p.identity.configuration : ''}`;
-  document.getElementById('p-pills').innerHTML = [p.category_id, p.avatar.level, 'native MODEL_3D', 'ES join ✓'].map(t => `<span class="pill">${t}</span>`).join('');
+  document.getElementById('p-pills').innerHTML = [p.category_id, p.avatar.level, isNative ? 'native MODEL_3D' : 'G2 proxy', 'ES offer ✓'].map(t => `<span class="pill">${t}</span>`).join('');
   document.getElementById('p-price').textContent = fmt(o.unit_price, o.currency);
   document.getElementById('p-offerstate').textContent = `${o.merchant} · ${o.available ? 'available' : 'unavailable'} · ${o.observed_at}`;
-  document.getElementById('p-warn').textContent = `Exact finish not bound to variant. ${o.es_checkout_state}. Native GLB rights: review.`;
+  document.getElementById('p-warn').textContent = isNative
+    ? `Exact finish not bound to variant. ${o.es_checkout_state}. Native GLB rights: review.`
+    : `Dimension-verified proxy, not exact IKEA geometry. ${o.es_checkout_state}.`;
   const swap = document.getElementById('p-swap');
   if (g.cycle.length > 1) { swap.hidden = false; swap.textContent = `⇄ Swap (${g.index + 1}/${g.cycle.length})`; swap.onclick = () => swapRole(role); }
   else swap.hidden = true;
-  // real merchant offer / RFQ link from the product's live handle
+  // real merchant offer / RFQ link: explicit product_url, else the native handle route
   const offer = document.getElementById('p-offer');
   const handle = byTwin.get(p.twin_id)?.handle;
   const origin = scene_data.geometry_source?.merchant_origin;
-  if (handle && origin) { offer.hidden = false; offer.href = `${origin}/products/${handle}`; }
+  const url = o.product_url || (handle && origin ? `${origin}/products/${handle}` : null);
+  if (url) { offer.hidden = false; offer.href = url; }
   else offer.hidden = true;
   panel.classList.add('open');
 }
