@@ -41,20 +41,24 @@ scene.background=skyTex();scene.fog=new THREE.Fog(0xcdd9de,500,1050);
 function stoneTex(){const c=document.createElement('canvas');c.width=c.height=256;const x=c.getContext('2d');x.fillStyle='#b8a586';x.fillRect(0,0,256,256);let s=99;const rnd=()=>{s=(s*16807)%2147483647;return s/2147483647;};for(let i=0;i<520;i++){x.fillStyle=rnd()<.5?'rgba(120,104,78,.25)':'rgba(214,201,170,.28)';const w=3+rnd()*10,h=2+rnd()*6;x.fillRect(rnd()*256,rnd()*256,w,h);}const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(2,2);t.colorSpace=THREE.SRGBColorSpace;return t;}
 const camera=new THREE.PerspectiveCamera(46,innerWidth/innerHeight,.5,2200);
 const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);
-renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.08;document.body.prepend(renderer.domElement);
+renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.02;document.body.prepend(renderer.domElement);
+// sky environment for real reflections on glass/water
+const _skyEq=skyTex();_skyEq.mapping=THREE.EquirectangularReflectionMapping;
+const _pmrem=new THREE.PMREMGenerator(renderer);scene.environment=_pmrem.fromEquirectangular(_skyEq).texture;
 const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.maxDistance=1000;
-const hemi=new THREE.HemisphereLight(0xdcecff,0x74806a,1.15);scene.add(hemi);
-const sun=new THREE.DirectionalLight(0xfff0d4,2.7);sun.castShadow=true;sun.shadow.mapSize.set(4096,4096);sun.shadow.bias=-0.0004;
+const hemi=new THREE.HemisphereLight(0xdcecff,0x6f7d64,1.0);scene.add(hemi);
+const sun=new THREE.DirectionalLight(0xfff2da,2.9);sun.castShadow=true;sun.shadow.mapSize.set(4096,4096);sun.shadow.bias=-0.0004;sun.shadow.radius=3;
 const sc=sun.shadow.camera;sc.left=-300;sc.right=300;sc.top=300;sc.bottom=-300;sc.far=1000;scene.add(sun,sun.target);
 // materials
-const M={stone:new THREE.MeshStandardMaterial({map:stoneTex(),roughness:.95}),
- cream:new THREE.MeshStandardMaterial({color:0xece4d6,roughness:.85}),
- white:new THREE.MeshStandardMaterial({color:0xf4f1ea,roughness:.8}),
- roof:new THREE.MeshStandardMaterial({color:0xe9e0cd,roughness:.7}),
- glass:new THREE.MeshStandardMaterial({color:0x27353c,roughness:.08,metalness:.5,transparent:true,opacity:.82}),
- wood:new THREE.MeshStandardMaterial({color:0x9c7546,roughness:.75}),
- water:new THREE.MeshStandardMaterial({color:0x39a0a6,roughness:.12,metalness:.35,transparent:true,opacity:.86}),
+const M={stone:new THREE.MeshStandardMaterial({map:stoneTex(),roughness:.9,envMapIntensity:.6}),
+ cream:new THREE.MeshStandardMaterial({color:0xeee6d8,roughness:.7,envMapIntensity:.5}),
+ white:new THREE.MeshStandardMaterial({color:0xf6f2ea,roughness:.62,envMapIntensity:.6}),
+ roof:new THREE.MeshStandardMaterial({color:0xdcd3c0,roughness:.55,envMapIntensity:.5}),
+ glass:new THREE.MeshStandardMaterial({color:0x223038,roughness:.04,metalness:.95,envMapIntensity:1.5,transparent:true,opacity:.86}),
+ wood:new THREE.MeshStandardMaterial({color:0xa87c4c,roughness:.7,envMapIntensity:.4}),
+ water:new THREE.MeshStandardMaterial({color:0x3fb0b6,roughness:.06,metalness:.6,envMapIntensity:1.4,transparent:true,opacity:.9}),
  planta:new THREE.MeshStandardMaterial({color:0x5f7a4b,roughness:1}),
+ hedge:new THREE.MeshStandardMaterial({color:0x6c8a4f,roughness:1}),
  trunk:new THREE.MeshStandardMaterial({color:0x6a4f38,roughness:1})};
 // terrain
 const T=S.terrain,nx=T.nx,nz=T.nz;const tg=new THREE.BufferGeometry();const pos=[];
@@ -119,7 +123,7 @@ function sampleY0(x,z){const i=Math.round((x-T.x0)/T.dx),j=Math.round((z-T.z0)/T
 // scattered trees on terrain for life
 let seed=7;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};
 function sampleY(x,z){const i=Math.round((x-T.x0)/T.dx),j=Math.round((z-T.z0)/T.dz);return(i>=0&&i<nx&&j>=0&&j<nz)?T.heights[j*nx+i]:0;}
-for(let i=0;i<26;i++){const x=T.x0+rnd()*(nx-1)*T.dx,z=T.z0+rnd()*(nz-1)*T.dz;const y=sampleY(x,z);const tr=new THREE.Group();
+for(let i=0;i<46;i++){const x=T.x0+rnd()*(nx-1)*T.dx,z=T.z0+rnd()*(nz-1)*T.dz;const y=sampleY(x,z);const tr=new THREE.Group();
  const tk=new THREE.Mesh(new THREE.CylinderGeometry(.18,.24,2.2,6),M.trunk);tk.position.y=1.1;tr.add(tk);
  const cr=new THREE.Mesh(new THREE.SphereGeometry(1.5+rnd(),7,6),M.planta);cr.position.y=2.8;cr.castShadow=true;tr.add(cr);tr.position.set(x,y,z);scene.add(tr);}
 // sea
