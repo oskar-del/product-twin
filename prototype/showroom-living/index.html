@@ -20,6 +20,12 @@
   .price .v{font:500 22px/1 Georgia,serif;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.5)}
   .price .note{font-size:9px;color:#e7dcc4;opacity:.8;max-width:210px;margin-top:4px}
   .help{position:absolute;left:26px;bottom:20px;font-size:11px;color:#efe8d7;background:rgba(20,17,12,.5);backdrop-filter:blur(8px);padding:8px 12px;border-radius:999px;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+  .roomtotal{position:absolute;right:24px;bottom:20px;background:rgba(20,17,12,.6);backdrop-filter:blur(10px);padding:9px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.1);text-align:right}
+  .roomtotal .k{display:block;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#e6c79a}
+  .roomtotal b{font:500 20px/1.1 Georgia,serif;color:#fff}
+  .roomtotal .rt-note{display:block;font-size:9px;color:#cfc7b6;margin-top:2px}
+  .swapbtn{margin-top:10px;width:100%;border:0;border-radius:10px;padding:10px;background:#1c2016;color:#f4efe4;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.02em}
+  .swapbtn:hover{background:#2c3324}
   .tag{position:absolute;pointer-events:auto;transform:translate(-50%,-50%);cursor:pointer}
   .tag .dot{width:26px;height:26px;border-radius:50%;background:rgba(250,246,238,.92);border:2px solid rgba(0,0,0,.15);box-shadow:0 3px 12px rgba(0,0,0,.35);display:grid;place-items:center;font-size:13px;color:#1c2016;transition:.15s}
   .tag:hover .dot{transform:scale(1.12);background:#fff}
@@ -42,10 +48,12 @@
   <div class="topline"><img class="hero" id="villa-hero" alt="" hidden /><div><div class="k">Product Twin · client preview</div><h1 id="villa-name">Villa</h1><div class="loc" id="villa-loc"></div><div class="specs" id="villa-specs"></div><div class="lst" id="villa-lst"></div></div></div>
   <div class="price"><div class="k">Asking price</div><div class="v" id="villa-price">—</div><div class="note" id="villa-note"></div></div>
   <div class="help">Drag to look around · scroll to zoom · tap a product</div>
+  <div class="roomtotal" id="roomtotal"><span class="k">Room · furnished total</span><b id="roomtotal-v">—</b><span class="rt-note" id="roomtotal-n"></span></div>
   <aside id="panel"><button class="close" id="close">×</button>
     <div class="small">Product Twin · native manufacturer 3D</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
     <div id="p-pills"></div>
     <div class="offer"><div class="small">Live trade offer</div><strong id="p-price">—</strong><span id="p-offerstate"></span></div>
+    <button id="p-swap" class="swapbtn" hidden>⇄ Swap this piece</button>
     <div class="warn" id="p-warn"></div>
   </aside>
 </div>
@@ -170,6 +178,22 @@ table.position.set(0, 0.16, -2.4); table.castShadow = table.receiveShadow = true
 const blobTex = makeCanvas(256, 256, (x, w, h) => { const g = x.createRadialGradient(w / 2, h / 2, 4, w / 2, h / 2, w / 2); g.addColorStop(0, 'rgba(0,0,0,.42)'); g.addColorStop(1, 'rgba(0,0,0,0)'); x.fillStyle = g; x.fillRect(0, 0, w, h); });
 function contactShadow(cx, cz, sx, sz) { const m = new THREE.Mesh(new THREE.PlaneGeometry(sx, sz), new THREE.MeshBasicMaterial({ map: blobTex, transparent: true, depthWrite: false })); m.rotation.x = -Math.PI / 2; m.position.set(cx, 0.015, cz); scene.add(m); }
 
+// manifest gives real title/offer/GLB for swap alternates by twin_id
+const manifest = await fetch('../../data/geometry/native-3d-showcase-manifest.json', { cache: 'no-store' }).then(r => r.json()).catch(() => ({ entries: [] }));
+const byTwin = new Map((manifest.entries || []).filter(e => e.resolved).map(e => [e.twin_id, e]));
+const mfg = t => t.includes('WENDELBO') ? 'Wendelbo' : (t.includes('NORR11') ? 'NORR11' : '');
+function altProduct(twin_id, placement, role, category_id) {
+  const e = byTwin.get(twin_id) || {};
+  const price = e.offer?.price?.amount != null ? Number(e.offer.price.amount) : null;
+  return {
+    twin_id, role, category_id: category_id || e.category_id,
+    identity: { manufacturer: mfg(twin_id), model: e.title || twin_id, merchant_sku: '' },
+    avatar: { level: 'G2', source: 'native_manufacturer_model3d', runtime_glb: e.glb?.runtime_path, rights_state: 'review' },
+    placement,
+    offer_snapshot: { merchant: 'Design Public Group (trade)', currency: e.offer?.price?.currency || 'USD', unit_price: price, available: !!e.offer?.available, observed_at: '2026-08-18', es_checkout_state: 'exact ES postcode tax/freight/delivery refresh required' },
+  };
+}
+
 const loader = new GLTFLoader();
 const picks = [];
 const tagEls = [];
@@ -184,37 +208,73 @@ function placeProduct(root, p) {
   return size;
 }
 
-for (const product of scene_data.products) {
-  try {
-    const gltf = await loader.loadAsync('../../' + product.avatar.runtime_glb);
-    const root = gltf.scene;
-    root.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; o.userData.product = product; } });
-    scene.add(root);
-    const size = placeProduct(root, product.placement);
-    contactShadow(product.placement.position_m[0], product.placement.position_m[2], Math.max(size.x, size.z) * 1.25, Math.max(size.x, size.z) * 1.25);
-    // floating tag anchored to the product top
-    const anchor = new THREE.Vector3(product.placement.position_m[0], size.y * 0.9, product.placement.position_m[2]);
-    const el = document.createElement('div'); el.className = 'tag'; el.innerHTML = '<div class="dot">+</div>';
-    el.onclick = () => showPanel(product);
-    document.getElementById('hud').appendChild(el);
-    tagEls.push({ el, anchor });
-    picks.push(root); loaded++;
-  } catch (e) { console.error('load failed', product.twin_id, e); }
+// build one swap cycle per placed role: [placed product, ...alternates]
+const cyclesByRole = new Map();
+for (const p of scene_data.products) {
+  const alt = (scene_data.swap_alternates || []).find(a => a.role === p.role);
+  const cycle = [p, ...((alt?.twin_ids) || []).map(t => altProduct(t, p.placement, p.role, p.category_id))].filter(x => x.avatar?.runtime_glb);
+  cyclesByRole.set(p.role, { cycle, index: 0, roots: new Map() });
+}
+
+for (const [role, g] of cyclesByRole) {
+  for (let i = 0; i < g.cycle.length; i++) {
+    const product = g.cycle[i];
+    try {
+      const gltf = await loader.loadAsync('../../' + product.avatar.runtime_glb);
+      const root = gltf.scene;
+      root.userData.role = role;
+      root.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; o.userData.role = role; } });
+      scene.add(root);
+      const size = placeProduct(root, product.placement);
+      root.visible = i === 0;
+      g.roots.set(i, { root, size });
+      picks.push(root);
+      if (i === 0) {
+        contactShadow(product.placement.position_m[0], product.placement.position_m[2], Math.max(size.x, size.z) * 1.25, Math.max(size.x, size.z) * 1.25);
+        const anchor = new THREE.Vector3(product.placement.position_m[0], size.y * 0.9, product.placement.position_m[2]);
+        const el = document.createElement('div'); el.className = 'tag'; el.innerHTML = '<div class="dot">+</div>';
+        el.onclick = () => showPanel(role);
+        document.getElementById('hud').appendChild(el);
+        tagEls.push({ el, anchor });
+        loaded++;
+      }
+    } catch (e) { console.error('load failed', product.twin_id, e); }
+  }
 }
 
 document.getElementById('loading').style.display = 'none';
 
-function showPanel(p) {
+const fmt = (v, cur) => v == null ? '—' : `$${Math.round(v).toLocaleString()} ${cur}`;
+function updateTotal() {
+  let sum = 0, cur = 'USD', pending = false;
+  for (const [, g] of cyclesByRole) { const o = g.cycle[g.index].offer_snapshot; if (typeof o.unit_price === 'number') { sum += o.unit_price; cur = o.currency; } else pending = true; }
+  document.getElementById('roomtotal-v').textContent = fmt(sum, cur);
+  document.getElementById('roomtotal-n').textContent = `${cyclesByRole.size} pieces · live trade list${pending ? ' · some pending' : ''}`;
+}
+updateTotal();
+
+const panel = document.getElementById('panel');
+function showPanel(role) {
+  const g = cyclesByRole.get(role); const p = g.cycle[g.index]; const o = p.offer_snapshot;
   document.getElementById('p-title').textContent = `${p.identity.manufacturer} ${p.identity.model}`;
   document.getElementById('p-mk').textContent = `SKU ${p.identity.merchant_sku || '—'}${p.identity.configuration ? ' · ' + p.identity.configuration : ''}`;
   document.getElementById('p-pills').innerHTML = [p.category_id, p.avatar.level, 'native MODEL_3D', 'ES join ✓'].map(t => `<span class="pill">${t}</span>`).join('');
-  const o = p.offer_snapshot;
-  document.getElementById('p-price').textContent = `$${o.unit_price.toLocaleString()} ${o.currency}`;
+  document.getElementById('p-price').textContent = fmt(o.unit_price, o.currency);
   document.getElementById('p-offerstate').textContent = `${o.merchant} · ${o.available ? 'available' : 'unavailable'} · ${o.observed_at}`;
   document.getElementById('p-warn').textContent = `Exact finish not bound to variant. ${o.es_checkout_state}. Native GLB rights: review.`;
-  document.getElementById('panel').classList.add('open');
+  const swap = document.getElementById('p-swap');
+  if (g.cycle.length > 1) { swap.hidden = false; swap.textContent = `⇄ Swap this piece (${g.index + 1}/${g.cycle.length})`; swap.onclick = () => swapRole(role); }
+  else swap.hidden = true;
+  panel.classList.add('open');
 }
-document.getElementById('close').onclick = () => document.getElementById('panel').classList.remove('open');
+function swapRole(role) {
+  const g = cyclesByRole.get(role);
+  const prev = g.roots.get(g.index); if (prev) prev.root.visible = false;
+  g.index = (g.index + 1) % g.cycle.length;
+  const cur = g.roots.get(g.index); if (cur) cur.root.visible = true;
+  showPanel(role); updateTotal();
+}
+document.getElementById('close').onclick = () => panel.classList.remove('open');
 
 // project tags to screen each frame
 const v = new THREE.Vector3();
@@ -232,8 +292,8 @@ const ray = new THREE.Raycaster(); const m2 = new THREE.Vector2();
 renderer.domElement.addEventListener('click', ev => {
   m2.set((ev.clientX / innerWidth) * 2 - 1, -(ev.clientY / innerHeight) * 2 + 1);
   ray.setFromCamera(m2, camera);
-  let o = ray.intersectObjects(picks, true)[0]?.object; while (o && !o.userData.product) o = o.parent;
-  if (o) showPanel(o.userData.product);
+  let o = ray.intersectObjects(picks, true)[0]?.object; while (o && !o.userData.role) o = o.parent;
+  if (o) showPanel(o.userData.role);
 });
 
 addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
