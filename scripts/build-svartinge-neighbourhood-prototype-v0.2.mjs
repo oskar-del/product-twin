@@ -40,9 +40,11 @@ function drapeOnTerrain(elements,navigation){
     if(g.position&&(g.primitive==="BOX"||g.primitive==="MARKER"||g.primitive==="DIAGRAMMATIC_MARKER"||g.primitive==="ROOM_VOLUME"))
       g.position=[g.position[0],round(g.position[1]+terrainY(g.position[0],g.position[2]),3),g.position[2]];
   }
+  const inWindow=(x,z)=>Math.abs(x)<=HF.size_m/2&&Math.abs(z)<=HF.size_m/2;
   for(const step of navigation){
     step.camera=[step.camera[0],round(step.camera[1]+terrainY(step.camera[0],step.camera[2]),3),step.camera[2]];
-    step.target=[step.target[0],round(step.target[1]+terrainY(step.target[0],step.target[2]),3),step.target[2]];
+    // A distant aim point (e.g. the Glan outlook target) sits outside the terrain window; leave it as authored.
+    if(inWindow(step.target[0],step.target[2]))step.target=[step.target[0],round(step.target[1]+terrainY(step.target[0],step.target[2]),3),step.target[2]];
   }
 }
 
