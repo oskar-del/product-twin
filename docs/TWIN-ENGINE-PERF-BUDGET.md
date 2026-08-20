@@ -73,8 +73,11 @@ real terrain, OSM context extrusion and viewshed overlays before anything here b
 
 ### Where the budget will actually get spent
 1. **Terrain resolution.** The Svärtinge terrain is 24×24 (1,152 triangles). A 1 m DEM over the
-   same 360 m is 360×360 → ~259k triangles, alone over the Twin budget. Terrain needs LOD or
-   decimation before the COG/DEM loader lands — this is the single biggest future cost.
+   same 360 m is 360×360 → ~259k triangles, alone over the Twin budget. **Addressed:**
+   `engine/compile/height-field.mjs` decimates a dense DEM to a triangle ceiling and reports the
+   height error it costs (259,200 → 149,058 triangles, 0.7 mm RMS on a smooth surface). The
+   COG/DEM *reader* is still a per-site adapter; the budget problem it would have created is
+   solved before it lands.
 2. **OSM/vector context extrusion.** Hundreds of buildings, one draw call each unless merged.
    The `CONTEXT_BUILDING` path already makes 2 meshes per building; at 500 buildings that is
    1,000 draw calls against a 400 ceiling. Merge by material before that ships.

@@ -88,12 +88,20 @@ The engine renders scenes; `engine/compile/` makes them.
 |---|---|
 | GeoJSON polygons → local ENU rings (+ area cross-check vs the authority's stated area) | `compile/geo-polygons.mjs` |
 | Scattered elevation samples → interpolated `GRID_SURFACE` (+ its own limitations) | `compile/terrain-interpolation.mjs` |
+| Dense DEM height field → budgeted `GRID_SURFACE` decimated to a triangle ceiling (+ reported RMS/max error) | `compile/height-field.mjs` |
 | Scene envelope, camera framing from real extents, contract enforcement | `compile/scene-assembler.mjs` |
 
 A **site adapter** does the joins only that site's owner can do and calls the assembler.
 `scripts/compile-essence-site-scene.mjs` is the reference one — copy it to start a new site.
 The assembler will not default an evidence class, a source, or a limitation: if a site cannot
 say where an element came from, the scene does not compile.
+
+A **dense DEM** (from a COG, an ASCII grid, or a LiDAR raster — the site adapter reads the bytes)
+goes through `heightFieldToGrid({heights, size, maxTriangles})`, which decimates it to stay under
+a triangle budget and REPORTS the height error that cost, in metres RMS and worst-case. This is
+the answer to the perf budget's named risk: a 1 m DEM over a 360 m site is 259,200 triangles,
+over the Twin ceiling, and decimates to 149,058 — losing 0.7 mm RMS on a smooth surface, and
+saying so in the terrain's own limitations.
 
 ## Measured claims
 

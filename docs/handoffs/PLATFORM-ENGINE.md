@@ -88,6 +88,14 @@ One checkout = one executor. Deliverable-first: every block ends with something 
     `viewer.measure.viewshed()` / `.drawViewshed()`; 19 more known-answer checks in the studies
     gate. On the Essence block from 1.6 m: parcel 21 = 98.7 % open sky, mean horizon 0.74°,
     clear to N/NE/SW/W/NW, derived terrain accounting for 83 % of what blocks it.
+  - **Terrain decimation (`engine/compile/height-field.mjs`)** — the perf budget's single named
+    risk, solved before it lands: a dense DEM → a GRID_SURFACE decimated to a triangle budget,
+    reporting the RMS/max height error the coarsening cost. The 259k-triangle 1 m-DEM case
+    decimates to 149,058 (under the 150k Twin ceiling), losing 0.7 mm RMS on a smooth surface,
+    and the terrain's limitations say so. Gate `engine:heightfield:test`, 29 known-answer checks
+    incl. a curved surface where decimation MUST report nonzero, monotonically shrinking, error.
+    Verified rendering: a synthetic ridge-and-valley DEM decimates and renders at 0.2 ms/frame.
+    The COG/DEM byte reader stays a per-site adapter (same split as the Essence GeoJSON adapter).
   - **NOT done:** Milestone 2's formal exit (Essence consuming the engine *on a branch that has
     both*) is still blocked on D1. Nothing pushed: `git push` was denied in this session;
     commits are local on `agent/platform-engine` in `../repo-platform`.
