@@ -1,28 +1,40 @@
-<!doctype html><meta charset=utf8><title>Villa 4 — two floors</title>
-<style>html,body{margin:0;height:100%;background:#c7d0d2;overflow:hidden}</style>
+<!doctype html><meta charset=utf8><title>Essence villa — from the floorplan</title>
+<style>html,body{margin:0;height:100%;background:#b9c6cf;overflow:hidden;font-family:ui-sans-serif,system-ui,sans-serif}
+#hud{position:fixed;left:14px;top:12px;z-index:9;background:rgba(20,32,36,.8);color:#fff;border-radius:12px;padding:10px 13px;backdrop-filter:blur(8px);max-width:300px}
+#hud .e{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#d9b669}
+#hud h1{font:600 16px/1.15 Georgia,serif;margin:3px 0 4px}#hud p{font-size:11px;opacity:.85;margin:0}
+#pick{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:9;display:flex;gap:6px;background:rgba(20,32,36,.8);padding:7px;border-radius:12px}
+#pick a{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:6px 11px;font-size:12px}
+#pick a.on{background:#e8ddc7;color:#14231d}</style>
+<div id="hud"><div class="e">Product Twin · from floorplan</div><h1 id="ttl">Essence — Villa</h1><p>Built from the architect's plan: real rooms, walls, stairs, two floors.</p></div>
+<div id="pick"></div>
 <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
 <script type="module">
 import * as THREE from 'three';import{OrbitControls}from 'three/addons/controls/OrbitControls.js';
-const scene=new THREE.Scene();scene.background=new THREE.Color(0xc7d0d2);
-const cam=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.1,3000);cam.position.set(24,34,34);
-const R=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});R.setPixelRatio(Math.min(devicePixelRatio,2));R.setSize(innerWidth,innerHeight);R.shadowMap.enabled=true;R.shadowMap.type=THREE.PCFSoftShadowMap;R.outputColorSpace=THREE.SRGBColorSpace;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.05;document.body.append(R.domElement);
-const ctr=new OrbitControls(cam,R.domElement);ctr.enableDamping=true;ctr.target.set(0,3,0);
-scene.add(new THREE.HemisphereLight(0xeef4ff,0x8a9088,1.0));
-const sun=new THREE.DirectionalLight(0xfff0d8,2.6);sun.position.set(28,54,26);sun.castShadow=true;sun.shadow.mapSize.set(4096,4096);sun.shadow.bias=-0.0004;const s=sun.shadow.camera;s.left=-40;s.right=40;s.top=40;s.bottom=-40;s.far=200;scene.add(sun);
 const V=new URLSearchParams(location.search).get('v')||'4';
+document.getElementById('ttl').textContent='Essence — Villa '+V;
+const pick=document.getElementById('pick');['1','2','3','4'].forEach(n=>{const a=document.createElement('a');a.textContent='Villa '+n;a.href='?v='+n;if(n===V)a.className='on';pick.appendChild(a);});
+const scene=new THREE.Scene();
+function skyTex(){const c=document.createElement('canvas');c.width=8;c.height=256;const x=c.getContext('2d');const g=x.createLinearGradient(0,0,0,256);g.addColorStop(0,'#7fb0d6');g.addColorStop(.5,'#a9cadd');g.addColorStop(1,'#e6ede9');x.fillStyle=g;x.fillRect(0,0,8,256);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t;}
+scene.background=skyTex();scene.fog=new THREE.Fog(0xd3dee2,120,320);
+const cam=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.1,3000);cam.position.set(24,30,32);
+const R=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});R.setPixelRatio(Math.min(devicePixelRatio,2));R.setSize(innerWidth,innerHeight);R.shadowMap.enabled=true;R.shadowMap.type=THREE.PCFSoftShadowMap;R.outputColorSpace=THREE.SRGBColorSpace;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.04;document.body.append(R.domElement);
+const skyEq=skyTex();skyEq.mapping=THREE.EquirectangularReflectionMapping;const pmrem=new THREE.PMREMGenerator(R);scene.environment=pmrem.fromEquirectangular(skyEq).texture;
+const ctr=new OrbitControls(cam,R.domElement);ctr.enableDamping=true;ctr.target.set(0,3,0);
+scene.add(new THREE.HemisphereLight(0xeaf3ff,0x74806a,.9));
+const sun=new THREE.DirectionalLight(0xfff1d8,2.7);sun.position.set(30,54,22);sun.castShadow=true;sun.shadow.mapSize.set(4096,4096);sun.shadow.bias=-0.0004;sun.shadow.radius=3;const s=sun.shadow.camera;s.left=-45;s.right=45;s.top=45;s.bottom=-45;s.far=200;scene.add(sun);
+// ground
+const ground=new THREE.Mesh(new THREE.CircleGeometry(120,48),new THREE.MeshStandardMaterial({color:0x8fa075,roughness:1}));ground.rotateX(-Math.PI/2);ground.position.y=-.35;ground.receiveShadow=true;scene.add(ground);
 const D=await (await fetch('v'+V+'floors.json')).json();
 const TL=new THREE.TextureLoader();
-const wallMat=new THREE.MeshStandardMaterial({color:0xeee9df,roughness:.8});
-const slabMat=(t)=>new THREE.MeshStandardMaterial({map:t,roughness:.9});
+const wallMat=new THREE.MeshStandardMaterial({color:0xefe9dd,roughness:.72,envMapIntensity:.5});
 function buildFloor(f,y0,wallH,tex){
  const cs=f.cellsize;
- // floor slab with plan texture
  const t=TL.load(tex);t.colorSpace=THREE.SRGBColorSpace;
- const slab=new THREE.Mesh(new THREE.BoxGeometry(f.texw,.25,f.texh),new THREE.MeshStandardMaterial({color:0xdfdacd,roughness:1}));
- slab.position.set(f.texoffx+f.texw/2,y0-.25,f.texoffy+f.texh/2);slab.receiveShadow=true;scene.add(slab);
+ const slab=new THREE.Mesh(new THREE.BoxGeometry(f.texw,.3,f.texh),new THREE.MeshStandardMaterial({color:0xe6e0d2,roughness:1}));
+ slab.position.set(f.texoffx+f.texw/2,y0-.2,f.texoffy+f.texh/2);slab.receiveShadow=true;slab.castShadow=true;scene.add(slab);
  const plane=new THREE.Mesh(new THREE.PlaneGeometry(f.texw,f.texh),new THREE.MeshStandardMaterial({map:t,roughness:.95}));
  plane.rotation.x=-Math.PI/2;plane.position.set(f.texoffx+f.texw/2,y0+.06,f.texoffy+f.texh/2);scene.add(plane);
- // walls
  const geo=new THREE.BoxGeometry(cs*1.06,wallH,cs*1.06);
  const inst=new THREE.InstancedMesh(geo,wallMat,f.cells.length);inst.castShadow=true;inst.receiveShadow=true;
  const M=new THREE.Matrix4();
@@ -31,9 +43,10 @@ function buildFloor(f,y0,wallH,tex){
 }
 buildFloor(D.baja,0,3.1,'v'+V+'baja.png');
 buildFloor(D.alta,3.4,2.8,'v'+V+'alta.png');
-// thin roof over upper (translucent so you can still see in from above)
-const rf=new THREE.Mesh(new THREE.BoxGeometry(D.alta.texw+1,.3,D.alta.texh+1),new THREE.MeshStandardMaterial({color:0xe7ded0,roughness:.6,transparent:true,opacity:.25}));
-rf.position.set(D.alta.texoffx+D.alta.texw/2,3.4+2.8+.15,D.alta.texoffy+D.alta.texh/2);scene.add(rf);
+// flat roof over upper — solid but liftable via ?roof=off
+const roofOn=new URLSearchParams(location.search).get('roof')!=='off';
+if(roofOn){const rf=new THREE.Mesh(new THREE.BoxGeometry(D.alta.texw+1.2,.35,D.alta.texh+1.2),new THREE.MeshStandardMaterial({color:0xe7ded0,roughness:.55,envMapIntensity:.5,transparent:true,opacity:.35}));
+ rf.position.set(D.alta.texoffx+D.alta.texw/2,3.4+2.8+.18,D.alta.texoffy+D.alta.texh/2);rf.castShadow=true;scene.add(rf);}
 addEventListener('resize',()=>{cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();R.setSize(innerWidth,innerHeight);});
 window.__t={scene,camera:cam,renderer:R,controls:ctr};
 window.snap=(px)=>{const w=px||1200,h=Math.round(w*innerHeight/innerWidth);const o=document.createElement('canvas');o.width=w;o.height=h;R.render(scene,cam);o.getContext('2d').drawImage(R.domElement,0,0,w,h);return o.toDataURL('image/jpeg',.82).split(',')[1];};
