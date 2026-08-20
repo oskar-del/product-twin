@@ -1,0 +1,5 @@
+# Inventory map · Kitchen cabinet systems (international) — v0.1, 2026-08-20
+16 brands researched, source-cited. STRUCTURAL FINDING: premium fitted-kitchen industry is 100% dealer/showroom — no D2C, no affiliate programs anywhere (verified absence, not gap). Commerce revenue in kitchens rides APPLIANCES/taps, not cabinets; cabinet avatars serve design/placement value.
+PRIORITY: Nobilia (P1 — best-in-class public dims PDFs + BIMobject) · bulthaup, Veneta Cucine (Archello BIM confirmed), Valcucine (parametric RFA/IFC via ArchDaily) = P2 · rest P3 (SieMatic/Häcker/Leicht/Schüller/Nolte/Scavolini/Snaidero/Arclinea/Boffi — catalog-gated, thin public data).
+Traps logged: Alno = defunct→Höffner private label by Häcker · Poggenpohl no longer Nobia (Adcuram 2017) · "Rational" kitchens ≠ RATIONAL AG ovens · BIMobject "Boffi" = Fratelli Boffi (different company). bimobject.com 403s bots — snippets-verified only.
+CONCLUSION for factory: Nordic P1 five + Nobilia = the cabinet feedstock; Italians/Germans = later manufacturer-deal lane.

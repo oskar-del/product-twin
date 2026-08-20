@@ -1,0 +1,6 @@
+# Inventory map · Kitchen cabinet systems (Nordic) — v0.1, 2026-08-20
+Research-agent output, source-cited, honesty notes at bottom. Feeds the Avatar Factory pack compiler.
+
+PRIORITY 1 (dims + 3D + route reachable now): IKEA METOD (planning-guide PDFs + own 3D planner; direct sales), Marbodal (Produktfakta PDFs + own BIMobject brand page; Nobia dealer net), Ballingslöv (spec PDF + active BIMobject page + limited e-handel + Bygghemma resale), Vedum (product-guide PDFs + BIMobject page + 220 dealers), HTH (FULL range as 52 BIM objects w/ real specs + own e-shop DK).
+PRIORITY 2: Kvik (manuals-level dims; BIMobject unconfirmed-visually; 165+ franchise stores), Epoq (exclusive via Elgiganten = THE confirmed affiliate angle — Elgiganten live on Awin, also ref'd Adtraction/Partner-Ads), Noremax/Norema (BIMobject page; Power/Byggmakker/Maxbo retail), Puustelli (own BIM library claimed, mm-custom sizing), Sigdal (BIMobject 146 products; dealer-only).
+Caveats: bimobject.com 403s non-browser fetch (snippets-verified); IKEA PDF read via cached text; no first-party cabinet-brand affiliate programs found (retailer-level instead — Elgiganten/Bygghemma). NOT checked: live BIMobject renders, login-gated portals, Adtraction/Awin merchant directories (need publisher login = Oskar).
