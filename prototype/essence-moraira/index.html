@@ -89,34 +89,33 @@ function label(text,x,y,z){const c=document.createElement('canvas');c.width=512;
 // ---- Essence villa: articulated Mediterranean massing ----
 const SEA=new THREE.Vector3(320,0,-360);
 function box(w,h,d,mat,cast=true){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.castShadow=cast;m.receiveShadow=true;return m;}
-function villa(v){const grp=new THREE.Group();const w=v.w,d=v.d,gh=3.3,uh=3.0;
- // plinth
- const pl=box(w+1.4,.7,d+1.4,M.stone);pl.position.y=.35;grp.add(pl);
- // ground volume (cream)
- const g0=box(w,gh,d,M.cream);g0.position.y=.7+gh/2;grp.add(g0);
- // glass facade on sea (+z) side of ground
- const gl=box(w*.86,gh*.86,.18,M.glass,false);gl.position.set(0,.7+gh/2,d/2+.02);grp.add(gl);
- // ground roof slab (overhang)
- const r0=box(w+1.5,.34,d+1.2,M.roof);r0.position.y=.7+gh+.17;grp.add(r0);
- // upper volume (white), set back toward -z, narrower
- const uw=w*.6,ud=d*.72;const g1=box(uw,uh,ud,M.white);g1.position.set(-w*.06,.7+gh+.34+uh/2,-d*.12);grp.add(g1);
- const gl1=box(uw*.8,uh*.7,.16,M.glass,false);gl1.position.set(-w*.06,.7+gh+.34+uh/2,-d*.12+ud/2+.02);grp.add(gl1);
- const r1=box(uw+1.1,.3,ud+1.0,M.roof);r1.position.set(-w*.06,.7+gh+.34+uh+.15,-d*.12);grp.add(r1);
- // stone feature wall on -x side, full height
- const sw=box(.5,gh+uh+1.1,d*.86,M.stone);sw.position.set(-w/2-.2,.7+(gh+uh)/2,0);grp.add(sw);
- // pool + deck on sea side (+z)
- const deck=box(w+2.2,.24,d*.7,M.wood);deck.position.set(0,.62,d/2+d*.42);grp.add(deck);
- const pool=box(w*.62,.42,d*.42,M.water,false);pool.position.set(w*.08,.66,d/2+d*.42);grp.add(pool);
- // stepped basement (sotano) on downhill/front side for villas that have one
- if(v.basement){const bh=2.8;const bs=box(w*.9,bh,d*.5,M.stone);bs.position.set(0,-bh/2+.3,d*.32);grp.add(bs);
-   const bd=box(w+2.6,.22,d*.55,M.wood);bd.position.set(0,.34,d*.62);grp.add(bd);}      // lower terrace deck
- // planting bushes
- for(const[bx,bz]of[[-w/2-1.4,d*.2],[w/2+1.1,-d*.2],[w/2+1.3,d/2+d*.2]]){const bush=new THREE.Mesh(new THREE.SphereGeometry(.9+Math.abs(bx)%1*.5,8,6),M.planta);bush.position.set(bx,1,bz);bush.castShadow=true;grp.add(bush);}
- // place + orient glazed front(+z) toward the view target (per villa)
+const OUT=await (await fetch('outlines.json')).json();
+const rotOverride={V1:0.6,V2:0.2,V3:-0.3,V4:2.2};
+function shapeFrom(o){const sh=new THREE.Shape(); o.forEach((p,i)=>{const x=p[0],y=-p[1]; i?sh.lineTo(x,y):sh.moveTo(x,y);}); sh.closePath(); return sh;}
+function villa(v){const grp=new THREE.Group();const gh=3.4,uh=3.1,H=gh+uh;
+ const rec=OUT[v.id]||{};
+ if(rec.pad){ // terrace / ground pad
+   const ps=shapeFrom(rec.pad); const pg=new THREE.ExtrudeGeometry(ps,{depth:.35,bevelEnabled:false}); pg.rotateX(-Math.PI/2);
+   const pad=new THREE.Mesh(pg,M.stone); pad.position.y=.05; pad.receiveShadow=true; grp.add(pad);
+ }
+ if(rec.building){ // two-storey building on the pad
+   const sh=shapeFrom(rec.building);
+   const g0=new THREE.ExtrudeGeometry(sh,{depth:gh,bevelEnabled:false}); g0.rotateX(-Math.PI/2);
+   const m0=new THREE.Mesh(g0,M.cream); m0.position.y=.35; m0.castShadow=m0.receiveShadow=true; grp.add(m0);
+   // ground-floor ribbon glass band
+   const gb=new THREE.ExtrudeGeometry(sh,{depth:1.5,bevelEnabled:false}); gb.rotateX(-Math.PI/2);
+   const gband=new THREE.Mesh(gb,M.glass); gband.scale.set(1.008,1,1.008); gband.position.y=.35+1.2; grp.add(gband);
+   const rg0=new THREE.ShapeGeometry(sh); rg0.rotateX(-Math.PI/2);
+   const r0=new THREE.Mesh(rg0,M.roof); r0.scale.set(1.06,1,1.06); r0.position.y=.35+gh+.04; grp.add(r0);
+   const g1=new THREE.ExtrudeGeometry(sh,{depth:uh,bevelEnabled:false}); g1.rotateX(-Math.PI/2);
+   const m1=new THREE.Mesh(g1,M.white); m1.scale.set(.88,1,.88); m1.position.y=.35+gh+.28; m1.castShadow=m1.receiveShadow=true; grp.add(m1);
+   const gb1=new THREE.ExtrudeGeometry(sh,{depth:1.3,bevelEnabled:false}); gb1.rotateX(-Math.PI/2);
+   const gband1=new THREE.Mesh(gb1,M.glass); gband1.scale.set(.888,1,.888); gband1.position.y=.35+gh+.28+1.0; grp.add(gband1);
+   const r1=new THREE.Mesh(rg0.clone(),M.roof); r1.scale.set(.94,1,.94); r1.position.y=.35+gh+.28+uh+.04; grp.add(r1);
+ }
  grp.position.set(v.cx,v.base_y,v.cz);
- const fx=(v.face_x!==undefined?v.face_x:SEA.x), fz=(v.face_z!==undefined?v.face_z:SEA.z);
- grp.rotation.y=Math.atan2(fx-v.cx,fz-v.cz);
- scene.add(grp);label(v.id,v.cx,v.base_y+gh+uh+6.5,v.cz);}
+ grp.rotation.y=(rotOverride[v.id]!==undefined?rotOverride[v.id]:Math.atan2(SEA.x-v.cx,SEA.z-v.cz));
+ scene.add(grp); label(v.id,v.cx,v.base_y+H+6.5,v.cz);}
 S.villas.forEach(villa);
 // existing dwelling the villas wrap around (retained; hatched on plan)
 if(S.central_house){const c=S.central_house;const by=sampleY0(c.cx,c.cz);
