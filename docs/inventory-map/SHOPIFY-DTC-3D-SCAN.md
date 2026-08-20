@@ -1,0 +1,4 @@
+# Inventory map · Shopify DTC furniture 3D scan (18 verified) — 2026-08-20
+HEADLINE: only **Frama** (framacph.com) has live Shopify Model3D — real .glb/.usdz + full dims on product pages = immediate census target alongside NORR11/Wendelbo.
+DUAL READING OF THIS LIST: (a) SOURCES — all 18 are Shopify+dims+photos = pack-compiler feedstock (Floyd, Burrow, Blu Dot, Mater, Warm Nordic, Northern, Oakywood, Umage... full dims verified); (b) CUSTOMERS — 15+ Shopify brands with NO 3D = the "we build your 3D + AR + showroom placement" prospect list. Sabai = warm lead (theme ships model-viewer CSS unused).
+REJECTED for storefront route (not Shopify — BIM routes from other sections still apply): Muuto, HAY, Fritz Hansen, &Tradition, Gubi, Bolia, Vipp, Ethnicraft(SAP), HKliving. Unverified: Maiden Home (bot-block), Audo, Ferm Living, OYOY, New Works.
