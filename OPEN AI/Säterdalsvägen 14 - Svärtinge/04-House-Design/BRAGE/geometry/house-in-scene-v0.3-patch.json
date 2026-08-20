@@ -1,0 +1,407 @@
+{
+  "patch_version": "brage-scene-patch/v0.3",
+  "entity_type": "NeighbourhoodScenePatch",
+  "patch_id": "PATCH_SE_SVARTINGE_54_28_VINKELHUSET_V03",
+  "applies_to_scene": "svartinge-neighbourhood-scene/v0.2 (SCENE_SE_NORRKOPING_SVARTINGE_54_28_CONCEPT_V02)",
+  "produces_scene_version": "svartinge-neighbourhood-scene/v0.3",
+  "generated_by": "BRAGE (agent/brage-design)",
+  "intent": "Replace the v0.1 single-box concept house with BRAGE's developed 'Vinkelhuset mot Glan' (L-plan bar + cold north wing, interior walls per room program, placed House Heart, terrace, vindficka). Context, terrain, roads, view and solar elements are UNCHANGED.",
+  "coordinate_system": {
+    "units": "metres",
+    "convention": "scene-v0.2 local frame; South(view)=-Z, East=+X, Y up"
+  },
+  "evidence_policy": {
+    "all_added_geometry_class": "CONCEPT",
+    "note": "No legal/envelope/terrain/access gate is closed. Navigation steps CONCEPT_HOUSE_ON_PLOT -> BUILDING_ORBIT -> ENTER_BUILDING -> ROOM now traverse the developed L, not the v0.1 box."
+  },
+  "keep_unchanged": [
+    "TERRAIN_CONTEXT",
+    "PLOT_54_28",
+    "ADDRESS_LOCATOR",
+    "ROAD_*",
+    "CTX_BLDG_*",
+    "VIEW_GLAN",
+    "SOLAR_PATH",
+    "POI_*"
+  ],
+  "remove_elements": [
+    "HOUSE_SLAB",
+    "HOUSE_WALL_N",
+    "HOUSE_WALL_S",
+    "HOUSE_WALL_E",
+    "HOUSE_WALL_W",
+    "HOUSE_ROOF",
+    "ROOM_LIVING",
+    "ROOM_SERVICE",
+    "WINDOW_GLAN",
+    "DOOR_ENTRY",
+    "SOFA_CONCEPT",
+    "TABLE_CONCEPT"
+  ],
+  "add_elements": [
+    {
+      "id": "HOUSE_BAR",
+      "type": "CONCEPT_BUILDING",
+      "label": "Heated south bar (1.5-plan)",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+        "USER_DIRECTIVE_CONCEPT"
+      ],
+      "geometry": {
+        "primitive": "EXTRUDED_POLYGON",
+        "points_xz": [
+          [
+            -11,
+            -4
+          ],
+          [
+            9,
+            -4
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            -11,
+            3
+          ]
+        ],
+        "base_y": 0.0,
+        "height_m": 3.0
+      },
+      "storeys": "1.5",
+      "roof": "ASYMMETRIC_GABLE_RIDGE_EW",
+      "intended_use": "LIVING_KITCHEN_DINING_MAINBED_plus_UPPER_HALF"
+    },
+    {
+      "id": "HOUSE_WING_N",
+      "type": "CONCEPT_BUILDING",
+      "label": "Cold garage/service wing (north, east end)",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+        "USER_DIRECTIVE_CONCEPT"
+      ],
+      "geometry": {
+        "primitive": "EXTRUDED_POLYGON",
+        "points_xz": [
+          [
+            3,
+            3
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            3,
+            11
+          ]
+        ],
+        "base_y": 0.0,
+        "height_m": 3.0
+      },
+      "storeys": "1",
+      "roof": "MONO_OR_GABLE",
+      "intended_use": "GARAGE_DOUBLE_ENTRY_UTILITY_WC_LAUNDRY"
+    },
+    {
+      "id": "HOUSE_HEART",
+      "type": "SERVICE_CORE",
+      "label": "Prefab wet-service core (House Heart) at the L hinge",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+        "USER_DIRECTIVE_CONCEPT"
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          4.0,
+          1.5,
+          2.0
+        ],
+        "size": [
+          3.0,
+          3.0,
+          3.0
+        ],
+        "rotation_y_deg": 0
+      },
+      "serves": [
+        "kitchen",
+        "main_ensuite",
+        "wing_wc_laundry"
+      ]
+    },
+    {
+      "id": "WALL_INT_LIVING_KITCHEN",
+      "type": "INTERIOR_WALL",
+      "label": "Living | kitchen-dining",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+        "USER_DIRECTIVE_CONCEPT"
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -4.0,
+          1.5,
+          -0.5
+        ],
+        "size": [
+          0.12,
+          3.0,
+          7.0
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "WALL_INT_KITCHEN_HEART",
+      "type": "INTERIOR_WALL",
+      "label": "Kitchen-dining | Heart/main-bed zone",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+        "USER_DIRECTIVE_CONCEPT"
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          2.0,
+          1.5,
+          -0.5
+        ],
+        "size": [
+          0.12,
+          3.0,
+          7.0
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "WALL_INT_HEART_MAINBED",
+      "type": "INTERIOR_WALL",
+      "label": "Heart | main bedroom",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+        "USER_DIRECTIVE_CONCEPT"
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          5.0,
+          1.5,
+          -0.5
+        ],
+        "size": [
+          0.12,
+          3.0,
+          7.0
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "WALL_INT_BAR_WING_SPINE",
+      "type": "INTERIOR_WALL",
+      "label": "Bar/north-wing hall spine",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+        "USER_DIRECTIVE_CONCEPT"
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          4.5,
+          1.5,
+          6.0
+        ],
+        "size": [
+          3.0,
+          3.0,
+          0.12
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "WALL_INT_GARAGE_UTIL",
+      "type": "INTERIOR_WALL",
+      "label": "Garage | entry/utility",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+        "USER_DIRECTIVE_CONCEPT"
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          6.0,
+          1.5,
+          7.0
+        ],
+        "size": [
+          0.15,
+          3.0,
+          8.0
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GLANRUMMET",
+      "type": "ROOM",
+      "label": "Glanrummet — west view/evening room (the one move)",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+        "USER_DIRECTIVE_CONCEPT"
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "position": [
+          -7.5,
+          1.5,
+          -0.5
+        ],
+        "size": [
+          7.0,
+          3.0,
+          7.0
+        ],
+        "rotation_y_deg": 0
+      },
+      "intended_use": "LIVING_VIEW",
+      "feature": "Fully glazed south+west; glazing splayed toward lake (structure stays orthogonal)."
+    },
+    {
+      "id": "TERRACE_SOUTH",
+      "type": "OUTDOOR_DECK",
+      "label": "South terrace (kvällssol)",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+        "USER_DIRECTIVE_CONCEPT"
+      ],
+      "geometry": {
+        "primitive": "EXTRUDED_POLYGON",
+        "points_xz": [
+          [
+            -11,
+            -4
+          ],
+          [
+            6,
+            -4
+          ],
+          [
+            6,
+            -12
+          ],
+          [
+            -11,
+            -12
+          ]
+        ],
+        "thickness_m": 0.15,
+        "top_Y": 0.05
+      }
+    },
+    {
+      "id": "VINDFICKA_SW_0",
+      "type": "WINDBREAK",
+      "label": "SW glazed windbreak + planting (the grafted 'heart')",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02"
+      ],
+      "geometry": {
+        "primitive": "WALL_SEGMENT",
+        "from_xz": [
+          -11,
+          -9
+        ],
+        "to_xz": [
+          -6,
+          -9
+        ],
+        "height_m": 2.0,
+        "thickness_m": 0.12,
+        "material": "GLASS_ON_TIMBER_POSTS"
+      }
+    },
+    {
+      "id": "VINDFICKA_SW_1",
+      "type": "WINDBREAK",
+      "label": "SW glazed windbreak + planting (the grafted 'heart')",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02"
+      ],
+      "geometry": {
+        "primitive": "WALL_SEGMENT",
+        "from_xz": [
+          -11,
+          -9
+        ],
+        "to_xz": [
+          -11,
+          -4
+        ],
+        "height_m": 2.0,
+        "thickness_m": 0.12,
+        "material": "GLASS_ON_TIMBER_POSTS"
+      }
+    },
+    {
+      "id": "OPT_SAUNA_POD",
+      "type": "OPTIONAL_OUTBUILDING",
+      "label": "Optional phase-2 sauna/guest pod by the water (graft from D)",
+      "evidence_class": "CONCEPT_OPTIONAL",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+        "USER_DIRECTIVE_CONCEPT"
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -16,
+          0.55,
+          -13
+        ],
+        "size": [
+          4,
+          3,
+          4
+        ],
+        "rotation_y_deg": 0
+      }
+    }
+  ],
+  "conditional_upgrades": [
+    {
+      "id": "WEST_SOUTERRANG",
+      "condition": "DTM_1M shows south fall >= ~2.5 m across HOUSE_BAR footprint",
+      "effect": "Drop Glanrummet/west social end to a walk-out lower level onto TERRACE_SOUTH; add lower-level slab below Y=0. Do NOT model until DTM closes."
+    }
+  ],
+  "handoff": {
+    "to": "Platform engine (render v0.3) + MIMER (verify vs rules once envelope gate opens)",
+    "open_requests": [
+      "1 m DTM (slope/FFL)",
+      "Glan viewshed per south window"
+    ]
+  }
+}
