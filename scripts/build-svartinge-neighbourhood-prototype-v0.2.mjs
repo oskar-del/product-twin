@@ -14,6 +14,38 @@ const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),"utf8"));
 const sha=p=>crypto.createHash("sha256").update(fs.readFileSync(path.join(root,p))).digest("hex");
 const round=(n,d=4)=>Number(n.toFixed(d));
 
+// Authoritative terrain heightfield derived from the gate-tracked Lantmäteriet 1 m DTM COG.
+const terrainDerived=read(`${base}/terrain-dem-derived-v0.1.json`);
+const HF=terrainDerived.heightfield;
+function terrainY(x,z){
+  const n=HF.segments,step=HF.size_m/n,half=HF.size_m/2;
+  const fx=Math.min(n,Math.max(0,(x+half)/step)),fz=Math.min(n,Math.max(0,(z+half)/step));
+  const ix=Math.min(n-1,Math.floor(fx)),iz=Math.min(n-1,Math.floor(fz)),tx=fx-ix,tz=fz-iz;
+  const at=(cx,cz)=>HF.vertices[cz*(n+1)+cx][1];
+  return round((at(ix,iz)*(1-tx)+at(ix+1,iz)*tx)*(1-tz)+(at(ix,iz+1)*(1-tx)+at(ix+1,iz+1)*tx)*tz,3);
+}
+const CONCEPT_TYPES=new Set(["CONCEPT_BUILDING","ROOM","OPENING","FURNITURE"]);
+// Drape a built scene onto the real terrain: everything gets grounded by the terrain
+// height at its plan position; the rigid concept house/room group shares one offset so it
+// does not distort. Terrain, solar arc and diagrammatic POIs keep their own handling.
+function drapeOnTerrain(elements,navigation){
+  const houseOffset=terrainY(1,1);
+  for(const el of elements){
+    const g=el.geometry;
+    if(el.id==="TERRAIN_CONTEXT")continue;
+    if(CONCEPT_TYPES.has(el.type)){if(g.position)g.position=[g.position[0],round(g.position[1]+houseOffset,3),g.position[2]];continue;}
+    if(g.primitive==="EXTRUDED_POLYGON"){const cx=g.points_xz.reduce((s,p)=>s+p[0],0)/g.points_xz.length,cz=g.points_xz.reduce((s,p)=>s+p[1],0)/g.points_xz.length;g.base_y=round(g.base_y+terrainY(cx,cz),3);continue;}
+    if(g.primitive==="POLYLINE_RIBBON"){g.points=g.points.map(([x,y,z])=>[x,round(y+terrainY(x,z),3),z]);continue;}
+    if(g.primitive==="DIRECTION_CONE"){g.origin=[g.origin[0],round(g.origin[1]+terrainY(g.origin[0],g.origin[2]),3),g.origin[2]];continue;}
+    if(g.position&&(g.primitive==="BOX"||g.primitive==="MARKER"||g.primitive==="DIAGRAMMATIC_MARKER"||g.primitive==="ROOM_VOLUME"))
+      g.position=[g.position[0],round(g.position[1]+terrainY(g.position[0],g.position[2]),3),g.position[2]];
+  }
+  for(const step of navigation){
+    step.camera=[step.camera[0],round(step.camera[1]+terrainY(step.camera[0],step.camera[2]),3),step.camera[2]];
+    step.target=[step.target[0],round(step.target[1]+terrainY(step.target[0],step.target[2]),3),step.target[2]];
+  }
+}
+
 function polygonArea(points){
   let twice=0;
   for(let i=0;i<points.length;i++){
@@ -29,16 +61,9 @@ function scalePolygonToArea(points,targetArea){
 }
 
 function terrainGrid(){
-  const size=360,segments=24,vertices=[];
-  for(let iz=0;iz<=segments;iz++){
-    for(let ix=0;ix<=segments;ix++){
-      const x=-size/2+size*ix/segments;
-      const z=-size/2+size*iz/segments;
-      const y=0.008*x+0.014*z+0.55*Math.sin(x/38)*Math.cos(z/52);
-      vertices.push([round(x),round(y),round(z)]);
-    }
-  }
-  return {size_m:size,segments,vertices,height_reference:"LOCAL_RELATIVE_UNCALIBRATED",method:"Deterministic contextual surface: planar fall plus low-amplitude smoothing; no RH2000 elevation claim."};
+  return {size_m:HF.size_m,segments:HF.segments,vertices:HF.vertices,
+    height_reference:"RH2000_MINUS_LOCATOR_DATUM",
+    method:"Sampled from the gate-tracked Lantmäteriet 1 m DTM COG m650_55.tif (multihash 1220789c… verified); RH2000 heights relative to the pin datum. Reproduce via scripts/derive_svartinge_terrain.py; provenance and coverage in terrain-dem-derived-v0.1.json."};
 }
 
 function element(id,type,label,evidence_class,geometry,source_refs=[],limitations=[]){
@@ -59,7 +84,7 @@ function buildScene(){
   const derivedArea=round(polygonArea(plot),3);
   const elements=[];
 
-  elements.push(element("TERRAIN_CONTEXT","TERRAIN","Derived local terrain context","DERIVED",{primitive:"GRID_SURFACE",...terrainGrid()},["FINDING_SE_HEIGHT_ITEM_AVAILABLE_NOT_FETCHED","RCPT_SE_LISTING_MAP_IMAGE"],["Indicative visual surface only.","No official raster bytes, RH2000 levels, contours, slopes, drainage or finished-floor values."]));
+  elements.push(element("TERRAIN_CONTEXT","TERRAIN","Authoritative local terrain (Lantmäteriet 1 m DTM)","AUTHORITATIVE",{primitive:"GRID_SURFACE",...terrainGrid()},["RCPT_SE_LM_TERRAIN_STAC_ITEM_650_55","RCPT_SE_LISTING_MAP_IMAGE"],["Heights are official RH2000 from the gate-tracked 1 m DTM COG (m650_55.tif), relative to the pin datum; GATE_SE_TERRAIN closed.","Far-east ~16% of the 360 m window is clamped to the tile edge (see coverage_qa in terrain-dem-derived-v0.1.json).","Terrain is authoritative; the plot boundary, access, utilities and finished-floor level remain unproven."]));
   elements.push(element("PLOT_54_28","PLOT","SVÄRTINGE 54:28 indicative municipal-map trace","INDICATIVE",{primitive:"EXTRUDED_POLYGON",points_xz:plot,base_y:0.15,height:0.18,area_m2:derivedArea},["FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED","RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY","RCPT_SE_LISTING_MAP_IMAGE"],["Shape is a derived visual trace scaled to the NOKA municipal-map surface area.","NOKA states that displayed boundaries have no legal effect.","Not suitable for cadastral, setback, area certification or set-out use."]));
   elements.push(element("ADDRESS_LOCATOR","ANCHOR","Säterdalsvägen 14 municipal locator","AUTHORITATIVE",{primitive:"MARKER",position:[0,2.5,0]},["FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"],["Authoritative only as a dated municipal address-to-property observation.","Not a survey control point or property-register title record."]));
 
@@ -104,7 +129,9 @@ function buildScene(){
     {id:"BUILDING_ORBIT",label:"Building orbit",camera:[18,11,17],target:[1,2,1],visible_groups:["PLOT","CONCEPT_BUILDING","OPENING","VIEW_DIRECTION"],cutaway:false},
     {id:"ENTER_BUILDING",label:"Enter building",camera:[-3.5,2.1,0.7],target:[3,1.6,-0.5],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE"],cutaway:true},
     {id:"ROOM",label:"Room",camera:[5.1,1.75,1.1],target:[2.7,1.45,-1.1],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE","VIEW_DIRECTION"],cutaway:true}
-  ].map(step=>({...step,live_context_view:deriveLiveContextView({originWgs84:[lon,lat],camera:step.camera,target:step.target,zoom:liveZoom[step.id]})}));
+  ];
+  drapeOnTerrain(elements,navigation);
+  navigation.forEach(step=>{step.live_context_view=deriveLiveContextView({originWgs84:[lon,lat],camera:step.camera,target:step.target,zoom:liveZoom[step.id]});});
 
   return {
     scene_version:"svartinge-neighbourhood-scene/v0.2",
@@ -112,7 +139,7 @@ function buildScene(){
     scene_id:"SCENE_SE_NORRKOPING_SVARTINGE_54_28_CONCEPT_V02",
     generated_at:"2026-08-18T00:00:00Z",
     subject:{working_property_identity:"SVÄRTINGE 54:28",address:source.identity.address,municipality:"Norrköping",identity_evidence_class:"AUTHORITATIVE",identity_scope:"MUNICIPAL_ADDRESS_TO_PROPERTY_OBSERVATION_NOT_PROPERTY_REGISTER"},
-    coordinate_system:{frame:"LOCAL_ENU",axes:{x:"EAST",y:"UP",z:"NORTH"},origin_wgs84:[lon,lat],horizontal_reference:"EPSG:4326 origin",vertical_reference:"LOCAL_RELATIVE_UNCALIBRATED",linear_units:"metre",evidence_class:"AUTHORITATIVE",limitations:["Origin is a municipal locator, not survey control.","All Y values are relative prototype heights.","Live context uses stage-level camera synchronization; it is not a pixel-aligned survey overlay."]},
+    coordinate_system:{frame:"LOCAL_ENU",axes:{x:"EAST",y:"UP",z:"NORTH"},origin_wgs84:[lon,lat],horizontal_reference:"EPSG:4326 origin",vertical_reference:"RH2000_MINUS_LOCATOR_DATUM",linear_units:"metre",evidence_class:"AUTHORITATIVE",limitations:["Origin is a municipal locator, not survey control.","Terrain Y is authoritative RH2000 relative to the pin datum; context and concept elements are draped onto it.","Live context uses stage-level camera synchronization; it is not a pixel-aligned survey overlay."]},
     source_bindings:[
       {path:sourcePath,sha256:sha(sourcePath),role:"OFFICIAL_AND_CONTEXT_EVIDENCE"},
       {path:projectPath,sha256:sha(projectPath),role:"LISTING_REPORTED_CONTEXT"},

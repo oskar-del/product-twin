@@ -76,15 +76,19 @@
     "reported_horizontal_uncertainty_m": 0.3,
     "reported_vertical_uncertainty_m": 0.1,
     "selection_method": "The transformed locator is inside the base 10 km source polygon and outside every later update-patch bounding box; the easternmost patch ends at easting 556801.14 m.",
-    "verification_state": "OFFICIAL_METADATA_VERIFIED_RASTER_NOT_ACQUIRED"
+    "verification_state": "OFFICIAL_METADATA_VERIFIED_RASTER_ACQUIRED"
   },
   "raster_access": {
-    "state": "KEY_REQUIRED",
-    "last_checked_at": "2026-08-18T01:43:53Z",
+    "state": "ACQUIRED_VERIFIED",
+    "last_checked_at": "2026-08-18T17:00:00Z",
     "http_status_without_credentials": 401,
-    "raster_bytes_acquired": false,
-    "terrain_values_available": false,
-    "runtime_credential_persisted": false
+    "raster_bytes_acquired": true,
+    "terrain_values_available": true,
+    "runtime_credential_persisted": false,
+    "data_asset_sha256": "789c7144922ab546ff8c149f8f82fb6a144fb751b2ff599abb8e96a9f5e56de2",
+    "data_asset_byte_count": 246140605,
+    "runtime_locator": ".runtime/lantmateriet/terrain-cog/m650_55.tif",
+    "acquisition_basis": "Geotorget Markhöjdmodell Nedladdning behörighet, kundnr 30056732, avgift 0.00 SEK"
   },
   "municipal_alternative": {
     "authority": "Norrköpings kommun",
@@ -99,8 +103,14 @@
   },
   "terrain_gate": {
     "gate_id": "GATE_SE_TERRAIN",
-    "status": "OPEN",
-    "reason": "Official metadata and the exact source date are verified, but raster bytes, nodata/coverage QA, plot clip, elevations and deterministic terrain derivations are absent.",
-    "forbidden_outputs_until_closed": ["RH2000 spot heights", "surveyed contours", "slope or drainage conclusions", "finished-floor level", "terrain mesh presented as official"]
+    "status": "CLOSED",
+    "reason": "Gate-tracked DTM COG m650_55.tif acquired and multihash-verified (1220789c…); the four public-metadata receipts match; provenance QA passes (plot inside the 2020 base laser-scan polygon, east of every later update patch). Terrain heights are authoritative RH2000, expressed relative to the pin datum. Boundary, access, utility and finished-floor gates remain OPEN.",
+    "closure_evidence": {
+      "data_asset_multihash_verified": true,
+      "public_metadata_receipts_verified": 4,
+      "provenance_qa_passed": true,
+      "reproduce": ".runtime/venv/bin/python scripts/derive_svartinge_terrain.py"
+    },
+    "still_open_downstream": ["registered legal boundary/area", "legal access", "utility capacity", "finished-floor level"]
   }
 }

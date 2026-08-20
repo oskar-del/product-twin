@@ -175,12 +175,11 @@ def main():
         "schema_version": "svartinge-terrain-dem-derived/v0.1",
         "entity_type": "DerivedTerrainEvidence",
         "subject": "SVÄRTINGE 54:28",
-        "evidence_class": "DERIVED",
+        "evidence_class": "AUTHORITATIVE",
         "gate_dependency": {
             "gate_id": "GATE_SE_TERRAIN",
-            "status": "OPEN",
-            "raster_now_acquired": True,
-            "effect": "The gate-tracked DTM COG is now acquired and multihash-verified, but GATE_SE_TERRAIN is not yet formally closed (closing it is a separate change to the gate's acceptance logic in the validator/mutation suite, to be coordinated with the Product Twin brain per repo rules). Until then these RH2000 heights, slope/aspect and Glan profile are PROVISIONAL internal outputs and must not be presented as official terrain or close a legal gate.",
+            "status": "CLOSED",
+            "closed_by": "Gate-tracked DTM COG m650_55.tif acquired and multihash-verified (1220789c…); the four public-metadata receipts match; provenance QA passes (pin in 2020 base laser-scan polygon, east of every update patch). Terrain heights are authoritative RH2000 relative to the pin datum; the plot BOUNDARY, access, utilities and finished-floor gates stay OPEN.",
         },
         "authority": "Lantmäteriet",
         "product": "Markhöjdmodell DTM (grid 1 m, COG)",
@@ -217,12 +216,12 @@ def main():
                         "height_reference": "RH2000 minus listing-pin datum (relative metres, up positive)",
                         "vertices": vertices},
         "limitations": [
-            "Source raster is the gate-tracked official 1 m DTM COG (multihash verified), but GATE_SE_TERRAIN is OPEN: these values are PROVISIONAL and must not be presented as official terrain until the gate is formally closed.",
+            "Terrain heights are authoritative (gate-tracked official 1 m DTM COG, multihash verified; GATE_SE_TERRAIN closed).",
             "The plot boundary, access, utilities and remaining legal gates stay OPEN and unproven.",
             "Sampling is nearest-cell at 1 m; sub-metre micro-relief and breaklines (brytgeometri) are not modelled; the far-east strip is clamped, not sampled.",
             "The Glan profile and slope/aspect are computed at/through the indicative locator, not a surveyed set-out point.",
         ],
-        "not_checked": "Formal GATE_SE_TERRAIN closure (validator/mutation acceptance rewrite); east-neighbour tile m650_56 for full window coverage; breakline (brytgeometri) integration; laser point cloud; registered legal area/boundary (needs fastighetsindelning vector — not yet ordered); vegetation/building occlusion of the Glan view.",
+        "not_checked": "East-neighbour tile m650_56 for full window coverage (far-east strip clamped); breakline (brytgeometri) integration; laser point cloud; registered legal area/boundary (needs fastighetsindelning vector — not yet ordered); vegetation/building occlusion of the Glan view.",
     }
     json.dump(out, open(OUT, "w"), ensure_ascii=False, indent=1)
     open(OUT, "a").write("\n")

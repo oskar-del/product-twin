@@ -189,13 +189,13 @@ export function validateTerrainSourceMetadata(terrain,{repoRoot=root}={}){
   check(projection.control_error_m<.002&&projection.scope==="Municipal address locator transformation, not survey control","terrain projection control or scope invalid");
   const sourceAtPlot=terrain.source_at_plot??{};exactKeys(sourceAtPlot,["provenance_feature_id","measurement_date","measurement_method","producer","reported_horizontal_uncertainty_m","reported_vertical_uncertainty_m","selection_method","verification_state"],"terrain source at plot",check);
   check(sourceAtPlot.provenance_feature_id==="0"&&sourceAtPlot.measurement_date==="2020-11-20"&&sourceAtPlot.measurement_method==="Luftburen laserskanning","terrain plot-area provenance drift");
-  check(sourceAtPlot.reported_horizontal_uncertainty_m===.3&&sourceAtPlot.reported_vertical_uncertainty_m===.1&&sourceAtPlot.verification_state==="OFFICIAL_METADATA_VERIFIED_RASTER_NOT_ACQUIRED","terrain source uncertainty or verification state drift");
-  const access=terrain.raster_access??{};exactKeys(access,["state","last_checked_at","http_status_without_credentials","raster_bytes_acquired","terrain_values_available","runtime_credential_persisted"],"terrain raster access",check);
-  check(access.state==="KEY_REQUIRED"&&access.http_status_without_credentials===401&&access.raster_bytes_acquired===false&&access.terrain_values_available===false&&access.runtime_credential_persisted===false,"terrain raster access falsely promoted");
+  check(sourceAtPlot.reported_horizontal_uncertainty_m===.3&&sourceAtPlot.reported_vertical_uncertainty_m===.1&&sourceAtPlot.verification_state==="OFFICIAL_METADATA_VERIFIED_RASTER_ACQUIRED","terrain source uncertainty or verification state drift");
+  const access=terrain.raster_access??{};exactKeys(access,["state","last_checked_at","http_status_without_credentials","raster_bytes_acquired","terrain_values_available","runtime_credential_persisted","data_asset_sha256","data_asset_byte_count","runtime_locator","acquisition_basis"],"terrain raster access",check);
+  check(access.state==="ACQUIRED_VERIFIED"&&access.http_status_without_credentials===401&&access.raster_bytes_acquired===true&&access.terrain_values_available===true&&access.runtime_credential_persisted===false&&access.data_asset_sha256===(item.data_asset_multihash||"").slice(4)&&access.data_asset_byte_count===item.data_asset_size_bytes&&/^\.runtime\//.test(access.runtime_locator||""),"terrain raster acquisition unverified or not tied to the tracked asset identity");
   const alternative=terrain.municipal_alternative??{};exactKeys(alternative,["authority","product","document_url","document_date","reported_products","reported_vertical_accuracy_m","exact_plot_coverage","minimum_fee_sek","state"],"municipal terrain alternative",check);
   check(alternative.authority==="Norrköpings kommun"&&alternative.reported_vertical_accuracy_m===.05&&alternative.exact_plot_coverage==="UNKNOWN_REQUIRES_MUNICIPAL_CONFIRMATION"&&alternative.minimum_fee_sek===500&&alternative.state==="DOCUMENTED_NOT_CONNECTED","municipal terrain alternative promoted or changed");
-  const gate=terrain.terrain_gate??{};exactKeys(gate,["gate_id","status","reason","forbidden_outputs_until_closed"],"terrain gate",check);
-  check(gate.gate_id==="GATE_SE_TERRAIN"&&gate.status==="OPEN"&&gate.forbidden_outputs_until_closed?.length>=5,"terrain gate closed or weakened without raster");
+  const gate=terrain.terrain_gate??{};exactKeys(gate,["gate_id","status","reason","closure_evidence","still_open_downstream"],"terrain gate",check);
+  check(gate.gate_id==="GATE_SE_TERRAIN"&&gate.status==="CLOSED"&&gate.closure_evidence?.data_asset_multihash_verified===true&&gate.closure_evidence?.provenance_qa_passed===true&&gate.closure_evidence?.public_metadata_receipts_verified===4&&Array.isArray(gate.still_open_downstream)&&gate.still_open_downstream.length>=3,"terrain gate not properly closed or downstream gates hidden");
   check(!/(api[_-]?key|access[_-]?token|password|connection[_-]?string|client[_-]?secret)\s*[\":=]+\s*[\"']?(?!required|false|null)/i.test(JSON.stringify(terrain)),"terrain metadata contains a possible credential payload");
   return {ok:errors.length===0,assertions,errors};
 }
@@ -209,7 +209,7 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
   check(JSON.stringify(scene.evidence_classes)===JSON.stringify(CLASSES),"evidence class vocabulary drift");
   check(scene.coordinate_system?.frame==="LOCAL_ENU"&&scene.coordinate_system?.linear_units==="metre","coordinate frame or units invalid");
   check(JSON.stringify(scene.coordinate_system?.axes)===JSON.stringify({x:"EAST",y:"UP",z:"NORTH"}),"local axis convention missing or changed");
-  check(scene.coordinate_system?.vertical_reference==="LOCAL_RELATIVE_UNCALIBRATED","vertical reference promoted");
+  check(scene.coordinate_system?.vertical_reference==="RH2000_MINUS_LOCATOR_DATUM","vertical reference invalid");
   check(scene.coordinate_system?.evidence_class==="AUTHORITATIVE","coordinate evidence class drift");
   check(scene.measurements?.municipal_map_area_m2?.evidence_class==="INDICATIVE","municipal area over-promoted");
   check(Math.abs(scene.measurements?.municipal_map_area_m2?.value-1938.1988442902577)<1e-6,"municipal area drift");
@@ -234,7 +234,7 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
   const plot=elements.find(x=>x.id==="PLOT_54_28");check(plot?.evidence_class==="INDICATIVE"&&plot?.geometry?.primitive==="EXTRUDED_POLYGON","plot representation invalid");
   check(Math.abs(polygonArea(plot?.geometry?.points_xz??[])-1938.1988442902577)<.05,"plot trace does not reproduce municipal map area");
   check(plot?.limitations?.some(x=>x.includes("no legal effect")),"plot legal limitation missing");
-  const terrain=elements.find(x=>x.id==="TERRAIN_CONTEXT");check(terrain?.evidence_class==="DERIVED"&&terrain?.geometry?.height_reference==="LOCAL_RELATIVE_UNCALIBRATED","terrain promoted or unlabelled");
+  const terrain=elements.find(x=>x.id==="TERRAIN_CONTEXT");check(terrain?.evidence_class==="AUTHORITATIVE"&&terrain?.geometry?.height_reference==="RH2000_MINUS_LOCATOR_DATUM"&&terrain?.source_refs?.includes("RCPT_SE_LM_TERRAIN_STAC_ITEM_650_55"),"terrain evidence class, height reference or source binding invalid");
   check(elements.filter(x=>x.type==="CONTEXT_BUILDING").length>=10&&elements.filter(x=>x.type==="CONTEXT_BUILDING").every(x=>x.evidence_class==="DERIVED"),"derived context massing incomplete or promoted");
   check(elements.filter(x=>x.type==="ROAD").length>=2&&elements.filter(x=>x.type==="ROAD").every(x=>x.evidence_class==="DERIVED"),"derived road context incomplete or promoted");
   check(elements.filter(x=>["CONCEPT_BUILDING","ROOM","OPENING","FURNITURE"].includes(x.type)).length>=10&&elements.filter(x=>["CONCEPT_BUILDING","ROOM","OPENING","FURNITURE"].includes(x.type)).every(x=>x.evidence_class==="CONCEPT"),"concept building/room geometry missing or promoted");
