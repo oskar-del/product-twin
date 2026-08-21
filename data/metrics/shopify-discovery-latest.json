@@ -1,16 +1,16 @@
 {
-  "fetched_at": "2026-08-18T03:58:10.646Z",
+  "fetched_at": "2026-08-21T04:00:49.590Z",
   "source_id": "shopify_global_catalog",
   "query_count": 122,
-  "unique_candidate_count": 15090,
+  "unique_candidate_count": 15081,
   "by_category": {
     "FFE.SEATING.SOFA": {
       "queries": 3,
-      "returned": 600
+      "returned": 583
     },
     "FFE.SEATING.LOUNGE": {
       "queries": 3,
-      "returned": 600
+      "returned": 599
     },
     "FFE.SEATING.DINING": {
       "queries": 2,
@@ -78,7 +78,7 @@
     },
     "OUTDOOR_FFE.UMBRELLA": {
       "queries": 2,
-      "returned": 400
+      "returned": 399
     },
     "ELECTRICAL.LUMINAIRES.PENDANT": {
       "queries": 3,
@@ -118,7 +118,7 @@
     },
     "KITCHEN.SINKS": {
       "queries": 2,
-      "returned": 200
+      "returned": 196
     },
     "KITCHEN.COOKING": {
       "queries": 2,
@@ -126,7 +126,7 @@
     },
     "KITCHEN.REFRIGERATION": {
       "queries": 2,
-      "returned": 200
+      "returned": 198
     },
     "FINISHES.TILE": {
       "queries": 3,
@@ -214,7 +214,7 @@
     },
     "ENERGY.SOLAR.INVERTER": {
       "queries": 3,
-      "returned": 300
+      "returned": 299
     },
     "ENERGY.SOLAR.MOUNTING": {
       "queries": 2,
@@ -222,7 +222,7 @@
     },
     "ENERGY.BATTERY": {
       "queries": 2,
-      "returned": 200
+      "returned": 196
     }
   },
   "storage_policy": "catalog_payload_ephemeral_not_cached"
