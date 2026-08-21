@@ -4,19 +4,19 @@
  * Split-screen aware: in COMPARE the canvas holds two viewports sharing one camera, so a click
  * must be resolved against the half it landed in or the ray misses by half a screen.
  *
+ * Merged-context aware: context buildings are merged into a few batched geometries for draw-call
+ * efficiency. A hit on a merged mesh is resolved back to its source element via the triangle
+ * index map attached to the mesh by merge-context.mjs.
+ *
  * Browser module: requires WebGL.
  */
 import * as THREE from "three";
+import {resolveContextPick} from "../geometry/merge-context.mjs";
 
-export function createPicker({renderer, camera, targets}) {
+export function createPicker({renderer, camera, targets, sceneElements = []}) {
   const raycaster = new THREE.Raycaster();
   const pointer = new THREE.Vector2();
 
-  /**
-   * @param {PointerEvent} event
-   * @param {boolean} split  true when the canvas is showing two viewports side by side
-   * @returns {object|null}  the scene element under the cursor
-   */
   function pick(event, {split = false} = {}) {
     const rect = renderer.domElement.getBoundingClientRect();
     const x = event.clientX - rect.left;
@@ -31,11 +31,19 @@ export function createPicker({renderer, camera, targets}) {
     camera.aspect = halfWidth / rect.height;
     camera.updateProjectionMatrix();
     raycaster.setFromCamera(pointer, camera);
-    const hit = raycaster.intersectObjects(targets, false).find(candidate => candidate.object.userData.element);
+    const hit = raycaster.intersectObjects(targets, false).find(candidate =>
+      candidate.object.userData.element || candidate.object.userData.mergedContext
+    );
     camera.aspect = previousAspect;
     camera.updateProjectionMatrix();
 
-    return hit ? hit.object.userData.element : null;
+    if (!hit) return null;
+    if (hit.object.userData.element) return hit.object.userData.element;
+    if (hit.object.userData.mergedContext) {
+      const elementId = resolveContextPick(hit);
+      if (elementId) return sceneElements.find(e => e.id === elementId) ?? null;
+    }
+    return null;
   }
 
   return {pick};

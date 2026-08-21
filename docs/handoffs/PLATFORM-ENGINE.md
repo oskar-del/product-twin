@@ -96,6 +96,17 @@ One checkout = one executor. Deliverable-first: every block ends with something 
     incl. a curved surface where decimation MUST report nonzero, monotonically shrinking, error.
     Verified rendering: a synthetic ridge-and-valley DEM decimates and renders at 0.2 ms/frame.
     The COG/DEM byte reader stays a per-site adapter (same split as the Essence GeoJSON adapter).
+  - **OSM context buildings (`engine/compile/osm-buildings.mjs` + `engine/geometry/merge-context.mjs`)**
+    — the perf budget's second named risk (500 buildings × 2 meshes = 1,000 draw calls vs 400
+    ceiling), solved: OSM GeoJSON footprints → projected CONTEXT_BUILDING elements with estimated
+    heights (levels×3 m, height tag, or 7 m default), terrain draping, footprint-area filter, and
+    nearest-to-origin budget cap. Evidence class: REPORTED_UNVERIFIED for every building (OSM is
+    crowd-sourced). The **renderer-side merge** (`merge-context.mjs`) collapses N individual
+    context meshes into ~6–8 batched geometries grouped by material colour, so the GPU draws
+    hundreds of buildings in a handful of calls. Picking preserved: each triangle in the merged
+    geometry is mapped back to its source element, so clicking a context building still opens
+    its inspect panel. Gate `engine:osm:test`, 54 checks across 10 sections. Engine wired: the
+    merge runs automatically after scene build; picking resolves merged hits.
+    Seven suites, 341 checks, all green.
   - **NOT done:** Milestone 2's formal exit (Essence consuming the engine *on a branch that has
-    both*) is still blocked on D1. Nothing pushed: `git push` was denied in this session;
-    commits are local on `agent/platform-engine` in `../repo-platform`.
+    both*) is still blocked on D1. Commits are on `agent/platform-engine` in `../repo-platform`.

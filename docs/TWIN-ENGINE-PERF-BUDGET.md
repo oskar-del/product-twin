@@ -78,9 +78,11 @@ real terrain, OSM context extrusion and viewshed overlays before anything here b
    height error it costs (259,200 → 149,058 triangles, 0.7 mm RMS on a smooth surface). The
    COG/DEM *reader* is still a per-site adapter; the budget problem it would have created is
    solved before it lands.
-2. **OSM/vector context extrusion.** Hundreds of buildings, one draw call each unless merged.
-   The `CONTEXT_BUILDING` path already makes 2 meshes per building; at 500 buildings that is
-   1,000 draw calls against a 400 ceiling. Merge by material before that ships.
+2. **OSM/vector context extrusion.** ~~Hundreds of buildings, one draw call each unless merged.~~
+   **Addressed:** `engine/compile/osm-buildings.mjs` compiles OSM footprints into CONTEXT_BUILDING
+   elements, and `engine/geometry/merge-context.mjs` merges them into ~6–8 batched geometries
+   grouped by material colour. 500 buildings → ~8 draw calls instead of 1,000. Picking preserved
+   via triangle-index mapping. The Overpass/GeoJSON *fetcher* is still a per-site adapter.
 3. **glTF avatars in showrooms.** A single unoptimised manufacturer model can exceed the whole
    Twin triangle budget by itself. This is why Showroom is its own class.
 4. **Shadow map.** One 2048² directional map at ±180 m covers the neighbourhood. A larger site

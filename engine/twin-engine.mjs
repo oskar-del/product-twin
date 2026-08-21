@@ -25,6 +25,7 @@ import {createViewer} from "./core/viewer.mjs";
 import {createPicker} from "./core/picking.mjs";
 import {createSceneBuilder} from "./geometry/primitives.mjs";
 import {createTextureLibrary} from "./geometry/textures.mjs";
+import {mergeContextBuildings} from "./geometry/merge-context.mjs";
 import {sunLightRig, localHourToUtc} from "./studies/sun.mjs";
 import {createGeometryIndex} from "./studies/geometry-queries.mjs";
 import {sightline, sightlineMatrix} from "./studies/sightline.mjs";
@@ -99,6 +100,8 @@ export async function createTwinViewer({
   const materials = createMaterialFactory({realisticPalette});
   const builder = createSceneBuilder({materials, textures});
   const built = builder.build(scene);
+
+  mergeContextBuildings(built.root, built.byId, built.clickable);
 
   const realismDecor = new THREE.Group();
   realismDecor.name = "twin-realism-decor";
@@ -246,7 +249,7 @@ export async function createTwinViewer({
   }
 
   // ── picking ──────────────────────────────────────────────────────────────────────────────
-  const picker = createPicker({renderer: viewer.renderer, camera: viewer.camera, targets: built.clickable});
+  const picker = createPicker({renderer: viewer.renderer, camera: viewer.camera, targets: built.clickable, sceneElements: scene.elements});
   viewer.renderer.domElement.addEventListener("click", event => {
     const element = picker.pick(event, {split: profile === PROFILE_COMPARE});
     if (element) openElement(element);

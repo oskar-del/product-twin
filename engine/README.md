@@ -89,6 +89,7 @@ The engine renders scenes; `engine/compile/` makes them.
 | GeoJSON polygons → local ENU rings (+ area cross-check vs the authority's stated area) | `compile/geo-polygons.mjs` |
 | Scattered elevation samples → interpolated `GRID_SURFACE` (+ its own limitations) | `compile/terrain-interpolation.mjs` |
 | Dense DEM height field → budgeted `GRID_SURFACE` decimated to a triangle ceiling (+ reported RMS/max error) | `compile/height-field.mjs` |
+| OSM building footprints → `CONTEXT_BUILDING` elements (projected, height-estimated, budget-capped, terrain-draped) | `compile/osm-buildings.mjs` |
 | Scene envelope, camera framing from real extents, contract enforcement | `compile/scene-assembler.mjs` |
 
 A **site adapter** does the joins only that site's owner can do and calls the assembler.
@@ -102,6 +103,13 @@ a triangle budget and REPORTS the height error that cost, in metres RMS and wors
 the answer to the perf budget's named risk: a 1 m DEM over a 360 m site is 259,200 triangles,
 over the Twin ceiling, and decimates to 149,058 — losing 0.7 mm RMS on a smooth surface, and
 saying so in the terrain's own limitations.
+
+**OSM context buildings** are compiled by `compileOsmBuildings({features, originWgs84, sourceRefs})`
+from `engine/compile/osm-buildings.mjs`. Heights come from OSM tags (`building:levels` × 3 m, or
+`height`) or default to 7 m; every building is `REPORTED_UNVERIFIED`. At render time,
+`engine/geometry/merge-context.mjs` merges individual context meshes into a few batched geometries
+grouped by material colour — 500 buildings go from ~1,000 draw calls to ~8. Clicking a merged
+building still opens its inspect panel (triangle-index mapping back to the source element).
 
 ## Measured claims
 
@@ -161,5 +169,5 @@ object.
 ## Not in v0.1
 
 SYSTEMS profile · walk camera + glTF avatars · Mapbox live-context layer · availability-status
-colouring · viewshed overlay · terrain COG/DEM loader · OSM/vector extrusion · timeline scrubber.
+colouring · terrain COG/DEM loader · timeline scrubber.
 See `docs/TWIN-ENGINE-AUDIT-2026-08-19.md` §4.
