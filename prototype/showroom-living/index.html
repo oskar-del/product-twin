@@ -20,6 +20,19 @@
   .price .v{font:500 22px/1 Georgia,serif;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.5)}
   .price .note{font-size:9px;color:#e7dcc4;opacity:.8;max-width:210px;margin-top:4px}
   .help{position:absolute;left:26px;bottom:20px;font-size:11px;color:#efe8d7;background:rgba(20,17,12,.5);backdrop-filter:blur(8px);padding:8px 12px;border-radius:999px;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+  @media(max-width:680px){
+    .topline{left:10px;top:10px;max-width:calc(100vw - 20px);padding:8px 10px 8px 8px;gap:10px}
+    .topline .hero{width:64px;height:48px}
+    .topline h1{font-size:16px}
+    .topline .k,.topline .loc,.topline .specs,.topline .lst{font-size:8px}
+    .price{display:none}
+    .help{left:10px;bottom:10px;font-size:10px;padding:6px 10px}
+    .roomtotal{right:10px;bottom:10px;padding:7px 10px}
+    .roomtotal b{font-size:16px}
+    #panel{right:0;bottom:0;left:0;width:auto;border-radius:16px 16px 0 0;max-height:55vh;overflow-y:auto}
+    .rfqbtn{right:10px;bottom:52px;font-size:11px;padding:9px 14px}
+    .modal-card{padding:16px}
+  }
   .roomtotal{position:absolute;right:24px;bottom:20px;background:rgba(20,17,12,.6);backdrop-filter:blur(10px);padding:9px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.1);text-align:right}
   .roomtotal .k{display:block;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#e6c79a}
   .roomtotal b{font:500 20px/1.1 Georgia,serif;color:#fff}
@@ -67,7 +80,7 @@
 <div id="hud">
   <div class="topline"><img class="hero" id="villa-hero" alt="" hidden /><div><div class="k">Product Twin · client preview</div><h1 id="villa-name">Villa</h1><div class="loc" id="villa-loc"></div><div class="specs" id="villa-specs"></div><div class="lst" id="villa-lst"></div></div></div>
   <div class="price"><div class="k">Asking price</div><div class="v" id="villa-price">—</div><div class="note" id="villa-note"></div></div>
-  <div class="help">Drag to look around · scroll to zoom · tap a product</div>
+  <div class="help" id="help-text">Drag to look around · scroll to zoom · tap a product</div>
   <div class="roomtotal" id="roomtotal"><span class="k">Room · furnished total</span><b id="roomtotal-v">—</b><span class="rt-note" id="roomtotal-n"></span></div>
   <aside id="panel"><button class="close" id="close">×</button>
     <div class="small" id="p-src">Product Twin</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
@@ -378,6 +391,22 @@ renderer.domElement.addEventListener('click', ev => {
   if (o) showPanel(o.userData.role);
 });
 
+// touch-tap detection: distinguish tap from drag/pinch on mobile
+let touchStart = null;
+renderer.domElement.addEventListener('touchstart', ev => { if (ev.touches.length === 1) touchStart = { x: ev.touches[0].clientX, y: ev.touches[0].clientY, t: Date.now() }; else touchStart = null; }, { passive: true });
+renderer.domElement.addEventListener('touchend', ev => {
+  if (!touchStart) return;
+  const ch = ev.changedTouches[0]; if (!ch) return;
+  const dx = ch.clientX - touchStart.x, dy = ch.clientY - touchStart.y, dt = Date.now() - touchStart.t;
+  if (Math.hypot(dx, dy) < 12 && dt < 350) {
+    m2.set((ch.clientX / innerWidth) * 2 - 1, -(ch.clientY / innerHeight) * 2 + 1);
+    ray.setFromCamera(m2, camera);
+    let o = ray.intersectObjects(picks, true)[0]?.object; while (o && !o.userData.role) o = o.parent;
+    if (o) showPanel(o.userData.role);
+  }
+  touchStart = null;
+});
+if ('ontouchstart' in window) document.getElementById('help-text').textContent = 'Pinch to zoom · drag to orbit · tap a product';
 addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
 (function animate() { requestAnimationFrame(animate); controls.update(); updateTags(); renderer.render(scene, camera); })();
 </script>
