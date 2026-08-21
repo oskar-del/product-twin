@@ -1,5 +1,23 @@
 # Avatar Factory (Claude) — persistent handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-08-21 (SUPERSEDES everything below; re-read this on every resume/compaction)
+>
+> **You are ACQUISITION-ONLY. You build AVATARS. You are measured in avatars/day, not features.**
+> The showroom surface (prototype/showroom-living — swap UX, mobile, composite, colour) has TRANSFERRED to the Platform & 3D Engine session. **Do NOT work on the showroom app.** If you catch yourself editing the Altea/showroom pitch, STOP — that is drift; it belongs to Platform now.
+>
+> **Your build queue, in order:**
+> 1. **PACK COMPILER** — the missing mass-production station. Script: catalog row (name, brand, article-no, W/D/H, category, photo URLs, price, ean) → G2 avatar spec, using per-category geometry templates generalised from the IKEA residential pack. Envelope-true G2, disclosed, no exact-form claims.
+> 2. **Avatar graph fields** — add `merchant`, `affiliate_link`, `cart_deeplink_capability`, `ean` to the avatar/twin manifest schema (the cart-splitter consumes these).
+> 3. **Furniture Batch 1** — 20 G2 avatars from census merchants (dims+photos), batches of 5, commit+push each. This is TODAY's work, IKEA-independent.
+> 4. **IKEA pipeline** (once program approved — pending Oskar's Adtraction application): ingest IKEA product feed from Adtraction dashboard "Products"/per-program feed (NOT scraping ikea.se — ToS-safe), join dims+images+ean, run pack compiler → G2 avatars at scale, wrap product URLs in the Adtraction tracked link. Target: whole living-room + bedroom IKEA range as tracked shoppable avatars.
+> 5. **Kitchen census** → **appliance pipeline** (EPREL × Icecat × affiliate feeds × BIMobject, EAN-joined, zero-LLM scripts).
+>
+> **Feedstock is ready:** `docs/inventory-map/` on `agent/brain` (~96 brands, START-HERE-TOP20.md, live affiliate rails). Full rationale + commerce/checkout model: `docs/VALUE-STORY-AND-IDEA-LEDGER.md` on `agent/brain` (read the 2026-08-20/21 entries).
+> **Report a NUMBER (total avatars in library) at the end of every work block.** Blockers → one line to Brain immediately.
+> **Hard rule unchanged:** no supplier/manufacturer email ever sent without Oskar's explicit go.
+
+---
+
 Standing session for **Acquisition / Avatar Factory** on `oskar-del/product-twin`.
 
 ## Session facts
