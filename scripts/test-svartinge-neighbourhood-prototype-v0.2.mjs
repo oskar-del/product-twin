@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateArchitecturalHeroViewer,validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validatePlotTerrainViewer,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateArchitecturalComparisonViewer,validateArchitecturalHeroViewer,validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validatePlotTerrainViewer,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
@@ -23,6 +23,7 @@ assert.equal(validateDesignCandidateStudies(designStudiesBaseline,{scene:baselin
 assert.equal(validateVisualAcceptance(visualAcceptanceBaseline,{scene:baseline}).ok,true,"baseline five-view visual acceptance must validate");
 assert.equal(validatePlotTerrainViewer(viewerBaseline).ok,true,"baseline plot terrain study must validate");
 assert.equal(validateArchitecturalHeroViewer(viewerBaseline).ok,true,"baseline architectural hero must validate");
+assert.equal(validateArchitecturalComparisonViewer(viewerBaseline).ok,true,"baseline architectural comparison must validate");
 const terrainFunctionNames=["pointInPolygon","segmentIntersectionParameter","clipSegmentToPlot","contourCellSegments"],terrainFunctionSource=terrainFunctionNames.map(name=>viewerBaseline.split("\n").find(line=>line.startsWith(`function ${name}(`))).join("\n"),terrainFunctions=new Function(`${terrainFunctionSource};return {${terrainFunctionNames.join(",")}}`)(),plotPoints=baseline.elements.find(item=>item.id==="PLOT_54_28").geometry.points_xz,plotBounds=plotPoints.reduce((out,[x,z])=>[Math.min(out[0],x),Math.min(out[1],z),Math.max(out[2],x),Math.max(out[3],z)],[Infinity,Infinity,-Infinity,-Infinity]),displayHeight=(x,z)=>2.2*(.008*x+.014*z+.55*Math.sin(x/38)*Math.cos(z/52)),terrainSamples=[];
 for(let x=Math.floor(plotBounds[0]);x<=Math.ceil(plotBounds[2]);x++)for(let z=Math.floor(plotBounds[1]);z<=Math.ceil(plotBounds[3]);z++)if(terrainFunctions.pointInPolygon(x,z,plotPoints))terrainSamples.push({x,z,h:displayHeight(x,z)});
 for(const [x,z] of plotPoints)terrainSamples.push({x,z,h:displayHeight(x,z)});
@@ -104,6 +105,19 @@ const architecturalHeroViewerAttacks=[
 ];
 for(const [name,mutate,needle] of architecturalHeroViewerAttacks){
   const result=validateArchitecturalHeroViewer(mutate(viewerBaseline));
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+
+const architecturalComparisonViewerAttacks=[
+  ["comparison land lens removed",html=>html.replace('data-lens="LAND"','data-lens="GROUND"'),"architectural comparison lenses missing"],
+  ["comparison land caveat promoted",html=>html.replace("no surveyed level, cut, fill, setback or buildable-envelope claim","surveyed level and buildable envelope verified"),"architectural comparison land lens"],
+  ["comparison living caveat removed",html=>html.replace("view performance remain unverified","view performance verified"),"architectural comparison living lens"],
+  ["comparison review silently selects",html=>html.replace("setActiveCandidate(candidate.candidate_id);setMode('REALISTIC')","sessionSelectedCandidateId=candidate.candidate_id;setMode('REALISTIC')"),"silently selecting a scheme"],
+  ["comparison raycast left binary",html=>html.replace("conceptComparison?3:2","conceptComparison?2:2"),"three synchronized viewports"],
+  ["comparison orbit framing removed",html=>html.replace("THREE ORBITABLE ARCHITECTURAL CONCEPTS","THREE STATIC ARCHITECTURAL CONCEPTS"),"framing, orbitability or performance"]
+];
+for(const [name,mutate,needle] of architecturalComparisonViewerAttacks){
+  const result=validateArchitecturalComparisonViewer(mutate(viewerBaseline));
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
 
@@ -255,4 +269,4 @@ for(const [name,mutate,needle] of visualAcceptanceAttacks){
   const changed=structuredClone(visualAcceptanceBaseline);mutate(changed);const result=validateVisualAcceptance(changed,{scene:baseline});
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+terrainViewerAttacks.length+architecturalHeroViewerAttacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+terrainViewerAttacks.length+architecturalHeroViewerAttacks.length+architecturalComparisonViewerAttacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);
