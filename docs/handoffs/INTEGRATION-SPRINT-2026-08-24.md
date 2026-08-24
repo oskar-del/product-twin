@@ -56,8 +56,9 @@ The room study discloses that:
 
 - Scene compiler: `scripts/build-svartinge-brage-integrated-scene.mjs`
 - Scene: `data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-brage-v0.3.json`
-- Svärtinge composition: `data/showrooms/svartinge-glanrummet-living-room-v0.2.json`
-- Room/commerce handoff: `data/integration/svartinge-glanrummet-commerce-v0.2.json`
+- Svärtinge composition: `data/showrooms/svartinge-glanrummet-living-room-v0.3.json`
+- Visual QA contract: `data/showrooms/svartinge-glanrummet-visual-qa-v0.1.json`
+- Room/commerce handoff: `data/integration/svartinge-glanrummet-commerce-v0.3.json`
 - Runtime asset validator: `scripts/validate-native-3d-showcase-runtime.mjs`
 - Final scripted vote: `scripts/gate-integration-sprint.sh`
 
@@ -83,7 +84,7 @@ Key checks:
 - Procurement structural and mutation gates passed.
 - The `--current` commerce check is expected to fail with exactly 9 stale observations; the final gate fails if stale commerce is ever accepted as current.
 
-No controlled-browser visual QA is claimed in this environment. A self-contained engine artifact was successfully generated at ignored path `dist/twins/svartinge-brage-v0.3.html` (823 KB, zero runtime network requests), but that bundle does not include rights-restricted furniture GLBs.
+The v0.3 room adds a deterministic visual QA contract: three fixed 1440 × 960 views, zero tolerated runtime asset failures, 24 px tag-safe margins, seeded procedural textures, a 100 mm room-boundary clearance, zero solid-product collisions, quantitative fixed-view frustum limits, and a mandatory human pixel review before publication. `npm run site:sweden:svartinge:visual:plan` produces a deterministic plan that can be checked without Chrome; `npm run site:sweden:svartinge:visual:capture` captures the actual hero, conversation and wide WebGL views on a host with Chrome and the ignored runtime GLBs. This container has no Chrome executable and its cloud browser cannot reach the loopback preview, so the new 3D captures remain `PENDING` and publication remains blocked. A self-contained engine artifact was successfully generated at ignored path `dist/twins/svartinge-brage-v0.3.html` (823 KB, zero runtime network requests), but that bundle does not include rights-restricted furniture GLBs.
 
 ## Independent review repair
 
@@ -99,6 +100,20 @@ The first independent review found one user-facing context leak that the origina
 - fails the BRAGE integration test if these Svärtinge-specific guards disappear.
 
 The cloud browser cannot reach the container-local preview (`ERR_BLOCKED_BY_CLIENT`), so this repair has deterministic coverage but still requires a real visual interaction pass on a reachable preview or local Mac browser before promotion.
+
+## Visual QA revision v0.3
+
+The first user-visible v0.2 screenshot exposed defects that the structural gate could not see: the right-hand chair was cropped, framed art overlapped the concept window, the table and rug washed out as white placeholders, the rug orientation weakened the seating group, and the plank contrast competed with the furniture. The v0.3 composition corrects those items without changing product identity, geometry level, rights, offer or procurement claims. Earlier v0.2 manifests remain preserved.
+
+Run the pixel gate on macOS from the repository root after resolving the runtime GLBs:
+
+```sh
+npm run site:sweden:svartinge:visual:capture
+```
+
+Review all three images in `.runtime/visual-qa/svartinge-glanrummet-v0.3/`. A successful capture is still not approval: the run report deliberately remains `CAPTURED_AWAITING_HUMAN_PIXEL_REVIEW` and `BLOCK` until a reviewer inspects the pixels.
+
+The capture gate deletes the exact versioned output directory before every run, checks readiness and captures pixels through one Chrome DevTools session, and hashes the manifests, viewer, capture code, local Three.js runtime and runtime GLBs into the report. The viewer and Node gate execute the same versioned portrait-framing function. `npm run site:sweden:svartinge:visual:test` exercises the CDP readiness-to-pixel sequence with a runtime mock and applies 15 negative mutations, including the earlier day-bed wall breach, collisions, white placeholder surfaces, incorrect portrait FOV selection, split-session capture, deferred stale-output cleanup, missing renderer hashes and missing input hashes.
 
 ## Claims still blocked
 

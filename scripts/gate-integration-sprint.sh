@@ -27,6 +27,8 @@ node scripts/test-svartinge-geographic-alignment.mjs
 
 node scripts/build-svartinge-brage-integrated-scene.mjs
 node scripts/test-svartinge-brage-integrated-scene.mjs
+node scripts/validate-svartinge-glanrummet-visual-qa.mjs
+node scripts/test-svartinge-glanrummet-visual-qa.mjs
 node scripts/validate-design-asset-review.mjs
 node scripts/validate-native-3d-showcase-runtime.mjs
 node scripts/test-native-3d-showcase-runtime.mjs

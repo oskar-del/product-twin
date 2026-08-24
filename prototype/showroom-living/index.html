@@ -94,12 +94,20 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { fitSphereDistance } from './visual-framing.mjs';
 
-const contextId = new URLSearchParams(location.search).get('context');
+const query = new URLSearchParams(location.search);
+const contextId = query.get('context');
 const isSvartingeStudy = contextId === 'svartinge-glanrummet';
+const visualQaMode = isSvartingeStudy && query.get('qa') === '1';
+const visualQaViewId = visualQaMode ? (query.get('view') || 'hero') : null;
+document.documentElement.dataset.visualQaState = visualQaMode ? 'loading' : 'interactive';
 const base_scene_data = await fetch('../../data/showrooms/norr11-marbella-living-room-v0.1.json', { cache: 'no-store' }).then(r => r.json());
 const context_scene_data = isSvartingeStudy
-  ? await fetch('../../data/showrooms/svartinge-glanrummet-living-room-v0.2.json', { cache: 'no-store' }).then(r => r.json())
+  ? await fetch('../../data/showrooms/svartinge-glanrummet-living-room-v0.3.json', { cache: 'no-store' }).then(r => r.json())
+  : null;
+const visual_qa_data = visualQaMode
+  ? await fetch('../../data/showrooms/svartinge-glanrummet-visual-qa-v0.1.json', { cache: 'no-store' }).then(r => r.json())
   : null;
 const scene_data = context_scene_data ? {
   ...base_scene_data,
@@ -115,6 +123,7 @@ const scene_data = context_scene_data ? {
   swap_alternates: base_scene_data.swap_alternates
 } : base_scene_data;
 const property = scene_data.property || { name: 'Villa (placeholder)', location: 'Spain', price_display: '—', note: '' };
+const visualQaView = visual_qa_data?.views.find(view => view.id === visualQaViewId) || visual_qa_data?.views[0] || null;
 if (isSvartingeStudy) document.title = 'Glanrummet furniture study · Product Twin';
 if (isSvartingeStudy) {
   document.getElementById('property-price-label').textContent = 'Status';
@@ -133,8 +142,8 @@ document.getElementById('villa-lst').textContent = property.reference ? `H&H · 
 document.getElementById('villa-note').textContent = property.reference ? 'real for-sale listing · refresh before use' : (property.note || '');
 if (property.hero_image) { const h = document.getElementById('villa-hero'); h.src = '../../' + property.hero_image; h.hidden = false; }
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: visualQaMode });
+renderer.setPixelRatio(visualQaMode ? 1 : Math.min(devicePixelRatio, 2));
 renderer.setSize(innerWidth, innerHeight);
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = isSvartingeStudy ? 0.82 : 1.08;
@@ -154,18 +163,28 @@ const [RW, RH, RD] = scene_data.room.size_m;
 // Room spans z = +1 (open front) to z = -(RD-1) (back wall); x = -RW/2 .. RW/2.
 const BACK_Z = -(RD - 1);
 const CENTER_Z = (1 + BACK_Z) / 2;
-const camera = new THREE.PerspectiveCamera(scene_data.camera?.fov_deg || 50, innerWidth / innerHeight, 0.05, 200);
-camera.position.set(...(scene_data.camera?.position_m || [3.15, 1.42, 3.0]));
+const camera = new THREE.PerspectiveCamera(visualQaView?.fov_deg || scene_data.camera?.fov_deg || 50, innerWidth / innerHeight, 0.05, 200);
+camera.position.set(...(visualQaView?.camera_position_m || scene_data.camera?.position_m || [3.15, 1.42, 3.0]));
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.target.set(...(scene_data.camera?.target_m || [-0.2, 0.5, -3.0]));
+controls.target.set(...(visualQaView?.target_m || scene_data.camera?.target_m || [-0.2, 0.5, -3.0]));
 controls.enableDamping = true; controls.dampingFactor = 0.08;
-controls.maxPolarAngle = Math.PI / 2 - 0.03; controls.minDistance = 2.4; controls.maxDistance = 12;
+controls.maxPolarAngle = Math.PI / 2 - 0.03; controls.minDistance = 2.4; controls.maxDistance = 24;
+controls.enabled = !visualQaMode;
+const defaultCameraPosition = camera.position.clone();
+const defaultCameraTarget = controls.target.clone();
+let userAdjustedCamera = false;
+controls.addEventListener('start', () => { if (!visualQaMode) userAdjustedCamera = true; });
 
 // ---- procedural textures (no external assets) ----
 function makeCanvas(w, h, draw) { const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; }
+let textureSeed = visual_qa_data?.texture_seed || 1729;
+function deterministicRandom() {
+  textureSeed = (textureSeed * 1664525 + 1013904223) >>> 0;
+  return textureSeed / 4294967296;
+}
 const oakTex = makeCanvas(1024, 1024, (x, w, h) => {
   const planks = isSvartingeStudy
-    ? ['#a78261', '#9a7454', '#ad8967', '#a17a59', '#b08d6b', '#987151', '#aa8360', '#a47c59']
+    ? ['#a98262', '#a37b5c', '#ac8565', '#a57e5f', '#ae8767', '#a17959', '#aa8262', '#a67e5e']
     : ['#b48a5b', '#a77d50', '#bd9365', '#ad8154', '#c09769', '#a4774d', '#b88d5e', '#ae8255'];
   x.fillStyle = planks[0]; x.fillRect(0, 0, w, h);
   for (let i = 0; i < 8; i++) {
@@ -173,16 +192,16 @@ const oakTex = makeCanvas(1024, 1024, (x, w, h) => {
     for (let g = 0; g < 34; g++) {
       const phase = Math.sin((i + 1) * 31 + g * 17);
       const gy = y + ((phase + 1) / 2) * h / 8;
-      x.strokeStyle = `rgba(75,52,34,${0.035 + ((g % 5) * 0.008)})`;
+      x.strokeStyle = `rgba(75,52,34,${0.024 + ((g % 5) * 0.005)})`;
       x.beginPath(); x.moveTo(0, gy); x.bezierCurveTo(w / 3, gy + phase * 7, 2 * w / 3, gy - phase * 5, w, gy); x.stroke();
     }
   }
 });
-oakTex.wrapS = oakTex.wrapT = THREE.RepeatWrapping; oakTex.repeat.set(4, 4);
-const plasterTex = makeCanvas(512, 512, (x, w, h) => { x.fillStyle = isSvartingeStudy ? '#d8d3ca' : '#efe7d8'; x.fillRect(0, 0, w, h); for (let i = 0; i < 9000; i++) { x.fillStyle = isSvartingeStudy ? `rgba(115,110,101,${Math.random() * 0.035})` : `rgba(${200 + Math.random() * 40},${190 + Math.random() * 30},${170},${Math.random() * 0.05})`; x.fillRect(Math.random() * w, Math.random() * h, 2, 2); } });
+oakTex.wrapS = oakTex.wrapT = THREE.RepeatWrapping; oakTex.repeat.set(isSvartingeStudy ? 3 : 4, isSvartingeStudy ? 3 : 4);
+const plasterTex = makeCanvas(512, 512, (x, w, h) => { x.fillStyle = isSvartingeStudy ? '#d8d3ca' : '#efe7d8'; x.fillRect(0, 0, w, h); for (let i = 0; i < 9000; i++) { x.fillStyle = isSvartingeStudy ? `rgba(115,110,101,${deterministicRandom() * 0.035})` : `rgba(${200 + deterministicRandom() * 40},${190 + deterministicRandom() * 30},${170},${deterministicRandom() * 0.05})`; x.fillRect(deterministicRandom() * w, deterministicRandom() * h, 2, 2); } });
 plasterTex.wrapS = plasterTex.wrapT = THREE.RepeatWrapping; plasterTex.repeat.set(3, 2);
 
-const floorMat = new THREE.MeshStandardMaterial({ map: oakTex, roughness: 0.62, metalness: 0 });
+const floorMat = new THREE.MeshStandardMaterial({ map: oakTex, roughness: isSvartingeStudy ? 0.74 : 0.62, metalness: 0 });
 const wallMat = new THREE.MeshStandardMaterial({ map: plasterTex, roughness: 0.95 });
 const ceilMat = new THREE.MeshStandardMaterial({ color: 0xf3ede1, roughness: 1 });
 
@@ -207,14 +226,14 @@ const view = makeCanvas(1024, 512, (x, w, h) => {
     x.fillStyle = '#314b3b'; x.beginPath(); x.moveTo(0, h * 0.51);
     for (let px = 0; px <= w; px += 18) { const crown = h * (0.43 + Math.sin(px * 0.031) * 0.018 + Math.sin(px * 0.009) * 0.025); x.lineTo(px, crown); }
     x.lineTo(w, h * 0.57); x.lineTo(0, h * 0.57); x.closePath(); x.fill();
-    x.fillStyle = 'rgba(224,228,215,.28)'; for (let i = 0; i < 24; i++) x.fillRect(Math.random() * w, h * 0.61 + Math.random() * h * 0.3, 35 + Math.random() * 95, 1.2);
+    x.fillStyle = 'rgba(224,228,215,.28)'; for (let i = 0; i < 24; i++) x.fillRect(deterministicRandom() * w, h * 0.61 + deterministicRandom() * h * 0.3, 35 + deterministicRandom() * 95, 1.2);
   } else {
     g.addColorStop(0, '#cfe0e6'); g.addColorStop(0.32, '#f0e2cf'); g.addColorStop(0.5, '#f6ddbf'); g.addColorStop(0.52, '#7ba7c0'); g.addColorStop(1, '#3d7ea0');
     x.fillStyle = g; x.fillRect(0, 0, w, h);
     x.fillStyle = 'rgba(96,110,120,.55)'; x.beginPath(); x.moveTo(0, h * 0.52);
     x.bezierCurveTo(w * 0.18, h * 0.36, w * 0.32, h * 0.34, w * 0.46, h * 0.5); x.lineTo(w * 0.46, h * 0.53); x.lineTo(0, h * 0.53); x.closePath(); x.fill();
-    x.fillStyle = 'rgba(255,238,205,.6)'; for (let i = 0; i < 60; i++) x.fillRect(w * 0.5 + Math.random() * w * 0.45, h * 0.5 + Math.random() * 3, 2, 2);
-    x.fillStyle = 'rgba(255,255,255,.45)'; for (let i = 0; i < 26; i++) x.fillRect(Math.random() * w, h * 0.6 + Math.random() * h * 0.35, 40 + Math.random() * 90, 1.4);
+    x.fillStyle = 'rgba(255,238,205,.6)'; for (let i = 0; i < 60; i++) x.fillRect(w * 0.5 + deterministicRandom() * w * 0.45, h * 0.5 + deterministicRandom() * 3, 2, 2);
+    x.fillStyle = 'rgba(255,255,255,.45)'; for (let i = 0; i < 26; i++) x.fillRect(deterministicRandom() * w, h * 0.6 + deterministicRandom() * h * 0.35, 40 + deterministicRandom() * 90, 1.4);
   }
 });
 const windowPane = new THREE.Mesh(new THREE.PlaneGeometry(RW * 0.64, RH * 0.66), new THREE.MeshBasicMaterial({ map: view }));
@@ -240,8 +259,8 @@ const bounce = new THREE.PointLight(0xffe4b8, isSvartingeStudy ? 0.28 : 0.5, 18)
   pot.position.set(px, 0.2, pz); pot.castShadow = pot.receiveShadow = true; scene.add(pot);
   const foliage = new THREE.MeshStandardMaterial({ color: 0x5f7d4f, roughness: 0.85, flatShading: true });
   for (let i = 0; i < 5; i++) { const leaf = new THREE.Mesh(new THREE.ConeGeometry(0.16, 0.9, 5), foliage); leaf.position.set(px + (Math.sin(i) * 0.12), 0.85 + i * 0.04, pz + Math.cos(i) * 0.12); leaf.rotation.z = (i - 2) * 0.28; leaf.castShadow = true; scene.add(leaf); }
-})(RW / 2 - 0.7, BACK_Z + 0.9);
-(function art(ax) {
+})(RW / 2 - 0.55, BACK_Z + 0.55);
+if (!isSvartingeStudy) (function art(ax) {
   const frame = new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.95, 0.05), new THREE.MeshStandardMaterial({ color: 0x2a2723, roughness: 0.5, metalness: 0.3 }));
   frame.position.set(ax, 1.55, BACK_Z + 0.09); scene.add(frame);
   const artTex = makeCanvas(512, 340, (x, w, h) => { const g = x.createLinearGradient(0, 0, w, h); g.addColorStop(0, '#c98f5a'); g.addColorStop(0.5, '#e7c79a'); g.addColorStop(1, '#8a5a3a'); x.fillStyle = g; x.fillRect(0, 0, w, h); x.strokeStyle = 'rgba(255,255,255,.25)'; for (let i = 0; i < 6; i++) { x.beginPath(); x.moveTo(0, h * (0.3 + i * 0.1)); x.bezierCurveTo(w / 3, h * (0.2 + i * 0.1), 2 * w / 3, h * (0.4 + i * 0.1), w, h * (0.3 + i * 0.1)); x.stroke(); } });
@@ -296,6 +315,19 @@ const loader = new GLTFLoader();
 const picks = [];
 const tagEls = [];
 let loaded = 0;
+let assetLoadsCompleted = 0;
+const assetLoadFailures = [];
+const projectedTagPosition = new THREE.Vector3();
+
+function updateTags() {
+  for (const { el, anchor } of tagEls) {
+    projectedTagPosition.copy(anchor).project(camera);
+    const behind = projectedTagPosition.z > 1;
+    el.style.display = behind ? 'none' : 'block';
+    el.style.left = (projectedTagPosition.x * 0.5 + 0.5) * innerWidth + 'px';
+    el.style.top = (-projectedTagPosition.y * 0.5 + 0.5) * innerHeight + 'px';
+  }
+}
 
 function placeProduct(root, p) {
   const box = new THREE.Box3().setFromObject(root); const size = new THREE.Vector3(); box.getSize(size);
@@ -328,6 +360,7 @@ for (const [role, g] of cyclesByRole) {
       root.visible = i === 0;
       g.roots.set(i, { root, size });
       picks.push(root);
+      assetLoadsCompleted++;
       if (i === 0) {
         if (size.y > 0.12) contactShadow(product.placement.position_m[0], product.placement.position_m[2], Math.max(size.x, size.z) * 1.25, Math.max(size.x, size.z) * 1.25);
         const anchor = new THREE.Vector3(product.placement.position_m[0], Math.max(size.y * 0.9, 0.35), product.placement.position_m[2]);
@@ -337,11 +370,69 @@ for (const [role, g] of cyclesByRole) {
         tagEls.push({ el, anchor });
         loaded++;
       }
-    } catch (e) { console.error('load failed', product.twin_id, e); }
+    } catch (e) { assetLoadFailures.push(product.twin_id); console.error('load failed', product.twin_id, e); }
   }
 }
 
 document.getElementById('loading').style.display = 'none';
+function frameCompositionForAspect() {
+  if (!isSvartingeStudy || visualQaMode || userAdjustedCamera) return;
+  const framing = scene_data.responsive_framing || {};
+  const fitBelowAspect = framing.fit_below_aspect_ratio || 1.45;
+  if (camera.aspect >= fitBelowAspect) {
+    camera.position.copy(defaultCameraPosition);
+    controls.target.copy(defaultCameraTarget);
+    camera.fov = scene_data.camera?.fov_deg || 49;
+    camera.updateProjectionMatrix();
+    controls.update();
+    return;
+  }
+  const compositionBounds = new THREE.Box3();
+  for (const group of cyclesByRole.values()) {
+    const active = group.roots.get(group.index)?.root;
+    if (active?.visible) compositionBounds.expandByObject(active);
+  }
+  if (compositionBounds.isEmpty()) return;
+  const sphere = compositionBounds.getBoundingSphere(new THREE.Sphere());
+  const fitMargin = framing.camera_fit_margin || 1.12;
+  controls.maxDistance = framing.maximum_camera_distance_m || 24;
+  const distance = Math.min(controls.maxDistance, fitSphereDistance({radius: sphere.radius, verticalFovDeg: camera.fov, aspect: camera.aspect, margin: fitMargin}));
+  const direction = defaultCameraPosition.clone().sub(defaultCameraTarget).normalize();
+  controls.target.copy(sphere.center);
+  camera.position.copy(sphere.center).addScaledVector(direction, distance);
+  camera.updateProjectionMatrix();
+  controls.update();
+}
+frameCompositionForAspect();
+if (visualQaMode) {
+  const expectedProducts = cyclesByRole.size;
+  const expectedAssets = [...cyclesByRole.values()].reduce((sum, group) => sum + group.cycle.length, 0);
+  controls.update();
+  camera.updateMatrixWorld();
+  updateTags();
+  const tagRects = tagEls.map(({ el }) => el.getBoundingClientRect());
+  const margin = visual_qa_data.acceptance.safe_frame_margin_px;
+  const clippedTags = tagRects.filter(rect => rect.left < margin || rect.top < margin || rect.right > innerWidth - margin || rect.bottom > innerHeight - margin).length;
+  const ready = loaded === expectedProducts && assetLoadsCompleted === expectedAssets && assetLoadFailures.length === 0 && clippedTags === 0;
+  document.documentElement.dataset.visualQaState = ready ? 'ready' : 'failed';
+  document.documentElement.dataset.visualQaView = visualQaView?.id || 'unknown';
+  document.documentElement.dataset.visualQaLoaded = String(loaded);
+  document.documentElement.dataset.visualQaExpected = String(expectedProducts);
+  document.documentElement.dataset.visualQaAssetsLoaded = String(assetLoadsCompleted);
+  document.documentElement.dataset.visualQaAssetsExpected = String(expectedAssets);
+  document.documentElement.dataset.visualQaFailures = String(assetLoadFailures.length);
+  document.documentElement.dataset.visualQaClippedTags = String(clippedTags);
+  window.__PRODUCT_TWIN_VISUAL_QA__ = {
+    state: ready ? 'ready' : 'failed',
+    view: visualQaView?.id || null,
+    loaded,
+    expectedProducts,
+    assetLoadsCompleted,
+    expectedAssets,
+    assetLoadFailures: [...assetLoadFailures],
+    clippedTags
+  };
+}
 
 const money = (v, cur) => new Intl.NumberFormat(undefined, {
   style: 'currency', currency: cur, maximumFractionDigits: Number(v) % 1 ? 2 : 0
@@ -444,16 +535,6 @@ document.getElementById('rfq-copy').onclick = async () => { try { await navigato
 document.getElementById('rfq-print').onclick = () => window.print();
 
 // project tags to screen each frame
-const v = new THREE.Vector3();
-function updateTags() {
-  for (const { el, anchor } of tagEls) {
-    v.copy(anchor).project(camera);
-    const behind = v.z > 1;
-    el.style.display = behind ? 'none' : 'block';
-    el.style.left = (v.x * 0.5 + 0.5) * innerWidth + 'px';
-    el.style.top = (-v.y * 0.5 + 0.5) * innerHeight + 'px';
-  }
-}
 // click products directly too
 const ray = new THREE.Raycaster(); const m2 = new THREE.Vector2();
 renderer.domElement.addEventListener('click', ev => {
@@ -463,7 +544,7 @@ renderer.domElement.addEventListener('click', ev => {
   if (o) showPanel(o.userData.role);
 });
 
-addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
+addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); frameCompositionForAspect(); });
 (function animate() { requestAnimationFrame(animate); controls.update(); updateTags(); renderer.render(scene, camera); })();
 </script>
 </body>

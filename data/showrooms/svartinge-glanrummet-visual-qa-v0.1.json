@@ -1,0 +1,64 @@
+{
+  "version": "showroom-visual-qa/v0.1",
+  "qa_id": "SVARTINGE_GLANRUMMET_VISUAL_QA_V01",
+  "composition_manifest": "data/showrooms/svartinge-glanrummet-living-room-v0.3.json",
+  "viewport": {"width_px": 1440, "height_px": 960, "device_scale_factor": 1},
+  "texture_seed": 1729,
+  "views": [
+    {
+      "id": "hero",
+      "label": "Complete seating composition",
+      "camera_position_m": [4.5, 1.65, 4.45],
+      "target_m": [0.0, 0.68, -3.35],
+      "fov_deg": 49
+    },
+    {
+      "id": "conversation",
+      "label": "Eye-level seating relationships",
+      "camera_position_m": [-4.75, 1.45, 2.35],
+      "target_m": [0.0, 0.64, -3.25],
+      "fov_deg": 50
+    },
+    {
+      "id": "wide",
+      "label": "Elevated full-room coverage",
+      "camera_position_m": [4.4, 4.65, 5.35],
+      "target_m": [0.0, 0.15, -3.15],
+      "fov_deg": 52
+    }
+  ],
+  "product_footprints_m": {
+    "hero_sofa": [1.967305, 0.775764],
+    "lounge_chair": [0.680861, 0.77577],
+    "day_bed": [0.843816, 2.009066],
+    "accent_chair": [0.786998, 0.803868],
+    "rug": [1.33, 1.95],
+    "coffee_table": [1.4, 0.6],
+    "floor_lamp": [0.62, 0.62]
+  },
+  "product_heights_m": {
+    "hero_sofa": 0.768128,
+    "lounge_chair": 0.767608,
+    "day_bed": 0.505297,
+    "accent_chair": 0.77,
+    "rug": 0.013,
+    "coffee_table": 0.37,
+    "floor_lamp": 1.51
+  },
+  "acceptance": {
+    "placed_product_count": 7,
+    "runtime_asset_load_failures_allowed": 0,
+    "minimum_fixed_views": 3,
+    "safe_frame_margin_px": 24,
+    "minimum_wall_clearance_m": 0.1,
+    "solid_product_collision_count_allowed": 0,
+    "minimum_supported_aspect_ratio": 0.5625,
+    "fixed_view_frustum_ndc_limit": 0.9,
+    "deterministic_procedural_textures_required": true,
+    "same_browser_readiness_and_capture_required": true,
+    "capture_input_hashes_required": true,
+    "stale_capture_cleanup_required": true,
+    "human_pixel_review_required_before_publication": true,
+    "unreviewed_publication_state": "BLOCK"
+  }
+}

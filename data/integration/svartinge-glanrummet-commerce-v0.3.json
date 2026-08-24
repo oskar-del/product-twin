@@ -1,0 +1,47 @@
+{
+  "version": "svartinge-glanrummet-commerce/v0.3",
+  "integration_id": "INTEGRATION_SE_SVARTINGE_GLANRUMMET_COMMERCE_V03",
+  "room_scene_id": "SCENE_SE_NORRKOPING_SVARTINGE_54_28_BRAGE_V03",
+  "room_element_id": "ROOM_GLANRUMMET",
+  "room_state": "CONCEPT",
+  "source_showroom_manifest": "data/showrooms/svartinge-glanrummet-living-room-v0.3.json",
+  "source_visual_qa_contract": "data/showrooms/svartinge-glanrummet-visual-qa-v0.1.json",
+  "source_product_manifest": "data/showrooms/norr11-marbella-living-room-v0.1.json",
+  "preview_url": "prototype/showroom-living/index.html?context=svartinge-glanrummet",
+  "binding_state": "DESIGN_STUDY_NOT_PROCUREMENT_READY",
+  "allowed": [
+    "preview the Svärtinge-specific seven-product furniture composition",
+    "inspect unchanged product identity and avatar-lane disclosures",
+    "apply visibly disclosed design-study colour cues without changing geometry",
+    "try same-role swaps and inspect dated source prices per product"
+  ],
+  "forbidden": [
+    "claim that the Altea listing interior is Glanrummet",
+    "claim that viewer-applied colour cues are exact selected or sellable variants",
+    "claim that native merchant GLBs are cleared for public redistribution",
+    "claim that 2026-08-17 or 2026-08-18 offer snapshots are current",
+    "calculate or display a comparable Sweden subtotal from mixed USD and EUR snapshots",
+    "claim Spanish supply, delivery, landed cost or checkout for Svärtinge",
+    "promote any furniture avatar to G3 from this integration",
+    "publish a revised room without the three-view human pixel review"
+  ],
+  "destination": {
+    "country": "SE",
+    "municipality": "Norrköping",
+    "postcode": "60570",
+    "commerce_state": "NOT_EVALUATED",
+    "comparable_subtotal_state": "WITHHELD"
+  },
+  "appearance": {
+    "state": "DESIGN_STUDY_CUES_NOT_VARIANT_BINDING",
+    "geometry_unchanged": true,
+    "exact_finish_claim": false,
+    "public_product_render_rights": "REVIEW"
+  },
+  "visual_qa": {
+    "contract_state": "IMPLEMENTED",
+    "pixel_review_state": "PENDING",
+    "publication_gate": "BLOCK_UNTIL_HUMAN_PIXEL_REVIEW"
+  },
+  "next_gate": "Run the deterministic three-view capture on a host with Chrome, inspect all three images, then bind at least one visually verified sellable finish and create a Sweden-destination offer snapshot before procurement, a comparable subtotal or any public product-render claim."
+}

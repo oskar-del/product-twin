@@ -63,8 +63,8 @@
       "role": "BRAGE_GEOMETRY_SPEC"
     },
     {
-      "path": "data/integration/svartinge-glanrummet-commerce-v0.2.json",
-      "sha256": "c9be364e2a9f50c4ddeb780a4a0d610621c7f6b7c42102669f0956dcb49e6027",
+      "path": "data/integration/svartinge-glanrummet-commerce-v0.3.json",
+      "sha256": "7c8066bc00dcceeb80a651d91b9b3610f6f1d102424a6819a4c6d4b491a7aae8",
       "role": "ROOM_COMMERCE_HANDOFF"
     }
   ],
@@ -4471,7 +4471,7 @@
       "linked_experience": {
         "label": "Open Glanrummet furniture study",
         "href": "../showroom-living/index.html?context=svartinge-glanrummet",
-        "manifest": "data/integration/svartinge-glanrummet-commerce-v0.2.json",
+        "manifest": "data/integration/svartinge-glanrummet-commerce-v0.3.json",
         "state": "DESIGN_STUDY_NOT_PROCUREMENT_READY"
       }
     },
@@ -4639,7 +4639,7 @@
   "integration": {
     "state": "SPATIAL_HOUSE_ROOM_COMMERCE_HANDOFF_READY",
     "room_id": "ROOM_GLANRUMMET",
-    "commerce_manifest": "data/integration/svartinge-glanrummet-commerce-v0.2.json",
+    "commerce_manifest": "data/integration/svartinge-glanrummet-commerce-v0.3.json",
     "blocked_promotions": [
       "LEGAL_BOUNDARY",
       "BUILDABLE_ENVELOPE",
