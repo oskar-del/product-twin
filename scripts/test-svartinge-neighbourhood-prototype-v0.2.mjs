@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateArchitecturalComparisonViewer,validateArchitecturalHeroViewer,validateArchitecturalIntentViewer,validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateNeighbourhoodDetailViewer,validateOfficialContextGeometrySources,validatePlotTerrainViewer,validateStreetApproachViewer,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateArchitecturalComparisonViewer,validateArchitecturalHeroViewer,validateArchitecturalIntentViewer,validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateNeighbourhoodDetailViewer,validateOfficialContextGeometrySources,validatePlotTerrainViewer,validateStreetApproachViewer,validateStreetContext,validateSvartingePrototype,validateTerrainShadingViewer,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
@@ -22,6 +22,7 @@ assert.equal(validateVisualReconstruction(visualReconstructionBaseline).ok,true,
 assert.equal(validateDesignCandidateStudies(designStudiesBaseline,{scene:baseline}).ok,true,"baseline design candidate studies must validate");
 assert.equal(validateVisualAcceptance(visualAcceptanceBaseline,{scene:baseline}).ok,true,"baseline five-view visual acceptance must validate");
 assert.equal(validatePlotTerrainViewer(viewerBaseline).ok,true,"baseline plot terrain study must validate");
+assert.equal(validateTerrainShadingViewer(viewerBaseline).ok,true,"baseline terrain shading must validate");
 assert.equal(validateNeighbourhoodDetailViewer(viewerBaseline).ok,true,"baseline neighbourhood street-room detail must validate");
 assert.equal(validateStreetApproachViewer(viewerBaseline).ok,true,"baseline street approach must validate");
 assert.equal(validateArchitecturalHeroViewer(viewerBaseline).ok,true,"baseline architectural hero must validate");
@@ -99,6 +100,18 @@ const terrainViewerAttacks=[
 ];
 for(const [name,mutate,needle] of terrainViewerAttacks){
   const result=validatePlotTerrainViewer(mutate(viewerBaseline));
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+
+const terrainShadingViewerAttacks=[
+  ["shadow normal bias removed",html=>html.replace("sun.shadow.normalBias=.12","sun.shadow.normalBias=0"),"directional shadow acne controls"],
+  ["shadow depth range widened",html=>html.replace("sun.shadow.camera.far=520","sun.shadow.camera.far=4000"),"directional shadow depth range"],
+  ["terrain self shadow restored",html=>html.replace("mesh.castShadow=false;mesh.receiveShadow=true;root.add(mesh);terrainObject=mesh","mesh.castShadow=true;mesh.receiveShadow=true;root.add(mesh);terrainObject=mesh"),"terrain shading can self-shadow"],
+  ["terrain faceting restored",html=>html.replace("const mesh=profile(new THREE.Mesh(geo),item,1,1)","const mesh=profile(new THREE.Mesh(geo,new THREE.MeshStandardMaterial({flatShading:true})),item,1,1)"),"terrain surface reintroduced faceting"],
+  ["aerial drape offset removed",html=>html.replace("polygonOffset:true,polygonOffsetFactor:-1","polygonOffset:false,polygonOffsetFactor:0"),"aerial drape can z-fight"]
+];
+for(const [name,mutate,needle] of terrainShadingViewerAttacks){
+  const result=validateTerrainShadingViewer(mutate(viewerBaseline));
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
 
@@ -312,4 +325,4 @@ for(const [name,mutate,needle] of visualAcceptanceAttacks){
   const changed=structuredClone(visualAcceptanceBaseline);mutate(changed);const result=validateVisualAcceptance(changed,{scene:baseline});
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+terrainViewerAttacks.length+streetApproachViewerAttacks.length+neighbourhoodDetailViewerAttacks.length+architecturalHeroViewerAttacks.length+architecturalComparisonViewerAttacks.length+architecturalIntentViewerAttacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+terrainViewerAttacks.length+terrainShadingViewerAttacks.length+streetApproachViewerAttacks.length+neighbourhoodDetailViewerAttacks.length+architecturalHeroViewerAttacks.length+architecturalComparisonViewerAttacks.length+architecturalIntentViewerAttacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);
