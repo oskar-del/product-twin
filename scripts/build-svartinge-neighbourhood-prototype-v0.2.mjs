@@ -14,6 +14,7 @@ const outputPath=`${base}/neighbourhood-scene-v0.2.json`;
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),"utf8"));
 const sha=p=>crypto.createHash("sha256").update(fs.readFileSync(path.join(root,p))).digest("hex");
 const round=(n,d=4)=>Number(n.toFixed(d));
+const VISUAL_RELIEF_EXAGGERATION=2.2;
 
 function polygonArea(points){
   let twice=0;
@@ -30,7 +31,7 @@ function scalePolygonToArea(points,targetArea){
 }
 
 function terrainHeight(x,z){
-  return 0.008*x+0.014*z+0.55*Math.sin(x/38)*Math.cos(z/52);
+  return VISUAL_RELIEF_EXAGGERATION*(0.008*x+0.014*z+0.55*Math.sin(x/38)*Math.cos(z/52));
 }
 
 function terrainGrid(){
@@ -43,7 +44,7 @@ function terrainGrid(){
       vertices.push([round(x),round(y),round(z)]);
     }
   }
-  return {size_m:size,segments,vertices,height_reference:"LOCAL_RELATIVE_UNCALIBRATED",method:"Deterministic contextual surface: planar fall plus low-amplitude smoothing; no RH2000 elevation claim."};
+  return {size_m:size,segments,vertices,height_reference:"LOCAL_RELATIVE_UNCALIBRATED",visual_relief_exaggeration:VISUAL_RELIEF_EXAGGERATION,method:"VISUAL_RELIEF_X2_2: deterministic contextual surface exaggerated for legibility; no RH2000 elevation, slope or surveyed-terrain claim."};
 }
 
 function element(id,type,label,evidence_class,geometry,source_refs=[],limitations=[]){

@@ -38,6 +38,7 @@ const attacks=[
   ["plot view clutter restored",m=>m.navigation.find(x=>x.id==="PLOT_ORBIT").visible_groups.push("CONTEXT_BUILDING"),"analytical plot view is cluttered or oblique"],
   ["terrain promoted",m=>m.elements.find(x=>x.id==="TERRAIN_CONTEXT").evidence_class="AUTHORITATIVE","terrain promoted"],
   ["terrain facets restored",m=>m.elements.find(x=>x.id==="TERRAIN_CONTEXT").geometry.segments=12,"terrain mesh too coarse"],
+  ["terrain relief misrepresented",m=>m.elements.find(x=>x.id==="TERRAIN_CONTEXT").geometry.visual_relief_exaggeration=1,"visual terrain relief disclosure missing"],
   ["context building promoted",m=>m.elements.find(x=>x.type==="CONTEXT_BUILDING").evidence_class="AUTHORITATIVE","context massing incomplete"],
   ["context building floats",m=>m.elements.find(x=>x.type==="CONTEXT_BUILDING").geometry.position[1]+=2,"context building is not terrain-grounded"],
   ["road promoted",m=>m.elements.find(x=>x.type==="ROAD").evidence_class="AUTHORITATIVE","road context incomplete"],
