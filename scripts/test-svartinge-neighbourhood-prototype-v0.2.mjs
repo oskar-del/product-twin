@@ -44,6 +44,7 @@ const attacks=[
   ["plot view clutter restored",m=>m.navigation.find(x=>x.id==="PLOT_ORBIT").visible_groups.push("CONTEXT_BUILDING"),"analytical plot view is cluttered or oblique"],
   ["plot camera flattened",m=>{const stage=m.navigation.find(x=>x.id==="PLOT_ORBIT");stage.camera[0]=stage.target[0];stage.camera[2]=stage.target[2]},"plot camera does not expose terrain form"],
   ["concept hero loses architecture",m=>m.navigation.find(x=>x.id==="CONCEPT_HOUSE_ON_PLOT").camera=[300,18,-300],"concept hero camera does not frame architecture at useful scale"],
+  ["concept hero over-crops architecture",m=>m.navigation.find(x=>x.id==="CONCEPT_HOUSE_ON_PLOT").camera=[14,5,7],"concept hero camera does not frame architecture at useful scale"],
   ["terrain promoted",m=>m.elements.find(x=>x.id==="TERRAIN_CONTEXT").evidence_class="AUTHORITATIVE","terrain promoted"],
   ["terrain facets restored",m=>m.elements.find(x=>x.id==="TERRAIN_CONTEXT").geometry.segments=12,"terrain mesh does not cover"],
   ["terrain relief misrepresented",m=>m.elements.find(x=>x.id==="TERRAIN_CONTEXT").geometry.visual_relief_exaggeration=1,"visual terrain relief disclosure missing"],
