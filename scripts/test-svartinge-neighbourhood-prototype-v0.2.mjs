@@ -9,7 +9,7 @@ const terrainBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvag
 const officialGeometryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/official-context-geometry-sources-v0.1.json","utf8"));
 const aerialHistoryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/municipal-aerial-history-v0.1.json","utf8"));
 const visualReconstructionBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/visual-reconstruction-v0.1.json","utf8"));
-const designStudiesBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/design-candidate-studies-v0.1.json","utf8"));
+const designStudiesBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/design-candidate-studies-v0.2.json","utf8"));
 const visualAcceptanceBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/visual-acceptance-v0.1.json","utf8"));
 assert.equal(validateSvartingePrototype(baseline).ok,true,"baseline scene must validate");
 assert.equal(validateContextProviders(providerBaseline).ok,true,"baseline provider registry must validate");
@@ -185,6 +185,12 @@ const designStudiesAttacks=[
   ["candidate geometry promoted",m=>m.policy.geometry_scope="APPROVED_BIM","design candidate policy promoted"],
   ["candidate architecture promoted",m=>m.candidates[0].presentation_profile.presentation_only=false,"architectural presentation profile promoted or invalid"],
   ["candidate roof strategies collapsed",m=>m.candidates[2].presentation_profile.roof_form=m.candidates[0].presentation_profile.roof_form,"design candidates do not exercise three distinct roof strategies"],
+  ["candidate arrival strategies collapsed",m=>m.candidates[2].presentation_profile.arrival_expression=m.candidates[0].presentation_profile.arrival_expression,"design candidates do not exercise three distinct arrival_expression strategies"],
+  ["candidate outdoor rooms collapsed",m=>m.candidates[2].presentation_profile.outdoor_room_type=m.candidates[0].presentation_profile.outdoor_room_type,"design candidates do not exercise three distinct outdoor_room_type strategies"],
+  ["candidate terrain responses collapsed",m=>m.candidates[2].presentation_profile.terrain_response_expression=m.candidates[0].presentation_profile.terrain_response_expression,"design candidates do not exercise three distinct terrain_response_expression strategies"],
+  ["candidate facade rhythms collapsed",m=>m.candidates[2].presentation_profile.facade_rhythm=m.candidates[0].presentation_profile.facade_rhythm,"design candidates do not exercise three distinct facade_rhythm strategies"],
+  ["candidate arrival enum invalid",m=>m.candidates[0].presentation_profile.arrival_expression="CARPORT_GATE","architectural presentation profile promoted or invalid"],
+  ["candidate design evidence thinned",m=>m.candidates[0].design_signals.pop(),"concept evidence or signals invalid"],
   ["candidate roof made implausible",m=>m.candidates[0].presentation_profile.roof_rise_m=9,"architectural presentation dimensions invalid"],
   ["candidate terrace leaves plot",m=>m.candidates[0].presentation_profile.terrace_depth_m=30,"architectural presentation dimensions invalid"],
   ["candidate presentation field injected",m=>m.candidates[0].presentation_profile.approved_material=true,"presentation: unknown or missing fields"],

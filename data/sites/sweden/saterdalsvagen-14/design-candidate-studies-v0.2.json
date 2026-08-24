@@ -1,0 +1,179 @@
+{
+  "schema_version": "svartinge-design-candidate-studies/v0.2",
+  "entity_type": "DesignCandidateStudySet",
+  "subject": "SVÄRTINGE 54:28",
+  "scene_ref": {
+    "scene_id": "SCENE_SE_NORRKOPING_SVARTINGE_54_28_CONCEPT_V02",
+    "scene_version": "svartinge-neighbourhood-scene/v0.2",
+    "path": "data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json"
+  },
+  "coordinate_frame": "LOCAL_ENU",
+  "linear_units": "metre",
+  "study_state": "CONCEPT_CANDIDATES_UNSELECTED",
+  "policy": {
+    "candidate_evidence_class": "CONCEPT",
+    "selected_candidate_id": null,
+    "legal_effect": "NONE",
+    "geometry_scope": "CONCEPT_PRESENTATION_GEOMETRY",
+    "display_terrain_basis": "DERIVED_RELATIVE_UNCALIBRATED",
+    "blocked_claims": [
+      "LEGAL_BOUNDARY",
+      "REGISTERED_AREA",
+      "ENTITLEMENT",
+      "BUILDABLE_ENVELOPE",
+      "LEGAL_ACCESS",
+      "UTILITY_CAPACITY",
+      "SURVEYED_TERRAIN",
+      "FINISHED_FLOOR_LEVEL"
+    ]
+  },
+  "intent_pipeline": {
+    "user_design_intent": [
+      "Explore how a compact home could address the reported Glan direction.",
+      "Compare one-volume, courtyard and split-volume spatial strategies.",
+      "Keep every study reversible until the legal and survey gates close."
+    ],
+    "hard_constraints": [
+      "Keep preview massing inside the indicative municipal display polygon.",
+      "Do not claim a legal setback, access, finished-floor level or buildable envelope.",
+      "Do not convert a preview action into an approved or selected design."
+    ],
+    "soft_objectives": [
+      "Orient primary living mass toward the reported southern view direction.",
+      "Use the derived relative display surface to compare compactness and stepping.",
+      "Retain a legible arrival side from Säterdalsvägen without asserting legal access."
+    ],
+    "ranking_state": "NOT_RANKED_INSUFFICIENT_EVIDENCE",
+    "explicit_selection_required": true
+  },
+  "candidates": [
+    {
+      "candidate_id": "VIEW_BAR",
+      "label": "A · View bar",
+      "summary": "A compact timber pavilion places a panoramic living façade and continuous deck toward the reported view direction.",
+      "evidence_class": "CONCEPT",
+      "footprint_m2": 96,
+      "concept_storeys": 1,
+      "approx_gross_floor_area_m2": 96,
+      "presentation_profile": {
+        "architectural_language": "NORDIC_VIEW_HOUSE_CONCEPT",
+        "roof_form": "SHALLOW_GABLE",
+        "wall_finish": "LIGHT_TIMBER_CONCEPT",
+        "roof_finish": "CHARCOAL_METAL_CONCEPT",
+        "roof_rise_m": 1.35,
+        "terrace_depth_m": 2.4,
+        "south_glazing_modules": 3,
+        "arrival_expression": "RECESSED_PORCH",
+        "outdoor_room_type": "LINEAR_VIEW_DECK",
+        "terrain_response_expression": "LOW_CONTINUOUS_PLINTH",
+        "facade_rhythm": "PANORAMIC_BAYS",
+        "presentation_only": true
+      },
+      "volumes": [
+        {
+          "volume_id": "VIEW_BAR_MAIN",
+          "position_xz_m": [9.4, 13.1],
+          "size_whd_m": [12, 3.4, 8],
+          "rotation_y_deg": 0,
+          "display_level_offset_m": 0
+        }
+      ],
+      "design_signals": [
+        "Smallest footprint and simplest structural span in the set.",
+        "Continuous southern deck and panoramic bays test an indoor-outdoor living edge.",
+        "A recessed porch keeps the arrival legible without claiming legal access.",
+        "No view, access, earthwork or planning performance has been verified."
+      ]
+    },
+    {
+      "candidate_id": "COURTYARD_EDGE",
+      "label": "B · Courtyard edge",
+      "summary": "Two timber wings and a light courtyard portal define a sheltered outdoor room while leaving the southern edge visually open.",
+      "evidence_class": "CONCEPT",
+      "footprint_m2": 130,
+      "concept_storeys": 1,
+      "approx_gross_floor_area_m2": 130,
+      "presentation_profile": {
+        "architectural_language": "NORDIC_COURTYARD_HOUSE_CONCEPT",
+        "roof_form": "CROSS_GABLE",
+        "wall_finish": "NATURAL_TIMBER_CONCEPT",
+        "roof_finish": "OXIDE_METAL_CONCEPT",
+        "roof_rise_m": 1.1,
+        "terrace_depth_m": 2.2,
+        "south_glazing_modules": 3,
+        "arrival_expression": "COURTYARD_PORTAL",
+        "outdoor_room_type": "SHELTERED_COURTYARD",
+        "terrain_response_expression": "TWIN_LEVEL_PLINTH",
+        "facade_rhythm": "COURTYARD_ARCADE",
+        "presentation_only": true
+      },
+      "volumes": [
+        {
+          "volume_id": "COURTYARD_NORTH",
+          "position_xz_m": [7, 19],
+          "size_whd_m": [15, 3.2, 5],
+          "rotation_y_deg": 0,
+          "display_level_offset_m": 0
+        },
+        {
+          "volume_id": "COURTYARD_EAST",
+          "position_xz_m": [17, 11],
+          "size_whd_m": [5, 3.2, 11],
+          "rotation_y_deg": 0,
+          "display_level_offset_m": 0
+        }
+      ],
+      "design_signals": [
+        "Largest footprint and most spatially enclosed strategy in the set.",
+        "The two wings and courtyard arcade create a protected garden hypothesis.",
+        "A portal and covered threshold distinguish arrival from the living terrace.",
+        "No wind, privacy, setback or entitlement performance has been verified."
+      ]
+    },
+    {
+      "candidate_id": "SPLIT_TERRACE",
+      "label": "C · Split terrace",
+      "summary": "Two mono-pitch timber pavilions, a glazed link and stepped decks test a sectional response to the relative display terrain.",
+      "evidence_class": "CONCEPT",
+      "footprint_m2": 108,
+      "concept_storeys": 1,
+      "approx_gross_floor_area_m2": 108,
+      "presentation_profile": {
+        "architectural_language": "NORDIC_SPLIT_LEVEL_CONCEPT",
+        "roof_form": "MONO_PITCH",
+        "wall_finish": "SAGE_TIMBER_CONCEPT",
+        "roof_finish": "CHARCOAL_METAL_CONCEPT",
+        "roof_rise_m": 1.2,
+        "terrace_depth_m": 2,
+        "south_glazing_modules": 2,
+        "arrival_expression": "GLAZED_LINK",
+        "outdoor_room_type": "STEPPED_TERRACES",
+        "terrain_response_expression": "STEPPED_PLINTH",
+        "facade_rhythm": "STAGGERED_BAYS",
+        "presentation_only": true
+      },
+      "volumes": [
+        {
+          "volume_id": "SPLIT_WEST",
+          "position_xz_m": [3, 15],
+          "size_whd_m": [9, 3.2, 6],
+          "rotation_y_deg": -8,
+          "display_level_offset_m": 0
+        },
+        {
+          "volume_id": "SPLIT_EAST",
+          "position_xz_m": [15, 8],
+          "size_whd_m": [9, 3.2, 6],
+          "rotation_y_deg": -8,
+          "display_level_offset_m": 0.65
+        }
+      ],
+      "design_signals": [
+        "Intermediate footprint and most articulated terrain-response hypothesis.",
+        "The glazed link and opposing mono-pitches make the two pavilions legible as one home.",
+        "Stepped decks express the level change without asserting actual cut and fill.",
+        "No surveyed levels, foundation, accessibility or drainage performance has been verified."
+      ]
+    }
+  ]
+}

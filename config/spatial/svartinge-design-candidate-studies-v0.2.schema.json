@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/svartinge-design-candidate-studies-v0.2.schema.json",
+  "title": "Svärtinge design candidate studies v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "entity_type", "subject", "scene_ref", "coordinate_frame", "linear_units", "study_state", "policy", "intent_pipeline", "candidates"],
+  "properties": {
+    "schema_version": {"const": "svartinge-design-candidate-studies/v0.2"},
+    "entity_type": {"const": "DesignCandidateStudySet"},
+    "subject": {"const": "SVÄRTINGE 54:28"},
+    "scene_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scene_id", "scene_version", "path"],
+      "properties": {
+        "scene_id": {"type": "string", "minLength": 1},
+        "scene_version": {"const": "svartinge-neighbourhood-scene/v0.2"},
+        "path": {"const": "data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json"}
+      }
+    },
+    "coordinate_frame": {"const": "LOCAL_ENU"},
+    "linear_units": {"const": "metre"},
+    "study_state": {"const": "CONCEPT_CANDIDATES_UNSELECTED"},
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidate_evidence_class", "selected_candidate_id", "legal_effect", "geometry_scope", "display_terrain_basis", "blocked_claims"],
+      "properties": {
+        "candidate_evidence_class": {"const": "CONCEPT"},
+        "selected_candidate_id": {"type": "null"},
+        "legal_effect": {"const": "NONE"},
+        "geometry_scope": {"const": "CONCEPT_PRESENTATION_GEOMETRY"},
+        "display_terrain_basis": {"const": "DERIVED_RELATIVE_UNCALIBRATED"},
+        "blocked_claims": {"type": "array", "minItems": 8, "maxItems": 8, "uniqueItems": true, "items": {"type": "string"}}
+      }
+    },
+    "intent_pipeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["user_design_intent", "hard_constraints", "soft_objectives", "ranking_state", "explicit_selection_required"],
+      "properties": {
+        "user_design_intent": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "hard_constraints": {"type": "array", "minItems": 3, "items": {"type": "string", "minLength": 1}},
+        "soft_objectives": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "ranking_state": {"const": "NOT_RANKED_INSUFFICIENT_EVIDENCE"},
+        "explicit_selection_required": {"const": true}
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_id", "label", "summary", "evidence_class", "footprint_m2", "concept_storeys", "approx_gross_floor_area_m2", "presentation_profile", "volumes", "design_signals"],
+        "properties": {
+          "candidate_id": {"enum": ["VIEW_BAR", "COURTYARD_EDGE", "SPLIT_TERRACE"]},
+          "label": {"type": "string", "minLength": 1},
+          "summary": {"type": "string", "minLength": 1},
+          "evidence_class": {"const": "CONCEPT"},
+          "footprint_m2": {"type": "number", "exclusiveMinimum": 0},
+          "concept_storeys": {"const": 1},
+          "approx_gross_floor_area_m2": {"type": "number", "exclusiveMinimum": 0},
+          "presentation_profile": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["architectural_language", "roof_form", "wall_finish", "roof_finish", "roof_rise_m", "terrace_depth_m", "south_glazing_modules", "arrival_expression", "outdoor_room_type", "terrain_response_expression", "facade_rhythm", "presentation_only"],
+            "properties": {
+              "architectural_language": {"enum": ["NORDIC_VIEW_HOUSE_CONCEPT", "NORDIC_COURTYARD_HOUSE_CONCEPT", "NORDIC_SPLIT_LEVEL_CONCEPT"]},
+              "roof_form": {"enum": ["SHALLOW_GABLE", "CROSS_GABLE", "MONO_PITCH"]},
+              "wall_finish": {"enum": ["LIGHT_TIMBER_CONCEPT", "NATURAL_TIMBER_CONCEPT", "SAGE_TIMBER_CONCEPT"]},
+              "roof_finish": {"enum": ["CHARCOAL_METAL_CONCEPT", "OXIDE_METAL_CONCEPT"]},
+              "roof_rise_m": {"type": "number", "minimum": 0.6, "maximum": 2},
+              "terrace_depth_m": {"type": "number", "minimum": 0, "maximum": 3},
+              "south_glazing_modules": {"type": "integer", "minimum": 1, "maximum": 4},
+              "arrival_expression": {"enum": ["RECESSED_PORCH", "COURTYARD_PORTAL", "GLAZED_LINK"]},
+              "outdoor_room_type": {"enum": ["LINEAR_VIEW_DECK", "SHELTERED_COURTYARD", "STEPPED_TERRACES"]},
+              "terrain_response_expression": {"enum": ["LOW_CONTINUOUS_PLINTH", "TWIN_LEVEL_PLINTH", "STEPPED_PLINTH"]},
+              "facade_rhythm": {"enum": ["PANORAMIC_BAYS", "COURTYARD_ARCADE", "STAGGERED_BAYS"]},
+              "presentation_only": {"const": true}
+            }
+          },
+          "volumes": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["volume_id", "position_xz_m", "size_whd_m", "rotation_y_deg", "display_level_offset_m"],
+              "properties": {
+                "volume_id": {"type": "string", "minLength": 1},
+                "position_xz_m": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "number"}},
+                "size_whd_m": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number", "exclusiveMinimum": 0}},
+                "rotation_y_deg": {"type": "number", "minimum": -180, "maximum": 180},
+                "display_level_offset_m": {"type": "number", "minimum": -5, "maximum": 5}
+              }
+            }
+          },
+          "design_signals": {"type": "array", "minItems": 4, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    }
+  }
+}
