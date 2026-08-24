@@ -1,0 +1,134 @@
+{
+  "schema_version": "svartinge-design-candidate-studies/v0.1",
+  "entity_type": "DesignCandidateStudySet",
+  "subject": "SVÄRTINGE 54:28",
+  "scene_ref": {
+    "scene_id": "SCENE_SE_NORRKOPING_SVARTINGE_54_28_CONCEPT_V02",
+    "scene_version": "svartinge-neighbourhood-scene/v0.2",
+    "path": "data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json"
+  },
+  "coordinate_frame": "LOCAL_ENU",
+  "linear_units": "metre",
+  "study_state": "CONCEPT_CANDIDATES_UNSELECTED",
+  "policy": {
+    "candidate_evidence_class": "CONCEPT",
+    "selected_candidate_id": null,
+    "legal_effect": "NONE",
+    "geometry_scope": "MASSING_ONLY",
+    "display_terrain_basis": "DERIVED_RELATIVE_UNCALIBRATED",
+    "blocked_claims": [
+      "LEGAL_BOUNDARY",
+      "REGISTERED_AREA",
+      "ENTITLEMENT",
+      "BUILDABLE_ENVELOPE",
+      "LEGAL_ACCESS",
+      "UTILITY_CAPACITY",
+      "SURVEYED_TERRAIN",
+      "FINISHED_FLOOR_LEVEL"
+    ]
+  },
+  "intent_pipeline": {
+    "user_design_intent": [
+      "Explore how a compact home could address the reported Glan direction.",
+      "Compare one-volume, courtyard and split-volume spatial strategies.",
+      "Keep every study reversible until the legal and survey gates close."
+    ],
+    "hard_constraints": [
+      "Keep preview massing inside the indicative municipal display polygon.",
+      "Do not claim a legal setback, access, finished-floor level or buildable envelope.",
+      "Do not convert a preview action into an approved or selected design."
+    ],
+    "soft_objectives": [
+      "Orient primary living mass toward the reported southern view direction.",
+      "Use the derived relative display surface to compare compactness and stepping.",
+      "Retain a legible arrival side from Säterdalsvägen without asserting legal access."
+    ],
+    "ranking_state": "NOT_RANKED_INSUFFICIENT_EVIDENCE",
+    "explicit_selection_required": true
+  },
+  "candidates": [
+    {
+      "candidate_id": "VIEW_BAR",
+      "label": "A · View bar",
+      "summary": "One compact volume keeps the footprint simple and turns its long façade toward the reported view direction.",
+      "evidence_class": "CONCEPT",
+      "footprint_m2": 96,
+      "concept_storeys": 1,
+      "approx_gross_floor_area_m2": 96,
+      "volumes": [
+        {
+          "volume_id": "VIEW_BAR_MAIN",
+          "position_xz_m": [9.4, 13.1],
+          "size_whd_m": [12, 3.4, 8],
+          "rotation_y_deg": 0,
+          "display_level_offset_m": 0
+        }
+      ],
+      "design_signals": [
+        "Smallest footprint in the set.",
+        "Single roof and structural span concept.",
+        "No view, access, earthwork or planning performance has been verified."
+      ]
+    },
+    {
+      "candidate_id": "COURTYARD_EDGE",
+      "label": "B · Courtyard edge",
+      "summary": "Two connected bars form a sheltered outdoor room while keeping the southern side visually open.",
+      "evidence_class": "CONCEPT",
+      "footprint_m2": 130,
+      "concept_storeys": 1,
+      "approx_gross_floor_area_m2": 130,
+      "volumes": [
+        {
+          "volume_id": "COURTYARD_NORTH",
+          "position_xz_m": [7, 19],
+          "size_whd_m": [15, 3.2, 5],
+          "rotation_y_deg": 0,
+          "display_level_offset_m": 0
+        },
+        {
+          "volume_id": "COURTYARD_EAST",
+          "position_xz_m": [17, 11],
+          "size_whd_m": [5, 3.2, 11],
+          "rotation_y_deg": 0,
+          "display_level_offset_m": 0
+        }
+      ],
+      "design_signals": [
+        "Largest footprint in the set.",
+        "Creates a protected garden relationship as a design hypothesis.",
+        "No wind, privacy, setback or entitlement performance has been verified."
+      ]
+    },
+    {
+      "candidate_id": "SPLIT_TERRACE",
+      "label": "C · Split terrace",
+      "summary": "Two staggered volumes test a stepped response to the derived relative display surface.",
+      "evidence_class": "CONCEPT",
+      "footprint_m2": 108,
+      "concept_storeys": 1,
+      "approx_gross_floor_area_m2": 108,
+      "volumes": [
+        {
+          "volume_id": "SPLIT_WEST",
+          "position_xz_m": [3, 15],
+          "size_whd_m": [9, 3.2, 6],
+          "rotation_y_deg": -8,
+          "display_level_offset_m": 0
+        },
+        {
+          "volume_id": "SPLIT_EAST",
+          "position_xz_m": [15, 8],
+          "size_whd_m": [9, 3.2, 6],
+          "rotation_y_deg": -8,
+          "display_level_offset_m": 0.65
+        }
+      ],
+      "design_signals": [
+        "Intermediate footprint in the set.",
+        "Tests a split-level composition without asserting actual cut and fill.",
+        "No surveyed levels, foundation, accessibility or drainage performance has been verified."
+      ]
+    }
+  ]
+}

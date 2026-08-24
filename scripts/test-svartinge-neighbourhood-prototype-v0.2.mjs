@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateContextProviders,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
@@ -9,6 +9,7 @@ const terrainBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvag
 const officialGeometryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/official-context-geometry-sources-v0.1.json","utf8"));
 const aerialHistoryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/municipal-aerial-history-v0.1.json","utf8"));
 const visualReconstructionBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/visual-reconstruction-v0.1.json","utf8"));
+const designStudiesBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/design-candidate-studies-v0.1.json","utf8"));
 assert.equal(validateSvartingePrototype(baseline).ok,true,"baseline scene must validate");
 assert.equal(validateContextProviders(providerBaseline).ok,true,"baseline provider registry must validate");
 assert.equal(validateStreetContext(streetBaseline).ok,true,"baseline street context must validate");
@@ -16,6 +17,7 @@ assert.equal(validateTerrainSourceMetadata(terrainBaseline).ok,true,"baseline te
 assert.equal(validateOfficialContextGeometrySources(officialGeometryBaseline).ok,true,"baseline official context geometry sources must validate");
 assert.equal(validateMunicipalAerialHistory(aerialHistoryBaseline).ok,true,"baseline municipal aerial history must validate");
 assert.equal(validateVisualReconstruction(visualReconstructionBaseline).ok,true,"baseline visual reconstruction must validate");
+assert.equal(validateDesignCandidateStudies(designStudiesBaseline,{scene:baseline}).ok,true,"baseline design candidate studies must validate");
 
 const attacks=[
   ["identity promoted",m=>m.subject.identity_scope="PROPERTY_REGISTER_VERIFIED","identity scope promoted"],
@@ -158,4 +160,20 @@ for(const [name,mutate,needle] of visualReconstructionAttacks){
   const changed=structuredClone(visualReconstructionBaseline);mutate(changed);const result=validateVisualReconstruction(changed);
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length} attacks)`);
+const designStudiesAttacks=[
+  ["candidate falsely selected",m=>m.policy.selected_candidate_id="VIEW_BAR","design candidate policy promoted"],
+  ["candidate evidence promoted",m=>m.candidates[0].evidence_class="DERIVED","concept evidence or signals invalid"],
+  ["candidate hard gate removed",m=>m.policy.blocked_claims.pop(),"design candidate hard gates changed"],
+  ["candidate falsely ranked",m=>m.intent_pipeline.ranking_state="RANKED","design intent pipeline incomplete or falsely ranked"],
+  ["candidate leaves display plot",m=>m.candidates[0].volumes[0].position_xz_m=[200,200],"preview massing leaves indicative display polygon"],
+  ["candidate footprint drift",m=>m.candidates[0].footprint_m2+=1,"footprint or concept GFA drift"],
+  ["candidate scene drift",m=>m.scene_ref.scene_id="OTHER","design candidate scene binding drift"],
+  ["candidate legal effect invented",m=>m.policy.legal_effect="APPROVED","design candidate policy promoted"],
+  ["candidate geometry promoted",m=>m.policy.geometry_scope="APPROVED_BIM","design candidate policy promoted"],
+  ["candidate unknown field",m=>m.approved=true,"design candidate studies: unknown or missing fields"]
+];
+for(const [name,mutate,needle] of designStudiesAttacks){
+  const changed=structuredClone(designStudiesBaseline);mutate(changed);const result=validateDesignCandidateStudies(changed,{scene:baseline});
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length} attacks)`);
