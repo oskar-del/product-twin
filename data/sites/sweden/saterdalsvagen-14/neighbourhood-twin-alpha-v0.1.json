@@ -1,0 +1,692 @@
+{
+  "manifest_version": "neighbourhood-twin-alpha/v0.1",
+  "entity_type": "NeighbourhoodTwinAlpha",
+  "neighbourhood_twin_id": "NEIGH_SE_NORRKOPING_SVARTINGE_54_28_ALPHA",
+  "version": "0.1",
+  "subject": {
+    "working_identity": "SVÄRTINGE 54:28",
+    "municipality": "Norrköping",
+    "address": "Säterdalsvägen 14, 605 70 Svärtinge",
+    "identity_state": "VERIFIED_MUNICIPAL_LOCATOR_NOT_PROPERTY_REGISTER"
+  },
+  "source_binding": {
+    "path": "data/sites/sweden/saterdalsvagen-14/plot-intelligence-v0.1.json",
+    "sha256": "e3ed2584a2caf5a1ad4895578c00f98439051c4ef6b1e1d306adf9af56d060aa",
+    "source_receipts": 20,
+    "findings": 18
+  },
+  "coordinate_anchor": {
+    "state": "VERIFIED",
+    "role": "MUNICIPAL_ADDRESS_TO_PROPERTY_LOCATOR",
+    "wgs84": {
+      "crs": "EPSG:4326",
+      "axis_order": "longitude_latitude",
+      "coordinates": [
+        16.0317063331,
+        58.6522414431
+      ]
+    },
+    "municipal_query": {
+      "crs": "EPSG:3010",
+      "coordinates": [
+        122807,
+        6504014
+      ]
+    },
+    "render_frame": {
+      "type": "LOCAL_ENU",
+      "origin_wgs84": [
+        16.0317063331,
+        58.6522414431
+      ],
+      "linear_unit": "metre",
+      "vertical_datum": "UNRESOLVED_NO_TERRAIN"
+    },
+    "limitations": [
+      "Not a surveyed point",
+      "Not an authoritative cadastral centroid",
+      "No vertical coordinate"
+    ]
+  },
+  "parcel_representation": {
+    "state": "INDICATIVE",
+    "geometry_path": "data/sites/sweden/saterdalsvagen-14/neighbourhood-context-indicative-v0.1.geojson",
+    "geometry_sha256": "d87b2595c8602ea0435569a654f9dc85d2b061f876527ab38decc28425cab988",
+    "representation": "AREA_EQUIVALENT_DISC",
+    "municipal_map_area_m2": 1938.1988442902577,
+    "registered_area_m2": null,
+    "legal_boundary_available": false,
+    "surveyed_boundary_available": false,
+    "render_policy": "TRANSLUCENT_UNCERTAINTY_DISC_ONLY",
+    "forbidden_labels": [
+      "LEGAL_BOUNDARY",
+      "CADASTRAL_BOUNDARY",
+      "SURVEYED_BOUNDARY",
+      "BUILDABLE_ENVELOPE"
+    ],
+    "limitations": [
+      "The disc is a synthetic area-equivalent context marker, not parcel shape",
+      "NOKA boundaries have no legal effect",
+      "No setout, setback or entitlement decision may use this geometry"
+    ]
+  },
+  "terrain": {
+    "state": "BLOCKED",
+    "availability": {
+      "product": "Lantmäteriet Markhöjdmodell 1 m",
+      "item_id": "650_55",
+      "horizontal_crs": "EPSG:3006",
+      "compound_crs": "EPSG:5845",
+      "vertical_datum": "RH2000",
+      "grid_resolution_m": 1
+    },
+    "asset_access": "HTTP_401_WITHOUT_CREDENTIALS",
+    "terrain_values_available": false,
+    "mesh_available": false,
+    "render_policy": "FLAT_NEUTRAL_CONTEXT_PLANE_WITH_TERRAIN_UNAVAILABLE_BADGE",
+    "blockers": [
+      "Raster bytes unavailable",
+      "No coverage/nodata QA",
+      "No plot clip",
+      "No elevations, contours, slopes, drainage or terrain mesh"
+    ]
+  },
+  "context_layers": [
+    {
+      "layer_id": "SURROUNDING_BUILDINGS",
+      "state": "INDICATIVE",
+      "source": "Norrköping 2026 Svärtinge consultation narrative",
+      "observation_date": "2026-08-17",
+      "geometry_available": false,
+      "render_allowed": false,
+      "known_context": "Svärtinge is described as an existing villa settlement with proposed residential development",
+      "limitations": [
+        "No authoritative or public building-footprint capture is bound",
+        "No height, storey, use or lawful-status claims"
+      ]
+    },
+    {
+      "layer_id": "ROADS_AND_STREETS",
+      "state": "INDICATIVE",
+      "source": "Municipal address locator and historic plan archive",
+      "observation_date": "2026-08-17",
+      "geometry_available": false,
+      "render_allowed": false,
+      "known_context": "Säterdalsvägen exists as the subject address; historic plan signals road structure and a historic maximum gradient of 1:12",
+      "limitations": [
+        "No current centreline geometry",
+        "No road class, width, gradient, manager or legal-access proof"
+      ]
+    },
+    {
+      "layer_id": "STREET_AND_NEIGHBOURHOOD_CHARACTER",
+      "state": "VERIFIED",
+      "source": "Norrköping FÖP Svärtinge consultation document",
+      "observation_date": "2026-08-17",
+      "geometry_available": false,
+      "render_allowed": true,
+      "render_mode": "TEXT_CONTEXT_ONLY",
+      "known_context": "Residential service locality near Glan; current centre described around school and grocery store",
+      "limitations": [
+        "Strategic narrative, not parcel geometry or entitlement"
+      ]
+    }
+  ],
+  "proximity_register": [
+    {
+      "category": "SCHOOL",
+      "name": "Svärtinge Skogsbacke skola",
+      "state": "VERIFIED",
+      "source_url": "https://norrkoping.se/skola-och-forskola/grundskola/kommunala-grundskolor/svartinge-skogsbacke-skola",
+      "observation_date": "2026-08-18",
+      "distance_m": null,
+      "measurement_method": "OFFICIAL_LOCALITY_PRESENCE_ONLY_NO_FACILITY_COORDINATE_CAPTURE",
+      "facts": [
+        "Municipal F-6 school",
+        "Located in Svärtinge"
+      ],
+      "limitations": [
+        "No straight-line, route or travel-time measurement"
+      ]
+    },
+    {
+      "category": "SCHOOL",
+      "name": "Svärtingehus skola",
+      "state": "VERIFIED",
+      "source_url": "https://norrkoping.se/skola-och-forskola/grundskola/kommunala-grundskolor/svartingehus-skola",
+      "observation_date": "2026-08-18",
+      "distance_m": null,
+      "measurement_method": "OFFICIAL_LOCALITY_PRESENCE_ONLY_NO_FACILITY_COORDINATE_CAPTURE",
+      "facts": [
+        "Municipal F-6 school",
+        "Located in Svärtinge"
+      ],
+      "limitations": [
+        "No straight-line, route or travel-time measurement"
+      ]
+    },
+    {
+      "category": "CHILDCARE",
+      "name": "Utsiktens förskola",
+      "state": "VERIFIED",
+      "source_url": "https://norrkoping.se/skola-och-forskola/forskola-och-annan-pedagogisk-verksamhet/kommunala-forskolor/utsikten",
+      "observation_date": "2026-08-18",
+      "distance_m": null,
+      "measurement_method": "OFFICIAL_LOCALITY_PRESENCE_ONLY_NO_FACILITY_COORDINATE_CAPTURE",
+      "facts": [
+        "Municipal preschool",
+        "Described as in upper Svärtinge"
+      ],
+      "limitations": [
+        "No straight-line, route or travel-time measurement"
+      ]
+    },
+    {
+      "category": "HEALTHCARE",
+      "name": "Local primary care",
+      "state": "INDICATIVE",
+      "source_url": "https://norrkoping.se/download/18.38ef647f19e49e0477131f/1779430656807/KS%202025_1018_Planhandling%20F%C3%96P%20Sv%C3%A4rtinge.pdf",
+      "observation_date": "2026-08-18",
+      "distance_m": null,
+      "measurement_method": "MUNICIPAL_CURRENT_SERVICE_NARRATIVE_NO_FACILITY_COORDINATE_CAPTURE",
+      "facts": [
+        "Draft municipal document states Svärtinge currently lacks a health centre",
+        "Region coverage is described as available elsewhere"
+      ],
+      "limitations": [
+        "Draft strategic document",
+        "No named provider, capacity, route or travel-time measurement"
+      ]
+    },
+    {
+      "category": "TRANSPORT",
+      "name": "Svärtinge skogsbacke stop",
+      "state": "VERIFIED",
+      "source_url": "https://www.ostgotatrafiken.se/hallplats/svartinge-skogsbacke",
+      "observation_date": "2026-08-18",
+      "distance_m": null,
+      "measurement_method": "OFFICIAL_STOP_PAGE_PRESENCE_ONLY_NO_COORDINATE_CAPTURE",
+      "facts": [
+        "Official stop page",
+        "Line 410 shown at observation"
+      ],
+      "limitations": [
+        "Timetable is volatile",
+        "No distance, walking route or service-frequency claim"
+      ]
+    },
+    {
+      "category": "SHOP",
+      "name": "ICA Nära Svärtinge",
+      "state": "VERIFIED",
+      "source_url": "https://www.ica.se/butiker/nara/norrkoping/ica-nara-svartinge-1064007/tjanster/",
+      "observation_date": "2026-08-18",
+      "distance_m": null,
+      "measurement_method": "PUBLIC_OPERATOR_LOCALITY_PRESENCE_ONLY_NO_COORDINATE_CAPTURE",
+      "facts": [
+        "Grocery service in Svärtinge",
+        "Operator page lists pharmacy/health service and fuel service"
+      ],
+      "limitations": [
+        "No price, stock, opening-hour or route claim",
+        "No distance measurement"
+      ]
+    },
+    {
+      "category": "NATURE",
+      "name": "Lake Glan and local nature context",
+      "state": "VERIFIED",
+      "source_url": "https://norrkoping.se/download/18.38ef647f19e49e0477131f/1779430656807/KS%202025_1018_Planhandling%20F%C3%96P%20Sv%C3%A4rtinge.pdf",
+      "observation_date": "2026-08-18",
+      "distance_m": null,
+      "measurement_method": "MUNICIPAL_LOCALITY_NARRATIVE_NO_ACCESS_OR_DISTANCE_MEASUREMENT",
+      "facts": [
+        "Svärtinge is described in relation to Lake Glan and nature"
+      ],
+      "limitations": [
+        "No verified sightline, shoreline access, walking route or distance"
+      ]
+    },
+    {
+      "category": "OTHER_SERVICE",
+      "name": "Library",
+      "state": "INDICATIVE",
+      "source_url": "https://norrkoping.se/download/18.38ef647f19e49e0477131f/1779430656807/KS%202025_1018_Planhandling%20F%C3%96P%20Sv%C3%A4rtinge.pdf",
+      "observation_date": "2026-08-18",
+      "distance_m": null,
+      "measurement_method": "MUNICIPAL_CURRENT_SERVICE_NARRATIVE",
+      "facts": [
+        "Draft municipal document states Svärtinge currently lacks a library"
+      ],
+      "limitations": [
+        "Draft narrative may change",
+        "No alternative-library distance or route measurement"
+      ]
+    }
+  ],
+  "evidence_register": [
+    {
+      "evidence_id": "EV_SUBJECT_IDENTITY",
+      "domain": "SUBJECT_IDENTITY",
+      "state": "VERIFIED",
+      "value": "SVÄRTINGE 54:28",
+      "source_refs": [
+        "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"
+      ],
+      "reason": "Municipal address/property point query confirms the working designation; property-register title and registered area remain outside this claim."
+    },
+    {
+      "evidence_id": "EV_COORDINATE_ANCHOR",
+      "domain": "COORDINATE",
+      "state": "VERIFIED",
+      "value": "EPSG:4326 locator plus EPSG:3010 municipal query point",
+      "source_refs": [
+        "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"
+      ],
+      "reason": "Pinned source coordinates with explicit axis order; not a survey control point."
+    },
+    {
+      "evidence_id": "EV_MUNICIPAL_MAP_AREA",
+      "domain": "PARCEL_AREA",
+      "state": "INDICATIVE",
+      "value": "1938.1988442902577 m2 municipal map surface",
+      "source_refs": [
+        "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"
+      ],
+      "reason": "NOKA map surface is useful context but has no legal effect."
+    },
+    {
+      "evidence_id": "EV_PARCEL_SHAPE",
+      "domain": "PARCEL_GEOMETRY",
+      "state": "UNKNOWN",
+      "value": null,
+      "source_refs": [],
+      "reason": "No authoritative cadastral vector or surveyed boundary is bound; only an area-equivalent uncertainty disc is rendered."
+    },
+    {
+      "evidence_id": "EV_SELLER_CLAIMS",
+      "domain": "MARKET_REPORTED_CONTEXT",
+      "state": "REPORTED_UNVERIFIED",
+      "value": "Claims remain only in the separated Project record",
+      "source_refs": [
+        "data/sites/sweden/saterdalsvagen-14/project-v0.1.json"
+      ],
+      "reason": "No listing, price, owner or transaction payload is copied into the Neighbourhood Twin."
+    },
+    {
+      "evidence_id": "EV_TERRAIN",
+      "domain": "TERRAIN",
+      "state": "BLOCKED",
+      "value": "Lantmäteriet item 650_55 identified; bytes unavailable",
+      "source_refs": [
+        "FINDING_SE_HEIGHT_ITEM_AVAILABLE_NOT_FETCHED"
+      ],
+      "reason": "HTTP 401 prevents raster QA and every terrain derivation."
+    },
+    {
+      "evidence_id": "EV_BUILDINGS",
+      "domain": "EXISTING_BUILDINGS",
+      "state": "BLOCKED",
+      "value": null,
+      "source_refs": [],
+      "reason": "No source-bound building footprints or heights are captured."
+    },
+    {
+      "evidence_id": "EV_ROADS",
+      "domain": "ROADS",
+      "state": "BLOCKED",
+      "value": null,
+      "source_refs": [],
+      "reason": "No current source-bound centreline, width, gradient, manager or access geometry is captured."
+    },
+    {
+      "evidence_id": "EV_PROXIMITY_PRESENCE",
+      "domain": "PROXIMITY",
+      "state": "VERIFIED",
+      "value": "Schools, preschool, transit stop, grocery and nature/locality context",
+      "source_refs": [
+        "public official/operator pages observed 2026-08-18"
+      ],
+      "reason": "Locality presence only; each row retains its source and method."
+    },
+    {
+      "evidence_id": "EV_PROXIMITY_DISTANCE",
+      "domain": "PROXIMITY_DISTANCE",
+      "state": "UNKNOWN",
+      "value": null,
+      "source_refs": [],
+      "reason": "No facility-coordinate capture was authorized; no straight-line, route or travel-time values are asserted."
+    },
+    {
+      "evidence_id": "EV_PLANNING_LOCATOR",
+      "domain": "PLANNING",
+      "state": "INDICATIVE",
+      "value": "0581K-22D:1008 at municipal point locator",
+      "source_refs": [
+        "FINDING_SE_NOKA_EFFECTIVE_PLAN_LOCATOR"
+      ],
+      "reason": "Historic plan record is found, but present property mapping, amendment chain and exact legal effect remain unresolved."
+    },
+    {
+      "evidence_id": "EV_STRATEGIC_PLAN_STATUS",
+      "domain": "PLANNING",
+      "state": "VERIFIED",
+      "value": "2025 municipal plan adopted; 1984 Svärtinge plan continues; 2026 proposal is consultation draft",
+      "source_refs": [
+        "FINDING_SE_CURRENT_STRATEGIC_PLAN_STATUS"
+      ],
+      "reason": "Instrument states are kept distinct and none is promoted to property entitlement."
+    },
+    {
+      "evidence_id": "EV_ENTITLEMENT",
+      "domain": "ENTITLEMENT",
+      "state": "BLOCKED",
+      "value": null,
+      "source_refs": [],
+      "reason": "No property-specific governing interpretation or buildable envelope exists."
+    },
+    {
+      "evidence_id": "EV_MUNIN_REFERENCE",
+      "domain": "MUNIN_INTERFACE",
+      "state": "UNKNOWN",
+      "value": null,
+      "source_refs": [],
+      "reason": "No opaque Munin identifier is available and none is invented; payload count remains zero."
+    }
+  ],
+  "planning": {
+    "state": "INDICATIVE",
+    "governing_locator": {
+      "record": "0581K-22D:1008",
+      "type": "Avstyckningsplan",
+      "legal_force_date": "1936-05-26",
+      "current_property_mapping": "UNRESOLVED"
+    },
+    "strategic_context": {
+      "municipality_wide_plan_adopted": "2025-12-15",
+      "svartinge_1984": "OUTDATED_BUT_CONTINUES_UNTIL_REPLACED",
+      "svartinge_2026": "CONSULTATION_DRAFT_NOT_ADOPTED"
+    },
+    "entitlement_state": "BLOCKED",
+    "historic_signals_only": [
+      "one dwelling house per historic plot",
+      "approximately 3000 m2 original average plot pattern",
+      "historic 1:12 road-gradient signal",
+      "historic 40 m high-voltage corridor",
+      "open roadside drainage",
+      "water provision before sale or construction"
+    ],
+    "forbidden_inferences": [
+      "Current minimum plot size",
+      "Current building right",
+      "Current buildable envelope",
+      "Current access approval",
+      "Current utility capacity"
+    ]
+  },
+  "hard_gates": [
+    {
+      "gate_id": "LEGAL_BOUNDARY",
+      "state": "BLOCKED",
+      "prevents": [
+        "LEGAL_OR_CADASTRAL_BOUNDARY_RENDER",
+        "SETBACK_MEASUREMENT",
+        "BUILDABLE_ENVELOPE"
+      ],
+      "reason": "NOKA map geometry has no legal effect and no authoritative cadastral vector or field survey is bound.",
+      "evidence_refs": [
+        "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"
+      ]
+    },
+    {
+      "gate_id": "TERRAIN",
+      "state": "BLOCKED",
+      "prevents": [
+        "TERRAIN_MESH",
+        "CONTOURS",
+        "SLOPE",
+        "DRAINAGE",
+        "FINISHED_FLOOR_LEVEL"
+      ],
+      "reason": "The identified 1 m terrain asset returned HTTP 401; no raster bytes or derivations exist.",
+      "evidence_refs": [
+        "FINDING_SE_HEIGHT_ITEM_AVAILABLE_NOT_FETCHED"
+      ]
+    },
+    {
+      "gate_id": "EXISTING_BUILDINGS",
+      "state": "BLOCKED",
+      "prevents": [
+        "BUILDING_FOOTPRINT_RENDER",
+        "HEIGHT_OR_STOREY_CLAIM",
+        "SHADOW_OR_OVERLOOK_ANALYSIS"
+      ],
+      "reason": "No source-bound surrounding building geometry or height evidence has been captured.",
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "ROAD_GEOMETRY",
+      "state": "BLOCKED",
+      "prevents": [
+        "ROAD_CENTERLINE_RENDER",
+        "ROAD_WIDTH_OR_GRADIENT",
+        "DRIVEWAY_DESIGN"
+      ],
+      "reason": "The street name and historic plan context do not provide current surveyed road geometry.",
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "PLANNING_AND_ENTITLEMENT",
+      "state": "BLOCKED",
+      "prevents": [
+        "ENTITLEMENT_CLAIM",
+        "BUILDABLE_ENVELOPE",
+        "H30_H50_ELIGIBILITY"
+      ],
+      "reason": "The current property-to-historic-plan mapping, amendment chain and property-specific legal effect remain unresolved.",
+      "evidence_refs": [
+        "FINDING_SE_NOKA_EFFECTIVE_PLAN_LOCATOR",
+        "FINDING_SE_CURRENT_STRATEGIC_PLAN_STATUS"
+      ]
+    },
+    {
+      "gate_id": "LEGAL_ACCESS",
+      "state": "BLOCKED",
+      "prevents": [
+        "LEGAL_ACCESS_PASS",
+        "DRIVEWAY_APPROVAL",
+        "CONSTRUCTION_ACCESS"
+      ],
+      "reason": "Road proximity cannot prove servitude, road-manager consent, gradient or permitted access.",
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "UTILITIES",
+      "state": "BLOCKED",
+      "prevents": [
+        "UTILITY_CAPACITY",
+        "CONNECTION_POINT",
+        "PAID_STATUS",
+        "CONSTRUCTION_CLEARANCE"
+      ],
+      "reason": "Seller-reported VA status is not provider-confirmed and no utility-line case exists.",
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "FLOOD_AND_DRAINAGE",
+      "state": "BLOCKED",
+      "prevents": [
+        "FLOOD_ABSENCE_CLAIM",
+        "DRAINAGE_DESIGN",
+        "SAFE_FLOOR_LEVEL"
+      ],
+      "reason": "Point-only consultation-layer zero intersections cannot prove parcel-wide absence; terrain and local drainage are unresolved.",
+      "evidence_refs": [
+        "FINDING_SE_DRAFT_FOP_POINT_CONTEXT"
+      ]
+    },
+    {
+      "gate_id": "SOIL_AND_GROUNDWATER",
+      "state": "BLOCKED",
+      "prevents": [
+        "FOUNDATION_SELECTION",
+        "INFILTRATION_DESIGN",
+        "CONTAMINATION_CLEARANCE"
+      ],
+      "reason": "Glaciofluvial screening and nearby depth variability require plot-specific geotechnical, groundwater, radon, infiltration and contamination work.",
+      "evidence_refs": [
+        "FINDING_SE_SOIL_GLACIOFLUVIAL",
+        "FINDING_SE_NEARBY_SOIL_DEPTH_VARIABILITY",
+        "FINDING_SE_EBH_CONTEXT_2KM"
+      ]
+    },
+    {
+      "gate_id": "HERITAGE_AND_ENVIRONMENT",
+      "state": "BLOCKED",
+      "prevents": [
+        "HERITAGE_CLEARANCE",
+        "PROTECTED_AREA_ABSENCE",
+        "SHORELINE_OR_WATER_PROTECTION_CLEARANCE"
+      ],
+      "reason": "Nearby heritage records, inconclusive national services, water-protection and parcel-wide environmental intersections remain unresolved.",
+      "evidence_refs": [
+        "FINDING_SE_HERITAGE_POINTS_500M",
+        "FINDING_SE_PROTECTED_SERVICE_INCONCLUSIVE",
+        "FINDING_SE_GLAN_WATER_PROTECTION_UNRESOLVED"
+      ]
+    }
+  ],
+  "munin_interface": {
+    "mode": "OPAQUE_REFERENCES_ONLY",
+    "references": [],
+    "payload_persisted": false,
+    "forbidden_payload_domains": [
+      "PRICE",
+      "OWNER",
+      "LISTING",
+      "TRANSACTION",
+      "VALUATION",
+      "COMPARABLE",
+      "PERSONAL_RECORD"
+    ],
+    "state": "NO_OPAQUE_REFERENCE_AVAILABLE_NOT_INVENTED"
+  },
+  "interface_stages": [
+    "REGION",
+    "NEIGHBOURHOOD",
+    "STREET",
+    "PLOT",
+    "BUILDING",
+    "UNIT",
+    "ROOM"
+  ],
+  "camera_lod_contract": [
+    {
+      "mode": "NEIGHBOURHOOD_VIEW",
+      "stage_from": "REGION",
+      "stage_to": "NEIGHBOURHOOD",
+      "target": "coordinate_anchor",
+      "range_m": [
+        250,
+        5000
+      ],
+      "lod": "LOD0_CONTEXT_LABELS",
+      "allowed": [
+        "anchor",
+        "locality labels",
+        "evidence-state badges"
+      ],
+      "blocked": [
+        "terrain mesh",
+        "building footprints",
+        "legal parcel outline"
+      ]
+    },
+    {
+      "mode": "STREET_VIEW",
+      "stage_from": "NEIGHBOURHOOD",
+      "stage_to": "STREET",
+      "target": "subject street context",
+      "range_m": [
+        50,
+        500
+      ],
+      "lod": "LOD1_TEXT_AND_ANCHOR",
+      "allowed": [
+        "street name",
+        "verified locality context"
+      ],
+      "blocked": [
+        "invented road geometry",
+        "street-level imagery",
+        "building massing"
+      ]
+    },
+    {
+      "mode": "PLOT_ORBIT",
+      "stage_from": "STREET",
+      "stage_to": "PLOT",
+      "target": "area-equivalent uncertainty disc",
+      "range_m": [
+        20,
+        150
+      ],
+      "lod": "LOD2_INDICATIVE_DISC",
+      "allowed": [
+        "translucent notional disc",
+        "anchor",
+        "gate overlays"
+      ],
+      "blocked": [
+        "legal boundary",
+        "setbacks",
+        "terrain-derived levels",
+        "buildable envelope"
+      ]
+    },
+    {
+      "mode": "BUILDING_ORBIT_AND_ROOM_ENTRY",
+      "stage_from": "PLOT",
+      "stage_to": "ROOM",
+      "target": null,
+      "range_m": null,
+      "lod": "BLOCKED_NO_BUILDING_UNIT_ROOM_GEOMETRY",
+      "allowed": [
+        "blocked-state explanation"
+      ],
+      "blocked": [
+        "building orbit",
+        "unit entry",
+        "room entry"
+      ]
+    }
+  ],
+  "prototype_capabilities": {
+    "can_display": [
+      "regional/locality context",
+      "verified address/property locator",
+      "explicit CRS",
+      "translucent area-equivalent uncertainty disc",
+      "text-only street/neighbourhood character",
+      "source-labelled proximity register",
+      "planning chronology",
+      "hard-gate overlays"
+    ],
+    "cannot_display": [
+      "legal or surveyed parcel boundary",
+      "terrain, contours, slope or drainage",
+      "source-bound surrounding buildings or road geometry",
+      "buildable envelope or entitlement",
+      "legal access or utility routes",
+      "verified flood absence",
+      "building, unit or room geometry"
+    ]
+  },
+  "evidence_summary": {
+    "VERIFIED": 12,
+    "INDICATIVE": 8,
+    "REPORTED_UNVERIFIED": 1,
+    "BLOCKED": 5,
+    "UNKNOWN": 3
+  }
+}

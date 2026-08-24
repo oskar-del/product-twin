@@ -1,0 +1,142 @@
+{
+  "schema_version": "svartinge-official-context-geometry-sources/v0.1",
+  "entity_type": "OfficialContextGeometrySourceReceiptSet",
+  "subject": "SVÄRTINGE 54:28",
+  "authority": "Lantmäteriet",
+  "catalogue": {
+    "api_url": "https://api.lantmateriet.se/stac-vektor/v1/",
+    "license": "CC-BY-4.0",
+    "special_terms_review_required": true,
+    "collections_observed": ["kommun-lan-rike", "fastighetsindelning", "belagenhetsadresser", "byggnader", "marktacke", "ortnamn"],
+    "topography_10_collection_present": false,
+    "retrieved_at": "2026-08-18T02:10:14Z",
+    "receipt": {
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/lm-vector-collections-2026-08-18.json",
+      "byte_count": 6868,
+      "sha256": "1d19a0f3b9a4b143027bfa92506d68da520b787505971def659e68f75b5c669d",
+      "content_persisted_in_repository": false
+    }
+  },
+  "datasets": {
+    "buildings": {
+      "collection": "byggnader",
+      "item_id": "0581",
+      "title": "Byggnader för Norrköpings kommun",
+      "item_url": "https://api.lantmateriet.se/stac-vektor/v1/collections/byggnader/items/0581",
+      "created_at": "2025-02-03T00:00:00Z",
+      "updated_at": "2026-08-14T23:30:00.889000Z",
+      "horizontal_crs": "EPSG:3006",
+      "wgs84_bbox": [15.619336529569237, 58.42418989426128, 17.07532217067591, 58.82713137823744],
+      "projected_bbox": [536174.241, 6476104.684, 619816.984, 6522660.206],
+      "asset_url": "https://dl1.lantmateriet.se/byggnadsverk/byggnad_kn0581.zip",
+      "asset_media_type": "application/zip",
+      "asset_size_bytes": 14122089,
+      "asset_format": "GeoPackage in ZIP",
+      "locator_covered": true,
+      "metadata_state": "OFFICIAL_METADATA_VERIFIED",
+      "metadata_receipt": {
+        "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/lm-building-item-0581.json",
+        "retrieved_at": "2026-08-18T02:09:12Z",
+        "byte_count": 1406,
+        "sha256": "c4c98db79320b39f6430d79c004924de9b849c7f38f17738923ddf6e5c67b827",
+        "content_persisted_in_repository": false
+      },
+      "asset_access": {
+        "state": "KEY_REQUIRED",
+        "http_status_without_credentials": 401,
+        "bytes_acquired": false,
+        "geometry_available": false,
+        "credential_persisted": false
+      }
+    },
+    "property_division": {
+      "collection": "fastighetsindelning",
+      "item_id": "0581",
+      "title": "Fastighetsindelning i Norrköpings kommun",
+      "item_url": "https://api.lantmateriet.se/stac-vektor/v1/collections/fastighetsindelning/items/0581",
+      "created_at": "2025-02-03T00:00:00Z",
+      "updated_at": "2026-08-15T00:14:50.028000Z",
+      "horizontal_crs": "EPSG:3006",
+      "wgs84_bbox": [15.613583841903212, 58.41838712926837, 17.601352087403935, 58.83308847286595],
+      "projected_bbox": [535844.138, 6475455.538, 650152.4, 6524383.969],
+      "asset_url": "https://dl1.lantmateriet.se/fastighet/fastighetsindelning_kn0581.zip",
+      "asset_media_type": "application/zip",
+      "asset_size_bytes": 44443839,
+      "asset_format": "GeoPackage in ZIP",
+      "locator_covered": true,
+      "metadata_state": "OFFICIAL_METADATA_VERIFIED",
+      "metadata_receipt": {
+        "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/lm-property-item-0581.json",
+        "retrieved_at": "2026-08-18T02:10:36Z",
+        "byte_count": 1501,
+        "sha256": "4b3754293bed4951194b97f47c7e4e9ac1a53a0098a09445b1e831db734b1554",
+        "content_persisted_in_repository": false
+      },
+      "asset_access": {
+        "state": "KEY_REQUIRED",
+        "http_status_without_credentials": 401,
+        "bytes_acquired": false,
+        "geometry_available": false,
+        "credential_persisted": false
+      }
+    }
+  },
+  "access_guide": {
+    "source_url": "https://www.lantmateriet.se/contentassets/6b85c93c6954407e855c896da5a415f2/guide_radiant_earth_byggnader.pdf",
+    "document_created_at": "2026-05-27T12:20:58Z",
+    "states_product_must_be_ordered": true,
+    "states_authorization_required": true,
+    "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/lm-building-stac-guide-2026-05-27.pdf",
+    "byte_count": 161318,
+    "sha256": "d6fcbd7a86ff522998b505b58e61119ab3eff0e268240beeb035b9c620098da9",
+    "content_persisted_in_repository": false
+  },
+  "road_source": {
+    "authority": "Trafikverket",
+    "product": "NVDB Vägtrafiknät",
+    "source_url": "https://bransch.trafikverket.se/tjanster/data-kartor-och-geodatatjanster/nyheter-om-trafikverkets-data/2025/nvdb-vagdata-tillgangliga-i-trafikverkets-datautbytesportal-for-anvandning-i-oppet-api/",
+    "documented_current_data": true,
+    "metadata_read_without_login": true,
+    "download_requires_registered_account": true,
+    "exact_extract_acquired": false,
+    "geometry_available": false,
+    "state": "KEY_REQUIRED",
+    "limitations": [
+      "No exact Säterdalsvägen Vägtrafiknät extract, centreline, width or gradient has been acquired.",
+      "Road-network geometry cannot establish legal access, road ownership, driveway permission or construction access."
+    ]
+  },
+  "import_contract": {
+    "runtime_credentials_only": true,
+    "committed_credentials_forbidden": true,
+    "raw_asset_sha256_required": true,
+    "raw_asset_byte_count_required": true,
+    "zip_entry_manifest_required": true,
+    "geopackage_integrity_check_required": true,
+    "source_crs_must_be_parsed": true,
+    "clip_buffer_m": 250,
+    "local_transform_method": "EPSG:3006 offsets from verified locator easting/northing; X east, Y up, Z north",
+    "derived_geometry_hash_required": true,
+    "source_object_ids_must_be_preserved": true,
+    "building_heights_may_be_invented": false,
+    "road_width_may_be_invented": false,
+    "legal_access_may_be_inferred": false
+  },
+  "promotion_gates": [
+    {
+      "gate_id": "GATE_SE_EXISTING_BUILDINGS",
+      "status": "OPEN",
+      "reason": "The exact official Norrköping building package is identified and current metadata is verified, but the protected asset, local clip and source-bound footprints are absent."
+    },
+    {
+      "gate_id": "GATE_SE_PROPERTY_DIVISION_CONTEXT",
+      "status": "OPEN",
+      "reason": "The exact official Norrköping property-division package is identified, but the protected asset and the SVÄRTINGE 54:28 feature have not been acquired or validated."
+    },
+    {
+      "gate_id": "GATE_SE_ROAD_GEOMETRY",
+      "status": "OPEN",
+      "reason": "NVDB Vägtrafiknät is the documented current road source, but no exact registered-account extract has been acquired."
+    }
+  ]
+}

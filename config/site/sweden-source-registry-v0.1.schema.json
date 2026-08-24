@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/site/sweden-source-registry-v0.1.schema.json",
+  "title": "Sweden plot-intelligence source registry v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "entity_type",
+    "registry_id",
+    "country",
+    "canonical_crs",
+    "researched_at",
+    "evidence_levels",
+    "current_rule_profile",
+    "sources",
+    "gate_catalog",
+    "version_alerts"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "entity_type": {"const": "SwedenPlotSourceRegistry"},
+    "registry_id": {"const": "SE_PLOT_SOURCE_REGISTRY_V0_1"},
+    "country": {"const": "SE"},
+    "canonical_crs": {"const": "EPSG:3006"},
+    "researched_at": {"type": "string", "format": "date"},
+    "evidence_levels": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["level_id", "precedence", "title", "role", "promotion_limit"],
+        "properties": {
+          "level_id": {"type": "string"},
+          "precedence": {"type": "integer", "minimum": 1, "maximum": 4},
+          "title": {"type": "string", "minLength": 3},
+          "role": {"type": "string", "minLength": 10},
+          "promotion_limit": {"type": "string", "minLength": 10}
+        }
+      }
+    },
+    "current_rule_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profile_id", "effective_from", "legal_source_id", "inside_detail_plan", "outside_detail_plan", "always_requires_case_checks"],
+      "properties": {
+        "profile_id": {"const": "PBL_2025_974_EFFECTIVE_2025_12_01"},
+        "effective_from": {"const": "2025-12-01"},
+        "legal_source_id": {"const": "SE_BOVERKET_CURRENT_PBL"},
+        "inside_detail_plan": {"$ref": "#/$defs/houseThreshold"},
+        "outside_detail_plan": {"$ref": "#/$defs/houseThreshold"},
+        "always_requires_case_checks": {
+          "type": "array",
+          "minItems": 5,
+          "items": {"type": "string", "minLength": 3},
+          "uniqueItems": true
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 20,
+      "items": {"$ref": "#/$defs/source"}
+    },
+    "gate_catalog": {
+      "type": "array",
+      "minItems": 15,
+      "items": {"$ref": "#/$defs/gate"}
+    },
+    "version_alerts": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["alert_id", "authority", "effective_date", "action"],
+        "properties": {
+          "alert_id": {"type": "string"},
+          "authority": {"type": "string"},
+          "effective_date": {"type": "string", "format": "date"},
+          "action": {"type": "string", "minLength": 10}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "houseThreshold": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["max_individual_area_m2", "max_cumulative_area_m2", "max_ridge_height_m"],
+      "properties": {
+        "max_individual_area_m2": {"type": "number", "exclusiveMinimum": 0},
+        "max_cumulative_area_m2": {"type": "number", "exclusiveMinimum": 0},
+        "max_ridge_height_m": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "licence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "uri", "note"],
+      "properties": {
+        "name": {"type": ["string", "null"]},
+        "uri": {"type": ["string", "null"]},
+        "note": {"type": "string", "minLength": 3}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id", "name", "authority", "source_kind", "evidence_level",
+        "themes", "access_mode", "automation_state", "landing_page", "endpoint_url",
+        "probe_url", "formats", "coverage", "currentness", "licence",
+        "can_close_gates", "cannot_prove", "limitations", "resolution_requires", "checked_at"
+      ],
+      "properties": {
+        "source_id": {"type": "string", "pattern": "^SE_[A-Z0-9_]+$"},
+        "name": {"type": "string", "minLength": 3},
+        "authority": {"type": "string", "minLength": 2},
+        "source_kind": {"enum": ["national_service", "national_guidance", "municipal_record", "provider_response", "commissioned_evidence"]},
+        "evidence_level": {"enum": ["LEVEL_OPEN_NATIONAL_CONTEXT", "LEVEL_MUNICIPAL_PLANNING", "LEVEL_AUTHORITATIVE_PROPERTY_RECORD", "LEVEL_FIELD_AND_PROVIDER_PROOF"]},
+        "themes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "access_mode": {"enum": ["OPEN_API", "OPEN_DOWNLOAD", "ACCESS_SETUP", "LEGAL_REVIEW_AND_ACCESS", "REQUEST_BASED", "ACCOUNT_CASE", "MUNICIPALITY_SPECIFIC", "PROVIDER_RESPONSE", "COMMISSIONED"]},
+        "automation_state": {"enum": ["DIRECT", "DIRECT_AFTER_ACCESS", "HUMAN_REQUEST_REQUIRED", "MUNICIPAL_ADAPTER_REQUIRED", "CASE_CREATION_REQUIRES_PERMISSION", "COMMISSION_REQUIRED"]},
+        "landing_page": {"type": ["string", "null"]},
+        "endpoint_url": {"type": ["string", "null"]},
+        "probe_url": {"type": ["string", "null"]},
+        "formats": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "coverage": {"type": "string", "minLength": 3},
+        "currentness": {"type": "string", "minLength": 3},
+        "licence": {"$ref": "#/$defs/licence"},
+        "can_close_gates": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "cannot_prove": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+        "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 5}},
+        "resolution_requires": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "checked_at": {"type": "string", "format": "date"}
+      }
+    },
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gate_id", "title", "stage", "default_status", "close_requires", "screening_sources", "false_positive_guard"],
+      "properties": {
+        "gate_id": {"type": "string", "pattern": "^GATE_SE_[A-Z0-9_]+$"},
+        "title": {"type": "string", "minLength": 3},
+        "stage": {"enum": ["INTAKE", "DISCOVERY", "DUE_DILIGENCE", "DESIGN_BASIS", "PRE_CONSTRUCTION"]},
+        "default_status": {"const": "OPEN"},
+        "close_requires": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+        "screening_sources": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "false_positive_guard": {"type": "string", "minLength": 10}
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "controls": {
+    "la_concha_sightline": {
+      "asset": null,
+      "bearing_deg_true_reported": 349.4,
+      "note": "No independently verified target coordinate or viewshed is included.",
+      "status": "REPORTED_SCENARIO_OVERLAY_ONLY",
+      "target": "La Concha summit"
+    },
+    "seasonal_sun": {
+      "dates": [
+        "2026-06-21",
+        "2026-09-22",
+        "2026-12-21"
+      ],
+      "location": [
+        -4.95024849,
+        36.49718685
+      ],
+      "note": "A viewer computes solar position; this bundle does not assert a rendered shadow study.",
+      "status": "PARAMETRIC_CONTROL_CONTRACT",
+      "timezone": "Europe/Madrid"
+    }
+  },
+  "coordinate_frames": {
+    "model": {
+      "axes": "+X east, +Y up, -Z north",
+      "origin_epsg25830_m": [
+        325341.89916010736,
+        4040890.070495259,
+        1.2741371393203735
+      ],
+      "true_north_vector": [
+        0,
+        0,
+        -1
+      ],
+      "units": "metres"
+    },
+    "projected": "EPSG:25830 easting,northing metres",
+    "web": "RFC 7946 longitude,latitude WGS84"
+  },
+  "entity_type": "SpatialExportContract",
+  "layers": {
+    "access_candidates_unverified": "data/sites/canopus/spatial/v0.2/access-candidates-v0.2.geojson",
+    "boundary": "data/sites/canopus/spatial/v0.2/boundary-wgs84-v0.2.geojson",
+    "buildings": "data/sites/canopus/spatial/v0.2/buildings-context-v0.2.geojson",
+    "concept_massing_overlay": null,
+    "contours": "data/sites/canopus/spatial/v0.2/contours-1m-v0.2.geojson",
+    "planning_envelope": null,
+    "roads": "data/sites/canopus/spatial/v0.2/roads-context-v0.2.geojson",
+    "section_aa": "data/sites/canopus/spatial/v0.2/section-aa-v0.2.json",
+    "spot_elevations": "data/sites/canopus/spatial/v0.2/spot-elevations-v0.2.geojson",
+    "terrain_mesh": "data/sites/canopus/spatial/v0.2/terrain-context-v0.2.glb"
+  },
+  "schema_version": "0.2",
+  "separation": {
+    "boundary_redefined_by_scenario": false,
+    "permitted_access_established": false,
+    "planning_entitlement_established": false,
+    "project_seller_facts_mutated": false,
+    "scenario_geometry_imported": false
+  },
+  "site_twin_ref": {
+    "content_sha256": "e6e0a63ae240b3641c66a9738fbb1bcf351e2fe958e0115b1cb39c46727fd41c",
+    "id": "SITE_CANOPUS_5410501UF2451S",
+    "path": "data/sites/canopus/spatial/v0.2/site-twin-v0.2.json",
+    "version": "0.2"
+  }
+}

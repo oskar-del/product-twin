@@ -1,0 +1,116 @@
+{
+  "schema_version": "svartinge-terrain-source-metadata/v0.1",
+  "entity_type": "TerrainSourceMetadataReceiptSet",
+  "subject": "SVÄRTINGE 54:28",
+  "source_item": {
+    "authority": "Lantmäteriet",
+    "collection": "dtm-cog",
+    "item_id": "650_55",
+    "item_url": "https://api.lantmateriet.se/stac-hojd/v1/collections/dtm-cog/items/650_55",
+    "data_asset_url": "https://dl1.lantmateriet.se/hojd/data/grid/mhm/65_5/m650_55.tif",
+    "data_asset_size_bytes": 246140605,
+    "data_asset_multihash": "1220789c7144922ab546ff8c149f8f82fb6a144fb751b2ff599abb8e96a9f5e56de2",
+    "projected_bbox": [550000, 6500000, 560000, 6510000],
+    "wgs84_bbox": [15.861264859089136, 58.636146914397685, 16.03614907927928, 58.72721562261237],
+    "compound_crs": "EPSG:5845",
+    "horizontal_crs": "EPSG:3006",
+    "vertical_datum": "RH2000",
+    "grid_resolution_m": 1,
+    "nodata": -9999,
+    "grid_shape": [10000, 10000],
+    "updated_at": "2026-06-23T16:05:18Z",
+    "data_modified_at": "2025-12-22T00:00:00Z"
+  },
+  "public_metadata_receipts": [
+    {
+      "receipt_id": "RCPT_SE_LM_TERRAIN_STAC_ITEM_650_55",
+      "source_url": "https://api.lantmateriet.se/stac-hojd/v1/collections/dtm-cog/items/650_55",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/lm-height-item.json",
+      "retrieved_at": "2026-08-17T17:33:25Z",
+      "byte_count": 5118,
+      "sha256": "c8c99c78dd1db2915bb3abd3e56a91013724807a1015f2fb105bfecc15eba94a",
+      "content_persisted_in_repository": false
+    },
+    {
+      "receipt_id": "RCPT_SE_LM_TERRAIN_INFO_650_55",
+      "source_url": "https://dl1.lantmateriet.se/hojd/pub/grid/mhm/65_5/m650_55_info.json",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/m650_55_info.json",
+      "retrieved_at": "2026-08-18T01:44:07Z",
+      "byte_count": 4340,
+      "sha256": "5a8aeebac1df53e4295eb5a6ec9dcd6c74d6e2854d36a640bfc2f2db2a685366",
+      "content_persisted_in_repository": false
+    },
+    {
+      "receipt_id": "RCPT_SE_LM_TERRAIN_PROVENANCE_650_55",
+      "source_url": "https://dl1.lantmateriet.se/hojd/pub/grid/mhm/65_5/m650_55_ursprung.json",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/m650_55_ursprung.json",
+      "retrieved_at": "2026-08-18T01:44:02Z",
+      "byte_count": 82472,
+      "sha256": "c0c8a44a7088146a4a25c11531ffb47309f53d7dfea7123ad12a6897a55488ea",
+      "content_persisted_in_repository": false
+    },
+    {
+      "receipt_id": "RCPT_SE_LM_TERRAIN_THUMBNAIL_650_55",
+      "source_url": "https://dl1.lantmateriet.se/hojd/pub/grid/mhm/65_5/m650_55_thumbnail.png",
+      "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/m650_55_thumbnail.png",
+      "retrieved_at": "2026-08-18T01:44:07Z",
+      "byte_count": 39076,
+      "sha256": "804ef951331d98912ec10f1eccbfa004d18cfdbac395848d4c8e68a9dea38edd",
+      "content_persisted_in_repository": false
+    }
+  ],
+  "locator_projection": {
+    "source_coordinate_wgs84": [16.0317063331, 58.6522414431],
+    "projected_coordinate_epsg3006": [559868.9999, 6501790.311],
+    "method": "Deterministic GRS80 Transverse Mercator using Lantmäteriet SWEREF 99 TM parameters; checked against the authority's published control example.",
+    "control_example_input_lat_lon": [60.666369395, 17.132577526],
+    "control_example_expected_northing_easting": [6727518, 616536],
+    "control_error_m": 0.0009,
+    "scope": "Municipal address locator transformation, not survey control"
+  },
+  "source_at_plot": {
+    "provenance_feature_id": "0",
+    "measurement_date": "2020-11-20",
+    "measurement_method": "Luftburen laserskanning",
+    "producer": "Lantmateriet",
+    "reported_horizontal_uncertainty_m": 0.3,
+    "reported_vertical_uncertainty_m": 0.1,
+    "selection_method": "The transformed locator is inside the base 10 km source polygon and outside every later update-patch bounding box; the easternmost patch ends at easting 556801.14 m.",
+    "verification_state": "OFFICIAL_METADATA_VERIFIED_RASTER_ACQUIRED"
+  },
+  "raster_access": {
+    "state": "ACQUIRED_VERIFIED",
+    "last_checked_at": "2026-08-18T17:00:00Z",
+    "http_status_without_credentials": 401,
+    "raster_bytes_acquired": true,
+    "terrain_values_available": true,
+    "runtime_credential_persisted": false,
+    "data_asset_sha256": "789c7144922ab546ff8c149f8f82fb6a144fb751b2ff599abb8e96a9f5e56de2",
+    "data_asset_byte_count": 246140605,
+    "runtime_locator": ".runtime/lantmateriet/terrain-cog/m650_55.tif",
+    "acquisition_basis": "Geotorget Markhöjdmodell Nedladdning behörighet, kundnr 30056732, avgift 0.00 SEK"
+  },
+  "municipal_alternative": {
+    "authority": "Norrköpings kommun",
+    "product": "Laserdata, terrängmodell",
+    "document_url": "https://norrkoping.se/download/18.505e551419540d1c3714633/1776090053908/Plantaxa%20inklusive%20kart-%20och%20m%C3%A4ttaxa.pdf",
+    "document_date": "2026-04-13",
+    "reported_products": ["LAS", "1x1 m point/ground grid in DWG or GeoTIFF"],
+    "reported_vertical_accuracy_m": 0.05,
+    "exact_plot_coverage": "UNKNOWN_REQUIRES_MUNICIPAL_CONFIRMATION",
+    "minimum_fee_sek": 500,
+    "state": "DOCUMENTED_NOT_CONNECTED"
+  },
+  "terrain_gate": {
+    "gate_id": "GATE_SE_TERRAIN",
+    "status": "CLOSED",
+    "reason": "Gate-tracked DTM COG m650_55.tif acquired and multihash-verified (1220789c…); the four public-metadata receipts match; provenance QA passes (plot inside the 2020 base laser-scan polygon, east of every later update patch). Terrain heights are authoritative RH2000, expressed relative to the pin datum. Boundary, access, utility and finished-floor gates remain OPEN.",
+    "closure_evidence": {
+      "data_asset_multihash_verified": true,
+      "public_metadata_receipts_verified": 4,
+      "provenance_qa_passed": true,
+      "reproduce": ".runtime/venv/bin/python scripts/derive_svartinge_terrain.py"
+    },
+    "still_open_downstream": ["registered legal boundary/area", "legal access", "utility capacity", "finished-floor level"]
+  }
+}

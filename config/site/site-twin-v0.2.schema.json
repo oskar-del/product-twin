@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/site/site-twin-v0.2.schema.json",
+  "title": "Promoted CANOPUS Site Twin spatial evidence profile",
+  "type": "object",
+  "required": ["schema_version", "entity_type", "site_twin_id", "project_id", "status", "base_site_twin", "spatial_evidence_manifest", "boundary", "terrain", "context", "access", "planning", "hard_gates"],
+  "additionalProperties": false,
+  "$defs": {
+    "artifactRef": {"type": "string", "pattern": "^data/sites/canopus/spatial/v0\\.2/"},
+    "gate": {
+      "type": "object",
+      "required": ["gate_id", "status", "severity", "satisfied_at", "evidence_ids", "check_profile"],
+      "additionalProperties": false,
+      "properties": {
+        "gate_id": {"type": "string", "pattern": "^GATE_[A-Z0-9_]+$"},
+        "status": {"enum": ["OPEN", "SATISFIED"]},
+        "severity": {"const": "HARD"},
+        "satisfied_at": {"type": ["string", "null"], "format": "date-time"},
+        "evidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^SRC_[A-Z0-9_]+$"}},
+        "check_profile": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "properties": {
+    "schema_version": {"const": "0.2"},
+    "entity_type": {"const": "SiteTwin"},
+    "site_twin_id": {"const": "SITE_CANOPUS_5410501UF2451S"},
+    "project_id": {"const": "PRJ_CANOPUS"},
+    "status": {"const": "OFFICIAL_BOUNDARY_AND_CONTEXT_TERRAIN_VERIFIED"},
+    "base_site_twin": {"type": "object", "required": ["path", "sha256", "preservation"]},
+    "spatial_evidence_manifest": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "path": {"$ref": "#/$defs/artifactRef"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "boundary": {"type": "object", "required": ["status", "artifact", "wgs84_artifact", "source_id", "observed"]},
+    "terrain": {"type": "object", "required": ["status", "analysis_artifact", "mesh_artifact", "source_id", "vertical_datum", "scope_note"]},
+    "context": {"type": "object", "required": ["roads", "buildings", "access_candidates"]},
+    "access": {
+      "type": "object",
+      "required": ["status", "permitted_access_point"],
+      "additionalProperties": false,
+      "properties": {"status": {"const": "UNVERIFIED_ANALYSIS_ONLY"}, "permitted_access_point": {"type": "null"}}
+    },
+    "planning": {
+      "type": "object",
+      "required": ["status", "entitlement", "buildable_envelope"],
+      "additionalProperties": false,
+      "properties": {"status": {"const": "UNRESOLVED_NO_COMPLIANCE_CLAIM"}, "entitlement": {"type": "null"}, "buildable_envelope": {"type": "null"}}
+    },
+    "hard_gates": {"type": "array", "minItems": 11, "maxItems": 11, "items": {"$ref": "#/$defs/gate"}}
+  }
+}

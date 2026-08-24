@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/spatial/neighbourhood-twin-v1.schema.json",
+  "title": "Neighbourhood Twin v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "entity_type", "neighbourhood_twin_id", "version", "lifecycle_state", "site_twin_ref", "frame", "context_geometry", "munin_reference_ids", "external_evidence_refs", "blockers"],
+  "properties": {
+    "manifest_version": {"const": "neighbourhood-twin/v1"},
+    "entity_type": {"const": "NeighbourhoodTwin"},
+    "neighbourhood_twin_id": {"type": "string", "pattern": "^NEIGH_[A-Z0-9_]+$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "lifecycle_state": {"enum": ["UNBOUND", "REFERENCE_ONLY", "SPATIAL_BASIS", "VERIFIED"]},
+    "site_twin_ref": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/immutableTwinRef"},
+    "frame": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/frame"},
+    "context_geometry": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/geometryBinding"},
+    "munin_reference_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "external_evidence_refs": {"type": "array", "items": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/externalEvidenceBinding"}},
+    "blockers": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/blockers"}
+  }
+}

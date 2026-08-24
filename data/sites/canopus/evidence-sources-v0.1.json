@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1",
+  "source_set_id": "SRCSET_CANOPUS_2026_08_17",
+  "storage_policy": "Source PDFs are not duplicated in the repository. Stable filenames, page counts and SHA-256 hashes bind assertions to the reviewed files.",
+  "documents": [
+    {
+      "document_id": "DOC_CANOPUS_LAND_REPORT",
+      "title": "CANOPUS - Land Report",
+      "original_filename": "CANOPUS - Land Report.pdf",
+      "pdf_pages": 5,
+      "sha256": "8d4fc2111af12fab957b1efffe546aa4d9411430f787df594681cc79dc6da9f6",
+      "document_date": "2026-08-13",
+      "reviewed_at": "2026-08-17",
+      "underlying_official_artifacts_attached": false
+    },
+    {
+      "document_id": "DOC_LCG_MASTER_PRESENTATION",
+      "title": "LA CONCHA GARDENS - Master Presentation",
+      "original_filename": "LA CONCHA GARDENS - Master Presentation.pdf",
+      "pdf_pages": 18,
+      "sha256": "078ec896af4449a5c19326643a2b73f335e442d2b16337f5dfbcbdca39777d25",
+      "document_date": "2026-08-14",
+      "reviewed_at": "2026-08-17",
+      "underlying_official_artifacts_attached": false
+    },
+    {
+      "document_id": "DOC_LCG_STUDY",
+      "title": "LA CONCHA GARDENS - The Study",
+      "original_filename": "LA CONCHA GARDENS - THE STUDY.pdf",
+      "pdf_pages": 25,
+      "sha256": "0542f95c01e719038769e38808ed9e3610ece4113c35c41bf3c906b7281be48b",
+      "document_date": "2026-08-14",
+      "reviewed_at": "2026-08-17",
+      "underlying_official_artifacts_attached": false
+    },
+    {
+      "document_id": "DOC_CANOPUS_BENCHMARK",
+      "title": "CANOPUS - Benchmark",
+      "original_filename": "CANOPUS - Benchmark.pdf",
+      "pdf_pages": 4,
+      "sha256": "0534a402e1212e55269dcadd40cb7a3cc10a26bb71110945c200791b69b7ebdb",
+      "document_date": "2026-08-13",
+      "reviewed_at": "2026-08-17",
+      "underlying_official_artifacts_attached": false
+    }
+  ],
+  "limitations": [
+    "The PDFs report Catastro, IGN, EU-DEM, PNOA, AENA and planning evidence, but the underlying machine-readable source artefacts are not part of this source set.",
+    "Official-source-reported means the dossier identifies an official source; it does not mean this implementation independently re-fetched that source.",
+    "Rendered plans and aerial illustrations are not survey geometry and must not be digitised as authoritative parcel or building coordinates."
+  ]
+}

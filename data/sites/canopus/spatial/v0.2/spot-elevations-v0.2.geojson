@@ -1,0 +1,37 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -4.94924084120595,
+          36.4984922260751,
+          4.0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "elevation_m_orthometric": 4.0,
+        "label": "minimum",
+        "vertical_datum": "Alicante orthometric datum realised by EGM2008-REDNAP"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -4.951331763029589,
+          36.49728625922968,
+          14.811321258544922
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "elevation_m_orthometric": 14.811321258544922,
+        "label": "maximum",
+        "vertical_datum": "Alicante orthometric datum realised by EGM2008-REDNAP"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

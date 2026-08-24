@@ -1,0 +1,279 @@
+{
+  "manifest_version": "room-twin/v1",
+  "entity_type": "RoomTwin",
+  "room_state": "CONCEPT_DESIGN_ROOM",
+  "identity": {
+    "project_id": "PRJ_CANOPUS",
+    "site_twin_id": "SITE_CANOPUS_5410501UF2451S",
+    "design_scenario_id": "SCN_LA_CONCHA_GARDENS_2026_08",
+    "building_id": "BLDG_CANOPUS_GUEST_WING_CONCEPT",
+    "level_id": "LVL_CANOPUS_GUEST_WING_UNASSIGNED",
+    "room_id": "ROOM_CANOPUS_DELUXE_GUEST_CONCEPT",
+    "room_version": "1.0",
+    "room_type": "HOTEL_GUEST_ROOM",
+    "intended_use": "DELUXE_GUEST_ACCOMMODATION_CONCEPT",
+    "label": "CANOPUS Deluxe Guest Room concept · 48 m² approximate 6 × 8 m brief"
+  },
+  "coordinate_systems": {
+    "linear_units": "m",
+    "angle_units": "rad",
+    "room_axis_convention": "+X right/east in room, +Y up, +Z toward max-z",
+    "site_frame": {
+      "frame_id": "SITE",
+      "crs": "EPSG:25830",
+      "origin": [325341.89916010736, 4040890.070495259, 1.2741371393203735],
+      "north_definition": "EPSG:25830 projected grid north; the verified Site Twin display model declares true north as local -Z",
+      "evidence_ref": "E_CANOPUS_SITE_FRAME_OFFICIAL"
+    },
+    "building_local": {
+      "frame_id": "BUILDING",
+      "parent_frame_id": "SITE",
+      "transform": null,
+      "evidence_ref": "E_CANOPUS_UNKNOWN_ROOM_HIERARCHY",
+      "gate_id": "GATE_CANOPUS_BUILDING_PLACEMENT"
+    },
+    "level_local": {
+      "frame_id": "LEVEL",
+      "parent_frame_id": "BUILDING",
+      "transform": null,
+      "evidence_ref": "E_CANOPUS_UNKNOWN_ROOM_HIERARCHY",
+      "gate_id": "GATE_CANOPUS_LEVEL_ASSIGNMENT"
+    },
+    "room_local": {
+      "frame_id": "ROOM",
+      "parent_frame_id": "LEVEL",
+      "transform": null,
+      "evidence_ref": "E_CANOPUS_UNKNOWN_ROOM_HIERARCHY",
+      "gate_id": "GATE_CANOPUS_ROOM_PLACEMENT"
+    },
+    "room_true_north_yaw_rad": null
+  },
+  "spatial_geometry": {
+    "bounds": {
+      "minX": -3,
+      "maxX": 3,
+      "minZ": -4,
+      "maxZ": 4,
+      "evidence_ref": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT"
+    },
+    "floor": {
+      "id": "concept-floor",
+      "label": "Concept room floor plane",
+      "y": 0,
+      "evidence_ref": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT"
+    },
+    "ceiling": null,
+    "walls": null,
+    "surfaces": [
+      { "id": "concept-left-edge", "label": "Concept left room edge", "side": "left", "rotation_rad": -1.5707963267948966, "gap_m": 0, "evidence_ref": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT" },
+      { "id": "concept-right-edge", "label": "Concept right room edge", "side": "right", "rotation_rad": 1.5707963267948966, "gap_m": 0, "evidence_ref": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT" },
+      { "id": "concept-min-z-edge", "label": "Concept min-z room edge", "side": "min-z", "rotation_rad": 3.141592653589793, "gap_m": 0, "evidence_ref": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT" },
+      { "id": "concept-max-z-edge", "label": "Concept max-z room edge", "side": "max-z", "rotation_rad": 0, "gap_m": 0, "evidence_ref": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT" }
+    ],
+    "openings": null,
+    "columns": null,
+    "fixed_elements": null,
+    "service_zones": null,
+    "protected_paths": null,
+    "required_clearances": null
+  },
+  "semantic_anchors": [
+    {
+      "id": "concept-room-centre",
+      "label": "Concept room centre derived from approximate rectangular bounds",
+      "anchor_type": "ROOM_CENTRE",
+      "target_ref": null,
+      "point": [0, 0, 0],
+      "direction": null,
+      "cone_half_angle_rad": null,
+      "rotations_rad": [0, 1.5707963267948966, 3.141592653589793, -1.5707963267948966],
+      "evidence_ref": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT"
+    },
+    { "id": "concept-left-edge-anchor", "label": "Concept left-edge relationship", "anchor_type": "WALL", "target_ref": "concept-left-edge", "point": null, "direction": null, "cone_half_angle_rad": null, "rotations_rad": null, "evidence_ref": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT" },
+    { "id": "concept-right-edge-anchor", "label": "Concept right-edge relationship", "anchor_type": "WALL", "target_ref": "concept-right-edge", "point": null, "direction": null, "cone_half_angle_rad": null, "rotations_rad": null, "evidence_ref": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT" },
+    { "id": "concept-min-z-edge-anchor", "label": "Concept min-z-edge relationship", "anchor_type": "WALL", "target_ref": "concept-min-z-edge", "point": null, "direction": null, "cone_half_angle_rad": null, "rotations_rad": null, "evidence_ref": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT" },
+    { "id": "concept-max-z-edge-anchor", "label": "Concept max-z-edge relationship", "anchor_type": "WALL", "target_ref": "concept-max-z-edge", "point": null, "direction": null, "cone_half_angle_rad": null, "rotations_rad": null, "evidence_ref": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT" }
+  ],
+  "evidence_records": [
+    {
+      "evidence_id": "E_CANOPUS_SITE_FRAME_OFFICIAL",
+      "state": "OFFICIAL_SOURCE_DERIVED",
+      "source": {
+        "kind": "REPOSITORY_RECORD",
+        "ref": "SITE_CANOPUS_5410501UF2451S/v0.2",
+        "locator": "data/sites/canopus/spatial/v0.2/spatial-export-v0.2.json",
+        "authority": "Catastro and IGN-derived CANOPUS Site Twin v0.2",
+        "sha256": "fc4fc90141523fe28a5e04a0657a2ca72db67d05c31b62657ded4d9d3f1fc9e6"
+      },
+      "observation_date": "2026-08-17",
+      "confidence": { "label": "HIGH", "value": 0.99 },
+      "method": "Referenced the hash-bound Site Twin v0.2 coordinate-frame export without copying boundary or terrain geometry into the Room Twin.",
+      "limitations": ["The room has no building, level or room transform into this site frame."]
+    },
+    {
+      "evidence_id": "E_CANOPUS_DELUXE_BRIEF_CONCEPT",
+      "state": "CONCEPT_DESIGN",
+      "source": {
+        "kind": "DOCUMENT",
+        "ref": "DOC_LCG_MASTER_PRESENTATION",
+        "locator": "data/sites/canopus/design-scenarios/la-concha-gardens-v0.1.json#programme.assertions.accommodation_area_range_m2",
+        "authority": "Concept Casas creative brief",
+        "sha256": "6b132d5c871a6be945519dd51d0efa1df4e151800ca0b665a23b61d792f6f6bb"
+      },
+      "observation_date": "2026-08-17",
+      "confidence": { "label": "MEDIUM", "value": 0.6 },
+      "method": "Bound the Deluxe-room concept to the 48 m² lower end of the creative accommodation range; no planning, BIM or survey status is inferred.",
+      "limitations": ["The source supplies a concept area range, not an approved room schedule or dimensioned drawing."]
+    },
+    {
+      "evidence_id": "E_CANOPUS_DELUXE_RECTANGLE_CONCEPT",
+      "state": "CONCEPT_DESIGN",
+      "source": {
+        "kind": "USER_DESIGN_DIRECTIVE",
+        "ref": "BRAIN_DIRECTIVE_2026_08_17_ROOM_TWIN",
+        "locator": "CANOPUS Deluxe Guest Room concept: 48 m² / approximately 6 × 8 m",
+        "authority": "Brain design directive",
+        "sha256": null
+      },
+      "observation_date": "2026-08-17",
+      "confidence": { "label": "MEDIUM", "value": 0.7 },
+      "method": "Represented the stated approximate 6 × 8 m concept as a centred room-local rectangle with no ceiling, openings, services, clearances or site placement.",
+      "limitations": [
+        "The rectangle is concept geometry only.",
+        "It is not surveyed, approved BIM, planning-compliant or built geometry."
+      ]
+    },
+    {
+      "evidence_id": "E_CANOPUS_UNKNOWN_ROOM_HIERARCHY",
+      "state": "UNKNOWN",
+      "source": { "kind": "NONE", "ref": null, "locator": null, "authority": null, "sha256": null },
+      "observation_date": null,
+      "confidence": { "label": "UNKNOWN", "value": 0 },
+      "method": "No approved building, level or room placement transform exists.",
+      "limitations": ["The concept cannot be composed into the verified Site Twin frame or used for environmental ranking."]
+    }
+  ],
+  "hard_gates": [
+    { "gate_id": "GATE_CATASTRO_BOUNDARY", "scope": "UPSTREAM_SITE", "status": "SATISFIED", "evidence_refs": ["E_CANOPUS_SITE_FRAME_OFFICIAL"], "blocker": null },
+    { "gate_id": "GATE_IGN_TERRAIN", "scope": "UPSTREAM_SITE", "status": "SATISFIED", "evidence_refs": ["E_CANOPUS_SITE_FRAME_OFFICIAL"], "blocker": null },
+    { "gate_id": "GATE_CONTEXT_OBSTRUCTIONS", "scope": "UPSTREAM_SITE", "status": "OPEN", "evidence_refs": [], "blocker": "Context obstruction evidence is incomplete." },
+    { "gate_id": "GATE_CERTIFICADO_URBANISTICO", "scope": "UPSTREAM_SITE", "status": "OPEN", "evidence_refs": [], "blocker": "Current property-specific planning certificate is absent." },
+    { "gate_id": "GATE_GOVERNING_PLAN", "scope": "UPSTREAM_SITE", "status": "OPEN", "evidence_refs": [], "blocker": "Governing planning instrument and provisions are unresolved." },
+    { "gate_id": "GATE_A7_BUILDING_LINE_AND_ACCESS", "scope": "UPSTREAM_SITE", "status": "OPEN", "evidence_refs": [], "blocker": "A-7 building line and access controls are unresolved." },
+    { "gate_id": "GATE_PERMITTED_ACCESS", "scope": "UPSTREAM_SITE", "status": "OPEN", "evidence_refs": [], "blocker": "No permitted access point is established." },
+    { "gate_id": "GATE_ROOFTOP_RULES", "scope": "UPSTREAM_SITE", "status": "OPEN", "evidence_refs": [], "blocker": "Rooftop rules are unresolved." },
+    { "gate_id": "GATE_TITLE_AND_CHARGES", "scope": "UPSTREAM_SITE", "status": "OPEN", "evidence_refs": [], "blocker": "Title and charges evidence is absent." },
+    { "gate_id": "GATE_FLOOD_AND_OVERLAYS", "scope": "UPSTREAM_SITE", "status": "OPEN", "evidence_refs": [], "blocker": "Flood and regulatory overlays are incomplete." },
+    { "gate_id": "GATE_UTILITY_CAPACITY", "scope": "UPSTREAM_SITE", "status": "OPEN", "evidence_refs": [], "blocker": "Utility connection and capacity evidence is absent." },
+    { "gate_id": "GATE_CANOPUS_BUILDING_PLACEMENT", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "No approved building placement on the Site Twin." },
+    { "gate_id": "GATE_CANOPUS_LEVEL_ASSIGNMENT", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "No approved level or level elevation." },
+    { "gate_id": "GATE_CANOPUS_ROOM_PLACEMENT", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "No room-to-level transform or true-north orientation." },
+    { "gate_id": "GATE_CANOPUS_ROOM_APPROVED_BIM_OR_SURVEY", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "No surveyed room or approved BIM geometry." },
+    { "gate_id": "GATE_CANOPUS_ROOM_OPENINGS_SERVICES_CLEARANCES", "scope": "ROOM", "status": "OPEN", "evidence_refs": [], "blocker": "Openings, ceiling, services, protected circulation and required clearances are unknown." }
+  ],
+  "blockers": [
+    "Concept room is not assigned to an approved building or level.",
+    "No room-to-site orientation exists for sun, views, privacy, glare or overheating analysis.",
+    "Ceiling, walls, openings, services, circulation and verified clearances are absent.",
+    "Planning entitlement, buildable envelope and permitted access remain null."
+  ],
+  "upstream_context": {
+    "site_twin_ref": {
+      "id": "SITE_CANOPUS_5410501UF2451S",
+      "version": "0.2",
+      "path": "data/sites/canopus/spatial/v0.2/site-twin-v0.2.json",
+      "sha256": "e6e0a63ae240b3641c66a9738fbb1bcf351e2fe958e0115b1cb39c46727fd41c"
+    },
+    "design_scenario_ref": {
+      "id": "SCN_LA_CONCHA_GARDENS_2026_08",
+      "version": "0.1",
+      "path": "data/sites/canopus/design-scenarios/la-concha-gardens-v0.1.json",
+      "sha256": "6b132d5c871a6be945519dd51d0efa1df4e151800ca0b665a23b61d792f6f6bb"
+    },
+    "site_boundary_geometry": null,
+    "terrain_dem": null,
+    "permitted_access_point": null,
+    "planning_entitlement": null,
+    "buildable_envelope": null
+  },
+  "spatial_intents": [
+    {
+      "intent_id": "INTENT_CANOPUS_PRESERVE_LA_CONCHA_AND_SUNSET_VIEWS",
+      "intent_type": "VIEW_PRESERVE",
+      "scope": "ROOM",
+      "user_design_intent": "Prioritise La Concha and western sunset views if a future verified building and room placement can support them.",
+      "hard_constraints": [
+        {
+          "constraint_id": "NO_VIEW_DIRECTION_WITHOUT_ROOM_TRANSFORM",
+          "statement": "Do not create room-local view directions or cones before room orientation and target geometry are verified.",
+          "evidence_refs": ["E_CANOPUS_UNKNOWN_ROOM_HIERARCHY"],
+          "gate_ids": ["GATE_CANOPUS_BUILDING_PLACEMENT", "GATE_CANOPUS_ROOM_PLACEMENT"]
+        }
+      ],
+      "soft_objectives": [
+        { "objective_id": "PRIORITISE_LA_CONCHA", "statement": "Prefer clear candidates that preserve a verified La Concha view.", "weight": 0.9 },
+        { "objective_id": "PRIORITISE_WESTERN_SUNSET", "statement": "Prefer clear candidates with controlled western sunset exposure.", "weight": 0.7 }
+      ],
+      "candidate_generation": {
+        "method": "DETERMINISTIC",
+        "status": "BLOCKED",
+        "input_refs": ["ROOM_BOUNDS"],
+        "blockers": ["Building placement, room orientation and verified target/view geometry are absent."]
+      },
+      "ranking": {
+        "method": "EVIDENCE_BACKED",
+        "status": "BLOCKED",
+        "required_evidence_refs": ["E_CANOPUS_DELUXE_BRIEF_CONCEPT", "E_CANOPUS_UNKNOWN_ROOM_HIERARCHY"]
+      },
+      "selection": { "status": "UNSELECTED", "selected_candidate_id": null, "selected_by": null, "selected_at": null }
+    },
+    {
+      "intent_id": "INTENT_CANOPUS_EVENING_SUN_CONTROL",
+      "intent_type": "EVENING_SUN",
+      "scope": "ROOM",
+      "user_design_intent": "Seek evening light while controlling glare and overheating once orientation and envelope evidence exist.",
+      "hard_constraints": [
+        {
+          "constraint_id": "NO_SOLAR_RANKING_WITHOUT_ORIENTATION",
+          "statement": "Do not rank solar performance before room true north, glazing and external shading are verified.",
+          "evidence_refs": ["E_CANOPUS_UNKNOWN_ROOM_HIERARCHY"],
+          "gate_ids": ["GATE_CANOPUS_ROOM_PLACEMENT", "GATE_CANOPUS_ROOM_OPENINGS_SERVICES_CLEARANCES"]
+        }
+      ],
+      "soft_objectives": [
+        { "objective_id": "EVENING_LIGHT", "statement": "Prefer useful evening daylight.", "weight": 0.7 },
+        { "objective_id": "LIMIT_GLARE_AND_OVERHEATING", "statement": "Penalise glare and overheating risk using verified glazing and climate inputs.", "weight": 0.9 }
+      ],
+      "candidate_generation": {
+        "method": "DETERMINISTIC",
+        "status": "BLOCKED",
+        "input_refs": ["ROOM_BOUNDS"],
+        "blockers": ["Room orientation, glazing, overhangs and external obstructions are unknown."]
+      },
+      "ranking": {
+        "method": "EVIDENCE_BACKED",
+        "status": "BLOCKED",
+        "required_evidence_refs": ["E_CANOPUS_UNKNOWN_ROOM_HIERARCHY"]
+      },
+      "selection": { "status": "UNSELECTED", "selected_candidate_id": null, "selected_by": null, "selected_at": null }
+    }
+  ],
+  "domain_ownership": {
+    "spatial_studio": "site/building/level/room geometry and environmental anchors",
+    "avatar_factory": "furniture geometry and product spatial semantics",
+    "procurement": "destination-specific supply",
+    "room_lab": "interaction and explicit placements",
+    "verification": "final acceptance"
+  },
+  "room_lab_compatibility": {
+    "target_manifest_version": "room-scene/v1",
+    "source_commit": "3daea697deabe6c53bb161c9ed5f42031f4fde41",
+    "source_manifest_path": "generated-from-room-twin:ROOM_CANOPUS_DELUXE_GUEST_CONCEPT/1.0",
+    "source_manifest_sha256": null,
+    "source_importer_sha256": "9ebcd0f264d9e8e86b5e8a41170bdbbe075792c7cd6fdb44728e115ca2b8d836",
+    "scene_id": "canopus-deluxe-guest-room-concept-v1",
+    "scene_label": "Concept 48 m² approximate 6 × 8 m CANOPUS Deluxe Guest Room",
+    "domain_owner": "ROOM_LAB",
+    "baseline_placements": []
+  }
+}

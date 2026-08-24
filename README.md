@@ -48,3 +48,9 @@ This first workflow only proves:
 5. GitHub-backed product graph seed.
 
 The first living-room proof now includes exact Product Twin identities, verified-scale G2 planning avatars, destination supply evidence, substitution scoring and Room Lab placement. Exact visual likeness, rights-cleared photo reconstruction, authoritative checkout logistics across all four benchmark markets, and G3+ geometry remain active gates.
+
+## Svärtinge Spatial Studio
+
+The Norrköping proof at Säterdalsvägen 14 now renders one evidence-labelled Twin through `INTELLIGENCE`, `REALISTIC` and synchronized `COMPARE` modes. The focused Street Room uses exact-address listing character and nearby July 2022 Street View character without storing provider pixels or deriving provider geometry. Legal boundary, surveyed terrain, legal access, utility capacity, entitlement and buildable envelope remain open gates.
+
+Run `npm run site:sweden:svartinge:prototype:gate` for the scene, evidence-separation and mutation checks.

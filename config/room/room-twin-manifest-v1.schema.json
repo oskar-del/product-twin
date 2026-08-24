@@ -1,0 +1,322 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/room-twin-manifest-v1.schema.json",
+  "title": "Canonical Site to Room Twin Manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_version",
+    "entity_type",
+    "room_state",
+    "identity",
+    "coordinate_systems",
+    "spatial_geometry",
+    "semantic_anchors",
+    "evidence_records",
+    "hard_gates",
+    "blockers",
+    "upstream_context",
+    "spatial_intents",
+    "domain_ownership",
+    "room_lab_compatibility"
+  ],
+  "properties": {
+    "manifest_version": { "const": "room-twin/v1" },
+    "entity_type": { "const": "RoomTwin" },
+    "room_state": { "enum": ["SURVEYED_ROOM", "OFFICIAL_DERIVED_ROOM", "MEASURED_EVIDENCE_ROOM", "ASSUMED_DESIGN_ROOM", "CONCEPT_DESIGN_ROOM", "UNKNOWN_ROOM"] },
+    "identity": { "$ref": "#/$defs/identity" },
+    "coordinate_systems": { "$ref": "#/$defs/coordinateSystems" },
+    "spatial_geometry": { "$ref": "#/$defs/spatialGeometry" },
+    "semantic_anchors": { "type": "array", "items": { "$ref": "#/$defs/semanticAnchor" } },
+    "evidence_records": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/evidenceRecord" } },
+    "hard_gates": { "type": "array", "items": { "$ref": "#/$defs/gate" } },
+    "blockers": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "upstream_context": { "$ref": "#/$defs/upstreamContext" },
+    "spatial_intents": {
+      "type": "array",
+      "items": { "$ref": "./spatial-intent-record-v1.schema.json" }
+    },
+    "domain_ownership": { "$ref": "#/$defs/domainOwnership" },
+    "room_lab_compatibility": { "$ref": "#/$defs/roomLabCompatibility" }
+  },
+  "$defs": {
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project_id", "site_twin_id", "design_scenario_id", "building_id", "level_id", "room_id", "room_version", "room_type", "intended_use", "label"],
+      "properties": {
+        "project_id": { "type": "string", "minLength": 1 },
+        "site_twin_id": { "type": "string", "minLength": 1 },
+        "design_scenario_id": { "type": "string", "minLength": 1 },
+        "building_id": { "type": "string", "minLength": 1 },
+        "level_id": { "type": "string", "minLength": 1 },
+        "room_id": { "type": "string", "minLength": 1 },
+        "room_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+$" },
+        "room_type": { "type": "string", "minLength": 1 },
+        "intended_use": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 }
+      }
+    },
+    "coordinateSystems": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["linear_units", "angle_units", "room_axis_convention", "site_frame", "building_local", "level_local", "room_local", "room_true_north_yaw_rad"],
+      "properties": {
+        "linear_units": { "const": "m" },
+        "angle_units": { "const": "rad" },
+        "room_axis_convention": { "const": "+X right/east in room, +Y up, +Z toward max-z" },
+        "site_frame": { "$ref": "#/$defs/siteFrame" },
+        "building_local": { "$ref": "#/$defs/localFrame" },
+        "level_local": { "$ref": "#/$defs/localFrame" },
+        "room_local": { "$ref": "#/$defs/localFrame" },
+        "room_true_north_yaw_rad": { "type": ["number", "null"] }
+      }
+    },
+    "siteFrame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["frame_id", "crs", "origin", "north_definition", "evidence_ref"],
+      "properties": {
+        "frame_id": { "const": "SITE" },
+        "crs": { "type": ["string", "null"] },
+        "origin": { "anyOf": [{ "$ref": "#/$defs/vector3" }, { "type": "null" }] },
+        "north_definition": { "type": ["string", "null"] },
+        "evidence_ref": { "type": "string", "minLength": 1 }
+      }
+    },
+    "localFrame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["frame_id", "parent_frame_id", "transform", "evidence_ref", "gate_id"],
+      "properties": {
+        "frame_id": { "enum": ["BUILDING", "LEVEL", "ROOM"] },
+        "parent_frame_id": { "enum": ["SITE", "BUILDING", "LEVEL"] },
+        "transform": { "anyOf": [{ "$ref": "#/$defs/transform" }, { "type": "null" }] },
+        "evidence_ref": { "type": "string", "minLength": 1 },
+        "gate_id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "transform": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["translation_m", "yaw_rad", "scale"],
+      "properties": {
+        "translation_m": { "$ref": "#/$defs/vector3" },
+        "yaw_rad": { "type": "number" },
+        "scale": { "const": 1 }
+      }
+    },
+    "spatialGeometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bounds", "floor", "ceiling", "walls", "surfaces", "openings", "columns", "fixed_elements", "service_zones", "protected_paths", "required_clearances"],
+      "properties": {
+        "bounds": { "$ref": "#/$defs/bounds" },
+        "floor": { "$ref": "#/$defs/floor" },
+        "ceiling": { "anyOf": [{ "$ref": "#/$defs/floor" }, { "type": "null" }] },
+        "walls": { "type": ["array", "null"], "items": { "$ref": "#/$defs/spatialElement" } },
+        "surfaces": { "type": "array", "items": { "$ref": "#/$defs/surface" } },
+        "openings": { "type": ["array", "null"], "items": { "$ref": "#/$defs/opening" } },
+        "columns": { "type": ["array", "null"], "items": { "$ref": "#/$defs/spatialElement" } },
+        "fixed_elements": { "type": ["array", "null"], "items": { "$ref": "#/$defs/spatialElement" } },
+        "service_zones": { "type": ["array", "null"], "items": { "$ref": "#/$defs/spatialElement" } },
+        "protected_paths": { "type": ["array", "null"], "items": { "$ref": "#/$defs/rect" } },
+        "required_clearances": { "type": ["array", "null"], "items": { "$ref": "#/$defs/rect" } }
+      }
+    },
+    "bounds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minX", "maxX", "minZ", "maxZ", "evidence_ref"],
+      "properties": {
+        "minX": { "type": "number" }, "maxX": { "type": "number" },
+        "minZ": { "type": "number" }, "maxZ": { "type": "number" },
+        "evidence_ref": { "type": "string" }
+      }
+    },
+    "floor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "y", "evidence_ref"],
+      "properties": {
+        "id": { "type": "string" }, "label": { "type": "string" },
+        "y": { "type": "number" }, "evidence_ref": { "type": "string" }
+      }
+    },
+    "surface": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "side", "rotation_rad", "gap_m", "evidence_ref"],
+      "properties": {
+        "id": { "type": "string" }, "label": { "type": "string" },
+        "side": { "enum": ["left", "right", "min-z", "max-z"] },
+        "rotation_rad": { "type": "number" }, "gap_m": { "type": "number", "minimum": 0 },
+        "evidence_ref": { "type": "string" }
+      }
+    },
+    "opening": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "opening_type", "surface_id", "width_m", "sill_m", "height_m", "offset_along_surface_m", "evidence_ref"],
+      "properties": {
+        "id": { "type": "string" }, "label": { "type": "string" },
+        "opening_type": { "enum": ["DOOR", "WINDOW", "OTHER"] },
+        "surface_id": { "type": "string" }, "width_m": { "type": "number", "exclusiveMinimum": 0 },
+        "sill_m": { "type": ["number", "null"] }, "height_m": { "type": ["number", "null"] },
+        "offset_along_surface_m": { "type": ["number", "null"] },
+        "evidence_ref": { "type": "string" }
+      }
+    },
+    "spatialElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "bounds", "evidence_ref"],
+      "properties": {
+        "id": { "type": "string" }, "label": { "type": "string" },
+        "bounds": { "$ref": "#/$defs/box3" }, "evidence_ref": { "type": "string" }
+      }
+    },
+    "rect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "x", "z", "width_m", "depth_m", "evidence_ref"],
+      "properties": {
+        "id": { "type": "string" }, "label": { "type": "string" },
+        "x": { "type": "number" }, "z": { "type": "number" },
+        "width_m": { "type": "number", "exclusiveMinimum": 0 },
+        "depth_m": { "type": "number", "exclusiveMinimum": 0 },
+        "evidence_ref": { "type": "string" }
+      }
+    },
+    "semanticAnchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "anchor_type", "target_ref", "point", "direction", "cone_half_angle_rad", "rotations_rad", "evidence_ref"],
+      "properties": {
+        "id": { "type": "string" }, "label": { "type": "string" },
+        "anchor_type": { "enum": ["WALL", "ROOM_CENTRE", "DOOR", "WINDOW", "VIEW_DIRECTION", "VIEW_CONE", "MORNING_SOLAR_DIRECTION", "EVENING_SOLAR_DIRECTION", "FOCAL_POINT", "POWER", "WATER", "DRAINAGE", "VENTILATION", "FURNITURE_RELATIONSHIP", "GARDEN_TERRACE_RELATIONSHIP"] },
+        "target_ref": { "type": ["string", "null"] },
+        "point": { "anyOf": [{ "$ref": "#/$defs/vector3" }, { "type": "null" }] },
+        "direction": { "anyOf": [{ "$ref": "#/$defs/vector3" }, { "type": "null" }] },
+        "cone_half_angle_rad": { "type": ["number", "null"], "minimum": 0 },
+        "rotations_rad": { "type": ["array", "null"], "items": { "type": "number" } },
+        "evidence_ref": { "type": "string" }
+      }
+    },
+    "evidenceRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "state", "source", "observation_date", "confidence", "method", "limitations"],
+      "properties": {
+        "evidence_id": { "type": "string" },
+        "state": { "enum": ["SURVEYED", "OFFICIAL_SOURCE_DERIVED", "MEASURED_FROM_SUPPLIED_EVIDENCE", "ASSUMED", "CONCEPT_DESIGN", "UNKNOWN"] },
+        "source": { "$ref": "#/$defs/source" },
+        "observation_date": { "type": ["string", "null"], "format": "date" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "method": { "type": "string" },
+        "limitations": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "ref", "locator", "authority", "sha256"],
+      "properties": {
+        "kind": { "enum": ["SURVEY", "DOCUMENT", "API", "REPOSITORY_RECORD", "USER_DESIGN_DIRECTIVE", "NONE"] },
+        "ref": { "type": ["string", "null"] }, "locator": { "type": ["string", "null"] },
+        "authority": { "type": ["string", "null"] },
+        "sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "value"],
+      "properties": {
+        "label": { "enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"] },
+        "value": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gate_id", "scope", "status", "evidence_refs", "blocker"],
+      "properties": {
+        "gate_id": { "type": "string" },
+        "scope": { "enum": ["UPSTREAM_SITE", "ROOM"] },
+        "status": { "enum": ["OPEN", "SATISFIED", "NOT_APPLICABLE"] },
+        "evidence_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "blocker": { "type": ["string", "null"] }
+      }
+    },
+    "upstreamContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["site_twin_ref", "design_scenario_ref", "site_boundary_geometry", "terrain_dem", "permitted_access_point", "planning_entitlement", "buildable_envelope"],
+      "properties": {
+        "site_twin_ref": { "$ref": "#/$defs/fileRef" },
+        "design_scenario_ref": { "$ref": "#/$defs/fileRef" },
+        "site_boundary_geometry": { "type": "null" },
+        "terrain_dem": { "type": "null" },
+        "permitted_access_point": { "type": "null" },
+        "planning_entitlement": { "type": "null" },
+        "buildable_envelope": { "type": "null" }
+      }
+    },
+    "fileRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "path", "sha256"],
+      "properties": {
+        "id": { "type": "string" }, "version": { "type": "string" },
+        "path": { "type": ["string", "null"] },
+        "sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "domainOwnership": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["spatial_studio", "avatar_factory", "procurement", "room_lab", "verification"],
+      "properties": {
+        "spatial_studio": { "const": "site/building/level/room geometry and environmental anchors" },
+        "avatar_factory": { "const": "furniture geometry and product spatial semantics" },
+        "procurement": { "const": "destination-specific supply" },
+        "room_lab": { "const": "interaction and explicit placements" },
+        "verification": { "const": "final acceptance" }
+      }
+    },
+    "roomLabCompatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target_manifest_version", "source_commit", "source_manifest_path", "source_manifest_sha256", "source_importer_sha256", "scene_id", "scene_label", "domain_owner", "baseline_placements"],
+      "properties": {
+        "target_manifest_version": { "const": "room-scene/v1" },
+        "source_commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+        "source_manifest_path": { "type": "string" },
+        "source_manifest_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+        "source_importer_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "scene_id": { "type": "string" }, "scene_label": { "type": "string" },
+        "domain_owner": { "const": "ROOM_LAB" },
+        "baseline_placements": { "type": "array", "items": { "$ref": "#/$defs/baselinePlacement" } }
+      }
+    },
+    "baselinePlacement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["product_id", "x", "y", "z", "rotation"],
+      "properties": {
+        "product_id": { "type": "string" }, "x": { "type": "number" },
+        "y": { "type": "number" }, "z": { "type": "number" }, "rotation": { "type": "number" }
+      }
+    },
+    "vector3": {
+      "type": "array", "prefixItems": [{ "type": "number" }, { "type": "number" }, { "type": "number" }], "items": false
+    },
+    "box3": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min", "max"],
+      "properties": { "min": { "$ref": "#/$defs/vector3" }, "max": { "$ref": "#/$defs/vector3" } }
+    }
+  }
+}
