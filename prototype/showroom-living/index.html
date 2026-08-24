@@ -95,21 +95,31 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-const scene_data = await fetch('../../data/showrooms/norr11-marbella-living-room-v0.1.json', { cache: 'no-store' }).then(r => r.json());
 const contextId = new URLSearchParams(location.search).get('context');
 const isSvartingeStudy = contextId === 'svartinge-glanrummet';
-const property = isSvartingeStudy ? {
-  name: 'Glanrummet · furniture study',
-  location: 'BRAGE Vinkelhuset · Svärtinge 54:28',
-  price_display: 'Design study · not a quote',
-  specs: '7 real product identities · 2 avatar lanes · Sweden supply not evaluated',
-  note: 'Concept-room preview only. The Altea property context is not used here.'
-} : (scene_data.property || { name: 'Villa (placeholder)', location: 'Spain', price_display: '—', note: '' });
+const base_scene_data = await fetch('../../data/showrooms/norr11-marbella-living-room-v0.1.json', { cache: 'no-store' }).then(r => r.json());
+const context_scene_data = isSvartingeStudy
+  ? await fetch('../../data/showrooms/svartinge-glanrummet-living-room-v0.2.json', { cache: 'no-store' }).then(r => r.json())
+  : null;
+const scene_data = context_scene_data ? {
+  ...base_scene_data,
+  ...context_scene_data,
+  room: { ...base_scene_data.room, ...context_scene_data.room },
+  products: base_scene_data.products.map(product => ({
+    ...product,
+    placement: {
+      ...product.placement,
+      ...(context_scene_data.placement_overrides?.[product.twin_id] || {})
+    }
+  })),
+  swap_alternates: base_scene_data.swap_alternates
+} : base_scene_data;
+const property = scene_data.property || { name: 'Villa (placeholder)', location: 'Spain', price_display: '—', note: '' };
 if (isSvartingeStudy) document.title = 'Glanrummet furniture study · Product Twin';
 if (isSvartingeStudy) {
   document.getElementById('property-price-label').textContent = 'Status';
   document.getElementById('offer-label').textContent = 'Dated offer snapshot';
-  document.getElementById('roomtotal-label').textContent = 'Room · snapshot subtotal';
+  document.getElementById('roomtotal-label').textContent = 'Sweden commerce';
   document.getElementById('rfq-btn').textContent = 'Review study BOM →';
   document.getElementById('rfq-eyebrow').textContent = 'Design-study bill of materials · not a quote';
   document.getElementById('rfq-copy').textContent = '⧉ Copy study BOM';
@@ -127,13 +137,14 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.setSize(innerWidth, innerHeight);
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.08;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = isSvartingeStudy ? 0.82 : 1.08;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 document.body.prepend(renderer.domElement);
 
 const scene = new THREE.Scene();
 const pmrem = new THREE.PMREMGenerator(renderer);
 scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+scene.environmentIntensity = isSvartingeStudy ? 0.68 : 1;
 
 // warm daylight sky seen through the window
 scene.background = new THREE.Color(0xbfd4dd);
@@ -143,24 +154,32 @@ const [RW, RH, RD] = scene_data.room.size_m;
 // Room spans z = +1 (open front) to z = -(RD-1) (back wall); x = -RW/2 .. RW/2.
 const BACK_Z = -(RD - 1);
 const CENTER_Z = (1 + BACK_Z) / 2;
-const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.05, 200);
-camera.position.set(3.15, 1.42, 3.0);
+const camera = new THREE.PerspectiveCamera(scene_data.camera?.fov_deg || 50, innerWidth / innerHeight, 0.05, 200);
+camera.position.set(...(scene_data.camera?.position_m || [3.15, 1.42, 3.0]));
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.target.set(-0.2, 0.5, -3.0);
+controls.target.set(...(scene_data.camera?.target_m || [-0.2, 0.5, -3.0]));
 controls.enableDamping = true; controls.dampingFactor = 0.08;
 controls.maxPolarAngle = Math.PI / 2 - 0.03; controls.minDistance = 2.4; controls.maxDistance = 12;
 
 // ---- procedural textures (no external assets) ----
 function makeCanvas(w, h, draw) { const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; }
 const oakTex = makeCanvas(1024, 1024, (x, w, h) => {
-  x.fillStyle = '#b48a5b'; x.fillRect(0, 0, w, h);
-  for (let i = 0; i < 8; i++) { // planks
-    const y = i * h / 8; x.fillStyle = `rgba(${120 + Math.round(Math.sin(i) * 18)},${90},${55},1)`; x.fillRect(0, y, w, h / 8 - 2);
-    for (let g = 0; g < 40; g++) { x.strokeStyle = `rgba(90,62,35,${0.05 + Math.random() * 0.08})`; x.beginPath(); const gy = y + Math.random() * h / 8; x.moveTo(0, gy); x.bezierCurveTo(w / 3, gy + (Math.random() - .5) * 10, 2 * w / 3, gy + (Math.random() - .5) * 10, w, gy); x.stroke(); }
+  const planks = isSvartingeStudy
+    ? ['#a78261', '#9a7454', '#ad8967', '#a17a59', '#b08d6b', '#987151', '#aa8360', '#a47c59']
+    : ['#b48a5b', '#a77d50', '#bd9365', '#ad8154', '#c09769', '#a4774d', '#b88d5e', '#ae8255'];
+  x.fillStyle = planks[0]; x.fillRect(0, 0, w, h);
+  for (let i = 0; i < 8; i++) {
+    const y = i * h / 8; x.fillStyle = planks[i]; x.fillRect(0, y, w, h / 8 - 2);
+    for (let g = 0; g < 34; g++) {
+      const phase = Math.sin((i + 1) * 31 + g * 17);
+      const gy = y + ((phase + 1) / 2) * h / 8;
+      x.strokeStyle = `rgba(75,52,34,${0.035 + ((g % 5) * 0.008)})`;
+      x.beginPath(); x.moveTo(0, gy); x.bezierCurveTo(w / 3, gy + phase * 7, 2 * w / 3, gy - phase * 5, w, gy); x.stroke();
+    }
   }
 });
 oakTex.wrapS = oakTex.wrapT = THREE.RepeatWrapping; oakTex.repeat.set(4, 4);
-const plasterTex = makeCanvas(512, 512, (x, w, h) => { x.fillStyle = '#efe7d8'; x.fillRect(0, 0, w, h); for (let i = 0; i < 9000; i++) { x.fillStyle = `rgba(${200 + Math.random() * 40},${190 + Math.random() * 30},${170},${Math.random() * 0.05})`; x.fillRect(Math.random() * w, Math.random() * h, 2, 2); } });
+const plasterTex = makeCanvas(512, 512, (x, w, h) => { x.fillStyle = isSvartingeStudy ? '#d8d3ca' : '#efe7d8'; x.fillRect(0, 0, w, h); for (let i = 0; i < 9000; i++) { x.fillStyle = isSvartingeStudy ? `rgba(115,110,101,${Math.random() * 0.035})` : `rgba(${200 + Math.random() * 40},${190 + Math.random() * 30},${170},${Math.random() * 0.05})`; x.fillRect(Math.random() * w, Math.random() * h, 2, 2); } });
 plasterTex.wrapS = plasterTex.wrapT = THREE.RepeatWrapping; plasterTex.repeat.set(3, 2);
 
 const floorMat = new THREE.MeshStandardMaterial({ map: oakTex, roughness: 0.62, metalness: 0 });
@@ -205,13 +224,13 @@ function bar(w, h, x, y) { const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, 
 bar(RW * 0.66, 0.06, 0.2, RH * 0.52 + RH * 0.33); bar(RW * 0.66, 0.06, 0.2, RH * 0.52 - RH * 0.33); bar(0.06, RH * 0.66, 0.2 - RW * 0.32, RH * 0.52); bar(0.06, RH * 0.66, 0.2 + RW * 0.32, RH * 0.52); bar(0.05, RH * 0.66, 0.2, RH * 0.52);
 
 // warm golden-hour sun coming in from the front-side, so product fronts face the light
-const sun = new THREE.DirectionalLight(0xffdca6, 3.2);
+const sun = new THREE.DirectionalLight(0xffdca6, isSvartingeStudy ? 1.7 : 3.2);
 sun.position.set(3.5, 6.0, 3.2); sun.castShadow = true;
 sun.shadow.mapSize.set(2048, 2048); const s = sun.shadow.camera; s.near = 0.5; s.far = 30; s.left = -8; s.right = 8; s.top = 8; s.bottom = -8; sun.shadow.bias = -0.0004;
 scene.add(sun);
 // soft warm bounce from the window side + cool sky fill
-scene.add(new THREE.HemisphereLight(0xf3e6cf, 0x6b5a44, 0.4));
-const bounce = new THREE.PointLight(0xffe4b8, 0.5, 18); bounce.position.set(0.2, 1.6, BACK_Z + 1.5); scene.add(bounce);
+scene.add(new THREE.HemisphereLight(0xf3e6cf, 0x6b5a44, isSvartingeStudy ? 0.62 : 0.4));
+const bounce = new THREE.PointLight(0xffe4b8, isSvartingeStudy ? 0.28 : 0.5, 18); bounce.position.set(0.2, 1.6, BACK_Z + 1.5); scene.add(bounce);
 
 // (rug, coffee table and floor lamp are now REAL products loaded from the scene)
 
@@ -249,6 +268,30 @@ function altProduct(twin_id, placement, role, category_id) {
   };
 }
 
+function applyStudyAppearance(root, product) {
+  if (!isSvartingeStudy) return;
+  const cue = scene_data.appearance_profile?.roles?.[product.role];
+  if (!cue || cue.preserve_proxy_materials) return;
+  const recolour = source => {
+    const material = source.clone();
+    const name = String(material.name || '').toLowerCase();
+    const isFrame = /metal|steel|chrome|frame|black|powder/.test(name);
+    if (material.color) material.color.set(isFrame ? cue.frame_color : cue.surface_color);
+    if (typeof material.roughness === 'number') material.roughness = isFrame ? 0.34 : cue.roughness;
+    if (typeof material.metalness === 'number') material.metalness = isFrame ? 0.62 : 0;
+    material.needsUpdate = true;
+    return material;
+  };
+  root.traverse(object => {
+    if (!object.isMesh || !object.material) return;
+    object.material = Array.isArray(object.material)
+      ? object.material.map(recolour)
+      : recolour(object.material);
+  });
+  root.userData.appearance_state = scene_data.appearance_profile.state;
+  root.userData.appearance_label = cue.surface_label;
+}
+
 const loader = new GLTFLoader();
 const picks = [];
 const tagEls = [];
@@ -278,6 +321,7 @@ for (const [role, g] of cyclesByRole) {
       const gltf = await loader.loadAsync('../../' + (product.avatar.runtime_glb || product.avatar.asset_path));
       const root = gltf.scene;
       root.userData.role = role;
+      applyStudyAppearance(root, product);
       root.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; o.userData.role = role; } });
       scene.add(root);
       const size = placeProduct(root, product.placement);
@@ -299,16 +343,21 @@ for (const [role, g] of cyclesByRole) {
 
 document.getElementById('loading').style.display = 'none';
 
-const money = (v, cur) => cur === 'EUR' ? `€${Number(v).toLocaleString(undefined, { maximumFractionDigits: v % 1 ? 2 : 0 })}` : `$${Math.round(v).toLocaleString()}`;
+const money = (v, cur) => new Intl.NumberFormat(undefined, {
+  style: 'currency', currency: cur, maximumFractionDigits: Number(v) % 1 ? 2 : 0
+}).format(Number(v));
 const fmt = (v, cur) => v == null ? '—' : `${money(v, cur)} ${cur}`;
 function updateTotal() {
+  if (isSvartingeStudy) {
+    document.getElementById('roomtotal-v').textContent = 'Not evaluated';
+    document.getElementById('roomtotal-n').textContent = `${cyclesByRole.size} pieces · source prices per product · no comparable Sweden total`;
+    return;
+  }
   const sums = new Map();
   for (const [, g] of cyclesByRole) { const o = g.cycle[g.index].offer_snapshot; if (typeof o.unit_price === 'number') sums.set(o.currency, (sums.get(o.currency) || 0) + o.unit_price); }
   const parts = [...sums.entries()].map(([cur, v]) => money(v, cur));
   document.getElementById('roomtotal-v').textContent = parts.join('  +  ') || '—';
-  document.getElementById('roomtotal-n').textContent = isSvartingeStudy
-    ? `${cyclesByRole.size} pieces · dated list snapshots · not a Sweden quote`
-    : `${cyclesByRole.size} pieces · live trade + retail list`;
+  document.getElementById('roomtotal-n').textContent = `${cyclesByRole.size} pieces · live trade + retail list`;
 }
 updateTotal();
 
@@ -319,12 +368,13 @@ function showPanel(role) {
   document.getElementById('p-src').textContent = isNative ? 'Product Twin · native manufacturer 3D' : 'Product Twin · dimension-verified proxy';
   document.getElementById('p-title').textContent = `${p.identity.manufacturer} ${p.identity.model}`;
   document.getElementById('p-mk').textContent = `SKU ${p.identity.merchant_sku || '—'}${p.identity.configuration ? ' · ' + p.identity.configuration : ''}`;
-  document.getElementById('p-pills').innerHTML = [p.category_id, p.avatar.level, isNative ? 'native MODEL_3D' : 'G2 proxy', isSvartingeStudy ? 'SE supply unknown' : 'ES offer snapshot'].map(t => `<span class="pill">${t}</span>`).join('');
+  document.getElementById('p-pills').innerHTML = [p.category_id, p.avatar.level, isNative ? 'native MODEL_3D' : 'G2 proxy', isSvartingeStudy ? 'appearance cue' : null, isSvartingeStudy ? 'SE supply unknown' : 'ES offer snapshot'].filter(Boolean).map(t => `<span class="pill">${t}</span>`).join('');
   document.getElementById('p-price').textContent = fmt(o.unit_price, o.currency);
   document.getElementById('p-offerstate').textContent = `${o.merchant} · ${isSvartingeStudy ? 'snapshot' : (o.available ? 'available' : 'unavailable')} · ${o.observed_at}`;
   const destinationGate = isSvartingeStudy ? 'Sweden supply, tax, freight, delivery and checkout are not evaluated' : o.es_checkout_state;
+  const appearanceCue = scene_data.appearance_profile?.roles?.[p.role]?.surface_label;
   document.getElementById('p-warn').textContent = isNative
-    ? `Exact finish not bound to variant. ${destinationGate}. Native GLB rights: review.`
+    ? `${isSvartingeStudy ? `Viewer colour is a ${appearanceCue}; ` : ''}exact finish is not bound to a sellable variant. ${destinationGate}. Native GLB rights: review.`
     : `Dimension-verified proxy, not exact IKEA geometry. ${destinationGate}.`;
   const swap = document.getElementById('p-swap');
   if (g.cycle.length > 1) { swap.hidden = false; swap.textContent = `⇄ Swap (${g.index + 1}/${g.cycle.length})`; swap.onclick = () => swapRole(role); }
@@ -362,7 +412,9 @@ function renderRfq() {
     const o = p.offer_snapshot; const url = o.product_url || (byTwin.get(p.twin_id)?.handle && scene_data.geometry_source?.merchant_origin ? `${scene_data.geometry_source.merchant_origin}/products/${byTwin.get(p.twin_id).handle}` : null);
     return `<div class="rfq-row"><div class="n">${p.identity.manufacturer} ${p.identity.model}<small>${p.identity.merchant_sku ? 'SKU ' + p.identity.merchant_sku + ' · ' : ''}${o.merchant}${url ? ' · <a href="' + url + '" target="_blank" rel="noopener">offer ↗</a>' : ''}</small></div><div class="p">${money(o.unit_price, o.currency)}</div></div>`;
   }).join('');
-  const totals = [...totalsByCurrency().entries()].map(([cur, v]) => `<div class="rfq-tot"><span class="sub">Subtotal ${cur}</span><span>${money(v, cur)} ${cur}</span></div>`).join('');
+  const totals = isSvartingeStudy
+    ? '<div class="rfq-tot"><span class="sub">Comparable Sweden subtotal</span><span>Not evaluated</span></div>'
+    : [...totalsByCurrency().entries()].map(([cur, v]) => `<div class="rfq-tot"><span class="sub">Subtotal ${cur}</span><span>${money(v, cur)} ${cur}</span></div>`).join('');
   document.getElementById('rfq-body').innerHTML = rows + totals;
 }
 function buildRfqText() {
@@ -378,7 +430,8 @@ function buildRfqText() {
     lines.push(`- ${p.identity.manufacturer} ${p.identity.model} | SKU ${p.identity.merchant_sku || '-'} | ${money(o.unit_price, o.currency)} ${o.currency} | ${o.merchant}${url ? ' | ' + url : ''}`);
   }
   lines.push('');
-  for (const [cur, v] of totalsByCurrency()) lines.push(`Subtotal ${cur}: ${money(v, cur)} ${cur}`);
+  if (isSvartingeStudy) lines.push('Comparable Sweden subtotal: not evaluated');
+  else for (const [cur, v] of totalsByCurrency()) lines.push(`Subtotal ${cur}: ${money(v, cur)} ${cur}`);
   lines.push('');
   lines.push(isSvartingeStudy
     ? 'Note: snapshot prices are stale; Sweden supply, tax, freight, delivery and checkout are not evaluated; native-3D geometry rights are under review; proxy items are dimension-verified, not exact manufacturer geometry.'

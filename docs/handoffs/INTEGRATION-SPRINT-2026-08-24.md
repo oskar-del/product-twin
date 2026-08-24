@@ -23,13 +23,13 @@
 
 The repository now supports this evidence-labelled path:
 
-`Svärtinge neighbourhood → verified 1 m terrain → BRAGE Vinkelhuset → Glanrummet → seven-product furniture study → same-role swap → subtotal update → review BOM`
+`Svärtinge neighbourhood → verified 1 m terrain → BRAGE Vinkelhuset → Glanrummet → Svärtinge-specific seven-product composition → same-role swap → source-price inspection → review BOM`
 
 Run from the repository root:
 
 ```sh
 node scripts/resolve-native-3d-showcase.mjs
-node scripts/serve-svartinge-neighbourhood-prototype.mjs
+PORT=8876 node scripts/serve-svartinge-neighbourhood-prototype.mjs
 ```
 
 Open:
@@ -56,7 +56,8 @@ The room study discloses that:
 
 - Scene compiler: `scripts/build-svartinge-brage-integrated-scene.mjs`
 - Scene: `data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-brage-v0.3.json`
-- Room/commerce handoff: `data/integration/svartinge-glanrummet-commerce-v0.1.json`
+- Svärtinge composition: `data/showrooms/svartinge-glanrummet-living-room-v0.2.json`
+- Room/commerce handoff: `data/integration/svartinge-glanrummet-commerce-v0.2.json`
 - Runtime asset validator: `scripts/validate-native-3d-showcase-runtime.mjs`
 - Final scripted vote: `scripts/gate-integration-sprint.sh`
 
@@ -77,7 +78,7 @@ Key checks:
 - Platform Engine: 86 validation, 35 mutation, 47 compiler, 29 terrain, 72 studies, 54 OSM and 18 bundle checks passed.
 - Plot-to-Project: 1,010 spatial assertions and 34 mutation attacks passed.
 - Sweden/Svärtinge: 510 national, 740 property, 91 neighbourhood and 518 viewer assertions passed; all mutation suites passed.
-- BRAGE integration: 26 checks passed, including Svärtinge visual-context and design-study wording guards.
+- BRAGE integration: 33 checks passed, including the Svärtinge-specific composition, appearance-cue, mixed-currency and design-study wording guards.
 - Native showcase: 8/8 manifest entries valid; when runtime assets are present, 8/8 GLB magic, size and SHA-256 checks pass.
 - Procurement structural and mutation gates passed.
 - The `--current` commerce check is expected to fail with exactly 9 stale observations; the final gate fails if stale commerce is ever accepted as current.
@@ -90,7 +91,9 @@ The first independent review found one user-facing context leak that the origina
 
 - renders a disclosed, concept-only Lake Glan/pine horizon in Svärtinge mode;
 - keeps the Mediterranean composition only in the original Spanish listing mode;
-- labels the total as a dated snapshot subtotal;
+- uses a Svärtinge-specific 7 × 3 × 7 m concept-room composition instead of the Marbella placement manifest;
+- applies a disclosed Scandinavian appearance-cue layer without changing geometry or claiming exact sellable finishes;
+- withholds the room subtotal because the dated source snapshots mix USD and EUR and are not Sweden-comparable;
 - labels copied output as a design-study BOM, never an RFQ;
 - labels outbound merchant links as product pages, not live Swedish offers; and
 - fails the BRAGE integration test if these Svärtinge-specific guards disappear.

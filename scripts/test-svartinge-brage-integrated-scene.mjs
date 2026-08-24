@@ -23,14 +23,23 @@ check(scene.navigation.find(stage => stage.id === "ROOM")?.on_enter_open_element
 check(scene.elements.find(element => element.id === "ROOM_GLANRUMMET")?.linked_experience?.state === "DESIGN_STUDY_NOT_PROCUREMENT_READY", "commerce handoff is visibly non-procurement");
 const spatialViewer = fs.readFileSync("prototype/svartinge-neighbourhood/index.html", "utf8");
 const showroomViewer = fs.readFileSync("prototype/showroom-living/index.html", "utf8");
+const showroomComposition = JSON.parse(fs.readFileSync("data/showrooms/svartinge-glanrummet-living-room-v0.2.json", "utf8"));
+const commerceHandoff = JSON.parse(fs.readFileSync("data/integration/svartinge-glanrummet-commerce-v0.2.json", "utf8"));
 check(spatialViewer.includes("neighbourhood-scene-brage-v0.3.json"), "viewer exposes BRAGE scene variant");
 check(spatialViewer.includes("s.on_enter_open_element"), "viewer opens the stage-bound room");
 check(showroomViewer.includes("svartinge-glanrummet"), "showroom discloses Svärtinge study context");
+check(showroomViewer.includes("svartinge-glanrummet-living-room-v0.2.json"), "showroom consumes the Svärtinge-specific composition manifest");
 check(showroomViewer.includes("Sweden supply, tax, freight, delivery and checkout are not evaluated"), "Svärtinge RFQ disclosure is explicit");
 check(showroomViewer.includes("Concept-only forested Lake Glan horizon"), "Svärtinge room renders a disclosed local concept context");
 check(showroomViewer.includes("DESIGN STUDY BOM — Glanrummet · not a quote"), "Svärtinge copy output cannot present itself as an RFQ");
 check(showroomViewer.includes("Open merchant product page →"), "Svärtinge merchant action avoids live-offer/RFQ wording");
-check(showroomViewer.includes("Room · snapshot subtotal"), "Svärtinge subtotal is labelled as a snapshot");
+check(showroomViewer.includes("Sweden commerce"), "Svärtinge commerce display is destination-labelled");
+check(showroomViewer.includes("Comparable Sweden subtotal: not evaluated"), "Svärtinge mixed-currency subtotal is withheld");
+check(showroomComposition.room.size_m.join("x") === "7x3x7", "Glanrummet composition matches the BRAGE concept-room envelope");
+check(Object.keys(showroomComposition.placement_overrides).length === 7, "all seven placements are Svärtinge-specific");
+check(showroomComposition.appearance_profile.exact_finish_claim === false, "appearance cues cannot claim exact finishes");
+check(commerceHandoff.destination.comparable_subtotal_state === "WITHHELD", "Sweden comparable subtotal remains withheld");
+check(commerceHandoff.forbidden.some(rule => rule.includes("mixed USD and EUR")), "mixed-currency Sweden total is explicitly forbidden");
 
 for (const mutation of [
   value => { value.scene_version = "wrong"; },

@@ -9,7 +9,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const basePath = "data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json";
 const patchPath = "OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-in-scene-v0.3-patch.json";
 const specPath = "OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-v0.2-geometry-spec.json";
-const commercePath = "data/integration/svartinge-glanrummet-commerce-v0.1.json";
+const commercePath = "data/integration/svartinge-glanrummet-commerce-v0.2.json";
 const outputPath = "data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-brage-v0.3.json";
 
 const read = relative => JSON.parse(fs.readFileSync(path.join(root, relative), "utf8"));
