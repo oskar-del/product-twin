@@ -96,9 +96,18 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
 const scene_data = await fetch('../../data/showrooms/norr11-marbella-living-room-v0.1.json', { cache: 'no-store' }).then(r => r.json());
-const property = scene_data.property || { name: 'Villa (placeholder)', location: 'Spain', price_display: '—', note: '' };
+const contextId = new URLSearchParams(location.search).get('context');
+const isSvartingeStudy = contextId === 'svartinge-glanrummet';
+const property = isSvartingeStudy ? {
+  name: 'Glanrummet · furniture study',
+  location: 'BRAGE Vinkelhuset · Svärtinge 54:28',
+  price_display: 'Design study · not a quote',
+  specs: '7 real product identities · 2 avatar lanes · Sweden supply not evaluated',
+  note: 'Concept-room preview only. The Altea property context is not used here.'
+} : (scene_data.property || { name: 'Villa (placeholder)', location: 'Spain', price_display: '—', note: '' });
+if (isSvartingeStudy) document.title = 'Glanrummet furniture study · Product Twin';
 document.getElementById('villa-name').textContent = property.name;
-document.getElementById('villa-loc').textContent = property.location + ' · furnished with real, purchasable pieces';
+document.getElementById('villa-loc').textContent = property.location + (isSvartingeStudy ? ' · composition preview' : ' · furnished with real, purchasable pieces');
 document.getElementById('villa-price').textContent = property.price_display;
 document.getElementById('villa-specs').textContent = property.specs || '';
 document.getElementById('villa-lst').textContent = property.reference ? `H&H · ${property.reference} · live listing` : '';
@@ -350,7 +359,9 @@ function buildRfqText() {
   lines.push('');
   for (const [cur, v] of totalsByCurrency()) lines.push(`Subtotal ${cur}: ${money(v, cur)} ${cur}`);
   lines.push('');
-  lines.push('Note: prices/stock and ES delivery require live refresh; native-3D geometry rights are under review; proxy items are dimension-verified, not exact manufacturer geometry.');
+  lines.push(isSvartingeStudy
+    ? 'Note: snapshot prices are stale; Sweden supply, tax, freight, delivery and checkout are not evaluated; native-3D geometry rights are under review; proxy items are dimension-verified, not exact manufacturer geometry.'
+    : 'Note: prices/stock and ES delivery require live refresh; native-3D geometry rights are under review; proxy items are dimension-verified, not exact manufacturer geometry.');
   return lines.join('\n');
 }
 document.getElementById('rfq-btn').onclick = () => { renderRfq(); document.getElementById('rfq-modal').hidden = false; };

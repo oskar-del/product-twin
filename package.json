@@ -122,6 +122,8 @@
     "site:sweden:svartinge:alignment:test": "node scripts/test-svartinge-geographic-alignment.mjs",
     "site:sweden:svartinge:prototype:gate": "npm run site:sweden:svartinge:prototype:build && npm run site:sweden:svartinge:prototype:validate && npm run site:sweden:svartinge:prototype:mutations && npm run site:sweden:svartinge:context:test && npm run site:sweden:svartinge:alignment:test",
     "site:sweden:svartinge:prototype:serve": "node scripts/serve-svartinge-neighbourhood-prototype.mjs",
+    "site:sweden:svartinge:brage:build": "node scripts/build-svartinge-brage-integrated-scene.mjs",
+    "site:sweden:svartinge:brage:test": "node scripts/test-svartinge-brage-integrated-scene.mjs",
     "room:twin:validate": "node scripts/validate-room-twins.mjs",
     "room:twin:mutations": "node scripts/test-room-twin-manifest.mjs",
     "room:twin:compat": "node scripts/validate-room-twins.mjs --room-lab-root ../room-lab-site --require-room-lab",
