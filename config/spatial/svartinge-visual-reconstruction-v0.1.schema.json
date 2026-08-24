@@ -27,7 +27,7 @@
             "required": ["width", "height"],
             "properties": {"width": {"type": "integer", "minimum": 1}, "height": {"type": "integer", "minimum": 1}}
           },
-          "viewpoint": {"const": "STREET_ARRIVAL_EXISTING_CONDITION"},
+          "viewpoint": {"enum": ["STREET_ARRIVAL_EXISTING_CONDITION", "NEIGHBOURHOOD_AERIAL_EXISTING_CONDITION"]},
           "evidence_state": {"const": "CONCEPT_VISUAL_RECONSTRUCTION"},
           "generation_method": {"const": "GENERATIVE_RENDER_FROM_REFERENCE_OBSERVATIONS"},
           "source_refs": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}},

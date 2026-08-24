@@ -35,6 +35,38 @@
         "It cannot establish entitlement, buildable envelope, elevation or finished-floor level.",
         "Neighbouring façades, vegetation and ground details are visually plausible approximations."
       ]
+    },
+    {
+      "rendering_id": "VR_SE_SVARTINGE_NEIGHBOURHOOD_AERIAL_V01",
+      "title": "Neighbourhood aerial · existing-condition reconstruction",
+      "asset_path": "prototype/svartinge-neighbourhood/assets/neighbourhood-aerial-existing-condition-v0.1.png",
+      "asset_sha256": "45b6a7d4332e5359735acb075310423e88f178088917ccc99058cfcbd0891d41",
+      "pixel_dimensions": {"width": 1672, "height": 941},
+      "viewpoint": "NEIGHBOURHOOD_AERIAL_EXISTING_CONDITION",
+      "evidence_state": "CONCEPT_VISUAL_RECONSTRUCTION",
+      "generation_method": "GENERATIVE_RENDER_FROM_REFERENCE_OBSERVATIONS",
+      "source_refs": [
+        "VR_SE_SVARTINGE_STREET_ARRIVAL_V01",
+        "OBS_SE_HEMNET_EXACT_ADDRESS_GALLERY",
+        "OBS_SE_NOKA_ORTHO_TARGET_TILE"
+      ],
+      "observed_character": [
+        "cleared hillside plot within a sparse detached-house neighbourhood",
+        "narrow winding uncurbed road with gravel shoulders",
+        "low Swedish timber houses with simple gable roofs",
+        "mixed Scots pine and silver birch woodland",
+        "exposed stone, soil and brush pile on the subject plot",
+        "forested lowland descending toward Lake Glan",
+        "informal driveways and vegetation-led plot edges"
+      ],
+      "limitations": [
+        "This is a generative visual reconstruction, not aerial photography.",
+        "The neighbourhood arrangement is visually plausible and is not exact building or road geometry.",
+        "It does not reproduce cadastral boundaries, surveyed terrain or a verified camera pose.",
+        "It cannot establish current condition or the position of neighbouring structures.",
+        "It cannot establish legal access, utilities, entitlement or buildable envelope.",
+        "The plot is identified by cleared-ground character only and has no rendered boundary line."
+      ]
     }
   ],
   "policy": {
