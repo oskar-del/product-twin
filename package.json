@@ -24,6 +24,18 @@
     "whole-building:test": "node scripts/whole-building-test.mjs",
     "procurement:routes": "node scripts/select-procurement-routes.mjs",
     "dashboard:project": "node scripts/build-project-control.mjs",
+    "engine:audit": "node scripts/audit-viewer-surfaces.mjs",
+    "engine:scene:build": "node scripts/build-twin-engine-conformance-scene.mjs",
+    "engine:validate": "node scripts/validate-twin-engine.mjs",
+    "engine:mutations": "node scripts/test-twin-engine.mjs",
+    "engine:bundle": "node scripts/bundle-twin-scene.mjs",
+    "engine:bundle:test": "node scripts/test-twin-scene-bundle.mjs",
+    "engine:compiler:test": "node scripts/test-twin-scene-compiler.mjs",
+    "engine:studies:test": "node scripts/test-twin-engine-studies.mjs",
+    "engine:heightfield:test": "node scripts/test-height-field.mjs",
+    "engine:osm:test": "node scripts/test-osm-buildings.mjs",
+    "engine:gate": "npm run engine:scene:build && npm run engine:validate && npm run engine:mutations && npm run engine:compiler:test && npm run engine:heightfield:test && npm run engine:studies:test && npm run engine:osm:test && npm run engine:bundle:test",
+    "engine:demo": "node scripts/serve-twin-engine-demo.mjs",
     "scene:v0:validate": "node scripts/validate-v0-shoppable-scene.mjs",
     "scene:living:supply:validate": "node scripts/validate-living-room-supply-board.mjs",
     "scene:v0:refresh": "node scripts/refresh-v0-shoppable-scene-offers.mjs",
@@ -81,6 +93,7 @@
   },
   "devDependencies": {
     "ajv": "8.20.0",
+    "esbuild": "0.28.2",
     "three": "0.185.0"
   }
 }
