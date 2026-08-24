@@ -55,6 +55,16 @@
       "footprint_m2": 96,
       "concept_storeys": 1,
       "approx_gross_floor_area_m2": 96,
+      "presentation_profile": {
+        "architectural_language": "NORDIC_VIEW_HOUSE_CONCEPT",
+        "roof_form": "SHALLOW_GABLE",
+        "wall_finish": "LIGHT_TIMBER_CONCEPT",
+        "roof_finish": "CHARCOAL_METAL_CONCEPT",
+        "roof_rise_m": 1.35,
+        "terrace_depth_m": 2.4,
+        "south_glazing_modules": 3,
+        "presentation_only": true
+      },
       "volumes": [
         {
           "volume_id": "VIEW_BAR_MAIN",
@@ -78,6 +88,16 @@
       "footprint_m2": 130,
       "concept_storeys": 1,
       "approx_gross_floor_area_m2": 130,
+      "presentation_profile": {
+        "architectural_language": "NORDIC_COURTYARD_HOUSE_CONCEPT",
+        "roof_form": "SHALLOW_GABLE",
+        "wall_finish": "NATURAL_TIMBER_CONCEPT",
+        "roof_finish": "OXIDE_METAL_CONCEPT",
+        "roof_rise_m": 1.1,
+        "terrace_depth_m": 2.2,
+        "south_glazing_modules": 3,
+        "presentation_only": true
+      },
       "volumes": [
         {
           "volume_id": "COURTYARD_NORTH",
@@ -108,6 +128,16 @@
       "footprint_m2": 108,
       "concept_storeys": 1,
       "approx_gross_floor_area_m2": 108,
+      "presentation_profile": {
+        "architectural_language": "NORDIC_SPLIT_LEVEL_CONCEPT",
+        "roof_form": "SHALLOW_GABLE",
+        "wall_finish": "SAGE_TIMBER_CONCEPT",
+        "roof_finish": "CHARCOAL_METAL_CONCEPT",
+        "roof_rise_m": 1.2,
+        "terrace_depth_m": 2,
+        "south_glazing_modules": 2,
+        "presentation_only": true
+      },
       "volumes": [
         {
           "volume_id": "SPLIT_WEST",

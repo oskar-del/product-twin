@@ -170,6 +170,10 @@ const designStudiesAttacks=[
   ["candidate scene drift",m=>m.scene_ref.scene_id="OTHER","design candidate scene binding drift"],
   ["candidate legal effect invented",m=>m.policy.legal_effect="APPROVED","design candidate policy promoted"],
   ["candidate geometry promoted",m=>m.policy.geometry_scope="APPROVED_BIM","design candidate policy promoted"],
+  ["candidate architecture promoted",m=>m.candidates[0].presentation_profile.presentation_only=false,"architectural presentation profile promoted or invalid"],
+  ["candidate roof made implausible",m=>m.candidates[0].presentation_profile.roof_rise_m=9,"architectural presentation dimensions invalid"],
+  ["candidate terrace leaves plot",m=>m.candidates[0].presentation_profile.terrace_depth_m=30,"architectural presentation dimensions invalid"],
+  ["candidate presentation field injected",m=>m.candidates[0].presentation_profile.approved_material=true,"presentation: unknown or missing fields"],
   ["candidate unknown field",m=>m.approved=true,"design candidate studies: unknown or missing fields"]
 ];
 for(const [name,mutate,needle] of designStudiesAttacks){

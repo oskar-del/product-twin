@@ -54,7 +54,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["candidate_id", "label", "summary", "evidence_class", "footprint_m2", "concept_storeys", "approx_gross_floor_area_m2", "volumes", "design_signals"],
+        "required": ["candidate_id", "label", "summary", "evidence_class", "footprint_m2", "concept_storeys", "approx_gross_floor_area_m2", "presentation_profile", "volumes", "design_signals"],
         "properties": {
           "candidate_id": {"enum": ["VIEW_BAR", "COURTYARD_EDGE", "SPLIT_TERRACE"]},
           "label": {"type": "string", "minLength": 1},
@@ -63,6 +63,21 @@
           "footprint_m2": {"type": "number", "exclusiveMinimum": 0},
           "concept_storeys": {"const": 1},
           "approx_gross_floor_area_m2": {"type": "number", "exclusiveMinimum": 0},
+          "presentation_profile": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["architectural_language", "roof_form", "wall_finish", "roof_finish", "roof_rise_m", "terrace_depth_m", "south_glazing_modules", "presentation_only"],
+            "properties": {
+              "architectural_language": {"enum": ["NORDIC_VIEW_HOUSE_CONCEPT", "NORDIC_COURTYARD_HOUSE_CONCEPT", "NORDIC_SPLIT_LEVEL_CONCEPT"]},
+              "roof_form": {"const": "SHALLOW_GABLE"},
+              "wall_finish": {"enum": ["LIGHT_TIMBER_CONCEPT", "NATURAL_TIMBER_CONCEPT", "SAGE_TIMBER_CONCEPT"]},
+              "roof_finish": {"enum": ["CHARCOAL_METAL_CONCEPT", "OXIDE_METAL_CONCEPT"]},
+              "roof_rise_m": {"type": "number", "minimum": 0.6, "maximum": 2},
+              "terrace_depth_m": {"type": "number", "minimum": 0, "maximum": 3},
+              "south_glazing_modules": {"type": "integer", "minimum": 1, "maximum": 4},
+              "presentation_only": {"const": true}
+            }
+          },
           "volumes": {
             "type": "array",
             "minItems": 1,
