@@ -1,0 +1,104 @@
+{
+  "version": "0.1",
+  "scene_id": "V0_NORR11_MARBELLA_LIVING_001",
+  "name": "NORR11 living room · Marbella",
+  "status": "STRUCTURAL_PROOF_NATIVE_MANUFACTURER_3D_ES_CHECKOUT_REFRESH_REQUIRED",
+  "generated_from": "data/geometry/native-3d-showcase-manifest.json",
+  "principle": "Real Product Twins from the MCP, shown with their native manufacturer 3D in one room. Geometry is the merchant's own MODEL_3D (runtime-only, rights review). Prices are the live trade-merchant USD list; ES delivery and EUR checkout remain live gates per each twin's verification state.",
+  "property": {
+    "state": "BOUND_REAL_H&H_LISTING",
+    "source": "hanssonhertzell.com (live, pulled 2026-08-18)",
+    "name": "Villa in Altea Hills",
+    "location": "Altea Hills, Costa Blanca North",
+    "price_display": "€6,490,000",
+    "reference": "R5355265",
+    "specs": "5 bed · 6 bath · 470 m² · plot 1,560 m² · pool · panoramic Mediterranean sea views",
+    "listing_url": "https://hanssonhertzell.com/en/properties/R5355265",
+    "hero_image": ".runtime/showcase/property/R5355265_P1.jpg",
+    "note": "Real currently-listed H&H villa. Photos are H&H's own listing images, kept in gitignored .runtime, not committed. Price/ref are live and refresh-required before use."
+  },
+  "location_context": {"country": "ES", "region": "Comunidad Valenciana", "municipality": "Altea", "area": "Altea Hills"},
+  "room": {"type": "living_room", "size_m": [7.0, 3.0, 8.0], "palette": ["warm limestone", "cream plaster", "smoked oak", "bronze"], "currency_display": "USD_TRADE_LIST"},
+  "geometry_source": {
+    "merchant": "Design Public Group (trade)",
+    "merchant_origin": "https://trade.designpublicgroup.com",
+    "media_type": "MODEL_3D",
+    "asset_storage": "runtime_inspection_only",
+    "runtime_dir": ".runtime/showcase/native-3d",
+    "rights_state": "review",
+    "note": "Native GLBs are downloaded to gitignored .runtime, never committed. Redistribution rights are unresolved; this is an internal placement proof."
+  },
+  "products": [
+    {
+      "twin_id": "PT_NORR11_MAN_3_SEATER_SOFA_NOR_MAN_3_SEAT_SOFA_CAT3",
+      "role": "hero_sofa",
+      "category_id": "FFE.SEATING.SOFA",
+      "identity": {"manufacturer": "NORR11", "product_family": "Man Sofa", "model": "Man 3-Seater Sofa", "merchant_sku": "NOR-MAN-3-SEAT-SOFA-CAT3", "configuration": "Upholstery Group Cat 3 (visible fabric/colour not bound)"},
+      "avatar": {"level": "G2", "source": "native_manufacturer_model3d", "runtime_glb": ".runtime/showcase/native-3d/PT_NORR11_MAN_3_SEATER_SOFA_NOR_MAN_3_SEAT_SOFA_CAT3.glb", "claim": "native manufacturer product-shape model (exact visible finish not bound)", "rights_state": "review"},
+      "placement": {"position_m": [0, 0, -3.0], "rotation_deg_y": 0, "ground_to_floor": true},
+      "offer_snapshot": {"merchant": "Design Public Group (trade)", "currency": "USD", "unit_price": 10500.0, "available": true, "observed_at": "2026-08-18", "es_checkout_state": "exact ES postcode tax/freight/delivery refresh required"}
+    },
+    {
+      "twin_id": "PT_NORR11_MAN_LOUNGE_CHAIR_NOR_MAN_LNG_CAT1",
+      "role": "lounge_chair",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "identity": {"manufacturer": "NORR11", "product_family": "Man Lounge Chair", "model": "Man Lounge Chair", "merchant_sku": "NOR-MAN-LNG-CAT1", "configuration": "Upholstery Group Cat 1"},
+      "avatar": {"level": "G2", "source": "native_manufacturer_model3d", "runtime_glb": ".runtime/showcase/native-3d/PT_NORR11_MAN_LOUNGE_CHAIR_NOR_MAN_LNG_CAT1.glb", "claim": "native manufacturer product-shape model", "rights_state": "review"},
+      "placement": {"position_m": [2.4, 0, -0.6], "rotation_deg_y": -125, "ground_to_floor": true},
+      "offer_snapshot": {"merchant": "Design Public Group (trade)", "currency": "USD", "unit_price": 4200.0, "available": true, "observed_at": "2026-08-18", "es_checkout_state": "exact ES postcode tax/freight/delivery refresh required"}
+    },
+    {
+      "twin_id": "PT_NORR11_MAN_DAY_BED_NOR_MAN_DAYBED_CAT1",
+      "role": "day_bed",
+      "category_id": "FFE.SEATING.SOFA",
+      "identity": {"manufacturer": "NORR11", "product_family": "Man Day Bed", "model": "Man Day Bed", "merchant_sku": "NOR-MAN-DAYBED-CAT1", "configuration": "Upholstery Group Cat 1"},
+      "avatar": {"level": "G2", "source": "native_manufacturer_model3d", "runtime_glb": ".runtime/showcase/native-3d/PT_NORR11_MAN_DAY_BED_NOR_MAN_DAYBED_CAT1.glb", "claim": "native manufacturer product-shape model; sha256 matches twin record", "rights_state": "review"},
+      "placement": {"position_m": [-2.6, 0, -1.2], "rotation_deg_y": 90, "ground_to_floor": true},
+      "offer_snapshot": {"merchant": "Design Public Group (trade)", "currency": "USD", "unit_price": 7100.0, "available": true, "observed_at": "2026-08-18", "es_checkout_state": "exact ES postcode tax/freight/delivery refresh required"}
+    },
+    {
+      "twin_id": "PT_WENDELBO_ATLI_WEN_333_1_COM",
+      "role": "accent_chair",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "identity": {"manufacturer": "Wendelbo", "product_family": "Atli", "model": "Atli Lounge Chair", "merchant_sku": "WEN-333-1-COM"},
+      "avatar": {"level": "G2", "source": "native_manufacturer_model3d", "runtime_glb": ".runtime/showcase/native-3d/PT_WENDELBO_ATLI_WEN_333_1_COM.glb", "claim": "native manufacturer product-shape model", "rights_state": "review"},
+      "placement": {"position_m": [2.2, 0, -3.4], "rotation_deg_y": 200, "ground_to_floor": true},
+      "offer_snapshot": {"merchant": "Design Public Group (trade)", "currency": "USD", "unit_price": 2957.0, "available": true, "observed_at": "2026-08-18", "es_checkout_state": "exact ES postcode tax/freight/delivery refresh required"}
+    },
+    {
+      "twin_id": "PT_IKEA_LOHALS_30511288",
+      "role": "rug",
+      "category_id": "FFE.TEXTILES.RUG",
+      "identity": {"manufacturer": "IKEA", "product_family": "LOHALS", "model": "LOHALS rug, flatwoven", "merchant_sku": "305.112.88"},
+      "avatar": {"level": "G2", "source": "product_twin_proxy", "asset_path": "data/geometry/avatars/ikea-lohals-30511288-g2-rug-proxy.glb", "claim": "dimension-verified proxy; not exact IKEA geometry", "rights_state": "product_twin_owned"},
+      "placement": {"position_m": [0, 0, -2.4], "rotation_deg_y": 0, "ground_to_floor": true},
+      "offer_snapshot": {"merchant": "IKEA Spain", "currency": "EUR", "unit_price": 49.99, "available": true, "observed_at": "2026-08-17", "product_url": "https://www.ikea.com/es/en/p/lohals-rug-flatwoven-natural-30511288/", "es_checkout_state": "IKEA Spain online offer; delivery/stock refresh required"}
+    },
+    {
+      "twin_id": "PT_IKEA_LISTERBY_30513904",
+      "role": "coffee_table",
+      "category_id": "FFE.TABLE.COFFEE",
+      "identity": {"manufacturer": "IKEA", "product_family": "LISTERBY", "model": "LISTERBY coffee table, oak veneer", "merchant_sku": "305.139.04"},
+      "avatar": {"level": "G2", "source": "product_twin_proxy", "asset_path": "data/geometry/avatars/ikea-listerby-30513904-g2-coffee-table-proxy.glb", "claim": "dimension-verified proxy; not exact IKEA geometry", "rights_state": "product_twin_owned"},
+      "placement": {"position_m": [0, 0, -2.4], "rotation_deg_y": 0, "ground_to_floor": true},
+      "offer_snapshot": {"merchant": "IKEA Spain", "currency": "EUR", "unit_price": 199.00, "available": true, "observed_at": "2026-08-17", "product_url": "https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/", "es_checkout_state": "IKEA Spain online offer; delivery/stock refresh required"}
+    },
+    {
+      "twin_id": "PT_IKEA_LAUTERS_30405042",
+      "role": "floor_lamp",
+      "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
+      "identity": {"manufacturer": "IKEA", "product_family": "LAUTERS", "model": "LAUTERS floor lamp, ash/white", "merchant_sku": "304.050.42"},
+      "avatar": {"level": "G2", "source": "product_twin_proxy", "asset_path": "data/geometry/avatars/ikea-lauters-30405042-g2-floor-lamp-proxy.glb", "claim": "dimension-verified proxy; not exact IKEA geometry", "rights_state": "product_twin_owned"},
+      "placement": {"position_m": [2.7, 0, -4.6], "rotation_deg_y": 0, "ground_to_floor": true},
+      "offer_snapshot": {"merchant": "IKEA Spain", "currency": "EUR", "unit_price": 59.99, "available": true, "observed_at": "2026-08-17", "product_url": "https://www.ikea.com/es/en/p/lauters-floor-lamp-ash-white-30405042/", "es_checkout_state": "IKEA Spain online offer; delivery/stock refresh required"}
+    }
+  ],
+  "swap_alternates": [
+    {"role": "hero_sofa", "twin_ids": ["PT_NORR11_MAN_2_SEATER_SOFA_NOR_MAN_2_SEAT_SOFA_CAT2", "PT_NORR11_MAMMOTH_SOFA_NOR_MAMMOTH_SOFA_CAT1_OAK", "PT_WENDELBO_LOBBY_SOFA_WEN_LBY_SOF_COM"]},
+    {"role": "lounge_chair", "twin_ids": ["PT_NORR11_FAVE_NOR_FAVE_CHR_CHRME_CAT0"]}
+  ],
+  "honest_state": {
+    "what_is_real": ["exact merchant product + variant identity", "native manufacturer MODEL_3D geometry", "live availability + trade USD price", "ES country-filter pass on the commerce join"],
+    "what_is_open": ["exact visible finish/colour not bound to the variant", "manufacturer W/D/H not yet configured on the twins (scale_state EXPECTED_DIMENSIONS_NOT_CONFIGURED)", "EUR ES-postcode checkout + freight + delivery not verified", "redistribution/render rights of the native GLB are review"]
+  }
+}
