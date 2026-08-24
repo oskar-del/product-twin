@@ -1,0 +1,2099 @@
+{
+  "schema_version": "room-commerce-procurement/v1",
+  "manifest_id": "PROC_MARBELLA_LIVING_ROOM_ES_29660_V1",
+  "revision": 1,
+  "producing_workstream": "Build, Procurement & Logistics OS",
+  "producer": {
+    "repository": "oskar-del/product-twin",
+    "branch": "agent/build-procurement-logistics",
+    "producer_commit": "0a044388bfff525179e59227d1dd6aa0e62f1120",
+    "checkpoint_state": "COMMITTED_PRODUCER"
+  },
+  "source_manifests": {
+    "scene": {
+      "path": "data/integrations/room-lab/3daea697deabe6c53bb161c9ed5f42031f4fde41/marbella-living-room.v1.json",
+      "identity": "marbella-living-room-v1",
+      "version": "room-scene/v1",
+      "sha256": "e796ed516880c76bd62670ab792699be01e8a27eef6f8b5d5749e7772d592bcf",
+      "room_lab_commit": "3daea697deabe6c53bb161c9ed5f42031f4fde41",
+      "id_state": "EMBEDDED"
+    },
+    "furniture": {
+      "path": "data/integrations/room-lab/3daea697deabe6c53bb161c9ed5f42031f4fde41/marbella-furniture.v1.json",
+      "identity": "marbella-furniture-v1",
+      "version": "room-furniture/v1",
+      "sha256": "635011d51a41d2e2441918d2fec4dc3e711a2b0956e8392f4653d2e919e1d228",
+      "room_lab_commit": "3daea697deabe6c53bb161c9ed5f42031f4fde41",
+      "id_state": "DERIVED_FROM_VERSIONED_FILENAME_NO_EMBEDDED_ID"
+    },
+    "room_lab_commerce_importer_contract": {
+      "path": "data/integrations/room-lab/3daea697deabe6c53bb161c9ed5f42031f4fde41/marbella-commerce-es-29660.v1.json",
+      "identity": "marbella-commerce-es-29660-v1",
+      "version": "room-commerce/v1",
+      "sha256": "eee4d7707e0686f62d0449130f5fc9b896f9ebc8eeb6378317b61b809a8f91b2",
+      "room_lab_commit": "3daea697deabe6c53bb161c9ed5f42031f4fde41",
+      "id_state": "DERIVED_FROM_VERSIONED_FILENAME_NO_EMBEDDED_ID"
+    },
+    "frozen_design": {
+      "path": "data/showrooms/living-room-client-design-v0.1.json",
+      "identity": "DESIGN_ROOM_LAB_LIVING_V0_1",
+      "version": "0.1",
+      "sha256": "f3556f2a24fdf1b9fcdaaa08de13c8748beb1999ba91f9dc6dff8ddf216a7b34"
+    },
+    "offer_evidence": {
+      "path": "data/procurement/living-room-design-offers-v0.1.json",
+      "identity": "DESIGN_ROOM_LAB_LIVING_V0_1",
+      "version": "0.1",
+      "sha256": "4b5a326a49fc774f05828c15e71c7d479321fb76de14e170eecb7f8c4a52d9ad"
+    },
+    "session_evidence": {
+      "path": "data/procurement/living-room-ikea-spain-session-2026-08-17.json",
+      "identity": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+      "version": "2026-08-17",
+      "sha256": "a4724bfdc077efa91c1f979b6f237b70bdc5800722c6112c04f0a86ac6255060"
+    }
+  },
+  "destination": {
+    "country": "ES",
+    "market": "ES",
+    "postcode": "29660",
+    "key": "ES-29660"
+  },
+  "compiled_at": "2026-08-17T20:00:00+02:00",
+  "evidence_freshness": {
+    "state": "CURRENT_AT_COMPILE_TIME",
+    "current_until": "2026-08-17T23:59:59+02:00",
+    "monitor": {
+      "cadence": "DAILY_WHILE_EXPOSED_AND_IMMEDIATELY_BEFORE_PURCHASE",
+      "all_selected_and_alternative_offers": true
+    }
+  },
+  "population": {
+    "state": "FROZEN_EIGHT_ORIGINAL_PRODUCTS",
+    "scene_product_ids": [
+      "kivik",
+      "poang",
+      "listerby",
+      "lohals",
+      "gladom",
+      "lauters",
+      "besta",
+      "billy"
+    ],
+    "product_twin_ids": [
+      "PT_IKEA_KIVIK_49440597",
+      "PT_IKEA_POANG_39240787",
+      "PT_IKEA_LISTERBY_30513904",
+      "PT_IKEA_LOHALS_30511288",
+      "PT_IKEA_GLADOM_70578451",
+      "PT_IKEA_LAUTERS_30405042",
+      "PT_IKEA_BESTA_89330691",
+      "PT_IKEA_BILLY_00263850"
+    ],
+    "selected_substitution_ids": [],
+    "conditional_substitution_ids": [
+      "SUB_LISTERBY_TO_VALNAS"
+    ]
+  },
+  "summary": {
+    "line_items": 8,
+    "total_units": 8,
+    "destination_deliverable_lines": 7,
+    "destination_deliverable_percentage": 87.5,
+    "destination_unavailable_lines": 1,
+    "local_lines": 0,
+    "purchase_ready_lines": 0,
+    "original_merchandise_subtotal": {
+      "amount": 1126.96,
+      "currency": "EUR"
+    },
+    "deliverable_merchandise_subtotal": {
+      "amount": 927.96,
+      "currency": "EUR"
+    },
+    "conditional_valnas_scenario_subtotal": {
+      "amount": 1176.96,
+      "currency": "EUR"
+    }
+  },
+  "line_items": [
+    {
+      "line_id": "LINE_LR_SOFA_01",
+      "placement_id": "LR_SOFA_01",
+      "room_product_id": "kivik",
+      "record_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_KIVIK_49440597",
+      "article_no": "494.405.97",
+      "product_role": {
+        "procurement_role": "sofa",
+        "room_lab_role": "seating"
+      },
+      "quantity": {
+        "placement_count": 1,
+        "bundle_quantity": null,
+        "total_units": 1,
+        "state": "ROOM_LAB_PLACEMENT_AND_FURNITURE_INSTANCE_RECONCILED"
+      },
+      "selection": {
+        "state": "FROZEN_ORIGINAL_SELECTED",
+        "substitution_applied": false,
+        "source_scene_product_id": "kivik"
+      },
+      "merchant": {
+        "seller_id": "ikea_spain",
+        "seller_name": "IKEA Spain storefront",
+        "retailer_territory_country": "ES",
+        "seller_country": null,
+        "dispatch_country": null,
+        "locality": {
+          "state": "UNRESOLVED",
+          "distance_km": null,
+          "reason": "No verified seller or dispatch location and radius evidence; IKEA Málaga stock is not supplier-locality proof."
+        }
+      },
+      "price": {
+        "state": "VERIFIED_CURRENT",
+        "amount": 499,
+        "currency": "EUR",
+        "reason": "Dated official Spain product-page price."
+      },
+      "tax": {
+        "state": "UNKNOWN",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax inclusion and amount are not independently joined at line level."
+      },
+      "stock": {
+        "wording": {
+          "home_delivery_29660": "AVAILABLE",
+          "IKEA_Malaga_click_collect": "AVAILABLE",
+          "IKEA_Malaga_store": "IN_STOCK"
+        },
+        "source_stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+        "local_classification": "NOT_CLASSIFIED_LOCAL"
+      },
+      "destination_delivery": {
+        "destination": {
+          "country": "ES",
+          "market": "ES",
+          "postcode": "29660",
+          "key": "ES-29660"
+        },
+        "eligibility": "ELIGIBLE",
+        "exact_postcode_evidence": true,
+        "source_state": "AVAILABLE"
+      },
+      "lead_time": {
+        "state": "AGGREGATE_WINDOW_NOT_ITEMIZED",
+        "days_min": 4,
+        "days_max": 7,
+        "source_scope": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+        "complete_for_purchase": false,
+        "reason": "The 4–7 day cart window was count-reconciled but not itemized to the seven named products and included two accessories."
+      },
+      "freight": {
+        "state": "UNKNOWN_CONTAMINATED",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "The captured freight quote included two accidental accessories; amount is withheld rather than emitted as zero."
+      },
+      "landed_cost": {
+        "state": "UNKNOWN_INCOMPLETE",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax, clean freight, handling, assembly and installation are incomplete; amount is withheld rather than emitted as zero."
+      },
+      "checkout_rfq": {
+        "checkout_state": "NO_CLEAN_EXACT_CHECKOUT_QUOTE",
+        "rfq_state": "NOT_SENT",
+        "mutable_payload_embedded": false,
+        "reason": "Historical combined-cart evidence was contaminated; no cart, checkout or RFQ is created by this manifest."
+      },
+      "procurement_approval": {
+        "state": "REQUIRED",
+        "evidence_ref": null
+      },
+      "purchase_refresh_required": true,
+      "evidence": {
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_KIVIK_49440597",
+        "session_id": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+        "product_url": "https://www.ikea.com/es/es/p/kivik-sofa-3-plazas-tibbleby-beis-gris-s49440597/",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "catalog_route_state": "SPAIN_EXACT_PRODUCT_ROUTE",
+        "observation": {
+          "source_observed_at": "2026-08-17",
+          "precision": "DAY",
+          "observed_window": {
+            "start": "2026-08-17T00:00:00+02:00",
+            "end": "2026-08-17T23:59:59+02:00"
+          },
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "state": "CURRENT_AT_COMPILE_TIME"
+        },
+        "market_scope": "ES_ONLY"
+      },
+      "gates": [
+        {
+          "id": "IDENTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Exact Product Twin and article identity are joined."
+        },
+        {
+          "id": "PRODUCT_LANE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Commerce is attached only to a Product Twin."
+        },
+        {
+          "id": "SCENE_SELECTION",
+          "result": "PASS",
+          "critical": true,
+          "reason": "The original frozen scene selection is preserved."
+        },
+        {
+          "id": "QUANTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Placement and Room Lab instance quantities reconcile."
+        },
+        {
+          "id": "DESTINATION_SCOPE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence is isolated to ES-29660."
+        },
+        {
+          "id": "EVIDENCE_TIMESTAMP",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Observation date, precision and expiry are present."
+        },
+        {
+          "id": "EVIDENCE_FRESHNESS",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence was current at compile time."
+        },
+        {
+          "id": "PRICE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "A positive EUR product-page price is joined."
+        },
+        {
+          "id": "TAX",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Line tax is unknown."
+        },
+        {
+          "id": "STOCK_AND_DESTINATION_DELIVERY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Delivery eligibility to ES-29660 is evidenced."
+        },
+        {
+          "id": "LEAD_TIME_COMPLETE",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Lead-time evidence is missing or only aggregate and non-itemized."
+        },
+        {
+          "id": "FREIGHT",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Clean freight is unknown or contaminated."
+        },
+        {
+          "id": "LANDED_COST",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Complete landed cost is unknown."
+        },
+        {
+          "id": "CHECKOUT_OR_RFQ",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "No exact checkout or RFQ quote is verified."
+        },
+        {
+          "id": "PROCUREMENT_APPROVAL",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Procurement approval is not evidenced."
+        },
+        {
+          "id": "PURCHASE_TIME_REFRESH",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "A fresh destination check is required immediately before purchase."
+        }
+      ],
+      "blocked_gate_ids": [
+        "TAX",
+        "LEAD_TIME_COMPLETE",
+        "FREIGHT",
+        "LANDED_COST",
+        "CHECKOUT_OR_RFQ",
+        "PROCUREMENT_APPROVAL",
+        "PURCHASE_TIME_REFRESH"
+      ],
+      "purchase_readiness": "NOT_PURCHASE_READY"
+    },
+    {
+      "line_id": "LINE_LR_ARMCHAIR_01",
+      "placement_id": "LR_ARMCHAIR_01",
+      "room_product_id": "poang",
+      "record_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_POANG_39240787",
+      "article_no": "392.407.87",
+      "product_role": {
+        "procurement_role": "armchair",
+        "room_lab_role": "seating"
+      },
+      "quantity": {
+        "placement_count": 1,
+        "bundle_quantity": null,
+        "total_units": 1,
+        "state": "ROOM_LAB_PLACEMENT_AND_FURNITURE_INSTANCE_RECONCILED"
+      },
+      "selection": {
+        "state": "FROZEN_ORIGINAL_SELECTED",
+        "substitution_applied": false,
+        "source_scene_product_id": "poang"
+      },
+      "merchant": {
+        "seller_id": "ikea_spain",
+        "seller_name": "IKEA Spain storefront",
+        "retailer_territory_country": "ES",
+        "seller_country": null,
+        "dispatch_country": null,
+        "locality": {
+          "state": "UNRESOLVED",
+          "distance_km": null,
+          "reason": "No verified seller or dispatch location and radius evidence; IKEA Málaga stock is not supplier-locality proof."
+        }
+      },
+      "price": {
+        "state": "VERIFIED_CURRENT",
+        "amount": 89,
+        "currency": "EUR",
+        "reason": "Dated official Spain product-page price."
+      },
+      "tax": {
+        "state": "UNKNOWN",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax inclusion and amount are not independently joined at line level."
+      },
+      "stock": {
+        "wording": {
+          "home_delivery_29660": "AVAILABLE",
+          "IKEA_Malaga_click_collect": "AVAILABLE",
+          "IKEA_Malaga_store": "IN_STOCK"
+        },
+        "source_stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+        "local_classification": "NOT_CLASSIFIED_LOCAL"
+      },
+      "destination_delivery": {
+        "destination": {
+          "country": "ES",
+          "market": "ES",
+          "postcode": "29660",
+          "key": "ES-29660"
+        },
+        "eligibility": "ELIGIBLE",
+        "exact_postcode_evidence": true,
+        "source_state": "AVAILABLE"
+      },
+      "lead_time": {
+        "state": "AGGREGATE_WINDOW_NOT_ITEMIZED",
+        "days_min": 4,
+        "days_max": 7,
+        "source_scope": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+        "complete_for_purchase": false,
+        "reason": "The 4–7 day cart window was count-reconciled but not itemized to the seven named products and included two accessories."
+      },
+      "freight": {
+        "state": "UNKNOWN_CONTAMINATED",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "The captured freight quote included two accidental accessories; amount is withheld rather than emitted as zero."
+      },
+      "landed_cost": {
+        "state": "UNKNOWN_INCOMPLETE",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax, clean freight, handling, assembly and installation are incomplete; amount is withheld rather than emitted as zero."
+      },
+      "checkout_rfq": {
+        "checkout_state": "NO_CLEAN_EXACT_CHECKOUT_QUOTE",
+        "rfq_state": "NOT_SENT",
+        "mutable_payload_embedded": false,
+        "reason": "Historical combined-cart evidence was contaminated; no cart, checkout or RFQ is created by this manifest."
+      },
+      "procurement_approval": {
+        "state": "REQUIRED",
+        "evidence_ref": null
+      },
+      "purchase_refresh_required": true,
+      "evidence": {
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_POANG_39240787",
+        "session_id": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+        "product_url": "https://www.ikea.com/es/es/p/poang-sillon-chapa-abedul-knisa-beige-claro-s39240787/",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "catalog_route_state": "SPAIN_EXACT_PRODUCT_ROUTE",
+        "observation": {
+          "source_observed_at": "2026-08-17",
+          "precision": "DAY",
+          "observed_window": {
+            "start": "2026-08-17T00:00:00+02:00",
+            "end": "2026-08-17T23:59:59+02:00"
+          },
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "state": "CURRENT_AT_COMPILE_TIME"
+        },
+        "market_scope": "ES_ONLY"
+      },
+      "gates": [
+        {
+          "id": "IDENTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Exact Product Twin and article identity are joined."
+        },
+        {
+          "id": "PRODUCT_LANE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Commerce is attached only to a Product Twin."
+        },
+        {
+          "id": "SCENE_SELECTION",
+          "result": "PASS",
+          "critical": true,
+          "reason": "The original frozen scene selection is preserved."
+        },
+        {
+          "id": "QUANTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Placement and Room Lab instance quantities reconcile."
+        },
+        {
+          "id": "DESTINATION_SCOPE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence is isolated to ES-29660."
+        },
+        {
+          "id": "EVIDENCE_TIMESTAMP",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Observation date, precision and expiry are present."
+        },
+        {
+          "id": "EVIDENCE_FRESHNESS",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence was current at compile time."
+        },
+        {
+          "id": "PRICE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "A positive EUR product-page price is joined."
+        },
+        {
+          "id": "TAX",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Line tax is unknown."
+        },
+        {
+          "id": "STOCK_AND_DESTINATION_DELIVERY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Delivery eligibility to ES-29660 is evidenced."
+        },
+        {
+          "id": "LEAD_TIME_COMPLETE",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Lead-time evidence is missing or only aggregate and non-itemized."
+        },
+        {
+          "id": "FREIGHT",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Clean freight is unknown or contaminated."
+        },
+        {
+          "id": "LANDED_COST",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Complete landed cost is unknown."
+        },
+        {
+          "id": "CHECKOUT_OR_RFQ",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "No exact checkout or RFQ quote is verified."
+        },
+        {
+          "id": "PROCUREMENT_APPROVAL",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Procurement approval is not evidenced."
+        },
+        {
+          "id": "PURCHASE_TIME_REFRESH",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "A fresh destination check is required immediately before purchase."
+        }
+      ],
+      "blocked_gate_ids": [
+        "TAX",
+        "LEAD_TIME_COMPLETE",
+        "FREIGHT",
+        "LANDED_COST",
+        "CHECKOUT_OR_RFQ",
+        "PROCUREMENT_APPROVAL",
+        "PURCHASE_TIME_REFRESH"
+      ],
+      "purchase_readiness": "NOT_PURCHASE_READY"
+    },
+    {
+      "line_id": "LINE_LR_COFFEE_TABLE_01",
+      "placement_id": "LR_COFFEE_TABLE_01",
+      "room_product_id": "listerby",
+      "record_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_LISTERBY_30513904",
+      "article_no": "305.139.04",
+      "product_role": {
+        "procurement_role": "coffee_table",
+        "room_lab_role": "coffee"
+      },
+      "quantity": {
+        "placement_count": 1,
+        "bundle_quantity": null,
+        "total_units": 1,
+        "state": "ROOM_LAB_PLACEMENT_AND_FURNITURE_INSTANCE_RECONCILED"
+      },
+      "selection": {
+        "state": "FROZEN_ORIGINAL_SELECTED",
+        "substitution_applied": false,
+        "source_scene_product_id": "listerby"
+      },
+      "merchant": {
+        "seller_id": "ikea_spain",
+        "seller_name": "IKEA Spain storefront",
+        "retailer_territory_country": "ES",
+        "seller_country": null,
+        "dispatch_country": null,
+        "locality": {
+          "state": "UNRESOLVED",
+          "distance_km": null,
+          "reason": "No verified seller or dispatch location and radius evidence; IKEA Málaga stock is not supplier-locality proof."
+        }
+      },
+      "price": {
+        "state": "VERIFIED_CURRENT",
+        "amount": 199,
+        "currency": "EUR",
+        "reason": "Dated official Spain product-page price."
+      },
+      "tax": {
+        "state": "UNKNOWN",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax inclusion and amount are not independently joined at line level."
+      },
+      "stock": {
+        "wording": {
+          "home_delivery_29660": "CURRENTLY_UNAVAILABLE",
+          "IKEA_Malaga_click_collect": "NOT_SOLD",
+          "IKEA_Malaga_store": "NOT_SOLD"
+        },
+        "source_stock_state": "DESTINATION_DELIVERY_UNAVAILABLE_AND_IKEA_MALAGA_NOT_SOLD",
+        "local_classification": "NOT_CLASSIFIED_LOCAL"
+      },
+      "destination_delivery": {
+        "destination": {
+          "country": "ES",
+          "market": "ES",
+          "postcode": "29660",
+          "key": "ES-29660"
+        },
+        "eligibility": "INELIGIBLE",
+        "exact_postcode_evidence": false,
+        "source_state": "UNAVAILABLE"
+      },
+      "lead_time": {
+        "state": "MISSING",
+        "days_min": null,
+        "days_max": null,
+        "source_scope": null,
+        "complete_for_purchase": false,
+        "reason": "No dated delivery window was captured for this line."
+      },
+      "freight": {
+        "state": "UNKNOWN_CONTAMINATED",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "The captured freight quote included two accidental accessories; amount is withheld rather than emitted as zero."
+      },
+      "landed_cost": {
+        "state": "UNKNOWN_INCOMPLETE",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax, clean freight, handling, assembly and installation are incomplete; amount is withheld rather than emitted as zero."
+      },
+      "checkout_rfq": {
+        "checkout_state": "NO_CLEAN_EXACT_CHECKOUT_QUOTE",
+        "rfq_state": "NOT_SENT",
+        "mutable_payload_embedded": false,
+        "reason": "Historical combined-cart evidence was contaminated; no cart, checkout or RFQ is created by this manifest."
+      },
+      "procurement_approval": {
+        "state": "REQUIRED",
+        "evidence_ref": null
+      },
+      "purchase_refresh_required": true,
+      "evidence": {
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_LISTERBY_30513904",
+        "session_id": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+        "product_url": "https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "catalog_route_state": "SPAIN_EXACT_PRODUCT_ROUTE",
+        "observation": {
+          "source_observed_at": "2026-08-17",
+          "precision": "DAY",
+          "observed_window": {
+            "start": "2026-08-17T00:00:00+02:00",
+            "end": "2026-08-17T23:59:59+02:00"
+          },
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "state": "CURRENT_AT_COMPILE_TIME"
+        },
+        "market_scope": "ES_ONLY"
+      },
+      "gates": [
+        {
+          "id": "IDENTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Exact Product Twin and article identity are joined."
+        },
+        {
+          "id": "PRODUCT_LANE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Commerce is attached only to a Product Twin."
+        },
+        {
+          "id": "SCENE_SELECTION",
+          "result": "PASS",
+          "critical": true,
+          "reason": "The original frozen scene selection is preserved."
+        },
+        {
+          "id": "QUANTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Placement and Room Lab instance quantities reconcile."
+        },
+        {
+          "id": "DESTINATION_SCOPE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence is isolated to ES-29660."
+        },
+        {
+          "id": "EVIDENCE_TIMESTAMP",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Observation date, precision and expiry are present."
+        },
+        {
+          "id": "EVIDENCE_FRESHNESS",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence was current at compile time."
+        },
+        {
+          "id": "PRICE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "A positive EUR product-page price is joined."
+        },
+        {
+          "id": "TAX",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Line tax is unknown."
+        },
+        {
+          "id": "STOCK_AND_DESTINATION_DELIVERY",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Delivery to ES-29660 is unavailable or not exactly evidenced."
+        },
+        {
+          "id": "LEAD_TIME_COMPLETE",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Lead-time evidence is missing or only aggregate and non-itemized."
+        },
+        {
+          "id": "FREIGHT",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Clean freight is unknown or contaminated."
+        },
+        {
+          "id": "LANDED_COST",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Complete landed cost is unknown."
+        },
+        {
+          "id": "CHECKOUT_OR_RFQ",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "No exact checkout or RFQ quote is verified."
+        },
+        {
+          "id": "PROCUREMENT_APPROVAL",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Procurement approval is not evidenced."
+        },
+        {
+          "id": "PURCHASE_TIME_REFRESH",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "A fresh destination check is required immediately before purchase."
+        }
+      ],
+      "blocked_gate_ids": [
+        "TAX",
+        "STOCK_AND_DESTINATION_DELIVERY",
+        "LEAD_TIME_COMPLETE",
+        "FREIGHT",
+        "LANDED_COST",
+        "CHECKOUT_OR_RFQ",
+        "PROCUREMENT_APPROVAL",
+        "PURCHASE_TIME_REFRESH"
+      ],
+      "purchase_readiness": "NOT_PURCHASE_READY"
+    },
+    {
+      "line_id": "LINE_LR_RUG_01",
+      "placement_id": "LR_RUG_01",
+      "room_product_id": "lohals",
+      "record_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_LOHALS_30511288",
+      "article_no": "305.112.88",
+      "product_role": {
+        "procurement_role": "rug",
+        "room_lab_role": "rug"
+      },
+      "quantity": {
+        "placement_count": 1,
+        "bundle_quantity": null,
+        "total_units": 1,
+        "state": "ROOM_LAB_PLACEMENT_AND_FURNITURE_INSTANCE_RECONCILED"
+      },
+      "selection": {
+        "state": "FROZEN_ORIGINAL_SELECTED",
+        "substitution_applied": false,
+        "source_scene_product_id": "lohals"
+      },
+      "merchant": {
+        "seller_id": "ikea_spain",
+        "seller_name": "IKEA Spain storefront",
+        "retailer_territory_country": "ES",
+        "seller_country": null,
+        "dispatch_country": null,
+        "locality": {
+          "state": "UNRESOLVED",
+          "distance_km": null,
+          "reason": "No verified seller or dispatch location and radius evidence; IKEA Málaga stock is not supplier-locality proof."
+        }
+      },
+      "price": {
+        "state": "VERIFIED_CURRENT",
+        "amount": 49.99,
+        "currency": "EUR",
+        "reason": "Dated official Spain product-page price."
+      },
+      "tax": {
+        "state": "UNKNOWN",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax inclusion and amount are not independently joined at line level."
+      },
+      "stock": {
+        "wording": {
+          "home_delivery_29660": "AVAILABLE",
+          "IKEA_Malaga_click_collect": "AVAILABLE",
+          "IKEA_Malaga_store": "IN_STOCK"
+        },
+        "source_stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+        "local_classification": "NOT_CLASSIFIED_LOCAL"
+      },
+      "destination_delivery": {
+        "destination": {
+          "country": "ES",
+          "market": "ES",
+          "postcode": "29660",
+          "key": "ES-29660"
+        },
+        "eligibility": "ELIGIBLE",
+        "exact_postcode_evidence": true,
+        "source_state": "AVAILABLE"
+      },
+      "lead_time": {
+        "state": "AGGREGATE_WINDOW_NOT_ITEMIZED",
+        "days_min": 4,
+        "days_max": 7,
+        "source_scope": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+        "complete_for_purchase": false,
+        "reason": "The 4–7 day cart window was count-reconciled but not itemized to the seven named products and included two accessories."
+      },
+      "freight": {
+        "state": "UNKNOWN_CONTAMINATED",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "The captured freight quote included two accidental accessories; amount is withheld rather than emitted as zero."
+      },
+      "landed_cost": {
+        "state": "UNKNOWN_INCOMPLETE",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax, clean freight, handling, assembly and installation are incomplete; amount is withheld rather than emitted as zero."
+      },
+      "checkout_rfq": {
+        "checkout_state": "NO_CLEAN_EXACT_CHECKOUT_QUOTE",
+        "rfq_state": "NOT_SENT",
+        "mutable_payload_embedded": false,
+        "reason": "Historical combined-cart evidence was contaminated; no cart, checkout or RFQ is created by this manifest."
+      },
+      "procurement_approval": {
+        "state": "REQUIRED",
+        "evidence_ref": null
+      },
+      "purchase_refresh_required": true,
+      "evidence": {
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_LOHALS_30511288",
+        "session_id": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+        "product_url": "https://www.ikea.com/es/en/p/lohals-rug-flatwoven-natural-30511288/",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "catalog_route_state": "SPAIN_EXACT_PRODUCT_ROUTE",
+        "observation": {
+          "source_observed_at": "2026-08-17",
+          "precision": "DAY",
+          "observed_window": {
+            "start": "2026-08-17T00:00:00+02:00",
+            "end": "2026-08-17T23:59:59+02:00"
+          },
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "state": "CURRENT_AT_COMPILE_TIME"
+        },
+        "market_scope": "ES_ONLY"
+      },
+      "gates": [
+        {
+          "id": "IDENTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Exact Product Twin and article identity are joined."
+        },
+        {
+          "id": "PRODUCT_LANE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Commerce is attached only to a Product Twin."
+        },
+        {
+          "id": "SCENE_SELECTION",
+          "result": "PASS",
+          "critical": true,
+          "reason": "The original frozen scene selection is preserved."
+        },
+        {
+          "id": "QUANTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Placement and Room Lab instance quantities reconcile."
+        },
+        {
+          "id": "DESTINATION_SCOPE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence is isolated to ES-29660."
+        },
+        {
+          "id": "EVIDENCE_TIMESTAMP",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Observation date, precision and expiry are present."
+        },
+        {
+          "id": "EVIDENCE_FRESHNESS",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence was current at compile time."
+        },
+        {
+          "id": "PRICE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "A positive EUR product-page price is joined."
+        },
+        {
+          "id": "TAX",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Line tax is unknown."
+        },
+        {
+          "id": "STOCK_AND_DESTINATION_DELIVERY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Delivery eligibility to ES-29660 is evidenced."
+        },
+        {
+          "id": "LEAD_TIME_COMPLETE",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Lead-time evidence is missing or only aggregate and non-itemized."
+        },
+        {
+          "id": "FREIGHT",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Clean freight is unknown or contaminated."
+        },
+        {
+          "id": "LANDED_COST",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Complete landed cost is unknown."
+        },
+        {
+          "id": "CHECKOUT_OR_RFQ",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "No exact checkout or RFQ quote is verified."
+        },
+        {
+          "id": "PROCUREMENT_APPROVAL",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Procurement approval is not evidenced."
+        },
+        {
+          "id": "PURCHASE_TIME_REFRESH",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "A fresh destination check is required immediately before purchase."
+        }
+      ],
+      "blocked_gate_ids": [
+        "TAX",
+        "LEAD_TIME_COMPLETE",
+        "FREIGHT",
+        "LANDED_COST",
+        "CHECKOUT_OR_RFQ",
+        "PROCUREMENT_APPROVAL",
+        "PURCHASE_TIME_REFRESH"
+      ],
+      "purchase_readiness": "NOT_PURCHASE_READY"
+    },
+    {
+      "line_id": "LINE_LR_SIDE_TABLE_01",
+      "placement_id": "LR_SIDE_TABLE_01",
+      "room_product_id": "gladom",
+      "record_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_GLADOM_70578451",
+      "article_no": "705.784.51",
+      "product_role": {
+        "procurement_role": "side_table",
+        "room_lab_role": "side-table"
+      },
+      "quantity": {
+        "placement_count": 1,
+        "bundle_quantity": null,
+        "total_units": 1,
+        "state": "ROOM_LAB_PLACEMENT_AND_FURNITURE_INSTANCE_RECONCILED"
+      },
+      "selection": {
+        "state": "FROZEN_ORIGINAL_SELECTED",
+        "substitution_applied": false,
+        "source_scene_product_id": "gladom"
+      },
+      "merchant": {
+        "seller_id": "ikea_spain",
+        "seller_name": "IKEA Spain storefront",
+        "retailer_territory_country": "ES",
+        "seller_country": null,
+        "dispatch_country": null,
+        "locality": {
+          "state": "UNRESOLVED",
+          "distance_km": null,
+          "reason": "No verified seller or dispatch location and radius evidence; IKEA Málaga stock is not supplier-locality proof."
+        }
+      },
+      "price": {
+        "state": "VERIFIED_CURRENT",
+        "amount": 19.99,
+        "currency": "EUR",
+        "reason": "Dated official Spain product-page price."
+      },
+      "tax": {
+        "state": "UNKNOWN",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax inclusion and amount are not independently joined at line level."
+      },
+      "stock": {
+        "wording": {
+          "home_delivery_29660": "AVAILABLE",
+          "IKEA_Malaga_click_collect": "AVAILABLE",
+          "IKEA_Malaga_store": "IN_STOCK"
+        },
+        "source_stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+        "local_classification": "NOT_CLASSIFIED_LOCAL"
+      },
+      "destination_delivery": {
+        "destination": {
+          "country": "ES",
+          "market": "ES",
+          "postcode": "29660",
+          "key": "ES-29660"
+        },
+        "eligibility": "ELIGIBLE",
+        "exact_postcode_evidence": true,
+        "source_state": "AVAILABLE"
+      },
+      "lead_time": {
+        "state": "AGGREGATE_WINDOW_NOT_ITEMIZED",
+        "days_min": 4,
+        "days_max": 7,
+        "source_scope": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+        "complete_for_purchase": false,
+        "reason": "The 4–7 day cart window was count-reconciled but not itemized to the seven named products and included two accessories."
+      },
+      "freight": {
+        "state": "UNKNOWN_CONTAMINATED",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "The captured freight quote included two accidental accessories; amount is withheld rather than emitted as zero."
+      },
+      "landed_cost": {
+        "state": "UNKNOWN_INCOMPLETE",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax, clean freight, handling, assembly and installation are incomplete; amount is withheld rather than emitted as zero."
+      },
+      "checkout_rfq": {
+        "checkout_state": "NO_CLEAN_EXACT_CHECKOUT_QUOTE",
+        "rfq_state": "NOT_SENT",
+        "mutable_payload_embedded": false,
+        "reason": "Historical combined-cart evidence was contaminated; no cart, checkout or RFQ is created by this manifest."
+      },
+      "procurement_approval": {
+        "state": "REQUIRED",
+        "evidence_ref": null
+      },
+      "purchase_refresh_required": true,
+      "evidence": {
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_GLADOM_70578451",
+        "session_id": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+        "product_url": "https://www.ikea.com/es/en/p/gladom-tray-table-dark-grey-green-70578451/",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "catalog_route_state": "SPAIN_EXACT_PRODUCT_ROUTE",
+        "observation": {
+          "source_observed_at": "2026-08-17",
+          "precision": "DAY",
+          "observed_window": {
+            "start": "2026-08-17T00:00:00+02:00",
+            "end": "2026-08-17T23:59:59+02:00"
+          },
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "state": "CURRENT_AT_COMPILE_TIME"
+        },
+        "market_scope": "ES_ONLY"
+      },
+      "gates": [
+        {
+          "id": "IDENTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Exact Product Twin and article identity are joined."
+        },
+        {
+          "id": "PRODUCT_LANE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Commerce is attached only to a Product Twin."
+        },
+        {
+          "id": "SCENE_SELECTION",
+          "result": "PASS",
+          "critical": true,
+          "reason": "The original frozen scene selection is preserved."
+        },
+        {
+          "id": "QUANTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Placement and Room Lab instance quantities reconcile."
+        },
+        {
+          "id": "DESTINATION_SCOPE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence is isolated to ES-29660."
+        },
+        {
+          "id": "EVIDENCE_TIMESTAMP",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Observation date, precision and expiry are present."
+        },
+        {
+          "id": "EVIDENCE_FRESHNESS",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence was current at compile time."
+        },
+        {
+          "id": "PRICE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "A positive EUR product-page price is joined."
+        },
+        {
+          "id": "TAX",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Line tax is unknown."
+        },
+        {
+          "id": "STOCK_AND_DESTINATION_DELIVERY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Delivery eligibility to ES-29660 is evidenced."
+        },
+        {
+          "id": "LEAD_TIME_COMPLETE",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Lead-time evidence is missing or only aggregate and non-itemized."
+        },
+        {
+          "id": "FREIGHT",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Clean freight is unknown or contaminated."
+        },
+        {
+          "id": "LANDED_COST",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Complete landed cost is unknown."
+        },
+        {
+          "id": "CHECKOUT_OR_RFQ",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "No exact checkout or RFQ quote is verified."
+        },
+        {
+          "id": "PROCUREMENT_APPROVAL",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Procurement approval is not evidenced."
+        },
+        {
+          "id": "PURCHASE_TIME_REFRESH",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "A fresh destination check is required immediately before purchase."
+        }
+      ],
+      "blocked_gate_ids": [
+        "TAX",
+        "LEAD_TIME_COMPLETE",
+        "FREIGHT",
+        "LANDED_COST",
+        "CHECKOUT_OR_RFQ",
+        "PROCUREMENT_APPROVAL",
+        "PURCHASE_TIME_REFRESH"
+      ],
+      "purchase_readiness": "NOT_PURCHASE_READY"
+    },
+    {
+      "line_id": "LINE_LR_FLOOR_LAMP_01",
+      "placement_id": "LR_FLOOR_LAMP_01",
+      "room_product_id": "lauters",
+      "record_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_LAUTERS_30405042",
+      "article_no": "304.050.42",
+      "product_role": {
+        "procurement_role": "floor_lamp",
+        "room_lab_role": "lighting"
+      },
+      "quantity": {
+        "placement_count": 1,
+        "bundle_quantity": null,
+        "total_units": 1,
+        "state": "ROOM_LAB_PLACEMENT_AND_FURNITURE_INSTANCE_RECONCILED"
+      },
+      "selection": {
+        "state": "FROZEN_ORIGINAL_SELECTED",
+        "substitution_applied": false,
+        "source_scene_product_id": "lauters"
+      },
+      "merchant": {
+        "seller_id": "ikea_spain",
+        "seller_name": "IKEA Spain storefront",
+        "retailer_territory_country": "ES",
+        "seller_country": null,
+        "dispatch_country": null,
+        "locality": {
+          "state": "UNRESOLVED",
+          "distance_km": null,
+          "reason": "No verified seller or dispatch location and radius evidence; IKEA Málaga stock is not supplier-locality proof."
+        }
+      },
+      "price": {
+        "state": "VERIFIED_CURRENT",
+        "amount": 59.99,
+        "currency": "EUR",
+        "reason": "Dated official Spain product-page price."
+      },
+      "tax": {
+        "state": "UNKNOWN",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax inclusion and amount are not independently joined at line level."
+      },
+      "stock": {
+        "wording": {
+          "home_delivery_29660": "AVAILABLE",
+          "IKEA_Malaga_click_collect": "AVAILABLE",
+          "IKEA_Malaga_store": "IN_STOCK"
+        },
+        "source_stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+        "local_classification": "NOT_CLASSIFIED_LOCAL"
+      },
+      "destination_delivery": {
+        "destination": {
+          "country": "ES",
+          "market": "ES",
+          "postcode": "29660",
+          "key": "ES-29660"
+        },
+        "eligibility": "ELIGIBLE",
+        "exact_postcode_evidence": true,
+        "source_state": "AVAILABLE"
+      },
+      "lead_time": {
+        "state": "AGGREGATE_WINDOW_NOT_ITEMIZED",
+        "days_min": 4,
+        "days_max": 7,
+        "source_scope": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+        "complete_for_purchase": false,
+        "reason": "The 4–7 day cart window was count-reconciled but not itemized to the seven named products and included two accessories."
+      },
+      "freight": {
+        "state": "UNKNOWN_CONTAMINATED",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "The captured freight quote included two accidental accessories; amount is withheld rather than emitted as zero."
+      },
+      "landed_cost": {
+        "state": "UNKNOWN_INCOMPLETE",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax, clean freight, handling, assembly and installation are incomplete; amount is withheld rather than emitted as zero."
+      },
+      "checkout_rfq": {
+        "checkout_state": "NO_CLEAN_EXACT_CHECKOUT_QUOTE",
+        "rfq_state": "NOT_SENT",
+        "mutable_payload_embedded": false,
+        "reason": "Historical combined-cart evidence was contaminated; no cart, checkout or RFQ is created by this manifest."
+      },
+      "procurement_approval": {
+        "state": "REQUIRED",
+        "evidence_ref": null
+      },
+      "purchase_refresh_required": true,
+      "evidence": {
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_LAUTERS_30405042",
+        "session_id": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+        "product_url": "https://www.ikea.com/es/en/p/lauters-floor-lamp-ash-white-30405042/",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "catalog_route_state": "SPAIN_EXACT_PRODUCT_ROUTE",
+        "observation": {
+          "source_observed_at": "2026-08-17",
+          "precision": "DAY",
+          "observed_window": {
+            "start": "2026-08-17T00:00:00+02:00",
+            "end": "2026-08-17T23:59:59+02:00"
+          },
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "state": "CURRENT_AT_COMPILE_TIME"
+        },
+        "market_scope": "ES_ONLY"
+      },
+      "gates": [
+        {
+          "id": "IDENTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Exact Product Twin and article identity are joined."
+        },
+        {
+          "id": "PRODUCT_LANE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Commerce is attached only to a Product Twin."
+        },
+        {
+          "id": "SCENE_SELECTION",
+          "result": "PASS",
+          "critical": true,
+          "reason": "The original frozen scene selection is preserved."
+        },
+        {
+          "id": "QUANTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Placement and Room Lab instance quantities reconcile."
+        },
+        {
+          "id": "DESTINATION_SCOPE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence is isolated to ES-29660."
+        },
+        {
+          "id": "EVIDENCE_TIMESTAMP",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Observation date, precision and expiry are present."
+        },
+        {
+          "id": "EVIDENCE_FRESHNESS",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence was current at compile time."
+        },
+        {
+          "id": "PRICE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "A positive EUR product-page price is joined."
+        },
+        {
+          "id": "TAX",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Line tax is unknown."
+        },
+        {
+          "id": "STOCK_AND_DESTINATION_DELIVERY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Delivery eligibility to ES-29660 is evidenced."
+        },
+        {
+          "id": "LEAD_TIME_COMPLETE",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Lead-time evidence is missing or only aggregate and non-itemized."
+        },
+        {
+          "id": "FREIGHT",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Clean freight is unknown or contaminated."
+        },
+        {
+          "id": "LANDED_COST",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Complete landed cost is unknown."
+        },
+        {
+          "id": "CHECKOUT_OR_RFQ",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "No exact checkout or RFQ quote is verified."
+        },
+        {
+          "id": "PROCUREMENT_APPROVAL",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Procurement approval is not evidenced."
+        },
+        {
+          "id": "PURCHASE_TIME_REFRESH",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "A fresh destination check is required immediately before purchase."
+        }
+      ],
+      "blocked_gate_ids": [
+        "TAX",
+        "LEAD_TIME_COMPLETE",
+        "FREIGHT",
+        "LANDED_COST",
+        "CHECKOUT_OR_RFQ",
+        "PROCUREMENT_APPROVAL",
+        "PURCHASE_TIME_REFRESH"
+      ],
+      "purchase_readiness": "NOT_PURCHASE_READY"
+    },
+    {
+      "line_id": "LINE_LR_MEDIA_UNIT_01",
+      "placement_id": "LR_MEDIA_UNIT_01",
+      "room_product_id": "besta",
+      "record_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_BESTA_89330691",
+      "article_no": "893.306.91",
+      "product_role": {
+        "procurement_role": "media_unit",
+        "room_lab_role": "storage"
+      },
+      "quantity": {
+        "placement_count": 1,
+        "bundle_quantity": null,
+        "total_units": 1,
+        "state": "ROOM_LAB_PLACEMENT_AND_FURNITURE_INSTANCE_RECONCILED"
+      },
+      "selection": {
+        "state": "FROZEN_ORIGINAL_SELECTED",
+        "substitution_applied": false,
+        "source_scene_product_id": "besta"
+      },
+      "merchant": {
+        "seller_id": "ikea_spain",
+        "seller_name": "IKEA Spain storefront",
+        "retailer_territory_country": "ES",
+        "seller_country": null,
+        "dispatch_country": null,
+        "locality": {
+          "state": "UNRESOLVED",
+          "distance_km": null,
+          "reason": "No verified seller or dispatch location and radius evidence; IKEA Málaga stock is not supplier-locality proof."
+        }
+      },
+      "price": {
+        "state": "VERIFIED_CURRENT",
+        "amount": 150,
+        "currency": "EUR",
+        "reason": "Dated official Spain product-page price."
+      },
+      "tax": {
+        "state": "UNKNOWN",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax inclusion and amount are not independently joined at line level."
+      },
+      "stock": {
+        "wording": {
+          "home_delivery_29660": "AVAILABLE",
+          "IKEA_Malaga_click_collect": "AVAILABLE",
+          "IKEA_Malaga_store": "IN_STOCK"
+        },
+        "source_stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+        "local_classification": "NOT_CLASSIFIED_LOCAL"
+      },
+      "destination_delivery": {
+        "destination": {
+          "country": "ES",
+          "market": "ES",
+          "postcode": "29660",
+          "key": "ES-29660"
+        },
+        "eligibility": "ELIGIBLE",
+        "exact_postcode_evidence": true,
+        "source_state": "AVAILABLE"
+      },
+      "lead_time": {
+        "state": "AGGREGATE_WINDOW_NOT_ITEMIZED",
+        "days_min": 4,
+        "days_max": 7,
+        "source_scope": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+        "complete_for_purchase": false,
+        "reason": "The 4–7 day cart window was count-reconciled but not itemized to the seven named products and included two accessories."
+      },
+      "freight": {
+        "state": "UNKNOWN_CONTAMINATED",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "The captured freight quote included two accidental accessories; amount is withheld rather than emitted as zero."
+      },
+      "landed_cost": {
+        "state": "UNKNOWN_INCOMPLETE",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax, clean freight, handling, assembly and installation are incomplete; amount is withheld rather than emitted as zero."
+      },
+      "checkout_rfq": {
+        "checkout_state": "NO_CLEAN_EXACT_CHECKOUT_QUOTE",
+        "rfq_state": "NOT_SENT",
+        "mutable_payload_embedded": false,
+        "reason": "Historical combined-cart evidence was contaminated; no cart, checkout or RFQ is created by this manifest."
+      },
+      "procurement_approval": {
+        "state": "REQUIRED",
+        "evidence_ref": null
+      },
+      "purchase_refresh_required": true,
+      "evidence": {
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_BESTA_89330691",
+        "session_id": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+        "product_url": "https://www.ikea.com/es/es/p/besta-mueble-tv-blanco-lappviken-blanco-s89330691/",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "catalog_route_state": "SPAIN_EXACT_PRODUCT_ROUTE",
+        "observation": {
+          "source_observed_at": "2026-08-17",
+          "precision": "DAY",
+          "observed_window": {
+            "start": "2026-08-17T00:00:00+02:00",
+            "end": "2026-08-17T23:59:59+02:00"
+          },
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "state": "CURRENT_AT_COMPILE_TIME"
+        },
+        "market_scope": "ES_ONLY"
+      },
+      "gates": [
+        {
+          "id": "IDENTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Exact Product Twin and article identity are joined."
+        },
+        {
+          "id": "PRODUCT_LANE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Commerce is attached only to a Product Twin."
+        },
+        {
+          "id": "SCENE_SELECTION",
+          "result": "PASS",
+          "critical": true,
+          "reason": "The original frozen scene selection is preserved."
+        },
+        {
+          "id": "QUANTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Placement and Room Lab instance quantities reconcile."
+        },
+        {
+          "id": "DESTINATION_SCOPE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence is isolated to ES-29660."
+        },
+        {
+          "id": "EVIDENCE_TIMESTAMP",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Observation date, precision and expiry are present."
+        },
+        {
+          "id": "EVIDENCE_FRESHNESS",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence was current at compile time."
+        },
+        {
+          "id": "PRICE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "A positive EUR product-page price is joined."
+        },
+        {
+          "id": "TAX",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Line tax is unknown."
+        },
+        {
+          "id": "STOCK_AND_DESTINATION_DELIVERY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Delivery eligibility to ES-29660 is evidenced."
+        },
+        {
+          "id": "LEAD_TIME_COMPLETE",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Lead-time evidence is missing or only aggregate and non-itemized."
+        },
+        {
+          "id": "FREIGHT",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Clean freight is unknown or contaminated."
+        },
+        {
+          "id": "LANDED_COST",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Complete landed cost is unknown."
+        },
+        {
+          "id": "CHECKOUT_OR_RFQ",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "No exact checkout or RFQ quote is verified."
+        },
+        {
+          "id": "PROCUREMENT_APPROVAL",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Procurement approval is not evidenced."
+        },
+        {
+          "id": "PURCHASE_TIME_REFRESH",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "A fresh destination check is required immediately before purchase."
+        }
+      ],
+      "blocked_gate_ids": [
+        "TAX",
+        "LEAD_TIME_COMPLETE",
+        "FREIGHT",
+        "LANDED_COST",
+        "CHECKOUT_OR_RFQ",
+        "PROCUREMENT_APPROVAL",
+        "PURCHASE_TIME_REFRESH"
+      ],
+      "purchase_readiness": "NOT_PURCHASE_READY"
+    },
+    {
+      "line_id": "LINE_LR_BOOKCASE_01",
+      "placement_id": "LR_BOOKCASE_01",
+      "room_product_id": "billy",
+      "record_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_IKEA_BILLY_00263850",
+      "article_no": "002.638.50",
+      "product_role": {
+        "procurement_role": "bookcase",
+        "room_lab_role": "storage"
+      },
+      "quantity": {
+        "placement_count": 1,
+        "bundle_quantity": null,
+        "total_units": 1,
+        "state": "ROOM_LAB_PLACEMENT_AND_FURNITURE_INSTANCE_RECONCILED"
+      },
+      "selection": {
+        "state": "FROZEN_ORIGINAL_SELECTED",
+        "substitution_applied": false,
+        "source_scene_product_id": "billy"
+      },
+      "merchant": {
+        "seller_id": "ikea_spain",
+        "seller_name": "IKEA Spain storefront",
+        "retailer_territory_country": "ES",
+        "seller_country": null,
+        "dispatch_country": null,
+        "locality": {
+          "state": "UNRESOLVED",
+          "distance_km": null,
+          "reason": "No verified seller or dispatch location and radius evidence; IKEA Málaga stock is not supplier-locality proof."
+        }
+      },
+      "price": {
+        "state": "VERIFIED_CURRENT",
+        "amount": 59.99,
+        "currency": "EUR",
+        "reason": "Dated official Spain product-page price."
+      },
+      "tax": {
+        "state": "UNKNOWN",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax inclusion and amount are not independently joined at line level."
+      },
+      "stock": {
+        "wording": {
+          "home_delivery_29660": "AVAILABLE",
+          "IKEA_Malaga_click_collect": "AVAILABLE",
+          "IKEA_Malaga_store": "IN_STOCK"
+        },
+        "source_stock_state": "DESTINATION_DELIVERY_AVAILABLE_AND_IKEA_MALAGA_IN_STOCK",
+        "local_classification": "NOT_CLASSIFIED_LOCAL"
+      },
+      "destination_delivery": {
+        "destination": {
+          "country": "ES",
+          "market": "ES",
+          "postcode": "29660",
+          "key": "ES-29660"
+        },
+        "eligibility": "ELIGIBLE",
+        "exact_postcode_evidence": true,
+        "source_state": "AVAILABLE"
+      },
+      "lead_time": {
+        "state": "AGGREGATE_WINDOW_NOT_ITEMIZED",
+        "days_min": 4,
+        "days_max": 7,
+        "source_scope": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+        "complete_for_purchase": false,
+        "reason": "The 4–7 day cart window was count-reconciled but not itemized to the seven named products and included two accessories."
+      },
+      "freight": {
+        "state": "UNKNOWN_CONTAMINATED",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "The captured freight quote included two accidental accessories; amount is withheld rather than emitted as zero."
+      },
+      "landed_cost": {
+        "state": "UNKNOWN_INCOMPLETE",
+        "amount": null,
+        "currency": "EUR",
+        "reason": "Tax, clean freight, handling, assembly and installation are incomplete; amount is withheld rather than emitted as zero."
+      },
+      "checkout_rfq": {
+        "checkout_state": "NO_CLEAN_EXACT_CHECKOUT_QUOTE",
+        "rfq_state": "NOT_SENT",
+        "mutable_payload_embedded": false,
+        "reason": "Historical combined-cart evidence was contaminated; no cart, checkout or RFQ is created by this manifest."
+      },
+      "procurement_approval": {
+        "state": "REQUIRED",
+        "evidence_ref": null
+      },
+      "purchase_refresh_required": true,
+      "evidence": {
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_BILLY_00263850",
+        "session_id": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+        "product_url": "https://www.ikea.com/es/es/p/billy-libreria-blanco-00263850/",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "catalog_route_state": "SPAIN_EXACT_PRODUCT_ROUTE",
+        "observation": {
+          "source_observed_at": "2026-08-17",
+          "precision": "DAY",
+          "observed_window": {
+            "start": "2026-08-17T00:00:00+02:00",
+            "end": "2026-08-17T23:59:59+02:00"
+          },
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "state": "CURRENT_AT_COMPILE_TIME"
+        },
+        "market_scope": "ES_ONLY"
+      },
+      "gates": [
+        {
+          "id": "IDENTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Exact Product Twin and article identity are joined."
+        },
+        {
+          "id": "PRODUCT_LANE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Commerce is attached only to a Product Twin."
+        },
+        {
+          "id": "SCENE_SELECTION",
+          "result": "PASS",
+          "critical": true,
+          "reason": "The original frozen scene selection is preserved."
+        },
+        {
+          "id": "QUANTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Placement and Room Lab instance quantities reconcile."
+        },
+        {
+          "id": "DESTINATION_SCOPE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence is isolated to ES-29660."
+        },
+        {
+          "id": "EVIDENCE_TIMESTAMP",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Observation date, precision and expiry are present."
+        },
+        {
+          "id": "EVIDENCE_FRESHNESS",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence was current at compile time."
+        },
+        {
+          "id": "PRICE",
+          "result": "PASS",
+          "critical": true,
+          "reason": "A positive EUR product-page price is joined."
+        },
+        {
+          "id": "TAX",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Line tax is unknown."
+        },
+        {
+          "id": "STOCK_AND_DESTINATION_DELIVERY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Delivery eligibility to ES-29660 is evidenced."
+        },
+        {
+          "id": "LEAD_TIME_COMPLETE",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Lead-time evidence is missing or only aggregate and non-itemized."
+        },
+        {
+          "id": "FREIGHT",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Clean freight is unknown or contaminated."
+        },
+        {
+          "id": "LANDED_COST",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Complete landed cost is unknown."
+        },
+        {
+          "id": "CHECKOUT_OR_RFQ",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "No exact checkout or RFQ quote is verified."
+        },
+        {
+          "id": "PROCUREMENT_APPROVAL",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Procurement approval is not evidenced."
+        },
+        {
+          "id": "PURCHASE_TIME_REFRESH",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "A fresh destination check is required immediately before purchase."
+        }
+      ],
+      "blocked_gate_ids": [
+        "TAX",
+        "LEAD_TIME_COMPLETE",
+        "FREIGHT",
+        "LANDED_COST",
+        "CHECKOUT_OR_RFQ",
+        "PROCUREMENT_APPROVAL",
+        "PURCHASE_TIME_REFRESH"
+      ],
+      "purchase_readiness": "NOT_PURCHASE_READY"
+    }
+  ],
+  "substitutions": [
+    {
+      "substitution_id": "SUB_LISTERBY_TO_VALNAS",
+      "source": {
+        "room_product_id": "listerby",
+        "product_twin_id": "PT_IKEA_LISTERBY_30513904",
+        "article_no": "305.139.04",
+        "selected_price": {
+          "amount": 199,
+          "currency": "EUR"
+        }
+      },
+      "alternative": {
+        "room_product_id": "valnas",
+        "product_twin_id": "PT_IKEA_VALNAS_20628038",
+        "article_no": "206.280.38",
+        "price": {
+          "amount": 249,
+          "currency": "EUR"
+        },
+        "destination_delivery": {
+          "destination": {
+            "country": "ES",
+            "market": "ES",
+            "postcode": "29660",
+            "key": "ES-29660"
+          },
+          "eligibility": "ELIGIBLE",
+          "lead_time_state": "MISSING"
+        },
+        "evidence": {
+          "offer_ref": "OFFER_ROUTE_IKEA_ES_VALNAS_20628038",
+          "product_url": "https://www.ikea.com/es/en/p/valnas-coffee-table-oak-veneer-20628038/",
+          "observation": {
+            "source_observed_at": "2026-08-17",
+            "precision": "DAY",
+            "observed_window": {
+              "start": "2026-08-17T00:00:00+02:00",
+              "end": "2026-08-17T23:59:59+02:00"
+            },
+            "expires_at": "2026-08-17T23:59:59+02:00",
+            "state": "CURRENT_AT_COMPILE_TIME"
+          },
+          "stock_wording": {
+            "home_delivery_29660": "AVAILABLE",
+            "IKEA_Malaga_click_collect": "AVAILABLE",
+            "IKEA_Malaga_store": "IN_STOCK"
+          },
+          "market_scope": "ES_ONLY"
+        }
+      },
+      "deltas": {
+        "price": {
+          "amount": 50,
+          "currency": "EUR"
+        },
+        "dimensions_mm": {
+          "width": -220,
+          "depth": 120,
+          "height": 130
+        },
+        "same_center_clearance_mm": {
+          "sofa_side": -60,
+          "opposite_side": -60
+        },
+        "conditional_scenario_subtotal": {
+          "amount": 1176.96,
+          "currency": "EUR"
+        }
+      },
+      "approval": {
+        "state": "CONDITIONAL_NOT_APPROVED",
+        "client_design_approval": "REQUIRED",
+        "automatic_substitution_allowed": false,
+        "approval_evidence_ref": null
+      },
+      "gates": [
+        {
+          "id": "ALTERNATIVE_IDENTITY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Exact VALNÄS Product Twin and article 206.280.38 are joined."
+        },
+        {
+          "id": "ROLE_MATCH",
+          "result": "PASS",
+          "critical": true,
+          "reason": "The candidate remains a coffee-table role."
+        },
+        {
+          "id": "DESTINATION_SUPPLY",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Dated evidence recorded delivery eligibility to ES-29660."
+        },
+        {
+          "id": "EVIDENCE_FRESHNESS",
+          "result": "PASS",
+          "critical": true,
+          "reason": "Evidence was current at compile time."
+        },
+        {
+          "id": "PLACEMENT_AND_CIRCULATION_FIT",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "The table is 120 mm deeper and reduces same-centre near/far clearance by 60 mm each; placement fit requires review."
+        },
+        {
+          "id": "TECHNICAL_COMPATIBILITY",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Technical compatibility is PASS_WITH_LIMITS, not fully approved."
+        },
+        {
+          "id": "FINISH_MATCH",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Colour, finish and material match remain PASS_WITH_LIMITS."
+        },
+        {
+          "id": "CLIENT_DESIGN_APPROVAL",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Explicit client design approval has not been recorded."
+        },
+        {
+          "id": "LEAD_TIME_COMPLETE",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "No dated VALNÄS delivery window was captured."
+        },
+        {
+          "id": "LANDED_COST",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "VALNÄS landed cost is incomplete."
+        },
+        {
+          "id": "CHECKOUT_OR_RFQ",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "No exact checkout or RFQ quote is verified."
+        },
+        {
+          "id": "PURCHASE_TIME_REFRESH",
+          "result": "BLOCKED",
+          "critical": true,
+          "reason": "Evidence must be refreshed immediately before purchase."
+        }
+      ],
+      "blocked_gate_ids": [
+        "PLACEMENT_AND_CIRCULATION_FIT",
+        "TECHNICAL_COMPATIBILITY",
+        "FINISH_MATCH",
+        "CLIENT_DESIGN_APPROVAL",
+        "LEAD_TIME_COMPLETE",
+        "LANDED_COST",
+        "CHECKOUT_OR_RFQ",
+        "PURCHASE_TIME_REFRESH"
+      ]
+    }
+  ],
+  "market_isolation": {
+    "authoritative_market": "ES",
+    "destination_key": "ES-29660",
+    "non_authoritative_markets": {
+      "SE": "NO_EVIDENCE_EXPORTED",
+      "GB": "NO_EVIDENCE_EXPORTED",
+      "US": "NO_EVIDENCE_EXPORTED"
+    }
+  },
+  "room_lab_export": {
+    "path": "data/exports/room-lab/marbella-commerce-es-29660.v1.json",
+    "contract_version": "room-commerce/v1",
+    "sha256": "0236892efe82318798f451bcdff9f4875854f67db87f03f9fee784f2f41cf4bc",
+    "frozen_procurement_offer_count": 9,
+    "contract_catalogue_offer_count": 14,
+    "out_of_scope_placeholder_count": 5,
+    "component_code_change_required": false
+  },
+  "content_hash": {
+    "algorithm": "sha256",
+    "canonicalization": "RFC8785_STYLE_SORTED_JSON_EXCLUDING_CONTENT_HASH",
+    "value": "175191fc18b942c6683ff8131207fd06cb2e0e3757547c103549cd88abbe3089"
+  }
+}

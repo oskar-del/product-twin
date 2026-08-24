@@ -1,0 +1,2177 @@
+{
+  "schema_version": "1.0.0",
+  "baseline_id": "COMPACT_HOUSE_ROUTE_BASELINE_PROJECT_MARBELLA_VILLA_001",
+  "revision": 1,
+  "status": "PRE_BOM_SCOPE_NOT_PROCUREMENT_READY",
+  "generated_at": "2026-08-17T18:15:00.000Z",
+  "project": {
+    "project_id": "PROJECT_MARBELLA_VILLA_001",
+    "project_type": "villa",
+    "country": "ES",
+    "region": "Andalucía",
+    "municipality": "Marbella",
+    "postal_code": "29660",
+    "currency": "EUR",
+    "local_supply_radius_km": 75,
+    "site_access_state": "UNVERIFIED"
+  },
+  "site_context": {
+    "climate_state": "VERIFIED_SCREENING_CONTEXT",
+    "cte_zone": "A3",
+    "solar_resource_state": "VERIFIED_SCREENING_RESOURCE",
+    "annual_energy_kwh_per_kwp": 1732.34,
+    "annual_plane_irradiation_kwh_m2": 2154.05,
+    "screening_tilt_deg": 33,
+    "screening_pvgis_azimuth_deg": 2,
+    "product_sizing_state": "BLOCKED_MISSING_BUILDING_INPUTS"
+  },
+  "source_snapshot": {
+    "project": {
+      "path": "data/projects/marbella-villa.example.json",
+      "identity": "PROJECT_MARBELLA_VILLA_001",
+      "version": "PROJECT_MARBELLA_VILLA_001",
+      "sha256": "ec8cc9b430ec87609832841651a18aba2e58c987d7ac44d7e203da7dc76208ce"
+    },
+    "pilot_scope": {
+      "path": "data/tests/whole-building-10.json",
+      "identity": "WHOLE_BUILDING_10_V0_1",
+      "version": "WHOLE_BUILDING_10_V0_1",
+      "sha256": "ae9449967029ebed25ac5cbc320004873fc770d0b91951a40a13f632acb9f503"
+    },
+    "routes": {
+      "path": "data/procurement/whole-building-10.routes.json",
+      "identity": "PROJECT_MARBELLA_VILLA_001",
+      "version": "2026-08-16T17:26:03.705Z",
+      "sha256": "1240a69b38a54ea1fb01bccef7518e9ccb372e6404f5269f47194e1188c9ba3a"
+    },
+    "pilot_results": {
+      "path": "data/tests/results/whole-building-10.latest.json",
+      "identity": "WHOLE_BUILDING_10_V0_1",
+      "version": "2026-08-16T03:08:17.163Z",
+      "sha256": "a53b05e80463c77839425b27fbafa1a5e148b183f4efda19dd57ded256c3566b"
+    },
+    "concrete_requirement": {
+      "path": "data/requirements/project-marbella-villa-001.structural-concrete.json",
+      "identity": "REQ_STRUCTURAL_CONCRETE_PROJECT_MARBELLA_VILLA_001",
+      "version": "needs_inputs",
+      "sha256": "0cad0c36e04ab5b0d96de6caa5b9252db608bb04980c37bba717bdcaec861feb"
+    },
+    "pool_requirement": {
+      "path": "data/requirements/project-marbella-villa-001.pool-circulation.json",
+      "identity": "REQ_POOL_CIRCULATION_PROJECT_MARBELLA_VILLA_001",
+      "version": "needs_inputs",
+      "sha256": "dd69f090701987d2501491b38c82add9bc1f27cfe506539784405ddffdbb952f"
+    },
+    "solar_requirement": {
+      "path": "data/energy/project-marbella-villa-001.solar-requirement.json",
+      "identity": "REQ_SOLAR_PROJECT_MARBELLA_VILLA_001",
+      "version": "needs_inputs",
+      "sha256": "793930c302d0700f7c098b9cfea6e0856476a7aa5a988c3f662e0fe6cf3c2530"
+    },
+    "pvgis": {
+      "path": "data/energy/project-marbella-villa-001.pvgis.json",
+      "identity": "PROJECT_MARBELLA_VILLA_001",
+      "version": "2026-08-16T03:01:38.289Z",
+      "sha256": "09c1f293b4c82414f18064ea75eaed0d223249f86bf9212d0a2c5deb5cc407aa"
+    },
+    "cte_climate": {
+      "path": "data/energy/project-marbella-villa-001.cte-climate.json",
+      "identity": "PROJECT_MARBELLA_VILLA_001",
+      "version": "2026-08-16T03:01:38.598Z",
+      "sha256": "f69b6f062e19188119324970ebe666cb3f567be3da69bfeff0d6d63a8a18f4b2"
+    },
+    "logistics_schema": {
+      "path": "config/logistics-schema.json",
+      "identity": "LOGISTICS_SCHEMA",
+      "version": "0.1",
+      "sha256": "1de67f82661cebe47c3af9229d8a222ff91cb6e4f59072d5f81e31c3e98255b5"
+    },
+    "regulatory_schema": {
+      "path": "config/regulatory-schema.json",
+      "identity": "REGULATORY_SCHEMA",
+      "version": "0.1",
+      "sha256": "572843f3400e5db4f4d0bccc63c1eef3d26f4a7c9072465ee2a7672b0817c4e9"
+    },
+    "jurisdiction_seed": {
+      "path": "config/jurisdictions/es-andalucia-seed.json",
+      "identity": "ES-MA-MARBELLA",
+      "version": "0.2",
+      "sha256": "a0cf76d74d1eddcfd566b8007a6af4c629087d39a778fc21f6568694ff15ce8d"
+    },
+    "prefab_system": {
+      "path": "config/prefab-system-schema.json",
+      "identity": "PREFAB_SYSTEM_SCHEMA",
+      "version": "0.1",
+      "sha256": "01ebf1db063dd967d5da604a5e61b1ff68f8f5cd5bc83febfe8ef04f47560789"
+    },
+    "prefab_modes": {
+      "path": "config/prefab-design-procurement-modes.json",
+      "identity": "PREFAB_DESIGN_PROCUREMENT_MODES",
+      "version": "0.1",
+      "sha256": "df497795da1a34b6d11838401bce94652a3de4c489f5d1cb701978c395a2ea10"
+    },
+    "prefab_pods": {
+      "path": "config/prefab-room-pods.json",
+      "identity": "PREFAB_ROOM_PODS",
+      "version": "0.1",
+      "sha256": "c2fcc829f422ced859be6724b85ff3ce3f725f4fa10c419107835fd046bb9ee6"
+    }
+  },
+  "scope_state": {
+    "state": "PILOT_ROUTE_MAP_NOT_FULL_BOM",
+    "frozen_house_design": false,
+    "full_bom": false,
+    "quantities_complete": false,
+    "pilot_slot_count": 10,
+    "expected_package_count": 11,
+    "partial_package_count": 7,
+    "missing_package_count": 4,
+    "missing_upstream_inputs": [
+      "frozen compact-house design graph and approved construction route",
+      "complete package and subpackage BoM",
+      "measured quantities and configuration schedules",
+      "dated construction programme and required-on-site dates",
+      "site access, unloading, lifting and storage survey",
+      "engineered technical and regulatory requirements",
+      "installation, commissioning and as-built handover plan"
+    ]
+  },
+  "packages": [
+    {
+      "package_id": "PKG_SITE_WORKS",
+      "name": "Site works",
+      "construction_phase": "siteworks",
+      "coverage_state": "MISSING_FROM_PILOT_SCOPE",
+      "expected_scope": [
+        "survey and setting out",
+        "earthworks",
+        "temporary works",
+        "site drainage and utilities"
+      ],
+      "pilot_line_item_ids": [],
+      "missing_scope": [
+        "No frozen site-works design, quantities, method, supplier route or programme package exists."
+      ]
+    },
+    {
+      "package_id": "PKG_FOUNDATIONS",
+      "name": "Foundations",
+      "construction_phase": "foundations",
+      "coverage_state": "MISSING_FROM_PILOT_SCOPE",
+      "expected_scope": [
+        "foundation system",
+        "excavation support",
+        "reinforcement",
+        "concrete pours",
+        "ground waterproofing"
+      ],
+      "pilot_line_item_ids": [],
+      "missing_scope": [
+        "Structural concrete is a pilot material slot, not a designed foundation system or quantified pour schedule."
+      ]
+    },
+    {
+      "package_id": "PKG_STRUCTURAL_SHELL",
+      "name": "Structural shell",
+      "construction_phase": "structure",
+      "coverage_state": "PILOT_PARTIAL",
+      "expected_scope": [
+        "primary structural system",
+        "concrete",
+        "reinforcement",
+        "structural steel or timber",
+        "connection nodes"
+      ],
+      "pilot_line_item_ids": [
+        "LINE_WB10_01"
+      ],
+      "missing_scope": [
+        "Only structural concrete routing is represented; engineered quantities, reinforcement, system selection and connections are absent."
+      ]
+    },
+    {
+      "package_id": "PKG_FACADE_ROOF_OPENINGS",
+      "name": "Facade, roof, windows and doors",
+      "construction_phase": "envelope",
+      "coverage_state": "PILOT_PARTIAL",
+      "expected_scope": [
+        "facade system",
+        "roof build-up",
+        "waterproofing",
+        "insulation",
+        "windows",
+        "external doors and interfaces"
+      ],
+      "pilot_line_item_ids": [
+        "LINE_WB10_02"
+      ],
+      "missing_scope": [
+        "Only a generic window-system pilot slot is represented; facade, roof, doors, schedule quantities and interface details are absent."
+      ]
+    },
+    {
+      "package_id": "PKG_MEP",
+      "name": "Electrical, plumbing, HVAC and ventilation",
+      "construction_phase": "mep_rough_in",
+      "coverage_state": "PILOT_PARTIAL",
+      "expected_scope": [
+        "electrical distribution",
+        "plumbing and drainage",
+        "hot water",
+        "HVAC",
+        "ventilation",
+        "controls and commissioning points"
+      ],
+      "pilot_line_item_ids": [
+        "LINE_WB10_08"
+      ],
+      "missing_scope": [
+        "Only a heat-pump discovery slot is represented; loads, schematics, distribution, ventilation and quantities are absent."
+      ]
+    },
+    {
+      "package_id": "PKG_PREFAB_PODS",
+      "name": "Bathroom, kitchen and service pods",
+      "construction_phase": "interior_build",
+      "coverage_state": "MISSING_FROM_PILOT_SCOPE",
+      "expected_scope": [
+        "bathroom pod",
+        "kitchen pod",
+        "utility or plant pod",
+        "service interfaces",
+        "lifting and installation route"
+      ],
+      "pilot_line_item_ids": [],
+      "missing_scope": [
+        "Pod categories and interface concepts exist, but no supplier system, configuration, quantity or route is selected."
+      ]
+    },
+    {
+      "package_id": "PKG_INTERIOR_FINISHES_JOINERY",
+      "name": "Interior finishes and fixed joinery",
+      "construction_phase": "finishes",
+      "coverage_state": "PILOT_PARTIAL",
+      "expected_scope": [
+        "partitions",
+        "ceilings",
+        "floor and wall finishes",
+        "paint",
+        "fixed joinery",
+        "kitchen cabinetry and worktops"
+      ],
+      "pilot_line_item_ids": [
+        "LINE_WB10_03"
+      ],
+      "missing_scope": [
+        "Only a natural-stone discovery slot is represented; room take-offs, finish schedules and fixed joinery are absent."
+      ]
+    },
+    {
+      "package_id": "PKG_BUILDING_FIXTURES_ENERGY",
+      "name": "Building fixtures, solar and energy systems",
+      "construction_phase": "fixtures",
+      "coverage_state": "PILOT_PARTIAL",
+      "expected_scope": [
+        "fixed luminaires",
+        "PV array",
+        "inverter",
+        "mounting",
+        "balance of system",
+        "metering",
+        "battery or energy manager if required"
+      ],
+      "pilot_line_item_ids": [
+        "LINE_WB10_06",
+        "LINE_WB10_07",
+        "LINE_WB10_09"
+      ],
+      "missing_scope": [
+        "Only panel, inverter and pendant discovery slots are represented; final fixture schedules, energy demand, usable roof geometry, shading, phase, grid constraints and system sizing are unresolved."
+      ]
+    },
+    {
+      "package_id": "PKG_FURNITURE_EQUIPMENT",
+      "name": "Furniture and equipment",
+      "construction_phase": "ffe",
+      "coverage_state": "PILOT_PARTIAL",
+      "expected_scope": [
+        "furniture",
+        "appliances",
+        "sanitaryware",
+        "loose equipment and accessories"
+      ],
+      "pilot_line_item_ids": [
+        "LINE_WB10_10"
+      ],
+      "missing_scope": [
+        "Only a discovery sofa slot is represented; the approved room plan is separate and the whole-house FFE schedule is absent."
+      ]
+    },
+    {
+      "package_id": "PKG_OUTDOOR_POOL_LANDSCAPE",
+      "name": "Pool, garden and landscape",
+      "construction_phase": "landscape",
+      "coverage_state": "PILOT_PARTIAL",
+      "expected_scope": [
+        "pool shell and waterproofing",
+        "pool hydraulics and plant",
+        "paving",
+        "drainage",
+        "irrigation",
+        "planting and outdoor equipment"
+      ],
+      "pilot_line_item_ids": [
+        "LINE_WB10_04",
+        "LINE_WB10_05"
+      ],
+      "missing_scope": [
+        "Only pool pipe and pump pilot slots are represented; pool geometry/duty, garden design, landscape quantities and site routes are absent."
+      ]
+    },
+    {
+      "package_id": "PKG_INSTALLATION_COMMISSIONING_HANDOVER",
+      "name": "Installation, commissioning and as-built handover",
+      "construction_phase": "commissioning",
+      "coverage_state": "MISSING_FROM_PILOT_SCOPE",
+      "expected_scope": [
+        "installation scopes",
+        "testing and commissioning",
+        "inspection records",
+        "warranties",
+        "as-built identities and maintenance data"
+      ],
+      "pilot_line_item_ids": [],
+      "missing_scope": [
+        "No installation contracts, commissioning plan, acceptance criteria or as-built handover graph exists."
+      ]
+    }
+  ],
+  "line_items": [
+    {
+      "line_item_id": "LINE_WB10_01",
+      "slot_id": "WB10_01",
+      "label": "Structural concrete",
+      "category_id": "STRUCTURE.CONCRETE",
+      "package_id": "PKG_STRUCTURAL_SHELL",
+      "construction_phase": "structure",
+      "source_phase": "substructure",
+      "quantity": {
+        "state": "UNRESOLVED",
+        "value": null,
+        "unit_basis": "m3"
+      },
+      "required_on_site": {
+        "state": "PLANNING_DAY_OFFSET_ONLY",
+        "date": null,
+        "planning_day_offset": 30
+      },
+      "selected_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/6p7y3Aoq4Gfk46FuAXlgjn",
+        "variant_id": "gid://shopify/ProductVariant/44364072648997",
+        "use_state": "DISCOVERY_REFERENCE_NOT_APPROVED_PRODUCT"
+      },
+      "identity_state": "UNRESOLVED",
+      "route": {
+        "route_type": "configured_rfq",
+        "source_id": "cemex_go_es",
+        "state": "needs_requirement",
+        "requirement_id": "REQ_STRUCTURAL_CONCRETE_PROJECT_MARBELLA_VILLA_001",
+        "requirement_state": "needs_inputs",
+        "inputs_required": [
+          "specified concrete compressive-strength class",
+          "exposure class / durability environment",
+          "consistency or slump class",
+          "maximum aggregate size",
+          "estimated concrete quantity in m3 by pour/package",
+          "required pour/delivery date or construction programme milestone",
+          "real project delivery address for batching-plant routing and truck logistics"
+        ]
+      },
+      "discovery_evidence": {
+        "evidence_state": "HISTORICAL_UNDATED_AGGREGATE",
+        "source_generated_at": "2026-08-16T03:08:17.163Z",
+        "live_supply_candidate_count": 149,
+        "offers_checked": 3,
+        "postcode_candidate_count": 3,
+        "technical_match_verified": false,
+        "lead_time_known": false,
+        "landed_cost_known": false,
+        "source_regulatory_state": "HOLD",
+        "regulatory_state": "HOLD",
+        "regulatory_derivation_state": "SOURCE_ALIGNED_WITH_AUTHORITY"
+      },
+      "supply_class": "UNVERIFIED",
+      "commercial_state": {
+        "merchandise": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "freight": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "tax_and_duty": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "installation": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "contingency": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "landed_total": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        }
+      },
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "QUANTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The pilot records a unit basis, not a measured or scheduled quantity."
+          },
+          {
+            "gate": "EXACT_IDENTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The selected external reference has unresolved canonical manufacturer identity."
+          },
+          {
+            "gate": "TECHNICAL_MATCH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No candidate is verified against an engineered technical requirement."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Discovery candidates are not exact, destination-confirmed supply for an approved product."
+          },
+          {
+            "gate": "LEAD_TIME",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No verified lead time is recorded."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No comparable merchandise, freight, tax, installation or landed cost is recorded."
+          },
+          {
+            "gate": "REGULATORY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The authority-derived regulatory state is HOLD."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The source contains a planning day offset, not a dated construction programme milestone."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No purchase-time destination refresh exists for an approved exact product."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_WB10_02",
+      "slot_id": "WB10_02",
+      "label": "Window system",
+      "category_id": "OPENINGS.WINDOWS",
+      "package_id": "PKG_FACADE_ROOF_OPENINGS",
+      "construction_phase": "envelope",
+      "source_phase": "envelope",
+      "quantity": {
+        "state": "UNRESOLVED",
+        "value": null,
+        "unit_basis": "schedule"
+      },
+      "required_on_site": {
+        "state": "PLANNING_DAY_OFFSET_ONLY",
+        "date": null,
+        "planning_day_offset": 150
+      },
+      "selected_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/4av5Zo4vEYeFOnVSuCKEtE",
+        "variant_id": "gid://shopify/ProductVariant/44087412031732",
+        "use_state": "DISCOVERY_REFERENCE_NOT_APPROVED_PRODUCT"
+      },
+      "identity_state": "UNRESOLVED",
+      "route": {
+        "route_type": "merchant_cart",
+        "source_id": "shopify_global_catalog",
+        "state": "needs_technical_review",
+        "requirement_id": null,
+        "requirement_state": null,
+        "inputs_required": [
+          "authoritative shipping/landed cost via Checkout or supplier quote",
+          "verified lead time",
+          "canonical manufacturer identity / exact model verification"
+        ]
+      },
+      "discovery_evidence": {
+        "evidence_state": "HISTORICAL_UNDATED_AGGREGATE",
+        "source_generated_at": "2026-08-16T03:08:17.163Z",
+        "live_supply_candidate_count": 98,
+        "offers_checked": 3,
+        "postcode_candidate_count": 3,
+        "technical_match_verified": false,
+        "lead_time_known": false,
+        "landed_cost_known": false,
+        "source_regulatory_state": "HOLD",
+        "regulatory_state": "HOLD",
+        "regulatory_derivation_state": "SOURCE_ALIGNED_WITH_AUTHORITY"
+      },
+      "supply_class": "UNVERIFIED",
+      "commercial_state": {
+        "merchandise": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "freight": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "tax_and_duty": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "installation": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "contingency": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "landed_total": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        }
+      },
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "QUANTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The pilot records a unit basis, not a measured or scheduled quantity."
+          },
+          {
+            "gate": "EXACT_IDENTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The selected external reference has unresolved canonical manufacturer identity."
+          },
+          {
+            "gate": "TECHNICAL_MATCH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No candidate is verified against an engineered technical requirement."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Discovery candidates are not exact, destination-confirmed supply for an approved product."
+          },
+          {
+            "gate": "LEAD_TIME",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No verified lead time is recorded."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No comparable merchandise, freight, tax, installation or landed cost is recorded."
+          },
+          {
+            "gate": "REGULATORY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The authority-derived regulatory state is HOLD."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The source contains a planning day offset, not a dated construction programme milestone."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No purchase-time destination refresh exists for an approved exact product."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_WB10_03",
+      "slot_id": "WB10_03",
+      "label": "Natural stone",
+      "category_id": "FINISHES.STONE",
+      "package_id": "PKG_INTERIOR_FINISHES_JOINERY",
+      "construction_phase": "finishes",
+      "source_phase": "finishes",
+      "quantity": {
+        "state": "UNRESOLVED",
+        "value": null,
+        "unit_basis": "m2"
+      },
+      "required_on_site": {
+        "state": "PLANNING_DAY_OFFSET_ONLY",
+        "date": null,
+        "planning_day_offset": 230
+      },
+      "selected_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/3bR8piOcHMiFdWceOyhJwQ",
+        "variant_id": "gid://shopify/ProductVariant/47198186471730",
+        "use_state": "DISCOVERY_REFERENCE_NOT_APPROVED_PRODUCT"
+      },
+      "identity_state": "UNRESOLVED",
+      "route": {
+        "route_type": "merchant_cart",
+        "source_id": "shopify_global_catalog",
+        "state": "needs_technical_review",
+        "requirement_id": null,
+        "requirement_state": null,
+        "inputs_required": [
+          "authoritative shipping/landed cost via Checkout or supplier quote",
+          "verified lead time",
+          "canonical manufacturer identity / exact model verification"
+        ]
+      },
+      "discovery_evidence": {
+        "evidence_state": "HISTORICAL_UNDATED_AGGREGATE",
+        "source_generated_at": "2026-08-16T03:08:17.163Z",
+        "live_supply_candidate_count": 147,
+        "offers_checked": 3,
+        "postcode_candidate_count": 3,
+        "technical_match_verified": false,
+        "lead_time_known": false,
+        "landed_cost_known": false,
+        "source_regulatory_state": "HOLD",
+        "regulatory_state": "HOLD",
+        "regulatory_derivation_state": "SOURCE_ALIGNED_WITH_AUTHORITY"
+      },
+      "supply_class": "UNVERIFIED",
+      "commercial_state": {
+        "merchandise": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "freight": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "tax_and_duty": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "installation": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "contingency": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "landed_total": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        }
+      },
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "QUANTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The pilot records a unit basis, not a measured or scheduled quantity."
+          },
+          {
+            "gate": "EXACT_IDENTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The selected external reference has unresolved canonical manufacturer identity."
+          },
+          {
+            "gate": "TECHNICAL_MATCH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No candidate is verified against an engineered technical requirement."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Discovery candidates are not exact, destination-confirmed supply for an approved product."
+          },
+          {
+            "gate": "LEAD_TIME",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No verified lead time is recorded."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No comparable merchandise, freight, tax, installation or landed cost is recorded."
+          },
+          {
+            "gate": "REGULATORY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The authority-derived regulatory state is HOLD."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The source contains a planning day offset, not a dated construction programme milestone."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No purchase-time destination refresh exists for an approved exact product."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_WB10_04",
+      "slot_id": "WB10_04",
+      "label": "Pool pressure pipe",
+      "category_id": "POOL.PIPE",
+      "package_id": "PKG_OUTDOOR_POOL_LANDSCAPE",
+      "construction_phase": "landscape",
+      "source_phase": "pool_first_fix",
+      "quantity": {
+        "state": "UNRESOLVED",
+        "value": null,
+        "unit_basis": "m"
+      },
+      "required_on_site": {
+        "state": "PLANNING_DAY_OFFSET_ONLY",
+        "date": null,
+        "planning_day_offset": 170
+      },
+      "selected_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/3P7aFIlod6xmzwiinxEt5L",
+        "variant_id": "gid://shopify/ProductVariant/47862683435356",
+        "use_state": "DISCOVERY_REFERENCE_NOT_APPROVED_PRODUCT"
+      },
+      "identity_state": "UNRESOLVED",
+      "route": {
+        "route_type": "merchant_cart",
+        "source_id": "shopify_global_catalog",
+        "state": "needs_technical_review",
+        "requirement_id": null,
+        "requirement_state": null,
+        "inputs_required": [
+          "authoritative shipping/landed cost via Checkout or supplier quote",
+          "verified lead time",
+          "canonical manufacturer identity / exact model verification"
+        ]
+      },
+      "discovery_evidence": {
+        "evidence_state": "HISTORICAL_UNDATED_AGGREGATE",
+        "source_generated_at": "2026-08-16T03:08:17.163Z",
+        "live_supply_candidate_count": 89,
+        "offers_checked": 3,
+        "postcode_candidate_count": 3,
+        "technical_match_verified": false,
+        "lead_time_known": false,
+        "landed_cost_known": false,
+        "source_regulatory_state": "NOT_APPLICABLE",
+        "regulatory_state": "NOT_APPLICABLE",
+        "regulatory_derivation_state": "SOURCE_ALIGNED_WITH_AUTHORITY"
+      },
+      "supply_class": "UNVERIFIED",
+      "commercial_state": {
+        "merchandise": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "freight": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "tax_and_duty": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "installation": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "contingency": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "landed_total": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        }
+      },
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "QUANTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The pilot records a unit basis, not a measured or scheduled quantity."
+          },
+          {
+            "gate": "EXACT_IDENTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The selected external reference has unresolved canonical manufacturer identity."
+          },
+          {
+            "gate": "TECHNICAL_MATCH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No candidate is verified against an engineered technical requirement."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Discovery candidates are not exact, destination-confirmed supply for an approved product."
+          },
+          {
+            "gate": "LEAD_TIME",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No verified lead time is recorded."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No comparable merchandise, freight, tax, installation or landed cost is recorded."
+          },
+          {
+            "gate": "REGULATORY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No seeded category rule applies to this pilot slot, but the complete house regulatory package is not closed."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The source contains a planning day offset, not a dated construction programme milestone."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No purchase-time destination refresh exists for an approved exact product."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_WB10_05",
+      "slot_id": "WB10_05",
+      "label": "Pool circulation pump",
+      "category_id": "POOL.PUMPS",
+      "package_id": "PKG_OUTDOOR_POOL_LANDSCAPE",
+      "construction_phase": "landscape",
+      "source_phase": "pool_plant",
+      "quantity": {
+        "state": "UNRESOLVED",
+        "value": null,
+        "unit_basis": "each"
+      },
+      "required_on_site": {
+        "state": "PLANNING_DAY_OFFSET_ONLY",
+        "date": null,
+        "planning_day_offset": 260
+      },
+      "selected_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/BaYtvgCWvPv4yLNAUIVFG",
+        "variant_id": "gid://shopify/ProductVariant/43998617239750",
+        "use_state": "DISCOVERY_REFERENCE_NOT_APPROVED_PRODUCT"
+      },
+      "identity_state": "UNRESOLVED",
+      "route": {
+        "route_type": "direct_trade",
+        "source_id": "fluidra_pro_es",
+        "state": "needs_requirement",
+        "requirement_id": "REQ_POOL_CIRCULATION_PROJECT_MARBELLA_VILLA_001",
+        "requirement_state": "needs_inputs",
+        "inputs_required": [
+          "pool volume + target turnover time, or explicit required filtration flow",
+          "total dynamic head from pipe/fitting/filter/equipment hydraulic calculation",
+          "pump connection / pipe and fitting system",
+          "pool plant electrical phase/circuit"
+        ]
+      },
+      "discovery_evidence": {
+        "evidence_state": "HISTORICAL_UNDATED_AGGREGATE",
+        "source_generated_at": "2026-08-16T03:08:17.163Z",
+        "live_supply_candidate_count": 175,
+        "offers_checked": 3,
+        "postcode_candidate_count": 3,
+        "technical_match_verified": false,
+        "lead_time_known": false,
+        "landed_cost_known": false,
+        "source_regulatory_state": "NOT_APPLICABLE",
+        "regulatory_state": "REVIEW",
+        "regulatory_derivation_state": "AUTHORITY_OVERRIDES_HISTORICAL_SOURCE"
+      },
+      "supply_class": "UNVERIFIED",
+      "commercial_state": {
+        "merchandise": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "freight": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "tax_and_duty": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "installation": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "contingency": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "landed_total": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        }
+      },
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "QUANTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The pilot records a unit basis, not a measured or scheduled quantity."
+          },
+          {
+            "gate": "EXACT_IDENTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The selected external reference has unresolved canonical manufacturer identity."
+          },
+          {
+            "gate": "TECHNICAL_MATCH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No candidate is verified against an engineered technical requirement."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Discovery candidates are not exact, destination-confirmed supply for an approved product."
+          },
+          {
+            "gate": "LEAD_TIME",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No verified lead time is recorded."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No comparable merchandise, freight, tax, installation or landed cost is recorded."
+          },
+          {
+            "gate": "REGULATORY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The authority-derived regulatory state is REVIEW."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The source contains a planning day offset, not a dated construction programme milestone."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No purchase-time destination refresh exists for an approved exact product."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_WB10_06",
+      "slot_id": "WB10_06",
+      "label": "PV module",
+      "category_id": "ENERGY.SOLAR.PANEL",
+      "package_id": "PKG_BUILDING_FIXTURES_ENERGY",
+      "construction_phase": "fixtures",
+      "source_phase": "energy",
+      "quantity": {
+        "state": "UNRESOLVED",
+        "value": null,
+        "unit_basis": "each"
+      },
+      "required_on_site": {
+        "state": "PLANNING_DAY_OFFSET_ONLY",
+        "date": null,
+        "planning_day_offset": 300
+      },
+      "selected_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/cK9QLDvaVXCIXOKWiyzoB",
+        "variant_id": "gid://shopify/ProductVariant/47634966184270",
+        "use_state": "DISCOVERY_REFERENCE_NOT_APPROVED_PRODUCT"
+      },
+      "identity_state": "UNRESOLVED",
+      "route": {
+        "route_type": "merchant_cart",
+        "source_id": "shopify_global_catalog",
+        "state": "needs_requirement",
+        "requirement_id": "REQ_SOLAR_PROJECT_MARBELLA_VILLA_001",
+        "requirement_state": "needs_inputs",
+        "inputs_required": [
+          "annual electricity demand or desired annual PV generation",
+          "usable roof-plane geometry/area after setbacks",
+          "local obstruction/shading model",
+          "confirmed electrical phase",
+          "grid export/import constraints and contracted supply",
+          "battery/autonomy objective if storage is desired"
+        ]
+      },
+      "discovery_evidence": {
+        "evidence_state": "HISTORICAL_UNDATED_AGGREGATE",
+        "source_generated_at": "2026-08-16T03:08:17.163Z",
+        "live_supply_candidate_count": 284,
+        "offers_checked": 3,
+        "postcode_candidate_count": 3,
+        "technical_match_verified": false,
+        "lead_time_known": false,
+        "landed_cost_known": false,
+        "source_regulatory_state": "REVIEW",
+        "regulatory_state": "REVIEW",
+        "regulatory_derivation_state": "SOURCE_ALIGNED_WITH_AUTHORITY"
+      },
+      "supply_class": "UNVERIFIED",
+      "commercial_state": {
+        "merchandise": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "freight": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "tax_and_duty": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "installation": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "contingency": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "landed_total": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        }
+      },
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "QUANTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The pilot records a unit basis, not a measured or scheduled quantity."
+          },
+          {
+            "gate": "EXACT_IDENTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The selected external reference has unresolved canonical manufacturer identity."
+          },
+          {
+            "gate": "TECHNICAL_MATCH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No candidate is verified against an engineered technical requirement."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Discovery candidates are not exact, destination-confirmed supply for an approved product."
+          },
+          {
+            "gate": "LEAD_TIME",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No verified lead time is recorded."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No comparable merchandise, freight, tax, installation or landed cost is recorded."
+          },
+          {
+            "gate": "REGULATORY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The authority-derived regulatory state is REVIEW."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The source contains a planning day offset, not a dated construction programme milestone."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No purchase-time destination refresh exists for an approved exact product."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_WB10_07",
+      "slot_id": "WB10_07",
+      "label": "PV inverter",
+      "category_id": "ENERGY.SOLAR.INVERTER",
+      "package_id": "PKG_BUILDING_FIXTURES_ENERGY",
+      "construction_phase": "fixtures",
+      "source_phase": "energy",
+      "quantity": {
+        "state": "UNRESOLVED",
+        "value": null,
+        "unit_basis": "each"
+      },
+      "required_on_site": {
+        "state": "PLANNING_DAY_OFFSET_ONLY",
+        "date": null,
+        "planning_day_offset": 300
+      },
+      "selected_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/4pPfq4MhVgZelzH5v2L4Q0",
+        "variant_id": "gid://shopify/ProductVariant/52960387662158",
+        "use_state": "DISCOVERY_REFERENCE_NOT_APPROVED_PRODUCT"
+      },
+      "identity_state": "UNRESOLVED",
+      "route": {
+        "route_type": "merchant_cart",
+        "source_id": "shopify_global_catalog",
+        "state": "needs_requirement",
+        "requirement_id": "REQ_SOLAR_PROJECT_MARBELLA_VILLA_001",
+        "requirement_state": "needs_inputs",
+        "inputs_required": [
+          "annual electricity demand or desired annual PV generation",
+          "usable roof-plane geometry/area after setbacks",
+          "local obstruction/shading model",
+          "confirmed electrical phase",
+          "grid export/import constraints and contracted supply",
+          "battery/autonomy objective if storage is desired"
+        ]
+      },
+      "discovery_evidence": {
+        "evidence_state": "HISTORICAL_UNDATED_AGGREGATE",
+        "source_generated_at": "2026-08-16T03:08:17.163Z",
+        "live_supply_candidate_count": 251,
+        "offers_checked": 3,
+        "postcode_candidate_count": 3,
+        "technical_match_verified": false,
+        "lead_time_known": false,
+        "landed_cost_known": false,
+        "source_regulatory_state": "REVIEW",
+        "regulatory_state": "REVIEW",
+        "regulatory_derivation_state": "SOURCE_ALIGNED_WITH_AUTHORITY"
+      },
+      "supply_class": "UNVERIFIED",
+      "commercial_state": {
+        "merchandise": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "freight": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "tax_and_duty": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "installation": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "contingency": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "landed_total": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        }
+      },
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "QUANTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The pilot records a unit basis, not a measured or scheduled quantity."
+          },
+          {
+            "gate": "EXACT_IDENTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The selected external reference has unresolved canonical manufacturer identity."
+          },
+          {
+            "gate": "TECHNICAL_MATCH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No candidate is verified against an engineered technical requirement."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Discovery candidates are not exact, destination-confirmed supply for an approved product."
+          },
+          {
+            "gate": "LEAD_TIME",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No verified lead time is recorded."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No comparable merchandise, freight, tax, installation or landed cost is recorded."
+          },
+          {
+            "gate": "REGULATORY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The authority-derived regulatory state is REVIEW."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The source contains a planning day offset, not a dated construction programme milestone."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No purchase-time destination refresh exists for an approved exact product."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_WB10_08",
+      "slot_id": "WB10_08",
+      "label": "Heat pump",
+      "category_id": "HVAC.HEAT_PUMPS",
+      "package_id": "PKG_MEP",
+      "construction_phase": "mep_rough_in",
+      "source_phase": "mep_second_fix",
+      "quantity": {
+        "state": "UNRESOLVED",
+        "value": null,
+        "unit_basis": "each"
+      },
+      "required_on_site": {
+        "state": "PLANNING_DAY_OFFSET_ONLY",
+        "date": null,
+        "planning_day_offset": 260
+      },
+      "selected_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/Y7RBzvVEwMsqDGR6jC8tg",
+        "variant_id": "gid://shopify/ProductVariant/51627048305023",
+        "use_state": "DISCOVERY_REFERENCE_NOT_APPROVED_PRODUCT"
+      },
+      "identity_state": "UNRESOLVED",
+      "route": {
+        "route_type": "merchant_cart",
+        "source_id": "shopify_global_catalog",
+        "state": "needs_technical_review",
+        "requirement_id": null,
+        "requirement_state": null,
+        "inputs_required": [
+          "authoritative shipping/landed cost via Checkout or supplier quote",
+          "verified lead time",
+          "canonical manufacturer identity / exact model verification"
+        ]
+      },
+      "discovery_evidence": {
+        "evidence_state": "HISTORICAL_UNDATED_AGGREGATE",
+        "source_generated_at": "2026-08-16T03:08:17.163Z",
+        "live_supply_candidate_count": 183,
+        "offers_checked": 3,
+        "postcode_candidate_count": 3,
+        "technical_match_verified": false,
+        "lead_time_known": false,
+        "landed_cost_known": false,
+        "source_regulatory_state": "REVIEW",
+        "regulatory_state": "REVIEW",
+        "regulatory_derivation_state": "SOURCE_ALIGNED_WITH_AUTHORITY"
+      },
+      "supply_class": "UNVERIFIED",
+      "commercial_state": {
+        "merchandise": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "freight": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "tax_and_duty": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "installation": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "contingency": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "landed_total": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        }
+      },
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "QUANTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The pilot records a unit basis, not a measured or scheduled quantity."
+          },
+          {
+            "gate": "EXACT_IDENTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The selected external reference has unresolved canonical manufacturer identity."
+          },
+          {
+            "gate": "TECHNICAL_MATCH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No candidate is verified against an engineered technical requirement."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Discovery candidates are not exact, destination-confirmed supply for an approved product."
+          },
+          {
+            "gate": "LEAD_TIME",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No verified lead time is recorded."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No comparable merchandise, freight, tax, installation or landed cost is recorded."
+          },
+          {
+            "gate": "REGULATORY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The authority-derived regulatory state is REVIEW."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The source contains a planning day offset, not a dated construction programme milestone."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No purchase-time destination refresh exists for an approved exact product."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_WB10_09",
+      "slot_id": "WB10_09",
+      "label": "Pendant luminaire",
+      "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+      "package_id": "PKG_BUILDING_FIXTURES_ENERGY",
+      "construction_phase": "fixtures",
+      "source_phase": "final_fix",
+      "quantity": {
+        "state": "UNRESOLVED",
+        "value": null,
+        "unit_basis": "each"
+      },
+      "required_on_site": {
+        "state": "PLANNING_DAY_OFFSET_ONLY",
+        "date": null,
+        "planning_day_offset": 340
+      },
+      "selected_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/5KfwjYpcWBC81c8PVGKcuS",
+        "variant_id": "gid://shopify/ProductVariant/54265230000470",
+        "use_state": "DISCOVERY_REFERENCE_NOT_APPROVED_PRODUCT"
+      },
+      "identity_state": "UNRESOLVED",
+      "route": {
+        "route_type": "merchant_cart",
+        "source_id": "shopify_global_catalog",
+        "state": "needs_technical_review",
+        "requirement_id": null,
+        "requirement_state": null,
+        "inputs_required": [
+          "authoritative shipping/landed cost via Checkout or supplier quote",
+          "verified lead time",
+          "canonical manufacturer identity / exact model verification"
+        ]
+      },
+      "discovery_evidence": {
+        "evidence_state": "HISTORICAL_UNDATED_AGGREGATE",
+        "source_generated_at": "2026-08-16T03:08:17.163Z",
+        "live_supply_candidate_count": 579,
+        "offers_checked": 3,
+        "postcode_candidate_count": 3,
+        "technical_match_verified": false,
+        "lead_time_known": false,
+        "landed_cost_known": false,
+        "source_regulatory_state": "REVIEW",
+        "regulatory_state": "REVIEW",
+        "regulatory_derivation_state": "SOURCE_ALIGNED_WITH_AUTHORITY"
+      },
+      "supply_class": "UNVERIFIED",
+      "commercial_state": {
+        "merchandise": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "freight": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "tax_and_duty": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "installation": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "contingency": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "landed_total": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        }
+      },
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "QUANTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The pilot records a unit basis, not a measured or scheduled quantity."
+          },
+          {
+            "gate": "EXACT_IDENTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The selected external reference has unresolved canonical manufacturer identity."
+          },
+          {
+            "gate": "TECHNICAL_MATCH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No candidate is verified against an engineered technical requirement."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Discovery candidates are not exact, destination-confirmed supply for an approved product."
+          },
+          {
+            "gate": "LEAD_TIME",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No verified lead time is recorded."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No comparable merchandise, freight, tax, installation or landed cost is recorded."
+          },
+          {
+            "gate": "REGULATORY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The authority-derived regulatory state is REVIEW."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The source contains a planning day offset, not a dated construction programme milestone."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No purchase-time destination refresh exists for an approved exact product."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_WB10_10",
+      "slot_id": "WB10_10",
+      "label": "Living-room sofa",
+      "category_id": "FFE.SEATING.SOFA",
+      "package_id": "PKG_FURNITURE_EQUIPMENT",
+      "construction_phase": "ffe",
+      "source_phase": "ff&e",
+      "quantity": {
+        "state": "UNRESOLVED",
+        "value": null,
+        "unit_basis": "each"
+      },
+      "required_on_site": {
+        "state": "PLANNING_DAY_OFFSET_ONLY",
+        "date": null,
+        "planning_day_offset": 390
+      },
+      "selected_reference": {
+        "source_id": "shopify_global_catalog",
+        "product_id": "gid://shopify/p/6yZXQwZMcvhdPzhULDkApv",
+        "variant_id": "gid://shopify/ProductVariant/40416650526818",
+        "use_state": "DISCOVERY_REFERENCE_NOT_APPROVED_PRODUCT"
+      },
+      "identity_state": "UNRESOLVED",
+      "route": {
+        "route_type": "merchant_cart",
+        "source_id": "shopify_global_catalog",
+        "state": "needs_technical_review",
+        "requirement_id": null,
+        "requirement_state": null,
+        "inputs_required": [
+          "authoritative shipping/landed cost via Checkout or supplier quote",
+          "verified lead time",
+          "canonical manufacturer identity / exact model verification"
+        ]
+      },
+      "discovery_evidence": {
+        "evidence_state": "HISTORICAL_UNDATED_AGGREGATE",
+        "source_generated_at": "2026-08-16T03:08:17.163Z",
+        "live_supply_candidate_count": 528,
+        "offers_checked": 3,
+        "postcode_candidate_count": 3,
+        "technical_match_verified": false,
+        "lead_time_known": false,
+        "landed_cost_known": false,
+        "source_regulatory_state": "NOT_APPLICABLE",
+        "regulatory_state": "NOT_APPLICABLE",
+        "regulatory_derivation_state": "SOURCE_ALIGNED_WITH_AUTHORITY"
+      },
+      "supply_class": "UNVERIFIED",
+      "commercial_state": {
+        "merchandise": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "freight": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "tax_and_duty": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "installation": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "contingency": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        },
+        "landed_total": {
+          "state": "UNVERIFIED",
+          "amount": null,
+          "currency": "EUR",
+          "reason": "No approved exact product, quantity or comparable destination quote exists for this pilot line."
+        }
+      },
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "QUANTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The pilot records a unit basis, not a measured or scheduled quantity."
+          },
+          {
+            "gate": "EXACT_IDENTITY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The selected external reference has unresolved canonical manufacturer identity."
+          },
+          {
+            "gate": "TECHNICAL_MATCH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No candidate is verified against an engineered technical requirement."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Discovery candidates are not exact, destination-confirmed supply for an approved product."
+          },
+          {
+            "gate": "LEAD_TIME",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No verified lead time is recorded."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No comparable merchandise, freight, tax, installation or landed cost is recorded."
+          },
+          {
+            "gate": "REGULATORY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No seeded category rule applies to this pilot slot, but the complete house regulatory package is not closed."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The source contains a planning day offset, not a dated construction programme milestone."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No purchase-time destination refresh exists for an approved exact product."
+          }
+        ]
+      }
+    }
+  ],
+  "route_summary": {
+    "total_lines": 10,
+    "configured_rfq": 1,
+    "merchant_cart": 8,
+    "direct_trade": 1,
+    "needs_requirement": 4,
+    "needs_technical_review": 6,
+    "executable_now": 0
+  },
+  "cost_summary": {
+    "state": "NO_COMPARABLE_COST_BASIS",
+    "currency": "EUR",
+    "merchandise": null,
+    "freight": null,
+    "tax_and_duty": null,
+    "installation": null,
+    "contingency": null,
+    "landed_total": null
+  },
+  "schedule": {
+    "state": "PRE_PROGRAMME",
+    "programme_start_date": null,
+    "planning_day_offsets_present": true,
+    "required_on_site_dates_present": false,
+    "delivery_packages": []
+  },
+  "construction_strategy": {
+    "selected_route": null,
+    "conventional_state": "NOT_EVALUATED",
+    "prefab_state": "CONCEPT_OPTIONS_ONLY",
+    "additive_state": "CONCEPT_OPTIONS_ONLY",
+    "hybrid_state": "CONCEPT_OPTIONS_ONLY",
+    "prefab_modes_are_planning_only": true,
+    "pod_configuration_selected": false
+  },
+  "risk_register": [
+    {
+      "risk_id": "RISK_NO_FROZEN_HOUSE_DESIGN_OR_FULL_BOM",
+      "severity": "CRITICAL",
+      "state": "OPEN",
+      "evidence": "The repository contains a ten-slot routing pilot, not a frozen compact-house design or complete BoM.",
+      "mitigation": "Freeze the H30 or other compact-house design graph and export measured package quantities before procurement compilation.",
+      "affected_line_item_ids": [
+        "LINE_WB10_01",
+        "LINE_WB10_02",
+        "LINE_WB10_03",
+        "LINE_WB10_04",
+        "LINE_WB10_05",
+        "LINE_WB10_06",
+        "LINE_WB10_07",
+        "LINE_WB10_08",
+        "LINE_WB10_09",
+        "LINE_WB10_10"
+      ]
+    },
+    {
+      "risk_id": "RISK_ALL_PILOT_QUANTITIES_UNRESOLVED",
+      "severity": "CRITICAL",
+      "state": "OPEN",
+      "evidence": "Every pilot slot records only a quantity basis.",
+      "mitigation": "Generate take-offs and schedules from approved geometry, engineering and room/package definitions.",
+      "affected_line_item_ids": [
+        "LINE_WB10_01",
+        "LINE_WB10_02",
+        "LINE_WB10_03",
+        "LINE_WB10_04",
+        "LINE_WB10_05",
+        "LINE_WB10_06",
+        "LINE_WB10_07",
+        "LINE_WB10_08",
+        "LINE_WB10_09",
+        "LINE_WB10_10"
+      ]
+    },
+    {
+      "risk_id": "RISK_DISCOVERY_REFERENCES_NOT_TECHNICALLY_VERIFIED",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "evidence": "All ten selected external references have unresolved exact identity and technical match.",
+      "mitigation": "Define requirements first, then resolve exact Product Twins or configured RFQ responses.",
+      "affected_line_item_ids": [
+        "LINE_WB10_01",
+        "LINE_WB10_02",
+        "LINE_WB10_03",
+        "LINE_WB10_04",
+        "LINE_WB10_05",
+        "LINE_WB10_06",
+        "LINE_WB10_07",
+        "LINE_WB10_08",
+        "LINE_WB10_09",
+        "LINE_WB10_10"
+      ]
+    },
+    {
+      "risk_id": "RISK_NO_LEAD_TIME_OR_LANDED_COST",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "evidence": "All ten pilot results report missing lead time and landed cost.",
+      "mitigation": "Obtain destination-specific quotes only after exact identity, quantity and technical fit are established.",
+      "affected_line_item_ids": [
+        "LINE_WB10_01",
+        "LINE_WB10_02",
+        "LINE_WB10_03",
+        "LINE_WB10_04",
+        "LINE_WB10_05",
+        "LINE_WB10_06",
+        "LINE_WB10_07",
+        "LINE_WB10_08",
+        "LINE_WB10_09",
+        "LINE_WB10_10"
+      ]
+    },
+    {
+      "risk_id": "RISK_PACKAGE_SCOPE_INCOMPLETE",
+      "severity": "CRITICAL",
+      "state": "OPEN",
+      "evidence": "Seven packages are partially represented and four are absent from the pilot.",
+      "mitigation": "Expand the frozen BoM to every site, building, services, interior, landscape and handover package.",
+      "affected_line_item_ids": [
+        "LINE_WB10_01",
+        "LINE_WB10_02",
+        "LINE_WB10_03",
+        "LINE_WB10_04",
+        "LINE_WB10_05",
+        "LINE_WB10_06",
+        "LINE_WB10_07",
+        "LINE_WB10_08",
+        "LINE_WB10_09",
+        "LINE_WB10_10"
+      ]
+    },
+    {
+      "risk_id": "RISK_SITE_ACCESS_UNVERIFIED",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "evidence": "Vehicle, crane, forklift, unloading, storage and delivery-window constraints are null.",
+      "mitigation": "Survey and approve the physical delivery and lifting constraints before route selection.",
+      "affected_line_item_ids": [
+        "LINE_WB10_01",
+        "LINE_WB10_02",
+        "LINE_WB10_03",
+        "LINE_WB10_04",
+        "LINE_WB10_05",
+        "LINE_WB10_06",
+        "LINE_WB10_07",
+        "LINE_WB10_08",
+        "LINE_WB10_09",
+        "LINE_WB10_10"
+      ]
+    },
+    {
+      "risk_id": "RISK_CONSTRUCTION_ROUTE_NOT_SELECTED",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "evidence": "Conventional, prefab, additive and hybrid options are concepts only.",
+      "mitigation": "Compare route-specific engineering, regulatory, cost, logistics and programme evidence before selection.",
+      "affected_line_item_ids": [
+        "LINE_WB10_01",
+        "LINE_WB10_02",
+        "LINE_WB10_03",
+        "LINE_WB10_04",
+        "LINE_WB10_05",
+        "LINE_WB10_06",
+        "LINE_WB10_07",
+        "LINE_WB10_08",
+        "LINE_WB10_09",
+        "LINE_WB10_10"
+      ]
+    },
+    {
+      "risk_id": "RISK_SOLAR_SYSTEM_REQUIREMENT_INCOMPLETE",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "evidence": "PV resource is verified, but demand, roof geometry, shading, phase and grid constraints are unresolved.",
+      "mitigation": "Complete the project solar requirement before choosing panels, inverters or storage.",
+      "affected_line_item_ids": [
+        "LINE_WB10_06",
+        "LINE_WB10_07"
+      ]
+    },
+    {
+      "risk_id": "RISK_REGULATORY_EVIDENCE_OPEN",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "evidence": "Pilot lines with HOLD or REVIEW regulatory states cannot progress to procurement.",
+      "mitigation": "Resolve applicable conformity, declaration, electrical and project regulatory gates.",
+      "affected_line_item_ids": [
+        "LINE_WB10_01",
+        "LINE_WB10_02",
+        "LINE_WB10_03",
+        "LINE_WB10_05",
+        "LINE_WB10_06",
+        "LINE_WB10_07",
+        "LINE_WB10_08",
+        "LINE_WB10_09"
+      ]
+    },
+    {
+      "risk_id": "RISK_INSTALLATION_COMMISSIONING_UNDEFINED",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "evidence": "No installation scopes, commissioning plan or as-built acceptance records exist.",
+      "mitigation": "Define installer responsibilities, tests, inspections, handover evidence and lifecycle ownership.",
+      "affected_line_item_ids": [
+        "LINE_WB10_01",
+        "LINE_WB10_02",
+        "LINE_WB10_03",
+        "LINE_WB10_04",
+        "LINE_WB10_05",
+        "LINE_WB10_06",
+        "LINE_WB10_07",
+        "LINE_WB10_08",
+        "LINE_WB10_09",
+        "LINE_WB10_10"
+      ]
+    }
+  ],
+  "procurement_readiness": {
+    "purchase_ready": false,
+    "state": "BLOCKED",
+    "gates": [
+      {
+        "gate": "FROZEN_HOUSE_DESIGN",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "No frozen compact-house design graph is attached."
+      },
+      {
+        "gate": "FULL_BOM_SCOPE",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "The ten-slot pilot does not cover the complete house scope."
+      },
+      {
+        "gate": "QUANTITIES_COMPLETE",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Every pilot quantity is unresolved."
+      },
+      {
+        "gate": "TECHNICAL_MATCHES",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "No pilot candidate has a verified technical match."
+      },
+      {
+        "gate": "DESTINATION_SUPPLY",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Discovery candidate counts do not prove exact destination supply."
+      },
+      {
+        "gate": "REGULATORY_CLEARANCE",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Required regulatory and conformity evidence is open."
+      },
+      {
+        "gate": "LANDED_COST",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "No comparable merchandise, freight, tax, installation or landed cost exists."
+      },
+      {
+        "gate": "CONSTRUCTION_PROGRAMME",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Planning day offsets are not dated required-on-site milestones."
+      },
+      {
+        "gate": "SITE_ACCESS",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Site delivery, unloading, lifting and storage constraints are unverified."
+      },
+      {
+        "gate": "CONSTRUCTION_ROUTE_SELECTED",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Conventional, prefab, additive or hybrid construction has not been selected."
+      },
+      {
+        "gate": "INSTALLATION_COMMISSIONING",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Installation, commissioning and handover scopes are undefined."
+      }
+    ],
+    "blocking_gate_ids": [
+      "FROZEN_HOUSE_DESIGN",
+      "FULL_BOM_SCOPE",
+      "QUANTITIES_COMPLETE",
+      "TECHNICAL_MATCHES",
+      "DESTINATION_SUPPLY",
+      "REGULATORY_CLEARANCE",
+      "LANDED_COST",
+      "CONSTRUCTION_PROGRAMME",
+      "SITE_ACCESS",
+      "CONSTRUCTION_ROUTE_SELECTED",
+      "INSTALLATION_COMMISSIONING"
+    ]
+  },
+  "consumer_contract": {
+    "manifest_role": "PRE_BOM_PACKAGE_AND_ROUTE_BASELINE",
+    "executable_procurement_plan": false,
+    "pilot_candidates_are_approved_products": false,
+    "country_claim_scope": "ES_29660_ONLY",
+    "mutable_checkout_payloads_embedded": false,
+    "notes": [
+      "The ten pilot slots demonstrate procurement-route diversity; they are not a complete compact-house BoM.",
+      "Live supply and postcode candidate counts are discovery signals, not exact product availability claims.",
+      "Prefab modes and pod categories are planning frameworks only; no factory or configuration is approved.",
+      "No Spain evidence may be inherited by Sweden, Great Britain or the United States."
+    ]
+  }
+}
