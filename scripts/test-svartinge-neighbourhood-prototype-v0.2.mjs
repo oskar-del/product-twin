@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateContextProviders,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateContextProviders,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
@@ -8,12 +8,14 @@ const streetBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvage
 const terrainBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/terrain-source-metadata-v0.1.json","utf8"));
 const officialGeometryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/official-context-geometry-sources-v0.1.json","utf8"));
 const aerialHistoryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/municipal-aerial-history-v0.1.json","utf8"));
+const visualReconstructionBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/visual-reconstruction-v0.1.json","utf8"));
 assert.equal(validateSvartingePrototype(baseline).ok,true,"baseline scene must validate");
 assert.equal(validateContextProviders(providerBaseline).ok,true,"baseline provider registry must validate");
 assert.equal(validateStreetContext(streetBaseline).ok,true,"baseline street context must validate");
 assert.equal(validateTerrainSourceMetadata(terrainBaseline).ok,true,"baseline terrain source metadata must validate");
 assert.equal(validateOfficialContextGeometrySources(officialGeometryBaseline).ok,true,"baseline official context geometry sources must validate");
 assert.equal(validateMunicipalAerialHistory(aerialHistoryBaseline).ok,true,"baseline municipal aerial history must validate");
+assert.equal(validateVisualReconstruction(visualReconstructionBaseline).ok,true,"baseline visual reconstruction must validate");
 
 const attacks=[
   ["identity promoted",m=>m.subject.identity_scope="PROPERTY_REGISTER_VERIFIED","identity scope promoted"],
@@ -133,4 +135,18 @@ for(const [name,mutate,needle] of aerialHistoryAttacks){
   const changed=structuredClone(aerialHistoryBaseline);mutate(changed);const result=validateMunicipalAerialHistory(changed);
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length} attacks)`);
+const visualReconstructionAttacks=[
+  ["visual promoted to photograph",m=>m.policy.is_source_photograph=true,"visual reconstruction evidence policy promoted"],
+  ["visual promoted to survey",m=>m.policy.is_survey_evidence=true,"visual reconstruction evidence policy promoted"],
+  ["visual closes gate",m=>m.policy.closes_evidence_gate=true,"visual reconstruction evidence policy promoted"],
+  ["provider pixels claimed",m=>m.policy.provider_pixels_in_asset=true,"visual reconstruction evidence policy promoted"],
+  ["visual geometry extraction",m=>m.policy.geometry_extraction_allowed=true,"visual reconstruction evidence policy promoted"],
+  ["visual asset hash drift",m=>m.renderings[0].asset_sha256="0".repeat(64),"visual reconstruction asset identity drift"],
+  ["visual hard gate removed",m=>m.policy.blocked_claims.pop(),"visual reconstruction hard gates changed"],
+  ["visual unknown field",m=>m.current_condition_verified=true,"visual reconstruction: unknown or missing fields"]
+];
+for(const [name,mutate,needle] of visualReconstructionAttacks){
+  const changed=structuredClone(visualReconstructionBaseline);mutate(changed);const result=validateVisualReconstruction(changed);
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length} attacks)`);

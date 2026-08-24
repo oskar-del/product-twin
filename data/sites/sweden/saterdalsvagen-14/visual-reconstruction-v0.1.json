@@ -1,0 +1,58 @@
+{
+  "schema_version": "svartinge-visual-reconstruction/v0.1",
+  "entity_type": "VisualReconstructionManifest",
+  "subject": "SVÄRTINGE 54:28",
+  "renderings": [
+    {
+      "rendering_id": "VR_SE_SVARTINGE_STREET_ARRIVAL_V01",
+      "title": "Street arrival · existing-condition reconstruction",
+      "asset_path": "prototype/svartinge-neighbourhood/assets/street-arrival-existing-condition-v0.1.png",
+      "asset_sha256": "47c0ce69c29659c219f9c12d1cc1be08235a505ed941dad48e801ad0f8ccec13",
+      "pixel_dimensions": {"width": 1672, "height": 941},
+      "viewpoint": "STREET_ARRIVAL_EXISTING_CONDITION",
+      "evidence_state": "CONCEPT_VISUAL_RECONSTRUCTION",
+      "generation_method": "GENERATIVE_RENDER_FROM_REFERENCE_OBSERVATIONS",
+      "source_refs": [
+        "OBS_SE_HEMNET_EXACT_ADDRESS_GALLERY",
+        "OBS_SE_GOOGLE_STREETVIEW_NEARBY_2022_07",
+        "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"
+      ],
+      "observed_character": [
+        "cleared hillside descending toward Lake Glan",
+        "fresh asphalt and compacted gravel at the upper working edge",
+        "exposed stone, sandy soil and sparse regrowth",
+        "retained Scots pine and silver birch at the plot edges",
+        "white gable house to one side and dark low timber house below",
+        "brush and cut-timber pile",
+        "timber utility pole and overhead lines",
+        "broad forested lowland and lake horizon"
+      ],
+      "limitations": [
+        "This is a generative visual reconstruction, not a source photograph.",
+        "It does not reproduce surveyed camera position, terrain, building geometry or vegetation positions.",
+        "It cannot establish current condition because the source gallery has no verified capture date.",
+        "It cannot establish a legal boundary, access right, utility identity or capacity.",
+        "It cannot establish entitlement, buildable envelope, elevation or finished-floor level.",
+        "Neighbouring façades, vegetation and ground details are visually plausible approximations."
+      ]
+    }
+  ],
+  "policy": {
+    "is_source_photograph": false,
+    "is_survey_evidence": false,
+    "closes_evidence_gate": false,
+    "provider_pixels_in_asset": false,
+    "geometry_extraction_allowed": false,
+    "display_label": "VISUAL RECONSTRUCTION · NOT A SURVEY OR CURRENT PHOTOGRAPH",
+    "blocked_claims": [
+      "LEGAL_BOUNDARY",
+      "REGISTERED_AREA",
+      "ENTITLEMENT",
+      "BUILDABLE_ENVELOPE",
+      "LEGAL_ACCESS",
+      "UTILITY_CAPACITY",
+      "SURVEYED_TERRAIN",
+      "FINISHED_FLOOR_LEVEL"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/svartinge-visual-reconstruction-v0.1.schema.json",
+  "title": "Svärtinge visual reconstruction manifest v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "entity_type", "subject", "renderings", "policy"],
+  "properties": {
+    "schema_version": {"const": "svartinge-visual-reconstruction/v0.1"},
+    "entity_type": {"const": "VisualReconstructionManifest"},
+    "subject": {"const": "SVÄRTINGE 54:28"},
+    "renderings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["rendering_id", "title", "asset_path", "asset_sha256", "pixel_dimensions", "viewpoint", "evidence_state", "generation_method", "source_refs", "observed_character", "limitations"],
+        "properties": {
+          "rendering_id": {"type": "string", "minLength": 1},
+          "title": {"type": "string", "minLength": 1},
+          "asset_path": {"type": "string", "pattern": "^prototype/svartinge-neighbourhood/assets/.+\\.png$"},
+          "asset_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "pixel_dimensions": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["width", "height"],
+            "properties": {"width": {"type": "integer", "minimum": 1}, "height": {"type": "integer", "minimum": 1}}
+          },
+          "viewpoint": {"const": "STREET_ARRIVAL_EXISTING_CONDITION"},
+          "evidence_state": {"const": "CONCEPT_VISUAL_RECONSTRUCTION"},
+          "generation_method": {"const": "GENERATIVE_RENDER_FROM_REFERENCE_OBSERVATIONS"},
+          "source_refs": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}},
+          "observed_character": {"type": "array", "minItems": 6, "items": {"type": "string", "minLength": 1}},
+          "limitations": {"type": "array", "minItems": 5, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["is_source_photograph", "is_survey_evidence", "closes_evidence_gate", "provider_pixels_in_asset", "geometry_extraction_allowed", "display_label", "blocked_claims"],
+      "properties": {
+        "is_source_photograph": {"const": false},
+        "is_survey_evidence": {"const": false},
+        "closes_evidence_gate": {"const": false},
+        "provider_pixels_in_asset": {"const": false},
+        "geometry_extraction_allowed": {"const": false},
+        "display_label": {"const": "VISUAL RECONSTRUCTION · NOT A SURVEY OR CURRENT PHOTOGRAPH"},
+        "blocked_claims": {
+          "type": "array",
+          "items": {"enum": ["LEGAL_BOUNDARY", "REGISTERED_AREA", "ENTITLEMENT", "BUILDABLE_ENVELOPE", "LEGAL_ACCESS", "UTILITY_CAPACITY", "SURVEYED_TERRAIN", "FINISHED_FLOOR_LEVEL"]},
+          "minItems": 8,
+          "maxItems": 8,
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}
