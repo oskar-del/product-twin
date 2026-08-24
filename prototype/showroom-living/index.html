@@ -63,16 +63,16 @@
 <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
 </head>
 <body>
-<div id="loading">Furnishing the villa with real product twins…</div>
+<div id="loading">Furnishing the room with product twins…</div>
 <div id="hud">
   <div class="topline"><img class="hero" id="villa-hero" alt="" hidden /><div><div class="k">Product Twin · client preview</div><h1 id="villa-name">Villa</h1><div class="loc" id="villa-loc"></div><div class="specs" id="villa-specs"></div><div class="lst" id="villa-lst"></div></div></div>
-  <div class="price"><div class="k">Asking price</div><div class="v" id="villa-price">—</div><div class="note" id="villa-note"></div></div>
+  <div class="price"><div class="k" id="property-price-label">Asking price</div><div class="v" id="villa-price">—</div><div class="note" id="villa-note"></div></div>
   <div class="help">Drag to look around · scroll to zoom · tap a product</div>
   <div class="roomtotal" id="roomtotal"><span class="k">Room · furnished total</span><b id="roomtotal-v">—</b><span class="rt-note" id="roomtotal-n"></span></div>
   <aside id="panel"><button class="close" id="close">×</button>
     <div class="small" id="p-src">Product Twin</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
     <div id="p-pills"></div>
-    <div class="offer"><div class="small">Live trade offer</div><strong id="p-price">—</strong><span id="p-offerstate"></span></div>
+    <div class="offer"><div class="small" id="offer-label">Live trade offer</div><strong id="p-price">—</strong><span id="p-offerstate"></span></div>
     <div class="actions"><a id="p-offer" class="offerbtn" target="_blank" rel="noopener" hidden>View live offer / RFQ →</a><button id="p-swap" class="swapbtn" hidden>⇄ Swap</button></div>
     <div class="warn" id="p-warn"></div>
   </aside>
@@ -80,12 +80,12 @@
   <div id="rfq-modal" class="modal" hidden>
     <div class="modal-card">
       <button class="close" id="rfq-close">×</button>
-      <div class="small">Request for quote · furnished living room</div>
+      <div class="small" id="rfq-eyebrow">Request for quote · furnished living room</div>
       <h2 id="rfq-title">—</h2>
       <div class="rfq-prop" id="rfq-prop"></div>
       <div id="rfq-body"></div>
       <div class="rfq-actions"><button id="rfq-copy">⧉ Copy RFQ</button><button id="rfq-print" class="secondary">Print / Save PDF</button></div>
-      <div class="rfq-note">Nothing is sent automatically — this is a bill of materials to review and send yourself. Prices, stock and ES delivery are live gates; native-3D rights are review.</div>
+      <div class="rfq-note" id="rfq-note">Nothing is sent automatically — this is a bill of materials to review and send yourself. Prices, stock and ES delivery are live gates; native-3D rights are review.</div>
     </div>
   </div>
 </div>
@@ -106,6 +106,13 @@ const property = isSvartingeStudy ? {
   note: 'Concept-room preview only. The Altea property context is not used here.'
 } : (scene_data.property || { name: 'Villa (placeholder)', location: 'Spain', price_display: '—', note: '' });
 if (isSvartingeStudy) document.title = 'Glanrummet furniture study · Product Twin';
+if (isSvartingeStudy) {
+  document.getElementById('property-price-label').textContent = 'Status';
+  document.getElementById('offer-label').textContent = 'Dated offer snapshot';
+  document.getElementById('rfq-btn').textContent = 'Review study BOM →';
+  document.getElementById('rfq-eyebrow').textContent = 'Design-study bill of materials · not a quote';
+  document.getElementById('rfq-note').textContent = 'Nothing is sent automatically. Snapshot prices are stale; Sweden supply, tax, freight, delivery and checkout are not evaluated. Native-3D rights remain under review.';
+}
 document.getElementById('villa-name').textContent = property.name;
 document.getElementById('villa-loc').textContent = property.location + (isSvartingeStudy ? ' · composition preview' : ' · furnished with real, purchasable pieces');
 document.getElementById('villa-price').textContent = property.price_display;
@@ -288,7 +295,9 @@ function updateTotal() {
   for (const [, g] of cyclesByRole) { const o = g.cycle[g.index].offer_snapshot; if (typeof o.unit_price === 'number') sums.set(o.currency, (sums.get(o.currency) || 0) + o.unit_price); }
   const parts = [...sums.entries()].map(([cur, v]) => money(v, cur));
   document.getElementById('roomtotal-v').textContent = parts.join('  +  ') || '—';
-  document.getElementById('roomtotal-n').textContent = `${cyclesByRole.size} pieces · live trade + retail list`;
+  document.getElementById('roomtotal-n').textContent = isSvartingeStudy
+    ? `${cyclesByRole.size} pieces · dated list snapshots · not a Sweden quote`
+    : `${cyclesByRole.size} pieces · live trade + retail list`;
 }
 updateTotal();
 
@@ -299,12 +308,13 @@ function showPanel(role) {
   document.getElementById('p-src').textContent = isNative ? 'Product Twin · native manufacturer 3D' : 'Product Twin · dimension-verified proxy';
   document.getElementById('p-title').textContent = `${p.identity.manufacturer} ${p.identity.model}`;
   document.getElementById('p-mk').textContent = `SKU ${p.identity.merchant_sku || '—'}${p.identity.configuration ? ' · ' + p.identity.configuration : ''}`;
-  document.getElementById('p-pills').innerHTML = [p.category_id, p.avatar.level, isNative ? 'native MODEL_3D' : 'G2 proxy', 'ES offer ✓'].map(t => `<span class="pill">${t}</span>`).join('');
+  document.getElementById('p-pills').innerHTML = [p.category_id, p.avatar.level, isNative ? 'native MODEL_3D' : 'G2 proxy', isSvartingeStudy ? 'SE supply unknown' : 'ES offer snapshot'].map(t => `<span class="pill">${t}</span>`).join('');
   document.getElementById('p-price').textContent = fmt(o.unit_price, o.currency);
-  document.getElementById('p-offerstate').textContent = `${o.merchant} · ${o.available ? 'available' : 'unavailable'} · ${o.observed_at}`;
+  document.getElementById('p-offerstate').textContent = `${o.merchant} · ${isSvartingeStudy ? 'snapshot' : (o.available ? 'available' : 'unavailable')} · ${o.observed_at}`;
+  const destinationGate = isSvartingeStudy ? 'Sweden supply, tax, freight, delivery and checkout are not evaluated' : o.es_checkout_state;
   document.getElementById('p-warn').textContent = isNative
-    ? `Exact finish not bound to variant. ${o.es_checkout_state}. Native GLB rights: review.`
-    : `Dimension-verified proxy, not exact IKEA geometry. ${o.es_checkout_state}.`;
+    ? `Exact finish not bound to variant. ${destinationGate}. Native GLB rights: review.`
+    : `Dimension-verified proxy, not exact IKEA geometry. ${destinationGate}.`;
   const swap = document.getElementById('p-swap');
   if (g.cycle.length > 1) { swap.hidden = false; swap.textContent = `⇄ Swap (${g.index + 1}/${g.cycle.length})`; swap.onclick = () => swapRole(role); }
   else swap.hidden = true;
