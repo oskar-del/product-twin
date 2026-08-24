@@ -246,7 +246,7 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
   check(scene.measurements?.municipal_map_area_m2?.evidence_class==="INDICATIVE","municipal area over-promoted");
   check(Math.abs(scene.measurements?.municipal_map_area_m2?.value-1938.1988442902577)<1e-6,"municipal area drift");
   check(scene.measurements?.listing_area_m2?.value===1939&&scene.measurements?.listing_area_m2?.evidence_class==="REPORTED_UNVERIFIED","listing area state drift");
-  check(Math.abs(scene.measurements?.derived_trace_area_m2?.value-1938.199)<=.01&&scene.measurements?.derived_trace_area_m2?.evidence_class==="DERIVED","derived trace area invalid");
+  check(Math.abs(scene.measurements?.municipal_export_computed_area_m2?.value-1938.1989135742188)<=.001&&scene.measurements?.municipal_export_computed_area_m2?.evidence_class==="INDICATIVE","municipal export area invalid");
   check(scene.legal_claim_policy?.visualisation_allowed===true&&scene.legal_claim_policy?.concept_design_allowed===true&&scene.legal_claim_policy?.sun_view_navigation_allowed===true,"concept capability incorrectly blocked");
   for(const claim of BLOCKED)check(scene.legal_claim_policy?.blocked_claims?.includes(claim),`missing blocked legal claim ${claim}`);
   check(JSON.stringify(scene.navigation?.map(x=>x.id))===JSON.stringify(STEPS),"navigation progression incomplete or reordered");
@@ -265,6 +265,8 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
   for(const state of CLASSES)check(elements.some(x=>x.evidence_class===state),`no scene element exercises ${state}`);
   const plot=elements.find(x=>x.id==="PLOT_54_28");check(plot?.evidence_class==="INDICATIVE"&&plot?.geometry?.primitive==="EXTRUDED_POLYGON","plot representation invalid");
   check(Math.abs(polygonArea(plot?.geometry?.points_xz??[])-1938.1988442902577)<.05,"plot trace does not reproduce municipal map area");
+  check(plot?.geometry?.points_xz?.length===6&&plot?.source_refs?.some(ref=>ref.endsWith("municipal-property-boundary-epsg3010-v0.1.json")),"plot is not bound to the six-segment municipal property export");
+  check(plot?.limitations?.some(limit=>/no legal effect/i.test(limit))&&plot?.limitations?.some(limit=>/may be misleading/i.test(limit)),"plot legal limitation missing");
   check(plot?.limitations?.some(x=>x.includes("no legal effect")),"plot legal limitation missing");
   const terrain=elements.find(x=>x.id==="TERRAIN_CONTEXT");check(terrain?.evidence_class==="DERIVED"&&terrain?.geometry?.height_reference==="LOCAL_RELATIVE_UNCALIBRATED","terrain promoted or unlabelled");
   check(elements.filter(x=>x.type==="CONTEXT_BUILDING").length>=10&&elements.filter(x=>x.type==="CONTEXT_BUILDING").every(x=>x.evidence_class==="DERIVED"),"derived context massing incomplete or promoted");

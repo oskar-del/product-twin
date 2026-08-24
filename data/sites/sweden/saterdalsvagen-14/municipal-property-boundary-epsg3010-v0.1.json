@@ -1,0 +1,82 @@
+{
+  "schema_version": "svartinge-municipal-property-boundary/v0.1",
+  "entity_type": "MunicipalPropertyBoundaryObservation",
+  "subject": "SVÄRTINGE 54:28",
+  "authority": "Norrköpings kommun, Kommunala lantmäteriet",
+  "source_service": {
+    "title": "Fastighetsuttag – fastighetsgränser i DWG",
+    "service_url": "https://geoteknik.norrkoping.se/fastighetsuttag/index.php",
+    "order_identifier": "682",
+    "requested_at": "2026-08-24T16:50:00+02:00",
+    "property_query": "SVÄRTINGE 54:28",
+    "property_query_resolved_exactly": true,
+    "download_media_type": "application/zip",
+    "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/raw/norrkoping-fastighetsuttag-svartinge-54-28-2026-08-24.zip",
+    "byte_count": 109751,
+    "sha256": "193971d36198a6792efd86d8a3de86e13a97e487876e76da919a31d9d7a0ea2e",
+    "raw_bytes_committed": false
+  },
+  "source_artifact": {
+    "format": "AutoCAD DWG 2010/2011/2012",
+    "runtime_locator": ".runtime/sites/sweden/saterdalsvagen-14/derived/municipal-parcel/svartinge-54-28.dwg",
+    "sha256": "b5075d86c599316aa020483e24cdc6fc38afbd08de2914f5e7d1348c03ee92bd",
+    "coordinate_reference_system": "EPSG:3010",
+    "horizontal_reference": "SWEREF 99 16 30",
+    "vertical_reference_reported": "RH 2000",
+    "conversion_tool": "GNU LibreDWG 0.13.3",
+    "source_layer": "klm_fastgranser",
+    "source_entity_handles": [
+      "E18C",
+      "E18A",
+      "E189",
+      "E18B",
+      "E190",
+      "E18D"
+    ]
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinate_order": "easting,northing",
+    "coordinates_epsg3010_m": [
+      [122784.26042865789, 6504013.568434175],
+      [122811.0097337619, 6504008.944810165],
+      [122834.34225805792, 6504004.911777566],
+      [122835.789, 6504008.570000078],
+      [122849.104, 6504042.440000076],
+      [122796.076, 6504047.650000077],
+      [122784.26042865789, 6504013.568434175]
+    ],
+    "area_m2": 1938.1989135742188,
+    "perimeter_m": 180.50653587419373,
+    "centroid_epsg3010_m": [122816.41925669182, 6504027.0972299315],
+    "bbox_epsg3010_m": [122784.26042865789, 6504004.911777566, 122849.104, 6504047.650000077],
+    "ring_closed": true,
+    "source_segments_joined_without_vertex_editing": true
+  },
+  "renderer_transform": {
+    "origin_epsg3010_m": [122807, 6504014],
+    "axes": "+X east, +Y up, +Z north",
+    "units": "metres",
+    "points_xz_local_m": [
+      [-22.73957134211, -0.431565825],
+      [4.0097337619, -5.055189835],
+      [27.34225805792, -9.088222434],
+      [28.789, -5.429999922],
+      [42.104, 28.440000076],
+      [-10.924, 33.650000077]
+    ]
+  },
+  "evidence_state": "OFFICIAL_MUNICIPAL_MAP_OBSERVATION",
+  "legal_effect": "NONE",
+  "limitations": [
+    "The municipality states that displayed property boundaries have no legal effect and their geographic position may be misleading.",
+    "The source states that rights and joint-property information may be incomplete.",
+    "This geometry may be used for municipal-map orientation and renderer alignment only, not cadastral certification, setback measurement or construction set-out.",
+    "Compare against cadastral decisions and obtain boundary determination or survey control where legal certainty is required."
+  ],
+  "gate_effect": {
+    "gate_id": "GATE_SE_PROPERTY_DIVISION_CONTEXT",
+    "status_after_observation": "PARTIALLY_OBSERVED_NOT_SATISFIED",
+    "legal_boundary_gate_closed": false
+  }
+}

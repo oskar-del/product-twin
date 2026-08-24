@@ -9,6 +9,7 @@ const base="data/sites/sweden/saterdalsvagen-14";
 const sourcePath=`${base}/plot-intelligence-v0.1.json`;
 const projectPath=`${base}/project-v0.1.json`;
 const alphaPath=`${base}/neighbourhood-twin-alpha-v0.1.json`;
+const municipalBoundaryPath=`${base}/municipal-property-boundary-epsg3010-v0.1.json`;
 const outputPath=`${base}/neighbourhood-scene-v0.2.json`;
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),"utf8"));
 const sha=p=>crypto.createHash("sha256").update(fs.readFileSync(path.join(root,p))).digest("hex");
@@ -50,17 +51,20 @@ function building(id,x,z,w,d,h,rotation=0){
 }
 
 function buildScene(){
-  const source=read(sourcePath),project=read(projectPath),alpha=read(alphaPath);
+  const source=read(sourcePath),project=read(projectPath),alpha=read(alphaPath),municipalBoundary=read(municipalBoundaryPath);
   const finding=source.findings.find(f=>f.finding_id==="FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED");
   if(!finding)throw new Error("NOKA property finding missing");
   const municipalArea=finding.value.municipal_map_area_m2;
   const [lon,lat]=source.identity.coordinate_wgs84;
-  const plot=scalePolygonToArea([[-29,-20],[27,-17],[31,17],[-24,23]],municipalArea);
-  const derivedArea=round(polygonArea(plot),3);
+  const plot=municipalBoundary.renderer_transform.points_xz_local_m;
+  const observedArea=municipalBoundary.geometry.area_m2;
+  if(municipalBoundary.subject!=="SVÄRTINGE 54:28"||municipalBoundary.source_service.property_query_resolved_exactly!==true)throw new Error("Exact municipal property boundary observation missing");
+  if(Math.abs(polygonArea(plot)-observedArea)>0.001)throw new Error("Municipal boundary transform changed the observed area");
+  if(Math.abs(observedArea-municipalArea)>0.01)throw new Error("Municipal boundary and locator areas disagree");
   const elements=[];
 
   elements.push(element("TERRAIN_CONTEXT","TERRAIN","Derived local terrain context","DERIVED",{primitive:"GRID_SURFACE",...terrainGrid()},["FINDING_SE_HEIGHT_ITEM_AVAILABLE_NOT_FETCHED","RCPT_SE_LISTING_MAP_IMAGE"],["Indicative visual surface only.","No official raster bytes, RH2000 levels, contours, slopes, drainage or finished-floor values."]));
-  elements.push(element("PLOT_54_28","PLOT","SVÄRTINGE 54:28 indicative municipal-map trace","INDICATIVE",{primitive:"EXTRUDED_POLYGON",points_xz:plot,base_y:0.15,height:0.18,area_m2:derivedArea},["FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED","RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY","RCPT_SE_LISTING_MAP_IMAGE"],["Shape is a derived visual trace scaled to the NOKA municipal-map surface area.","NOKA states that displayed boundaries have no legal effect.","Not suitable for cadastral, setback, area certification or set-out use."]));
+  elements.push(element("PLOT_54_28","PLOT","SVÄRTINGE 54:28 municipal-map boundary observation","INDICATIVE",{primitive:"EXTRUDED_POLYGON",points_xz:plot,base_y:0.15,height:0.18,area_m2:observedArea},[municipalBoundaryPath,"FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED","RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"],["Shape is joined without vertex editing from the property-specific Norrköping municipal DWG export.","Norrköpings kommun states that displayed property boundaries have no legal effect and their geographic position may be misleading.","Not suitable for cadastral, setback, area certification or set-out use."]));
   elements.push(element("ADDRESS_LOCATOR","ANCHOR","Säterdalsvägen 14 municipal locator","AUTHORITATIVE",{primitive:"MARKER",position:[0,2.5,0]},["FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"],["Authoritative only as a dated municipal address-to-property observation.","Not a survey control point or property-register title record."]));
 
   elements.push(element("ROAD_SATERDALSVAGEN","ROAD","Säterdalsvägen derived alignment","DERIVED",{primitive:"POLYLINE_RIBBON",points:[[-150,0,-54],[-70,0,-43],[-35,0,-30],[-28,0,-18],[-27,0,80]],width_m:6},["RCPT_SE_LISTING_MAP_IMAGE","RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"],["Diagrammatic alignment traced from available map imagery.","No current centreline, width, gradient, road-manager or legal-access claim."]));
@@ -112,15 +116,16 @@ function buildScene(){
     scene_id:"SCENE_SE_NORRKOPING_SVARTINGE_54_28_CONCEPT_V02",
     generated_at:"2026-08-18T00:00:00Z",
     subject:{working_property_identity:"SVÄRTINGE 54:28",address:source.identity.address,municipality:"Norrköping",identity_evidence_class:"AUTHORITATIVE",identity_scope:"MUNICIPAL_ADDRESS_TO_PROPERTY_OBSERVATION_NOT_PROPERTY_REGISTER"},
-    coordinate_system:{frame:"LOCAL_ENU",axes:{x:"EAST",y:"UP",z:"NORTH"},origin_wgs84:[lon,lat],horizontal_reference:"EPSG:4326 origin",vertical_reference:"LOCAL_RELATIVE_UNCALIBRATED",linear_units:"metre",evidence_class:"AUTHORITATIVE",limitations:["Origin is a municipal locator, not survey control.","All Y values are relative prototype heights.","Live context uses stage-level camera synchronization; it is not a pixel-aligned survey overlay."]},
+    coordinate_system:{frame:"LOCAL_ENU",axes:{x:"EAST",y:"UP",z:"NORTH"},origin_wgs84:[lon,lat],horizontal_reference:"EPSG:4326 origin",projected_origin_epsg3010_m:municipalBoundary.renderer_transform.origin_epsg3010_m,vertical_reference:"LOCAL_RELATIVE_UNCALIBRATED",linear_units:"metre",evidence_class:"AUTHORITATIVE",limitations:["Origin is a municipal locator, not survey control.","All Y values are relative prototype heights.","Live context uses stage-level camera synchronization; it is not a pixel-aligned survey overlay."]},
     source_bindings:[
       {path:sourcePath,sha256:sha(sourcePath),role:"OFFICIAL_AND_CONTEXT_EVIDENCE"},
       {path:projectPath,sha256:sha(projectPath),role:"LISTING_REPORTED_CONTEXT"},
       {path:alphaPath,sha256:sha(alphaPath),role:"PRIOR_EVIDENCE_GATE_CHECKPOINT"},
+      {path:municipalBoundaryPath,sha256:sha(municipalBoundaryPath),role:"OFFICIAL_MUNICIPAL_MAP_BOUNDARY_OBSERVATION_NO_LEGAL_EFFECT"},
       {path:".runtime/sites/sweden/saterdalsvagen-14/raw/boneo-fastighetskarta.webp",sha256:"RUNTIME_ONLY_NOT_COMMITTED",role:"LISTING_MAP_TRACE_REFERENCE"}
     ],
     evidence_classes:["AUTHORITATIVE","INDICATIVE","DERIVED","REPORTED_UNVERIFIED","CONCEPT"],
-    measurements:{municipal_map_area_m2:{value:municipalArea,evidence_class:"INDICATIVE",source_ref:"FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"},listing_area_m2:{value:1939,evidence_class:"REPORTED_UNVERIFIED",source_ref:"PROJECT_SE_SATERDALSVAGEN14"},derived_trace_area_m2:{value:derivedArea,evidence_class:"DERIVED",method:"Visual quadrilateral trace scaled uniformly to municipal-map area"}},
+    measurements:{municipal_map_area_m2:{value:municipalArea,evidence_class:"INDICATIVE",source_ref:"FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"},listing_area_m2:{value:1939,evidence_class:"REPORTED_UNVERIFIED",source_ref:"PROJECT_SE_SATERDALSVAGEN14"},municipal_export_computed_area_m2:{value:observedArea,evidence_class:"INDICATIVE",method:"Joined without vertex editing from six klm_fastgranser segments in the property-specific municipal DWG export"}},
     legal_claim_policy:{visualisation_allowed:true,concept_design_allowed:true,sun_view_navigation_allowed:true,blocked_claims:["LEGAL_BOUNDARY","REGISTERED_AREA","ENTITLEMENT","BUILDABLE_ENVELOPE","LEGAL_ACCESS","UTILITY_CAPACITY","SURVEYED_TERRAIN","FINISHED_FLOOR_LEVEL"],rule:"Open gates block authoritative legal/design-basis claims, not explicitly labelled concept visualization."},
     navigation,
     elements,
@@ -138,5 +143,5 @@ export function build(){
 
 if(process.argv[1]===fileURLToPath(import.meta.url)){
   const scene=build();
-  console.log(JSON.stringify({output:outputPath,elements:scene.elements.length,navigation_steps:scene.navigation.length,evidence_classes:scene.evidence_classes,plot_area_m2:scene.measurements.derived_trace_area_m2.value},null,2));
+  console.log(JSON.stringify({output:outputPath,elements:scene.elements.length,navigation_steps:scene.navigation.length,evidence_classes:scene.evidence_classes,plot_area_m2:scene.measurements.municipal_export_computed_area_m2.value},null,2));
 }

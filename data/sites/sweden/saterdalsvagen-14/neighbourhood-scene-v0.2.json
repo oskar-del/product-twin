@@ -22,6 +22,10 @@
       58.6522414431
     ],
     "horizontal_reference": "EPSG:4326 origin",
+    "projected_origin_epsg3010_m": [
+      122807,
+      6504014
+    ],
     "vertical_reference": "LOCAL_RELATIVE_UNCALIBRATED",
     "linear_units": "metre",
     "evidence_class": "AUTHORITATIVE",
@@ -48,6 +52,11 @@
       "role": "PRIOR_EVIDENCE_GATE_CHECKPOINT"
     },
     {
+      "path": "data/sites/sweden/saterdalsvagen-14/municipal-property-boundary-epsg3010-v0.1.json",
+      "sha256": "e56f8c5d700e2039d4f052f753a162013ceff9258af6d228df755506ab160c00",
+      "role": "OFFICIAL_MUNICIPAL_MAP_BOUNDARY_OBSERVATION_NO_LEGAL_EFFECT"
+    },
+    {
       "path": ".runtime/sites/sweden/saterdalsvagen-14/raw/boneo-fastighetskarta.webp",
       "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
       "role": "LISTING_MAP_TRACE_REFERENCE"
@@ -71,10 +80,10 @@
       "evidence_class": "REPORTED_UNVERIFIED",
       "source_ref": "PROJECT_SE_SATERDALSVAGEN14"
     },
-    "derived_trace_area_m2": {
-      "value": 1938.199,
-      "evidence_class": "DERIVED",
-      "method": "Visual quadrilateral trace scaled uniformly to municipal-map area"
+    "municipal_export_computed_area_m2": {
+      "value": 1938.1989135742188,
+      "evidence_class": "INDICATIVE",
+      "method": "Joined without vertex editing from six klm_fastgranser segments in the property-specific municipal DWG export"
     }
   },
   "legal_claim_policy": {
@@ -3477,40 +3486,48 @@
     {
       "id": "PLOT_54_28",
       "type": "PLOT",
-      "label": "SVÄRTINGE 54:28 indicative municipal-map trace",
+      "label": "SVÄRTINGE 54:28 municipal-map boundary observation",
       "evidence_class": "INDICATIVE",
       "geometry": {
         "primitive": "EXTRUDED_POLYGON",
         "points_xz": [
           [
-            -27.5763,
-            -19.0181
+            -22.73957134211,
+            -0.431565825
           ],
           [
-            25.6745,
-            -16.1654
+            4.0097337619,
+            -5.055189835
           ],
           [
-            29.4781,
-            16.1654
+            27.34225805792,
+            -9.088222434
           ],
           [
-            -22.8217,
-            21.8708
+            28.789,
+            -5.429999922
+          ],
+          [
+            42.104,
+            28.440000076
+          ],
+          [
+            -10.924,
+            33.650000077
           ]
         ],
         "base_y": 0.15,
         "height": 0.18,
-        "area_m2": 1938.199
+        "area_m2": 1938.1989135742188
       },
       "source_refs": [
+        "data/sites/sweden/saterdalsvagen-14/municipal-property-boundary-epsg3010-v0.1.json",
         "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED",
-        "RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY",
-        "RCPT_SE_LISTING_MAP_IMAGE"
+        "RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"
       ],
       "limitations": [
-        "Shape is a derived visual trace scaled to the NOKA municipal-map surface area.",
-        "NOKA states that displayed boundaries have no legal effect.",
+        "Shape is joined without vertex editing from the property-specific Norrköping municipal DWG export.",
+        "Norrköpings kommun states that displayed property boundaries have no legal effect and their geographic position may be misleading.",
         "Not suitable for cadastral, setback, area certification or set-out use."
       ]
     },
