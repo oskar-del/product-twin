@@ -10,6 +10,7 @@ const sourcePath=`${base}/plot-intelligence-v0.1.json`;
 const projectPath=`${base}/project-v0.1.json`;
 const alphaPath=`${base}/neighbourhood-twin-alpha-v0.1.json`;
 const municipalBoundaryPath=`${base}/municipal-property-boundary-epsg3010-v0.1.json`;
+const osmContextPath=`${base}/osm-context-v0.1.json`;
 const outputPath=`${base}/neighbourhood-scene-v0.2.json`;
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),"utf8"));
 const sha=p=>crypto.createHash("sha256").update(fs.readFileSync(path.join(root,p))).digest("hex");
@@ -35,7 +36,7 @@ function terrainHeight(x,z){
 }
 
 function terrainGrid(){
-  const size=360,segments=72,vertices=[];
+  const size=1800,segments=120,vertices=[];
   for(let iz=0;iz<=segments;iz++){
     for(let ix=0;ix<=segments;ix++){
       const x=-size/2+size*ix/segments;
@@ -56,7 +57,7 @@ function building(id,x,z,w,d,h,rotation=0){
 }
 
 function buildScene(){
-  const source=read(sourcePath),project=read(projectPath),alpha=read(alphaPath),municipalBoundary=read(municipalBoundaryPath);
+  const source=read(sourcePath),project=read(projectPath),alpha=read(alphaPath),municipalBoundary=read(municipalBoundaryPath),osmContext=read(osmContextPath);
   const finding=source.findings.find(f=>f.finding_id==="FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED");
   if(!finding)throw new Error("NOKA property finding missing");
   const municipalArea=finding.value.municipal_map_area_m2;
@@ -72,18 +73,21 @@ function buildScene(){
   elements.push(element("PLOT_54_28","PLOT","SVÄRTINGE 54:28 municipal-map boundary observation","INDICATIVE",{primitive:"EXTRUDED_POLYGON",points_xz:plot,base_y:0.15,height:0.18,area_m2:observedArea},[municipalBoundaryPath,"FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED","RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"],["Shape is joined without vertex editing from the property-specific Norrköping municipal DWG export.","Norrköpings kommun states that displayed property boundaries have no legal effect and their geographic position may be misleading.","Not suitable for cadastral, setback, area certification or set-out use."]));
   elements.push(element("ADDRESS_LOCATOR","ANCHOR","Säterdalsvägen 14 municipal locator","AUTHORITATIVE",{primitive:"MARKER",position:[0,2.5,0]},["FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"],["Authoritative only as a dated municipal address-to-property observation.","Not a survey control point or property-register title record."]));
 
-  const groundPoint=(x,z)=>[x,round(terrainHeight(x,z)),z];
-  elements.push(element("ROAD_SATERDALSVAGEN","ROAD","Säterdalsvägen derived alignment","DERIVED",{primitive:"POLYLINE_RIBBON",points:[[-150,-54],[-70,-43],[-35,-30],[-28,-18],[-27,80]].map(([x,z])=>groundPoint(x,z)),width_m:6},["RCPT_SE_LISTING_MAP_IMAGE","RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"],["Diagrammatic alignment traced from available map imagery.","No current centreline, width, gradient, road-manager or legal-access claim."]));
-  elements.push(element("ROAD_GAMLA_LANDSVAGEN","ROAD","Gamla Landsvägen derived alignment","DERIVED",{primitive:"POLYLINE_RIBBON",points:[[20,-31],[85,-44],[155,-52]].map(([x,z])=>groundPoint(x,z)),width_m:7},["RCPT_SE_LISTING_MAP_IMAGE"],["Diagrammatic alignment traced from listing map imagery.","Width and vertical geometry are estimated for navigation only."]));
-
-  [
-    ["CTX_BLDG_01",-88,-20,18,11,5.8,-12],["CTX_BLDG_02",-115,-72,14,10,5.2,8],
-    ["CTX_BLDG_03",-57,-76,17,12,6.1,-4],["CTX_BLDG_04",10,-58,12,9,5.4,15],
-    ["CTX_BLDG_05",58,-30,26,11,6.2,-17],["CTX_BLDG_06",92,-70,17,11,5.8,-11],
-    ["CTX_BLDG_07",91,32,22,12,6.0,7],["CTX_BLDG_08",-90,57,17,11,5.6,12],
-    ["CTX_BLDG_09",-45,91,18,12,6.1,-5],["CTX_BLDG_10",42,88,16,10,5.5,9],
-    ["CTX_BLDG_11",126,68,19,12,6.4,-8],["CTX_BLDG_12",133,-10,15,10,5.2,11]
-  ].forEach(args=>elements.push(building(...args)));
+  for(const surface of osmContext.compiled.landcover){
+    elements.push(element(surface.feature_id,"LANDCOVER",`${surface.landuse} land cover · OpenStreetMap`,"DERIVED",{primitive:"DRAPED_POLYGON",points_xz:surface.points_xz,surface_class:surface.landuse,source_way_id:surface.osm_way_id},[osmContextPath,`OSM_WAY_${surface.osm_way_id}`],["OpenStreetMap community context, not an official land-use or planning designation.","Draped onto an uncalibrated display surface."]));
+  }
+  for(const surface of osmContext.compiled.water){
+    elements.push(element(surface.feature_id,"WATER",`${surface.name??"Water"} · OpenStreetMap`,"DERIVED",{primitive:"DRAPED_POLYGON",points_xz:surface.points_xz,surface_class:"water",source_way_id:surface.osm_way_id},[osmContextPath,`OSM_WAY_${surface.osm_way_id}`],["Community-mapped water geometry for context only.","No flood, shoreline, drainage or level claim."]));
+  }
+  for(const stream of osmContext.compiled.waterways){
+    elements.push(element(stream.feature_id,"WATERWAY",`${stream.name??stream.waterway} · OpenStreetMap`,"DERIVED",{primitive:"POLYLINE_RIBBON",points:stream.points_xz.map(([x,z])=>[x,round(terrainHeight(x,z)+.05),z]),width_m:1.15,source_name:stream.name,source_way_id:stream.osm_way_id},[osmContextPath,`OSM_WAY_${stream.osm_way_id}`],["Community-mapped waterway centreline for visual context only.","Width, level, flow and drainage effect are not verified."]));
+  }
+  for(const road of osmContext.compiled.roads){
+    elements.push(element(road.feature_id,"ROAD",`${road.name??road.highway_class} · OpenStreetMap`,"DERIVED",{primitive:"POLYLINE_RIBBON",points:road.points_xz.map(([x,z])=>[x,round(terrainHeight(x,z)+.04),z]),width_m:road.display_width_m,source_name:road.name,source_way_id:road.osm_way_id,highway_class:road.highway_class,width_method:road.width_method},[osmContextPath,`OSM_WAY_${road.osm_way_id}`],["Centreline geometry is source-bound to OpenStreetMap community data.","Displayed width is contextual and does not establish road, frontage or legal-access geometry."]));
+  }
+  for(const sourceBuilding of osmContext.compiled.buildings){
+    elements.push(element(sourceBuilding.feature_id,"CONTEXT_BUILDING",`Building footprint ${sourceBuilding.osm_way_id} · OpenStreetMap`,"DERIVED",{primitive:"EXTRUDED_FOOTPRINT",points_xz:sourceBuilding.points_xz,height_m:sourceBuilding.display_height_m,height_method:sourceBuilding.height_method,source_way_id:sourceBuilding.osm_way_id,building_tag:sourceBuilding.building_tag},[osmContextPath,`OSM_WAY_${sourceBuilding.osm_way_id}`],["Footprint is source-bound to OpenStreetMap community data, not official Lantmäteriet geometry.","Height and roof expression are deterministic presentation-only substitutes because no source height or level tag is present.","No ownership, lawful use, exact address or current-condition claim."]));
+  }
 
   elements.push(element("VIEW_GLAN","VIEW_DIRECTION","Reported Glan view direction","REPORTED_UNVERIFIED",{primitive:"DIRECTION_CONE",origin:[5,3,-3],azimuth_deg:185,length_m:95,spread_deg:22},["PROJECT_SE_SATERDALSVAGEN14","RCPT_SE_LISTING"],["Direction is a concept visualization of the seller-reported Glan view.","No verified sightline, obstruction, seasonal foliage or view-right claim."]));
   elements.push(element("SOLAR_PATH","ENVIRONMENTAL_ANCHOR","Derived solar path","DERIVED",{primitive:"SOLAR_ARC",latitude_deg:lat,longitude_deg:lon,study_date:"2026-06-21",hours:[6,8,10,12,14,16,18,20]},["COORDINATE_ANCHOR"],["Solar vectors are analytical directions from the working coordinate.","Context massing and terrain are not verified, so shadows are concept-study output only."]));
@@ -110,10 +114,10 @@ function buildScene(){
 
   const liveZoom={NEIGHBOURHOOD_VIEW:15.6,STREET_VIEW:19.2,PLOT_ORBIT:17.8,CONCEPT_HOUSE_ON_PLOT:18.7,BUILDING_ORBIT:19.4,ENTER_BUILDING:20,ROOM:20.5};
   const navigation=[
-    {id:"NEIGHBOURHOOD_VIEW",label:"Neighbourhood view",camera:[125,105,150],target:[9,0,13],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
-    {id:"STREET_VIEW",label:"Street approach",camera:[-54,4.2,-28],target:[8,2,14],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
+    {id:"NEIGHBOURHOOD_VIEW",label:"Neighbourhood orbit",camera:[690,430,735],target:[0,0,0],visible_groups:["TERRAIN","LANDCOVER","WATER","WATERWAY","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
+    {id:"STREET_VIEW",label:"Street approach",camera:[-79,5.4,-91],target:[4,2,8],visible_groups:["TERRAIN","LANDCOVER","WATER","WATERWAY","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
     {id:"PLOT_ORBIT",label:"Plot plan",camera:[9,75,25],target:[9,0,13],visible_groups:["TERRAIN","PLOT","ROAD"],cutaway:false},
-    {id:"CONCEPT_HOUSE_ON_PLOT",label:"Concept house on plot",camera:[-44,28,-38],target:[8,2.4,13],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION","CONCEPT_BUILDING","OPENING"],cutaway:false},
+    {id:"CONCEPT_HOUSE_ON_PLOT",label:"Architecture studio",camera:[-44,28,-38],target:[8,2.4,13],visible_groups:["TERRAIN","LANDCOVER","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION","CONCEPT_BUILDING","OPENING"],cutaway:false},
     {id:"BUILDING_ORBIT",label:"Building orbit",camera:[26.4,11,29.1],target:[9.4,2,13.1],visible_groups:["PLOT","CONCEPT_BUILDING","OPENING","VIEW_DIRECTION"],cutaway:false},
     {id:"ENTER_BUILDING",label:"Enter building",camera:[4.9,2.1,12.8],target:[11.4,1.6,11.6],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE"],cutaway:true},
     {id:"ROOM",label:"Room",camera:[13.5,1.75,13.2],target:[11.1,1.45,11],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE","VIEW_DIRECTION"],cutaway:true}
@@ -131,6 +135,7 @@ function buildScene(){
       {path:projectPath,sha256:sha(projectPath),role:"LISTING_REPORTED_CONTEXT"},
       {path:alphaPath,sha256:sha(alphaPath),role:"PRIOR_EVIDENCE_GATE_CHECKPOINT"},
       {path:municipalBoundaryPath,sha256:sha(municipalBoundaryPath),role:"OFFICIAL_MUNICIPAL_MAP_BOUNDARY_OBSERVATION_NO_LEGAL_EFFECT"},
+      {path:osmContextPath,sha256:sha(osmContextPath),role:"OPENSTREETMAP_CONTEXT_GEOMETRY_NON_OFFICIAL_ODBL"},
       {path:".runtime/sites/sweden/saterdalsvagen-14/raw/boneo-fastighetskarta.webp",sha256:"RUNTIME_ONLY_NOT_COMMITTED",role:"LISTING_MAP_TRACE_REFERENCE"}
     ],
     evidence_classes:["AUTHORITATIVE","INDICATIVE","DERIVED","REPORTED_UNVERIFIED","CONCEPT"],
