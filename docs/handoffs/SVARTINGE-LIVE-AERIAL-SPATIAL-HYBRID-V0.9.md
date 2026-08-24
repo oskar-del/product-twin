@@ -12,9 +12,10 @@ V0.9 corrects that architecture:
 
 - Realistic mode renders the live Three.js scene at every stage.
 - The Norrköping municipal 2017 aerial layer is requested live and UV-registered onto the local terrain mesh.
-- Roads, indicative context buildings, forest depth, plot clearing and lake context remain navigable geometry above the aerial ground.
+- Realistic mode shows the live aerial terrain without approximate roads, trees, plot polygons or house boxes layered over it. Those overlays remain available only in Intelligence mode because their registration is not verified.
 - The four generated existing-condition views remain in the separate `Realistic view` reference gallery.
 - No design, building or room is unlocked while `selected_house_profile` is null.
+- The unselected design stage cannot display concept buildings, openings, rooms or furniture.
 
 ## Runtime pixel policy
 
@@ -42,4 +43,4 @@ The live drape improves visual grounding only. It does not verify or close:
 
 ## Acceptance
 
-The validator requires the main Realistic profile to remain navigable, rejects any return to full-screen geometry-replacing backplates, verifies the fixed municipal route and no-store headers, and rejects server-side pixel persistence code.
+The validator requires the main Realistic profile to remain navigable, rejects any return to full-screen geometry-replacing backplates, rejects approximate 3D overlays in the aerial profile, verifies the fixed municipal route and no-store headers, rejects server-side pixel persistence code, and blocks concept geometry from the unselected design stage.
