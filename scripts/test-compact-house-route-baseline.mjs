@@ -8,7 +8,7 @@ const ROOT = process.cwd();
 const entries = await Promise.all(Object.entries(HOUSE_FILES).filter(([key]) => !['schema', 'output'].includes(key)).map(async ([key, file]) => [key, JSON.parse(await fs.readFile(path.join(ROOT, file), 'utf8'))]));
 const sources = Object.fromEntries(entries);
 const schema = JSON.parse(await fs.readFile(path.join(ROOT, HOUSE_FILES.schema), 'utf8'));
-const snapshotTime = new Date('2026-08-17T20:15:00+02:00');
+const snapshotTime = new Date('2026-08-24T12:00:00+02:00');
 const baseline = buildCompactHouseRouteBaseline(sources, snapshotTime);
 const validate = (candidate, sourceOverride = sources) => validateCompactHouseRouteBaseline(candidate, schema, sourceOverride);
 
@@ -38,9 +38,9 @@ assert(baseline.line_items.every((line) => line.quantity.state === 'UNRESOLVED' 
 assert(baseline.line_items.every((line) => line.supply_class === 'UNVERIFIED'));
 assert(baseline.line_items.every((line) => line.discovery_evidence.evidence_state === 'HISTORICAL_UNDATED_AGGREGATE'));
 const poolPumpRegulatory = baseline.line_items.find((line) => line.slot_id === 'WB10_05').discovery_evidence;
-assert.equal(poolPumpRegulatory.source_regulatory_state, 'NOT_APPLICABLE');
+assert.equal(poolPumpRegulatory.source_regulatory_state, 'REVIEW');
 assert.equal(poolPumpRegulatory.regulatory_state, 'REVIEW');
-assert.equal(poolPumpRegulatory.regulatory_derivation_state, 'AUTHORITY_OVERRIDES_HISTORICAL_SOURCE');
+assert.equal(poolPumpRegulatory.regulatory_derivation_state, 'SOURCE_ALIGNED_WITH_AUTHORITY');
 assert(baseline.line_items.every((line) => line.readiness.purchase_ready === false && line.readiness.gates.length === 9));
 assert.deepEqual(baseline.route_summary, {total_lines: 10, configured_rfq: 1, merchant_cart: 8, direct_trade: 1, needs_requirement: 4, needs_technical_review: 6, executable_now: 0});
 assert.equal(baseline.cost_summary.state, 'NO_COMPARABLE_COST_BASIS');
