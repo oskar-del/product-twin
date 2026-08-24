@@ -1,0 +1,81 @@
+{
+  "manifest_version": "sweden-neighbourhood-cell-availability/v1",
+  "entity_type": "SwedenNeighbourhoodCellAvailability",
+  "availability_id": "SE_CELL_AVAIL_SVARTINGE_54_28_V1",
+  "compiler_contract_ref": "data/neighbourhood-cell/v1/sweden-contract-only-fixture-v1.json",
+  "subject": {
+    "working_property_identity": "SVÄRTINGE 54:28",
+    "locator_epsg3006_easting_northing": [559868.9999, 6501790.311],
+    "locator_evidence_ref": "data/sites/sweden/saterdalsvagen-14/terrain-source-metadata-v0.1.json",
+    "identity_state": "AUTHORITATIVE_LOCATOR_NOT_SURVEY_CONTROL"
+  },
+  "selection": {
+    "profile": "SUBURBAN",
+    "context_radius_m": 800,
+    "stitching_halo_m": 100,
+    "selection_radius_m": 900,
+    "selection_bbox_epsg3006": [558968.9999, 6500890.311, 560768.9999, 6502690.311],
+    "method": "LOCATOR_PLUS_SUBURBAN_RADIUS_AND_CELL_STITCHING_HALO"
+  },
+  "cells": [
+    {"cell_id": "SE_EPSG3006_1KM_558_6500", "easting_km": 558, "northing_km": 6500, "bbox_epsg3006": [558000, 6500000, 559000, 6501000], "role": "CONTEXT", "availability_state": "INDEXED_NOT_COMPILED"},
+    {"cell_id": "SE_EPSG3006_1KM_559_6500", "easting_km": 559, "northing_km": 6500, "bbox_epsg3006": [559000, 6500000, 560000, 6501000], "role": "CONTEXT", "availability_state": "INDEXED_NOT_COMPILED"},
+    {"cell_id": "SE_EPSG3006_1KM_560_6500", "easting_km": 560, "northing_km": 6500, "bbox_epsg3006": [560000, 6500000, 561000, 6501000], "role": "CONTEXT", "availability_state": "INDEXED_NOT_COMPILED"},
+    {"cell_id": "SE_EPSG3006_1KM_558_6501", "easting_km": 558, "northing_km": 6501, "bbox_epsg3006": [558000, 6501000, 559000, 6502000], "role": "CONTEXT", "availability_state": "INDEXED_NOT_COMPILED"},
+    {"cell_id": "SE_EPSG3006_1KM_559_6501", "easting_km": 559, "northing_km": 6501, "bbox_epsg3006": [559000, 6501000, 560000, 6502000], "role": "SUBJECT", "availability_state": "INDEXED_NOT_COMPILED"},
+    {"cell_id": "SE_EPSG3006_1KM_560_6501", "easting_km": 560, "northing_km": 6501, "bbox_epsg3006": [560000, 6501000, 561000, 6502000], "role": "CONTEXT", "availability_state": "INDEXED_NOT_COMPILED"},
+    {"cell_id": "SE_EPSG3006_1KM_558_6502", "easting_km": 558, "northing_km": 6502, "bbox_epsg3006": [558000, 6502000, 559000, 6503000], "role": "CONTEXT", "availability_state": "INDEXED_NOT_COMPILED"},
+    {"cell_id": "SE_EPSG3006_1KM_559_6502", "easting_km": 559, "northing_km": 6502, "bbox_epsg3006": [559000, 6502000, 560000, 6503000], "role": "CONTEXT", "availability_state": "INDEXED_NOT_COMPILED"},
+    {"cell_id": "SE_EPSG3006_1KM_560_6502", "easting_km": 560, "northing_km": 6502, "bbox_epsg3006": [560000, 6502000, 561000, 6503000], "role": "CONTEXT", "availability_state": "INDEXED_NOT_COMPILED"}
+  ],
+  "source_coverage": [
+    {
+      "category": "TERRAIN",
+      "source_label": "Lantmäteriet Markhöjdmodell 1 m",
+      "source_item_or_service": "650_55",
+      "state": "METADATA_ONLY_KEY_REQUIRED",
+      "source_ref": "data/sites/sweden/saterdalsvagen-14/terrain-source-metadata-v0.1.json",
+      "promotion_blocker": "Raster bytes and per-cell coverage, nodata, CRS and RH2000 value QA are absent."
+    },
+    {
+      "category": "ORTHOPHOTO",
+      "source_label": "Norrköping municipal aerial WMS",
+      "source_item_or_service": "AERIAL_2017",
+      "state": "CONNECTED_LIVE_ONLY",
+      "source_ref": "data/sites/sweden/saterdalsvagen-14/municipal-aerial-history-v0.1.json",
+      "promotion_blocker": "The connected WMS is a live display layer; no source-authorized persistent cell raster is bound."
+    },
+    {
+      "category": "PROPERTY_DIVISION",
+      "source_label": "Lantmäteriet Fastighetsindelning vector",
+      "source_item_or_service": "0581",
+      "state": "METADATA_ONLY_KEY_REQUIRED",
+      "source_ref": "data/sites/sweden/saterdalsvagen-14/official-context-geometry-sources-v0.1.json",
+      "promotion_blocker": "The Norrköping-wide protected GeoPackage bytes are absent."
+    },
+    {
+      "category": "BUILDINGS",
+      "source_label": "Lantmäteriet Byggnad vector",
+      "source_item_or_service": "0581",
+      "state": "METADATA_ONLY_KEY_REQUIRED",
+      "source_ref": "data/sites/sweden/saterdalsvagen-14/official-context-geometry-sources-v0.1.json",
+      "promotion_blocker": "The Norrköping-wide protected GeoPackage bytes and height evidence are absent."
+    },
+    {
+      "category": "ROADS",
+      "source_label": "Trafikverket NVDB Vägtrafiknät",
+      "source_item_or_service": "Vägtrafiknät",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "source_ref": "data/sites/sweden/saterdalsvagen-14/official-context-geometry-sources-v0.1.json",
+      "promotion_blocker": "No exact road-network extract is acquired for the nine selected cells."
+    }
+  ],
+  "compiled_artifacts": [],
+  "market_reference_ids": [],
+  "blockers": [
+    "All nine cells are indexed but none is compiled.",
+    "Official terrain, property, building and road bytes are absent.",
+    "No cell may be marked reusable until source lineage, edge stitching and deterministic artifact hashes pass Verification."
+  ],
+  "deployment_state": "NOT_DEPLOYED"
+}

@@ -1,0 +1,249 @@
+{
+  "manifest_version": "sweden-neighbourhood-cell/v1",
+  "entity_type": "SwedenNeighbourhoodCellCompilerContract",
+  "compiler_id": "SE_CELL_COMPILER_CONTRACT_ONLY",
+  "country_code": "SE",
+  "cell_index": {
+    "scheme": "NATIVE_PROJECTED_SQUARE",
+    "native_crs": "EPSG:3006",
+    "cell_size_m": 1000,
+    "halo_m": 100,
+    "cell_id_template": "SE_EPSG3006_1KM_{EASTING_KM}_{NORTHING_KM}",
+    "postcode_role": "DISCOVERY_ANALYTICS_AND_ROLLOUT_ONLY_NOT_SPATIAL_KEY",
+    "boundary_stitching": "SOURCE_GEOMETRY_CLIPPED_WITH_HALO_AND_DEDUPED_BY_STABLE_SOURCE_ID"
+  },
+  "request_resolution": {
+    "entrypoint": "ADDRESS",
+    "steps": [
+      "NORMALIZE_ADDRESS",
+      "RESOLVE_CANONICAL_ADDRESS_ID",
+      "RESOLVE_PROPERTY_ID_AND_LINEAGE",
+      "LOCATE_NATIVE_CELLS",
+      "LOAD_AVAILABLE_CELL_VERSIONS",
+      "COMPILE_MISSING_OR_STALE_LAYERS",
+      "BIND_PROPERTY_TWIN_AS_OVERLAY"
+    ],
+    "cache_policy": "REUSE_SOURCE_BOUND_CELL_ARTIFACTS_BY_VERSION_AND_HASH",
+    "missing_cell_policy": "LIVE_CONTEXT_FIRST_THEN_ASYNC_SOURCE_BOUND_COMPILATION"
+  },
+  "context_policy": {
+    "selection_method": "STREET_NETWORK_PLUS_VIEW_HORIZON",
+    "minimum_street_segments": 10,
+    "urban_radius_m": [300, 500],
+    "suburban_radius_m": [600, 800],
+    "rural_radius_m": [1000, 3000],
+    "distant_context_policy": "LIGHTWEIGHT_TERRAIN_AND_LANDMARK_LOD_WHEN_VIEW_RELEVANT"
+  },
+  "lod_policy": {
+    "format": "OGC_3D_TILES_OR_EQUIVALENT_STREAMABLE_HIERARCHY",
+    "levels": [
+      "REGIONAL_TERRAIN",
+      "NEIGHBOURHOOD_CONTEXT",
+      "STREET_CONTEXT",
+      "PROPERTY_DETAIL",
+      "BUILDING_AND_ROOM_DETAIL"
+    ],
+    "camera_continuity": "ONE_GEOREFERENCED_WORLD_ONE_CAMERA"
+  },
+  "layers": [
+    {
+      "layer_id": "SE_CELL_LAYER_TERRAIN",
+      "category": "TERRAIN",
+      "state": "KEY_REQUIRED",
+      "persistence": "PERSISTENT_SOURCE_BOUND_GEOMETRY",
+      "domain_owner": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "geometry_derivation_allowed": true,
+      "source_artifact_ref": null,
+      "blockers": ["Lantmäteriet Markhöjdmodell access and exact cell bytes are required before terrain compilation."]
+    },
+    {
+      "layer_id": "SE_CELL_LAYER_ORTHOPHOTO",
+      "category": "ORTHOPHOTO",
+      "state": "CONNECTED",
+      "persistence": "LIVE_DISPLAY_ONLY",
+      "domain_owner": "EXTERNAL_PROVIDER",
+      "geometry_derivation_allowed": false,
+      "source_artifact_ref": null,
+      "blockers": ["Current municipal WMS imagery is live-only; a source-authorized persistent orthophoto artifact is not yet bound."]
+    },
+    {
+      "layer_id": "SE_CELL_LAYER_PROPERTY_DIVISION",
+      "category": "PROPERTY_DIVISION",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "persistence": "PERSISTENT_SOURCE_BOUND_GEOMETRY",
+      "domain_owner": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "geometry_derivation_allowed": true,
+      "source_artifact_ref": null,
+      "blockers": ["A cell-wide municipal base-map or Lantmäteriet property-division package is required; single-property exports do not scale to a neighbourhood cell."]
+    },
+    {
+      "layer_id": "SE_CELL_LAYER_BUILDINGS",
+      "category": "BUILDINGS",
+      "state": "KEY_REQUIRED",
+      "persistence": "PERSISTENT_SOURCE_BOUND_GEOMETRY",
+      "domain_owner": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "geometry_derivation_allowed": true,
+      "source_artifact_ref": null,
+      "blockers": ["Official building vectors and height or surface evidence are required before replacing derived massing."]
+    },
+    {
+      "layer_id": "SE_CELL_LAYER_ROADS",
+      "category": "ROADS",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "persistence": "PERSISTENT_SOURCE_BOUND_GEOMETRY",
+      "domain_owner": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "geometry_derivation_allowed": true,
+      "source_artifact_ref": null,
+      "blockers": ["The authoritative street and path extract for the selected cells is not yet acquired."]
+    },
+    {
+      "layer_id": "SE_CELL_LAYER_VEGETATION",
+      "category": "VEGETATION",
+      "state": "RESEARCH_ONLY",
+      "persistence": "PERSISTENT_SOURCE_BOUND_GEOMETRY",
+      "domain_owner": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "geometry_derivation_allowed": true,
+      "source_artifact_ref": null,
+      "blockers": ["A licensed canopy or surface-height source and deterministic tree-generalization method are not yet selected."]
+    },
+    {
+      "layer_id": "SE_CELL_LAYER_HYDROGRAPHY",
+      "category": "HYDROGRAPHY",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "persistence": "PERSISTENT_SOURCE_BOUND_GEOMETRY",
+      "domain_owner": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "geometry_derivation_allowed": true,
+      "source_artifact_ref": null,
+      "blockers": ["Source-bound water geometry and water-level semantics are not yet connected."]
+    },
+    {
+      "layer_id": "SE_CELL_LAYER_PLANNING",
+      "category": "PLANNING",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "persistence": "PERSISTENT_REFERENCE_ONLY",
+      "domain_owner": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "geometry_derivation_allowed": true,
+      "source_artifact_ref": null,
+      "blockers": ["Plan records are source references until current applicability is interpreted and verified."]
+    },
+    {
+      "layer_id": "SE_CELL_LAYER_ENVIRONMENT",
+      "category": "ENVIRONMENT",
+      "state": "DOCUMENTED_NOT_CONNECTED",
+      "persistence": "PERSISTENT_REFERENCE_ONLY",
+      "domain_owner": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "geometry_derivation_allowed": true,
+      "source_artifact_ref": null,
+      "blockers": ["National and municipal environmental overlays require dated cell clips and source manifests."]
+    },
+    {
+      "layer_id": "SE_CELL_LAYER_LIVE_PHOTOREALISTIC_REFERENCE",
+      "category": "LIVE_PHOTOREALISTIC_REFERENCE",
+      "state": "KEY_REQUIRED",
+      "persistence": "LIVE_DISPLAY_ONLY",
+      "domain_owner": "EXTERNAL_PROVIDER",
+      "geometry_derivation_allowed": false,
+      "source_artifact_ref": null,
+      "blockers": ["Google Photorealistic 3D Tiles may be displayed live with attribution but may not be persisted, traced or used to derive Product Twin geometry."]
+    }
+  ],
+  "market_interface": {
+    "manifest_version": "munin-property-market-reference/v2",
+    "entity_type": "MuninPropertyMarketReferenceInterface",
+    "interface_id": "MUNIN_MARKET_IF_SWEDEN_CONTRACT_ONLY",
+    "provider": "MUNIN",
+    "consumer": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+    "mode": "REFERENCE_ONLY_NO_PAYLOAD",
+    "evidence_states": ["RECORDED", "LISTED", "INFERRED", "FORECAST"],
+    "supported_reference_types": ["PROPERTY", "PROPERTY_LINEAGE", "ADDRESS", "BUILDING", "UNIT", "BRF", "HISTORIC_SALES", "TRANSACTION_HISTORY", "LISTING_HISTORY", "TAX_ASSESSMENT_HISTORY", "CURRENT_LISTING", "COMPARABLE_SET", "MARKET_INDEX", "VALUATION"],
+    "timeline_event_types": ["LISTING_CREATED", "ASKING_PRICE_CHANGED", "LISTING_WITHDRAWN", "LISTING_RELISTED", "BROKER_REPORTED_SALE", "FINAL_BID_REPORTED", "DEED_TRANSFER_RECORDED", "TAX_ASSESSMENT_RECORDED", "PROPERTY_SUBDIVIDED", "PROPERTY_MERGED", "BUILDING_COMPLETED"],
+    "transaction_allocation_states": ["EXACT_SINGLE_PROPERTY", "MULTI_PROPERTY_UNALLOCATED", "PARENT_PROPERTY_ONLY", "NOT_APPLICABLE"],
+    "identity_resolution_order": ["TYPED_ADDRESS", "CANONICAL_ADDRESS_ID", "PROPERTY_ID", "PROPERTY_LINEAGE", "BUILDING_ID", "UNIT_OR_BRF_ID"],
+    "connector_routes": [
+      {
+        "connector_id": "SE_MARKET_LANTMATERIET_FASTIGHETSPRIS",
+        "source_name": "Lantmäteriet Fastighetsprisregistret",
+        "role": "OFFICIAL_TRANSACTION",
+        "state": "KEY_REQUIRED",
+        "acquisition_mode": "FILE_EXTRACT",
+        "supported_evidence_states": ["RECORDED"],
+        "personal_data_policy": "NO_PERSONAL_DATA_REQUESTED_OR_PERSISTED",
+        "limitations": ["Access or ordered extracts are required; multi-property transfers must remain unallocated unless the source supplies an exact allocation."]
+      },
+      {
+        "connector_id": "SE_MARKET_VALUEGUARD",
+        "source_name": "Valueguard",
+        "role": "COMMERCIAL_TRANSACTION",
+        "state": "KEY_REQUIRED",
+        "acquisition_mode": "API",
+        "supported_evidence_states": ["RECORDED", "INFERRED", "FORECAST"],
+        "personal_data_policy": "NO_PERSONAL_DATA_REQUESTED_OR_PERSISTED",
+        "limitations": ["Commercial credentials, licensed fields and permitted retention terms must be agreed before execution."]
+      },
+      {
+        "connector_id": "SE_MARKET_MAKLARSTATISTIK",
+        "source_name": "Svensk Mäklarstatistik",
+        "role": "AGGREGATED_MARKET",
+        "state": "PARTNERSHIP_REQUIRED",
+        "acquisition_mode": "API",
+        "supported_evidence_states": ["INFERRED", "FORECAST"],
+        "personal_data_policy": "NO_PERSONAL_DATA_REQUESTED_OR_PERSISTED",
+        "limitations": ["Detailed object data and publication rights require a commercial agreement; aggregate data is not an exact-address sale record."]
+      },
+      {
+        "connector_id": "SE_MARKET_BOOLI",
+        "source_name": "Booli",
+        "role": "LISTING_REFERENCE",
+        "state": "PARTNERSHIP_REQUIRED",
+        "acquisition_mode": "LIVE_REFERENCE_ONLY",
+        "supported_evidence_states": ["LISTED"],
+        "personal_data_policy": "NO_PERSONAL_DATA_REQUESTED_OR_PERSISTED",
+        "limitations": ["The housing-data API is closed to new users; public pages are references and must not be treated as an authorized ingestion feed."]
+      },
+      {
+        "connector_id": "SE_MARKET_HEMNET",
+        "source_name": "Hemnet",
+        "role": "LISTING_REFERENCE",
+        "state": "PARTNERSHIP_REQUIRED",
+        "acquisition_mode": "LIVE_REFERENCE_ONLY",
+        "supported_evidence_states": ["LISTED"],
+        "personal_data_policy": "NO_PERSONAL_DATA_REQUESTED_OR_PERSISTED",
+        "limitations": ["Hemnet BostadsAPI access requires a signed contract and is broker-oriented; public sale pages are consent-dependent and incomplete."]
+      },
+      {
+        "connector_id": "SE_MARKET_SKATTEVERKET",
+        "source_name": "Skatteverket tax assessment service",
+        "role": "TAX_ASSESSMENT",
+        "state": "DOCUMENTED_NOT_CONNECTED",
+        "acquisition_mode": "AUTHENTICATED_SERVICE",
+        "supported_evidence_states": ["RECORDED"],
+        "personal_data_policy": "NO_PERSONAL_DATA_REQUESTED_OR_PERSISTED",
+        "limitations": ["The public service requires Swedish e-identification and property designation; tax assessment is not a sale price."]
+      }
+    ],
+    "references": [],
+    "privacy": {
+      "person_names": "FORBIDDEN",
+      "personal_identifiers": "FORBIDDEN",
+      "protected_records": "EXCLUDE",
+      "price_payload_location": "MUNIN_ONLY"
+    },
+    "ownership": {
+      "identity_market_and_price_facts": "MUNIN",
+      "property_lineage_facts": "MUNIN",
+      "spatial_applicability": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "transformation_geometry": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "final_acceptance": "VERIFICATION"
+    }
+  },
+  "ownership": {
+    "neighbourhood_geometry": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+    "market_and_price_facts": "MUNIN",
+    "project_overlays": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+    "promotion_to_current_world": "VERIFICATION_ONLY",
+    "final_acceptance": "VERIFICATION"
+  },
+  "forbidden_operations": ["PERSIST_GOOGLE_TILES", "TRACE_OR_EXTRACT_GOOGLE_GEOMETRY", "COPY_MUNIN_MARKET_PAYLOAD", "PROMOTE_PROPOSED_DESIGN_TO_EXISTING_CONDITION", "USE_POSTCODE_AS_GEOMETRY_KEY"],
+  "dashboard_expansion": false,
+  "deployment_state": "NOT_DEPLOYED"
+}

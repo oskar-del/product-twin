@@ -1,0 +1,50 @@
+{
+  "compiler_version": "sweden-neighbourhood-cell/v1",
+  "compiler_id": "SE_CELL_COMPILER_CONTRACT_ONLY",
+  "country_code": "SE",
+  "spatial_index": {
+    "scheme": "NATIVE_PROJECTED_SQUARE",
+    "crs": "EPSG:3006",
+    "cell_size_m": 1000,
+    "halo_m": 100
+  },
+  "execution_phases": [
+    {
+      "phase": 1,
+      "id": "IDENTITY_AND_CELL_RESOLUTION",
+      "operations": ["NORMALIZE_ADDRESS", "RESOLVE_CANONICAL_ADDRESS_ID", "RESOLVE_PROPERTY_ID_AND_LINEAGE", "LOCATE_NATIVE_CELLS"]
+    },
+    {
+      "phase": 2,
+      "id": "REUSE_AND_ACQUIRE",
+      "operations": ["LOAD_AVAILABLE_CELL_VERSIONS", "COMPILE_MISSING_OR_STALE_LAYERS"]
+    },
+    {
+      "phase": 3,
+      "id": "SOURCE_BOUND_SPATIAL_COMPILATION",
+      "layer_ids": ["SE_CELL_LAYER_TERRAIN", "SE_CELL_LAYER_ORTHOPHOTO", "SE_CELL_LAYER_PROPERTY_DIVISION", "SE_CELL_LAYER_BUILDINGS", "SE_CELL_LAYER_ROADS", "SE_CELL_LAYER_VEGETATION", "SE_CELL_LAYER_HYDROGRAPHY", "SE_CELL_LAYER_PLANNING", "SE_CELL_LAYER_ENVIRONMENT"]
+    },
+    {
+      "phase": 4,
+      "id": "LIVE_VISUAL_CONTEXT",
+      "layer_ids": ["SE_CELL_LAYER_LIVE_PHOTOREALISTIC_REFERENCE"]
+    },
+    {
+      "phase": 5,
+      "id": "PROPERTY_AND_PROJECT_OVERLAYS",
+      "operations": ["BIND_PROPERTY_TWIN_AS_OVERLAY"]
+    },
+    {
+      "phase": 6,
+      "id": "VERIFICATION",
+      "operations": ["VERIFY_SOURCE_LINEAGE", "VERIFY_CELL_STITCHING", "VERIFY_PROPERTY_APPLICABILITY", "KEEP_PROPOSED_DESIGNS_SEPARATE_FROM_CURRENT_WORLD"]
+    }
+  ],
+  "market_interface": {
+    "version": "munin-property-market-reference/v2",
+    "mode": "REFERENCE_ONLY_NO_PAYLOAD",
+    "reference_count": 0,
+    "connector_count": 6
+  },
+  "deployment_state": "NOT_DEPLOYED"
+}

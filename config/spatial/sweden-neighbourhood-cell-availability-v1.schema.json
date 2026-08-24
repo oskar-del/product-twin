@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/spatial/sweden-neighbourhood-cell-availability-v1.schema.json",
+  "title": "Sweden Neighbourhood Cell availability manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "entity_type", "availability_id", "compiler_contract_ref", "subject", "selection", "cells", "source_coverage", "compiled_artifacts", "market_reference_ids", "blockers", "deployment_state"],
+  "properties": {
+    "manifest_version": {"const": "sweden-neighbourhood-cell-availability/v1"},
+    "entity_type": {"const": "SwedenNeighbourhoodCellAvailability"},
+    "availability_id": {"type": "string", "pattern": "^SE_CELL_AVAIL_[A-Z0-9_]+$"},
+    "compiler_contract_ref": {"const": "data/neighbourhood-cell/v1/sweden-contract-only-fixture-v1.json"},
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["working_property_identity", "locator_epsg3006_easting_northing", "locator_evidence_ref", "identity_state"],
+      "properties": {
+        "working_property_identity": {"type": "string", "minLength": 1},
+        "locator_epsg3006_easting_northing": {"type": "array", "prefixItems": [{"type": "number"}, {"type": "number"}], "minItems": 2, "maxItems": 2},
+        "locator_evidence_ref": {"type": "string", "minLength": 1},
+        "identity_state": {"const": "AUTHORITATIVE_LOCATOR_NOT_SURVEY_CONTROL"}
+      }
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profile", "context_radius_m", "stitching_halo_m", "selection_radius_m", "selection_bbox_epsg3006", "method"],
+      "properties": {
+        "profile": {"const": "SUBURBAN"},
+        "context_radius_m": {"const": 800},
+        "stitching_halo_m": {"const": 100},
+        "selection_radius_m": {"const": 900},
+        "selection_bbox_epsg3006": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4},
+        "method": {"const": "LOCATOR_PLUS_SUBURBAN_RADIUS_AND_CELL_STITCHING_HALO"}
+      }
+    },
+    "cells": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["cell_id", "easting_km", "northing_km", "bbox_epsg3006", "role", "availability_state"],
+        "properties": {
+          "cell_id": {"type": "string", "pattern": "^SE_EPSG3006_1KM_[0-9]+_[0-9]+$"},
+          "easting_km": {"type": "integer"},
+          "northing_km": {"type": "integer"},
+          "bbox_epsg3006": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4},
+          "role": {"enum": ["SUBJECT", "CONTEXT"]},
+          "availability_state": {"enum": ["INDEXED_NOT_COMPILED", "PARTIALLY_COMPILED", "COMPILED_UNVERIFIED", "VERIFIED_REUSABLE"]}
+        }
+      }
+    },
+    "source_coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["category", "source_label", "source_item_or_service", "state", "source_ref", "promotion_blocker"],
+        "properties": {
+          "category": {"enum": ["TERRAIN", "ORTHOPHOTO", "PROPERTY_DIVISION", "BUILDINGS", "ROADS"]},
+          "source_label": {"type": "string", "minLength": 1},
+          "source_item_or_service": {"type": "string", "minLength": 1},
+          "state": {"enum": ["METADATA_ONLY_KEY_REQUIRED", "CONNECTED_LIVE_ONLY", "DOCUMENTED_NOT_CONNECTED"]},
+          "source_ref": {"type": "string", "minLength": 1},
+          "promotion_blocker": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "compiled_artifacts": {"type": "array", "maxItems": 0},
+    "market_reference_ids": {"type": "array", "maxItems": 0},
+    "blockers": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+    "deployment_state": {"const": "NOT_DEPLOYED"}
+  }
+}

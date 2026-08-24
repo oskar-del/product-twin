@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/spatial/munin-property-market-reference-v2.schema.json",
+  "title": "External Munin property and market reference interface v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_version",
+    "entity_type",
+    "interface_id",
+    "provider",
+    "consumer",
+    "mode",
+    "evidence_states",
+    "supported_reference_types",
+    "timeline_event_types",
+    "transaction_allocation_states",
+    "identity_resolution_order",
+    "connector_routes",
+    "references",
+    "privacy",
+    "ownership"
+  ],
+  "properties": {
+    "manifest_version": {"const": "munin-property-market-reference/v2"},
+    "entity_type": {"const": "MuninPropertyMarketReferenceInterface"},
+    "interface_id": {"type": "string", "pattern": "^MUNIN_MARKET_IF_[A-Z0-9_]+$"},
+    "provider": {"const": "MUNIN"},
+    "consumer": {"const": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3"},
+    "mode": {"const": "REFERENCE_ONLY_NO_PAYLOAD"},
+    "evidence_states": {"const": ["RECORDED", "LISTED", "INFERRED", "FORECAST"]},
+    "supported_reference_types": {
+      "const": [
+        "PROPERTY",
+        "PROPERTY_LINEAGE",
+        "ADDRESS",
+        "BUILDING",
+        "UNIT",
+        "BRF",
+        "HISTORIC_SALES",
+        "TRANSACTION_HISTORY",
+        "LISTING_HISTORY",
+        "TAX_ASSESSMENT_HISTORY",
+        "CURRENT_LISTING",
+        "COMPARABLE_SET",
+        "MARKET_INDEX",
+        "VALUATION"
+      ]
+    },
+    "timeline_event_types": {
+      "const": [
+        "LISTING_CREATED",
+        "ASKING_PRICE_CHANGED",
+        "LISTING_WITHDRAWN",
+        "LISTING_RELISTED",
+        "BROKER_REPORTED_SALE",
+        "FINAL_BID_REPORTED",
+        "DEED_TRANSFER_RECORDED",
+        "TAX_ASSESSMENT_RECORDED",
+        "PROPERTY_SUBDIVIDED",
+        "PROPERTY_MERGED",
+        "BUILDING_COMPLETED"
+      ]
+    },
+    "transaction_allocation_states": {
+      "const": [
+        "EXACT_SINGLE_PROPERTY",
+        "MULTI_PROPERTY_UNALLOCATED",
+        "PARENT_PROPERTY_ONLY",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "identity_resolution_order": {
+      "const": [
+        "TYPED_ADDRESS",
+        "CANONICAL_ADDRESS_ID",
+        "PROPERTY_ID",
+        "PROPERTY_LINEAGE",
+        "BUILDING_ID",
+        "UNIT_OR_BRF_ID"
+      ]
+    },
+    "connector_routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["connector_id", "source_name", "role", "state", "acquisition_mode", "supported_evidence_states", "personal_data_policy", "limitations"],
+        "properties": {
+          "connector_id": {"type": "string", "pattern": "^SE_MARKET_[A-Z0-9_]+$"},
+          "source_name": {"type": "string", "minLength": 1},
+          "role": {"enum": ["OFFICIAL_TRANSACTION", "COMMERCIAL_TRANSACTION", "AGGREGATED_MARKET", "LISTING_REFERENCE", "TAX_ASSESSMENT"]},
+          "state": {"enum": ["CONNECTED", "EXECUTABLE_NOT_TESTED", "DOCUMENTED_NOT_CONNECTED", "KEY_REQUIRED", "PARTNERSHIP_REQUIRED", "RESEARCH_ONLY"]},
+          "acquisition_mode": {"enum": ["FILE_EXTRACT", "API", "AUTHENTICATED_SERVICE", "LIVE_REFERENCE_ONLY"]},
+          "supported_evidence_states": {"type": "array", "items": {"enum": ["RECORDED", "LISTED", "INFERRED", "FORECAST"]}, "minItems": 1, "uniqueItems": true},
+          "personal_data_policy": {"const": "NO_PERSONAL_DATA_REQUESTED_OR_PERSISTED"},
+          "limitations": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1}
+        }
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["reference_id", "reference_type", "external_id", "record_version", "canonical_uri", "content_sha256", "evidence_state", "observed_at", "source_system", "payload_persisted", "personal_data_persisted"],
+        "properties": {
+          "reference_id": {"type": "string", "pattern": "^MREF_[A-Z0-9_]+$"},
+          "reference_type": {"enum": ["PROPERTY", "PROPERTY_LINEAGE", "ADDRESS", "BUILDING", "UNIT", "BRF", "HISTORIC_SALES", "TRANSACTION_HISTORY", "LISTING_HISTORY", "TAX_ASSESSMENT_HISTORY", "CURRENT_LISTING", "COMPARABLE_SET", "MARKET_INDEX", "VALUATION"]},
+          "external_id": {"type": "string", "minLength": 1},
+          "record_version": {"type": "string", "minLength": 1},
+          "canonical_uri": {"type": ["string", "null"]},
+          "content_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+          "evidence_state": {"enum": ["RECORDED", "LISTED", "INFERRED", "FORECAST"]},
+          "observed_at": {"type": "string", "format": "date-time"},
+          "source_system": {"const": "MUNIN"},
+          "payload_persisted": {"const": false},
+          "personal_data_persisted": {"const": false}
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["person_names", "personal_identifiers", "protected_records", "price_payload_location"],
+      "properties": {
+        "person_names": {"const": "FORBIDDEN"},
+        "personal_identifiers": {"const": "FORBIDDEN"},
+        "protected_records": {"const": "EXCLUDE"},
+        "price_payload_location": {"const": "MUNIN_ONLY"}
+      }
+    },
+    "ownership": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["identity_market_and_price_facts", "property_lineage_facts", "spatial_applicability", "transformation_geometry", "final_acceptance"],
+      "properties": {
+        "identity_market_and_price_facts": {"const": "MUNIN"},
+        "property_lineage_facts": {"const": "MUNIN"},
+        "spatial_applicability": {"const": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3"},
+        "transformation_geometry": {"const": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3"},
+        "final_acceptance": {"const": "VERIFICATION"}
+      }
+    }
+  }
+}

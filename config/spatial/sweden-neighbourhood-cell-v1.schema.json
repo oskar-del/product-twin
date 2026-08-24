@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/spatial/sweden-neighbourhood-cell-v1.schema.json",
+  "title": "Sweden Neighbourhood Cell compiler contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_version",
+    "entity_type",
+    "compiler_id",
+    "country_code",
+    "cell_index",
+    "request_resolution",
+    "context_policy",
+    "lod_policy",
+    "layers",
+    "market_interface",
+    "ownership",
+    "forbidden_operations",
+    "dashboard_expansion",
+    "deployment_state"
+  ],
+  "properties": {
+    "manifest_version": {"const": "sweden-neighbourhood-cell/v1"},
+    "entity_type": {"const": "SwedenNeighbourhoodCellCompilerContract"},
+    "compiler_id": {"type": "string", "pattern": "^SE_CELL_COMPILER_[A-Z0-9_]+$"},
+    "country_code": {"const": "SE"},
+    "cell_index": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scheme", "native_crs", "cell_size_m", "halo_m", "cell_id_template", "postcode_role", "boundary_stitching"],
+      "properties": {
+        "scheme": {"const": "NATIVE_PROJECTED_SQUARE"},
+        "native_crs": {"const": "EPSG:3006"},
+        "cell_size_m": {"const": 1000},
+        "halo_m": {"type": "number", "minimum": 50, "maximum": 250},
+        "cell_id_template": {"const": "SE_EPSG3006_1KM_{EASTING_KM}_{NORTHING_KM}"},
+        "postcode_role": {"const": "DISCOVERY_ANALYTICS_AND_ROLLOUT_ONLY_NOT_SPATIAL_KEY"},
+        "boundary_stitching": {"const": "SOURCE_GEOMETRY_CLIPPED_WITH_HALO_AND_DEDUPED_BY_STABLE_SOURCE_ID"}
+      }
+    },
+    "request_resolution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entrypoint", "steps", "cache_policy", "missing_cell_policy"],
+      "properties": {
+        "entrypoint": {"const": "ADDRESS"},
+        "steps": {"const": ["NORMALIZE_ADDRESS", "RESOLVE_CANONICAL_ADDRESS_ID", "RESOLVE_PROPERTY_ID_AND_LINEAGE", "LOCATE_NATIVE_CELLS", "LOAD_AVAILABLE_CELL_VERSIONS", "COMPILE_MISSING_OR_STALE_LAYERS", "BIND_PROPERTY_TWIN_AS_OVERLAY"]},
+        "cache_policy": {"const": "REUSE_SOURCE_BOUND_CELL_ARTIFACTS_BY_VERSION_AND_HASH"},
+        "missing_cell_policy": {"const": "LIVE_CONTEXT_FIRST_THEN_ASYNC_SOURCE_BOUND_COMPILATION"}
+      }
+    },
+    "context_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["selection_method", "minimum_street_segments", "urban_radius_m", "suburban_radius_m", "rural_radius_m", "distant_context_policy"],
+      "properties": {
+        "selection_method": {"const": "STREET_NETWORK_PLUS_VIEW_HORIZON"},
+        "minimum_street_segments": {"type": "integer", "minimum": 10},
+        "urban_radius_m": {"type": "array", "prefixItems": [{"const": 300}, {"const": 500}], "minItems": 2, "maxItems": 2},
+        "suburban_radius_m": {"type": "array", "prefixItems": [{"const": 600}, {"const": 800}], "minItems": 2, "maxItems": 2},
+        "rural_radius_m": {"type": "array", "prefixItems": [{"const": 1000}, {"const": 3000}], "minItems": 2, "maxItems": 2},
+        "distant_context_policy": {"const": "LIGHTWEIGHT_TERRAIN_AND_LANDMARK_LOD_WHEN_VIEW_RELEVANT"}
+      }
+    },
+    "lod_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["format", "levels", "camera_continuity"],
+      "properties": {
+        "format": {"const": "OGC_3D_TILES_OR_EQUIVALENT_STREAMABLE_HIERARCHY"},
+        "levels": {"const": ["REGIONAL_TERRAIN", "NEIGHBOURHOOD_CONTEXT", "STREET_CONTEXT", "PROPERTY_DETAIL", "BUILDING_AND_ROOM_DETAIL"]},
+        "camera_continuity": {"const": "ONE_GEOREFERENCED_WORLD_ONE_CAMERA"}
+      }
+    },
+    "layers": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["layer_id", "category", "state", "persistence", "domain_owner", "geometry_derivation_allowed", "source_artifact_ref", "blockers"],
+        "properties": {
+          "layer_id": {"type": "string", "pattern": "^SE_CELL_LAYER_[A-Z0-9_]+$"},
+          "category": {"enum": ["TERRAIN", "ORTHOPHOTO", "PROPERTY_DIVISION", "BUILDINGS", "ROADS", "VEGETATION", "HYDROGRAPHY", "PLANNING", "ENVIRONMENT", "LIVE_PHOTOREALISTIC_REFERENCE"]},
+          "state": {"enum": ["CONNECTED", "EXECUTABLE_NOT_TESTED", "DOCUMENTED_NOT_CONNECTED", "KEY_REQUIRED", "PARTNERSHIP_REQUIRED", "RESEARCH_ONLY"]},
+          "persistence": {"enum": ["PERSISTENT_SOURCE_BOUND_GEOMETRY", "PERSISTENT_SOURCE_BOUND_RASTER", "PERSISTENT_REFERENCE_ONLY", "LIVE_DISPLAY_ONLY"]},
+          "domain_owner": {"enum": ["PLOT_TO_PROJECT_SPATIAL_STUDIO_3", "EXTERNAL_PROVIDER"]},
+          "geometry_derivation_allowed": {"type": "boolean"},
+          "source_artifact_ref": {"type": ["string", "null"]},
+          "blockers": {"type": "array", "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "market_interface": {"$ref": "./munin-property-market-reference-v2.schema.json"},
+    "ownership": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["neighbourhood_geometry", "market_and_price_facts", "project_overlays", "promotion_to_current_world", "final_acceptance"],
+      "properties": {
+        "neighbourhood_geometry": {"const": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3"},
+        "market_and_price_facts": {"const": "MUNIN"},
+        "project_overlays": {"const": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3"},
+        "promotion_to_current_world": {"const": "VERIFICATION_ONLY"},
+        "final_acceptance": {"const": "VERIFICATION"}
+      }
+    },
+    "forbidden_operations": {"const": ["PERSIST_GOOGLE_TILES", "TRACE_OR_EXTRACT_GOOGLE_GEOMETRY", "COPY_MUNIN_MARKET_PAYLOAD", "PROMOTE_PROPOSED_DESIGN_TO_EXISTING_CONDITION", "USE_POSTCODE_AS_GEOMETRY_KEY"]},
+    "dashboard_expansion": {"const": false},
+    "deployment_state": {"const": "NOT_DEPLOYED"}
+  }
+}
