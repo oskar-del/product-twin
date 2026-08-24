@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateArchitecturalComparisonViewer,validateArchitecturalHeroViewer,validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validatePlotTerrainViewer,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateArchitecturalComparisonViewer,validateArchitecturalHeroViewer,validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validatePlotTerrainViewer,validateStreetApproachViewer,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
@@ -22,6 +22,7 @@ assert.equal(validateVisualReconstruction(visualReconstructionBaseline).ok,true,
 assert.equal(validateDesignCandidateStudies(designStudiesBaseline,{scene:baseline}).ok,true,"baseline design candidate studies must validate");
 assert.equal(validateVisualAcceptance(visualAcceptanceBaseline,{scene:baseline}).ok,true,"baseline five-view visual acceptance must validate");
 assert.equal(validatePlotTerrainViewer(viewerBaseline).ok,true,"baseline plot terrain study must validate");
+assert.equal(validateStreetApproachViewer(viewerBaseline).ok,true,"baseline street approach must validate");
 assert.equal(validateArchitecturalHeroViewer(viewerBaseline).ok,true,"baseline architectural hero must validate");
 assert.equal(validateArchitecturalComparisonViewer(viewerBaseline).ok,true,"baseline architectural comparison must validate");
 const terrainFunctionNames=["pointInPolygon","segmentIntersectionParameter","clipSegmentToPlot","contourCellSegments"],terrainFunctionSource=terrainFunctionNames.map(name=>viewerBaseline.split("\n").find(line=>line.startsWith(`function ${name}(`))).join("\n"),terrainFunctions=new Function(`${terrainFunctionSource};return {${terrainFunctionNames.join(",")}}`)(),plotPoints=baseline.elements.find(item=>item.id==="PLOT_54_28").geometry.points_xz,plotBounds=plotPoints.reduce((out,[x,z])=>[Math.min(out[0],x),Math.min(out[1],z),Math.max(out[2],x),Math.max(out[3],z)],[Infinity,Infinity,-Infinity,-Infinity]),displayHeight=(x,z)=>2.2*(.008*x+.014*z+.55*Math.sin(x/38)*Math.cos(z/52)),terrainSamples=[];
@@ -51,6 +52,9 @@ const attacks=[
   ["plot limitation erased",m=>m.elements.find(x=>x.id==="PLOT_54_28").limitations=["visual"],"plot legal limitation missing"],
   ["neighbourhood camera loses plot",m=>m.navigation.find(x=>x.id==="NEIGHBOURHOOD_VIEW").target=[400,0,400],"neighbourhood camera does not target subject plot"],
   ["street camera floats",m=>m.navigation.find(x=>x.id==="STREET_VIEW").camera[1]+=8,"street camera is not at a credible local eye height"],
+  ["street camera retreats",m=>{const stage=m.navigation.find(x=>x.id==="STREET_VIEW");stage.camera[0]-=90;stage.camera[2]-=90},"street approach does not frame the plot at arrival scale"],
+  ["street target leaves plot",m=>m.navigation.find(x=>x.id==="STREET_VIEW").target=[400,1.6,400],"street approach target leaves the indicative plot"],
+  ["street camera leaves mapped road",m=>m.navigation.find(x=>x.id==="STREET_VIEW").camera[0]+=20,"street approach camera is not source-bound to Säterdalsvägen"],
   ["plot view clutter restored",m=>m.navigation.find(x=>x.id==="PLOT_ORBIT").visible_groups.push("CONTEXT_BUILDING"),"analytical plot view is cluttered or oblique"],
   ["plot camera flattened",m=>{const stage=m.navigation.find(x=>x.id==="PLOT_ORBIT");stage.camera[0]=stage.target[0];stage.camera[2]=stage.target[2]},"plot camera does not expose terrain form"],
   ["concept hero loses architecture",m=>m.navigation.find(x=>x.id==="CONCEPT_HOUSE_ON_PLOT").camera=[300,18,-300],"concept hero camera does not frame architecture at useful scale"],
@@ -93,6 +97,17 @@ const terrainViewerAttacks=[
 ];
 for(const [name,mutate,needle] of terrainViewerAttacks){
   const result=validatePlotTerrainViewer(mutate(viewerBaseline));
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+
+const streetApproachViewerAttacks=[
+  ["street FOV drifts",html=>html.replace("STREET_VIEW:44","STREET_VIEW:48"),"street approach camera FOV drift"],
+  ["street legal access promoted",html=>html.replace("FRONTAGE + LEGAL ACCESS UNVERIFIED","FRONTAGE + LEGAL ACCESS VERIFIED"),"street approach evidence caption missing or promoted"],
+  ["street road binding changes",html=>html.replace("source_name?.toLocaleLowerCase('sv-SE')==='säterdalsvägen'","source_name?.toLocaleLowerCase('sv-SE')==='other'"),"street approach source-road treatment missing"],
+  ["street labels restored",html=>html.replace("stageLabelsAllowed=!['STREET_VIEW','PLOT_ORBIT','CONCEPT_HOUSE_ON_PLOT'].includes(s.id)","stageLabelsAllowed=!['PLOT_ORBIT','CONCEPT_HOUSE_ON_PLOT'].includes(s.id)"),"street approach labels or POIs obscure the primary subject"]
+];
+for(const [name,mutate,needle] of streetApproachViewerAttacks){
+  const result=validateStreetApproachViewer(mutate(viewerBaseline));
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
 
@@ -269,4 +284,4 @@ for(const [name,mutate,needle] of visualAcceptanceAttacks){
   const changed=structuredClone(visualAcceptanceBaseline);mutate(changed);const result=validateVisualAcceptance(changed,{scene:baseline});
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+terrainViewerAttacks.length+architecturalHeroViewerAttacks.length+architecturalComparisonViewerAttacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+terrainViewerAttacks.length+streetApproachViewerAttacks.length+architecturalHeroViewerAttacks.length+architecturalComparisonViewerAttacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);

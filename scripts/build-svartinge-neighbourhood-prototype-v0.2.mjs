@@ -35,6 +35,39 @@ function terrainHeight(x,z){
   return VISUAL_RELIEF_EXAGGERATION*(0.008*x+0.014*z+0.55*Math.sin(x/38)*Math.cos(z/52));
 }
 
+function closestPointOnSegment(point,a,b){
+  const dx=b[0]-a[0],dz=b[1]-a[1],lengthSquared=dx*dx+dz*dz;
+  const t=lengthSquared?Math.max(0,Math.min(1,((point[0]-a[0])*dx+(point[1]-a[1])*dz)/lengthSquared)):0;
+  return [a[0]+dx*t,a[1]+dz*t];
+}
+
+function deriveStreetApproach(plot,roads,preferredRoadName){
+  const named=roads.filter(road=>road.name?.toLocaleLowerCase("sv-SE")===preferredRoadName.toLocaleLowerCase("sv-SE"));
+  if(!named.length)throw new Error(`Street approach source road missing: ${preferredRoadName}`);
+  const centroid=plot.reduce((sum,[x,z])=>[sum[0]+x/plot.length,sum[1]+z/plot.length],[0,0]);
+  let nearest=null;
+  for(const road of named){
+    for(let index=0;index<road.points_xz.length-1;index++){
+      const a=road.points_xz[index],b=road.points_xz[index+1];
+      for(const plotPoint of plot){
+        const roadPoint=closestPointOnSegment(plotPoint,a,b),distance=Math.hypot(roadPoint[0]-plotPoint[0],roadPoint[1]-plotPoint[1]);
+        if(!nearest||distance<nearest.distance)nearest={a,b,plotPoint,roadPoint,distance};
+      }
+    }
+  }
+  const endpoints=[nearest.a,nearest.b].sort((a,b)=>Math.hypot(b[0]-centroid[0],b[1]-centroid[1])-Math.hypot(a[0]-centroid[0],a[1]-centroid[1]));
+  const awayEndpoint=endpoints.find(endpoint=>Math.hypot(endpoint[0]-nearest.roadPoint[0],endpoint[1]-nearest.roadPoint[1])>=4);
+  if(!awayEndpoint)throw new Error(`Street approach source segment too short: ${preferredRoadName}`);
+  const available=Math.hypot(awayEndpoint[0]-nearest.roadPoint[0],awayEndpoint[1]-nearest.roadPoint[1]);
+  const travel=Math.min(14,available*.9),unit=[(awayEndpoint[0]-nearest.roadPoint[0])/available,(awayEndpoint[1]-nearest.roadPoint[1])/available];
+  const cameraXZ=[nearest.roadPoint[0]+unit[0]*travel,nearest.roadPoint[1]+unit[1]*travel];
+  const targetXZ=[nearest.plotPoint[0]*.72+centroid[0]*.28,nearest.plotPoint[1]*.72+centroid[1]*.28];
+  return {
+    camera:[round(cameraXZ[0]),round(terrainHeight(...cameraXZ)+1.75),round(cameraXZ[1])],
+    target:[round(targetXZ[0]),round(terrainHeight(...targetXZ)+1.65),round(targetXZ[1])]
+  };
+}
+
 function terrainGrid(){
   const size=1800,segments=120,vertices=[];
   for(let iz=0;iz<=segments;iz++){
@@ -112,10 +145,11 @@ function buildScene(){
   const poiNames=["Svärtinge Skogsbacke skola","Svärtingehus skola","Utsiktens förskola","Svärtinge skogsbacke stop","ICA Nära Svärtinge","Lake Glan context"];
   poiNames.forEach((label,i)=>elements.push(element(`POI_${String(i+1).padStart(2,"0")}`,"POI",label,"INDICATIVE",{primitive:"DIAGRAMMATIC_MARKER",position:[-145+i*52,8,145+(i%2)*18],placement_method:"DIAGRAMMATIC_NOT_GEOGRAPHIC",distance_m:null},[alpha.proximity_register.find(p=>p.name===label)?.source_url??"NEIGHBOURHOOD_ALPHA_PROXIMITY_REGISTER"],["Locality presence is source-bound, but the 3D marker position is indicative and diagrammatic.","No coordinate, distance, route or travel-time claim."])));
 
+  const streetApproach=deriveStreetApproach(plot,osmContext.compiled.roads,"Säterdalsvägen");
   const liveZoom={NEIGHBOURHOOD_VIEW:15.6,STREET_VIEW:19.2,PLOT_ORBIT:17.8,CONCEPT_HOUSE_ON_PLOT:18.7,BUILDING_ORBIT:19.4,ENTER_BUILDING:20,ROOM:20.5};
   const navigation=[
     {id:"NEIGHBOURHOOD_VIEW",label:"Neighbourhood orbit",camera:[690,430,735],target:[11,0,7],visible_groups:["TERRAIN","LANDCOVER","WATER","WATERWAY","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
-    {id:"STREET_VIEW",label:"Street approach",camera:[-56,round(terrainHeight(-56,-87)+2.2),-87],target:[-8,round(terrainHeight(-8,6)+1.7),6],visible_groups:["TERRAIN","LANDCOVER","WATER","WATERWAY","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
+    {id:"STREET_VIEW",label:"Street approach",camera:streetApproach.camera,target:streetApproach.target,visible_groups:["TERRAIN","LANDCOVER","WATER","WATERWAY","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
     {id:"PLOT_ORBIT",label:"Plot + terrain",camera:[-67,58,-64],target:[10,.9,8],visible_groups:["TERRAIN","PLOT","ROAD"],cutaway:false},
     {id:"CONCEPT_HOUSE_ON_PLOT",label:"Architecture studio",camera:[31,12,-20],target:[9.4,2.4,12.4],visible_groups:["TERRAIN","LANDCOVER","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION","CONCEPT_BUILDING","OPENING"],cutaway:false},
     {id:"BUILDING_ORBIT",label:"Building orbit",camera:[26.4,11,29.1],target:[9.4,2,13.1],visible_groups:["PLOT","CONCEPT_BUILDING","OPENING","VIEW_DIRECTION"],cutaway:false},
