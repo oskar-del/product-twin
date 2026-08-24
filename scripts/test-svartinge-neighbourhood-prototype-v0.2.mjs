@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validatePlotTerrainViewer,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
@@ -11,6 +11,7 @@ const aerialHistoryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterd
 const visualReconstructionBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/visual-reconstruction-v0.1.json","utf8"));
 const designStudiesBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/design-candidate-studies-v0.2.json","utf8"));
 const visualAcceptanceBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/visual-acceptance-v0.1.json","utf8"));
+const viewerBaseline=fs.readFileSync("prototype/svartinge-neighbourhood/index.html","utf8");
 assert.equal(validateSvartingePrototype(baseline).ok,true,"baseline scene must validate");
 assert.equal(validateContextProviders(providerBaseline).ok,true,"baseline provider registry must validate");
 assert.equal(validateStreetContext(streetBaseline).ok,true,"baseline street context must validate");
@@ -20,6 +21,13 @@ assert.equal(validateMunicipalAerialHistory(aerialHistoryBaseline).ok,true,"base
 assert.equal(validateVisualReconstruction(visualReconstructionBaseline).ok,true,"baseline visual reconstruction must validate");
 assert.equal(validateDesignCandidateStudies(designStudiesBaseline,{scene:baseline}).ok,true,"baseline design candidate studies must validate");
 assert.equal(validateVisualAcceptance(visualAcceptanceBaseline,{scene:baseline}).ok,true,"baseline five-view visual acceptance must validate");
+assert.equal(validatePlotTerrainViewer(viewerBaseline).ok,true,"baseline plot terrain study must validate");
+const terrainFunctionNames=["pointInPolygon","segmentIntersectionParameter","clipSegmentToPlot","contourCellSegments"],terrainFunctionSource=terrainFunctionNames.map(name=>viewerBaseline.split("\n").find(line=>line.startsWith(`function ${name}(`))).join("\n"),terrainFunctions=new Function(`${terrainFunctionSource};return {${terrainFunctionNames.join(",")}}`)(),plotPoints=baseline.elements.find(item=>item.id==="PLOT_54_28").geometry.points_xz,plotBounds=plotPoints.reduce((out,[x,z])=>[Math.min(out[0],x),Math.min(out[1],z),Math.max(out[2],x),Math.max(out[3],z)],[Infinity,Infinity,-Infinity,-Infinity]),displayHeight=(x,z)=>2.2*(.008*x+.014*z+.55*Math.sin(x/38)*Math.cos(z/52)),terrainSamples=[];
+for(let x=Math.floor(plotBounds[0]);x<=Math.ceil(plotBounds[2]);x++)for(let z=Math.floor(plotBounds[1]);z<=Math.ceil(plotBounds[3]);z++)if(terrainFunctions.pointInPolygon(x,z,plotPoints))terrainSamples.push({x,z,h:displayHeight(x,z)});
+for(const [x,z] of plotPoints)terrainSamples.push({x,z,h:displayHeight(x,z)});
+const displayLow=terrainSamples.reduce((best,item)=>item.h<best.h?item:best),displayHigh=terrainSamples.reduce((best,item)=>item.h>best.h?item:best),displayRelief=displayHigh.h-displayLow.h;let contourLevelCount=0,contourSegmentCount=0;
+for(let offset=.5;offset<displayRelief-.1;offset+=.5){contourLevelCount++;const level=displayLow.h+offset;for(let x=Math.floor(plotBounds[0]);x<Math.ceil(plotBounds[2]);x++)for(let z=Math.floor(plotBounds[1]);z<Math.ceil(plotBounds[3]);z++){const corners=[[x,z],[x+1,z],[x+1,z+1],[x,z+1]],heights=corners.map(([cx,cz])=>displayHeight(cx,cz));for(const [a,b] of terrainFunctions.contourCellSegments(corners,heights,level))for(const [start,end] of terrainFunctions.clipSegmentToPlot(a,b,plotPoints)){const midpoint=[(start[0]+end[0])/2,(start[1]+end[1])/2];assert.equal(terrainFunctions.pointInPolygon(midpoint[0],midpoint[1],plotPoints),true,"clipped contour midpoint must remain inside indicative plot");contourSegmentCount++;}}}
+assert.equal(Number(displayRelief.toFixed(1)),3.6,"relative display relief drift");assert.equal(contourLevelCount,7,"relative contour-level count drift");assert.equal(contourSegmentCount,294,"deterministic clipped contour segment count drift");
 
 const attacks=[
   ["identity promoted",m=>m.subject.identity_scope="PROPERTY_REGISTER_VERIFIED","identity scope promoted"],
@@ -71,6 +79,18 @@ const attacks=[
 
 for(const [name,mutate,needle] of attacks){
   const changed=structuredClone(baseline);mutate(changed);const result=validateSvartingePrototype(changed);
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+
+const terrainViewerAttacks=[
+  ["plot contour interval inflated",html=>html.replace("interval=.5","interval=5"),"plot terrain relative contour geometry missing"],
+  ["plot contour clipping bypassed",html=>html.replace("clipSegmentToPlot(a,b,points)","[[a,b]]"),"plot terrain contours are not clipped"],
+  ["plot contour evidence promoted",html=>html.replace("DERIVED_RELATIVE_UNCALIBRATED","AUTHORITATIVE"),"plot terrain evidence classification promoted"],
+  ["plot contour stage scope removed",html=>html.replace("stage.id==='PLOT_ORBIT'&&Boolean(terrainObject?.visible)","Boolean(terrainObject?.visible)"),"plot terrain study scope"],
+  ["plot official-level warning removed",html=>html.replace("NO RH2000 LEVEL","OFFICIAL CONTOURS"),"plot terrain evidence classification promoted"]
+];
+for(const [name,mutate,needle] of terrainViewerAttacks){
+  const result=validatePlotTerrainViewer(mutate(viewerBaseline));
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
 
@@ -222,4 +242,4 @@ for(const [name,mutate,needle] of visualAcceptanceAttacks){
   const changed=structuredClone(visualAcceptanceBaseline);mutate(changed);const result=validateVisualAcceptance(changed,{scene:baseline});
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+terrainViewerAttacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);
