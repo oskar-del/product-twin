@@ -77,12 +77,25 @@ Key checks:
 - Platform Engine: 86 validation, 35 mutation, 47 compiler, 29 terrain, 72 studies, 54 OSM and 18 bundle checks passed.
 - Plot-to-Project: 1,010 spatial assertions and 34 mutation attacks passed.
 - Sweden/Svärtinge: 510 national, 740 property, 91 neighbourhood and 518 viewer assertions passed; all mutation suites passed.
-- BRAGE integration: 22 checks passed.
+- BRAGE integration: 26 checks passed, including Svärtinge visual-context and design-study wording guards.
 - Native showcase: 8/8 manifest entries valid; when runtime assets are present, 8/8 GLB magic, size and SHA-256 checks pass.
 - Procurement structural and mutation gates passed.
 - The `--current` commerce check is expected to fail with exactly 9 stale observations; the final gate fails if stale commerce is ever accepted as current.
 
 No controlled-browser visual QA is claimed in this environment. A self-contained engine artifact was successfully generated at ignored path `dist/twins/svartinge-brage-v0.3.html` (823 KB, zero runtime network requests), but that bundle does not include rights-restricted furniture GLBs.
+
+## Independent review repair
+
+The first independent review found one user-facing context leak that the original gate did not cover: the Svärtinge query mode changed the labels to Glanrummet but retained the Spanish/Mediterranean window scene and RFQ wording. The integration branch now:
+
+- renders a disclosed, concept-only Lake Glan/pine horizon in Svärtinge mode;
+- keeps the Mediterranean composition only in the original Spanish listing mode;
+- labels the total as a dated snapshot subtotal;
+- labels copied output as a design-study BOM, never an RFQ;
+- labels outbound merchant links as product pages, not live Swedish offers; and
+- fails the BRAGE integration test if these Svärtinge-specific guards disappear.
+
+The cloud browser cannot reach the container-local preview (`ERR_BLOCKED_BY_CLIENT`), so this repair has deterministic coverage but still requires a real visual interaction pass on a reachable preview or local Mac browser before promotion.
 
 ## Claims still blocked
 

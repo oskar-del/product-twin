@@ -27,6 +27,10 @@ check(spatialViewer.includes("neighbourhood-scene-brage-v0.3.json"), "viewer exp
 check(spatialViewer.includes("s.on_enter_open_element"), "viewer opens the stage-bound room");
 check(showroomViewer.includes("svartinge-glanrummet"), "showroom discloses Svärtinge study context");
 check(showroomViewer.includes("Sweden supply, tax, freight, delivery and checkout are not evaluated"), "Svärtinge RFQ disclosure is explicit");
+check(showroomViewer.includes("Concept-only forested Lake Glan horizon"), "Svärtinge room renders a disclosed local concept context");
+check(showroomViewer.includes("DESIGN STUDY BOM — Glanrummet · not a quote"), "Svärtinge copy output cannot present itself as an RFQ");
+check(showroomViewer.includes("Open merchant product page →"), "Svärtinge merchant action avoids live-offer/RFQ wording");
+check(showroomViewer.includes("Room · snapshot subtotal"), "Svärtinge subtotal is labelled as a snapshot");
 
 for (const mutation of [
   value => { value.scene_version = "wrong"; },

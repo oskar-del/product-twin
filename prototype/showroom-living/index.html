@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Real products in a real villa · Product Twin client preview</title>
+<title>Product Twin room study · client preview</title>
 <style>
   html,body{margin:0;height:100%;overflow:hidden;background:#0e0d0a;color:#f4efe4;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
   canvas{display:block}
@@ -68,7 +68,7 @@
   <div class="topline"><img class="hero" id="villa-hero" alt="" hidden /><div><div class="k">Product Twin · client preview</div><h1 id="villa-name">Villa</h1><div class="loc" id="villa-loc"></div><div class="specs" id="villa-specs"></div><div class="lst" id="villa-lst"></div></div></div>
   <div class="price"><div class="k" id="property-price-label">Asking price</div><div class="v" id="villa-price">—</div><div class="note" id="villa-note"></div></div>
   <div class="help">Drag to look around · scroll to zoom · tap a product</div>
-  <div class="roomtotal" id="roomtotal"><span class="k">Room · furnished total</span><b id="roomtotal-v">—</b><span class="rt-note" id="roomtotal-n"></span></div>
+  <div class="roomtotal" id="roomtotal"><span class="k" id="roomtotal-label">Room · furnished total</span><b id="roomtotal-v">—</b><span class="rt-note" id="roomtotal-n"></span></div>
   <aside id="panel"><button class="close" id="close">×</button>
     <div class="small" id="p-src">Product Twin</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
     <div id="p-pills"></div>
@@ -109,8 +109,10 @@ if (isSvartingeStudy) document.title = 'Glanrummet furniture study · Product Tw
 if (isSvartingeStudy) {
   document.getElementById('property-price-label').textContent = 'Status';
   document.getElementById('offer-label').textContent = 'Dated offer snapshot';
+  document.getElementById('roomtotal-label').textContent = 'Room · snapshot subtotal';
   document.getElementById('rfq-btn').textContent = 'Review study BOM →';
   document.getElementById('rfq-eyebrow').textContent = 'Design-study bill of materials · not a quote';
+  document.getElementById('rfq-copy').textContent = '⧉ Copy study BOM';
   document.getElementById('rfq-note').textContent = 'Nothing is sent automatically. Snapshot prices are stale; Sweden supply, tax, freight, delivery and checkout are not evaluated. Native-3D rights remain under review.';
 }
 document.getElementById('villa-name').textContent = property.name;
@@ -174,18 +176,27 @@ wall(RW, RH, 0, RH / 2, BACK_Z);                       // back wall (far)
 wall(RD, RH, -RW / 2, RH / 2, CENTER_Z, Math.PI / 2);  // left wall
 wall(RD, RH, RW / 2, RH / 2, CENTER_Z, Math.PI / 2);   // right wall
 
-// large window opening on the back wall -> Mediterranean view + light
-// golden-hour Mediterranean bay, matching the villa's real terrace hero (P1)
+// The room study reuses a composition manifest, never the source property's view.
+// Svärtinge receives a visibly conceptual Lake Glan/pine context; the Spanish
+// listing keeps its original Mediterranean composition.
 const view = makeCanvas(1024, 512, (x, w, h) => {
   const g = x.createLinearGradient(0, 0, 0, h);
-  g.addColorStop(0, '#cfe0e6'); g.addColorStop(0.32, '#f0e2cf'); g.addColorStop(0.5, '#f6ddbf'); g.addColorStop(0.52, '#7ba7c0'); g.addColorStop(1, '#3d7ea0');
-  x.fillStyle = g; x.fillRect(0, 0, w, h);
-  // distant headland silhouette across the bay
-  x.fillStyle = 'rgba(96,110,120,.55)'; x.beginPath(); x.moveTo(0, h * 0.52);
-  x.bezierCurveTo(w * 0.18, h * 0.36, w * 0.32, h * 0.34, w * 0.46, h * 0.5); x.lineTo(w * 0.46, h * 0.53); x.lineTo(0, h * 0.53); x.closePath(); x.fill();
-  // town glow on the far shore + sun glints on the water
-  x.fillStyle = 'rgba(255,238,205,.6)'; for (let i = 0; i < 60; i++) x.fillRect(w * 0.5 + Math.random() * w * 0.45, h * 0.5 + Math.random() * 3, 2, 2);
-  x.fillStyle = 'rgba(255,255,255,.45)'; for (let i = 0; i < 26; i++) x.fillRect(Math.random() * w, h * 0.6 + Math.random() * h * 0.35, 40 + Math.random() * 90, 1.4);
+  if (isSvartingeStudy) {
+    g.addColorStop(0, '#a9bdc6'); g.addColorStop(0.43, '#d5c9b7'); g.addColorStop(0.54, '#78939a'); g.addColorStop(1, '#405e67');
+    x.fillStyle = g; x.fillRect(0, 0, w, h);
+    // Concept-only forested Lake Glan horizon: not a surveyed or photographic view claim.
+    x.fillStyle = '#314b3b'; x.beginPath(); x.moveTo(0, h * 0.51);
+    for (let px = 0; px <= w; px += 18) { const crown = h * (0.43 + Math.sin(px * 0.031) * 0.018 + Math.sin(px * 0.009) * 0.025); x.lineTo(px, crown); }
+    x.lineTo(w, h * 0.57); x.lineTo(0, h * 0.57); x.closePath(); x.fill();
+    x.fillStyle = 'rgba(224,228,215,.28)'; for (let i = 0; i < 24; i++) x.fillRect(Math.random() * w, h * 0.61 + Math.random() * h * 0.3, 35 + Math.random() * 95, 1.2);
+  } else {
+    g.addColorStop(0, '#cfe0e6'); g.addColorStop(0.32, '#f0e2cf'); g.addColorStop(0.5, '#f6ddbf'); g.addColorStop(0.52, '#7ba7c0'); g.addColorStop(1, '#3d7ea0');
+    x.fillStyle = g; x.fillRect(0, 0, w, h);
+    x.fillStyle = 'rgba(96,110,120,.55)'; x.beginPath(); x.moveTo(0, h * 0.52);
+    x.bezierCurveTo(w * 0.18, h * 0.36, w * 0.32, h * 0.34, w * 0.46, h * 0.5); x.lineTo(w * 0.46, h * 0.53); x.lineTo(0, h * 0.53); x.closePath(); x.fill();
+    x.fillStyle = 'rgba(255,238,205,.6)'; for (let i = 0; i < 60; i++) x.fillRect(w * 0.5 + Math.random() * w * 0.45, h * 0.5 + Math.random() * 3, 2, 2);
+    x.fillStyle = 'rgba(255,255,255,.45)'; for (let i = 0; i < 26; i++) x.fillRect(Math.random() * w, h * 0.6 + Math.random() * h * 0.35, 40 + Math.random() * 90, 1.4);
+  }
 });
 const windowPane = new THREE.Mesh(new THREE.PlaneGeometry(RW * 0.64, RH * 0.66), new THREE.MeshBasicMaterial({ map: view }));
 windowPane.position.set(0.2, RH * 0.52, BACK_Z + 0.08); scene.add(windowPane);
@@ -323,7 +334,7 @@ function showPanel(role) {
   const handle = byTwin.get(p.twin_id)?.handle;
   const origin = scene_data.geometry_source?.merchant_origin;
   const url = o.product_url || (handle && origin ? `${origin}/products/${handle}` : null);
-  if (url) { offer.hidden = false; offer.href = url; }
+  if (url) { offer.hidden = false; offer.href = url; offer.textContent = isSvartingeStudy ? 'Open merchant product page →' : 'View live offer / RFQ →'; }
   else offer.hidden = true;
   panel.classList.add('open');
 }
@@ -345,7 +356,7 @@ function totalsByCurrency() {
 }
 function renderRfq() {
   const pr = property;
-  document.getElementById('rfq-title').textContent = 'Furnished living room — 7-piece selection';
+  document.getElementById('rfq-title').textContent = isSvartingeStudy ? 'Glanrummet — 7-piece design study' : 'Furnished living room — 7-piece selection';
   document.getElementById('rfq-prop').innerHTML = `<b>${pr.name}</b> · ${pr.location}${pr.reference ? ' · H&H ' + pr.reference : ''}${pr.price_display ? ' · ' + pr.price_display : ''}`;
   const rows = activeList().map(p => {
     const o = p.offer_snapshot; const url = o.product_url || (byTwin.get(p.twin_id)?.handle && scene_data.geometry_source?.merchant_origin ? `${scene_data.geometry_source.merchant_origin}/products/${byTwin.get(p.twin_id).handle}` : null);
@@ -357,7 +368,7 @@ function renderRfq() {
 function buildRfqText() {
   const pr = property;
   const lines = [];
-  lines.push('REQUEST FOR QUOTE — furnished living room');
+  lines.push(isSvartingeStudy ? 'DESIGN STUDY BOM — Glanrummet · not a quote' : 'REQUEST FOR QUOTE — furnished living room');
   lines.push(`Property: ${pr.name} · ${pr.location}${pr.reference ? ' · H&H ' + pr.reference : ''}${pr.price_display ? ' · ' + pr.price_display : ''}`);
   if (pr.listing_url) lines.push(`Listing: ${pr.listing_url}`);
   lines.push('');
@@ -376,7 +387,7 @@ function buildRfqText() {
 }
 document.getElementById('rfq-btn').onclick = () => { renderRfq(); document.getElementById('rfq-modal').hidden = false; };
 document.getElementById('rfq-close').onclick = () => document.getElementById('rfq-modal').hidden = true;
-document.getElementById('rfq-copy').onclick = async () => { try { await navigator.clipboard.writeText(buildRfqText()); document.getElementById('rfq-copy').textContent = '✓ Copied'; setTimeout(() => document.getElementById('rfq-copy').textContent = '⧉ Copy RFQ', 1500); } catch (e) { console.error(e); } };
+document.getElementById('rfq-copy').onclick = async () => { try { await navigator.clipboard.writeText(buildRfqText()); document.getElementById('rfq-copy').textContent = '✓ Copied'; setTimeout(() => document.getElementById('rfq-copy').textContent = isSvartingeStudy ? '⧉ Copy study BOM' : '⧉ Copy RFQ', 1500); } catch (e) { console.error(e); } };
 document.getElementById('rfq-print').onclick = () => window.print();
 
 // project tags to screen each frame
