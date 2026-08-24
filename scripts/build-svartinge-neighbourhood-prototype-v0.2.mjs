@@ -29,13 +29,17 @@ function scalePolygonToArea(points,targetArea){
   return points.map(([x,z])=>[round(x*factor),round(z*factor)]);
 }
 
+function terrainHeight(x,z){
+  return 0.008*x+0.014*z+0.55*Math.sin(x/38)*Math.cos(z/52);
+}
+
 function terrainGrid(){
-  const size=360,segments=24,vertices=[];
+  const size=360,segments=72,vertices=[];
   for(let iz=0;iz<=segments;iz++){
     for(let ix=0;ix<=segments;ix++){
       const x=-size/2+size*ix/segments;
       const z=-size/2+size*iz/segments;
-      const y=0.008*x+0.014*z+0.55*Math.sin(x/38)*Math.cos(z/52);
+      const y=terrainHeight(x,z);
       vertices.push([round(x),round(y),round(z)]);
     }
   }
@@ -47,7 +51,7 @@ function element(id,type,label,evidence_class,geometry,source_refs=[],limitation
 }
 
 function building(id,x,z,w,d,h,rotation=0){
-  return element(id,"CONTEXT_BUILDING",`Context massing ${id.split("_").at(-1)}`,"DERIVED",{primitive:"BOX",position:[x,h/2,z],size:[w,h,d],rotation_y_deg:rotation},["RCPT_SE_LISTING_MAP_IMAGE"],["Footprint position and envelope are diagrammatically traced/estimated from the listing map.","Height is a context-massing estimate, not a surveyed storey or ridge height.","No ownership, use, lawful-status or address claim."]);
+  return element(id,"CONTEXT_BUILDING",`Context massing ${id.split("_").at(-1)}`,"DERIVED",{primitive:"BOX",position:[x,round(terrainHeight(x,z)+h/2),z],size:[w,h,d],rotation_y_deg:rotation},["RCPT_SE_LISTING_MAP_IMAGE"],["Footprint position and envelope are diagrammatically traced/estimated from the listing map.","Height is a context-massing estimate, not a surveyed storey or ridge height.","No ownership, use, lawful-status or address claim."]);
 }
 
 function buildScene(){
@@ -67,8 +71,9 @@ function buildScene(){
   elements.push(element("PLOT_54_28","PLOT","SVÄRTINGE 54:28 municipal-map boundary observation","INDICATIVE",{primitive:"EXTRUDED_POLYGON",points_xz:plot,base_y:0.15,height:0.18,area_m2:observedArea},[municipalBoundaryPath,"FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED","RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"],["Shape is joined without vertex editing from the property-specific Norrköping municipal DWG export.","Norrköpings kommun states that displayed property boundaries have no legal effect and their geographic position may be misleading.","Not suitable for cadastral, setback, area certification or set-out use."]));
   elements.push(element("ADDRESS_LOCATOR","ANCHOR","Säterdalsvägen 14 municipal locator","AUTHORITATIVE",{primitive:"MARKER",position:[0,2.5,0]},["FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"],["Authoritative only as a dated municipal address-to-property observation.","Not a survey control point or property-register title record."]));
 
-  elements.push(element("ROAD_SATERDALSVAGEN","ROAD","Säterdalsvägen derived alignment","DERIVED",{primitive:"POLYLINE_RIBBON",points:[[-150,0,-54],[-70,0,-43],[-35,0,-30],[-28,0,-18],[-27,0,80]],width_m:6},["RCPT_SE_LISTING_MAP_IMAGE","RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"],["Diagrammatic alignment traced from available map imagery.","No current centreline, width, gradient, road-manager or legal-access claim."]));
-  elements.push(element("ROAD_GAMLA_LANDSVAGEN","ROAD","Gamla Landsvägen derived alignment","DERIVED",{primitive:"POLYLINE_RIBBON",points:[[20,0,-31],[85,0,-44],[155,0,-52]],width_m:7},["RCPT_SE_LISTING_MAP_IMAGE"],["Diagrammatic alignment traced from listing map imagery.","Width and vertical geometry are estimated for navigation only."]));
+  const groundPoint=(x,z)=>[x,round(terrainHeight(x,z)),z];
+  elements.push(element("ROAD_SATERDALSVAGEN","ROAD","Säterdalsvägen derived alignment","DERIVED",{primitive:"POLYLINE_RIBBON",points:[[-150,-54],[-70,-43],[-35,-30],[-28,-18],[-27,80]].map(([x,z])=>groundPoint(x,z)),width_m:6},["RCPT_SE_LISTING_MAP_IMAGE","RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"],["Diagrammatic alignment traced from available map imagery.","No current centreline, width, gradient, road-manager or legal-access claim."]));
+  elements.push(element("ROAD_GAMLA_LANDSVAGEN","ROAD","Gamla Landsvägen derived alignment","DERIVED",{primitive:"POLYLINE_RIBBON",points:[[20,-31],[85,-44],[155,-52]].map(([x,z])=>groundPoint(x,z)),width_m:7},["RCPT_SE_LISTING_MAP_IMAGE"],["Diagrammatic alignment traced from listing map imagery.","Width and vertical geometry are estimated for navigation only."]));
 
   [
     ["CTX_BLDG_01",-88,-20,18,11,5.8,-12],["CTX_BLDG_02",-115,-72,14,10,5.2,8],
@@ -84,18 +89,20 @@ function buildScene(){
 
   const houseRotation=0;
   const conceptCenter=[9.4,13.1];
-  elements.push(element("HOUSE_SLAB","CONCEPT_BUILDING","Concept house slab","CONCEPT",{primitive:"BOX",position:[conceptCenter[0],0.55,conceptCenter[1]],size:[12,0.35,8],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept placement only; no entitlement, setback, access, foundation or finished-floor claim."]));
-  elements.push(element("HOUSE_WALL_N","CONCEPT_BUILDING","Concept north wall","CONCEPT",{primitive:"BOX",position:[conceptCenter[0],2.05,conceptCenter[1]+4],size:[12,3,0.22],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept geometry only."]));
-  elements.push(element("HOUSE_WALL_S","CONCEPT_BUILDING","Concept garden wall","CONCEPT",{primitive:"BOX",position:[conceptCenter[0],2.05,conceptCenter[1]-4],size:[12,3,0.22],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept geometry only; includes diagrammatic glazing zones."]));
-  elements.push(element("HOUSE_WALL_E","CONCEPT_BUILDING","Concept east wall","CONCEPT",{primitive:"BOX",position:[conceptCenter[0]+6,2.05,conceptCenter[1]],size:[0.22,3,8],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept geometry only."]));
-  elements.push(element("HOUSE_WALL_W","CONCEPT_BUILDING","Concept west wall","CONCEPT",{primitive:"BOX",position:[conceptCenter[0]-6,2.05,conceptCenter[1]],size:[0.22,3,8],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept geometry only."]));
-  elements.push(element("HOUSE_ROOF","CONCEPT_BUILDING","Concept roof","CONCEPT",{primitive:"BOX",position:[conceptCenter[0],3.65,conceptCenter[1]],size:[12.5,0.28,8.5],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept geometry only; hidden for interior navigation."]));
-  elements.push(element("ROOM_LIVING","ROOM","Concept living room","CONCEPT",{primitive:"ROOM_VOLUME",position:[11.2,1.65,11.55],size:[6,3,4.6],rotation_y_deg:houseRotation,intended_use:"LIVING_DINING"},["ROOM_TWIN_PATTERN","USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["6.0 x 4.6 m concept room used to prove the navigation/export chain.","Not surveyed, approved BIM or built geometry."]));
-  elements.push(element("ROOM_SERVICE","ROOM","Concept service/private zone","CONCEPT",{primitive:"ROOM_VOLUME",position:[6.3,1.65,13.45],size:[3.4,3,6.5],rotation_y_deg:houseRotation,intended_use:"UNRESOLVED_FLEX_ZONE"},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Diagrammatic zone only; no fixed programme or compliance claim."]));
-  elements.push(element("WINDOW_GLAN","OPENING","Concept south glazing","CONCEPT",{primitive:"BOX",position:[11.5,2.05,8.98],size:[4.2,2.25,0.08],rotation_y_deg:houseRotation},["VIEW_GLAN","USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept opening aligned to the reported view direction; no overheating, structural or planning verification."]));
-  elements.push(element("DOOR_ENTRY","OPENING","Concept entrance","CONCEPT",{primitive:"BOX",position:[3.28,1.75,13.3],size:[0.08,2.25,1.05],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept entry only; not a legal access or accessibility claim."]));
-  elements.push(element("SOFA_CONCEPT","FURNITURE","Concept sofa proxy","CONCEPT",{primitive:"BOX",position:[11.4,1.0,12.45],size:[2.8,0.8,0.9],rotation_y_deg:houseRotation},["ROOM_TWIN_PATTERN"],["Spatial proxy only; no Product Twin or procurement claim."]));
-  elements.push(element("TABLE_CONCEPT","FURNITURE","Concept table proxy","CONCEPT",{primitive:"BOX",position:[11.4,0.8,10.9],size:[1.5,0.12,0.75],rotation_y_deg:houseRotation},["ROOM_TWIN_PATTERN"],["Spatial proxy only; no Product Twin or procurement claim."]));
+  const conceptGround=terrainHeight(...conceptCenter);
+  const cy=y=>round(conceptGround+y);
+  elements.push(element("HOUSE_SLAB","CONCEPT_BUILDING","Concept house slab","CONCEPT",{primitive:"BOX",position:[conceptCenter[0],cy(.55),conceptCenter[1]],size:[12,0.35,8],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept placement only; no entitlement, setback, access, foundation or finished-floor claim."]));
+  elements.push(element("HOUSE_WALL_N","CONCEPT_BUILDING","Concept north wall","CONCEPT",{primitive:"BOX",position:[conceptCenter[0],cy(2.05),conceptCenter[1]+4],size:[12,3,0.22],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept geometry only."]));
+  elements.push(element("HOUSE_WALL_S","CONCEPT_BUILDING","Concept garden wall","CONCEPT",{primitive:"BOX",position:[conceptCenter[0],cy(2.05),conceptCenter[1]-4],size:[12,3,0.22],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept geometry only; includes diagrammatic glazing zones."]));
+  elements.push(element("HOUSE_WALL_E","CONCEPT_BUILDING","Concept east wall","CONCEPT",{primitive:"BOX",position:[conceptCenter[0]+6,cy(2.05),conceptCenter[1]],size:[0.22,3,8],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept geometry only."]));
+  elements.push(element("HOUSE_WALL_W","CONCEPT_BUILDING","Concept west wall","CONCEPT",{primitive:"BOX",position:[conceptCenter[0]-6,cy(2.05),conceptCenter[1]],size:[0.22,3,8],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept geometry only."]));
+  elements.push(element("HOUSE_ROOF","CONCEPT_BUILDING","Concept roof","CONCEPT",{primitive:"BOX",position:[conceptCenter[0],cy(3.65),conceptCenter[1]],size:[12.5,0.28,8.5],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept geometry only; hidden for interior navigation."]));
+  elements.push(element("ROOM_LIVING","ROOM","Concept living room","CONCEPT",{primitive:"ROOM_VOLUME",position:[11.2,cy(1.65),11.55],size:[6,3,4.6],rotation_y_deg:houseRotation,intended_use:"LIVING_DINING"},["ROOM_TWIN_PATTERN","USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["6.0 x 4.6 m concept room used to prove the navigation/export chain.","Not surveyed, approved BIM or built geometry."]));
+  elements.push(element("ROOM_SERVICE","ROOM","Concept service/private zone","CONCEPT",{primitive:"ROOM_VOLUME",position:[6.3,cy(1.65),13.45],size:[3.4,3,6.5],rotation_y_deg:houseRotation,intended_use:"UNRESOLVED_FLEX_ZONE"},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Diagrammatic zone only; no fixed programme or compliance claim."]));
+  elements.push(element("WINDOW_GLAN","OPENING","Concept south glazing","CONCEPT",{primitive:"BOX",position:[11.5,cy(2.05),8.98],size:[4.2,2.25,0.08],rotation_y_deg:houseRotation},["VIEW_GLAN","USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept opening aligned to the reported view direction; no overheating, structural or planning verification."]));
+  elements.push(element("DOOR_ENTRY","OPENING","Concept entrance","CONCEPT",{primitive:"BOX",position:[3.28,cy(1.75),13.3],size:[0.08,2.25,1.05],rotation_y_deg:houseRotation},["USER_DIRECTIVE_CONCEPT_PROTOTYPE"],["Concept entry only; not a legal access or accessibility claim."]));
+  elements.push(element("SOFA_CONCEPT","FURNITURE","Concept sofa proxy","CONCEPT",{primitive:"BOX",position:[11.4,cy(1.0),12.45],size:[2.8,0.8,0.9],rotation_y_deg:houseRotation},["ROOM_TWIN_PATTERN"],["Spatial proxy only; no Product Twin or procurement claim."]));
+  elements.push(element("TABLE_CONCEPT","FURNITURE","Concept table proxy","CONCEPT",{primitive:"BOX",position:[11.4,cy(.8),10.9],size:[1.5,0.12,0.75],rotation_y_deg:houseRotation},["ROOM_TWIN_PATTERN"],["Spatial proxy only; no Product Twin or procurement claim."]));
 
   const poiNames=["Svärtinge Skogsbacke skola","Svärtingehus skola","Utsiktens förskola","Svärtinge skogsbacke stop","ICA Nära Svärtinge","Lake Glan context"];
   poiNames.forEach((label,i)=>elements.push(element(`POI_${String(i+1).padStart(2,"0")}`,"POI",label,"INDICATIVE",{primitive:"DIAGRAMMATIC_MARKER",position:[-145+i*52,8,145+(i%2)*18],placement_method:"DIAGRAMMATIC_NOT_GEOGRAPHIC",distance_m:null},[alpha.proximity_register.find(p=>p.name===label)?.source_url??"NEIGHBOURHOOD_ALPHA_PROXIMITY_REGISTER"],["Locality presence is source-bound, but the 3D marker position is indicative and diagrammatic.","No coordinate, distance, route or travel-time claim."])));
