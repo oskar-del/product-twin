@@ -142,6 +142,9 @@ const visualReconstructionAttacks=[
   ["provider pixels claimed",m=>m.policy.provider_pixels_in_asset=true,"visual reconstruction evidence policy promoted"],
   ["visual geometry extraction",m=>m.policy.geometry_extraction_allowed=true,"visual reconstruction evidence policy promoted"],
   ["visual asset hash drift",m=>m.renderings[0].asset_sha256="0".repeat(64),"visual reconstruction asset identity drift"],
+  ["visual viewpoint removed",m=>m.renderings.pop(),"visual reconstruction set incomplete"],
+  ["visual viewpoint duplicated",m=>m.renderings[3].rendering_id=m.renderings[0].rendering_id,"visual reconstruction viewpoint drift"],
+  ["stage asset swapped",m=>m.renderings[2].asset_path=m.renderings[3].asset_path,"visual reconstruction asset identity drift"],
   ["visual hard gate removed",m=>m.policy.blocked_claims.pop(),"visual reconstruction hard gates changed"],
   ["visual unknown field",m=>m.current_condition_verified=true,"visual reconstruction: unknown or missing fields"]
 ];

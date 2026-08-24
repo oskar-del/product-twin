@@ -67,6 +67,70 @@
         "It cannot establish legal access, utilities, entitlement or buildable envelope.",
         "The plot is identified by cleared-ground character only and has no rendered boundary line."
       ]
+    },
+    {
+      "rendering_id": "VR_SE_SVARTINGE_STREET_APPROACH_V01",
+      "title": "Säterdalsvägen approach · existing-condition reconstruction",
+      "asset_path": "prototype/svartinge-neighbourhood/assets/street-approach-existing-condition-v0.1.png",
+      "asset_sha256": "891a5749880b458aff87377325e53b0f2119789c3fc7765381660c9fc3ac463c",
+      "pixel_dimensions": {"width": 1672, "height": 941},
+      "viewpoint": "STREET_APPROACH_EXISTING_CONDITION",
+      "evidence_state": "CONCEPT_VISUAL_RECONSTRUCTION",
+      "generation_method": "GENERATIVE_RENDER_FROM_REFERENCE_OBSERVATIONS",
+      "source_refs": [
+        "VR_SE_SVARTINGE_STREET_ARRIVAL_V01",
+        "OBS_SE_GOOGLE_STREETVIEW_NEARBY_2022_07",
+        "OBS_SE_HEMNET_EXACT_ADDRESS_GALLERY"
+      ],
+      "observed_character": [
+        "narrow winding uncurbed local asphalt road",
+        "gravel shoulders and shallow grassy drainage edges",
+        "informal individual driveways",
+        "mature Scots pine and silver birch street room",
+        "low detached timber houses partly screened by vegetation",
+        "timber utility poles and thin overhead wires",
+        "filtered distant glimpse toward Lake Glan"
+      ],
+      "limitations": [
+        "This is a generative visual reconstruction, not Google Street View or a current photograph.",
+        "The camera location and road geometry are not surveyed or provider-derived.",
+        "Neighbouring houses, vegetation and utility positions are plausible approximations.",
+        "It cannot establish the subject frontage or a legal access point.",
+        "It cannot establish road width, drainage capacity or utility ownership.",
+        "The plot is indicated by context only and has no rendered property line."
+      ]
+    },
+    {
+      "rendering_id": "VR_SE_SVARTINGE_PLOT_OUTLOOK_V01",
+      "title": "Plot outlook toward Glan · existing-condition reconstruction",
+      "asset_path": "prototype/svartinge-neighbourhood/assets/plot-outlook-existing-condition-v0.1.png",
+      "asset_sha256": "6df422ab0f4ba2059e6f2db83295610c52c36ca13beb26cbc3402c7815ee6bf4",
+      "pixel_dimensions": {"width": 1672, "height": 941},
+      "viewpoint": "PLOT_OUTLOOK_EXISTING_CONDITION",
+      "evidence_state": "CONCEPT_VISUAL_RECONSTRUCTION",
+      "generation_method": "GENERATIVE_RENDER_FROM_REFERENCE_OBSERVATIONS",
+      "source_refs": [
+        "VR_SE_SVARTINGE_STREET_ARRIVAL_V01",
+        "OBS_SE_HEMNET_EXACT_ADDRESS_GALLERY",
+        "VIEW_GLAN"
+      ],
+      "observed_character": [
+        "open central view corridor toward Lake Glan",
+        "rough cleared hillside with exposed granite and sandy soil",
+        "low grasses, cut stumps and early regrowth",
+        "retained pine and birch framing the plot edges",
+        "neighbouring low roofs below the principal sightline",
+        "forested lowland between the plot and the lake",
+        "broad calm lake horizon"
+      ],
+      "limitations": [
+        "This is a generative visual reconstruction, not a verified current view photograph.",
+        "The camera pose, terrain fall and vegetation positions are not surveyed.",
+        "The lake view is reported and visually reconstructed, not legally protected or guaranteed.",
+        "Neighbouring building positions and rooflines are plausible approximations.",
+        "It cannot establish a buildable envelope, finished-floor elevation or permanent view cone.",
+        "No parcel boundary or design geometry is rendered."
+      ]
     }
   ],
   "policy": {
