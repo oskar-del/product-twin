@@ -107,48 +107,14 @@
       "id": "NEIGHBOURHOOD_VIEW",
       "label": "Neighbourhood view",
       "camera": [
-        150,
         125,
-        185
+        105,
+        150
       ],
       "target": [
+        9,
         0,
-        0,
-        0
-      ],
-      "visible_groups": [
-        "TERRAIN",
-        "PLOT",
-        "ROAD",
-        "CONTEXT_BUILDING",
-        "POI",
-        "CONCEPT_BUILDING"
-      ],
-      "cutaway": false,
-      "live_context_view": {
-        "center_wgs84": [
-          16.0317063331,
-          58.6522414431
-        ],
-        "zoom": 15.6,
-        "pitch": 62.3079,
-        "bearing": 219.0355,
-        "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
-        "evidence_effect": "NONE"
-      }
-    },
-    {
-      "id": "STREET_VIEW",
-      "label": "Street approach",
-      "camera": [
-        -78,
-        2.25,
-        -52
-      ],
-      "target": [
-        -27,
-        1.35,
-        20
+        13
       ],
       "visible_groups": [
         "TERRAIN",
@@ -160,12 +126,45 @@
       "cutaway": false,
       "live_context_view": {
         "center_wgs84": [
-          16.03124010955226,
-          58.6524223730801
+          16.031861740949246,
+          58.65235904758707
+        ],
+        "zoom": 15.6,
+        "pitch": 59.676,
+        "bearing": 220.2551,
+        "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
+        "evidence_effect": "NONE"
+      }
+    },
+    {
+      "id": "STREET_VIEW",
+      "label": "Street approach",
+      "camera": [
+        -54,
+        4.2,
+        -28
+      ],
+      "target": [
+        8,
+        2,
+        14
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "PLOT",
+        "ROAD",
+        "CONTEXT_BUILDING",
+        "POI"
+      ],
+      "cutaway": false,
+      "live_context_view": {
+        "center_wgs84": [
+          16.03184447341044,
+          58.65236809408607
         ],
         "zoom": 19.2,
         "pitch": 85,
-        "bearing": 35.3112,
+        "bearing": 55.8855,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }
@@ -174,14 +173,14 @@
       "id": "PLOT_ORBIT",
       "label": "Plot outlook",
       "camera": [
-        7,
-        9.5,
-        25
+        58,
+        38,
+        66
       ],
       "target": [
-        0,
-        3.5,
-        -230
+        9,
+        1.5,
+        13
       ],
       "visible_groups": [
         "TERRAIN",
@@ -193,45 +192,47 @@
       "cutaway": false,
       "live_context_view": {
         "center_wgs84": [
-          16.0317063331,
-          58.65016074832888
+          16.031861740949246,
+          58.65235904758707
         ],
         "zoom": 17.8,
-        "pitch": 85,
-        "bearing": 181.5724,
+        "pitch": 63.1753,
+        "bearing": 222.7543,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }
     },
     {
       "id": "CONCEPT_HOUSE_ON_PLOT",
-      "label": "Design scenario · not selected",
+      "label": "Concept house on plot",
       "camera": [
-        34,
-        24,
-        36
+        48,
+        31,
+        54
       ],
       "target": [
-        1,
+        9.4,
         2,
-        1
+        13.1
       ],
       "visible_groups": [
         "TERRAIN",
         "PLOT",
         "ROAD",
         "CONTEXT_BUILDING",
-        "VIEW_DIRECTION"
+        "VIEW_DIRECTION",
+        "CONCEPT_BUILDING",
+        "OPENING"
       ],
       "cutaway": false,
       "live_context_view": {
         "center_wgs84": [
-          16.031723600638806,
-          58.652250489599005
+          16.03186864796477,
+          58.652359952236964
         ],
         "zoom": 18.7,
-        "pitch": 65.4234,
-        "bearing": 223.3153,
+        "pitch": 62.7216,
+        "bearing": 223.3428,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }
@@ -240,14 +241,14 @@
       "id": "BUILDING_ORBIT",
       "label": "Building orbit",
       "camera": [
-        18,
+        26.4,
         11,
-        17
+        29.1
       ],
       "target": [
-        1,
+        9.4,
         2,
-        1
+        13.1
       ],
       "visible_groups": [
         "PLOT",
@@ -258,8 +259,8 @@
       "cutaway": false,
       "live_context_view": {
         "center_wgs84": [
-          16.031723600638806,
-          58.652250489599005
+          16.03186864796477,
+          58.652359952236964
         ],
         "zoom": 19.4,
         "pitch": 68.9175,
@@ -272,14 +273,14 @@
       "id": "ENTER_BUILDING",
       "label": "Enter building",
       "camera": [
-        -3.5,
+        4.9,
         2.1,
-        0.7
+        12.8
       ],
       "target": [
-        3,
+        11.4,
         1.6,
-        -0.5
+        11.6
       ],
       "visible_groups": [
         "CONCEPT_BUILDING",
@@ -290,8 +291,8 @@
       "cutaway": true,
       "live_context_view": {
         "center_wgs84": [
-          16.031758135716416,
-          58.6522369198505
+          16.03190318304238,
+          58.65234638248846
         ],
         "zoom": 20,
         "pitch": 85,
@@ -304,14 +305,14 @@
       "id": "ROOM",
       "label": "Room",
       "camera": [
-        5.1,
+        13.5,
         1.75,
-        1.1
+        13.2
       ],
       "target": [
-        2.7,
+        11.1,
         1.45,
-        -1.1
+        11
       ],
       "visible_groups": [
         "CONCEPT_BUILDING",
@@ -323,8 +324,8 @@
       "cutaway": true,
       "live_context_view": {
         "center_wgs84": [
-          16.031752955454774,
-          58.6522314919511
+          16.03189800278074,
+          58.65234095458906
         ],
         "zoom": 20.5,
         "pitch": 84.7354,
@@ -4029,9 +4030,9 @@
       "geometry": {
         "primitive": "BOX",
         "position": [
-          1,
+          9.4,
           0.55,
-          1
+          13.1
         ],
         "size": [
           12,
@@ -4055,9 +4056,9 @@
       "geometry": {
         "primitive": "BOX",
         "position": [
-          1,
+          9.4,
           2.05,
-          5
+          17.1
         ],
         "size": [
           12,
@@ -4081,9 +4082,9 @@
       "geometry": {
         "primitive": "BOX",
         "position": [
-          1,
+          9.4,
           2.05,
-          -3
+          9.1
         ],
         "size": [
           12,
@@ -4107,9 +4108,9 @@
       "geometry": {
         "primitive": "BOX",
         "position": [
-          7,
+          15.4,
           2.05,
-          1
+          13.1
         ],
         "size": [
           0.22,
@@ -4133,9 +4134,9 @@
       "geometry": {
         "primitive": "BOX",
         "position": [
-          -5,
+          3.4000000000000004,
           2.05,
-          1
+          13.1
         ],
         "size": [
           0.22,
@@ -4159,9 +4160,9 @@
       "geometry": {
         "primitive": "BOX",
         "position": [
-          1,
+          9.4,
           3.65,
-          1
+          13.1
         ],
         "size": [
           12.5,
@@ -4185,9 +4186,9 @@
       "geometry": {
         "primitive": "ROOM_VOLUME",
         "position": [
-          2.8,
+          11.2,
           1.65,
-          -0.55
+          11.55
         ],
         "size": [
           6,
@@ -4214,9 +4215,9 @@
       "geometry": {
         "primitive": "ROOM_VOLUME",
         "position": [
-          -2.1,
+          6.3,
           1.65,
-          1.35
+          13.45
         ],
         "size": [
           3.4,
@@ -4241,9 +4242,9 @@
       "geometry": {
         "primitive": "BOX",
         "position": [
-          3.1,
+          11.5,
           2.05,
-          -3.12
+          8.98
         ],
         "size": [
           4.2,
@@ -4268,9 +4269,9 @@
       "geometry": {
         "primitive": "BOX",
         "position": [
-          -5.12,
+          3.28,
           1.75,
-          1.2
+          13.3
         ],
         "size": [
           0.08,
@@ -4294,9 +4295,9 @@
       "geometry": {
         "primitive": "BOX",
         "position": [
-          3,
+          11.4,
           1,
-          0.35
+          12.45
         ],
         "size": [
           2.8,
@@ -4320,9 +4321,9 @@
       "geometry": {
         "primitive": "BOX",
         "position": [
-          3,
+          11.4,
           0.8,
-          -1.2
+          10.9
         ],
         "size": [
           1.5,

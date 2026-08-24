@@ -39,7 +39,7 @@ const attacks=[
   ["context building promoted",m=>m.elements.find(x=>x.type==="CONTEXT_BUILDING").evidence_class="AUTHORITATIVE","context massing incomplete"],
   ["road promoted",m=>m.elements.find(x=>x.type==="ROAD").evidence_class="AUTHORITATIVE","road context incomplete"],
   ["concept house promoted",m=>m.elements.find(x=>x.id==="HOUSE_SLAB").evidence_class="DERIVED","concept building/room geometry"],
-  ["unselected concept geometry leaked",m=>m.navigation.find(x=>x.id==="CONCEPT_HOUSE_ON_PLOT").visible_groups.push("CONCEPT_BUILDING"),"unselected design stage leaks concept geometry"],
+  ["concept preview removed",m=>m.navigation.find(x=>x.id==="CONCEPT_HOUSE_ON_PLOT").visible_groups=m.navigation.find(x=>x.id==="CONCEPT_HOUSE_ON_PLOT").visible_groups.filter(x=>x!=="CONCEPT_BUILDING"),"concept preview visibility invalid"],
   ["view promoted",m=>m.elements.find(x=>x.id==="VIEW_GLAN").evidence_class="AUTHORITATIVE","reported view promoted"],
   ["POI distance invented",m=>m.elements.find(x=>x.type==="POI").geometry.distance_m=450,"POI position promoted or coordinate/distance invented"],
   ["POI position promoted",m=>m.elements.find(x=>x.type==="POI").evidence_class="AUTHORITATIVE","POI position promoted or coordinate/distance invented"],
