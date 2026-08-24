@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateArchitecturalComparisonViewer,validateArchitecturalHeroViewer,validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validatePlotTerrainViewer,validateStreetApproachViewer,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateArchitecturalComparisonViewer,validateArchitecturalHeroViewer,validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateNeighbourhoodDetailViewer,validateOfficialContextGeometrySources,validatePlotTerrainViewer,validateStreetApproachViewer,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
@@ -22,6 +22,7 @@ assert.equal(validateVisualReconstruction(visualReconstructionBaseline).ok,true,
 assert.equal(validateDesignCandidateStudies(designStudiesBaseline,{scene:baseline}).ok,true,"baseline design candidate studies must validate");
 assert.equal(validateVisualAcceptance(visualAcceptanceBaseline,{scene:baseline}).ok,true,"baseline five-view visual acceptance must validate");
 assert.equal(validatePlotTerrainViewer(viewerBaseline).ok,true,"baseline plot terrain study must validate");
+assert.equal(validateNeighbourhoodDetailViewer(viewerBaseline).ok,true,"baseline neighbourhood street-room detail must validate");
 assert.equal(validateStreetApproachViewer(viewerBaseline).ok,true,"baseline street approach must validate");
 assert.equal(validateArchitecturalHeroViewer(viewerBaseline).ok,true,"baseline architectural hero must validate");
 assert.equal(validateArchitecturalComparisonViewer(viewerBaseline).ok,true,"baseline architectural comparison must validate");
@@ -108,6 +109,18 @@ const streetApproachViewerAttacks=[
 ];
 for(const [name,mutate,needle] of streetApproachViewerAttacks){
   const result=validateStreetApproachViewer(mutate(viewerBaseline));
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+
+const neighbourhoodDetailViewerAttacks=[
+  ["nearby detail renderer removed",html=>html.replace("function addHouseDetails","function omitHouseDetails"),"nearby building detail is not source-footprint bound"],
+  ["nearby detail loses source footprints",html=>html.replace("const g=item.geometry,points=g.points_xz","const g=item.geometry,points=[]"),"nearby building detail is not source-footprint bound"],
+  ["nearby detail expands without bound",html=>html.replace("slice(0,36)","slice(0,360)"),"nearby building detail is not performance bounded"],
+  ["nearby detail evidence promoted",html=>html.replace("userData.visualOnly=true","userData.visualOnly=false"),"nearby building detail can promote"],
+  ["nearby detail limitation promoted",html=>html.replace("they are not observed building details","they are observed building details"),"nearby building detail limitation missing or promoted"]
+];
+for(const [name,mutate,needle] of neighbourhoodDetailViewerAttacks){
+  const result=validateNeighbourhoodDetailViewer(mutate(viewerBaseline));
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
 
@@ -284,4 +297,4 @@ for(const [name,mutate,needle] of visualAcceptanceAttacks){
   const changed=structuredClone(visualAcceptanceBaseline);mutate(changed);const result=validateVisualAcceptance(changed,{scene:baseline});
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+terrainViewerAttacks.length+streetApproachViewerAttacks.length+architecturalHeroViewerAttacks.length+architecturalComparisonViewerAttacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+terrainViewerAttacks.length+streetApproachViewerAttacks.length+neighbourhoodDetailViewerAttacks.length+architecturalHeroViewerAttacks.length+architecturalComparisonViewerAttacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);
