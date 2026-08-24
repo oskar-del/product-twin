@@ -171,23 +171,21 @@
     },
     {
       "id": "PLOT_ORBIT",
-      "label": "Plot outlook",
+      "label": "Plot plan",
       "camera": [
-        58,
-        38,
-        66
+        9,
+        75,
+        25
       ],
       "target": [
         9,
-        1.5,
+        0,
         13
       ],
       "visible_groups": [
         "TERRAIN",
         "PLOT",
-        "ROAD",
-        "CONTEXT_BUILDING",
-        "VIEW_DIRECTION"
+        "ROAD"
       ],
       "cutaway": false,
       "live_context_view": {
@@ -196,8 +194,8 @@
           58.65235904758707
         ],
         "zoom": 17.8,
-        "pitch": 63.1753,
-        "bearing": 222.7543,
+        "pitch": 9.0903,
+        "bearing": 180,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }
