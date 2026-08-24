@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateOfficialContextGeometrySources,validateStreetContext,validateSvartingePrototype,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
@@ -10,6 +10,7 @@ const officialGeometryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/sat
 const aerialHistoryBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/municipal-aerial-history-v0.1.json","utf8"));
 const visualReconstructionBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/visual-reconstruction-v0.1.json","utf8"));
 const designStudiesBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/design-candidate-studies-v0.1.json","utf8"));
+const visualAcceptanceBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/visual-acceptance-v0.1.json","utf8"));
 assert.equal(validateSvartingePrototype(baseline).ok,true,"baseline scene must validate");
 assert.equal(validateContextProviders(providerBaseline).ok,true,"baseline provider registry must validate");
 assert.equal(validateStreetContext(streetBaseline).ok,true,"baseline street context must validate");
@@ -18,6 +19,7 @@ assert.equal(validateOfficialContextGeometrySources(officialGeometryBaseline).ok
 assert.equal(validateMunicipalAerialHistory(aerialHistoryBaseline).ok,true,"baseline municipal aerial history must validate");
 assert.equal(validateVisualReconstruction(visualReconstructionBaseline).ok,true,"baseline visual reconstruction must validate");
 assert.equal(validateDesignCandidateStudies(designStudiesBaseline,{scene:baseline}).ok,true,"baseline design candidate studies must validate");
+assert.equal(validateVisualAcceptance(visualAcceptanceBaseline,{scene:baseline}).ok,true,"baseline five-view visual acceptance must validate");
 
 const attacks=[
   ["identity promoted",m=>m.subject.identity_scope="PROPERTY_REGISTER_VERIFIED","identity scope promoted"],
@@ -37,7 +39,11 @@ const attacks=[
   ["plot promoted",m=>m.elements.find(x=>x.id==="PLOT_54_28").evidence_class="AUTHORITATIVE","plot representation invalid"],
   ["plot area drift",m=>m.elements.find(x=>x.id==="PLOT_54_28").geometry.points_xz[0][0]+=8,"plot trace does not reproduce"],
   ["plot limitation erased",m=>m.elements.find(x=>x.id==="PLOT_54_28").limitations=["visual"],"plot legal limitation missing"],
+  ["neighbourhood camera loses plot",m=>m.navigation.find(x=>x.id==="NEIGHBOURHOOD_VIEW").target=[400,0,400],"neighbourhood camera does not target subject plot"],
+  ["street camera floats",m=>m.navigation.find(x=>x.id==="STREET_VIEW").camera[1]+=8,"street camera is not at a credible local eye height"],
   ["plot view clutter restored",m=>m.navigation.find(x=>x.id==="PLOT_ORBIT").visible_groups.push("CONTEXT_BUILDING"),"analytical plot view is cluttered or oblique"],
+  ["plot camera flattened",m=>{const stage=m.navigation.find(x=>x.id==="PLOT_ORBIT");stage.camera[0]=stage.target[0];stage.camera[2]=stage.target[2]},"plot camera does not expose terrain form"],
+  ["concept hero loses architecture",m=>m.navigation.find(x=>x.id==="CONCEPT_HOUSE_ON_PLOT").camera=[300,18,-300],"concept hero camera does not frame architecture at useful scale"],
   ["terrain promoted",m=>m.elements.find(x=>x.id==="TERRAIN_CONTEXT").evidence_class="AUTHORITATIVE","terrain promoted"],
   ["terrain facets restored",m=>m.elements.find(x=>x.id==="TERRAIN_CONTEXT").geometry.segments=12,"terrain mesh does not cover"],
   ["terrain relief misrepresented",m=>m.elements.find(x=>x.id==="TERRAIN_CONTEXT").geometry.visual_relief_exaggeration=1,"visual terrain relief disclosure missing"],
@@ -178,6 +184,7 @@ const designStudiesAttacks=[
   ["candidate legal effect invented",m=>m.policy.legal_effect="APPROVED","design candidate policy promoted"],
   ["candidate geometry promoted",m=>m.policy.geometry_scope="APPROVED_BIM","design candidate policy promoted"],
   ["candidate architecture promoted",m=>m.candidates[0].presentation_profile.presentation_only=false,"architectural presentation profile promoted or invalid"],
+  ["candidate roof strategies collapsed",m=>m.candidates[2].presentation_profile.roof_form=m.candidates[0].presentation_profile.roof_form,"design candidates do not exercise three distinct roof strategies"],
   ["candidate roof made implausible",m=>m.candidates[0].presentation_profile.roof_rise_m=9,"architectural presentation dimensions invalid"],
   ["candidate terrace leaves plot",m=>m.candidates[0].presentation_profile.terrace_depth_m=30,"architectural presentation dimensions invalid"],
   ["candidate presentation field injected",m=>m.candidates[0].presentation_profile.approved_material=true,"presentation: unknown or missing fields"],
@@ -187,4 +194,25 @@ for(const [name,mutate,needle] of designStudiesAttacks){
   const changed=structuredClone(designStudiesBaseline);mutate(changed);const result=validateDesignCandidateStudies(changed,{scene:baseline});
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length} attacks)`);
+const visualAcceptanceAttacks=[
+  ["visual acceptance version mutated",m=>m.schema_version="svartinge-visual-acceptance/v9","visual acceptance identity drift"],
+  ["automated approval enabled",m=>m.policy.automated_visual_approval_allowed=true,"visual acceptance policy weakened"],
+  ["explicit approval disabled",m=>m.policy.explicit_user_approval_required=false,"visual acceptance policy weakened"],
+  ["browser security bypass enabled",m=>m.policy.browser_security_workarounds_allowed=true,"visual acceptance policy weakened"],
+  ["canonical view removed",m=>m.canonical_views.pop(),"five-view visual acceptance set incomplete or reordered"],
+  ["canonical views reordered",m=>m.canonical_views.reverse(),"five-view visual acceptance set incomplete or reordered"],
+  ["comparison changed to realistic",m=>m.canonical_views[4].renderer_mode="REALISTIC","canonical stage or renderer mode drift"],
+  ["view falsely approved",m=>m.canonical_views[0].acceptance_state="APPROVED","approval lacks user-reviewed visual artifact"],
+  ["pending blockers erased",m=>m.canonical_views[0].blockers=[],"pending visual state lost required blockers"],
+  ["pending review evidence invented",m=>m.canonical_views[0].review_evidence.reviewer="USER","pending visual state lost required blockers or invented review evidence"],
+  ["aggregate falsely approved",m=>m.review_state="APPROVED","visual acceptance aggregate state is inconsistent"],
+  ["user approval invented",m=>m.user_approval={confirmation:"APPROVED_BY_USER",reviewed_at:"2026-08-24T20:00:00Z",approved_view_ids:m.canonical_views.map(view=>view.view_id)},"user approval was invented before all five views passed"],
+  ["viewer hash drift",m=>m.viewer_ref.sha256="0".repeat(64),"visual acceptance viewer binding or hash mismatch"],
+  ["scene hash drift",m=>m.scene_ref.sha256="0".repeat(64),"visual acceptance scene hash mismatch"],
+  ["visual acceptance unknown field",m=>m.self_score=10,"visual acceptance: unknown or missing fields"]
+];
+for(const [name,mutate,needle] of visualAcceptanceAttacks){
+  const changed=structuredClone(visualAcceptanceBaseline);mutate(changed);const result=validateVisualAcceptance(changed,{scene:baseline});
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);

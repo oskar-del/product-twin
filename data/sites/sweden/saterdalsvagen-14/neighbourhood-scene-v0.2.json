@@ -117,9 +117,9 @@
         735
       ],
       "target": [
+        11,
         0,
-        0,
-        0
+        7
       ],
       "visible_groups": [
         "TERRAIN",
@@ -134,12 +134,12 @@
       "cutaway": false,
       "live_context_view": {
         "center_wgs84": [
-          16.0317063331,
-          58.6522414431
+          16.031896276026856,
+          58.652304768593034
         ],
         "zoom": 15.6,
-        "pitch": 66.9002,
-        "bearing": 223.1913,
+        "pitch": 66.6384,
+        "bearing": 223.0054,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }
@@ -148,14 +148,14 @@
       "id": "STREET_VIEW",
       "label": "Street approach",
       "camera": [
-        -79,
-        5.4,
-        -91
+        -56,
+        -1.3422,
+        -87
       ],
       "target": [
-        4,
-        2,
-        8
+        -8,
+        1.4928,
+        6
       ],
       "visible_groups": [
         "TERRAIN",
@@ -170,28 +170,28 @@
       "cutaway": false,
       "live_context_view": {
         "center_wgs84": [
-          16.03177540325522,
-          58.65231381509204
+          16.03156819278956,
+          58.65229572209403
         ],
         "zoom": 19.2,
         "pitch": 85,
-        "bearing": 39.9759,
+        "bearing": 27.2996,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }
     },
     {
       "id": "PLOT_ORBIT",
-      "label": "Plot plan",
+      "label": "Plot + terrain",
       "camera": [
-        9,
-        75,
-        25
+        -67,
+        58,
+        -64
       ],
       "target": [
-        9,
-        0,
-        13
+        10,
+        0.9,
+        8
       ],
       "visible_groups": [
         "TERRAIN",
@@ -201,12 +201,12 @@
       "cutaway": false,
       "live_context_view": {
         "center_wgs84": [
-          16.031861740949246,
-          58.65235904758707
+          16.03187900848805,
+          58.65231381509204
         ],
         "zoom": 17.8,
-        "pitch": 9.0903,
-        "bearing": 180,
+        "pitch": 61.5577,
+        "bearing": 46.922,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }
@@ -215,14 +215,14 @@
       "id": "CONCEPT_HOUSE_ON_PLOT",
       "label": "Architecture studio",
       "camera": [
-        -44,
-        28,
-        -38
+        39,
+        17,
+        -30
       ],
       "target": [
-        8,
-        2.4,
-        13
+        9,
+        2.5,
+        12
       ],
       "visible_groups": [
         "TERRAIN",
@@ -237,12 +237,12 @@
       "cutaway": false,
       "live_context_view": {
         "center_wgs84": [
-          16.03184447341044,
-          58.65235904758707
+          16.031861740949246,
+          58.65235000108806
         ],
         "zoom": 18.7,
-        "pitch": 70.6346,
-        "bearing": 45.5563,
+        "pitch": 74.3083,
+        "bearing": 324.4623,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }

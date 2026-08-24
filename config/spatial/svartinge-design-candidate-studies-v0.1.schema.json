@@ -69,7 +69,7 @@
             "required": ["architectural_language", "roof_form", "wall_finish", "roof_finish", "roof_rise_m", "terrace_depth_m", "south_glazing_modules", "presentation_only"],
             "properties": {
               "architectural_language": {"enum": ["NORDIC_VIEW_HOUSE_CONCEPT", "NORDIC_COURTYARD_HOUSE_CONCEPT", "NORDIC_SPLIT_LEVEL_CONCEPT"]},
-              "roof_form": {"const": "SHALLOW_GABLE"},
+              "roof_form": {"enum": ["SHALLOW_GABLE", "CROSS_GABLE", "MONO_PITCH"]},
               "wall_finish": {"enum": ["LIGHT_TIMBER_CONCEPT", "NATURAL_TIMBER_CONCEPT", "SAGE_TIMBER_CONCEPT"]},
               "roof_finish": {"enum": ["CHARCOAL_METAL_CONCEPT", "OXIDE_METAL_CONCEPT"]},
               "roof_rise_m": {"type": "number", "minimum": 0.6, "maximum": 2},

@@ -1,0 +1,101 @@
+{
+  "schema_version": "svartinge-visual-acceptance/v0.1",
+  "entity_type": "SpatialTwinVisualAcceptance",
+  "subject": "SVÄRTINGE 54:28",
+  "scene_ref": {
+    "scene_id": "SCENE_SE_NORRKOPING_SVARTINGE_54_28_CONCEPT_V02",
+    "scene_version": "svartinge-neighbourhood-scene/v0.2",
+    "path": "data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json",
+    "sha256": "5a24595565faa142d3030c05c10167a42ee756a19c5ae555f695bbca091c15b4"
+  },
+  "viewer_ref": {
+    "path": "prototype/svartinge-neighbourhood/index.html",
+    "sha256": "1b39810f92d2fbf0eb005349bf1c315658ddc04bc087bf9704eaf8594a73fa2e"
+  },
+  "review_state": "PENDING_USER_REVIEW",
+  "policy": {
+    "automated_visual_approval_allowed": false,
+    "explicit_user_approval_required": true,
+    "actual_product_resolution_required": true,
+    "browser_security_workarounds_allowed": false,
+    "completion_gate": "ALL_FIVE_CANONICAL_VIEWS_EXPLICITLY_APPROVED"
+  },
+  "canonical_views": [
+    {
+      "view_id": "NEIGHBOURHOOD_ORBIT",
+      "label": "Neighbourhood orbit",
+      "navigation_stage_id": "NEIGHBOURHOOD_VIEW",
+      "renderer_mode": "REALISTIC",
+      "acceptance_state": "PENDING_USER_REVIEW",
+      "acceptance_criteria": [
+        "The subject plot can be identified within five seconds.",
+        "Approximately ten surrounding streets read as one continuous neighbourhood.",
+        "Roads, source-derived footprints, land cover and water remain spatially coherent.",
+        "No floating buildings, broken surfaces, stretched imagery or empty horizon is visible."
+      ],
+      "review_evidence": {"artifact_path": null, "artifact_sha256": null, "reviewed_at": null, "reviewer": null, "notes": null},
+      "blockers": ["PIXEL_REVIEW_REQUIRED", "INTERACTION_REVIEW_REQUIRED", "USER_APPROVAL_REQUIRED"]
+    },
+    {
+      "view_id": "STREET_APPROACH",
+      "label": "Street approach",
+      "navigation_stage_id": "STREET_VIEW",
+      "renderer_mode": "REALISTIC",
+      "acceptance_state": "PENDING_USER_REVIEW",
+      "acceptance_criteria": [
+        "The default camera reads at credible human eye height.",
+        "The route, plot relationship and nearby building scale are understandable.",
+        "Orbit, pan and zoom remain usable without opening evidence panels accidentally.",
+        "Vegetation and detail support rather than obscure the source-bound context."
+      ],
+      "review_evidence": {"artifact_path": null, "artifact_sha256": null, "reviewed_at": null, "reviewer": null, "notes": null},
+      "blockers": ["PIXEL_REVIEW_REQUIRED", "INTERACTION_REVIEW_REQUIRED", "USER_APPROVAL_REQUIRED"]
+    },
+    {
+      "view_id": "PLOT_AND_TERRAIN",
+      "label": "Plot and terrain",
+      "navigation_stage_id": "PLOT_ORBIT",
+      "renderer_mode": "REALISTIC",
+      "acceptance_state": "PENDING_USER_REVIEW",
+      "acceptance_criteria": [
+        "The plot boundary is continuously draped across the display terrain.",
+        "The oblique default camera makes relative fall legible rather than flattening the land.",
+        "The plot remains unmistakable without implying a legal or surveyed boundary.",
+        "Labels, warnings and evidence controls do not cover the primary subject."
+      ],
+      "review_evidence": {"artifact_path": null, "artifact_sha256": null, "reviewed_at": null, "reviewer": null, "notes": null},
+      "blockers": ["PIXEL_REVIEW_REQUIRED", "INTERACTION_REVIEW_REQUIRED", "USER_APPROVAL_REQUIRED"]
+    },
+    {
+      "view_id": "ARCHITECTURAL_CONCEPT_HERO",
+      "label": "Architectural concept hero",
+      "navigation_stage_id": "CONCEPT_HOUSE_ON_PLOT",
+      "renderer_mode": "REALISTIC",
+      "acceptance_state": "PENDING_USER_REVIEW",
+      "acceptance_criteria": [
+        "The selected preview fills enough of the frame to read as architecture rather than a box.",
+        "Roof, façade, entrance, glazing and terrace expression are visibly legible.",
+        "The house-to-plot, terrain, sun and view relationships can be understood.",
+        "The design remains explicitly concept and unselected until the user acts."
+      ],
+      "review_evidence": {"artifact_path": null, "artifact_sha256": null, "reviewed_at": null, "reviewer": null, "notes": null},
+      "blockers": ["PIXEL_REVIEW_REQUIRED", "INTERACTION_REVIEW_REQUIRED", "USER_APPROVAL_REQUIRED"]
+    },
+    {
+      "view_id": "THREE_SCHEME_COMPARISON",
+      "label": "Three-scheme comparison",
+      "navigation_stage_id": "CONCEPT_HOUSE_ON_PLOT",
+      "renderer_mode": "COMPARE",
+      "acceptance_state": "PENDING_USER_REVIEW",
+      "acceptance_criteria": [
+        "All three schemes use the same plot, camera and display terrain basis.",
+        "The three architectural strategies are recognisably different without relying on labels.",
+        "Roof form, footprint, volume count and design signals are visible and comparable.",
+        "No scheme is ranked, approved or selected without explicit user action."
+      ],
+      "review_evidence": {"artifact_path": null, "artifact_sha256": null, "reviewed_at": null, "reviewer": null, "notes": null},
+      "blockers": ["PIXEL_REVIEW_REQUIRED", "INTERACTION_REVIEW_REQUIRED", "USER_APPROVAL_REQUIRED"]
+    }
+  ],
+  "user_approval": null
+}

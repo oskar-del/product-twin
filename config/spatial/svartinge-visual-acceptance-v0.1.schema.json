@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/svartinge-visual-acceptance-v0.1.schema.json",
+  "title": "Svärtinge Spatial Twin visual acceptance",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "entity_type", "subject", "scene_ref", "viewer_ref", "review_state", "policy", "canonical_views", "user_approval"],
+  "properties": {
+    "schema_version": {"const": "svartinge-visual-acceptance/v0.1"},
+    "entity_type": {"const": "SpatialTwinVisualAcceptance"},
+    "subject": {"const": "SVÄRTINGE 54:28"},
+    "scene_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scene_id", "scene_version", "path", "sha256"],
+      "properties": {
+        "scene_id": {"const": "SCENE_SE_NORRKOPING_SVARTINGE_54_28_CONCEPT_V02"},
+        "scene_version": {"const": "svartinge-neighbourhood-scene/v0.2"},
+        "path": {"const": "data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "viewer_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"const": "prototype/svartinge-neighbourhood/index.html"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "review_state": {"enum": ["PENDING_USER_REVIEW", "PARTIALLY_APPROVED", "APPROVED"]},
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["automated_visual_approval_allowed", "explicit_user_approval_required", "actual_product_resolution_required", "browser_security_workarounds_allowed", "completion_gate"],
+      "properties": {
+        "automated_visual_approval_allowed": {"const": false},
+        "explicit_user_approval_required": {"const": true},
+        "actual_product_resolution_required": {"const": true},
+        "browser_security_workarounds_allowed": {"const": false},
+        "completion_gate": {"const": "ALL_FIVE_CANONICAL_VIEWS_EXPLICITLY_APPROVED"}
+      }
+    },
+    "canonical_views": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["view_id", "label", "navigation_stage_id", "renderer_mode", "acceptance_state", "acceptance_criteria", "review_evidence", "blockers"],
+        "properties": {
+          "view_id": {"enum": ["NEIGHBOURHOOD_ORBIT", "STREET_APPROACH", "PLOT_AND_TERRAIN", "ARCHITECTURAL_CONCEPT_HERO", "THREE_SCHEME_COMPARISON"]},
+          "label": {"type": "string", "minLength": 3},
+          "navigation_stage_id": {"enum": ["NEIGHBOURHOOD_VIEW", "STREET_VIEW", "PLOT_ORBIT", "CONCEPT_HOUSE_ON_PLOT"]},
+          "renderer_mode": {"enum": ["REALISTIC", "COMPARE"]},
+          "acceptance_state": {"enum": ["PENDING_USER_REVIEW", "APPROVED", "REJECTED"]},
+          "acceptance_criteria": {"type": "array", "minItems": 3, "items": {"type": "string", "minLength": 8}, "uniqueItems": true},
+          "review_evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["artifact_path", "artifact_sha256", "reviewed_at", "reviewer", "notes"],
+            "properties": {
+              "artifact_path": {"type": ["string", "null"]},
+              "artifact_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+              "reviewed_at": {"type": ["string", "null"], "format": "date-time"},
+              "reviewer": {"enum": ["USER", null]},
+              "notes": {"type": ["string", "null"]}
+            }
+          },
+          "blockers": {
+            "type": "array",
+            "items": {"enum": ["PIXEL_REVIEW_REQUIRED", "INTERACTION_REVIEW_REQUIRED", "USER_APPROVAL_REQUIRED"]},
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "user_approval": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["confirmation", "reviewed_at", "approved_view_ids"],
+      "properties": {
+        "confirmation": {"const": "APPROVED_BY_USER"},
+        "reviewed_at": {"type": "string", "format": "date-time"},
+        "approved_view_ids": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {"enum": ["NEIGHBOURHOOD_ORBIT", "STREET_APPROACH", "PLOT_AND_TERRAIN", "ARCHITECTURAL_CONCEPT_HERO", "THREE_SCHEME_COMPARISON"]},
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

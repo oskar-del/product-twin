@@ -114,10 +114,10 @@ function buildScene(){
 
   const liveZoom={NEIGHBOURHOOD_VIEW:15.6,STREET_VIEW:19.2,PLOT_ORBIT:17.8,CONCEPT_HOUSE_ON_PLOT:18.7,BUILDING_ORBIT:19.4,ENTER_BUILDING:20,ROOM:20.5};
   const navigation=[
-    {id:"NEIGHBOURHOOD_VIEW",label:"Neighbourhood orbit",camera:[690,430,735],target:[0,0,0],visible_groups:["TERRAIN","LANDCOVER","WATER","WATERWAY","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
-    {id:"STREET_VIEW",label:"Street approach",camera:[-79,5.4,-91],target:[4,2,8],visible_groups:["TERRAIN","LANDCOVER","WATER","WATERWAY","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
-    {id:"PLOT_ORBIT",label:"Plot plan",camera:[9,75,25],target:[9,0,13],visible_groups:["TERRAIN","PLOT","ROAD"],cutaway:false},
-    {id:"CONCEPT_HOUSE_ON_PLOT",label:"Architecture studio",camera:[-44,28,-38],target:[8,2.4,13],visible_groups:["TERRAIN","LANDCOVER","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION","CONCEPT_BUILDING","OPENING"],cutaway:false},
+    {id:"NEIGHBOURHOOD_VIEW",label:"Neighbourhood orbit",camera:[690,430,735],target:[11,0,7],visible_groups:["TERRAIN","LANDCOVER","WATER","WATERWAY","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
+    {id:"STREET_VIEW",label:"Street approach",camera:[-56,round(terrainHeight(-56,-87)+2.2),-87],target:[-8,round(terrainHeight(-8,6)+1.7),6],visible_groups:["TERRAIN","LANDCOVER","WATER","WATERWAY","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
+    {id:"PLOT_ORBIT",label:"Plot + terrain",camera:[-67,58,-64],target:[10,.9,8],visible_groups:["TERRAIN","PLOT","ROAD"],cutaway:false},
+    {id:"CONCEPT_HOUSE_ON_PLOT",label:"Architecture studio",camera:[39,17,-30],target:[9,2.5,12],visible_groups:["TERRAIN","LANDCOVER","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION","CONCEPT_BUILDING","OPENING"],cutaway:false},
     {id:"BUILDING_ORBIT",label:"Building orbit",camera:[26.4,11,29.1],target:[9.4,2,13.1],visible_groups:["PLOT","CONCEPT_BUILDING","OPENING","VIEW_DIRECTION"],cutaway:false},
     {id:"ENTER_BUILDING",label:"Enter building",camera:[4.9,2.1,12.8],target:[11.4,1.6,11.6],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE"],cutaway:true},
     {id:"ROOM",label:"Room",camera:[13.5,1.75,13.2],target:[11.1,1.45,11],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE","VIEW_DIRECTION"],cutaway:true}
