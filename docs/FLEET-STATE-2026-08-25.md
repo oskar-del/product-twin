@@ -121,6 +121,20 @@ wedged the automated tab once. Normal human scrolling should be fine, but give i
 phone pass before Nancy. Re-run: serve the file locally (config kept in
 /Users/oskarpeterson/Documents/AI/.claude/launch.json, "essence-showcase") and repeat.
 
+## Update 2026-08-25 ~23:20 — Essence showcase v2 (real renders)
+
+The Essence session rebuilt the showcase on the developer's REAL architect renders
+(scraped+mapped per villa from essencemoraira.com; Blender massing scrapped) and
+republished to the SAME artifact URL — Brain verified live: 8.8 MB served at 38777df1,
+hero = real render, per-villa galleries + 4-col spec ledgers present, honest credits
+footer. Commit f2e2395 is UNPUSHED (repo worktree ahead 1).
+DEVELOPER-CREDIT QUESTION (Oskar decides before Nancy): page credits
+"Developer: Orange Villas Development S.L." — that is the legal promoter SPV per
+Essence's own M1 receipts (README line 25). But the project's public site credits
+"GPC Group" as developer brand; our ledger's "Grupo Turis" looks stale. Recommend
+crediting the public brand (GPC Group) or both; SPV-only can read oddly on a sales
+page. One-line fix in showcase2.json + rebuild if changed.
+
 ## Decisions Oskar owns (queued)
 
 1. Winner: confirm Vinkelhuset (per 03-JUDGED-MATRIX) or re-open via tre-hus artifact.
