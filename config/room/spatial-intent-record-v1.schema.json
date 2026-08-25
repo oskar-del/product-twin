@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/spatial-intent-record-v1.schema.json",
+  "title": "Spatial Intent Record v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "intent_id",
+    "intent_type",
+    "scope",
+    "user_design_intent",
+    "hard_constraints",
+    "soft_objectives",
+    "candidate_generation",
+    "ranking",
+    "selection"
+  ],
+  "properties": {
+    "intent_id": { "type": "string", "minLength": 1 },
+    "intent_type": {
+      "enum": [
+        "MORNING_SUN",
+        "EVENING_SUN",
+        "VIEW_PRESERVE",
+        "VIEW_PRIORITISE",
+        "PRIVACY",
+        "GLARE_OVERHEATING",
+        "WINDOW_ORIENTATION_OPENING",
+        "ROOM_ADJACENCY_CIRCULATION",
+        "GARDEN_SUN_SHADE_WIND_WATER_PLANTING"
+      ]
+    },
+    "scope": { "enum": ["ROOM", "LEVEL", "BUILDING", "GARDEN_TERRACE"] },
+    "user_design_intent": { "type": "string", "minLength": 1 },
+    "hard_constraints": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/constraint" }
+    },
+    "soft_objectives": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/objective" }
+    },
+    "candidate_generation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "status", "input_refs", "blockers"],
+      "properties": {
+        "method": { "const": "DETERMINISTIC" },
+        "status": { "enum": ["READY", "BLOCKED"] },
+        "input_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "blockers": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "ranking": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "status", "required_evidence_refs"],
+      "properties": {
+        "method": { "const": "EVIDENCE_BACKED" },
+        "status": { "enum": ["READY", "BLOCKED"] },
+        "required_evidence_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "selected_candidate_id", "selected_by", "selected_at"],
+      "properties": {
+        "status": { "enum": ["UNSELECTED", "SELECTED"] },
+        "selected_candidate_id": { "type": ["string", "null"] },
+        "selected_by": { "type": ["string", "null"] },
+        "selected_at": { "type": ["string", "null"], "format": "date-time" }
+      }
+    }
+  },
+  "$defs": {
+    "constraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["constraint_id", "statement", "evidence_refs", "gate_ids"],
+      "properties": {
+        "constraint_id": { "type": "string", "minLength": 1 },
+        "statement": { "type": "string", "minLength": 1 },
+        "evidence_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "gate_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "objective": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["objective_id", "statement", "weight"],
+      "properties": {
+        "objective_id": { "type": "string", "minLength": 1 },
+        "statement": { "type": "string", "minLength": 1 },
+        "weight": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    }
+  }
+}

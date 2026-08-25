@@ -118,6 +118,21 @@ The Room Lab deployment repository remains a delivery shell temporarily. It cons
 6. Design Scenario overlays and AI optimization tools.
 7. Market-specific procurement, installation and as-built lifecycle evidence.
 
+## National site adapters
+
+National source availability must not collapse different evidence levels into
+one confidence score.
+
+- Spain/CANOPUS v0.2 is a project-specific official Catastro and IGN evidence
+  bundle with boundary and context terrain gates closed.
+- Sweden v0.1 is a reusable national source and gate profile. It separates open
+  national context, municipal planning, authoritative requested property
+  records, and field/provider proof. Until a municipality and exact property
+  designation are supplied, it remains an intake template with every gate open.
+
+Both adapters export source receipts, derived lineage and explicit gate state.
+Neither lets a Design Scenario redefine Site Twin evidence.
+
 ## First end-to-end proof
 
 The first complete proof is not a larger dashboard. It is one CANOPUS space or compact residential room where a user can:
@@ -129,4 +144,3 @@ The first complete proof is not a larger dashboard. It is one CANOPUS space or c
 - replace a generic placement with a destination-ready Product Twin without changing the approved location;
 - recalculate fit, budget, lead time and coverage;
 - export a reproducible scene and evidence manifest.
-

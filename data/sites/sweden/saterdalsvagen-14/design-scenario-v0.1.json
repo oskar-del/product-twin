@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1",
+  "entity_type": "SwedenDesignScenario",
+  "scenario_id": "SCN_SE_SATERDALSVAGEN14_BASELINE",
+  "status": "CONCEPT_VISUALISATION_ACTIVE_LEGAL_GATES_OPEN",
+  "site_twin_ref": {
+    "id": "SITE_SE_SATERDALSVAGEN14_DISCOVERY",
+    "version": "0.1",
+    "path": "data/sites/sweden/saterdalsvagen-14/plot-intelligence-v0.1.json",
+    "content_sha256": "e3ed2584a2caf5a1ad4895578c00f98439051c4ef6b1e1d306adf9af56d060aa"
+  },
+  "requested_house_profiles": ["HOUSEKIT_H30", "HOUSEKIT_H50"],
+  "selected_house_profile": null,
+  "site_boundary": null,
+  "buildable_envelope": null,
+  "building_geometry": null,
+  "access_point": null,
+  "finished_floor_level": null,
+  "blockers": [
+    "Authoritative property identity and design boundary are absent; this blocks legal/set-out claims, not evidence-labelled concept visualisation.",
+    "NOKA plan record 0581K-22D:1008 and both linked municipal plan files are captured, but today's 54:28 parcel-to-historic-lot mapping, amendment chain and current legal interpretation are unresolved.",
+    "Legal access, terrain, ground, environmental and utility-capacity gates remain open.",
+    "H30/H50 are comparison profiles only and neither is established as eligible; the v0.2 concept house is not either profile and makes no entitlement claim."
+  ],
+  "separation_rules": {
+    "cannot_redefine_site_boundary": true,
+    "cannot_promote_screening_to_entitlement": true,
+    "cannot_convert_seller_claims_to_verified_facts": true
+  }
+}

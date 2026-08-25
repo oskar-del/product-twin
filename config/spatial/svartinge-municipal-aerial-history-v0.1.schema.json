@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/svartinge-municipal-aerial-history-v0.1.schema.json",
+  "title": "Svärtinge Municipal Aerial History v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "entity_type", "subject", "authority", "service", "locator", "live_layers", "rendering_policy", "gate"],
+  "properties": {
+    "schema_version": {"const": "svartinge-municipal-aerial-history/v0.1"},
+    "entity_type": {"const": "MunicipalAerialHistoryReferenceSet"},
+    "subject": {"const": "SVÄRTINGE 54:28"},
+    "authority": {"const": "Norrköpings kommun"},
+    "service": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["endpoint", "protocol", "service_title", "crs", "axis_order", "capabilities_retrieved_at", "capabilities_receipt"],
+      "properties": {
+        "endpoint": {"const": "https://kartdata.norrkoping.se/wms?servicename=kartor"},
+        "protocol": {"const": "WMS 1.3.0"},
+        "service_title": {"const": "SpatialMap 4.3.0"},
+        "crs": {"const": "EPSG:3010"},
+        "axis_order": {"const": "NORTHING_EASTING_FOR_WMS_1_3_0"},
+        "capabilities_retrieved_at": {"type": "string", "format": "date-time"},
+        "capabilities_receipt": {"$ref": "#/$defs/receipt"}
+      }
+    },
+    "locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["coordinate_epsg3010_easting_northing", "source", "scope"],
+      "properties": {
+        "coordinate_epsg3010_easting_northing": {"const": [122807, 6504014]},
+        "source": {"type": "string", "minLength": 10},
+        "scope": {"type": "string", "minLength": 20}
+      }
+    },
+    "live_layers": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {"$ref": "#/$defs/layer"}
+    },
+    "rendering_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "provider_pixels_in_repository", "browser_cache_is_provider_controlled", "attribution_required", "geometry_extraction_allowed", "evidence_promotion_allowed", "legal_boundary_effect", "source_year_labels_are_capture_dates", "attribution"],
+      "properties": {
+        "mode": {"const": "LIVE_REFERENCE_ONLY"},
+        "provider_pixels_in_repository": {"const": false},
+        "browser_cache_is_provider_controlled": {"const": true},
+        "attribution_required": {"const": true},
+        "geometry_extraction_allowed": {"const": false},
+        "evidence_promotion_allowed": {"const": false},
+        "legal_boundary_effect": {"const": "NONE"},
+        "source_year_labels_are_capture_dates": {"const": false},
+        "attribution": {"type": "string", "minLength": 40}
+      }
+    },
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gate_id", "status", "reason"],
+      "properties": {
+        "gate_id": {"const": "GATE_SE_AERIAL_PROVENANCE_AND_PUBLICATION_RIGHTS"},
+        "status": {"const": "OPEN"},
+        "reason": {"type": "string", "minLength": 40}
+      }
+    }
+  },
+  "$defs": {
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["runtime_locator", "byte_count", "sha256", "content_persisted_in_repository"],
+      "properties": {
+        "runtime_locator": {"type": "string", "pattern": "^\\.runtime/"},
+        "byte_count": {"const": 609850},
+        "sha256": {"const": "de938fb1cd269fed257e66ee32bfaa79c06912a076f1c3cbb80f07747339cd03"},
+        "content_persisted_in_repository": {"const": false}
+      }
+    },
+    "layer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["layer_id", "wms_layer", "service_title", "year_label", "year_label_is_verified_capture_date", "live_request_url", "request_bbox_axis_order", "response_observed_at", "response_status", "response_byte_count", "response_sha256", "response_persisted", "exact_locator_covered"],
+      "properties": {
+        "layer_id": {"enum": ["AERIAL_2008", "AERIAL_2010", "AERIAL_2017", "AERIAL_2025"]},
+        "wms_layer": {"type": "string", "minLength": 5},
+        "service_title": {"type": "string", "minLength": 5},
+        "year_label": {"enum": [2008, 2010, 2017, 2025]},
+        "year_label_is_verified_capture_date": {"const": false},
+        "live_request_url": {"type": "string", "pattern": "^https://kart(or|data|or-cache)"},
+        "request_bbox_axis_order": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number"}},
+        "response_observed_at": {"type": "string", "format": "date-time"},
+        "response_status": {"const": 200},
+        "response_byte_count": {"type": "integer", "minimum": 100000},
+        "response_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "response_persisted": {"const": false},
+        "exact_locator_covered": {"const": true}
+      }
+    }
+  }
+}

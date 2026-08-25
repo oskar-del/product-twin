@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/site/project.schema.json",
+  "title": "Spatial project",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "entity_type",
+    "project_id",
+    "site_twin_ref",
+    "design_scenario_refs",
+    "evidence_source_manifest",
+    "assertions",
+    "seller_brief",
+    "economics"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "entity_type": {"const": "Project"},
+    "project_id": {"type": "string", "pattern": "^PRJ_[A-Z0-9_]+$"},
+    "site_twin_ref": {"type": "string", "pattern": "^SITE_[A-Z0-9_]+$"},
+    "design_scenario_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^SCN_[A-Z0-9_]+$"}
+    },
+    "evidence_source_manifest": {"type": "string"},
+    "assertions": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"$ref": "./evidence-assertion.schema.json"}
+    },
+    "seller_brief": {
+      "type": "object",
+      "required": ["status", "assertions"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {"const": "UNVERIFIED_SELLER_BRIEF"},
+        "assertions": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"$ref": "./evidence-assertion.schema.json"}
+        }
+      }
+    },
+    "economics": {
+      "type": "object",
+      "required": ["status", "assertions"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {"const": "UNVERIFIED_UNDERWRITING"},
+        "assertions": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"$ref": "./evidence-assertion.schema.json"}
+        }
+      }
+    }
+  }
+}

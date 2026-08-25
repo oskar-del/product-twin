@@ -1,0 +1,1674 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "PROC_PLAN_ROOM_LAB_LIVING_ES_29660",
+  "revision": 1,
+  "status": "DRAFT_NOT_PURCHASE_READY",
+  "generated_at": "2026-08-17T16:00:00.000Z",
+  "source_snapshot": {
+    "design": {
+      "path": "data/showrooms/living-room-client-design-v0.1.json",
+      "version": "0.1",
+      "identity": "DESIGN_ROOM_LAB_LIVING_V0_1",
+      "sha256": "ba22586c155a400d616f1676feb36a4e59612314cf02a318d34e8cefb073e275"
+    },
+    "offer_evidence": {
+      "path": "data/procurement/living-room-design-offers-v0.1.json",
+      "version": "0.1",
+      "identity": "DESIGN_ROOM_LAB_LIVING_V0_1",
+      "sha256": "0c77f51640973692a54080831b5d5dbdc0ca351105568c1d84e3919a96148ca6"
+    },
+    "session_evidence": {
+      "path": "data/procurement/living-room-ikea-spain-session-2026-08-17.json",
+      "version": "2026-08-17",
+      "identity": "IKEA_ES_ROOM_LAB_29660_2026_08_17",
+      "sha256": "e8dd91e684c7ca0c7a071ea19bbe6f6955355af5597e99f5916346a597a105d9"
+    },
+    "approval_evidence": null,
+    "site_access_evidence": null,
+    "placement_snapshot": {
+      "state": "IDENTITY_QUANTITY_ONLY",
+      "placement_line_count": 8,
+      "placed_unit_count": 8,
+      "transforms_included": false,
+      "bundle_membership_included": false,
+      "missing_inputs": [
+        "versioned Room Lab transforms",
+        "bundle membership and placed-avatar quantities"
+      ]
+    }
+  },
+  "destination": {
+    "country": "ES",
+    "region": "Malaga",
+    "postal_code": "29660",
+    "construction_phase": "ffe",
+    "site_access_state": "UNVERIFIED",
+    "local_supply_radius_km": 100
+  },
+  "currency": "EUR",
+  "packages": [
+    {
+      "package_id": "PKG_FFE_LIVING_ROOM",
+      "name": "Living room furniture, fixtures and equipment",
+      "construction_phase": "ffe",
+      "subpackages": [
+        {
+          "subpackage_id": "SUBPKG_FFE_SEATING",
+          "name": "Seating",
+          "assignment_state": "RULE_BASED_ROLE_MAP",
+          "line_item_ids": [
+            "LINE_LR_SOFA_01",
+            "LINE_LR_ARMCHAIR_01"
+          ]
+        },
+        {
+          "subpackage_id": "SUBPKG_FFE_TABLES",
+          "name": "Tables",
+          "assignment_state": "RULE_BASED_ROLE_MAP",
+          "line_item_ids": [
+            "LINE_LR_COFFEE_TABLE_01",
+            "LINE_LR_SIDE_TABLE_01"
+          ]
+        },
+        {
+          "subpackage_id": "SUBPKG_FFE_LIGHTING",
+          "name": "Lighting",
+          "assignment_state": "RULE_BASED_ROLE_MAP",
+          "line_item_ids": [
+            "LINE_LR_FLOOR_LAMP_01"
+          ]
+        },
+        {
+          "subpackage_id": "SUBPKG_FFE_SOFT_FURNISHINGS",
+          "name": "Soft furnishings",
+          "assignment_state": "RULE_BASED_ROLE_MAP",
+          "line_item_ids": [
+            "LINE_LR_RUG_01"
+          ]
+        },
+        {
+          "subpackage_id": "SUBPKG_FFE_STORAGE",
+          "name": "Storage and media",
+          "assignment_state": "RULE_BASED_ROLE_MAP",
+          "line_item_ids": [
+            "LINE_LR_MEDIA_UNIT_01",
+            "LINE_LR_BOOKCASE_01"
+          ]
+        }
+      ]
+    }
+  ],
+  "line_items": [
+    {
+      "line_item_id": "LINE_LR_SOFA_01",
+      "placement_id": "LR_SOFA_01",
+      "role": "sofa",
+      "generic_specification_role": "FFE.SEATING.SOFA",
+      "quantity": 1,
+      "unit": "each",
+      "bundle": {
+        "state": "BUNDLE_MEMBERSHIP_UNVERIFIED",
+        "bundle_id": null,
+        "placed_avatar_quantity": null
+      },
+      "primary_product": {
+        "twin_id": "PT_IKEA_KIVIK_49440597",
+        "avatar_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
+        "selected_configuration": "3-seat sofa, Tibbleby beige/grey",
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_KIVIK_49440597",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "supply_class": "CONFIRMED_WITHIN_10_DAYS",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront",
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "locality_state": "ORIGIN_UNRESOLVED",
+          "locality_evidence": {
+            "state": "UNRESOLVED",
+            "source_ref": null,
+            "origin_location": null,
+            "distance_km": null
+          }
+        },
+        "unit_price": {
+          "amount": 499,
+          "currency": "EUR"
+        },
+        "merchandise_total": {
+          "amount": 499,
+          "currency": "EUR"
+        },
+        "delivery": {
+          "country": "ES",
+          "postal_code": "29660",
+          "destination_state": "AVAILABLE",
+          "exact_destination_confirmed": true,
+          "lead_time_days_min": 4,
+          "lead_time_days_max": 7,
+          "window_source": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+          "classification_reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+        },
+        "evidence": {
+          "source_ref": "data/procurement/living-room-design-offers-v0.1.json#OFFER_ROUTE_IKEA_ES_KIVIK_49440597",
+          "source_uri": "https://www.ikea.com/es/es/p/kivik-sofa-3-plazas-tibbleby-beis-gris-s49440597/",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "freshness_state": "CURRENT",
+          "live_refresh_required": false,
+          "refresh_before_purchase": true
+        }
+      },
+      "alternatives": [],
+      "approval_state": "SPECIFIED_NOT_PROCUREMENT_APPROVED",
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "IDENTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Exact retail article identity is recorded."
+          },
+          {
+            "gate": "QUANTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Quantity must be a positive whole number from the frozen placement manifest."
+          },
+          {
+            "gate": "EVIDENCE_FRESHNESS",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Offer evidence is current at plan generation."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+          },
+          {
+            "gate": "PROCUREMENT_APPROVAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The specified line has not received explicit procurement approval."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No required-on-site date is present in the room manifest."
+          },
+          {
+            "gate": "CLEAN_CHECKOUT_TOTAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No clean line-level or exact-cart checkout total is attached."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Freight, tax/duty, handling and site delivery are incomplete."
+          },
+          {
+            "gate": "INSTALLATION",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Installation scope, installer and cost are unverified."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Price, stock and delivery must be refreshed immediately before purchase."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_LR_ARMCHAIR_01",
+      "placement_id": "LR_ARMCHAIR_01",
+      "role": "armchair",
+      "generic_specification_role": "FFE.SEATING.ARMCHAIR",
+      "quantity": 1,
+      "unit": "each",
+      "bundle": {
+        "state": "BUNDLE_MEMBERSHIP_UNVERIFIED",
+        "bundle_id": null,
+        "placed_avatar_quantity": null
+      },
+      "primary_product": {
+        "twin_id": "PT_IKEA_POANG_39240787",
+        "avatar_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+        "selected_configuration": "Armchair, birch veneer/Knisa light beige",
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_POANG_39240787",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "supply_class": "CONFIRMED_WITHIN_10_DAYS",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront",
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "locality_state": "ORIGIN_UNRESOLVED",
+          "locality_evidence": {
+            "state": "UNRESOLVED",
+            "source_ref": null,
+            "origin_location": null,
+            "distance_km": null
+          }
+        },
+        "unit_price": {
+          "amount": 89,
+          "currency": "EUR"
+        },
+        "merchandise_total": {
+          "amount": 89,
+          "currency": "EUR"
+        },
+        "delivery": {
+          "country": "ES",
+          "postal_code": "29660",
+          "destination_state": "AVAILABLE",
+          "exact_destination_confirmed": true,
+          "lead_time_days_min": 4,
+          "lead_time_days_max": 7,
+          "window_source": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+          "classification_reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+        },
+        "evidence": {
+          "source_ref": "data/procurement/living-room-design-offers-v0.1.json#OFFER_ROUTE_IKEA_ES_POANG_39240787",
+          "source_uri": "https://www.ikea.com/es/es/p/poang-sillon-chapa-abedul-knisa-beige-claro-s39240787/",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "freshness_state": "CURRENT",
+          "live_refresh_required": false,
+          "refresh_before_purchase": true
+        }
+      },
+      "alternatives": [],
+      "approval_state": "SPECIFIED_NOT_PROCUREMENT_APPROVED",
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "IDENTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Exact retail article identity is recorded."
+          },
+          {
+            "gate": "QUANTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Quantity must be a positive whole number from the frozen placement manifest."
+          },
+          {
+            "gate": "EVIDENCE_FRESHNESS",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Offer evidence is current at plan generation."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+          },
+          {
+            "gate": "PROCUREMENT_APPROVAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The specified line has not received explicit procurement approval."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No required-on-site date is present in the room manifest."
+          },
+          {
+            "gate": "CLEAN_CHECKOUT_TOTAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No clean line-level or exact-cart checkout total is attached."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Freight, tax/duty, handling and site delivery are incomplete."
+          },
+          {
+            "gate": "INSTALLATION",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Installation scope, installer and cost are unverified."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Price, stock and delivery must be refreshed immediately before purchase."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_LR_COFFEE_TABLE_01",
+      "placement_id": "LR_COFFEE_TABLE_01",
+      "role": "coffee_table",
+      "generic_specification_role": "FFE.TABLE.COFFEE",
+      "quantity": 1,
+      "unit": "each",
+      "bundle": {
+        "state": "BUNDLE_MEMBERSHIP_UNVERIFIED",
+        "bundle_id": null,
+        "placed_avatar_quantity": null
+      },
+      "primary_product": {
+        "twin_id": "PT_IKEA_LISTERBY_30513904",
+        "avatar_id": "AVATAR_IKEA_LISTERBY_30513904_G2_COFFEE_TABLE_PROXY",
+        "selected_configuration": "Coffee table, oak veneer",
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_LISTERBY_30513904",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "supply_class": "UNAVAILABLE",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront",
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "locality_state": "ORIGIN_UNRESOLVED",
+          "locality_evidence": {
+            "state": "UNRESOLVED",
+            "source_ref": null,
+            "origin_location": null,
+            "distance_km": null
+          }
+        },
+        "unit_price": {
+          "amount": 199,
+          "currency": "EUR"
+        },
+        "merchandise_total": {
+          "amount": 199,
+          "currency": "EUR"
+        },
+        "delivery": {
+          "country": "ES",
+          "postal_code": "29660",
+          "destination_state": "UNAVAILABLE",
+          "exact_destination_confirmed": false,
+          "lead_time_days_min": null,
+          "lead_time_days_max": null,
+          "window_source": null,
+          "classification_reason": "The exact destination route was checked and is unavailable."
+        },
+        "evidence": {
+          "source_ref": "data/procurement/living-room-design-offers-v0.1.json#OFFER_ROUTE_IKEA_ES_LISTERBY_30513904",
+          "source_uri": "https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "freshness_state": "CURRENT",
+          "live_refresh_required": false,
+          "refresh_before_purchase": true
+        }
+      },
+      "alternatives": [
+        {
+          "substitution_id": "SUB_LISTERBY_TO_VALNAS",
+          "state": "CONDITIONAL_NOT_APPROVED",
+          "twin_id": "PT_IKEA_VALNAS_20628038",
+          "avatar_id": "AVATAR_IKEA_VALNAS_20628038_G2_COFFEE_TABLE_PROXY",
+          "selected_configuration": "Coffee table, oak veneer",
+          "offer_ref": "OFFER_ROUTE_IKEA_ES_VALNAS_20628038",
+          "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+          "supply_class": "UNVERIFIED",
+          "unit_price": {
+            "amount": 249,
+            "currency": "EUR"
+          },
+          "delivery": {
+            "country": "ES",
+            "postal_code": "29660",
+            "destination_state": "AVAILABLE",
+            "exact_destination_confirmed": true,
+            "lead_time_days_min": null,
+            "lead_time_days_max": null,
+            "window_source": "PRODUCT_PAGE_NO_DATED_WINDOW_CAPTURED",
+            "classification_reason": "Destination delivery is available but no dated lead-time window is captured."
+          },
+          "evidence": {
+            "source_ref": "data/procurement/living-room-design-offers-v0.1.json#OFFER_ROUTE_IKEA_ES_VALNAS_20628038",
+            "source_uri": "https://www.ikea.com/es/en/p/valnas-coffee-table-oak-veneer-20628038/",
+            "observed_at": "2026-08-17",
+            "expires_at": "2026-08-17T23:59:59+02:00",
+            "freshness_state": "CURRENT",
+            "live_refresh_required": false,
+            "refresh_before_purchase": true
+          },
+          "deltas": {
+            "fit": {
+              "state": "REVIEW",
+              "dimension_delta_mm": {
+                "width": -220,
+                "depth": 120,
+                "height": 130
+              },
+              "same_center_transform_effect": {
+                "sofa_side_clearance_reduction_mm": 60,
+                "opposite_side_clearance_reduction_mm": 60,
+                "height_increase_mm": 130
+              }
+            },
+            "visual": {
+              "state": "PASS_WITH_LIMITS",
+              "detail": "Colour, finish and material equivalence remains a disclosed design review."
+            },
+            "performance": {
+              "state": "PASS_WITH_LIMITS",
+              "detail": "Furniture role compatibility is recorded; technical limits remain disclosed."
+            },
+            "carbon": {
+              "state": "UNVERIFIED",
+              "kg_co2e_delta": null,
+              "reason": "Comparable product, freight and installation carbon evidence is unavailable.",
+              "source_ref": null
+            },
+            "cost": {
+              "state": "VERIFIED_PRODUCT_PAGE_PRICE_DELTA",
+              "amount": 50,
+              "currency": "EUR"
+            },
+            "schedule": {
+              "state": "UNVERIFIED",
+              "lead_time_days_min": null,
+              "lead_time_days_max": null,
+              "reason": "No dated lead-time window is captured for the alternative."
+            }
+          },
+          "approval_gates": [
+            {
+              "gate": "IDENTITY",
+              "state": "PASS",
+              "critical": true,
+              "reason": "The alternative must have an exact verified retail identity."
+            },
+            {
+              "gate": "EVIDENCE_FRESHNESS",
+              "state": "PASS",
+              "critical": true,
+              "reason": "Alternative offer evidence is CURRENT."
+            },
+            {
+              "gate": "DESTINATION_SUPPLY",
+              "state": "BLOCKED",
+              "critical": true,
+              "reason": "Destination delivery is available but no dated lead-time window is captured."
+            },
+            {
+              "gate": "ROLE_MATCH",
+              "state": "PASS",
+              "critical": true,
+              "reason": "The alternative must preserve the approved design role."
+            },
+            {
+              "gate": "DIMENSION_AND_CIRCULATION_FIT",
+              "state": "REVIEW",
+              "critical": true,
+              "reason": "Placement and circulation fit must pass at the selected transform."
+            },
+            {
+              "gate": "TECHNICAL_COMPATIBILITY",
+              "state": "REVIEW",
+              "critical": true,
+              "reason": "Technical compatibility must pass without undisclosed limits."
+            },
+            {
+              "gate": "COLOUR_FINISH_MATERIAL",
+              "state": "REVIEW",
+              "critical": true,
+              "reason": "Colour, finish and material intent must be approved."
+            },
+            {
+              "gate": "CLIENT_DESIGN_APPROVAL",
+              "state": "BLOCKED",
+              "critical": true,
+              "reason": "The client must explicitly approve the substitution."
+            },
+            {
+              "gate": "CARBON_DELTA",
+              "state": "REVIEW",
+              "critical": false,
+              "reason": "Comparable carbon evidence is not yet available."
+            },
+            {
+              "gate": "SCHEDULE_DELTA",
+              "state": "BLOCKED",
+              "critical": true,
+              "reason": "Destination delivery is available but no dated lead-time window is captured."
+            }
+          ]
+        }
+      ],
+      "approval_state": "SPECIFIED_NOT_PROCUREMENT_APPROVED",
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "IDENTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Exact retail article identity is recorded."
+          },
+          {
+            "gate": "QUANTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Quantity must be a positive whole number from the frozen placement manifest."
+          },
+          {
+            "gate": "EVIDENCE_FRESHNESS",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Offer evidence is current at plan generation."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The exact destination route was checked and is unavailable."
+          },
+          {
+            "gate": "PROCUREMENT_APPROVAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The specified line has not received explicit procurement approval."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No required-on-site date is present in the room manifest."
+          },
+          {
+            "gate": "CLEAN_CHECKOUT_TOTAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No clean line-level or exact-cart checkout total is attached."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Freight, tax/duty, handling and site delivery are incomplete."
+          },
+          {
+            "gate": "INSTALLATION",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Installation scope, installer and cost are unverified."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Price, stock and delivery must be refreshed immediately before purchase."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_LR_SIDE_TABLE_01",
+      "placement_id": "LR_SIDE_TABLE_01",
+      "role": "side_table",
+      "generic_specification_role": "FFE.TABLE.SIDE",
+      "quantity": 1,
+      "unit": "each",
+      "bundle": {
+        "state": "BUNDLE_MEMBERSHIP_UNVERIFIED",
+        "bundle_id": null,
+        "placed_avatar_quantity": null
+      },
+      "primary_product": {
+        "twin_id": "PT_IKEA_GLADOM_70578451",
+        "avatar_id": "AVATAR_IKEA_GLADOM_70578451_G2_TRAY_TABLE_PROXY",
+        "selected_configuration": "Tray table, dark grey-green",
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_GLADOM_70578451",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "supply_class": "CONFIRMED_WITHIN_10_DAYS",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront",
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "locality_state": "ORIGIN_UNRESOLVED",
+          "locality_evidence": {
+            "state": "UNRESOLVED",
+            "source_ref": null,
+            "origin_location": null,
+            "distance_km": null
+          }
+        },
+        "unit_price": {
+          "amount": 19.99,
+          "currency": "EUR"
+        },
+        "merchandise_total": {
+          "amount": 19.99,
+          "currency": "EUR"
+        },
+        "delivery": {
+          "country": "ES",
+          "postal_code": "29660",
+          "destination_state": "AVAILABLE",
+          "exact_destination_confirmed": true,
+          "lead_time_days_min": 4,
+          "lead_time_days_max": 7,
+          "window_source": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+          "classification_reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+        },
+        "evidence": {
+          "source_ref": "data/procurement/living-room-design-offers-v0.1.json#OFFER_ROUTE_IKEA_ES_GLADOM_70578451",
+          "source_uri": "https://www.ikea.com/es/en/p/gladom-tray-table-dark-grey-green-70578451/",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "freshness_state": "CURRENT",
+          "live_refresh_required": false,
+          "refresh_before_purchase": true
+        }
+      },
+      "alternatives": [],
+      "approval_state": "SPECIFIED_NOT_PROCUREMENT_APPROVED",
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "IDENTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Exact retail article identity is recorded."
+          },
+          {
+            "gate": "QUANTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Quantity must be a positive whole number from the frozen placement manifest."
+          },
+          {
+            "gate": "EVIDENCE_FRESHNESS",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Offer evidence is current at plan generation."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+          },
+          {
+            "gate": "PROCUREMENT_APPROVAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The specified line has not received explicit procurement approval."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No required-on-site date is present in the room manifest."
+          },
+          {
+            "gate": "CLEAN_CHECKOUT_TOTAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No clean line-level or exact-cart checkout total is attached."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Freight, tax/duty, handling and site delivery are incomplete."
+          },
+          {
+            "gate": "INSTALLATION",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Installation scope, installer and cost are unverified."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Price, stock and delivery must be refreshed immediately before purchase."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_LR_FLOOR_LAMP_01",
+      "placement_id": "LR_FLOOR_LAMP_01",
+      "role": "floor_lamp",
+      "generic_specification_role": "ELECTRICAL.LUMINAIRES.FLOOR_LAMP",
+      "quantity": 1,
+      "unit": "each",
+      "bundle": {
+        "state": "BUNDLE_MEMBERSHIP_UNVERIFIED",
+        "bundle_id": null,
+        "placed_avatar_quantity": null
+      },
+      "primary_product": {
+        "twin_id": "PT_IKEA_LAUTERS_30405042",
+        "avatar_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+        "selected_configuration": "Floor lamp, ash/white",
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_LAUTERS_30405042",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "supply_class": "CONFIRMED_WITHIN_10_DAYS",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront",
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "locality_state": "ORIGIN_UNRESOLVED",
+          "locality_evidence": {
+            "state": "UNRESOLVED",
+            "source_ref": null,
+            "origin_location": null,
+            "distance_km": null
+          }
+        },
+        "unit_price": {
+          "amount": 59.99,
+          "currency": "EUR"
+        },
+        "merchandise_total": {
+          "amount": 59.99,
+          "currency": "EUR"
+        },
+        "delivery": {
+          "country": "ES",
+          "postal_code": "29660",
+          "destination_state": "AVAILABLE",
+          "exact_destination_confirmed": true,
+          "lead_time_days_min": 4,
+          "lead_time_days_max": 7,
+          "window_source": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+          "classification_reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+        },
+        "evidence": {
+          "source_ref": "data/procurement/living-room-design-offers-v0.1.json#OFFER_ROUTE_IKEA_ES_LAUTERS_30405042",
+          "source_uri": "https://www.ikea.com/es/en/p/lauters-floor-lamp-ash-white-30405042/",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "freshness_state": "CURRENT",
+          "live_refresh_required": false,
+          "refresh_before_purchase": true
+        }
+      },
+      "alternatives": [],
+      "approval_state": "SPECIFIED_NOT_PROCUREMENT_APPROVED",
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "IDENTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Exact retail article identity is recorded."
+          },
+          {
+            "gate": "QUANTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Quantity must be a positive whole number from the frozen placement manifest."
+          },
+          {
+            "gate": "EVIDENCE_FRESHNESS",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Offer evidence is current at plan generation."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+          },
+          {
+            "gate": "PROCUREMENT_APPROVAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The specified line has not received explicit procurement approval."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No required-on-site date is present in the room manifest."
+          },
+          {
+            "gate": "CLEAN_CHECKOUT_TOTAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No clean line-level or exact-cart checkout total is attached."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Freight, tax/duty, handling and site delivery are incomplete."
+          },
+          {
+            "gate": "INSTALLATION",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Installation scope, installer and cost are unverified."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Price, stock and delivery must be refreshed immediately before purchase."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_LR_RUG_01",
+      "placement_id": "LR_RUG_01",
+      "role": "rug",
+      "generic_specification_role": "FFE.SOFT_FURNISHINGS.RUG",
+      "quantity": 1,
+      "unit": "each",
+      "bundle": {
+        "state": "BUNDLE_MEMBERSHIP_UNVERIFIED",
+        "bundle_id": null,
+        "placed_avatar_quantity": null
+      },
+      "primary_product": {
+        "twin_id": "PT_IKEA_LOHALS_30511288",
+        "avatar_id": "AVATAR_IKEA_LOHALS_30511288_G2_RUG_PROXY",
+        "selected_configuration": "Rug, flatwoven, natural, 133×195 cm",
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_LOHALS_30511288",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "supply_class": "CONFIRMED_WITHIN_10_DAYS",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront",
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "locality_state": "ORIGIN_UNRESOLVED",
+          "locality_evidence": {
+            "state": "UNRESOLVED",
+            "source_ref": null,
+            "origin_location": null,
+            "distance_km": null
+          }
+        },
+        "unit_price": {
+          "amount": 49.99,
+          "currency": "EUR"
+        },
+        "merchandise_total": {
+          "amount": 49.99,
+          "currency": "EUR"
+        },
+        "delivery": {
+          "country": "ES",
+          "postal_code": "29660",
+          "destination_state": "AVAILABLE",
+          "exact_destination_confirmed": true,
+          "lead_time_days_min": 4,
+          "lead_time_days_max": 7,
+          "window_source": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+          "classification_reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+        },
+        "evidence": {
+          "source_ref": "data/procurement/living-room-design-offers-v0.1.json#OFFER_ROUTE_IKEA_ES_LOHALS_30511288",
+          "source_uri": "https://www.ikea.com/es/en/p/lohals-rug-flatwoven-natural-30511288/",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "freshness_state": "CURRENT",
+          "live_refresh_required": false,
+          "refresh_before_purchase": true
+        }
+      },
+      "alternatives": [],
+      "approval_state": "SPECIFIED_NOT_PROCUREMENT_APPROVED",
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "IDENTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Exact retail article identity is recorded."
+          },
+          {
+            "gate": "QUANTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Quantity must be a positive whole number from the frozen placement manifest."
+          },
+          {
+            "gate": "EVIDENCE_FRESHNESS",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Offer evidence is current at plan generation."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+          },
+          {
+            "gate": "PROCUREMENT_APPROVAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The specified line has not received explicit procurement approval."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No required-on-site date is present in the room manifest."
+          },
+          {
+            "gate": "CLEAN_CHECKOUT_TOTAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No clean line-level or exact-cart checkout total is attached."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Freight, tax/duty, handling and site delivery are incomplete."
+          },
+          {
+            "gate": "INSTALLATION",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Installation scope, installer and cost are unverified."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Price, stock and delivery must be refreshed immediately before purchase."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_LR_MEDIA_UNIT_01",
+      "placement_id": "LR_MEDIA_UNIT_01",
+      "role": "media_unit",
+      "generic_specification_role": "FFE.STORAGE.MEDIA_UNIT",
+      "quantity": 1,
+      "unit": "each",
+      "bundle": {
+        "state": "BUNDLE_MEMBERSHIP_UNVERIFIED",
+        "bundle_id": null,
+        "placed_avatar_quantity": null
+      },
+      "primary_product": {
+        "twin_id": "PT_IKEA_BESTA_89330691",
+        "avatar_id": "AVATAR_IKEA_BESTA_89330691_G2_MEDIA_UNIT_PROXY",
+        "selected_configuration": "TV bench, white/Lappviken white",
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_BESTA_89330691",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "supply_class": "CONFIRMED_WITHIN_10_DAYS",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront",
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "locality_state": "ORIGIN_UNRESOLVED",
+          "locality_evidence": {
+            "state": "UNRESOLVED",
+            "source_ref": null,
+            "origin_location": null,
+            "distance_km": null
+          }
+        },
+        "unit_price": {
+          "amount": 150,
+          "currency": "EUR"
+        },
+        "merchandise_total": {
+          "amount": 150,
+          "currency": "EUR"
+        },
+        "delivery": {
+          "country": "ES",
+          "postal_code": "29660",
+          "destination_state": "AVAILABLE",
+          "exact_destination_confirmed": true,
+          "lead_time_days_min": 4,
+          "lead_time_days_max": 7,
+          "window_source": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+          "classification_reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+        },
+        "evidence": {
+          "source_ref": "data/procurement/living-room-design-offers-v0.1.json#OFFER_ROUTE_IKEA_ES_BESTA_89330691",
+          "source_uri": "https://www.ikea.com/es/es/p/besta-mueble-tv-blanco-lappviken-blanco-s89330691/",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "freshness_state": "CURRENT",
+          "live_refresh_required": false,
+          "refresh_before_purchase": true
+        }
+      },
+      "alternatives": [],
+      "approval_state": "SPECIFIED_NOT_PROCUREMENT_APPROVED",
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "IDENTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Exact retail article identity is recorded."
+          },
+          {
+            "gate": "QUANTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Quantity must be a positive whole number from the frozen placement manifest."
+          },
+          {
+            "gate": "EVIDENCE_FRESHNESS",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Offer evidence is current at plan generation."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+          },
+          {
+            "gate": "PROCUREMENT_APPROVAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The specified line has not received explicit procurement approval."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No required-on-site date is present in the room manifest."
+          },
+          {
+            "gate": "CLEAN_CHECKOUT_TOTAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No clean line-level or exact-cart checkout total is attached."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Freight, tax/duty, handling and site delivery are incomplete."
+          },
+          {
+            "gate": "INSTALLATION",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Installation scope, installer and cost are unverified."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Price, stock and delivery must be refreshed immediately before purchase."
+          }
+        ]
+      }
+    },
+    {
+      "line_item_id": "LINE_LR_BOOKCASE_01",
+      "placement_id": "LR_BOOKCASE_01",
+      "role": "bookcase",
+      "generic_specification_role": "FFE.STORAGE.BOOKCASE",
+      "quantity": 1,
+      "unit": "each",
+      "bundle": {
+        "state": "BUNDLE_MEMBERSHIP_UNVERIFIED",
+        "bundle_id": null,
+        "placed_avatar_quantity": null
+      },
+      "primary_product": {
+        "twin_id": "PT_IKEA_BILLY_00263850",
+        "avatar_id": "AVATAR_IKEA_BILLY_00263850_G2_BOOKCASE_PROXY",
+        "selected_configuration": "Bookcase, white",
+        "offer_ref": "OFFER_ROUTE_IKEA_ES_BILLY_00263850",
+        "identity_state": "EXACT_RETAIL_ARTICLE_VERIFIED",
+        "supply_class": "CONFIRMED_WITHIN_10_DAYS",
+        "seller": {
+          "seller_id": "ikea_spain",
+          "seller_name": "IKEA Spain storefront",
+          "retailer_territory_country": "ES",
+          "seller_country": null,
+          "dispatch_country": null,
+          "locality_state": "ORIGIN_UNRESOLVED",
+          "locality_evidence": {
+            "state": "UNRESOLVED",
+            "source_ref": null,
+            "origin_location": null,
+            "distance_km": null
+          }
+        },
+        "unit_price": {
+          "amount": 59.99,
+          "currency": "EUR"
+        },
+        "merchandise_total": {
+          "amount": 59.99,
+          "currency": "EUR"
+        },
+        "delivery": {
+          "country": "ES",
+          "postal_code": "29660",
+          "destination_state": "AVAILABLE",
+          "exact_destination_confirmed": true,
+          "lead_time_days_min": 4,
+          "lead_time_days_max": 7,
+          "window_source": "COMBINED_CART_7_EXACT_ROOM_PRODUCTS_PLUS_2_ACCESSORIES",
+          "classification_reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+        },
+        "evidence": {
+          "source_ref": "data/procurement/living-room-design-offers-v0.1.json#OFFER_ROUTE_IKEA_ES_BILLY_00263850",
+          "source_uri": "https://www.ikea.com/es/es/p/billy-libreria-blanco-00263850/",
+          "observed_at": "2026-08-17",
+          "expires_at": "2026-08-17T23:59:59+02:00",
+          "freshness_state": "CURRENT",
+          "live_refresh_required": false,
+          "refresh_before_purchase": true
+        }
+      },
+      "alternatives": [],
+      "approval_state": "SPECIFIED_NOT_PROCUREMENT_APPROVED",
+      "readiness": {
+        "purchase_ready": false,
+        "state": "BLOCKED",
+        "gates": [
+          {
+            "gate": "IDENTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Exact retail article identity is recorded."
+          },
+          {
+            "gate": "QUANTITY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Quantity must be a positive whole number from the frozen placement manifest."
+          },
+          {
+            "gate": "EVIDENCE_FRESHNESS",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Offer evidence is current at plan generation."
+          },
+          {
+            "gate": "DESTINATION_SUPPLY",
+            "state": "PASS",
+            "critical": true,
+            "reason": "Destination delivery is confirmed within 4-7 days; origin is unresolved."
+          },
+          {
+            "gate": "PROCUREMENT_APPROVAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "The specified line has not received explicit procurement approval."
+          },
+          {
+            "gate": "REQUIRED_ON_SITE_DATE",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No required-on-site date is present in the room manifest."
+          },
+          {
+            "gate": "CLEAN_CHECKOUT_TOTAL",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "No clean line-level or exact-cart checkout total is attached."
+          },
+          {
+            "gate": "LANDED_COST",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Freight, tax/duty, handling and site delivery are incomplete."
+          },
+          {
+            "gate": "INSTALLATION",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Installation scope, installer and cost are unverified."
+          },
+          {
+            "gate": "PURCHASE_REFRESH",
+            "state": "BLOCKED",
+            "critical": true,
+            "reason": "Price, stock and delivery must be refreshed immediately before purchase."
+          }
+        ]
+      }
+    }
+  ],
+  "classification_summary": {
+    "basis": "selected_primary_products",
+    "total_lines": 8,
+    "total_units": 8,
+    "classes": [
+      {
+        "supply_class": "LOCAL",
+        "line_count": 0,
+        "unit_quantity": 0,
+        "unit_percentage": 0
+      },
+      {
+        "supply_class": "CONFIRMED_WITHIN_10_DAYS",
+        "line_count": 7,
+        "unit_quantity": 7,
+        "unit_percentage": 87.5
+      },
+      {
+        "supply_class": "CONFIRMED_BEYOND_10_DAYS",
+        "line_count": 0,
+        "unit_quantity": 0,
+        "unit_percentage": 0
+      },
+      {
+        "supply_class": "UNAVAILABLE",
+        "line_count": 1,
+        "unit_quantity": 1,
+        "unit_percentage": 12.5
+      },
+      {
+        "supply_class": "UNVERIFIED",
+        "line_count": 0,
+        "unit_quantity": 0,
+        "unit_percentage": 0
+      }
+    ]
+  },
+  "cost_summary": {
+    "specified_merchandise": {
+      "state": "VERIFIED",
+      "amount": 1126.96,
+      "currency": "EUR",
+      "reason": "Eight current official product-page prices; this includes the unavailable specified LISTERBY line.",
+      "source_ref": "data/procurement/living-room-design-offers-v0.1.json"
+    },
+    "currently_deliverable_merchandise": {
+      "state": "VERIFIED",
+      "amount": 927.96,
+      "currency": "EUR",
+      "reason": "Selected primary products with current destination delivery and a dated lead-time classification.",
+      "source_ref": "data/procurement/living-room-design-offers-v0.1.json"
+    },
+    "freight": {
+      "state": "CONTAMINATED_EVIDENCE",
+      "amount": null,
+      "currency": "EUR",
+      "reason": "The captured 79.90 EUR quote includes two accidental accessories and cannot be allocated cleanly.",
+      "source_ref": "data/procurement/living-room-ikea-spain-session-2026-08-17.json"
+    },
+    "tax_and_duty": {
+      "state": "UNVERIFIED",
+      "amount": null,
+      "currency": "EUR",
+      "reason": "Destination tax treatment, included VAT disclosure and any duty are not joined at plan level.",
+      "source_ref": null
+    },
+    "installation": {
+      "state": "UNVERIFIED",
+      "amount": null,
+      "currency": "EUR",
+      "reason": "Assembly, placement, electrical connection and installer scope are not quoted.",
+      "source_ref": null
+    },
+    "contingency": {
+      "state": "UNVERIFIED",
+      "amount": null,
+      "currency": "EUR",
+      "reason": "No approved contingency basis or percentage is present.",
+      "source_ref": null
+    },
+    "landed_total": {
+      "state": "UNVERIFIED",
+      "amount": null,
+      "currency": "EUR",
+      "reason": "Landed total is withheld until freight, tax/duty, handling, unloading, installation and contingency are complete.",
+      "source_ref": null
+    }
+  },
+  "delivery_schedule": {
+    "state": "BLOCKED",
+    "required_on_site_date": null,
+    "scheduled_groups": [
+      {
+        "delivery_group_id": "DELIVERY_GROUP_IKEA_ES_ROOM_BASELINE",
+        "state": "EVIDENCE_WINDOW_ONLY",
+        "line_item_ids": [
+          "LINE_LR_SOFA_01",
+          "LINE_LR_ARMCHAIR_01",
+          "LINE_LR_SIDE_TABLE_01",
+          "LINE_LR_FLOOR_LAMP_01",
+          "LINE_LR_RUG_01",
+          "LINE_LR_MEDIA_UNIT_01",
+          "LINE_LR_BOOKCASE_01"
+        ],
+        "delivery_date_min": "2026-08-21",
+        "delivery_date_max": "2026-08-24",
+        "membership_evidence_state": "COUNT_RECONCILED_NOT_ITEMIZED",
+        "source_ref": "data/procurement/living-room-ikea-spain-session-2026-08-17.json",
+        "booking_state": "NOT_BOOKED"
+      }
+    ],
+    "blocked_line_item_ids": [
+      "LINE_LR_COFFEE_TABLE_01"
+    ],
+    "unscheduled_reason": "The required-on-site date, clean freight quote, site access, procurement approvals and one selected product route are unresolved."
+  },
+  "risk_register": [
+    {
+      "risk_id": "RISK_SELECTED_PRODUCT_UNAVAILABLE",
+      "category": "supply",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "affected_line_item_ids": [
+        "LINE_LR_COFFEE_TABLE_01"
+      ],
+      "evidence": "LISTERBY is unavailable for the exact ES 29660 route in the dated observation.",
+      "mitigation": "Keep LISTERBY selected and visibly blocked; fit-check and explicitly approve VALNÄS or another exact alternative before changing the design.",
+      "owner": "Build, Procurement & Logistics OS"
+    },
+    {
+      "risk_id": "RISK_SUBSTITUTION_NOT_APPROVED",
+      "category": "approval",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "affected_line_item_ids": [
+        "LINE_LR_COFFEE_TABLE_01"
+      ],
+      "evidence": "VALNÄS remains conditional with fit, technical, finish and client-approval gates open.",
+      "mitigation": "Resolve every disclosed delta and record explicit client approval; never auto-apply the alternative.",
+      "owner": "Room Lab & Commerce Showroom / client decision"
+    },
+    {
+      "risk_id": "RISK_FREIGHT_QUOTE_CONTAMINATED",
+      "category": "landed_cost",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "affected_line_item_ids": [
+        "LINE_LR_SOFA_01",
+        "LINE_LR_ARMCHAIR_01",
+        "LINE_LR_SIDE_TABLE_01",
+        "LINE_LR_FLOOR_LAMP_01",
+        "LINE_LR_RUG_01",
+        "LINE_LR_MEDIA_UNIT_01",
+        "LINE_LR_BOOKCASE_01"
+      ],
+      "evidence": "The combined cart contained seven exact products and two accidental accessories.",
+      "mitigation": "Capture a clean cart or supplier quote and allocate freight without embedding mutable checkout payloads.",
+      "owner": "Build, Procurement & Logistics OS"
+    },
+    {
+      "risk_id": "RISK_CART_MEMBERSHIP_NOT_ITEMIZED",
+      "category": "schedule_evidence",
+      "severity": "MEDIUM",
+      "state": "OPEN",
+      "affected_line_item_ids": [
+        "LINE_LR_SOFA_01",
+        "LINE_LR_ARMCHAIR_01",
+        "LINE_LR_SIDE_TABLE_01",
+        "LINE_LR_FLOOR_LAMP_01",
+        "LINE_LR_RUG_01",
+        "LINE_LR_MEDIA_UNIT_01",
+        "LINE_LR_BOOKCASE_01"
+      ],
+      "evidence": "The source cart records seven exact room products by count, but does not itemize their Product Twin IDs inside the cart evidence object.",
+      "mitigation": "Treat the calendar window as evidence-only and capture an itemized clean quote before booking or purchase.",
+      "owner": "Build, Procurement & Logistics OS"
+    },
+    {
+      "risk_id": "RISK_SUPPLY_ORIGIN_UNRESOLVED",
+      "category": "supplier",
+      "severity": "MEDIUM",
+      "state": "OPEN",
+      "affected_line_item_ids": [
+        "LINE_LR_SOFA_01",
+        "LINE_LR_ARMCHAIR_01",
+        "LINE_LR_COFFEE_TABLE_01",
+        "LINE_LR_SIDE_TABLE_01",
+        "LINE_LR_FLOOR_LAMP_01",
+        "LINE_LR_RUG_01",
+        "LINE_LR_MEDIA_UNIT_01",
+        "LINE_LR_BOOKCASE_01"
+      ],
+      "evidence": "Seller and dispatch country are null for every selected offer.",
+      "mitigation": "Capture seller or dispatch origin before making locality or route-carbon claims.",
+      "owner": "Build, Procurement & Logistics OS"
+    },
+    {
+      "risk_id": "RISK_EVIDENCE_EXPIRES_DAILY",
+      "category": "freshness",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "affected_line_item_ids": [
+        "LINE_LR_SOFA_01",
+        "LINE_LR_ARMCHAIR_01",
+        "LINE_LR_COFFEE_TABLE_01",
+        "LINE_LR_SIDE_TABLE_01",
+        "LINE_LR_FLOOR_LAMP_01",
+        "LINE_LR_RUG_01",
+        "LINE_LR_MEDIA_UNIT_01",
+        "LINE_LR_BOOKCASE_01"
+      ],
+      "evidence": "Every selected offer is mutable and the current snapshot expires at the recorded validity boundary.",
+      "mitigation": "Run the evidence monitor daily while shown and refresh immediately before approval or purchase.",
+      "owner": "Verification, Evidence & Monitoring"
+    },
+    {
+      "risk_id": "RISK_PLACEMENT_SNAPSHOT_INCOMPLETE",
+      "category": "source_completeness",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "affected_line_item_ids": [
+        "LINE_LR_SOFA_01",
+        "LINE_LR_ARMCHAIR_01",
+        "LINE_LR_COFFEE_TABLE_01",
+        "LINE_LR_SIDE_TABLE_01",
+        "LINE_LR_FLOOR_LAMP_01",
+        "LINE_LR_RUG_01",
+        "LINE_LR_MEDIA_UNIT_01",
+        "LINE_LR_BOOKCASE_01"
+      ],
+      "evidence": "The repository manifest contains identities and quantities but no transforms or bundle membership.",
+      "mitigation": "Consume a versioned Room Lab placement export before claiming exact bundle or placement-derived quantities.",
+      "owner": "Room Lab & Commerce Showroom"
+    },
+    {
+      "risk_id": "RISK_SITE_AND_INSTALLATION_UNVERIFIED",
+      "category": "delivery_installation",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "affected_line_item_ids": [
+        "LINE_LR_SOFA_01",
+        "LINE_LR_ARMCHAIR_01",
+        "LINE_LR_COFFEE_TABLE_01",
+        "LINE_LR_SIDE_TABLE_01",
+        "LINE_LR_FLOOR_LAMP_01",
+        "LINE_LR_RUG_01",
+        "LINE_LR_MEDIA_UNIT_01",
+        "LINE_LR_BOOKCASE_01"
+      ],
+      "evidence": "Site access, unloading, storage, required-on-site date, assembly and installation are absent.",
+      "mitigation": "Attach destination access constraints, installation scope and required-on-site date before scheduling.",
+      "owner": "Build, Procurement & Logistics OS"
+    }
+  ],
+  "evidence_freshness": {
+    "evaluated_at": "2026-08-17T16:00:00.000Z",
+    "overall_state": "CURRENT",
+    "current_until": "2026-08-17T23:59:59+02:00",
+    "current_count": 9,
+    "expired_count": 0,
+    "refresh_required_count": 0,
+    "unknown_count": 0,
+    "policy": "Price, stock and delivery evidence is checked daily while shown as current and immediately before approval or purchase.",
+    "monitor": {
+      "owner": "Verification, Evidence & Monitoring",
+      "cadence": "DAILY_WHILE_SHOWN_AS_CURRENT_AND_IMMEDIATELY_BEFORE_PURCHASE",
+      "failure_destination": "Build, Procurement & Logistics OS risk register and Room Lab supply state",
+      "last_checked_at": "2026-08-17T16:00:00.000Z",
+      "renewal_condition": "Refresh every selected and alternative offer for destination ES 29660 and generate a new versioned observation.",
+      "stop_condition": "Stop when the room plan is superseded, rejected or no longer shown as current."
+    }
+  },
+  "procurement_readiness": {
+    "purchase_ready": false,
+    "state": "BLOCKED",
+    "gate_policy": "Purchase readiness is true only when every critical deterministic gate passes; prose judgement cannot waive a failure.",
+    "gates": [
+      {
+        "gate": "SOURCE_PLACEMENT_COMPLETE",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Room Lab transforms and bundle membership are not present in the frozen repository manifest."
+      },
+      {
+        "gate": "MERCHANDISE_RECONCILIATION",
+        "state": "PASS",
+        "critical": true,
+        "reason": "Every selected line has a current comparable-currency product-page price."
+      },
+      {
+        "gate": "DESTINATION_SUPPLY_ALL_LINES",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "1 selected line is unavailable or unverified."
+      },
+      {
+        "gate": "SUBSTITUTION_APPROVALS",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "At least one blocked selected line lacks an approved alternative."
+      },
+      {
+        "gate": "LINE_PROCUREMENT_APPROVALS",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "No hashed line-level procurement-approval source is attached."
+      },
+      {
+        "gate": "EVIDENCE_FRESHNESS",
+        "state": "PASS",
+        "critical": true,
+        "reason": "Evidence freshness is CURRENT."
+      },
+      {
+        "gate": "PURCHASE_TIME_REFRESH",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "A new price, stock and delivery observation is required immediately before purchase."
+      },
+      {
+        "gate": "CLEAN_FREIGHT",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "The captured 79.90 EUR quote includes two accidental accessories and cannot be allocated cleanly."
+      },
+      {
+        "gate": "TAX_AND_DUTY",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Destination tax treatment, included VAT disclosure and any duty are not joined at plan level."
+      },
+      {
+        "gate": "INSTALLATION",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Assembly, placement, electrical connection and installer scope are not quoted."
+      },
+      {
+        "gate": "CONTINGENCY",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "No approved contingency basis or percentage is present."
+      },
+      {
+        "gate": "LANDED_TOTAL",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Landed total is withheld until freight, tax/duty, handling, unloading, installation and contingency are complete."
+      },
+      {
+        "gate": "REQUIRED_ON_SITE_DATE",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "No required-on-site date is attached."
+      },
+      {
+        "gate": "SITE_ACCESS",
+        "state": "BLOCKED",
+        "critical": true,
+        "reason": "Delivery access, unloading and storage constraints are unverified."
+      },
+      {
+        "gate": "MUTABLE_CHECKOUT_PAYLOAD_EXCLUDED",
+        "state": "PASS",
+        "critical": true,
+        "reason": "The permanent plan contains evidence references, not mutable cart or order payloads."
+      }
+    ],
+    "blocking_gate_ids": [
+      "SOURCE_PLACEMENT_COMPLETE",
+      "DESTINATION_SUPPLY_ALL_LINES",
+      "SUBSTITUTION_APPROVALS",
+      "LINE_PROCUREMENT_APPROVALS",
+      "PURCHASE_TIME_REFRESH",
+      "CLEAN_FREIGHT",
+      "TAX_AND_DUTY",
+      "INSTALLATION",
+      "CONTINGENCY",
+      "LANDED_TOTAL",
+      "REQUIRED_ON_SITE_DATE",
+      "SITE_ACCESS"
+    ]
+  },
+  "consumer_contract": {
+    "consumer": "ROOM_LAB",
+    "manifest_role": "PROCUREMENT_PLAN",
+    "selected_design_mutated": false,
+    "conditional_alternatives_auto_applied": false,
+    "mutable_checkout_payloads_embedded": false,
+    "notes": [
+      "Room Lab owns placement transforms and bundle truth; this plan owns supply, cost, schedule, risk and readiness.",
+      "VALNÄS is a separate conditional scenario and does not replace LISTERBY in the selected design.",
+      "SE, GB and US must use separate destination evidence and are not inferred from this Spain plan."
+    ]
+  }
+}

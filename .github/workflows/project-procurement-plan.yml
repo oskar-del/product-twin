@@ -1,0 +1,111 @@
+name: Project Procurement Plan
+
+on:
+  push:
+    paths:
+      - ".github/workflows/project-procurement-plan.yml"
+      - "config/project-procurement-plan.schema.json"
+      - "config/compact-house-route-baseline.schema.json"
+      - "config/room-commerce-procurement-manifest.schema.json"
+      - "config/logistics-schema.json"
+      - "config/regulatory-schema.json"
+      - "config/jurisdictions/es-andalucia-seed.json"
+      - "config/prefab-system-schema.json"
+      - "config/prefab-design-procurement-modes.json"
+      - "config/prefab-room-pods.json"
+      - "data/showrooms/living-room-client-design-v0.1.json"
+      - "data/procurement/living-room-design-offers-v0.1.json"
+      - "data/procurement/living-room-ikea-spain-session-2026-08-17.json"
+      - "data/procurement/room-lab-living-spain-procurement-plan-v1.0.0.json"
+      - "data/integrations/room-lab/**"
+      - "data/procurement/marbella-living-room-commerce-es-29660.v1.json"
+      - "data/exports/room-lab/marbella-commerce-es-29660.v1.json"
+      - "data/projects/marbella-villa.example.json"
+      - "data/tests/whole-building-10.json"
+      - "data/tests/results/whole-building-10.latest.json"
+      - "data/procurement/whole-building-10.routes.json"
+      - "data/procurement/project-marbella-villa-001-compact-house-route-baseline-v1.0.0.json"
+      - "data/requirements/project-marbella-villa-001.structural-concrete.json"
+      - "data/requirements/project-marbella-villa-001.pool-circulation.json"
+      - "data/energy/project-marbella-villa-001.solar-requirement.json"
+      - "data/energy/project-marbella-villa-001.pvgis.json"
+      - "data/energy/project-marbella-villa-001.cte-climate.json"
+      - "scripts/build-living-room-procurement-plan.mjs"
+      - "scripts/validate-project-procurement-plan.mjs"
+      - "scripts/test-project-procurement-plan.mjs"
+      - "scripts/build-room-commerce-procurement-manifest.mjs"
+      - "scripts/validate-room-commerce-procurement-manifest.mjs"
+      - "scripts/test-room-commerce-procurement-manifest.mjs"
+      - "scripts/build-compact-house-route-baseline.mjs"
+      - "scripts/validate-compact-house-route-baseline.mjs"
+      - "scripts/test-compact-house-route-baseline.mjs"
+      - "package.json"
+  pull_request:
+    paths:
+      - ".github/workflows/project-procurement-plan.yml"
+      - "config/project-procurement-plan.schema.json"
+      - "config/compact-house-route-baseline.schema.json"
+      - "config/room-commerce-procurement-manifest.schema.json"
+      - "config/logistics-schema.json"
+      - "config/regulatory-schema.json"
+      - "config/jurisdictions/es-andalucia-seed.json"
+      - "config/prefab-system-schema.json"
+      - "config/prefab-design-procurement-modes.json"
+      - "config/prefab-room-pods.json"
+      - "data/showrooms/living-room-client-design-v0.1.json"
+      - "data/procurement/living-room-design-offers-v0.1.json"
+      - "data/procurement/living-room-ikea-spain-session-2026-08-17.json"
+      - "data/procurement/room-lab-living-spain-procurement-plan-v1.0.0.json"
+      - "data/integrations/room-lab/**"
+      - "data/procurement/marbella-living-room-commerce-es-29660.v1.json"
+      - "data/exports/room-lab/marbella-commerce-es-29660.v1.json"
+      - "data/projects/marbella-villa.example.json"
+      - "data/tests/whole-building-10.json"
+      - "data/tests/results/whole-building-10.latest.json"
+      - "data/procurement/whole-building-10.routes.json"
+      - "data/procurement/project-marbella-villa-001-compact-house-route-baseline-v1.0.0.json"
+      - "data/requirements/project-marbella-villa-001.structural-concrete.json"
+      - "data/requirements/project-marbella-villa-001.pool-circulation.json"
+      - "data/energy/project-marbella-villa-001.solar-requirement.json"
+      - "data/energy/project-marbella-villa-001.pvgis.json"
+      - "data/energy/project-marbella-villa-001.cte-climate.json"
+      - "scripts/build-living-room-procurement-plan.mjs"
+      - "scripts/validate-project-procurement-plan.mjs"
+      - "scripts/test-project-procurement-plan.mjs"
+      - "scripts/build-room-commerce-procurement-manifest.mjs"
+      - "scripts/validate-room-commerce-procurement-manifest.mjs"
+      - "scripts/test-room-commerce-procurement-manifest.mjs"
+      - "scripts/build-compact-house-route-baseline.mjs"
+      - "scripts/validate-compact-house-route-baseline.mjs"
+      - "scripts/test-compact-house-route-baseline.mjs"
+      - "package.json"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run deterministic procurement-plan tests
+        run: npm run procurement:plan:test
+      - name: Validate committed procurement-plan manifest
+        run: npm run procurement:plan:validate -- --current
+      - name: Run deterministic Room Lab commerce procurement tests
+        run: npm run procurement:room-commerce:test
+      - name: Validate committed Room Lab commerce procurement manifest
+        run: npm run procurement:room-commerce:validate -- --current
+      - name: Run deterministic compact-house baseline tests
+        run: npm run procurement:house:test
+      - name: Validate committed compact-house route baseline
+        run: npm run procurement:house:validate

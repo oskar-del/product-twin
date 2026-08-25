@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "entity_type": "SwedenPlotIntake",
+  "country": "SE",
+  "intake_id": "SE_NORRKOPING_SATERDALSVAGEN14_20260817",
+  "submitted_at": "2026-08-17T17:00:00Z",
+  "locator": {
+    "municipality": "Norrköping",
+    "property_designation": "SVÄRTINGE 54:28",
+    "address": "Säterdalsvägen 14, 605 70 Svärtinge",
+    "coordinate_wgs84": [16.0317063331, 58.6522414431],
+    "listing_url": "https://www.hemnet.se/bostad/tomt-svartinge-norrkopings-kommun-saterdalsvagen-14-20444697"
+  },
+  "project_intent": {
+    "journey": "PLOT_FIRST",
+    "house_profiles": ["HOUSEKIT_H30", "HOUSEKIT_H50"],
+    "target_use": "DETACHED_RESIDENTIAL_DISCOVERY",
+    "notes": "The property designation and coordinate are high-confidence market locators, not authoritative property-register or surveyed-boundary evidence."
+  },
+  "permissions": {
+    "may_request_property_register_extract": false,
+    "may_create_ledningskollen_case": false,
+    "may_contact_municipality": false,
+    "may_order_field_work": false
+  },
+  "ready_for_automated_discovery": true,
+  "blockers": [
+    "Confirm SVÄRTINGE 54:28 and the registered area through an authoritative property record.",
+    "External property-register requests, municipal contacts, Ledningskollen cases and field orders require separate explicit permission."
+  ]
+}

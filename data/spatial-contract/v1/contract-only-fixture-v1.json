@@ -1,0 +1,309 @@
+{
+  "manifest_version": "plot-to-project-spatial/v1",
+  "entity_type": "PlotToProjectSpatialBundle",
+  "project_id": "PRJ_CONTRACT_ONLY",
+  "site_twin_ref": {
+    "id": "SITE_TEST_ONLY_UNBOUND",
+    "version": null,
+    "path": null,
+    "content_sha256": null,
+    "binding_state": "UNBOUND"
+  },
+  "munin_interface": {
+    "manifest_version": "munin-external-reference/v1",
+    "entity_type": "MuninExternalReferenceInterface",
+    "interface_id": "MUNIN_IF_CONTRACT_ONLY",
+    "provider": "MUNIN",
+    "consumer": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+    "mode": "REFERENCE_ONLY_NO_PAYLOAD",
+    "evidence_states": ["RECORDED", "LISTED", "INFERRED", "FORECAST"],
+    "supported_reference_types": ["PROPERTY", "BUILDING", "UNIT", "BRF", "HISTORIC_SALES", "CURRENT_LISTING", "COMPARABLE_SET"],
+    "references": [],
+    "ownership": {
+      "identity_and_market_facts": "MUNIN",
+      "spatial_applicability": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "transformation_geometry": "PLOT_TO_PROJECT_SPATIAL_STUDIO_3",
+      "final_acceptance": "VERIFICATION"
+    }
+  },
+  "neighbourhood_twins": [
+    {
+      "manifest_version": "neighbourhood-twin/v1",
+      "entity_type": "NeighbourhoodTwin",
+      "neighbourhood_twin_id": "NEIGH_TEST_ONLY_UNBOUND",
+      "version": "1.0",
+      "lifecycle_state": "UNBOUND",
+      "site_twin_ref": {
+        "id": "SITE_TEST_ONLY_UNBOUND",
+        "version": null,
+        "path": null,
+        "content_sha256": null,
+        "binding_state": "UNBOUND"
+      },
+      "frame": {
+        "frame_id": "NEIGH_TEST_ONLY_FRAME",
+        "parent_frame_id": "SITE_TEST_ONLY_UNBOUND",
+        "crs": null,
+        "linear_units": "m",
+        "transform_to_parent": null,
+        "evidence_state": null,
+        "evidence_refs": []
+      },
+      "context_geometry": {
+        "status": "ABSENT",
+        "geometry_kind": "NEIGHBOURHOOD_CONTEXT",
+        "uri": null,
+        "content_sha256": null,
+        "crs": null,
+        "linear_units": "m",
+        "bounds": null,
+        "evidence_state": null,
+        "evidence_refs": []
+      },
+      "munin_reference_ids": [],
+      "external_evidence_refs": [],
+      "blockers": ["Contract-only fixture: no property or neighbourhood evidence is bound."]
+    }
+  ],
+  "building_twins": [
+    {
+      "manifest_version": "building-twin/v1",
+      "entity_type": "BuildingTwin",
+      "building_twin_id": "BLDG_TEST_ONLY_UNBOUND",
+      "version": "1.0",
+      "lifecycle_state": "UNBOUND",
+      "neighbourhood_twin_id": "NEIGH_TEST_ONLY_UNBOUND",
+      "frame": {
+        "frame_id": "BLDG_TEST_ONLY_FRAME",
+        "parent_frame_id": "NEIGH_TEST_ONLY_FRAME",
+        "crs": null,
+        "linear_units": "m",
+        "transform_to_parent": null,
+        "evidence_state": null,
+        "evidence_refs": []
+      },
+      "envelope_geometry": {
+        "status": "ABSENT",
+        "geometry_kind": "BUILDING_ENVELOPE",
+        "uri": null,
+        "content_sha256": null,
+        "crs": null,
+        "linear_units": "m",
+        "bounds": null,
+        "evidence_state": null,
+        "evidence_refs": []
+      },
+      "level_geometry_refs": [],
+      "munin_reference_ids": [],
+      "external_evidence_refs": [],
+      "blockers": ["Contract-only fixture: no building identity or geometry is bound."]
+    }
+  ],
+  "unit_twins": [
+    {
+      "manifest_version": "unit-twin/v1",
+      "entity_type": "UnitTwin",
+      "unit_twin_id": "UNIT_TEST_ONLY_UNBOUND",
+      "version": "1.0",
+      "lifecycle_state": "UNBOUND",
+      "building_twin_id": "BLDG_TEST_ONLY_UNBOUND",
+      "frame": {
+        "frame_id": "UNIT_TEST_ONLY_FRAME",
+        "parent_frame_id": "BLDG_TEST_ONLY_FRAME",
+        "crs": null,
+        "linear_units": "m",
+        "transform_to_parent": null,
+        "evidence_state": null,
+        "evidence_refs": []
+      },
+      "unit_geometry": {
+        "status": "ABSENT",
+        "geometry_kind": "UNIT_BOUNDARY",
+        "uri": null,
+        "content_sha256": null,
+        "crs": null,
+        "linear_units": "m",
+        "bounds": null,
+        "evidence_state": null,
+        "evidence_refs": []
+      },
+      "existing_condition_twin_ids": ["ECOND_TEST_ONLY_UNBOUND"],
+      "munin_reference_ids": [],
+      "external_evidence_refs": [],
+      "blockers": ["Contract-only fixture: no unit identity or geometry is bound."]
+    }
+  ],
+  "existing_condition_twins": [
+    {
+      "manifest_version": "existing-condition-twin/v1",
+      "entity_type": "ExistingConditionTwin",
+      "existing_condition_twin_id": "ECOND_TEST_ONLY_UNBOUND",
+      "version": "1.0",
+      "lifecycle_state": "UNBOUND",
+      "unit_twin_id": "UNIT_TEST_ONLY_UNBOUND",
+      "observation_date": null,
+      "frame": {
+        "frame_id": "ECOND_TEST_ONLY_FRAME",
+        "parent_frame_id": "UNIT_TEST_ONLY_FRAME",
+        "crs": null,
+        "linear_units": "m",
+        "transform_to_parent": null,
+        "evidence_state": null,
+        "evidence_refs": []
+      },
+      "condition_geometry": {
+        "status": "ABSENT",
+        "geometry_kind": "EXISTING_CONDITION",
+        "uri": null,
+        "content_sha256": null,
+        "crs": null,
+        "linear_units": "m",
+        "bounds": null,
+        "evidence_state": null,
+        "evidence_refs": []
+      },
+      "element_observations": [],
+      "space_twin_ids": ["SPACE_TEST_ONLY_UNBOUND"],
+      "munin_reference_ids": [],
+      "external_evidence_refs": [],
+      "blockers": ["Contract-only fixture: no dated existing-condition evidence is bound."]
+    }
+  ],
+  "space_twins": [
+    {
+      "manifest_version": "space-twin/v1",
+      "entity_type": "SpaceTwin",
+      "space_twin_id": "SPACE_TEST_ONLY_UNBOUND",
+      "version": "1.0",
+      "lifecycle_state": "UNBOUND",
+      "existing_condition_twin_id": "ECOND_TEST_ONLY_UNBOUND",
+      "space_type": "UNASSIGNED_CONTRACT_SPACE",
+      "intended_use": "CONTRACT_VALIDATION_ONLY",
+      "frame": {
+        "frame_id": "SPACE_TEST_ONLY_FRAME",
+        "parent_frame_id": "ECOND_TEST_ONLY_FRAME",
+        "crs": null,
+        "linear_units": "m",
+        "transform_to_parent": null,
+        "evidence_state": null,
+        "evidence_refs": []
+      },
+      "space_geometry": {
+        "status": "ABSENT",
+        "geometry_kind": "SPACE_BOUNDARY",
+        "uri": null,
+        "content_sha256": null,
+        "crs": null,
+        "linear_units": "m",
+        "bounds": null,
+        "evidence_state": null,
+        "evidence_refs": []
+      },
+      "room_twin_ref": {
+        "id": "ROOM_TEST_ONLY_UNBOUND",
+        "version": null,
+        "path": null,
+        "content_sha256": null,
+        "binding_state": "UNBOUND"
+      },
+      "semantic_anchor_refs": [],
+      "munin_reference_ids": [],
+      "external_evidence_refs": [],
+      "blockers": ["Contract-only fixture: no space geometry or Room Twin is bound."]
+    }
+  ],
+  "design_scenarios": [
+    {
+      "manifest_version": "existing-property-design-scenario/v1",
+      "entity_type": "ExistingPropertyDesignScenario",
+      "scenario_id": "SCN_TEST_AS_IS",
+      "project_id": "PRJ_CONTRACT_ONLY",
+      "site_twin_id": "SITE_TEST_ONLY_UNBOUND",
+      "existing_condition_twin_id": "ECOND_TEST_ONLY_UNBOUND",
+      "mode": "AS_IS",
+      "status": "BLOCKED_NO_EXISTING_PROPERTY_EVIDENCE",
+      "scope_refs": ["SPACE_TEST_ONLY_UNBOUND"],
+      "transformation_operations": [],
+      "external_evidence_refs": [],
+      "blockers": ["No existing-property evidence is bound; as-is state is not established."]
+    },
+    {
+      "manifest_version": "existing-property-design-scenario/v1",
+      "entity_type": "ExistingPropertyDesignScenario",
+      "scenario_id": "SCN_TEST_COSMETIC_RENOVATION",
+      "project_id": "PRJ_CONTRACT_ONLY",
+      "site_twin_id": "SITE_TEST_ONLY_UNBOUND",
+      "existing_condition_twin_id": "ECOND_TEST_ONLY_UNBOUND",
+      "mode": "COSMETIC_RENOVATION",
+      "status": "BLOCKED_NO_EXISTING_PROPERTY_EVIDENCE",
+      "scope_refs": ["SPACE_TEST_ONLY_UNBOUND"],
+      "transformation_operations": [],
+      "external_evidence_refs": [],
+      "blockers": ["No existing-property evidence is bound; no cosmetic transformation geometry is proposed."]
+    },
+    {
+      "manifest_version": "existing-property-design-scenario/v1",
+      "entity_type": "ExistingPropertyDesignScenario",
+      "scenario_id": "SCN_TEST_FULL_RENOVATION",
+      "project_id": "PRJ_CONTRACT_ONLY",
+      "site_twin_id": "SITE_TEST_ONLY_UNBOUND",
+      "existing_condition_twin_id": "ECOND_TEST_ONLY_UNBOUND",
+      "mode": "FULL_RENOVATION",
+      "status": "BLOCKED_NO_EXISTING_PROPERTY_EVIDENCE",
+      "scope_refs": ["SPACE_TEST_ONLY_UNBOUND"],
+      "transformation_operations": [],
+      "external_evidence_refs": [],
+      "blockers": ["No existing-property evidence is bound; no full-renovation transformation geometry is proposed."]
+    },
+    {
+      "manifest_version": "existing-property-design-scenario/v1",
+      "entity_type": "ExistingPropertyDesignScenario",
+      "scenario_id": "SCN_TEST_RECONFIGURATION",
+      "project_id": "PRJ_CONTRACT_ONLY",
+      "site_twin_id": "SITE_TEST_ONLY_UNBOUND",
+      "existing_condition_twin_id": "ECOND_TEST_ONLY_UNBOUND",
+      "mode": "RECONFIGURATION",
+      "status": "BLOCKED_NO_EXISTING_PROPERTY_EVIDENCE",
+      "scope_refs": ["SPACE_TEST_ONLY_UNBOUND"],
+      "transformation_operations": [],
+      "external_evidence_refs": [],
+      "blockers": ["No existing-property evidence is bound; no reconfiguration geometry is proposed."]
+    },
+    {
+      "manifest_version": "existing-property-design-scenario/v1",
+      "entity_type": "ExistingPropertyDesignScenario",
+      "scenario_id": "SCN_TEST_ENERGY_RETROFIT",
+      "project_id": "PRJ_CONTRACT_ONLY",
+      "site_twin_id": "SITE_TEST_ONLY_UNBOUND",
+      "existing_condition_twin_id": "ECOND_TEST_ONLY_UNBOUND",
+      "mode": "ENERGY_RETROFIT",
+      "status": "BLOCKED_NO_EXISTING_PROPERTY_EVIDENCE",
+      "scope_refs": ["SPACE_TEST_ONLY_UNBOUND"],
+      "transformation_operations": [],
+      "external_evidence_refs": [],
+      "blockers": ["No existing-property or energy evidence is bound; no retrofit geometry is proposed."]
+    },
+    {
+      "manifest_version": "existing-property-design-scenario/v1",
+      "entity_type": "ExistingPropertyDesignScenario",
+      "scenario_id": "SCN_TEST_EXTENSION",
+      "project_id": "PRJ_CONTRACT_ONLY",
+      "site_twin_id": "SITE_TEST_ONLY_UNBOUND",
+      "existing_condition_twin_id": "ECOND_TEST_ONLY_UNBOUND",
+      "mode": "EXTENSION",
+      "status": "BLOCKED_NO_EXISTING_PROPERTY_EVIDENCE",
+      "scope_refs": ["SPACE_TEST_ONLY_UNBOUND"],
+      "transformation_operations": [],
+      "external_evidence_refs": [],
+      "blockers": ["No existing-property or entitlement evidence is bound; no extension geometry is proposed."]
+    }
+  ],
+  "ownership_boundary": {
+    "munin": "property/building/unit/BRF identity; historic sales; current listings; comparable sets; market values; costs; ownership facts",
+    "spatial_studio_3": "spatial hierarchy; spatial applicability; coordinate transforms; existing-condition and scenario transformation geometry",
+    "verification": "final evidence and geometry acceptance"
+  },
+  "forbidden_local_fact_domains": ["MARKET_VALUE", "COST", "OWNERSHIP"],
+  "dashboard_expansion": false,
+  "deployment_state": "NOT_DEPLOYED"
+}

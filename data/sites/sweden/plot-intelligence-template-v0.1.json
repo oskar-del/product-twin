@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.1",
+  "entity_type": "SwedenPlotIntelligence",
+  "profile": "SE_NATIONAL_PLOT_INTELLIGENCE_V0_1",
+  "country": "SE",
+  "status": "INTAKE_REQUIRED",
+  "canonical_crs": "EPSG:3006",
+  "source_registry_ref": {
+    "id": "SE_PLOT_SOURCE_REGISTRY_V0_1",
+    "version": "0.1",
+    "path": "data/sites/sweden/source-registry-v0.1.json",
+    "content_sha256": "f309154628ad77c396bd4de86028dc6a7dce54a1c181854b480d148a2adfa956"
+  },
+  "site_twin_ref": null,
+  "identity": {
+    "municipality": null,
+    "property_designation": null,
+    "address": null,
+    "coordinate_wgs84": null,
+    "intake_ready": false
+  },
+  "project_context": {
+    "project_id": null,
+    "requested_house_profiles": [
+      "HOUSEKIT_H30",
+      "HOUSEKIT_H50"
+    ],
+    "scenario_refs": [],
+    "no_site_evidence_override": true
+  },
+  "source_receipts": [],
+  "findings": [],
+  "gates": [
+    {"gate_id": "GATE_SE_PLOT_IDENTITY", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No Swedish plot locator has been supplied."},
+    {"gate_id": "GATE_SE_MUNICIPAL_JURISDICTION", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Municipality and county are unresolved."},
+    {"gate_id": "GATE_SE_PROPERTY_DIVISION_CONTEXT", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No Lantmäteriet property-division item has been acquired."},
+    {"gate_id": "GATE_SE_PROPERTY_REGISTER", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No property-register extract has been requested or attached."},
+    {"gate_id": "GATE_SE_RIGHTS_AND_JOINT_FACILITIES", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Full rights, servitudes, joint facilities and cadastral acts are unresolved."},
+    {"gate_id": "GATE_SE_BOUNDARY_FOR_DESIGN", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No design survey or boundary determination exists."},
+    {"gate_id": "GATE_SE_DETAIL_PLAN_AND_STATUS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The municipality and governing plan record are unresolved."},
+    {"gate_id": "GATE_SE_CURRENT_LAW_PROFILE", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "The current law source must be captured again on the plot assessment date."},
+    {"gate_id": "GATE_SE_H30_H50_ELIGIBILITY", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "A footprint label alone cannot establish plot-specific permit eligibility."},
+    {"gate_id": "GATE_SE_BUILDABLE_ENVELOPE", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No authoritative buildable envelope may be drawn before upstream gates close."},
+    {"gate_id": "GATE_SE_TERRAIN", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No 1 m height-model item has been acquired for a plot."},
+    {"gate_id": "GATE_SE_GROUND_CONDITIONS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No ground, groundwater, radon or environmental investigation exists."},
+    {"gate_id": "GATE_SE_FLOOD_AND_GEOHAZARDS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No plot-specific flood and geohazard screening exists."},
+    {"gate_id": "GATE_SE_ENVIRONMENTAL_RESTRICTIONS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Protected nature, shoreline and water restrictions are unresolved."},
+    {"gate_id": "GATE_SE_CULTURAL_AND_CONTAMINATION", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "Cultural heritage, historic use and contaminated-land screening are unresolved."},
+    {"gate_id": "GATE_SE_LEGAL_ACCESS", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No legal or permitted access point is established."},
+    {"gate_id": "GATE_SE_UTILITIES_AND_CAPACITY", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No provider has confirmed connection capacity, point, cost or lead time."},
+    {"gate_id": "GATE_SE_CONSTRUCTION_CLEARANCE", "status": "OPEN", "evidence_refs": [], "decided_at": null, "reason": "No construction-stage line-location case or authority clearance exists."}
+  ],
+  "separation_rules": {
+    "site_evidence_is_immutable": true,
+    "scenario_cannot_redefine_boundary": true,
+    "screening_cannot_become_entitlement": true,
+    "road_geometry_cannot_prove_legal_access": true,
+    "overview_geology_cannot_replace_field_investigation": true,
+    "utility_map_cannot_prove_capacity": true
+  }
+}

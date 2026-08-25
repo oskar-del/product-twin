@@ -1,0 +1,627 @@
+{
+  "version": "0.1",
+  "review_id": "SWEET_HOME_3D_KATOR_LEGAZ_DESIGN_ASSET_REVIEW_V0_1",
+  "principle": "Per-model rights/licence review for the Kator/Legaz Design Asset lane. The rights half (licence identity, attribution, generic-asset scope) is completable from public evidence; the geometry half (download, units, scale, visual QA) is BLOCKED until the assets are actually downloaded and QA'd. Rights-safe does NOT equal publishable.",
+  "source_pilot": "config/geometry/sweet-home-3d-design-asset-pilot-v0.1.json",
+  "audit_context": "OpenAI-era audit: Kator/Legaz claimed G1, independently verified G0, 0/12 publishable. This record completes the rights review for all listed assets and keeps geometry/visual QA as the standing blocker.",
+  "summary": {
+    "assets_total": 12,
+    "rights_review_complete": 12,
+    "geometry_review_complete": 0,
+    "publishable": 0
+  },
+  "claims": [
+    {
+      "design_asset_id": "DA_SH3D_KL_MID_CENTURY_SOFA",
+      "source_model_name": "Mid-century-sofa",
+      "category_id": "FFE.SEATING.SOFA",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_MID_CENTURY_CHAIR",
+      "source_model_name": "Mid-century-chair",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CHAIR_OTTOMAN",
+      "source_model_name": "Chair-ottoman",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_DINING_CHAIR",
+      "source_model_name": "Dining-chair",
+      "category_id": "FFE.SEATING.DINING",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CAFE_TABLE",
+      "source_model_name": "Cafe-table",
+      "category_id": "FFE.TABLE.DINING",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_GLASS_DINING_TABLE",
+      "source_model_name": "Glass-dining-table",
+      "category_id": "FFE.TABLE.DINING",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_FULL_BOOKCASE",
+      "source_model_name": "Full bookcase",
+      "category_id": "FFE.STORAGE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_ORIENTAL_RUG",
+      "source_model_name": "Oriental rug",
+      "category_id": "FFE.RUGS",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_OFFICE_CHAIR",
+      "source_model_name": "Office-chair",
+      "category_id": "FFE.SEATING.LOUNGE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_CUSTOM_DESK",
+      "source_model_name": "Custom-desk",
+      "category_id": "FFE.TABLE.DESK",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_FRIDGE",
+      "source_model_name": "Fridge",
+      "category_id": "KITCHEN.REFRIGERATION",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    },
+    {
+      "design_asset_id": "DA_SH3D_KL_PEDESTAL_VASE_LAMP",
+      "source_model_name": "Pedestal-vase-lamp",
+      "category_id": "ELECTRICAL.LUMINAIRES.TABLE",
+      "identity_scope": "GENERIC_DESIGN_ASSET",
+      "rights_review": {
+        "state": "COMPLETE",
+        "license_spdx_like": "CC-BY-3.0-US",
+        "license_full_name": "Creative Commons Attribution 3.0 United States",
+        "license_verified": true,
+        "license_evidence": [
+          "https://www.sweethome3d.com/freeModels.jsp",
+          "KatorLegaz models (c) 2003-2013 Andrew Kator & Jennifer Legaz, CC BY 3.0 US; 90-model library, verified 2026-08-18"
+        ],
+        "attribution_required": true,
+        "attribution_text": "3D model by Andrew Kator and Jennifer Legaz, distributed by Sweet Home 3D under CC BY 3.0 US.",
+        "per_model_license_retained": true,
+        "commercial_use_permitted_by_license": true,
+        "derivatives_permitted_by_license": true,
+        "ai_training_use": "NOT_CLAIMED",
+        "redistribution_of_source": "attribution-bound; not offered as downloadable Product Twin content",
+        "reviewer": "avatar-factory-claude",
+        "review_date": "2026-08-18"
+      },
+      "geometry_review": {
+        "state": "BLOCKED_ASSETS_NOT_DOWNLOADED",
+        "asset_downloaded": false,
+        "obj_mtl_dependencies_complete": false,
+        "authoring_units_resolved": false,
+        "bounds_measured_m": false,
+        "floor_anchor_pivot_normalized": false,
+        "materials_render_without_missing_refs": false,
+        "glb_with_attribution_metadata": false,
+        "visual_qa_passed": false
+      },
+      "forbidden_claims": [
+        "exact retail product",
+        "manufacturer-authoritative likeness",
+        "purchasable offer",
+        "current price or stock",
+        "destination delivery",
+        "engineering or fabrication geometry"
+      ],
+      "max_claim_after_full_review": "G2_GENERIC_DESIGN_ASSET",
+      "publishable": false,
+      "publish_blockers": [
+        "geometry review blocked: assets not downloaded",
+        "no scale verification or visual QA on the actual mesh",
+        "not a product twin: replacement product search still required for any commerce join"
+      ]
+    }
+  ]
+}

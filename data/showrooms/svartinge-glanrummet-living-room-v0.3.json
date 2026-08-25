@@ -1,0 +1,137 @@
+{
+  "version": "showroom-composition/v0.3",
+  "scene_id": "SVARTINGE_GLANRUMMET_DESIGN_STUDY_V03",
+  "base_manifest": "data/showrooms/norr11-marbella-living-room-v0.1.json",
+  "context_id": "svartinge-glanrummet",
+  "layout_state": "GLANRUMMET_SPECIFIC_CONCEPT_COMPOSITION_VISUAL_QA_REVISED",
+  "room": {
+    "type": "living_room",
+    "size_m": [7.0, 3.0, 7.0],
+    "palette": [
+      "quiet smoked oak",
+      "warm grey lime plaster",
+      "forest green",
+      "oatmeal textile",
+      "dark bronze"
+    ],
+    "geometry_state": "BRAGE_CONCEPT_ROOM_VOLUME_NOT_SURVEYED",
+    "currency_display": "SOURCE_SNAPSHOTS_ONLY_NO_COMPARABLE_SWEDEN_TOTAL"
+  },
+  "camera": {
+    "position_m": [4.2, 1.65, 4.3],
+    "target_m": [0.0, 0.68, -3.35],
+    "fov_deg": 49
+  },
+  "responsive_framing": {
+    "fit_below_aspect_ratio": 1.45,
+    "minimum_supported_aspect_ratio": 0.5625,
+    "camera_fit_margin": 1.12,
+    "maximum_camera_distance_m": 24.0,
+    "fit_subject": "ACTIVE_PRODUCT_GEOMETRY_BOUNDING_SPHERE"
+  },
+  "property": {
+    "state": "BRAGE_CONCEPT_ROOM",
+    "name": "Glanrummet · furniture study v0.3",
+    "location": "BRAGE Vinkelhuset · Svärtinge 54:28",
+    "price_display": "Design study · not a quote",
+    "specs": "7 real product identities · 4 native product-shape avatars · 3 G2 planning proxies",
+    "note": "Svärtinge-specific concept composition. Room, opening, view and material cues are not surveyed or exact product-finish claims."
+  },
+  "commerce_display": {
+    "destination": "SE-60570",
+    "state": "NOT_EVALUATED",
+    "comparable_total_state": "WITHHELD",
+    "reason": "The active source-price snapshots mix USD and EUR and have not been refreshed or classified for Sweden."
+  },
+  "appearance_profile": {
+    "state": "DESIGN_STUDY_CUES_NOT_VARIANT_BINDING",
+    "geometry_mutation": false,
+    "exact_finish_claim": false,
+    "roles": {
+      "hero_sofa": {
+        "surface_label": "warm stone textile cue",
+        "surface_color": "#777168",
+        "frame_color": "#303431",
+        "roughness": 0.82
+      },
+      "lounge_chair": {
+        "surface_label": "smoked taupe textile cue",
+        "surface_color": "#6c6258",
+        "frame_color": "#2d302e",
+        "roughness": 0.8
+      },
+      "day_bed": {
+        "surface_label": "oatmeal textile cue",
+        "surface_color": "#8b806f",
+        "frame_color": "#343735",
+        "roughness": 0.84
+      },
+      "accent_chair": {
+        "surface_label": "forest textile cue",
+        "surface_color": "#46584d",
+        "frame_color": "#2b2e2c",
+        "roughness": 0.83
+      },
+      "rug": {
+        "surface_label": "natural-jute planning cue",
+        "surface_color": "#8b7350",
+        "frame_color": "#8b7350",
+        "roughness": 0.98
+      },
+      "coffee_table": {
+        "surface_label": "smoked-oak planning cue",
+        "surface_color": "#6f4f36",
+        "frame_color": "#463326",
+        "roughness": 0.68
+      },
+      "floor_lamp": {
+        "surface_label": "Product Twin-owned ash/textile proxy cue",
+        "preserve_proxy_materials": true
+      }
+    }
+  },
+  "placement_overrides": {
+    "PT_NORR11_MAN_3_SEATER_SOFA_NOR_MAN_3_SEAT_SOFA_CAT3": {
+      "position_m": [0.0, 0.0, -4.25],
+      "rotation_deg_y": 0
+    },
+    "PT_NORR11_MAN_LOUNGE_CHAIR_NOR_MAN_LNG_CAT1": {
+      "position_m": [-2.15, 0.0, -2.0],
+      "rotation_deg_y": 125
+    },
+    "PT_NORR11_MAN_DAY_BED_NOR_MAN_DAYBED_CAT1": {
+      "position_m": [-2.2, 0.0, -4.35],
+      "rotation_deg_y": 90
+    },
+    "PT_WENDELBO_ATLI_WEN_333_1_COM": {
+      "position_m": [2.2, 0.0, -2.25],
+      "rotation_deg_y": 215
+    },
+    "PT_IKEA_LOHALS_30511288": {
+      "position_m": [0.0, 0.0, -3.15],
+      "rotation_deg_y": 90
+    },
+    "PT_IKEA_LISTERBY_30513904": {
+      "position_m": [0.0, 0.0, -3.1],
+      "rotation_deg_y": 0
+    },
+    "PT_IKEA_LAUTERS_30405042": {
+      "position_m": [2.65, 0.0, -4.75],
+      "rotation_deg_y": 0
+    }
+  },
+  "visual_corrections": [
+    "Widened the default camera so the complete seating group remains in frame at 1440x960.",
+    "Removed the back-wall decorative frame in Svärtinge mode because it overlapped the concept opening.",
+    "Reduced floor-plank contrast and made procedural textures deterministic.",
+    "Rotated the verified 1330x1950 mm LOHALS rug so its long axis supports the seating group.",
+    "Applied disclosed planning colours to the proxy rug and coffee table to prevent white-placeholder rendering.",
+    "Moved the day bed 350 mm inward from the earlier draft so its verified footprint clears the left wall."
+  ],
+  "disclosures": [
+    "Product identities and source geometry lanes are inherited unchanged from the base manifest.",
+    "Viewer-applied colours are composition cues, not exact selected or sellable variants.",
+    "No mixed-currency room subtotal is displayed for Sweden.",
+    "Sweden supply, stock, tax, freight, delivery and checkout remain unevaluated."
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/compact-house-route-baseline.schema.json",
+  "title": "Compact House Package and Procurement Route Baseline",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "baseline_id",
+    "revision",
+    "status",
+    "generated_at",
+    "project",
+    "site_context",
+    "source_snapshot",
+    "scope_state",
+    "packages",
+    "line_items",
+    "route_summary",
+    "cost_summary",
+    "schedule",
+    "construction_strategy",
+    "risk_register",
+    "procurement_readiness",
+    "consumer_contract"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "baseline_id": {"const": "COMPACT_HOUSE_ROUTE_BASELINE_PROJECT_MARBELLA_VILLA_001"},
+    "revision": {"type": "integer", "minimum": 1},
+    "status": {"const": "PRE_BOM_SCOPE_NOT_PROCUREMENT_READY"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "project": {"$ref": "#/$defs/project"},
+    "site_context": {"$ref": "#/$defs/site_context"},
+    "source_snapshot": {"$ref": "#/$defs/source_snapshot"},
+    "scope_state": {"$ref": "#/$defs/scope_state"},
+    "packages": {"type": "array", "minItems": 11, "maxItems": 11, "items": {"$ref": "#/$defs/package"}},
+    "line_items": {"type": "array", "minItems": 10, "maxItems": 10, "items": {"$ref": "#/$defs/line_item"}},
+    "route_summary": {"$ref": "#/$defs/route_summary"},
+    "cost_summary": {"$ref": "#/$defs/cost_summary"},
+    "schedule": {"$ref": "#/$defs/schedule"},
+    "construction_strategy": {"$ref": "#/$defs/construction_strategy"},
+    "risk_register": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/risk"}},
+    "procurement_readiness": {"$ref": "#/$defs/readiness"},
+    "consumer_contract": {"$ref": "#/$defs/consumer_contract"}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "source_ref": {
+      "type": "object",
+      "required": ["path", "identity", "version", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "identity": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "project": {
+      "type": "object",
+      "required": ["project_id", "project_type", "country", "region", "municipality", "postal_code", "currency", "local_supply_radius_km", "site_access_state"],
+      "properties": {
+        "project_id": {"const": "PROJECT_MARBELLA_VILLA_001"},
+        "project_type": {"const": "villa"},
+        "country": {"const": "ES"},
+        "region": {"const": "Andalucía"},
+        "municipality": {"const": "Marbella"},
+        "postal_code": {"const": "29660"},
+        "currency": {"const": "EUR"},
+        "local_supply_radius_km": {"const": 75},
+        "site_access_state": {"const": "UNVERIFIED"}
+      },
+      "additionalProperties": false
+    },
+    "site_context": {
+      "type": "object",
+      "required": ["climate_state", "cte_zone", "solar_resource_state", "annual_energy_kwh_per_kwp", "annual_plane_irradiation_kwh_m2", "screening_tilt_deg", "screening_pvgis_azimuth_deg", "product_sizing_state"],
+      "properties": {
+        "climate_state": {"const": "VERIFIED_SCREENING_CONTEXT"},
+        "cte_zone": {"const": "A3"},
+        "solar_resource_state": {"const": "VERIFIED_SCREENING_RESOURCE"},
+        "annual_energy_kwh_per_kwp": {"const": 1732.34},
+        "annual_plane_irradiation_kwh_m2": {"const": 2154.05},
+        "screening_tilt_deg": {"const": 33},
+        "screening_pvgis_azimuth_deg": {"const": 2},
+        "product_sizing_state": {"const": "BLOCKED_MISSING_BUILDING_INPUTS"}
+      },
+      "additionalProperties": false
+    },
+    "source_snapshot": {
+      "type": "object",
+      "required": ["project", "pilot_scope", "routes", "pilot_results", "concrete_requirement", "pool_requirement", "solar_requirement", "pvgis", "cte_climate", "logistics_schema", "regulatory_schema", "jurisdiction_seed", "prefab_system", "prefab_modes", "prefab_pods"],
+      "properties": {
+        "project": {"$ref": "#/$defs/source_ref"},
+        "pilot_scope": {"$ref": "#/$defs/source_ref"},
+        "routes": {"$ref": "#/$defs/source_ref"},
+        "pilot_results": {"$ref": "#/$defs/source_ref"},
+        "concrete_requirement": {"$ref": "#/$defs/source_ref"},
+        "pool_requirement": {"$ref": "#/$defs/source_ref"},
+        "solar_requirement": {"$ref": "#/$defs/source_ref"},
+        "pvgis": {"$ref": "#/$defs/source_ref"},
+        "cte_climate": {"$ref": "#/$defs/source_ref"},
+        "logistics_schema": {"$ref": "#/$defs/source_ref"},
+        "regulatory_schema": {"$ref": "#/$defs/source_ref"},
+        "jurisdiction_seed": {"$ref": "#/$defs/source_ref"},
+        "prefab_system": {"$ref": "#/$defs/source_ref"},
+        "prefab_modes": {"$ref": "#/$defs/source_ref"},
+        "prefab_pods": {"$ref": "#/$defs/source_ref"}
+      },
+      "additionalProperties": false
+    },
+    "scope_state": {
+      "type": "object",
+      "required": ["state", "frozen_house_design", "full_bom", "quantities_complete", "pilot_slot_count", "expected_package_count", "partial_package_count", "missing_package_count", "missing_upstream_inputs"],
+      "properties": {
+        "state": {"const": "PILOT_ROUTE_MAP_NOT_FULL_BOM"},
+        "frozen_house_design": {"const": false},
+        "full_bom": {"const": false},
+        "quantities_complete": {"const": false},
+        "pilot_slot_count": {"const": 10},
+        "expected_package_count": {"const": 11},
+        "partial_package_count": {"type": "integer", "minimum": 0},
+        "missing_package_count": {"type": "integer", "minimum": 0},
+        "missing_upstream_inputs": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true}
+      },
+      "additionalProperties": false
+    },
+    "package": {
+      "type": "object",
+      "required": ["package_id", "name", "construction_phase", "coverage_state", "expected_scope", "pilot_line_item_ids", "missing_scope"],
+      "properties": {
+        "package_id": {"type": "string", "pattern": "^PKG_[A-Z0-9_]+$"},
+        "name": {"type": "string", "minLength": 1},
+        "construction_phase": {"enum": ["siteworks", "foundations", "structure", "envelope", "mep_rough_in", "interior_build", "finishes", "fixtures", "ffe", "landscape", "commissioning"]},
+        "coverage_state": {"enum": ["PILOT_PARTIAL", "MISSING_FROM_PILOT_SCOPE"]},
+        "expected_scope": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+        "pilot_line_item_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "missing_scope": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true}
+      },
+      "additionalProperties": false
+    },
+    "gate": {
+      "type": "object",
+      "required": ["gate", "state", "critical", "reason"],
+      "properties": {
+        "gate": {"type": "string", "minLength": 1},
+        "state": {"enum": ["PASS", "BLOCKED"]},
+        "critical": {"const": true},
+        "reason": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "line_item": {
+      "type": "object",
+      "required": ["line_item_id", "slot_id", "label", "category_id", "package_id", "construction_phase", "source_phase", "quantity", "required_on_site", "selected_reference", "identity_state", "route", "discovery_evidence", "supply_class", "commercial_state", "readiness"],
+      "properties": {
+        "line_item_id": {"type": "string", "pattern": "^LINE_WB10_[0-9]{2}$"},
+        "slot_id": {"type": "string", "pattern": "^WB10_[0-9]{2}$"},
+        "label": {"type": "string", "minLength": 1},
+        "category_id": {"type": "string", "minLength": 1},
+        "package_id": {"type": "string", "pattern": "^PKG_[A-Z0-9_]+$"},
+        "construction_phase": {"enum": ["structure", "envelope", "mep_rough_in", "finishes", "fixtures", "ffe", "landscape"]},
+        "source_phase": {"type": "string", "minLength": 1},
+        "quantity": {
+          "type": "object",
+          "required": ["state", "value", "unit_basis"],
+          "properties": {
+            "state": {"const": "UNRESOLVED"},
+            "value": {"type": "null"},
+            "unit_basis": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": false
+        },
+        "required_on_site": {
+          "type": "object",
+          "required": ["state", "date", "planning_day_offset"],
+          "properties": {
+            "state": {"const": "PLANNING_DAY_OFFSET_ONLY"},
+            "date": {"type": "null"},
+            "planning_day_offset": {"type": "integer", "minimum": 0}
+          },
+          "additionalProperties": false
+        },
+        "selected_reference": {
+          "type": ["object", "null"],
+          "required": ["source_id", "product_id", "variant_id", "use_state"],
+          "properties": {
+            "source_id": {"const": "shopify_global_catalog"},
+            "product_id": {"type": "string", "pattern": "^gid://shopify/p/[A-Za-z0-9]+$"},
+            "variant_id": {"type": "string", "pattern": "^gid://shopify/ProductVariant/[0-9]+$"},
+            "use_state": {"const": "DISCOVERY_REFERENCE_NOT_APPROVED_PRODUCT"}
+          },
+          "additionalProperties": false
+        },
+        "identity_state": {"const": "UNRESOLVED"},
+        "route": {
+          "type": "object",
+          "required": ["route_type", "source_id", "state", "requirement_id", "requirement_state", "inputs_required"],
+          "properties": {
+            "route_type": {"enum": ["configured_rfq", "merchant_cart", "direct_trade"]},
+            "source_id": {"type": ["string", "null"]},
+            "state": {"enum": ["needs_requirement", "needs_technical_review"]},
+            "requirement_id": {"type": ["string", "null"]},
+            "requirement_state": {"type": ["string", "null"]},
+            "inputs_required": {"type": "array", "items": {"type": "string"}}
+          },
+          "additionalProperties": false
+        },
+        "discovery_evidence": {
+          "type": "object",
+          "required": ["evidence_state", "source_generated_at", "live_supply_candidate_count", "offers_checked", "postcode_candidate_count", "technical_match_verified", "lead_time_known", "landed_cost_known", "source_regulatory_state", "regulatory_state", "regulatory_derivation_state"],
+          "properties": {
+            "evidence_state": {"const": "HISTORICAL_UNDATED_AGGREGATE"},
+            "source_generated_at": {"type": "string", "format": "date-time"},
+            "live_supply_candidate_count": {"type": "integer", "minimum": 0},
+            "offers_checked": {"type": "integer", "minimum": 0},
+            "postcode_candidate_count": {"type": "integer", "minimum": 0},
+            "technical_match_verified": {"const": false},
+            "lead_time_known": {"const": false},
+            "landed_cost_known": {"const": false},
+            "source_regulatory_state": {"enum": ["HOLD", "REVIEW", "NOT_APPLICABLE"]},
+            "regulatory_state": {"enum": ["HOLD", "REVIEW", "NOT_APPLICABLE"]},
+            "regulatory_derivation_state": {"enum": ["SOURCE_ALIGNED_WITH_AUTHORITY", "AUTHORITY_OVERRIDES_HISTORICAL_SOURCE"]}
+          },
+          "additionalProperties": false
+        },
+        "supply_class": {"const": "UNVERIFIED"},
+        "commercial_state": {
+          "type": "object",
+          "required": ["merchandise", "freight", "tax_and_duty", "installation", "contingency", "landed_total"],
+          "properties": {
+            "merchandise": {"$ref": "#/$defs/unverified_cost"},
+            "freight": {"$ref": "#/$defs/unverified_cost"},
+            "tax_and_duty": {"$ref": "#/$defs/unverified_cost"},
+            "installation": {"$ref": "#/$defs/unverified_cost"},
+            "contingency": {"$ref": "#/$defs/unverified_cost"},
+            "landed_total": {"$ref": "#/$defs/unverified_cost"}
+          },
+          "additionalProperties": false
+        },
+        "readiness": {
+          "type": "object",
+          "required": ["purchase_ready", "state", "gates"],
+          "properties": {
+            "purchase_ready": {"const": false},
+            "state": {"const": "BLOCKED"},
+            "gates": {"type": "array", "minItems": 9, "maxItems": 9, "items": {"$ref": "#/$defs/gate"}}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "unverified_cost": {
+      "type": "object",
+      "required": ["state", "amount", "currency", "reason"],
+      "properties": {
+        "state": {"const": "UNVERIFIED"},
+        "amount": {"type": "null"},
+        "currency": {"const": "EUR"},
+        "reason": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "route_summary": {
+      "type": "object",
+      "required": ["total_lines", "configured_rfq", "merchant_cart", "direct_trade", "needs_requirement", "needs_technical_review", "executable_now"],
+      "properties": {
+        "total_lines": {"const": 10},
+        "configured_rfq": {"type": "integer", "minimum": 0},
+        "merchant_cart": {"type": "integer", "minimum": 0},
+        "direct_trade": {"type": "integer", "minimum": 0},
+        "needs_requirement": {"type": "integer", "minimum": 0},
+        "needs_technical_review": {"type": "integer", "minimum": 0},
+        "executable_now": {"const": 0}
+      },
+      "additionalProperties": false
+    },
+    "cost_summary": {
+      "type": "object",
+      "required": ["state", "currency", "merchandise", "freight", "tax_and_duty", "installation", "contingency", "landed_total"],
+      "properties": {
+        "state": {"const": "NO_COMPARABLE_COST_BASIS"},
+        "currency": {"const": "EUR"},
+        "merchandise": {"type": "null"},
+        "freight": {"type": "null"},
+        "tax_and_duty": {"type": "null"},
+        "installation": {"type": "null"},
+        "contingency": {"type": "null"},
+        "landed_total": {"type": "null"}
+      },
+      "additionalProperties": false
+    },
+    "schedule": {
+      "type": "object",
+      "required": ["state", "programme_start_date", "planning_day_offsets_present", "required_on_site_dates_present", "delivery_packages"],
+      "properties": {
+        "state": {"const": "PRE_PROGRAMME"},
+        "programme_start_date": {"type": "null"},
+        "planning_day_offsets_present": {"const": true},
+        "required_on_site_dates_present": {"const": false},
+        "delivery_packages": {"type": "array", "maxItems": 0}
+      },
+      "additionalProperties": false
+    },
+    "construction_strategy": {
+      "type": "object",
+      "required": ["selected_route", "conventional_state", "prefab_state", "additive_state", "hybrid_state", "prefab_modes_are_planning_only", "pod_configuration_selected"],
+      "properties": {
+        "selected_route": {"type": "null"},
+        "conventional_state": {"const": "NOT_EVALUATED"},
+        "prefab_state": {"const": "CONCEPT_OPTIONS_ONLY"},
+        "additive_state": {"const": "CONCEPT_OPTIONS_ONLY"},
+        "hybrid_state": {"const": "CONCEPT_OPTIONS_ONLY"},
+        "prefab_modes_are_planning_only": {"const": true},
+        "pod_configuration_selected": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "risk": {
+      "type": "object",
+      "required": ["risk_id", "severity", "state", "evidence", "mitigation", "affected_line_item_ids"],
+      "properties": {
+        "risk_id": {"type": "string", "pattern": "^RISK_[A-Z0-9_]+$"},
+        "severity": {"enum": ["MEDIUM", "HIGH", "CRITICAL"]},
+        "state": {"const": "OPEN"},
+        "evidence": {"type": "string", "minLength": 1},
+        "mitigation": {"type": "string", "minLength": 1},
+        "affected_line_item_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      },
+      "additionalProperties": false
+    },
+    "readiness": {
+      "type": "object",
+      "required": ["purchase_ready", "state", "gates", "blocking_gate_ids"],
+      "properties": {
+        "purchase_ready": {"const": false},
+        "state": {"const": "BLOCKED"},
+        "gates": {"type": "array", "minItems": 11, "maxItems": 11, "items": {"$ref": "#/$defs/gate"}},
+        "blocking_gate_ids": {"type": "array", "minItems": 11, "maxItems": 11, "items": {"type": "string"}, "uniqueItems": true}
+      },
+      "additionalProperties": false
+    },
+    "consumer_contract": {
+      "type": "object",
+      "required": ["manifest_role", "executable_procurement_plan", "pilot_candidates_are_approved_products", "country_claim_scope", "mutable_checkout_payloads_embedded", "notes"],
+      "properties": {
+        "manifest_role": {"const": "PRE_BOM_PACKAGE_AND_ROUTE_BASELINE"},
+        "executable_procurement_plan": {"const": false},
+        "pilot_candidates_are_approved_products": {"const": false},
+        "country_claim_scope": {"const": "ES_29660_ONLY"},
+        "mutable_checkout_payloads_embedded": {"const": false},
+        "notes": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    }
+  }
+}

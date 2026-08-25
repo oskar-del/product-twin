@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/spatial/plot-to-project-spatial-bundle-v1.schema.json",
+  "title": "Plot-to-Project Spatial hierarchy bundle v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "entity_type", "project_id", "site_twin_ref", "munin_interface", "neighbourhood_twins", "building_twins", "unit_twins", "existing_condition_twins", "space_twins", "design_scenarios", "ownership_boundary", "forbidden_local_fact_domains", "dashboard_expansion", "deployment_state"],
+  "properties": {
+    "manifest_version": {"const": "plot-to-project-spatial/v1"},
+    "entity_type": {"const": "PlotToProjectSpatialBundle"},
+    "project_id": {"type": "string", "pattern": "^PRJ_[A-Z0-9_]+$"},
+    "site_twin_ref": {"$ref": "./plot-to-project-defs-v1.schema.json#/$defs/immutableTwinRef"},
+    "munin_interface": {"$ref": "./munin-external-reference-v1.schema.json"},
+    "neighbourhood_twins": {"type": "array", "items": {"$ref": "./neighbourhood-twin-v1.schema.json"}},
+    "building_twins": {"type": "array", "items": {"$ref": "./building-twin-v1.schema.json"}},
+    "unit_twins": {"type": "array", "items": {"$ref": "./unit-twin-v1.schema.json"}},
+    "existing_condition_twins": {"type": "array", "items": {"$ref": "./existing-condition-twin-v1.schema.json"}},
+    "space_twins": {"type": "array", "items": {"$ref": "./space-twin-v1.schema.json"}},
+    "design_scenarios": {"type": "array", "items": {"$ref": "./existing-property-design-scenario-v1.schema.json"}},
+    "ownership_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["munin", "spatial_studio_3", "verification"],
+      "properties": {
+        "munin": {"const": "property/building/unit/BRF identity; historic sales; current listings; comparable sets; market values; costs; ownership facts"},
+        "spatial_studio_3": {"const": "spatial hierarchy; spatial applicability; coordinate transforms; existing-condition and scenario transformation geometry"},
+        "verification": {"const": "final evidence and geometry acceptance"}
+      }
+    },
+    "forbidden_local_fact_domains": {"const": ["MARKET_VALUE", "COST", "OWNERSHIP"]},
+    "dashboard_expansion": {"const": false},
+    "deployment_state": {"const": "NOT_DEPLOYED"}
+  }
+}

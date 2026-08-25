@@ -1,0 +1,30 @@
+{
+  "manifest_version": "room-scene/v1",
+  "scene": {
+    "id": "canopus-deluxe-guest-room-concept-v1",
+    "label": "Concept 48 m² approximate 6 × 8 m CANOPUS Deluxe Guest Room",
+    "bounds": {
+      "minX": -3,
+      "maxX": 3,
+      "minZ": -4,
+      "maxZ": 4
+    },
+    "floor": {
+      "id": "concept-floor",
+      "label": "Concept room floor plane",
+      "y": 0
+    },
+    "surfaces": [
+      { "id": "concept-left-edge", "label": "Concept left room edge", "side": "left", "rotation": -1.5707963267948966, "gap": 0 },
+      { "id": "concept-right-edge", "label": "Concept right room edge", "side": "right", "rotation": 1.5707963267948966, "gap": 0 },
+      { "id": "concept-min-z-edge", "label": "Concept min-z room edge", "side": "min-z", "rotation": 3.141592653589793, "gap": 0 },
+      { "id": "concept-max-z-edge", "label": "Concept max-z room edge", "side": "max-z", "rotation": 0, "gap": 0 }
+    ],
+    "openings": [],
+    "protectedPaths": [],
+    "anchors": [
+      { "id": "concept-room-centre", "label": "Concept room centre derived from approximate rectangular bounds", "x": 0, "z": 0, "rotations": [0, 1.5707963267948966, 3.141592653589793, -1.5707963267948966] }
+    ],
+    "baseline_placements": []
+  }
+}

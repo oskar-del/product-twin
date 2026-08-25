@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1",
+  "entity_type": "SwedenPlotIntake",
+  "country": "SE",
+  "intake_id": null,
+  "submitted_at": null,
+  "locator": {
+    "municipality": null,
+    "property_designation": null,
+    "address": null,
+    "coordinate_wgs84": null,
+    "listing_url": null
+  },
+  "project_intent": {
+    "journey": "PLOT_FIRST",
+    "house_profiles": [
+      "HOUSEKIT_H30",
+      "HOUSEKIT_H50"
+    ],
+    "target_use": null,
+    "notes": null
+  },
+  "permissions": {
+    "may_request_property_register_extract": false,
+    "may_create_ledningskollen_case": false,
+    "may_contact_municipality": false,
+    "may_order_field_work": false
+  },
+  "ready_for_automated_discovery": false,
+  "blockers": [
+    "Provide municipality plus full fastighetsbeteckning for an exact run; an address, coordinate or listing can start locator resolution only.",
+    "External property-register requests, municipality contacts, Ledningskollen cases and field orders require separate explicit permission."
+  ]
+}

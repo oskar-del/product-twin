@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Product Twin room study · client preview</title>
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;background:#0e0d0a;color:#f4efe4;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
+  canvas{display:block}
+  #hud{position:fixed;inset:0;pointer-events:none}
+  .topline{position:absolute;left:22px;top:20px;display:flex;gap:14px;align-items:flex-start;background:rgba(18,15,10,.42);backdrop-filter:blur(10px);padding:12px 16px 12px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.1);max-width:430px}
+  .topline .hero{width:104px;height:78px;border-radius:9px;object-fit:cover;flex:none;box-shadow:0 3px 12px rgba(0,0,0,.4)}
+  .topline .k{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#e6c79a}
+  .topline h1{margin:3px 0 0;font:500 22px/1.05 Georgia,serif;color:#fbf7ee}
+  .topline .loc{font-size:11px;color:#e9e2d2;margin-top:3px}
+  .topline .specs{font-size:10px;color:#cfc7b6;margin-top:5px;line-height:1.4}
+  .topline .lst{font-size:9px;color:#d8b98a;margin-top:5px;letter-spacing:.06em}
+  .price{position:absolute;right:24px;top:22px;text-align:right}
+  .price .k{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#e7dcc4;opacity:.85}
+  .price .v{font:500 22px/1 Georgia,serif;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+  .price .note{font-size:9px;color:#e7dcc4;opacity:.8;max-width:210px;margin-top:4px}
+  .help{position:absolute;left:26px;bottom:20px;font-size:11px;color:#efe8d7;background:rgba(20,17,12,.5);backdrop-filter:blur(8px);padding:8px 12px;border-radius:999px;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+  .roomtotal{position:absolute;right:24px;bottom:20px;background:rgba(20,17,12,.6);backdrop-filter:blur(10px);padding:9px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.1);text-align:right}
+  .roomtotal .k{display:block;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#e6c79a}
+  .roomtotal b{font:500 20px/1.1 Georgia,serif;color:#fff}
+  .roomtotal .rt-note{display:block;font-size:9px;color:#cfc7b6;margin-top:2px}
+  .actions{display:flex;gap:8px;margin-top:10px}
+  .offerbtn{flex:1;text-align:center;text-decoration:none;border-radius:10px;padding:10px;background:#b3894f;color:#1c2016;font-size:12px;font-weight:700;letter-spacing:.02em}
+  .offerbtn:hover{background:#c69b5c}
+  .swapbtn{flex:none;border:0;border-radius:10px;padding:10px 14px;background:#1c2016;color:#f4efe4;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.02em}
+  .swapbtn:hover{background:#2c3324}
+  .rfqbtn{pointer-events:auto;position:absolute;right:24px;bottom:74px;border:0;border-radius:999px;padding:11px 18px;background:#b3894f;color:#1c2016;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:.02em;box-shadow:0 4px 16px rgba(0,0,0,.35)}
+  .rfqbtn:hover{background:#c69b5c}
+  .modal{pointer-events:auto;position:absolute;inset:0;background:rgba(12,11,8,.62);backdrop-filter:blur(4px);display:grid;place-items:center;z-index:6}
+  .modal[hidden]{display:none}
+  .modal-card{width:min(560px,calc(100vw - 40px));max-height:calc(100vh - 60px);overflow:auto;background:#f7f3e9;color:#1c2016;border-radius:18px;padding:24px}
+  .modal-card h2{font:500 24px/1.1 Georgia,serif;margin:6px 0 2px}
+  .rfq-prop{font-size:12px;color:#5c6357;margin:6px 0 14px;padding-bottom:12px;border-bottom:1px solid #e2ddcc}
+  .rfq-row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #ece7d8;font-size:13px}
+  .rfq-row .n{color:#1c2016}.rfq-row .n small{display:block;color:#8a8368;font-size:10px;margin-top:1px}
+  .rfq-row .p{white-space:nowrap;font-weight:600}
+  .rfq-tot{display:flex;justify-content:space-between;padding:12px 0 2px;font:500 18px/1 Georgia,serif}
+  .rfq-tot .sub{font-size:10px;color:#8a8368;letter-spacing:.1em;text-transform:uppercase;align-self:center}
+  .rfq-actions{display:flex;gap:8px;margin-top:16px}
+  .rfq-actions button{flex:1;border:0;border-radius:10px;padding:11px;background:#1c2016;color:#f4efe4;font-size:12px;font-weight:700;cursor:pointer}
+  .rfq-actions button.secondary{background:#e0dccb;color:#26372d}
+  .rfq-note{margin-top:12px;font-size:10px;color:#7a7358;line-height:1.5}
+  .tag{position:absolute;pointer-events:auto;transform:translate(-50%,-50%);cursor:pointer}
+  .tag .dot{width:26px;height:26px;border-radius:50%;background:rgba(250,246,238,.92);border:2px solid rgba(0,0,0,.15);box-shadow:0 3px 12px rgba(0,0,0,.35);display:grid;place-items:center;font-size:13px;color:#1c2016;transition:.15s}
+  .tag:hover .dot{transform:scale(1.12);background:#fff}
+  #panel{pointer-events:auto;position:absolute;right:18px;bottom:18px;width:326px;background:rgba(247,243,233,.98);color:#1c2016;border-radius:16px;padding:18px;box-sizing:border-box;transform:translateY(160%);transition:.24s cubic-bezier(.2,.7,.2,1);box-shadow:0 18px 50px rgba(0,0,0,.35)}
+  #panel.open{transform:none}
+  #panel .small{font-size:10px;color:#7a7358;text-transform:uppercase;letter-spacing:.12em}
+  #panel h2{font:500 22px/1.05 Georgia,serif;margin:6px 0 3px}#panel .mk{font-size:11px;color:#6a6450;margin-bottom:8px}
+  .offer{margin-top:10px;padding:11px 12px;border:1px solid #e0dccb;border-radius:11px;background:#fff}
+  .offer strong{display:block;font:500 21px/1 Georgia,serif;margin:2px 0}.offer span{font-size:10px;color:#6a7360}
+  .pill{display:inline-block;background:#eae7d8;padding:4px 8px;border-radius:999px;font-size:9px;margin:2px 2px 0 0}
+  .warn{margin-top:9px;padding:9px;background:#f1e7d2;border-radius:9px;font-size:10px;color:#6f5a34;line-height:1.45}
+  .close{float:right;border:0;background:none;color:#4a4636;font-size:18px;cursor:pointer;line-height:1}
+  #loading{position:absolute;inset:0;display:grid;place-items:center;background:#0e0d0a;color:#e8e1cd;font-size:13px;letter-spacing:.03em;z-index:5}
+</style>
+<!-- three.js vendored locally so the pitch runs offline (no CDN dependency) -->
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+</head>
+<body>
+<div id="loading">Furnishing the room with product twins…</div>
+<div id="hud">
+  <div class="topline"><img class="hero" id="villa-hero" alt="" hidden /><div><div class="k">Product Twin · client preview</div><h1 id="villa-name">Villa</h1><div class="loc" id="villa-loc"></div><div class="specs" id="villa-specs"></div><div class="lst" id="villa-lst"></div></div></div>
+  <div class="price"><div class="k" id="property-price-label">Asking price</div><div class="v" id="villa-price">—</div><div class="note" id="villa-note"></div></div>
+  <div class="help">Drag to look around · scroll to zoom · tap a product</div>
+  <div class="roomtotal" id="roomtotal"><span class="k" id="roomtotal-label">Room · furnished total</span><b id="roomtotal-v">—</b><span class="rt-note" id="roomtotal-n"></span></div>
+  <aside id="panel"><button class="close" id="close">×</button>
+    <div class="small" id="p-src">Product Twin</div><h2 id="p-title">—</h2><div class="mk" id="p-mk"></div>
+    <div id="p-pills"></div>
+    <div class="offer"><div class="small" id="offer-label">Live trade offer</div><strong id="p-price">—</strong><span id="p-offerstate"></span></div>
+    <div class="actions"><a id="p-offer" class="offerbtn" target="_blank" rel="noopener" hidden>View live offer / RFQ →</a><button id="p-swap" class="swapbtn" hidden>⇄ Swap</button></div>
+    <div class="warn" id="p-warn"></div>
+  </aside>
+  <button id="rfq-btn" class="rfqbtn">Request room quote →</button>
+  <div id="rfq-modal" class="modal" hidden>
+    <div class="modal-card">
+      <button class="close" id="rfq-close">×</button>
+      <div class="small" id="rfq-eyebrow">Request for quote · furnished living room</div>
+      <h2 id="rfq-title">—</h2>
+      <div class="rfq-prop" id="rfq-prop"></div>
+      <div id="rfq-body"></div>
+      <div class="rfq-actions"><button id="rfq-copy">⧉ Copy RFQ</button><button id="rfq-print" class="secondary">Print / Save PDF</button></div>
+      <div class="rfq-note" id="rfq-note">Nothing is sent automatically — this is a bill of materials to review and send yourself. Prices, stock and ES delivery are live gates; native-3D rights are review.</div>
+    </div>
+  </div>
+</div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { fitSphereDistance } from './visual-framing.mjs';
+
+const query = new URLSearchParams(location.search);
+const contextId = query.get('context');
+const isSvartingeStudy = contextId === 'svartinge-glanrummet';
+const visualQaMode = isSvartingeStudy && query.get('qa') === '1';
+const visualQaViewId = visualQaMode ? (query.get('view') || 'hero') : null;
+document.documentElement.dataset.visualQaState = visualQaMode ? 'loading' : 'interactive';
+const base_scene_data = await fetch('../../data/showrooms/norr11-marbella-living-room-v0.1.json', { cache: 'no-store' }).then(r => r.json());
+const context_scene_data = isSvartingeStudy
+  ? await fetch('../../data/showrooms/svartinge-glanrummet-living-room-v0.3.json', { cache: 'no-store' }).then(r => r.json())
+  : null;
+const visual_qa_data = visualQaMode
+  ? await fetch('../../data/showrooms/svartinge-glanrummet-visual-qa-v0.1.json', { cache: 'no-store' }).then(r => r.json())
+  : null;
+const scene_data = context_scene_data ? {
+  ...base_scene_data,
+  ...context_scene_data,
+  room: { ...base_scene_data.room, ...context_scene_data.room },
+  products: base_scene_data.products.map(product => ({
+    ...product,
+    placement: {
+      ...product.placement,
+      ...(context_scene_data.placement_overrides?.[product.twin_id] || {})
+    }
+  })),
+  swap_alternates: base_scene_data.swap_alternates
+} : base_scene_data;
+const property = scene_data.property || { name: 'Villa (placeholder)', location: 'Spain', price_display: '—', note: '' };
+const visualQaView = visual_qa_data?.views.find(view => view.id === visualQaViewId) || visual_qa_data?.views[0] || null;
+if (isSvartingeStudy) document.title = 'Glanrummet furniture study · Product Twin';
+if (isSvartingeStudy) {
+  document.getElementById('property-price-label').textContent = 'Status';
+  document.getElementById('offer-label').textContent = 'Dated offer snapshot';
+  document.getElementById('roomtotal-label').textContent = 'Sweden commerce';
+  document.getElementById('rfq-btn').textContent = 'Review study BOM →';
+  document.getElementById('rfq-eyebrow').textContent = 'Design-study bill of materials · not a quote';
+  document.getElementById('rfq-copy').textContent = '⧉ Copy study BOM';
+  document.getElementById('rfq-note').textContent = 'Nothing is sent automatically. Snapshot prices are stale; Sweden supply, tax, freight, delivery and checkout are not evaluated. Native-3D rights remain under review.';
+}
+document.getElementById('villa-name').textContent = property.name;
+document.getElementById('villa-loc').textContent = property.location + (isSvartingeStudy ? ' · composition preview' : ' · furnished with real, purchasable pieces');
+document.getElementById('villa-price').textContent = property.price_display;
+document.getElementById('villa-specs').textContent = property.specs || '';
+document.getElementById('villa-lst').textContent = property.reference ? `H&H · ${property.reference} · live listing` : '';
+document.getElementById('villa-note').textContent = property.reference ? 'real for-sale listing · refresh before use' : (property.note || '');
+if (property.hero_image) { const h = document.getElementById('villa-hero'); h.src = '../../' + property.hero_image; h.hidden = false; }
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: visualQaMode });
+renderer.setPixelRatio(visualQaMode ? 1 : Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = isSvartingeStudy ? 0.82 : 1.08;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.prepend(renderer.domElement);
+
+const scene = new THREE.Scene();
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+scene.environmentIntensity = isSvartingeStudy ? 0.68 : 1;
+
+// warm daylight sky seen through the window
+scene.background = new THREE.Color(0xbfd4dd);
+
+const [RW, RH, RD] = scene_data.room.size_m;
+
+// Room spans z = +1 (open front) to z = -(RD-1) (back wall); x = -RW/2 .. RW/2.
+const BACK_Z = -(RD - 1);
+const CENTER_Z = (1 + BACK_Z) / 2;
+const camera = new THREE.PerspectiveCamera(visualQaView?.fov_deg || scene_data.camera?.fov_deg || 50, innerWidth / innerHeight, 0.05, 200);
+camera.position.set(...(visualQaView?.camera_position_m || scene_data.camera?.position_m || [3.15, 1.42, 3.0]));
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(...(visualQaView?.target_m || scene_data.camera?.target_m || [-0.2, 0.5, -3.0]));
+controls.enableDamping = true; controls.dampingFactor = 0.08;
+controls.maxPolarAngle = Math.PI / 2 - 0.03; controls.minDistance = 2.4; controls.maxDistance = 24;
+controls.enabled = !visualQaMode;
+const defaultCameraPosition = camera.position.clone();
+const defaultCameraTarget = controls.target.clone();
+let userAdjustedCamera = false;
+controls.addEventListener('start', () => { if (!visualQaMode) userAdjustedCamera = true; });
+
+// ---- procedural textures (no external assets) ----
+function makeCanvas(w, h, draw) { const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; }
+let textureSeed = visual_qa_data?.texture_seed || 1729;
+function deterministicRandom() {
+  textureSeed = (textureSeed * 1664525 + 1013904223) >>> 0;
+  return textureSeed / 4294967296;
+}
+const oakTex = makeCanvas(1024, 1024, (x, w, h) => {
+  const planks = isSvartingeStudy
+    ? ['#a98262', '#a37b5c', '#ac8565', '#a57e5f', '#ae8767', '#a17959', '#aa8262', '#a67e5e']
+    : ['#b48a5b', '#a77d50', '#bd9365', '#ad8154', '#c09769', '#a4774d', '#b88d5e', '#ae8255'];
+  x.fillStyle = planks[0]; x.fillRect(0, 0, w, h);
+  for (let i = 0; i < 8; i++) {
+    const y = i * h / 8; x.fillStyle = planks[i]; x.fillRect(0, y, w, h / 8 - 2);
+    for (let g = 0; g < 34; g++) {
+      const phase = Math.sin((i + 1) * 31 + g * 17);
+      const gy = y + ((phase + 1) / 2) * h / 8;
+      x.strokeStyle = `rgba(75,52,34,${0.024 + ((g % 5) * 0.005)})`;
+      x.beginPath(); x.moveTo(0, gy); x.bezierCurveTo(w / 3, gy + phase * 7, 2 * w / 3, gy - phase * 5, w, gy); x.stroke();
+    }
+  }
+});
+oakTex.wrapS = oakTex.wrapT = THREE.RepeatWrapping; oakTex.repeat.set(isSvartingeStudy ? 3 : 4, isSvartingeStudy ? 3 : 4);
+const plasterTex = makeCanvas(512, 512, (x, w, h) => { x.fillStyle = isSvartingeStudy ? '#d8d3ca' : '#efe7d8'; x.fillRect(0, 0, w, h); for (let i = 0; i < 9000; i++) { x.fillStyle = isSvartingeStudy ? `rgba(115,110,101,${deterministicRandom() * 0.035})` : `rgba(${200 + deterministicRandom() * 40},${190 + deterministicRandom() * 30},${170},${deterministicRandom() * 0.05})`; x.fillRect(deterministicRandom() * w, deterministicRandom() * h, 2, 2); } });
+plasterTex.wrapS = plasterTex.wrapT = THREE.RepeatWrapping; plasterTex.repeat.set(3, 2);
+
+const floorMat = new THREE.MeshStandardMaterial({ map: oakTex, roughness: isSvartingeStudy ? 0.74 : 0.62, metalness: 0 });
+const wallMat = new THREE.MeshStandardMaterial({ map: plasterTex, roughness: 0.95 });
+const ceilMat = new THREE.MeshStandardMaterial({ color: 0xf3ede1, roughness: 1 });
+
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(RW, RD), floorMat);
+floor.rotation.x = -Math.PI / 2; floor.position.z = CENTER_Z; floor.receiveShadow = true; scene.add(floor);
+const ceil = new THREE.Mesh(new THREE.PlaneGeometry(RW, RD), ceilMat);
+ceil.rotation.x = Math.PI / 2; ceil.position.set(0, RH, CENTER_Z); scene.add(ceil);
+function wall(w, h, x, y, z, ry = 0) { const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.14), wallMat); m.position.set(x, y, z); m.rotation.y = ry; m.receiveShadow = true; scene.add(m); return m; }
+wall(RW, RH, 0, RH / 2, BACK_Z);                       // back wall (far)
+wall(RD, RH, -RW / 2, RH / 2, CENTER_Z, Math.PI / 2);  // left wall
+wall(RD, RH, RW / 2, RH / 2, CENTER_Z, Math.PI / 2);   // right wall
+
+// The room study reuses a composition manifest, never the source property's view.
+// Svärtinge receives a visibly conceptual Lake Glan/pine context; the Spanish
+// listing keeps its original Mediterranean composition.
+const view = makeCanvas(1024, 512, (x, w, h) => {
+  const g = x.createLinearGradient(0, 0, 0, h);
+  if (isSvartingeStudy) {
+    g.addColorStop(0, '#a9bdc6'); g.addColorStop(0.43, '#d5c9b7'); g.addColorStop(0.54, '#78939a'); g.addColorStop(1, '#405e67');
+    x.fillStyle = g; x.fillRect(0, 0, w, h);
+    // Concept-only forested Lake Glan horizon: not a surveyed or photographic view claim.
+    x.fillStyle = '#314b3b'; x.beginPath(); x.moveTo(0, h * 0.51);
+    for (let px = 0; px <= w; px += 18) { const crown = h * (0.43 + Math.sin(px * 0.031) * 0.018 + Math.sin(px * 0.009) * 0.025); x.lineTo(px, crown); }
+    x.lineTo(w, h * 0.57); x.lineTo(0, h * 0.57); x.closePath(); x.fill();
+    x.fillStyle = 'rgba(224,228,215,.28)'; for (let i = 0; i < 24; i++) x.fillRect(deterministicRandom() * w, h * 0.61 + deterministicRandom() * h * 0.3, 35 + deterministicRandom() * 95, 1.2);
+  } else {
+    g.addColorStop(0, '#cfe0e6'); g.addColorStop(0.32, '#f0e2cf'); g.addColorStop(0.5, '#f6ddbf'); g.addColorStop(0.52, '#7ba7c0'); g.addColorStop(1, '#3d7ea0');
+    x.fillStyle = g; x.fillRect(0, 0, w, h);
+    x.fillStyle = 'rgba(96,110,120,.55)'; x.beginPath(); x.moveTo(0, h * 0.52);
+    x.bezierCurveTo(w * 0.18, h * 0.36, w * 0.32, h * 0.34, w * 0.46, h * 0.5); x.lineTo(w * 0.46, h * 0.53); x.lineTo(0, h * 0.53); x.closePath(); x.fill();
+    x.fillStyle = 'rgba(255,238,205,.6)'; for (let i = 0; i < 60; i++) x.fillRect(w * 0.5 + deterministicRandom() * w * 0.45, h * 0.5 + deterministicRandom() * 3, 2, 2);
+    x.fillStyle = 'rgba(255,255,255,.45)'; for (let i = 0; i < 26; i++) x.fillRect(deterministicRandom() * w, h * 0.6 + deterministicRandom() * h * 0.35, 40 + deterministicRandom() * 90, 1.4);
+  }
+});
+const windowPane = new THREE.Mesh(new THREE.PlaneGeometry(RW * 0.64, RH * 0.66), new THREE.MeshBasicMaterial({ map: view }));
+windowPane.position.set(0.2, RH * 0.52, BACK_Z + 0.08); scene.add(windowPane);
+const frameMat = new THREE.MeshStandardMaterial({ color: 0x2a2723, roughness: 0.5, metalness: 0.3 });
+function bar(w, h, x, y) { const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.06), frameMat); m.position.set(x, y, BACK_Z + 0.12); scene.add(m); }
+bar(RW * 0.66, 0.06, 0.2, RH * 0.52 + RH * 0.33); bar(RW * 0.66, 0.06, 0.2, RH * 0.52 - RH * 0.33); bar(0.06, RH * 0.66, 0.2 - RW * 0.32, RH * 0.52); bar(0.06, RH * 0.66, 0.2 + RW * 0.32, RH * 0.52); bar(0.05, RH * 0.66, 0.2, RH * 0.52);
+
+// warm golden-hour sun coming in from the front-side, so product fronts face the light
+const sun = new THREE.DirectionalLight(0xffdca6, isSvartingeStudy ? 1.7 : 3.2);
+sun.position.set(3.5, 6.0, 3.2); sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048); const s = sun.shadow.camera; s.near = 0.5; s.far = 30; s.left = -8; s.right = 8; s.top = 8; s.bottom = -8; sun.shadow.bias = -0.0004;
+scene.add(sun);
+// soft warm bounce from the window side + cool sky fill
+scene.add(new THREE.HemisphereLight(0xf3e6cf, 0x6b5a44, isSvartingeStudy ? 0.62 : 0.4));
+const bounce = new THREE.PointLight(0xffe4b8, isSvartingeStudy ? 0.28 : 0.5, 18); bounce.position.set(0.2, 1.6, BACK_Z + 1.5); scene.add(bounce);
+
+// (rug, coffee table and floor lamp are now REAL products loaded from the scene)
+
+// warm scene props (clearly decor, not products): a potted plant + framed art
+(function plant(px, pz) {
+  const pot = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.17, 0.4, 20), new THREE.MeshStandardMaterial({ color: 0xb9b0a0, roughness: 0.9 }));
+  pot.position.set(px, 0.2, pz); pot.castShadow = pot.receiveShadow = true; scene.add(pot);
+  const foliage = new THREE.MeshStandardMaterial({ color: 0x5f7d4f, roughness: 0.85, flatShading: true });
+  for (let i = 0; i < 5; i++) { const leaf = new THREE.Mesh(new THREE.ConeGeometry(0.16, 0.9, 5), foliage); leaf.position.set(px + (Math.sin(i) * 0.12), 0.85 + i * 0.04, pz + Math.cos(i) * 0.12); leaf.rotation.z = (i - 2) * 0.28; leaf.castShadow = true; scene.add(leaf); }
+})(RW / 2 - 0.55, BACK_Z + 0.55);
+if (!isSvartingeStudy) (function art(ax) {
+  const frame = new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.95, 0.05), new THREE.MeshStandardMaterial({ color: 0x2a2723, roughness: 0.5, metalness: 0.3 }));
+  frame.position.set(ax, 1.55, BACK_Z + 0.09); scene.add(frame);
+  const artTex = makeCanvas(512, 340, (x, w, h) => { const g = x.createLinearGradient(0, 0, w, h); g.addColorStop(0, '#c98f5a'); g.addColorStop(0.5, '#e7c79a'); g.addColorStop(1, '#8a5a3a'); x.fillStyle = g; x.fillRect(0, 0, w, h); x.strokeStyle = 'rgba(255,255,255,.25)'; for (let i = 0; i < 6; i++) { x.beginPath(); x.moveTo(0, h * (0.3 + i * 0.1)); x.bezierCurveTo(w / 3, h * (0.2 + i * 0.1), 2 * w / 3, h * (0.4 + i * 0.1), w, h * (0.3 + i * 0.1)); x.stroke(); } });
+  const canvasArt = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 0.86), new THREE.MeshBasicMaterial({ map: artTex })); canvasArt.position.set(ax, 1.55, BACK_Z + 0.12); scene.add(canvasArt);
+})(-RW / 2 + 1.4);
+
+// soft contact-shadow blob under each product
+const blobTex = makeCanvas(256, 256, (x, w, h) => { const g = x.createRadialGradient(w / 2, h / 2, 4, w / 2, h / 2, w / 2); g.addColorStop(0, 'rgba(0,0,0,.42)'); g.addColorStop(1, 'rgba(0,0,0,0)'); x.fillStyle = g; x.fillRect(0, 0, w, h); });
+function contactShadow(cx, cz, sx, sz) { const m = new THREE.Mesh(new THREE.PlaneGeometry(sx, sz), new THREE.MeshBasicMaterial({ map: blobTex, transparent: true, depthWrite: false })); m.rotation.x = -Math.PI / 2; m.position.set(cx, 0.015, cz); scene.add(m); }
+
+// manifest gives real title/offer/GLB for swap alternates by twin_id
+const manifest = await fetch('../../data/geometry/native-3d-showcase-manifest.json', { cache: 'no-store' }).then(r => r.json()).catch(() => ({ entries: [] }));
+const byTwin = new Map((manifest.entries || []).filter(e => e.resolved).map(e => [e.twin_id, e]));
+const mfg = t => t.includes('WENDELBO') ? 'Wendelbo' : (t.includes('NORR11') ? 'NORR11' : '');
+function altProduct(twin_id, placement, role, category_id) {
+  const e = byTwin.get(twin_id) || {};
+  const price = e.offer?.price?.amount != null ? Number(e.offer.price.amount) : null;
+  return {
+    twin_id, role, category_id: category_id || e.category_id,
+    identity: { manufacturer: mfg(twin_id), model: e.title || twin_id, merchant_sku: '' },
+    avatar: { level: 'G2', source: 'native_manufacturer_model3d', runtime_glb: e.glb?.runtime_path, rights_state: 'review' },
+    placement,
+    offer_snapshot: { merchant: 'Design Public Group (trade)', currency: e.offer?.price?.currency || 'USD', unit_price: price, available: !!e.offer?.available, observed_at: '2026-08-18', es_checkout_state: 'exact ES postcode tax/freight/delivery refresh required' },
+  };
+}
+
+function applyStudyAppearance(root, product) {
+  if (!isSvartingeStudy) return;
+  const cue = scene_data.appearance_profile?.roles?.[product.role];
+  if (!cue || cue.preserve_proxy_materials) return;
+  const recolour = source => {
+    const material = source.clone();
+    const name = String(material.name || '').toLowerCase();
+    const isFrame = /metal|steel|chrome|frame|black|powder/.test(name);
+    if (material.color) material.color.set(isFrame ? cue.frame_color : cue.surface_color);
+    if (typeof material.roughness === 'number') material.roughness = isFrame ? 0.34 : cue.roughness;
+    if (typeof material.metalness === 'number') material.metalness = isFrame ? 0.62 : 0;
+    material.needsUpdate = true;
+    return material;
+  };
+  root.traverse(object => {
+    if (!object.isMesh || !object.material) return;
+    object.material = Array.isArray(object.material)
+      ? object.material.map(recolour)
+      : recolour(object.material);
+  });
+  root.userData.appearance_state = scene_data.appearance_profile.state;
+  root.userData.appearance_label = cue.surface_label;
+}
+
+const loader = new GLTFLoader();
+const picks = [];
+const tagEls = [];
+let loaded = 0;
+let assetLoadsCompleted = 0;
+const assetLoadFailures = [];
+const projectedTagPosition = new THREE.Vector3();
+
+function updateTags() {
+  for (const { el, anchor } of tagEls) {
+    projectedTagPosition.copy(anchor).project(camera);
+    const behind = projectedTagPosition.z > 1;
+    el.style.display = behind ? 'none' : 'block';
+    el.style.left = (projectedTagPosition.x * 0.5 + 0.5) * innerWidth + 'px';
+    el.style.top = (-projectedTagPosition.y * 0.5 + 0.5) * innerHeight + 'px';
+  }
+}
+
+function placeProduct(root, p) {
+  const box = new THREE.Box3().setFromObject(root); const size = new THREE.Vector3(); box.getSize(size);
+  root.position.x += p.position_m[0] - (box.min.x + size.x / 2);
+  root.position.z += p.position_m[2] - (box.min.z + size.z / 2);
+  root.position.y += -box.min.y + (p.position_m[1] || 0);
+  root.rotation.y = (p.rotation_deg_y || 0) * Math.PI / 180;
+  return size;
+}
+
+// build one swap cycle per placed role: [placed product, ...alternates]
+const cyclesByRole = new Map();
+for (const p of scene_data.products) {
+  const alt = (scene_data.swap_alternates || []).find(a => a.role === p.role);
+  const cycle = [p, ...((alt?.twin_ids) || []).map(t => altProduct(t, p.placement, p.role, p.category_id))].filter(x => x.avatar?.runtime_glb || x.avatar?.asset_path);
+  cyclesByRole.set(p.role, { cycle, index: 0, roots: new Map() });
+}
+
+for (const [role, g] of cyclesByRole) {
+  for (let i = 0; i < g.cycle.length; i++) {
+    const product = g.cycle[i];
+    try {
+      const gltf = await loader.loadAsync('../../' + (product.avatar.runtime_glb || product.avatar.asset_path));
+      const root = gltf.scene;
+      root.userData.role = role;
+      applyStudyAppearance(root, product);
+      root.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; o.userData.role = role; } });
+      scene.add(root);
+      const size = placeProduct(root, product.placement);
+      root.visible = i === 0;
+      g.roots.set(i, { root, size });
+      picks.push(root);
+      assetLoadsCompleted++;
+      if (i === 0) {
+        if (size.y > 0.12) contactShadow(product.placement.position_m[0], product.placement.position_m[2], Math.max(size.x, size.z) * 1.25, Math.max(size.x, size.z) * 1.25);
+        const anchor = new THREE.Vector3(product.placement.position_m[0], Math.max(size.y * 0.9, 0.35), product.placement.position_m[2]);
+        const el = document.createElement('div'); el.className = 'tag'; el.innerHTML = '<div class="dot">+</div>';
+        el.onclick = () => showPanel(role);
+        document.getElementById('hud').appendChild(el);
+        tagEls.push({ el, anchor });
+        loaded++;
+      }
+    } catch (e) { assetLoadFailures.push(product.twin_id); console.error('load failed', product.twin_id, e); }
+  }
+}
+
+document.getElementById('loading').style.display = 'none';
+function frameCompositionForAspect() {
+  if (!isSvartingeStudy || visualQaMode || userAdjustedCamera) return;
+  const framing = scene_data.responsive_framing || {};
+  const fitBelowAspect = framing.fit_below_aspect_ratio || 1.45;
+  if (camera.aspect >= fitBelowAspect) {
+    camera.position.copy(defaultCameraPosition);
+    controls.target.copy(defaultCameraTarget);
+    camera.fov = scene_data.camera?.fov_deg || 49;
+    camera.updateProjectionMatrix();
+    controls.update();
+    return;
+  }
+  const compositionBounds = new THREE.Box3();
+  for (const group of cyclesByRole.values()) {
+    const active = group.roots.get(group.index)?.root;
+    if (active?.visible) compositionBounds.expandByObject(active);
+  }
+  if (compositionBounds.isEmpty()) return;
+  const sphere = compositionBounds.getBoundingSphere(new THREE.Sphere());
+  const fitMargin = framing.camera_fit_margin || 1.12;
+  controls.maxDistance = framing.maximum_camera_distance_m || 24;
+  const distance = Math.min(controls.maxDistance, fitSphereDistance({radius: sphere.radius, verticalFovDeg: camera.fov, aspect: camera.aspect, margin: fitMargin}));
+  const direction = defaultCameraPosition.clone().sub(defaultCameraTarget).normalize();
+  controls.target.copy(sphere.center);
+  camera.position.copy(sphere.center).addScaledVector(direction, distance);
+  camera.updateProjectionMatrix();
+  controls.update();
+}
+frameCompositionForAspect();
+if (visualQaMode) {
+  const expectedProducts = cyclesByRole.size;
+  const expectedAssets = [...cyclesByRole.values()].reduce((sum, group) => sum + group.cycle.length, 0);
+  controls.update();
+  camera.updateMatrixWorld();
+  updateTags();
+  const tagRects = tagEls.map(({ el }) => el.getBoundingClientRect());
+  const margin = visual_qa_data.acceptance.safe_frame_margin_px;
+  const clippedTags = tagRects.filter(rect => rect.left < margin || rect.top < margin || rect.right > innerWidth - margin || rect.bottom > innerHeight - margin).length;
+  const ready = loaded === expectedProducts && assetLoadsCompleted === expectedAssets && assetLoadFailures.length === 0 && clippedTags === 0;
+  document.documentElement.dataset.visualQaState = ready ? 'ready' : 'failed';
+  document.documentElement.dataset.visualQaView = visualQaView?.id || 'unknown';
+  document.documentElement.dataset.visualQaLoaded = String(loaded);
+  document.documentElement.dataset.visualQaExpected = String(expectedProducts);
+  document.documentElement.dataset.visualQaAssetsLoaded = String(assetLoadsCompleted);
+  document.documentElement.dataset.visualQaAssetsExpected = String(expectedAssets);
+  document.documentElement.dataset.visualQaFailures = String(assetLoadFailures.length);
+  document.documentElement.dataset.visualQaClippedTags = String(clippedTags);
+  window.__PRODUCT_TWIN_VISUAL_QA__ = {
+    state: ready ? 'ready' : 'failed',
+    view: visualQaView?.id || null,
+    loaded,
+    expectedProducts,
+    assetLoadsCompleted,
+    expectedAssets,
+    assetLoadFailures: [...assetLoadFailures],
+    clippedTags
+  };
+}
+
+const money = (v, cur) => new Intl.NumberFormat(undefined, {
+  style: 'currency', currency: cur, maximumFractionDigits: Number(v) % 1 ? 2 : 0
+}).format(Number(v));
+const fmt = (v, cur) => v == null ? '—' : `${money(v, cur)} ${cur}`;
+function updateTotal() {
+  if (isSvartingeStudy) {
+    document.getElementById('roomtotal-v').textContent = 'Not evaluated';
+    document.getElementById('roomtotal-n').textContent = `${cyclesByRole.size} pieces · source prices per product · no comparable Sweden total`;
+    return;
+  }
+  const sums = new Map();
+  for (const [, g] of cyclesByRole) { const o = g.cycle[g.index].offer_snapshot; if (typeof o.unit_price === 'number') sums.set(o.currency, (sums.get(o.currency) || 0) + o.unit_price); }
+  const parts = [...sums.entries()].map(([cur, v]) => money(v, cur));
+  document.getElementById('roomtotal-v').textContent = parts.join('  +  ') || '—';
+  document.getElementById('roomtotal-n').textContent = `${cyclesByRole.size} pieces · live trade + retail list`;
+}
+updateTotal();
+
+const panel = document.getElementById('panel');
+function showPanel(role) {
+  const g = cyclesByRole.get(role); const p = g.cycle[g.index]; const o = p.offer_snapshot;
+  const isNative = p.avatar.source === 'native_manufacturer_model3d';
+  document.getElementById('p-src').textContent = isNative ? 'Product Twin · native manufacturer 3D' : 'Product Twin · dimension-verified proxy';
+  document.getElementById('p-title').textContent = `${p.identity.manufacturer} ${p.identity.model}`;
+  document.getElementById('p-mk').textContent = `SKU ${p.identity.merchant_sku || '—'}${p.identity.configuration ? ' · ' + p.identity.configuration : ''}`;
+  document.getElementById('p-pills').innerHTML = [p.category_id, p.avatar.level, isNative ? 'native MODEL_3D' : 'G2 proxy', isSvartingeStudy ? 'appearance cue' : null, isSvartingeStudy ? 'SE supply unknown' : 'ES offer snapshot'].filter(Boolean).map(t => `<span class="pill">${t}</span>`).join('');
+  document.getElementById('p-price').textContent = fmt(o.unit_price, o.currency);
+  document.getElementById('p-offerstate').textContent = `${o.merchant} · ${isSvartingeStudy ? 'snapshot' : (o.available ? 'available' : 'unavailable')} · ${o.observed_at}`;
+  const destinationGate = isSvartingeStudy ? 'Sweden supply, tax, freight, delivery and checkout are not evaluated' : o.es_checkout_state;
+  const appearanceCue = scene_data.appearance_profile?.roles?.[p.role]?.surface_label;
+  document.getElementById('p-warn').textContent = isNative
+    ? `${isSvartingeStudy ? `Viewer colour is a ${appearanceCue}; ` : ''}exact finish is not bound to a sellable variant. ${destinationGate}. Native GLB rights: review.`
+    : `Dimension-verified proxy, not exact IKEA geometry. ${destinationGate}.`;
+  const swap = document.getElementById('p-swap');
+  if (g.cycle.length > 1) { swap.hidden = false; swap.textContent = `⇄ Swap (${g.index + 1}/${g.cycle.length})`; swap.onclick = () => swapRole(role); }
+  else swap.hidden = true;
+  // real merchant offer / RFQ link: explicit product_url, else the native handle route
+  const offer = document.getElementById('p-offer');
+  const handle = byTwin.get(p.twin_id)?.handle;
+  const origin = scene_data.geometry_source?.merchant_origin;
+  const url = o.product_url || (handle && origin ? `${origin}/products/${handle}` : null);
+  if (url) { offer.hidden = false; offer.href = url; offer.textContent = isSvartingeStudy ? 'Open merchant product page →' : 'View live offer / RFQ →'; }
+  else offer.hidden = true;
+  panel.classList.add('open');
+}
+function swapRole(role) {
+  const g = cyclesByRole.get(role);
+  const prev = g.roots.get(g.index); if (prev) prev.root.visible = false;
+  g.index = (g.index + 1) % g.cycle.length;
+  const cur = g.roots.get(g.index); if (cur) cur.root.visible = true;
+  showPanel(role); updateTotal();
+}
+document.getElementById('close').onclick = () => panel.classList.remove('open');
+
+// ---- room-level RFQ (bill of materials; nothing is sent) ----
+function activeList() { return [...cyclesByRole.values()].map(g => g.cycle[g.index]); }
+function totalsByCurrency() {
+  const sums = new Map();
+  for (const p of activeList()) { const o = p.offer_snapshot; if (typeof o.unit_price === 'number') sums.set(o.currency, (sums.get(o.currency) || 0) + o.unit_price); }
+  return sums;
+}
+function renderRfq() {
+  const pr = property;
+  document.getElementById('rfq-title').textContent = isSvartingeStudy ? 'Glanrummet — 7-piece design study' : 'Furnished living room — 7-piece selection';
+  document.getElementById('rfq-prop').innerHTML = `<b>${pr.name}</b> · ${pr.location}${pr.reference ? ' · H&H ' + pr.reference : ''}${pr.price_display ? ' · ' + pr.price_display : ''}`;
+  const rows = activeList().map(p => {
+    const o = p.offer_snapshot; const url = o.product_url || (byTwin.get(p.twin_id)?.handle && scene_data.geometry_source?.merchant_origin ? `${scene_data.geometry_source.merchant_origin}/products/${byTwin.get(p.twin_id).handle}` : null);
+    return `<div class="rfq-row"><div class="n">${p.identity.manufacturer} ${p.identity.model}<small>${p.identity.merchant_sku ? 'SKU ' + p.identity.merchant_sku + ' · ' : ''}${o.merchant}${url ? ' · <a href="' + url + '" target="_blank" rel="noopener">offer ↗</a>' : ''}</small></div><div class="p">${money(o.unit_price, o.currency)}</div></div>`;
+  }).join('');
+  const totals = isSvartingeStudy
+    ? '<div class="rfq-tot"><span class="sub">Comparable Sweden subtotal</span><span>Not evaluated</span></div>'
+    : [...totalsByCurrency().entries()].map(([cur, v]) => `<div class="rfq-tot"><span class="sub">Subtotal ${cur}</span><span>${money(v, cur)} ${cur}</span></div>`).join('');
+  document.getElementById('rfq-body').innerHTML = rows + totals;
+}
+function buildRfqText() {
+  const pr = property;
+  const lines = [];
+  lines.push(isSvartingeStudy ? 'DESIGN STUDY BOM — Glanrummet · not a quote' : 'REQUEST FOR QUOTE — furnished living room');
+  lines.push(`Property: ${pr.name} · ${pr.location}${pr.reference ? ' · H&H ' + pr.reference : ''}${pr.price_display ? ' · ' + pr.price_display : ''}`);
+  if (pr.listing_url) lines.push(`Listing: ${pr.listing_url}`);
+  lines.push('');
+  lines.push('Pieces:');
+  for (const p of activeList()) {
+    const o = p.offer_snapshot; const url = o.product_url || (byTwin.get(p.twin_id)?.handle && scene_data.geometry_source?.merchant_origin ? `${scene_data.geometry_source.merchant_origin}/products/${byTwin.get(p.twin_id).handle}` : '');
+    lines.push(`- ${p.identity.manufacturer} ${p.identity.model} | SKU ${p.identity.merchant_sku || '-'} | ${money(o.unit_price, o.currency)} ${o.currency} | ${o.merchant}${url ? ' | ' + url : ''}`);
+  }
+  lines.push('');
+  if (isSvartingeStudy) lines.push('Comparable Sweden subtotal: not evaluated');
+  else for (const [cur, v] of totalsByCurrency()) lines.push(`Subtotal ${cur}: ${money(v, cur)} ${cur}`);
+  lines.push('');
+  lines.push(isSvartingeStudy
+    ? 'Note: snapshot prices are stale; Sweden supply, tax, freight, delivery and checkout are not evaluated; native-3D geometry rights are under review; proxy items are dimension-verified, not exact manufacturer geometry.'
+    : 'Note: prices/stock and ES delivery require live refresh; native-3D geometry rights are under review; proxy items are dimension-verified, not exact manufacturer geometry.');
+  return lines.join('\n');
+}
+document.getElementById('rfq-btn').onclick = () => { renderRfq(); document.getElementById('rfq-modal').hidden = false; };
+document.getElementById('rfq-close').onclick = () => document.getElementById('rfq-modal').hidden = true;
+document.getElementById('rfq-copy').onclick = async () => { try { await navigator.clipboard.writeText(buildRfqText()); document.getElementById('rfq-copy').textContent = '✓ Copied'; setTimeout(() => document.getElementById('rfq-copy').textContent = isSvartingeStudy ? '⧉ Copy study BOM' : '⧉ Copy RFQ', 1500); } catch (e) { console.error(e); } };
+document.getElementById('rfq-print').onclick = () => window.print();
+
+// project tags to screen each frame
+// click products directly too
+const ray = new THREE.Raycaster(); const m2 = new THREE.Vector2();
+renderer.domElement.addEventListener('click', ev => {
+  m2.set((ev.clientX / innerWidth) * 2 - 1, -(ev.clientY / innerHeight) * 2 + 1);
+  ray.setFromCamera(m2, camera);
+  let o = ray.intersectObjects(picks, true)[0]?.object; while (o && !o.userData.role) o = o.parent;
+  if (o) showPanel(o.userData.role);
+});
+
+addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); frameCompositionForAspect(); });
+(function animate() { requestAnimationFrame(animate); controls.update(); updateTags(); renderer.render(scene, camera); })();
+</script>
+</body>
+</html>

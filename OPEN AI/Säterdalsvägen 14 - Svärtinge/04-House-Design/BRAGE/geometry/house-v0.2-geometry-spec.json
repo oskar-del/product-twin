@@ -1,0 +1,101 @@
+{
+  "spec_version": "brage-house-geometry/v0.2",
+  "entity_type": "ConceptHouseGeometrySpec",
+  "spec_id": "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
+  "generated_by": "BRAGE (agent/brage-design)",
+  "subject": {
+    "working_property_identity": "SVÄRTINGE 54:28",
+    "address": "Säterdalsvägen 14, 605 70 Svärtinge, Norrköping"
+  },
+  "coordinate_system": {
+    "binds_scene": "svartinge-neighbourhood-scene/v0.2",
+    "units": "metres",
+    "convention": "Local scene frame. South (lake/view side) = negative Z. East = positive X. Y up. rotation_y_deg about Y.",
+    "note": "Same frame as neighbourhood-scene-v0.2.json so Platform can drop these elements straight into the scene graph."
+  },
+  "evidence_policy": {
+    "all_geometry_class": "CONCEPT",
+    "statement": "No legal boundary, buildable envelope (BYA/BTA), access or terrain gate is closed. Finished-floor (Y=0 datum) is provisional flat-plot; do not treat any dimension as engineered or permitted.",
+    "open_gates_blocking_promotion": ["registered_area", "legal_boundary", "BYA_BTA", "H30_H50_eligibility", "terrain_DTM_slope_FFL", "legal_access", "utility_capacity"],
+    "upgrades_requested": [
+      {"id": "DTM_1M", "unlocks": "slope + fall line -> confirm/deny west-end souterräng upgrade; set finished-floor"},
+      {"id": "VIEWSHED_GLAN", "unlocks": "promote Glan view REPORTED_UNVERIFIED -> DERIVED per south window at eye height"}
+    ]
+  },
+  "design_intent": {
+    "concept_name": "Vinkelhuset mot Glan",
+    "parti": "L-plan longhouse: heated E-W bar on the south (lake) frontage; cold garage/service wing steps north off the east end; west side left open to WNW summer-evening sun; SW terrace corner sheltered by a built vindficka windbreak.",
+    "drivers": {
+      "south_view_and_winter_sun": "Glan view az 185 + winter noon alt ~7.9deg both point south -> south glass bar",
+      "evening_sun": "summer sunset az ~320 (WNW) -> keep west open; social zone at west end",
+      "wind": "prevailing SW + lake breeze -> vindficka glazed windbreak at SW terrace corner; north wing screens NE/E",
+      "envelope_economy": "garage as cold wing shortens heated perimeter; compact footprint de-risks open BYA gate",
+      "slope_agnostic": "correct on flat datum; west-end walk-out is a conditional upgrade only if DTM confirms south fall >= ~2.5 m"
+    }
+  },
+  "datum": { "finished_floor_level_Y": 0.0, "status": "PROVISIONAL_FLAT_PLOT" },
+  "elements": [
+    {
+      "id": "HOUSE_BAR", "type": "CONCEPT_BUILDING_MASS", "label": "Heated south bar (1.5-plan)",
+      "evidence_class": "CONCEPT",
+      "geometry": { "primitive": "BOX", "footprint_xz": [[-11,-4],[9,-4],[9,3],[-11,3]], "wall_height_m": 3.0, "storeys": "1.5", "roof": "ASYMMETRIC_GABLE_RIDGE_EW" },
+      "intended_use": "LIVING_KITCHEN_DINING_MAINBED_plus_UPPER_HALF"
+    },
+    {
+      "id": "HOUSE_WING_N", "type": "CONCEPT_BUILDING_MASS", "label": "Cold garage/service wing (north, east end)",
+      "evidence_class": "CONCEPT",
+      "geometry": { "primitive": "BOX", "footprint_xz": [[3,3],[11,3],[11,11],[3,11]], "wall_height_m": 3.0, "storeys": "1", "roof": "MONO_OR_GABLE" },
+      "intended_use": "GARAGE_DOUBLE_ENTRY_UTILITY_WC_LAUNDRY"
+    },
+    {
+      "id": "HOUSE_HEART", "type": "SERVICE_CORE", "label": "Prefab wet-service core (House Heart) at the L hinge",
+      "evidence_class": "CONCEPT",
+      "geometry": { "primitive": "BOX", "position": [4.0, 1.5, 2.0], "size": [3.0, 3.0, 3.0], "rotation_y_deg": 0 },
+      "serves": ["kitchen", "main_ensuite", "wing_wc_laundry"],
+      "rationale": "Central hinge = shortest water/waste/vent runs; collapses systems complexity into one checkable, twinnable core (systems truth-law)."
+    },
+    { "id": "WALL_INT_LIVING_KITCHEN", "type": "INTERIOR_WALL", "evidence_class": "CONCEPT", "label": "Living | kitchen-dining",
+      "geometry": { "primitive": "BOX", "position": [-4.0, 1.5, -0.5], "size": [0.12, 3.0, 7.0], "rotation_y_deg": 0 } },
+    { "id": "WALL_INT_KITCHEN_HEART", "type": "INTERIOR_WALL", "evidence_class": "CONCEPT", "label": "Kitchen-dining | Heart/main-bed zone",
+      "geometry": { "primitive": "BOX", "position": [2.0, 1.5, -0.5], "size": [0.12, 3.0, 7.0], "rotation_y_deg": 0 } },
+    { "id": "WALL_INT_HEART_MAINBED", "type": "INTERIOR_WALL", "evidence_class": "CONCEPT", "label": "Heart | main bedroom",
+      "geometry": { "primitive": "BOX", "position": [5.0, 1.5, -0.5], "size": [0.12, 3.0, 7.0], "rotation_y_deg": 0 } },
+    { "id": "WALL_INT_BAR_WING_SPINE", "type": "INTERIOR_WALL", "evidence_class": "CONCEPT", "label": "Bar/north-wing hall spine",
+      "geometry": { "primitive": "BOX", "position": [4.5, 1.5, 6.0], "size": [3.0, 3.0, 0.12], "rotation_y_deg": 0 } },
+    { "id": "WALL_INT_GARAGE_UTIL", "type": "INTERIOR_WALL", "evidence_class": "CONCEPT", "label": "Garage | entry/utility",
+      "geometry": { "primitive": "BOX", "position": [6.0, 1.5, 7.0], "size": [0.15, 3.0, 8.0], "rotation_y_deg": 0 } },
+    {
+      "id": "ROOM_GLANRUMMET", "type": "ROOM", "label": "Glanrummet — west view/evening room (the one move)",
+      "evidence_class": "CONCEPT",
+      "geometry": { "primitive": "ROOM_VOLUME", "position": [-7.5, 1.5, -0.5], "size": [7.0, 3.0, 7.0], "rotation_y_deg": 0 },
+      "intended_use": "LIVING_VIEW", "feature": "Fully glazed south+west; glazing splayed toward lake (structure stays orthogonal)."
+    },
+    {
+      "id": "TERRACE_SOUTH", "type": "OUTDOOR_DECK", "label": "South terrace (kvällssol)",
+      "evidence_class": "CONCEPT",
+      "geometry": { "primitive": "EXTRUDED_POLYGON", "points_xz": [[-11,-4],[6,-4],[6,-12],[-11,-12]], "thickness_m": 0.15, "top_Y": 0.05 }
+    },
+    {
+      "id": "VINDFICKA_SW", "type": "WINDBREAK", "label": "SW glazed windbreak + planting (the grafted 'heart')",
+      "evidence_class": "CONCEPT",
+      "geometry": { "primitive": "SCREEN_L", "segments": [ {"from_xz": [-11,-9], "to_xz": [-6,-9]}, {"from_xz": [-11,-9], "to_xz": [-11,-4]} ], "height_m": 2.0, "material": "GLASS_ON_TIMBER_POSTS" },
+      "rationale": "Blocks SW gust; keeps WNW evening sun; no added heated floor."
+    },
+    {
+      "id": "OPT_SAUNA_POD", "type": "OPTIONAL_OUTBUILDING", "label": "Optional phase-2 sauna/guest pod by the water (graft from D)",
+      "evidence_class": "CONCEPT_OPTIONAL",
+      "geometry": { "primitive": "BOX", "position": [-16, 0.55, -13], "size": [4, 3, 4], "rotation_y_deg": 0 },
+      "status": "NOT_PART_OF_HOUSE_v0.2_gesture"
+    }
+  ],
+  "conditional_upgrades": [
+    {
+      "id": "WEST_SOUTERRANG", "condition": "DTM_1M shows south fall >= ~2.5 m across HOUSE_BAR footprint",
+      "effect": "Drop Glanrummet/west social end to a walk-out lower level onto TERRACE_SOUTH; add lower-level slab below Y=0. Do NOT model until DTM closes."
+    }
+  ],
+  "handoff": {
+    "to": "Platform engine (render) + MIMER (verify vs rules)",
+    "next": ["Drop elements into neighbourhood-scene v0.3", "Run BYA/BTA + H30/H50 checks once envelope gate opens", "Request DTM + Glan viewshed"]
+  }
+}

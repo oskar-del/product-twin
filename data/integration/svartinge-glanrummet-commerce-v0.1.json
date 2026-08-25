@@ -1,0 +1,29 @@
+{
+  "version": "svartinge-glanrummet-commerce/v0.1",
+  "integration_id": "INTEGRATION_SE_SVARTINGE_GLANRUMMET_COMMERCE_V01",
+  "room_scene_id": "SCENE_SE_NORRKOPING_SVARTINGE_54_28_BRAGE_V03",
+  "room_element_id": "ROOM_GLANRUMMET",
+  "room_state": "CONCEPT",
+  "source_showroom_manifest": "data/showrooms/norr11-marbella-living-room-v0.1.json",
+  "preview_url": "prototype/showroom-living/index.html?context=svartinge-glanrummet",
+  "binding_state": "DESIGN_STUDY_NOT_PROCUREMENT_READY",
+  "allowed": [
+    "preview the seven-product furniture composition",
+    "inspect identity and avatar-lane disclosures",
+    "try same-role swaps and compare snapshot subtotals"
+  ],
+  "forbidden": [
+    "claim that the Altea listing interior is Glanrummet",
+    "claim that native merchant GLBs are cleared for public redistribution",
+    "claim that 2026-08-17 or 2026-08-18 offer snapshots are current",
+    "claim Spanish supply, delivery, landed cost or checkout for Svärtinge",
+    "promote any furniture avatar to G3 from this integration"
+  ],
+  "destination": {
+    "country": "SE",
+    "municipality": "Norrköping",
+    "postcode": "60570",
+    "commerce_state": "NOT_EVALUATED"
+  },
+  "next_gate": "Create a Sweden-destination offer snapshot and rights-approved versioned geometry manifest before procurement or publication."
+}

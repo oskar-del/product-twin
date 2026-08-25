@@ -1,0 +1,82 @@
+{
+  "version": "0.1",
+  "target_id": "ANATOMIC_SITT_ZITZI_DELFI_PRO_G3_V0_1",
+  "category_id": "MEDTECH.SEATING.POSTURAL",
+  "type": "postural_seating_system",
+  "route": "photo_controlled_capture",
+  "manufacturer": "Anatomic SITT AB",
+  "manufacturer_org_no": "556411-7348",
+  "product_family": "Zitzi",
+  "model": "Zitzi Delfi Pro",
+  "recommended_first_subject": {
+    "note": "Delfi Pro is an adjustable foam/fabric/strap system. For a FIRST photo-to-avatar reconstruction, prefer a rigid, opaque, matte, distinctly-featured subject. Fix all adjustments before capture and photograph the seat in ONE frozen configuration, or start with a rigid catalogue accessory (moulded shell, tray/table, rigid base) that satisfies the controlled-capture contract. See docs/ANATOMIC-SITT-PHOTO-CAPTURE-GUIDE.md.",
+    "capture_friendly": ["rigid moulded seat shell in fixed config", "tray/table accessory", "rigid headrest", "rigid base/frame"],
+    "capture_hostile": ["dominant transparent or highly reflective surfaces", "loose straps mid-air", "changing adjustment during the orbit"]
+  },
+  "reference_identity_public": {
+    "state": "manufacturer_published_reference_not_the_verified_twin_identity",
+    "note": "These are real, published registry values used to ground the target. The exact SKU/variant of the physical unit Oskar photographs MUST be confirmed at capture time and written into the runtime job.",
+    "hmi_numbers": {
+      "size_0": "85704",
+      "size_1": "53369",
+      "size_2": "53370",
+      "size_3": "53371",
+      "size_4": "85705"
+    },
+    "published_specs": {
+      "internal_width_cm": {"size_0": 30, "size_1": 30, "size_2": 34, "size_3": 38, "size_4": 38},
+      "user_weight_max_kg": 90,
+      "internal_width_note": "If internal width is adjustable, value is the maximum internal width."
+    },
+    "public_sources": [
+      "https://hmi-basen.dk/en/r11x.asp?linkinfo=23118",
+      "https://portale.siva.it/en-GB/databases/products/detail/id-18630",
+      "https://pdf.medicalexpo.com/pdf/anatomic-sitt/"
+    ]
+  },
+  "dimensions_mm": {
+    "state": "capture_required",
+    "width_mm": null,
+    "depth_mm": null,
+    "height_mm": null,
+    "measurement_policy": "Oskar measures W/D/H of the exact physical unit in mm with a tape at capture time; registry internal-width is NOT the full envelope and is not a substitute."
+  },
+  "rights": {
+    "state": "clearable_family_firm",
+    "reconstruction_allowed": "yes_on_written_authorization",
+    "render_allowed": "yes_on_written_authorization",
+    "redistribution_allowed": "review_until_written_scope",
+    "authorization_template": "docs/legal/anatomic-sitt-reconstruction-authorization.md",
+    "note": "Anatomic SITT AB is Oskar's family firm (brother-in-law is CEO). Rights are instantly clearable via one signed internal authorization — the cheapest exact G3 rights path in the corpus. No manufacturer cold-outreach needed. The signed authorization is the evidence_ref the pipeline requires; until it exists, redistribution stays review and generated output stays runtime-only."
+  },
+  "avatar_plan": {
+    "target_level": "G3",
+    "pre_qa_ceiling": "G2",
+    "geometry": "multi-view photo reconstruction of the exact owned physical unit (Meshy multi-image), scale-constrained by measured W/H/D",
+    "appearance": "exact captured materials of the real unit; no generated recolouring",
+    "scale_gate": "each axis within 3% of measured W/D/H (photo-avatar-qa-contract)",
+    "identity_gate": "exact SKU/variant of the captured unit confirmed and written into the job before any exact-product claim"
+  },
+  "route_files": {
+    "capture_guide": "docs/ANATOMIC-SITT-PHOTO-CAPTURE-GUIDE.md",
+    "runtime_job_template": "config/geometry/intake/anatomic-sitt-photo-avatar-job.template.json",
+    "controlled_capture_contract": "config/geometry/photo-avatar-controlled-capture.json",
+    "job_schema": "config/geometry/photo-avatar-job.schema.json",
+    "qa_contract": "config/geometry/photo-avatar-qa-contract.json"
+  },
+  "promotion": {
+    "current_level": "G0",
+    "target_level": "G3",
+    "blockers": [
+      "capture 5 cleared views (front/rear/left/right/three_quarter) of the exact owned unit, plus extra orbit frames for QA",
+      "measure and record W/D/H in mm with evidence_ref",
+      "sign the family-firm reconstruction+render authorization and attach it as rights evidence_ref",
+      "confirm the exact SKU/variant of the captured unit and set identity_state=verified",
+      "run preflight PASS, generate with MESHY_API_KEY, pass multi-view QA, obtain human acceptance"
+    ]
+  },
+  "next_gates_beyond_g3": [
+    "engineering-interface authority (mounting/adjustment interfaces) for any G4 claim — photo capture alone never grants this",
+    "manufacturer CAD/spec cross-check if available internally"
+  ]
+}

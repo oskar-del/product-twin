@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://product-twin.local/schemas/room-commerce-procurement-manifest.schema.json",
+  "title": "Canonical Room Commerce Procurement Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "manifest_id", "revision", "producing_workstream", "producer", "source_manifests", "destination", "compiled_at", "evidence_freshness", "population", "summary", "line_items", "substitutions", "market_isolation", "room_lab_export", "content_hash"],
+  "properties": {
+    "schema_version": {"const": "room-commerce-procurement/v1"},
+    "manifest_id": {"const": "PROC_MARBELLA_LIVING_ROOM_ES_29660_V1"},
+    "revision": {"const": 1},
+    "producing_workstream": {"const": "Build, Procurement & Logistics OS"},
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "branch", "producer_commit", "checkpoint_state"],
+      "properties": {
+        "repository": {"const": "oskar-del/product-twin"},
+        "branch": {"const": "agent/build-procurement-logistics"},
+        "producer_commit": {"anyOf": [{"type": "string", "pattern": "^[a-f0-9]{40}$"}, {"const": "PENDING_FIRST_PRODUCER_COMMIT"}]},
+        "checkpoint_state": {"enum": ["PENDING_FIRST_PRODUCER_COMMIT", "COMMITTED_PRODUCER"]}
+      }
+    },
+    "source_manifests": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scene", "furniture", "room_lab_commerce_importer_contract", "frozen_design", "offer_evidence", "session_evidence"],
+      "properties": {
+        "scene": {"$ref": "#/$defs/roomLabSource"},
+        "furniture": {"$ref": "#/$defs/roomLabSource"},
+        "room_lab_commerce_importer_contract": {"$ref": "#/$defs/roomLabSource"},
+        "frozen_design": {"$ref": "#/$defs/source"},
+        "offer_evidence": {"$ref": "#/$defs/source"},
+        "session_evidence": {"$ref": "#/$defs/source"}
+      }
+    },
+    "destination": {"$ref": "#/$defs/destination"},
+    "compiled_at": {"type": "string", "format": "date-time"},
+    "evidence_freshness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "current_until", "monitor"],
+      "properties": {
+        "state": {"enum": ["CURRENT_AT_COMPILE_TIME", "EXPIRED_AT_COMPILE_TIME"]},
+        "current_until": {"type": "string", "format": "date-time"},
+        "monitor": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["cadence", "all_selected_and_alternative_offers"],
+          "properties": {
+            "cadence": {"const": "DAILY_WHILE_EXPOSED_AND_IMMEDIATELY_BEFORE_PURCHASE"},
+            "all_selected_and_alternative_offers": {"const": true}
+          }
+        }
+      }
+    },
+    "population": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "scene_product_ids", "product_twin_ids", "selected_substitution_ids", "conditional_substitution_ids"],
+      "properties": {
+        "state": {"const": "FROZEN_EIGHT_ORIGINAL_PRODUCTS"},
+        "scene_product_ids": {"type": "array", "minItems": 8, "maxItems": 8, "uniqueItems": true, "items": {"type": "string"}},
+        "product_twin_ids": {"type": "array", "minItems": 8, "maxItems": 8, "uniqueItems": true, "items": {"type": "string", "pattern": "^PT_"}},
+        "selected_substitution_ids": {"type": "array", "maxItems": 0},
+        "conditional_substitution_ids": {"const": ["SUB_LISTERBY_TO_VALNAS"]}
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["line_items", "total_units", "destination_deliverable_lines", "destination_deliverable_percentage", "destination_unavailable_lines", "local_lines", "purchase_ready_lines", "original_merchandise_subtotal", "deliverable_merchandise_subtotal", "conditional_valnas_scenario_subtotal"],
+      "properties": {
+        "line_items": {"const": 8},
+        "total_units": {"const": 8},
+        "destination_deliverable_lines": {"const": 7},
+        "destination_deliverable_percentage": {"const": 87.5},
+        "destination_unavailable_lines": {"const": 1},
+        "local_lines": {"const": 0},
+        "purchase_ready_lines": {"const": 0},
+        "original_merchandise_subtotal": {"$ref": "#/$defs/eur112696"},
+        "deliverable_merchandise_subtotal": {"$ref": "#/$defs/eur92796"},
+        "conditional_valnas_scenario_subtotal": {"$ref": "#/$defs/eur117696"}
+      }
+    },
+    "line_items": {"type": "array", "minItems": 8, "maxItems": 8, "items": {"$ref": "#/$defs/line"}},
+    "substitutions": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"$ref": "#/$defs/substitution"}},
+    "market_isolation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authoritative_market", "destination_key", "non_authoritative_markets"],
+      "properties": {
+        "authoritative_market": {"const": "ES"},
+        "destination_key": {"const": "ES-29660"},
+        "non_authoritative_markets": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["SE", "GB", "US"],
+          "properties": {"SE": {"const": "NO_EVIDENCE_EXPORTED"}, "GB": {"const": "NO_EVIDENCE_EXPORTED"}, "US": {"const": "NO_EVIDENCE_EXPORTED"}}
+        }
+      }
+    },
+    "room_lab_export": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "contract_version", "sha256", "frozen_procurement_offer_count", "contract_catalogue_offer_count", "out_of_scope_placeholder_count", "component_code_change_required"],
+      "properties": {
+        "path": {"const": "data/exports/room-lab/marbella-commerce-es-29660.v1.json"},
+        "contract_version": {"const": "room-commerce/v1"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "frozen_procurement_offer_count": {"const": 9},
+        "contract_catalogue_offer_count": {"const": 14},
+        "out_of_scope_placeholder_count": {"const": 5},
+        "component_code_change_required": {"const": false}
+      }
+    },
+    "content_hash": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "canonicalization", "value"],
+      "properties": {
+        "algorithm": {"const": "sha256"},
+        "canonicalization": {"const": "RFC8785_STYLE_SORTED_JSON_EXCLUDING_CONTENT_HASH"},
+        "value": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "identity", "version", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "identity": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "roomLabSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "identity", "version", "sha256", "room_lab_commit", "id_state"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "identity": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "room_lab_commit": {"const": "3daea697deabe6c53bb161c9ed5f42031f4fde41"},
+        "id_state": {"enum": ["EMBEDDED", "DERIVED_FROM_VERSIONED_FILENAME_NO_EMBEDDED_ID"]}
+      }
+    },
+    "destination": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["country", "market", "postcode", "key"],
+      "properties": {"country": {"const": "ES"}, "market": {"const": "ES"}, "postcode": {"const": "29660"}, "key": {"const": "ES-29660"}}
+    },
+    "money": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "amount", "currency", "reason"],
+      "properties": {
+        "state": {"type": "string", "minLength": 1},
+        "amount": {"type": ["number", "null"]},
+        "currency": {"const": "EUR"},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "result", "critical", "reason"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "result": {"enum": ["PASS", "BLOCKED"]},
+        "critical": {"const": true},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_observed_at", "precision", "observed_window", "expires_at", "state"],
+      "properties": {
+        "source_observed_at": {"type": "string", "format": "date"},
+        "precision": {"const": "DAY"},
+        "observed_window": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["start", "end"],
+          "properties": {"start": {"type": "string", "format": "date-time"}, "end": {"type": "string", "format": "date-time"}}
+        },
+        "expires_at": {"type": "string", "format": "date-time"},
+        "state": {"enum": ["CURRENT_AT_COMPILE_TIME", "EXPIRED_AT_COMPILE_TIME"]}
+      }
+    },
+    "line": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["line_id", "placement_id", "room_product_id", "record_lane", "product_twin_id", "article_no", "product_role", "quantity", "selection", "merchant", "price", "tax", "stock", "destination_delivery", "lead_time", "freight", "landed_cost", "checkout_rfq", "procurement_approval", "purchase_refresh_required", "evidence", "gates", "blocked_gate_ids", "purchase_readiness"],
+      "properties": {
+        "line_id": {"type": "string", "pattern": "^LINE_"},
+        "placement_id": {"type": "string", "minLength": 1},
+        "room_product_id": {"type": "string", "minLength": 1},
+        "record_lane": {"const": "PRODUCT_TWIN"},
+        "product_twin_id": {"type": "string", "pattern": "^PT_"},
+        "article_no": {"type": "string", "minLength": 1},
+        "product_role": {"type": "object", "additionalProperties": false, "required": ["procurement_role", "room_lab_role"], "properties": {"procurement_role": {"type": "string"}, "room_lab_role": {"type": "string"}}},
+        "quantity": {"type": "object", "additionalProperties": false, "required": ["placement_count", "bundle_quantity", "total_units", "state"], "properties": {"placement_count": {"const": 1}, "bundle_quantity": {"type": "null"}, "total_units": {"const": 1}, "state": {"const": "ROOM_LAB_PLACEMENT_AND_FURNITURE_INSTANCE_RECONCILED"}}},
+        "selection": {"type": "object", "additionalProperties": false, "required": ["state", "substitution_applied", "source_scene_product_id"], "properties": {"state": {"const": "FROZEN_ORIGINAL_SELECTED"}, "substitution_applied": {"const": false}, "source_scene_product_id": {"type": "string"}}},
+        "merchant": {"type": "object", "additionalProperties": false, "required": ["seller_id", "seller_name", "retailer_territory_country", "seller_country", "dispatch_country", "locality"], "properties": {"seller_id": {"type": "string"}, "seller_name": {"type": "string"}, "retailer_territory_country": {"const": "ES"}, "seller_country": {"type": "null"}, "dispatch_country": {"type": "null"}, "locality": {"type": "object", "additionalProperties": false, "required": ["state", "distance_km", "reason"], "properties": {"state": {"const": "UNRESOLVED"}, "distance_km": {"type": "null"}, "reason": {"type": "string"}}}}},
+        "price": {"$ref": "#/$defs/money"},
+        "tax": {"$ref": "#/$defs/money"},
+        "stock": {"type": "object"},
+        "destination_delivery": {"type": "object"},
+        "lead_time": {"type": "object"},
+        "freight": {"$ref": "#/$defs/money"},
+        "landed_cost": {"$ref": "#/$defs/money"},
+        "checkout_rfq": {"type": "object"},
+        "procurement_approval": {"type": "object"},
+        "purchase_refresh_required": {"const": true},
+        "evidence": {"type": "object", "required": ["offer_ref", "session_id", "product_url", "identity_state", "catalog_route_state", "observation", "market_scope"], "properties": {"observation": {"$ref": "#/$defs/observation"}, "market_scope": {"const": "ES_ONLY"}}},
+        "gates": {"type": "array", "minItems": 16, "maxItems": 16, "items": {"$ref": "#/$defs/gate"}},
+        "blocked_gate_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "purchase_readiness": {"const": "NOT_PURCHASE_READY"}
+      }
+    },
+    "substitution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["substitution_id", "source", "alternative", "deltas", "approval", "gates", "blocked_gate_ids"],
+      "properties": {
+        "substitution_id": {"const": "SUB_LISTERBY_TO_VALNAS"},
+        "source": {"type": "object"},
+        "alternative": {"type": "object"},
+        "deltas": {"type": "object"},
+        "approval": {"type": "object", "required": ["state", "client_design_approval", "automatic_substitution_allowed", "approval_evidence_ref"], "properties": {"state": {"const": "CONDITIONAL_NOT_APPROVED"}, "client_design_approval": {"const": "REQUIRED"}, "automatic_substitution_allowed": {"const": false}, "approval_evidence_ref": {"type": "null"}}},
+        "gates": {"type": "array", "minItems": 12, "maxItems": 12, "items": {"$ref": "#/$defs/gate"}},
+        "blocked_gate_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}
+      }
+    },
+    "eur112696": {"type": "object", "additionalProperties": false, "required": ["amount", "currency"], "properties": {"amount": {"const": 1126.96}, "currency": {"const": "EUR"}}},
+    "eur92796": {"type": "object", "additionalProperties": false, "required": ["amount", "currency"], "properties": {"amount": {"const": 927.96}, "currency": {"const": "EUR"}}},
+    "eur117696": {"type": "object", "additionalProperties": false, "required": ["amount", "currency"], "properties": {"amount": {"const": 1176.96}, "currency": {"const": "EUR"}}}
+  }
+}

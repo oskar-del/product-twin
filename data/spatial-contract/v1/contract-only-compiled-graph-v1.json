@@ -1,0 +1,33 @@
+{
+  "edges": [
+    {"from": "BLDG_TEST_ONLY_UNBOUND", "relation": "CONTAINS", "to": "UNIT_TEST_ONLY_UNBOUND"},
+    {"from": "ECOND_TEST_ONLY_UNBOUND", "relation": "BASELINE_FOR", "to": "SCN_TEST_AS_IS"},
+    {"from": "ECOND_TEST_ONLY_UNBOUND", "relation": "BASELINE_FOR", "to": "SCN_TEST_COSMETIC_RENOVATION"},
+    {"from": "ECOND_TEST_ONLY_UNBOUND", "relation": "BASELINE_FOR", "to": "SCN_TEST_ENERGY_RETROFIT"},
+    {"from": "ECOND_TEST_ONLY_UNBOUND", "relation": "BASELINE_FOR", "to": "SCN_TEST_EXTENSION"},
+    {"from": "ECOND_TEST_ONLY_UNBOUND", "relation": "BASELINE_FOR", "to": "SCN_TEST_FULL_RENOVATION"},
+    {"from": "ECOND_TEST_ONLY_UNBOUND", "relation": "BASELINE_FOR", "to": "SCN_TEST_RECONFIGURATION"},
+    {"from": "ECOND_TEST_ONLY_UNBOUND", "relation": "CONTAINS", "to": "SPACE_TEST_ONLY_UNBOUND"},
+    {"from": "NEIGH_TEST_ONLY_UNBOUND", "relation": "CONTAINS", "to": "BLDG_TEST_ONLY_UNBOUND"},
+    {"from": "SITE_TEST_ONLY_UNBOUND", "relation": "CONTAINS", "to": "NEIGH_TEST_ONLY_UNBOUND"},
+    {"from": "UNIT_TEST_ONLY_UNBOUND", "relation": "BASELINE_CAPTURE", "to": "ECOND_TEST_ONLY_UNBOUND"}
+  ],
+  "evidence_states": ["RECORDED", "LISTED", "INFERRED", "FORECAST"],
+  "manifest_version": "plot-to-project-spatial-graph/v1",
+  "nodes": [
+    {"entity_type": "BuildingTwin", "id": "BLDG_TEST_ONLY_UNBOUND", "version": "1.0"},
+    {"entity_type": "ExistingConditionTwin", "id": "ECOND_TEST_ONLY_UNBOUND", "version": "1.0"},
+    {"entity_type": "NeighbourhoodTwin", "id": "NEIGH_TEST_ONLY_UNBOUND", "version": "1.0"},
+    {"entity_type": "ExistingPropertyDesignScenario", "id": "SCN_TEST_AS_IS", "version": "existing-property-design-scenario/v1"},
+    {"entity_type": "ExistingPropertyDesignScenario", "id": "SCN_TEST_COSMETIC_RENOVATION", "version": "existing-property-design-scenario/v1"},
+    {"entity_type": "ExistingPropertyDesignScenario", "id": "SCN_TEST_ENERGY_RETROFIT", "version": "existing-property-design-scenario/v1"},
+    {"entity_type": "ExistingPropertyDesignScenario", "id": "SCN_TEST_EXTENSION", "version": "existing-property-design-scenario/v1"},
+    {"entity_type": "ExistingPropertyDesignScenario", "id": "SCN_TEST_FULL_RENOVATION", "version": "existing-property-design-scenario/v1"},
+    {"entity_type": "ExistingPropertyDesignScenario", "id": "SCN_TEST_RECONFIGURATION", "version": "existing-property-design-scenario/v1"},
+    {"entity_type": "SiteTwin", "id": "SITE_TEST_ONLY_UNBOUND", "version": null},
+    {"entity_type": "SpaceTwin", "id": "SPACE_TEST_ONLY_UNBOUND", "version": "1.0"},
+    {"entity_type": "UnitTwin", "id": "UNIT_TEST_ONLY_UNBOUND", "version": "1.0"}
+  ],
+  "project_id": "PRJ_CONTRACT_ONLY",
+  "source_bundle_sha256": "ad1041bd9101b5b62b7c0d49eeaef5c4fe1eee1619537e7f7e97b5334d685faa"
+}

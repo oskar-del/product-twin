@@ -1,0 +1,427 @@
+{
+  "derived_artifacts": [
+    {
+      "artifact_id": "BOUNDARY_EPSG25830_V0_2_JSON",
+      "byte_count": 9495,
+      "deterministic": true,
+      "generated_at": "2026-08-17T18:01:52+02:00",
+      "inputs": {
+        "boundary_source": "159602421da4b2666c6c3361d20d632031de935ed8c6a5a91b6bc2c216a62b9a"
+      },
+      "path": "data/sites/canopus/spatial/v0.2/boundary-epsg25830-v0.2.json",
+      "sha256": "d5974de0843b250e647483033a1fc716f65c2bcfe85bb64364e0b1f48f5f164f",
+      "toolchain": {
+        "Pillow": "12.3.0",
+        "builder": "scripts/build-canopus-spatial-v0.2.py",
+        "numpy": "2.3.5",
+        "python": "3.12.13"
+      }
+    },
+    {
+      "artifact_id": "BOUNDARY_WGS84_V0_2_GEOJSON",
+      "byte_count": 8563,
+      "deterministic": true,
+      "generated_at": "2026-08-17T18:01:52+02:00",
+      "inputs": {
+        "boundary_source": "159602421da4b2666c6c3361d20d632031de935ed8c6a5a91b6bc2c216a62b9a"
+      },
+      "path": "data/sites/canopus/spatial/v0.2/boundary-wgs84-v0.2.geojson",
+      "sha256": "42138eb7e72eb84676087ad1e9515811a6b1c238164542268885a023770255e6",
+      "toolchain": {
+        "Pillow": "12.3.0",
+        "builder": "scripts/build-canopus-spatial-v0.2.py",
+        "numpy": "2.3.5",
+        "python": "3.12.13"
+      }
+    },
+    {
+      "artifact_id": "TERRAIN_ANALYSIS_V0_2_JSON",
+      "byte_count": 2973,
+      "deterministic": true,
+      "generated_at": "2026-08-17T18:01:52+02:00",
+      "inputs": {
+        "boundary_artifact": "d5974de0843b250e647483033a1fc716f65c2bcfe85bb64364e0b1f48f5f164f",
+        "boundary_source": "159602421da4b2666c6c3361d20d632031de935ed8c6a5a91b6bc2c216a62b9a",
+        "terrain_source": "710b8ee75ab04353c06cce8e4633992bfebb7d49ec68687e51ef8c718e791020"
+      },
+      "path": "data/sites/canopus/spatial/v0.2/terrain-analysis-v0.2.json",
+      "sha256": "fb0207a8fc44e34fbca28eb911adc79b8f9821c8747d6cc0274c3ca3daeccc2d",
+      "toolchain": {
+        "Pillow": "12.3.0",
+        "builder": "scripts/build-canopus-spatial-v0.2.py",
+        "numpy": "2.3.5",
+        "python": "3.12.13"
+      }
+    },
+    {
+      "artifact_id": "SPOT_ELEVATIONS_V0_2_GEOJSON",
+      "byte_count": 842,
+      "deterministic": true,
+      "generated_at": "2026-08-17T18:01:52+02:00",
+      "inputs": {
+        "boundary_artifact": "d5974de0843b250e647483033a1fc716f65c2bcfe85bb64364e0b1f48f5f164f",
+        "boundary_source": "159602421da4b2666c6c3361d20d632031de935ed8c6a5a91b6bc2c216a62b9a",
+        "terrain_source": "710b8ee75ab04353c06cce8e4633992bfebb7d49ec68687e51ef8c718e791020"
+      },
+      "path": "data/sites/canopus/spatial/v0.2/spot-elevations-v0.2.geojson",
+      "sha256": "75c8d0bc6dc6737a041bc6ea1832c289087198b5fddae0e097344698b5d39995",
+      "toolchain": {
+        "Pillow": "12.3.0",
+        "builder": "scripts/build-canopus-spatial-v0.2.py",
+        "numpy": "2.3.5",
+        "python": "3.12.13"
+      }
+    },
+    {
+      "artifact_id": "CONTOURS_1M_V0_2_GEOJSON",
+      "byte_count": 194902,
+      "deterministic": true,
+      "generated_at": "2026-08-17T18:01:52+02:00",
+      "inputs": {
+        "boundary_artifact": "d5974de0843b250e647483033a1fc716f65c2bcfe85bb64364e0b1f48f5f164f",
+        "boundary_source": "159602421da4b2666c6c3361d20d632031de935ed8c6a5a91b6bc2c216a62b9a",
+        "terrain_source": "710b8ee75ab04353c06cce8e4633992bfebb7d49ec68687e51ef8c718e791020"
+      },
+      "path": "data/sites/canopus/spatial/v0.2/contours-1m-v0.2.geojson",
+      "sha256": "e0d4e1693eedf0a980228bb180fdf45bea47db4a953f21c0204458a561b7e17f",
+      "toolchain": {
+        "Pillow": "12.3.0",
+        "builder": "scripts/build-canopus-spatial-v0.2.py",
+        "numpy": "2.3.5",
+        "python": "3.12.13"
+      }
+    },
+    {
+      "artifact_id": "SECTION_AA_V0_2_JSON",
+      "byte_count": 11058,
+      "deterministic": true,
+      "generated_at": "2026-08-17T18:01:52+02:00",
+      "inputs": {
+        "boundary_artifact": "d5974de0843b250e647483033a1fc716f65c2bcfe85bb64364e0b1f48f5f164f",
+        "boundary_source": "159602421da4b2666c6c3361d20d632031de935ed8c6a5a91b6bc2c216a62b9a",
+        "terrain_source": "710b8ee75ab04353c06cce8e4633992bfebb7d49ec68687e51ef8c718e791020"
+      },
+      "path": "data/sites/canopus/spatial/v0.2/section-aa-v0.2.json",
+      "sha256": "6ad31cfbec5de73db94307a15aad091bd65336e858983b4034acad213d2b7003",
+      "toolchain": {
+        "Pillow": "12.3.0",
+        "builder": "scripts/build-canopus-spatial-v0.2.py",
+        "numpy": "2.3.5",
+        "python": "3.12.13"
+      }
+    },
+    {
+      "artifact_id": "TERRAIN_CONTEXT_V0_2_GLB",
+      "byte_count": 265720,
+      "deterministic": true,
+      "generated_at": "2026-08-17T18:01:52+02:00",
+      "inputs": {
+        "boundary_artifact": "d5974de0843b250e647483033a1fc716f65c2bcfe85bb64364e0b1f48f5f164f",
+        "boundary_source": "159602421da4b2666c6c3361d20d632031de935ed8c6a5a91b6bc2c216a62b9a",
+        "terrain_source": "710b8ee75ab04353c06cce8e4633992bfebb7d49ec68687e51ef8c718e791020"
+      },
+      "path": "data/sites/canopus/spatial/v0.2/terrain-context-v0.2.glb",
+      "sha256": "bab74084910afc8202cf13b1c65847227cb3e29ccf17692b28303524900947b5",
+      "toolchain": {
+        "Pillow": "12.3.0",
+        "builder": "scripts/build-canopus-spatial-v0.2.py",
+        "numpy": "2.3.5",
+        "python": "3.12.13"
+      }
+    },
+    {
+      "artifact_id": "ROADS_CONTEXT_V0_2_GEOJSON",
+      "byte_count": 137212,
+      "deterministic": true,
+      "generated_at": "2026-08-17T18:01:52+02:00",
+      "inputs": {
+        "boundary_source": "159602421da4b2666c6c3361d20d632031de935ed8c6a5a91b6bc2c216a62b9a",
+        "roads_source": "d8713b4976aefbd671d5886c3eae5e6e532c5663ea8ec5d4495dd110c6596a1f"
+      },
+      "path": "data/sites/canopus/spatial/v0.2/roads-context-v0.2.geojson",
+      "sha256": "4923df82cdd9310532937fd0a531e83fe7cc3dc749eff517fc14d7b51695b321",
+      "toolchain": {
+        "Pillow": "12.3.0",
+        "builder": "scripts/build-canopus-spatial-v0.2.py",
+        "numpy": "2.3.5",
+        "python": "3.12.13"
+      }
+    },
+    {
+      "artifact_id": "BUILDINGS_CONTEXT_V0_2_GEOJSON",
+      "byte_count": 169538,
+      "deterministic": true,
+      "generated_at": "2026-08-17T18:01:52+02:00",
+      "inputs": {
+        "boundary_source": "159602421da4b2666c6c3361d20d632031de935ed8c6a5a91b6bc2c216a62b9a",
+        "buildings_source": "92c37b51a003bbed72934837b56078e9981f338fe30b1ee1cc8f6ff4011ea9c5"
+      },
+      "path": "data/sites/canopus/spatial/v0.2/buildings-context-v0.2.geojson",
+      "sha256": "2a1a9cea92a41f4aff9ce7f83932cfa5e19331230715cddea773cae13ea0aa93",
+      "toolchain": {
+        "Pillow": "12.3.0",
+        "builder": "scripts/build-canopus-spatial-v0.2.py",
+        "numpy": "2.3.5",
+        "python": "3.12.13"
+      }
+    },
+    {
+      "artifact_id": "ACCESS_CANDIDATES_V0_2_GEOJSON",
+      "byte_count": 2339,
+      "deterministic": true,
+      "generated_at": "2026-08-17T18:01:52+02:00",
+      "inputs": {
+        "boundary_source": "159602421da4b2666c6c3361d20d632031de935ed8c6a5a91b6bc2c216a62b9a",
+        "roads_source": "d8713b4976aefbd671d5886c3eae5e6e532c5663ea8ec5d4495dd110c6596a1f"
+      },
+      "path": "data/sites/canopus/spatial/v0.2/access-candidates-v0.2.geojson",
+      "sha256": "613a8d162bd2e1e136dc4d93295b415ecacec48950ca6147585d43a42cfaf700",
+      "toolchain": {
+        "Pillow": "12.3.0",
+        "builder": "scripts/build-canopus-spatial-v0.2.py",
+        "numpy": "2.3.5",
+        "python": "3.12.13"
+      }
+    }
+  ],
+  "entity_type": "SpatialEvidenceManifest",
+  "generated_at": "2026-08-17T18:01:52+02:00",
+  "raw_distribution": "Raw official responses are immutable runtime evidence and are excluded from Git.",
+  "schema_version": "0.2",
+  "site_twin_id": "SITE_CANOPUS_5410501UF2451S",
+  "sources": [
+    {
+      "authority": "Dirección General del Catastro",
+      "byte_count": 5093,
+      "dataset": "INSPIRE Cadastral Parcels continuously updated service",
+      "dataset_metadata_date": "2025-01-28",
+      "feature_begin_lifespan_version": "2010-08-05T00:00:00",
+      "feature_end_lifespan_version": null,
+      "http": {
+        "content_type": "application/gml+xml",
+        "etag": null,
+        "last_modified": null,
+        "status": 200
+      },
+      "licence": {
+        "distribution_note": "Legacy Catastro INSPIRE terms are more conservative; raw official GML is not redistributed in Git. Only transformed value-added outputs and hashes are committed.",
+        "name": "CC BY 4.0 as stated by current IDEE metadata",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "media_type": "application/gml+xml",
+      "replay": "curl --fail --location 'https://ovc.catastro.meh.es/INSPIRE/wfsCP.aspx?service=wfs&version=2&request=getfeature&STOREDQUERIE_ID=GetParcel&refcat=5410501UF2451S&srsname=EPSG::25830' --output '.runtime/sites/canopus/raw/canopus-catastro.gml'",
+      "request_url": "https://ovc.catastro.meh.es/INSPIRE/wfsCP.aspx?service=wfs&version=2&request=getfeature&STOREDQUERIE_ID=GetParcel&refcat=5410501UF2451S&srsname=EPSG::25830",
+      "retrieved_at": "2026-08-17T17:47:31+02:00",
+      "runtime_locator": ".runtime/sites/canopus/raw/canopus-catastro.gml",
+      "sha256": "159602421da4b2666c6c3361d20d632031de935ed8c6a5a91b6bc2c216a62b9a",
+      "source_id": "SRC_CATASTRO_PARCEL_GML",
+      "survey_or_currentness_date": null,
+      "valid_from": null,
+      "valid_to": null
+    },
+    {
+      "authority": "Dirección General del Catastro",
+      "byte_count": 509,
+      "dataset": "Catastro coordinate service",
+      "http": {
+        "content_type": "application/xml",
+        "etag": null,
+        "last_modified": null,
+        "status": 200
+      },
+      "licence": {
+        "distribution_note": "Legacy Catastro INSPIRE terms are more conservative; raw official GML is not redistributed in Git. Only transformed value-added outputs and hashes are committed.",
+        "name": "CC BY 4.0 as stated by current IDEE metadata",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "media_type": "application/xml",
+      "replay": "curl --fail --location 'https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/rest/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=5410501UF2451S' --output '.runtime/sites/canopus/raw/canopus-catastro-reference-wgs84.xml'",
+      "request_url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/rest/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=5410501UF2451S",
+      "retrieved_at": "2026-08-17T17:50:02+02:00",
+      "runtime_locator": ".runtime/sites/canopus/raw/canopus-catastro-reference-wgs84.xml",
+      "sha256": "c7fef54ec0537ba208eea509d65d96e90738ef641e167bb464aa11b99356eb44",
+      "source_id": "SRC_CATASTRO_REFERENCE_WGS84"
+    },
+    {
+      "authority": "Dirección General del Catastro",
+      "byte_count": 14510,
+      "dataset": "INSPIRE Cadastral Parcels WFS 2.0 capabilities",
+      "http": {
+        "content_type": "application/xml",
+        "etag": null,
+        "last_modified": null,
+        "status": 200
+      },
+      "licence": {
+        "distribution_note": "Legacy Catastro INSPIRE terms are more conservative; raw official GML is not redistributed in Git. Only transformed value-added outputs and hashes are committed.",
+        "name": "CC BY 4.0 as stated by current IDEE metadata",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "media_type": "application/xml",
+      "replay": "curl --fail --location 'https://ovc.catastro.meh.es/INSPIRE/wfsCP.aspx?service=WFS&version=2.0.0&request=GetCapabilities' --output '.runtime/sites/canopus/raw/canopus-catastro-capabilities.xml'",
+      "request_url": "https://ovc.catastro.meh.es/INSPIRE/wfsCP.aspx?service=WFS&version=2.0.0&request=GetCapabilities",
+      "retrieved_at": "2026-08-17T17:49:16+02:00",
+      "runtime_locator": ".runtime/sites/canopus/raw/canopus-catastro-capabilities.xml",
+      "sha256": "85bb60ee4169b0620df42d40572bcd7d83f5cf0d2a7768fd3759359dd43f7d26",
+      "source_id": "SRC_CATASTRO_CAPABILITIES",
+      "terms_note": "Capabilities link the legacy DGC INSPIRE licence; the conservative raw-nonredistribution rule is applied."
+    },
+    {
+      "authority": "Dirección General del Catastro / IDEE",
+      "byte_count": 28215,
+      "dataset": "INSPIRE Cadastral Parcels WFS metadata",
+      "http": {
+        "content_type": "application/xml",
+        "etag": null,
+        "last_modified": null,
+        "status": 200
+      },
+      "licence": {
+        "distribution_note": "Legacy Catastro INSPIRE terms are more conservative; raw official GML is not redistributed in Git. Only transformed value-added outputs and hashes are committed.",
+        "name": "CC BY 4.0 as stated by current IDEE metadata",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "media_type": "application/xml",
+      "metadata_date": "2025-01-28",
+      "replay": "curl --fail --location 'https://www.idee.es/csw-inspire-idee/srv/spa/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetRecordById&outputSchema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&ElementSetName=full&ID=ES_SDGC_CP_WFS' --output '.runtime/sites/canopus/raw/canopus-catastro-service-metadata.xml'",
+      "request_url": "https://www.idee.es/csw-inspire-idee/srv/spa/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetRecordById&outputSchema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&ElementSetName=full&ID=ES_SDGC_CP_WFS",
+      "retrieved_at": "2026-08-17T17:49:29+02:00",
+      "runtime_locator": ".runtime/sites/canopus/raw/canopus-catastro-service-metadata.xml",
+      "service_publication_date": "2012-12-31",
+      "sha256": "12b63b4f4428a0c35bdffc51c750158e399d66a0bd659b469b99cfd3e4b12dda",
+      "source_id": "SRC_CATASTRO_SERVICE_METADATA"
+    },
+    {
+      "authority": "Dirección General del Catastro / IDEE",
+      "byte_count": 47128,
+      "continuous_update_note": "Data is generated from the continuously maintained cadastral database at invocation; this is not a parcel survey date.",
+      "dataset": "INSPIRE Cadastral Parcels dataset metadata",
+      "dataset_creation_date": "2015-12-01",
+      "http": {
+        "content_type": "application/xml",
+        "etag": null,
+        "last_modified": null,
+        "status": 200
+      },
+      "licence": {
+        "distribution_note": "Legacy Catastro INSPIRE terms are more conservative; raw official GML is not redistributed in Git. Only transformed value-added outputs and hashes are committed.",
+        "name": "CC BY 4.0 as stated by current IDEE metadata",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "media_type": "application/xml",
+      "metadata_date": "2025-01-28",
+      "replay": "curl --fail --location 'https://www.idee.es/csw-inspire-idee/srv/spa/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetRecordById&outputSchema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&ElementSetName=full&ID=ES_SDGC_CP' --output '.runtime/sites/canopus/raw/catastro-dataset-metadata.xml'",
+      "request_url": "https://www.idee.es/csw-inspire-idee/srv/spa/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetRecordById&outputSchema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&ElementSetName=full&ID=ES_SDGC_CP",
+      "retrieved_at": "2026-08-17T17:49:59+02:00",
+      "runtime_locator": ".runtime/sites/canopus/raw/catastro-dataset-metadata.xml",
+      "sha256": "95ad0ef8582aa2ed20588e71af6c64a973734f2f2c254895d827e0275e8e9ed2",
+      "source_id": "SRC_CATASTRO_DATASET_METADATA"
+    },
+    {
+      "authority": "Instituto Geográfico Nacional / CNIG",
+      "buffer_rule": "parcel bounds expanded 1000 m and rounded outward to the 5 m grid",
+      "byte_count": 728266,
+      "coverage_request_bounds_epsg25830": [
+        324170,
+        4039735,
+        326505,
+        4042050
+      ],
+      "dataset": "MDT05 first LiDAR coverage, 5 m",
+      "dataset_coverage_or_acquisition": "first LiDAR coverage 2008-2015",
+      "horizontal_crs": "ETRS89 / UTM zone 30",
+      "http": {
+        "content_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "etag": null,
+        "last_modified": null,
+        "status": 200
+      },
+      "licence": {
+        "attribution": "Obra derivada de MDT05-cob1 2008-2015 CC-BY 4.0 scne.es",
+        "name": "CC BY 4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "media_type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "replay": "curl --fail --location 'https://api-coverages.idee.es/collections/EL.ElevationGridCoverage_25830_5_PB/coverage?bbox=324170,4039735,326505,4042050&bbox-crs=25830&f=COG' --output '.runtime/sites/canopus/raw/canopus-mdt05-buffer1000-cog.tif'",
+      "request_url": "https://api-coverages.idee.es/collections/EL.ElevationGridCoverage_25830_5_PB/coverage?bbox=324170,4039735,326505,4042050&bbox-crs=25830&f=COG",
+      "retrieved_at": "2026-08-17T17:57:04+02:00",
+      "runtime_locator": ".runtime/sites/canopus/raw/canopus-mdt05-buffer1000-cog.tif",
+      "sha256": "710b8ee75ab04353c06cce8e4633992bfebb7d49ec68687e51ef8c718e791020",
+      "source_geokey_axis_note": "GeoKey EPSG:3042; collection is EPSG:25830; numeric model coordinates are easting,northing",
+      "source_id": "SRC_IGN_MDT05_COG",
+      "vertical_datum": "Alicante orthometric datum realised by EGM2008-REDNAP"
+    },
+    {
+      "authority": "Instituto Geográfico Nacional / CNIG",
+      "byte_count": 4645,
+      "dataset": "OGC API Coverages collection metadata",
+      "http": {
+        "content_type": "application/json",
+        "etag": null,
+        "last_modified": null,
+        "status": 200
+      },
+      "licence": {
+        "attribution": "Obra derivada de MDT05-cob1 2008-2015 CC-BY 4.0 scne.es",
+        "name": "CC BY 4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "media_type": "application/json",
+      "replay": "curl --fail --location 'https://api-coverages.idee.es/collections/EL.ElevationGridCoverage_25830_5_PB' --output '.runtime/sites/canopus/raw/ign-mdt05-ogc-collection.json'",
+      "request_url": "https://api-coverages.idee.es/collections/EL.ElevationGridCoverage_25830_5_PB",
+      "retrieved_at": "2026-08-17T17:57:57+02:00",
+      "runtime_locator": ".runtime/sites/canopus/raw/ign-mdt05-ogc-collection.json",
+      "sha256": "fc279fd54d2c2fe66fbf4c4b6176e57c0027b1e52f2952cf9771b74cb6a5e6bb",
+      "source_id": "SRC_IGN_MDT05_COLLECTION_METADATA"
+    },
+    {
+      "authority": "Dirección General del Catastro",
+      "byte_count": 142694,
+      "dataset": "INSPIRE Buildings continuously updated service",
+      "http": {
+        "content_type": "application/gml+xml",
+        "etag": null,
+        "last_modified": null,
+        "status": 200
+      },
+      "licence": {
+        "distribution_note": "Legacy Catastro INSPIRE terms are more conservative; raw official GML is not redistributed in Git. Only transformed value-added outputs and hashes are committed.",
+        "name": "CC BY 4.0 as stated by current IDEE metadata",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "media_type": "application/gml+xml",
+      "replay": "curl --fail --location 'https://ovc.catastro.meh.es/INSPIRE/wfsBU.aspx?service=wfs&version=2&request=getfeature&typenames=BU.BUILDING&bbox=325074,4040637,325603,4041145&srsname=EPSG::25830' --output '.runtime/sites/canopus/raw/canopus-catastro-buildings-100m.gml'",
+      "request_url": "https://ovc.catastro.meh.es/INSPIRE/wfsBU.aspx?service=wfs&version=2&request=getfeature&typenames=BU.BUILDING&bbox=325074,4040637,325603,4041145&srsname=EPSG::25830",
+      "retrieved_at": "2026-08-17T17:59:25+02:00",
+      "runtime_locator": ".runtime/sites/canopus/raw/canopus-catastro-buildings-100m.gml",
+      "sha256": "92c37b51a003bbed72934837b56078e9981f338fe30b1ee1cc8f6ff4011ea9c5",
+      "source_id": "SRC_CATASTRO_BUILDINGS_GML"
+    },
+    {
+      "authority": "Sistema Cartográfico Nacional / IGN",
+      "byte_count": 957350,
+      "dataset": "INSPIRE Transport Networks RoadLink",
+      "http": {
+        "content_type": "application/geo+json",
+        "etag": null,
+        "last_modified": null,
+        "status": 200
+      },
+      "legal_access_evidence": false,
+      "licence": {
+        "attribution": "Obra derivada de MDT05-cob1 2008-2015 CC-BY 4.0 scne.es",
+        "name": "CC BY 4.0",
+        "uri": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "media_type": "application/geo+json",
+      "number_matched": 528,
+      "number_returned": 528,
+      "replay": "curl --fail --location 'https://api-features.idee.es/collections/roadlink/items?bbox=-4.9615,36.4882,-4.9389,36.5062&limit=1000&f=json' --output '.runtime/sites/canopus/raw/canopus-roadlink-context.geojson'",
+      "request_url": "https://api-features.idee.es/collections/roadlink/items?bbox=-4.9615,36.4882,-4.9389,36.5062&limit=1000&f=json",
+      "retrieved_at": "2026-08-17T16:01:52.184638Z",
+      "runtime_locator": ".runtime/sites/canopus/raw/canopus-roadlink-context.geojson",
+      "sha256": "d8713b4976aefbd671d5886c3eae5e6e532c5663ea8ec5d4495dd110c6596a1f",
+      "source_id": "SRC_IDEE_ROADLINK_GEOJSON"
+    }
+  ]
+}

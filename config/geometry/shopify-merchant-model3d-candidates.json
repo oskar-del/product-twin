@@ -1,0 +1,32 @@
+{
+  "version": "0.1",
+  "purpose": "Candidate design/furniture merchants to test for token-less Shopify Storefront MODEL_3D census viability. Membership here is a HYPOTHESIS; only merchants that PASS the live capability probe (npm run avatar:shopify:model3d:capability) become census-eligible. No viability is asserted without live evidence.",
+  "storefront_api_version": "2026-07",
+  "baseline_merchant_id": "design_public_group_trade",
+  "candidates": [
+    {"merchant_id": "design_public_group_trade", "origin": "https://trade.designpublicgroup.com", "note": "baseline; census already proven here"},
+    {"merchant_id": "burrow", "origin": "https://burrow.com", "note": "token-less products query responded 200 in first probe"},
+    {"merchant_id": "floyd", "origin": "https://floyddetroit.com"},
+    {"merchant_id": "industry_west", "origin": "https://www.industrywest.com"},
+    {"merchant_id": "hem", "origin": "https://www.hem.com"},
+    {"merchant_id": "maiden_home", "origin": "https://www.maidenhome.com"},
+    {"merchant_id": "benchmade_modern", "origin": "https://benchmademodern.com"},
+    {"merchant_id": "sabai", "origin": "https://sabai.design"},
+    {"merchant_id": "inside_weather", "origin": "https://insideweather.com"},
+    {"merchant_id": "joybird", "origin": "https://joybird.com"},
+    {"merchant_id": "lulu_and_georgia", "origin": "https://www.luluandgeorgia.com"},
+    {"merchant_id": "rove_concepts", "origin": "https://www.roveconcepts.com"},
+    {"merchant_id": "castlery", "origin": "https://www.castlery.com"},
+    {"merchant_id": "the_citizenry", "origin": "https://www.the-citizenry.com"},
+    {"merchant_id": "gus_modern", "origin": "https://gusmodern.com"},
+    {"merchant_id": "blu_dot", "origin": "https://www.bludot.com"},
+    {"merchant_id": "thuma", "origin": "https://www.thuma.co"},
+    {"merchant_id": "branch", "origin": "https://www.branchfurniture.com"},
+    {"merchant_id": "poly_and_bark", "origin": "https://www.polyandbark.com"},
+    {"merchant_id": "medley", "origin": "https://medleyhome.com"},
+    {"merchant_id": "kardiel", "origin": "https://www.kardiel.com"},
+    {"merchant_id": "campaign", "origin": "https://www.campaignliving.com"}
+  ],
+  "probe_policy": "For each candidate fetch /sitemap.xml, find product sitemaps, take a small sample of product handles, and run the token-less product(handle) Storefront query. Record: is_shopify_sitemap, storefront_api_ok, sample_products_resolved, model3d_seen_in_sample, http statuses. Persist verdicts and evidence only; never persist model source URLs or a catalogue mirror.",
+  "persistence_policy": "Persist only merchant origin, viability verdict, sampled counts and MODEL_3D-seen booleans. No model source URLs."
+}

@@ -1,0 +1,72 @@
+{
+  "_template_notes": [
+    "TURNKEY PHOTO-TO-AVATAR JOB for an Anatomic SITT (Zitzi) owned product.",
+    "Copy this file to .runtime/avatars/<job_id>.json (the .runtime/ folder is gitignored). Do NOT commit the filled job.",
+    "Fill ONLY the fields marked <<FILL ...>>. Everything else is pre-configured for a PASS.",
+    "NEVER put MESHY_API_KEY or any credential in this file. It is set as an environment variable only.",
+    "Then: export AVATAR_JOB=.runtime/avatars/<job_id>.json && npm run avatar:photo:preflight",
+    "Preflight will BLOCK until the 5 cleared views, HTTPS image URLs, measured dimensions and rights evidence are present. That blocking is intended — it is the gate, not a bug.",
+    "Delete this _template_notes key in the runtime copy (optional; the pipeline ignores unknown keys)."
+  ],
+  "job_id": "<<FILL unique id, e.g. anatomic-zitzi-delfi-pro-2026-08-18>>",
+  "subject": {
+    "product_twin_id": null,
+    "category_id": "MEDTECH.SEATING.POSTURAL",
+    "manufacturer": "Anatomic SITT AB",
+    "model": "<<FILL exact model, e.g. Zitzi Delfi Pro>>",
+    "sku": "<<FILL exact SKU/variant of the physical unit, e.g. HMI 53370 / internal article no.>>",
+    "gtin": null,
+    "identity_state": "candidate"
+  },
+  "source_images": [
+    {"image_id": "front-1", "source_type": "user_capture", "source_uri_or_reference": "<<FILL temporary https URL to the FRONT photo>>", "view": "front", "rights_state": "cleared_for_reconstruction", "known_camera": false},
+    {"image_id": "rear-1", "source_type": "user_capture", "source_uri_or_reference": "<<FILL temporary https URL to the REAR photo>>", "view": "rear", "rights_state": "cleared_for_reconstruction", "known_camera": false},
+    {"image_id": "left-1", "source_type": "user_capture", "source_uri_or_reference": "<<FILL temporary https URL to the LEFT photo>>", "view": "left", "rights_state": "cleared_for_reconstruction", "known_camera": false},
+    {"image_id": "right-1", "source_type": "user_capture", "source_uri_or_reference": "<<FILL temporary https URL to the RIGHT photo>>", "view": "right", "rights_state": "cleared_for_reconstruction", "known_camera": false},
+    {"image_id": "three-quarter-1", "source_type": "user_capture", "source_uri_or_reference": "<<FILL temporary https URL to the THREE-QUARTER photo>>", "view": "three_quarter", "rights_state": "cleared_for_reconstruction", "known_camera": false}
+  ],
+  "rights": {
+    "reconstruction_allowed": "yes",
+    "render_allowed": "yes",
+    "redistribution_allowed": "review",
+    "evidence_refs": ["<<FILL reference to the SIGNED family-firm authorization, e.g. docs/legal/anatomic-sitt-reconstruction-authorization-signed-2026-08-18.pdf or a hash/URL>>"]
+  },
+  "dimensions": {
+    "width_mm": "<<FILL measured width in mm (number, no quotes)>>",
+    "depth_mm": "<<FILL measured depth in mm (number, no quotes)>>",
+    "height_mm": "<<FILL measured height in mm (number, no quotes)>>",
+    "scale_state": "measured",
+    "evidence_ref": "<<FILL reference to the tape-measure photo / measurement note>>"
+  },
+  "reconstruction": {
+    "engine": "meshy",
+    "mode": "multi_image_ai",
+    "target_format": "glb",
+    "target_polycount": null,
+    "pbr_requested": true,
+    "remesh_requested": false
+  },
+  "coverage": {
+    "observed_surface_percent": null,
+    "inferred_surface_percent": null,
+    "unresolved_surface_percent": null,
+    "notes": ["fill after QA re-render from captured views"]
+  },
+  "qa": {
+    "scale_checked": false,
+    "source_view_rerender_required": true,
+    "silhouette_error_percent": null,
+    "landmark_error_percent": null,
+    "material_match_state": "not_checked",
+    "human_review_state": "not_reviewed"
+  },
+  "promotion": {
+    "maximum_claim_level": "G2",
+    "exact_product_claim_allowed": false,
+    "blocking_reasons": [
+      "multi-view QA not yet run",
+      "exact SKU/variant identity not yet verified (identity_state=candidate)",
+      "redistribution rights still review until signed authorization scope is recorded"
+    ]
+  }
+}
