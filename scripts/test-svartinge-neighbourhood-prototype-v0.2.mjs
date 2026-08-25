@@ -59,6 +59,7 @@ const attacks=[
   ["street target floats",m=>m.navigation.find(x=>x.id==="STREET_VIEW").target[1]+=3,"street approach does not reveal the road-to-plot ground relationship"],
   ["street camera retreats",m=>{const stage=m.navigation.find(x=>x.id==="STREET_VIEW");stage.camera[0]-=90;stage.camera[2]-=90},"street approach does not frame the plot at arrival scale"],
   ["street target leaves plot",m=>m.navigation.find(x=>x.id==="STREET_VIEW").target=[400,1.6,400],"street approach target leaves the indicative plot"],
+  ["street target returns to corner",m=>{const stage=m.navigation.find(x=>x.id==="STREET_VIEW");stage.target=[-19,.2,.5]},"street approach does not centre the subject plot"],
   ["street camera leaves mapped road",m=>m.navigation.find(x=>x.id==="STREET_VIEW").camera[0]+=20,"street approach camera is not source-bound to the Säterdalsvägen road corridor"],
   ["plot view clutter restored",m=>m.navigation.find(x=>x.id==="PLOT_ORBIT").visible_groups.push("CONTEXT_BUILDING"),"analytical plot view is cluttered or oblique"],
   ["plot camera flattened",m=>{const stage=m.navigation.find(x=>x.id==="PLOT_ORBIT");stage.camera[0]=stage.target[0];stage.camera[2]=stage.target[2]},"plot camera does not expose terrain form"],
@@ -124,7 +125,8 @@ const streetApproachViewerAttacks=[
   ["street legal access promoted",html=>html.replace("FRONTAGE + LEGAL ACCESS UNVERIFIED","FRONTAGE + LEGAL ACCESS VERIFIED"),"street approach evidence caption missing or promoted"],
   ["street road binding changes",html=>html.replace("source_name?.toLocaleLowerCase('sv-SE')==='säterdalsvägen'","source_name?.toLocaleLowerCase('sv-SE')==='other'"),"street approach source-road treatment missing"],
   ["street labels restored",html=>html.replace("stageLabelsAllowed=!['STREET_VIEW','PLOT_ORBIT','CONCEPT_HOUSE_ON_PLOT'].includes(s.id)","stageLabelsAllowed=!['PLOT_ORBIT','CONCEPT_HOUSE_ON_PLOT'].includes(s.id)"),"street approach labels or POIs obscure the primary subject"],
-  ["street plot analytics restored",html=>html.replace("if(o.userData.plotAnalyticalCue)o.visible=false","if(o.userData.plotAnalyticalCue)o.visible=true"),"street approach plot locator is visually obstructive"],
+  ["street plot analytics restored",html=>html.replace("if(o.userData.plotAnalyticalCue)o.visible=streetApproach&&Boolean(o.userData.streetBoundaryCue)","if(o.userData.plotAnalyticalCue)o.visible=true"),"street approach plot locator is missing boundary lights"],
+  ["street boundary lights oversized",html=>html.replace("object.material.size=1.05","object.material.size=2.5"),"street approach boundary lights are oversized"],
   ["street utility obstruction restored",html=>html.replace("if(o.userData.utilityInfrastructure)o.visible=false","if(o.userData.utilityInfrastructure)o.visible=realistic"),"visual-only utility furniture obstructs"]
 ];
 for(const [name,mutate,needle] of streetApproachViewerAttacks){

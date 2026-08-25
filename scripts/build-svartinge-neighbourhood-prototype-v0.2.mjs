@@ -64,7 +64,7 @@ function deriveStreetApproach(plot,roads,preferredRoadName){
   // sit directly between the camera and the plot.
   const travel=Math.min(22,available*.9),unit=[(awayEndpoint[0]-nearest.roadPoint[0])/available,(awayEndpoint[1]-nearest.roadPoint[1])/available],lateralOffset=2.2,side=[-unit[1],unit[0]];
   const cameraXZ=[nearest.roadPoint[0]+unit[0]*travel+side[0]*lateralOffset,nearest.roadPoint[1]+unit[1]*travel+side[1]*lateralOffset];
-  const targetXZ=[nearest.plotPoint[0]*.9+centroid[0]*.1,nearest.plotPoint[1]*.9+centroid[1]*.1];
+  const targetXZ=[nearest.plotPoint[0]*.35+centroid[0]*.65,nearest.plotPoint[1]*.35+centroid[1]*.65];
   return {
     camera:[round(cameraXZ[0]),round(terrainHeight(...cameraXZ)+1.75),round(cameraXZ[1])],
     target:[round(targetXZ[0]),round(terrainHeight(...targetXZ)+.55),round(targetXZ[1])]
