@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_LANDSKRONA_90403722",
+  "kind": "object",
+  "category_id": "FFE.SEATING.SOFA",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "LANDSKRONA",
+    "model": "LANDSKRONA 2-seat sofa, Gunnared dark grey/metal",
+    "article_no": "904.037.22",
+    "ean": null,
+    "configuration": "LANDSKRONA 2-seat sofa, Gunnared dark grey/metal"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1640,
+      "depth": 890,
+      "height": 780
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 499,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/landskrona-2-seat-sofa-gunnared-dark-grey-metal-s90403722/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-90403722/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/landskrona-2-seat-sofa-gunnared-dark-grey-metal-s90403722/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "904.037.22",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 1640x890x780mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

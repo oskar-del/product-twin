@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_METOD_29345971",
+  "kind": "object",
+  "category_id": "FFE.KITCHEN.TALL_CABINET",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "METOD",
+    "model": "METOD high cabinet w shelves, white/Veddinge white, 60x60x200 cm",
+    "article_no": "293.459.71",
+    "ean": null,
+    "configuration": "METOD high cabinet w shelves, white/Veddinge white, 60x60x200 cm"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 600,
+      "depth": 600,
+      "height": 2000
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 179,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/metod-high-cabinet-w-shelves-white-veddinge-white-s29345971/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-29345971/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/metod-high-cabinet-w-shelves-white-veddinge-white-s29345971/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "293.459.71",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 600x600x2000mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

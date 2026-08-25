@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_NESTTUN_40395877",
+  "kind": "object",
+  "category_id": "FFE.BEDROOM.BED_FRAME",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "NESTTUN",
+    "model": "NESTTUN bed frame, white, 160x200 cm",
+    "article_no": "403.958.77",
+    "ean": null,
+    "configuration": "NESTTUN bed frame, white, 160x200 cm"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1670,
+      "depth": 2090,
+      "height": 950
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 129,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/nesttun-bed-frame-white-s40395877/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-40395877/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/nesttun-bed-frame-white-s40395877/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "403.958.77",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 1670x2090x950mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

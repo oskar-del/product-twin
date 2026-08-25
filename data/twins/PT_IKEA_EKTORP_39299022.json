@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_EKTORP_39299022",
+  "kind": "object",
+  "category_id": "FFE.SEATING.SOFA",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "EKTORP",
+    "model": "EKTORP 3-seat sofa, Hallarp beige",
+    "article_no": "392.990.22",
+    "ean": null,
+    "configuration": "EKTORP 3-seat sofa, Hallarp beige"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 2180,
+      "depth": 880,
+      "height": 880
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 499,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/ektorp-3-seat-sofa-hallarp-beige-s39299022/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-39299022/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/ektorp-3-seat-sofa-hallarp-beige-s39299022/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "392.990.22",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 2180x880x880mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

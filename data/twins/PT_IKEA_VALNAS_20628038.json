@@ -44,7 +44,11 @@
     "asset_path": "data/geometry/avatars/ikea-valnas-20628038-g2-coffee-table-proxy.glb",
     "scale_state": "verified 1180x720x500mm envelope",
     "shape_claim": "product-bound oak-veneer planning reconstruction; exact IKEA industrial-design geometry and veneer artwork are not claimed",
-    "placement": {"origin":"floor_center","recommended_sofa_gap_mm":420,"recommended_circulation_clearance_mm":600},
+    "placement": {
+      "origin": "floor_center",
+      "recommended_sofa_gap_mm": 420,
+      "recommended_circulation_clearance_mm": 600
+    },
     "appearance": {
       "material_cues": [
         "oak veneer"
@@ -63,7 +67,11 @@
   },
   "offer": {
     "offer_ref": "OFFER_ROUTE_IKEA_ES_VALNAS_20628038",
-    "price_observed": {"amount":"249.00","currency":"EUR","observed_at":"2026-08-17"},
+    "price_observed": {
+      "amount": "249.00",
+      "currency": "EUR",
+      "observed_at": "2026-08-17"
+    },
     "destination_delivery": "AVAILABLE_29660",
     "store_stock": "IKEA_MALAGA_IN_STOCK",
     "seller_country": null,
@@ -86,5 +94,17 @@
     "client design approval",
     "live price and delivery refresh before purchase"
   ],
-  "policy": "This is a real exact retail product with a verified-scale G2 planning avatar and live destination availability. It can be compared in the room but cannot silently replace the LISTERBY placement or claim G3 visual exactness."
+  "policy": "This is a real exact retail product with a verified-scale G2 planning avatar and live destination availability. It can be compared in the room but cannot silently replace the LISTERBY placement or claim G3 visual exactness.",
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": null,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/valnas-coffee-table-oak-veneer-20628038/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-20628038/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  }
 }

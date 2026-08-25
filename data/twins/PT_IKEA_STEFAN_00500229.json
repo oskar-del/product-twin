@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_STEFAN_00500229",
+  "kind": "object",
+  "category_id": "FFE.SEATING.DINING_CHAIR",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "STEFAN",
+    "model": "STEFAN chair, brown-black",
+    "article_no": "005.002.29",
+    "ean": null,
+    "configuration": "STEFAN chair, brown-black"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 420,
+      "depth": 490,
+      "height": 900
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 25,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/stefan-chair-brown-black-00500229/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-00500229/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/stefan-chair-brown-black-00500229/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "005.002.29",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 420x490x900mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_IDANAS_40484261",
+  "kind": "object",
+  "category_id": "FFE.BEDROOM.BED_FRAME",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "IDANAS",
+    "model": "IDANAS upholstered bed frame, Gunnared dark grey, 160x200 cm",
+    "article_no": "404.842.61",
+    "ean": null,
+    "configuration": "IDANAS upholstered bed frame, Gunnared dark grey, 160x200 cm"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1800,
+      "depth": 2130,
+      "height": 1170
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 449,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/idanas-upholstered-bed-frame-gunnared-dark-grey-s40484261/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-40484261/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/idanas-upholstered-bed-frame-gunnared-dark-grey-s40484261/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "404.842.61",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 1800x2130x1170mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_MATCHSPEL_60462069",
+  "kind": "object",
+  "category_id": "FFE.SEATING.OFFICE_CHAIR",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "MATCHSPEL",
+    "model": "MATCHSPEL gaming chair, Bomstad dark grey",
+    "article_no": "604.620.69",
+    "ean": null,
+    "configuration": "MATCHSPEL gaming chair, Bomstad dark grey"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 660,
+      "depth": 660,
+      "height": 1300
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 129,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/matchspel-gaming-chair-bomstad-dark-grey-s60462069/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-60462069/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/matchspel-gaming-chair-bomstad-dark-grey-s60462069/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "604.620.69",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 660x660x1300mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

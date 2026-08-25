@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_METOD_20346019",
+  "kind": "object",
+  "category_id": "FFE.KITCHEN.BASE_CABINET",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "METOD",
+    "model": "METOD base cabinet w shelf/2 doors, white/Veddinge white, 80x60 cm",
+    "article_no": "203.460.19",
+    "ean": null,
+    "configuration": "METOD base cabinet w shelf/2 doors, white/Veddinge white, 80x60 cm"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 800,
+      "depth": 600,
+      "height": 880
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 129,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/metod-base-cabinet-w-shelf-2-doors-white-veddinge-white-s20346019/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-20346019/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/metod-base-cabinet-w-shelf-2-doors-white-veddinge-white-s20346019/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "203.460.19",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 800x600x880mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

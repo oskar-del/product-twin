@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_HEMNES_50421356",
+  "kind": "object",
+  "category_id": "FFE.STORAGE.SHOE_CABINET",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "HEMNES",
+    "model": "HEMNES shoe cabinet with 4 compartments, white",
+    "article_no": "504.213.56",
+    "ean": null,
+    "configuration": "HEMNES shoe cabinet with 4 compartments, white"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1070,
+      "depth": 220,
+      "height": 1010
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 149,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/hemnes-shoe-cabinet-with-4-compartments-white-s50421356/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-50421356/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/hemnes-shoe-cabinet-with-4-compartments-white-s50421356/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "504.213.56",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 1070x220x1010mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

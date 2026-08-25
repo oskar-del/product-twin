@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_MORABO_80485763",
+  "kind": "object",
+  "category_id": "FFE.SEATING.SOFA",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "MORABO",
+    "model": "MORABO 2-seat sofa, Gunnared dark grey/metal",
+    "article_no": "804.857.63",
+    "ean": null,
+    "configuration": "MORABO 2-seat sofa, Gunnared dark grey/metal"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1740,
+      "depth": 900,
+      "height": 810
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 599,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/morabo-2-seat-sofa-gunnared-dark-grey-metal-s80485763/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-80485763/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/morabo-2-seat-sofa-gunnared-dark-grey-metal-s80485763/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "804.857.63",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 1740x900x810mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

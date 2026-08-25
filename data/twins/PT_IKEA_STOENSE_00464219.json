@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_STOENSE_00464219",
+  "kind": "object",
+  "category_id": "FFE.TEXTILES.RUG",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "STOENSE",
+    "model": "STOENSE rug, low pile, off-white, 133x195 cm",
+    "article_no": "004.642.19",
+    "ean": null,
+    "configuration": "STOENSE rug, low pile, off-white, 133x195 cm"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1330,
+      "depth": 1950,
+      "height": 18
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 79,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/stoense-rug-low-pile-off-white-00464219/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-00464219/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/stoense-rug-low-pile-off-white-00464219/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "004.642.19",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 1330x1950x18mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

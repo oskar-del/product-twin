@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_MALM_20354501",
+  "kind": "object",
+  "category_id": "FFE.STORAGE.CHEST",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "MALM",
+    "model": "MALM chest of 2 drawers, white",
+    "article_no": "203.545.01",
+    "ean": null,
+    "configuration": "MALM chest of 2 drawers, white"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 400,
+      "depth": 480,
+      "height": 550
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 49,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/malm-chest-of-2-drawers-white-20354501/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-20354501/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/malm-chest-of-2-drawers-white-20354501/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "203.545.01",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 400x480x550mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

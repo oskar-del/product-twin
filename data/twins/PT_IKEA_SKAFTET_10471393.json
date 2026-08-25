@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_SKAFTET_10471393",
+  "kind": "object",
+  "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "SKAFTET",
+    "model": "SKAFTET floor lamp base, nickel-plated",
+    "article_no": "104.713.93",
+    "ean": null,
+    "configuration": "SKAFTET floor lamp base, nickel-plated"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 280,
+      "depth": 280,
+      "height": 1300
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 29,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/skaftet-floor-lamp-base-nickel-plated-10471393/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-10471393/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/skaftet-floor-lamp-base-nickel-plated-10471393/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "104.713.93",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 280x280x1300mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

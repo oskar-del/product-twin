@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_NORDEN_50514846",
+  "kind": "object",
+  "category_id": "FFE.TABLE.DINING",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "NORDEN",
+    "model": "NORDEN gateleg table, birch, 26/89/152x80 cm",
+    "article_no": "505.148.46",
+    "ean": null,
+    "configuration": "NORDEN gateleg table, birch, 26/89/152x80 cm"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1520,
+      "depth": 800,
+      "height": 740
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 199,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/norden-gateleg-table-birch-s50514846/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-50514846/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/norden-gateleg-table-birch-s50514846/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "505.148.46",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 1520x800x740mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

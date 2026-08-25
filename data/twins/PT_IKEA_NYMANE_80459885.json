@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_NYMANE_80459885",
+  "kind": "object",
+  "category_id": "ELECTRICAL.LUMINAIRES.WALL",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "NYMANE",
+    "model": "NYMANE wall lamp with swing arm, white",
+    "article_no": "804.598.85",
+    "ean": null,
+    "configuration": "NYMANE wall lamp with swing arm, white"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 150,
+      "depth": 330,
+      "height": 400
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 29,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/nymane-wall-lamp-with-swing-arm-white-80459885/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-80459885/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/nymane-wall-lamp-with-swing-arm-white-80459885/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "804.598.85",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 150x330x400mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

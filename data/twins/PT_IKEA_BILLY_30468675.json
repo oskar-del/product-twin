@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_BILLY_30468675",
+  "kind": "object",
+  "category_id": "FFE.STORAGE.BOOKCASE",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "BILLY",
+    "model": "BILLY bookcase, white, 40x28x106 cm",
+    "article_no": "304.686.75",
+    "ean": null,
+    "configuration": "BILLY bookcase, white, 40x28x106 cm"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 400,
+      "depth": 280,
+      "height": 1060
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 25,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/billy-bookcase-white-30468675/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-30468675/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/billy-bookcase-white-30468675/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "304.686.75",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 400x280x1060mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

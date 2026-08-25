@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_HEMNES_49413268",
+  "kind": "object",
+  "category_id": "FFE.BATHROOM.VANITY_SET",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "HEMNES",
+    "model": "HEMNES/RATTVIKEN bathroom furniture set of 5, white",
+    "article_no": "494.132.68",
+    "ean": null,
+    "configuration": "HEMNES/RATTVIKEN bathroom furniture set of 5, white"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 820,
+      "depth": 490,
+      "height": 890
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 369,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/hemnes-rattviken-bathroom-furniture-set-of-5-white-s49413268/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-49413268/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/hemnes-rattviken-bathroom-furniture-set-of-5-white-s49413268/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "494.132.68",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 820x490x890mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}

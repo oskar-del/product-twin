@@ -1,0 +1,63 @@
+{
+  "twin_id": "PT_IKEA_BRIMNES_30425555",
+  "kind": "object",
+  "category_id": "FFE.BEDROOM.BED_FRAME",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "IKEA",
+    "product_family": "BRIMNES",
+    "model": "BRIMNES bed frame w storage/headboard, white, 160x200 cm",
+    "article_no": "304.255.55",
+    "ean": null,
+    "configuration": "BRIMNES bed frame w storage/headboard, white, 160x200 cm"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1760,
+      "depth": 2340,
+      "height": 1110
+    },
+    "evidence_state": "official_retailer_dimensions"
+  },
+  "commerce": {
+    "merchant": "IKEA Spain",
+    "currency": "EUR",
+    "unit_price": 349,
+    "ean": null,
+    "product_url": "https://www.ikea.com/es/en/p/brimnes-bed-frame-w-storage-headboard-white-s30425555/",
+    "cart_deeplink": "https://www.ikea.com/es/en/p/-30425555/",
+    "affiliate_link": null,
+    "available": true,
+    "observed_at": "2026-08-25",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "external_identities": [
+    {
+      "source_id": "ikea_spain",
+      "role": "direct_retail_reference",
+      "product_url": "https://www.ikea.com/es/en/p/brimnes-bed-frame-w-storage-headboard-white-s30425555/",
+      "verification": {
+        "state": "exact_retail_article_verified",
+        "article_no": "304.255.55",
+        "ean": null,
+        "postcode_delivery_state": "live_refresh_required"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "awaiting_proxy_build",
+    "avatar_id": null,
+    "asset_path": null,
+    "scale_state": "target 1760x2340x1110mm"
+  },
+  "readiness": {
+    "identity": "verified_exact_retail_article",
+    "commerce": "live_commerce_fields_populated",
+    "dimensions": "verified",
+    "geometry": "G0_awaiting_proxy"
+  },
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+}
