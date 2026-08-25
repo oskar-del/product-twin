@@ -1,5 +1,10 @@
 # Product Twin Brain Control Board
 
+> **SUPERSEDED 2026-08-25.** This board describes the 7-chat ChatGPT-era structure.
+> The fleet is now SIX sessions governed by docs/SESSION-GOALS.md; current verified
+> state lives in docs/FLEET-STATE-2026-08-25.md. Kept for history — do not act on
+> the directives below.
+
 Last updated: 2026-08-17
 
 ## Purpose
