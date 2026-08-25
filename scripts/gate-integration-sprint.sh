@@ -46,7 +46,7 @@ if node scripts/validate-room-commerce-procurement-manifest.mjs --current >"$sta
   echo "integration gate FAIL: stale commerce was accepted as current" >&2
   exit 1
 fi
-stale_count="$(rg -c 'stale at' "$stale_result")"
+stale_count="$(grep -c 'stale at' "$stale_result")"
 if [[ "$stale_count" -ne 9 ]]; then
   echo "integration gate FAIL: expected 9 stale offer blockers, found $stale_count" >&2
   cat "$stale_result" >&2
