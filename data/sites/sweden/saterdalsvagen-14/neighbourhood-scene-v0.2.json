@@ -148,14 +148,14 @@
       "id": "STREET_VIEW",
       "label": "Street approach",
       "camera": [
-        -38.9146,
-        -0.833,
-        -35.653
+        -39.1196,
+        -0.9803,
+        -43.9475
       ],
       "target": [
-        -13.172,
-        1.0582,
-        1.6532
+        -19.3226,
+        -0.3695,
+        0.313
       ],
       "visible_groups": [
         "TERRAIN",
@@ -170,12 +170,12 @@
       "cutaway": false,
       "live_context_view": {
         "center_wgs84": [
-          16.031478885078858,
-          58.65225639877216
+          16.031372679354686,
+          58.652244274654194
         ],
         "zoom": 19.2,
         "pitch": 85,
-        "bearing": 34.6071,
+        "bearing": 24.0982,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }
@@ -184,9 +184,9 @@
       "id": "PLOT_ORBIT",
       "label": "Plot + terrain",
       "camera": [
-        -67,
-        58,
-        -64
+        -52,
+        42,
+        -48
       ],
       "target": [
         10,
@@ -205,8 +205,8 @@
           58.65231381509204
         ],
         "zoom": 17.8,
-        "pitch": 61.5577,
-        "bearing": 46.922,
+        "pitch": 63.8055,
+        "bearing": 47.9108,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }

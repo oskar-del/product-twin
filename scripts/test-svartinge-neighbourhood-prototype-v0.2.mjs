@@ -56,9 +56,10 @@ const attacks=[
   ["plot limitation erased",m=>m.elements.find(x=>x.id==="PLOT_54_28").limitations=["visual"],"plot legal limitation missing"],
   ["neighbourhood camera loses plot",m=>m.navigation.find(x=>x.id==="NEIGHBOURHOOD_VIEW").target=[400,0,400],"neighbourhood camera does not target subject plot"],
   ["street camera floats",m=>m.navigation.find(x=>x.id==="STREET_VIEW").camera[1]+=8,"street camera is not at a credible local eye height"],
+  ["street target floats",m=>m.navigation.find(x=>x.id==="STREET_VIEW").target[1]+=3,"street approach does not reveal the road-to-plot ground relationship"],
   ["street camera retreats",m=>{const stage=m.navigation.find(x=>x.id==="STREET_VIEW");stage.camera[0]-=90;stage.camera[2]-=90},"street approach does not frame the plot at arrival scale"],
   ["street target leaves plot",m=>m.navigation.find(x=>x.id==="STREET_VIEW").target=[400,1.6,400],"street approach target leaves the indicative plot"],
-  ["street camera leaves mapped road",m=>m.navigation.find(x=>x.id==="STREET_VIEW").camera[0]+=20,"street approach camera is not source-bound to Säterdalsvägen"],
+  ["street camera leaves mapped road",m=>m.navigation.find(x=>x.id==="STREET_VIEW").camera[0]+=20,"street approach camera is not source-bound to the Säterdalsvägen road corridor"],
   ["plot view clutter restored",m=>m.navigation.find(x=>x.id==="PLOT_ORBIT").visible_groups.push("CONTEXT_BUILDING"),"analytical plot view is cluttered or oblique"],
   ["plot camera flattened",m=>{const stage=m.navigation.find(x=>x.id==="PLOT_ORBIT");stage.camera[0]=stage.target[0];stage.camera[2]=stage.target[2]},"plot camera does not expose terrain form"],
   ["concept hero loses architecture",m=>m.navigation.find(x=>x.id==="CONCEPT_HOUSE_ON_PLOT").camera=[300,18,-300],"concept hero camera does not frame architecture at useful scale"],
@@ -109,7 +110,9 @@ const terrainShadingViewerAttacks=[
   ["shadow depth range widened",html=>html.replace("sun.shadow.camera.far=520","sun.shadow.camera.far=4000"),"directional shadow depth range"],
   ["terrain self shadow restored",html=>html.replace("mesh.castShadow=false;mesh.receiveShadow=true;root.add(mesh);terrainObject=mesh","mesh.castShadow=true;mesh.receiveShadow=true;root.add(mesh);terrainObject=mesh"),"terrain shading can self-shadow"],
   ["terrain faceting restored",html=>html.replace("const mesh=profile(new THREE.Mesh(geo),item,1,1)","const mesh=profile(new THREE.Mesh(geo,new THREE.MeshStandardMaterial({flatShading:true})),item,1,1)"),"terrain surface reintroduced faceting"],
-  ["aerial drape offset removed",html=>html.replace("polygonOffset:true,polygonOffsetFactor:-1","polygonOffset:false,polygonOffsetFactor:0"),"aerial drape can z-fight"]
+  ["aerial drape offset removed",html=>html.replace("polygonOffset:true,polygonOffsetFactor:-1","polygonOffset:false,polygonOffsetFactor:0"),"aerial drape can z-fight"],
+  ["close-stage aerial restored at full opacity",html=>html.replace("STREET_VIEW:.24,PLOT_ORBIT:.3,CONCEPT_HOUSE_ON_PLOT:.18","STREET_VIEW:.94,PLOT_ORBIT:.94,CONCEPT_HOUSE_ON_PLOT:.94"),"close-view aerial drape can overpower"],
+  ["comparison aerial restored",html=>html.replace("aerialDrapeMesh.visible=realistic&&!conceptComparison","aerialDrapeMesh.visible=realistic"),"close-view aerial drape can overpower"]
 ];
 for(const [name,mutate,needle] of terrainShadingViewerAttacks){
   const result=validateTerrainShadingViewer(mutate(viewerBaseline));
@@ -120,7 +123,9 @@ const streetApproachViewerAttacks=[
   ["street FOV drifts",html=>html.replace("STREET_VIEW:44","STREET_VIEW:48"),"street approach camera FOV drift"],
   ["street legal access promoted",html=>html.replace("FRONTAGE + LEGAL ACCESS UNVERIFIED","FRONTAGE + LEGAL ACCESS VERIFIED"),"street approach evidence caption missing or promoted"],
   ["street road binding changes",html=>html.replace("source_name?.toLocaleLowerCase('sv-SE')==='säterdalsvägen'","source_name?.toLocaleLowerCase('sv-SE')==='other'"),"street approach source-road treatment missing"],
-  ["street labels restored",html=>html.replace("stageLabelsAllowed=!['STREET_VIEW','PLOT_ORBIT','CONCEPT_HOUSE_ON_PLOT'].includes(s.id)","stageLabelsAllowed=!['PLOT_ORBIT','CONCEPT_HOUSE_ON_PLOT'].includes(s.id)"),"street approach labels or POIs obscure the primary subject"]
+  ["street labels restored",html=>html.replace("stageLabelsAllowed=!['STREET_VIEW','PLOT_ORBIT','CONCEPT_HOUSE_ON_PLOT'].includes(s.id)","stageLabelsAllowed=!['PLOT_ORBIT','CONCEPT_HOUSE_ON_PLOT'].includes(s.id)"),"street approach labels or POIs obscure the primary subject"],
+  ["street plot analytics restored",html=>html.replace("if(o.userData.plotAnalyticalCue)o.visible=false","if(o.userData.plotAnalyticalCue)o.visible=true"),"street approach plot locator is visually obstructive"],
+  ["street utility obstruction restored",html=>html.replace("if(o.userData.utilityInfrastructure)o.visible=false","if(o.userData.utilityInfrastructure)o.visible=realistic"),"visual-only utility furniture obstructs"]
 ];
 for(const [name,mutate,needle] of streetApproachViewerAttacks){
   const result=validateStreetApproachViewer(mutate(viewerBaseline));
@@ -131,8 +136,12 @@ const neighbourhoodDetailViewerAttacks=[
   ["nearby detail renderer removed",html=>html.replace("function addHouseDetails","function omitHouseDetails"),"nearby building detail is not source-footprint bound"],
   ["nearby detail loses source footprints",html=>html.replace("const g=item.geometry,points=g.points_xz","const g=item.geometry,points=[]"),"nearby building detail is not source-footprint bound"],
   ["nearby detail expands without bound",html=>html.replace("slice(0,36)","slice(0,360)"),"nearby building detail is not performance bounded"],
-  ["nearby detail evidence promoted",html=>html.replace("mesh.castShadow=castShadow;mesh.userData.visualOnly=true","mesh.castShadow=castShadow;mesh.userData.visualOnly=false"),"nearby building detail can promote"],
-  ["nearby detail limitation promoted",html=>html.replace("they are not observed building details","they are observed building details"),"nearby building detail limitation missing or promoted"]
+  ["nearby detail evidence promoted",html=>html.replace("mesh.castShadow=castShadow;mesh.userData.contextBuildingDetail=true;mesh.userData.visualOnly=true","mesh.castShadow=castShadow;mesh.userData.contextBuildingDetail=true;mesh.userData.visualOnly=false"),"nearby building detail can promote"],
+  ["nearby detail limitation promoted",html=>html.replace("they are not observed building details","they are observed building details"),"nearby building detail limitation missing or promoted"],
+  ["nearby detail stage binding removed",html=>html.replace("mesh.castShadow=castShadow;mesh.userData.contextBuildingDetail=true","mesh.castShadow=castShadow;mesh.userData.contextBuildingDetail=false"),"building detail can float"],
+  ["road batching mount removed",html=>html.replace("data.elements.forEach(buildElement);mountRoadNetwork();","data.elements.forEach(buildElement);"),"road ribbons are not deterministically"],
+  ["road batching lineage removed",html=>html.replace("sourceGeometry='OSM_ROAD_RIBBONS'","sourceGeometry='GENERIC_ROAD_GRID'"),"road-network visual batching can promote"],
+  ["neighbourhood tree LOD removed",html=>html.replace("if(o.userData.contextVegetation)o.visible=realistic&&boundedSiteStage&&!conceptComparison","if(o.userData.contextVegetation)o.visible=realistic"),"vegetation is rendered across the full neighbourhood"]
 ];
 for(const [name,mutate,needle] of neighbourhoodDetailViewerAttacks){
   const result=validateNeighbourhoodDetailViewer(mutate(viewerBaseline));
@@ -140,12 +149,17 @@ for(const [name,mutate,needle] of neighbourhoodDetailViewerAttacks){
 }
 
 const contextBuildingLodViewerAttacks=[
-  ["middle LOD expands to the far horizon",html=>html.replace("else if(distance<650)contextRoofLodEntries.push","else if(distance<950)contextRoofLodEntries.push"),"roof LOD bands"],
-  ["middle LOD loses footprint lineage",html=>html.replace("sourceGeometry='OSM_FOOTPRINT_BOUNDS'","sourceGeometry='GENERIC_ROOF_GRID'"),"not source-footprint bound"],
-  ["middle LOD loses instancing",html=>html.replace("new THREE.InstancedMesh(geometry","new THREE.Mesh(geometry"),"not deterministically instanced"],
-  ["middle LOD evidence promoted",html=>html.replace("mesh.userData.visualOnly=true;mesh.userData.evidenceEffect='NONE';mesh.userData.sourceGeometry","mesh.userData.visualOnly=false;mesh.userData.evidenceEffect='CLOSE_GATE';mesh.userData.sourceGeometry"),"masquerade as observed building evidence"],
-  ["middle LOD shadows exceed frame budget",html=>html.replace("mesh.castShadow=false;mesh.receiveShadow=false;mesh.userData.realisticOnly=true","mesh.castShadow=true;mesh.receiveShadow=true;mesh.userData.realisticOnly=true"),"bounded rendering budget"],
-  ["middle LOD mount removed",html=>html.replace("function buildRealismDecor(){addSky();mountContextRoofLod();","function buildRealismDecor(){addSky();"),"not mounted or disclosed"]
+  ["far LOD band removed",html=>html.replaceAll("['NEAR_0_170_M','MID_170_650_M','FAR_650_PLUS_M']","['NEAR_0_170_M','MID_170_650_M']"),"mount bands are incomplete"],
+  ["body LOD loses footprint lineage",html=>html.replace("contextBodyLodEntries.push","contextBodyLodEntriesOmitted.push"),"not source-footprint bound"],
+  ["middle LOD loses footprint lineage",html=>html.replaceAll("sourceGeometry='OSM_FOOTPRINT_BOUNDS'","sourceGeometry='GENERIC_ROOF_GRID'"),"not source-footprint bound"],
+  ["body LOD loses instancing",html=>html.replace("new THREE.InstancedMesh(geometry","new THREE.Mesh(geometry"),"not deterministically instanced"],
+  ["context LOD evidence promoted",html=>html.replaceAll("mesh.userData.visualOnly=true;mesh.userData.evidenceEffect='NONE';mesh.userData.sourceGeometry","mesh.userData.visualOnly=false;mesh.userData.evidenceEffect='CLOSE_GATE';mesh.userData.sourceGeometry"),"masquerade as observed building evidence"],
+  ["context LOD shadows exceed frame budget",html=>html.replaceAll("mesh.castShadow=false;mesh.receiveShadow=false;mesh.userData.realisticOnly=true","mesh.castShadow=true;mesh.receiveShadow=true;mesh.userData.realisticOnly=true"),"bounded rendering budget"],
+  ["concept context distance bound removed",html=>html.replace("contextDistanceLimit=candidatePreview?150:boundedSiteStage?170:Infinity","contextDistanceLimit=Infinity"),"street/plot/concept context geometry"],
+  ["realistic LOD replacement removed",html=>html.replace("contextLodReplaced=realistic&&item.type==='CONTEXT_BUILDING'&&!boundedSiteStage","contextLodReplaced=false"),"realistic LOD replacement is not distance bounded"],
+  ["body LOD mount removed",html=>html.replace("function buildRealismDecor(){addSky();mountContextBodyLod();mountContextRoofLod();","function buildRealismDecor(){addSky();mountContextRoofLod();"),"not mounted or disclosed"],
+  ["profile traversal restored per frame",html=>html.replace("if(mode==='COMPARE')applyProfile(name,previewCandidateId)","applyProfile(name,previewCandidateId)"),"recomputed on every animation frame"],
+  ["shadow map restored per frame",html=>html.replace("renderer.shadowMap.autoUpdate=false","renderer.shadowMap.autoUpdate=true"),"shadows are recomputed on every animation frame"]
 ];
 for(const [name,mutate,needle] of contextBuildingLodViewerAttacks){
   const result=validateContextBuildingLodViewer(mutate(viewerBaseline));

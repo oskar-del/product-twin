@@ -59,12 +59,15 @@ function deriveStreetApproach(plot,roads,preferredRoadName){
   const awayEndpoint=endpoints.find(endpoint=>Math.hypot(endpoint[0]-nearest.roadPoint[0],endpoint[1]-nearest.roadPoint[1])>=4);
   if(!awayEndpoint)throw new Error(`Street approach source segment too short: ${preferredRoadName}`);
   const available=Math.hypot(awayEndpoint[0]-nearest.roadPoint[0],awayEndpoint[1]-nearest.roadPoint[1]);
-  const travel=Math.min(14,available*.9),unit=[(awayEndpoint[0]-nearest.roadPoint[0])/available,(awayEndpoint[1]-nearest.roadPoint[1])/available];
-  const cameraXZ=[nearest.roadPoint[0]+unit[0]*travel,nearest.roadPoint[1]+unit[1]*travel];
-  const targetXZ=[nearest.plotPoint[0]*.72+centroid[0]*.28,nearest.plotPoint[1]*.72+centroid[1]*.28];
+  // Keep enough road ahead to read the arrival, while placing the eye at the
+  // source-derived road shoulder so the visual-only utility pole does not
+  // sit directly between the camera and the plot.
+  const travel=Math.min(22,available*.9),unit=[(awayEndpoint[0]-nearest.roadPoint[0])/available,(awayEndpoint[1]-nearest.roadPoint[1])/available],lateralOffset=2.2,side=[-unit[1],unit[0]];
+  const cameraXZ=[nearest.roadPoint[0]+unit[0]*travel+side[0]*lateralOffset,nearest.roadPoint[1]+unit[1]*travel+side[1]*lateralOffset];
+  const targetXZ=[nearest.plotPoint[0]*.9+centroid[0]*.1,nearest.plotPoint[1]*.9+centroid[1]*.1];
   return {
     camera:[round(cameraXZ[0]),round(terrainHeight(...cameraXZ)+1.75),round(cameraXZ[1])],
-    target:[round(targetXZ[0]),round(terrainHeight(...targetXZ)+1.65),round(targetXZ[1])]
+    target:[round(targetXZ[0]),round(terrainHeight(...targetXZ)+.55),round(targetXZ[1])]
   };
 }
 
@@ -150,7 +153,7 @@ function buildScene(){
   const navigation=[
     {id:"NEIGHBOURHOOD_VIEW",label:"Neighbourhood orbit",camera:[690,430,735],target:[11,0,7],visible_groups:["TERRAIN","LANDCOVER","WATER","WATERWAY","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
     {id:"STREET_VIEW",label:"Street approach",camera:streetApproach.camera,target:streetApproach.target,visible_groups:["TERRAIN","LANDCOVER","WATER","WATERWAY","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
-    {id:"PLOT_ORBIT",label:"Plot + terrain",camera:[-67,58,-64],target:[10,.9,8],visible_groups:["TERRAIN","PLOT","ROAD"],cutaway:false},
+    {id:"PLOT_ORBIT",label:"Plot + terrain",camera:[-52,42,-48],target:[10,.9,8],visible_groups:["TERRAIN","PLOT","ROAD"],cutaway:false},
     {id:"CONCEPT_HOUSE_ON_PLOT",label:"Architecture studio",camera:[31,12,-20],target:[9.4,2.4,12.4],visible_groups:["TERRAIN","LANDCOVER","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION","CONCEPT_BUILDING","OPENING"],cutaway:false},
     {id:"BUILDING_ORBIT",label:"Building orbit",camera:[26.4,11,29.1],target:[9.4,2,13.1],visible_groups:["PLOT","CONCEPT_BUILDING","OPENING","VIEW_DIRECTION"],cutaway:false},
     {id:"ENTER_BUILDING",label:"Enter building",camera:[4.9,2.1,12.8],target:[11.4,1.6,11.6],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE"],cutaway:true},
