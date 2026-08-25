@@ -1,5 +1,24 @@
 # Platform & 3D Engine — Claude Session Handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-08-25 (from Brain fleet sweep; re-read on every resume/compaction)
+>
+> **1. You owe Spatial a review you haven't seen.** Spatial Studio drafted
+> `docs/DESIGN-SELECTOR-MOUNT-CONTRACT.md` (on branch `agent/spatial-studio-claude`,
+> ~64 lines, "Status: DRAFT for Platform review") and is blocked waiting for you to
+> freeze it before implementing `mountDesign()/clearDesign()`. BRAGE's geometry spec
+> for all three Svärtinge houses already exists
+> (`OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-v0.2-geometry-spec.json`
+> on `agent/brage-design`). Both halves of the design-selector integration exist —
+> only your review connects them. ~1 hour. Do this first.
+> **2. Twin-consumption path** (per SESSION-GOALS): glTF/GLB avatar loader + SYSTEMS
+> profile so `data/twins` records render as contract-valid scene elements — retires the
+> legacy showroom viewer.
+> **3. Gate housekeeping:** branch `fix/gate-grep-fallback` (from origin/main) swaps the
+> gate's rg call to grep (rg missing on this machine). The hard-coded "expected 9 stale
+> offer blockers" snapshot assertion in `scripts/gate-integration-sprint.sh` is yours to
+> make derived instead of typed.
+> Full verified fleet state: `docs/FLEET-STATE-2026-08-25.md` on `agent/brain`.
+
 ## Why this session exists
 Three workstreams are each building their own three.js viewer (Svärtinge twin, Essence microsite, Avatar showroom) plus four legacy prototypes. That's the same engine written five times. This session owns the SHARED technology so every surface gets the best stack once: one twin-engine, one design system, one bundling/publish pipeline.
 
