@@ -1,12 +1,12 @@
 {
   "summary": {
-    "generated_at": "2026-08-21T04:03:45.300Z",
+    "generated_at": "2026-08-25T04:02:29.673Z",
     "taxonomy_version": "0.2",
     "energy_taxonomy_version": "0.1",
     "category_count": 148,
     "categories_with_live_discovery": 55,
     "categories_with_live_commerce_signals": 55,
-    "total_live_discoveries_after_dedup": 15081,
+    "total_live_discoveries_after_dedup": 15030,
     "storage_policy": "aggregate_only_no_shopify_catalog_payload_cached",
     "note": "Counts describe this live run only and are not a persistent Shopify product mirror."
   },
@@ -26,9 +26,9 @@
       "name": "Basins & vanity basins",
       "parent": "BATH",
       "specification_profile": "sanitary_fixture",
-      "live_discovered": 198,
-      "live_commerce_signals": 198,
-      "live_media_signals": 198,
+      "live_discovered": 196,
+      "live_commerce_signals": 196,
+      "live_media_signals": 146,
       "status": "live_commerce_candidates"
     },
     {
@@ -46,9 +46,9 @@
       "name": "Showers, trays & enclosures",
       "parent": "BATH",
       "specification_profile": "sanitary_fixture",
-      "live_discovered": 200,
-      "live_commerce_signals": 200,
-      "live_media_signals": 200,
+      "live_discovered": 199,
+      "live_commerce_signals": 199,
+      "live_media_signals": 199,
       "status": "live_commerce_candidates"
     },
     {
@@ -56,9 +56,9 @@
       "name": "Taps & mixers",
       "parent": "BATH",
       "specification_profile": "plumbing_fixture",
-      "live_discovered": 195,
-      "live_commerce_signals": 195,
-      "live_media_signals": 195,
+      "live_discovered": 196,
+      "live_commerce_signals": 196,
+      "live_media_signals": 196,
       "status": "live_commerce_candidates"
     },
     {
@@ -66,9 +66,9 @@
       "name": "Bathroom furniture & vanities",
       "parent": "BATH",
       "specification_profile": "casework",
-      "live_discovered": 197,
-      "live_commerce_signals": 197,
-      "live_media_signals": 197,
+      "live_discovered": 196,
+      "live_commerce_signals": 196,
+      "live_media_signals": 196,
       "status": "live_commerce_candidates"
     },
     {
@@ -126,9 +126,9 @@
       "name": "Floor lamps",
       "parent": "ELECTRICAL",
       "specification_profile": "luminaire",
-      "live_discovered": 382,
-      "live_commerce_signals": 382,
-      "live_media_signals": 380,
+      "live_discovered": 385,
+      "live_commerce_signals": 385,
+      "live_media_signals": 383,
       "status": "live_commerce_candidates"
     },
     {
@@ -146,9 +146,9 @@
       "name": "Pendant lights",
       "parent": "ELECTRICAL",
       "specification_profile": "luminaire",
-      "live_discovered": 585,
-      "live_commerce_signals": 585,
-      "live_media_signals": 583,
+      "live_discovered": 587,
+      "live_commerce_signals": 587,
+      "live_media_signals": 584,
       "status": "live_commerce_candidates"
     },
     {
@@ -156,9 +156,9 @@
       "name": "Table lamps",
       "parent": "ELECTRICAL",
       "specification_profile": "luminaire",
-      "live_discovered": 377,
-      "live_commerce_signals": 377,
-      "live_media_signals": 377,
+      "live_discovered": 384,
+      "live_commerce_signals": 384,
+      "live_media_signals": 334,
       "status": "live_commerce_candidates"
     },
     {
@@ -166,9 +166,9 @@
       "name": "Wall lights",
       "parent": "ELECTRICAL",
       "specification_profile": "luminaire",
-      "live_discovered": 388,
-      "live_commerce_signals": 388,
-      "live_media_signals": 388,
+      "live_discovered": 391,
+      "live_commerce_signals": 391,
+      "live_media_signals": 391,
       "status": "live_commerce_candidates"
     },
     {
@@ -176,9 +176,9 @@
       "name": "Switches & sockets",
       "parent": "ELECTRICAL",
       "specification_profile": "electrical_component",
-      "live_discovered": 197,
-      "live_commerce_signals": 197,
-      "live_media_signals": 195,
+      "live_discovered": 193,
+      "live_commerce_signals": 193,
+      "live_media_signals": 191,
       "status": "live_commerce_candidates"
     },
     {
@@ -196,9 +196,9 @@
       "name": "Battery storage",
       "parent": "ENERGY",
       "specification_profile": "battery_system",
-      "live_discovered": 153,
-      "live_commerce_signals": 153,
-      "live_media_signals": 153,
+      "live_discovered": 156,
+      "live_commerce_signals": 156,
+      "live_media_signals": 156,
       "status": "live_commerce_candidates"
     },
     {
@@ -266,9 +266,9 @@
       "name": "Solar inverters",
       "parent": "ENERGY",
       "specification_profile": "power_electronics",
-      "live_discovered": 254,
-      "live_commerce_signals": 254,
-      "live_media_signals": 244,
+      "live_discovered": 255,
+      "live_commerce_signals": 255,
+      "live_media_signals": 247,
       "status": "live_commerce_candidates"
     },
     {
@@ -276,9 +276,9 @@
       "name": "PV mounting systems",
       "parent": "ENERGY",
       "specification_profile": "solar_mounting",
-      "live_discovered": 83,
-      "live_commerce_signals": 83,
-      "live_media_signals": 82,
+      "live_discovered": 90,
+      "live_commerce_signals": 90,
+      "live_media_signals": 89,
       "status": "live_commerce_candidates"
     },
     {
@@ -296,9 +296,9 @@
       "name": "Photovoltaic panels",
       "parent": "ENERGY",
       "specification_profile": "pv_module",
-      "live_discovered": 287,
-      "live_commerce_signals": 287,
-      "live_media_signals": 284,
+      "live_discovered": 291,
+      "live_commerce_signals": 291,
+      "live_media_signals": 241,
       "status": "live_commerce_candidates"
     },
     {
@@ -336,9 +336,9 @@
       "name": "Thermal & acoustic insulation",
       "parent": "ENVELOPE",
       "specification_profile": "performance_material",
-      "live_discovered": 97,
-      "live_commerce_signals": 97,
-      "live_media_signals": 82,
+      "live_discovered": 96,
+      "live_commerce_signals": 96,
+      "live_media_signals": 90,
       "status": "live_commerce_candidates"
     },
     {
@@ -366,8 +366,8 @@
       "name": "Waterproofing & membranes",
       "parent": "ENVELOPE",
       "specification_profile": "performance_material",
-      "live_discovered": 85,
-      "live_commerce_signals": 85,
+      "live_discovered": 86,
+      "live_commerce_signals": 86,
       "live_media_signals": 85,
       "status": "live_commerce_candidates"
     },
@@ -386,9 +386,9 @@
       "name": "Beds & headboards",
       "parent": "FFE",
       "specification_profile": "furniture",
-      "live_discovered": 386,
-      "live_commerce_signals": 386,
-      "live_media_signals": 380,
+      "live_discovered": 384,
+      "live_commerce_signals": 384,
+      "live_media_signals": 378,
       "status": "live_commerce_candidates"
     },
     {
@@ -396,9 +396,9 @@
       "name": "Bedside tables",
       "parent": "FFE",
       "specification_profile": "furniture",
-      "live_discovered": 357,
-      "live_commerce_signals": 357,
-      "live_media_signals": 356,
+      "live_discovered": 367,
+      "live_commerce_signals": 367,
+      "live_media_signals": 365,
       "status": "live_commerce_candidates"
     },
     {
@@ -416,9 +416,9 @@
       "name": "Mirrors",
       "parent": "FFE",
       "specification_profile": "fixture",
-      "live_discovered": 389,
-      "live_commerce_signals": 389,
-      "live_media_signals": 388,
+      "live_discovered": 370,
+      "live_commerce_signals": 370,
+      "live_media_signals": 343,
       "status": "live_commerce_candidates"
     },
     {
@@ -426,9 +426,9 @@
       "name": "Rugs",
       "parent": "FFE",
       "specification_profile": "soft_furnishing",
-      "live_discovered": 567,
-      "live_commerce_signals": 567,
-      "live_media_signals": 566,
+      "live_discovered": 557,
+      "live_commerce_signals": 557,
+      "live_media_signals": 557,
       "status": "live_commerce_candidates"
     },
     {
@@ -436,9 +436,9 @@
       "name": "Dining chairs",
       "parent": "FFE",
       "specification_profile": "furniture",
-      "live_discovered": 357,
-      "live_commerce_signals": 357,
-      "live_media_signals": 356,
+      "live_discovered": 363,
+      "live_commerce_signals": 363,
+      "live_media_signals": 362,
       "status": "live_commerce_candidates"
     },
     {
@@ -446,9 +446,9 @@
       "name": "Lounge chairs & armchairs",
       "parent": "FFE",
       "specification_profile": "furniture",
-      "live_discovered": 549,
-      "live_commerce_signals": 549,
-      "live_media_signals": 544,
+      "live_discovered": 535,
+      "live_commerce_signals": 535,
+      "live_media_signals": 531,
       "status": "live_commerce_candidates"
     },
     {
@@ -456,9 +456,9 @@
       "name": "Sofas & sectionals",
       "parent": "FFE",
       "specification_profile": "furniture",
-      "live_discovered": 532,
-      "live_commerce_signals": 532,
-      "live_media_signals": 527,
+      "live_discovered": 525,
+      "live_commerce_signals": 525,
+      "live_media_signals": 520,
       "status": "live_commerce_candidates"
     },
     {
@@ -466,9 +466,9 @@
       "name": "Bar stools & counter stools",
       "parent": "FFE",
       "specification_profile": "furniture",
-      "live_discovered": 355,
-      "live_commerce_signals": 355,
-      "live_media_signals": 355,
+      "live_discovered": 364,
+      "live_commerce_signals": 364,
+      "live_media_signals": 364,
       "status": "live_commerce_candidates"
     },
     {
@@ -476,9 +476,9 @@
       "name": "Storage, cabinets & shelving",
       "parent": "FFE",
       "specification_profile": "furniture",
-      "live_discovered": 387,
-      "live_commerce_signals": 387,
-      "live_media_signals": 359,
+      "live_discovered": 379,
+      "live_commerce_signals": 379,
+      "live_media_signals": 354,
       "status": "live_commerce_candidates"
     },
     {
@@ -486,9 +486,9 @@
       "name": "Coffee tables",
       "parent": "FFE",
       "specification_profile": "furniture",
-      "live_discovered": 558,
-      "live_commerce_signals": 558,
-      "live_media_signals": 552,
+      "live_discovered": 560,
+      "live_commerce_signals": 560,
+      "live_media_signals": 554,
       "status": "live_commerce_candidates"
     },
     {
@@ -496,9 +496,9 @@
       "name": "Desks & work tables",
       "parent": "FFE",
       "specification_profile": "furniture",
-      "live_discovered": 371,
-      "live_commerce_signals": 371,
-      "live_media_signals": 370,
+      "live_discovered": 367,
+      "live_commerce_signals": 367,
+      "live_media_signals": 366,
       "status": "live_commerce_candidates"
     },
     {
@@ -506,9 +506,9 @@
       "name": "Dining tables",
       "parent": "FFE",
       "specification_profile": "furniture",
-      "live_discovered": 382,
-      "live_commerce_signals": 382,
-      "live_media_signals": 382,
+      "live_discovered": 386,
+      "live_commerce_signals": 386,
+      "live_media_signals": 336,
       "status": "live_commerce_candidates"
     },
     {
@@ -516,9 +516,9 @@
       "name": "Side tables",
       "parent": "FFE",
       "specification_profile": "furniture",
-      "live_discovered": 563,
-      "live_commerce_signals": 563,
-      "live_media_signals": 560,
+      "live_discovered": 549,
+      "live_commerce_signals": 549,
+      "live_media_signals": 547,
       "status": "live_commerce_candidates"
     },
     {
@@ -566,9 +566,9 @@
       "name": "Paint & coatings",
       "parent": "FINISHES",
       "specification_profile": "coating_material",
-      "live_discovered": 196,
-      "live_commerce_signals": 196,
-      "live_media_signals": 196,
+      "live_discovered": 200,
+      "live_commerce_signals": 200,
+      "live_media_signals": 200,
       "status": "live_commerce_candidates"
     },
     {
@@ -606,9 +606,9 @@
       "name": "Natural stone",
       "parent": "FINISHES",
       "specification_profile": "surface_material",
-      "live_discovered": 148,
-      "live_commerce_signals": 148,
-      "live_media_signals": 148,
+      "live_discovered": 145,
+      "live_commerce_signals": 145,
+      "live_media_signals": 145,
       "status": "live_commerce_candidates"
     },
     {
@@ -616,9 +616,9 @@
       "name": "Ceramic & porcelain tile",
       "parent": "FINISHES",
       "specification_profile": "surface_material",
-      "live_discovered": 283,
-      "live_commerce_signals": 283,
-      "live_media_signals": 280,
+      "live_discovered": 285,
+      "live_commerce_signals": 285,
+      "live_media_signals": 283,
       "status": "live_commerce_candidates"
     },
     {
@@ -766,9 +766,9 @@
       "name": "Heat pumps & chillers",
       "parent": "HVAC",
       "specification_profile": "mechanical_equipment",
-      "live_discovered": 185,
-      "live_commerce_signals": 185,
-      "live_media_signals": 185,
+      "live_discovered": 184,
+      "live_commerce_signals": 184,
+      "live_media_signals": 184,
       "status": "live_commerce_candidates"
     },
     {
@@ -866,9 +866,9 @@
       "name": "Ovens, hobs & cooking",
       "parent": "KITCHEN",
       "specification_profile": "appliance",
-      "live_discovered": 192,
-      "live_commerce_signals": 192,
-      "live_media_signals": 186,
+      "live_discovered": 200,
+      "live_commerce_signals": 200,
+      "live_media_signals": 193,
       "status": "live_commerce_candidates"
     },
     {
@@ -896,9 +896,9 @@
       "name": "Refrigeration",
       "parent": "KITCHEN",
       "specification_profile": "appliance",
-      "live_discovered": 190,
-      "live_commerce_signals": 190,
-      "live_media_signals": 189,
+      "live_discovered": 194,
+      "live_commerce_signals": 194,
+      "live_media_signals": 192,
       "status": "live_commerce_candidates"
     },
     {
@@ -906,9 +906,9 @@
       "name": "Kitchen sinks",
       "parent": "KITCHEN",
       "specification_profile": "sanitary_fixture",
-      "live_discovered": 193,
-      "live_commerce_signals": 193,
-      "live_media_signals": 192,
+      "live_discovered": 197,
+      "live_commerce_signals": 197,
+      "live_media_signals": 196,
       "status": "live_commerce_candidates"
     },
     {
@@ -926,9 +926,9 @@
       "name": "Kitchen taps",
       "parent": "KITCHEN",
       "specification_profile": "plumbing_fixture",
-      "live_discovered": 196,
-      "live_commerce_signals": 196,
-      "live_media_signals": 196,
+      "live_discovered": 195,
+      "live_commerce_signals": 195,
+      "live_media_signals": 195,
       "status": "live_commerce_candidates"
     },
     {
@@ -966,9 +966,9 @@
       "name": "Handles, hinges, locks & hardware",
       "parent": "OPENINGS",
       "specification_profile": "architectural_hardware",
-      "live_discovered": 190,
-      "live_commerce_signals": 190,
-      "live_media_signals": 190,
+      "live_discovered": 189,
+      "live_commerce_signals": 189,
+      "live_media_signals": 189,
       "status": "live_commerce_candidates"
     },
     {
@@ -1006,9 +1006,9 @@
       "name": "Outdoor dining chairs",
       "parent": "OUTDOOR_FFE",
       "specification_profile": "furniture",
-      "live_discovered": 326,
-      "live_commerce_signals": 326,
-      "live_media_signals": 324,
+      "live_discovered": 339,
+      "live_commerce_signals": 339,
+      "live_media_signals": 299,
       "status": "live_commerce_candidates"
     },
     {
@@ -1016,9 +1016,9 @@
       "name": "Outdoor lounge chairs",
       "parent": "OUTDOOR_FFE",
       "specification_profile": "furniture",
-      "live_discovered": 359,
-      "live_commerce_signals": 359,
-      "live_media_signals": 358,
+      "live_discovered": 351,
+      "live_commerce_signals": 351,
+      "live_media_signals": 350,
       "status": "live_commerce_candidates"
     },
     {
@@ -1036,9 +1036,9 @@
       "name": "Outdoor sofas",
       "parent": "OUTDOOR_FFE",
       "specification_profile": "furniture",
-      "live_discovered": 378,
-      "live_commerce_signals": 378,
-      "live_media_signals": 377,
+      "live_discovered": 345,
+      "live_commerce_signals": 345,
+      "live_media_signals": 295,
       "status": "live_commerce_candidates"
     },
     {
@@ -1046,9 +1046,9 @@
       "name": "Sun loungers & daybeds",
       "parent": "OUTDOOR_FFE",
       "specification_profile": "furniture",
-      "live_discovered": 382,
-      "live_commerce_signals": 382,
-      "live_media_signals": 380,
+      "live_discovered": 376,
+      "live_commerce_signals": 376,
+      "live_media_signals": 376,
       "status": "live_commerce_candidates"
     },
     {
@@ -1056,9 +1056,9 @@
       "name": "Outdoor tables",
       "parent": "OUTDOOR_FFE",
       "specification_profile": "furniture",
-      "live_discovered": 364,
-      "live_commerce_signals": 364,
-      "live_media_signals": 364,
+      "live_discovered": 357,
+      "live_commerce_signals": 357,
+      "live_media_signals": 357,
       "status": "live_commerce_candidates"
     },
     {
@@ -1066,9 +1066,9 @@
       "name": "Umbrellas & freestanding shade",
       "parent": "OUTDOOR_FFE",
       "specification_profile": "outdoor_equipment",
-      "live_discovered": 389,
-      "live_commerce_signals": 389,
-      "live_media_signals": 389,
+      "live_discovered": 396,
+      "live_commerce_signals": 396,
+      "live_media_signals": 396,
       "status": "live_commerce_candidates"
     },
     {
@@ -1106,8 +1106,8 @@
       "name": "Pipe",
       "parent": "PLUMBING",
       "specification_profile": "pipe_component",
-      "live_discovered": 132,
-      "live_commerce_signals": 132,
+      "live_discovered": 131,
+      "live_commerce_signals": 131,
       "live_media_signals": 125,
       "status": "live_commerce_candidates"
     },
@@ -1138,7 +1138,7 @@
       "specification_profile": "valve_component",
       "live_discovered": 100,
       "live_commerce_signals": 100,
-      "live_media_signals": 99,
+      "live_media_signals": 100,
       "status": "live_commerce_candidates"
     },
     {
@@ -1166,9 +1166,9 @@
       "name": "Filtration",
       "parent": "POOL",
       "specification_profile": "pool_equipment",
-      "live_discovered": 196,
-      "live_commerce_signals": 196,
-      "live_media_signals": 193,
+      "live_discovered": 192,
+      "live_commerce_signals": 192,
+      "live_media_signals": 189,
       "status": "live_commerce_candidates"
     },
     {
@@ -1186,9 +1186,9 @@
       "name": "Pool pipe fittings",
       "parent": "POOL",
       "specification_profile": "pipe_component",
-      "live_discovered": 72,
-      "live_commerce_signals": 72,
-      "live_media_signals": 72,
+      "live_discovered": 71,
+      "live_commerce_signals": 71,
+      "live_media_signals": 71,
       "status": "live_commerce_candidates"
     },
     {
@@ -1216,9 +1216,9 @@
       "name": "Pool pipe",
       "parent": "POOL",
       "specification_profile": "pipe_component",
-      "live_discovered": 88,
-      "live_commerce_signals": 88,
-      "live_media_signals": 87,
+      "live_discovered": 89,
+      "live_commerce_signals": 89,
+      "live_media_signals": 88,
       "status": "live_commerce_candidates"
     },
     {
@@ -1226,9 +1226,9 @@
       "name": "Pool pumps",
       "parent": "POOL",
       "specification_profile": "mechanical_equipment",
-      "live_discovered": 179,
-      "live_commerce_signals": 179,
-      "live_media_signals": 179,
+      "live_discovered": 177,
+      "live_commerce_signals": 177,
+      "live_media_signals": 177,
       "status": "live_commerce_candidates"
     },
     {
@@ -1256,9 +1256,9 @@
       "name": "Dosing, chlorination & treatment",
       "parent": "POOL",
       "specification_profile": "pool_equipment",
-      "live_discovered": 197,
-      "live_commerce_signals": 197,
-      "live_media_signals": 197,
+      "live_discovered": 196,
+      "live_commerce_signals": 196,
+      "live_media_signals": 196,
       "status": "live_commerce_candidates"
     },
     {
@@ -1426,9 +1426,9 @@
       "name": "Concrete, screeds & mortars",
       "parent": "STRUCTURE",
       "specification_profile": "concrete_material",
-      "live_discovered": 149,
-      "live_commerce_signals": 149,
-      "live_media_signals": 146,
+      "live_discovered": 148,
+      "live_commerce_signals": 148,
+      "live_media_signals": 144,
       "status": "live_commerce_candidates"
     },
     {

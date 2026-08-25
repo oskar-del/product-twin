@@ -1,178 +1,178 @@
 {
-  "generated_at": "2026-08-21T04:03:44.789Z",
-  "input_candidates": 15081,
-  "triaged_candidates": 15081,
+  "generated_at": "2026-08-25T04:02:29.134Z",
+  "input_candidates": 15030,
+  "triaged_candidates": 15030,
   "classified_categories": 55,
   "by_category": {
     "FFE.SEATING.SOFA": {
-      "count": 532,
+      "count": 525,
       "top_quality": 0.7393,
-      "average_quality": 0.7372
+      "average_quality": 0.7369
     },
     "OUTDOOR_FFE.SOFA": {
-      "count": 378,
+      "count": 345,
       "top_quality": 0.7393,
-      "average_quality": 0.7368
+      "average_quality": 0.7265
     },
     "FFE.SEATING.LOUNGE": {
-      "count": 549,
+      "count": 535,
       "top_quality": 0.7393,
-      "average_quality": 0.7361
-    },
-    "FFE.SEATING.DINING": {
-      "count": 357,
-      "top_quality": 0.7393,
-      "average_quality": 0.738
+      "average_quality": 0.736
     },
     "OUTDOOR_FFE.LOUNGE_CHAIR": {
-      "count": 359,
+      "count": 351,
       "top_quality": 0.7393,
-      "average_quality": 0.7374
+      "average_quality": 0.7377
+    },
+    "FFE.SEATING.DINING": {
+      "count": 363,
+      "top_quality": 0.7393,
+      "average_quality": 0.7376
     },
     "FFE.SEATING.STOOL": {
-      "count": 355,
+      "count": 364,
       "top_quality": 0.7393,
-      "average_quality": 0.7375
+      "average_quality": 0.7377
     },
     "FFE.TABLE.COFFEE": {
-      "count": 558,
+      "count": 560,
       "top_quality": 0.7393,
       "average_quality": 0.7361
     },
     "FFE.TABLE.SIDE": {
-      "count": 563,
-      "top_quality": 0.7393,
-      "average_quality": 0.7366
-    },
-    "FFE.TABLE.DINING": {
-      "count": 382,
-      "top_quality": 0.7393,
-      "average_quality": 0.7381
-    },
-    "FFE.TABLE.DESK": {
-      "count": 371,
-      "top_quality": 0.7393,
-      "average_quality": 0.7359
-    },
-    "FFE.STORAGE": {
-      "count": 387,
-      "top_quality": 0.7393,
-      "average_quality": 0.7306
-    },
-    "FFE.BEDS": {
-      "count": 386,
+      "count": 549,
       "top_quality": 0.7393,
       "average_quality": 0.7368
     },
+    "FFE.TABLE.DINING": {
+      "count": 386,
+      "top_quality": 0.7393,
+      "average_quality": 0.7286
+    },
+    "FFE.TABLE.DESK": {
+      "count": 367,
+      "top_quality": 0.7393,
+      "average_quality": 0.7356
+    },
+    "FFE.STORAGE": {
+      "count": 379,
+      "top_quality": 0.7393,
+      "average_quality": 0.7312
+    },
+    "FFE.BEDS": {
+      "count": 384,
+      "top_quality": 0.7393,
+      "average_quality": 0.7372
+    },
     "FFE.BEDSIDE": {
+      "count": 367,
+      "top_quality": 0.7393,
+      "average_quality": 0.7371
+    },
+    "FFE.RUGS": {
+      "count": 557,
+      "top_quality": 0.7393,
+      "average_quality": 0.735
+    },
+    "FFE.MIRRORS": {
+      "count": 370,
+      "top_quality": 0.7393,
+      "average_quality": 0.7321
+    },
+    "OUTDOOR_FFE.DINING_CHAIR": {
+      "count": 339,
+      "top_quality": 0.7393,
+      "average_quality": 0.7282
+    },
+    "OUTDOOR_FFE.SUNLOUNGER": {
+      "count": 376,
+      "top_quality": 0.7393,
+      "average_quality": 0.7343
+    },
+    "OUTDOOR_FFE.TABLE": {
       "count": 357,
       "top_quality": 0.7393,
       "average_quality": 0.7373
     },
-    "FFE.RUGS": {
-      "count": 567,
-      "top_quality": 0.7393,
-      "average_quality": 0.7352
-    },
-    "FFE.MIRRORS": {
-      "count": 389,
-      "top_quality": 0.7393,
-      "average_quality": 0.7373
-    },
-    "OUTDOOR_FFE.SUNLOUNGER": {
-      "count": 382,
-      "top_quality": 0.7393,
-      "average_quality": 0.734
-    },
-    "OUTDOOR_FFE.DINING_CHAIR": {
-      "count": 326,
-      "top_quality": 0.7393,
-      "average_quality": 0.7368
-    },
-    "OUTDOOR_FFE.TABLE": {
-      "count": 364,
-      "top_quality": 0.7393,
-      "average_quality": 0.7372
-    },
     "OUTDOOR_FFE.UMBRELLA": {
-      "count": 389,
+      "count": 396,
       "top_quality": 0.7393,
-      "average_quality": 0.737
+      "average_quality": 0.7374
     },
     "ELECTRICAL.LUMINAIRES.PENDANT": {
-      "count": 585,
+      "count": 587,
       "top_quality": 0.7393,
-      "average_quality": 0.7358
+      "average_quality": 0.7357
     },
     "ELECTRICAL.LUMINAIRES.WALL": {
-      "count": 388,
+      "count": 391,
       "top_quality": 0.7393,
-      "average_quality": 0.7369
+      "average_quality": 0.7371
     },
     "ELECTRICAL.LUMINAIRES.FLOOR": {
-      "count": 382,
+      "count": 385,
       "top_quality": 0.7393,
-      "average_quality": 0.7366
+      "average_quality": 0.7365
     },
     "ELECTRICAL.LUMINAIRES.TABLE": {
-      "count": 377,
+      "count": 384,
       "top_quality": 0.7393,
-      "average_quality": 0.7362
+      "average_quality": 0.727
     },
     "BATH.BASINS": {
-      "count": 198,
+      "count": 196,
       "top_quality": 0.7393,
-      "average_quality": 0.7372
+      "average_quality": 0.7181
     },
     "BATH.TAPS": {
-      "count": 195,
+      "count": 196,
       "top_quality": 0.7393,
-      "average_quality": 0.7376
+      "average_quality": 0.7365
     },
     "BATH.SHOWERS": {
-      "count": 200,
+      "count": 199,
       "top_quality": 0.7393,
-      "average_quality": 0.7385
+      "average_quality": 0.7382
     },
     "BATH.VANITIES": {
+      "count": 196,
+      "top_quality": 0.7393,
+      "average_quality": 0.7375
+    },
+    "KITCHEN.TAPS": {
+      "count": 195,
+      "top_quality": 0.7393,
+      "average_quality": 0.7365
+    },
+    "KITCHEN.SINKS": {
       "count": 197,
       "top_quality": 0.7393,
       "average_quality": 0.7369
     },
-    "KITCHEN.TAPS": {
-      "count": 196,
-      "top_quality": 0.7393,
-      "average_quality": 0.7376
-    },
-    "KITCHEN.SINKS": {
-      "count": 193,
-      "top_quality": 0.7393,
-      "average_quality": 0.7334
-    },
     "KITCHEN.COOKING": {
-      "count": 192,
+      "count": 200,
       "top_quality": 0.7393,
-      "average_quality": 0.7308
+      "average_quality": 0.7333
     },
     "KITCHEN.REFRIGERATION": {
-      "count": 190,
+      "count": 194,
       "top_quality": 0.7393,
-      "average_quality": 0.7376
+      "average_quality": 0.7377
     },
     "FINISHES.TILE": {
-      "count": 283,
+      "count": 285,
       "top_quality": 0.7393,
-      "average_quality": 0.7373
+      "average_quality": 0.7372
     },
     "FINISHES.STONE": {
-      "count": 148,
+      "count": 145,
       "top_quality": 0.7393,
-      "average_quality": 0.7362
+      "average_quality": 0.7364
     },
     "FINISHES.PAINT": {
-      "count": 196,
+      "count": 200,
       "top_quality": 0.7393,
-      "average_quality": 0.7344
+      "average_quality": 0.7349
     },
     "FINISHES.WALLCOVERING": {
       "count": 196,
@@ -180,19 +180,19 @@
       "average_quality": 0.739
     },
     "OPENINGS.HARDWARE": {
-      "count": 190,
+      "count": 189,
       "top_quality": 0.7393,
-      "average_quality": 0.7379
+      "average_quality": 0.7371
     },
     "OPENINGS.WINDOWS": {
       "count": 99,
       "top_quality": 0.7393,
-      "average_quality": 0.7386
+      "average_quality": 0.739
     },
     "ELECTRICAL.SWITCHES": {
-      "count": 197,
+      "count": 193,
       "top_quality": 0.7393,
-      "average_quality": 0.7333
+      "average_quality": 0.7328
     },
     "POOL.LIGHTING": {
       "count": 171,
@@ -200,84 +200,84 @@
       "average_quality": 0.7359
     },
     "POOL.PUMPS": {
-      "count": 179,
+      "count": 177,
       "top_quality": 0.7393,
-      "average_quality": 0.7384
+      "average_quality": 0.7379
     },
     "POOL.FILTRATION": {
-      "count": 196,
+      "count": 192,
       "top_quality": 0.7393,
-      "average_quality": 0.7352
+      "average_quality": 0.736
     },
     "POOL.TREATMENT": {
-      "count": 197,
+      "count": 196,
       "top_quality": 0.7393,
-      "average_quality": 0.7391
+      "average_quality": 0.7387
     },
     "POOL.PIPE": {
-      "count": 88,
+      "count": 89,
       "top_quality": 0.7393,
-      "average_quality": 0.7367
+      "average_quality": 0.7371
     },
     "POOL.FITTINGS": {
-      "count": 72,
+      "count": 71,
       "top_quality": 0.7393,
       "average_quality": 0.7384
     },
     "PLUMBING.PIPE": {
-      "count": 132,
+      "count": 131,
       "top_quality": 0.7393,
-      "average_quality": 0.7327
+      "average_quality": 0.7337
     },
     "PLUMBING.VALVES": {
       "count": 100,
       "top_quality": 0.7393,
-      "average_quality": 0.7386
+      "average_quality": 0.739
     },
     "STRUCTURE.CONCRETE": {
-      "count": 149,
+      "count": 148,
       "top_quality": 0.7393,
-      "average_quality": 0.7365
+      "average_quality": 0.7358
     },
     "STRUCTURE.MASONRY": {
       "count": 100,
       "top_quality": 0.7393,
-      "average_quality": 0.7362
+      "average_quality": 0.7353
     },
     "ENVELOPE.INSULATION": {
-      "count": 97,
+      "count": 96,
       "top_quality": 0.7393,
-      "average_quality": 0.707
+      "average_quality": 0.7145
     },
     "ENVELOPE.WATERPROOFING": {
-      "count": 85,
+      "count": 86,
       "top_quality": 0.7393,
-      "average_quality": 0.7366
+      "average_quality": 0.7358
     },
     "HVAC.HEAT_PUMPS": {
-      "count": 185,
+      "count": 184,
       "top_quality": 0.7393,
-      "average_quality": 0.7349
+      "average_quality": 0.7347
     },
     "ENERGY.SOLAR.PANEL": {
-      "count": 287,
+      "count": 291,
       "top_quality": 0.7393,
-      "average_quality": 0.734
+      "average_quality": 0.7223
     },
     "ENERGY.BATTERY": {
-      "count": 153,
+      "count": 156,
       "top_quality": 0.7393,
-      "average_quality": 0.7368
+      "average_quality": 0.7363
     },
     "ENERGY.SOLAR.INVERTER": {
-      "count": 254,
+      "count": 255,
       "top_quality": 0.7393,
-      "average_quality": 0.7341
+      "average_quality": 0.735
     },
     "ENERGY.SOLAR.MOUNTING": {
-      "count": 83,
+      "count": 90,
       "top_quality": 0.7393,
-      "average_quality": 0.7372
+      "average_quality": 0.7342
     }
   },
   "storage_policy": "triage_payload_ephemeral_not_cached",
