@@ -55,6 +55,12 @@ svg{width:100%;height:auto;display:block}
 .data span{background:var(--section-bg);border:1px solid var(--border);padding:6px 12px;border-radius:8px}
 footer{margin-top:36px;font:13px/1.6 'Barlow',sans-serif;color:var(--dim);max-width:68ch}
 footer strong{color:var(--accent);font-weight:600}
+.elev-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px}
+@media(max-width:800px){.elev-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.elev-grid{grid-template-columns:1fr}}
+.dim-line{stroke:var(--accent);stroke-width:0.5;opacity:.6}
+.dim-tick{stroke:var(--accent);stroke-width:0.5;opacity:.6}
+.dim-text{font-family:'Barlow Condensed',sans-serif;font-size:7.5px;fill:var(--accent);text-anchor:middle;opacity:.7}
 </style>
 
 <main>
@@ -206,6 +212,11 @@ footer strong{color:var(--accent);font-weight:600}
 <!-- Terrace south -->
 <rect x="81" y="232" width="200" height="28" fill="var(--terrace)" stroke="var(--terrace-s)" stroke-width="0.8" stroke-dasharray="3 2"/>
 <text x="181" y="250" font-family="Barlow Condensed" font-size="8" fill="var(--dim)" text-anchor="middle">terrass</text>
+<!-- Dimension lines -->
+<line x1="77" y1="272" x2="363" y2="272" class="dim-line"/><line x1="77" y1="269" x2="77" y2="275" class="dim-tick"/><line x1="363" y1="269" x2="363" y2="275" class="dim-tick"/>
+<text x="220" y="282" class="dim-text">22 000</text>
+<line x1="375" y1="120" x2="375" y2="230" class="dim-line"/><line x1="372" y1="120" x2="378" y2="120" class="dim-tick"/><line x1="372" y1="230" x2="378" y2="230" class="dim-tick"/>
+<text x="388" y="178" class="dim-text" text-anchor="start" transform="rotate(-90 388 178)">8 500</text>
 </svg>
 </div>
 <div>
@@ -318,6 +329,52 @@ footer strong{color:var(--accent);font-weight:600}
 <!-- Sun angle -->
 <line x1="88" y1="26" x2="134" y2="66" stroke="var(--accent)" stroke-width="0.8" stroke-dasharray="3 2" opacity=".6"/>
 <text x="78" y="22" font-family="Barlow Condensed" font-size="7" fill="var(--accent)">vintersol 8°</text>
+</svg>
+</div>
+</div>
+
+<div class="elev-grid">
+<div>
+<div class="dlbl">Fasad norr (gatan)</div>
+<svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="140" fill="var(--section-bg)" rx="3"/>
+<line x1="15" y1="105" x2="285" y2="105" stroke="var(--ground)" stroke-width="2"/>
+<rect x="30" y="55" width="240" height="50" fill="var(--wall)" rx="0"/>
+<line x1="28" y1="52" x2="272" y2="52" stroke="var(--roof)" stroke-width="2.5"/>
+<line x1="24" y1="52" x2="28" y2="55" stroke="var(--roof)" stroke-width="1.5"/>
+<line x1="276" y1="52" x2="272" y2="55" stroke="var(--roof)" stroke-width="1.5"/>
+<rect x="135" y="68" width="30" height="37" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.6" rx="1"/>
+<line x1="150" y1="68" x2="150" y2="105" stroke="var(--glass-stroke)" stroke-width="0.4"/>
+<rect x="65" y="74" width="18" height="20" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<rect x="220" y="74" width="18" height="20" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<rect x="100" y="78" width="12" height="14" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<text x="150" y="125" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">entré + garage · stående panel · plåttak</text>
+</svg>
+</div>
+<div>
+<div class="dlbl">Fasad öst (gavel)</div>
+<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="140" fill="var(--section-bg)" rx="3"/>
+<line x1="15" y1="105" x2="185" y2="105" stroke="var(--ground)" stroke-width="2"/>
+<rect x="40" y="55" width="120" height="50" fill="var(--wall)" rx="0"/>
+<line x1="38" y1="52" x2="162" y2="52" stroke="var(--roof)" stroke-width="2.5"/>
+<rect x="56" y="68" width="22" height="28" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<rect x="122" y="74" width="16" height="18" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<text x="100" y="125" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">sovrum · 8,5 m bred</text>
+</svg>
+</div>
+<div>
+<div class="dlbl">Fasad väst (gavel)</div>
+<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="140" fill="var(--section-bg)" rx="3"/>
+<line x1="15" y1="105" x2="185" y2="105" stroke="var(--ground)" stroke-width="2"/>
+<rect x="40" y="55" width="120" height="50" fill="var(--wall)" rx="0"/>
+<line x1="38" y1="52" x2="162" y2="52" stroke="var(--roof)" stroke-width="2.5"/>
+<rect x="52" y="62" width="36" height="36" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.6" rx="1"/>
+<line x1="70" y1="62" x2="70" y2="98" stroke="var(--glass-stroke)" stroke-width="0.4"/>
+<line x1="52" y1="80" x2="88" y2="80" stroke="var(--glass-stroke)" stroke-width="0.4"/>
+<rect x="115" y="74" width="16" height="18" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<text x="100" y="125" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">vardagsrum · kvällssol</text>
 </svg>
 </div>
 </div>
@@ -486,6 +543,13 @@ footer strong{color:var(--accent);font-weight:600}
 <line x1="65" y1="-3" x2="65" y2="3" stroke="var(--wall)" stroke-width="1"/>
 <text x="32.5" y="10" font-family="Barlow Condensed" font-size="8" fill="var(--dim)" text-anchor="middle">5 m</text>
 </g>
+<!-- Dimension lines -->
+<line x1="52" y1="305" x2="318" y2="305" class="dim-line"/><line x1="52" y1="302" x2="52" y2="308" class="dim-tick"/><line x1="318" y1="302" x2="318" y2="308" class="dim-tick"/>
+<text x="185" y="316" class="dim-text">20 000 (bar)</text>
+<line x1="340" y1="176" x2="340" y2="267" class="dim-line"/><line x1="337" y1="176" x2="343" y2="176" class="dim-tick"/><line x1="337" y1="267" x2="343" y2="267" class="dim-tick"/>
+<text x="353" y="224" class="dim-text" text-anchor="start" transform="rotate(-90 353 224)">7 000</text>
+<line x1="224" y1="44" x2="332" y2="44" class="dim-line"/><line x1="224" y1="41" x2="224" y2="47" class="dim-tick"/><line x1="332" y1="41" x2="332" y2="47" class="dim-tick"/>
+<text x="278" y="40" class="dim-text">8 000 (flygel)</text>
 </svg>
 </div>
 <div>
@@ -628,6 +692,70 @@ footer strong{color:var(--accent);font-weight:600}
 <!-- Optional souterräng (dashed) -->
 <rect x="120" y="136" width="80" height="30" fill="none" stroke="var(--dim)" stroke-width="0.8" stroke-dasharray="4 3" opacity=".5"/>
 <text x="160" y="155" font-family="Barlow Condensed" font-size="6.5" fill="var(--dim)" text-anchor="middle" opacity=".6">ev. suterräng (om DTM bekräftar)</text>
+</svg>
+</div>
+</div>
+
+<div class="elev-grid">
+<div>
+<div class="dlbl">Fasad norr (gatan)</div>
+<svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="140" fill="var(--section-bg)" rx="3"/>
+<line x1="15" y1="105" x2="285" y2="105" stroke="var(--ground)" stroke-width="2"/>
+<!-- Wing (garage) prominent in foreground -->
+<rect x="140" y="52" width="110" height="53" fill="var(--wall)"/>
+<line x1="138" y1="49" x2="252" y2="49" stroke="var(--roof)" stroke-width="2.5"/>
+<!-- Bar behind, lower roof visible -->
+<rect x="30" y="60" width="112" height="45" fill="var(--wall)"/>
+<line x1="28" y1="57" x2="144" y2="57" stroke="var(--roof)" stroke-width="2"/>
+<!-- Garage door -->
+<rect x="160" y="68" width="40" height="37" fill="var(--furn)" stroke="var(--wall-int)" stroke-width="0.6" rx="1"/>
+<line x1="165" y1="68" x2="165" y2="105" stroke="var(--wall-int)" stroke-width="0.3"/>
+<line x1="195" y1="68" x2="195" y2="105" stroke="var(--wall-int)" stroke-width="0.3"/>
+<!-- Entry door -->
+<rect x="128" y="78" width="14" height="27" fill="var(--furn)" stroke="var(--wall-int)" stroke-width="0.6" rx="0.5"/>
+<!-- Small windows -->
+<rect x="60" y="72" width="18" height="18" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<rect x="95" y="72" width="14" height="14" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<rect x="216" y="66" width="18" height="18" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<text x="150" y="125" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">flygel (garage) + bar · entré i knutpunkt</text>
+</svg>
+</div>
+<div>
+<div class="dlbl">Fasad öst</div>
+<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="140" fill="var(--section-bg)" rx="3"/>
+<line x1="15" y1="105" x2="185" y2="105" stroke="var(--ground)" stroke-width="2"/>
+<!-- Wing gable -->
+<rect x="40" y="52" width="90" height="53" fill="var(--wall)"/>
+<polyline points="38,49 85,38 132,49" fill="none" stroke="var(--roof)" stroke-width="2.5"/>
+<!-- Bar end visible behind -->
+<rect x="130" y="60" width="40" height="45" fill="var(--wall)" opacity=".7"/>
+<line x1="128" y1="57" x2="172" y2="57" stroke="var(--roof)" stroke-width="1.5"/>
+<rect x="56" y="66" width="20" height="24" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<rect x="96" y="70" width="14" height="16" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<text x="100" y="125" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">garagegavel + bar bakom</text>
+</svg>
+</div>
+<div>
+<div class="dlbl">Fasad väst — kvällssol</div>
+<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="140" fill="var(--section-bg)" rx="3"/>
+<line x1="15" y1="105" x2="185" y2="105" stroke="var(--ground)" stroke-width="2"/>
+<!-- Bar gable end -->
+<rect x="50" y="60" width="100" height="45" fill="var(--wall)"/>
+<line x1="48" y1="57" x2="152" y2="57" stroke="var(--roof)" stroke-width="2.5"/>
+<!-- Glanrummet glass — THE signature -->
+<rect x="56" y="62" width="44" height="38" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.8" rx="1"/>
+<line x1="78" y1="62" x2="78" y2="100" stroke="var(--glass-stroke)" stroke-width="0.4"/>
+<line x1="56" y1="82" x2="100" y2="82" stroke="var(--glass-stroke)" stroke-width="0.4"/>
+<!-- Corner glass wraps south -->
+<rect x="100" y="62" width="6" height="38" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5"/>
+<rect x="118" y="72" width="18" height="20" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<!-- Sun indicator -->
+<line x1="28" y1="44" x2="48" y2="58" stroke="var(--accent)" stroke-width="1" opacity=".6"/>
+<circle cx="24" cy="40" r="4" fill="var(--accent)" opacity=".4"/>
+<text x="100" y="125" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">Glanrummet hörnglas · kvällssol</text>
 </svg>
 </div>
 </div>
@@ -800,6 +928,13 @@ footer strong{color:var(--accent);font-weight:600}
 <line x1="65" y1="-3" x2="65" y2="3" stroke="var(--wall)" stroke-width="1"/>
 <text x="32.5" y="10" font-family="Barlow Condensed" font-size="8" fill="var(--dim)" text-anchor="middle">5 m</text>
 </g>
+<!-- Dimension lines -->
+<line x1="88" y1="280" x2="348" y2="280" class="dim-line"/><line x1="88" y1="277" x2="88" y2="283" class="dim-tick"/><line x1="348" y1="277" x2="348" y2="283" class="dim-tick"/>
+<text x="218" y="290" class="dim-text">~20 000 (total bredd)</text>
+<line x1="360" y1="60" x2="360" y2="264" class="dim-line"/><line x1="357" y1="60" x2="363" y2="60" class="dim-tick"/><line x1="357" y1="264" x2="363" y2="264" class="dim-tick"/>
+<text x="373" y="164" class="dim-text" text-anchor="start" transform="rotate(-90 373 164)">~16 000 (total djup)</text>
+<line x1="168" y1="114" x2="268" y2="114" class="dim-line"/><line x1="168" y1="111" x2="168" y2="117" class="dim-tick"/><line x1="268" y1="111" x2="268" y2="117" class="dim-tick"/>
+<text x="218" y="110" class="dim-text">7 000 (gård)</text>
 </svg>
 </div>
 <div>
@@ -925,6 +1060,64 @@ footer strong{color:var(--accent);font-weight:600}
 <circle cx="240" cy="56" r="8" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".5"/>
 <line x1="240" y1="64" x2="240" y2="88" stroke="var(--accent)" stroke-width="0.6" stroke-dasharray="2 2" opacity=".4"/>
 <text x="240" y="50" font-family="Barlow Condensed" font-size="7" fill="var(--accent)" text-anchor="middle">sol i gården</text>
+</svg>
+</div>
+</div>
+
+<div class="elev-grid">
+<div>
+<div class="dlbl">Fasad norr (gatan)</div>
+<svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="140" fill="var(--section-bg)" rx="3"/>
+<line x1="15" y1="105" x2="285" y2="105" stroke="var(--ground)" stroke-width="2"/>
+<!-- Connector bar, low flat roof -->
+<rect x="40" y="68" width="220" height="37" fill="var(--wall)"/>
+<line x1="38" y1="66" x2="262" y2="66" stroke="var(--roof)" stroke-width="2.5"/>
+<!-- Entry -->
+<rect x="100" y="76" width="22" height="29" fill="var(--furn)" stroke="var(--wall-int)" stroke-width="0.6" rx="0.5"/>
+<!-- Garage door -->
+<rect x="185" y="74" width="44" height="31" fill="var(--furn)" stroke="var(--wall-int)" stroke-width="0.6" rx="1"/>
+<line x1="190" y1="74" x2="190" y2="105" stroke="var(--wall-int)" stroke-width="0.3"/>
+<line x1="224" y1="74" x2="224" y2="105" stroke="var(--wall-int)" stroke-width="0.3"/>
+<!-- Windows -->
+<rect x="55" y="78" width="18" height="16" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<rect x="138" y="78" width="14" height="14" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<!-- Wing roofs visible behind -->
+<rect x="36" y="56" width="10" height="12" fill="var(--wall)" opacity=".5"/>
+<rect x="254" y="56" width="10" height="12" fill="var(--wall)" opacity=".5"/>
+<text x="150" y="125" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">konnektorn · entré + garage · lågt plåttak</text>
+</svg>
+</div>
+<div>
+<div class="dlbl">Fasad öst</div>
+<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="140" fill="var(--section-bg)" rx="3"/>
+<line x1="15" y1="105" x2="185" y2="105" stroke="var(--ground)" stroke-width="2"/>
+<!-- East wing gable, flat roof -->
+<rect x="50" y="52" width="100" height="53" fill="var(--wall)"/>
+<line x1="48" y1="50" x2="152" y2="50" stroke="var(--roof)" stroke-width="2.5"/>
+<rect x="64" y="62" width="22" height="30" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.6" rx="0.5"/>
+<rect x="108" y="66" width="16" height="22" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<text x="100" y="125" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">östra flygeln · sovrum + bad</text>
+</svg>
+</div>
+<div>
+<div class="dlbl">Fasad väst</div>
+<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="140" fill="var(--section-bg)" rx="3"/>
+<line x1="15" y1="105" x2="185" y2="105" stroke="var(--ground)" stroke-width="2"/>
+<!-- West wing gable, flat roof -->
+<rect x="50" y="52" width="100" height="53" fill="var(--wall)"/>
+<line x1="48" y1="50" x2="152" y2="50" stroke="var(--roof)" stroke-width="2.5"/>
+<!-- Large living room window -->
+<rect x="60" y="58" width="40" height="36" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.7" rx="1"/>
+<line x1="80" y1="58" x2="80" y2="94" stroke="var(--glass-stroke)" stroke-width="0.4"/>
+<line x1="60" y1="78" x2="100" y2="78" stroke="var(--glass-stroke)" stroke-width="0.4"/>
+<rect x="118" y="66" width="16" height="22" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<!-- Evening sun -->
+<line x1="28" y1="38" x2="48" y2="52" stroke="var(--accent)" stroke-width="1" opacity=".6"/>
+<circle cx="24" cy="34" r="4" fill="var(--accent)" opacity=".4"/>
+<text x="100" y="125" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">västra flygeln · kök/matsal · kvällssol</text>
 </svg>
 </div>
 </div>
