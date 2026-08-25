@@ -98,6 +98,29 @@ docs/SESSION-GOALS.md (3a51430). This file is a snapshot — re-verify before re
    PERSISTENT-CHAT-TOPOLOGY.md describe the dead 7-chat era (banner added today);
    4/6 sessions have no handoff doc in docs/handoffs/.
 
+## Verification record — Essence showcase (maker≠checker, Brain, 2026-08-25 ~19:15)
+
+Checked the committed page (data/sites/essence-moraira/showcase/essence-moraira-showcase.html,
+2,040,728 bytes) served locally in the automated browser pane. PASS on everything checkable:
+
+- Structure: title "Essence Moraira"; sections = intro, Villa I, II, III, IV,
+  "The site, in motion" (film), closing CTA. (JS section enumeration.)
+- Images: 9/9 are inline data:image/jpeg and ALL decode to real pixels — hero 1400×787,
+  4 renders 1000×600, 4 floorplans (308×581 / 441×567 / 343×364 / 299×700). 0 broken.
+- Film: 1 video element, inline data URI, readyState 4, duration 6 s.
+- Theme paints: body rgb(12,26,32), text rgb(234,239,236); scroll-reveal sections reach
+  class "in" at opacity 1. Hero visually verified by screenshot (renders beautifully).
+- Console: zero errors.
+
+**NOT checked:** mid-page *pixel* rendering (the pane's screenshot pipeline returned black
+frames for all below-fold captures — a hidden-pane compositing artifact, contradicted by
+computed-style evidence; hero screenshots were clean) · the artifact URL 38777df1 itself
+(login-gated — Oskar eyeballs per standing rule) · phone rendering. Caveat for humans: the
+page uses smooth-scroll + ~1.6 MB of inline base64; aggressive programmatic scrolling
+wedged the automated tab once. Normal human scrolling should be fine, but give it one
+phone pass before Nancy. Re-run: serve the file locally (config kept in
+/Users/oskarpeterson/Documents/AI/.claude/launch.json, "essence-showcase") and repeat.
+
 ## Decisions Oskar owns (queued)
 
 1. Winner: confirm Vinkelhuset (per 03-JUDGED-MATRIX) or re-open via tre-hus artifact.
