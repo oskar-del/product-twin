@@ -156,6 +156,9 @@ const architecturalHeroViewerAttacks=[
   ["hero panel reserve removed",html=>html.replace("camera.setViewOffset(width+dockReserve","camera.setViewOffset(width"),"architectural hero framing"],
   ["hero side openings removed",html=>html.replaceAll("facade_rhythm==='PANORAMIC_BAYS'","facade_rhythm==='NONE'"),"architectural hero lacks façade depth"],
   ["hero roof seams removed",html=>html.replace("function addRoofSeams","function omitRoofSeams"),"architectural hero roof expression"],
+  ["hero vertical timber removed",html=>html.replace("texture:surfaceTextures.verticalTimber","siding:true"),"lacks legible Nordic vertical-timber"],
+  ["hero envelope depth removed",html=>html.replace("function addArchitecturalEnvelopeDepth","function omitArchitecturalEnvelopeDepth"),"envelope lacks corner"],
+  ["hero deck edge removed",html=>html.replace("function addConceptRailing","function omitConceptRailing"),"deck edge or arrival transition"],
   ["hero plot overlay restored",html=>html.replace("candidatePreview?.035:.1",".1"),"architectural hero is obscured"],
   ["hero plot clutter restored",html=>html.replace("realistic&&!candidatePreview","realistic"),"architectural hero clutter isolation"]
 ];
@@ -306,6 +309,7 @@ const designStudiesAttacks=[
   ["candidate arrival strategies collapsed",m=>m.candidates[2].presentation_profile.arrival_expression=m.candidates[0].presentation_profile.arrival_expression,"design candidates do not exercise three distinct arrival_expression strategies"],
   ["candidate outdoor rooms collapsed",m=>m.candidates[2].presentation_profile.outdoor_room_type=m.candidates[0].presentation_profile.outdoor_room_type,"design candidates do not exercise three distinct outdoor_room_type strategies"],
   ["candidate terrain responses collapsed",m=>m.candidates[2].presentation_profile.terrain_response_expression=m.candidates[0].presentation_profile.terrain_response_expression,"design candidates do not exercise three distinct terrain_response_expression strategies"],
+  ["candidate terrain levels collapsed",m=>m.candidates.find(candidate=>candidate.candidate_id==="COURTYARD_EDGE").volumes[1].display_level_offset_m=0,"concept terrain-response geometry drift"],
   ["candidate facade rhythms collapsed",m=>m.candidates[2].presentation_profile.facade_rhythm=m.candidates[0].presentation_profile.facade_rhythm,"design candidates do not exercise three distinct facade_rhythm strategies"],
   ["candidate arrival enum invalid",m=>m.candidates[0].presentation_profile.arrival_expression="CARPORT_GATE","architectural presentation profile promoted or invalid"],
   ["candidate design evidence thinned",m=>m.candidates[0].design_signals.pop(),"concept evidence or signals invalid"],

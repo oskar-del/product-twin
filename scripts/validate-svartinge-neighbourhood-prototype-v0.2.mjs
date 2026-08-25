@@ -120,6 +120,9 @@ export function validateArchitecturalHeroViewer(html){
   check(section.includes("function addArchitecturalOpening")&&section.includes("facade_rhythm==='PANORAMIC_BAYS'")&&section.includes("rotationYDeg"),"architectural hero lacks façade depth or side-opening articulation");
   check(section.includes("function addRoofSeams")&&section.includes("profile.roof_form==='MONO_PITCH'")&&section.includes("metalness:.38"),"architectural hero roof expression lacks lightweight construction depth");
   check(html.includes("function timberDeckTexture")&&section.includes("texture:surfaceTextures.deck")&&section.includes("function addConceptPlanter"),"architectural hero outdoor-room material or concept planting threshold missing");
+  check(html.includes("function verticalTimberTexture")&&section.includes("texture:surfaceTextures.verticalTimber"),"architectural hero lacks legible Nordic vertical-timber façade character");
+  check(section.includes("function addArchitecturalEnvelopeDepth")&&section.includes("envelopeDepth='CONCEPT_PRESENTATION_ONLY'")&&section.includes("addArchitecturalEnvelopeDepth(assembly"),"architectural hero envelope lacks corner, shadow-gap or fascia depth");
+  check(section.includes("function addConceptRailing")&&section.includes("function addConceptSteps")&&section.includes("unit.userData.evidenceEffect='NONE'"),"architectural hero deck edge or arrival transition remains unresolved");
   check(html.includes("CONCEPT_HOUSE_ON_PLOT:35")&&html.includes("camera.setViewOffset(width+dockReserve")&&html.includes("mode!=='COMPARE'"),"architectural hero framing does not reserve the design panel or preserve comparison framing");
   check(html.includes("plotAnalyticalCue")&&html.includes("isPlotBeaconFill")&&html.includes("candidatePreview?.035:.1")&&html.includes("depthTest:true"),"architectural hero is obscured by analytical plot overlays");
   check(html.includes("currentSiteClutter")&&html.includes("realistic&&!candidatePreview")&&!section.includes("new THREE.PointLight")&&!section.includes("EffectComposer"),"architectural hero clutter isolation or performance boundary missing");
@@ -186,6 +189,8 @@ export function validateDesignCandidateStudies(studies,{scene=read(scenePath),re
     check(Math.abs(footprint-candidate.footprint_m2)<1e-9&&candidate.approx_gross_floor_area_m2===candidate.footprint_m2,`${candidate.candidate_id}: footprint or concept GFA drift`);
   }
   check(new Set(candidates.map(candidate=>candidate.presentation_profile.roof_form)).size===3,"design candidates do not exercise three distinct roof strategies");
+  const levelCounts=Object.fromEntries(candidates.map(candidate=>[candidate.candidate_id,new Set(candidate.volumes.map(volume=>volume.display_level_offset_m)).size]));
+  check(levelCounts.VIEW_BAR===1&&levelCounts.COURTYARD_EDGE===2&&levelCounts.SPLIT_TERRACE===2,"concept terrain-response geometry drift");
   for(const field of ["arrival_expression","outdoor_room_type","terrain_response_expression","facade_rhythm"])check(new Set(candidates.map(candidate=>candidate.presentation_profile[field])).size===3,`design candidates do not exercise three distinct ${field} strategies`);
   check(walk(studies,"designStudies").length===0,"design candidate set contains forbidden external facts");
   const schema=read(designStudiesSchemaPath,repoRoot);check(schema.additionalProperties===false&&schema.properties?.schema_version?.const==="svartinge-design-candidate-studies/v0.2","strict design candidate schema missing");
