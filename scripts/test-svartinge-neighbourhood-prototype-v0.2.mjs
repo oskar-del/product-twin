@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {validateArchitecturalComparisonViewer,validateArchitecturalHeroViewer,validateArchitecturalIntentViewer,validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateNeighbourhoodDetailViewer,validateOfficialContextGeometrySources,validatePlotTerrainViewer,validateStreetApproachViewer,validateStreetContext,validateSvartingePrototype,validateTerrainShadingViewer,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
+import {validateArchitecturalComparisonViewer,validateContextBuildingLodViewer,validateArchitecturalHeroViewer,validateArchitecturalIntentViewer,validateContextProviders,validateDesignCandidateStudies,validateMunicipalAerialHistory,validateNeighbourhoodDetailViewer,validateOfficialContextGeometrySources,validatePlotTerrainViewer,validateStreetApproachViewer,validateStreetContext,validateSvartingePrototype,validateTerrainShadingViewer,validateTerrainSourceMetadata,validateVisualAcceptance,validateVisualReconstruction} from "./validate-svartinge-neighbourhood-prototype-v0.2.mjs";
 
 const baseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json","utf8"));
 const providerBaseline=JSON.parse(fs.readFileSync("data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json","utf8"));
@@ -24,6 +24,7 @@ assert.equal(validateVisualAcceptance(visualAcceptanceBaseline,{scene:baseline})
 assert.equal(validatePlotTerrainViewer(viewerBaseline).ok,true,"baseline plot terrain study must validate");
 assert.equal(validateTerrainShadingViewer(viewerBaseline).ok,true,"baseline terrain shading must validate");
 assert.equal(validateNeighbourhoodDetailViewer(viewerBaseline).ok,true,"baseline neighbourhood street-room detail must validate");
+assert.equal(validateContextBuildingLodViewer(viewerBaseline).ok,true,"baseline context-building roof LOD must validate");
 assert.equal(validateStreetApproachViewer(viewerBaseline).ok,true,"baseline street approach must validate");
 assert.equal(validateArchitecturalHeroViewer(viewerBaseline).ok,true,"baseline architectural hero must validate");
 assert.equal(validateArchitecturalIntentViewer(viewerBaseline).ok,true,"baseline architectural intent must validate");
@@ -130,11 +131,24 @@ const neighbourhoodDetailViewerAttacks=[
   ["nearby detail renderer removed",html=>html.replace("function addHouseDetails","function omitHouseDetails"),"nearby building detail is not source-footprint bound"],
   ["nearby detail loses source footprints",html=>html.replace("const g=item.geometry,points=g.points_xz","const g=item.geometry,points=[]"),"nearby building detail is not source-footprint bound"],
   ["nearby detail expands without bound",html=>html.replace("slice(0,36)","slice(0,360)"),"nearby building detail is not performance bounded"],
-  ["nearby detail evidence promoted",html=>html.replace("userData.visualOnly=true","userData.visualOnly=false"),"nearby building detail can promote"],
+  ["nearby detail evidence promoted",html=>html.replace("mesh.castShadow=castShadow;mesh.userData.visualOnly=true","mesh.castShadow=castShadow;mesh.userData.visualOnly=false"),"nearby building detail can promote"],
   ["nearby detail limitation promoted",html=>html.replace("they are not observed building details","they are observed building details"),"nearby building detail limitation missing or promoted"]
 ];
 for(const [name,mutate,needle] of neighbourhoodDetailViewerAttacks){
   const result=validateNeighbourhoodDetailViewer(mutate(viewerBaseline));
+  assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
+}
+
+const contextBuildingLodViewerAttacks=[
+  ["middle LOD expands to the far horizon",html=>html.replace("else if(distance<650)contextRoofLodEntries.push","else if(distance<950)contextRoofLodEntries.push"),"roof LOD bands"],
+  ["middle LOD loses footprint lineage",html=>html.replace("sourceGeometry='OSM_FOOTPRINT_BOUNDS'","sourceGeometry='GENERIC_ROOF_GRID'"),"not source-footprint bound"],
+  ["middle LOD loses instancing",html=>html.replace("new THREE.InstancedMesh(geometry","new THREE.Mesh(geometry"),"not deterministically instanced"],
+  ["middle LOD evidence promoted",html=>html.replace("mesh.userData.visualOnly=true;mesh.userData.evidenceEffect='NONE';mesh.userData.sourceGeometry","mesh.userData.visualOnly=false;mesh.userData.evidenceEffect='CLOSE_GATE';mesh.userData.sourceGeometry"),"masquerade as observed building evidence"],
+  ["middle LOD shadows exceed frame budget",html=>html.replace("mesh.castShadow=false;mesh.receiveShadow=false;mesh.userData.realisticOnly=true","mesh.castShadow=true;mesh.receiveShadow=true;mesh.userData.realisticOnly=true"),"bounded rendering budget"],
+  ["middle LOD mount removed",html=>html.replace("function buildRealismDecor(){addSky();mountContextRoofLod();","function buildRealismDecor(){addSky();"),"not mounted or disclosed"]
+];
+for(const [name,mutate,needle] of contextBuildingLodViewerAttacks){
+  const result=validateContextBuildingLodViewer(mutate(viewerBaseline));
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
 
@@ -325,4 +339,4 @@ for(const [name,mutate,needle] of visualAcceptanceAttacks){
   const changed=structuredClone(visualAcceptanceBaseline);mutate(changed);const result=validateVisualAcceptance(changed,{scene:baseline});
   assert.equal(result.ok,false,name);assert.ok(result.errors.some(e=>e.includes(needle)),`${name}: ${result.errors.join(" | ")}`);
 }
-console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+terrainViewerAttacks.length+terrainShadingViewerAttacks.length+streetApproachViewerAttacks.length+neighbourhoodDetailViewerAttacks.length+architecturalHeroViewerAttacks.length+architecturalComparisonViewerAttacks.length+architecturalIntentViewerAttacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);
+console.log(`Svärtinge 3D prototype mutation suite passed (${attacks.length+terrainViewerAttacks.length+terrainShadingViewerAttacks.length+streetApproachViewerAttacks.length+neighbourhoodDetailViewerAttacks.length+contextBuildingLodViewerAttacks.length+architecturalHeroViewerAttacks.length+architecturalComparisonViewerAttacks.length+architecturalIntentViewerAttacks.length+providerAttacks.length+streetAttacks.length+terrainAttacks.length+officialGeometryAttacks.length+aerialHistoryAttacks.length+visualReconstructionAttacks.length+designStudiesAttacks.length+visualAcceptanceAttacks.length} attacks)`);
