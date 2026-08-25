@@ -39,38 +39,30 @@
   ],
   "geometry": {
     "level": "G2",
-    "state": "promoted_realistic_planning_proxy",
-    "avatar_id": "AVATAR_IKEA_KIVIK_49440597_G2_SOFA_PROXY",
-    "asset_path": "data/geometry/avatars/ikea-kivik-49440597-g2-sofa-proxy.glb",
-    "scale_state": "verified 2280x950x830mm envelope; 1800x600mm seat at 450mm height",
-    "shape_claim": "realistic upholstered planning proxy; exact IKEA industrial-design geometry and fabric texture are not claimed",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_IKEA_KIVIK_49440597_G2_PROXY",
+    "asset_path": "data/geometry/avatars/ikea-kivik-49440597-g2-proxy.glb",
+    "scale_state": "verified 2280x950x830mm envelope",
+    "shape_claim": "dimension-verified proxy from category heuristic; not exact manufacturer geometry",
     "placement": {
       "origin": "floor_center",
-      "back_to_wall_anchor": true,
-      "recommended_front_clearance_mm": 700
+      "floor_contact": true
     },
     "appearance": {
-      "material_cues": [
-        "warm beige-grey woven upholstery",
-        "dark low-profile feet"
-      ],
-      "pbr_state": "variant_specific_base_colour_and_roughness_cues",
-      "embedded_textures": false,
+      "pbr_state": "spine_colour_by_category",
       "exact_manufacturer_texture_or_finish_claimed": false
     },
-    "qa_metric": "data/metrics/ikea-kivik-49440597-g2-sofa-proxy-latest.json",
     "rights": {
-      "geometry_owner": "Product Twin planning proxy",
+      "geometry_owner": "Product Twin universal proxy",
       "manufacturer_geometry_copied": false,
-      "manufacturer_texture_artwork_copied": false,
-      "exact_likeness_claimed": false
+      "manufacturer_texture_artwork_copied": false
     }
   },
   "readiness": {
     "identity": "verified_exact_retail_article",
     "commerce": "official_product_page_verified_live_postcode_refresh_required",
     "dimensions": "verified",
-    "geometry": "G2_promoted_planning_proxy",
+    "geometry": "G2_promoted_universal_proxy",
     "appearance": "variant_colour_and_roughness_cues_only_no_exact_texture",
     "room_placement": "ready_for_planning_and_circulation",
     "render": "planning_preview_only",

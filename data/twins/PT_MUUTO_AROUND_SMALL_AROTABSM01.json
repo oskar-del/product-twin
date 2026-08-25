@@ -14,7 +14,8 @@
   },
   "physical": {
     "dimensions_mm": {
-      "diameter": 450,
+      "width": 450,
+      "depth": 450,
       "height": 460
     },
     "evidence_state": "manufacturer_verified"
@@ -51,31 +52,31 @@
     }
   ],
   "geometry": {
-    "level": "G0",
-    "state": "exact_product_bound_asset_unresolved",
-    "preferred_source": "Muuto architect file",
-    "advertised_formats": [
-      "OBJ",
-      "3DS",
-      "DWG",
-      "SketchUp",
-      "Revit"
-    ],
-    "runtime_target": "GLB",
-    "scale_state": "manufacturer_dimensions_known_asset_not_validated",
-    "exact_likeness_state": "pending_asset_resolution",
+    "level": "G2",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_MUUTO_AROUND_SMALL_AROTABSM01_G2_PROXY",
+    "asset_path": "data/geometry/avatars/muuto-around-small-arotabsm01-g2-proxy.glb",
+    "scale_state": "verified 450x450x460mm envelope",
+    "shape_claim": "dimension-verified proxy from category heuristic; not exact manufacturer geometry",
+    "placement": {
+      "origin": "floor_center",
+      "floor_contact": true
+    },
+    "appearance": {
+      "pbr_state": "spine_colour_by_category",
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
     "rights": {
-      "space_planning_use": "manufacturer_professional_files_available",
-      "render_use": "review",
-      "derivative_conversion": "review",
-      "redistribution": "review"
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
     }
   },
   "readiness": {
     "identity": "verified",
     "commerce": "exact_spain_listing_postcode_unverified",
     "dimensions": "verified",
-    "geometry": "candidate",
+    "geometry": "G2_promoted_universal_proxy",
     "render": "blocked",
     "specification": "partial_verified",
     "rights": "review"

@@ -38,38 +38,30 @@
   ],
   "geometry": {
     "level": "G2",
-    "state": "promoted_realistic_planning_proxy",
-    "avatar_id": "AVATAR_IKEA_BESTA_89330691_G2_MEDIA_UNIT_PROXY",
-    "asset_path": "data/geometry/avatars/ikea-besta-89330691-g2-media-unit-proxy.glb",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_IKEA_BESTA_89330691_G2_PROXY",
+    "asset_path": "data/geometry/avatars/ikea-besta-89330691-g2-proxy.glb",
     "scale_state": "verified 1800x420x380mm envelope",
-    "shape_claim": "realistic warm-white three-front media-unit proxy; exact IKEA hardware and panel construction are not claimed",
+    "shape_claim": "dimension-verified proxy from category heuristic; not exact manufacturer geometry",
     "placement": {
       "origin": "floor_center",
-      "back_to_wall_anchor": true,
-      "rear_service_zone_mm": 80
+      "floor_contact": true
     },
     "appearance": {
-      "material_cues": [
-        "warm white laminate",
-        "shadowed door reveals"
-      ],
-      "pbr_state": "variant_specific_base_colour_and_roughness_cues",
-      "embedded_textures": false,
+      "pbr_state": "spine_colour_by_category",
       "exact_manufacturer_texture_or_finish_claimed": false
     },
-    "qa_metric": "data/metrics/ikea-besta-89330691-g2-media-unit-proxy-latest.json",
     "rights": {
-      "geometry_owner": "Product Twin planning proxy",
+      "geometry_owner": "Product Twin universal proxy",
       "manufacturer_geometry_copied": false,
-      "manufacturer_texture_artwork_copied": false,
-      "exact_likeness_claimed": false
+      "manufacturer_texture_artwork_copied": false
     }
   },
   "readiness": {
     "identity": "verified_exact_retail_article",
     "commerce": "official_product_page_verified_live_postcode_refresh_required",
     "dimensions": "verified",
-    "geometry": "G2_promoted_planning_proxy",
+    "geometry": "G2_promoted_universal_proxy",
     "appearance": "variant_colour_and_roughness_cues_only_no_exact_texture",
     "room_placement": "ready_for_planning_and_circulation",
     "render": "planning_preview_only",

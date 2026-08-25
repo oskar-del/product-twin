@@ -39,31 +39,24 @@
   ],
   "geometry": {
     "level": "G2",
-    "state": "promoted_realistic_planning_proxy",
-    "avatar_id": "AVATAR_IKEA_VALNAS_20628038_G2_COFFEE_TABLE_PROXY",
-    "asset_path": "data/geometry/avatars/ikea-valnas-20628038-g2-coffee-table-proxy.glb",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_IKEA_VALNAS_20628038_G2_PROXY",
+    "asset_path": "data/geometry/avatars/ikea-valnas-20628038-g2-proxy.glb",
     "scale_state": "verified 1180x720x500mm envelope",
-    "shape_claim": "product-bound oak-veneer planning reconstruction; exact IKEA industrial-design geometry and veneer artwork are not claimed",
+    "shape_claim": "dimension-verified proxy from category heuristic; not exact manufacturer geometry",
     "placement": {
       "origin": "floor_center",
-      "recommended_sofa_gap_mm": 420,
-      "recommended_circulation_clearance_mm": 600
+      "floor_contact": true
     },
     "appearance": {
-      "material_cues": [
-        "oak veneer"
-      ],
-      "exact_selected_variant_bound": true,
-      "pbr_state": "variant_specific_base_colour_and_roughness_cues",
-      "texture_evidence_state": "no_exact_manufacturer_texture"
+      "pbr_state": "spine_colour_by_category",
+      "exact_manufacturer_texture_or_finish_claimed": false
     },
     "rights": {
-      "geometry_owner": null,
+      "geometry_owner": "Product Twin universal proxy",
       "manufacturer_geometry_copied": false,
-      "manufacturer_texture_artwork_copied": false,
-      "exact_likeness_claimed": false
-    },
-    "qa_metric": "data/metrics/ikea-valnas-20628038-g2-coffee-table-proxy-latest.json"
+      "manufacturer_texture_artwork_copied": false
+    }
   },
   "offer": {
     "offer_ref": "OFFER_ROUTE_IKEA_ES_VALNAS_20628038",
@@ -81,7 +74,7 @@
     "identity": "verified_exact_retail_article",
     "commerce": "official_product_page_and_destination_availability_verified_live",
     "dimensions": "verified",
-    "geometry": "G2_promoted_planning_proxy",
+    "geometry": "G2_promoted_universal_proxy",
     "appearance": "variant_colour_and_roughness_cues_only_no_exact_texture",
     "room_placement": "review_required_against_existing_LISTERBY_transform",
     "render": "planning_preview_only",

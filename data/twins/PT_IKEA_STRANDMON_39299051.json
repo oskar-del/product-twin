@@ -47,17 +47,31 @@
     }
   ],
   "geometry": {
-    "level": "G0",
-    "state": "awaiting_proxy_build",
-    "avatar_id": null,
-    "asset_path": null,
-    "scale_state": "target 600x400x440mm"
+    "level": "G2",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_IKEA_STRANDMON_39299051_G2_PROXY",
+    "asset_path": "data/geometry/avatars/ikea-strandmon-39299051-g2-proxy.glb",
+    "scale_state": "verified 600x400x440mm envelope",
+    "shape_claim": "dimension-verified proxy from category heuristic; not exact manufacturer geometry",
+    "placement": {
+      "origin": "floor_center",
+      "floor_contact": true
+    },
+    "appearance": {
+      "pbr_state": "spine_colour_by_category",
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
   },
   "readiness": {
     "identity": "verified_exact_retail_article",
     "commerce": "live_commerce_fields_populated",
     "dimensions": "verified",
-    "geometry": "G0_awaiting_proxy"
+    "geometry": "G2_promoted_universal_proxy"
   },
   "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
 }
