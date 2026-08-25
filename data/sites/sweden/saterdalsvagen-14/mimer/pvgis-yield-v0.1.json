@@ -1,0 +1,128 @@
+{
+  "schema": "mimer-pvgis-yield/v0.1",
+  "evidence_class": "EXTERNAL_MODEL (JRC PVGIS v5.2, SARAH2)",
+  "roof_geometry": "CONCEPT — proposed planes, not a built/surveyed roof",
+  "system_loss_pct": 14,
+  "lat": 58.6522414431,
+  "lon": 16.0317063331,
+  "planes": [
+    {
+      "plane": "Optimal (PVGIS)",
+      "slope_deg": 43,
+      "azimuth_pvgis": -2,
+      "E_y_kWh_per_kWp": 936.5,
+      "irr_y_kWh_m2": 1206.4,
+      "sd_year": 36.1
+    },
+    {
+      "plane": "South pitch 40°",
+      "slope_deg": 40,
+      "azimuth_pvgis": 0,
+      "E_y_kWh_per_kWp": 935.8,
+      "irr_y_kWh_m2": 1206.2,
+      "sd_year": 35.8
+    },
+    {
+      "plane": "SW pitch 40° (view)",
+      "slope_deg": 40,
+      "azimuth_pvgis": 27,
+      "E_y_kWh_per_kWp": 911.6,
+      "irr_y_kWh_m2": 1178.0,
+      "sd_year": 33.9
+    },
+    {
+      "plane": "SW pitch 22° (gentle)",
+      "slope_deg": 22,
+      "azimuth_pvgis": 27,
+      "E_y_kWh_per_kWp": 877.1,
+      "irr_y_kWh_m2": 1135.1,
+      "sd_year": 31.5
+    },
+    {
+      "plane": "Flat/low 10°",
+      "slope_deg": 10,
+      "azimuth_pvgis": 0,
+      "E_y_kWh_per_kWp": 828.8,
+      "irr_y_kWh_m2": 1075.7,
+      "sd_year": 29.9
+    }
+  ],
+  "monthly_kWh_per_kWp": {
+    "Optimal (PVGIS)": [
+      18.0,
+      36.8,
+      86.4,
+      118.1,
+      129.2,
+      129.7,
+      126.4,
+      109.6,
+      87.2,
+      57.0,
+      24.5,
+      13.6
+    ],
+    "South pitch 40°": [
+      17.4,
+      36.1,
+      85.6,
+      118.0,
+      130.2,
+      131.2,
+      127.6,
+      110.0,
+      86.7,
+      56.0,
+      23.8,
+      13.1
+    ],
+    "SW pitch 40° (view)": [
+      15.8,
+      33.6,
+      81.5,
+      115.1,
+      129.0,
+      130.4,
+      126.9,
+      108.3,
+      84.0,
+      53.0,
+      22.0,
+      12.1
+    ],
+    "SW pitch 22° (gentle)": [
+      11.8,
+      28.2,
+      73.8,
+      110.9,
+      130.7,
+      135.2,
+      130.3,
+      107.2,
+      78.1,
+      45.4,
+      17.0,
+      8.5
+    ],
+    "Flat/low 10°": [
+      8.9,
+      23.7,
+      66.4,
+      104.9,
+      128.4,
+      134.9,
+      128.9,
+      103.5,
+      71.7,
+      38.7,
+      13.0,
+      5.8
+    ]
+  },
+  "note_shading": "PVGIS uses its own horizon; local tree/neighbour shading NOT modelled here. Site is open to the S/SW (downslope toward Glan), so far-horizon losses are low, but on-plot trees must be surveyed.",
+  "sizing_example": {
+    "assumed_kWp": 8,
+    "plane": "Optimal (PVGIS)",
+    "annual_kWh": 7492
+  }
+}

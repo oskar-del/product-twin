@@ -67,3 +67,7 @@ The current record contains 20 official source receipts and 18 findings. The str
 5. Plot-specific survey, geotechnical/groundwater/radon/infiltration work and environmental/heritage completion.
 
 Steps 1–5 include external requests, contacts or commissioned work and therefore require explicit user permission.
+
+## Design / analysis layer — MIMER (M1–M6)
+
+A design-and-analysis layer for the same subject lives in [`mimer/`](mimer/INDEX.md): sun study, PVGIS solar, site plan (buildable shelf / access / VA), house concept (souterräng typology), systems skeleton and value map, plus rendered sheets. It **consumes** the receipted evidence and terrain here — the Site Intelligence page and twin should read both as one Svärtinge truth. All terrain-derived numbers stay provisional while `GATE_SE_TERRAIN` is open; house & systems are CONCEPT. Regenerate via `scripts/mimer/*.py`.

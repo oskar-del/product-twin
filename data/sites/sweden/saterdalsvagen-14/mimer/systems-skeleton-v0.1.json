@@ -1,0 +1,26 @@
+{
+  "schema": "mimer-systems-skeleton/v0.1",
+  "subject": "SVÄRTINGE 54:28",
+  "evidence_class": "CONCEPT",
+  "hub": "House Heart (services core, lower level)",
+  "systems": {
+    "water": "Incoming pressurised + meter from Säterdalsvägen main",
+    "foul_sewer": "Gravity to main; fall ≈1:15 (house ~1.7 m above main over ~26 m) ≫ typ. min ~1:100 — no pump",
+    "stormwater": "Roof → soakaway on permeable Isälvssediment (esker), separated from foul; infiltration to verify",
+    "electricity": "Grid service → main panel; PV DC→inverter→panel; battery-ready; EV point at carport",
+    "heating": "Ground-source heat pump (bergvärme) + tank → hydronic underfloor; rock ~9 m (SGU, variable); permit near Övre Svärtinge groundwater body",
+    "ventilation": "Balanced FTX heat recovery (typ. ≥75%); intake NE-shaded, extract wet rooms + kitchen",
+    "smart_meter": "Sub-metering + leak/temp sensors + PV/heat-pump telemetry — the digital-twin data feed"
+  },
+  "verify_against": [
+    "BBR",
+    "utility VA connection data",
+    "geotech/infiltration",
+    "groundwater-body permit"
+  ],
+  "sheets": [
+    "sheets/systems-sheet.png",
+    "sheets/systems-section.png",
+    "sheets/house-heart.png"
+  ]
+}

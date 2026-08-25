@@ -1,0 +1,45 @@
+{
+  "schema": "mimer-house-concept/v0.1",
+  "subject": "SVÄRTINGE 54:28",
+  "evidence_class": "CONCEPT",
+  "typology": "Swedish sluttningshus / souterräng 1.5-plan",
+  "rationale": "Gentle building shelf (~10°) with a steep NE bank (>25°) rising behind → cut against the bank, open SW; a flat slab would need heavy cut/fill.",
+  "orientation": {
+    "long_axis": "NW–SE (along contour)",
+    "opens": "SW to measured Glan axis + midday–sunset sun"
+  },
+  "footprint_m": {
+    "length_nw_se": 15,
+    "width_ne_sw": 9
+  },
+  "level_datums_rh2000_m_concept": {
+    "terrace": 66.3,
+    "lower_ff": 66.8,
+    "upper_ff": 69.7
+  },
+  "roof": {
+    "type": "mono-pitch falling SW",
+    "pv_plane": "SW ~912 kWh/kWp (see pvgis-yield-v0.1.json)"
+  },
+  "program": {
+    "lower": [
+      "great room/kitchen (SW glazing)",
+      "master + SW view",
+      "bath/wardrobe",
+      "entry/stair",
+      "House Heart",
+      "carport/store (NE)"
+    ],
+    "upper": [
+      "gallery over living + SW balcony",
+      "bed 2/3 (SW)",
+      "study/bed 4",
+      "tech/PV inverter (NE)"
+    ]
+  },
+  "sheets": [
+    "sheets/house-concept-sheet.png",
+    "sheets/concept-section.png",
+    "sheets/concept-plans.png"
+  ]
+}

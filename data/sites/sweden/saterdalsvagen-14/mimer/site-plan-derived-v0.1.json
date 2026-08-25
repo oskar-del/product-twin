@@ -1,0 +1,46 @@
+{
+  "schema": "mimer-site-plan-derived/v0.1",
+  "subject": "SVÄRTINGE 54:28",
+  "evidence_class": "DERIVED",
+  "gate_dependency": {
+    "gate_id": "GATE_SE_TERRAIN",
+    "status": "OPEN",
+    "note": "Provisional analysis derived from the receipted public 1 m Lantmäteriet DEM; GATE_SE_TERRAIN OPEN — not official terrain/survey. House & systems are CONCEPT."
+  },
+  "relief_m": 13.93,
+  "slope_at_pin_deg": 14.2,
+  "aspect_deg": 207,
+  "aspect_compass": "SW",
+  "building_shelf": {
+    "definition": "largest contiguous slope<12° patch inside the −4.5 m setback inset",
+    "area_m2_approx": 306,
+    "setback_m": 4.5,
+    "note": "CONCEPT — indicative boundary trace, not a surveyed envelope"
+  },
+  "access": {
+    "road": "Säterdalsvägen",
+    "source": "OSM (reference)",
+    "frontage_corner": "SW/low (~65.5 m)",
+    "note": "Google snapped #14→#8; frontage reference-only"
+  },
+  "va_point_schematic": {
+    "location": "road, SW low corner",
+    "gravity_fall_house_to_main": true
+  },
+  "historic_plan_signals_1936": {
+    "act": "avstyckningsplan 0581K-22D:1008 (in force 1936-05-26)",
+    "signals": [
+      "one dwelling house per plot",
+      "max road gradient 1:12",
+      "40 m high-voltage corridor (location unlocated)",
+      "open roadside drainage",
+      "water provided before sale/construction"
+    ],
+    "status": "HISTORIC signal — not confirmed present entitlement",
+    "receipts": [
+      "RCPT_SE_NORRKOPING_PLAN_22D1008_DESCRIPTION",
+      "RCPT_SE_NORRKOPING_PLAN_22D1008_MAP"
+    ]
+  },
+  "sheet": "sheets/svartinge-site-plan.png"
+}

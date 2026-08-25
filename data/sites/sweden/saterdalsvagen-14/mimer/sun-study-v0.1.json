@@ -1,0 +1,80 @@
+{
+  "schema": "mimer-sun-study/v0.1",
+  "evidence_class": "DERIVED",
+  "gate": "GATE_SE_TERRAIN OPEN — bare-earth terrain only, provisional",
+  "site": {
+    "lat": 58.6522414431,
+    "lon": 16.0317063331,
+    "pin_rh2000_m": 69.84,
+    "slope_deg": 14.2,
+    "aspect_deg": 207,
+    "aspect_compass": "SW"
+  },
+  "sun_positions": {
+    "summer-solstice": {
+      "9": {
+        "az": 103.7,
+        "alt": 35.7
+      },
+      "12": {
+        "az": 157.5,
+        "alt": 53.3
+      },
+      "15": {
+        "az": 224.9,
+        "alt": 48.7
+      },
+      "18": {
+        "az": 270.8,
+        "alt": 27.3
+      }
+    },
+    "equinox": {
+      "9": {
+        "az": 118.7,
+        "alt": 16.7
+      },
+      "12": {
+        "az": 165.8,
+        "alt": 30.8
+      },
+      "15": {
+        "az": 217.2,
+        "alt": 26.1
+      },
+      "18": {
+        "az": 259.7,
+        "alt": 6.5
+      }
+    },
+    "winter-solstice": {
+      "9": {
+        "az": 140.9,
+        "alt": 0.8
+      },
+      "12": {
+        "az": 181.4,
+        "alt": 8.0
+      },
+      "15": {
+        "az": 221.7,
+        "alt": -0.1
+      },
+      "18": {
+        "az": 258.5,
+        "alt": -20.6
+      }
+    }
+  },
+  "terrace_recommendation": {
+    "orientation": "SW (facing ~205–215°)",
+    "why": "Natural plot fall is SW at 14° — building the main terrace on the downslope SW corner aligns the outdoor room with (a) the measured Glan water-view axis to the south and (b) midday-through-sunset sun. Morning sun reaches the plot unobstructed by terrain; the only self-shadowing is the plot's own upslope NE edge in early winter mornings.",
+    "avoid": "NE upper corner for primary outdoor living — it loses sun first and faces away from Glan."
+  },
+  "images": [
+    "sun-shadows-summer-solstice.png",
+    "sun-shadows-equinox.png",
+    "sun-shadows-winter-solstice.png",
+    "sun-path-polar.png"
+  ]
+}
