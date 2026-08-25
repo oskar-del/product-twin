@@ -1,6 +1,30 @@
 # Avatar Factory (Claude) — persistent handoff
 
-> ## ⛳ CURRENT MANDATE — 2026-08-21 (SUPERSEDES everything below; re-read this on every resume/compaction)
+> ## ⛳ CURRENT MANDATE — 2026-08-25 (from Brain fleet sweep; SUPERSEDES everything below; re-read on every resume/compaction)
+>
+> **1. FIX THE 7f72563 REGRESSION FIRST — before anything else.** Your unpushed commit
+> "universal proxy builder — all 203 twins promoted to G2" silently DOWNGRADED 11 twins
+> that had richer geometry: 9 material-cued IKEA GLBs (e.g. LISTERBY oak veneer, POÄNG,
+> KIVIK) plus the NORR11 FAVE and Wendelbo ATLI **native** GLBs — all overwritten with
+> generic category-colour proxies while the richer files still sit in
+> `data/geometry/avatars/`. This violates the materials-from-spine rule. Fix = follow-up
+> commit: (a) re-point the 11 twin JSONs back to their richer GLBs (no regeneration
+> needed), (b) fix the skip logic in `scripts/build-all-proxies.mjs` to detect existing
+> material-cued/native geometry, (c) make `avatar-index.json` counts derived, not typed.
+> Then flag Oskar to push both commits together.
+> **2. Commerce truth, not commerce theatre.** Verified 2026-08-25: `affiliate_link`
+> 0/203 (hardcoded null at `scripts/backfill-commerce.mjs:49`), `ean` 2/203,
+> cart_deeplinks are plain untracked URLs. Pre-write the Adtraction link-wrapping in
+> backfill-commerce.mjs behind a config flag NOW so approval day = backfill day; backfill
+> EAN from the IKEA feed rows you already have.
+> **3. Reality check on IKEA:** the Adtraction application was NEVER SUBMITTED (API shows
+> no channels + no applications — Oskar must register a channel first). Don't block on
+> it; don't claim it's pending.
+> Full verified state: `docs/FLEET-STATE-2026-08-25.md` on `agent/brain`.
+> Everything below (2026-08-21 queue: pack compiler, graph fields, BIMobject) remains
+> your backlog AFTER items 1-2.
+
+> ## ⛳ PREVIOUS MANDATE — 2026-08-21 (backlog after the block above)
 >
 > **You are ACQUISITION-ONLY. You build AVATARS. You are measured in avatars/day, not features.**
 > The showroom surface (prototype/showroom-living — swap UX, mobile, composite, colour) has TRANSFERRED to the Platform & 3D Engine session. **Do NOT work on the showroom app.** If you catch yourself editing the Altea/showroom pitch, STOP — that is drift; it belongs to Platform now.
