@@ -136,7 +136,8 @@ export function validateArchitecturalHeroViewer(html){
   check(section.includes("function addArchitecturalEnvelopeDepth")&&section.includes("envelopeDepth='CONCEPT_PRESENTATION_ONLY'")&&section.includes("addArchitecturalEnvelopeDepth(assembly"),"architectural hero envelope lacks corner, shadow-gap or fascia depth");
   check(section.includes("function addConceptRailing")&&section.includes("function addConceptSteps")&&section.includes("unit.userData.evidenceEffect='NONE'"),"architectural hero deck edge or arrival transition remains unresolved");
   check(html.includes("CONCEPT_HOUSE_ON_PLOT:35")&&html.includes("camera.setViewOffset(width+dockReserve")&&html.includes("mode!=='COMPARE'"),"architectural hero framing does not reserve the design panel or preserve comparison framing");
-  check(html.includes("plotAnalyticalCue")&&html.includes("isPlotBeaconFill")&&html.includes("candidatePreview?.035:.1")&&html.includes("depthTest:true"),"architectural hero is obscured by analytical plot overlays");
+  check(html.includes("plotAnalyticalCue")&&html.includes("isPlotBeaconFill")&&html.includes("candidatePreview?.035:.1")&&html.includes("object.userData.plotBoundaryCue&&object.isLine")&&html.includes("object.material.depthTest=true")&&html.includes("conceptOcclusionSafe=true"),"architectural hero is obscured by analytical plot overlays");
+  check(html.includes("function syncHeroIntentPresentation")&&html.includes("if(object.userData.intentLens)object.visible=false")&&html.includes("function renderSynchronizedFrame(){syncHeroIntentPresentation();"),"architectural hero is obscured by analytical intent overlays");
   check(html.includes("currentSiteClutter")&&html.includes("realistic&&!candidatePreview")&&!section.includes("new THREE.PointLight")&&!section.includes("EffectComposer"),"architectural hero clutter isolation or performance boundary missing");
   return {ok:errors.length===0,assertions,errors};
 }
@@ -166,6 +167,8 @@ export function validateArchitecturalComparisonViewer(html){
   check(html.includes("comparisonLens.classList.toggle('hidden',!conceptComparison)")&&html.includes("schemeCompareLabels.classList.toggle('hidden',!conceptComparison)")&&html.includes("designDock.classList.toggle('hidden',!conceptStudy||conceptComparison)"),"architectural comparison overlays are not isolated to the concept comparison stage");
   check(html.includes("conceptComparison?3:2")&&html.includes("paneIndex=Math.min(paneCount-1")&&html.includes("Math.floor(e.clientX/paneWidth)"),"architectural comparison pointer mapping does not respect the three synchronized viewports");
   check(html.includes("THREE ORBITABLE ARCHITECTURAL CONCEPTS · SAME PLOT · SAME CAMERA")&&html.includes("innerWidth/3")&&html.includes("CONCEPT_HOUSE_ON_PLOT'?50:62")&&!section.includes("new THREE.PointLight")&&!section.includes("EffectComposer"),"architectural comparison framing, orbitability or performance boundary drift");
+  check(html.includes("gradient.addColorStop(1,'#b8ced0')")&&html.includes("comparisonSafeHorizon=true")&&html.includes("sky.userData.currentSiteClutter=true")&&!html.includes("gradient.addColorStop(1,'#eef0df')"),"architectural comparison repeats a white sky-horizon slab across viewports");
+  check(html.includes(".scheme-compare-labels:not(.hidden)::before")&&html.includes("left:33.3333%")&&html.includes("left:66.6667%"),"architectural comparison viewports lack deliberate full-height separation");
   return {ok:errors.length===0,assertions,errors};
 }
 

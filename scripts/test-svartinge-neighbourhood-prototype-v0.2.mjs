@@ -176,6 +176,8 @@ const architecturalHeroViewerAttacks=[
   ["hero envelope depth removed",html=>html.replace("function addArchitecturalEnvelopeDepth","function omitArchitecturalEnvelopeDepth"),"envelope lacks corner"],
   ["hero deck edge removed",html=>html.replace("function addConceptRailing","function omitConceptRailing"),"deck edge or arrival transition"],
   ["hero plot overlay restored",html=>html.replace("candidatePreview?.035:.1",".1"),"architectural hero is obscured"],
+  ["hero boundary line draws through architecture",html=>html.replace("object.material.depthTest=true","object.material.depthTest=false"),"architectural hero is obscured"],
+  ["hero intent overlays restored",html=>html.replace("if(object.userData.intentLens)object.visible=false","if(object.userData.intentLens)object.visible=true"),"architectural hero is obscured"],
   ["hero plot clutter restored",html=>html.replace("realistic&&!candidatePreview","realistic"),"architectural hero clutter isolation"]
 ];
 for(const [name,mutate,needle] of architecturalHeroViewerAttacks){
@@ -189,7 +191,9 @@ const architecturalComparisonViewerAttacks=[
   ["comparison living caveat removed",html=>html.replace("view performance remain unverified","view performance verified"),"architectural comparison living lens"],
   ["comparison review silently selects",html=>html.replace("setActiveCandidate(candidate.candidate_id);setMode('REALISTIC')","sessionSelectedCandidateId=candidate.candidate_id;setMode('REALISTIC')"),"silently selecting a scheme"],
   ["comparison raycast left binary",html=>html.replace("conceptComparison?3:2","conceptComparison?2:2"),"three synchronized viewports"],
-  ["comparison orbit framing removed",html=>html.replace("THREE ORBITABLE ARCHITECTURAL CONCEPTS","THREE STATIC ARCHITECTURAL CONCEPTS"),"framing, orbitability or performance"]
+  ["comparison orbit framing removed",html=>html.replace("THREE ORBITABLE ARCHITECTURAL CONCEPTS","THREE STATIC ARCHITECTURAL CONCEPTS"),"framing, orbitability or performance"],
+  ["comparison white horizon restored",html=>html.replace("sky.userData.currentSiteClutter=true","sky.userData.currentSiteClutter=false"),"repeats a white sky-horizon slab"],
+  ["comparison viewport separators removed",html=>html.replaceAll(".scheme-compare-labels:not(.hidden)",".scheme-compare-labels"),"viewports lack deliberate full-height separation"]
 ];
 for(const [name,mutate,needle] of architecturalComparisonViewerAttacks){
   const result=validateArchitecturalComparisonViewer(mutate(viewerBaseline));
