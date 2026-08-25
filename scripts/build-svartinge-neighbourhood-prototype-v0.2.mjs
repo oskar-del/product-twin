@@ -16,6 +16,8 @@ const round=(n,d=4)=>Number(n.toFixed(d));
 
 // Authoritative terrain heightfield derived from the gate-tracked Lantmäteriet 1 m DTM COG.
 const terrainDerived=read(`${base}/terrain-dem-derived-v0.1.json`);
+// DERIVED neighbourhood context from OpenStreetMap (ODbL, © OSM contributors).
+const osmContext=read(`${base}/osm-context-derived-v0.1.json`);
 const HF=terrainDerived.heightfield;
 function terrainY(x,z){
   const n=HF.segments,step=HF.size_m/n,half=HF.size_m/2;
@@ -72,8 +74,8 @@ function element(id,type,label,evidence_class,geometry,source_refs=[],limitation
   return {id,type,label,evidence_class,geometry,source_refs,limitations};
 }
 
-function building(id,x,z,w,d,h,rotation=0){
-  return element(id,"CONTEXT_BUILDING",`Context massing ${id.split("_").at(-1)}`,"DERIVED",{primitive:"BOX",position:[x,h/2,z],size:[w,h,d],rotation_y_deg:rotation},["RCPT_SE_LISTING_MAP_IMAGE"],["Footprint position and envelope are diagrammatically traced/estimated from the listing map.","Height is a context-massing estimate, not a surveyed storey or ridge height.","No ownership, use, lawful-status or address claim."]);
+function building(id,x,z,w,d,h,rotation=0,name=null){
+  return element(id,"CONTEXT_BUILDING",name?`Context building · ${name}`:"Context building (OSM)","DERIVED",{primitive:"BOX",position:[x,h/2,z],size:[w,h,d],rotation_y_deg:rotation},["OSM_CONTEXT_ODBL"],["Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.","Height is estimated from building:levels or a default, not a surveyed ridge height.","Superseded by the Lantmäteriet byggnad vector when acquired."]);
 }
 
 function buildScene(){
@@ -90,17 +92,14 @@ function buildScene(){
   elements.push(element("PLOT_54_28","PLOT","SVÄRTINGE 54:28 indicative municipal-map trace","INDICATIVE",{primitive:"EXTRUDED_POLYGON",points_xz:plot,base_y:0.15,height:0.18,area_m2:derivedArea},["FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED","RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY","RCPT_SE_LISTING_MAP_IMAGE"],["Shape is a derived visual trace scaled to the NOKA municipal-map surface area.","NOKA states that displayed boundaries have no legal effect.","Not suitable for cadastral, setback, area certification or set-out use."]));
   elements.push(element("ADDRESS_LOCATOR","ANCHOR","Säterdalsvägen 14 municipal locator","AUTHORITATIVE",{primitive:"MARKER",position:[0,2.5,0]},["FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"],["Authoritative only as a dated municipal address-to-property observation.","Not a survey control point or property-register title record."]));
 
-  elements.push(element("ROAD_SATERDALSVAGEN","ROAD","Säterdalsvägen derived alignment","DERIVED",{primitive:"POLYLINE_RIBBON",points:[[-150,0,-54],[-70,0,-43],[-35,0,-30],[-28,0,-18],[-27,0,80]],width_m:6},["RCPT_SE_LISTING_MAP_IMAGE","RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"],["Diagrammatic alignment traced from available map imagery.","No current centreline, width, gradient, road-manager or legal-access claim."]));
-  elements.push(element("ROAD_GAMLA_LANDSVAGEN","ROAD","Gamla Landsvägen derived alignment","DERIVED",{primitive:"POLYLINE_RIBBON",points:[[20,0,-31],[85,0,-44],[155,0,-52]],width_m:7},["RCPT_SE_LISTING_MAP_IMAGE"],["Diagrammatic alignment traced from listing map imagery.","Width and vertical geometry are estimated for navigation only."]));
+  let sawSater=false;
+  osmContext.roads.forEach(r=>{
+    const id=(r.name==="Säterdalsvägen"&&!sawSater)?(sawSater=true,"ROAD_SATERDALSVAGEN"):r.id;
+    elements.push(element(id,"ROAD",r.name?`${r.name} (OSM)`:"Road (OSM)","DERIVED",{primitive:"POLYLINE_RIBBON",points:r.points_xz.map(([x,z])=>[x,0,z]),width_m:r.width_m},["OSM_CONTEXT_ODBL"],["Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."]));
+  });
+  if(!sawSater)elements.find(e=>e.type==="ROAD").id="ROAD_SATERDALSVAGEN";
 
-  [
-    ["CTX_BLDG_01",-88,-20,18,11,5.8,-12],["CTX_BLDG_02",-115,-72,14,10,5.2,8],
-    ["CTX_BLDG_03",-57,-76,17,12,6.1,-4],["CTX_BLDG_04",10,-58,12,9,5.4,15],
-    ["CTX_BLDG_05",58,-30,26,11,6.2,-17],["CTX_BLDG_06",92,-70,17,11,5.8,-11],
-    ["CTX_BLDG_07",91,32,22,12,6.0,7],["CTX_BLDG_08",-90,57,17,11,5.6,12],
-    ["CTX_BLDG_09",-45,91,18,12,6.1,-5],["CTX_BLDG_10",42,88,16,10,5.5,9],
-    ["CTX_BLDG_11",126,68,19,12,6.4,-8],["CTX_BLDG_12",133,-10,15,10,5.2,11]
-  ].forEach(args=>elements.push(building(...args)));
+  osmContext.buildings.forEach(b=>elements.push(building(b.id,b.center_xz[0],b.center_xz[1],b.size[0],b.size[2],b.size[1],b.rotation_deg,b.name)));
 
   elements.push(element("VIEW_GLAN","VIEW_DIRECTION","Reported Glan view direction","REPORTED_UNVERIFIED",{primitive:"DIRECTION_CONE",origin:[5,3,-3],azimuth_deg:185,length_m:95,spread_deg:22},["PROJECT_SE_SATERDALSVAGEN14","RCPT_SE_LISTING"],["Direction is a concept visualization of the seller-reported Glan view.","No verified sightline, obstruction, seasonal foliage or view-right claim."]));
   elements.push(element("SOLAR_PATH","ENVIRONMENTAL_ANCHOR","Derived solar path","DERIVED",{primitive:"SOLAR_ARC",latitude_deg:lat,longitude_deg:lon,study_date:"2026-06-21",hours:[6,8,10,12,14,16,18,20]},["COORDINATE_ANCHOR"],["Solar vectors are analytical directions from the working coordinate.","Context massing and terrain are not verified, so shadows are concept-study output only."]));
