@@ -33,5 +33,15 @@ Both are committed, DERIVED, attributed, and evidence-safe:
 
 The plot is still an INDICATIVE trace. The authoritative parcel polygon + building footprints are the Lantmäteriet vectors, currently **403 (not ordered)** on the Geotorget account (kundnr 30056732) — the download credential (`lantmateriet.env`) authenticates fine; the products just aren't granted. **Action (Oskar):** order **`Fastighetsindelning nedladdning, vektor`** + **`Byggnad nedladdning, vektor`** in Geotorget (free, accepts terms). Then Spatial Studio downloads + integrates them exactly like terrain (verify feature identity → replace the trace with the registered polygon → re-run the point-only risk screens against real geometry), and the OSM buildings are superseded by authoritative footprints. This is the pillar that turns "indicative" into "real boundary".
 
+## Boundary source investigation (verified 2026-08-18 — why the order is unavoidable)
+
+Autonomous routes to a real parcel polygon were tested and **all fail without the Geotorget order**:
+- **Norrköping WMS** (`kartor.norrkoping.se` / `kartdata.norrkoping.se`, MapServer 6.4.1, EPSG:3010): has `fastighetskarta` + `f_fastighetsgranser` layers, but **0 layers are queryable** — `GetFeatureInfo` returns `LayerNotQueryable`. It serves raster tiles only (usable as an imagery drape, not geometry).
+- **WFS**: 404 on both hosts — no public vector service.
+- **Lantmäteriet `fastighetsindelning` vector**: `dl1` returns **403** with the working download credential (authenticated but product not granted) — needs the order.
+- The NOKA front-end holds the polygon (area to 6 dp, 1938.198844 m²) but exposes no located public geometry endpoint; even if found it is "no legal effect" indicative, inferior to the authoritative Lantmäteriet vector.
+
+Conclusion: the **authoritative boundary requires ordering `Fastighetsindelning nedladdning, vektor`** (kundnr 30056732). No code path substitutes for it. (Norrköping WMS could still drape municipal orthophoto as an imagery layer — an imagery win, not a boundary one.)
+
 ## Status
 Data layer (terrain closed, OSM, satellite): **done, committed, trunk-consumable.** Boundary: **blocked on the order above.** Photos + trunk look: **trunk-owner action per §1–3.** Spatial Studio will implement the design-selector `mountDesign` hook (see `DESIGN-SELECTOR-MOUNT-CONTRACT.md`) once Platform freezes the A/B/C spec.
