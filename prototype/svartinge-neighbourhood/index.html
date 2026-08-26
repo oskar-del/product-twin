@@ -94,14 +94,15 @@ function drapeSatelliteTerrain(token){
   loader.load(url,tex=>{tex.colorSpace=THREE.SRGBColorSpace;const m=terrainObject.userData.realisticMaterial;m.map=tex;m.color.set(0xffffff);m.needsUpdate=true;satAttribution.classList.remove('hidden');orthoAttribution.classList.add('hidden');},undefined,()=>setLiveStatus('SATELLITE DRAPE FAILED · CHECK MAPBOX TOKEN URL RESTRICTIONS',true));
 }
 function undrapeSatelliteTerrain(){_satToken=null;satAttribution.classList.add('hidden');drapeMunicipalOrtho();}
-const orthoAttribution=document.createElement('div');orthoAttribution.textContent='Ground: © Lantmäteriet ortofoto · Norrköpings kommun WMS (live)';orthoAttribution.className='hidden';orthoAttribution.style.cssText='position:fixed;right:16px;bottom:52px;z-index:9;background:rgba(20,35,29,.82);color:#fff;font-size:8px;letter-spacing:.05em;padding:4px 8px;border-radius:6px;pointer-events:none';document.body.appendChild(orthoAttribution);
+const orthoAttribution=document.createElement('div');orthoAttribution.textContent='Ground: © Lantmäteriet ortofoto + real cadastral boundaries · Norrköpings kommun WMS (live, indicative)';orthoAttribution.className='hidden';orthoAttribution.style.cssText='position:fixed;right:16px;bottom:52px;z-index:9;background:rgba(20,35,29,.82);color:#fff;font-size:8px;letter-spacing:.05em;padding:4px 8px;border-radius:6px;pointer-events:none';document.body.appendChild(orthoAttribution);
 function drapeMunicipalOrtho(){
   if(!terrainObject||_satToken)return; // a connected Mapbox satellite drape takes priority
   const N0=6504026.41,E0=122813.93,h=(data.elements.find(e=>e.id==='TERRAIN_CONTEXT')?.geometry.size_m||360)/2; // pin in EPSG:3010 (SWEREF 99 16 30)
   const bbox=[N0-h,E0-h,N0+h,E0+h].map(v=>v.toFixed(2)).join(','); // WMS 1.3.0 axis order N,E
-  const url=`https://kartdata.norrkoping.se/wms?servicename=kartor&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG:3010&BBOX=${bbox}&WIDTH=1024&HEIGHT=1024&FORMAT=image/jpeg&STYLES=&LAYERS=extwms_lm_ortofoto`;
+  // Composite: Lantmäteriet ortofoto + real municipal cadastral boundaries + fastighet labels.
+  const url=`https://kartdata.norrkoping.se/wms?servicename=kartor&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG:3010&BBOX=${bbox}&WIDTH=1536&HEIGHT=1536&FORMAT=image/jpeg&STYLES=&LAYERS=extwms_lm_ortofoto,f_fastighetsgranser,txt_fastighbeteckning`;
   const loader=new THREE.TextureLoader();loader.setCrossOrigin('anonymous');
-  loader.load(url,tex=>{if(_satToken)return;tex.colorSpace=THREE.SRGBColorSpace;const m=terrainObject.userData.realisticMaterial;m.map=tex;m.color.set(0xffffff);m.needsUpdate=true;orthoAttribution.classList.remove('hidden');},undefined,()=>{});
+  loader.load(url,tex=>{if(_satToken)return;tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=renderer.capabilities.getMaxAnisotropy?.()||1;const m=terrainObject.userData.realisticMaterial;m.map=tex;m.color.set(0xffffff);m.needsUpdate=true;orthoAttribution.classList.remove('hidden');},undefined,()=>{});
 }
 function skyGradientTexture(){const canvas=document.createElement('canvas');canvas.width=16;canvas.height=256;const ctx=canvas.getContext('2d');const grad=ctx.createLinearGradient(0,0,0,256);grad.addColorStop(0,'#5b8fbd');grad.addColorStop(.42,'#8fb7cd');grad.addColorStop(.72,'#c2d4d5');grad.addColorStop(1,'#e4ebe2');ctx.fillStyle=grad;ctx.fillRect(0,0,16,256);const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;return texture}
 let _hf=null;
