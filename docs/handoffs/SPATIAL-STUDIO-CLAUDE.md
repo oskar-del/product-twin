@@ -1,5 +1,30 @@
 # Plot-to-Project Spatial Studio — Claude Session Handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-08-27 (Brain; LANTMÄTERIET DATA LANDED; re-read every resume)
+>
+> Your "Geotorget order is unavoidable" blocker is RESOLVED. Orders LM2026/114822
+> (fastighetsindelning) + LM2026/114814 (byggnad) were delivered 2026-08-27; the zips
+> live at `"../lm-data/"` (repo-external, NOT in git — LM license). Brain already ran
+> YOUR drop-in (`scripts/ingest-property-division.py`) against the real data — one fix
+> was needed (real LM schema splits designation into trakt+etikett; composed, fallback
+> kept) — and GATE_SE_PROPERTY_DIVISION_CONTEXT is CLOSED:
+> `data/sites/sweden/saterdalsvagen-14/property-division-derived-v0.1.json` — subject
+> SVÄRTINGE 54:28, 1 ring (7 pts), **1 936.8 m² AUTHORITATIVE** (Lantmäteriet), 75
+> context parcels, full sha256 receipt chain. Validator re-run: 838 PASS.
+>
+> YOUR QUEUE NOW:
+> 1. **Wire the viewer overlay** to render the authoritative boundary (your own
+>    script's final message) — replace the provisional developer trace everywhere;
+>    evidence chip flips INDICATIVE → AUTHORITATIVE.
+> 2. **Byggnad footprints**: `../lm-data/byggnad_kn0581.zip` (35 MB GPKG) = official
+>    building geometry for the neighbourhood — upgrade/verify the OSM context with it
+>    (same ingest pattern; receipts mandatory).
+> 3. Nationwide: the grant serves EVERY kommun via
+>    `api.lantmateriet.se/stac-vektor/v1/collections/{fastighetsindelning,byggnader}/items/<kommunkod>`
+>    — keep the ingest generic; this is the plot-analysis SEO machine's data layer.
+> Then continue trunk adoption (COMPARE + Site Intelligence = one experience).
+> Commit every block; Oskar pushes.
+
 ## Role
 
 This is the persistent **Claude** specialist session for the Plot-to-Project Spatial Studio workstream. It continues the ChatGPT chat "3: Plot-to-Project Spatial Studio" with the capabilities that environment lacked: full local filesystem, authenticated GitHub push, a real browser, and the ability to download and process official Swedish geodata.
