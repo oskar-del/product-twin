@@ -11,12 +11,18 @@
 >    43 m fall to Glan over 800 m, ~70 m RH2000 at the pin. Your chip "Sluttning okänd
 >    (DTM väntar)" is stale — THE SLOPE IS CONFIRMED, which validates the suterräng
 >    logic in House A and House B's optional suterräng west gable.
-> QUEUE: (a) update the tre-hus presentation's evidence chips + footer (remove the
-> DTM-401 caveat, keep Glan-view still seller-reported); (b) draw House A's missing
-> undervåning plan — now grounded in real slope; (c) STILL WAITING: Oskar's winner
-> call — your Vinkelhuset recommendation stands; on the call, the winner's full
-> ritningsuppsättning → Essence dollhouse pipeline + Spatial mount (your designs are
-> already mounted in the studio as concept masses).
+> QUEUE: (a) update the tre-hus presentation's evidence chips + footer — DONE; (b) House
+> A undervåning plan — DONE.
+> **(c) ⭐ WINNER CALLED 2026-08-27: VINKELHUSET (House B).** Oskar picked it; Brain added
+> the "Vald riktning: Vinkelhuset" decision section to the presentation (id="valt", with
+> the 4-point rationale) and republished the artifact. YOUR JOB NOW: draw Vinkelhuset's
+> FULL ritningsuppsättning — all four fasader at detail scale, sections, construction
+> details, materialspecifikation, dimensioned plan(s) incl. the optional west-gable
+> suterräng — architect-portfolio quality — then hand the geometry to (1) Essence's
+> floorplan→dollhouse pipeline for 3D and (2) Spatial's design-selector mount (spec:
+> geometry/house-v0.2-geometry-spec.json). Refine/expand the decision rationale I drafted
+> if you want it sharper — it's grounded but it's your voice.
+> After Vinkelhuset ships: the 10-type Swedish classics library.
 > Commit every block; Oskar pushes.
 
 BRAGE is the creative counterpart to MIMER: MIMER measures the site, BRAGE argues **what deserves to stand on it**, then develops the chosen concept into a spatial + systems spec the engine can build.
