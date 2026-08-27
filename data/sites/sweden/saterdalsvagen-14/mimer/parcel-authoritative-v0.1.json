@@ -1,0 +1,33 @@
+{
+  "schema": "mimer-parcel-authoritative/v0.1",
+  "subject": "SVÄRTINGE 54:28",
+  "evidence_class": "AUTHORITATIVE",
+  "authority": "Lantmäteriet",
+  "what": "Registered property-division extent for the subject parcel — supersedes the earlier indicative municipal trace and the seller-reported area for the identity/geometry claims.",
+  "authoritative_area_m2": 1936.8,
+  "area_method": "shoelace of the registered subject ring (7 vertices), independently recomputed 2026-08-27 → 1936.8 m² (matches the LM registerenhetsomradesyta)",
+  "source_object_id": "registerenhetsomradesyta:51016844",
+  "source_product": "fastighetsindelning_kn0581 (GeoPackage)",
+  "source_crs": "EPSG:3006 (SWEREF99TM)",
+  "senast_andrad": "2023-01-27",
+  "delivery": {
+    "orders": ["LM2026/114822 (fastighetsindelning)", "LM2026/114814 (byggnad)"],
+    "delivered": "2026-08-27",
+    "license_note": "Raw LM GeoPackage is repo-external (../lm-data/), NOT committed — Lantmäteriet licence. Only derived extent is used."
+  },
+  "receipts": {
+    "raw_asset_zip_sha256": "839f729f63d8393a02f4a111cd0ca51b4366c2a322e24b89a6da6aa605a4b646",
+    "raw_asset_byte_count": 44439286,
+    "gpkg_entry": "fastighetsindelning_kn0581.gpkg (115372032 bytes)",
+    "derived_geometry_sha256": "92ab23e77fac6478dc966b70f88204bd677ace2614b1716d86bd1f58323ffe6f"
+  },
+  "consumes": "repo-spatial-studio: data/sites/sweden/saterdalsvagen-14/property-division-derived-v0.1.json (Spatial ingest, evidence_class AUTHORITATIVE)",
+  "limitations": [
+    "Authoritative for EXTENT (registered division), NOT a survey of monument (gränsmarkering) positions — a plot-specific survey is still required before setting building corners.",
+    "Terrain figures remain DERIVED from the 1 m DEM (separate GATE_SE_TERRAIN); this receipt does not upgrade terrain."
+  ],
+  "gate_effects": {
+    "GATE_SE_PLOT_IDENTITY": "SATISFIED (area + registered extent)",
+    "GATE_SE_BOUNDARY_FOR_DESIGN": "SATISFIED_FOR_EXTENT (monument survey still open)"
+  }
+}
