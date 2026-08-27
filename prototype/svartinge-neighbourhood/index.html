@@ -221,14 +221,18 @@ function drawOfficialBuildings(bd){
     const shape=new THREE.Shape(rings[0].map(([x,z])=>new THREE.Vector2(x,-z)));  // -z so ENU north survives rotateX
     for(let k=1;k<rings.length;k++)shape.holes.push(new THREE.Path(rings[k].map(([x,z])=>new THREE.Vector2(x,-z))));
     const h=_BLD_H[b.type]||4;
-    const geo=new THREE.ExtrudeGeometry(shape,{depth:h,bevelEnabled:false});geo.rotateX(-Math.PI/2);
+    // Skirt to the slope: bury the base to the lowest terrain point under the footprint and
+    // extend the volume by the ground spread, so no edge floats or sinks on the 13° fall.
+    const gys=rings[0].map(([x,z])=>groundY(x,z)),minGy=Math.min(...gys),maxGy=Math.max(...gys);
+    const depth=h+(maxGy-minGy)+0.4;
+    const geo=new THREE.ExtrudeGeometry(shape,{depth,bevelEnabled:false});geo.rotateX(-Math.PI/2);
     const item={id:'LM_B_'+i,type:'CONTEXT_BUILDING',evidence_class:'DERIVED',
       label:(b.type||'Byggnad')+' · authoritative footprint',
       geometry:{primitive:'LM byggnad footprint, extruded (height DERIVED)',size:[0,h,0],position:[0,0,0]},
       source_refs:['Lantmäteriet byggnad_kn0581 · '+b.object_id],
       limitations:['Footprint is authoritative registered LM byggnad geometry.','Height is DERIVED — not in the product; a per-type default extrusion.']};
     const cx=rings[0].reduce((s,p)=>s+p[0],0)/rings[0].length,cz=rings[0].reduce((s,p)=>s+p[1],0)/rings[0].length;
-    const mesh=profile(new THREE.Mesh(geo),item);mesh.position.y=groundY(cx,cz);mesh.castShadow=true;mesh.receiveShadow=true;
+    const mesh=profile(new THREE.Mesh(geo),item);mesh.position.y=minGy-0.4;mesh.castShadow=true;mesh.receiveShadow=true;
     officialBuildings.add(mesh);byId.set(item.id,mesh);
   });
 }
