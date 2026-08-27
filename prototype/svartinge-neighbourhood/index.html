@@ -151,9 +151,19 @@ const designStudio=new THREE.Group();root.add(designStudio);let activeDesign='0'
 const DEFAULT_MASSING=['HOUSE_SLAB','HOUSE_WALL_N','HOUSE_WALL_S','HOUSE_WALL_E','HOUSE_WALL_W','HOUSE_ROOF'];
 const DESIGNS=[
   {id:'0',lang:'BASELINE',name:'Prototype concept house',summary:'The default navigation/export concept volume.',footprint:96,storeys:1,gfa:96,boxes:null},
-  {id:'A',lang:'LÅNGHUS',name:'Ridge-parallel bar riding the contour',summary:'A single-storey bar aligned NW–SE along the 70 m contour so every room faces the SW fall toward Glan. The long south-west facade is floor-to-ceiling glass; the north-east wall is closed against wind. Sitting on-grade at one level avoids cutting into the 13° slope — the ground simply falls away from the terrace edge, giving a natural elevated feeling without a second storey.',footprint:119,storeys:1,gfa:119,boxes:[{p:[0,0,0],s:[17,3.2,7],roof:'gable'}]},
-  {id:'B',lang:'VINKELHUS',name:'L-plan with living room lifted into the view',summary:'An L-plan that hinges where the slope steepens. The uphill wing (bedrooms/entry) sits at natural grade; the downhill wing rotates to face Glan and steps 1.2 m lower, following the SW fall. This drop lifts the living room ceiling to double height on the valley side — framing the lake panorama from an elevated position while the bedroom wing shelters the courtyard terrace from the prevailing SW wind.',footprint:118,storeys:1,gfa:126,boxes:[{p:[0,0,0],s:[14,3.2,7],roof:'gable'},{p:[7,-1.2,-7],s:[8,4.4,8],roof:'flat'}]},
-  {id:'C',lang:'SPLITNIVÅ',name:'Three-level cascade tracking the gradient',summary:'Three compact boxes step down the 13° SW slope in 1.5 m drops — entry/garage at road level, living/kitchen mid-level, master suite lowest with a private terrace facing Glan. Each step matches roughly one contour interval, so every volume sits on-grade with minimal earthwork. The cascade creates rooftop views from the upper levels while the lowest box opens directly onto the hillside garden toward the lake.',footprint:95,storeys:1,gfa:131,boxes:[{p:[0,0,0],s:[9,3.0,7],roof:'flat'},{p:[0,-1.5,-8],s:[10,3.2,7],roof:'flat'},{p:[0,-3.0,-16],s:[9,3.2,7],roof:'flat'}]},
+  // The plot is marketed "i samarbete med Eksjöhus" — so the studio carries Eksjöhus's real
+  // Sluttningshus (walk-out slope) catalogue, the product line built for exactly this SW fall.
+  // Massing reconstructed from Eksjöhus's PUBLISHED figures (BOA/footprint/height/storeys);
+  // exact width×depth and roof pitch are not published → proportions are a stated assumption.
+  {id:'BJ',builder:'Eksjöhus',lang:'SLUTTNINGSHUS',name:'Eksjöhus Björkalund',boa:186,footprint:133,storeys:2,gfa:186,src:'eksjohus.se/husmodeller/bjorkalund',
+   summary:'Eksjöhus’s most view-oriented walk-out slope house: entry at the upslope street, a walk-out lower level opening SW to the garden, and a wraparound balcony along the SW façade — here a veranda over the 43 m fall to Lake Glan. 186 m² BOA on a 133 m² footprint.',
+   model:{W:12.6,D:8.4,storeyH:2.6,storeys:2,roof:'gable',ridge:'depth',roofPitch:27,balcony:true,balconyDepth:2.6,facade:'wood'}},
+  {id:'RI',builder:'Eksjöhus',lang:'SLUTTNINGSHUS',name:'Eksjöhus Rimsjö',boa:158,footprint:116,storeys:2,gfa:158,src:'eksjohus.se/husmodeller/rimsjo',
+   summary:'The lightest-footprint Sluttningshus (116 m²) — sits gently on the 1 937 m² lot. An integrated carport whose roof becomes a large SW terrace: a second lake-facing outdoor room. Flex+ plan lets glazing push to the view side. 158 m² BOA.',
+   model:{W:11.4,D:10.2,storeyH:2.7,storeys:2,roof:'flat',balcony:true,balconyDepth:2.2,facade:'render'}},
+  {id:'SU',builder:'Eksjöhus',lang:'SLUTTNINGSHUS',name:'Eksjöhus Sundvik',boa:205,footprint:146,storeys:2,gfa:205,src:'eksjohus.se/husmodeller/sundvik',
+   summary:'The premium Sluttningshus (205 m²): living, kitchen and dining on the ENTRY level so the main rooms take the Glan view from the upper storey; master suite on the walk-out level below. 146 m² footprint.',
+   model:{W:13.6,D:10.7,storeyH:2.7,storeys:2,roof:'gable',balcony:true,balconyDepth:2.4,facade:'wood'}},
 ];
 function studioBox(x,y,z,w,h,d,roof){
   const item={id:'DESIGN_BOX',type:'CONCEPT_BUILDING',evidence_class:'CONCEPT'};
@@ -162,12 +172,51 @@ function studioBox(x,y,z,w,h,d,roof){
   if(roof==='gable'){const r=profile(new THREE.Mesh(new THREE.ConeGeometry(Math.max(w,d)*.7,1.8,4)),item);r.position.set(x,y+h+.9,z);r.rotation.y=Math.PI/4;r.castShadow=true;designStudio.add(r);}
   return m;
 }
+// Reconstructed Eksjöhus suterräng (walk-out slope house) massing, sited on the real fall.
+// Front (long glazed/balcony façade) faces downhill = SW = the Glan view; depth runs uphill.
+let ekWindows=[];   // world-space window/eye points for the Glan sightline pass
+function suterrangHouse(spec){
+  const m=spec.model,ax=1,az=1,e=3;
+  const gx=(groundY(ax+e,az)-groundY(ax-e,az))/(2*e),gz=(groundY(ax,az+e)-groundY(ax,az-e))/(2*e);
+  let dx=-gx,dz=-gz;const L=Math.hypot(dx,dz)||1;dx/=L;dz/=L;              // downhill unit (≈SW)
+  const grp=new THREE.Group();grp.position.set(ax,0,az);grp.rotation.y=Math.atan2(-dx,-dz); // front(-Z)→downhill
+  const gF=groundY(ax+dx*m.D/2,az+dz*m.D/2),gB=groundY(ax-dx*m.D/2,az-dz*m.D/2);
+  const base=Math.min(gF,gB)-0.4,H=m.storeyH;                             // lower floor cut into the fall
+  const item={id:'EK_HOUSE',type:'CONCEPT_BUILDING',evidence_class:'CONCEPT',label:spec.name+' · concept massing',
+    geometry:{primitive:'Reconstructed Eksjöhus '+spec.name.replace('Eksjöhus ','')+' massing',size:[m.W,H*2,m.D],position:[ax,base,az]},
+    source_refs:[spec.src||'Eksjöhus'],
+    limitations:['Massing reconstructed from Eksjöhus published BOA / footprint / height / storeys.','Exact width×depth and roof pitch are a stated assumption (not all published).','CONCEPT class: not an entitlement, setback or FFL claim.']};
+  const facadeCol=m.facade==='render'?0xece9e1:(m.facade==='brick'?0x9a6b52:0xcbb89a);
+  const mk=(geo,col,rough=.9)=>{const me=profile(new THREE.Mesh(geo),item);me.userData.realisticMaterial=new THREE.MeshStandardMaterial({color:col,roughness:rough,side:THREE.DoubleSide});if(mode==='REALISTIC')me.material=me.userData.realisticMaterial;me.castShadow=me.receiveShadow=true;grp.add(me);return me;};
+  mk(new THREE.BoxGeometry(m.W,H,m.D),facadeCol).position.set(0,base+H/2,0);        // lower walk-out
+  mk(new THREE.BoxGeometry(m.W,H,m.D),facadeCol).position.set(0,base+H+H/2,0);      // upper (living+balcony)
+  // SW glazing wall on the front (-Z), both storeys
+  const glass=new THREE.Mesh(new THREE.PlaneGeometry(m.W*0.84,H*2*0.78),new THREE.MeshStandardMaterial({color:0x9fc4d8,roughness:.08,metalness:.25,transparent:true,opacity:.5,side:THREE.DoubleSide}));
+  glass.position.set(0,base+H,-(m.D/2+0.04));glass.userData.item=item;grp.add(glass);
+  // wraparound balcony along the front at the upper (living) level
+  if(m.balcony){const bd=m.balconyDepth||2.4;
+    mk(new THREE.BoxGeometry(m.W+1.4,0.22,bd),0xbfae90).position.set(0,base+H,-(m.D/2+bd/2));
+    const rail=new THREE.Mesh(new THREE.BoxGeometry(m.W+1.4,0.55,0.06),new THREE.MeshStandardMaterial({color:0x5f5f5a,transparent:true,opacity:.55}));rail.position.set(0,base+H+0.4,-(m.D/2+bd));rail.userData.item=item;grp.add(rail);}
+  // roof: 27° ryggåstak, ridge front-to-back (extrude the gable triangle along depth)
+  if(m.roof==='gable'){const rise=(m.W/2)*Math.tan((m.roofPitch||27)*Math.PI/180);
+    const sh=new THREE.Shape();sh.moveTo(-m.W/2,0);sh.lineTo(m.W/2,0);sh.lineTo(0,rise);sh.closePath();
+    const rg=new THREE.ExtrudeGeometry(sh,{depth:m.D,bevelEnabled:false});rg.translate(0,0,-m.D/2);
+    mk(rg,0x4a4a48).position.set(0,base+2*H,0);
+  }else{mk(new THREE.BoxGeometry(m.W,0.3,m.D),0x3f4241).position.set(0,base+2*H+0.15,0);}   // flat roof / terrace deck
+  designStudio.add(grp);
+  // window/eye points for the Glan sightline (upper living, at the balcony rail), in WORLD space
+  const eyeLocal=[[-m.W*0.3,base+H+1.5,-(m.D/2+0.2)],[0,base+H+1.5,-(m.D/2+0.2)],[m.W*0.3,base+H+1.5,-(m.D/2+0.2)]];
+  ekWindows=eyeLocal.map(([lx,ly,lz])=>{const v=new THREE.Vector3(lx,ly,lz);grp.localToWorld(v);return v;});
+  return grp;
+}
 function mountDesign(spec){
   activeDesign=spec.id;
   while(designStudio.children.length)designStudio.remove(designStudio.children[0]);
+  ekWindows=[];
   const ay=groundY(1,1);
-  if(spec.boxes)for(const b of spec.boxes)studioBox(1+b.p[0],ay+b.p[1],1+b.p[2],b.s[0],b.s[1],b.s[2],b.roof);
-  DEFAULT_MASSING.forEach(id=>{const o=byId.get(id);if(o)o.userData.designHidden=!!spec.boxes;});
+  if(spec.model)suterrangHouse(spec);
+  else if(spec.boxes)for(const b of spec.boxes)studioBox(1+b.p[0],ay+b.p[1],1+b.p[2],b.s[0],b.s[1],b.s[2],b.roof);
+  DEFAULT_MASSING.forEach(id=>{const o=byId.get(id);if(o)o.userData.designHidden=!!(spec.boxes||spec.model);});
   if(data&&data.navigation)applyStageVisibility(data.navigation[currentStep]);
   if(window.updateDesignDock)window.updateDesignDock(spec);
 }
@@ -175,13 +224,15 @@ function clearDesign(){mountDesign(DESIGNS[0]);}
 function buildDesignDock(){
   const dock=document.createElement('div');dock.id='designDock';dock.className='hidden';
   dock.style.cssText='position:fixed;right:16px;top:154px;z-index:9;width:min(320px,calc(100vw - 32px));background:rgba(20,35,29,.94);color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:15px;box-shadow:0 18px 48px rgba(0,0,0,.2);backdrop-filter:blur(16px);font-size:11px';
-  dock.innerHTML='<div style="display:flex;justify-content:space-between;gap:12px"><b style="font-size:9px;letter-spacing:.12em">CONCEPT DESIGN STUDIO</b><span style="font-size:7px;letter-spacing:.09em;color:#d9b669">ON THE LAND</span></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px;padding:8px;border-radius:10px;background:rgba(255,255,255,.05)"><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">13° SW</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">SLOPE · ASPECT</span></div><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">43 m</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">GLAN FALL / 800 m</span></div><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">70 m</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">RH2000 AT PIN</span></div></div><div style="font-size:7px;letter-spacing:.05em;color:rgba(255,255,255,.42);margin-top:5px">Measured land the designs respond to (authoritative 1 m DTM)</div><div id="ddOpts" style="display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:12px 0"></div><div id="ddLang" style="font-size:7px;letter-spacing:.11em;color:#d9b669"></div><div id="ddName" style="font:500 19px/1.05 Georgia,serif;margin:5px 0"></div><div id="ddSummary" style="font-size:9px;line-height:1.5;color:rgba(255,255,255,.66)"></div><div id="ddMetrics" style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:11px"></div><div style="margin-top:11px;padding:8px;border-radius:9px;background:rgba(181,95,74,.22);font-size:7px;line-height:1.45;color:#f5d8cf">Concept massing studies on the real plot, terrain &amp; boundary — each a distinct response to the measured land (13° SW fall, Glan view). CONCEPT class: massing only, no entitlement, setback or FFL claim.</div>';
+  dock.innerHTML='<div style="display:flex;justify-content:space-between;gap:12px"><b style="font-size:9px;letter-spacing:.12em">CONCEPT DESIGN STUDIO</b><span style="font-size:7px;letter-spacing:.09em;color:#d9b669">ON THE LAND</span></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px;padding:8px;border-radius:10px;background:rgba(255,255,255,.05)"><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">13° SW</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">SLOPE · ASPECT</span></div><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">43 m</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">GLAN FALL / 800 m</span></div><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">70 m</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">RH2000 AT PIN</span></div></div><div style="font-size:7px;letter-spacing:.05em;color:rgba(255,255,255,.42);margin-top:5px">Measured land the designs respond to (authoritative 1 m DTM)</div><div id="ddOpts" style="display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:12px 0"></div><div id="ddLang" style="font-size:7px;letter-spacing:.11em;color:#d9b669"></div><div id="ddName" style="font:500 19px/1.05 Georgia,serif;margin:5px 0"></div><div id="ddSummary" style="font-size:9px;line-height:1.5;color:rgba(255,255,255,.66)"></div><div id="ddMetrics" style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:11px"></div><div style="margin-top:11px;padding:8px;border-radius:9px;background:rgba(181,95,74,.22);font-size:7px;line-height:1.45;color:#f5d8cf">Eksjöhus’s real Sluttningshus (walk-out) models — the line built for exactly this SW fall — reconstructed as massing from their published figures and sited on the real plot, terrain &amp; boundary. Exact width×depth &amp; roof pitch assumed (not all published). CONCEPT class: modelled after Eksjöhus, not their drawings; no entitlement / setback / FFL claim.</div>';
   document.body.appendChild(dock);
   const opts=dock.querySelector('#ddOpts');
-  DESIGNS.forEach(d=>{const b=document.createElement('button');b.textContent=d.id==='0'?'Base':d.id;b.dataset.id=d.id;b.style.cssText='border:1px solid rgba(255,255,255,.18);background:transparent;color:rgba(255,255,255,.72);border-radius:9px;padding:8px 4px;font-size:9px;cursor:pointer';b.onclick=()=>mountDesign(d);opts.appendChild(b);});
+  DESIGNS.forEach(d=>{const b=document.createElement('button');b.textContent=d.builder?d.name.replace('Eksjöhus ',''):'Base';b.dataset.id=d.id;b.style.cssText='border:1px solid rgba(255,255,255,.18);background:transparent;color:rgba(255,255,255,.72);border-radius:9px;padding:7px 3px;font-size:8px;cursor:pointer';b.onclick=()=>mountDesign(d);opts.appendChild(b);});
   window.updateDesignDock=spec=>{
-    dock.querySelector('#ddLang').textContent=spec.lang;dock.querySelector('#ddName').textContent=spec.name;dock.querySelector('#ddSummary').textContent=spec.summary;
-    dock.querySelector('#ddMetrics').innerHTML=[['Footprint',spec.footprint+' m²'],['Storeys',spec.storeys],['GFA ≈',spec.gfa+' m²']].map(([k,v])=>`<div style="border-top:1px solid rgba(255,255,255,.14);padding-top:8px"><b style="display:block;font:500 15px/1 Georgia,serif">${v}</b><span style="font-size:6px;letter-spacing:.08em;color:rgba(255,255,255,.5)">${k}</span></div>`).join('');
+    dock.querySelector('#ddLang').textContent=(spec.builder?spec.builder+' · ':'')+spec.lang;dock.querySelector('#ddName').textContent=spec.name;
+    dock.querySelector('#ddSummary').innerHTML=spec.summary+(spec.builder?`<div style="margin-top:6px;font-size:7px;letter-spacing:.05em;color:rgba(255,255,255,.42)">Modelled after ${spec.builder} ${spec.name.replace(spec.builder+' ','')} · ${spec.src}</div>`:'');
+    const metrics=spec.builder?[['BOA',spec.boa+' m²'],['Footprint',spec.footprint+' m²'],['Storeys',spec.storeys]]:[['Footprint',spec.footprint+' m²'],['Storeys',spec.storeys],['GFA ≈',spec.gfa+' m²']];
+    dock.querySelector('#ddMetrics').innerHTML=metrics.map(([k,v])=>`<div style="border-top:1px solid rgba(255,255,255,.14);padding-top:8px"><b style="display:block;font:500 15px/1 Georgia,serif">${v}</b><span style="font-size:6px;letter-spacing:.08em;color:rgba(255,255,255,.5)">${k}</span></div>`).join('');
     [...opts.children].forEach(b=>{const on=b.dataset.id===spec.id;b.style.background=on?'#d9b669':'transparent';b.style.color=on?'#14231d':'rgba(255,255,255,.72)';b.style.borderColor=on?'#d9b669':'rgba(255,255,255,.18)';});
   };
   return dock;
@@ -237,7 +288,7 @@ function drawOfficialBuildings(bd){
   });
 }
 try{[data,providers,streetContext,terrainMetadata,officialGeometrySources,aerialHistory]=await Promise.all([fetch(DATA),fetch(PROVIDERS),fetch(STREET),fetch(TERRAIN_METADATA),fetch(OFFICIAL_GEOMETRY),fetch(AERIAL_HISTORY)]).then(async rs=>{for(const r of rs)if(!r.ok)throw new Error(`${r.status} ${r.statusText}`);return Promise.all(rs.map(r=>r.json()))});data.elements.forEach(buildElement);buildRealismDecor();drapeMunicipalOrtho();mountAerialHistory();makeSteps();setSun();try{const _r=await fetch(DERIVED_BOUNDARY);if(_r.ok){const _pd=await _r.json();if(_pd&&_pd.evidence_class==='AUTHORITATIVE'&&_pd.subject_rings_local?.length){propertyDivision=_pd;drawAuthoritativeBoundary(_pd);const _prov=byId.get('PLOT_54_28');if(_prov){_prov.userData.designHidden=true;if(_prov.userData.label)_prov.userData.label.visible=false;}/* the authoritative clip supersedes the indicative municipal-map trace + its label */}}}catch(_e){}
-try{const _rb=await fetch(DERIVED_BUILDINGS);if(_rb.ok){const _bd=await _rb.json();if(_bd&&_bd.buildings?.length){drawOfficialBuildings(_bd);/* authoritative footprints supersede the OSM-derived boxes */data.elements.filter(e=>e.type==='CONTEXT_BUILDING').forEach(e=>{const o=byId.get(e.id);if(o)o.userData.designHidden=true;});}}}catch(_e){}setMode('INTELLIGENCE');stepTo(0,true);mountDesign(DESIGNS[0]);loading.remove();renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-tween.start)/tween.duration),k=1-Math.pow(1-t,3);camera.position.lerpVectors(tween.fromPos,tween.toPos,k);controls.target.lerpVectors(tween.fromTarget,tween.toTarget,k);if(t===1)tween=null}controls.update();renderer.setScissorTest(true);if(mode==='COMPARE'){const left=Math.floor(innerWidth/2);renderPass('INTELLIGENCE',0,left);renderPass('REALISTIC',left,innerWidth-left)}else renderPass(mode,0,innerWidth);renderer.setScissorTest(false)})}catch(error){loading.classList.add('error');loading.innerHTML=`Could not load the synchronized Twin.<br><br>${error.message}<br><br>Run <code>npm run site:sweden:svartinge:prototype:serve</code> from the repository root.`}
+try{const _rb=await fetch(DERIVED_BUILDINGS);if(_rb.ok){const _bd=await _rb.json();if(_bd&&_bd.buildings?.length){drawOfficialBuildings(_bd);/* authoritative footprints supersede the OSM-derived boxes */data.elements.filter(e=>e.type==='CONTEXT_BUILDING').forEach(e=>{const o=byId.get(e.id);if(o)o.userData.designHidden=true;});}}}catch(_e){}setMode('INTELLIGENCE');stepTo(0,true);mountDesign(DESIGNS.find(d=>d.id==='BJ')||DESIGNS[0]);loading.remove();renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-tween.start)/tween.duration),k=1-Math.pow(1-t,3);camera.position.lerpVectors(tween.fromPos,tween.toPos,k);controls.target.lerpVectors(tween.fromTarget,tween.toTarget,k);if(t===1)tween=null}controls.update();renderer.setScissorTest(true);if(mode==='COMPARE'){const left=Math.floor(innerWidth/2);renderPass('INTELLIGENCE',0,left);renderPass('REALISTIC',left,innerWidth-left)}else renderPass(mode,0,innerWidth);renderer.setScissorTest(false)})}catch(error){loading.classList.add('error');loading.innerHTML=`Could not load the synchronized Twin.<br><br>${error.message}<br><br>Run <code>npm run site:sweden:svartinge:prototype:serve</code> from the repository root.`}
 </script>
 </body>
 </html>
