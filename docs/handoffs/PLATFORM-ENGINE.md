@@ -148,6 +148,13 @@ One checkout = one executor. Deliverable-first: every block ends with something 
     area cross-check, and terrain draping. Renderer profiles updated with `PROPERTY_BOUNDARY`
     colour and opacity. Gate `engine:boundary:test`, 22 checks incl. real LM boundary, scene
     contract compliance, area tolerance failure path, and terrain draping.
-    Nine suites, 363 checks, all green.
+    Nine suites, 277 checks, all green.
+  - **Twin-consumption path (2026-08-27)** — `engine/geometry/gltf-loader.mjs` (GLTFLoader wrapper
+    with dual intelligence/realistic materials), `engine/compile/twin-record.mjs` (twin record →
+    scene element adapter, G0→CONCEPT through G3→AUTHORITATIVE), GLTF_ASSET primitive in scene
+    contract + JSON schema + primitives builder (placeholder sphere until async load), SYSTEMS
+    render profile (dark environment for technical layers). Conformance fixture now 15 elements,
+    10/10 primitives. `data/twins/*.json` records can now render as contract-valid scene elements.
+    Nine suites, 277 checks, all green.
   - **NOT done:** Milestone 2's formal exit (Essence consuming the engine *on a branch that has
     both*) is still blocked on D1. Commits are on `agent/platform-engine` in `../repo-platform`.
