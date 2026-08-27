@@ -2,6 +2,28 @@
 
 The **Site Intelligence** microsite is the trunk (published artifact `d700a89d…`, "extend, never fork"). Its source lives OpenAI/Codex-side, not in this repo, so this is a **hand-over spec**: what the trunk should adopt from the Spatial Studio data layer + prototype viewer to (1) fix its blank photos and (2) stop being stale on terrain. All of it is already committed in this repo for the trunk build to consume.
 
+> ## 🔄 UPDATE 2026-08-27 — the boundary pillar LANDED; §3 and §4 below are superseded
+> The Geotorget grant arrived (orders LM2026/114822 + LM2026/114814). The trunk must
+> rebuild from current data — the "boundary is blocked / OSM is the building source"
+> statements in §3–§4 are now STALE. Current trunk-consumable truth:
+> - **Real boundary (was §4, DONE)**: authoritative `fastighetsindelning` clip
+>   `data/sites/sweden/saterdalsvagen-14/property-division-derived-v0.1.json` —
+>   SVÄRTINGE 54:28, 1 936.8 m² AUTHORITATIVE, EPSG:3006, 75 context parcels, full
+>   sha256 receipts. `GATE_SE_PROPERTY_DIVISION_CONTEXT` CLOSED. Re-runnable via
+>   `scripts/ingest-property-division.py` (LM_BASIC_AUTH creds, self-test PASS).
+> - **Official buildings (supersedes §3 OSM)**: `buildings-official-derived-v0.1.json`
+>   — 153 LM `byggnad` footprints within 200 m (AUTHORITATIVE footprint; height
+>   DERIVED — LM byggnad has no height, never invented). Re-runnable via
+>   `scripts/ingest-buildings.py` (self-test PASS). OSM context is now the *fallback*.
+> - **Viewer patterns to adopt** (prototype `svartinge-neighbourhood/index.html`):
+>   `drawAuthoritativeBoundary` (registered polygon → translucent green fence + cap,
+>   draped on the DTM), the byggnad extrude+slope-skirt (footprint AUTHORITATIVE /
+>   height DERIVED), evidence chips that flip INDICATIVE→AUTHORITATIVE with the SHA
+>   receipt, and the derived-area shown via shoelace (numbers computed, never typed).
+> - **Both ingest scripts are kommun-parameterised** — the trunk's data layer can fan
+>   out to any kommun via the same STAC grant (`…/items/<kommunkod>`).
+> - Still open per §1: the blank photos (trunk-owner artifact-capability action).
+
 ## 1. Fix the missing photos (blank image slots)
 
 **Symptom:** in the shared artifact only the hero (embedded data-URI JPEG) renders; the four aerial-history tiles, the main aerial map, and the "photorealistic reconstruction" are blank.
@@ -43,5 +65,5 @@ Autonomous routes to a real parcel polygon were tested and **all fail without th
 
 Conclusion: the **authoritative boundary requires ordering `Fastighetsindelning nedladdning, vektor`** (kundnr 30056732). No code path substitutes for it. (Norrköping WMS could still drape municipal orthophoto as an imagery layer — an imagery win, not a boundary one.)
 
-## Status
-Data layer (terrain closed, OSM, satellite): **done, committed, trunk-consumable.** Boundary: **blocked on the order above.** Photos + trunk look: **trunk-owner action per §1–3.** Spatial Studio will implement the design-selector `mountDesign` hook (see `DESIGN-SELECTOR-MOUNT-CONTRACT.md`) once Platform freezes the A/B/C spec.
+## Status (2026-08-27)
+Data layer (terrain closed, **authoritative boundary + official building footprints landed**, OSM/satellite fallback): **done, committed, trunk-consumable** — see the UPDATE block at the top. Boundary: **CLOSED** (was blocked; the order landed). Design selector: `mountDesign` hook implemented and carrying BRAGE's real A/B/C concept designs in the prototype. Photos + trunk look: **still trunk-owner action per §1** (blank aerial/satellite slots need the artifact `network` capability + a URL-restricted Mapbox token). Only remaining trunk item is §1.
