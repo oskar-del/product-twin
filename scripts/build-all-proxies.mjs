@@ -179,7 +179,17 @@ async function main() {
     const p = path.join(TWINS_DIR, file);
     const twin = JSON.parse(await fs.readFile(p, 'utf8'));
 
-    // Skip if already has a G2+ asset (unless --force)
+    const geoState = twin.geometry?.state || '';
+    const RICHER_STATES = [
+      'promoted_realistic_planning_proxy',
+      'candidate_live_shopify_native_exact_shape_scale_verified',
+      'candidate_live_shopify_native_product_shape',
+    ];
+    if (RICHER_STATES.includes(geoState)) {
+      skipped++;
+      continue;
+    }
+
     if (!FORCE && twin.geometry?.level && twin.geometry.level !== 'G0' && twin.geometry.asset_path) {
       try { await fs.access(path.join(ROOT, twin.geometry.asset_path)); skipped++; continue; } catch {}
     }

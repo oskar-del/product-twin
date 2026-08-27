@@ -41,30 +41,38 @@
   ],
   "geometry": {
     "level": "G2",
-    "state": "promoted_universal_proxy",
-    "avatar_id": "AVATAR_IKEA_LAUTERS_30405042_G2_PROXY",
-    "asset_path": "data/geometry/avatars/ikea-lauters-30405042-g2-proxy.glb",
-    "scale_state": "verified 620x620x1510mm envelope",
-    "shape_claim": "dimension-verified proxy from category heuristic; not exact manufacturer geometry",
+    "state": "promoted_realistic_planning_proxy",
+    "avatar_id": "AVATAR_IKEA_LAUTERS_30405042_G2_FLOOR_LAMP_PROXY",
+    "asset_path": "data/geometry/avatars/ikea-lauters-30405042-g2-floor-lamp-proxy.glb",
+    "scale_state": "verified 620mm base diameter x 1510mm maximum height envelope",
+    "shape_claim": "product-bound ash-tripod/textile-shade planning reconstruction; exact joinery and shade texture are not claimed",
     "placement": {
       "origin": "floor_center",
-      "floor_contact": true
+      "service_clearance_mm": 100,
+      "cord_length_mm": 3500
     },
     "appearance": {
-      "pbr_state": "spine_colour_by_category",
+      "material_cues": [
+        "clear-lacquered solid ash tripod",
+        "white recycled-polyester shade"
+      ],
+      "pbr_state": "variant_specific_base_colour_and_roughness_cues",
+      "embedded_textures": false,
       "exact_manufacturer_texture_or_finish_claimed": false
     },
+    "qa_metric": "data/metrics/ikea-lauters-30405042-g2-floor-lamp-proxy-latest.json",
     "rights": {
-      "geometry_owner": "Product Twin universal proxy",
+      "geometry_owner": "Product Twin planning proxy",
       "manufacturer_geometry_copied": false,
-      "manufacturer_texture_artwork_copied": false
+      "manufacturer_texture_artwork_copied": false,
+      "exact_likeness_claimed": false
     }
   },
   "readiness": {
     "identity": "verified_exact_retail_article",
     "commerce": "official_product_page_verified_live_postcode_refresh_required",
     "dimensions": "verified",
-    "geometry": "G2_promoted_universal_proxy",
+    "geometry": "G2_material_cued_planning_proxy",
     "appearance": "variant_colour_and_roughness_cues_only_no_exact_texture",
     "room_placement": "ready_for_planning_and_circulation",
     "render": "planning_preview_only",

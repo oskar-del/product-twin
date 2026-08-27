@@ -10,6 +10,15 @@ import readline from 'node:readline';
 const ROOT = process.cwd();
 const TWINS_DIR = path.join(ROOT, 'data/twins');
 
+const ADTRACTION_CHANNEL = process.env.ADTRACTION_CHANNEL_ID || '';
+const ADTRACTION_PROGRAM = process.env.ADTRACTION_PROGRAM_ID || '';
+const ADTRACTION_READY = !!(ADTRACTION_CHANNEL && ADTRACTION_PROGRAM);
+
+function adtractionWrap(productUrl) {
+  if (!ADTRACTION_READY || !productUrl) return null;
+  return `https://track.adtraction.com/t/t?a=${ADTRACTION_CHANNEL}&as=${ADTRACTION_PROGRAM}&t=2&tk=1&url=${encodeURIComponent(productUrl)}`;
+}
+
 function slugify(family) {
   return family.toUpperCase().replace(/[^A-Z0-9]+/g, '_').replace(/^_|_$/g, '');
 }
@@ -61,7 +70,7 @@ function buildTwin(row) {
       ean: row.ean || null,
       product_url: row.product_url || null,
       cart_deeplink: row.cart_deeplink || cartDeeplink(art, manufacturer),
-      affiliate_link: row.affiliate_link || null,
+      affiliate_link: row.affiliate_link || adtractionWrap(row.product_url || row.cart_deeplink || cartDeeplink(art, manufacturer)) || null,
       available: true,
       observed_at: new Date().toISOString().slice(0, 10),
       refresh_policy: 'live_required_before_quote_or_purchase',

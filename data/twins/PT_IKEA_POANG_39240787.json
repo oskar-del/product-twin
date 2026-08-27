@@ -5,7 +5,7 @@
   "identity": {
     "state": "verified",
     "manufacturer": "IKEA",
-    "product_family": "POÄNG",
+    "product_family": "PO\u00c4NG",
     "model": "Armchair, birch veneer/Knisa light beige",
     "article_no": "392.407.87",
     "configuration": "Armchair, birch veneer/Knisa light beige"
@@ -39,30 +39,37 @@
   ],
   "geometry": {
     "level": "G2",
-    "state": "promoted_universal_proxy",
-    "avatar_id": "AVATAR_IKEA_POANG_39240787_G2_PROXY",
-    "asset_path": "data/geometry/avatars/ikea-poang-39240787-g2-proxy.glb",
-    "scale_state": "verified 680x820x1000mm envelope",
-    "shape_claim": "dimension-verified proxy from category heuristic; not exact manufacturer geometry",
+    "state": "promoted_realistic_planning_proxy",
+    "avatar_id": "AVATAR_IKEA_POANG_39240787_G2_ARMCHAIR_PROXY",
+    "asset_path": "data/geometry/avatars/ikea-poang-39240787-g2-armchair-proxy.glb",
+    "scale_state": "verified 680x820x1000mm envelope; 560x500mm seat at 420mm height",
+    "shape_claim": "realistic birch-frame/upholstery planning proxy; exact IKEA curved-frame geometry and fabric texture are not claimed",
     "placement": {
       "origin": "floor_center",
-      "floor_contact": true
+      "recommended_front_clearance_mm": 600
     },
     "appearance": {
-      "pbr_state": "spine_colour_by_category",
+      "material_cues": [
+        "light birch veneer",
+        "light beige upholstery"
+      ],
+      "pbr_state": "variant_specific_base_colour_and_roughness_cues",
+      "embedded_textures": false,
       "exact_manufacturer_texture_or_finish_claimed": false
     },
+    "qa_metric": "data/metrics/ikea-poang-39240787-g2-armchair-proxy-latest.json",
     "rights": {
-      "geometry_owner": "Product Twin universal proxy",
+      "geometry_owner": "Product Twin planning proxy",
       "manufacturer_geometry_copied": false,
-      "manufacturer_texture_artwork_copied": false
+      "manufacturer_texture_artwork_copied": false,
+      "exact_likeness_claimed": false
     }
   },
   "readiness": {
     "identity": "verified_exact_retail_article",
     "commerce": "official_product_page_verified_live_postcode_refresh_required",
     "dimensions": "verified",
-    "geometry": "G2_promoted_universal_proxy",
+    "geometry": "G2_material_cued_planning_proxy",
     "appearance": "variant_colour_and_roughness_cues_only_no_exact_texture",
     "room_placement": "ready_for_planning_and_circulation",
     "render": "planning_preview_only",

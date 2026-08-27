@@ -1,29 +1,38 @@
 {
-  "generated_at": "2026-08-17",
+  "generated_at": "2026-08-27",
   "summary": {
-    "promoted_avatars": 23,
-    "candidates": 9,
-    "indexed_total": 32,
+    "total_twins": 203,
     "G0": 0,
     "G1": 0,
-    "G2": 23,
-    "G2_candidates": 8,
-    "G3_promoted": 0,
-    "G3_candidates": 1,
-    "G4_promoted": 0,
-    "G5_promoted": 0,
-    "promoted_object_avatars": 18,
-    "promoted_material_or_material_system_avatars": 3,
-    "promoted_system_or_component_avatars": 3,
-    "exact_manufacturer_geometry_candidates": 1,
-    "merchant_native_model3d_candidates": 8,
-    "merchant_native_scale_qa_passes": 6,
-    "textured_merchant_native_model3d_candidates": 4,
-    "dimension_verified_proxies": 23,
-    "residential_room_ready_avatars": 13,
-    "realistic_material_proxies": 13,
-    "material_repeat_takeoff_pipeline_passed": true,
-    "v0_mixed_avatar_index_count_met": true
+    "G2": 203,
+    "G3": 0,
+    "G4": 0,
+    "G5": 0,
+    "geometry_states": {
+      "promoted_universal_proxy": 186,
+      "promoted_realistic_planning_proxy": 9,
+      "candidate_live_shopify_native_exact_shape_scale_verified": 2,
+      "candidate_live_shopify_native_product_shape": 6
+    },
+    "categories": {
+      "FFE.TABLE": 30,
+      "FFE.STORAGE": 47,
+      "FFE.OUTDOOR": 8,
+      "ELECTRICAL.LUMINAIRES": 19,
+      "FFE.SEATING": 48,
+      "FFE.BEDROOM": 19,
+      "FFE.KITCHEN": 18,
+      "FFE.BATHROOM": 4,
+      "FFE.DECOR": 1,
+      "FFE.TEXTILES": 8,
+      "ELECTRICAL.BULBS": 1
+    },
+    "commerce_coverage": {
+      "has_commerce": 203,
+      "has_ean": 2,
+      "has_affiliate_link": 0
+    },
+    "note": "counts derived from data/twins/ by scripts/rebuild-avatar-index.mjs"
   },
   "avatars": [
     {
@@ -76,13 +85,29 @@
       "identity": "manufacturer_family_and_size_verified_variant_suffix_unresolved",
       "scale": "verified outer width/height; opening and visible glazing envelopes manufacturer-sourced; depth is proxy",
       "shape": "system proxy",
-      "verified_outer_mm": {"width":550,"height":978},
-      "verified_opening_mm": {"width":466,"height":899},
-      "verified_visible_glazing_mm": {"width":371,"height":783},
+      "verified_outer_mm": {
+        "width": 550,
+        "height": 978
+      },
+      "verified_opening_mm": {
+        "width": 466,
+        "height": 899
+      },
+      "verified_visible_glazing_mm": {
+        "width": 371,
+        "height": 783
+      },
       "system_rules": {
-        "roof_pitch_deg": {"min":15,"max":90},
+        "roof_pitch_deg": {
+          "min": 15,
+          "max": 90
+        },
         "operation": "manual centre-pivot/top control bar",
-        "flashing_families": ["ED-", "EB-", "EK-"]
+        "flashing_families": [
+          "ED-",
+          "EB-",
+          "EK-"
+        ]
       },
       "variant_reference_seen": "GGL-CK04-2070",
       "variant_semantics": "unresolved; no glazing performance bound to 2070",
@@ -97,10 +122,20 @@
       "level": "G2",
       "promotion_state": "promoted_proxy",
       "asset_path": "data/geometry/avatars/gf-sanipex-1158140-g2-system-proxy.glb",
-      "identity": {"manufacturer_part_no":"1158140","gf_item_no":"351616990","ean":"7613263030184","etim_class":"EC003024"},
+      "identity": {
+        "manufacturer_part_no": "1158140",
+        "gf_item_no": "351616990",
+        "ean": "7613263030184",
+        "etim_class": "EC003024"
+      },
       "scale": "verified 45x25x25mm product envelope; schematic interface cue increases whole proxy length to ~53mm",
       "shape": "system proxy; manufacturer industrial-design shape not copied",
-      "interface": {"component_type":"IfcPipeFittingType","nominal_system":"JRG Sanipex MT","nominal_diameter_mm":16,"connection_role":"adapter"},
+      "interface": {
+        "component_type": "IfcPipeFittingType",
+        "nominal_system": "JRG Sanipex MT",
+        "nominal_diameter_mm": 16,
+        "connection_role": "adapter"
+      },
       "g4_state": "exact manufacturer BIM identity and formats verified; official download requires account",
       "next_gate": "authorized manufacturer BIM retrieval + exact geometry QA + Spain/EU procurement"
     },
@@ -117,8 +152,20 @@
       "identity": "exact_manufacturer_model",
       "scale": "verified 1134x2382x30mm module envelope; service-box depth is proxy",
       "shape": "generic PV module proxy; manufacturer artwork/cell texture not copied",
-      "electrical_stc": {"rated_power_wp":670,"voc_v":54.30,"isc_a":15.60,"vmp_v":44.96,"imp_a":14.91,"calculated_module_efficiency_percent":24.8039},
-      "mechanical": {"weight_kg":28.5,"junction_box":"split, IP68","front_static_load_pa":5400,"back_static_load_pa":2400},
+      "electrical_stc": {
+        "rated_power_wp": 670,
+        "voc_v": 54.3,
+        "isc_a": 15.6,
+        "vmp_v": 44.96,
+        "imp_a": 14.91,
+        "calculated_module_efficiency_percent": 24.8039
+      },
+      "mechanical": {
+        "weight_kg": 28.5,
+        "junction_box": "split, IP68",
+        "front_static_load_pa": 5400,
+        "back_static_load_pa": 2400
+      },
       "next_gate": "full compliance profile + authorized exact geometry/appearance + Spain/EU offer/RFQ"
     },
     {
@@ -132,10 +179,23 @@
       "promotion_state": "promoted_proxy",
       "asset_path": "data/geometry/avatars/moso-bamboo-xtreme-bo-dtht171g-g2-system-proxy.glb",
       "identity": "manufacturer_product_code_and_family_verified",
-      "module_mm": {"length":1850,"width":137,"thickness":20},
-      "joint_gap_mm": {"min":5,"max":6,"design_default":5.5},
+      "module_mm": {
+        "length": 1850,
+        "width": 137,
+        "thickness": 20
+      },
+      "joint_gap_mm": {
+        "min": 5,
+        "max": 6,
+        "design_default": 5.5
+      },
       "shape": "rectangular board/repeat proxy; exact groove/bevel profile and proprietary appearance not claimed",
-      "takeoff_test": {"area_m2":20,"waste_percent":10,"preliminary_boards_per_m2":3.7932669512,"ordered_boards":84},
+      "takeoff_test": {
+        "area_m2": 20,
+        "waste_percent": 10,
+        "preliminary_boards_per_m2": 3.7932669512,
+        "ordered_boards": 84
+      },
       "next_gate": "authorized profile/PBR geometry + live Spain/EU offer/RFQ + project-specific fixing/joist layout"
     },
     {
@@ -150,8 +210,18 @@
       "identity": "exact_manufacturer_reference",
       "scale": "verified 600x380x70mm envelope",
       "shape": "schematic countertop-basin proxy; exact Roca industrial-design geometry not claimed",
-      "specification": {"material":"porcelain","installation_type":"countertop","bowl_capacity_l":8,"drain_included":true,"tap_included":false},
-      "commerce": {"merchant":"Roca Spain","type":"manufacturer_direct_online","refresh_policy":"live_required_before_quote_or_purchase"},
+      "specification": {
+        "material": "porcelain",
+        "installation_type": "countertop",
+        "bowl_capacity_l": 8,
+        "drain_included": true,
+        "tap_included": false
+      },
+      "commerce": {
+        "merchant": "Roca Spain",
+        "type": "manufacturer_direct_online",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized exact CAD/BIM geometry + connection geometry + live price/stock refresh"
     },
     {
@@ -167,8 +237,18 @@
       "identity": "exact_retail_article",
       "scale": "verified 380mm diameter x 290mm fixed shade envelope; 1500mm cord is parametric placement metadata",
       "shape": "generic conical pendant proxy; exact IKEA industrial-design geometry not claimed",
-      "specification": {"max_power_w":22,"lamp_base":"E27","shade_material":"steel","ce_marked":true,"mounting":"ceiling hook"},
-      "commerce": {"merchant":"IKEA Spain","type":"retailer_direct_online","refresh_policy":"live_required_before_quote_or_purchase"},
+      "specification": {
+        "max_power_w": 22,
+        "lamp_base": "E27",
+        "shade_material": "steel",
+        "ce_marked": true,
+        "mounting": "ceiling hook"
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "type": "retailer_direct_online",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized exact geometry/render rights + photometric data + live stock/delivery refresh"
     },
     {
@@ -184,8 +264,18 @@
       "identity": "exact_retail_article",
       "scale": "verified 280mm diameter x 260mm fixed shade envelope; 1600mm cord is parametric placement metadata",
       "shape": "generic rotational pendant proxy; exact IKEA industrial-design geometry not claimed",
-      "specification": {"max_power_w":22,"lamp_base":"E27","shade_material":"polystyrene plastic","ce_marked":true,"mounting":"ceiling hook"},
-      "commerce": {"merchant":"IKEA Spain","type":"retailer_direct_online","refresh_policy":"live_required_before_quote_or_purchase"},
+      "specification": {
+        "max_power_w": 22,
+        "lamp_base": "E27",
+        "shade_material": "polystyrene plastic",
+        "ce_marked": true,
+        "mounting": "ceiling hook"
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "type": "retailer_direct_online",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized exact geometry/render rights + photometric data + live stock/delivery refresh"
     },
     {
@@ -201,8 +291,16 @@
       "identity": "exact_retail_article",
       "scale": "verified 2280x950x830mm envelope; 1800x600mm seat at 450mm height",
       "shape": "realistic upholstered planning proxy; exact IKEA industrial-design geometry and fabric texture are not claimed",
-      "placement": {"origin":"floor_center","back_to_wall_anchor":true,"recommended_front_clearance_mm":700},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/kivik-sofa-3-plazas-tibbleby-beis-gris-s49440597/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "back_to_wall_anchor": true,
+        "recommended_front_clearance_mm": 700
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/es/p/kivik-sofa-3-plazas-tibbleby-beis-gris-s49440597/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized exact geometry/appearance and live postcode availability"
     },
     {
@@ -218,8 +316,15 @@
       "identity": "exact_retail_article",
       "scale": "verified 680x820x1000mm envelope; 560x500mm seat at 420mm height",
       "shape": "realistic birch-frame/upholstery planning proxy; exact IKEA curved-frame geometry and fabric texture are not claimed",
-      "placement": {"origin":"floor_center","recommended_front_clearance_mm":600},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/poang-sillon-chapa-abedul-knisa-beige-claro-s39240787/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "recommended_front_clearance_mm": 600
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/es/p/poang-sillon-chapa-abedul-knisa-beige-claro-s39240787/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized exact geometry/appearance and live postcode availability"
     },
     {
@@ -235,8 +340,15 @@
       "identity": "exact_retail_article",
       "scale": "verified 1400x780x740mm envelope",
       "shape": "realistic ash/birch planning proxy; exact IKEA joinery and industrial-design geometry are not claimed",
-      "placement": {"origin":"floor_center","recommended_chair_zone_mm":750},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/lisabo-mesa-chapa-fresno-70294339/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "recommended_chair_zone_mm": 750
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/es/p/lisabo-mesa-chapa-fresno-70294339/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized exact geometry/appearance and live postcode availability"
     },
     {
@@ -252,8 +364,15 @@
       "identity": "exact_retail_article",
       "scale": "verified 460x510x800mm envelope; 440x390mm seat at 450mm height",
       "shape": "realistic ash/birch planning proxy; exact IKEA curved shell and joinery are not claimed",
-      "placement": {"origin":"floor_center","table_anchor":"seat_center_at_table_edge"},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/lisabo-silla-fresno-00457235/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "table_anchor": "seat_center_at_table_edge"
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/es/p/lisabo-silla-fresno-00457235/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized exact geometry/appearance and live postcode availability"
     },
     {
@@ -269,8 +388,16 @@
       "identity": "exact_retail_article",
       "scale": "verified 1760x2090x1000mm frame envelope for 1600x2000mm mattress",
       "shape": "realistic warm-white frame/slat proxy; mattress, bedding and exact IKEA panel construction are not included or claimed",
-      "placement": {"origin":"floor_center","headboard_wall_anchor":true,"recommended_side_clearance_mm":600},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/malm-estructura-cama-blanco-s09929373/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "headboard_wall_anchor": true,
+        "recommended_side_clearance_mm": 600
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/es/p/malm-estructura-cama-blanco-s09929373/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized exact geometry/appearance and live postcode availability"
     },
     {
@@ -286,8 +413,16 @@
       "identity": "exact_retail_article",
       "scale": "verified 800x280x2020mm envelope; 30kg maximum per shelf",
       "shape": "realistic warm-white shelf proxy; exact IKEA construction details are not claimed",
-      "placement": {"origin":"floor_center","back_to_wall_anchor":true,"wall_fixing_required":true},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/billy-libreria-blanco-00263850/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "back_to_wall_anchor": true,
+        "wall_fixing_required": true
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/es/p/billy-libreria-blanco-00263850/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "wall-fixing rule test, authorized exact geometry/appearance and live postcode availability"
     },
     {
@@ -303,8 +438,16 @@
       "identity": "exact_retail_article",
       "scale": "verified 1800x420x380mm envelope",
       "shape": "realistic warm-white three-front media-unit proxy; exact IKEA hardware and panel construction are not claimed",
-      "placement": {"origin":"floor_center","back_to_wall_anchor":true,"rear_service_zone_mm":80},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/besta-mueble-tv-blanco-lappviken-blanco-s89330691/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "back_to_wall_anchor": true,
+        "rear_service_zone_mm": 80
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/es/p/besta-mueble-tv-blanco-lappviken-blanco-s89330691/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "cable/service rule test, authorized exact geometry/appearance and live postcode availability"
     },
     {
@@ -320,8 +463,16 @@
       "identity": "exact_retail_article",
       "scale": "verified 1860x635x38mm module",
       "appearance": "natural oak-effect PBR colour with a neutral procedural grain cue; manufacturer laminate artwork is not copied",
-      "placement": {"origin":"underside_center","base_cabinet_anchor":true,"nominal_installed_height_mm":900},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/es/p/saljan-encimera-efecto-roble-laminado-60439173/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "underside_center",
+        "base_cabinet_anchor": true,
+        "nominal_installed_height_mm": 900
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/es/p/saljan-encimera-efecto-roble-laminado-60439173/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "cut/join/sink rules, authorized decor texture and live postcode availability"
     },
     {
@@ -337,8 +488,16 @@
       "identity": "exact_retail_article",
       "scale": "verified 1400x600x370mm envelope",
       "shape": "product-bound oak-veneer planning reconstruction; exact IKEA industrial-design geometry and veneer artwork are not claimed",
-      "placement": {"origin":"floor_center","recommended_sofa_gap_mm":420,"recommended_circulation_clearance_mm":600},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "recommended_sofa_gap_mm": 420,
+        "recommended_circulation_clearance_mm": 600
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized exact geometry/appearance and live postcode availability"
     },
     {
@@ -354,8 +513,17 @@
       "identity": "exact_retail_article",
       "scale": "verified 1180x720x500mm envelope",
       "shape": "product-bound oak-veneer planning reconstruction; exact IKEA industrial-design geometry and veneer artwork are not claimed",
-      "placement": {"origin":"floor_center","recommended_sofa_gap_mm":420,"recommended_circulation_clearance_mm":600},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/en/p/valnas-coffee-table-oak-veneer-20628038/","destination":"29660 available and IKEA Málaga in stock observed 2026-08-17","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "recommended_sofa_gap_mm": 420,
+        "recommended_circulation_clearance_mm": 600
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/en/p/valnas-coffee-table-oak-veneer-20628038/",
+        "destination": "29660 available and IKEA Málaga in stock observed 2026-08-17",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "same-position fit and circulation review, exact appearance validation and client design approval"
     },
     {
@@ -371,8 +539,16 @@
       "identity": "exact_retail_article_and_size",
       "scale": "verified 1330x1950x13mm envelope",
       "appearance": "natural-jute flatweave cue; exact fibre variation and manufacturer photography are not copied",
-      "placement": {"origin":"floor_center","underlay_required":true,"floor_contact":true},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/en/p/lohals-rug-flatwoven-natural-30511288/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "underlay_required": true,
+        "floor_contact": true
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/en/p/lohals-rug-flatwoven-natural-30511288/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized appearance validation and live postcode availability"
     },
     {
@@ -388,8 +564,15 @@
       "identity": "exact_retail_article_and_dark_grey_green_variant",
       "scale": "verified 450mm diameter x 530mm height envelope",
       "shape": "product-bound powder-coated-steel planning reconstruction; exact tray/frame geometry is not claimed",
-      "placement": {"origin":"floor_center","recommended_seating_gap_mm":120},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/en/p/gladom-tray-table-dark-grey-green-70578451/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "recommended_seating_gap_mm": 120
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/en/p/gladom-tray-table-dark-grey-green-70578451/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized exact geometry/colour validation and live postcode availability"
     },
     {
@@ -405,8 +588,16 @@
       "identity": "exact_retail_article_and_ash_white_variant",
       "scale": "verified 620mm base diameter x 1510mm maximum height envelope",
       "shape": "product-bound ash-tripod/textile-shade planning reconstruction; exact joinery and shade texture are not claimed",
-      "placement": {"origin":"floor_center","service_clearance_mm":100,"cord_length_mm":3500},
-      "commerce": {"merchant":"IKEA Spain","official_url":"https://www.ikea.com/es/en/p/lauters-floor-lamp-ash-white-30405042/","refresh_policy":"live_required_before_quote_or_purchase"},
+      "placement": {
+        "origin": "floor_center",
+        "service_clearance_mm": 100,
+        "cord_length_mm": 3500
+      },
+      "commerce": {
+        "merchant": "IKEA Spain",
+        "official_url": "https://www.ikea.com/es/en/p/lauters-floor-lamp-ash-white-30405042/",
+        "refresh_policy": "live_required_before_quote_or_purchase"
+      },
       "next_gate": "authorized exact geometry/material validation, photometric data and live postcode availability"
     }
   ],
@@ -422,14 +613,32 @@
       "identity": "manufacturer article verified",
       "geometry": "exact manufacturer 3DS converted transiently to GLB",
       "scale": "PASS",
-      "expected_mm": [360, 540, 550],
-      "measured_mm": [360.0061869621277, 539.5571136474609, 549.3096351623535],
+      "expected_mm": [
+        360,
+        540,
+        550
+      ],
+      "measured_mm": [
+        360.0061869621277,
+        539.5571136474609,
+        549.3096351623535
+      ],
       "max_relative_error": 0.0012552087957208807,
       "source_asset_sha256": "056266beb2cbea1af1cc91bcab74dccb46620ebc55464276d1d22f90f8977e9a",
       "persistent_binary": false,
-      "procurement": {"state":"manufacturer_rfq_route_verified","route":"https://www.arper.com/es_ES/request-product-information","purpose":"availability and prices","rfq_context":"Ply Table #3853 / article 3853"},
-      "rights": {"state":"commercial_use_requires_written_permission","evidence_file":"data/rights/arper-ply-3853-rights-and-rfq.json"},
-      "blockers": ["obtain written Arper permission for Product Twin commercial rendering/derivative use"]
+      "procurement": {
+        "state": "manufacturer_rfq_route_verified",
+        "route": "https://www.arper.com/es_ES/request-product-information",
+        "purpose": "availability and prices",
+        "rfq_context": "Ply Table #3853 / article 3853"
+      },
+      "rights": {
+        "state": "commercial_use_requires_written_permission",
+        "evidence_file": "data/rights/arper-ply-3853-rights-and-rfq.json"
+      },
+      "blockers": [
+        "obtain written Arper permission for Product Twin commercial rendering/derivative use"
+      ]
     },
     {
       "avatar_id": "SHOPIFY_FURNITURE_MODEL3D_b163aea21fdf6542",
@@ -801,8 +1010,23 @@
       "target_id": "GF_SANIPEX_MT_1158140_G4_V0_1",
       "category_id": "PLUMBING.FITTINGS",
       "state": "exact_identity_and_formats_verified_account_required",
-      "identity": {"part_no":"1158140","gf_item":"351616990","ean":"7613263030184","etim":"EC003024","ifc_type":"IfcPipeFittingType"},
-      "formats": ["RFA","DWG2D","DWG3D","DXF","IFC","SAT","FBX","OBJ"],
+      "identity": {
+        "part_no": "1158140",
+        "gf_item": "351616990",
+        "ean": "7613263030184",
+        "etim": "EC003024",
+        "ifc_type": "IfcPipeFittingType"
+      },
+      "formats": [
+        "RFA",
+        "DWG2D",
+        "DWG3D",
+        "DXF",
+        "IFC",
+        "SAT",
+        "FBX",
+        "OBJ"
+      ],
       "reason_not_g4_avatar": "Official BIM service requires a user account before geometry download; no bypass attempted."
     }
   ],

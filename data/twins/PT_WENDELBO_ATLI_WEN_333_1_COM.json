@@ -44,24 +44,28 @@
   ],
   "geometry": {
     "level": "G2",
-    "state": "promoted_universal_proxy",
-    "avatar_id": "AVATAR_WENDELBO_ATLI_WEN_333_1_COM_G2_PROXY",
-    "asset_path": "data/geometry/avatars/wendelbo-atli-wen-333-1-com-g2-proxy.glb",
-    "scale_state": "verified 790x800x770mm envelope",
-    "shape_claim": "dimension-verified proxy from category heuristic; not exact manufacturer geometry",
-    "placement": {
-      "origin": "floor_center",
-      "floor_contact": true
-    },
+    "state": "candidate_live_shopify_native_exact_shape_scale_verified",
+    "source_media_type": "MODEL_3D",
+    "formats": [
+      "GLB",
+      "USDZ"
+    ],
+    "asset_storage": "runtime_inspection_only",
+    "asset_sha256": "0787188f3f430755f3a65c35b107b40c6dcc364c5cc4505a2a1d285d4c22fe46",
+    "scale_state": "manufacturer_scale_qa_pass",
     "appearance": {
-      "pbr_state": "spine_colour_by_category",
-      "exact_manufacturer_texture_or_finish_claimed": false
+      "material_count": 2,
+      "texture_count": 0,
+      "state": "generic_grey_materials_selected_variant_not_bound",
+      "exact_selected_finish_claimed": false
     },
     "rights": {
-      "geometry_owner": "Product Twin universal proxy",
-      "manufacturer_geometry_copied": false,
-      "manufacturer_texture_artwork_copied": false
-    }
+      "state": "review",
+      "render_scope": "unresolved",
+      "derivative_storage": "runtime_inspection_only",
+      "redistribution": false
+    },
+    "inspection_evidence": "data/metrics/shopify-furniture-model3d-inspection-latest.json"
   },
   "commerce": {
     "source": "Shopify catalog and merchant Storefront API",
@@ -77,7 +81,7 @@
     "identity": "partial_exact_configuration_incomplete",
     "commerce": "live_candidate",
     "dimensions": "verified",
-    "geometry": "G2_promoted_universal_proxy",
+    "geometry": "G2_native_shopify_verified",
     "appearance": "blocked",
     "room_placement": "runtime_shape_study_only",
     "render": "blocked",
