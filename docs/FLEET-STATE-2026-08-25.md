@@ -135,6 +135,19 @@ Essence's own M1 receipts (README line 25). But the project's public site credit
 crediting the public brand (GPC Group) or both; SPV-only can read oddly on a sales
 page. One-line fix in showcase2.json + rebuild if changed.
 
+## Update 2026-08-27 — LANTMÄTERIET GRANTS DELIVERED ✅
+
+Geotorget orders LM2026/114822 (fastighetsindelning vektor) + LM2026/114814 (byggnad
+vektor) flipped to "Lyckad". Brain downloaded + verified Norrköping (kn0581) same
+morning: both GPKGs at "product twin/lm-data/" (NOT in git — LM license). PROOF:
+registerenhetsomradesyta query returns Svärtinge 54:28 polygon (fid 51016844,
+senastandrad 2023-01-27, geometry present; 1,231 Svärtinge parcels). See
+lm-data/README.md for re-check command + NOT-checked list. Nationwide per-kommun
+fetch available via the STAC API under the same grant.
+UNBLOCKED: Spatial's authoritative boundary (its 2026-08-26 "Geotorget order is
+unavoidable" finding is resolved — relay to the session) · MIMER official parcel
+receipt · building footprints · plot-analysis SEO machine data layer.
+
 ## Decisions Oskar owns (queued)
 
 1. Winner: confirm Vinkelhuset (per 03-JUDGED-MATRIX) or re-open via tre-hus artifact.
