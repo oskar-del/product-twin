@@ -148,6 +148,28 @@ UNBLOCKED: Spatial's authoritative boundary (its 2026-08-26 "Geotorget order is
 unavoidable" finding is resolved — relay to the session) · MIMER official parcel
 receipt · building footprints · plot-analysis SEO machine data layer.
 
+## Update 2026-08-27 16:15 — FLEET WAVE on LM mandates, all Brain-verified
+
+Five sessions restarted and executed their 2026-08-27 mandates; Brain independently
+verified each (not just commit messages). All UNPUSHED (ahead counts noted):
+
+- **Avatar** (ahead 1, dff4486): 11-twin regression FIXED — verified 17 richer twins
+  now (8 native + 9 material-cued), generic proxies deleted, all 203 still G2; Adtraction
+  wrapping pre-wired. Note: EAN still 2/203 (backfill is a separate follow-up).
+- **Spatial** (ahead 4): boundary overlay (ded76d7) + byggnad footprints (c6933b8 ingest,
+  82f57b1 viewer). Verified: validator 838 PASS; ingest-buildings --self-test PASS;
+  153 footprints clipped, footprint AUTHORITATIVE / height DERIVED (heights never invented).
+- **Platform** (ahead 4): froze Spatial's mount contract (d8bbc60), authoritative
+  boundary layer element (b141d80), twin-consumption path GLTF_ASSET+SYSTEMS (f7d480c).
+  Verified: engine:gate 22/22, bundle 18/18, compiler 47/47 all PASS.
+- **MIMER** (ahead 2): authoritative parcel receipt #21 added, 54:28 moved OUT of the
+  NOT-verified ledger (cd64527); §6 BoM build_bom.py + §7 comps framework (0ba8f38).
+- **BRAGE** (ahead 1, 0ba2fcb): evidence chips updated (slope "13° SV — uppmätt", area
+  authoritative — 4 mentions), House A undervåning plan added (SVG count 18→19).
+
+Push all: `for d in repo-avatar-factory repo-brage repo-mimer repo-platform repo-spatial-studio; do git -C "$d" push; done`
+Still open for Oskar: tre-hus winner call · Adtraction sitting · Essence credit + Nancy.
+
 ## Decisions Oskar owns (queued)
 
 1. Winner: confirm Vinkelhuset (per 03-JUDGED-MATRIX) or re-open via tre-hus artifact.
