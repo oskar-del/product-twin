@@ -21,7 +21,8 @@ const OPACITY = {
   OPENING: {intelligence: 0.48, realistic: 1},
   TERRAIN: {intelligence: 0.86, realistic: 1},
   PLOT: {intelligence: 0.72, realistic: 0.18},
-  ROAD: {intelligence: 0.84, realistic: 1}
+  ROAD: {intelligence: 0.84, realistic: 1},
+  PROPERTY_BOUNDARY: {intelligence: 0.55, realistic: 0.25}
 };
 
 const opacityFor = element => OPACITY[element.type] ?? {intelligence: 1, realistic: 1};

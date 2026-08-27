@@ -33,7 +33,8 @@ export const DEFAULT_REALISTIC_PALETTE = Object.freeze({
   POI: 0xd3a14c,
   VIEW_DIRECTION: 0x9c6171,
   ENVIRONMENTAL_ANCHOR: 0xe2b85f,
-  ANCHOR: 0x2f765f
+  ANCHOR: 0x2f765f,
+  PROPERTY_BOUNDARY: 0x1a6b4a
 });
 
 const CONTEXT_BUILDING_WALLS = [0xb84e3f, 0xd8cbb7, 0xe4ddca, 0xb99d79];
