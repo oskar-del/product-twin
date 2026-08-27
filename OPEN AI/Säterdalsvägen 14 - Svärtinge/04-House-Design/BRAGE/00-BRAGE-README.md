@@ -1,5 +1,24 @@
 # BRAGE — Svärtinge 54:28 · Design Study (first assignment)
 
+> ## ⛳ CURRENT MANDATE — 2026-08-27 (Brain; SITE DATA UPGRADED; re-read every resume)
+>
+> Two of your presentation's open evidence caveats just closed:
+> 1. **Plot area is now AUTHORITATIVE: 1 936.8 m²** (Lantmäteriet fastighetsindelning,
+>    delivered 2026-08-27; 7-corner polygon in
+>    `repo-spatial-studio: data/sites/sweden/saterdalsvagen-14/property-division-derived-v0.1.json`).
+>    Your chip "~1 938 m² indikativ yta" → update to the authoritative figure.
+> 2. **Terrain is measured**: Spatial's closed terrain gate gives 13° SW slope/aspect,
+>    43 m fall to Glan over 800 m, ~70 m RH2000 at the pin. Your chip "Sluttning okänd
+>    (DTM väntar)" is stale — THE SLOPE IS CONFIRMED, which validates the suterräng
+>    logic in House A and House B's optional suterräng west gable.
+> QUEUE: (a) update the tre-hus presentation's evidence chips + footer (remove the
+> DTM-401 caveat, keep Glan-view still seller-reported); (b) draw House A's missing
+> undervåning plan — now grounded in real slope; (c) STILL WAITING: Oskar's winner
+> call — your Vinkelhuset recommendation stands; on the call, the winner's full
+> ritningsuppsättning → Essence dollhouse pipeline + Spatial mount (your designs are
+> already mounted in the studio as concept masses).
+> Commit every block; Oskar pushes.
+
 BRAGE is the creative counterpart to MIMER: MIMER measures the site, BRAGE argues **what deserves to stand on it**, then develops the chosen concept into a spatial + systems spec the engine can build.
 
 - Property: `SVÄRTINGE 54:28` — Säterdalsvägen 14, 605 70 Svärtinge, Norrköping
