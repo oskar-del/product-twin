@@ -1,5 +1,14 @@
 # Platform & 3D Engine — Claude Session Handoff
 
+> ## ⛳ UPDATE 2026-08-27 — Lantmäteriet data landed
+> The LM vector grants delivered (parcels + buildings, `"../lm-data/"`, repo-external).
+> Spatial derived the authoritative SVÄRTINGE 54:28 boundary (1 936.8 m²,
+> `data/sites/sweden/saterdalsvagen-14/property-division-derived-v0.1.json` on its
+> branch). Engine implication: the twin-scene contract should carry an
+> AUTHORITATIVE-boundary layer (polygon overlay + evidence chip) and, later, an LM
+> byggnad-footprint context source next to OSM. Slot after item 1 below — the mount-
+> contract review is still first.
+
 > ## ⛳ CURRENT MANDATE — 2026-08-25 (from Brain fleet sweep; re-read on every resume/compaction)
 >
 > **1. You owe Spatial a review you haven't seen.** Spatial Studio drafted
