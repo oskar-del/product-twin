@@ -23,7 +23,8 @@ export const PRIMITIVES = Object.freeze([
   "MARKER",
   "DIAGRAMMATIC_MARKER",
   "DIRECTION_CONE",
-  "SOLAR_ARC"
+  "SOLAR_ARC",
+  "GLTF_ASSET"
 ]);
 
 export const PROFILES = Object.freeze(["INTELLIGENCE", "REALISTIC", "COMPARE", "SYSTEMS"]);
@@ -93,6 +94,13 @@ const GEOMETRY_RULES = {
     if (!isFiniteNumber(g.longitude_deg) || Math.abs(g.longitude_deg) > 180) problems.push(`${at}.longitude_deg must be a longitude`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(String(g.study_date))) problems.push(`${at}.study_date must be YYYY-MM-DD`);
     if (!Array.isArray(g.hours) || !g.hours.length || !g.hours.every(isFiniteNumber)) problems.push(`${at}.hours must be a non-empty array of numbers`);
+    return problems;
+  },
+  GLTF_ASSET(g, at) {
+    const problems = [];
+    if (!isNonEmptyString(g.asset_path)) problems.push(`${at}.asset_path must be a non-empty string`);
+    if (g.position != null && !isVec3(g.position)) problems.push(`${at}.position must be [x,y,z]`);
+    if (g.rotation_y_deg != null && !isFiniteNumber(g.rotation_y_deg)) problems.push(`${at}.rotation_y_deg must be a number`);
     return problems;
   }
 };

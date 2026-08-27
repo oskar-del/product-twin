@@ -237,6 +237,27 @@ export function createSceneBuilder({materials, textures = null, labels: labelsEn
       }
       group.userData.solarMarks = marks;
       return group;
+    },
+
+    GLTF_ASSET(element, geometry) {
+      const group = new THREE.Group();
+      group.name = `gltf-placeholder-${element.id}`;
+      if (geometry.position) group.position.set(...geometry.position);
+      if (geometry.rotation_y_deg != null) group.rotation.y = THREE.MathUtils.degToRad(geometry.rotation_y_deg);
+      if (geometry.scale) {
+        const s = Array.isArray(geometry.scale) ? geometry.scale : [geometry.scale, geometry.scale, geometry.scale];
+        group.scale.set(...s);
+      }
+      // A placeholder sphere until the async GLTFLoader replaces this
+      const placeholder = dress(new THREE.Mesh(
+        ownGeometry(new THREE.SphereGeometry(0.3, 12, 8)), element
+      ), element);
+      placeholder.position.y = 0.3;
+      pickable(placeholder, element);
+      group.add(placeholder);
+      group.userData.isGltfPlaceholder = true;
+      group.userData.assetPath = geometry.asset_path;
+      return group;
     }
   };
   BUILDERS.ROOM_VOLUME = BUILDERS.BOX;

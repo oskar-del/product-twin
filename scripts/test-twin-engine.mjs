@@ -42,9 +42,13 @@ const MUTATIONS = [
   ["no elements at all", scene => { scene.elements = []; }],
   ["no stages at all", scene => { scene.navigation = []; }],
   ["solar arc dated with a season instead of a date", scene => {
-    scene.elements.at(-1).geometry.study_date = "summer";
+    const arc = scene.elements.find(e => e.geometry.primitive === "SOLAR_ARC");
+    arc.geometry.study_date = "summer";
   }],
-  ["solar arc placed off the globe", scene => { scene.elements.at(-1).geometry.latitude_deg = 118; }]
+  ["solar arc placed off the globe", scene => {
+    const arc = scene.elements.find(e => e.geometry.primitive === "SOLAR_ARC");
+    arc.geometry.latitude_deg = 118;
+  }]
 ];
 
 let failures = 0;
