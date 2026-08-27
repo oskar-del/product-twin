@@ -24,6 +24,24 @@
 >    — keep the ingest generic; this is the plot-analysis SEO machine's data layer.
 > Then continue trunk adoption (COMPARE + Site Intelligence = one experience).
 > Commit every block; Oskar pushes.
+>
+> ### Claude progress — 2026-08-27 (mandate items 1 & 2 DONE, verified in browser)
+> - **Item 1 — boundary overlay wired (`ded76d7`)**: the authoritative 7-point 54:28
+>   polygon (1 937 m², EPSG:3006) renders as the AUTHORITATIVE green boundary fence +
+>   75 context parcels; provisional `PLOT_54_28` indicative trace suppressed; source
+>   chip flipped INDICATIVE → "✓ AUTHORITATIVE · 1937 m² · SHA 92ab23e77f…" (area via
+>   shoelace, never typed).
+> - **Item 2 — byggnad footprints (`c6933b8` ingest, `82f57b1` viewer)**:
+>   `scripts/ingest-buildings.py` (reuses the proven helpers) clipped 153 official
+>   footprints within 200 m (49 Bostad) → `buildings-official-derived-v0.1.json` with
+>   receipts; viewer extrudes them through profile(), retires the OSM boxes. Footprint
+>   AUTHORITATIVE, **height DERIVED** (LM byggnad has no height — never invented).
+> - **Item 3 — generic/nationwide**: both ingest scripts are kommun-parameterised
+>   (property-division pulls the STAC asset by kommunkod; buildings takes any
+>   `byggnad_kn<NNNN>.zip`). Ready to fan out to other kommuner.
+> - Gates/checks each block: `--self-test` PASS, validator 838 PASS, module syntax OK,
+>   no forbidden storage APIs. NOT checked: heavy 5-min soak / all 153 footprints for
+>   self-intersecting rings; COMPARE-mode trunk convergence still open.
 
 ## Role
 
