@@ -70,9 +70,9 @@ footer strong{color:var(--accent);font-weight:600}
 <div class="evi">
 <span>🌊 Glan söder az 185° — rapporterad</span>
 <span>☀️ Vintersol 8° · kvällssol VNV 320°</span>
-<span>⛰️ Sluttning okänd (DTM väntar)</span>
+<span>⛰️ Sluttning 13° SV — uppmätt (1 m DTM)</span>
 <span>💨 SV-byar + sjöbris från Glan</span>
-<span>📐 ~1 938 m² indikativ yta</span>
+<span>📐 1 936,8 m² auktoritativ yta (Lantmäteriet)</span>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -333,6 +333,114 @@ footer strong{color:var(--accent);font-weight:600}
 </div>
 </div>
 
+<!-- ── UNDERVÅNING (lower floor, grounded in 13° SW slope) ── -->
+<div style="margin-top:18px">
+<div class="dlbl">Plan · undervåning (sjönivå) — bekräftad av 13° SV-sluttning</div>
+<svg viewBox="0 0 440 280" xmlns="http://www.w3.org/2000/svg">
+<rect width="440" height="280" fill="var(--section-bg)" rx="4"/>
+
+<!-- Site context: slope indication -->
+<text x="220" y="16" font-family="Barlow Condensed" font-size="8" fill="var(--dim)" text-anchor="middle" font-weight="500">SLUTTNING 13° → SV (mot Glan)</text>
+<line x1="170" y1="22" x2="270" y2="22" stroke="var(--accent)" stroke-width="0.8" opacity=".4"/>
+
+<!-- Upper floor outline above (dashed, for reference) -->
+<rect x="77" y="38" width="286" height="110" fill="none" stroke="var(--dim)" stroke-width="0.8" stroke-dasharray="5 3" opacity=".35"/>
+<text x="350" y="50" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" opacity=".5">övre våning (ovan)</text>
+
+<!-- ── UNDERVÅNING wall mass: ~15m × 7m under western 2/3 ── -->
+<!-- x=77, y=38, w=195, h=110 (under living+kitchen+hall) -->
+<rect x="77" y="38" width="195" height="110" fill="var(--wall)"/>
+
+<!-- Room cutouts -->
+<!-- Stort allrum / TV-rum: 7m × 5.5m (SW corner, the money room with lake glass) -->
+<rect x="81" y="42" width="91" height="102" fill="var(--card)"/>
+<!-- Gästrum 1: 4m × 3.5m -->
+<rect x="174" y="42" width="50" height="48" fill="var(--card)"/>
+<!-- Gästrum 2 / kontor: 3.5m × 3.5m -->
+<rect x="174" y="92" width="50" height="52" fill="var(--card)"/>
+<!-- Teknikrum + förråd: 3m × 7m (east end, under hall) -->
+<rect x="226" y="42" width="42" height="102" fill="var(--card)"/>
+<!-- Trappa ned (stairwell from above): 2.5m × 2.5m -->
+<rect x="226" y="42" width="32" height="30" fill="var(--heart-light)" stroke="var(--heart)" stroke-width="0.8"/>
+
+<!-- Windows — south wall (full glass toward Glan) -->
+<rect x="85" y="144" width="87" height="4" fill="var(--glass)" rx="1"/>
+<rect x="178" y="144" width="46" height="4" fill="var(--glass)" rx="1"/>
+<!-- West wall window -->
+<rect x="77" y="54" width="4" height="60" fill="var(--glass)" rx="1"/>
+
+<!-- Interior walls (thin) -->
+<line x1="174" y1="42" x2="174" y2="144" stroke="var(--wall-int)" stroke-width="1.2"/>
+<line x1="226" y1="42" x2="226" y2="144" stroke="var(--wall-int)" stroke-width="1.2"/>
+<line x1="174" y1="90" x2="226" y2="90" stroke="var(--wall-int)" stroke-width="1"/>
+
+<!-- Door openings -->
+<rect x="172" y="68" width="4" height="12" fill="var(--card)"/>
+<rect x="172" y="110" width="4" height="12" fill="var(--card)"/>
+<rect x="224" y="68" width="4" height="12" fill="var(--card)"/>
+
+<!-- Furniture -->
+<g opacity=".5">
+<!-- Allrum: soffa + TV -->
+<rect x="88" y="108" width="42" height="16" rx="2" fill="var(--furn)" stroke="var(--furn-s)" stroke-width="0.5"/>
+<rect x="88" y="52" width="6" height="28" rx="1" fill="var(--furn)" stroke="var(--furn-s)" stroke-width="0.4"/>
+<!-- Gästrum 1: säng -->
+<rect x="186" y="52" width="28" height="22" rx="2" fill="var(--furn)" stroke="var(--furn-s)" stroke-width="0.5"/>
+<!-- Gästrum 2: skrivbord -->
+<rect x="186" y="120" width="24" height="10" rx="1" fill="var(--furn)" stroke="var(--furn-s)" stroke-width="0.4"/>
+<!-- Teknikrum -->
+<rect x="234" y="96" width="14" height="18" rx="1" fill="var(--furn)" stroke="var(--furn-s)" stroke-width="0.4"/>
+<rect x="252" y="96" width="10" height="10" rx="5" fill="none" stroke="var(--furn-s)" stroke-width="0.5"/>
+</g>
+
+<!-- Stair symbol -->
+<g transform="translate(230,46)">
+<line x1="0" y1="0" x2="24" y2="0" stroke="var(--wall-int)" stroke-width="0.5"/>
+<line x1="0" y1="4" x2="24" y2="4" stroke="var(--wall-int)" stroke-width="0.5"/>
+<line x1="0" y1="8" x2="24" y2="8" stroke="var(--wall-int)" stroke-width="0.5"/>
+<line x1="0" y1="12" x2="24" y2="12" stroke="var(--wall-int)" stroke-width="0.5"/>
+<line x1="0" y1="16" x2="24" y2="16" stroke="var(--wall-int)" stroke-width="0.5"/>
+<line x1="0" y1="20" x2="24" y2="20" stroke="var(--wall-int)" stroke-width="0.5"/>
+<line x1="12" y1="0" x2="12" y2="24" stroke="var(--accent)" stroke-width="0.8" stroke-dasharray="2 1"/>
+<text x="12" y="-3" font-family="Barlow Condensed" font-size="6" fill="var(--accent)" text-anchor="middle">↑ trappa</text>
+</g>
+
+<!-- Room labels -->
+<g font-family="Barlow Condensed" font-size="8.5" fill="var(--label)" text-anchor="middle">
+<text x="126" y="86" font-size="9" font-weight="500" fill="var(--accent)">Allrum / TV</text>
+<text x="126" y="96" font-size="7.5" fill="var(--dim)">~38 m²</text>
+<text x="199" y="68" font-size="8">Gästrum</text>
+<text x="199" y="78" font-size="7" fill="var(--dim)">~14 m²</text>
+<text x="199" y="116" font-size="8">Kontor</text>
+<text x="199" y="126" font-size="7" fill="var(--dim)">~14 m²</text>
+<text x="247" y="86" font-size="7.5">Teknik</text>
+<text x="247" y="96" font-size="6.5" fill="var(--dim)">~18 m²</text>
+</g>
+
+<!-- Terrace south (lower level, directly toward Glan) -->
+<rect x="81" y="152" width="140" height="24" fill="var(--terrace)" stroke="var(--terrace-s)" stroke-width="0.8" stroke-dasharray="3 2"/>
+<text x="151" y="168" font-family="Barlow Condensed" font-size="8" fill="var(--dim)" text-anchor="middle">terrass mot Glan (sjönivå)</text>
+
+<!-- Dimension lines -->
+<line x1="77" y1="192" x2="272" y2="192" class="dim-line"/><line x1="77" y1="189" x2="77" y2="195" class="dim-tick"/><line x1="272" y1="189" x2="272" y2="195" class="dim-tick"/>
+<text x="174" y="202" class="dim-text">15 000</text>
+<line x1="284" y1="38" x2="284" y2="148" class="dim-line"/><line x1="281" y1="38" x2="287" y2="38" class="dim-tick"/><line x1="281" y1="148" x2="287" y2="148" class="dim-tick"/>
+<text x="297" y="96" class="dim-text" text-anchor="start" transform="rotate(-90 297 96)">8 500</text>
+
+<!-- North arrow -->
+<g transform="translate(400,240)">
+<polygon points="0,-12 4,0 -4,0" fill="var(--wall)" opacity=".7"/>
+<text x="0" y="-15" font-family="Barlow" font-size="8" fill="var(--dim)" text-anchor="middle" font-weight="600">N</text>
+</g>
+
+<!-- View arrow -->
+<text x="151" y="220" font-family="Barlow Condensed" font-size="9" fill="var(--glass-stroke)" text-anchor="middle" font-weight="500" letter-spacing="3">↓  GLAN  ↓</text>
+
+<!-- GFA label -->
+<text x="174" y="250" font-family="Barlow Condensed" font-size="8" fill="var(--dim)" text-anchor="middle">Undervåning BTA ~84 m² · total BTA ~196 m²</text>
+</svg>
+</div>
+
 <div class="elev-grid">
 <div>
 <div class="dlbl">Fasad norr (gatan)</div>
@@ -381,7 +489,7 @@ footer strong{color:var(--accent);font-weight:600}
 
 <div class="info">
 <div><b>Varför för den här tomten:</b> Huset gör det slänten redan vill — övervåning i gatunivå, undervåning kliver ut mot sjön med full utsikt. Avlopp med självfall, banken i ryggen tar nordostvinden.</div>
-<div><b>Risk:</b> Kvällsuteplatsen ligger öppen för SV-byarna. Sluttningen måste bekräftas med DTM innan suterrängversionen fryses — på plan mark faller konceptet tillbaka till en enkel platta.</div>
+<div><b>Risk:</b> Kvällsuteplatsen ligger öppen för SV-byarna. Sluttningen är nu bekräftad (13° SV) — suterrängversionen är validerad. Undervåning mot sjön med full takhöjd.</div>
 </div>
 <div class="data">
 <span>~170–190 m² BTA</span>
@@ -691,7 +799,7 @@ footer strong{color:var(--accent);font-weight:600}
 
 <!-- Optional souterräng (dashed) -->
 <rect x="120" y="136" width="80" height="30" fill="none" stroke="var(--dim)" stroke-width="0.8" stroke-dasharray="4 3" opacity=".5"/>
-<text x="160" y="155" font-family="Barlow Condensed" font-size="6.5" fill="var(--dim)" text-anchor="middle" opacity=".6">ev. suterräng (om DTM bekräftar)</text>
+<text x="160" y="155" font-family="Barlow Condensed" font-size="6.5" fill="var(--dim)" text-anchor="middle" opacity=".6">suterräng bekräftad (13° SV)</text>
 </svg>
 </div>
 </div>
@@ -762,7 +870,7 @@ footer strong{color:var(--accent);font-weight:600}
 
 <div class="info">
 <div><b>Varför för den här tomten:</b> Det enda förslaget som får alla fem — sjöutsikt, vintersol, kvällssol, vindskydd och kontrollerad kostnad — i samma hus. Vinkeln + vindfickan gör kvällsuteplatsen vindskyddad utan att tappa västsolen. House Heart i knuten samlar alla våtrum.</div>
-<div><b>Risk:</b> Något större fotavtryck. Suterrängversionen vid västra gaveln väntar på terrängdata (DTM). På plan mark fungerar huset ändå — det är ritat att klara båda fallen.</div>
+<div><b>Risk:</b> Något större fotavtryck. Suterrängversionen vid västra gaveln är nu validerad (13° SV-sluttning bekräftad). House Heart i knuten samlar alla våtrum — kortast möjliga ledningsdragning.</div>
 </div>
 <div class="data">
 <span>~165–185 m² + 35 m² garage</span>
@@ -1165,6 +1273,6 @@ footer strong{color:var(--accent);font-weight:600}
 </div>
 
 <footer>
-<strong>Alla tre är KONCEPT</strong> ur verifierad platsdata — inget är konstruerat eller bygglovsprövat. Terrängdata (1 m DTM) saknas fortfarande (HTTP 401). Sjöutsikten mot Glan är säljarrapporterad, inte viewshed-verifierad. Solbana och vinddata är härledda från latitud 58.65°N och regionalt klimat. Nästa steg efter valet: full ritningsuppsättning av vinnaren (fyra fasader, detaljer, materialspecifikation) → 3D-modell i tomtens kontext. · <strong>BRAGE/MIMER</strong> · 2026-08-25
+<strong>Alla tre är KONCEPT</strong> ur verifierad platsdata — inget är konstruerat eller bygglovsprövat. Terräng bekräftad: 13° SV-sluttning, ~70 m RH2000 vid tomtnål, 43 m fall mot Glan över 800 m (1 m DTM, uppmätt 2026-08-27). Tomtyta 1 936,8 m² (Lantmäteriet, auktoritativ). Sjöutsikten mot Glan är säljarrapporterad, inte viewshed-verifierad. Solbana och vinddata är härledda från latitud 58.65°N och regionalt klimat. Nästa steg efter valet: full ritningsuppsättning av vinnaren → 3D-modell i tomtens kontext. · <strong>BRAGE/MIMER</strong> · 2026-08-27
 </footer>
 </main>
