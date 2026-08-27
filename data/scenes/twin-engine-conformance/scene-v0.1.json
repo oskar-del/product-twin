@@ -675,6 +675,29 @@
       "limitations": [
         "Synthetic conformance fixture. Not a claim about any real place, parcel or building."
       ]
+    },
+    {
+      "id": "AVATAR_FIXTURE",
+      "type": "FURNITURE",
+      "label": "Fixture glTF avatar",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/fixture-placeholder.glb",
+        "position": [
+          3,
+          1.05,
+          -2
+        ],
+        "rotation_y_deg": 45
+      },
+      "source_refs": [
+        "ENGINE_CONFORMANCE_FIXTURE"
+      ],
+      "limitations": [
+        "Synthetic conformance fixture. Not a claim about any real place, parcel or building.",
+        "Placeholder — no actual .glb is loaded in headless tests."
+      ]
     }
   ]
 }

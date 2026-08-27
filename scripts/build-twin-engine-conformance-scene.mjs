@@ -110,7 +110,8 @@ export function buildConformanceScene() {
       element("ADDRESS_ANCHOR", "ANCHOR", "Coordinate anchor", "AUTHORITATIVE", {primitive: "MARKER", position: [0, 1, 0]}, ["Marks the frame origin, nothing else."]),
       element("POI_SCHOOL", "POI", "Fixture point of interest", "DERIVED", {primitive: "DIAGRAMMATIC_MARKER", position: [-34, 1, 28], distance_m: 44, placement_method: "DIAGRAMMATIC_BEARING_AND_DISTANCE"}),
       element("VIEW_SOUTHWEST", "VIEW_DIRECTION", "Fixture view direction", "REPORTED_UNVERIFIED", {primitive: "DIRECTION_CONE", origin: [0, 4.4, 0], azimuth_deg: 225, length_m: 38, spread_deg: 26}, ["Direction only; no visibility analysis."]),
-      element("SOLAR_PATH", "ENVIRONMENTAL_ANCHOR", "Fixture solar path", "DERIVED", {primitive: "SOLAR_ARC", latitude_deg: 0, longitude_deg: 0, study_date: "2026-06-21", hours: [6, 8, 10, 12, 14, 16, 18]})
+      element("SOLAR_PATH", "ENVIRONMENTAL_ANCHOR", "Fixture solar path", "DERIVED", {primitive: "SOLAR_ARC", latitude_deg: 0, longitude_deg: 0, study_date: "2026-06-21", hours: [6, 8, 10, 12, 14, 16, 18]}),
+      element("AVATAR_FIXTURE", "FURNITURE", "Fixture glTF avatar", "INDICATIVE", {primitive: "GLTF_ASSET", asset_path: "data/geometry/avatars/fixture-placeholder.glb", position: [3, 1.05, -2], rotation_y_deg: 45}, ["Placeholder — no actual .glb is loaded in headless tests."])
     ]
   };
 }

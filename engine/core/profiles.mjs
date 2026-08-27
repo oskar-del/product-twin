@@ -13,11 +13,13 @@ import {evidenceHex} from "./evidence.mjs";
 export const PROFILE_INTELLIGENCE = "INTELLIGENCE";
 export const PROFILE_REALISTIC = "REALISTIC";
 export const PROFILE_COMPARE = "COMPARE";
+export const PROFILE_SYSTEMS = "SYSTEMS";
 
 export const PROFILE_CAPTIONS = Object.freeze({
   INTELLIGENCE: "Evidence colours expose source status and uncertainty.",
   REALISTIC: "Natural materials and daylight. Presentation only — the geometry and its claims are unchanged.",
-  COMPARE: "One twin, one camera: analytical evidence beside realistic context."
+  COMPARE: "One twin, one camera: analytical evidence beside realistic context.",
+  SYSTEMS: "Technical layers: MEP runs, structural zones, service cores. Evidence colours show what is designed vs what is verified."
 });
 
 /** Default natural palette by element type. A scene's own vocabulary can override any entry. */
@@ -54,6 +56,12 @@ export const PROFILE_ENVIRONMENTS = Object.freeze({
     fog: {color: 0xb8ced0, near: 235, far: 720},
     hemisphere: {sky: 0xeaf5ff, ground: 0x55684b, intensity: 1.3},
     exposure: 1.18
+  },
+  SYSTEMS: {
+    background: 0x1a1e1c,
+    fog: {color: 0x1a1e1c, near: 280, far: 800},
+    hemisphere: {sky: 0x8899aa, ground: 0x2a3530, intensity: 1.9},
+    exposure: 1.1
   }
 });
 
@@ -126,6 +134,7 @@ export function applyProfile(profileName, {scene, root, realismDecor, labelGroup
   const name = profileName === PROFILE_COMPARE ? PROFILE_INTELLIGENCE : profileName;
   const environment = PROFILE_ENVIRONMENTS[name] ?? PROFILE_ENVIRONMENTS.INTELLIGENCE;
   const realistic = name === PROFILE_REALISTIC;
+  const systems = name === PROFILE_SYSTEMS;
 
   scene.background = new THREE.Color(environment.background);
   // Fog distances come from the scene's own extents when it declares them: hardcoded distances
