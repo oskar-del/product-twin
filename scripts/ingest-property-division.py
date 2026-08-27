@@ -141,10 +141,18 @@ def ingest_gpkg(gpkg_path, origin, designation=DESIGNATION, buffer_m=CLIP_BUFFER
             except Exception:
                 continue
             desig = None            # this parcel's own designation (e.g. "SVÄRTINGE 54:29")
-            for c in tcols:
-                v = rec.get(c)
-                if isinstance(v, str) and re.search(r"\d+:\d+", v):
-                    desig = v; break
+            # Real LM fastighetsindelning schema splits the designation:
+            # trakt='SVÄRTINGE' + etikett='54:28'. Compose when both exist;
+            # fall back to the single-column scan for other schemas.
+            _trakt, _etik = rec.get("trakt"), rec.get("etikett")
+            if isinstance(_trakt, str) and isinstance(_etik, str) \
+                    and re.search(r"\d+:\d+", _etik):
+                desig = f"{_trakt} {_etik}"
+            else:
+                for c in tcols:
+                    v = rec.get(c)
+                    if isinstance(v, str) and re.search(r"\d+:\d+", v):
+                        desig = v; break
             is_subject = desig is not None and re.sub(r"\s+", "", desig).upper() == norm
             oid = f"{table}:{rec[rowid]}"
             cx, cy = _centroid(polys)
