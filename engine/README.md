@@ -90,6 +90,7 @@ The engine renders scenes; `engine/compile/` makes them.
 | Scattered elevation samples → interpolated `GRID_SURFACE` (+ its own limitations) | `compile/terrain-interpolation.mjs` |
 | Dense DEM height field → budgeted `GRID_SURFACE` decimated to a triangle ceiling (+ reported RMS/max error) | `compile/height-field.mjs` |
 | OSM building footprints → `CONTEXT_BUILDING` elements (projected, height-estimated, budget-capped, terrain-draped) | `compile/osm-buildings.mjs` |
+| Authoritative property boundary → `PROPERTY_BOUNDARY` element with area cross-check | `compile/authoritative-boundary.mjs` |
 | Scene envelope, camera framing from real extents, contract enforcement | `compile/scene-assembler.mjs` |
 
 A **site adapter** does the joins only that site's owner can do and calls the assembler.

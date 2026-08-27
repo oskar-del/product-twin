@@ -136,5 +136,18 @@ One checkout = one executor. Deliverable-first: every block ends with something 
     its inspect panel. Gate `engine:osm:test`, 54 checks across 10 sections. Engine wired: the
     merge runs automatically after scene build; picking resolves merged hits.
     Seven suites, 341 checks, all green.
+  - **Design-selector mount contract REVIEWED (2026-08-27)** — `docs/DESIGN-SELECTOR-MOUNT-CONTRACT-REVIEW.md`:
+    cross-checked Spatial's draft against BRAGE's v0.2 geometry spec. Verdict APPROVE with 6
+    required changes (type vocabulary mismatch, anchor-relative coordinates, unknown primitives,
+    invalid CONCEPT_OPTIONAL evidence class, field name mismatches, anchor value placeholder).
+    Answers all 4 open items. Spatial unblocked to implement `mountDesign`/`clearDesign`.
+  - **Authoritative boundary layer (`engine/compile/authoritative-boundary.mjs`)** — the LM data
+    arrived (SVÄRTINGE 54:28 boundary extracted from `fastighetsindelning_kn0581.gpkg`, SWEREF 99 TM
+    → WGS84, 1 938.1 m² projected vs 1 936.8 m² stated = 0.07% drift). The compiler produces a
+    `PROPERTY_BOUNDARY` element with `AUTHORITATIVE` evidence class, thin slab overlay (0.15 m),
+    area cross-check, and terrain draping. Renderer profiles updated with `PROPERTY_BOUNDARY`
+    colour and opacity. Gate `engine:boundary:test`, 22 checks incl. real LM boundary, scene
+    contract compliance, area tolerance failure path, and terrain draping.
+    Nine suites, 363 checks, all green.
   - **NOT done:** Milestone 2's formal exit (Essence consuming the engine *on a branch that has
     both*) is still blocked on D1. Commits are on `agent/platform-engine` in `../repo-platform`.
