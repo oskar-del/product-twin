@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_40686",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Idun bärkvist röd",
+    "manufacturer": "Newport",
+    "article_no": "40686",
+    "ean": null,
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "SEASONAL",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 359,
+    "sale_price": null,
+    "ean": null,
+    "product_url": "https://www.newport.se/shop/jul/julblommor/idun-barkvist-rod",
+    "cart_deeplink": "https://www.newport.se/shop/jul/julblommor/idun-barkvist-rod",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=40686&fid=2175&url=https://www.newport.se/shop/jul/julblommor/idun-barkvist-rod",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/6483e9769dc411ebb34e000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Brun / Röd",
+    "material": "Ståltråd / PE-plast / PU-skum"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "40686",
+      "product_url": "https://www.newport.se/shop/jul/julblommor/idun-barkvist-rod"
+    }
+  ]
+}

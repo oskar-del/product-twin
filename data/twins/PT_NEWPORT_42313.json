@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_42313",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bergspalm konstträd grön 110cm",
+    "manufacturer": "Newport",
+    "article_no": "42313",
+    "ean": "7330026169218",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.PLANT",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 849,
+    "sale_price": null,
+    "ean": "7330026169218",
+    "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/konsttrad/bergspalm-konsttrad-110cm",
+    "cart_deeplink": "https://www.newport.se/shop/flower-world/konstvaxter/konsttrad/bergspalm-konsttrad-110cm",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=42313&fid=2175&url=https://www.newport.se/shop/flower-world/konstvaxter/konsttrad/bergspalm-konsttrad-110cm",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/649a38f09dc411ebb34e000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grön",
+    "material": "Ståltråd / PE-plast"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "42313",
+      "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/konsttrad/bergspalm-konsttrad-110cm"
+    }
+  ]
+}

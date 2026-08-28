@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_98491",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Art Deco doftljus",
+    "manufacturer": "Côte Noire",
+    "article_no": "98491",
+    "ean": "0745604932691",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.FRAGRANCE",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 1099,
+    "sale_price": null,
+    "ean": "0745604932691",
+    "product_url": "https://www.newport.se/shop/inredning/doft-skonhet/doftljus/art-deco-doftljus-vit",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/doft-skonhet/doftljus/art-deco-doftljus-vit",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=98491&fid=2175&url=https://www.newport.se/shop/inredning/doft-skonhet/doftljus/art-deco-doftljus-vit",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/955225efb32c42b88e4f4d603f39003c/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit",
+    "material": "Sojavax / kokosvax / bivax"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "98491",
+      "product_url": "https://www.newport.se/shop/inredning/doft-skonhet/doftljus/art-deco-doftljus-vit"
+    }
+  ]
+}

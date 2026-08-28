@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_101496",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Roses de luxe gåvoset vit",
+    "manufacturer": "Côte Noire",
+    "article_no": "101496",
+    "ean": "0745604931564",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.PLANT",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 2699,
+    "sale_price": null,
+    "ean": "0745604931564",
+    "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/krukvaxter/roses-de-luxe-gavoset-vit",
+    "cart_deeplink": "https://www.newport.se/shop/flower-world/konstvaxter/krukvaxter/roses-de-luxe-gavoset-vit",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=101496&fid=2175&url=https://www.newport.se/shop/flower-world/konstvaxter/krukvaxter/roses-de-luxe-gavoset-vit",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/131398d385d84c5883767d3dede158f5/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit / Guld",
+    "material": null
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "101496",
+      "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/krukvaxter/roses-de-luxe-gavoset-vit"
+    }
+  ]
+}

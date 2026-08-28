@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_105433",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Amarante kudde camari cream",
+    "manufacturer": "Eichholtz",
+    "article_no": "105433",
+    "ean": "8721324013799",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.TEXTILES.CUSHION",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 2049,
+    "sale_price": null,
+    "ean": "8721324013799",
+    "product_url": "https://www.newport.se/shop/textil/kuddar/prydnadskuddar/amarante-kudde-camari-cream",
+    "cart_deeplink": "https://www.newport.se/shop/textil/kuddar/prydnadskuddar/amarante-kudde-camari-cream",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=105433&fid=2175&url=https://www.newport.se/shop/textil/kuddar/prydnadskuddar/amarante-kudde-camari-cream",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/6b7ffbacf61411f093690050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Akryl / Polyester / Linne / Viskos"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "105433",
+      "product_url": "https://www.newport.se/shop/textil/kuddar/prydnadskuddar/amarante-kudde-camari-cream"
+    }
+  ]
+}

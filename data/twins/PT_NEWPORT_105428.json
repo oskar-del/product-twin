@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_105428",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Camari kudde cream",
+    "manufacturer": "Eichholtz",
+    "article_no": "105428",
+    "ean": "8721324013775",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.TEXTILES.CUSHION",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 2759,
+    "sale_price": null,
+    "ean": "8721324013775",
+    "product_url": "https://www.newport.se/shop/textil/kuddar/prydnadskuddar/camari-kudde-cream-60x60",
+    "cart_deeplink": "https://www.newport.se/shop/textil/kuddar/prydnadskuddar/camari-kudde-cream-60x60",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=105428&fid=2175&url=https://www.newport.se/shop/textil/kuddar/prydnadskuddar/camari-kudde-cream-60x60",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/6b7e8ce9f61411f093690050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit",
+    "material": "Tyg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "105428",
+      "product_url": "https://www.newport.se/shop/textil/kuddar/prydnadskuddar/camari-kudde-cream-60x60"
+    }
+  ]
+}

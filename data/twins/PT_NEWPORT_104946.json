@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_104946",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emily pearl halsband",
+    "manufacturer": "Lily And Rose",
+    "article_no": "104946",
+    "ean": "2001004412644",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER.ACCESSORIES",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 399,
+    "sale_price": null,
+    "ean": "2001004412644",
+    "product_url": "https://www.newport.se/shop/inredning/smycken/halsband/emily-pearl-halsband-rosaline",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/smycken/halsband/emily-pearl-halsband-rosaline",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=104946&fid=2175&url=https://www.newport.se/shop/inredning/smycken/halsband/emily-pearl-halsband-rosaline",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/7074fff1865e4e85bd476867ec21d619/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Guld",
+    "material": "Mässing / Swarovski"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "104946",
+      "product_url": "https://www.newport.se/shop/inredning/smycken/halsband/emily-pearl-halsband-rosaline"
+    }
+  ]
+}

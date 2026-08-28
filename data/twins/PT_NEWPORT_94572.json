@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_94572",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lyckliga Lotta krukväxt vit",
+    "manufacturer": "Newport",
+    "article_no": "94572",
+    "ean": "7330026178036",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.PLANT",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 379,
+    "sale_price": null,
+    "ean": "7330026178036",
+    "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/krukvaxter/lyckliga-lotta-krukvaxt-vit",
+    "cart_deeplink": "https://www.newport.se/shop/flower-world/konstvaxter/krukvaxter/lyckliga-lotta-krukvaxt-vit",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=94572&fid=2175&url=https://www.newport.se/shop/flower-world/konstvaxter/krukvaxter/lyckliga-lotta-krukvaxt-vit",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/8f863217062e11ef91120050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit / Grön",
+    "material": "Konstväxt"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "94572",
+      "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/krukvaxter/lyckliga-lotta-krukvaxt-vit"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_107791",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Marenzo fåtölj teak",
+    "manufacturer": "Eichholtz",
+    "article_no": "107791",
+    "ean": "8721324012792",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.OUTDOOR",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 28695,
+    "sale_price": null,
+    "ean": "8721324012792",
+    "product_url": "https://www.newport.se/shop/mobler/utemobler/tradgardsfatoljer/marenzo-fatolj-teak",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/utemobler/tradgardsfatoljer/marenzo-fatolj-teak",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=107791&fid=2175&url=https://www.newport.se/shop/mobler/utemobler/tradgardsfatoljer/marenzo-fatolj-teak",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/2c2626b252c111f193690050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Brun",
+    "material": "Teak / Polyeten / Aluminium / Dacron / Polyure / Polypropenband"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "107791",
+      "product_url": "https://www.newport.se/shop/mobler/utemobler/tradgardsfatoljer/marenzo-fatolj-teak"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_96981",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Nuno vägglampa vintage mässing/brons",
+    "manufacturer": "Eichholtz",
+    "article_no": "96981",
+    "ean": "8720875173075",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "ELECTRICAL.LUMINAIRES.WALL",
+  "bucket": "LIGHTING",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 3559,
+    "sale_price": null,
+    "ean": "8720875173075",
+    "product_url": "https://www.newport.se/shop/belysning/lampor/vagglampor/nuno-vagglampa-vintage-massing-brons",
+    "cart_deeplink": "https://www.newport.se/shop/belysning/lampor/vagglampor/nuno-vagglampa-vintage-massing-brons",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=96981&fid=2175&url=https://www.newport.se/shop/belysning/lampor/vagglampor/nuno-vagglampa-vintage-massing-brons",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/100c134aab2111ef947e0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Guld / Brun",
+    "material": "Aluminium / Järn / PVC"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "96981",
+      "product_url": "https://www.newport.se/shop/belysning/lampor/vagglampor/nuno-vagglampa-vintage-massing-brons"
+    }
+  ]
+}

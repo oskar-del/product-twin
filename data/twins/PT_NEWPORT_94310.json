@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_94310",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Nymphea smörkupa klarglas",
+    "manufacturer": "Newport",
+    "article_no": "94310",
+    "ean": "3028601256258",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 359,
+    "sale_price": null,
+    "ean": "3028601256258",
+    "product_url": "https://www.newport.se/shop/servering/dukning/detaljer/nymphea-smorkupa-klarglas",
+    "cart_deeplink": "https://www.newport.se/shop/servering/dukning/detaljer/nymphea-smorkupa-klarglas",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=94310&fid=2175&url=https://www.newport.se/shop/servering/dukning/detaljer/nymphea-smorkupa-klarglas",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/256c83bdea9211ee940f0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Transparent",
+    "material": "Glas"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "94310",
+      "product_url": "https://www.newport.se/shop/servering/dukning/detaljer/nymphea-smorkupa-klarglas"
+    }
+  ]
+}

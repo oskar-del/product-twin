@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_62808",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Morris & Co Willow Bough mugg",
+    "manufacturer": "William Morris",
+    "article_no": "62808",
+    "ean": "0749151791503",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 349,
+    "sale_price": null,
+    "ean": "0749151791503",
+    "product_url": "https://www.newport.se/shop/servering/koppar-muggar/tekoppar/morris-co-willow-bough-mugg",
+    "cart_deeplink": "https://www.newport.se/shop/servering/koppar-muggar/tekoppar/morris-co-willow-bough-mugg",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=62808&fid=2175&url=https://www.newport.se/shop/servering/koppar-muggar/tekoppar/morris-co-willow-bough-mugg",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/c8e392d9fba711ed92de0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Porslin"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "62808",
+      "product_url": "https://www.newport.se/shop/servering/koppar-muggar/tekoppar/morris-co-willow-bough-mugg"
+    }
+  ]
+}

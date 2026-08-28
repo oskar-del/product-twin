@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_53740",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sensation spegel rund OUTLET",
+    "manufacturer": "Eichholtz",
+    "article_no": "53740",
+    "ean": null,
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "SEASONAL",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 13695,
+    "sale_price": 5478,
+    "ean": null,
+    "product_url": "https://www.newport.se/shop/inredning/speglar/runda-speglar/sensation-spegel-rund-outlet",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/speglar/runda-speglar/sensation-spegel-rund-outlet",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=53740&fid=2175&url=https://www.newport.se/shop/inredning/speglar/runda-speglar/sensation-spegel-rund-outlet",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/f3d7aa2c4bb411eca5c0000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Rostfritt stål / spegelglas / MDF"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "53740",
+      "product_url": "https://www.newport.se/shop/inredning/speglar/runda-speglar/sensation-spegel-rund-outlet"
+    }
+  ]
+}

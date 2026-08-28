@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_95773",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Victoria karmstol iceland hunter",
+    "manufacturer": "Artwood",
+    "article_no": "95773",
+    "ean": "7340172942016",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.SEATING.DINING_CHAIR",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 5695,
+    "sale_price": null,
+    "ean": "7340172942016",
+    "product_url": "https://www.newport.se/shop/mobler/stolar/matstolar/victoria-matstol-iceland-hunter",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/stolar/matstolar/victoria-matstol-iceland-hunter",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=95773&fid=2175&url=https://www.newport.se/shop/mobler/stolar/matstolar/victoria-matstol-iceland-hunter",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/88da5b005fbc11ef91120050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Brun / Grå / Svart",
+    "material": "Björkträ / plywood / MDF / kallskum / syntetfiber / polyester"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "95773",
+      "product_url": "https://www.newport.se/shop/mobler/stolar/matstolar/victoria-matstol-iceland-hunter"
+    }
+  ]
+}

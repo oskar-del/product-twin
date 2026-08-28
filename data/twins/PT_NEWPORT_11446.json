@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_11446",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Rome takkrona grå",
+    "manufacturer": "Artwood",
+    "article_no": "11446",
+    "ean": "7340172975762",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+  "bucket": "LIGHTING",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 23595,
+    "sale_price": null,
+    "ean": "7340172975762",
+    "product_url": "https://www.newport.se/shop/belysning/lampor/taklampor/rome-takkrona-gra-l",
+    "cart_deeplink": "https://www.newport.se/shop/belysning/lampor/taklampor/rome-takkrona-gra-l",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=11446&fid=2175&url=https://www.newport.se/shop/belysning/lampor/taklampor/rome-takkrona-gra-l",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/63d8e6b59dc411ebb34e000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grå",
+    "material": "Järn"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "11446",
+      "product_url": "https://www.newport.se/shop/belysning/lampor/taklampor/rome-takkrona-gra-l"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_100220",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Modern Abstract matta multi rost",
+    "manufacturer": "Classic Collection",
+    "article_no": "100220",
+    "ean": "7340110828259",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.TEXTILES.RUG",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 8295,
+    "sale_price": null,
+    "ean": "7340110828259",
+    "product_url": "https://www.newport.se/shop/textil/mattor/ullmattor/modern-abstract-matta-multi-rost-170x230",
+    "cart_deeplink": "https://www.newport.se/shop/textil/mattor/ullmattor/modern-abstract-matta-multi-rost-170x230",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100220&fid=2175&url=https://www.newport.se/shop/textil/mattor/ullmattor/modern-abstract-matta-multi-rost-170x230",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/7d2fba6c20e511f0947e0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Flerfärgad / Vinröd",
+    "material": "Ull / Bomull"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "100220",
+      "product_url": "https://www.newport.se/shop/textil/mattor/ullmattor/modern-abstract-matta-multi-rost-170x230"
+    }
+  ]
+}

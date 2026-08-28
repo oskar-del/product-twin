@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_107860",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Harlow vägglampa silver",
+    "manufacturer": "Hudson Valley Lighting",
+    "article_no": "107860",
+    "ean": "0197292189718",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "ELECTRICAL.LUMINAIRES.WALL",
+  "bucket": "LIGHTING",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 7895,
+    "sale_price": null,
+    "ean": "0197292189718",
+    "product_url": "https://www.newport.se/shop/belysning/lampor/vagglampor/harlow-vagglampa-silver-107860",
+    "cart_deeplink": "https://www.newport.se/shop/belysning/lampor/vagglampor/harlow-vagglampa-silver-107860",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=107860&fid=2175&url=https://www.newport.se/shop/belysning/lampor/vagglampor/harlow-vagglampa-silver-107860",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/9f34b092552111f193690050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Silver / Vit",
+    "material": "Handsmitt järn / Tyg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "107860",
+      "product_url": "https://www.newport.se/shop/belysning/lampor/vagglampor/harlow-vagglampa-silver-107860"
+    }
+  ]
+}

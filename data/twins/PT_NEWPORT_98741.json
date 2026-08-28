@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_98741",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cliff matstol mayer silver 2-set",
+    "manufacturer": "Eichholtz",
+    "article_no": "98741",
+    "ean": "8720875186723",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.SEATING.DINING_CHAIR",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 12795,
+    "sale_price": null,
+    "ean": "8720875186723",
+    "product_url": "https://www.newport.se/shop/mobler/stolar/matstolar/cliff-matstol-mayer-silver-2-set",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/stolar/matstolar/cliff-matstol-mayer-silver-2-set",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=98741&fid=2175&url=https://www.newport.se/shop/mobler/stolar/matstolar/cliff-matstol-mayer-silver-2-set",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/c97a9e43d8ac11ef947e0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grå / Silver / Svart / Guld",
+    "material": "Plast / Tyg / Stål / Plywood / Polypropylen (PP)"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "98741",
+      "product_url": "https://www.newport.se/shop/mobler/stolar/matstolar/cliff-matstol-mayer-silver-2-set"
+    }
+  ]
+}

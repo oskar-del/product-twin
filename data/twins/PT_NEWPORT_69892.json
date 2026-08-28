@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_69892",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Taranto bänk cascade off-white",
+    "manufacturer": "Eichholtz",
+    "article_no": "69892",
+    "ean": "8720875172788",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.SEATING.BENCH",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 14295,
+    "sale_price": null,
+    "ean": "8720875172788",
+    "product_url": "https://www.newport.se/shop/mobler/stolar/bankar/taranto-bank-cascade-off-white",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/stolar/bankar/taranto-bank-cascade-off-white",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=69892&fid=2175&url=https://www.newport.se/shop/mobler/stolar/bankar/taranto-bank-cascade-off-white",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/b68fb793c1d911eebd4a0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit",
+    "material": "Metall / Tyg / Plywood / PU-skum / Nylonväv"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "69892",
+      "product_url": "https://www.newport.se/shop/mobler/stolar/bankar/taranto-bank-cascade-off-white"
+    }
+  ]
+}

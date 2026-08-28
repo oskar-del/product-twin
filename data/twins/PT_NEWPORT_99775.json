@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_99775",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "The Girl From Nuba",
+    "manufacturer": "Cobra Art",
+    "article_no": "99775",
+    "ean": "7340172987864",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "OTHER",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 16495,
+    "sale_price": null,
+    "ean": "7340172987864",
+    "product_url": "https://www.newport.se/shop/inredning/tavlor/livsstil-modeikoner/the-girl-from-nuba-120x120-plexi",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/tavlor/livsstil-modeikoner/the-girl-from-nuba-120x120-plexi",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=99775&fid=2175&url=https://www.newport.se/shop/inredning/tavlor/livsstil-modeikoner/the-girl-from-nuba-120x120-plexi",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/8fa935655d1711eebd4a0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Flerfärgad",
+    "material": "Plexiglas"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "99775",
+      "product_url": "https://www.newport.se/shop/inredning/tavlor/livsstil-modeikoner/the-girl-from-nuba-120x120-plexi"
+    }
+  ]
+}

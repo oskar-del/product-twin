@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_106855",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Vilda balkonglåda grön",
+    "manufacturer": "Newport",
+    "article_no": "106855",
+    "ean": null,
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.OUTDOOR",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 559,
+    "sale_price": null,
+    "ean": null,
+    "product_url": "https://www.newport.se/shop/mobler/utemobler/blomlador-planteringslador/vilda-balkonglada-gron-50",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/utemobler/blomlador-planteringslador/vilda-balkonglada-gron-50",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=106855&fid=2175&url=https://www.newport.se/shop/mobler/utemobler/blomlador-planteringslador/vilda-balkonglada-gron-50",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/7bdcacbf11624bab8fdd9f1b2a85c8e9/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grön",
+    "material": "Metall"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "106855",
+      "product_url": "https://www.newport.se/shop/mobler/utemobler/blomlador-planteringslador/vilda-balkonglada-gron-50"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_57952",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Montana hörnmodul haze cream",
+    "manufacturer": "Artwood",
+    "article_no": "57952",
+    "ean": "7340172957898",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.SEATING.SOFA",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 20095,
+    "sale_price": null,
+    "ean": "7340172957898",
+    "product_url": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/montana-hornmodul-haze-cream",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/montana-hornmodul-haze-cream",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=57952&fid=2175&url=https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/montana-hornmodul-haze-cream",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/a7f8c9e91f9511edb3d20050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit",
+    "material": "100% polyester / bok / nozagfjädrar / HR-skum / fiber / silikon"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "57952",
+      "product_url": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/montana-hornmodul-haze-cream"
+    }
+  ]
+}

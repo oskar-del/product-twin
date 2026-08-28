@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_59067",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Pocasset skrivbord iconic black",
+    "manufacturer": "Newport",
+    "article_no": "59067",
+    "ean": "7340066724865",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.TABLE",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 19900,
+    "sale_price": null,
+    "ean": "7340066724865",
+    "product_url": "https://www.newport.se/shop/mobler/bord/skrivbord/pocasset-skrivbord-iconic-black",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/bord/skrivbord/pocasset-skrivbord-iconic-black",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=59067&fid=2175&url=https://www.newport.se/shop/mobler/bord/skrivbord/pocasset-skrivbord-iconic-black",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/8073ecbb760c11edaf330050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Ekfanér / Alträ / Lackerad premiumboard"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "59067",
+      "product_url": "https://www.newport.se/shop/mobler/bord/skrivbord/pocasset-skrivbord-iconic-black"
+    }
+  ]
+}

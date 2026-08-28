@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_104901",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "James Bond Limited-Edition \"007\" Trilogy Slipcase",
+    "manufacturer": "Assouline",
+    "article_no": "104901",
+    "ean": "9781649806307",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.BOOK",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 7395,
+    "sale_price": null,
+    "ean": "9781649806307",
+    "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/limited-edition/james-bond-limited-edition-007-trilogy-slipcase",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/coffee-table-books/limited-edition/james-bond-limited-edition-007-trilogy-slipcase",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=104901&fid=2175&url=https://www.newport.se/shop/inredning/coffee-table-books/limited-edition/james-bond-limited-edition-007-trilogy-slipcase",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/84b4b1e0c6ba11f093690050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Inbunden"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "104901",
+      "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/limited-edition/james-bond-limited-edition-007-trilogy-slipcase"
+    }
+  ]
+}

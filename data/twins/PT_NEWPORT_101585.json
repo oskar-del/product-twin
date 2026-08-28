@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_101585",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Square matta svart/natur",
+    "manufacturer": "Classic Collection",
+    "article_no": "101585",
+    "ean": "7340110825395",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.TEXTILES.RUG",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 4749,
+    "sale_price": null,
+    "ean": "7340110825395",
+    "product_url": "https://www.newport.se/shop/textil/mattor/ullmattor/square-matta-svartnatur-170x230",
+    "cart_deeplink": "https://www.newport.se/shop/textil/mattor/ullmattor/square-matta-svartnatur-170x230",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=101585&fid=2175&url=https://www.newport.se/shop/textil/mattor/ullmattor/square-matta-svartnatur-170x230",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/0f0808eedda64f1fbb9522f7c387ccef/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Svart / Beige",
+    "material": "Ull / Bomull (varp)"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "101585",
+      "product_url": "https://www.newport.se/shop/textil/mattor/ullmattor/square-matta-svartnatur-170x230"
+    }
+  ]
+}

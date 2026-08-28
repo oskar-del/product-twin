@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_58428",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Nerone konsolbord charcoal grey",
+    "manufacturer": "Eichholtz",
+    "article_no": "58428",
+    "ean": null,
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.TABLE",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 50295,
+    "sale_price": null,
+    "ean": null,
+    "product_url": "https://www.newport.se/shop/mobler/bord/avlastningsbord/Nerone-konsolbord-charcoal-grey",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/bord/avlastningsbord/Nerone-konsolbord-charcoal-grey",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=58428&fid=2175&url=https://www.newport.se/shop/mobler/bord/avlastningsbord/Nerone-konsolbord-charcoal-grey",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/78ca520734dc11ed920a0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Svart / Guld / Grå",
+    "material": "Plywood / mdf / Rostfritt stål / Ekfanér / Meranti fanér"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "58428",
+      "product_url": "https://www.newport.se/shop/mobler/bord/avlastningsbord/Nerone-konsolbord-charcoal-grey"
+    }
+  ]
+}

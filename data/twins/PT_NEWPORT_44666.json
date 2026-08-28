@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_44666",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Travels Light luftballong Green Double",
+    "manufacturer": "Authentic Models",
+    "article_no": "44666",
+    "ean": "781934584292",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 999,
+    "sale_price": null,
+    "ean": "781934584292",
+    "product_url": "https://www.newport.se/shop/inredning/dekoration/luftballonger/travels-light-luftballong-green-double",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/dekoration/luftballonger/travels-light-luftballong-green-double",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=44666&fid=2175&url=https://www.newport.se/shop/inredning/dekoration/luftballonger/travels-light-luftballong-green-double",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/64a725349dc411ebb34e000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grön",
+    "material": "Rotting / Papper / Polypropylen (PP)"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "44666",
+      "product_url": "https://www.newport.se/shop/inredning/dekoration/luftballonger/travels-light-luftballong-green-double"
+    }
+  ]
+}

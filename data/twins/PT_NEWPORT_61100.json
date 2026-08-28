@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_61100",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Racer modellbil röd",
+    "manufacturer": "Authentic Models",
+    "article_no": "61100",
+    "ean": "781934585831",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 2849,
+    "sale_price": null,
+    "ean": "781934585831",
+    "product_url": "https://www.newport.se/shop/inredning/dekoration/vintageinredning/racer-modellbil-rod",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/dekoration/vintageinredning/racer-modellbil-rod",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=61100&fid=2175&url=https://www.newport.se/shop/inredning/dekoration/vintageinredning/racer-modellbil-rod",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/5eb33bdfc70c11edace00050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Röd",
+    "material": "Aluminium / Konstläder"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "61100",
+      "product_url": "https://www.newport.se/shop/inredning/dekoration/vintageinredning/racer-modellbil-rod"
+    }
+  ]
+}

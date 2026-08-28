@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_95929",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Giselle kökssoffa hailey shell",
+    "manufacturer": "Artwood",
+    "article_no": "95929",
+    "ean": "7340172938200",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.SEATING.SOFA",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 20395,
+    "sale_price": null,
+    "ean": "7340172938200",
+    "product_url": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/giselle-kokssoffa-hailey-shell",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/giselle-kokssoffa-hailey-shell",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=95929&fid=2175&url=https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/giselle-kokssoffa-hailey-shell",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/8911fcda5fbc11ef91120050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit / Grå",
+    "material": "Kallskum / massivt trä / plywood / MDF"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "95929",
+      "product_url": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/giselle-kokssoffa-hailey-shell"
+    }
+  ]
+}

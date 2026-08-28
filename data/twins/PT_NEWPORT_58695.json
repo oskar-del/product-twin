@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_58695",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Skala stegpall bambu",
+    "manufacturer": "Cinas",
+    "article_no": "58695",
+    "ean": "5703332027077",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.SEATING.CHAIR",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 2495,
+    "sale_price": null,
+    "ean": "5703332027077",
+    "product_url": "https://www.newport.se/shop/mobler/stolar/pallar/skala-stegpall-bambu",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/stolar/pallar/skala-stegpall-bambu",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=58695&fid=2175&url=https://www.newport.se/shop/mobler/stolar/pallar/skala-stegpall-bambu",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/5b854b7b4acc11ed920a0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Brun",
+    "material": "Bambu"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "58695",
+      "product_url": "https://www.newport.se/shop/mobler/stolar/pallar/skala-stegpall-bambu"
+    }
+  ]
+}

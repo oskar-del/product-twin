@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_69408",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Loire plafond guld/vitt glas L",
+    "manufacturer": "Visual Comfort",
+    "article_no": "69408",
+    "ean": null,
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
+  "bucket": "LIGHTING",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 25995,
+    "sale_price": null,
+    "ean": null,
+    "product_url": "https://www.newport.se/shop/belysning/lampor/taklampor/loire-plafond-guld-vitt-glas-l",
+    "cart_deeplink": "https://www.newport.se/shop/belysning/lampor/taklampor/loire-plafond-guld-vitt-glas-l",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=69408&fid=2175&url=https://www.newport.se/shop/belysning/lampor/taklampor/loire-plafond-guld-vitt-glas-l",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/ca10873abb8a11eebd4a0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit",
+    "material": null
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "69408",
+      "product_url": "https://www.newport.se/shop/belysning/lampor/taklampor/loire-plafond-guld-vitt-glas-l"
+    }
+  ]
+}

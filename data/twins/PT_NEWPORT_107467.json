@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_107467",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sängkappa indigo",
+    "manufacturer": "Newport",
+    "article_no": "107467",
+    "ean": "7340066720003",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 2495,
+    "sale_price": null,
+    "ean": "7340066720003",
+    "product_url": "https://www.newport.se/shop/textil/sangklader/sangkappor/sangkappa-indigo-160-x-200-x-45-cm",
+    "cart_deeplink": "https://www.newport.se/shop/textil/sangklader/sangkappor/sangkappa-indigo-160-x-200-x-45-cm",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=107467&fid=2175&url=https://www.newport.se/shop/textil/sangklader/sangkappor/sangkappa-indigo-160-x-200-x-45-cm",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/0c4b0b24e56d4b90b96c48dd42116cd5/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Lila / Blå",
+    "material": "Polyester"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "107467",
+      "product_url": "https://www.newport.se/shop/textil/sangklader/sangkappor/sangkappa-indigo-160-x-200-x-45-cm"
+    }
+  ]
+}

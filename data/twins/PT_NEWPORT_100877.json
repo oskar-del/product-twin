@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_100877",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Caspar mugg vit",
+    "manufacturer": "Brandani",
+    "article_no": "100877",
+    "ean": "8029722841755",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "SEASONAL",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 279,
+    "sale_price": null,
+    "ean": "8029722841755",
+    "product_url": "https://www.newport.se/shop/jul/jul-dukade-bordet/caspar-mugg-vit",
+    "cart_deeplink": "https://www.newport.se/shop/jul/jul-dukade-bordet/caspar-mugg-vit",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100877&fid=2175&url=https://www.newport.se/shop/jul/jul-dukade-bordet/caspar-mugg-vit",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/f308dabb3b9e11f093690050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit",
+    "material": "Porslin"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "100877",
+      "product_url": "https://www.newport.se/shop/jul/jul-dukade-bordet/caspar-mugg-vit"
+    }
+  ]
+}

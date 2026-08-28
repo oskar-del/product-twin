@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_97998",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Wine & Travel Italy",
+    "manufacturer": "Assouline",
+    "article_no": "97998",
+    "ean": "9781649804181",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.BOOK",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 1579,
+    "sale_price": null,
+    "ean": "9781649804181",
+    "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/wine-travel-italy",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/wine-travel-italy",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=97998&fid=2175&url=https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/wine-travel-italy",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/a431778dec454408aa3efce9b0ad52c0/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Rosa",
+    "material": "Inbunden"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "97998",
+      "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/wine-travel-italy"
+    }
+  ]
+}

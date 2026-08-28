@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_59021",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Eucalyptus snittblomma grön",
+    "manufacturer": "Newport",
+    "article_no": "59021",
+    "ean": "7330026176919",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.PLANT",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 99,
+    "sale_price": null,
+    "ean": "7330026176919",
+    "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/eucalyptus-snittblomma-gron",
+    "cart_deeplink": "https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/eucalyptus-snittblomma-gron",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=59021&fid=2175&url=https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/eucalyptus-snittblomma-gron",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/7900c94f724c11edaf330050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grön",
+    "material": "PE-plast / Polyester / Ståltråd"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "59021",
+      "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/eucalyptus-snittblomma-gron"
+    }
+  ]
+}

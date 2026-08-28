@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_105352",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Marwood ask flerfärgad",
+    "manufacturer": "Eichholtz",
+    "article_no": "105352",
+    "ean": "8720875195176",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 5695,
+    "sale_price": null,
+    "ean": "8720875195176",
+    "product_url": "https://www.newport.se/shop/inredning/smaforvaring/askar/marwood-ask-flerfargad-l",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/smaforvaring/askar/marwood-ask-flerfargad-l",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=105352&fid=2175&url=https://www.newport.se/shop/inredning/smaforvaring/askar/marwood-ask-flerfargad-l",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/6b6884c4f61411f093690050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Flerfärgad / Brun / Svart / Vit",
+    "material": "MDF / Polyesterharts"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "105352",
+      "product_url": "https://www.newport.se/shop/inredning/smaforvaring/askar/marwood-ask-flerfargad-l"
+    }
+  ]
+}

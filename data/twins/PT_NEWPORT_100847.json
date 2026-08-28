@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_100847",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Kalligrafiset turkos",
+    "manufacturer": "Authentic Models",
+    "article_no": "100847",
+    "ean": "781934586982",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 439,
+    "sale_price": null,
+    "ean": "781934586982",
+    "product_url": "https://www.newport.se/shop/inredning/dekoration/vintageinredning/kalligrafiset-turkos",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/dekoration/vintageinredning/kalligrafiset-turkos",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100847&fid=2175&url=https://www.newport.se/shop/inredning/dekoration/vintageinredning/kalligrafiset-turkos",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/cab7ccd337dd11f093690050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Turkos",
+    "material": "Glas"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "100847",
+      "product_url": "https://www.newport.se/shop/inredning/dekoration/vintageinredning/kalligrafiset-turkos"
+    }
+  ]
+}

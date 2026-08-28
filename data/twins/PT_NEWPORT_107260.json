@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_107260",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Eliza kruka vit",
+    "manufacturer": "Wikholm Form",
+    "article_no": "107260",
+    "ean": "7313820070454",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.VASE",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 379,
+    "sale_price": null,
+    "ean": "7313820070454",
+    "product_url": "https://www.newport.se/shop/inredning/krukor-vaser/krukor/eliza-kruka-vit",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/krukor-vaser/krukor/eliza-kruka-vit",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=107260&fid=2175&url=https://www.newport.se/shop/inredning/krukor-vaser/krukor/eliza-kruka-vit",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/014f8b8c1d2f11f193690050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit",
+    "material": "Porslin"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "107260",
+      "product_url": "https://www.newport.se/shop/inredning/krukor-vaser/krukor/eliza-kruka-vit"
+    }
+  ]
+}

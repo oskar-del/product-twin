@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_59184",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Montpellier kuddfodral randig",
+    "manufacturer": "Artwood",
+    "article_no": "59184",
+    "ean": "7340172924821",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.TEXTILES.CUSHION",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 649,
+    "sale_price": null,
+    "ean": "7340172924821",
+    "product_url": "https://www.newport.se/shop/textil/kuddar/kuddfodral/montpellier-kuddfodral-randig-60x60",
+    "cart_deeplink": "https://www.newport.se/shop/textil/kuddar/kuddfodral/montpellier-kuddfodral-randig-60x60",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=59184&fid=2175&url=https://www.newport.se/shop/textil/kuddar/kuddfodral/montpellier-kuddfodral-randig-60x60",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/47ac9b2e90e611edbb420050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Polypropylen (PP) / Polyester"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "59184",
+      "product_url": "https://www.newport.se/shop/textil/kuddar/kuddfodral/montpellier-kuddfodral-randig-60x60"
+    }
+  ]
+}

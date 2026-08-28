@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_29597",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dione örhängen crystal",
+    "manufacturer": "Caroline Svedbom",
+    "article_no": "29597",
+    "ean": "7340167201579",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "OTHER",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 1695,
+    "sale_price": null,
+    "ean": "7340167201579",
+    "product_url": "https://www.newport.se/shop/accessoarer-old/smycken-old/orhangen-old/dione-orhangen-crystal",
+    "cart_deeplink": "https://www.newport.se/shop/accessoarer-old/smycken-old/orhangen-old/dione-orhangen-crystal",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=29597&fid=2175&url=https://www.newport.se/shop/accessoarer-old/smycken-old/orhangen-old/dione-orhangen-crystal",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/643f14209dc411ebb34e000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Guldpläterad mässing"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "29597",
+      "product_url": "https://www.newport.se/shop/accessoarer-old/smycken-old/orhangen-old/dione-orhangen-crystal"
+    }
+  ]
+}

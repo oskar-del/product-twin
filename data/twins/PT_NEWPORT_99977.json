@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_99977",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ferla skål turkos",
+    "manufacturer": "Newport",
+    "article_no": "99977",
+    "ean": "7340066725428",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 499,
+    "sale_price": null,
+    "ean": "7340066725428",
+    "product_url": "https://www.newport.se/shop/servering/tallrikar/skalar/ferla-skal-turkos",
+    "cart_deeplink": "https://www.newport.se/shop/servering/tallrikar/skalar/ferla-skal-turkos",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=99977&fid=2175&url=https://www.newport.se/shop/servering/tallrikar/skalar/ferla-skal-turkos",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/3916cee5d2a142d99e344c2021a6c99d/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Turkos",
+    "material": "Keramik"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "99977",
+      "product_url": "https://www.newport.se/shop/servering/tallrikar/skalar/ferla-skal-turkos"
+    }
+  ]
+}

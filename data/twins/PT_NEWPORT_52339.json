@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_52339",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Totem Black Pearls doftpinnar",
+    "manufacturer": "Baobab",
+    "article_no": "52339",
+    "ean": "5415198244504",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.FRAGRANCE",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 1995,
+    "sale_price": null,
+    "ean": "5415198244504",
+    "product_url": "https://www.newport.se/shop/inredning/doft-skonhet/diffusers/totem-black-pearls-doftpinnar",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/doft-skonhet/diffusers/totem-black-pearls-doftpinnar",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=52339&fid=2175&url=https://www.newport.se/shop/inredning/doft-skonhet/diffusers/totem-black-pearls-doftpinnar",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/6acefd620c9511ec9f87000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Glas / Doftolja"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "52339",
+      "product_url": "https://www.newport.se/shop/inredning/doft-skonhet/diffusers/totem-black-pearls-doftpinnar"
+    }
+  ]
+}

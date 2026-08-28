@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_44815",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Stateroom barskåp burgundy",
+    "manufacturer": "Authentic Models",
+    "article_no": "44815",
+    "ean": "781934584995",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 61295,
+    "sale_price": null,
+    "ean": "781934584995",
+    "product_url": "https://www.newport.se/shop/servering/bar/barskap/stateroom-barskap-burgundy",
+    "cart_deeplink": "https://www.newport.se/shop/servering/bar/barskap/stateroom-barskap-burgundy",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=44815&fid=2175&url=https://www.newport.se/shop/servering/bar/barskap/stateroom-barskap-burgundy",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/64a7e2099dc411ebb34e000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Röd / Vinröd / Brun",
+    "material": "Mässing / Läder / Mahogny / Fanér"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "44815",
+      "product_url": "https://www.newport.se/shop/servering/bar/barskap/stateroom-barskap-burgundy"
+    }
+  ]
+}

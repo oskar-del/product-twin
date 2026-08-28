@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_62535",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Caribbean Patio",
+    "manufacturer": "Slim Aarons",
+    "article_no": "62535",
+    "ean": null,
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.ART",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 4695,
+    "sale_price": null,
+    "ean": null,
+    "product_url": "https://www.newport.se/shop/gallery/slim-aarons/collections/women/caribbean-patio-62535",
+    "cart_deeplink": "https://www.newport.se/shop/gallery/slim-aarons/collections/women/caribbean-patio-62535",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=62535&fid=2175&url=https://www.newport.se/shop/gallery/slim-aarons/collections/women/caribbean-patio-62535",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/ec3c6f9ce34911ed938c0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": null
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "62535",
+      "product_url": "https://www.newport.se/shop/gallery/slim-aarons/collections/women/caribbean-patio-62535"
+    }
+  ]
+}

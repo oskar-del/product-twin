@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_61140",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Stateroom champagnebar",
+    "manufacturer": "Authentic Models",
+    "article_no": "61140",
+    "ean": "781934586333",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 66595,
+    "sale_price": null,
+    "ean": "781934586333",
+    "product_url": "https://www.newport.se/shop/servering/bar/barskap/stateroom-champagnebar",
+    "cart_deeplink": "https://www.newport.se/shop/servering/bar/barskap/stateroom-champagnebar",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=61140&fid=2175&url=https://www.newport.se/shop/servering/bar/barskap/stateroom-champagnebar",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/5ebbe8eac70c11edace00050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Brun / Beige",
+    "material": "Läder / Mahogny / Fanér"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "61140",
+      "product_url": "https://www.newport.se/shop/servering/bar/barskap/stateroom-champagnebar"
+    }
+  ]
+}

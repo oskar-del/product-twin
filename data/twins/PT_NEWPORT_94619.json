@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_94619",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "The Impossible Collection of Jewelry",
+    "manufacturer": "Assouline",
+    "article_no": "94619",
+    "ean": "9781614280583",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.BOOK",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 14895,
+    "sale_price": null,
+    "ean": "9781614280583",
+    "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/limited-edition/the-impossible-collection-of-jewelry",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/coffee-table-books/limited-edition/the-impossible-collection-of-jewelry",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=94619&fid=2175&url=https://www.newport.se/shop/inredning/coffee-table-books/limited-edition/the-impossible-collection-of-jewelry",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/3f20feaf0ebf11ef91120050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grön",
+    "material": "Inbunden"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "94619",
+      "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/limited-edition/the-impossible-collection-of-jewelry"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_101292",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Wimbledon Baseline Stripe handduk lila 2-set",
+    "manufacturer": "Wimbledon",
+    "article_no": "101292",
+    "ean": "5057241291457",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 899,
+    "sale_price": null,
+    "ean": "5057241291457",
+    "product_url": "https://www.newport.se/shop/textil/handdukar/frottehanddukar/wimbledon-baseline-stripe-handduk-lila-2-set",
+    "cart_deeplink": "https://www.newport.se/shop/textil/handdukar/frottehanddukar/wimbledon-baseline-stripe-handduk-lila-2-set",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=101292&fid=2175&url=https://www.newport.se/shop/textil/handdukar/frottehanddukar/wimbledon-baseline-stripe-handduk-lila-2-set",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/b05881a9ffef483cad2cbd7db5f2b986/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Lila / Vit",
+    "material": "Bomull"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "101292",
+      "product_url": "https://www.newport.se/shop/textil/handdukar/frottehanddukar/wimbledon-baseline-stripe-handduk-lila-2-set"
+    }
+  ]
+}

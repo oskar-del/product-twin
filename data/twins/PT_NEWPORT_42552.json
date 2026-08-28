@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_42552",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cylinder lampskärm avanna hazel",
+    "manufacturer": "Artwood",
+    "article_no": "42552",
+    "ean": "7340172977490",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "ELECTRICAL.LUMINAIRES.ACCESSORY",
+  "bucket": "LIGHTING",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 769,
+    "sale_price": null,
+    "ean": "7340172977490",
+    "product_url": "https://www.newport.se/shop/belysning/lamptillbehor/lampskarmar/cylinder-lampskarm-avanna-hazel-25cm",
+    "cart_deeplink": "https://www.newport.se/shop/belysning/lamptillbehor/lampskarmar/cylinder-lampskarm-avanna-hazel-25cm",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=42552&fid=2175&url=https://www.newport.se/shop/belysning/lamptillbehor/lampskarmar/cylinder-lampskarm-avanna-hazel-25cm",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/649b9a4d9dc411ebb34e000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Brun / Orange",
+    "material": "Polyester"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "42552",
+      "product_url": "https://www.newport.se/shop/belysning/lamptillbehor/lampskarmar/cylinder-lampskarm-avanna-hazel-25cm"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_95430",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Romantic Toile servetter blå 20-pack",
+    "manufacturer": "Caspari",
+    "article_no": "95430",
+    "ean": "0025096488563",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 69,
+    "sale_price": null,
+    "ean": "0025096488563",
+    "product_url": "https://www.newport.se/shop/servering/kokstextilier/servetter/romantic-toile-servetter-bla-20-pack",
+    "cart_deeplink": "https://www.newport.se/shop/servering/kokstextilier/servetter/romantic-toile-servetter-bla-20-pack",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=95430&fid=2175&url=https://www.newport.se/shop/servering/kokstextilier/servetter/romantic-toile-servetter-bla-20-pack",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/43bb79615e1b11ef91120050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit / Blå",
+    "material": "Papper"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "95430",
+      "product_url": "https://www.newport.se/shop/servering/kokstextilier/servetter/romantic-toile-servetter-bla-20-pack"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_98651",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Harvard ask marquetry brun",
+    "manufacturer": "Eichholtz",
+    "article_no": "98651",
+    "ean": "8720875176311",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 4279,
+    "sale_price": null,
+    "ean": "8720875176311",
+    "product_url": "https://www.newport.se/shop/inredning/smaforvaring/askar/harvard-ask-marquetry-brun",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/smaforvaring/askar/harvard-ask-marquetry-brun",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=98651&fid=2175&url=https://www.newport.se/shop/inredning/smaforvaring/askar/harvard-ask-marquetry-brun",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/c960539cd8ac11ef947e0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Brun",
+    "material": "MDF / Nylon / Stål / Naturmaterial"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "98651",
+      "product_url": "https://www.newport.se/shop/inredning/smaforvaring/askar/harvard-ask-marquetry-brun"
+    }
+  ]
+}

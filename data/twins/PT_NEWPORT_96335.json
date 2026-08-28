@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_96335",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Hortensia snittblomma cream",
+    "manufacturer": "Newport",
+    "article_no": "96335",
+    "ean": "7330026181357",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.PLANT",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 149,
+    "sale_price": null,
+    "ean": "7330026181357",
+    "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/hortensia-snittblomma-cream-65cm",
+    "cart_deeplink": "https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/hortensia-snittblomma-cream-65cm",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=96335&fid=2175&url=https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/hortensia-snittblomma-cream-65cm",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/d1e4ac8469b511ef91120050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Gul / Vit",
+    "material": "Polyester / PE-plast / Ståltråd"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "96335",
+      "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/hortensia-snittblomma-cream-65cm"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_98758",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Banyan bordslampa vintage mässing",
+    "manufacturer": "Eichholtz",
+    "article_no": "98758",
+    "ean": "8720875190584",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "ELECTRICAL.LUMINAIRES.TABLE",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 17195,
+    "sale_price": null,
+    "ean": "8720875190584",
+    "product_url": "https://www.newport.se/shop/belysning/lampor/bordslampor/banyan-bordslampa-vintage-massing",
+    "cart_deeplink": "https://www.newport.se/shop/belysning/lampor/bordslampor/banyan-bordslampa-vintage-massing",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=98758&fid=2175&url=https://www.newport.se/shop/belysning/lampor/bordslampor/banyan-bordslampa-vintage-massing",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/c97fada7d8ac11ef947e0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Guld / Beige / Brun",
+    "material": "Mässing / MDF / Aluminium / Järn / Tyg / PVC"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "98758",
+      "product_url": "https://www.newport.se/shop/belysning/lampor/bordslampor/banyan-bordslampa-vintage-massing"
+    }
+  ]
+}

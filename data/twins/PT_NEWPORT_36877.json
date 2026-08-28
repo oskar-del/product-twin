@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_36877",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bretagne sidobord modern black",
+    "manufacturer": "Newport",
+    "article_no": "36877",
+    "ean": "7340066724278",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.TABLE.SIDE",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 10900,
+    "sale_price": null,
+    "ean": "7340066724278",
+    "product_url": "https://www.newport.se/shop/mobler/bord/sidobord/bretagne-sidobord-modern-black",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/bord/sidobord/bretagne-sidobord-modern-black",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=36877&fid=2175&url=https://www.newport.se/shop/mobler/bord/sidobord/bretagne-sidobord-modern-black",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/646a11809dc411ebb34e000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Lackerad premiumboard"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "36877",
+      "product_url": "https://www.newport.se/shop/mobler/bord/sidobord/bretagne-sidobord-modern-black"
+    }
+  ]
+}

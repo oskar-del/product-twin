@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_95117",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cindy grangirlang kottar 180cm",
+    "manufacturer": "Newport",
+    "article_no": "95117",
+    "ean": "7330026175622",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "SEASONAL",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 1099,
+    "sale_price": null,
+    "ean": "7330026175622",
+    "product_url": "https://www.newport.se/shop/jul/jul-granar-och-kransar/cindy-grangirlang-kottar",
+    "cart_deeplink": "https://www.newport.se/shop/jul/jul-granar-och-kransar/cindy-grangirlang-kottar",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=95117&fid=2175&url=https://www.newport.se/shop/jul/jul-granar-och-kransar/cindy-grangirlang-kottar",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/025798f22c7f11ef91120050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grön",
+    "material": "Lim / Ståltråd / PE-plast"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "95117",
+      "product_url": "https://www.newport.se/shop/jul/jul-granar-och-kransar/cindy-grangirlang-kottar"
+    }
+  ]
+}

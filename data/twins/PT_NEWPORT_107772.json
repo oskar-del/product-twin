@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_107772",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Nottingham sängbord vänster spegelglas/borstad mässing",
+    "manufacturer": "Eichholtz",
+    "article_no": "107772",
+    "ean": "8721324000836",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.TABLE.SIDE",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 35795,
+    "sale_price": null,
+    "ean": "8721324000836",
+    "product_url": "https://www.newport.se/shop/mobler/bord/sidobord/nottingham-sangbord-vanster-spegelglas-borstad-massing",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/bord/sidobord/nottingham-sangbord-vanster-spegelglas-borstad-massing",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=107772&fid=2175&url=https://www.newport.se/shop/mobler/bord/sidobord/nottingham-sangbord-vanster-spegelglas-borstad-massing",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/1c310fc3c9ba44269bed8d191c471042/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Transparent / Guld",
+    "material": "MDF / Spegelglas / Ekfanér / Plywood"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "107772",
+      "product_url": "https://www.newport.se/shop/mobler/bord/sidobord/nottingham-sangbord-vanster-spegelglas-borstad-massing"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_39988",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tender ljusstake nickel",
+    "manufacturer": "Klong",
+    "article_no": "39988",
+    "ean": "7350077843936",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.CANDLE",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 1899,
+    "sale_price": null,
+    "ean": "7350077843936",
+    "product_url": "https://www.newport.se/shop/inredning/ljusstakar-ljuslyktor/ljusstakar/tender-ljusstake-nickel-hog",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/ljusstakar-ljuslyktor/ljusstakar/tender-ljusstake-nickel-hog",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=39988&fid=2175&url=https://www.newport.se/shop/inredning/ljusstakar-ljuslyktor/ljusstakar/tender-ljusstake-nickel-hog",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/647fd3719dc411ebb34e000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Silver",
+    "material": "Förnicklad mässing"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "39988",
+      "product_url": "https://www.newport.se/shop/inredning/ljusstakar-ljuslyktor/ljusstakar/tender-ljusstake-nickel-hog"
+    }
+  ]
+}

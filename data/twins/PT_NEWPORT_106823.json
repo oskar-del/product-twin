@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_106823",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Classic Cars Review: Revised Edition",
+    "manufacturer": "teNeues",
+    "article_no": "106823",
+    "ean": "9783961716135",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.BOOK",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 1599,
+    "sale_price": null,
+    "ean": "9783961716135",
+    "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/classic-cars-review-revised-edition",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/classic-cars-review-revised-edition",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=106823&fid=2175&url=https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/classic-cars-review-revised-edition",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/83f57c730ca511f193690050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Svart / Röd / Grå",
+    "material": null
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "106823",
+      "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/classic-cars-review-revised-edition"
+    }
+  ]
+}

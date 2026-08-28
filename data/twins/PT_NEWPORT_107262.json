@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_107262",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Manda skål grönmelerad",
+    "manufacturer": "Wikholm Form",
+    "article_no": "107262",
+    "ean": "7313820084833",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 699,
+    "sale_price": null,
+    "ean": "7313820084833",
+    "product_url": "https://www.newport.se/shop/servering/dukning/serveringsskalar/manda-skal-gronmelerad",
+    "cart_deeplink": "https://www.newport.se/shop/servering/dukning/serveringsskalar/manda-skal-gronmelerad",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=107262&fid=2175&url=https://www.newport.se/shop/servering/dukning/serveringsskalar/manda-skal-gronmelerad",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/01546da11d2f11f193690050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grön",
+    "material": "Porslin"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "107262",
+      "product_url": "https://www.newport.se/shop/servering/dukning/serveringsskalar/manda-skal-gronmelerad"
+    }
+  ]
+}

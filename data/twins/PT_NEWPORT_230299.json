@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_230299",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Loud kuddfodral brun OUTLET",
+    "manufacturer": "Artwood",
+    "article_no": "230299",
+    "ean": null,
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "SEASONAL",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 599,
+    "sale_price": 419,
+    "ean": null,
+    "product_url": "https://www.newport.se/shop/textil/kuddar/kuddfodral/loud-kuddfodral-brun-outlet-230299",
+    "cart_deeplink": "https://www.newport.se/shop/textil/kuddar/kuddfodral/loud-kuddfodral-brun-outlet-230299",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=230299&fid=2175&url=https://www.newport.se/shop/textil/kuddar/kuddfodral/loud-kuddfodral-brun-outlet-230299",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/5247677d46614c74b11139ba16c87b7e/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Brun",
+    "material": "Syntetfiber"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "230299",
+      "product_url": "https://www.newport.se/shop/textil/kuddar/kuddfodral/loud-kuddfodral-brun-outlet-230299"
+    }
+  ]
+}

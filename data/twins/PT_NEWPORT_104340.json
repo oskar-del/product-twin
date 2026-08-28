@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_104340",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Classic lampskärm leather grey OUTLET",
+    "manufacturer": "Artwood",
+    "article_no": "104340",
+    "ean": null,
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "LIGHTING",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 3929,
+    "sale_price": 2750,
+    "ean": null,
+    "product_url": "https://www.newport.se/shop/belysning/lamptillbehor/lampskarmar/classic-lampskarm-leather-grey-outlet-104340",
+    "cart_deeplink": "https://www.newport.se/shop/belysning/lamptillbehor/lampskarmar/classic-lampskarm-leather-grey-outlet-104340",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=104340&fid=2175&url=https://www.newport.se/shop/belysning/lamptillbehor/lampskarmar/classic-lampskarm-leather-grey-outlet-104340",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/14a89f9cf2284e728e74ac443481cba0/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grå",
+    "material": "Läder"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "104340",
+      "product_url": "https://www.newport.se/shop/belysning/lamptillbehor/lampskarmar/classic-lampskarm-leather-grey-outlet-104340"
+    }
+  ]
+}

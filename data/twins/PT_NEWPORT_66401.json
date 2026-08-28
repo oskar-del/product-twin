@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_66401",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Clam badrumsmatta grå",
+    "manufacturer": "Classic Collection",
+    "article_no": "66401",
+    "ean": "7340110826262",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.TEXTILES.RUG",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 699,
+    "sale_price": null,
+    "ean": "7340110826262",
+    "product_url": "https://www.newport.se/shop/textil/mattor/badrumsmattor/clam-badrumsmatta-gra",
+    "cart_deeplink": "https://www.newport.se/shop/textil/mattor/badrumsmattor/clam-badrumsmatta-gra",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=66401&fid=2175&url=https://www.newport.se/shop/textil/mattor/badrumsmattor/clam-badrumsmatta-gra",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/d73c1ec96f1211eebd4a0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grå",
+    "material": "Bomull"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "66401",
+      "product_url": "https://www.newport.se/shop/textil/mattor/badrumsmattor/clam-badrumsmatta-gra"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_105133",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tulpan snittblomma persika",
+    "manufacturer": "Newport",
+    "article_no": "105133",
+    "ean": "7330026184563",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.PLANT",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 149,
+    "sale_price": null,
+    "ean": "7330026184563",
+    "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/tulpan-snittblomma-persika",
+    "cart_deeplink": "https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/tulpan-snittblomma-persika",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=105133&fid=2175&url=https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/tulpan-snittblomma-persika",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/30102a5649d94871ab1adba434b46dfc/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grön / Orange / Röd",
+    "material": "Konstväxt"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "105133",
+      "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/snittblommor/tulpan-snittblomma-persika"
+    }
+  ]
+}

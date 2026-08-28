@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_66722",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Portus Cale tvål",
+    "manufacturer": "Portus Cale",
+    "article_no": "66722",
+    "ean": "827553223058",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.FRAGRANCE",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 359,
+    "sale_price": null,
+    "ean": "827553223058",
+    "product_url": "https://www.newport.se/shop/inredning/doft-skonhet/parfym-kroppsvard/handtval/portus-cale-tval-150g",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/doft-skonhet/parfym-kroppsvard/handtval/portus-cale-tval-150g",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=66722&fid=2175&url=https://www.newport.se/shop/inredning/doft-skonhet/parfym-kroppsvard/handtval/portus-cale-tval-150g",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/f123a5407ee411eebd4a0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Tvål"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "66722",
+      "product_url": "https://www.newport.se/shop/inredning/doft-skonhet/parfym-kroppsvard/handtval/portus-cale-tval-150g"
+    }
+  ]
+}

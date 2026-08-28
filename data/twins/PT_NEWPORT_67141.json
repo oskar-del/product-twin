@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_67141",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Hunter vitrinskåp mörkgrå",
+    "manufacturer": "Artwood",
+    "article_no": "67141",
+    "ean": "7340172905929",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.STORAGE",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 20495,
+    "sale_price": null,
+    "ean": "7340172905929",
+    "product_url": "https://www.newport.se/shop/mobler/forvaring/vitrinskap/hunter-vitrinskap-morkgra",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/forvaring/vitrinskap/hunter-vitrinskap-morkgra",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=67141&fid=2175&url=https://www.newport.se/shop/mobler/forvaring/vitrinskap/hunter-vitrinskap-morkgra",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/ef9fb7f3b37d11eebd4a0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grå",
+    "material": "Glas / MDF / Ekfanér"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "67141",
+      "product_url": "https://www.newport.se/shop/mobler/forvaring/vitrinskap/hunter-vitrinskap-morkgra"
+    }
+  ]
+}

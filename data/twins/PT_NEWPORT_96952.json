@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_96952",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Normandie assiett röd/grön 6-pack",
+    "manufacturer": "Newport",
+    "article_no": "96952",
+    "ean": null,
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 1199,
+    "sale_price": null,
+    "ean": null,
+    "product_url": "https://www.newport.se/shop/servering/tallrikar/assietter/normandie-assiett-rodgron-6-pack",
+    "cart_deeplink": "https://www.newport.se/shop/servering/tallrikar/assietter/normandie-assiett-rodgron-6-pack",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=96952&fid=2175&url=https://www.newport.se/shop/servering/tallrikar/assietter/normandie-assiett-rodgron-6-pack",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/054b240ba33411ef895c0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Röd / Grön / Blå / Gul",
+    "material": "Porslin"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "96952",
+      "product_url": "https://www.newport.se/shop/servering/tallrikar/assietter/normandie-assiett-rodgron-6-pack"
+    }
+  ]
+}

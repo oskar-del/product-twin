@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_70019",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Siderno soffa off-white",
+    "manufacturer": "Eichholtz",
+    "article_no": "70019",
+    "ean": "8720875170616",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.SEATING.SOFA",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 64595,
+    "sale_price": null,
+    "ean": "8720875170616",
+    "product_url": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/siderno-soffa-off-white",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/siderno-soffa-off-white",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=70019&fid=2175&url=https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/siderno-soffa-off-white",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/b6efee6ec1d911eebd4a0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit",
+    "material": "Rostfritt stål / Tyg / Plywood / PU-skum / Nylonväv / Dacron"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "70019",
+      "product_url": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/siderno-soffa-off-white"
+    }
+  ]
+}

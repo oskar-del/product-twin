@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_61338",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dodici doftljus",
+    "manufacturer": "Max Benjamin",
+    "article_no": "61338",
+    "ean": "5391533716908",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.FRAGRANCE",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 349,
+    "sale_price": null,
+    "ean": "5391533716908",
+    "product_url": "https://www.newport.se/shop/inredning/doft-skonhet/doftljus/dodici-doftljus-210g",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/doft-skonhet/doftljus/dodici-doftljus-210g",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=61338&fid=2175&url=https://www.newport.se/shop/inredning/doft-skonhet/doftljus/dodici-doftljus-210g",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/f175d555de7e11ed938c0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Grå / Brun",
+    "material": "Rökfärgat glas"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "61338",
+      "product_url": "https://www.newport.se/shop/inredning/doft-skonhet/doftljus/dodici-doftljus-210g"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_53104",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "The Carlyle",
+    "manufacturer": "Assouline",
+    "article_no": "53104",
+    "ean": "9781614289753",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.BOOK",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 1579,
+    "sale_price": null,
+    "ean": "9781614289753",
+    "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/the-carlyle",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/the-carlyle",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=53104&fid=2175&url=https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/the-carlyle",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/3c8e513d19f711ecab5d000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Beige",
+    "material": "Inbunden"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "53104",
+      "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/resor-livsstil/the-carlyle"
+    }
+  ]
+}

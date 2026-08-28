@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_56938",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "World of Art - Women, Art, Society",
+    "manufacturer": "Thames & Hudson",
+    "article_no": "56938",
+    "ean": "9780500204566",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.DECOR.BOOK",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 459,
+    "sale_price": null,
+    "ean": "9780500204566",
+    "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/konst/world-of-art-women-art-society",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/coffee-table-books/konst/world-of-art-women-art-society",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=56938&fid=2175&url=https://www.newport.se/shop/inredning/coffee-table-books/konst/world-of-art-women-art-society",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/8e610f0aeaf611ecb5ff0050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Vit",
+    "material": "Häftad"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "56938",
+      "product_url": "https://www.newport.se/shop/inredning/coffee-table-books/konst/world-of-art-women-art-society"
+    }
+  ]
+}

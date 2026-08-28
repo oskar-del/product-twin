@@ -1,0 +1,57 @@
+{
+  "twin_id": "PT_NEWPORT_106853",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Rope bangle armband guld",
+    "manufacturer": "Caroline Svedbom",
+    "article_no": "106853",
+    "ean": "7340167288051",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "OTHER.ACCESSORIES",
+  "bucket": "DECOR",
+  "physical": {
+    "dimensions_mm": null
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 995,
+    "sale_price": null,
+    "ean": "7340167288051",
+    "product_url": "https://www.newport.se/shop/inredning/smycken/armband/rope-bangle-armband-guld",
+    "cart_deeplink": "https://www.newport.se/shop/inredning/smycken/armband/rope-bangle-armband-guld",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=106853&fid=2175&url=https://www.newport.se/shop/inredning/smycken/armband/rope-bangle-armband-guld",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/c4a89606d4ed4613b936fcce10adde0b/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Guldpläterad mässing"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "106853",
+      "product_url": "https://www.newport.se/shop/inredning/smycken/armband/rope-bangle-armband-guld"
+    }
+  ]
+}
