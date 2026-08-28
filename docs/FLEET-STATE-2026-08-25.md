@@ -200,6 +200,33 @@ Applied via the approved "Hansson & Hertzell" channel:
   network. Do NOT create a mis-typed channel just to pass IKEA's filter.
 Next: when Nordic Nest or Byggstart approves, Avatar's backfill wires those tracked links.
 
+## Update 2026-08-28 ~14:40 — Adtraction application sweep (Brain, via Chrome)
+
+Full SE catalog pulled via API (475 programs). Elgiganten, MediaMarkt, Power, NetOnNet,
+Electrolux, Miele, Bauhaus, Jula, Clas Ohlson are NOT on Adtraction (they run on Awin/CJ —
+Awin-list targets). IKEA SE is on Adtraction but its program restricts EVERY promotional
+type (content/paid/direct/savings/other all "not allowed") — effectively closed to open
+publishers; reach IKEA via Awin/other network, not Adtraction.
+
+APPLIED (channel "Hansson & Hertzell", all "Application sent / under review"):
+1. Nordic Nest SE 8% · 2. Byggstart SE ~72 GBP/lead · 3. Bosch Home SE 4% ·
+4. Siemens Home SE 5% · 5. Elon SE 5% · 6. Vitvaror-Outlet.se 4% (Bosch/Siemens/NEFF) ·
+7. Granit SE 10% · 8. Gripsholm SE 15% · 9. Newport SE 9%.
+
+QUEUED priority brands (content-eligible unknown until checked; apply via
+platform.adtraction.com/brands/<id>?channel=2106320328):
+Kungsängen 1954031234 · Länna Möbler 1714020937 · Svenssons 1740247393 ·
+Bobo Home 1963727346 · Chilli.se 1918738947 · Magasin 11 1960529814 · Mjuk 1670846950 ·
+Designtorget 1105652945 · Bäddsofflagret 1960532773 · VidaXL 1680333337 ·
+Lampan.se 1934366746 · Markslöjd 1409973979 · Lampemesteren 1690870362 ·
+Valostore 1954031170 · KitchenTime 1871508222 · Bagaren och Kocken 1048502771 ·
+Onyx Cookware 1974402616 · Trendcarpet 1962291457 · SE Mattor 1954031339 ·
+Kilands 1960528772 · Beijer Bygg 1127510935 · P Lindberg 1954027466 · Golvpoolen 1954023645.
+APPLY MECHANIC: 2-batch per brand (navigate+screenshot to get button-y [673 w/ badge row,
+697 w/ multi-country row]; then click apply + click "Agree & apply" at (1231,520) +
+screenshot). Single-batch-with-navigate fails on load timing — don't.
+When any program approves → Avatar backfill wires tracked links.
+
 ## Decisions Oskar owns (queued)
 
 1. Winner: confirm Vinkelhuset (per 03-JUDGED-MATRIX) or re-open via tre-hus artifact.
