@@ -11,7 +11,11 @@
   "category_id": "ELECTRICAL.LUMINAIRES.TABLE",
   "bucket": "FURNITURE",
   "physical": {
-    "dimensions_mm": null
+    "dimensions_mm": {
+      "width": 300,
+      "depth": 300,
+      "height": 500
+    }
   },
   "commerce": {
     "merchant": "Newport SE",
@@ -38,13 +42,30 @@
     "material": "Mässing / Glas / Linne"
   },
   "geometry": {
-    "level": "G0",
-    "state": "catalog_only"
+    "level": "G2",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_NEWPORT_104069_G2_PROXY",
+    "asset_path": "data/geometry/avatars/newport-104069-g2-proxy.glb",
+    "scale_state": "category_default 300x300x500mm",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "placement": {
+      "origin": "floor_center",
+      "floor_contact": true
+    },
+    "appearance": {
+      "pbr_state": "spine_colour_by_category",
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
   },
   "readiness": {
     "identity": "feed_verified",
     "commerce": "affiliate_live",
-    "geometry": "G0_catalog_only"
+    "geometry": "G2_promoted_universal_proxy"
   },
   "external_identities": [
     {
