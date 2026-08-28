@@ -1,5 +1,36 @@
 # Avatar Factory (Claude) — persistent handoff
 
+> ## ⭐ NEWPORT DEEP-MAP — 2026-08-28 (Oskar priority; Newport = first APPROVED Adtraction program + warm relationship)
+>
+> Newport SE is APPROVED (9% commission, tracking link live at.newport.se). Product feed
+> = **13,036 SKUs**, Adtraction feed ID **2175** ("Standard"). Newport is furniture AND
+> heavy decor (sample: Marbella rattan armchair 859kr · Kate terracotta pot 499kr ·
+> Hortensia artificial flower 129kr · pillows/throws/vases/candles). This is the flagship
+> catalog to map deep.
+>
+> DELIVERABLES:
+> 1. **Ingest Newport feed 2175** (get the tokened feed URL from the dashboard "Copy feed
+>    URL" on the Newport brand page — Oskar/Brain hands it over; do NOT commit the tokened
+>    URL, store in .runtime). Zero-LLM script: parse → catalog rows (name, price, image,
+>    product_url, EAN/GTIN if present, category). Report the EXACT category breakdown:
+>    how many are FLOOR-STANDING FURNITURE (sofa/chair/table/bed/cabinet/shelf) vs
+>    ATTACH-DECOR (pillow/throw/vase/pot/flower/candle/tray/textile) vs other.
+> 2. **Map ALL 13,036 as shoppable catalog entries** (cheap: identity+price+image+affiliate).
+>    Wire the Newport tracked affiliate link (program now approved) — this is the first
+>    real monetized catalog.
+> 3. **Geometry in tiers** per Oskar's layering thesis (see below): hero furniture → G2
+>    proxies first; attach-decor → lightweight (billboard/plane or simple proxy).
+> 4. **LAYERING / ATTACH-POINT model (Oskar's core idea):** a scene composes as base →
+>    attach: sofa is a base piece with pillow attach-slots on the seat/back; table has a
+>    centerpiece slot; floor has a rug slot; shelf/console has vignette slots. Decor snaps
+>    to slots so you build "sofa + 3 pillows + throw + coffee-table + vase" as one styled,
+>    fully-shoppable scene. This is where Newport's decor density becomes the product's
+>    superpower (most configurators only do the big piece). Define the attach-point schema
+>    on the twin manifest; Platform renders it.
+> Report a NUMBER (Newport SKUs mapped / by tier) each block. Commit every batch; Oskar pushes.
+
+
+
 > ## ⛳ CURRENT MANDATE — 2026-08-25 (from Brain fleet sweep; SUPERSEDES everything below; re-read on every resume/compaction)
 >
 > **1. FIX THE 7f72563 REGRESSION FIRST — before anything else.** Your unpushed commit
