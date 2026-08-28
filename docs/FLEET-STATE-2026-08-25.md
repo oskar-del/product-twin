@@ -170,6 +170,18 @@ verified each (not just commit messages). All UNPUSHED (ahead counts noted):
 Push all: `for d in repo-avatar-factory repo-brage repo-mimer repo-platform repo-spatial-studio; do git -C "$d" push; done`
 Still open for Oskar: tre-hus winner call · Adtraction sitting · Essence credit + Nancy.
 
+## Update 2026-08-28 ~13:30 — ADTRACTION CHANNEL APPROVED ✅
+
+The "Hansson & Hertzell" channel (submitted 2026-08-27: Content type, hanssonhertzell.se,
+1,000 monthly visitors) was APPROVED. The earlier rejection ("promotional method/traffic
+source not verifiable") was cleared by the honest real-website + modest-real-number
+submission. This unblocks the affiliate money rail end to end.
+NEXT (Oskar-gated, dashboard): apply to individual brand programs — priority
+IKEA SE (id 1978727047, 9%), Nordic Nest, Byggstart (925 SEK/lead, house-build → direct
+fit for the Svärtinge/MIMER funnel). The moment ANY program approves, Avatar Factory's
+pre-wired backfill-commerce.mjs (Adtraction link-wrapping behind its config flag) turns
+the 203 twins' null affiliate_links into tracked links in one run.
+
 ## Decisions Oskar owns (queued)
 
 1. Winner: confirm Vinkelhuset (per 03-JUDGED-MATRIX) or re-open via tre-hus artifact.
