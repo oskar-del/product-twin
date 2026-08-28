@@ -74,5 +74,72 @@
       "product_id": "43472",
       "product_url": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/burbury-soffa-avalon-vit"
     }
-  ]
+  ],
+  "attach_points": {
+    "base_type": "sofa",
+    "slots": [
+      {
+        "slot_id": "seat_left",
+        "slot_type": "surface",
+        "position": {
+          "x": -0.6,
+          "y": 0.442,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.TEXTILES.CUSHION"
+        ],
+        "max_items": 2,
+        "size_constraint_mm": {
+          "max_width": 700,
+          "max_depth": 700,
+          "max_height": 200
+        }
+      },
+      {
+        "slot_id": "seat_right",
+        "slot_type": "surface",
+        "position": {
+          "x": 0.6,
+          "y": 0.442,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.TEXTILES.CUSHION"
+        ],
+        "max_items": 2,
+        "size_constraint_mm": {
+          "max_width": 700,
+          "max_depth": 700,
+          "max_height": 200
+        }
+      },
+      {
+        "slot_id": "back_center",
+        "slot_type": "lean",
+        "position": {
+          "x": 0,
+          "y": 0.5525,
+          "z": -0.315
+        },
+        "accepts": [
+          "FFE.TEXTILES.CUSHION"
+        ],
+        "max_items": 1
+      },
+      {
+        "slot_id": "arm_drape",
+        "slot_type": "drape",
+        "position": {
+          "x": 0.9,
+          "y": 0.51,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.TEXTILES.THROW"
+        ],
+        "max_items": 1
+      }
+    ]
+  }
 }

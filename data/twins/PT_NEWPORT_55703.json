@@ -74,5 +74,41 @@
       "product_id": "55703",
       "product_url": "https://www.newport.se/shop/mobler/fatoljer/tygfatoljer/monroe-fatolj-indigo"
     }
-  ]
+  ],
+  "attach_points": {
+    "base_type": "armchair",
+    "slots": [
+      {
+        "slot_id": "seat",
+        "slot_type": "surface",
+        "position": {
+          "x": 0,
+          "y": 0.408,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.TEXTILES.CUSHION"
+        ],
+        "max_items": 1,
+        "size_constraint_mm": {
+          "max_width": 450,
+          "max_depth": 450,
+          "max_height": 150
+        }
+      },
+      {
+        "slot_id": "arm_drape",
+        "slot_type": "drape",
+        "position": {
+          "x": 0.30000000000000004,
+          "y": 0.4675,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.TEXTILES.THROW"
+        ],
+        "max_items": 1
+      }
+    ]
+  }
 }

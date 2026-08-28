@@ -74,5 +74,60 @@
       "product_id": "63398",
       "product_url": "https://www.newport.se/shop/mobler/bord/soffbord/cloud-soffbord-morkgra-s"
     }
-  ]
+  ],
+  "attach_points": {
+    "base_type": "table",
+    "slots": [
+      {
+        "slot_id": "tabletop_center",
+        "slot_type": "surface",
+        "position": {
+          "x": 0,
+          "y": 0.4,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.DECOR.VASE",
+          "FFE.DECOR.CANDLE",
+          "FFE.DECOR.BOOK",
+          "FFE.DECOR.PLANT",
+          "FFE.DECOR.FRAGRANCE"
+        ],
+        "max_items": 3,
+        "size_constraint_mm": {
+          "max_width": 600,
+          "max_depth": 300,
+          "max_height": 500
+        }
+      },
+      {
+        "slot_id": "tabletop_left",
+        "slot_type": "surface",
+        "position": {
+          "x": -0.36,
+          "y": 0.4,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.DECOR",
+          "ELECTRICAL.LUMINAIRES.TABLE"
+        ],
+        "max_items": 1
+      },
+      {
+        "slot_id": "tabletop_right",
+        "slot_type": "surface",
+        "position": {
+          "x": 0.36,
+          "y": 0.4,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.DECOR",
+          "ELECTRICAL.LUMINAIRES.TABLE"
+        ],
+        "max_items": 1
+      }
+    ]
+  }
 }

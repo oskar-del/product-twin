@@ -74,5 +74,29 @@
       "product_id": "11960",
       "product_url": "https://www.newport.se/shop/mobler/forvaring/skankar-sideboards/marthas-skank-classic-white"
     }
-  ]
+  ],
+  "attach_points": {
+    "base_type": "console",
+    "slots": [
+      {
+        "slot_id": "shelf_0",
+        "slot_type": "surface",
+        "position": {
+          "x": 0,
+          "y": 0.8,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.DECOR.VASE",
+          "FFE.DECOR.CANDLE",
+          "FFE.DECOR.BOOK",
+          "FFE.DECOR.PLANT",
+          "FFE.DECOR.ART",
+          "FFE.DECOR.FRAGRANCE",
+          "ELECTRICAL.LUMINAIRES.TABLE"
+        ],
+        "max_items": 3
+      }
+    ]
+  }
 }

@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Attach-Point Schema for Twin Layering",
+  "description": "Defines how base pieces (furniture) expose slots that decor/lighting/textile items snap into, composing shoppable vignettes.",
+  "definitions": {
+    "slot": {
+      "type": "object",
+      "required": ["slot_id", "slot_type", "position", "accepts"],
+      "properties": {
+        "slot_id": {
+          "type": "string",
+          "description": "Unique slot identifier within the base piece (e.g. 'seat_cushion_left', 'tabletop_center')"
+        },
+        "slot_type": {
+          "type": "string",
+          "enum": ["surface", "hang", "lean", "drape", "stack"],
+          "description": "How the attach-item relates to the slot physically"
+        },
+        "position": {
+          "type": "object",
+          "description": "Position relative to base piece origin (floor_center), in meters",
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" },
+            "z": { "type": "number" }
+          },
+          "required": ["x", "y", "z"]
+        },
+        "normal": {
+          "type": "object",
+          "description": "Surface normal at the slot (for orientation of attached item)",
+          "properties": {
+            "x": { "type": "number", "default": 0 },
+            "y": { "type": "number", "default": 1 },
+            "z": { "type": "number", "default": 0 }
+          }
+        },
+        "accepts": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Category IDs or attach_role values this slot accepts (e.g. ['FFE.TEXTILES.CUSHION', 'FFE.TEXTILES.THROW'])"
+        },
+        "max_items": {
+          "type": "integer",
+          "default": 1,
+          "description": "How many items can stack/layer in this slot"
+        },
+        "size_constraint_mm": {
+          "type": "object",
+          "description": "Max dimensions of items that fit this slot",
+          "properties": {
+            "max_width": { "type": "number" },
+            "max_depth": { "type": "number" },
+            "max_height": { "type": "number" }
+          }
+        }
+      }
+    },
+    "attach_role": {
+      "type": "string",
+      "enum": [
+        "pillow",
+        "throw",
+        "centerpiece",
+        "vase",
+        "candle",
+        "tray",
+        "book",
+        "plant",
+        "art",
+        "lamp_table",
+        "lamp_floor",
+        "lamp_pendant",
+        "rug",
+        "mirror",
+        "fragrance"
+      ],
+      "description": "The role a decor/lighting item plays when attached to a base"
+    }
+  },
+  "type": "object",
+  "properties": {
+    "base_type": {
+      "type": "string",
+      "enum": ["sofa", "armchair", "table", "bed", "shelf", "console", "floor", "wall", "ceiling"],
+      "description": "What kind of base piece this is"
+    },
+    "slots": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/slot" },
+      "description": "Attach points exposed by this base piece"
+    }
+  }
+}

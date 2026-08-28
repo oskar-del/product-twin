@@ -1,36 +1,39 @@
 {
-  "generated_at": "2026-08-27",
+  "generated_at": "2026-08-28",
   "summary": {
-    "total_twins": 203,
-    "G0": 0,
+    "total_twins": 13239,
+    "G0": 9396,
     "G1": 0,
-    "G2": 203,
+    "G2": 3843,
     "G3": 0,
     "G4": 0,
     "G5": 0,
     "geometry_states": {
-      "promoted_universal_proxy": 186,
+      "promoted_universal_proxy": 3826,
       "promoted_realistic_planning_proxy": 9,
+      "catalog_only": 9396,
       "candidate_live_shopify_native_exact_shape_scale_verified": 2,
       "candidate_live_shopify_native_product_shape": 6
     },
     "categories": {
-      "FFE.TABLE": 30,
-      "FFE.STORAGE": 47,
-      "FFE.OUTDOOR": 8,
-      "ELECTRICAL.LUMINAIRES": 19,
-      "FFE.SEATING": 48,
+      "FFE.TABLE": 913,
+      "FFE.STORAGE": 254,
+      "FFE.OUTDOOR": 464,
+      "ELECTRICAL.LUMINAIRES": 3205,
+      "FFE.SEATING": 1369,
       "FFE.BEDROOM": 19,
       "FFE.KITCHEN": 18,
       "FFE.BATHROOM": 4,
-      "FFE.DECOR": 1,
-      "FFE.TEXTILES": 8,
-      "ELECTRICAL.BULBS": 1
+      "FFE.DECOR": 3964,
+      "FFE.TEXTILES": 1400,
+      "ELECTRICAL.BULBS": 1,
+      "OTHER": 1351,
+      "OTHER.ACCESSORIES": 277
     },
     "commerce_coverage": {
-      "has_commerce": 203,
-      "has_ean": 2,
-      "has_affiliate_link": 0
+      "has_commerce": 13239,
+      "has_ean": 7337,
+      "has_affiliate_link": 13036
     },
     "note": "counts derived from data/twins/ by scripts/rebuild-avatar-index.mjs"
   },
