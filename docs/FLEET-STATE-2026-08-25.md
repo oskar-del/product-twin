@@ -227,6 +227,25 @@ APPLY MECHANIC: 2-batch per brand (navigate+screenshot to get button-y [673 w/ b
 screenshot). Single-batch-with-navigate fails on load timing — don't.
 When any program approves → Avatar backfill wires tracked links.
 
+## Update 2026-08-28 ~15:30 — Adtraction sweep COMPLETE (30 programs applied)
+
+APPLIED (all "under review" unless noted). Appliances/white-goods: Bosch Home 4%,
+Siemens Home 5%, Elon 5%, Vitvaror-Outlet 4%. Kitchen: KitchenTime 8%, Bagaren och
+Kocken 5%, Onyx Cookware 15%. Furniture: Nordic Nest 8%, Granit 10%, Gripsholm 15%,
+Newport 9% (**APPROVED** ✅ — feed 2175, 13,036 SKUs, tracking link live), Kungsängen 5%,
+Länna Möbler 5%, Svenssons 8%, Bobo Home 7%, Chilli 7%, Magasin 11 5%, Mjuk 5%,
+Designtorget 4%, Bäddsofflagret 6% (AOV 1225 GBP), VidaXL 6%. Lighting: Lampan 14%,
+Markslöjd 10%, Lampemesteren 8%, Valostore 10%. Rugs/textile: Trendcarpet 9%, SE Mattor 9%.
+Building/floor: Golvpoolen 3% (AOV 517 GBP, EPC 1.70 — highest). Garden/rural: P Lindberg 6%.
+BLOCKED (content channels not allowed, like IKEA): IKEA SE, Kilands.
+NOT FOUND (stale program id): Beijer Bygg (1127510935) — skip.
+Not on Adtraction at all (→ Awin): Elgiganten, MediaMarkt, Power, NetOnNet, Electrolux,
+Miele, Bauhaus, Jula, Clas Ohlson.
+When each approves → Avatar backfill wires the tracked link. Newport is the flagship
+deep-map (mandate in avatar handoff): 13,036 SKUs, layering/attach-point model.
+STILL NEEDED: Newport product FEED url (dashboard "Copy feed URL", copied to Oskar's
+clipboard 2026-08-28 — awaiting paste) → .runtime → Avatar ingestion.
+
 ## Decisions Oskar owns (queued)
 
 1. Winner: confirm Vinkelhuset (per 03-JUDGED-MATRIX) or re-open via tre-hus artifact.
