@@ -116,7 +116,7 @@ function drapeMunicipalOrtho(){
   // Composite: Lantmäteriet ortofoto + real municipal cadastral boundaries + fastighet labels.
   const url=`https://kartdata.norrkoping.se/wms?servicename=kartor&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG:3010&BBOX=${bbox}&WIDTH=1536&HEIGHT=1536&FORMAT=image/jpeg&STYLES=&LAYERS=extwms_lm_ortofoto,f_fastighetsgranser,txt_fastighbeteckning`;
   const loader=new THREE.TextureLoader();loader.setCrossOrigin('anonymous');
-  loader.load(url,tex=>{if(_satToken)return;tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=renderer.capabilities.getMaxAnisotropy?.()||1;const m=terrainObject.userData.realisticMaterial;m.map=tex;m.color.set(0xffffff);m.needsUpdate=true;orthoAttribution.classList.remove('hidden');},undefined,()=>{});
+  loader.load(url,tex=>{if(_satToken)return;tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=renderer.capabilities.getMaxAnisotropy?.()||1;const m=terrainObject.userData.realisticMaterial;m.map=tex;m.color.set(0xffffff);m.needsUpdate=true;roofOrthoMat.map=tex;roofOrthoMat.color.set(0xffffff);roofOrthoMat.needsUpdate=true;/* real roofs on the buildings */orthoAttribution.classList.remove('hidden');},undefined,()=>{});
 }
 // Fill the surround beyond the 360 m detailed terrain with real wide-area orthophoto,
 // so the study area sits in its true landscape instead of a hard edge into a green void.
@@ -303,8 +303,11 @@ function pdArea(){const r=propertyDivision?.subject_rings_local?.[0]||[];let a=0
 // Official LM byggnad footprints — authoritative plan, DERIVED extrusion height.
 const officialBuildings=new THREE.Group();root.add(officialBuildings);let officialBuildingData=null;
 const _BLD_H={Bostad:5.6,'Samhällsfunktion':6,Verksamhet:6,Industri:7,'Övrig byggnad':4,Komplementbyggnad:3};
-// A pitched gable roof auto-oriented to a footprint's principal axis (PCA) — turns the
-// flat-topped extrusions into houses. Ridge runs along the building's long axis.
+// Shared materials for the official buildings: roof top textured with the REAL Lantmäteriet
+// aerial (set once the ortho loads, in drapeMunicipalOrtho); walls a neutral tone.
+const roofOrthoMat=new THREE.MeshStandardMaterial({color:0xc9c2b2,roughness:.92,metalness:0,envMapIntensity:.4});
+const wallMat=new THREE.MeshStandardMaterial({color:0xb3a998,roughness:.85,envMapIntensity:.35});
+// (unused after the aerial-roof switch, kept for reference)
 function addBuildingRoof(ring,yTop,item){
   const n=ring.length;let mx=0,mz=0;for(const [x,z] of ring){mx+=x;mz+=z}mx/=n;mz/=n;
   let sxx=0,szz=0,sxz=0;for(const [x,z] of ring){const dx=x-mx,dz=z-mz;sxx+=dx*dx;szz+=dz*dz;sxz+=dx*dz}
@@ -325,6 +328,13 @@ function addBuildingRoof(ring,yTop,item){
 }
 function drawOfficialBuildings(bd){
   officialBuildingData=bd;
+  const S=data.elements.find(e=>e.id==='TERRAIN_CONTEXT')?.geometry.size_m||360,HALF=S/2;
+  // Project the real aerial onto each roof top: same world→UV as the terrain drape, so roofs
+  // line up pixel-for-pixel with the ground imagery (v = shapeX,-z → (x+HALF)/S,(z+HALF)/S).
+  const orthoUV={
+    generateTopUV:(g,v,ia,ib,ic)=>[ia,ib,ic].map(i=>new THREE.Vector2((v[i*3]+HALF)/S,(-v[i*3+1]+HALF)/S)),
+    generateSideWallUV:()=>[new THREE.Vector2(0,0),new THREE.Vector2(0,1),new THREE.Vector2(1,1),new THREE.Vector2(1,0)]
+  };
   bd.buildings.forEach((b,i)=>{
     const rings=(b.footprint_rings_local||[]).filter(r=>r&&r.length>=3);if(!rings.length)return;
     const h=_BLD_H[b.type]||4;
@@ -342,11 +352,13 @@ function drawOfficialBuildings(bd){
     rings.forEach((ring,ri)=>{
       let pts=ring;if(pts.length>3&&pts[0][0]===pts[pts.length-1][0]&&pts[0][1]===pts[pts.length-1][1])pts=pts.slice(0,-1); // drop closing dup → Earcut won't punch a hole
       const shape=new THREE.Shape(pts.map(([x,z])=>new THREE.Vector2(x,-z)));
-      const geo=new THREE.ExtrudeGeometry(shape,{depth,bevelEnabled:false});geo.rotateX(-Math.PI/2);
-      const mesh=profile(new THREE.Mesh(geo),item);mesh.position.y=minGy-0.4;mesh.castShadow=true;mesh.receiveShadow=true;
+      const geo=new THREE.ExtrudeGeometry(shape,{depth,bevelEnabled:false,UVGenerator:orthoUV});geo.rotateX(-Math.PI/2);
+      const mesh=new THREE.Mesh(geo,[roofOrthoMat,wallMat]);   // cap = real aerial roof, walls = neutral
+      mesh.userData.item=item;mesh.userData.intelligenceMaterial=intelligenceMat('DERIVED',1);mesh.userData.realisticMaterial=[roofOrthoMat,wallMat];
+      mesh.material=(mode==='REALISTIC')?mesh.userData.realisticMaterial:mesh.userData.intelligenceMaterial;
+      mesh.position.y=minGy-0.4;mesh.castShadow=true;mesh.receiveShadow=true;clickable.push(mesh);
       officialBuildings.add(mesh);if(ri===0)byId.set(item.id,mesh);
     });
-    const main=rings.reduce((a,r)=>r.length>a.length?r:a,rings[0]);addBuildingRoof(main,maxGy+h,item); // pitched roof on the main part
   });
 }
 try{[data,providers,streetContext,terrainMetadata,officialGeometrySources,aerialHistory]=await Promise.all([fetch(DATA),fetch(PROVIDERS),fetch(STREET),fetch(TERRAIN_METADATA),fetch(OFFICIAL_GEOMETRY),fetch(AERIAL_HISTORY)]).then(async rs=>{for(const r of rs)if(!r.ok)throw new Error(`${r.status} ${r.statusText}`);return Promise.all(rs.map(r=>r.json()))});data.elements.forEach(buildElement);buildRealismDecor();drapeMunicipalOrtho();drapeWideContext();mountAerialHistory();makeSteps();setSun();try{const _r=await fetch(DERIVED_BOUNDARY);if(_r.ok){const _pd=await _r.json();if(_pd&&_pd.evidence_class==='AUTHORITATIVE'&&_pd.subject_rings_local?.length){propertyDivision=_pd;drawAuthoritativeBoundary(_pd);const _prov=byId.get('PLOT_54_28');if(_prov){_prov.userData.designHidden=true;if(_prov.userData.label)_prov.userData.label.visible=false;}/* the authoritative clip supersedes the indicative municipal-map trace + its label */}}}catch(_e){}
