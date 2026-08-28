@@ -45,7 +45,8 @@
 </aside>
 <script type="module">
 import * as THREE from 'three';
-import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js'
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 import {createMapboxRuntimeAdapter} from './live-context-adapter.mjs';
 const DATA='../../data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.json',PROVIDERS='../../data/sites/sweden/saterdalsvagen-14/context-providers-v0.1.json',STREET='../../data/sites/sweden/saterdalsvagen-14/street-context-v0.1.json',TERRAIN_METADATA='../../data/sites/sweden/saterdalsvagen-14/terrain-source-metadata-v0.1.json',OFFICIAL_GEOMETRY='../../data/sites/sweden/saterdalsvagen-14/official-context-geometry-sources-v0.1.json',AERIAL_HISTORY='../../data/sites/sweden/saterdalsvagen-14/municipal-aerial-history-v0.1.json';
 // Authoritative property-division clip — produced by scripts/ingest-property-division.py
@@ -53,9 +54,11 @@ const DATA='../../data/sites/sweden/saterdalsvagen-14/neighbourhood-scene-v0.2.j
 const DERIVED_BOUNDARY='../../data/sites/sweden/saterdalsvagen-14/property-division-derived-v0.1.json';let propertyDivision=null;
 const DERIVED_BUILDINGS='../../data/sites/sweden/saterdalsvagen-14/buildings-official-derived-v0.1.json';
 const colors={AUTHORITATIVE:0x176b52,INDICATIVE:0xc18a2d,DERIVED:0x497aa2,REPORTED_UNVERIFIED:0xa65b68,CONCEPT:0x735a9e},cssColors={AUTHORITATIVE:'#176b52',INDICATIVE:'#c18a2d',DERIVED:'#497aa2',REPORTED_UNVERIFIED:'#a65b68',CONCEPT:'#735a9e'};
-const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,.1,1400);camera.position.set(150,125,185);const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;document.body.prepend(renderer.domElement);const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,0,0);controls.enableDamping=true;controls.maxDistance=600;controls.minDistance=.7;
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,.1,1400);camera.position.set(150,125,185);const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;document.body.prepend(renderer.domElement);
+// Image-based lighting: soft indoor-room IBL so PBR materials (glass, wood, metal) read as real.
+const _pmrem=new THREE.PMREMGenerator(renderer);scene.environment=_pmrem.fromScene(new RoomEnvironment(),0.04).texture;const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,0,0);controls.enableDamping=true;controls.maxDistance=600;controls.minDistance=.7;
 const backgrounds={INTELLIGENCE:new THREE.Color(0xd9e0db),REALISTIC:new THREE.Color(0x9fc1cf)},fogs={INTELLIGENCE:new THREE.Fog(0xd9e0db,260,620),REALISTIC:new THREE.Fog(0xb8ced0,235,720)};
-const hemi=new THREE.HemisphereLight(0xffffff,0x68766e,1.65);scene.add(hemi);const sun=new THREE.DirectionalLight(0xfff1cf,2.8);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-180;sun.shadow.camera.right=180;sun.shadow.camera.top=180;sun.shadow.camera.bottom=-180;scene.add(sun,sun.target);const root=new THREE.Group(),labelGroup=new THREE.Group(),poiGroup=new THREE.Group(),realismDecor=new THREE.Group();scene.add(root,labelGroup,poiGroup,realismDecor);const clickable=[],byId=new Map();let data,providers,streetContext,terrainMetadata,officialGeometrySources,aerialHistory,currentStep=0,terrainObject=null,tween=null,mode='INTELLIGENCE',labelsEnabled=true,stageLabelsAllowed=true,liveAdapter=null;
+const hemi=new THREE.HemisphereLight(0xffffff,0x68766e,1.65);scene.add(hemi);const sun=new THREE.DirectionalLight(0xfff1cf,2.8);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.bias=-0.0004;sun.shadow.normalBias=0.02;sun.shadow.camera.left=-180;sun.shadow.camera.right=180;sun.shadow.camera.top=180;sun.shadow.camera.bottom=-180;scene.add(sun,sun.target);const root=new THREE.Group(),labelGroup=new THREE.Group(),poiGroup=new THREE.Group(),realismDecor=new THREE.Group();scene.add(root,labelGroup,poiGroup,realismDecor);const clickable=[],byId=new Map();let data,providers,streetContext,terrainMetadata,officialGeometrySources,aerialHistory,currentStep=0,terrainObject=null,tween=null,mode='INTELLIGENCE',labelsEnabled=true,stageLabelsAllowed=true,liveAdapter=null;
 const panel=document.getElementById('panel'),panelType=document.getElementById('panelType'),panelTitle=document.getElementById('panelTitle'),panelBadge=document.getElementById('panelBadge'),panelBody=document.getElementById('panelBody'),closeButton=document.getElementById('close'),sourcesButton=document.getElementById('sourcesButton'),steps=document.getElementById('steps'),solarTime=document.getElementById('solarTime'),timeLabel=document.getElementById('timeLabel'),terrainToggle=document.getElementById('terrainToggle'),poiToggle=document.getElementById('poiToggle'),labelsToggle=document.getElementById('labelsToggle'),divider=document.getElementById('divider'),leftLabel=document.getElementById('leftLabel'),rightLabel=document.getElementById('rightLabel'),modeCaption=document.getElementById('modeCaption'),loading=document.getElementById('loading'),livePanel=document.getElementById('livePanel'),liveContextButton=document.getElementById('liveContextButton'),liveClose=document.getElementById('liveClose'),liveToken=document.getElementById('liveToken'),liveConnect=document.getElementById('liveConnect'),liveDisconnect=document.getElementById('liveDisconnect'),liveStatus=document.getElementById('liveStatus'),liveMap=document.getElementById('liveMap'),aerialPanel=document.getElementById('aerialPanel'),aerialHistoryButton=document.getElementById('aerialHistoryButton'),aerialClose=document.getElementById('aerialClose'),aerialYears=document.getElementById('aerialYears'),aerialImage=document.getElementById('aerialImage'),aerialCrosshair=document.getElementById('aerialCrosshair'),aerialCaption=document.getElementById('aerialCaption'),aerialFoot=document.getElementById('aerialFoot');
 const intelligenceMat=(e,opacity=1)=>new THREE.MeshStandardMaterial({color:colors[e],roughness:.8,metalness:.02,transparent:opacity<1,opacity,side:THREE.DoubleSide});
 const naturalPalette={TERRAIN:0x71905f,PLOT:0x9fb47f,ROAD:0x525554,CONTEXT_BUILDING:0xddd4c5,CONCEPT_BUILDING:0xe6dfd1,ROOM:0xd6cab3,OPENING:0x83b2bd,FURNITURE:0x936e55,POI:0xd3a14c,VIEW_DIRECTION:0x9c6171,ENVIRONMENTAL_ANCHOR:0xe2b85f,ADDRESS_MARKER:0x2f765f};
@@ -186,23 +189,41 @@ function suterrangHouse(spec){
     geometry:{primitive:'Reconstructed Eksjöhus '+spec.name.replace('Eksjöhus ','')+' massing',size:[m.W,H*2,m.D],position:[ax,base,az]},
     source_refs:[spec.src||'Eksjöhus'],
     limitations:['Massing reconstructed from Eksjöhus published BOA / footprint / height / storeys.','Exact width×depth and roof pitch are a stated assumption (not all published).','CONCEPT class: not an entitlement, setback or FFL claim.']};
-  const facadeCol=m.facade==='render'?0xece9e1:(m.facade==='brick'?0x9a6b52:0xcbb89a);
-  const mk=(geo,col,rough=.9)=>{const me=profile(new THREE.Mesh(geo),item);me.userData.realisticMaterial=new THREE.MeshStandardMaterial({color:col,roughness:rough,side:THREE.DoubleSide});if(mode==='REALISTIC')me.material=me.userData.realisticMaterial;me.castShadow=me.receiveShadow=true;grp.add(me);return me;};
-  mk(new THREE.BoxGeometry(m.W,H,m.D),facadeCol).position.set(0,base+H/2,0);        // lower walk-out
-  mk(new THREE.BoxGeometry(m.W,H,m.D),facadeCol).position.set(0,base+H+H/2,0);      // upper (living+balcony)
-  // SW glazing wall on the front (-Z), both storeys
-  const glass=new THREE.Mesh(new THREE.PlaneGeometry(m.W*0.84,H*2*0.78),new THREE.MeshStandardMaterial({color:0x9fc4d8,roughness:.08,metalness:.25,transparent:true,opacity:.5,side:THREE.DoubleSide}));
-  glass.position.set(0,base+H,-(m.D/2+0.04));glass.userData.item=item;grp.add(glass);
-  // wraparound balcony along the front at the upper (living) level
-  if(m.balcony){const bd=m.balconyDepth||2.4;
-    mk(new THREE.BoxGeometry(m.W+1.4,0.22,bd),0xbfae90).position.set(0,base+H,-(m.D/2+bd/2));
-    const rail=new THREE.Mesh(new THREE.BoxGeometry(m.W+1.4,0.55,0.06),new THREE.MeshStandardMaterial({color:0x5f5f5a,transparent:true,opacity:.55}));rail.position.set(0,base+H+0.4,-(m.D/2+bd));rail.userData.item=item;grp.add(rail);}
-  // roof: 27° ryggåstak, ridge front-to-back (extrude the gable triangle along depth)
-  if(m.roof==='gable'){const rise=(m.W/2)*Math.tan((m.roofPitch||27)*Math.PI/180);
-    const sh=new THREE.Shape();sh.moveTo(-m.W/2,0);sh.lineTo(m.W/2,0);sh.lineTo(0,rise);sh.closePath();
-    const rg=new THREE.ExtrudeGeometry(sh,{depth:m.D,bevelEnabled:false});rg.translate(0,0,-m.D/2);
-    mk(rg,0x4a4a48).position.set(0,base+2*H,0);
-  }else{mk(new THREE.BoxGeometry(m.W,0.3,m.D),0x3f4241).position.set(0,base+2*H+0.15,0);}   // flat roof / terrace deck
+  const W=m.W,D=m.D,top=base+2*H;
+  const woodCol=m.facade==='render'?0xe7e3d9:(m.facade==='brick'?0x9c6b52:0xc9a877);
+  const M={
+    wall:new THREE.MeshStandardMaterial({color:woodCol,roughness:.72,metalness:.02,envMapIntensity:.85}),
+    trim:new THREE.MeshStandardMaterial({color:0xf3efe6,roughness:.55,envMapIntensity:.6}),
+    plinth:new THREE.MeshStandardMaterial({color:0x3a3834,roughness:.9}),
+    roof:new THREE.MeshStandardMaterial({color:0x2d2f31,roughness:.5,metalness:.15,envMapIntensity:.7}),
+    glass:new THREE.MeshStandardMaterial({color:0x223440,metalness:.92,roughness:.05,envMapIntensity:1.7,transparent:true,opacity:.5}),
+    deck:new THREE.MeshStandardMaterial({color:0xa9865a,roughness:.78}),
+    rail:new THREE.MeshStandardMaterial({color:0x9fb0b8,metalness:.6,roughness:.14,envMapIntensity:1.3,transparent:true,opacity:.32})};
+  const add=(geo,mat,x,y,z,cast=true)=>{const me=new THREE.Mesh(geo,mat);me.position.set(x,y,z);me.castShadow=cast;me.receiveShadow=true;me.userData.item=item;me.userData.intelligenceMaterial=intelligenceMat('CONCEPT',1);me.userData.realisticMaterial=mat;me.material=(mode==='REALISTIC')?mat:me.userData.intelligenceMaterial;grp.add(me);return me;};
+  const B=(w,h,d)=>new THREE.BoxGeometry(w,h,d);
+  add(B(W+0.25,0.55,D+0.25),M.plinth,0,base+0.27,0);                                  // foundation plinth
+  add(B(W,2*H,D),M.wall,0,base+H,0);                                                   // wall volume
+  [[-W/2,-D/2],[W/2,-D/2],[-W/2,D/2],[W/2,D/2]].forEach(([cx,cz])=>add(B(0.16,2*H,0.16),M.trim,cx,base+H,cz,false)); // corner boards
+  const fz=-(D/2+0.03);                                                                // SW glazed gable wall
+  add(B(W*0.9,2*H*0.84,0.06),M.glass,0,base+H,fz);
+  for(let i=-2;i<=2;i++)add(B(0.07,2*H*0.84,0.08),M.trim,i*(W*0.9)/4,base+H,fz+0.02,false);
+  [base+H*0.55,base+H,base+H*1.45].forEach(y=>add(B(W*0.9,0.08,0.08),M.trim,0,y,fz+0.02,false));
+  const sideWin=s=>[base+H*0.5,base+H*1.5].forEach(y=>{add(B(0.06,1.2,1.4),M.glass,s*(W/2+0.01),y,D*0.16);add(B(0.06,1.2,1.4),M.glass,s*(W/2+0.01),y,-D*0.18);});
+  sideWin(1);sideWin(-1);
+  add(B(W*0.42,1.2,0.06),M.glass,-(W*0.18),base+H*1.5,D/2+0.01);                       // a rear window
+  if(m.balcony){const bd=m.balconyDepth||2.4,bw=W+1.3,by=base+H;                       // upper-level veranda
+    add(B(bw,0.22,bd),M.deck,0,by,-(D/2+bd/2));
+    add(B(bw,0.9,0.05),M.rail,0,by+0.55,-(D/2+bd));
+    [-1,1].forEach(s=>add(B(0.05,0.9,bd),M.rail,s*bw/2,by+0.55,-(D/2+bd/2)));
+    [-bw/2,-bw/6,bw/6,bw/2].forEach(px=>add(B(0.1,0.95,0.1),M.trim,px,by+0.5,-(D/2+bd),false));
+    add(B(bw,0.12,bd),M.plinth,0,by-0.12,-(D/2+bd/2),false);}
+  if(m.roof!=='flat'){const pitch=(m.roofPitch||27)*Math.PI/180,ovh=0.55,rw=W+2*ovh,rise=(rw/2)*Math.tan(pitch);
+    const sh=new THREE.Shape();sh.moveTo(-rw/2,0);sh.lineTo(rw/2,0);sh.lineTo(0,rise);sh.closePath();
+    const rg=new THREE.ExtrudeGeometry(sh,{depth:D+2*ovh,bevelEnabled:false});rg.translate(0,0,-(D+2*ovh)/2);
+    add(rg,M.roof,0,top,0);
+    add(B(rw,0.12,0.14),M.trim,0,top-0.02,-(D/2+ovh),false);add(B(rw,0.12,0.14),M.trim,0,top-0.02,D/2+ovh,false); // fascia
+    add(B(0.7,1.6,0.7),M.plinth,W*0.22,top+rise*0.5,D*0.1);                            // chimney
+  }else{add(B(W,0.3,D),M.roof,0,top+0.15,0);add(B(W-0.6,0.12,D-0.6),M.deck,0,top+0.32,0,false);add(B(W,0.6,0.05),M.rail,0,top+0.6,-(D/2-0.02));}
   designStudio.add(grp);
   // window/eye points for the Glan sightline (upper living, at the balcony rail), in WORLD space
   const eyeLocal=[[-m.W*0.3,base+H+1.5,-(m.D/2+0.2)],[0,base+H+1.5,-(m.D/2+0.2)],[m.W*0.3,base+H+1.5,-(m.D/2+0.2)]];
