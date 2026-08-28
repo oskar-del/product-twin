@@ -297,6 +297,25 @@ function pdArea(){const r=propertyDivision?.subject_rings_local?.[0]||[];let a=0
 // Official LM byggnad footprints — authoritative plan, DERIVED extrusion height.
 const officialBuildings=new THREE.Group();root.add(officialBuildings);let officialBuildingData=null;
 const _BLD_H={Bostad:5.6,'Samhällsfunktion':6,Verksamhet:6,Industri:7,'Övrig byggnad':4,Komplementbyggnad:3};
+// A pitched gable roof auto-oriented to a footprint's principal axis (PCA) — turns the
+// flat-topped extrusions into houses. Ridge runs along the building's long axis.
+function addBuildingRoof(ring,yTop,item){
+  const n=ring.length;let mx=0,mz=0;for(const [x,z] of ring){mx+=x;mz+=z}mx/=n;mz/=n;
+  let sxx=0,szz=0,sxz=0;for(const [x,z] of ring){const dx=x-mx,dz=z-mz;sxx+=dx*dx;szz+=dz*dz;sxz+=dx*dz}
+  const th=0.5*Math.atan2(2*sxz,sxx-szz),c=Math.cos(th),s=Math.sin(th);
+  let minU=1e9,maxU=-1e9,minV=1e9,maxV=-1e9;
+  for(const [x,z] of ring){const dx=x-mx,dz=z-mz,u=dx*c+dz*s,v=-dx*s+dz*c;if(u<minU)minU=u;if(u>maxU)maxU=u;if(v<minV)minV=v;if(v>maxV)maxV=v}
+  const Ln=maxU-minU,Wd=maxV-minV;if(Ln<1.5||Wd<1.5)return;
+  const rise=Math.min(Wd*0.34,3.0),ovh=0.45;
+  const sh=new THREE.Shape();sh.moveTo(-(Wd/2+ovh),0);sh.lineTo(Wd/2+ovh,0);sh.lineTo(0,rise);sh.closePath();
+  const geo=new THREE.ExtrudeGeometry(sh,{depth:Ln+2*ovh,bevelEnabled:false});geo.translate(0,0,-(Ln+2*ovh)/2);
+  const roofCol=[0x46433f,0x6d4032,0x54503f,0x3f4241][Math.abs(Math.round(mx*7+mz*13))%4];
+  const roof=profile(new THREE.Mesh(geo),item);
+  roof.userData.realisticMaterial=new THREE.MeshStandardMaterial({color:roofCol,roughness:.72,metalness:.05,envMapIntensity:.5});
+  if(mode==='REALISTIC')roof.material=roof.userData.realisticMaterial;
+  roof.position.set(mx,yTop-0.15,mz);roof.rotation.y=Math.PI/2-th;roof.castShadow=true;roof.receiveShadow=true;
+  officialBuildings.add(roof);
+}
 function drawOfficialBuildings(bd){
   officialBuildingData=bd;
   bd.buildings.forEach((b,i)=>{
@@ -320,6 +339,7 @@ function drawOfficialBuildings(bd){
       const mesh=profile(new THREE.Mesh(geo),item);mesh.position.y=minGy-0.4;mesh.castShadow=true;mesh.receiveShadow=true;
       officialBuildings.add(mesh);if(ri===0)byId.set(item.id,mesh);
     });
+    const main=rings.reduce((a,r)=>r.length>a.length?r:a,rings[0]);addBuildingRoof(main,maxGy+h,item); // pitched roof on the main part
   });
 }
 try{[data,providers,streetContext,terrainMetadata,officialGeometrySources,aerialHistory]=await Promise.all([fetch(DATA),fetch(PROVIDERS),fetch(STREET),fetch(TERRAIN_METADATA),fetch(OFFICIAL_GEOMETRY),fetch(AERIAL_HISTORY)]).then(async rs=>{for(const r of rs)if(!r.ok)throw new Error(`${r.status} ${r.statusText}`);return Promise.all(rs.map(r=>r.json()))});data.elements.forEach(buildElement);buildRealismDecor();drapeMunicipalOrtho();drapeWideContext();mountAerialHistory();makeSteps();setSun();try{const _r=await fetch(DERIVED_BOUNDARY);if(_r.ok){const _pd=await _r.json();if(_pd&&_pd.evidence_class==='AUTHORITATIVE'&&_pd.subject_rings_local?.length){propertyDivision=_pd;drawAuthoritativeBoundary(_pd);const _prov=byId.get('PLOT_54_28');if(_prov){_prov.userData.designHidden=true;if(_prov.userData.label)_prov.userData.label.visible=false;}/* the authoritative clip supersedes the indicative municipal-map trace + its label */}}}catch(_e){}
