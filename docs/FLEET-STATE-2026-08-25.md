@@ -182,6 +182,24 @@ fit for the Svärtinge/MIMER funnel). The moment ANY program approves, Avatar Fa
 pre-wired backfill-commerce.mjs (Adtraction link-wrapping behind its config flag) turns
 the 203 twins' null affiliate_links into tracked links in one run.
 
+## Update 2026-08-28 ~14:10 — Program applications submitted (Brain, via Chrome)
+
+Applied via the approved "Hansson & Hertzell" channel:
+- **Nordic Nest SE** (8% per sale, 69,895-product home-furnishing feed) — APPLICATION SENT,
+  under review. Good IKEA-alternative catalog (Fritz Hansen, Stelton, Global, etc.).
+- **Byggstart SE** (~71.56 GBP/lead new-build; 44.48 renovation; 11.60 other) —
+  APPLICATION SENT, under review. Direct fit for the Svärtinge/MIMER house-build funnel.
+- **IKEA SE — BLOCKED, cannot apply.** Adtraction shows: "This channel cannot apply to
+  promote this brand due to Content channels are not allowed." Our channel is Content-type
+  (the honest description of the Product Twin shoppable-content use). IKEA disallows content
+  channels on Adtraction.
+  ⚠️ STRATEGIC: the 203 twins are built on IKEA SKUs, but IKEA is not reachable with our
+  channel type. Options for Oskar: (a) monetize via Nordic Nest instead (different catalog —
+  Avatar would re-point/add Nordic Nest products); (b) investigate whether IKEA allows a
+  DIFFERENT channel type we could honestly qualify for; (c) reach IKEA affiliate via another
+  network. Do NOT create a mis-typed channel just to pass IKEA's filter.
+Next: when Nordic Nest or Byggstart approves, Avatar's backfill wires those tracked links.
+
 ## Decisions Oskar owns (queued)
 
 1. Winner: confirm Vinkelhuset (per 03-JUDGED-MATRIX) or re-open via tre-hus artifact.
