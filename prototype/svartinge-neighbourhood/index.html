@@ -87,14 +87,42 @@ function profile(mesh,item,intelOpacity=1,naturalOpacity=1,variant='base'){mesh.
 function labelSprite(text,evidence,scale=1){const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');canvas.width=512;canvas.height=96;ctx.fillStyle='rgba(249,247,241,.97)';ctx.roundRect(4,4,504,88,18);ctx.fill();ctx.strokeStyle=cssColors[evidence];ctx.lineWidth=6;ctx.stroke();ctx.fillStyle='#0f1a15';ctx.font='700 30px Inter, sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(text.slice(0,42),256,48);const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(canvas),transparent:true,depthTest:false}));sprite.scale.set(16*scale,3*scale,1);sprite.userData.isLabel=true;labelGroup.add(sprite);return sprite}
 function attach(mesh,item){mesh.userData.item=item;clickable.push(mesh);byId.set(item.id,mesh);mesh.castShadow=true;mesh.receiveShadow=true;return mesh}
 function box(item,g){const mesh=profile(new THREE.Mesh(new THREE.BoxGeometry(...g.size)),item,item.type==='ROOM'?.15:item.type==='OPENING'?.48:1,item.type==='ROOM'?.08:1);mesh.position.set(...g.position);mesh.rotation.y=THREE.MathUtils.degToRad(g.rotation_y_deg||0);attach(mesh,item);root.add(mesh);if(item.type==='CONTEXT_BUILDING'){const roof=profile(new THREE.Mesh(new THREE.ConeGeometry(Math.max(g.size[0],g.size[2])*.72,1.7,4)),item,1,1,'roof');roof.position.set(g.position[0],g.position[1]+g.size[1]/2+.85,g.position[2]);roof.rotation.y=Math.PI/4+mesh.rotation.y;roof.userData.item=item;clickable.push(roof);roof.castShadow=true;root.add(roof)}return mesh}
-function terrain(item,g){const geo=new THREE.BufferGeometry(),verts=[],indices=[],n=g.segments+1;g.vertices.forEach(v=>verts.push(...v));for(let z=0;z<g.segments;z++)for(let x=0;x<g.segments;x++){const a=z*n+x,b=a+1,c=a+n,d=c+1;indices.push(a,c,b,b,c,d)}geo.setAttribute('position',new THREE.Float32BufferAttribute(verts,3));const _uv=[];for(let iz=0;iz<=g.segments;iz++)for(let ix=0;ix<=g.segments;ix++)_uv.push(ix/g.segments,iz/g.segments);geo.setAttribute('uv',new THREE.Float32BufferAttribute(_uv,2));geo.setIndex(indices);geo.computeVertexNormals();const mesh=profile(new THREE.Mesh(geo),item,.86,1);attach(mesh,item);root.add(mesh);terrainObject=mesh;const wire=new THREE.LineSegments(new THREE.WireframeGeometry(geo),new THREE.LineBasicMaterial({color:0x82968a,transparent:true,opacity:.18}));wire.userData.intelligenceOnly=true;mesh.add(wire);return mesh}
+function terrain(item,g){const geo=new THREE.BufferGeometry(),verts=[],indices=[],n=g.segments+1;g.vertices.forEach(v=>verts.push(...v));for(let z=0;z<g.segments;z++)for(let x=0;x<g.segments;x++){const a=z*n+x,b=a+1,c=a+n,d=c+1;indices.push(a,c,b,b,c,d)}geo.setAttribute('position',new THREE.Float32BufferAttribute(verts,3));const _uv=[];for(let iz=0;iz<=g.segments;iz++)for(let ix=0;ix<=g.segments;ix++)_uv.push(ix/g.segments,iz/g.segments);geo.setAttribute('uv',new THREE.Float32BufferAttribute(_uv,2));geo.setIndex(indices);geo.computeVertexNormals();const mesh=profile(new THREE.Mesh(geo),item,.86,1);attach(mesh,item);root.add(mesh);terrainObject=mesh;const wire=new THREE.LineSegments(new THREE.WireframeGeometry(geo),new THREE.LineBasicMaterial({color:0x82968a,transparent:true,opacity:.18}));wire.userData.intelligenceOnly=true;mesh.add(wire);addTerrainSkirt(g);return mesh}
+// Extrude the terrain perimeter down into a solid base + bottom cap, so at grazing angles the twin
+// reads as a carved block on a table instead of a paper-thin plate you can see under.
+function addTerrainSkirt(g){
+  const n=g.segments+1,V=g.vertices,at=(ix,iz)=>V[iz*n+ix];let minY=Infinity;for(const v of V)if(v[1]<minY)minY=v[1];const baseY=minY-28;
+  const perim=[];for(let ix=0;ix<n;ix++)perim.push(at(ix,0));for(let iz=1;iz<n;iz++)perim.push(at(n-1,iz));for(let ix=n-2;ix>=0;ix--)perim.push(at(ix,n-1));for(let iz=n-2;iz>=1;iz--)perim.push(at(0,iz));
+  const pos=[];for(let i=0;i<perim.length;i++){const a=perim[i],b=perim[(i+1)%perim.length];pos.push(a[0],a[1],a[2], b[0],b[1],b[2], b[0],baseY,b[2],  a[0],a[1],a[2], b[0],baseY,b[2], a[0],baseY,a[2]);}
+  for(let i=0;i<perim.length;i++){const a=perim[i],b=perim[(i+1)%perim.length];pos.push(0,baseY,0, b[0],baseY,b[2], a[0],baseY,a[2]);}
+  const sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));sg.computeVertexNormals();
+  const skirt=new THREE.Mesh(sg,new THREE.MeshStandardMaterial({color:0x5f574c,roughness:1,metalness:0,side:THREE.DoubleSide}));skirt.renderOrder=-1;root.add(skirt);return skirt;
+}
 function polygon(item,g){const shape=new THREE.Shape();g.points_xz.forEach(([x,z],i)=>i?shape.lineTo(x,z):shape.moveTo(x,z));shape.closePath();const geo=new THREE.ExtrudeGeometry(shape,{depth:g.height,bevelEnabled:false});geo.rotateX(Math.PI/2);const mesh=profile(new THREE.Mesh(geo),item,.72,.18);mesh.position.y=g.base_y;attach(mesh,item);root.add(mesh);const edge=new THREE.LineSegments(new THREE.EdgesGeometry(geo),new THREE.LineBasicMaterial({color:colors[item.evidence_class]}));edge.userData.alwaysVisible=true;mesh.add(edge);const l=labelSprite('54:28 · INDICATIVE',item.evidence_class,.9);l.position.set(0,5,0);mesh.userData.label=l;return mesh}
+// Road name laid FLAT along the road surface (like Google Maps), not a floating sign.
+function roadNameLabel(name,pos,dir){
+  const ctx=document.createElement('canvas').getContext('2d'),fs=64;ctx.font='600 '+fs+'px Inter, sans-serif';
+  const w=Math.ceil(ctx.measureText(name).width)+28,h=fs+20,cv=ctx.canvas;cv.width=w;cv.height=h;
+  ctx.font='600 '+fs+'px Inter, sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.lineJoin='round';ctx.lineWidth=9;ctx.strokeStyle='rgba(24,30,26,.7)';ctx.strokeText(name,w/2,h/2);/* dark halo for legibility on the aerial */
+  ctx.fillStyle='rgba(255,255,255,.95)';ctx.fillText(name,w/2,h/2);
+  const tex=new THREE.CanvasTexture(cv);tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=renderer.capabilities.getMaxAnisotropy?.()||1;
+  const worldH=5,worldW=worldH*w/h;
+  const mesh=new THREE.Mesh(new THREE.PlaneGeometry(worldW,worldH),new THREE.MeshBasicMaterial({map:tex,transparent:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-6}));
+  /* pos/dir arrive in the ORIGINAL frame; roadLabels is NOT under the scale.x=-1 flip, so mirror x here to land on the flipped-world road */
+  const right=new THREE.Vector3(-dir.x,0,dir.z);if(right.lengthSq()<1e-6)right.set(1,0,0);right.normalize();
+  if(right.x<0)right.negate();/* keep text left-to-right, never upside-down */
+  const up=new THREE.Vector3(0,1,0),pageUp=new THREE.Vector3().crossVectors(up,right).normalize();
+  mesh.quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(right,pageUp,up));
+  mesh.position.set(-pos.x,groundY(pos.x,pos.z)+0.35,pos.z);mesh.renderOrder=5;
+  return mesh;
+}
 function ribbon(item,g){const group=new THREE.Group();
   // Densify + drape so the road hugs the terrain (long straight segments clipped the slopes into shards).
   const raw=g.points,P=[];for(let i=0;i<raw.length-1;i++){const ax=raw[i][0],az=raw[i][2],bx=raw[i+1][0],bz=raw[i+1][2],d=Math.hypot(bx-ax,bz-az),n=Math.max(1,Math.ceil(d/4));for(let k=0;k<n;k++){const t=k/n,x=ax+(bx-ax)*t,z=az+(bz-az)*t;P.push(new THREE.Vector3(x,groundY(x,z)+0.1,z));}}
   {const L=raw[raw.length-1];P.push(new THREE.Vector3(L[0],groundY(L[0],L[2])+0.1,L[2]));}
   for(let i=0;i<P.length-1;i++){const a=P[i],b=P[i+1],mid=a.clone().add(b).multiplyScalar(.5),length=a.distanceTo(b)+0.06;const mesh=profile(new THREE.Mesh(new THREE.BoxGeometry(g.width_m,.1,length)),item,.84,1);mesh.position.copy(mid);mesh.lookAt(b);mesh.userData.item=item;clickable.push(mesh);mesh.receiveShadow=true;group.add(mesh)}
-  if(item.label){const name=item.label.replace(/ \(OSM\)$/,'').trim();const seen=(roadLabels.userData.seen||(roadLabels.userData.seen=new Set()));const key=name.toLowerCase();if(!seen.has(key)){seen.add(key);let m=P[0];for(const q of P)if(q.x*q.x+q.z*q.z<m.x*m.x+m.z*m.z)m=q;/* anchor the name where the road is nearest the plot, so it sits inside the neighbourhood-view frame */const lbl=labelSprite(name,'AUTHORITATIVE',3.0);lbl.position.set(m.x,Math.max(m.y,groundY(m.x,m.z))+7,m.z);lbl.renderOrder=6;roadLabels.add(lbl);}}
+  if(item.label){const name=item.label.replace(/ \(OSM\)$/,'').trim();const seen=(roadLabels.userData.seen||(roadLabels.userData.seen=new Set()));const key=name.toLowerCase();if(!seen.has(key)){seen.add(key);let mi=0;for(let i=0;i<P.length;i++)if(P[i].x*P[i].x+P[i].z*P[i].z<P[mi].x*P[mi].x+P[mi].z*P[mi].z)mi=i;/* anchor where the road is nearest the plot */const m=P[mi],nb=(mi+1<P.length?P[mi+1]:P[Math.max(0,mi-1)]);const dir=new THREE.Vector3(nb.x-m.x,0,nb.z-m.z);roadLabels.add(roadNameLabel(name,m,dir));}}
   group.userData.item=item;root.add(group);byId.set(item.id,group);return group}
 function marker(item,g){const group=new THREE.Group();const stem=profile(new THREE.Mesh(new THREE.CylinderGeometry(.11,.11,3,10)),item);stem.position.y=1.5;group.add(stem);const head=profile(new THREE.Mesh(new THREE.SphereGeometry(.55,18,12)),item);head.position.y=3.3;head.userData.item=item;clickable.push(head);group.add(head);group.position.set(...g.position);root.add(group);byId.set(item.id,group);const l=labelSprite(item.label,item.evidence_class,.75);l.position.copy(group.position).add(new THREE.Vector3(0,5.4,0));return group}
 function poi(item,g){const group=marker(item,g);root.remove(group);poiGroup.add(group);return group}
@@ -177,7 +205,7 @@ function stepTo(i,instant=false){currentStep=i;const s=data.navigation[i];stageL
   // Per-stage tilt limit. Tight 77° everywhere (no grazing the flat terrain edge-on / going
   // underground) EXCEPT the genuinely low/interior stages (street, inside the building), which
   // need a near-horizontal camera. This also pulls PLOT_ORBIT off its grazing angle onto a clean 3/4.
-  controls.maxPolarAngle=['STREET_VIEW','ENTER_BUILDING'].includes(s.id)?Math.PI*0.57:Math.PI*0.43;document.querySelectorAll('.step').forEach((b,n)=>b.classList.toggle('active',n===i));applyStageVisibility(s);roadLabels.visible=i<4;/* road-NAME labels belong in the overview stages (neighbourhood/street/outlook/house-on-plot); hide them in the tight orbit + interior so a big depthTest-off pill can't float inside the room */toggleDesignDock(s.id);toggleBoundary(s.id);syncLiveStage();const pos=new THREE.Vector3(...s.camera),target=new THREE.Vector3(...s.target);tween=instant?null:{fromPos:camera.position.clone(),toPos:pos,fromTarget:controls.target.clone(),toTarget:target,start:performance.now(),duration:900};if(instant){camera.position.copy(pos);controls.target.copy(target)}if(i===6){const room=byId.get('ROOM_LIVING');if(room)openPanel(room.userData.item)}else panel.classList.remove('open')}
+  controls.maxPolarAngle=['ENTER_BUILDING','ROOM'].includes(s.id)?Math.PI*0.62:Math.PI*0.48;/* never let the outdoor camera drop below the horizontal — that is what let you tilt UNDER the terrain and see the backstage/underside. Only the interior stages (inside the house) relax it. */document.querySelectorAll('.step').forEach((b,n)=>b.classList.toggle('active',n===i));applyStageVisibility(s);roadLabels.visible=i<4;/* road-NAME labels belong in the overview stages (neighbourhood/street/outlook/house-on-plot); hide them in the tight orbit + interior so a big depthTest-off pill can't float inside the room */toggleDesignDock(s.id);toggleBoundary(s.id);syncLiveStage();const pos=new THREE.Vector3(...s.camera),target=new THREE.Vector3(...s.target);tween=instant?null:{fromPos:camera.position.clone(),toPos:pos,fromTarget:controls.target.clone(),toTarget:target,start:performance.now(),duration:900};if(instant){camera.position.copy(pos);controls.target.copy(target)}if(i===6){const room=byId.get('ROOM_LIVING');if(room)openPanel(room.userData.item)}else panel.classList.remove('open')}
 function makeSteps(){data.navigation.forEach((s,i)=>{const b=document.createElement('button');b.className='step';b.textContent=`${i+1}. ${s.label}`;b.onclick=()=>stepTo(i);steps.appendChild(b)})}
 function solarPosition(hour){const t=(hour-6)/14,az=THREE.MathUtils.degToRad(70+220*t),alt=THREE.MathUtils.degToRad(Math.max(2,54*Math.sin(Math.PI*t)));return new THREE.Vector3(Math.sin(az)*Math.cos(alt)*150,Math.sin(alt)*150,Math.cos(az)*Math.cos(alt)*150)}
 function setSun(){const h=+solarTime.value;timeLabel.textContent=`${String(Math.floor(h)).padStart(2,'0')}:${h%1?String(Math.round((h%1)*60)).padStart(2,'0'):'00'}`;sun.position.copy(solarPosition(h));sun.target.position.set(0,0,0);sun.intensity=Math.max(.25,3*Math.sin(Math.PI*(h-6)/14))}
@@ -303,30 +331,45 @@ function toggleDesignDock(stageId){designDockEl.classList.toggle('hidden',!['CON
 // ---- Authoritative boundary (registered property division) ----
 // Drawn only when the ingest has produced the AUTHORITATIVE clip; inert otherwise.
 const authoritativeBoundary=new THREE.Group();scene.add(authoritativeBoundary);authoritativeBoundary.visible=false;
-const BOUNDARY_STAGES=['PLOT_ORBIT','PLOT_OUTLOOK','CONCEPT_HOUSE_ON_PLOT','BUILDING_ORBIT'];
+const BOUNDARY_STAGES=['NEIGHBOURHOOD_VIEW','STREET_VIEW','PLOT_ORBIT','PLOT_OUTLOOK','CONCEPT_HOUSE_ON_PLOT','BUILDING_ORBIT'];
+const plotPulse=[];/* {mat,base,amp} materials animated in the render loop so the plot "breathes" */
+const ACCENT=0xffcf6a;/* signature plot accent (bronze-gold) */
+function plotChip(designation,areaText){
+  const cv=document.createElement('canvas');cv.width=512;cv.height=150;const ctx=cv.getContext('2d');
+  ctx.fillStyle='rgba(16,21,18,.9)';ctx.beginPath();ctx.roundRect(8,8,496,134,26);ctx.fill();
+  ctx.strokeStyle='#ffcf6a';ctx.lineWidth=4;ctx.stroke();
+  ctx.fillStyle='#ffcf6a';ctx.beginPath();ctx.arc(48,75,11,0,7);ctx.fill();
+  ctx.textAlign='left';ctx.textBaseline='alphabetic';
+  ctx.fillStyle='#fff';ctx.font='700 42px Inter, sans-serif';ctx.fillText(designation,80,68);
+  ctx.fillStyle='rgba(255,255,255,.72)';ctx.font='500 28px Inter, sans-serif';ctx.fillText(areaText,80,112);
+  const tex=new THREE.CanvasTexture(cv);tex.colorSpace=THREE.SRGBColorSpace;
+  const spr=new THREE.Sprite(new THREE.SpriteMaterial({map:tex,transparent:true,depthTest:false}));spr.scale.set(30,8.8,1);spr.renderOrder=12;return spr;
+}
 function drawAuthoritativeBoundary(pd){
   while(authoritativeBoundary.children.length)authoritativeBoundary.remove(authoritativeBoundary.children[0]);
-  // Registered boundary rendered as a low translucent fence + bright cap line, so the
-  // authoritative extent reads at any camera angle (a 1px line vanishes on terrain).
-  const fence=(ring,h,col,op)=>{
-    const pos=[],base=ring.map(([x,z])=>new THREE.Vector3(x,groundY(x,z),z));
-    for(let i=0;i<base.length-1;i++){const a=base[i],b=base[i+1];
-      const a2=a.clone().setY(a.y+h),b2=b.clone().setY(b.y+h);
-      pos.push(a.x,a.y,a.z, b.x,b.y,b.z, b2.x,b2.y,b2.z,  a.x,a.y,a.z, b2.x,b2.y,b2.z, a2.x,a2.y,a2.z);}
-    const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));
-    authoritativeBoundary.add(new THREE.Mesh(g,new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:op,side:THREE.DoubleSide,depthWrite:false})));
-    const cap=base.map(p=>p.clone().setY(p.y+h));
-    authoritativeBoundary.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(cap),new THREE.LineBasicMaterial({color:col})));
-  };
-  // Subject 54:28 as a clean draped double-line following the terrain — a crisp plot outline,
-  // not a translucent wall (which reads as a dark band on the sloped plot at oblique angles).
-  (pd.subject_rings_local||[]).forEach(r=>{
-    [0.25,0.7].forEach((lift,i)=>{const pts=r.map(([x,z])=>new THREE.Vector3(x,groundY(x,z)+lift,z));
-      authoritativeBoundary.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:0x2fe39a,transparent:true,opacity:i?0.4:0.95})));});
+  plotPulse.length=0;
+  const rings=pd.subject_rings_local||[];if(!rings.length)return;
+  let cx=0,cz=0,cn=0;rings[0].forEach(([x,z])=>{cx+=x;cz+=z;cn++;});cx/=cn;cz/=cn;const cy=groundY(cx,cz);
+  rings.forEach(r=>{
+    // Breathing translucent FILL (fan from centroid, draped just above the sloped terrain)
+    const fpos=[];for(let i=0;i<r.length-1;i++){const a=r[i],b=r[i+1];fpos.push(cx,cy+0.15,cz, a[0],groundY(a[0],a[1])+0.15,a[1], b[0],groundY(b[0],b[1])+0.15,b[1]);}
+    const fg=new THREE.BufferGeometry();fg.setAttribute('position',new THREE.Float32BufferAttribute(fpos,3));
+    const fmat=new THREE.MeshBasicMaterial({color:ACCENT,transparent:true,opacity:.12,side:THREE.DoubleSide,depthWrite:false});
+    const fill=new THREE.Mesh(fg,fmat);fill.renderOrder=2;authoritativeBoundary.add(fill);plotPulse.push({mat:fmat,base:.12,amp:.08});
+    // Pulsing glow OUTLINE (soft under-glow + crisp bright rim)
+    [{lift:.35,col:0xffe6a6,op:.95},{lift:.75,col:ACCENT,op:.45}].forEach(spec=>{
+      const pts=r.map(([x,z])=>new THREE.Vector3(x,groundY(x,z)+spec.lift,z));
+      const lmat=new THREE.LineBasicMaterial({color:spec.col,transparent:true,opacity:spec.op});
+      const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),lmat);line.renderOrder=3;authoritativeBoundary.add(line);
+      plotPulse.push({mat:lmat,base:spec.op,amp:spec.op*.45});});
   });
-  // Context parcels are NOT drawn as fences — on the slope they stretch into tall dark shards
-  // all over the scene, and the aerial's cadastral lines already show the neighbouring parcels.
+  // Marker BEAM at the plot centre (Google-pin energy, pulsing) + always-on plot CHIP above it
+  const bmat=new THREE.MeshBasicMaterial({color:ACCENT,transparent:true,opacity:.16,depthWrite:false,side:THREE.DoubleSide});
+  const beam=new THREE.Mesh(new THREE.CylinderGeometry(1.1,1.7,56,22,1,true),bmat);beam.position.set(cx,cy+28,cz);beam.renderOrder=2;authoritativeBoundary.add(beam);plotPulse.push({mat:bmat,base:.16,amp:.12});
+  const areaTxt=(pd.subject_area_m2?Math.round(pd.subject_area_m2).toLocaleString('sv-SE'):'1 938')+' m² · your plot';
+  const chip=plotChip(pd.subject_designation||'Svärtinge 54:28',areaTxt);chip.position.set(cx,cy+62,cz);authoritativeBoundary.add(chip);
 }
+function updatePlotPulse(){if(!plotPulse.length||!authoritativeBoundary.visible)return;const s=(Math.sin(performance.now()*0.0022)+1)*0.5;for(const p of plotPulse)p.mat.opacity=p.base+p.amp*s;}
 function toggleBoundary(stageId){authoritativeBoundary.visible=!!propertyDivision&&BOUNDARY_STAGES.includes(stageId);}
 function pdArea(){const r=propertyDivision?.subject_rings_local?.[0]||[];let a=0;for(let i=0;i<r.length;i++){const j=(i+1)%r.length;a+=r[i][0]*r[j][1]-r[j][0]*r[i][1];}return Math.abs(a)/2;}
 // Official LM byggnad footprints — authoritative plan, DERIVED extrusion height.
@@ -397,8 +440,8 @@ try{const _rb=await fetch(DERIVED_BUILDINGS);if(_rb.ok){const _bd=await _rb.json
    side vs Lantmäteriet/Google). Un-mirror the whole world by negating the EAST axis on every content
    group so vectors, official buildings, boundary, aerial drape, labels and the concept house all match
    the real map. Camera/compass operate in world space and stay correct. */
-[root,labelGroup,poiGroup,realismDecor,roadLabels,authoritativeBoundary].forEach(g=>{g.scale.x=-1;g.updateMatrixWorld(true);});
-setMode('INTELLIGENCE');stepTo(0,true);mountDesign(DESIGNS.find(d=>d.id==='BJ')||DESIGNS[0]);loading.remove();renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-tween.start)/tween.duration),k=1-Math.pow(1-t,3);camera.position.lerpVectors(tween.fromPos,tween.toPos,k);controls.target.lerpVectors(tween.fromTarget,tween.toTarget,k);if(t===1)tween=null}try{controls.update();updateCompass();if(mode==='COMPARE'){renderer.setScissorTest(true);const left=Math.floor(innerWidth/2);renderPass('INTELLIGENCE',0,left);renderPass('REALISTIC',left,innerWidth-left);renderer.setScissorTest(false)}else{applyProfile(mode);camera.aspect=innerWidth/innerHeight;camera.fov=45;camera.updateProjectionMatrix();composer.render()}}catch(_loopErr){/* A transient first-frame/mode-switch error must never permanently freeze the twin (a dead frame in front of a client is unacceptable). Log once, keep the loop alive; the next frame renders fine. */if(!window.__loopErr){window.__loopErr=(_loopErr&&_loopErr.stack)||String(_loopErr);console.warn('[render-loop recovered]',_loopErr);}}})}catch(error){loading.classList.add('error');loading.innerHTML=`Could not load the synchronized Twin.<br><br>${error.message}<br><br>Run <code>npm run site:sweden:svartinge:prototype:serve</code> from the repository root.`}
+[root,labelGroup,poiGroup,realismDecor,authoritativeBoundary].forEach(g=>{g.scale.x=-1;g.updateMatrixWorld(true);});/* roadLabels is NOT flipped — flat text planes would render mirror-reversed under scale.x=-1; roadNameLabel places them in already-flipped world coords instead */
+setMode('INTELLIGENCE');stepTo(0,true);mountDesign(DESIGNS.find(d=>d.id==='BJ')||DESIGNS[0]);loading.remove();renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-tween.start)/tween.duration),k=1-Math.pow(1-t,3);camera.position.lerpVectors(tween.fromPos,tween.toPos,k);controls.target.lerpVectors(tween.fromTarget,tween.toTarget,k);if(t===1)tween=null}try{controls.update();updateCompass();updatePlotPulse();if(mode==='COMPARE'){renderer.setScissorTest(true);const left=Math.floor(innerWidth/2);renderPass('INTELLIGENCE',0,left);renderPass('REALISTIC',left,innerWidth-left);renderer.setScissorTest(false)}else{applyProfile(mode);camera.aspect=innerWidth/innerHeight;camera.fov=45;camera.updateProjectionMatrix();composer.render()}}catch(_loopErr){/* A transient first-frame/mode-switch error must never permanently freeze the twin (a dead frame in front of a client is unacceptable). Log once, keep the loop alive; the next frame renders fine. */if(!window.__loopErr){window.__loopErr=(_loopErr&&_loopErr.stack)||String(_loopErr);console.warn('[render-loop recovered]',_loopErr);}}})}catch(error){loading.classList.add('error');loading.innerHTML=`Could not load the synchronized Twin.<br><br>${error.message}<br><br>Run <code>npm run site:sweden:svartinge:prototype:serve</code> from the repository root.`}
 </script>
 </body>
 </html>
