@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS17886",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gummifäste Purelux Tube adapter - Spectre 12X",
+    "manufacturer": "Purelux",
+    "article_no": "HS17886",
+    "ean": "6430042692590",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 39,
+    "ean": "6430042692590",
+    "product_url": "https://www.valostore.se/sv/produkt/faste_purelux_tube_adapter_spectre_12x",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/faste_purelux_tube_adapter_spectre_12x",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS17886&fid=2623&url=https://www.valostore.se/sv/produkt/faste_purelux_tube_adapter_spectre_12x",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Mount_Purelux_Tube_adapter_Spectre_12X/thumbs/purelux_tube_adapter_spectre12x_1_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

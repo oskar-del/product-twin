@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS17851-14564",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "LED-lampa AGGE Carnival E27, 8W, Bottle, 8 st",
+    "manufacturer": "AGGE",
+    "article_no": "HS17851-14564",
+    "ean": "6430042692521",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 1192,
+    "ean": "6430042692521",
+    "product_url": "https://www.valostore.se/sv/produkt/led_lampa_agge_carnival_e27_bottle/HS17851-14564",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/led_lampa_agge_carnival_e27_bottle/HS17851-14564",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS17851-14564&fid=2623&url=https://www.valostore.se/sv/produkt/led_lampa_agge_carnival_e27_bottle/HS17851-14564",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/LEDBulb_AGGE_Carnival_E27_8W_Bottle/thumbs/agge_carnival_spare_bulb_bottle_8pcs_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

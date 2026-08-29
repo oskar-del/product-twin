@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS20165",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Custom 16340-batteri OLIGHT - 650 mAh / Perun Mini / Perun 2 Mini / Baton 3/4 / S1R-II",
+    "manufacturer": "Olight",
+    "article_no": "HS20165",
+    "ean": null,
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 129,
+    "ean": null,
+    "product_url": "https://www.valostore.se/sv/produkt/laddningsbart_batteri_olight_baton_3_4_s1rii",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/laddningsbart_batteri_olight_baton_3_4_s1rii",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS20165&fid=2623&url=https://www.valostore.se/sv/produkt/laddningsbart_batteri_olight_baton_3_4_s1rii",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Spare_battery_Olight_Perun_Mini_Perun_2_Mini_Baton_34S1RII_650_mAh/thumbs/spare_battery_olight_baton_4_1_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

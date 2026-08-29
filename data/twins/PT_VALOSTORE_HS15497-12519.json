@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS15497-12519",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ficklampa OLIGHT Baton 3 Pro - 1500 lm / 101 mm / Laddbar, Svart",
+    "manufacturer": "Olight",
+    "article_no": "HS15497-12519",
+    "ean": "6975498001317",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 1049,
+    "ean": "6975498001317",
+    "product_url": "https://www.valostore.se/sv/produkt/ficklampa_olight_baton_3_pro/HS15497-12519",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/ficklampa_olight_baton_3_pro/HS15497-12519",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS15497-12519&fid=2623&url=https://www.valostore.se/sv/produkt/ficklampa_olight_baton_3_pro/HS15497-12519",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/Flashlight_Olight_Baton_3_Pro_1500_lm/thumbs/olight_baton_3_pro_black_1_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

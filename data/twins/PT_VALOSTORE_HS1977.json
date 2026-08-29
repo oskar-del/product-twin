@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS1977",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Moon Bicycle bracket 100/200/250",
+    "manufacturer": "Moon",
+    "article_no": "HS1977",
+    "ean": "6430042680665",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 99,
+    "ean": "6430042680665",
+    "product_url": "https://www.valostore.se/sv/produkt/moon_stangfaste",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/moon_stangfaste",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS1977&fid=2623&url=https://www.valostore.se/sv/produkt/moon_stangfaste",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/images/tuotekuvat/Led Lenser varaosat/thumbs/moon_varaosa_3_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

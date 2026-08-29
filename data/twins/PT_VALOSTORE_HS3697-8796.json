@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS3697-8796",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "LED-lykta SUNREE CC5, 840 lm, CC5",
+    "manufacturer": "Sunree",
+    "article_no": "HS3697-8796",
+    "ean": "6957689700193",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 899,
+    "ean": "6957689700193",
+    "product_url": "https://www.valostore.se/sv/produkt/led_lykta_sunree_cc3/HS3697-8796",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/led_lykta_sunree_cc3/HS3697-8796",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS3697-8796&fid=2623&url=https://www.valostore.se/sv/produkt/led_lykta_sunree_cc3/HS3697-8796",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/Lantern_Sunree_CC3_9900_mAh_gold/thumbs/sunree_cc5_1_1_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

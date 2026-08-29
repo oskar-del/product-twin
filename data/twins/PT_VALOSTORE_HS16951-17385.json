@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS16951-17385",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Arbetsbelysning PURELUX Black Raven 44 - 9 cm / 44W - Bred, 4 st",
+    "manufacturer": "Purelux",
+    "article_no": "HS16951-17385",
+    "ean": "6430042691258",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 2996,
+    "ean": "6430042691258",
+    "product_url": "https://www.valostore.se/sv/produkt/arbetsbelysning_purelux_black_raven_44/HS16951-17385",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/arbetsbelysning_purelux_black_raven_44/HS16951-17385",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS16951-17385&fid=2623&url=https://www.valostore.se/sv/produkt/arbetsbelysning_purelux_black_raven_44/HS16951-17385",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/17385/thumbs/purelux_black_raven_44_4pcs_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

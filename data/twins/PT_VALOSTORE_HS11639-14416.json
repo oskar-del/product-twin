@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS11639-14416",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cykellampa LIGHT5 NB800 - 800 lm / Laddbar, Framlampa + Light5 Streak baklampa",
+    "manufacturer": "Light5",
+    "article_no": "HS11639-14416",
+    "ean": "6430042690770",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 1558,
+    "ean": "6430042690770",
+    "product_url": "https://www.valostore.se/sv/produkt/cykellampa_light5_nb800/HS11639-14416",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/cykellampa_light5_nb800/HS11639-14416",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS11639-14416&fid=2623&url=https://www.valostore.se/sv/produkt/cykellampa_light5_nb800/HS11639-14416",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/Bikelight_Light5_NB800_800_lm/thumbs/light5_nb800_streak_kit_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS21570",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ficklampa OLIGHT ArkPro - 1500 lm / 124 mm / Laddbar, Svart",
+    "manufacturer": "Olight",
+    "article_no": "HS21570",
+    "ean": null,
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 1449,
+    "ean": null,
+    "product_url": "https://www.valostore.se/sv/produkt/ficklampa_olight_arkpro",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/ficklampa_olight_arkpro",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS21570&fid=2623&url=https://www.valostore.se/sv/produkt/ficklampa_olight_arkpro",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Flashlight_Olight_ArkPro__1500_lm__124_mm__Rechargeable/thumbs/olight_arkpro_all_colors_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

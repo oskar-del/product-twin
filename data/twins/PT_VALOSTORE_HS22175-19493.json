@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS22175-19493",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Pennlampa OLIGHT Open 3 - 120 lm / 156 mm / Laddbar, Grön",
+    "manufacturer": "Olight",
+    "article_no": "HS22175-19493",
+    "ean": "6977261696461",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 1149,
+    "ean": "6977261696461",
+    "product_url": "https://www.valostore.se/sv/produkt/pennlampa_olight_open_3/HS22175-19493",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/pennlampa_olight_open_3/HS22175-19493",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS22175-19493&fid=2623&url=https://www.valostore.se/sv/produkt/pennlampa_olight_open_3/HS22175-19493",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/Pen_light_Olight_Open_3__120_lm__156_mm__Rechargeable/thumbs/olight_open_3_od_green_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

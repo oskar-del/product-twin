@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS22970",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Laddbart batteri OLIGHT Ecolast AA - Li-ion / 1.5V / 2100 mAh, 4 st",
+    "manufacturer": "Olight",
+    "article_no": "HS22970",
+    "ean": "6977261695341",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 249,
+    "ean": "6977261695341",
+    "product_url": "https://www.valostore.se/sv/produkt/laddbart_batteri_olight_ecolast_aa",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/laddbart_batteri_olight_ecolast_aa",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS22970&fid=2623&url=https://www.valostore.se/sv/produkt/laddbart_batteri_olight_ecolast_aa",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Battery_Olight_Ecolast_AA__2100_mAh/thumbs/olight_ecolast_aa_1_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

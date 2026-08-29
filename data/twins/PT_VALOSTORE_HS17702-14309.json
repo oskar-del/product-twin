@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS17702-14309",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Flatstift Abico Female 6.3 mm, 10 st",
+    "manufacturer": "Purelux",
+    "article_no": "HS17702-14309",
+    "ean": null,
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 100,
+    "ean": null,
+    "product_url": "https://www.valostore.se/sv/produkt/flatstift_abico_female_6_3_mm/HS17702-14309",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/flatstift_abico_female_6_3_mm/HS17702-14309",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS17702-14309&fid=2623&url=https://www.valostore.se/sv/produkt/flatstift_abico_female_6_3_mm/HS17702-14309",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/Connector_Abico_Female_63_mm/thumbs/abico_63_mm_10pcs_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

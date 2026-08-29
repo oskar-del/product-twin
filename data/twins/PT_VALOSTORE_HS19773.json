@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS19773",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Laddare LIGHT5 Smart Flare Kit",
+    "manufacturer": "Light5",
+    "article_no": "HS19773",
+    "ean": "6430042696116",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 249,
+    "ean": "6430042696116",
+    "product_url": "https://www.valostore.se/sv/produkt/laddare_light5_smart_flare_kit",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/laddare_light5_smart_flare_kit",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS19773&fid=2623&url=https://www.valostore.se/sv/produkt/laddare_light5_smart_flare_kit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Charger_Light5_Smart_Flare_Kit/thumbs/light5_smart_flare_kit_charger_2_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

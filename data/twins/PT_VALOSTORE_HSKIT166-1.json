@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HSKIT166-1",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Pannlampa LUMONITE Navigator (v.2) - 4195 lm / Laddbar, Grundpaket (lampa, batteri, laddare, pannband)",
+    "manufacturer": "LUMONITE®",
+    "article_no": "HSKIT166-1",
+    "ean": "6430042692330",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 4999,
+    "ean": "6430042692330",
+    "product_url": "https://www.valostore.se/sv/produkt/lumonite_navigator/HSKIT166-1",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/lumonite_navigator/HSKIT166-1",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HSKIT166-1&fid=2623&url=https://www.valostore.se/sv/produkt/lumonite_navigator/HSKIT166-1",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/KIT_Pannlampa_LUMONITE_Navigator_v2_3864_lm/thumbs/lumonite_navigator2_1_1_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

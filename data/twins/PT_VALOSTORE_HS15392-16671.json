@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS15392-16671",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Reläkabelsats PURELUX Pro Serie 12V, DT-4, 2 utgångar (DT-4)",
+    "manufacturer": "Purelux",
+    "article_no": "HS15392-16671",
+    "ean": "6430042694891",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 359,
+    "ean": "6430042694891",
+    "product_url": "https://www.valostore.se/sv/produkt/kabelsats_purelux_pro_serie_dt4/HS15392-16671",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/kabelsats_purelux_pro_serie_dt4/HS15392-16671",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS15392-16671&fid=2623&url=https://www.valostore.se/sv/produkt/kabelsats_purelux_pro_serie_dt4/HS15392-16671",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/Wiring_Harness_Purelux_Pro_Serie_12V_DT4/thumbs/purelux_wiring_harness_dt_4_2_output_1_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

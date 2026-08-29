@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HSKIT426-18396",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Extraljuspaket Tesla Model X, Purelux Panther Aero C800-paket (2021->)",
+    "manufacturer": "Purelux",
+    "article_no": "HSKIT426-18396",
+    "ean": null,
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 6991,
+    "ean": null,
+    "product_url": "https://www.valostore.se/sv/produkt/extraljuspaket_tesla_model_x/HSKIT426-18396",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/extraljuspaket_tesla_model_x/HSKIT426-18396",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HSKIT426-18396&fid=2623&url=https://www.valostore.se/sv/produkt/extraljuspaket_tesla_model_x/HSKIT426-18396",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/18396/thumbs/extralight_kit_tesla_model_x_purelux_panther__aero_c800_2012_2021_dual_kitcopy_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

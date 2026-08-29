@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS18971",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Arbetsbelysning PURELUX Square 120 HD Gen2 - 18 cm / 120W / Bred, 1 st (Gen2)",
+    "manufacturer": "Purelux",
+    "article_no": "HS18971",
+    "ean": "6430042694679",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 2299,
+    "ean": "6430042694679",
+    "product_url": "https://www.valostore.se/sv/produkt/arbetsbelysning_purelux_square_120_hd_gen2",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/arbetsbelysning_purelux_square_120_hd_gen2",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS18971&fid=2623&url=https://www.valostore.se/sv/produkt/arbetsbelysning_purelux_square_120_hd_gen2",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Worklight_Purelux_Square_120_HD_Gen2_120W_Wide/thumbs/purelux_square_hd_120_flood_01_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

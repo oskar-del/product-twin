@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS17472",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Xenon-lampa PURELUX Blaze Xenon, 35W, D3S, 2 st",
+    "manufacturer": "Purelux",
+    "article_no": "HS17472",
+    "ean": "6430042691838",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 749,
+    "ean": "6430042691838",
+    "product_url": "https://www.valostore.se/sv/produkt/xenon_lampa_purelux_blaze_xenon_d3s",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/xenon_lampa_purelux_blaze_xenon_d3s",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS17472&fid=2623&url=https://www.valostore.se/sv/produkt/xenon_lampa_purelux_blaze_xenon_d3s",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Xenon_bulb_Purelux_Blaze_Xenon_35W_D3S_2_pcs/thumbs/purelux_blaze_6000k_d35_xenon_02_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

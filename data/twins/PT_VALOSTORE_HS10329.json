@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS10329",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Laddbar arbetslampa OLIGHT Swivel, 400 lm",
+    "manufacturer": "Olight",
+    "article_no": "HS10329",
+    "ean": "6972378123510",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 599,
+    "ean": "6972378123510",
+    "product_url": "https://www.valostore.se/sv/produkt/laddbar_arbetslampa_olight_swivel",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/laddbar_arbetslampa_olight_swivel",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS10329&fid=2623&url=https://www.valostore.se/sv/produkt/laddbar_arbetslampa_olight_swivel",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Rechargeable_work_light_Olight_Swivel_400_lm/thumbs/HS10329_1_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

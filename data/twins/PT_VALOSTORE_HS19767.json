@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS19767",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Styrfäste MOON RB-43",
+    "manufacturer": "Moon",
+    "article_no": "HS19767",
+    "ean": "4897029985281",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 119,
+    "ean": "4897029985281",
+    "product_url": "https://www.valostore.se/sv/produkt/stangfaste_moon_rb_43",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/stangfaste_moon_rb_43",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS19767&fid=2623&url=https://www.valostore.se/sv/produkt/stangfaste_moon_rb_43",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Bar_mount_Moon_RB43/thumbs/moon_rb_43_1_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS18234",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "LED-Lykta OLIGHT Sphere, 75 lm",
+    "manufacturer": "Olight",
+    "article_no": "HS18234",
+    "ean": "6975498003267",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 289,
+    "ean": "6975498003267",
+    "product_url": "https://www.valostore.se/sv/produkt/led-lykta_olight_sphere",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/led-lykta_olight_sphere",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS18234&fid=2623&url=https://www.valostore.se/sv/produkt/led-lykta_olight_sphere",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Lantern_Olight_Obulb_2_75_lm/thumbs/olight_obulb2_1_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

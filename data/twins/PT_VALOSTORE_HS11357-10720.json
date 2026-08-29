@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS11357-10720",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "LED-list / Arbetsbelysning AGGE 230V - 1500 lm/m, 3 m, Endast LED-list (4000K)",
+    "manufacturer": "AGGE",
+    "article_no": "HS11357-10720",
+    "ean": "6430042690510",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 249,
+    "ean": "6430042690510",
+    "product_url": "https://www.valostore.se/sv/produkt/led_list_agge_230v_3_m/HS11357-10720",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/led_list_agge_230v_3_m/HS11357-10720",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS11357-10720&fid=2623&url=https://www.valostore.se/sv/produkt/led_list_agge_230v_3_m/HS11357-10720",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/Led_strip_AGGE_230V__1500_lmm_3_m/thumbs/agge_230V_3m_1_normal.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS19623",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cykellampa MOON Titan Max - 1700 lm / Laddbar",
+    "manufacturer": "Moon",
+    "article_no": "HS19623",
+    "ean": "4897029988022",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 999,
+    "ean": "4897029988022",
+    "product_url": "https://www.valostore.se/sv/produkt/cykellampa_moon_titan_max",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/cykellampa_moon_titan_max",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS19623&fid=2623&url=https://www.valostore.se/sv/produkt/cykellampa_moon_titan_max",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Bike_light_Moon_Titan_Max__1700_lm__Rechargeable/thumbs/moon_titan_max_1700_2_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

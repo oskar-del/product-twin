@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HSKIT575-16380",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Extraljuspaket PURELUX WRC 21, 436W / 28 000 lm",
+    "manufacturer": "Purelux",
+    "article_no": "HSKIT575-16380",
+    "ean": null,
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 8032,
+    "ean": null,
+    "product_url": "https://www.valostore.se/sv/produkt/extraljuspaket_purelux_wrc_21/HSKIT575-16380",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/extraljuspaket_purelux_wrc_21/HSKIT575-16380",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HSKIT575-16380&fid=2623&url=https://www.valostore.se/sv/produkt/extraljuspaket_purelux_wrc_21/HSKIT575-16380",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/bundles/16380/thumbs/purelux_panther_7_5_wrc_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

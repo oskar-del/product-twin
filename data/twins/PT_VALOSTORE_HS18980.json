@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_VALOSTORE_HS18980",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Arbetsbelysning PURELUX Rotatable 60 - 10 cm / 60W / Spot, 1 st",
+    "manufacturer": "Purelux",
+    "article_no": "HS18980",
+    "ean": "6430042694761",
+    "source": "valostore_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "CATALOG_ONLY",
+  "commerce": {
+    "merchant": "valostore SE",
+    "currency": "SEK",
+    "unit_price": 999,
+    "ean": "6430042694761",
+    "product_url": "https://www.valostore.se/sv/produkt/arbetsbelysning_purelux_rotatable_60_gen2_spot",
+    "cart_deeplink": "https://www.valostore.se/sv/produkt/arbetsbelysning_purelux_rotatable_60_gen2_spot",
+    "affiliate_link": "https://go.adt212.net/t/t?a=1954031172&as=2106320328&t=2&tk=1&cupa_sku=HS18980&fid=2623&url=https://www.valostore.se/sv/produkt/arbetsbelysning_purelux_rotatable_60_gen2_spot",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://cdn.handshake.fi/i/products/Worklight_Purelux_Rotatable_60_Gen2_60W_Spot/thumbs/purelux_rotatable_spot_60_1_normal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}
