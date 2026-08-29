@@ -210,7 +210,7 @@ function makeSteps(){data.navigation.forEach((s,i)=>{const b=document.createElem
 function solarPosition(hour){const t=(hour-6)/14,az=THREE.MathUtils.degToRad(70+220*t),alt=THREE.MathUtils.degToRad(Math.max(2,54*Math.sin(Math.PI*t)));return new THREE.Vector3(Math.sin(az)*Math.cos(alt)*150,Math.sin(alt)*150,Math.cos(az)*Math.cos(alt)*150)}
 function solarDir(hour){const p=solarPosition(hour);p.x=-p.x;/* our content frame is east-flipped (scale.x=-1); flip the sun too so the derived shadows fall the geographically-correct way */return p.normalize();}
 function setSun(){const h=+solarTime.value;timeLabel.textContent=`${String(Math.floor(h)).padStart(2,'0')}:${h%1?String(Math.round((h%1)*60)).padStart(2,'0'):'00'}`;const d=solarDir(h);sun.position.copy(plotCenterWorld).add(d.clone().multiplyScalar(170));sun.target.position.copy(plotCenterWorld);sun.target.updateMatrixWorld();sun.intensity=Math.max(.25,3*Math.sin(Math.PI*(h-6)/14));positionSunMarker();drawSunShadow()}
-function applyProfile(name){const realistic=name==='REALISTIC';scene.background=backgrounds[name];scene.fog=fogs[name];hemi.color.set(realistic?0xeaf5ff:0xffffff);hemi.groundColor.set(realistic?0x55684b:0x68766e);hemi.intensity=realistic?1.3:1.65;renderer.toneMappingExposure=realistic?1.18:1.03;realismDecor.visible=realistic;sunPath.visible=authoritativeBoundary.visible&&realistic;sunShadow.visible=authoritativeBoundary.visible&&realistic;labelGroup.visible=labelsEnabled&&stageLabelsAllowed&&!realistic;root.traverse(o=>{if(o.isMesh&&o.userData.intelligenceMaterial)o.material=realistic?o.userData.realisticMaterial:o.userData.intelligenceMaterial;if(o.userData.intelligenceOnly)o.visible=!realistic})}
+function applyProfile(name){const realistic=name==='REALISTIC';scene.background=backgrounds[name];scene.fog=fogs[name];hemi.color.set(realistic?0xeaf5ff:0xffffff);hemi.groundColor.set(realistic?0x55684b:0x68766e);hemi.intensity=realistic?1.3:1.65;renderer.toneMappingExposure=realistic?1.18:1.03;realismDecor.visible=realistic;sunPath.visible=authoritativeBoundary.visible&&realistic;sunShadow.visible=authoritativeBoundary.visible&&realistic;glanView.visible=authoritativeBoundary.visible&&realistic;labelGroup.visible=labelsEnabled&&stageLabelsAllowed&&!realistic;root.traverse(o=>{if(o.isMesh&&o.userData.intelligenceMaterial)o.material=realistic?o.userData.realisticMaterial:o.userData.intelligenceMaterial;if(o.userData.intelligenceOnly)o.visible=!realistic})}
 function setMode(next){mode=next;document.querySelectorAll('.mode').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));const compare=mode==='COMPARE';divider.classList.toggle('hidden',!compare);leftLabel.classList.toggle('hidden',!compare);rightLabel.classList.toggle('hidden',!compare);modeCaption.textContent={INTELLIGENCE:'Evidence colours expose source status and uncertainty.',REALISTIC:'Exact-address listing character + nearby July 2022 street context · no provider geometry.',COMPARE:'One Twin · one camera · analytical evidence beside realistic context.'}[mode]}
 document.querySelectorAll('.mode').forEach(b=>b.onclick=()=>setMode(b.dataset.mode));const ray=new THREE.Raycaster(),mouse=new THREE.Vector2();let _downXY=null;renderer.domElement.addEventListener('pointerdown',e=>{_downXY=[e.clientX,e.clientY]});renderer.domElement.addEventListener('click',e=>{if(_downXY&&Math.hypot(e.clientX-_downXY[0],e.clientY-_downXY[1])>6)return;/* a camera drag, not a pick */const half=mode==='COMPARE'?innerWidth/2:innerWidth,offset=mode==='COMPARE'&&e.clientX>=half?half:0;mouse.x=(e.clientX-offset)/half*2-1;mouse.y=-(e.clientY/innerHeight)*2+1;camera.aspect=half/innerHeight;camera.updateProjectionMatrix();ray.setFromCamera(mouse,camera);const hit=ray.intersectObjects(clickable,false).find(h=>h.object.userData.item);if(hit)openPanel(hit.object.userData.item)});solarTime.oninput=setSun;terrainToggle.onclick=e=>{terrainObject.visible=!terrainObject.visible;e.currentTarget.classList.toggle('active',terrainObject.visible)};poiToggle.onclick=e=>{poiGroup.visible=!poiGroup.visible;e.currentTarget.classList.toggle('active',poiGroup.visible)};labelsToggle.onclick=e=>{labelsEnabled=!labelsEnabled;e.currentTarget.classList.toggle('active',labelsEnabled)};
 addEventListener('keydown',e=>{if(e.key==='ArrowRight')stepTo(Math.min(data.navigation.length-1,currentStep+1));if(e.key==='ArrowLeft')stepTo(Math.max(0,currentStep-1));if(e.key==='1')setMode('INTELLIGENCE');if(e.key==='2')setMode('REALISTIC');if(e.key==='3')setMode('COMPARE')});addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);composer.setSize(innerWidth,innerHeight);gtao.setSize(innerWidth,innerHeight)});
@@ -347,6 +347,7 @@ function mountDesign(spec){
   if(data&&data.navigation)applyStageVisibility(data.navigation[currentStep]);
   if(window.updateDesignDock)window.updateDesignDock(spec);
   if(typeof drawSunShadow==='function')drawSunShadow();/* rebuild the derived shadow for the new massing */
+  if(typeof drawGlanSightlines==='function')drawGlanSightlines();
 }
 function clearDesign(){mountDesign(DESIGNS[0]);}
 function buildDesignDock(){
@@ -371,6 +372,22 @@ function toggleDesignDock(stageId){designDockEl.classList.toggle('hidden',!['CON
 // Drawn only when the ingest has produced the AUTHORITATIVE clip; inert otherwise.
 const authoritativeBoundary=new THREE.Group();scene.add(authoritativeBoundary);authoritativeBoundary.visible=false;
 const sunPath=new THREE.Group();scene.add(sunPath);sunPath.visible=false;let plotCenterWorld=new THREE.Vector3();let sunMarker=null;const SUN_ARC_R=95;
+const glanView=new THREE.Group();scene.add(glanView);glanView.visible=false;
+// REPORTED_UNVERIFIED sightlines from the SW living windows down the fall toward Lake Glan (the listing's
+// selling point). Drawn on the real terrain so the ~43 m fall to the water reads on the land. Never proven.
+function drawGlanSightlines(){
+  while(glanView.children.length)glanView.remove(glanView.children[0]);
+  if(!ekWindows||!ekWindows.length)return;
+  const gY=(wx,wz)=>groundY(-wx,wz),c=plotCenterWorld,e=4;
+  let ghx=(gY(c.x+e,c.z)-gY(c.x-e,c.z))/(2*e),ghz=(gY(c.x,c.z+e)-gY(c.x,c.z-e))/(2*e);
+  let dx=-ghx,dz=-ghz;const L=Math.hypot(dx,dz)||1;dx/=L;dz/=L;/* world downhill (SW toward Glan) */
+  const col=0xc06a86,mat=new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.66,depthWrite:false});
+  let far=null;
+  ekWindows.forEach(w=>{const pts=[w.clone()];for(let t=5;t<=180;t+=5){const px=w.x+dx*t,pz=w.z+dz*t,py=gY(px,pz)+0.8;pts.push(new THREE.Vector3(px,py,pz));far=pts[pts.length-1];}
+    const tube=new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),pts.length,0.4,7,false),mat);tube.renderOrder=4;glanView.add(tube);});
+  if(far){const lbl=labelSprite('Lake Glan (SW) · reported view · ~43 m fall / 800 m · unverified','REPORTED_UNVERIFIED',1.8);lbl.position.set(far.x,far.y+8,far.z);lbl.renderOrder=6;glanView.add(lbl);
+    glanView.add(new THREE.Mesh(new THREE.ConeGeometry(3.2,7,20),new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.5})).translateX(far.x).translateY(far.y+3.5).translateZ(far.z));}
+}
 // DERIVED solar path arced over the plot: the sun's 21-June track (analytical), with a marker that rides the slider.
 function buildSunArc(){
   while(sunPath.children.length)sunPath.remove(sunPath.children[0]);sunMarker=null;
