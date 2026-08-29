@@ -219,7 +219,7 @@ function renderPass(name,x,width){renderer.setViewport(x,0,width,innerHeight);re
 // Viewer-side mountDesign/clearDesign hook per DESIGN-SELECTOR-MOUNT-CONTRACT.md.
 // Designs A/B/C are BRAGE's real concept massing studies (CONCEPT class), each a
 // distinct response to the measured land. Massing only — no evidence promoted.
-const designStudio=new THREE.Group();root.add(designStudio);let activeDesign='0';
+const designStudio=new THREE.Group();root.add(designStudio);let activeDesign='0';let interiorCams=null;
 const DEFAULT_MASSING=['HOUSE_SLAB','HOUSE_WALL_N','HOUSE_WALL_S','HOUSE_WALL_E','HOUSE_WALL_W','HOUSE_ROOF'];
 const DESIGNS=[
   {id:'0',lang:'BASELINE',name:'Prototype concept house',summary:'The default navigation/export concept volume.',footprint:96,storeys:1,gfa:96,boxes:null},
@@ -247,6 +247,39 @@ function studioBox(x,y,z,w,h,d,roof){
 // Reconstructed Eksjöhus suterräng (walk-out slope house) massing, sited on the real fall.
 // Front (long glazed/balcony façade) faces downhill = SW = the Glan view; depth runs uphill.
 let ekWindows=[];   // world-space window/eye points for the Glan sightline pass
+// A furnished walk-out living room inside the upper level (floor at base+H), opening SW (-Z) to the
+// glazed gable + veranda + the fall to Glan. CONCEPT class. Reads as a home, not a grey box.
+function furnishLivingRoom(grp,base,H,W,D,houseItem){
+  const y0=base+H+0.06,ceil=base+2*H-0.12,ix=W/2-0.28,iz=D/2-0.28,midY=(y0+ceil)/2;
+  const item={id:'EK_HOUSE',type:'CONCEPT_BUILDING',evidence_class:'CONCEPT',label:houseItem.label+' · living room',source_refs:houseItem.source_refs,limitations:houseItem.limitations};
+  const M={floor:new THREE.MeshStandardMaterial({color:0xb98a5c,roughness:.62,metalness:.02,envMapIntensity:.4}),
+    plaster:new THREE.MeshStandardMaterial({color:0xece7dd,roughness:.9,side:THREE.DoubleSide}),
+    sofa:new THREE.MeshStandardMaterial({color:0x6f7a70,roughness:.95}),
+    walnut:new THREE.MeshStandardMaterial({color:0x6b4a30,roughness:.5,metalness:.05}),
+    rug:new THREE.MeshStandardMaterial({color:0xb45a3c,roughness:1}),
+    stone:new THREE.MeshStandardMaterial({color:0x3a3d40,roughness:.4,metalness:.2}),
+    counter:new THREE.MeshStandardMaterial({color:0xe6e1d6,roughness:.7}),
+    chair:new THREE.MeshStandardMaterial({color:0x8a7f6e,roughness:.85}),
+    accent:new THREE.MeshStandardMaterial({color:0xd8b26a,roughness:.6})};
+  const B=(w,h,d)=>new THREE.BoxGeometry(w,h,d);
+  const im=(geo,mat,x,y,z)=>{const me=new THREE.Mesh(geo,mat);me.position.set(x,y,z);me.userData.item=item;me.userData.intelligenceMaterial=intelligenceMat('CONCEPT',1);me.userData.realisticMaterial=mat;me.material=(mode==='REALISTIC')?mat:me.userData.intelligenceMaterial;grp.add(me);return me;};
+  im(B(2*ix,0.07,2*iz),M.floor,0,y0,0);im(B(2*ix,0.07,2*iz),M.plaster,0,ceil,0);           // floor + ceiling
+  im(B(2*ix,ceil-y0,0.08),M.plaster,0,midY,iz);                                            // back wall (+Z)
+  im(B(0.08,ceil-y0,2*iz),M.plaster,-ix,midY,0);im(B(0.08,ceil-y0,2*iz),M.plaster,ix,midY,0); // side walls
+  im(B(3.4,0.03,2.6),M.rug,0,y0+0.05,-iz*0.28);                                             // rug near the view
+  const sz=iz*0.12;                                                                         // sofa faces -Z (the view)
+  im(B(3.0,0.42,1.0),M.sofa,0,y0+0.28,sz);im(B(3.0,0.62,0.22),M.sofa,0,y0+0.6,sz+0.5);
+  [-1.5,1.5].forEach(x=>im(B(0.24,0.55,1.0),M.sofa,x,y0+0.42,sz));
+  im(B(1.5,0.09,0.72),M.walnut,0,y0+0.4,sz-1.5);[-0.65,0.65].forEach(x=>[-0.28,0.28].forEach(z=>im(B(0.07,0.36,0.07),M.walnut,x,y0+0.2,sz-1.5+z))); // coffee table
+  const dcx=ix*0.5,dcz=iz*0.42;                                                             // dining, back-right
+  im(B(1.9,0.08,0.95),M.walnut,dcx,y0+0.75,dcz);[[-0.85,-0.4],[0.85,-0.4],[-0.85,0.4],[0.85,0.4]].forEach(([ox,oz])=>im(B(0.07,0.75,0.07),M.walnut,dcx+ox,y0+0.37,dcz+oz));
+  [[-0.6,-0.62],[0.6,-0.62],[-0.6,0.62],[0.6,0.62]].forEach(([ox,oz])=>{im(B(0.44,0.07,0.44),M.chair,dcx+ox,y0+0.46,dcz+oz);im(B(0.44,0.5,0.06),M.chair,dcx+ox,y0+0.72,dcz+oz+(oz<0?-0.19:0.19));});
+  const kcx=-ix*0.52;                                                                       // kitchen run, back-left
+  im(B(2.6,0.9,0.62),M.counter,kcx,y0+0.45,iz-0.42);im(B(2.72,0.06,0.68),M.stone,kcx,y0+0.93,iz-0.42);
+  im(B(0.5,0.9,0.5),M.accent,dcx,y0+0.45,-iz*0.1);                                          // a warm accent (planter/lamp base)
+  const pl=new THREE.PointLight(0xffdca6,7,26,2.2);pl.position.set(0,ceil-0.35,0);grp.add(pl);
+  const pl2=new THREE.PointLight(0xffe6c2,4,18,2.2);pl2.position.set(dcx,ceil-0.35,dcz);grp.add(pl2);
+}
 function suterrangHouse(spec){
   const m=spec.model,ax=1,az=1,e=3;
   const gx=(groundY(ax+e,az)-groundY(ax-e,az))/(2*e),gz=(groundY(ax,az+e)-groundY(ax,az-e))/(2*e);
@@ -265,7 +298,7 @@ function suterrangHouse(spec){
     trim:new THREE.MeshStandardMaterial({color:0xf3efe6,roughness:.55,envMapIntensity:.6}),
     plinth:new THREE.MeshStandardMaterial({color:0x3a3834,roughness:.9}),
     roof:new THREE.MeshStandardMaterial({color:0x2d2f31,roughness:.5,metalness:.15,envMapIntensity:.7}),
-    glass:new THREE.MeshStandardMaterial({color:0x223440,metalness:.92,roughness:.05,envMapIntensity:1.7,transparent:true,opacity:.5}),
+    glass:new THREE.MeshStandardMaterial({color:0x2b3f4a,metalness:.9,roughness:.06,envMapIntensity:1.6,transparent:true,opacity:.28}),/* more transparent so the furnished living room + warm light read through the gable */
     deck:new THREE.MeshStandardMaterial({color:0xa9865a,roughness:.78}),
     rail:new THREE.MeshStandardMaterial({color:0x9fb0b8,metalness:.6,roughness:.14,envMapIntensity:1.3,transparent:true,opacity:.32})};
   const add=(geo,mat,x,y,z,cast=true)=>{const me=new THREE.Mesh(geo,mat);me.position.set(x,y,z);me.castShadow=cast;me.receiveShadow=true;me.userData.item=item;me.userData.intelligenceMaterial=intelligenceMat('CONCEPT',1);me.userData.realisticMaterial=mat;me.material=(mode==='REALISTIC')?mat:me.userData.intelligenceMaterial;grp.add(me);return me;};
@@ -293,10 +326,14 @@ function suterrangHouse(spec){
     add(B(rw,0.12,0.14),M.trim,0,top-0.02,-(D/2+ovh),false);add(B(rw,0.12,0.14),M.trim,0,top-0.02,D/2+ovh,false); // fascia
     add(B(0.7,1.6,0.7),M.plinth,W*0.22,top+rise*0.5,D*0.1);                            // chimney
   }else{add(B(W,0.3,D),M.roof,0,top+0.15,0);add(B(W-0.6,0.12,D-0.6),M.deck,0,top+0.32,0,false);add(B(W,0.6,0.05),M.rail,0,top+0.6,-(D/2-0.02));}
-  designStudio.add(grp);
+  furnishLivingRoom(grp,base,H,W,D,item);
+  designStudio.add(grp);grp.updateWorldMatrix(true,true);
   // window/eye points for the Glan sightline (upper living, at the balcony rail), in WORLD space
   const eyeLocal=[[-m.W*0.3,base+H+1.5,-(m.D/2+0.2)],[0,base+H+1.5,-(m.D/2+0.2)],[m.W*0.3,base+H+1.5,-(m.D/2+0.2)]];
   ekWindows=eyeLocal.map(([lx,ly,lz])=>{const v=new THREE.Vector3(lx,ly,lz);grp.localToWorld(v);return v;});
+  /* NOTE: the furnished living room is built (visible through the glazed gable in the orbit stages).
+     A dedicated interior fly-through (framed inside the room) is DEFERRED — the solid shell + the
+     east-axis flip make reliable inside-cameras finicky; not shipping broken framing. */
   return grp;
 }
 function mountDesign(spec){
