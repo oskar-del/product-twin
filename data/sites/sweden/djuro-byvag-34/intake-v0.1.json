@@ -1,0 +1,67 @@
+{
+  "schema_version": "plot-intake/v0.1",
+  "entity_type": "PlotIntake",
+  "subject_address": "Djurö byväg 34, 139 73 Djurhamn",
+  "kommun": "Värmdö",
+  "kommunkod": "0120",
+  "lanskod": "01",
+  "resolved_at": "2026-08-30",
+  "geocode": {
+    "method": "OSM Nominatim address search",
+    "query": "Djurö byväg 34, 139 73 Djurhamn, Sweden",
+    "result_class": "REPORTED",
+    "note": "Third-party geocode used only as a search seed for the authoritative LM point-in-polygon lookup below. Not itself an evidence source for the parcel designation.",
+    "wgs84": { "lat": 59.3242380, "lon": 18.7076237 },
+    "osm": { "osm_type": "way", "osm_id": 1128102152, "place_id": 166044360 },
+    "matched_display_name": "34, Djurö byväg, Talatta, Björkås, Värmdö kommun, Stockholms län, 139 73, Sverige"
+  },
+  "coordinate_transform": {
+    "method": "Karney/Kruger transverse-mercator series (GRS80, central meridian 15E, k0=0.9996, EPSG:3006)",
+    "class": "DERIVED",
+    "self_test": {
+      "input_wgs84": { "lat": 58.6522414431, "lon": 16.0317063331 },
+      "expected_sweref99tm": [559869.0, 6501790.31],
+      "computed_sweref99tm": [559869.000, 6501790.310],
+      "source_of_expected": "committed Svärtinge origin_sweref (data/sites/sweden/saterdalsvagen-14/osm-context-derived-v0.1.json)",
+      "result": "PASS — exact match to 3 decimal places"
+    },
+    "djuro_wgs84": { "lat": 59.3242380, "lon": 18.7076237 },
+    "djuro_sweref99tm": { "E": 710934.881, "N": 6582029.947 }
+  },
+  "resolved_parcel": {
+    "class": "AUTHORITATIVE",
+    "source": "Lantmäteriet fastighetsindelning_kn0120.gpkg, table registerenhetsomradesyta, via point-in-polygon at the geocoded coordinate",
+    "designation": "DJURÖ 4:147",
+    "kommun": "VÄRMDÖ",
+    "kommunkod": "0120",
+    "trakt": "DJURÖ",
+    "block": "4",
+    "enhet": 147,
+    "fid": 3021261,
+    "objektidentitet": "8c41372b-94cc-31b4-9415-1c03d6aecf82",
+    "registerenhetsreferens": "909a6a43-ebf9-90ec-e040-ed8f66444c3f",
+    "senastandrad": "2014-07-01T19:16Z",
+    "area_m2_shoelace": 5156.3,
+    "bbox_sweref99tm": { "E_min": 710857.06, "E_max": 710967.87, "N_min": 6581971.676, "N_max": 6582069.235 }
+  },
+  "resolved_building": {
+    "class": "AUTHORITATIVE",
+    "source": "Lantmäteriet byggnad_kn0120.gpkg, table byggnad, point-in-polygon at the geocoded coordinate",
+    "fid": 106485,
+    "objektidentitet": "e001e6c5-1a34-461b-8253-500b659e095e",
+    "objekttyp": "Bostad",
+    "andamal1": "Bostad;Småhus friliggande",
+    "huvudbyggnad": "Nej",
+    "insamlingslage": "Takkant",
+    "versiongiltigfran": "2021-03-10T10:41:15.564Z",
+    "lagesosakerhetplan_m": 0.25,
+    "lagesosakerhethojd_m": 0.5,
+    "note": "huvudbyggnad=Nej means LM's register does not flag this footprint as the main dwelling on the property — likely an outbuilding/guest house at the exact geocoded point. The main house footprint (if a different building) is not yet resolved and needs a full-parcel building sweep, not just the point-in-polygon at the address pin."
+  },
+  "not_checked": [
+    "belagenhetsadresser (authoritative address-point) lookup — LM returned HTTP 403 for this collection under the current Geotorget grant (kundnr 30056732); grant covers fastighetsindelning, byggnader, and DTM/laser only, not belagenhetsadresser",
+    "full building inventory on the parcel (only the building at the exact geocoded point has been resolved; a parcel-clip sweep of byggnad_kn0120.gpkg is still needed to find all structures incl. the main house)",
+    "terrain DTM download for the Djurö area (not yet pulled)",
+    "viewshed / sea-view verification (not yet computed)"
+  ]
+}

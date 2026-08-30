@@ -1,0 +1,64 @@
+{
+  "schema_version": "svartinge-official-context-geometry-sources/v0.1",
+  "entity_type": "OfficialContextGeometrySourceReceiptSet",
+  "subject": "DJURÖ 4:147",
+  "authority": "Lantmäteriet",
+  "catalogue": {
+    "api_url": "https://api.lantmateriet.se/stac-vektor/v1/",
+    "license": "CC-BY-4.0",
+    "retrieved_at": "2026-08-30"
+  },
+  "datasets": {
+    "property_division": {
+      "collection": "fastighetsindelning",
+      "item_id": "0120",
+      "title": "Fastighetsindelning i Värmdö kommun",
+      "item_url": "https://api.lantmateriet.se/stac-vektor/v1/collections/fastighetsindelning/items/0120",
+      "asset_url": "https://dl1.lantmateriet.se/fastighet/fastighetsindelning_kn0120.zip",
+      "asset_size_bytes_declared": 33818912,
+      "asset_size_bytes_downloaded": 33818912,
+      "asset_sha256": "2dc19757b36124bfe3eb174d82e3f67528adbff3dafe643302f95a3d54b8c880",
+      "local_path": "../lm-data/fastighetsindelning_kn0120.zip",
+      "zip_entry": { "name": "fastighetsindelning_kn0120.gpkg", "size_bytes": 85221376 },
+      "gpkg_integrity_check": "PRAGMA integrity_check = ok",
+      "horizontal_crs": "EPSG:3006",
+      "access_basis": "Geotorget order 2026-08-18, kundnr 30056732 (same grant used for Svärtinge)",
+      "downloaded_at": "2026-08-30",
+      "class": "AUTHORITATIVE"
+    },
+    "buildings": {
+      "collection": "byggnader",
+      "item_id": "0120",
+      "title": "Byggnader för Värmdö kommun",
+      "item_url": "https://api.lantmateriet.se/stac-vektor/v1/collections/byggnader/items/0120",
+      "asset_url": "https://dl1.lantmateriet.se/byggnadsverk/byggnad_kn0120.zip",
+      "asset_size_bytes_declared": 15280624,
+      "asset_size_bytes_downloaded": 15280624,
+      "asset_sha256": "fbeea328dfab88995e1126396660d47a697071899dcf9ac52a892b4b7950878c",
+      "local_path": "../lm-data/byggnad_kn0120.zip",
+      "zip_entry": { "name": "byggnad_kn0120.gpkg", "size_bytes": 39399424 },
+      "gpkg_integrity_check": "PRAGMA integrity_check = ok",
+      "horizontal_crs": "EPSG:3006",
+      "access_basis": "Geotorget order 2026-08-18, kundnr 30056732",
+      "downloaded_at": "2026-08-30",
+      "class": "AUTHORITATIVE"
+    },
+    "belagenhetsadresser": {
+      "collection": "belagenhetsadresser",
+      "item_id": "0120",
+      "item_url": "https://api.lantmateriet.se/stac-vektor/v1/collections/belagenhetsadresser/items/0120",
+      "asset_url": "https://dl1.lantmateriet.se/adress/belagenhetsadresser/belagenhetsadresser_kn0120.zip",
+      "asset_access": {
+        "state": "DENIED",
+        "http_status": 403,
+        "note": "Not covered by the current Geotorget order — only fastighetsindelning, byggnader and DTM/laserdata are granted (kundnr 30056732)."
+      },
+      "class": "NOT_AVAILABLE"
+    },
+    "terrain_dtm": {
+      "collection": "Markhöjdmodell Nedladdning (stac-hojd/v2, grid 1m)",
+      "status": "not yet downloaded for the Djurö tile set",
+      "class": "PENDING"
+    }
+  }
+}
