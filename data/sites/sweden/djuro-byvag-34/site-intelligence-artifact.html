@@ -1,0 +1,600 @@
+<!doctype html>
+<title>Djurö Byväg 34</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f4efe4; --paper-raised:#fbf8f1; --ink:#17211d; --ink-soft:#4b564f;
+  --hair:rgba(23,33,29,.13); --hair-strong:rgba(23,33,29,.24);
+  --sea:#1c3d4d; --pine:#33513e; --granite:#7c8481; --amber:#c68f4a;
+  --auth:#1f6f52; --auth-bg:#e4efe7; --derived:#3f6f92; --derived-bg:#e6edf3;
+  --reported:#a15b3f; --reported-bg:#f3e6de; --concept:#7c5c96; --concept-bg:#ece5f1;
+  --card:var(--paper-raised); --shadow:0 18px 44px rgba(23,33,29,.10);
+  --focus:#1c3d4d;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141b17; --paper-raised:#1b241f; --ink:#eee8dc; --ink-soft:#a9b3ac;
+    --hair:rgba(238,232,220,.13); --hair-strong:rgba(238,232,220,.24);
+    --sea:#7fb3c9; --pine:#7fae8f; --granite:#94a09b; --amber:#e0a860;
+    --auth:#6fcf9f; --auth-bg:#1e332a; --derived:#8db8d8; --derived-bg:#1e2c36;
+    --reported:#e0977c; --reported-bg:#382720; --concept:#c3a6dc; --concept-bg:#2b2436;
+    --shadow:0 18px 44px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141b17; --paper-raised:#1b241f; --ink:#eee8dc; --ink-soft:#a9b3ac;
+  --hair:rgba(238,232,220,.13); --hair-strong:rgba(238,232,220,.24);
+  --sea:#7fb3c9; --pine:#7fae8f; --granite:#94a09b; --amber:#e0a860;
+  --auth:#6fcf9f; --auth-bg:#1e332a; --derived:#8db8d8; --derived-bg:#1e2c36;
+  --reported:#e0977c; --reported-bg:#382720; --concept:#c3a6dc; --concept-bg:#2b2436;
+  --shadow:0 18px 44px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:'Inter',ui-sans-serif,system-ui,sans-serif;
+  line-height:1.5; -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--amber);color:#17211d}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:500; text-wrap:balance; margin:0}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace; font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--focus); outline-offset:2px}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,56px)}
+
+/* ---------- Hero ---------- */
+.hero{padding:clamp(48px,8vw,88px) 0 clamp(32px,5vw,56px); border-bottom:1px solid var(--hair)}
+.hero-eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:flex;gap:10px;align-items:center;margin-bottom:18px}
+.hero-eyebrow .sep{opacity:.4}
+.hero h1{font-size:clamp(34px,5.6vw,60px);line-height:1.04;letter-spacing:-.01em;max-width:16ch}
+.hero .place{color:var(--sea)}
+.hero-sub{margin-top:14px;font-size:16px;color:var(--ink-soft);max-width:56ch}
+.hero-stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.stat-chip{background:var(--card);border:1px solid var(--hair);border-radius:12px;padding:11px 15px;box-shadow:var(--shadow)}
+.stat-chip .k{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px}
+.stat-chip .v{font-size:15px;font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+
+/* ---------- Evidence badges ---------- */
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;padding:4px 9px;border-radius:999px;font-weight:600;white-space:nowrap}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.badge.AUTH{color:var(--auth);background:var(--auth-bg)}
+.badge.DERIVED{color:var(--derived);background:var(--derived-bg)}
+.badge.REPORTED{color:var(--reported);background:var(--reported-bg)}
+.badge.CONCEPT{color:var(--concept);background:var(--concept-bg)}
+
+.legend{display:flex;flex-wrap:wrap;gap:16px;padding:16px 0;border-bottom:1px solid var(--hair);font-size:11.5px;color:var(--ink-soft)}
+.legend b{color:var(--ink);font-weight:600}
+
+/* ---------- Twin / canvas ---------- */
+.twin-section{padding:clamp(28px,5vw,44px) 0}
+.twin-frame{position:relative;border-radius:20px;overflow:hidden;background:linear-gradient(180deg,#cfe0e6,#e9e2cf);box-shadow:var(--shadow);border:1px solid var(--hair)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .twin-frame{background:linear-gradient(180deg,#0f1c22,#1a2019)}}
+:root[data-theme="dark"] .twin-frame{background:linear-gradient(180deg,#0f1c22,#1a2019)}
+#twin{display:block;width:100%;height:clamp(360px,58vh,640px);touch-action:none;cursor:grab}
+#twin:active{cursor:grabbing}
+.twin-hud{position:absolute;left:16px;top:16px;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.twin-tag{background:rgba(23,33,29,.72);color:#f4efe4;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:7px 10px;border-radius:9px;backdrop-filter:blur(6px)}
+.twin-legend{position:absolute;right:16px;top:16px;background:rgba(23,33,29,.72);color:#f4efe4;border-radius:12px;padding:10px 12px;font-size:10px;line-height:1.9;backdrop-filter:blur(6px)}
+.twin-legend .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px}
+.twin-hint{position:absolute;left:16px;bottom:14px;background:rgba(23,33,29,.6);color:#f4efe4cc;font-size:9.5px;letter-spacing:.04em;padding:6px 10px;border-radius:8px;backdrop-filter:blur(6px)}
+.twin-controls{position:absolute;right:16px;bottom:14px;display:flex;gap:6px}
+.twin-btn{border:1px solid rgba(244,239,228,.35);background:rgba(23,33,29,.55);color:#f4efe4;border-radius:8px;padding:7px 11px;font-size:10.5px;cursor:pointer;backdrop-filter:blur(6px)}
+.twin-btn:hover{background:rgba(23,33,29,.75)}
+.twin-caption{margin-top:12px;font-size:12px;color:var(--ink-soft);max-width:74ch}
+
+/* ---------- Intelligence sections ---------- */
+.section{padding:clamp(30px,5vw,50px) 0;border-top:1px solid var(--hair)}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.section-eyebrow{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
+.section h2{font-size:clamp(22px,3vw,30px)}
+.grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+@media(max-width:820px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow)}
+.card + .card{margin-top:16px}
+.card-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+.card-head h3{font-size:16px;font-weight:600;font-family:'Inter',sans-serif}
+.rows{display:flex;flex-direction:column}
+.row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--hair);font-size:13.5px}
+.row:last-child{border-bottom:0}
+.row .k{color:var(--ink-soft)}
+.row .v{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;text-align:right}
+.note{font-size:12px;color:var(--ink-soft);margin-top:10px;line-height:1.55}
+.note.warn{color:var(--reported)}
+table.data{width:100%;border-collapse:collapse;font-size:13px}
+table.data th{text-align:left;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;padding:0 10px 8px 0;border-bottom:1px solid var(--hair-strong)}
+table.data td{padding:9px 10px 9px 0;border-bottom:1px solid var(--hair)}
+table.data tr:last-child td{border-bottom:0}
+.scrollx{overflow-x:auto}
+.pill-role{font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--hair);color:var(--ink-soft)}
+.pill-role.main{background:var(--auth-bg);color:var(--auth)}
+
+.arc-bar{position:relative;height:34px;border-radius:8px;background:var(--hair);overflow:hidden;margin:12px 0 6px}
+.arc-fill{position:absolute;top:0;bottom:0;background:linear-gradient(90deg,var(--sea),var(--derived))}
+.arc-ticks{display:flex;justify-content:space-between;font-size:9px;color:var(--ink-soft);letter-spacing:.04em}
+
+.sun-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+@media(max-width:700px){.sun-grid{grid-template-columns:1fr}}
+.sun-card{border:1px solid var(--hair);border-radius:12px;padding:13px 14px}
+.sun-card h4{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 8px;font-weight:500}
+.sun-line{display:flex;justify-content:space-between;font-size:12.5px;padding:3px 0}
+.sun-line .v{font-family:'IBM Plex Mono',monospace}
+.over-water{color:var(--derived);font-weight:600}
+
+/* ---------- Footer ---------- */
+footer{padding:clamp(36px,6vw,60px) 0 60px;border-top:1px solid var(--hair)}
+footer h3{font-size:14px;margin-bottom:12px}
+.checklist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:12.5px;color:var(--ink-soft)}
+.checklist li{padding-left:18px;position:relative}
+.checklist li::before{content:"—";position:absolute;left:0;color:var(--hair-strong)}
+.receipts{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.receipt-tag{font-size:10.5px;font-family:'IBM Plex Mono',monospace;background:var(--hair);border-radius:7px;padding:5px 9px;color:var(--ink-soft)}
+.footer-meta{margin-top:30px;font-size:11px;color:var(--ink-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-eyebrow">PLOT-TO-PROJECT &middot; SITE INTELLIGENCE<span class="sep">/</span><span class="mono">__DESIGNATION__</span></div>
+    <h1>Djurö byväg 34<br><span class="place">Djurhamn, Värmdö</span></h1>
+    <p class="hero-sub">A working evidence base for the archipelago summer house at __DESIGNATION__ — every figure below is traced to an authoritative registry, a documented derivation, or flagged as unverified. Built for a renovation in planning, not a finished survey.</p>
+    <div class="hero-stats">
+      <div class="stat-chip"><span class="k">Parcel</span><span class="v">__PARCEL_AREA__ m²</span></div>
+      <div class="stat-chip"><span class="k">Elevation at house</span><span class="v">__PIN_ELEV__ m RH2000</span></div>
+      <div class="stat-chip"><span class="k">Ground slope</span><span class="v">__SLOPE__° facing __ASPECT_COMPASS__</span></div>
+      <div class="stat-chip"><span class="k">Open water in view</span><span class="v">__SEA_PCT__% of horizon</span></div>
+      <div class="stat-chip"><span class="k">Registered structures</span><span class="v">__N_BUILDINGS__ on parcel</span></div>
+    </div>
+  </header>
+
+  <div class="legend">
+    <span><span class="badge AUTH">Authoritative</span> <b>·</b> official registry, unedited</span>
+    <span><span class="badge DERIVED">Derived</span> <b>·</b> computed from real official data</span>
+    <span><span class="badge REPORTED">Reported</span> <b>·</b> third-party or unverified</span>
+    <span><span class="badge CONCEPT">Concept</span> <b>·</b> illustrative, not measured</span>
+  </div>
+
+  <section class="twin-section">
+    <div class="twin-frame">
+      <canvas id="twin"></canvas>
+      <div class="twin-hud">
+        <div class="twin-tag">Orbit twin &middot; real terrain, boundary &amp; footprints</div>
+      </div>
+      <div class="twin-legend">
+        <div><span class="dot" style="background:#c9944f"></span>Parcel boundary</div>
+        <div><span class="dot" style="background:#3c5b45"></span>Main house</div>
+        <div><span class="dot" style="background:#8a8f89"></span>Outbuilding</div>
+        <div><span class="dot" style="background:#3f7fa0"></span>Open water (viewshed)</div>
+      </div>
+      <div class="twin-hint">Drag to orbit &middot; scroll or pinch to zoom</div>
+      <div class="twin-controls"><button class="twin-btn" id="twinReset" type="button">Reset view</button></div>
+    </div>
+    <p class="twin-caption">Terrain mesh is a real 1&nbsp;m Lantmäteriet DEM sample (DERIVED). The parcel outline and building footprints are the official Lantmäteriet vectors (AUTHORITATIVE). Building <em>heights</em> are illustrative massing only — LM's building register carries no height field, so nothing here should be read as a measured elevation of any wall or roof (CONCEPT). The blue water plane marks the directions the bare-earth viewshed found open water from standing eye height at the house (DERIVED) — trees and the house's own structure are not modelled.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">Parcel &amp; registration</div>
+        <h2>What the land registry says</h2>
+      </div>
+      <span class="badge AUTH">Authoritative</span>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="card-head"><h3>DJURÖ 4:147</h3><span class="badge AUTH">LM fastighetsindelning</span></div>
+        <div class="rows">
+          <div class="row"><span class="k">Kommun</span><span class="v">Värmdö (0120)</span></div>
+          <div class="row"><span class="k">Trakt / block / enhet</span><span class="v">DJURÖ / 4 / 147</span></div>
+          <div class="row"><span class="k">Registered area</span><span class="v">5,156.3 m²</span></div>
+          <div class="row"><span class="k">Plot footprint</span><span class="v">~111 × 98 m</span></div>
+          <div class="row"><span class="k">Last register update</span><span class="v">2014-07-01</span></div>
+          <div class="row"><span class="k">Source</span><span class="v">fastighetsindelning_kn0120.gpkg</span></div>
+        </div>
+        <p class="note">Area is a shoelace calculation on the exact registered boundary polygon — not a rounded municipal figure.</p>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Address resolution</h3><span class="badge DERIVED">Coordinate transform</span></div>
+        <div class="rows">
+          <div class="row"><span class="k">Geocode seed</span><span class="v">OSM Nominatim</span></div>
+          <div class="row"><span class="k">WGS84</span><span class="v">59.32424°N 18.70762°E</span></div>
+          <div class="row"><span class="k">SWEREF99&nbsp;TM</span><span class="v">E 710,934.9 &nbsp;N 6,582,030.0</span></div>
+          <div class="row"><span class="k">Parcel match method</span><span class="v">point-in-polygon</span></div>
+        </div>
+        <p class="note">The geocode is a REPORTED search seed only; what makes the parcel match AUTHORITATIVE is that the resulting coordinate was tested directly against LM's own boundary polygon, not taken on trust from OSM. Official address-point data (belägenhetsadresser) was requested but denied (HTTP 403) under the current data grant.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">Structures on the plot</div>
+        <h2>Four registered buildings, not one</h2>
+      </div>
+      <span class="badge AUTH">Authoritative</span>
+    </div>
+    <div class="card">
+      <div class="scrollx">
+        <table class="data" id="buildingsTable">
+          <thead><tr><th>Role</th><th>LM object type</th><th>Footprint area</th><th>Register ID</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="note warn">LM's own "huvudbyggnad" (main-building) flag is blank on every structure here — a common registry gap. Role is assigned from object type instead (Bostad = residence), which is the correct discriminator. The largest structure on the plot (190 m²) is registered as a Komplementbyggnad, not the house — likely a garage or boathouse given the coastal setting, but that specific use is REPORTED, not confirmed.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">Terrain</div>
+        <h2>Ground shape at the house</h2>
+      </div>
+      <span class="badge DERIVED">1&nbsp;m Lantmäteriet DEM</span>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="rows">
+          <div class="row"><span class="k">Elevation (RH2000)</span><span class="v">__PIN_ELEV__ m</span></div>
+          <div class="row"><span class="k">Slope</span><span class="v">__SLOPE__°</span></div>
+          <div class="row"><span class="k">Aspect (downhill)</span><span class="v">__ASPECT__° &middot; __ASPECT_COMPASS__</span></div>
+          <div class="row"><span class="k">Method</span><span class="v">Horn 3×3, 1&nbsp;m grid</span></div>
+        </div>
+        <p class="note">The ground falls toward the <b>west-northwest</b> — away from most of the open-water directions found by the viewshed below, which is why the house end of the plot reads flatter toward the sea side and steeper inland.</p>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Why DERIVED, not AUTHORITATIVE</h3></div>
+        <p class="note" style="margin-top:0">Source pixels are official Lantmäteriet 1&nbsp;m grid data (real, receipted, SHA-256 verified) — but slope and aspect are a computation on top of that raster, not an official surveyed value. Sub-metre breaklines and any post-2026 site regrading are not captured.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">Sea view</div>
+        <h2>Where the water actually is</h2>
+      </div>
+      <span class="badge DERIVED">Bare-earth viewshed</span>
+    </div>
+    <div class="card">
+      <div class="card-head"><h3>Open-water arc from the house</h3><span class="mono" style="font-size:12px;color:var(--ink-soft)">__SEA_PCT__% of the compass</span></div>
+      <div class="arc-bar"><div class="arc-fill" id="arcFill"></div></div>
+      <div class="arc-ticks"><span>N</span><span>E</span><span>S</span><span>W</span><span>N</span></div>
+      <p class="note" id="arcNote"></p>
+      <p class="note warn">This is a bare-earth result: it does not know about trees, the house's own walls, or the neighbours' building heights (LM's building register carries no height field). A real view from a deck or upper floor could be more open — or more blocked by a hedge — than this DEM alone can say. Treat it as a lower bound on what the terrain permits, not a promise of what you'll see standing at the kitchen window.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">Sun</div>
+        <h2>Light over the water, by season</h2>
+      </div>
+      <span class="badge DERIVED">Solar geometry &middot; PVGIS</span>
+    </div>
+    <div class="card">
+      <div class="sun-grid" id="sunGrid"></div>
+      <p class="note">Solar positions from a standard astronomical formula (self-checked: equinox sunrise/sunset fall almost exactly due east/west; solstice noon altitude matches 90°&nbsp;−&nbsp;latitude&nbsp;+&nbsp;23.44° to within rounding). Cross-referenced against the viewshed arc above — a sunrise or sunset marked <span class="over-water">over water</span> falls inside the open-water compass range, not just "somewhere sunny".</p>
+    </div>
+  </section>
+
+  <footer>
+    <h3>What this page does not know</h3>
+    <ul class="checklist">
+      <li>Official address point (belägenhetsadresser) — denied, HTTP 403, under the current Geotorget grant</li>
+      <li>Official hydrography / land-cover boundary (marktacke) — denied, HTTP 403; the water plane above is a DEM elevation-flatness heuristic instead</li>
+      <li>Building heights — LM's byggnad register carries no height field; nothing on this page or in the twin is a measured wall or ridge height</li>
+      <li>Vegetation and tree canopy — not modelled in the viewshed or the twin; real sightlines may be more or less open</li>
+      <li>Neighbouring building heights — footprints only, no verified elevation</li>
+      <li>Interior condition, structural condition, or renovation scope of any of the four buildings</li>
+      <li>Legal boundary survey, easements, access rights, or planning status</li>
+    </ul>
+    <div class="receipts">
+      <span class="receipt-tag">fastighetsindelning_kn0120.zip · sha256 2dc19757…</span>
+      <span class="receipt-tag">byggnad_kn0120.zip · sha256 fbeea328…</span>
+      <span class="receipt-tag">10× 1m DTM tiles, mhm-65_7 · sha256 receipted</span>
+      <span class="receipt-tag">PVGIS v5.2 PVcalc API</span>
+    </div>
+    <div class="footer-meta">
+      <span>Product Twin &middot; Plot-to-Project showcase &middot; not a legal or structural survey</span>
+      <span class="mono">Generated 2026-08-31</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+const DATA = {"pin_elev":7.0,"slope":8.1,"aspect":295,"aspect_compass":"WNW","heightfield":{"size":260,"seg":24,"v":[[-130.0,-1.14,-130.0],[-119.17,-1.81,-130.0],[-108.33,-2.65,-130.0],[-97.5,-2.52,-130.0],[-86.67,-2.97,-130.0],[-75.83,-2.97,-130.0],[-65.0,-3.05,-130.0],[-54.17,-3.06,-130.0],[-43.33,-3.13,-130.0],[-32.5,-3.08,-130.0],[-21.67,-2.89,-130.0],[-10.83,-0.31,-130.0],[0.0,-0.7,-130.0],[10.83,-0.53,-130.0],[21.67,-1.24,-130.0],[32.5,-1.36,-130.0],[43.33,-0.55,-130.0],[54.17,1.34,-130.0],[65.0,1.95,-130.0],[75.83,1.23,-130.0],[86.67,-0.11,-130.0],[97.5,-0.89,-130.0],[108.33,-1.59,-130.0],[119.17,-3.9,-130.0],[130.0,-5.06,-130.0],[-130.0,-2.33,-119.17],[-119.17,-2.85,-119.17],[-108.33,-2.98,-119.17],[-97.5,-2.71,-119.17],[-86.67,-2.96,-119.17],[-75.83,-3.15,-119.17],[-65.0,-3.07,-119.17],[-54.17,-3.13,-119.17],[-43.33,-3.09,-119.17],[-32.5,-3.1,-119.17],[-21.67,-2.88,-119.17],[-10.83,-0.08,-119.17],[0.0,0.13,-119.17],[10.83,0.07,-119.17],[21.67,-0.84,-119.17],[32.5,0.42,-119.17],[43.33,1.49,-119.17],[54.17,2.83,-119.17],[65.0,2.06,-119.17],[75.83,0.99,-119.17],[86.67,-0.5,-119.17],[97.5,-0.86,-119.17],[108.33,-1.51,-119.17],[119.17,-4.22,-119.17],[130.0,-5.4,-119.17],[-130.0,-2.47,-108.33],[-119.17,-2.68,-108.33],[-108.33,-2.94,-108.33],[-97.5,-3.16,-108.33],[-86.67,-2.93,-108.33],[-75.83,-2.91,-108.33],[-65.0,-3.04,-108.33],[-54.17,-3.04,-108.33],[-43.33,-3.09,-108.33],[-32.5,-2.55,-108.33],[-21.67,-1.73,-108.33],[-10.83,1.32,-108.33],[0.0,-0.07,-108.33],[10.83,-0.08,-108.33],[21.67,-0.75,-108.33],[32.5,1.88,-108.33],[43.33,2.92,-108.33],[54.17,2.8,-108.33],[65.0,2.06,-108.33],[75.83,0.42,-108.33],[86.67,-0.14,-108.33],[97.5,-0.22,-108.33],[108.33,-2.41,-108.33],[119.17,-4.87,-108.33],[130.0,-5.68,-108.33],[-130.0,-2.52,-97.5],[-119.17,-2.67,-97.5],[-108.33,-2.71,-97.5],[-97.5,-2.9,-97.5],[-86.67,-3.09,-97.5],[-75.83,-2.82,-97.5],[-65.0,-2.98,-97.5],[-54.17,-2.98,-97.5],[-43.33,-1.04,-97.5],[-32.5,-0.22,-97.5],[-21.67,1.49,-97.5],[-10.83,0.34,-97.5],[0.0,-0.13,-97.5],[10.83,-0.79,-97.5],[21.67,1.86,-97.5],[32.5,2.77,-97.5],[43.33,3.39,-97.5],[54.17,2.43,-97.5],[65.0,1.4,-97.5],[75.83,-0.29,-97.5],[86.67,-0.17,-97.5],[97.5,-0.35,-97.5],[108.33,-3.28,-97.5],[119.17,-5.52,-97.5],[130.0,-5.89,-97.5],[-130.0,-2.51,-86.67],[-119.17,-2.41,-86.67],[-108.33,-1.42,-86.67],[-97.5,-2.31,-86.67],[-86.67,-3.14,-86.67],[-75.83,-3.25,-86.67],[-65.0,-3.11,-86.67],[-54.17,-1.82,-86.67],[-43.33,-0.53,-86.67],[-32.5,-0.54,-86.67],[-21.67,0.33,-86.67],[-10.83,0.02,-86.67],[0.0,-0.91,-86.67],[10.83,-1.0,-86.67],[21.67,3.37,-86.67],[32.5,4.11,-86.67],[43.33,3.3,-86.67],[54.17,1.91,-86.67],[65.0,0.21,-86.67],[75.83,-0.69,-86.67],[86.67,-0.73,-86.67],[97.5,-2.18,-86.67],[108.33,-5.26,-86.67],[119.17,-6.0,-86.67],[130.0,-6.19,-86.67],[-130.0,-2.52,-75.83],[-119.17,-1.82,-75.83],[-108.33,-0.93,-75.83],[-97.5,-2.21,-75.83],[-86.67,-3.23,-75.83],[-75.83,-3.12,-75.83],[-65.0,-2.48,-75.83],[-54.17,-1.95,-75.83],[-43.33,-0.74,-75.83],[-32.5,-0.6,-75.83],[-21.67,-0.51,-75.83],[-10.83,-0.85,-75.83],[0.0,-0.69,-75.83],[10.83,-0.98,-75.83],[21.67,2.96,-75.83],[32.5,3.36,-75.83],[43.33,2.54,-75.83],[54.17,0.76,-75.83],[65.0,-0.91,-75.83],[75.83,-1.39,-75.83],[86.67,-1.41,-75.83],[97.5,-4.92,-75.83],[108.33,-5.99,-75.83],[119.17,-6.16,-75.83],[130.0,-6.31,-75.83],[-130.0,-2.55,-65.0],[-119.17,-0.77,-65.0],[-108.33,-1.19,-65.0],[-97.5,-2.25,-65.0],[-86.67,-3.13,-65.0],[-75.83,-2.43,-65.0],[-65.0,-1.9,-65.0],[-54.17,-1.39,-65.0],[-43.33,-0.65,-65.0],[-32.5,-0.56,-65.0],[-21.67,-1.19,-65.0],[-10.83,-1.59,-65.0],[0.0,-1.5,-65.0],[10.83,0.94,-65.0],[21.67,2.47,-65.0],[32.5,1.7,-65.0],[43.33,1.24,-65.0],[54.17,-0.43,-65.0],[65.0,-1.68,-65.0],[75.83,-1.99,-65.0],[86.67,-5.8,-65.0],[97.5,-6.35,-65.0],[108.33,-6.77,-65.0],[119.17,-6.5,-65.0],[130.0,-5.93,-65.0],[-130.0,-1.85,-54.17],[-119.17,-0.69,-54.17],[-108.33,-1.76,-54.17],[-97.5,-2.9,-54.17],[-86.67,-2.94,-54.17],[-75.83,-1.3,-54.17],[-65.0,-1.42,-54.17],[-54.17,-0.51,-54.17],[-43.33,1.6,-54.17],[-32.5,-0.52,-54.17],[-21.67,-1.45,-54.17],[-10.83,-1.89,-54.17],[0.0,-2.04,-54.17],[10.83,-1.16,-54.17],[21.67,0.49,-54.17],[32.5,1.36,-54.17],[43.33,0.02,-54.17],[54.17,-1.92,-54.17],[65.0,-1.8,-54.17],[75.83,-2.08,-54.17],[86.67,-6.01,-54.17],[97.5,-6.85,-54.17],[108.33,-6.85,-54.17],[119.17,-6.79,-54.17],[130.0,-5.93,-54.17],[-130.0,-1.55,-43.33],[-119.17,-2.54,-43.33],[-108.33,-2.87,-43.33],[-97.5,-3.24,-43.33],[-86.67,-2.57,-43.33],[-75.83,-1.56,-43.33],[-65.0,-0.17,-43.33],[-54.17,1.27,-43.33],[-43.33,1.86,-43.33],[-32.5,-0.38,-43.33],[-21.67,-1.69,-43.33],[-10.83,-2.15,-43.33],[0.0,-1.89,-43.33],[10.83,-1.24,-43.33],[21.67,1.93,-43.33],[32.5,1.06,-43.33],[43.33,-1.86,-43.33],[54.17,-3.79,-43.33],[65.0,-3.5,-43.33],[75.83,-5.42,-43.33],[86.67,-6.85,-43.33],[97.5,-6.85,-43.33],[108.33,-6.85,-43.33],[119.17,-6.85,-43.33],[130.0,-6.85,-43.33],[-130.0,-2.71,-32.5],[-119.17,-3.04,-32.5],[-108.33,-2.98,-32.5],[-97.5,-3.03,-32.5],[-86.67,-2.62,-32.5],[-75.83,-1.34,-32.5],[-65.0,0.87,-32.5],[-54.17,2.13,-32.5],[-43.33,1.24,-32.5],[-32.5,-1.03,-32.5],[-21.67,-2.01,-32.5],[-10.83,-2.11,-32.5],[0.0,-2.21,-32.5],[10.83,0.26,-32.5],[21.67,2.21,-32.5],[32.5,-0.23,-32.5],[43.33,-2.75,-32.5],[54.17,-5.3,-32.5],[65.0,-5.95,-32.5],[75.83,-6.85,-32.5],[86.67,-6.85,-32.5],[97.5,-6.85,-32.5],[108.33,-6.85,-32.5],[119.17,-6.85,-32.5],[130.0,-6.85,-32.5],[-130.0,-3.06,-21.67],[-119.17,-3.06,-21.67],[-108.33,-3.17,-21.67],[-97.5,-2.99,-21.67],[-86.67,-2.37,-21.67],[-75.83,0.17,-21.67],[-65.0,1.68,-21.67],[-54.17,2.72,-21.67],[-43.33,0.13,-21.67],[-32.5,-1.2,-21.67],[-21.67,-2.35,-21.67],[-10.83,-2.58,-21.67],[0.0,-1.45,-21.67],[10.83,1.42,-21.67],[21.67,0.92,-21.67],[32.5,-1.73,-21.67],[43.33,-3.27,-21.67],[54.17,-6.39,-21.67],[65.0,-6.85,-21.67],[75.83,-6.85,-21.67],[86.67,-6.85,-21.67],[97.5,-6.85,-21.67],[108.33,-6.85,-21.67],[119.17,-6.85,-21.67],[130.0,-6.85,-21.67],[-130.0,-3.07,-10.83],[-119.17,-3.12,-10.83],[-108.33,-3.13,-10.83],[-97.5,-2.54,-10.83],[-86.67,0.37,-10.83],[-75.83,0.3,-10.83],[-65.0,1.43,-10.83],[-54.17,3.12,-10.83],[-43.33,-1.11,-10.83],[-32.5,-2.41,-10.83],[-21.67,-2.64,-10.83],[-10.83,-2.74,-10.83],[0.0,0.1,-10.83],[10.83,0.79,-10.83],[21.67,-0.83,-10.83],[32.5,-2.47,-10.83],[43.33,-3.94,-10.83],[54.17,-6.7,-10.83],[65.0,-6.85,-10.83],[75.83,-6.85,-10.83],[86.67,-6.85,-10.83],[97.5,-6.85,-10.83],[108.33,-6.85,-10.83],[119.17,-6.85,-10.83],[130.0,-6.85,-10.83],[-130.0,-3.12,0.0],[-119.17,-3.14,0.0],[-108.33,-3.11,0.0],[-97.5,-2.7,0.0],[-86.67,-0.74,0.0],[-75.83,-0.86,0.0],[-65.0,-0.8,0.0],[-54.17,-0.5,0.0],[-43.33,-2.59,0.0],[-32.5,-2.59,0.0],[-21.67,-2.82,0.0],[-10.83,-2.82,0.0],[0.0,0.0,0.0],[10.83,-0.25,0.0],[21.67,-2.15,0.0],[32.5,-3.32,0.0],[43.33,-5.37,0.0],[54.17,-6.85,0.0],[65.0,-6.85,0.0],[75.83,-6.85,0.0],[86.67,-6.85,0.0],[97.5,-6.85,0.0],[108.33,-6.85,0.0],[119.17,-6.85,0.0],[130.0,-6.85,0.0],[-130.0,-2.91,10.83],[-119.17,-3.06,10.83],[-108.33,-2.53,10.83],[-97.5,-2.5,10.83],[-86.67,-2.44,10.83],[-75.83,-2.42,10.83],[-65.0,-1.2,10.83],[-54.17,-1.91,10.83],[-43.33,-2.72,10.83],[-32.5,-2.4,10.83],[-21.67,-3.25,10.83],[-10.83,-2.93,10.83],[0.0,-0.26,10.83],[10.83,-3.58,10.83],[21.67,-3.67,10.83],[32.5,-4.07,10.83],[43.33,-6.66,10.83],[54.17,-6.85,10.83],[65.0,-6.85,10.83],[75.83,-6.85,10.83],[86.67,-6.85,10.83],[97.5,-6.85,10.83],[108.33,-6.85,10.83],[119.17,-6.85,10.83],[130.0,-6.85,10.83],[-130.0,-2.96,21.67],[-119.17,-3.07,21.67],[-108.33,-2.53,21.67],[-97.5,-2.39,21.67],[-86.67,-1.72,21.67],[-75.83,-1.87,21.67],[-65.0,-1.18,21.67],[-54.17,-2.68,21.67],[-43.33,-2.56,21.67],[-32.5,-2.89,21.67],[-21.67,-4.96,21.67],[-10.83,-3.82,21.67],[0.0,-6.33,21.67],[10.83,-5.52,21.67],[21.67,-4.88,21.67],[32.5,-6.0,21.67],[43.33,-6.85,21.67],[54.17,-6.85,21.67],[65.0,-6.85,21.67],[75.83,-6.85,21.67],[86.67,-6.85,21.67],[97.5,-6.85,21.67],[108.33,-6.85,21.67],[119.17,-6.85,21.67],[130.0,-6.85,21.67],[-130.0,-3.12,32.5],[-119.17,-2.49,32.5],[-108.33,-2.41,32.5],[-97.5,-0.43,32.5],[-86.67,-0.65,32.5],[-75.83,-1.04,32.5],[-65.0,-1.1,32.5],[-54.17,-3.43,32.5],[-43.33,-2.81,32.5],[-32.5,-5.69,32.5],[-21.67,-6.48,32.5],[-10.83,-5.62,32.5],[0.0,-6.85,32.5],[10.83,-5.84,32.5],[21.67,-6.67,32.5],[32.5,-6.85,32.5],[43.33,-6.85,32.5],[54.17,-6.85,32.5],[65.0,-6.85,32.5],[75.83,-6.85,32.5],[86.67,-6.85,32.5],[97.5,-6.85,32.5],[108.33,-6.85,32.5],[119.17,-6.85,32.5],[130.0,-6.85,32.5],[-130.0,-2.53,43.33],[-119.17,-2.34,43.33],[-108.33,-1.73,43.33],[-97.5,-0.63,43.33],[-86.67,-0.88,43.33],[-75.83,-0.06,43.33],[-65.0,-1.83,43.33],[-54.17,-4.18,43.33],[-43.33,-6.26,43.33],[-32.5,-6.85,43.33],[-21.67,-6.85,43.33],[-10.83,-6.85,43.33],[0.0,-6.85,43.33],[10.83,-6.85,43.33],[21.67,-6.85,43.33],[32.5,-6.85,43.33],[43.33,-6.85,43.33],[54.17,-6.85,43.33],[65.0,-6.85,43.33],[75.83,-6.85,43.33],[86.67,-6.85,43.33],[97.5,-6.85,43.33],[108.33,-6.85,43.33],[119.17,-6.85,43.33],[130.0,-6.85,43.33],[-130.0,-2.61,54.17],[-119.17,-2.35,54.17],[-108.33,-2.25,54.17],[-97.5,-1.61,54.17],[-86.67,-0.8,54.17],[-75.83,-0.03,54.17],[-65.0,-2.35,54.17],[-54.17,-3.94,54.17],[-43.33,-6.85,54.17],[-32.5,-6.85,54.17],[-21.67,-6.85,54.17],[-10.83,-6.85,54.17],[0.0,-6.85,54.17],[10.83,-6.85,54.17],[21.67,-6.85,54.17],[32.5,-6.85,54.17],[43.33,-6.85,54.17],[54.17,-6.85,54.17],[65.0,-6.85,54.17],[75.83,-6.85,54.17],[86.67,-6.85,54.17],[97.5,-6.85,54.17],[108.33,-6.85,54.17],[119.17,-6.85,54.17],[130.0,-6.85,54.17],[-130.0,-2.66,65.0],[-119.17,-2.61,65.0],[-108.33,-2.26,65.0],[-97.5,-2.6,65.0],[-86.67,-0.94,65.0],[-75.83,-1.02,65.0],[-65.0,-1.91,65.0],[-54.17,-4.12,65.0],[-43.33,-6.85,65.0],[-32.5,-6.85,65.0],[-21.67,-6.85,65.0],[-10.83,-6.85,65.0],[0.0,-6.85,65.0],[10.83,-6.85,65.0],[21.67,-6.85,65.0],[32.5,-6.85,65.0],[43.33,-6.85,65.0],[54.17,-6.85,65.0],[65.0,-6.85,65.0],[75.83,-6.85,65.0],[86.67,-6.85,65.0],[97.5,-6.85,65.0],[108.33,-6.85,65.0],[119.17,-6.85,65.0],[130.0,-6.85,65.0],[-130.0,-2.33,75.83],[-119.17,-2.88,75.83],[-108.33,-2.54,75.83],[-97.5,-1.3,75.83],[-86.67,-1.56,75.83],[-75.83,-1.55,75.83],[-65.0,-1.91,75.83],[-54.17,-4.69,75.83],[-43.33,-6.85,75.83],[-32.5,-6.85,75.83],[-21.67,-6.85,75.83],[-10.83,-6.85,75.83],[0.0,-6.85,75.83],[10.83,-6.85,75.83],[21.67,-6.85,75.83],[32.5,-6.85,75.83],[43.33,-6.85,75.83],[54.17,-6.85,75.83],[65.0,-6.85,75.83],[75.83,-6.85,75.83],[86.67,-6.85,75.83],[97.5,-6.85,75.83],[108.33,-6.85,75.83],[119.17,-6.85,75.83],[130.0,-6.85,75.83],[-130.0,-1.06,86.67],[-119.17,-2.66,86.67],[-108.33,-2.63,86.67],[-97.5,-1.71,86.67],[-86.67,-0.94,86.67],[-75.83,-0.43,86.67],[-65.0,-2.79,86.67],[-54.17,-4.83,86.67],[-43.33,-6.85,86.67],[-32.5,-6.85,86.67],[-21.67,-6.85,86.67],[-10.83,-6.85,86.67],[0.0,-6.85,86.67],[10.83,-6.85,86.67],[21.67,-6.85,86.67],[32.5,-6.85,86.67],[43.33,-6.85,86.67],[54.17,-6.85,86.67],[65.0,-6.85,86.67],[75.83,-6.85,86.67],[86.67,-6.85,86.67],[97.5,-6.85,86.67],[108.33,-6.85,86.67],[119.17,-6.85,86.67],[130.0,-6.85,86.67],[-130.0,-0.34,97.5],[-119.17,-2.06,97.5],[-108.33,-1.6,97.5],[-97.5,-0.47,97.5],[-86.67,0.63,97.5],[-75.83,0.15,97.5],[-65.0,-3.16,97.5],[-54.17,-5.01,97.5],[-43.33,-6.85,97.5],[-32.5,-6.85,97.5],[-21.67,-6.85,97.5],[-10.83,-6.85,97.5],[0.0,-6.85,97.5],[10.83,-6.85,97.5],[21.67,-6.85,97.5],[32.5,-6.85,97.5],[43.33,-6.85,97.5],[54.17,-6.85,97.5],[65.0,-6.85,97.5],[75.83,-6.85,97.5],[86.67,-6.85,97.5],[97.5,-6.85,97.5],[108.33,-6.85,97.5],[119.17,-6.85,97.5],[130.0,-6.85,97.5],[-130.0,-1.28,108.33],[-119.17,-1.31,108.33],[-108.33,1.22,108.33],[-97.5,2.18,108.33],[-86.67,3.31,108.33],[-75.83,-0.49,108.33],[-65.0,-2.69,108.33],[-54.17,-4.62,108.33],[-43.33,-6.85,108.33],[-32.5,-6.85,108.33],[-21.67,-6.85,108.33],[-10.83,-6.85,108.33],[0.0,-6.85,108.33],[10.83,-6.85,108.33],[21.67,-6.85,108.33],[32.5,-6.85,108.33],[43.33,-6.85,108.33],[54.17,-6.85,108.33],[65.0,-6.85,108.33],[75.83,-6.85,108.33],[86.67,-6.85,108.33],[97.5,-6.85,108.33],[108.33,-6.85,108.33],[119.17,-6.85,108.33],[130.0,-6.85,108.33],[-130.0,-1.79,119.17],[-119.17,-0.05,119.17],[-108.33,3.05,119.17],[-97.5,4.09,119.17],[-86.67,2.53,119.17],[-75.83,-0.98,119.17],[-65.0,-4.21,119.17],[-54.17,-6.64,119.17],[-43.33,-6.85,119.17],[-32.5,-6.85,119.17],[-21.67,-6.85,119.17],[-10.83,-6.85,119.17],[0.0,-6.85,119.17],[10.83,-6.85,119.17],[21.67,-6.85,119.17],[32.5,-6.85,119.17],[43.33,-6.85,119.17],[54.17,-6.85,119.17],[65.0,-6.85,119.17],[75.83,-6.85,119.17],[86.67,-6.85,119.17],[97.5,-6.85,119.17],[108.33,-6.85,119.17],[119.17,-6.85,119.17],[130.0,-6.85,119.17],[-130.0,-1.41,130.0],[-119.17,1.94,130.0],[-108.33,2.9,130.0],[-97.5,3.68,130.0],[-86.67,-0.52,130.0],[-75.83,-3.96,130.0],[-65.0,-6.69,130.0],[-54.17,-6.85,130.0],[-43.33,-6.85,130.0],[-32.5,-6.85,130.0],[-21.67,-6.85,130.0],[-10.83,-6.85,130.0],[0.0,-6.85,130.0],[10.83,-6.85,130.0],[21.67,-6.85,130.0],[32.5,-6.85,130.0],[43.33,-6.85,130.0],[54.17,-6.85,130.0],[65.0,-6.85,130.0],[75.83,-6.85,130.0],[86.67,-6.85,130.0],[97.5,-6.85,130.0],[108.33,-6.85,130.0],[119.17,-6.85,130.0],[130.0,-6.85,130.0]]},"sea_arcs":[{"from_deg":321,"to_deg":114,"from_compass":"NW","to_compass":"ESE"}],"sea_fraction":0.433,"rays":[{"az":0,"sea":true,"dist":56.0},{"az":3,"sea":true,"dist":48.0},{"az":6,"sea":true,"dist":48.0},{"az":9,"sea":true,"dist":46.0},{"az":12,"sea":true,"dist":44.0},{"az":15,"sea":true,"dist":44.0},{"az":18,"sea":true,"dist":44.0},{"az":21,"sea":true,"dist":44.0},{"az":24,"sea":true,"dist":44.0},{"az":27,"sea":true,"dist":44.0},{"az":30,"sea":true,"dist":44.0},{"az":33,"sea":true,"dist":44.0},{"az":36,"sea":true,"dist":48.0},{"az":39,"sea":true,"dist":48.0},{"az":42,"sea":true,"dist":48.0},{"az":45,"sea":true,"dist":48.0},{"az":48,"sea":true,"dist":48.0},{"az":51,"sea":true,"dist":50.0},{"az":54,"sea":true,"dist":50.0},{"az":57,"sea":true,"dist":62.0},{"az":60,"sea":true,"dist":52.0},{"az":63,"sea":true,"dist":58.0},{"az":66,"sea":true,"dist":58.0},{"az":69,"sea":true,"dist":58.0},{"az":72,"sea":true,"dist":60.0},{"az":75,"sea":true,"dist":60.0},{"az":78,"sea":true,"dist":58.0},{"az":81,"sea":true,"dist":58.0},{"az":84,"sea":true,"dist":58.0},{"az":87,"sea":true,"dist":58.0},{"az":90,"sea":true,"dist":58.0},{"az":93,"sea":true,"dist":62.0},{"az":96,"sea":true,"dist":68.0},{"az":99,"sea":true,"dist":76.0},{"az":102,"sea":true,"dist":90.0},{"az":105,"sea":true,"dist":104.0},{"az":108,"sea":true,"dist":122.0},{"az":111,"sea":true,"dist":188.0},{"az":114,"sea":true,"dist":186.0},{"az":117,"sea":false,"dist":null},{"az":120,"sea":false,"dist":null},{"az":123,"sea":false,"dist":null},{"az":126,"sea":false,"dist":null},{"az":129,"sea":false,"dist":null},{"az":132,"sea":false,"dist":null},{"az":135,"sea":false,"dist":null},{"az":138,"sea":false,"dist":null},{"az":141,"sea":false,"dist":null},{"az":144,"sea":false,"dist":null},{"az":147,"sea":false,"dist":null},{"az":150,"sea":false,"dist":null},{"az":153,"sea":false,"dist":null},{"az":156,"sea":false,"dist":null},{"az":159,"sea":false,"dist":null},{"az":162,"sea":false,"dist":null},{"az":165,"sea":false,"dist":null},{"az":168,"sea":false,"dist":null},{"az":171,"sea":false,"dist":null},{"az":174,"sea":false,"dist":null},{"az":177,"sea":false,"dist":null},{"az":180,"sea":false,"dist":null},{"az":183,"sea":false,"dist":null},{"az":186,"sea":false,"dist":null},{"az":189,"sea":false,"dist":null},{"az":192,"sea":false,"dist":null},{"az":195,"sea":false,"dist":null},{"az":198,"sea":false,"dist":null},{"az":201,"sea":false,"dist":null},{"az":204,"sea":false,"dist":null},{"az":207,"sea":false,"dist":null},{"az":210,"sea":false,"dist":null},{"az":213,"sea":false,"dist":null},{"az":216,"sea":false,"dist":null},{"az":219,"sea":false,"dist":null},{"az":222,"sea":false,"dist":null},{"az":225,"sea":false,"dist":null},{"az":228,"sea":false,"dist":null},{"az":231,"sea":false,"dist":null},{"az":234,"sea":false,"dist":null},{"az":237,"sea":false,"dist":null},{"az":240,"sea":false,"dist":null},{"az":243,"sea":false,"dist":null},{"az":246,"sea":false,"dist":null},{"az":249,"sea":false,"dist":null},{"az":252,"sea":false,"dist":null},{"az":255,"sea":false,"dist":null},{"az":258,"sea":false,"dist":null},{"az":261,"sea":false,"dist":null},{"az":264,"sea":false,"dist":null},{"az":267,"sea":false,"dist":null},{"az":270,"sea":false,"dist":null},{"az":273,"sea":false,"dist":null},{"az":276,"sea":false,"dist":null},{"az":279,"sea":false,"dist":null},{"az":282,"sea":false,"dist":null},{"az":285,"sea":false,"dist":null},{"az":288,"sea":false,"dist":null},{"az":291,"sea":false,"dist":null},{"az":294,"sea":false,"dist":null},{"az":297,"sea":false,"dist":null},{"az":300,"sea":false,"dist":null},{"az":303,"sea":false,"dist":null},{"az":306,"sea":false,"dist":null},{"az":309,"sea":false,"dist":null},{"az":312,"sea":false,"dist":null},{"az":315,"sea":false,"dist":null},{"az":318,"sea":false,"dist":null},{"az":321,"sea":true,"dist":50.0},{"az":324,"sea":true,"dist":48.0},{"az":327,"sea":true,"dist":46.0},{"az":330,"sea":true,"dist":46.0},{"az":333,"sea":true,"dist":44.0},{"az":336,"sea":true,"dist":46.0},{"az":339,"sea":true,"dist":44.0},{"az":342,"sea":true,"dist":46.0},{"az":345,"sea":true,"dist":44.0},{"az":348,"sea":true,"dist":46.0},{"az":351,"sea":true,"dist":46.0},{"az":354,"sea":true,"dist":46.0},{"az":357,"sea":true,"dist":46.0}],"boundary":[[32.99,20.05],[29.18,28.02],[10.55,39.29],[1.16,29.68],[-11.73,36.91],[-14.56,33.64],[-77.82,-21.81],[-63.07,-39.05],[-31.71,-58.27],[32.99,20.05]],"parcel_area":5156.3,"buildings":[{"fid":18178,"type":"Komplementbyggnad","role":"OUTBUILDING","area":190.2,"footprint":[[-32.96,-21.41],[-41.25,-23.61],[-36.75,-40.55],[-35.39,-40.19],[-34.53,-46.92],[-28.99,-46.26],[-29.98,-38.67],[-28.48,-38.27],[-32.96,-21.41]]},{"fid":106485,"type":"Bostad","role":"MAIN_HOUSE","area":119.7,"footprint":[[-0.65,8.12],[-8.47,2.39],[-2.9,-5.23],[-0.81,-3.7],[1.53,-6.88],[7.26,-2.69],[-0.65,8.12]]},{"fid":43113,"type":"Komplementbyggnad","role":"OUTBUILDING","area":84.6,"footprint":[[-40.67,3.86],[-35.48,-1.76],[-27.35,5.75],[-32.54,11.37],[-40.67,3.86]]},{"fid":85879,"type":"Komplementbyggnad","role":"OUTBUILDING","area":21.5,"footprint":[[13.08,20.34],[16.11,22.74],[12.65,27.11],[9.62,24.71],[13.08,20.34]]}],"sun":{"summer_solstice_2026":{"date":"2026-06-21","sunrise_azimuth_deg":40.05,"sunrise_over_water":true,"sunset_azimuth_deg":322.33,"sunset_over_water":true,"solar_noon_altitude_deg":54.11},"winter_solstice_2026":{"date":"2026-12-21","sunrise_azimuth_deg":139.94,"sunrise_over_water":false,"sunset_azimuth_deg":217.6,"sunset_over_water":false,"solar_noon_altitude_deg":7.24},"spring_equinox_2026":{"date":"2026-03-20","sunrise_azimuth_deg":91.65,"sunrise_over_water":true,"sunset_azimuth_deg":268.39,"sunset_over_water":false,"solar_noon_altitude_deg":30.6}},"designation":"DJUR\u00d6 4:147"};
+</script>
+<script>
+// ---------- populate static text ----------
+const fmt1 = n => (Math.round(n*10)/10).toString();
+
+document.body.innerHTML = document.body.innerHTML
+  .replaceAll('__DESIGNATION__', DATA.designation)
+  .replaceAll('__PARCEL_AREA__', DATA.parcel_area.toLocaleString('en-US'))
+  .replaceAll('__PIN_ELEV__', fmt1(DATA.pin_elev))
+  .replaceAll('__SLOPE__', fmt1(DATA.slope))
+  .replaceAll('__ASPECT__', Math.round(DATA.aspect))
+  .replaceAll('__ASPECT_COMPASS__', DATA.aspect_compass)
+  .replaceAll('__SEA_PCT__', Math.round(DATA.sea_fraction*100))
+  .replaceAll('__N_BUILDINGS__', DATA.buildings.length);
+
+// buildings table
+const tb = document.querySelector('#buildingsTable tbody');
+DATA.buildings.slice().sort((a,b)=>b.area-a.area).forEach(b=>{
+  const tr = document.createElement('tr');
+  const roleLabel = b.role === 'MAIN_HOUSE' ? 'Main house' : 'Outbuilding';
+  const roleClass = b.role === 'MAIN_HOUSE' ? 'pill-role main' : 'pill-role';
+  tr.innerHTML = `<td><span class="${roleClass}">${roleLabel}</span></td><td>${b.type}</td><td class="mono">${b.area.toFixed(1)} m²</td><td class="mono">fid ${b.fid}</td>`;
+  tb.appendChild(tr);
+});
+
+// sea arc bar
+(function(){
+  const bar = document.getElementById('arcFill');
+  const arc = DATA.sea_arcs[0];
+  const from = arc.from_deg, to = arc.to_deg > arc.from_deg ? arc.to_deg : arc.to_deg + 360;
+  const left = (from/360)*100, width = ((to-from)/360)*100;
+  bar.style.left = left + '%';
+  bar.style.width = Math.min(width, 100-left) + '%';
+  if (to > 360){
+    const wrap = document.createElement('div');
+    wrap.className = 'arc-fill';
+    wrap.style.left = '0%';
+    wrap.style.width = ((to-360)/360*100) + '%';
+    bar.parentElement.appendChild(wrap);
+  }
+  document.getElementById('arcNote').textContent =
+    `Open water visible from ${arc.from_compass} (${arc.from_deg}°) around through north to ${arc.to_compass} (${arc.to_deg}°) — the house looks out over the sound to the north and east.`;
+})();
+
+// sun grid
+(function(){
+  const grid = document.getElementById('sunGrid');
+  const labels = {summer_solstice_2026:'Summer solstice · 21 Jun', winter_solstice_2026:'Winter solstice · 21 Dec', spring_equinox_2026:'Equinox · 20 Mar'};
+  Object.keys(labels).forEach(key=>{
+    const s = DATA.sun[key];
+    const card = document.createElement('div');
+    card.className = 'sun-card';
+    card.innerHTML = `<h4>${labels[key]}</h4>
+      <div class="sun-line"><span>Sunrise</span><span class="v ${s.sunrise_over_water?'over-water':''}">${s.sunrise_azimuth_deg.toFixed(0)}° ${s.sunrise_over_water?'· over water':''}</span></div>
+      <div class="sun-line"><span>Solar noon altitude</span><span class="v">${s.solar_noon_altitude_deg.toFixed(0)}°</span></div>
+      <div class="sun-line"><span>Sunset</span><span class="v ${s.sunset_over_water?'over-water':''}">${s.sunset_azimuth_deg.toFixed(0)}° ${s.sunset_over_water?'· over water':''}</span></div>`;
+    grid.appendChild(card);
+  });
+})();
+
+// ---------- 3D orbit twin (custom canvas renderer, no external libs) ----------
+(function(){
+  const canvas = document.getElementById('twin');
+  const ctx = canvas.getContext('2d');
+  let W, H, DPR;
+  function resize(){
+    DPR = Math.min(devicePixelRatio||1, 2);
+    const rect = canvas.getBoundingClientRect();
+    W = rect.width; H = rect.height;
+    canvas.width = W*DPR; canvas.height = H*DPR;
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  let yaw = -0.6, pitch = 0.62, dist = 210;
+  const DEFAULT = {yaw:-0.6, pitch:0.62, dist:210};
+  const target = {x:0,y:2,z:0};
+
+  function project(p){
+    // rotate around Y (yaw) then X (pitch)
+    let x = p.x, y = p.y - target.y, z = p.z;
+    let cx = x*Math.cos(yaw) - z*Math.sin(yaw);
+    let cz = x*Math.sin(yaw) + z*Math.cos(yaw);
+    let cy = y*Math.cos(pitch) - cz*Math.sin(pitch);
+    let cz2 = y*Math.sin(pitch) + cz*Math.cos(pitch);
+    cz2 += dist;
+    if (cz2 < 1) cz2 = 1;
+    const f = 480 / cz2;
+    return { sx: W/2 + cx*f, sy: H/2 - cy*f, depth: cz2, f };
+  }
+
+  const hf = DATA.heightfield;
+  const seg = hf.seg, size = hf.size;
+  const verts = hf.v; // (seg+1)^2, each [x,y,z]
+  function vidx(ix,iz){ return iz*(seg+1)+ix; }
+
+  const sunDir = {x:0.4, y:0.85, z:0.35};
+  const sunLen = Math.hypot(sunDir.x,sunDir.y,sunDir.z);
+  sunDir.x/=sunLen; sunDir.y/=sunLen; sunDir.z/=sunLen;
+
+  function terrainQuads(){
+    const quads = [];
+    for(let iz=0; iz<seg; iz++){
+      for(let ix=0; ix<seg; ix++){
+        const a = verts[vidx(ix,iz)], b = verts[vidx(ix+1,iz)], c = verts[vidx(ix+1,iz+1)], d = verts[vidx(ix,iz+1)];
+        const cxp = (a[0]+b[0]+c[0]+d[0])/4, cyp=(a[1]+b[1]+c[1]+d[1])/4, czp=(a[2]+b[2]+c[2]+d[2])/4;
+        // normal via cross product of diagonals
+        const u = [c[0]-a[0], c[1]-a[1], c[2]-a[2]];
+        const v = [d[0]-b[0], d[1]-b[1], d[2]-b[2]];
+        let n = [u[1]*v[2]-u[2]*v[1], u[2]*v[0]-u[0]*v[2], u[0]*v[1]-u[1]*v[0]];
+        const nl = Math.hypot(n[0],n[1],n[2])||1;
+        n = [n[0]/nl, n[1]/nl, n[2]/nl];
+        if (n[1] < 0) n = [-n[0],-n[1],-n[2]];
+        const light = Math.max(0.28, n[0]*sunDir.x + n[1]*sunDir.y + n[2]*sunDir.z);
+        quads.push({pts:[a,b,c,d], depth: cxp*0+cyp*0+czp, cx:cxp, cy:cyp, cz:czp, light});
+      }
+    }
+    return quads;
+  }
+  const quads = terrainQuads();
+
+  function isWater(az){
+    for(const arc of DATA.sea_arcs){
+      const lo=arc.from_deg, hi=arc.to_deg;
+      if (lo<=hi){ if(az>=lo&&az<=hi) return true; } else { if(az>=lo||az<=hi) return true; }
+    }
+    return false;
+  }
+
+  function terrainColor(t, light, wet){
+    // t: 0..1 normalized height within local range
+    let r,g,b;
+    if (wet){ r=48; g=94; b=118; }
+    else { r = 92+38*t; g = 122+40*(1-Math.abs(t-0.5)); b = 78+18*t; }
+    r*=light; g*=light; b*=light;
+    return `rgb(${r|0},${g|0},${b|0})`;
+  }
+
+  const ys = verts.map(v=>v[1]);
+  const yMin = Math.min(...ys), yMax = Math.max(...ys);
+
+  function drawTerrain(){
+    const items = quads.map(q=>{
+      const dx=q.cx, dz=q.cz;
+      const az = (Math.atan2(dx,dz)*180/Math.PI+360)%360;
+      const wet = isWater(az) && q.cy < -DATA.pin_elev*0.35;
+      const t = (q.cy - yMin)/((yMax-yMin)||1);
+      const projPts = q.pts.map(project);
+      const avgDepth = projPts.reduce((s,p)=>s+p.depth,0)/4;
+      return {projPts, avgDepth, color: terrainColor(t, q.light, wet)};
+    });
+    items.sort((a,b)=>b.avgDepth-a.avgDepth);
+    for(const it of items){
+      ctx.beginPath();
+      ctx.moveTo(it.projPts[0].sx, it.projPts[0].sy);
+      for(let i=1;i<4;i++) ctx.lineTo(it.projPts[i].sx, it.projPts[i].sy);
+      ctx.closePath();
+      ctx.fillStyle = it.color;
+      ctx.fill();
+    }
+  }
+
+  function drawWaterPlane(){
+    // large flat quad at sea-level height, spanning the sea-facing sector
+    const seaY = -DATA.pin_elev*0.35;
+    const R = size*1.35;
+    const segs = 48;
+    const pts3 = [];
+    for(const arc of DATA.sea_arcs){
+      let lo = arc.from_deg, hi = arc.to_deg; if (hi<lo) hi+=360;
+      const ring = [{x:0,y:seaY,z:0}];
+      for(let i=0;i<=segs;i++){
+        const az = lo + (hi-lo)*(i/segs);
+        const rad = az*Math.PI/180;
+        ring.push({x: Math.sin(rad)*R, y: seaY, z: Math.cos(rad)*R});
+      }
+      const proj = ring.map(project);
+      const avgDepth = proj.reduce((s,p)=>s+p.depth,0)/proj.length;
+      pts3.push({proj, avgDepth});
+    }
+    pts3.sort((a,b)=>b.avgDepth-a.avgDepth);
+    ctx.save();
+    ctx.globalAlpha = 0.4;
+    for(const w of pts3){
+      ctx.beginPath();
+      ctx.moveTo(w.proj[0].sx, w.proj[0].sy);
+      for(let i=1;i<w.proj.length;i++) ctx.lineTo(w.proj[i].sx, w.proj[i].sy);
+      ctx.closePath();
+      ctx.fillStyle = '#3f7fa0';
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  function groundY(x,z){
+    // bilinear sample of heightfield for arbitrary x,z (approx, nearest for simplicity)
+    const gx = (x + size/2)/size*seg, gz = (z + size/2)/size*seg;
+    const ix = Math.max(0, Math.min(seg, Math.round(gx))), iz = Math.max(0, Math.min(seg, Math.round(gz)));
+    return verts[vidx(ix,iz)][1];
+  }
+
+  function drawBoundary(){
+    const pts = DATA.boundary.map(([x,z])=>({x, y: groundY(x,z)+0.6, z}));
+    const proj = pts.map(project);
+    ctx.beginPath();
+    ctx.moveTo(proj[0].sx, proj[0].sy);
+    for(let i=1;i<proj.length;i++) ctx.lineTo(proj[i].sx, proj[i].sy);
+    ctx.closePath();
+    ctx.strokeStyle = '#c68f4a';
+    ctx.lineWidth = 2.4;
+    ctx.setLineDash([]);
+    ctx.stroke();
+  }
+
+  function drawBuildings(){
+    const items = [];
+    for(const b of DATA.buildings){
+      const isMain = b.role === 'MAIN_HOUSE';
+      const h = isMain ? 5.2 : (b.area>150 ? 4.2 : 3.0);
+      const cx = b.footprint.reduce((s,p)=>s+p[0],0)/b.footprint.length;
+      const cz = b.footprint.reduce((s,p)=>s+p[1],0)/b.footprint.length;
+      const baseY = groundY(cx,cz);
+      const top = b.footprint.map(([x,z])=>({x,y:baseY+h,z}));
+      const bot = b.footprint.map(([x,z])=>({x,y:baseY,z}));
+      const color = isMain ? '#3c5b45' : '#8a8f89';
+      const roofColor = isMain ? '#2c4433' : '#71766f';
+      // walls
+      for(let i=0;i<bot.length-1;i++){
+        const quad = [bot[i], bot[i+1], top[i+1], top[i]];
+        const proj = quad.map(project);
+        const depth = proj.reduce((s,p)=>s+p.depth,0)/4;
+        items.push({proj, depth, color});
+      }
+      // roof
+      const proj = top.map(project);
+      const depth = proj.reduce((s,p)=>s+p.depth,0)/proj.length;
+      items.push({proj, depth: depth-0.01, color: roofColor});
+    }
+    items.sort((a,b)=>b.depth-a.depth);
+    for(const it of items){
+      ctx.beginPath();
+      ctx.moveTo(it.proj[0].sx, it.proj[0].sy);
+      for(let i=1;i<it.proj.length;i++) ctx.lineTo(it.proj[i].sx, it.proj[i].sy);
+      ctx.closePath();
+      ctx.fillStyle = it.color;
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(0,0,0,.18)';
+      ctx.lineWidth = 0.6;
+      ctx.stroke();
+    }
+  }
+
+  function render(){
+    ctx.clearRect(0,0,W,H);
+    drawTerrain();
+    drawWaterPlane();
+    drawBoundary();
+    drawBuildings();
+  }
+
+  // pointer orbit controls
+  let dragging=false, lastX=0, lastY=0;
+  canvas.addEventListener('pointerdown', e=>{ dragging=true; lastX=e.clientX; lastY=e.clientY; canvas.setPointerCapture(e.pointerId); });
+  canvas.addEventListener('pointermove', e=>{
+    if(!dragging) return;
+    const dx = e.clientX-lastX, dy = e.clientY-lastY;
+    lastX=e.clientX; lastY=e.clientY;
+    yaw += dx*0.006;
+    pitch = Math.max(0.12, Math.min(1.4, pitch + dy*0.005));
+    render();
+  });
+  window.addEventListener('pointerup', ()=>{ dragging=false; });
+  canvas.addEventListener('wheel', e=>{
+    e.preventDefault();
+    dist = Math.max(60, Math.min(420, dist + e.deltaY*0.15));
+    render();
+  }, {passive:false});
+  document.getElementById('twinReset').addEventListener('click', ()=>{
+    yaw=DEFAULT.yaw; pitch=DEFAULT.pitch; dist=DEFAULT.dist; render();
+  });
+
+  const ro = new ResizeObserver(()=>{ resize(); render(); });
+  ro.observe(canvas);
+  render();
+})();
+</script>
