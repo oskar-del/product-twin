@@ -148,6 +148,18 @@ def main():
             "first_water_hit": hit,
         })
 
+    # Coarse heightfield over a 260 m grid (24 segments) around the pin, relative to pin datum,
+    # for the 3D viewer terrain mesh (matches the Svärtinge viewer's grid convention).
+    size, seg = 260, 24
+    vertices = []
+    for iz in range(seg + 1):
+        for ix in range(seg + 1):
+            x = -size / 2 + size * ix / seg
+            z = -size / 2 + size * iz / seg
+            zv = sample(PIN_E + x, PIN_N + z)
+            y = round((zv - z_pin), 2) if zv is not None else -0.3
+            vertices.append([round(x, 2), y, round(z, 2)])
+
     sea_hits = [r for r in rays if r["sea_view"]]
     sea_arcs = []
     if sea_hits:
@@ -210,6 +222,11 @@ def main():
                 for a, b in sea_arcs
             ],
             "rays": rays,
+        },
+        "heightfield": {
+            "size_m": size, "segments": seg,
+            "height_reference": "RH2000 minus pin datum (relative metres, up positive)",
+            "vertices": vertices,
         },
         "limitations": [
             "Water classification is a DEM elevation/flatness heuristic, not the official LM hydrography vector (denied, HTTP 403) — small ponds, wet rock, or very flat non-water ground near the threshold could misclassify in either direction at the margin.",
