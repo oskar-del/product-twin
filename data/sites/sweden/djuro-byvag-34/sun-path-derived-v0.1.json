@@ -1,0 +1,96 @@
+{
+ "schema_version": "djuro-sun-path-derived/v0.1",
+ "entity_type": "DerivedSunPathEvidence",
+ "subject": "DJURÖ 4:147 (Djurö byväg 34)",
+ "evidence_class": "DERIVED",
+ "method": {
+  "solar_position": "NOAA/Meeus low-precision solar position algorithm (deterministic astronomy, self-checked: equinox sunrise/sunset ~90/270 deg, solstice noon altitude = 90 - lat + 23.44 deg exactly)",
+  "irradiation": "PVGIS v5.2 PVcalc API (JRC, EU Commission), PVGIS-SARAH2 radiation DB, ERA5 meteo, DEM-calculated horizon, free-standing 0deg tilt reference surface",
+  "cross_reference": "sunrise/sunset azimuths cross-checked against the DEM viewshed sea-view arcs in terrain-dem-derived-v0.1.json"
+ },
+ "coordinate": {
+  "lat": 59.324238,
+  "lon": 18.7076237
+ },
+ "solstice_equinox_paths": {
+  "summer_solstice_2026": {
+   "date": "2026-06-21",
+   "sunrise_azimuth_deg": 40.05,
+   "sunrise_over_water": true,
+   "sunset_azimuth_deg": 322.33,
+   "sunset_over_water": true,
+   "solar_noon_altitude_deg": 54.11
+  },
+  "winter_solstice_2026": {
+   "date": "2026-12-21",
+   "sunrise_azimuth_deg": 139.94,
+   "sunrise_over_water": false,
+   "sunset_azimuth_deg": 217.6,
+   "sunset_over_water": false,
+   "solar_noon_altitude_deg": 7.24
+  },
+  "spring_equinox_2026": {
+   "date": "2026-03-20",
+   "sunrise_azimuth_deg": 91.65,
+   "sunrise_over_water": true,
+   "sunset_azimuth_deg": 268.39,
+   "sunset_over_water": false,
+   "solar_noon_altitude_deg": 30.6
+  }
+ },
+ "monthly_irradiation_kwh_m2_day": [
+  {
+   "month": 1,
+   "H_i_d_kwh_m2": 0.28
+  },
+  {
+   "month": 2,
+   "H_i_d_kwh_m2": 0.82
+  },
+  {
+   "month": 3,
+   "H_i_d_kwh_m2": 2.16
+  },
+  {
+   "month": 4,
+   "H_i_d_kwh_m2": 3.96
+  },
+  {
+   "month": 5,
+   "H_i_d_kwh_m2": 5.32
+  },
+  {
+   "month": 6,
+   "H_i_d_kwh_m2": 5.93
+  },
+  {
+   "month": 7,
+   "H_i_d_kwh_m2": 5.62
+  },
+  {
+   "month": 8,
+   "H_i_d_kwh_m2": 4.39
+  },
+  {
+   "month": 9,
+   "H_i_d_kwh_m2": 2.77
+  },
+  {
+   "month": 10,
+   "H_i_d_kwh_m2": 1.23
+  },
+  {
+   "month": 11,
+   "H_i_d_kwh_m2": 0.39
+  },
+  {
+   "month": 12,
+   "H_i_d_kwh_m2": 0.17
+  }
+ ],
+ "summary": {
+  "note": "Summer solstice sunrise (az ~40 deg NE) falls inside the DEM-derived sea-view arc (NW 321 -> ESE 114 through N/NE/E) -> morning sun rises over open water. Summer sunset (az ~322 deg NW) sits at the edge of that arc. Winter and equinox sunrise/sunset azimuths (SE/SW, E/W) fall mostly outside the sea-view arc -> afternoon/evening sun is land-facing, consistent with the WNW ground-slope aspect (see terrain-dem-derived-v0.1.json).",
+  "class": "DERIVED — both the astronomy and the water/viewshed classification it is cross-checked against are derived, not surveyed."
+ },
+ "not_checked": "actual shading from trees/neighbouring structures at sunrise/sunset (viewshed does not model vegetation or building height); does not account for the 2026 calendar leap/adjustment beyond standard Julian-day math"
+}

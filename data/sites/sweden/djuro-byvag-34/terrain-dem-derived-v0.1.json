@@ -1,0 +1,857 @@
+{
+ "schema_version": "djuro-terrain-dem-derived/v0.1",
+ "entity_type": "DerivedTerrainEvidence",
+ "subject": "DJURÖ 4:147 (Djurö byväg 34)",
+ "evidence_class": "DERIVED",
+ "authority": "Lantmäteriet",
+ "product": "Lantmäteriet Markhöjdmodell Nedladdning (grid 1m, COG)",
+ "licence": "Användningsvillkor för värdefulla datamängder (HVD open data), CC BY 4.0",
+ "source_crs": "EPSG:5845",
+ "derived_at": "2026-08-31T08:52:18+00:00",
+ "source_receipt": {
+  "file": ".runtime/receipts/lantmateriet-terrain-djuro-2026-08-31.json",
+  "tiles": {
+   "65775_7075_25.tif": {
+    "sha256": "8453bbd5c7416f3f5dd6625a02c444f990f9f3fc5a016e8c006115848ff82ad9",
+    "bytes": 7618136
+   },
+   "65775_7100_25.tif": {
+    "sha256": "e259cadbd07484e88285b82be7e4355cce96a168d985fd9c4aad83b4fe2978bc",
+    "bytes": 4231172
+   },
+   "65775_7125_25.tif": {
+    "sha256": "eda2bbaea7c6d9e1debfa34a2f312dbf9d53bdd6da4260e06fb25b1ebb46610b",
+    "bytes": 5481982
+   },
+   "65800_7075_25.tif": {
+    "sha256": "9d889eb4e9ea3fe7f21cabc56bb560d7921c389e836824f1cdca2596f22a6bad",
+    "bytes": 5294812
+   },
+   "65800_7100_25.tif": {
+    "sha256": "d2f1ce020bfa9af983fc631c9960239a29f9077db8370952e51d63ef0afdf7f6",
+    "bytes": 8672647
+   },
+   "65800_7125_25.tif": {
+    "sha256": "6b3d1a26d7f0109b70a95fd11cbc516e959d04d00482a78694e2ebf3bbc66398",
+    "bytes": 1743619
+   },
+   "65825_7075_25.tif": {
+    "sha256": "034096421215eb8addf16516b8cc1a753636a559d16f3cd7e1acacc02d0eef0f",
+    "bytes": 5385288
+   },
+   "65825_7100_25.tif": {
+    "sha256": "d27ee043effe2d3864b30f287f03996c55c4a4bd15cae4a45b8d0609bf7f71b1",
+    "bytes": 10969369
+   },
+   "65825_7125_25.tif": {
+    "sha256": "3b4df1cff608eba4eb5135b2fb624207335d0d6db1ddd047a56112088e4e88cd",
+    "bytes": 2142867
+   },
+   "65850_7125_25.tif": {
+    "sha256": "5beb776798b18a7ba96c3865c062fb433a5e7c535192cf0f0cdf263f2e06bf58",
+    "bytes": 659479
+   }
+  }
+ },
+ "coordinate_anchor": {
+  "sweref99tm_en": [
+   710934.881,
+   6582029.947
+  ],
+  "source": "intake-v0.1.json geocode->parcel resolution"
+ },
+ "pin_elevation_rh2000_m": 7.0,
+ "slope_aspect_at_pin": {
+  "slope_deg": 8.1,
+  "aspect_deg": 295,
+  "aspect_compass": "WNW",
+  "method": "Horn (1981) 3x3 on 1 m grid"
+ },
+ "water_mask_method": {
+  "class": "DERIVED",
+  "note": "marktacke (official LM land-cover/hydrography vector) was requested but denied (HTTP 403) under the current Geotorget grant. Water cells are instead classified directly from the same receipted 1 m DEM: elevation < 0.3 m RH2000 AND local 5x5 relief < 0.15 m. This is a disclosed heuristic on real elevation data, not an official water boundary — do not present it as AUTHORITATIVE hydrography.",
+  "elevation_threshold_m": 0.3,
+  "local_relief_threshold_m": 0.15
+ },
+ "viewshed": {
+  "class": "DERIVED",
+  "method": "Radial line-of-sight from eye height 1.6 m above the pin's ground elevation, 3 deg azimuth steps, 2.0 m ray steps out to 600.0 m, classic terrain-masking (a ray is blocked once any closer point's elevation angle exceeds all prior maxima). Reports the first unobstructed step per azimuth that also satisfies the water mask above.",
+  "eye_height_m": 1.6,
+  "max_range_m": 600.0,
+  "sea_view_azimuth_count": 52,
+  "sea_view_azimuth_fraction": 0.433,
+  "sea_view_arcs_deg": [
+   {
+    "from_deg": 321,
+    "to_deg": 114,
+    "from_compass": "NW",
+    "to_compass": "ESE"
+   }
+  ],
+  "rays": [
+   {
+    "azimuth_deg": 0,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 56.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 3,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 48.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 6,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 48.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 9,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 46.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 12,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 44.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 15,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 44.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 18,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 44.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 21,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 44.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 24,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 44.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 27,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 44.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 30,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 44.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 33,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 44.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 36,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 48.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 39,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 48.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 42,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 48.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 45,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 48.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 48,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 48.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 51,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 50.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 54,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 50.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 57,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 62.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 60,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 52.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 63,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 58.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 66,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 58.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 69,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 58.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 72,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 60.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 75,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 60.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 78,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 58.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 81,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 58.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 84,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 58.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 87,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 58.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 90,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 58.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 93,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 62.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 96,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 68.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 99,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 76.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 102,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 90.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 105,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 104.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 108,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 122.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 111,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 188.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 114,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 186.0,
+     "elevation_rh2000_m": 0.28
+    }
+   },
+   {
+    "azimuth_deg": 117,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 120,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 123,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 126,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 129,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 132,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 135,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 138,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 141,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 144,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 147,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 150,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 153,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 156,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 159,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 162,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 165,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 168,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 171,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 174,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 177,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 180,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 183,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 186,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 189,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 192,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 195,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 198,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 201,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 204,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 207,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 210,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 213,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 216,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 219,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 222,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 225,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 228,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 231,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 234,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 237,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 240,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 243,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 246,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 249,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 252,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 255,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 258,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 261,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 264,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 267,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 270,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 273,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 276,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 279,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 282,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 285,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 288,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 291,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 294,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 297,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 300,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 303,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 306,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 309,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 312,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 315,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 318,
+    "sea_view": false,
+    "first_water_hit": null
+   },
+   {
+    "azimuth_deg": 321,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 50.0,
+     "elevation_rh2000_m": 0.17
+    }
+   },
+   {
+    "azimuth_deg": 324,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 48.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 327,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 46.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 330,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 46.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 333,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 44.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 336,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 46.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 339,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 44.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 342,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 46.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 345,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 44.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 348,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 46.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 351,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 46.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 354,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 46.0,
+     "elevation_rh2000_m": 0.15
+    }
+   },
+   {
+    "azimuth_deg": 357,
+    "sea_view": true,
+    "first_water_hit": {
+     "distance_m": 46.0,
+     "elevation_rh2000_m": 0.15
+    }
+   }
+  ]
+ },
+ "limitations": [
+  "Water classification is a DEM elevation/flatness heuristic, not the official LM hydrography vector (denied, HTTP 403) — small ponds, wet rock, or very flat non-water ground near the threshold could misclassify in either direction at the margin.",
+  "Viewshed does not model vegetation (tree canopy), the house's own structure, or neighbouring buildings' height (LM byggnad carries no height) — a real summer view may be more or less open than this bare-earth DEM result depending on tree cover, which is not evaluated here.",
+  "Eye height is a fixed 1.6 m standing-eye-level assumption at the address pin ground elevation, not at any specific window, deck, or upper-floor height in the (unbuilt/renovated) house.",
+  "Ray sampling is nearest-cell at 1 m DEM resolution with 2 m steps; sub-metre features (sea walls, rocks) are not resolved."
+ ],
+ "not_checked": "official hydrography boundary (marktacke, denied); vegetation/canopy height; upper-floor / deck-height view (only ground+1.6m eye level checked); neighbouring building heights."
+}
