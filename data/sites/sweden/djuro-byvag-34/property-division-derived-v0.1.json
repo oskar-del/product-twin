@@ -1,0 +1,69 @@
+{
+ "schema_version": "svartinge-property-division-derived/v0.1",
+ "entity_type": "OfficialParcelBoundary",
+ "subject": "DJURÖ 4:147",
+ "evidence_class": "AUTHORITATIVE",
+ "authority": "Lantmäteriet",
+ "source_asset": "fastighetsindelning_kn0120.gpkg, table registerenhetsomradesyta, fid 3021261 (see official-context-geometry-sources-v0.1.json for receipt)",
+ "designation": "DJURÖ 4:147",
+ "kommun": "VÄRMDÖ",
+ "kommunkod": "0120",
+ "local_frame_origin_sweref99tm": {
+  "E": 710934.881,
+  "N": 6582029.947,
+  "note": "address geocode point, ENU origin X=E-E0, Z=N-N0"
+ },
+ "sweref99tm_bbox": {
+  "E_min": 710857.06,
+  "E_max": 710967.87,
+  "N_min": 6581971.676,
+  "N_max": 6582069.235
+ },
+ "area_m2": 5156.3,
+ "local_boundary_polygon_xz": [
+  [
+   [
+    [
+     32.99,
+     20.05
+    ],
+    [
+     29.18,
+     28.02
+    ],
+    [
+     10.55,
+     39.29
+    ],
+    [
+     1.16,
+     29.68
+    ],
+    [
+     -11.73,
+     36.91
+    ],
+    [
+     -14.56,
+     33.64
+    ],
+    [
+     -77.82,
+     -21.81
+    ],
+    [
+     -63.07,
+     -39.05
+    ],
+    [
+     -31.71,
+     -58.27
+    ],
+    [
+     32.99,
+     20.05
+    ]
+   ]
+  ]
+ ]
+}

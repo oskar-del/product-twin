@@ -1,0 +1,314 @@
+{
+ "schema_version": "svartinge-buildings-official-derived/v0.1",
+ "entity_type": "OfficialBuildingFootprints",
+ "subject": "DJURÖ 4:147",
+ "authority": "Lantmäteriet",
+ "source_asset": "byggnad_kn0120.gpkg (see official-context-geometry-sources-v0.1.json for receipt)",
+ "local_frame_origin_sweref99tm": {
+  "E": 710934.881,
+  "N": 6582029.947,
+  "note": "address geocode point, used as ENU origin (X=E-E0, Z=N-N0) matching the Svärtinge viewer convention"
+ },
+ "buildings_on_parcel": [
+  {
+   "fid": 18178,
+   "objekttyp": "Komplementbyggnad",
+   "andamal1": "Komplementbyggnad;",
+   "huvudbyggnad": "Nej",
+   "husnummer": 3,
+   "insamlingslage": "Takkant",
+   "centroid": [
+    710901.4,
+    6581994.69
+   ],
+   "area_m2": 190.2,
+   "inside_parcel": true,
+   "objektidentitet": "6f045bed-4cd7-4fb8-94dd-d61dc7aaf024",
+   "local_footprint_xz": [
+    [
+     [
+      [
+       -32.96,
+       -21.41
+      ],
+      [
+       -41.25,
+       -23.61
+      ],
+      [
+       -36.75,
+       -40.55
+      ],
+      [
+       -35.39,
+       -40.19
+      ],
+      [
+       -34.53,
+       -46.92
+      ],
+      [
+       -28.99,
+       -46.26
+      ],
+      [
+       -29.98,
+       -38.67
+      ],
+      [
+       -28.48,
+       -38.27
+      ],
+      [
+       -32.96,
+       -21.41
+      ]
+     ]
+    ]
+   ],
+   "role": "OUTBUILDING",
+   "evidence_class": "AUTHORITATIVE"
+  },
+  {
+   "fid": 106485,
+   "objekttyp": "Bostad",
+   "andamal1": "Bostad;Småhus friliggande",
+   "huvudbyggnad": "Nej",
+   "husnummer": 1,
+   "insamlingslage": "Takkant",
+   "centroid": [
+    710934.21,
+    6582029.97
+   ],
+   "area_m2": 119.7,
+   "inside_parcel": true,
+   "objektidentitet": "e001e6c5-1a34-461b-8253-500b659e095e",
+   "local_footprint_xz": [
+    [
+     [
+      [
+       -0.65,
+       8.12
+      ],
+      [
+       -8.47,
+       2.39
+      ],
+      [
+       -2.9,
+       -5.23
+      ],
+      [
+       -0.81,
+       -3.7
+      ],
+      [
+       1.53,
+       -6.88
+      ],
+      [
+       7.26,
+       -2.69
+      ],
+      [
+       -0.65,
+       8.12
+      ]
+     ]
+    ]
+   ],
+   "role": "MAIN_HOUSE",
+   "evidence_class": "AUTHORITATIVE"
+  },
+  {
+   "fid": 43113,
+   "objekttyp": "Komplementbyggnad",
+   "andamal1": "Komplementbyggnad;",
+   "huvudbyggnad": "Nej",
+   "husnummer": 2,
+   "insamlingslage": "Takkant",
+   "centroid": [
+    710899.54,
+    6582034.56
+   ],
+   "area_m2": 84.6,
+   "inside_parcel": true,
+   "objektidentitet": "188ac8ec-6e20-4ff6-b884-1663e7961595",
+   "local_footprint_xz": [
+    [
+     [
+      [
+       -40.67,
+       3.86
+      ],
+      [
+       -35.48,
+       -1.76
+      ],
+      [
+       -27.35,
+       5.75
+      ],
+      [
+       -32.54,
+       11.37
+      ],
+      [
+       -40.67,
+       3.86
+      ]
+     ]
+    ]
+   ],
+   "role": "OUTBUILDING",
+   "evidence_class": "AUTHORITATIVE"
+  },
+  {
+   "fid": 85879,
+   "objekttyp": "Komplementbyggnad",
+   "andamal1": "Komplementbyggnad;",
+   "huvudbyggnad": "Nej",
+   "husnummer": 4,
+   "insamlingslage": "Takkant",
+   "centroid": [
+    710947.79,
+    6582052.99
+   ],
+   "area_m2": 21.5,
+   "inside_parcel": true,
+   "objektidentitet": "a5a70b71-d351-4e0f-abee-8c3331522d9c",
+   "local_footprint_xz": [
+    [
+     [
+      [
+       13.08,
+       20.34
+      ],
+      [
+       16.11,
+       22.74
+      ],
+      [
+       12.65,
+       27.11
+      ],
+      [
+       9.62,
+       24.71
+      ],
+      [
+       13.08,
+       20.34
+      ]
+     ]
+    ]
+   ],
+   "role": "OUTBUILDING",
+   "evidence_class": "AUTHORITATIVE"
+  }
+ ],
+ "neighbour_buildings_context": [
+  {
+   "fid": 41853,
+   "objekttyp": "Bostad",
+   "andamal1": "Bostad;Småhus friliggande",
+   "huvudbyggnad": "Nej",
+   "husnummer": 1,
+   "insamlingslage": "Takkant",
+   "centroid": [
+    710953.14,
+    6582006.73
+   ],
+   "area_m2": 227.7,
+   "inside_parcel": false,
+   "objektidentitet": "149024bf-3520-4d31-ad99-955225dd1c32",
+   "evidence_class": "AUTHORITATIVE",
+   "role": "NEIGHBOUR_CONTEXT"
+  },
+  {
+   "fid": 65796,
+   "objekttyp": "Komplementbyggnad",
+   "andamal1": "Komplementbyggnad;",
+   "huvudbyggnad": "Nej",
+   "husnummer": 5,
+   "insamlingslage": "Takkant",
+   "centroid": [
+    710968.29,
+    6581966.8
+   ],
+   "area_m2": 64.6,
+   "inside_parcel": false,
+   "objektidentitet": "2bc50e53-7c8c-4c3e-ae27-7128242861f9",
+   "evidence_class": "AUTHORITATIVE",
+   "role": "NEIGHBOUR_CONTEXT"
+  },
+  {
+   "fid": 38938,
+   "objekttyp": "Övrig byggnad",
+   "andamal1": "Övrig byggnad;",
+   "huvudbyggnad": "Nej",
+   "husnummer": 9,
+   "insamlingslage": "Takkant",
+   "centroid": [
+    710883.57,
+    6582034.29
+   ],
+   "area_m2": 42.8,
+   "inside_parcel": false,
+   "objektidentitet": "c358a3ab-8801-4c14-b899-25f18af8261f",
+   "evidence_class": "AUTHORITATIVE",
+   "role": "NEIGHBOUR_CONTEXT"
+  },
+  {
+   "fid": 40929,
+   "objekttyp": "Komplementbyggnad",
+   "andamal1": "Komplementbyggnad;",
+   "huvudbyggnad": "Nej",
+   "husnummer": 4,
+   "insamlingslage": "Takkant",
+   "centroid": [
+    710960.09,
+    6581969.74
+   ],
+   "area_m2": 9.3,
+   "inside_parcel": false,
+   "objektidentitet": "6f76a30b-c016-4329-add8-ae17e7db5e58",
+   "evidence_class": "AUTHORITATIVE",
+   "role": "NEIGHBOUR_CONTEXT"
+  },
+  {
+   "fid": 98330,
+   "objekttyp": "Övrig byggnad",
+   "andamal1": "Övrig byggnad;",
+   "huvudbyggnad": "Nej",
+   "husnummer": 3,
+   "insamlingslage": "Takkant",
+   "centroid": [
+    710950.55,
+    6581989.29
+   ],
+   "area_m2": 8.6,
+   "inside_parcel": false,
+   "objektidentitet": "8c22637b-2595-4a71-98c5-474d68ea78ba",
+   "evidence_class": "AUTHORITATIVE",
+   "role": "NEIGHBOUR_CONTEXT"
+  }
+ ],
+ "summary": {
+  "count_on_parcel": 4,
+  "main_house": {
+   "fid": 106485,
+   "objekttyp": "Bostad",
+   "area_m2": 119.7,
+   "note": "LM's 'huvudbyggnad' flag is 'Nej' for every structure on this parcel (a common registry gap, not unique to this plot) — MAIN_HOUSE role assigned here from objekttyp='Bostad' (residence) vs 'Komplementbyggnad' (outbuilding), which is the correct discriminator per LM's byggnad schema."
+  },
+  "largest_structure": {
+   "fid": 18178,
+   "objekttyp": "Komplementbyggnad",
+   "area_m2": 190.2,
+   "note": "The largest registered structure on the parcel is a Komplementbyggnad (190.2 m²), larger than the house itself (119.7 m²) — likely a boathouse/garage/storage building given the coastal setting. Not verified by imagery; footprint and area are AUTHORITATIVE, its actual use is REPORTED/inferred only."
+  },
+  "outbuildings_count": 3
+ },
+ "not_checked": "building height (LM byggnad vector carries no height — any height shown in the 3D twin must be DERIVED from imagery/LIDAR or CONCEPT, never AUTHORITATIVE); building age/condition; actual use of the largest outbuilding"
+}
