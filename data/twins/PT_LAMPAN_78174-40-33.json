@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_78174-40-33",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Manuela Ø40 - Takplafond - Grön",
+    "manufacturer": "Lucide",
+    "article_no": "78174/40/33",
+    "ean": "5411212782809",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 829,
+    "ean": "5411212782809",
+    "product_url": "https://lampan.se/p/manuela-o40-0/?option=600",
+    "cart_deeplink": "https://lampan.se/p/manuela-o40-0/?option=600",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=78174%2F40%2F33&fid=2470&url=https://lampan.se/p/manuela-o40-0/?option=600",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/78174-40-33.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

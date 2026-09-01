@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_27874-45-30",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Combo 45cm - Pollare - Svart",
+    "manufacturer": "Lucide",
+    "article_no": "27874/45/30",
+    "ean": "5411212271297",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1409,
+    "ean": "5411212271297",
+    "product_url": "https://lampan.se/p/combo-45cm/?option=498",
+    "cart_deeplink": "https://lampan.se/p/combo-45cm/?option=498",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=27874%2F45%2F30&fid=2470&url=https://lampan.se/p/combo-45cm/?option=498",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/27874-45-30.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

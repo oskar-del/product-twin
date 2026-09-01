@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_113618",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Kosta Boda Bv Beans skål gyllenbrun",
+    "manufacturer": "Kosta Boda",
+    "article_no": "113618",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3006,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/113618/kosta-boda-bv-beans-skal-gyllenbrun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/113618/kosta-boda-bv-beans-skal-gyllenbrun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=113618&fid=978&url=https://www.mjuk.com/sv-se/product/113618/kosta-boda-bv-beans-skal-gyllenbrun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/b594c3a7ea41e74b8b8efdc75f85a349.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

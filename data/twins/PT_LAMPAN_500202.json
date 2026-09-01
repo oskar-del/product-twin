@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_500202",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Kord - USB-C till USB-C - Tillbehör - Mörkgrön",
+    "manufacturer": "Kord",
+    "article_no": "500202",
+    "ean": "7350173340094",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 195,
+    "ean": "7350173340094",
+    "product_url": "https://lampan.se/p/usb-c-till-usb-c-0/?option=14054",
+    "cart_deeplink": "https://lampan.se/p/usb-c-till-usb-c-0/?option=14054",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=500202&fid=2470&url=https://lampan.se/p/usb-c-till-usb-c-0/?option=14054",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/7-47932.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP922356-922357",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschförvaring INR Pile",
+    "manufacturer": "INR",
+    "article_no": "GOP922356-922357",
+    "ean": "7392102902577",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3312,
+    "ean": "7392102902577",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschforvaring-inr-pile/p-922356-922357",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschforvaring-inr-pile/p-922356-922357",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP922356-922357&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschforvaring-inr-pile/p-922356-922357",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/96129402-6798-4c25-9f60-51f3304463d8/357743_0.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

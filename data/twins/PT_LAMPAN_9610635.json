@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_9610635",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Airam - Enna Ø43 - Taklampa - Mässing",
+    "manufacturer": "Airam",
+    "article_no": "9610635",
+    "ean": "6435200309945",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1239,
+    "ean": "6435200309945",
+    "product_url": "https://lampan.se/p/enna-o43-0/?option=6978",
+    "cart_deeplink": "https://lampan.se/p/enna-o43-0/?option=6978",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=9610635&fid=2470&url=https://lampan.se/p/enna-o43-0/?option=6978",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-56143.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

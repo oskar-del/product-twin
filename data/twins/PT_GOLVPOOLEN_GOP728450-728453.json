@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP728450-728453",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschdörr Bathlife Mångsidig Rak",
+    "manufacturer": "Bathlife",
+    "article_no": "GOP728450-728453",
+    "ean": "7330027156392",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3249,
+    "ean": "7330027156392",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-bathlife-mangsidig-rak/p-728450-728453",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-bathlife-mangsidig-rak/p-728450-728453",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP728450-728453&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-bathlife-mangsidig-rak/p-728450-728453",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f819e462-348c-48c5-ac73-ec5fd4fe2d17/duschdorr-bathlife-mangsidig-rak.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

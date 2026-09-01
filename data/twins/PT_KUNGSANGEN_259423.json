@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_259423",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Hallarskär 180x200 Fast/Extra fast D.Ljusgrå",
+    "manufacturer": "Kungsangen",
+    "article_no": "259423",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 95990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-hallarskar/259423",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-hallarskar/259423",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=259423&fid=2564&url=https://kungsangen.com/se/p/sang-hallarskar/259423",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h4e/h9c/8825289048094/ks2000Wx1500H_hallarskar_ramsang_s35_180_duved_ljusgra/ks2000Wx1500H-hallarskar-ramsang-s35-180-duved-ljusgra.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

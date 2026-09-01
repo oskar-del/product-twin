@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_T979-16",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Armaturhantverk - Torsö Ø10 - Badrumslampa - Svart",
+    "manufacturer": "Armaturhantverk",
+    "article_no": "T979/16",
+    "ean": "7330525979165",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 789,
+    "ean": "7330525979165",
+    "product_url": "https://lampan.se/p/torso-o10-0/?option=5180",
+    "cart_deeplink": "https://lampan.se/p/torso-o10-0/?option=5180",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=T979%2F16&fid=2470&url=https://lampan.se/p/torso-o10-0/?option=5180",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/t-979-16.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

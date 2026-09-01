@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1109198-1973320",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställsblandare Tapwell Ringo RIN 081",
+    "manufacturer": "Tapwell",
+    "article_no": "GOP1109198-1973320",
+    "ean": "8020913532223",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3520,
+    "ean": "8020913532223",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-tapwell-ringo-rin-081/p-1109198-1973320",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-tapwell-ringo-rin-081/p-1109198-1973320",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1109198-1973320&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-tapwell-ringo-rin-081/p-1109198-1973320",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/82a5f1c0-5fee-487b-8e7d-35276efd9453/4229904-kopiera.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

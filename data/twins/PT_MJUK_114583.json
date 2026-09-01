@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_114583",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Muuto Fiber stol grå",
+    "manufacturer": "Muuto",
+    "article_no": "114583",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1758,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/114583/muuto-fiber-stol-gra",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/114583/muuto-fiber-stol-gra",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=114583&fid=978&url=https://www.mjuk.com/sv-se/product/114583/muuto-fiber-stol-gra",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/44321c139dfefe06f2997aac3c91e176.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

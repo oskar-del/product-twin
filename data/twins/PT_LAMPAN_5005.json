@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_5005",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lightson - Terra - Lightson trädgårdssystem - Silver",
+    "manufacturer": "Lightson",
+    "article_no": "5005",
+    "ean": "7340110600602",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 289,
+    "ean": "7340110600602",
+    "product_url": "https://lampan.se/p/terra/?option=2756",
+    "cart_deeplink": "https://lampan.se/p/terra/?option=2756",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=5005&fid=2470&url=https://lampan.se/p/terra/?option=2756",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/2_5005_terra_lightson_product_72dpi.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

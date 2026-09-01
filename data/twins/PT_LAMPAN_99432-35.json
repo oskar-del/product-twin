@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_99432-35",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Trabo 70cm - Taklampa - Trä",
+    "manufacturer": "Brilliant",
+    "article_no": "99432/35",
+    "ean": "4004353393518",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1759,
+    "ean": "4004353393518",
+    "product_url": "https://lampan.se/p/trabo-70cm/?option=13867",
+    "cart_deeplink": "https://lampan.se/p/trabo-70cm/?option=13867",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=99432%2F35&fid=2470&url=https://lampan.se/p/trabo-70cm/?option=13867",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/pendelleuchten_trabo_4004353393518_1_800x800.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

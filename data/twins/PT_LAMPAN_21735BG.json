@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_21735BG",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Sofia 50cm - Bordslampa - Grön",
+    "manufacturer": "Globo Lighting",
+    "article_no": "21735BG",
+    "ean": "9007371481545",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1269,
+    "ean": "9007371481545",
+    "product_url": "https://lampan.se/p/sofia-50cm-2/?option=9797",
+    "cart_deeplink": "https://lampan.se/p/sofia-50cm-2/?option=9797",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=21735BG&fid=2470&url=https://lampan.se/p/sofia-50cm-2/?option=9797",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-12933.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_94990",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Normann Copenhagen Form stol blå",
+    "manufacturer": "Normann Copenhagen",
+    "article_no": "94990",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1768,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/94990/normann-copenhagen-form-stol-bla",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/94990/normann-copenhagen-form-stol-bla",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=94990&fid=978&url=https://www.mjuk.com/sv-se/product/94990/normann-copenhagen-form-stol-bla",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/15b8d02ecd8d6ac1bcd5724141a91482.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

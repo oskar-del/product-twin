@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_90987",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Mobel Kova stol svart",
+    "manufacturer": "Mobel",
+    "article_no": "90987",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3100,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/90987/mobel-kova-stol-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/90987/mobel-kova-stol-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=90987&fid=978&url=https://www.mjuk.com/sv-se/product/90987/mobel-kova-stol-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/e222d19c-4b89-4cae-8c7d-d26b24f3f463.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

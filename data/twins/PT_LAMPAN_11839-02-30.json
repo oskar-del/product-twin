@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_11839-02-30",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Timbala - Fasadbelysning - Svart",
+    "manufacturer": "Lucide",
+    "article_no": "11839/02/30",
+    "ean": "5411212114006",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 599,
+    "ean": "5411212114006",
+    "product_url": "https://lampan.se/p/timbala/?option=12596",
+    "cart_deeplink": "https://lampan.se/p/timbala/?option=12596",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=11839%2F02%2F30&fid=2470&url=https://lampan.se/p/timbala/?option=12596",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-80496.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

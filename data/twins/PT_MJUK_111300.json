@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_111300",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Normann Copenhagen Toli pendel Ø 42 cm brun",
+    "manufacturer": "Normann Copenhagen",
+    "article_no": "111300",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2444,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/111300/normann-copenhagen-toli-pendel-o-42-cm-brun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/111300/normann-copenhagen-toli-pendel-o-42-cm-brun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=111300&fid=978&url=https://www.mjuk.com/sv-se/product/111300/normann-copenhagen-toli-pendel-o-42-cm-brun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/35f3ec7bd2b12f11abe1a5a0225f1dc5.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

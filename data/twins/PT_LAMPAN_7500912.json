@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7500912",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ifö electric - Smycka Tova Ø12 - Taklampa - Svart",
+    "manufacturer": "Ifö electric",
+    "article_no": "7500912",
+    "ean": "7312907130449",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2539,
+    "ean": "7312907130449",
+    "product_url": "https://lampan.se/p/smycka-tova-o12/?option=4851",
+    "cart_deeplink": "https://lampan.se/p/smycka-tova-o12/?option=4851",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7500912&fid=2470&url=https://lampan.se/p/smycka-tova-o12/?option=4851",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/35fd3c05e3c836ac8bc3d3e355c4e7eab9c0d2fd420.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

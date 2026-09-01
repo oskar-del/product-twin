@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2960030",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Light & Living  - Milan Ø40 - Taklampa - Natur",
+    "manufacturer": "Light & Living",
+    "article_no": "2960030",
+    "ean": "8717807643966",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 789,
+    "ean": "8717807643966",
+    "product_url": "https://lampan.se/p/milan-o40/?option=10629",
+    "cart_deeplink": "https://lampan.se/p/milan-o40/?option=10629",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2960030&fid=2470&url=https://lampan.se/p/milan-o40/?option=10629",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/2960030.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

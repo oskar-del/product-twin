@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_117522",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Marcus utesoffa hörnmodul",
+    "manufacturer": "deNoord",
+    "article_no": "117522",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1612,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/117522/marcus-utesoffa-hornmodul",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/117522/marcus-utesoffa-hornmodul",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=117522&fid=978&url=https://www.mjuk.com/sv-se/product/117522/marcus-utesoffa-hornmodul",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/52b57be70b2eb7b4e707d0a3281d2500.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

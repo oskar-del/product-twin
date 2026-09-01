@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1749118-1749119",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Spolknapp Bathlife Spola",
+    "manufacturer": "Bathlife",
+    "article_no": "GOP1749118-1749119",
+    "ean": "7330027166506",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 659,
+    "ean": "7330027166506",
+    "product_url": "https://www.golvpoolen.se/badrum/toalettstol/spolknapp/spolknapp-bathlife-spola/p-1749118-1749119",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/toalettstol/spolknapp/spolknapp-bathlife-spola/p-1749118-1749119",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1749118-1749119&fid=2559&url=https://www.golvpoolen.se/badrum/toalettstol/spolknapp/spolknapp-bathlife-spola/p-1749118-1749119",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/18700ee7-580f-460f-9270-a696184d3f94/401410104_1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

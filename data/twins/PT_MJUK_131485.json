@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_131485",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Castlebay möbelset för sovrum grå",
+    "manufacturer": "Mjuk",
+    "article_no": "131485",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 6500,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/131485/castlebay-mobelset-for-sovrum-gra",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/131485/castlebay-mobelset-for-sovrum-gra",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=131485&fid=978&url=https://www.mjuk.com/sv-se/product/131485/castlebay-mobelset-for-sovrum-gra",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/3a48a020-1218-45be-ba48-7fc0c7b0bdfe.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

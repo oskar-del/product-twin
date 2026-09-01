@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_901141",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Eglo - Ruotale Ø70 - Taklampa - Sand",
+    "manufacturer": "Eglo",
+    "article_no": "901141",
+    "ean": "9008606303540",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2879,
+    "ean": "9008606303540",
+    "product_url": "https://lampan.se/p/ruotale-o70/?option=4357",
+    "cart_deeplink": "https://lampan.se/p/ruotale-o70/?option=4357",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=901141&fid=2470&url=https://lampan.se/p/ruotale-o70/?option=4357",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/901141_view_0001.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

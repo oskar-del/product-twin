@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP578646",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Parkettgolv Kährs Harmony Ale Mattlackad Borstad Ek 3-Stav",
+    "manufacturer": "Kährs",
+    "article_no": "GOP578646",
+    "ean": "7393969041799",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2005,
+    "ean": "7393969041799",
+    "product_url": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-kahrs-harmony-ale-mattlackad-borstad-ek-3-stav/p-578646",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-kahrs-harmony-ale-mattlackad-borstad-ek-3-stav/p-578646",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP578646&fid=2559&url=https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-kahrs-harmony-ale-mattlackad-borstad-ek-3-stav/p-578646",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f2468eef-a7aa-474c-834f-491bcff589ff/tragolv-kahrs-harmony-ale-mattlackad-borstad-ek-3-stav.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

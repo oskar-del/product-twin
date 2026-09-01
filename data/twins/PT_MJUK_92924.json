@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_92924",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Zack Calore träkorg",
+    "manufacturer": "Mjuk",
+    "article_no": "92924",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1030,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/92924/zack-calore-trakorg",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/92924/zack-calore-trakorg",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=92924&fid=978&url=https://www.mjuk.com/sv-se/product/92924/zack-calore-trakorg",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/c4c98f1885b3b1d9f6ffc8b3a7b09e69.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

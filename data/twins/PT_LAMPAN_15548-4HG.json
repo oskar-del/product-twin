@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_15548-4HG",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Maxy 100cm - Taklampa - Koppar",
+    "manufacturer": "Globo Lighting",
+    "article_no": "15548-4HG",
+    "ean": "9007371447985",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3339,
+    "ean": "9007371447985",
+    "product_url": "https://lampan.se/p/maxy-100cm/?option=9945",
+    "cart_deeplink": "https://lampan.se/p/maxy-100cm/?option=9945",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=15548-4HG&fid=2470&url=https://lampan.se/p/maxy-100cm/?option=9945",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-59727.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

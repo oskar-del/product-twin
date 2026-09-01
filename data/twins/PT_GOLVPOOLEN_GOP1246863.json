@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1246863",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschkorg Bathlife Reda",
+    "manufacturer": "Bathlife",
+    "article_no": "GOP1246863",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 829,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-bathlife-reda/p-1246863",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-bathlife-reda/p-1246863",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1246863&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-bathlife-reda/p-1246863",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/33d84111-4ae9-4237-a0b0-4db7312076e0/vit.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

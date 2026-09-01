@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1065834-1065878",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukstork Duschbyggarna ZigZag",
+    "manufacturer": "Duschbyggarna",
+    "article_no": "GOP1065834-1065878",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 8136,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-duschbyggarna-zigzag/p-1065834-1065878",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-duschbyggarna-zigzag/p-1065834-1065878",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1065834-1065878&fid=2559&url=https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-duschbyggarna-zigzag/p-1065834-1065878",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/9f368b98-0a46-4a01-9274-e4d028829a0f/tm8350-5009-zigzag-835x500-azurbla.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

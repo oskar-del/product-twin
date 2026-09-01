@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1508217",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Spegelskåp Dansani Mido+ Select 100",
+    "manufacturer": "Dansani",
+    "article_no": "GOP1508217",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 4299,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/spegelskap/spegelskap-dansani-midoplus-select-100/p-1508217",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/spegelskap/spegelskap-dansani-midoplus-select-100/p-1508217",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1508217&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/spegelskap/spegelskap-dansani-midoplus-select-100/p-1508217",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/278a16d8-14bf-4dbe-b7c8-b2ba97678ce9/s670-181.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

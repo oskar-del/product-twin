@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_111758",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "LoCa Knax skohylla 60cm ek",
+    "manufacturer": "LoCa",
+    "article_no": "111758",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1956,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/111758/loca-knax-skohylla-60cm-ek",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/111758/loca-knax-skohylla-60cm-ek",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=111758&fid=978&url=https://www.mjuk.com/sv-se/product/111758/loca-knax-skohylla-60cm-ek",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/f46cd1b89fcd9c07f3c3a99bf3315960.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

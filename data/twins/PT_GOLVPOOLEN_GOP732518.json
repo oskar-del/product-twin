@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP732518",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maskinkit Dewalt DCK551P3T-QW Med batteri och laddare 18 V",
+    "manufacturer": "DeWalt",
+    "article_no": "GOP732518",
+    "ean": "5035048646052",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 17645,
+    "ean": "5035048646052",
+    "product_url": "https://www.golvpoolen.se/verktyg/elverktyg/verktygspaket/maskinkit-dewalt-dck551p3t-qw-med-batteri-och-laddare-18-v/p-732518",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/elverktyg/verktygspaket/maskinkit-dewalt-dck551p3t-qw-med-batteri-och-laddare-18-v/p-732518",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP732518&fid=2559&url=https://www.golvpoolen.se/verktyg/elverktyg/verktygspaket/maskinkit-dewalt-dck551p3t-qw-med-batteri-och-laddare-18-v/p-732518",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/7868c14d-2fa1-43e3-adec-86926503a75b/maskinkit-dck551p3t-dewalt-18-v-med-batteri.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

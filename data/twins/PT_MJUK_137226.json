@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_137226",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dolores takfläkt med belysning",
+    "manufacturer": "Beliani",
+    "article_no": "137226",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1192,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/137226/dolores-takflakt-med-belysning",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/137226/dolores-takflakt-med-belysning",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=137226&fid=978&url=https://www.mjuk.com/sv-se/product/137226/dolores-takflakt-med-belysning",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/a23194d5-f640-488a-9b06-5f57ddd2e916.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

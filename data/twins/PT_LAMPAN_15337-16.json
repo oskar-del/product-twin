@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_15337-16",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Carpatica Ø40 - Taklampa - Brunbets",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "15337-16",
+    "ean": "7392986782548",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2199,
+    "ean": "7392986782548",
+    "product_url": "https://lampan.se/p/carpatica-o40/?option=1973",
+    "cart_deeplink": "https://lampan.se/p/carpatica-o40/?option=1973",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=15337-16&fid=2470&url=https://lampan.se/p/carpatica-o40/?option=1973",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/15337-16_carpatica_7392986782548_pp1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_57852-4H",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Lucero 4 - Spotlight - Svart",
+    "manufacturer": "Globo Lighting",
+    "article_no": "57852-4H",
+    "ean": "9007371507634",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1839,
+    "ean": "9007371507634",
+    "product_url": "https://lampan.se/p/lucero-4/?option=9971",
+    "cart_deeplink": "https://lampan.se/p/lucero-4/?option=9971",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=57852-4H&fid=2470&url=https://lampan.se/p/lucero-4/?option=9971",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/2-31941.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

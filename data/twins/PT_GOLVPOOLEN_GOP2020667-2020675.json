@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2020667-2020675",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställsblandare Tapwell EVM003",
+    "manufacturer": "Tapwell",
+    "article_no": "GOP2020667-2020675",
+    "ean": "8020913628582",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 4316,
+    "ean": "8020913628582",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-tapwell-evm003/p-2020667-2020675",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-tapwell-evm003/p-2020667-2020675",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2020667-2020675&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-tapwell-evm003/p-2020667-2020675",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/d7158c34-3634-4f94-be94-6de9d88ca55a/9428810-evm003-mattsvart.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

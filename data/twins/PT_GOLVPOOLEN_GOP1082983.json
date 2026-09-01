@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1082983",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duscharm Hansgrohe 100 mm Rund",
+    "manufacturer": "Hansgrohe",
+    "article_no": "GOP1082983",
+    "ean": "4011097470214",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3221,
+    "ean": "4011097470214",
+    "product_url": "https://www.golvpoolen.se/badrum/duscharmatur/duschhallare/duscharm-hansgrohe-100-mm-rund/p-1082983",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duscharmatur/duschhallare/duscharm-hansgrohe-100-mm-rund/p-1082983",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1082983&fid=2559&url=https://www.golvpoolen.se/badrum/duscharmatur/duschhallare/duscharm-hansgrohe-100-mm-rund/p-1082983",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/6be5ac2c-6946-4ed1-8a8c-2cb22af3dcca/hansgrohe_27418000.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

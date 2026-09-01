@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_106769",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Fiberkudde Låg 50x60",
+    "manufacturer": "Kungsangen",
+    "article_no": "106769",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 399,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/fiberkudde-lag/106769",
+    "cart_deeplink": "https://kungsangen.com/se/p/fiberkudde-lag/106769",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=106769&fid=2564&url=https://kungsangen.com/se/p/fiberkudde-lag/106769",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hcf/hba/8831883935774/ks2000Wx1500H_Fiberkudde_Lag_50x60/ks2000Wx1500H-Fiberkudde-Lag-50x60.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

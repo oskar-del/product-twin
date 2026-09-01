@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_121800G",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Strömshaga - Brännarerör - Tillbehör - Transparent",
+    "manufacturer": "Strömshaga",
+    "article_no": "121800G",
+    "ean": "7332771030638",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 79,
+    "ean": "7332771030638",
+    "product_url": "https://lampan.se/p/brannareror/?option=8906",
+    "cart_deeplink": "https://lampan.se/p/brannareror/?option=8906",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=121800G&fid=2470&url=https://lampan.se/p/brannareror/?option=8906",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-27935.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

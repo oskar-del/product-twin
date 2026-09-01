@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP943357",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Toalettsits Ifö Sign 99266 Röd",
+    "manufacturer": "Ifö",
+    "article_no": "GOP943357",
+    "ean": "7391515112115",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 617,
+    "ean": "7391515112115",
+    "product_url": "https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-ifo-sign-99266-rod/p-943357",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-ifo-sign-99266-rod/p-943357",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP943357&fid=2559&url=https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-ifo-sign-99266-rod/p-943357",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/0b52c18b-db10-4106-8029-06820f8adb20/7921419.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

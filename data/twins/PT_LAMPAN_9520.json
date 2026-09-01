@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_9520",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dyberg Larsen - Ocean Mini 28cm - Portabel lampa - Orange",
+    "manufacturer": "Dyberg Larsen",
+    "article_no": "9520",
+    "ean": "5704709095200",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 979,
+    "ean": "5704709095200",
+    "product_url": "https://lampan.se/p/ocean-mini-28cm-0/?option=15272",
+    "cart_deeplink": "https://lampan.se/p/ocean-mini-28cm-0/?option=15272",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=9520&fid=2470&url=https://lampan.se/p/ocean-mini-28cm-0/?option=15272",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/5704709095200_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

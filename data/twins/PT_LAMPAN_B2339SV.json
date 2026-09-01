@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_B2339SV",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cottex - Prakt 60cm - Bordslampa - Svart",
+    "manufacturer": "Cottex",
+    "article_no": "B2339SV",
+    "ean": "7393168533934",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 739,
+    "ean": "7393168533934",
+    "product_url": "https://lampan.se/p/prakt-60cm-1/?option=4432",
+    "cart_deeplink": "https://lampan.se/p/prakt-60cm-1/?option=4432",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=B2339SV&fid=2470&url=https://lampan.se/p/prakt-60cm-1/?option=4432",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/b2339sv.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

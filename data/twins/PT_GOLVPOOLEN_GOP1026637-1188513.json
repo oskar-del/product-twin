@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1026637-1188513",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdusch Damixa Silhouet",
+    "manufacturer": "Damixa",
+    "article_no": "GOP1026637-1188513",
+    "ean": "5708516828037",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1065,
+    "ean": "5708516828037",
+    "product_url": "https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-damixa-silhouet/p-1026637-1188513",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-damixa-silhouet/p-1026637-1188513",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1026637-1188513&fid=2559&url=https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-damixa-silhouet/p-1026637-1188513",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/0a89bbbf-9d9f-4f48-a4d2-2cafac99c916/766868700_silhouet-handshower_brushed-copper.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

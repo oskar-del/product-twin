@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_P040941",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Norrsken Design - Flores Ø35 - Kristallkrona - Antikmässing",
+    "manufacturer": "Norrsken Design",
+    "article_no": "P040941",
+    "ean": "7394363032529",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3199,
+    "ean": "7394363032529",
+    "product_url": "https://lampan.se/p/flores-o35/?option=2695",
+    "cart_deeplink": "https://lampan.se/p/flores-o35/?option=2695",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=P040941&fid=2470&url=https://lampan.se/p/flores-o35/?option=2695",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-35747.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

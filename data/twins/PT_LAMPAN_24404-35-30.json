@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_24404-35-30",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Calina Ø42 - Taklampa - Svart",
+    "manufacturer": "Lucide",
+    "article_no": "24404/35/30",
+    "ean": "5411212241979",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5689,
+    "ean": "5411212241979",
+    "product_url": "https://lampan.se/p/calina-o42/?option=837",
+    "cart_deeplink": "https://lampan.se/p/calina-o42/?option=837",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=24404%2F35%2F30&fid=2470&url=https://lampan.se/p/calina-o42/?option=837",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/24404-35-30.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

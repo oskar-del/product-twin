@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP515269",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Toalettborste Smedbo Outline FK311P Krom/Vitt Porslin",
+    "manufacturer": "Smedbo",
+    "article_no": "GOP515269",
+    "ean": "7391447077452",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1070,
+    "ean": "7391447077452",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/toalettborste/toalettborste-smedbo-outline-fk311p-krom-och-vitt-porslin/p-515269",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/toalettborste/toalettborste-smedbo-outline-fk311p-krom-och-vitt-porslin/p-515269",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP515269&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/toalettborste/toalettborste-smedbo-outline-fk311p-krom-och-vitt-porslin/p-515269",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/d3cc1071-78c7-4ad8-8197-23cdd3b53a7a/toalettborste-smedbo-outline-fk311p-krom-och-vitt-porslin.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

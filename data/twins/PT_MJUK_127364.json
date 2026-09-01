@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_127364",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Akustikskärm för skrivbord",
+    "manufacturer": "Mjuk",
+    "article_no": "127364",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1030,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/127364/akustikskarm-for-skrivbord",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/127364/akustikskarm-for-skrivbord",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=127364&fid=978&url=https://www.mjuk.com/sv-se/product/127364/akustikskarm-for-skrivbord",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/b4d89b1f1f50c4c128e2968deadc41ee.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

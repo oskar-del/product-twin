@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_929004115801",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Philips - Hanno Ø38 - Takplafond - Svart",
+    "manufacturer": "Philips",
+    "article_no": "929004115801",
+    "ean": "8720169301337",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 799,
+    "ean": "8720169301337",
+    "product_url": "https://lampan.se/p/hanno-o38/?option=6427",
+    "cart_deeplink": "https://lampan.se/p/hanno-o38/?option=6427",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=929004115801&fid=2470&url=https://lampan.se/p/hanno-o38/?option=6427",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/hanno-ceiling-ss-rd-24w-b-g-rtp.unknown.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

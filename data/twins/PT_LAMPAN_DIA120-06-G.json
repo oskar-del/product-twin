@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_DIA120-06-G",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Karolina Ø40 - Kristallkrona - Guld",
+    "manufacturer": "Maytoni",
+    "article_no": "DIA120-06-G",
+    "ean": "4260361986696",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4279,
+    "ean": "4260361986696",
+    "product_url": "https://lampan.se/p/karolina-o40/?option=6539",
+    "cart_deeplink": "https://lampan.se/p/karolina-o40/?option=6539",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=DIA120-06-G&fid=2470&url=https://lampan.se/p/karolina-o40/?option=6539",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/dia120-06-g_on_w_standard.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

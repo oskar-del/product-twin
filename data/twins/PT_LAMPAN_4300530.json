@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4300530",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Unison - E27 normal 6W 2700K dimbar - Ljuskälla - Transparent",
+    "manufacturer": "Unison",
+    "article_no": "4300530",
+    "ean": "7340037004781",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 79,
+    "ean": "7340037004781",
+    "product_url": "https://lampan.se/p/e27-normal-6w-2700k-dimbar/?option=15724",
+    "cart_deeplink": "https://lampan.se/p/e27-normal-6w-2700k-dimbar/?option=15724",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4300530&fid=2470&url=https://lampan.se/p/e27-normal-6w-2700k-dimbar/?option=15724",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/4300530-w.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

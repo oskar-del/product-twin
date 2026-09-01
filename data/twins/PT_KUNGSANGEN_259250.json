@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_259250",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Hallarskär 90x200 Extra fast H.22.Gråbeige",
+    "manufacturer": "Kungsangen",
+    "article_no": "259250",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 49990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-hallarskar/259250",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-hallarskar/259250",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=259250&fid=2564&url=https://kungsangen.com/se/p/sang-hallarskar/259250",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h0c/h89/10221183041566/ks2000Wx1500H_hallarhamn_ramsang_s35_90_hagfors_grabeige/ks2000Wx1500H-hallarhamn-ramsang-s35-90-hagfors-grabeige.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

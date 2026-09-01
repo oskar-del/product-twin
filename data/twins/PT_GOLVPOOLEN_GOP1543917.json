@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1543917",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Skarvrör Purus 3/4 till Utloppsslang",
+    "manufacturer": "Purus",
+    "article_no": "GOP1543917",
+    "ean": "7391543519443",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 48,
+    "ean": "7391543519443",
+    "product_url": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/skarvror-purus-3-och-4-till-utloppsslang/p-1543917",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/skarvror-purus-3-och-4-till-utloppsslang/p-1543917",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1543917&fid=2559&url=https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/skarvror-purus-3-och-4-till-utloppsslang/p-1543917",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/3990186c-97cc-4dee-8beb-3c446d585e58/2910345.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

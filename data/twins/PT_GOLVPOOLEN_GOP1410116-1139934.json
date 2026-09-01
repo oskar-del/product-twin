@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1410116-1139934",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvåldispenser Smedbo House R370",
+    "manufacturer": "Smedbo",
+    "article_no": "GOP1410116-1139934",
+    "ean": "7391447087970",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 940,
+    "ean": "7391447087970",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvaldispenser-smedbo-house-r370/p-1410116-1139934",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvaldispenser-smedbo-house-r370/p-1410116-1139934",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1410116-1139934&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvaldispenser-smedbo-house-r370/p-1410116-1139934",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/8a01b37b-4ade-4ea7-b37d-d30319b6586b/rb370.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

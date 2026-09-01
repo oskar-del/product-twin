@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1774989-505491",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukskrok Beslagsboden 073",
+    "manufacturer": "Beslagsboden",
+    "article_no": "GOP1774989-505491",
+    "ean": "7391447033298",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 56,
+    "ean": "7391447033298",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-beslagsboden-073/p-1774989-505491",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-beslagsboden-073/p-1774989-505491",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1774989-505491&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-beslagsboden-073/p-1774989-505491",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/2e3a5db1-fd78-403a-9c48-88824ef53304/handdukskrok-beslagsboden-bk073-krom.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

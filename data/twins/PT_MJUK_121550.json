@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_121550",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Hakola fåtölj beige",
+    "manufacturer": "Hakola",
+    "article_no": "121550",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 6126,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/121550/hakola-fatolj-beige",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/121550/hakola-fatolj-beige",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=121550&fid=978&url=https://www.mjuk.com/sv-se/product/121550/hakola-fatolj-beige",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/765d086378d56ccab7d1f362ceb6c88e.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

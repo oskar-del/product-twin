@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_316515",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "CO Bankeryd - Down Ø20 - Takplafond - Antracit",
+    "manufacturer": "CO Bankeryd",
+    "article_no": "316515",
+    "ean": "7319683165153",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 799,
+    "ean": "7319683165153",
+    "product_url": "https://lampan.se/p/down-o20/?option=6828",
+    "cart_deeplink": "https://lampan.se/p/down-o20/?option=6828",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=316515&fid=2470&url=https://lampan.se/p/down-o20/?option=6828",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/co_bankeryd_down_ceiling_black_316515_1500x1500.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

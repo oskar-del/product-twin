@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_118095",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sofacompany Allie matbord 200 cm vit",
+    "manufacturer": "Sofacompany",
+    "article_no": "118095",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3890,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/118095/sofacompany-allie-matbord-200-cm-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/118095/sofacompany-allie-matbord-200-cm-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=118095&fid=978&url=https://www.mjuk.com/sv-se/product/118095/sofacompany-allie-matbord-200-cm-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/1339acc0840c9f34db3069cef8a01e17.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

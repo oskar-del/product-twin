@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_929003205401",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Philips - Star 4 - Spotlight - Svart",
+    "manufacturer": "Philips",
+    "article_no": "929003205401",
+    "ean": "8719514435438",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1439,
+    "ean": "8719514435438",
+    "product_url": "https://lampan.se/p/star-4/?option=6416",
+    "cart_deeplink": "https://lampan.se/p/star-4/?option=6416",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=929003205401&fid=2470&url=https://lampan.se/p/star-4/?option=6416",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/dc3f747595d34519b28bae3d0107af8a.unknown.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

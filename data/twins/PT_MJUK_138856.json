@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_138856",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sofacompany Dane soffmodul Aulla Cacao",
+    "manufacturer": "Sofacompany",
+    "article_no": "138856",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3937,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/138856/sofacompany-dane-soffmodul-aulla-cacao",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/138856/sofacompany-dane-soffmodul-aulla-cacao",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=138856&fid=978&url=https://www.mjuk.com/sv-se/product/138856/sofacompany-dane-soffmodul-aulla-cacao",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/698ace4d-5d20-4a6a-8fac-096023ac369b.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

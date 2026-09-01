@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_268095",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sänggavel Hovsta 180 A.Petrol",
+    "manufacturer": "Kungsangen",
+    "article_no": "268095",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 6490,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sanggavel-hovsta/268095",
+    "cart_deeplink": "https://kungsangen.com/se/p/sanggavel-hovsta/268095",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=268095&fid=2564&url=https://kungsangen.com/se/p/sanggavel-hovsta/268095",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h39/h88/9036023595038/ks2000Wx1500H_hovsta_gavel_180_anouk_petrol/ks2000Wx1500H-hovsta-gavel-180-anouk-petrol.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_8196982",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Light & Living  - Jamiri 45cm - Lampfot - Brun",
+    "manufacturer": "Light & Living",
+    "article_no": "8196982",
+    "ean": "8717807700904",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 979,
+    "ean": "8717807700904",
+    "product_url": "https://lampan.se/p/jamiri-45cm-5/?option=11539",
+    "cart_deeplink": "https://lampan.se/p/jamiri-45cm-5/?option=11539",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=8196982&fid=2470&url=https://lampan.se/p/jamiri-45cm-5/?option=11539",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/8196982.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

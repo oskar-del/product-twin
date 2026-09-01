@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_31588SA",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Boston 80cm - Pollare - Antracit",
+    "manufacturer": "Globo Lighting",
+    "article_no": "31588SA",
+    "ean": "9007371433735",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 749,
+    "ean": "9007371433735",
+    "product_url": "https://lampan.se/p/boston-80cm-0/?option=9532",
+    "cart_deeplink": "https://lampan.se/p/boston-80cm-0/?option=9532",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=31588SA&fid=2470&url=https://lampan.se/p/boston-80cm-0/?option=9532",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-35929.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

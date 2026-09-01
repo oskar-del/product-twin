@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_65266-24",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Madelene Ø25 - Kristallkrona - Mässing",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "65266-24",
+    "ean": "7392986772181",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1099,
+    "ean": "7392986772181",
+    "product_url": "https://lampan.se/p/madelene-o25/?option=1897",
+    "cart_deeplink": "https://lampan.se/p/madelene-o25/?option=1897",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=65266-24&fid=2470&url=https://lampan.se/p/madelene-o25/?option=1897",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/65266-24_madelene_7392986772181_pp1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

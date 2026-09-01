@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_803-42",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - Tara 28cm - Portabel lampa - Trä",
+    "manufacturer": "Star Trading",
+    "article_no": "803-42",
+    "ean": "7391482080554",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 229,
+    "ean": "7391482080554",
+    "product_url": "https://lampan.se/p/tara-28cm/?option=14650",
+    "cart_deeplink": "https://lampan.se/p/tara-28cm/?option=14650",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=803-42&fid=2470&url=https://lampan.se/p/tara-28cm/?option=14650",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/803-42_mn.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

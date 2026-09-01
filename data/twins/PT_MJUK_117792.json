@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_117792",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "NORR11 NY11 barstol ek",
+    "manufacturer": "Norr11",
+    "article_no": "117792",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4774,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/117792/norr11-ny11-barstol-ek",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/117792/norr11-ny11-barstol-ek",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=117792&fid=978&url=https://www.mjuk.com/sv-se/product/117792/norr11-ny11-barstol-ek",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/c06f295b-20c7-45b1-92f5-d478d492d161.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1880117",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Badkarsbord Nordhem Styrbord",
+    "manufacturer": "Nordhem",
+    "article_no": "GOP1880117",
+    "ean": "7340100026238",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2535,
+    "ean": "7340100026238",
+    "product_url": "https://www.golvpoolen.se/badrum/badkar/tillbehor-badkar/badkarsbord-nordhem-styrbord/p-1880117",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badkar/tillbehor-badkar/badkarsbord-nordhem-styrbord/p-1880117",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1880117&fid=2559&url=https://www.golvpoolen.se/badrum/badkar/tillbehor-badkar/badkarsbord-nordhem-styrbord/p-1880117",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/d467029f-042a-4822-aebe-df355783fe25/styrbord_sbb400g_2_1600x1600.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

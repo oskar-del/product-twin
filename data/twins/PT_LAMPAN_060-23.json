@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_060-23",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - LED Antikljus Flamme Candy - Batteriljus - Grön",
+    "manufacturer": "Star Trading",
+    "article_no": "060-23",
+    "ean": "7391482076151",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 89,
+    "ean": "7391482076151",
+    "product_url": "https://lampan.se/p/led-antikljus-flamme-candy-1/?option=8662",
+    "cart_deeplink": "https://lampan.se/p/led-antikljus-flamme-candy-1/?option=8662",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=060-23&fid=2470&url=https://lampan.se/p/led-antikljus-flamme-candy-1/?option=8662",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/060-23_mn.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

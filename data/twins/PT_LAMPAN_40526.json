@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_40526",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Faro Barcelona - Sole 10cm - Vägglampa - Vit räfflad",
+    "manufacturer": "Faro Barcelona",
+    "article_no": "40526",
+    "ean": "8421776402607",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 249,
+    "ean": "8421776402607",
+    "product_url": "https://lampan.se/p/sole-10cm-3/?option=13131",
+    "cart_deeplink": "https://lampan.se/p/sole-10cm-3/?option=13131",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=40526&fid=2470&url=https://lampan.se/p/sole-10cm-3/?option=13131",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-60928.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

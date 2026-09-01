@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1543922",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Slangnippel Purus G25xØ15/17/20",
+    "manufacturer": "Purus",
+    "article_no": "GOP1543922",
+    "ean": "7391543515353",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 31,
+    "ean": "7391543515353",
+    "product_url": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/ror-och-rordelar/slangnippel-purus-g25xo15-och-17-och-20/p-1543922",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/ror-och-rordelar/slangnippel-purus-g25xo15-och-17-och-20/p-1543922",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1543922&fid=2559&url=https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/ror-och-rordelar/slangnippel-purus-g25xo15-och-17-och-20/p-1543922",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/205f36da-bd9c-4a8a-ab55-4d95895fb115/8078065.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

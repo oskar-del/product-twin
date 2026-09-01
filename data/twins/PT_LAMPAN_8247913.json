@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_8247913",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lampan - Aten 4 - Spotlight - Krom",
+    "manufacturer": "Lampan",
+    "article_no": "8247913",
+    "ean": "7360935001309",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 899,
+    "ean": "7360935001309",
+    "product_url": "https://lampan.se/p/aten-4-0/?option=2056",
+    "cart_deeplink": "https://lampan.se/p/aten-4-0/?option=2056",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=8247913&fid=2470&url=https://lampan.se/p/aten-4-0/?option=2056",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/aten4_krom.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

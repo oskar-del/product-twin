@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1869712",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Light & Living  - Penguin 24cm - Bordslampa - Svart",
+    "manufacturer": "Light & Living",
+    "article_no": "1869712",
+    "ean": "8717807634698",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 689,
+    "ean": "8717807634698",
+    "product_url": "https://lampan.se/p/penguin-24cm/?option=10506",
+    "cart_deeplink": "https://lampan.se/p/penguin-24cm/?option=10506",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1869712&fid=2470&url=https://lampan.se/p/penguin-24cm/?option=10506",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1869712.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

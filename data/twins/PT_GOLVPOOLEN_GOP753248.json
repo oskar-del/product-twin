@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP753248",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Mimou Lotus Lake Blå",
+    "manufacturer": "Mimou",
+    "article_no": "GOP753248",
+    "ean": "7332590804984",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 785,
+    "ean": "7332590804984",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-mimou-lotus-lake-bla/p-753248",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-mimou-lotus-lake-bla/p-753248",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP753248&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-mimou-lotus-lake-bla/p-753248",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f49e2382-652c-4071-b547-d04c1f34221a/tapet-mimou-lotus-lake-bla.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

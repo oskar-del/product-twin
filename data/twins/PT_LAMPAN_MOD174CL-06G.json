@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD174CL-06G",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Frame Ø55 - Takplafond - Guld",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD174CL-06G",
+    "ean": "4099776057833",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5439,
+    "ean": "4099776057833",
+    "product_url": "https://lampan.se/p/frame-o55/?option=12265",
+    "cart_deeplink": "https://lampan.se/p/frame-o55/?option=12265",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD174CL-06G&fid=2470&url=https://lampan.se/p/frame-o55/?option=12265",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/image0-74855.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

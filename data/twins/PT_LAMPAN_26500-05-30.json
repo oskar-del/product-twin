@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_26500-05-30",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Turbin 14cm - Bordslampa - Svart",
+    "manufacturer": "Lucide",
+    "article_no": "26500/05/30",
+    "ean": "5411212262653",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 579,
+    "ean": "5411212262653",
+    "product_url": "https://lampan.se/p/turbin-14cm-0/?option=1055",
+    "cart_deeplink": "https://lampan.se/p/turbin-14cm-0/?option=1055",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=26500%2F05%2F30&fid=2470&url=https://lampan.se/p/turbin-14cm-0/?option=1055",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/26500-05-30.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

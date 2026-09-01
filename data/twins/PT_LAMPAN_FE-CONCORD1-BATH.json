@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_FE-CONCORD1-BATH",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Concord 26cm - Badrumslampa - Krom",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "FE-CONCORD1-BATH",
+    "ean": "5024005225218",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1689,
+    "ean": "5024005225218",
+    "product_url": "https://lampan.se/p/concord-26cm/?option=10409",
+    "cart_deeplink": "https://lampan.se/p/concord-26cm/?option=10409",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=FE-CONCORD1-BATH&fid=2470&url=https://lampan.se/p/concord-26cm/?option=10409",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/fe-concord1-bath.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

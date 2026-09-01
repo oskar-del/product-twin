@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2006054",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Parkettgolv Boen Ek Andante Live Matt lack 1-stav",
+    "manufacturer": "Boen",
+    "article_no": "GOP2006054",
+    "ean": "7035580047902",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 6235,
+    "ean": "7035580047902",
+    "product_url": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-boen-ek-andante-live-matt-lack-1-stav/p-2006054",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-boen-ek-andante-live-matt-lack-1-stav/p-2006054",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2006054&fid=2559&url=https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-boen-ek-andante-live-matt-lack-1-stav/p-2006054",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f7ffcd90-7710-47c9-a5a9-14f4b9f40f80/10036331_oak-andante-castle-plank-kopiera.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

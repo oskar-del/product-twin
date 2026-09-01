@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_129259",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "FeelDesign Cannes utestol svart",
+    "manufacturer": "Mjuk",
+    "article_no": "129259",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2849,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/129259/feeldesign-cannes-utestol-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/129259/feeldesign-cannes-utestol-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=129259&fid=978&url=https://www.mjuk.com/sv-se/product/129259/feeldesign-cannes-utestol-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/46a316e37226ab9f8c7a22cee2c9d1b6.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

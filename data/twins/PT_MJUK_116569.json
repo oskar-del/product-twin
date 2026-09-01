@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_116569",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Capdell Loop arbetsstol blå",
+    "manufacturer": "Capdell",
+    "article_no": "116569",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4150,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/116569/capdell-loop-arbetsstol-bla",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/116569/capdell-loop-arbetsstol-bla",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=116569&fid=978&url=https://www.mjuk.com/sv-se/product/116569/capdell-loop-arbetsstol-bla",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/156af546671a0c13d1c9b8322d8821f0.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_915004327801",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Philips - Runner 4 - Spotlight - vit",
+    "manufacturer": "Philips",
+    "article_no": "915004327801",
+    "ean": "8718291487852",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1439,
+    "ean": "8718291487852",
+    "product_url": "https://lampan.se/p/runner-4-0/?option=6413",
+    "cart_deeplink": "https://lampan.se/p/runner-4-0/?option=6413",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=915004327801&fid=2470&url=https://lampan.se/p/runner-4-0/?option=6413",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/249eecea35ef4ad89d17ab1400c3a9c1.unknown.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

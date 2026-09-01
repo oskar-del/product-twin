@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_8885-5CL",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Marie Therese Ø55 - Taklampa - Klar",
+    "manufacturer": "Searchlight",
+    "article_no": "8885-5CL",
+    "ean": "5013874412379",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1829,
+    "ean": "5013874412379",
+    "product_url": "https://lampan.se/p/marie-therese-o55/?option=2883",
+    "cart_deeplink": "https://lampan.se/p/marie-therese-o55/?option=2883",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=8885-5CL&fid=2470&url=https://lampan.se/p/marie-therese-o55/?option=2883",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/8885-5cl.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

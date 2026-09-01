@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_11400-8GO",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Lara 98cm - Kristallkrona - Borstad guld",
+    "manufacturer": "Searchlight",
+    "article_no": "11400-8GO",
+    "ean": "5053423301464",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4699,
+    "ean": "5053423301464",
+    "product_url": "https://lampan.se/p/lara-98cm/?option=14954",
+    "cart_deeplink": "https://lampan.se/p/lara-98cm/?option=14954",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=11400-8GO&fid=2470&url=https://lampan.se/p/lara-98cm/?option=14954",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/11400-8go_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

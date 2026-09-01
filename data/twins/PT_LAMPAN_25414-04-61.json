@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_25414-04-61",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Trevor 125cm - Taklampa - Vit",
+    "manufacturer": "Lucide",
+    "article_no": "25414/04/61",
+    "ean": "5411212251145",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1929,
+    "ean": "5411212251145",
+    "product_url": "https://lampan.se/p/trevor-125cm/?option=14024",
+    "cart_deeplink": "https://lampan.se/p/trevor-125cm/?option=14024",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=25414%2F04%2F61&fid=2470&url=https://lampan.se/p/trevor-125cm/?option=14024",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/high-ressquare25414-04-61.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

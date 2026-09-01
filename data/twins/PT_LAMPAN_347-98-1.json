@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_347-98-1",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - GX53 LED-lampa - Ljuskälla",
+    "manufacturer": "Star Trading",
+    "article_no": "347-98-1",
+    "ean": "7391482049049",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 99,
+    "ean": "7391482049049",
+    "product_url": "https://lampan.se/p/gx53-led-lampa/",
+    "cart_deeplink": "https://lampan.se/p/gx53-led-lampa/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=347-98-1&fid=2470&url=https://lampan.se/p/gx53-led-lampa/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/347-98-1_fl_001.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_0368M",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Karlskrona lampfabrik - Fröding 300 - Karlskrona lampfabrik - Mässing",
+    "manufacturer": "Karlskrona lampfabrik",
+    "article_no": "0368M",
+    "ean": "7332535051084",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4700,
+    "ean": "7332535051084",
+    "product_url": "https://lampan.se/p/froding-300/?option=9701",
+    "cart_deeplink": "https://lampan.se/p/froding-300/?option=9701",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=0368M&fid=2470&url=https://lampan.se/p/froding-300/?option=9701",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/784x870_ta-0368m_2330l1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_134674",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Smeg vattenkokare 1,7 L mattvit",
+    "manufacturer": "Smeg",
+    "article_no": "134674",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1544,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/134674/smeg-vattenkokare-1-7-l-mattvit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/134674/smeg-vattenkokare-1-7-l-mattvit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=134674&fid=978&url=https://www.mjuk.com/sv-se/product/134674/smeg-vattenkokare-1-7-l-mattvit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/34dc5e79adb3564b3ac1070f3810e836.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

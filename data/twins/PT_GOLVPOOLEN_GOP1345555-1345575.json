@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1345555-1345575",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bidé Villeroy & Boch Subway 2.0 Väggmonterad",
+    "manufacturer": "Villeroy & Boch",
+    "article_no": "GOP1345555-1345575",
+    "ean": "4047289796589",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 7921,
+    "ean": "4047289796589",
+    "product_url": "https://www.golvpoolen.se/badrum/bide/vagghangd-bide/bide-villeroy-och-boch-subway-20-vaggmonterad/p-1345555-1345575",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/bide/vagghangd-bide/bide-villeroy-och-boch-subway-20-vaggmonterad/p-1345555-1345575",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1345555-1345575&fid=2559&url=https://www.golvpoolen.se/badrum/bide/vagghangd-bide/bide-villeroy-och-boch-subway-20-vaggmonterad/p-1345555-1345575",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/9ba3bb61-5efc-4cf1-9c3e-001b269eee13/pic_54000001_540000r1_33600965_s.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

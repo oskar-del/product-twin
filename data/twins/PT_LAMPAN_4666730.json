@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4666730",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Unison - E27 sensor rörelse + dag/natt 9W 3000K - Ljuskälla - Vit",
+    "manufacturer": "Unison",
+    "article_no": "4666730",
+    "ean": "7340037006198",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 169,
+    "ean": "7340037006198",
+    "product_url": "https://lampan.se/p/e27-sensor-rorelse-dag-natt-9w-3000k/?option=4529",
+    "cart_deeplink": "https://lampan.se/p/e27-sensor-rorelse-dag-natt-9w-3000k/?option=4529",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4666730&fid=2470&url=https://lampan.se/p/e27-sensor-rorelse-dag-natt-9w-3000k/?option=4529",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/led-e27-rorelsesensor-opal-2700k-806lm-83w60w-47611.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

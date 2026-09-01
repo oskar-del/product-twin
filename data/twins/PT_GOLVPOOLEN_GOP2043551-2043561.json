@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2043551-2043561",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschvägg Arc 13 Frame",
+    "manufacturer": "INR",
+    "article_no": "GOP2043551-2043561",
+    "ean": "7392102097884",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 18252,
+    "ean": "7392102097884",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschvagg/duschvagg-arc-13-frame/p-2043551-2043561",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschvagg/duschvagg-arc-13-frame/p-2043551-2043561",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2043551-2043561&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschvagg/duschvagg-arc-13-frame/p-2043551-2043561",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b8ecb7a6-2eb6-47ba-bc68-332d8f396e6d/113111189.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

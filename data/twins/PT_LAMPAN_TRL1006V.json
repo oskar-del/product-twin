@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_TRL1006V",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Nordic Lighting - Forma 3-set - Nordic Lighting skensystem - Vit",
+    "manufacturer": "Nordic Lighting",
+    "article_no": "TRL1006V",
+    "ean": "7350170884157",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 849,
+    "ean": "7350170884157",
+    "product_url": "https://lampan.se/p/forma-3-set-0/?option=15614",
+    "cart_deeplink": "https://lampan.se/p/forma-3-set-0/?option=15614",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=TRL1006V&fid=2470&url=https://lampan.se/p/forma-3-set-0/?option=15614",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/trl1006v1-97087.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

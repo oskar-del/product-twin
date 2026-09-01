@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1082141",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Kakel Arredo Carrara Blank 10x20 cm",
+    "manufacturer": "Arredo",
+    "article_no": "GOP1082141",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 455,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/kakel-och-klinker/kakel/kakel-badrum/kakel-arredo-carrara-blank-10x20-cm/p-1082141",
+    "cart_deeplink": "https://www.golvpoolen.se/kakel-och-klinker/kakel/kakel-badrum/kakel-arredo-carrara-blank-10x20-cm/p-1082141",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1082141&fid=2559&url=https://www.golvpoolen.se/kakel-och-klinker/kakel/kakel-badrum/kakel-arredo-carrara-blank-10x20-cm/p-1082141",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/23a1f4b7-db65-4d2a-b98d-eb61c12a347b/299108.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

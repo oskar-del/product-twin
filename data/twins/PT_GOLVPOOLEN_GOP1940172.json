@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1940172",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Transformator till Gustavsberg Sensoric 1.0",
+    "manufacturer": "Gustavsberg",
+    "article_no": "GOP1940172",
+    "ean": "7391530080895",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 420,
+    "ean": "7391530080895",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/transformator-till-gustavsberg-sensoric-10/p-1940172",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/transformator-till-gustavsberg-sensoric-10/p-1940172",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1940172&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/transformator-till-gustavsberg-sensoric-10/p-1940172",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/5de932a4-5587-4583-a162-b16ad3eff190/8009001.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

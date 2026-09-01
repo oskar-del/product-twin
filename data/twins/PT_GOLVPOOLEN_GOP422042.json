@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP422042",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukskrok Beslagsboden BK1093 Krom",
+    "manufacturer": "Beslagsboden",
+    "article_no": "GOP422042",
+    "ean": "7391447044669",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 98,
+    "ean": "7391447044669",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-beslagsboden-bk1093-krom/p-422042",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-beslagsboden-bk1093-krom/p-422042",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP422042&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-beslagsboden-bk1093-krom/p-422042",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/60c83e6b-3f66-4d01-b742-ad7988c0ee82/handdukskrok-beslagsboden-bk1093-rostfri.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

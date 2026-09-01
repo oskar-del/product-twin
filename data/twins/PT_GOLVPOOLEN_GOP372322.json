@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP372322",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Uttag FM Mattsson för Bänkdiskmaskin/Kaffemaskin",
+    "manufacturer": "FM Mattsson",
+    "article_no": "GOP372322",
+    "ean": "7391887225871",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 499,
+    "ean": "7391887225871",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/uttag-fm-mattsson-for-bankdiskmaskin-och-kaffemaskin/p-372322",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/uttag-fm-mattsson-for-bankdiskmaskin-och-kaffemaskin/p-372322",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP372322&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/uttag-fm-mattsson-for-bankdiskmaskin-och-kaffemaskin/p-372322",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/3ac761b5-de2c-4614-b713-b80f66c6dc10/uttag-fm-mattsson-for-bankdiskmaskin-och-kaffemaskin.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

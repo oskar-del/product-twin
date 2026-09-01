@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GRIPSHOLM_1-se-p8365-v18152-s12814",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gripsholm Örngott i siden",
+    "manufacturer": "Gripsholm",
+    "article_no": "1/se-p8365-v18152-s12814",
+    "ean": "7318161535181",
+    "source": "gripsholm_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "gripsholm SE",
+    "currency": "SEK",
+    "unit_price": 599,
+    "ean": "7318161535181",
+    "product_url": "https://www.gripsholm.se/p/pillowcase-silk-offwhite?country=se",
+    "cart_deeplink": "https://www.gripsholm.se/p/pillowcase-silk-offwhite?country=se",
+    "affiliate_link": "https://pid.gripsholm.se/t/t?a=1960533239&as=2106320328&t=2&tk=1&cupa_sku=1%2Fse-p8365-v18152-s12814&fid=2720&url=https://www.gripsholm.se/p/pillowcase-silk-offwhite?country=se",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://springhill.centracdn.net/client/dynamic/originals/8365_5885da0c49-917771_917771-02-original.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

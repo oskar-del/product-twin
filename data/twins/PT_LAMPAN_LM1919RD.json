@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_LM1919RD",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Leitmotiv - Bonnet 40cm - Bordslampa - Röd",
+    "manufacturer": "Leitmotiv",
+    "article_no": "LM1919RD",
+    "ean": "8714302775253",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 779,
+    "ean": "8714302775253",
+    "product_url": "https://lampan.se/p/bonnet-40cm-4/?option=15370",
+    "cart_deeplink": "https://lampan.se/p/bonnet-40cm-4/?option=15370",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=LM1919RD&fid=2470&url=https://lampan.se/p/bonnet-40cm-4/?option=15370",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/lm1919rd_00.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

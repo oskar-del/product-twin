@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP791523",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bandslip Einhell TC-BS 8038",
+    "manufacturer": "Einhell",
+    "article_no": "GOP791523",
+    "ean": "4006825598360",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 735,
+    "ean": "4006825598360",
+    "product_url": "https://www.golvpoolen.se/verktyg/elverktyg/slipmaskin/bandslip-einhell-tc-bs-8038/p-791523",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/elverktyg/slipmaskin/bandslip-einhell-tc-bs-8038/p-791523",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP791523&fid=2559&url=https://www.golvpoolen.se/verktyg/elverktyg/slipmaskin/bandslip-einhell-tc-bs-8038/p-791523",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/28605616-4bd2-41bb-8f44-dd1c2f9edc4d/bandslip-einhell-tc-bs-8038.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

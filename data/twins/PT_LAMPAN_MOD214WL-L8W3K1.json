@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD214WL-L8W3K1",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Combo 52cm - Sänglampa - Vit",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD214WL-L8W3K1",
+    "ean": "4099776180203",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2549,
+    "ean": "4099776180203",
+    "product_url": "https://lampan.se/p/combo-52cm/?option=12263",
+    "cart_deeplink": "https://lampan.se/p/combo-52cm/?option=12263",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD214WL-L8W3K1&fid=2470&url=https://lampan.se/p/combo-52cm/?option=12263",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/image0-4511.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD085PL-12BS",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Revero Ø70 - Kristallkrona - Mässing",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD085PL-12BS",
+    "ean": "4251110046204",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 10469,
+    "ean": "4251110046204",
+    "product_url": "https://lampan.se/p/revero-o70/?option=12284",
+    "cart_deeplink": "https://lampan.se/p/revero-o70/?option=12284",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD085PL-12BS&fid=2470&url=https://lampan.se/p/revero-o70/?option=12284",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/image1-79380.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

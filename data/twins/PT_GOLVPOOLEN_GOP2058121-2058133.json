@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2058121-2058133",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschdörr Strømberg Noma 45 med Sidopanel Nisch",
+    "manufacturer": "Strømberg",
+    "article_no": "GOP2058121-2058133",
+    "ean": "5055350927830",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 10590,
+    "ean": "5055350927830",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-stromberg-noma-45-med-sidopanel-nisch/p-2058121-2058133",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-stromberg-noma-45-med-sidopanel-nisch/p-2058121-2058133",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2058121-2058133&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-stromberg-noma-45-med-sidopanel-nisch/p-2058121-2058133",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/94c9b7bc-97ff-4394-8a34-d7b96adbae72/dns45-11-h-.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

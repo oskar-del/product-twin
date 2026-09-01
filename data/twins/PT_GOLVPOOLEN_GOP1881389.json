@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1881389",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Hörnlist Hestraplattan Hestra Beige",
+    "manufacturer": "Hestraplattan",
+    "article_no": "GOP1881389",
+    "ean": "7391520100473",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 35,
+    "ean": "7391520100473",
+    "product_url": "https://www.golvpoolen.se/golv/utegolv/trall-balkong/hornlist-hestraplattan-hestra-beige/p-1881389",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/utegolv/trall-balkong/hornlist-hestraplattan-hestra-beige/p-1881389",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1881389&fid=2559&url=https://www.golvpoolen.se/golv/utegolv/trall-balkong/hornlist-hestraplattan-hestra-beige/p-1881389",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f54bff2f-ed6c-48b8-a40b-13752eb2ad33/classic_hornlist_beige-scaled.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

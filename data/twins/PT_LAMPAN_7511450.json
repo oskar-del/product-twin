@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7511450",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ifö electric - Aton Cairo Stor Ø34 - Badrumslampa - Grå",
+    "manufacturer": "Ifö electric",
+    "article_no": "7511450",
+    "ean": "7312907305120",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2669,
+    "ean": "7312907305120",
+    "product_url": "https://lampan.se/p/aton-cairo-stor-o34/?option=4901",
+    "cart_deeplink": "https://lampan.se/p/aton-cairo-stor-o34/?option=4901",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7511450&fid=2470&url=https://lampan.se/p/aton-cairo-stor-o34/?option=4901",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-88227.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

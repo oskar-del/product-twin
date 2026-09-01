@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP250515-250523",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschbadkar Svedbergs Torne",
+    "manufacturer": "Svedbergs",
+    "article_no": "GOP250515-250523",
+    "ean": "7323100008930",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 15299,
+    "ean": "7323100008930",
+    "product_url": "https://www.golvpoolen.se/badrum/badkar/duschbadkar/duschbadkar-svedbergs-torne/p-250515-250523",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badkar/duschbadkar/duschbadkar-svedbergs-torne/p-250515-250523",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP250515-250523&fid=2559&url=https://www.golvpoolen.se/badrum/badkar/duschbadkar/duschbadkar-svedbergs-torne/p-250515-250523",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/6021280a-9965-4560-a431-82ba5739fd7c/duschbadkar-svedbergs-z1700.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2066582",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Mellanlägg Timberman TimberLUX 1.6mm med fuktspärr",
+    "manufacturer": "Timberman",
+    "article_no": "GOP2066582",
+    "ean": "5602248690897",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 949,
+    "ean": "5602248690897",
+    "product_url": "https://www.golvpoolen.se/golv/golvtillbehor/ovriga-golvtillbehor/mellanlagg-timberman-timberlux-16mm-med-fuktsparr/p-2066582",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvtillbehor/ovriga-golvtillbehor/mellanlagg-timberman-timberlux-16mm-med-fuktsparr/p-2066582",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2066582&fid=2559&url=https://www.golvpoolen.se/golv/golvtillbehor/ovriga-golvtillbehor/mellanlagg-timberman-timberlux-16mm-med-fuktsparr/p-2066582",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/d4465053-8c84-4a3b-b9cc-c60661e0f1c3/184570-timberlux_miljo_bred_01.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

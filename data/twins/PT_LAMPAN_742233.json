@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_742233",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Bellevue Ø14 - Taklampa - Opal",
+    "manufacturer": "Halo Design",
+    "article_no": "742233",
+    "ean": "5705639742233",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1249,
+    "ean": "5705639742233",
+    "product_url": "https://lampan.se/p/bellevue-o14/?option=8205",
+    "cart_deeplink": "https://lampan.se/p/bellevue-o14/?option=8205",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=742233&fid=2470&url=https://lampan.se/p/bellevue-o14/?option=8205",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/742233-bellevue-pendant-opal-14_packshot.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1083005",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Inbyggnadsdel Hansgrohe Trio Avstängnings-/Omkastarventil",
+    "manufacturer": "Hansgrohe",
+    "article_no": "GOP1083005",
+    "ean": "4011097415772",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2363,
+    "ean": "4011097415772",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/inbyggnadsdel-hansgrohe-trio-avstangnings-och-omkastarventil/p-1083005",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/inbyggnadsdel-hansgrohe-trio-avstangnings-och-omkastarventil/p-1083005",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1083005&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/inbyggnadsdel-hansgrohe-trio-avstangnings-och-omkastarventil/p-1083005",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/1921dfc4-5441-4145-8a23-c57b34c3be46/hansgrohe_15981180.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

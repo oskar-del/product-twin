@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_117709",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Decotique Marvelous konsolbord vit",
+    "manufacturer": "Decotique",
+    "article_no": "117709",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1612,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/117709/decotique-marvelous-konsolbord-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/117709/decotique-marvelous-konsolbord-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=117709&fid=978&url=https://www.mjuk.com/sv-se/product/117709/decotique-marvelous-konsolbord-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/aa34e3618c290a75088e510c74d06a42.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

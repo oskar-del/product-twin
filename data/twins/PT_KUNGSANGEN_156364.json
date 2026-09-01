@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_156364",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Sunnerström 180x200 Mjuk/Fast A.Black",
+    "manufacturer": "Kungsangen",
+    "article_no": "156364",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 55990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-sunnerstrom/156364",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-sunnerstrom/156364",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=156364&fid=2564&url=https://kungsangen.com/se/p/sang-sunnerstrom/156364",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h80/hf7/8825243697182/ks2000Wx1500H_sunnerstrom_kontinental_s31_vx20_180_anouk_black/ks2000Wx1500H-sunnerstrom-kontinental-s31-vx20-180-anouk-black.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

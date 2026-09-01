@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_126939",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Estiluz Flow pendellampa guld",
+    "manufacturer": "Estiluz",
+    "article_no": "126939",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4504,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/126939/estiluz-flow-pendellampa-guld",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/126939/estiluz-flow-pendellampa-guld",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=126939&fid=978&url=https://www.mjuk.com/sv-se/product/126939/estiluz-flow-pendellampa-guld",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/76d7279a-4691-4627-bf47-231e8ee403b5.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7530303",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ifö electric - Opus 100/100 - Badrumslampa - Svart",
+    "manufacturer": "Ifö electric",
+    "article_no": "7530303",
+    "ean": "7312908201162",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 949,
+    "ean": "7312908201162",
+    "product_url": "https://lampan.se/p/opus-100-100/?option=4840",
+    "cart_deeplink": "https://lampan.se/p/opus-100-100/?option=4840",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7530303&fid=2470&url=https://lampan.se/p/opus-100-100/?option=4840",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/768f87fd722aa305d18076e9703638a28b6f6dfe420.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

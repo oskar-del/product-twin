@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70018343",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "FAD Golvlampa Vit/Ek - Santa & Cole - Vardagsrum - Trä",
+    "manufacturer": "Santa & Cole",
+    "article_no": "70018343",
+    "ean": "8435515313062",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 12455,
+    "ean": "8435515313062",
+    "product_url": "https://www.lampemesteren.se/p/fad-golvlampa-vit-ek-santa-cole-70018343.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/fad-golvlampa-vit-ek-santa-cole-70018343.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70018343&fid=1004&url=https://www.lampemesteren.se/p/fad-golvlampa-vit-ek-santa-cole-70018343.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/3512D3ABD979/k_8fdeb1180a1bb4ff1b855f01112cf563;w_1600;h_1600;q_90/70018343.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

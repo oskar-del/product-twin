@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_B1219GR",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cottex - Archie 35cm - Bordslampa - Grön",
+    "manufacturer": "Cottex",
+    "article_no": "B1219GR",
+    "ean": "7393168521955",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 249,
+    "ean": "7393168521955",
+    "product_url": "https://lampan.se/p/archie-35cm-0/?option=4385",
+    "cart_deeplink": "https://lampan.se/p/archie-35cm-0/?option=4385",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=B1219GR&fid=2470&url=https://lampan.se/p/archie-35cm-0/?option=4385",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/kopiaavb1219gr.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

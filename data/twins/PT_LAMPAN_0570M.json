@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_0570M",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Karlskrona lampfabrik - Bankir - Karlskrona lampfabrik - Mässing",
+    "manufacturer": "Karlskrona lampfabrik",
+    "article_no": "0570M",
+    "ean": "7332535062585",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4899,
+    "ean": "7332535062585",
+    "product_url": "https://lampan.se/p/bankir/?option=9141",
+    "cart_deeplink": "https://lampan.se/p/bankir/?option=9141",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=0570M&fid=2470&url=https://lampan.se/p/bankir/?option=9141",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/784x870_ta-0570m.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

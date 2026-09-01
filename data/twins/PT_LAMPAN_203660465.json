@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_203660465",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "House Doctor - Desk Ø18 - Vägglampa - Antikbrun",
+    "manufacturer": "House Doctor",
+    "article_no": "203660465",
+    "ean": "5707644864443",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1400,
+    "ean": "5707644864443",
+    "product_url": "https://lampan.se/p/desk-o18/?option=8846",
+    "cart_deeplink": "https://lampan.se/p/desk-o18/?option=8846",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=203660465&fid=2470&url=https://lampan.se/p/desk-o18/?option=8846",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/203660465_01.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

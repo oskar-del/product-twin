@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_EU22353OR",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Groove 50cm - Bordslampa - Orange",
+    "manufacturer": "Searchlight",
+    "article_no": "EU22353OR",
+    "ean": "5053423274096",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 719,
+    "ean": "5053423274096",
+    "product_url": "https://lampan.se/p/groove-50cm-0/?option=12914",
+    "cart_deeplink": "https://lampan.se/p/groove-50cm-0/?option=12914",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=EU22353OR&fid=2470&url=https://lampan.se/p/groove-50cm-0/?option=12914",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/eu22353or_22353or_2.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

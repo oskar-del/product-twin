@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_583-750",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Konstsmide - Virgo 255cm - Stolpe - Svart",
+    "manufacturer": "Konstsmide",
+    "article_no": "583-750",
+    "ean": "7318305837508",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5389,
+    "ean": "7318305837508",
+    "product_url": "https://lampan.se/p/virgo-255cm/?option=5066",
+    "cart_deeplink": "https://lampan.se/p/virgo-255cm/?option=5066",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=583-750&fid=2470&url=https://lampan.se/p/virgo-255cm/?option=5066",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/583-750.i.1.0.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

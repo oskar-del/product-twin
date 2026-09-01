@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2018-11-90-50",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Pixie Design - Hilda 11 - Adventsljusstake - Vit",
+    "manufacturer": "Pixie Design",
+    "article_no": "2018/11-90-50",
+    "ean": "7340119807415",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 669,
+    "ean": "7340119807415",
+    "product_url": "https://lampan.se/p/hilda-11-0/?option=2324",
+    "cart_deeplink": "https://lampan.se/p/hilda-11-0/?option=2324",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2018%2F11-90-50&fid=2470&url=https://lampan.se/p/hilda-11-0/?option=2324",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/nova11_vit_1b.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

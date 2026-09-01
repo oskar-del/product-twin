@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_P4536MK",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lampan - Ascot Ø46 - Kristallkrona - Mässing/transparent",
+    "manufacturer": "Lampan",
+    "article_no": "P4536MK",
+    "ean": "7350170883822",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3699,
+    "ean": "7350170883822",
+    "product_url": "https://lampan.se/p/ascot-o46/?option=15602",
+    "cart_deeplink": "https://lampan.se/p/ascot-o46/?option=15602",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=P4536MK&fid=2470&url=https://lampan.se/p/ascot-o46/?option=15602",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/p4536mk.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

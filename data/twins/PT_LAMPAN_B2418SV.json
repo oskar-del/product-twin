@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_B2418SV",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cottex - New Chelsea 47cm - Bordslampa - Svart",
+    "manufacturer": "Cottex",
+    "article_no": "B2418SV",
+    "ean": "7393168541823",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 539,
+    "ean": "7393168541823",
+    "product_url": "https://lampan.se/p/new-chelsea-47cm/?option=4418",
+    "cart_deeplink": "https://lampan.se/p/new-chelsea-47cm/?option=4418",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=B2418SV&fid=2470&url=https://lampan.se/p/new-chelsea-47cm/?option=4418",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/b2418sv.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

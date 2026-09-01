@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_21443-35-33",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Runa Ø35 - Taklampa - Grön",
+    "manufacturer": "Lucide",
+    "article_no": "21443/35/33",
+    "ean": "5411212212214",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 719,
+    "ean": "5411212212214",
+    "product_url": "https://lampan.se/p/runa-o35/?option=14698",
+    "cart_deeplink": "https://lampan.se/p/runa-o35/?option=14698",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=21443%2F35%2F33&fid=2470&url=https://lampan.se/p/runa-o35/?option=14698",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/high-res21443-35-33.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_901938",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Eglo - Mannera 20cm - Portabel lampa - Röd",
+    "manufacturer": "Eglo",
+    "article_no": "901938",
+    "ean": "9008606355556",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 499,
+    "ean": "9008606355556",
+    "product_url": "https://lampan.se/p/mannera-20cm-3/?option=12219",
+    "cart_deeplink": "https://lampan.se/p/mannera-20cm-3/?option=12219",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=901938&fid=2470&url=https://lampan.se/p/mannera-20cm-3/?option=12219",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-99758.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_131523",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Sofienäs 160x210 Fast/Extra fast A.Petrol",
+    "manufacturer": "Kungsangen",
+    "article_no": "131523",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 37190,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-sofienas/131523",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-sofienas/131523",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=131523&fid=2564&url=https://kungsangen.com/se/p/sang-sofienas/131523",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/ha7/h31/9605616533534/ks2000Wx1500H_sofienas_ramsang_s23_180_anouk_petrol/ks2000Wx1500H-sofienas-ramsang-s23-180-anouk-petrol.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

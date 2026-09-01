@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1876731-1876734",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Väggpanel Lamelio Vasco",
+    "manufacturer": "Lamelio",
+    "article_no": "GOP1876731-1876734",
+    "ean": "5900774963639",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 299,
+    "ean": "5900774963639",
+    "product_url": "https://www.golvpoolen.se/golv/vaggbekladnad/vaggskivor/vaggpanel-lamelio-vasco/p-1876731-1876734",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/vaggbekladnad/vaggskivor/vaggpanel-lamelio-vasco/p-1876731-1876734",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1876731-1876734&fid=2559&url=https://www.golvpoolen.se/golv/vaggbekladnad/vaggskivor/vaggpanel-lamelio-vasco/p-1876731-1876734",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/fbe31289-5b71-4d6f-acb6-f2379e451792/10070-21-3.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

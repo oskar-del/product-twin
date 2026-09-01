@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_G81162-06",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Jorvic 60cm - Takplafond - Svart",
+    "manufacturer": "Brilliant",
+    "article_no": "G81162/06",
+    "ean": "4004353463006",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 519,
+    "ean": "4004353463006",
+    "product_url": "https://lampan.se/p/jorvic-60cm/?option=12972",
+    "cart_deeplink": "https://lampan.se/p/jorvic-60cm/?option=12972",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=G81162%2F06&fid=2470&url=https://lampan.se/p/jorvic-60cm/?option=12972",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/g81162_06.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

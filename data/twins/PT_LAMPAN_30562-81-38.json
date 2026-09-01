@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_30562-81-38",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Herman 50cm - Bordslampa - Creme",
+    "manufacturer": "Lucide",
+    "article_no": "30562/81/38",
+    "ean": "5411212303394",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1459,
+    "ean": "5411212303394",
+    "product_url": "https://lampan.se/p/herman-50cm/?option=1058",
+    "cart_deeplink": "https://lampan.se/p/herman-50cm/?option=1058",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=30562%2F81%2F38&fid=2470&url=https://lampan.se/p/herman-50cm/?option=1058",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/30562-81-38.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

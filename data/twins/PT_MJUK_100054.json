@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_100054",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Offecct stol vinröd",
+    "manufacturer": "Offecct",
+    "article_no": "100054",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1831,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/100054/offecct-stol-vinrod",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/100054/offecct-stol-vinrod",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=100054&fid=978&url=https://www.mjuk.com/sv-se/product/100054/offecct-stol-vinrod",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/610d17f1d8476eb3c48b501aaf8afdd5.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

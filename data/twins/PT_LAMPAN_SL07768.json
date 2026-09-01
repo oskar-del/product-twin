@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_SL07768",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Superliving - Urban Wide Ø36 - Taklampa - Grön",
+    "manufacturer": "Superliving",
+    "article_no": "SL07768",
+    "ean": "5710825007768",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1695,
+    "ean": "5710825007768",
+    "product_url": "https://lampan.se/p/urban-wide-o36-1/?option=7754",
+    "cart_deeplink": "https://lampan.se/p/urban-wide-o36-1/?option=7754",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=SL07768&fid=2470&url=https://lampan.se/p/urban-wide-o36-1/?option=7754",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-97219.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

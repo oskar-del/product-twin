@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_49009-05-31",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - LED GU10 5W Dim to warm - Ljuskälla",
+    "manufacturer": "Lucide",
+    "article_no": "49009/05/31",
+    "ean": "5411212491244",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 159,
+    "ean": "5411212491244",
+    "product_url": "https://lampan.se/p/led-gu10-5w-dim-to-warm-0/",
+    "cart_deeplink": "https://lampan.se/p/led-gu10-5w-dim-to-warm-0/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=49009%2F05%2F31&fid=2470&url=https://lampan.se/p/led-gu10-5w-dim-to-warm-0/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-41604.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

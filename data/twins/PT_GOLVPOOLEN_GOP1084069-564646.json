@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1084069-564646",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Slangvinkel Hansgrohe FixFit S",
+    "manufacturer": "Hansgrohe",
+    "article_no": "GOP1084069-564646",
+    "ean": "4011097678726",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 441,
+    "ean": "4011097678726",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/tillbehor-dusch/slangvinkel-hansgrohe-fixfit-s/p-1084069-564646",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/tillbehor-dusch/slangvinkel-hansgrohe-fixfit-s/p-1084069-564646",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1084069-564646&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/tillbehor-dusch/slangvinkel-hansgrohe-fixfit-s/p-1084069-564646",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/ef8c498c-737a-4445-92c4-c1a04ba6d567/hansgrohe_27506000.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

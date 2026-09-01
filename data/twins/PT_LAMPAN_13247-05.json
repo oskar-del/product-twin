@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_13247-05",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Clarie 25cm - Bordslampa - Krom",
+    "manufacturer": "Brilliant",
+    "article_no": "13247/05",
+    "ean": "4004353175190",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 269,
+    "ean": "4004353175190",
+    "product_url": "https://lampan.se/p/clarie-25cm/?option=3735",
+    "cart_deeplink": "https://lampan.se/p/clarie-25cm/?option=3735",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=13247%2F05&fid=2470&url=https://lampan.se/p/clarie-25cm/?option=3735",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/4004353175190.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

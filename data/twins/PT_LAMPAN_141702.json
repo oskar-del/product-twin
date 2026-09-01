@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_141702",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Strömshaga - Fotogenlampa Rak Marja - Fotogenlampa - Transparent",
+    "manufacturer": "Strömshaga",
+    "article_no": "141702",
+    "ean": "7332771077008",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 349,
+    "ean": "7332771077008",
+    "product_url": "https://lampan.se/p/fotogenlampa-rak-marja/?option=13329",
+    "cart_deeplink": "https://lampan.se/p/fotogenlampa-rak-marja/?option=13329",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=141702&fid=2470&url=https://lampan.se/p/fotogenlampa-rak-marja/?option=13329",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-43206.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

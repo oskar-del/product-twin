@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_210475",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Påslakanset Natur Vit 220x210",
+    "manufacturer": "Kungsangen",
+    "article_no": "210475",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 1599,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/paslakanset-natur-vit/210475",
+    "cart_deeplink": "https://kungsangen.com/se/p/paslakanset-natur-vit/210475",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=210475&fid=2564&url=https://kungsangen.com/se/p/paslakanset-natur-vit/210475",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h44/h26/8830063312926/ks2000Wx1500H_paslakanset-natur-vit-150x200/ks2000Wx1500H-paslakanset-natur-vit-150x200.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

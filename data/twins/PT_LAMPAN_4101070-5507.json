@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4101070-5507",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "By Rydéns - Delino - Golvlampa - Beige",
+    "manufacturer": "By Rydéns",
+    "article_no": "4101070-5507",
+    "ean": "7391741014092",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1695,
+    "ean": "7391741014092",
+    "product_url": "https://lampan.se/p/delino/?option=15891",
+    "cart_deeplink": "https://lampan.se/p/delino/?option=15891",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4101070-5507&fid=2470&url=https://lampan.se/p/delino/?option=15891",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/lampa_bild_5.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

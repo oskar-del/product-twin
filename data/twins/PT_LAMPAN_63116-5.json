@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_63116-5",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Cuimbra Ø45 - Kristallkrona - Krom",
+    "manufacturer": "Globo Lighting",
+    "article_no": "63116-5",
+    "ean": "9007371250752",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1149,
+    "ean": "9007371250752",
+    "product_url": "https://lampan.se/p/cuimbra-o45/?option=9822",
+    "cart_deeplink": "https://lampan.se/p/cuimbra-o45/?option=9822",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=63116-5&fid=2470&url=https://lampan.se/p/cuimbra-o45/?option=9822",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-62412.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

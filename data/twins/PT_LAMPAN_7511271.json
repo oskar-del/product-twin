@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7511271",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ifö electric - Light On Ø10 - Badrumslampa - Svart",
+    "manufacturer": "Ifö electric",
+    "article_no": "7511271",
+    "ean": "7312906057167",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1159,
+    "ean": "7312906057167",
+    "product_url": "https://lampan.se/p/light-on-o10-3/?option=5139",
+    "cart_deeplink": "https://lampan.se/p/light-on-o10-3/?option=5139",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7511271&fid=2470&url=https://lampan.se/p/light-on-o10-3/?option=5139",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/12240cd6cc3671610d8e4982673044f4cfff4338300.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

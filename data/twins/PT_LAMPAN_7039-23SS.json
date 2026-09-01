@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7039-23SS",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Cheese Ø23 - Badrumslampa - Silver",
+    "manufacturer": "Searchlight",
+    "article_no": "7039-23SS",
+    "ean": "5013874395511",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 579,
+    "ean": "5013874395511",
+    "product_url": "https://lampan.se/p/cheese-o23-0/?option=2988",
+    "cart_deeplink": "https://lampan.se/p/cheese-o23-0/?option=2988",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7039-23SS&fid=2470&url=https://lampan.se/p/cheese-o23-0/?option=2988",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/7039-23ss.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

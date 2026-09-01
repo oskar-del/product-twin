@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7839-630",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Konstsmide - Menton 30cm - Portabel lampa - Grön",
+    "manufacturer": "Konstsmide",
+    "article_no": "7839-630",
+    "ean": "7318307839630",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1359,
+    "ean": "7318307839630",
+    "product_url": "https://lampan.se/p/menton-30cm-0/?option=10427",
+    "cart_deeplink": "https://lampan.se/p/menton-30cm-0/?option=10427",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7839-630&fid=2470&url=https://lampan.se/p/menton-30cm-0/?option=10427",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-61007.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

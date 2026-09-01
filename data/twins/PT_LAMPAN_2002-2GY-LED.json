@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2002-2GY-LED",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Sheffield - Fasadbelysning - Antracit",
+    "manufacturer": "Searchlight",
+    "article_no": "2002-2GY-LED",
+    "ean": "5053423138046",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 869,
+    "ean": "5053423138046",
+    "product_url": "https://lampan.se/p/sheffield-0/?option=3003",
+    "cart_deeplink": "https://lampan.se/p/sheffield-0/?option=3003",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2002-2GY-LED&fid=2470&url=https://lampan.se/p/sheffield-0/?option=3003",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/2002-2gy-led.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

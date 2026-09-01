@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_122466",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Fogia Figurine konferensbord petrol",
+    "manufacturer": "Fogia",
+    "article_no": "122466",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 8549,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/122466/fogia-figurine-konferensbord-petrol",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/122466/fogia-figurine-konferensbord-petrol",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=122466&fid=978&url=https://www.mjuk.com/sv-se/product/122466/fogia-figurine-konferensbord-petrol",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/d942529f3ea6a2c59c05e410f70ef4f8.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

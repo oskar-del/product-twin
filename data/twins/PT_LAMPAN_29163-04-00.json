@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_29163-04-00",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Toulouse - Golvlampa - Guld",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "29163-04-00",
+    "ean": "7041661291928",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3999,
+    "ean": "7041661291928",
+    "product_url": "https://lampan.se/p/toulouse/?option=15824",
+    "cart_deeplink": "https://lampan.se/p/toulouse/?option=15824",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=29163-04-00&fid=2470&url=https://lampan.se/p/toulouse/?option=15824",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/eznfjhha2ck42qjbgyo7rkn0w.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

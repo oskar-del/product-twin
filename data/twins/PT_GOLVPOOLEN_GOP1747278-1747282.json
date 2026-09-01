@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1747278-1747282",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukstork LH Prato",
+    "manufacturer": "LH",
+    "article_no": "GOP1747278-1747282",
+    "ean": "8053303385970",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 10678,
+    "ean": "8053303385970",
+    "product_url": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-lh-prato/p-1747278-1747282",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-lh-prato/p-1747278-1747282",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1747278-1747282&fid=2559&url=https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-lh-prato/p-1747278-1747282",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/2000d96b-d567-438a-80fe-2d2fa7c65109/prato50067eh-db-handukstork-lh-sanova-mattsvart-dsc_0065.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

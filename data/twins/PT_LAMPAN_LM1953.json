@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_LM1953",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Leitmotiv - Bonnet 40cm - Bordslampa - Grön",
+    "manufacturer": "Leitmotiv",
+    "article_no": "LM1953",
+    "ean": "8714302691904",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 779,
+    "ean": "8714302691904",
+    "product_url": "https://lampan.se/p/bonnet-40cm-2/?option=15368",
+    "cart_deeplink": "https://lampan.se/p/bonnet-40cm-2/?option=15368",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=LM1953&fid=2470&url=https://lampan.se/p/bonnet-40cm-2/?option=15368",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/lm1953.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

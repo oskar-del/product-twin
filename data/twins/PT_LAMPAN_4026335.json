@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4026335",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Unison - LED G9 4W 3000K dimbar - Ljuskälla",
+    "manufacturer": "Unison",
+    "article_no": "4026335",
+    "ean": "7340037007218",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 99,
+    "ean": "7340037007218",
+    "product_url": "https://lampan.se/p/led-g9-4w-3000k-dimbar/",
+    "cart_deeplink": "https://lampan.se/p/led-g9-4w-3000k-dimbar/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4026335&fid=2470&url=https://lampan.se/p/led-g9-4w-3000k-dimbar/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/result-4026335-22-w.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

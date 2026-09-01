@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_35410CR",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Mars Ø25 - Taklampa - Krämvit",
+    "manufacturer": "Searchlight",
+    "article_no": "35410CR",
+    "ean": "5053423274294",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 669,
+    "ean": "5053423274294",
+    "product_url": "https://lampan.se/p/mars-o25-3/?option=12853",
+    "cart_deeplink": "https://lampan.se/p/mars-o25-3/?option=12853",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=35410CR&fid=2470&url=https://lampan.se/p/mars-o25-3/?option=12853",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/35410cr_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

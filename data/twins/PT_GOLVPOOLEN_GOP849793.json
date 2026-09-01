@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP849793",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdusch Axor One 2jet",
+    "manufacturer": "Axor",
+    "article_no": "GOP849793",
+    "ean": "4011097790022",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2599,
+    "ean": "4011097790022",
+    "product_url": "https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-axor-one-2jet/p-849793",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-axor-one-2jet/p-849793",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP849793&fid=2559&url=https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-axor-one-2jet/p-849793",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f6a1e180-1387-4e01-95bf-3863f77ccd97/handdusch-hansgrohe-axor-one-2jet.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

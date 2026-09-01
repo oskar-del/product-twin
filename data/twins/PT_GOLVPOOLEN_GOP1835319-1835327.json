@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1835319-1835327",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handtag INR Add",
+    "manufacturer": "INR",
+    "article_no": "GOP1835319-1835327",
+    "ean": "7340123949309",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 241,
+    "ean": "7340123949309",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-inr-add/p-1835319-1835327",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-inr-add/p-1835319-1835327",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1835319-1835327&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-inr-add/p-1835319-1835327",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/2c42eb23-4786-4fe3-9129-88a7db7eb402/inr-add-290-brushed-bronze.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

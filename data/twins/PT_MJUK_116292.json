@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_116292",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lladró Naturofantastic äggkopp",
+    "manufacturer": "Lladró",
+    "article_no": "116292",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 364,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/116292/lladro-naturofantastic-aggkopp",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/116292/lladro-naturofantastic-aggkopp",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=116292&fid=978&url=https://www.mjuk.com/sv-se/product/116292/lladro-naturofantastic-aggkopp",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/5e1d3d5baa8fc0fe48ca5c62d8e97969.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

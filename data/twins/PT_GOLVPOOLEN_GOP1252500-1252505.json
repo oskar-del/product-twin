@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1252500-1252505",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschdörr Hafa Igloo Pro Vik Dubbel",
+    "manufacturer": "Hafa",
+    "article_no": "GOP1252500-1252505",
+    "ean": "7330027119229",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 11830,
+    "ean": "7330027119229",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-hafa-igloo-pro-vik-dubbel/p-1252500-1252505",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-hafa-igloo-pro-vik-dubbel/p-1252500-1252505",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1252500-1252505&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-hafa-igloo-pro-vik-dubbel/p-1252500-1252505",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/bcfee084-fc8f-4bc2-b083-32fc38fa65eb/1450694.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

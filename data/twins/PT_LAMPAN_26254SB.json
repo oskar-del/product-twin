@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_26254SB",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Mod 109cm - Taklampa - Mässing",
+    "manufacturer": "Searchlight",
+    "article_no": "26254SB",
+    "ean": "5053423271101",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3509,
+    "ean": "5053423271101",
+    "product_url": "https://lampan.se/p/mod-109cm/?option=14802",
+    "cart_deeplink": "https://lampan.se/p/mod-109cm/?option=14802",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=26254SB&fid=2470&url=https://lampan.se/p/mod-109cm/?option=14802",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/26254sb_11.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_99675A76",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Mallow Ø20 - Vägglampa - Mattsvart",
+    "manufacturer": "Brilliant",
+    "article_no": "99675A76",
+    "ean": "3276007382051",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 389,
+    "ean": "3276007382051",
+    "product_url": "https://lampan.se/p/mallow-o20/?option=3989",
+    "cart_deeplink": "https://lampan.se/p/mallow-o20/?option=3989",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=99675A76&fid=2470&url=https://lampan.se/p/mallow-o20/?option=3989",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/3276007382051.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

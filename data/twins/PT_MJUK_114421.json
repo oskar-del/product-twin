@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_114421",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Orrefors Reed vas 175 mm klar",
+    "manufacturer": "Orrefors",
+    "article_no": "114421",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1196,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/114421/orrefors-reed-vas-175-mm-klar",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/114421/orrefors-reed-vas-175-mm-klar",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=114421&fid=978&url=https://www.mjuk.com/sv-se/product/114421/orrefors-reed-vas-175-mm-klar",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/b2d6d24adae7b5526b13e227df4367ba.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

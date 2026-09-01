@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1271482-1872290",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Högskåp Svedbergs Stomme",
+    "manufacturer": "Svedbergs",
+    "article_no": "GOP1271482-1872290",
+    "ean": "7323100338860",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3293,
+    "ean": "7323100338860",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/hogskap-svedbergs-stomme/p-1271482-1872290",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/hogskap-svedbergs-stomme/p-1271482-1872290",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1271482-1872290&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/hogskap-svedbergs-stomme/p-1271482-1872290",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/fc0213a3-728b-477c-8cc2-78fe1bbfa884/7120359-kopiera.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_ET38-FR01BT01",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "PR Home - Edith Ø38 - Taklampa - Vit",
+    "manufacturer": "PR Home",
+    "article_no": "ET38-FR01BT01",
+    "ean": "7330976140039",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 999,
+    "ean": "7330976140039",
+    "product_url": "https://lampan.se/p/edith-o38/?option=2624",
+    "cart_deeplink": "https://lampan.se/p/edith-o38/?option=2624",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=ET38-FR01BT01&fid=2470&url=https://lampan.se/p/edith-o38/?option=2624",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/et38-fr01bt01.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

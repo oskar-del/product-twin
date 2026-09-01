@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_228202",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Annehamn 160x210 Multizon Fast/Multizon Medel Sa.67.Antracit",
+    "manufacturer": "Kungsangen",
+    "article_no": "228202",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 77990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-annehamn/228202",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-annehamn/228202",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=228202&fid=2564&url=https://kungsangen.com/se/p/sang-annehamn/228202",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hbf/h7b/8825250250782/ks2000Wx1500H_Annehamn_kontinental_s23_vx20_180_sala_antracit/ks2000Wx1500H-Annehamn-kontinental-s23-vx20-180-sala-antracit.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

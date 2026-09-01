@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4231718",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "PR Home - Tulippa Ø17 - Fönsterlampa - Beige",
+    "manufacturer": "PR Home",
+    "article_no": "4231718",
+    "ean": "7330976132423",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 999,
+    "ean": "7330976132423",
+    "product_url": "https://lampan.se/p/tulippa-o17/?option=2612",
+    "cart_deeplink": "https://lampan.se/p/tulippa-o17/?option=2612",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4231718&fid=2470&url=https://lampan.se/p/tulippa-o17/?option=2612",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/4231718.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_G90961A63",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Hilly - Fasadbelysning - Mörkgrå",
+    "manufacturer": "Brilliant",
+    "article_no": "G90961A63",
+    "ean": "4004353346873",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 499,
+    "ean": "4004353346873",
+    "product_url": "https://lampan.se/p/hilly/?option=4045",
+    "cart_deeplink": "https://lampan.se/p/hilly/?option=4045",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=G90961A63&fid=2470&url=https://lampan.se/p/hilly/?option=4045",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/4004353346873.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

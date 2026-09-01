@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7724111",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Norlys - Stockholm - Fasadbelysning - Svart",
+    "manufacturer": "Norlys",
+    "article_no": "7724111",
+    "ean": "7042892266068",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2209,
+    "ean": "7042892266068",
+    "product_url": "https://lampan.se/p/stockholm-3/?option=4652",
+    "cart_deeplink": "https://lampan.se/p/stockholm-3/?option=4652",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7724111&fid=2470&url=https://lampan.se/p/stockholm-3/?option=4652",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/stockholm-226-b.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

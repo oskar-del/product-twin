@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1486681",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet A Street Prints Akira  FD25100",
+    "manufacturer": "A Street Prints",
+    "article_no": "GOP1486681",
+    "ean": "5011419251001",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 919,
+    "ean": "5011419251001",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-a-street-prints-akira-fd25100/p-1486681",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-a-street-prints-akira-fd25100/p-1486681",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1486681&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-a-street-prints-akira-fd25100/p-1486681",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/644a41b8-6d73-48df-9dae-f465bd85ba50/fd25100.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

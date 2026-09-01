@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1215358-1215365",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdusch Tapwell ZDOC095",
+    "manufacturer": "Tapwell",
+    "article_no": "GOP1215358-1215365",
+    "ean": "7340188813089",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 893,
+    "ean": "7340188813089",
+    "product_url": "https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-tapwell-zdoc095/p-1215358-1215365",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-tapwell-zdoc095/p-1215358-1215365",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1215358-1215365&fid=2559&url=https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-tapwell-zdoc095/p-1215358-1215365",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/4592d87e-542b-42c2-88a9-046d0c1bdb0e/9422849.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

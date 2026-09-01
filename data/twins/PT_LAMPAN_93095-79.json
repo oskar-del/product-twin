@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_93095-79",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Lillian 36cm - Bordslampa - Beige",
+    "manufacturer": "Brilliant",
+    "article_no": "93095/79",
+    "ean": "4004353446016",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 579,
+    "ean": "4004353446016",
+    "product_url": "https://lampan.se/p/lillian-36cm/?option=13907",
+    "cart_deeplink": "https://lampan.se/p/lillian-36cm/?option=13907",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=93095%2F79&fid=2470&url=https://lampan.se/p/lillian-36cm/?option=13907",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/tischleuchten_lillian_4004353446016_1_800x800.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

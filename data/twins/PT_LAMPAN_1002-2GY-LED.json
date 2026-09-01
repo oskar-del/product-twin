@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1002-2GY-LED",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Sheffield - Fasadbelysning - Grå",
+    "manufacturer": "Searchlight",
+    "article_no": "1002-2GY-LED",
+    "ean": "5053423140193",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 899,
+    "ean": "5053423140193",
+    "product_url": "https://lampan.se/p/sheffield-1/?option=3004",
+    "cart_deeplink": "https://lampan.se/p/sheffield-1/?option=3004",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1002-2GY-LED&fid=2470&url=https://lampan.se/p/sheffield-1/?option=3004",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1002-2gy-led.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_ALM-OTIS-F-MB-OP",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Otis Ø20 - Badrumslampa - Svart",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "ALM-OTIS-F-MB-OP",
+    "ean": "5024005121855",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1649,
+    "ean": "5024005121855",
+    "product_url": "https://lampan.se/p/otis-o20-0/?option=15787",
+    "cart_deeplink": "https://lampan.se/p/otis-o20-0/?option=15787",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=ALM-OTIS-F-MB-OP&fid=2470&url=https://lampan.se/p/otis-o20-0/?option=15787",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/alm-otis-f-mb-op_2.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

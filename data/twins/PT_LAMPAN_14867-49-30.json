@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_14867-49-30",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Arne-Led 50cm - Pollare - Svart",
+    "manufacturer": "Lucide",
+    "article_no": "14867/49/30",
+    "ean": "5411212143921",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 639,
+    "ean": "5411212143921",
+    "product_url": "https://lampan.se/p/arne-led-50cm-0/?option=442",
+    "cart_deeplink": "https://lampan.se/p/arne-led-50cm-0/?option=442",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=14867%2F49%2F30&fid=2470&url=https://lampan.se/p/arne-led-50cm-0/?option=442",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/14867-49-30.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

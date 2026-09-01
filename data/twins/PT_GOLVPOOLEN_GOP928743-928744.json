@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP928743-928744",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tätskikt PCI Wadian Gul",
+    "manufacturer": "PCI",
+    "article_no": "GOP928743-928744",
+    "ean": "4083200018811",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 423,
+    "ean": "4083200018811",
+    "product_url": "https://www.golvpoolen.se/kakel-och-klinker/fix-och-fog/ovrig-fix-och-fog/tatskikt-pci-wadian-gul/p-928743-928744",
+    "cart_deeplink": "https://www.golvpoolen.se/kakel-och-klinker/fix-och-fog/ovrig-fix-och-fog/tatskikt-pci-wadian-gul/p-928743-928744",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP928743-928744&fid=2559&url=https://www.golvpoolen.se/kakel-och-klinker/fix-och-fog/ovrig-fix-och-fog/tatskikt-pci-wadian-gul/p-928743-928744",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/a2505779-9036-4b8a-9094-1e239e3b38e3/311543_0.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

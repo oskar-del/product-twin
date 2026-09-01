@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1508875-1508887",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukstork Pax Flex U",
+    "manufacturer": "PAX",
+    "article_no": "GOP1508875-1508887",
+    "ean": "7391477610414",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3149,
+    "ean": "7391477610414",
+    "product_url": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-pax-flex-u/p-1508875-1508887",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-pax-flex-u/p-1508875-1508887",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1508875-1508887&fid=2559&url=https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-pax-flex-u/p-1508875-1508887",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/5d51a0db-3347-42bd-8ed5-5edf5073ef62/26_1041_flex_u3_650_svart.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

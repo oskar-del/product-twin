@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1061402-1061404",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Utloppshus Unidrain Sidoutlopp",
+    "manufacturer": "Unidrain",
+    "article_no": "GOP1061402-1061404",
+    "ean": "5707692008370",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 834,
+    "ean": "5707692008370",
+    "product_url": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/utloppshus-unidrain-sidoutlopp/p-1061402-1061404",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/utloppshus-unidrain-sidoutlopp/p-1061402-1061404",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1061402-1061404&fid=2559&url=https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/utloppshus-unidrain-sidoutlopp/p-1061402-1061404",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/ad49ece4-d8e2-4d6d-b4bb-c659f24498e0/14210075.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

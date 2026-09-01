@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD070WL-L6B3K",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Fad 100cm - Vägglampa - Svart",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD070WL-L6B3K",
+    "ean": "4251110051628",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2199,
+    "ean": "4251110051628",
+    "product_url": "https://lampan.se/p/fad-100cm/?option=6470",
+    "cart_deeplink": "https://lampan.se/p/fad-100cm/?option=6470",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD070WL-L6B3K&fid=2470&url=https://lampan.se/p/fad-100cm/?option=6470",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/mod070wl-l6b3k_on_w.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

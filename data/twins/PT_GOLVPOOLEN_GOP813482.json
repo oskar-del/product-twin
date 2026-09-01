@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP813482",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Inbyggnadsdel Grohe för Golvblandare",
+    "manufacturer": "Grohe",
+    "article_no": "GOP813482",
+    "ean": "4005176992056",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 5267,
+    "ean": "4005176992056",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/inbyggnadsdel-grohe-for-golvblandare/p-813482",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/inbyggnadsdel-grohe-for-golvblandare/p-813482",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP813482&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/inbyggnadsdel-grohe-for-golvblandare/p-813482",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/9a6c6637-db89-4a4d-8dc1-f90279843757/inbyggnadsdel-grohe-for-golvblandare.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

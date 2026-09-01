@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1039620-1039623",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschdörr Gustavsberg Round",
+    "manufacturer": "Gustavsberg",
+    "article_no": "GOP1039620-1039623",
+    "ean": "7391530073576",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 5495,
+    "ean": "7391530073576",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschhorn/duschdorr-gustavsberg-round/p-1039620-1039623",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschhorn/duschdorr-gustavsberg-round/p-1039620-1039623",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1039620-1039623&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschhorn/duschdorr-gustavsberg-round/p-1039620-1039623",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/3afd5e4f-d5cc-45c8-aeb0-cb93933ed50c/shower-enclosure-round-doorjpg_red.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

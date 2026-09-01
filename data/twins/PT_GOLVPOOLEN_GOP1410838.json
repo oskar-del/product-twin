@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1410838",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Plåtlåda Ballingslöv till Dörr",
+    "manufacturer": "Ballingslöv",
+    "article_no": "GOP1410838",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 467,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshylla/platlada-ballingslov-till-dorr/p-1410838",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshylla/platlada-ballingslov-till-dorr/p-1410838",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1410838&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumshylla/platlada-ballingslov-till-dorr/p-1410838",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b5f09ed2-a6d1-4b26-a162-3a89675d6cf8/hd-hylla-inrede-dorr-inrlucb.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

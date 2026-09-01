@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_FLAMINGO-TL-BLK",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Flamingo 50cm - Bordslampa - Svart",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "FLAMINGO-TL-BLK",
+    "ean": "5024005009870",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1149,
+    "ean": "5024005009870",
+    "product_url": "https://lampan.se/p/flamingo-50cm-0/?option=10184",
+    "cart_deeplink": "https://lampan.se/p/flamingo-50cm-0/?option=10184",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=FLAMINGO-TL-BLK&fid=2470&url=https://lampan.se/p/flamingo-50cm-0/?option=10184",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/flamingo-tl-blk.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7836154",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Sinne - Fasadbelysning - Roststruktur",
+    "manufacturer": "Belid",
+    "article_no": "7836154",
+    "ean": "7391534007454",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3299,
+    "ean": "7391534007454",
+    "product_url": "https://lampan.se/p/sinne-0/?option=1649",
+    "cart_deeplink": "https://lampan.se/p/sinne-0/?option=1649",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7836154&fid=2470&url=https://lampan.se/p/sinne-0/?option=1649",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/partspartnumber7836154filenamesinne_7836154_f_web.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

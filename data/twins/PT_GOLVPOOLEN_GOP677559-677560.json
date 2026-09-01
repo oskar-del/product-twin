@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP677559-677560",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Hörnbadkar Nordhem Klarvik I",
+    "manufacturer": "Nordhem",
+    "article_no": "GOP677559-677560",
+    "ean": "7340100018653",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 27430,
+    "ean": "7340100018653",
+    "product_url": "https://www.golvpoolen.se/badrum/badkar/hornbadkar/hornbadkar-nordhem-klarvik-i/p-677559-677560",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badkar/hornbadkar/hornbadkar-nordhem-klarvik-i/p-677559-677560",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP677559-677560&fid=2559&url=https://www.golvpoolen.se/badrum/badkar/hornbadkar/hornbadkar-nordhem-klarvik-i/p-677559-677560",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/9ff4b926-8510-4bb2-8e13-e16ef4cc1707/hornbadkar-nordhem-klarvik.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_15215-3",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Attila Ø46 - Taklampa - Rökfärgad",
+    "manufacturer": "Globo Lighting",
+    "article_no": "15215-3",
+    "ean": "9007371455553",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3449,
+    "ean": "9007371455553",
+    "product_url": "https://lampan.se/p/attila-o46/?option=9927",
+    "cart_deeplink": "https://lampan.se/p/attila-o46/?option=9927",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=15215-3&fid=2470&url=https://lampan.se/p/attila-o46/?option=9927",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-58104.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

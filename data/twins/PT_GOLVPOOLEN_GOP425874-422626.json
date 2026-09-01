@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP425874-422626",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Spolknapp Geberit Sigma 50 Square",
+    "manufacturer": "Geberit",
+    "article_no": "GOP425874-422626",
+    "ean": "4025416453192",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2779,
+    "ean": "4025416453192",
+    "product_url": "https://www.golvpoolen.se/badrum/toalettstol/spolknapp/spolknapp-geberit-sigma-50-square/p-425874-422626",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/toalettstol/spolknapp/spolknapp-geberit-sigma-50-square/p-425874-422626",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP425874-422626&fid=2559&url=https://www.golvpoolen.se/badrum/toalettstol/spolknapp/spolknapp-geberit-sigma-50-square/p-425874-422626",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e7dd27ef-9917-4cd5-a0e3-83b5b5f460b2/spolknapp-geberit-sigma-50.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

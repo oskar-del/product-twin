@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD179PL-L26W4K",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Skyline 110cm - Taklampa - Svart",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD179PL-L26W4K",
+    "ean": "4099776049449",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3509,
+    "ean": "4099776049449",
+    "product_url": "https://lampan.se/p/skyline-110cm-0/?option=6587",
+    "cart_deeplink": "https://lampan.se/p/skyline-110cm-0/?option=6587",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD179PL-L26W4K&fid=2470&url=https://lampan.se/p/skyline-110cm-0/?option=6587",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/mod179pl-l26w4k_on_w_standard.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

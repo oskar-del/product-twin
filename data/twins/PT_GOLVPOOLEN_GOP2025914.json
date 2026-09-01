@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2025914",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Toalettsits TECE Slim med Soft Close",
+    "manufacturer": "TECE",
+    "article_no": "GOP2025914",
+    "ean": "4027255097315",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1588,
+    "ean": "4027255097315",
+    "product_url": "https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-tece-slim-med-soft-close/p-2025914",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-tece-slim-med-soft-close/p-2025914",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2025914&fid=2559&url=https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-tece-slim-med-soft-close/p-2025914",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/0d11e1b5-5618-44eb-a85d-4ebe5c0e6807/525844-1.jpeg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

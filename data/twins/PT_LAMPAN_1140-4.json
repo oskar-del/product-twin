@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1140-4",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emibig Lighting - Nova Ø46 - Taklampa - Rökfärgad",
+    "manufacturer": "Emibig Lighting",
+    "article_no": "1140/4",
+    "ean": "5907106002547",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2659,
+    "ean": "5907106002547",
+    "product_url": "https://lampan.se/p/nova-o46/?option=12167",
+    "cart_deeplink": "https://lampan.se/p/nova-o46/?option=12167",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1140%2F4&fid=2470&url=https://lampan.se/p/nova-o46/?option=12167",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1140_4-1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_402-21",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - Slimline 25LED 16m - Julgransbelysning - Grön",
+    "manufacturer": "Star Trading",
+    "article_no": "402-21",
+    "ean": "7391482022486",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 579,
+    "ean": "7391482022486",
+    "product_url": "https://lampan.se/p/slimline-25led-16m/?option=10997",
+    "cart_deeplink": "https://lampan.se/p/slimline-25led-16m/?option=10997",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=402-21&fid=2470&url=https://lampan.se/p/slimline-25led-16m/?option=10997",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/402-21_mn.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

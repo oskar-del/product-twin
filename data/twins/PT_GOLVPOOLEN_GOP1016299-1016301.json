@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1016299-1016301",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Högskåp Duravit Ketho",
+    "manufacturer": "Duravit",
+    "article_no": "GOP1016299-1016301",
+    "ean": "4021534724138",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 9499,
+    "ean": "4021534724138",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/hogskap-duravit-ketho/p-1016299-1016301",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/hogskap-duravit-ketho/p-1016299-1016301",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1016299-1016301&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/hogskap-duravit-ketho/p-1016299-1016301",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e8fef3a9-be18-45ef-af3b-c376683f9bca/kt1265l1818.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

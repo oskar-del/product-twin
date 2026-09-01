@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1026635",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdusch Damixa Fair Jet",
+    "manufacturer": "Damixa",
+    "article_no": "GOP1026635",
+    "ean": "5708516801733",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 270,
+    "ean": "5708516801733",
+    "product_url": "https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-damixa-fair-jet/p-1026635",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-damixa-fair-jet/p-1026635",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1026635&fid=2559&url=https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-damixa-fair-jet/p-1026635",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e7b68404-3d20-4f3c-946b-6e36fd1d019d/766720000.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

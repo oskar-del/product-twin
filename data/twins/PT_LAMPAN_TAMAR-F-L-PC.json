@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_TAMAR-F-L-PC",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Tamar Ø30 - Badrumslampa - Polerad krom",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "TAMAR-F-L-PC",
+    "ean": "5024005306412",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2069,
+    "ean": "5024005306412",
+    "product_url": "https://lampan.se/p/tamar-o30/?option=7062",
+    "cart_deeplink": "https://lampan.se/p/tamar-o30/?option=7062",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=TAMAR-F-L-PC&fid=2470&url=https://lampan.se/p/tamar-o30/?option=7062",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/tamar-f-l-pc.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

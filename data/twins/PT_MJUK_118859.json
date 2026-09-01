@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_118859",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Kay Bojesen Standard-Bearer Medium",
+    "manufacturer": "Kay Bojesen",
+    "article_no": "118859",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 5741,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/118859/kay-bojesen-standard-bearer-medium",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/118859/kay-bojesen-standard-bearer-medium",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=118859&fid=978&url=https://www.mjuk.com/sv-se/product/118859/kay-bojesen-standard-bearer-medium",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/0fa5965686bdce32921162160ab595ea.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

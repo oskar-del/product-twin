@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1112236-1112238",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Vattenlås Gustavsberg Round för Golvanslutning",
+    "manufacturer": "Gustavsberg",
+    "article_no": "GOP1112236-1112238",
+    "ean": "7393792234177",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1688,
+    "ean": "7393792234177",
+    "product_url": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/vattenlas/vattenlas-gustavsberg-round-for-golvanslutning/p-1112236-1112238",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/vattenlas/vattenlas-gustavsberg-round-for-golvanslutning/p-1112236-1112238",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1112236-1112238&fid=2559&url=https://www.golvpoolen.se/badrum/handfat-och-tvattstall/vattenlas/vattenlas-gustavsberg-round-for-golvanslutning/p-1112236-1112238",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/3b826764-06a7-49db-af24-2db3d7fc035e/gb41109939-53.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

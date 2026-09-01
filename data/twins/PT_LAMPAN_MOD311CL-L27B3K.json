@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD311CL-L27B3K",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Orign Ø40 - Takplafond - Svart",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD311CL-L27B3K",
+    "ean": "4099776152446",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5349,
+    "ean": "4099776152446",
+    "product_url": "https://lampan.se/p/orign-o40/?option=12247",
+    "cart_deeplink": "https://lampan.se/p/orign-o40/?option=12247",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD311CL-L27B3K&fid=2470&url=https://lampan.se/p/orign-o40/?option=12247",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/image1-64808.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

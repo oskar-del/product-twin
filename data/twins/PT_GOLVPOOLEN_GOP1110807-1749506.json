@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1110807-1749506",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschdörr Hafa Igloo Pro Vik Niche",
+    "manufacturer": "Hafa",
+    "article_no": "GOP1110807-1749506",
+    "ean": "7330027149714",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 8890,
+    "ean": "7330027149714",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-hafa-igloo-pro-vik-niche/p-1110807-1749506",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-hafa-igloo-pro-vik-niche/p-1110807-1749506",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1110807-1749506&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-hafa-igloo-pro-vik-niche/p-1110807-1749506",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/8c280806-cd40-4da9-8cb3-08912f6792e3/1450832_1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

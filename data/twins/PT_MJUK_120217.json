@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_120217",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Umage Eos Evia Medium lampskärm rosa",
+    "manufacturer": "Umage",
+    "article_no": "120217",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1519,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/120217/umage-eos-evia-medium-lampskarm-rosa",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/120217/umage-eos-evia-medium-lampskarm-rosa",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=120217&fid=978&url=https://www.mjuk.com/sv-se/product/120217/umage-eos-evia-medium-lampskarm-rosa",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/c42ef61f0f86f9247a9109248ffbfd2c.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

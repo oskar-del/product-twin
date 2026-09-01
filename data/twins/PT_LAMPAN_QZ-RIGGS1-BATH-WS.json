@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_QZ-RIGGS1-BATH-WS",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Riggs Ø14 - Badrumslampa - Råmässing",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "QZ-RIGGS1-BATH-WS",
+    "ean": "5024005717218",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2179,
+    "ean": "5024005717218",
+    "product_url": "https://lampan.se/p/riggs-o14/?option=7053",
+    "cart_deeplink": "https://lampan.se/p/riggs-o14/?option=7053",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=QZ-RIGGS1-BATH-WS&fid=2470&url=https://lampan.se/p/riggs-o14/?option=7053",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/qz-riggs1-bath-ws.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1060301-1060304",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukskrok INR Bow",
+    "manufacturer": "INR",
+    "article_no": "GOP1060301-1060304",
+    "ean": "7392102902355",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 552,
+    "ean": "7392102902355",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-inr-bow/p-1060301-1060304",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-inr-bow/p-1060301-1060304",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1060301-1060304&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-inr-bow/p-1060301-1060304",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b11fad78-37c1-4819-8788-314a23ca8501/80000620.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

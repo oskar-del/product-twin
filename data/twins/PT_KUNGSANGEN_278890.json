@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_278890",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Adebäck 180x200 Fast/Fast A.Nougat",
+    "manufacturer": "Kungsangen",
+    "article_no": "278890",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 33990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-adeback-s/278890",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-adeback-s/278890",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=278890&fid=2564&url=https://kungsangen.com/se/p/sang-adeback-s/278890",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/he7/h58/9612986155038/ks2000Wx1500H_adeback_kontinental_s23_vx16_180_anouk_nougat/ks2000Wx1500H-adeback-kontinental-s23-vx16-180-anouk-nougat.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

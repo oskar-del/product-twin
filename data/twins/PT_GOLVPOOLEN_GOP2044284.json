@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2044284",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Laminatgolv Berryalloc Grand Avenue Via Roma",
+    "manufacturer": "BerryAlloc",
+    "article_no": "GOP2044284",
+    "ean": "7052870180590",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1506,
+    "ean": "7052870180590",
+    "product_url": "https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-grand-avenue-via-roma/p-2044284",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-grand-avenue-via-roma/p-2044284",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2044284&fid=2559&url=https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-grand-avenue-via-roma/p-2044284",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/13c461a6-4a1c-4118-90a3-176731b8e4bb/rsh_01_62002825.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7507007",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ifö electric - Opus 140/100 - Badrumslampa - Vit",
+    "manufacturer": "Ifö electric",
+    "article_no": "7507007",
+    "ean": "7312908251303",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1689,
+    "ean": "7312908251303",
+    "product_url": "https://lampan.se/p/opus-140-100-1/?option=4830",
+    "cart_deeplink": "https://lampan.se/p/opus-140-100-1/?option=4830",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7507007&fid=2470&url=https://lampan.se/p/opus-140-100-1/?option=4830",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/opus20140-10020matt20opalglas20vit20ip4420rak2c207w20gx5320.jpg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_56143-13GCD",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Grappy Ø56 - Takplafond - Flerfärgad",
+    "manufacturer": "Globo Lighting",
+    "article_no": "56143-13GCD",
+    "ean": "9007371462773",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5289,
+    "ean": "9007371462773",
+    "product_url": "https://lampan.se/p/grappy-o56-5/?option=10045",
+    "cart_deeplink": "https://lampan.se/p/grappy-o56-5/?option=10045",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=56143-13GCD&fid=2470&url=https://lampan.se/p/grappy-o56-5/?option=10045",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-99948.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

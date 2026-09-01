@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_109484",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sofacompany Rosa stol gråbeige",
+    "manufacturer": "Sofacompany",
+    "article_no": "109484",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1540,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/109484/sofacompany-rosa-stol-grabeige",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/109484/sofacompany-rosa-stol-grabeige",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=109484&fid=978&url=https://www.mjuk.com/sv-se/product/109484/sofacompany-rosa-stol-grabeige",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/f7a461c61b5e684bfc0bd7c80993ed02.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

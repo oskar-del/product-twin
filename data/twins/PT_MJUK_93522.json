@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_93522",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Zack Fresco hylla vit",
+    "manufacturer": "Zack",
+    "article_no": "93522",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 791,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/93522/zack-fresco-hylla-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/93522/zack-fresco-hylla-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=93522&fid=978&url=https://www.mjuk.com/sv-se/product/93522/zack-fresco-hylla-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/9232fc7ec85c2b60a96a00fee9f5e6c3.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

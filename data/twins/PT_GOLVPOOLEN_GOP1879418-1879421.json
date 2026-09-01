@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1879418-1879421",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställ Vedum Free",
+    "manufacturer": "Vedum",
+    "article_no": "GOP1879418-1879421",
+    "ean": "7332936068155",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 4785,
+    "ean": "7332936068155",
+    "product_url": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-vedum-free/p-1879418-1879421",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-vedum-free/p-1879418-1879421",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1879418-1879421&fid=2559&url=https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-vedum-free/p-1879418-1879421",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/007f23cc-f57a-4f34-a794-64788e21adc9/72610061_square.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

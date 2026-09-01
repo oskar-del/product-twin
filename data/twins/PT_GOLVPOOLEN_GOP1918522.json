@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1918522",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställsblandare Mora LYNX",
+    "manufacturer": "Mora",
+    "article_no": "GOP1918522",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2275,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-mora-lynx/p-1918522",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-mora-lynx/p-1918522",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1918522&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-mora-lynx/p-1918522",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/9ac82937-abe3-4a96-a658-18a4d49691d0/bild_10_8275916-kopiera-2.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

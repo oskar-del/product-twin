@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70010523",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bellman 205 Vägglampa Black - Pholc - Vardagsrum - Metall",
+    "manufacturer": "Pholc",
+    "article_no": "70010523",
+    "ean": "7319683112157",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 7195,
+    "ean": "7319683112157",
+    "product_url": "https://www.lampemesteren.se/p/bellman-205-vagglampa-black-pholc-70010523.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/bellman-205-vagglampa-black-pholc-70010523.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70010523&fid=1004&url=https://www.lampemesteren.se/p/bellman-205-vagglampa-black-pholc-70010523.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/CEBA0B28FDB3/k_86d3c8f22cc8ba865b6cefb1247a2944;w_1600;h_1600;q_90/70010523.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

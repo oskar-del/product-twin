@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_740154",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Atom Ø26 - Takplafond - Svart",
+    "manufacturer": "Halo Design",
+    "article_no": "740154",
+    "ean": "5705639740154",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1799,
+    "ean": "5705639740154",
+    "product_url": "https://lampan.se/p/atom-o26/?option=7939",
+    "cart_deeplink": "https://lampan.se/p/atom-o26/?option=7939",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=740154&fid=2470&url=https://lampan.se/p/atom-o26/?option=7939",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/740154-atom-trio-opal_packshot.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7530304",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ifö electric - Opus 100/125 - Badrumslampa - Vit",
+    "manufacturer": "Ifö electric",
+    "article_no": "7530304",
+    "ean": "7312908221108",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 859,
+    "ean": "7312908221108",
+    "product_url": "https://lampan.se/p/opus-100-125-1/?option=4839",
+    "cart_deeplink": "https://lampan.se/p/opus-100-125-1/?option=4839",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7530304&fid=2470&url=https://lampan.se/p/opus-100-125-1/?option=4839",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/dff8522daad0aa6879d6c0502416ddc258881ee0300.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

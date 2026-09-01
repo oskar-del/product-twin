@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP826341",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Diskbänk Strand Stainless Rodi Evo 100",
+    "manufacturer": "Strand Stainless",
+    "article_no": "GOP826341",
+    "ean": "5604315255480",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 19580,
+    "ean": "5604315255480",
+    "product_url": "https://www.golvpoolen.se/badrum/vask-kok-och-tvattstuga/diskho/diskbank-strand-stainless-rodi-evo-100/p-826341",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/vask-kok-och-tvattstuga/diskho/diskbank-strand-stainless-rodi-evo-100/p-826341",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP826341&fid=2559&url=https://www.golvpoolen.se/badrum/vask-kok-och-tvattstuga/diskho/diskbank-strand-stainless-rodi-evo-100/p-826341",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e43b5ff5-bd4c-40fa-a1ad-76adc5da75ad/diskho-strand-rodi-evo-100.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_138929",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gregor 2-sits soffa mörkbrun",
+    "manufacturer": "Mjuk",
+    "article_no": "138929",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3263,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/138929/gregor-2-sits-soffa-morkbrun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/138929/gregor-2-sits-soffa-morkbrun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=138929&fid=978&url=https://www.mjuk.com/sv-se/product/138929/gregor-2-sits-soffa-morkbrun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/7a6c0e319720a5a7a1fbf6a9f7833aa0.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

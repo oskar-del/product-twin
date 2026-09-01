@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70012074",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Street Taklampa Large Svart - Herstal - Vardagsrum - Metall",
+    "manufacturer": "Herstal",
+    "article_no": "70012074",
+    "ean": "7391534110444",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 2249,
+    "ean": "7391534110444",
+    "product_url": "https://www.lampemesteren.se/p/street-taklampa-large-svart-herstal-70012074.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/street-taklampa-large-svart-herstal-70012074.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70012074&fid=1004&url=https://www.lampemesteren.se/p/street-taklampa-large-svart-herstal-70012074.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/B817682A881D/k_dc668204dc5ae9dd8fcb1003c36e5b73;w_1600;h_1600;q_90/70012074.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

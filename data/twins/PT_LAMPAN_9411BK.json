@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_9411BK",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Bird Cage Ø30 - Taklampa - Svart",
+    "manufacturer": "Searchlight",
+    "article_no": "9411BK",
+    "ean": "5053423098241",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1169,
+    "ean": "5053423098241",
+    "product_url": "https://lampan.se/p/bird-cage-o30/?option=12490",
+    "cart_deeplink": "https://lampan.se/p/bird-cage-o30/?option=12490",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=9411BK&fid=2470&url=https://lampan.se/p/bird-cage-o30/?option=12490",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/9411bk_p9411bk_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

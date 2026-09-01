@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2006048",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Parkettgolv Boen Ek Andante Live Matt Lack 3-stav",
+    "manufacturer": "Boen",
+    "article_no": "GOP2006048",
+    "ean": "7035580183907",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3206,
+    "ean": "7035580183907",
+    "product_url": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-boen-ek-andante-live-matt-lack-3-stav/p-2006048",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-boen-ek-andante-live-matt-lack-3-stav/p-2006048",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2006048&fid=2559&url=https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-boen-ek-andante-live-matt-lack-3-stav/p-2006048",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/2130d2b9-79d3-4c65-bedc-d9c73ab4ec6a/10041715_eigl35td_oak-andante-3-strip-kopiera.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

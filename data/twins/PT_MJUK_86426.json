@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_86426",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Arper Mixu barstol röd / brun",
+    "manufacturer": "Arper",
+    "article_no": "86426",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4670,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/86426/arper-mixu-barstol-rod-brun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/86426/arper-mixu-barstol-rod-brun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=86426&fid=978&url=https://www.mjuk.com/sv-se/product/86426/arper-mixu-barstol-rod-brun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/5ab6077f09daf31c3428b07f11595a48.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

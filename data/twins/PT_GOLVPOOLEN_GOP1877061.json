@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1877061",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bensindunk Pressol 20L Jeep",
+    "manufacturer": "Pressol",
+    "article_no": "GOP1877061",
+    "ean": "4103810211270",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 409,
+    "ean": "4103810211270",
+    "product_url": "https://www.golvpoolen.se/verktyg/tillbehor-verktyg/ovriga-verktygstillbehor/bensindunk-pressol-20l-jeep/p-1877061",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/tillbehor-verktyg/ovriga-verktygstillbehor/bensindunk-pressol-20l-jeep/p-1877061",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1877061&fid=2559&url=https://www.golvpoolen.se/verktyg/tillbehor-verktyg/ovriga-verktygstillbehor/bensindunk-pressol-20l-jeep/p-1877061",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/1eeadbcc-a39c-4fad-813a-f5dd937e99b2/958155.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

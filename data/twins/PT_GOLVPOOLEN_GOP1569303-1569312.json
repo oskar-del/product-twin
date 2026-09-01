@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1569303-1569312",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bubbelbadkar Bathlife Fridfull",
+    "manufacturer": "Bathlife",
+    "article_no": "GOP1569303-1569312",
+    "ean": "7330027147093",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 55999,
+    "ean": "7330027147093",
+    "product_url": "https://www.golvpoolen.se/badrum/badkar/bubbelbadkar/bubbelbadkar-bathlife-fridfull/p-1569303-1569312",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badkar/bubbelbadkar/bubbelbadkar-bathlife-fridfull/p-1569303-1569312",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1569303-1569312&fid=2559&url=https://www.golvpoolen.se/badrum/badkar/bubbelbadkar/bubbelbadkar-bathlife-fridfull/p-1569303-1569312",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/178bb6a0-497b-4633-a995-d36b80d687fe/40573538_2.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1486386",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Fiona Swan 640818",
+    "manufacturer": "Fiona",
+    "article_no": "GOP1486386",
+    "ean": "5701573294180",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 589,
+    "ean": "5701573294180",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-swan-640818/p-1486386",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-swan-640818/p-1486386",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1486386&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-swan-640818/p-1486386",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f46c7cba-53a8-4d48-aa04-b7b5adb60965/640818.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

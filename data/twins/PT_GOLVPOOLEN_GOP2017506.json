@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2017506",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Trägolv Bjelin Härdad Ek Hagstad 3.0 XXL 1-stav",
+    "manufacturer": "Bjelin",
+    "article_no": "GOP2017506",
+    "ean": "7330044060146",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1825,
+    "ean": "7330044060146",
+    "product_url": "https://www.golvpoolen.se/golv/tragolv/hardat-tragolv/tragolv-bjelin-hardad-ek-hagstad-30-xxl-1-stav/p-2017506",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tragolv/hardat-tragolv/tragolv-bjelin-hardad-ek-hagstad-30-xxl-1-stav/p-2017506",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2017506&fid=2559&url=https://www.golvpoolen.se/golv/tragolv/hardat-tragolv/tragolv-bjelin-hardad-ek-hagstad-30-xxl-1-stav/p-2017506",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/bb418b7e-6ae8-4742-b986-ab5f18536c26/346014_2.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

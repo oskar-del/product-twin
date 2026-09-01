@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1882092-1882093",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Vinylgolv Gerflor Loftex Boutic Clear",
+    "manufacturer": "Gerflor",
+    "article_no": "GOP1882092-1882093",
+    "ean": "3475710436789",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 590,
+    "ean": "3475710436789",
+    "product_url": "https://www.golvpoolen.se/golv/plastgolv/vinylgolv/vinylgolv-gerflor-loftex-boutic-clear/p-1882092-1882093",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/plastgolv/vinylgolv/vinylgolv-gerflor-loftex-boutic-clear/p-1882092-1882093",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1882092-1882093&fid=2559&url=https://www.golvpoolen.se/golv/plastgolv/vinylgolv/vinylgolv-gerflor-loftex-boutic-clear/p-1882092-1882093",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/710c8c5c-ad78-4771-9d4f-821cf41fa0d3/10232170_1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

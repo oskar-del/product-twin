@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_F7302",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Frilight - Ljusplatta 9x9cm - Dekorationsbelysning - Ek",
+    "manufacturer": "Frilight",
+    "article_no": "F7302",
+    "ean": "7350028497171",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 399,
+    "ean": "7350028497171",
+    "product_url": "https://lampan.se/p/ljusplatta-9x9cm-0/?option=11021",
+    "cart_deeplink": "https://lampan.se/p/ljusplatta-9x9cm-0/?option=11021",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=F7302&fid=2470&url=https://lampan.se/p/ljusplatta-9x9cm-0/?option=11021",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/frilight-ljussockel-ek-oljad-90x90-sw90-led.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

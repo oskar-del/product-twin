@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_404-95",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - Svea 25LED 16m - Julgransbelysning - Grön",
+    "manufacturer": "Star Trading",
+    "article_no": "404-95",
+    "ean": "7391482404954",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 779,
+    "ean": "7391482404954",
+    "product_url": "https://lampan.se/p/svea-25led-16m/?option=10990",
+    "cart_deeplink": "https://lampan.se/p/svea-25led-16m/?option=10990",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=404-95&fid=2470&url=https://lampan.se/p/svea-25led-16m/?option=10990",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/404-95_mn.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

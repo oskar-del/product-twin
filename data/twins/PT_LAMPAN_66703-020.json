@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_66703-020",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Bendir Ø38 - Takplafond - Vit Plisserad",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "66703-020",
+    "ean": "7041661260436",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1199,
+    "ean": "7041661260436",
+    "product_url": "https://lampan.se/p/bendir-o38/?option=7315",
+    "cart_deeplink": "https://lampan.se/p/bendir-o38/?option=7315",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=66703-020&fid=2470&url=https://lampan.se/p/bendir-o38/?option=7315",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/r1xzpsqfo7igc76pdiypnmpm5.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

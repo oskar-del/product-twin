@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_119017",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Lyckenäs 80x200 Fast A.Rose",
+    "manufacturer": "Kungsangen",
+    "article_no": "119017",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 45990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-lyckenas/119017",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-lyckenas/119017",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=119017&fid=2564&url=https://kungsangen.com/se/p/sang-lyckenas/119017",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h9d/h9c/8825218793502/ks2000Wx1500H_lyckenas_stallbar_mb21_vx20_90_anouk_rose/ks2000Wx1500H-lyckenas-stallbar-mb21-vx20-90-anouk-rose.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

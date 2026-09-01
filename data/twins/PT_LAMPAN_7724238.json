@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7724238",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Norlys - Lund 230cm - Stolpe - Svart",
+    "manufacturer": "Norlys",
+    "article_no": "7724238",
+    "ean": "7042892740063",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4689,
+    "ean": "7042892740063",
+    "product_url": "https://lampan.se/p/lund-230cm-2/?option=4676",
+    "cart_deeplink": "https://lampan.se/p/lund-230cm-2/?option=4676",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7724238&fid=2470&url=https://lampan.se/p/lund-230cm-2/?option=4676",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-68722.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

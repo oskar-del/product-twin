@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP427615",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Underhållsvax Osmo Vax för Vitpigmenterade Ytor 1L",
+    "manufacturer": "Osmo",
+    "article_no": "GOP427615",
+    "ean": "4006850887224",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 594,
+    "ean": "4006850887224",
+    "product_url": "https://www.golvpoolen.se/golv/golvvard/underhallsvax-osmo-vax-for-vitpigmenterade-ytor-1l/p-427615",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvvard/underhallsvax-osmo-vax-for-vitpigmenterade-ytor-1l/p-427615",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP427615&fid=2559&url=https://www.golvpoolen.se/golv/golvvard/underhallsvax-osmo-vax-for-vitpigmenterade-ytor-1l/p-427615",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/440d47f5-1df6-436e-a24e-291679be8067/underhallsvax-osmo-vit-10-liter.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

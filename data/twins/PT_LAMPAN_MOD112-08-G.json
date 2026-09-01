@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD112-08-G",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Balbo Ø50 - Taklampa - Cognac",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD112-08-G",
+    "ean": "4251110010137",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 6889,
+    "ean": "4251110010137",
+    "product_url": "https://lampan.se/p/balbo-o50/?option=6523",
+    "cart_deeplink": "https://lampan.se/p/balbo-o50/?option=6523",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD112-08-G&fid=2470&url=https://lampan.se/p/balbo-o50/?option=6523",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/mod112-08-g_off_w.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

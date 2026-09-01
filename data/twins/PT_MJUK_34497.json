@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_34497",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Blauet 1896 Metric vägglampa",
+    "manufacturer": "Blauet",
+    "article_no": "34497",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 760,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/34497/blauet-1896-metric-vagglampa",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/34497/blauet-1896-metric-vagglampa",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=34497&fid=978&url=https://www.mjuk.com/sv-se/product/34497/blauet-1896-metric-vagglampa",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/cf63e30d-56ca-40b9-a685-ada14f5f5bf3.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

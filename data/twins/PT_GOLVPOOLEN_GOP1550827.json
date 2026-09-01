@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1550827",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Laminatgolv BerryAlloc Grand Avenue Ginza",
+    "manufacturer": "BerryAlloc",
+    "article_no": "GOP1550827",
+    "ean": "7052870178603",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2146,
+    "ean": "7052870178603",
+    "product_url": "https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-grand-avenue-ginza/p-1550827",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-grand-avenue-ginza/p-1550827",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1550827&fid=2559&url=https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-grand-avenue-ginza/p-1550827",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/85a12f3d-4898-4097-8d52-b086669e2148/57963477_ginza_rsh_1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

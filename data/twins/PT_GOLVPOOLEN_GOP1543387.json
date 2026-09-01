@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1543387",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Oljevård Faxe Vit",
+    "manufacturer": "Faxe",
+    "article_no": "GOP1543387",
+    "ean": "5708710928311",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 242,
+    "ean": "5708710928311",
+    "product_url": "https://www.golvpoolen.se/golv/golvvard/oljevard-faxe-vit/p-1543387",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvvard/oljevard-faxe-vit/p-1543387",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1543387&fid=2559&url=https://www.golvpoolen.se/golv/golvvard/oljevard-faxe-vit/p-1543387",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/df8ada51-40eb-4c6e-a9f4-a3bcab2ea6c4/028007301100.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

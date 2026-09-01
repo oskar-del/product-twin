@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1557938",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Spegel Ifö Silia",
+    "manufacturer": "Ifö",
+    "article_no": "GOP1557938",
+    "ean": "4025410609120",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 799,
+    "ean": "4025410609120",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsspegel/spegel-ifo-silia/p-1557938",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsspegel/spegel-ifo-silia/p-1557938",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1557938&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumsspegel/spegel-ifo-silia/p-1557938",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/8cdc2552-cfd0-4728-ad75-5109e61f8e07/502513001_primary_image.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

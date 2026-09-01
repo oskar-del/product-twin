@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_57998-3",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Drew 3 - Spotlight - Svart",
+    "manufacturer": "Globo Lighting",
+    "article_no": "57998-3",
+    "ean": "9007371436774",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 639,
+    "ean": "9007371436774",
+    "product_url": "https://lampan.se/p/drew-3/?option=9873",
+    "cart_deeplink": "https://lampan.se/p/drew-3/?option=9873",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=57998-3&fid=2470&url=https://lampan.se/p/drew-3/?option=9873",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/3-47049.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

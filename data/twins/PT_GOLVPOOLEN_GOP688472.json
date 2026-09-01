@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP688472",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Fiona Living NW 490620",
+    "manufacturer": "Fiona",
+    "article_no": "GOP688472",
+    "ean": "5701573655202",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 289,
+    "ean": "5701573655202",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-living-nw-490620/p-688472",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-living-nw-490620/p-688472",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP688472&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-living-nw-490620/p-688472",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/dac291a9-c1c1-43a9-92bf-c489427cf312/tapet-fiona-living-nw-490620-.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

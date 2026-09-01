@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_425-753",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Konstsmide - Vidar 15cm - Fasadbelysning - Silver",
+    "manufacturer": "Konstsmide",
+    "article_no": "425-753",
+    "ean": "7318304257536",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3319,
+    "ean": "7318304257536",
+    "product_url": "https://lampan.se/p/vidar-15cm/?option=10422",
+    "cart_deeplink": "https://lampan.se/p/vidar-15cm/?option=10422",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=425-753&fid=2470&url=https://lampan.se/p/vidar-15cm/?option=10422",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-80256.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

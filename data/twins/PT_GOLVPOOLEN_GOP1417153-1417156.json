@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1417153-1417156",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställ Westerbergs Hav Betong",
+    "manufacturer": "Westerbergs",
+    "article_no": "GOP1417153-1417156",
+    "ean": "7333231003797",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 11200,
+    "ean": "7333231003797",
+    "product_url": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-westerbergs-hav-betong/p-1417153-1417156",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-westerbergs-hav-betong/p-1417153-1417156",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1417153-1417156&fid=2559&url=https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-westerbergs-hav-betong/p-1417153-1417156",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/5db9e233-f196-4387-81c0-2ca3e4dcb0b4/betong-handfat-900-westerbergs-hav-betong-20074007-bp.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

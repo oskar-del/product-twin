@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_G81205-05",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Catania Ø48 - Takfläkt - Vit",
+    "manufacturer": "Brilliant",
+    "article_no": "G81205/05",
+    "ean": "4004353471506",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1999,
+    "ean": "4004353471506",
+    "product_url": "https://lampan.se/p/catania-o48-0/?option=15661",
+    "cart_deeplink": "https://lampan.se/p/catania-o48-0/?option=15661",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=G81205%2F05&fid=2470&url=https://lampan.se/p/catania-o48-0/?option=15661",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/deckenleuchten_catania_4004353471506_4_800x800.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

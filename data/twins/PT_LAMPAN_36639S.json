@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_36639S",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Cup LED - Solcellslampa - Sand",
+    "manufacturer": "Globo Lighting",
+    "article_no": "36639S",
+    "ean": "9007371533572",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 409,
+    "ean": "9007371533572",
+    "product_url": "https://lampan.se/p/cup-led-0/?option=9513",
+    "cart_deeplink": "https://lampan.se/p/cup-led-0/?option=9513",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=36639S&fid=2470&url=https://lampan.se/p/cup-led-0/?option=9513",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-62911.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

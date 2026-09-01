@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_69548-30",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Nice - Golvlampa - Antik",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "69548-30",
+    "ean": "7041661256385",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2499,
+    "ean": "7041661256385",
+    "product_url": "https://lampan.se/p/nice-1/?option=1850",
+    "cart_deeplink": "https://lampan.se/p/nice-1/?option=1850",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=69548-30&fid=2470&url=https://lampan.se/p/nice-1/?option=1850",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/69548-30_nice_7041661256385.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

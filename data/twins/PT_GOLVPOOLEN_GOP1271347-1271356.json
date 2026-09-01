@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1271347-1271356",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Golvvärmematta Raychem QuickNet-90",
+    "manufacturer": "Raychem",
+    "article_no": "GOP1271347-1271356",
+    "ean": "5414506019858",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3895,
+    "ean": "5414506019858",
+    "product_url": "https://www.golvpoolen.se/golv/golvvarme/golvvarme-el/golvvarmematta-raychem-quicknet-90/p-1271347-1271356",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvvarme/golvvarme-el/golvvarmematta-raychem-quicknet-90/p-1271347-1271356",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1271347-1271356&fid=2559&url=https://www.golvpoolen.se/golv/golvvarme/golvvarme-el/golvvarmematta-raychem-quicknet-90/p-1271347-1271356",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/85a35bd8-cceb-4ed2-a944-eaac3a1b49ec/nvent-raychem-quicknet-90-med-termostat_e-nr-8940401-mfl.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

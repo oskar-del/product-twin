@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_743711",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Mesh Ø20 - Taklampa - Opal",
+    "manufacturer": "Halo Design",
+    "article_no": "743711",
+    "ean": "5705639743711",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2249,
+    "ean": "5705639743711",
+    "product_url": "https://lampan.se/p/mesh-o20/?option=8016",
+    "cart_deeplink": "https://lampan.se/p/mesh-o20/?option=8016",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=743711&fid=2470&url=https://lampan.se/p/mesh-o20/?option=8016",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/743711_hd_mesh_pendant_20_opal_72dpi.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

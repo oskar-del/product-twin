@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7094-4CC",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Elise 118cm - Taklampa - Krom",
+    "manufacturer": "Searchlight",
+    "article_no": "7094-4CC",
+    "ean": "5053423077345",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3559,
+    "ean": "5053423077345",
+    "product_url": "https://lampan.se/p/elise-118cm/?option=12828",
+    "cart_deeplink": "https://lampan.se/p/elise-118cm/?option=12828",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7094-4CC&fid=2470&url=https://lampan.se/p/elise-118cm/?option=12828",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/7094-4cc_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

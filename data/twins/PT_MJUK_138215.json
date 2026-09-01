@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_138215",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Jack matstol, svart, set om 4",
+    "manufacturer": "No brand",
+    "article_no": "138215",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1966,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/138215/jack-matstol-svart-set-om-4",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/138215/jack-matstol-svart-set-om-4",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=138215&fid=978&url=https://www.mjuk.com/sv-se/product/138215/jack-matstol-svart-set-om-4",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/08682f3c-f09d-4ec3-86bd-e38c493588ec.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

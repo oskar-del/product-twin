@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_745562",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Stockholm Ø18 - Taklampa - Grön",
+    "manufacturer": "Halo Design",
+    "article_no": "745562",
+    "ean": "5705639745562",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1549,
+    "ean": "5705639745562",
+    "product_url": "https://lampan.se/p/stockholm-o18-1/?option=7881",
+    "cart_deeplink": "https://lampan.se/p/stockholm-o18-1/?option=7881",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=745562&fid=2470&url=https://lampan.se/p/stockholm-o18-1/?option=7881",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/745562-stockholm-pendantlamp18-marblegreen1-72ppi.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

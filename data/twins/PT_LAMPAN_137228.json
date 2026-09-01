@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_137228",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Strömshaga - Fotogenlampa Majken Mellan - Fotogenlampa - Grå",
+    "manufacturer": "Strömshaga",
+    "article_no": "137228",
+    "ean": "7332771052401",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 399,
+    "ean": "7332771052401",
+    "product_url": "https://lampan.se/p/fotogenlampa-majken-mellan/?option=1413",
+    "cart_deeplink": "https://lampan.se/p/fotogenlampa-majken-mellan/?option=1413",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=137228&fid=2470&url=https://lampan.se/p/fotogenlampa-majken-mellan/?option=1413",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-60947.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

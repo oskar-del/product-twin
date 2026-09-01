@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_737499",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Carpenter Ø15 - Taklampa - Opal",
+    "manufacturer": "Halo Design",
+    "article_no": "737499",
+    "ean": "5705639737499",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 769,
+    "ean": "5705639737499",
+    "product_url": "https://lampan.se/p/carpenter-o15-1/?option=8180",
+    "cart_deeplink": "https://lampan.se/p/carpenter-o15-1/?option=8180",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=737499&fid=2470&url=https://lampan.se/p/carpenter-o15-1/?option=8180",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/737499-carpenter-pendant-opal-15-packshot.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

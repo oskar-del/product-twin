@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7744330",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Unison - E27 7W 2700K 3-steg dimbar - Ljuskälla",
+    "manufacturer": "Unison",
+    "article_no": "7744330",
+    "ean": "7340037000035",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 99,
+    "ean": "7340037000035",
+    "product_url": "https://lampan.se/p/e27-7w-2700k-3-steg-dimbar/",
+    "cart_deeplink": "https://lampan.se/p/e27-7w-2700k-3-steg-dimbar/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7744330&fid=2470&url=https://lampan.se/p/e27-7w-2700k-3-steg-dimbar/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/e27.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

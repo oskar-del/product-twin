@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP392688",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Golvlim Casco CascoFlex",
+    "manufacturer": "Casco",
+    "article_no": "GOP392688",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 970,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/kakel-och-klinker/fix-och-fog/ovrig-fix-och-fog/golvlim-casco-cascoflex/p-392688",
+    "cart_deeplink": "https://www.golvpoolen.se/kakel-och-klinker/fix-och-fog/ovrig-fix-och-fog/golvlim-casco-cascoflex/p-392688",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP392688&fid=2559&url=https://www.golvpoolen.se/kakel-och-klinker/fix-och-fog/ovrig-fix-och-fog/golvlim-casco-cascoflex/p-392688",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/739ad7f0-ae2c-4c34-90a0-60070a8a8de7/golvlim-casco-cascoflex.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

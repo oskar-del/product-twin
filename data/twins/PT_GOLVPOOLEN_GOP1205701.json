@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1205701",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Skruvdragare Einhell TE-SD 3,6/1 Li 3,6 V 1,5 Ah",
+    "manufacturer": "Einhell",
+    "article_no": "GOP1205701",
+    "ean": "4006825622744",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 349,
+    "ean": "4006825622744",
+    "product_url": "https://www.golvpoolen.se/verktyg/elverktyg/skruvdragare/skruvdragare-einhell-te-sd-36-och-1-li-36-v-15-ah/p-1205701",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/elverktyg/skruvdragare/skruvdragare-einhell-te-sd-36-och-1-li-36-v-15-ah/p-1205701",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1205701&fid=2559&url=https://www.golvpoolen.se/verktyg/elverktyg/skruvdragare/skruvdragare-einhell-te-sd-36-och-1-li-36-v-15-ah/p-1205701",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/8015951b-a326-456a-9448-4c75ff6f5718/1205701.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

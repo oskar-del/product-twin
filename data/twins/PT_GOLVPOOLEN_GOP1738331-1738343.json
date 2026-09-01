@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1738331-1738343",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dusch- och Badkarsblandare Tapwell EVM020-150",
+    "manufacturer": "Tapwell",
+    "article_no": "GOP1738331-1738343",
+    "ean": "7350004672226",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 4495,
+    "ean": "7350004672226",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/badkarsblandare/dusch-och-badkarsblandare-tapwell-evm020-150/p-1738331-1738343",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/badkarsblandare/dusch-och-badkarsblandare-tapwell-evm020-150/p-1738331-1738343",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1738331-1738343&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/badkarsblandare/dusch-och-badkarsblandare-tapwell-evm020-150/p-1738331-1738343",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/5b7a54e6-2c15-41b4-9b21-833efbad8fb1/9418843.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

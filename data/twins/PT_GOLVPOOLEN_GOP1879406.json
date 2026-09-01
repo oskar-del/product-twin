@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1879406",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställ Vedum Mezzo Dubbel",
+    "manufacturer": "Vedum",
+    "article_no": "GOP1879406",
+    "ean": "7332936068216",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 11173,
+    "ean": "7332936068216",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/tillval-badrumsmobler/tvattstall-vedum-mezzo-dubbel/p-1879406",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/tillval-badrumsmobler/tvattstall-vedum-mezzo-dubbel/p-1879406",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1879406&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/tillval-badrumsmobler/tvattstall-vedum-mezzo-dubbel/p-1879406",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f8d34221-81d9-48aa-96a6-32288e8d400e/vedum-tvattstall-mezzo-1230-db.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

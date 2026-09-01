@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_915004203301",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Philips - Fit 33cm - Badrumslampa - Krom",
+    "manufacturer": "Philips",
+    "article_no": "915004203301",
+    "ean": "8718291455349",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1139,
+    "ean": "8718291455349",
+    "product_url": "https://lampan.se/p/fit-33cm/?option=6425",
+    "cart_deeplink": "https://lampan.se/p/fit-33cm/?option=6425",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=915004203301&fid=2470&url=https://lampan.se/p/fit-33cm/?option=6425",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/654cd40457d54dc5b649a9b9008bc114.unknown.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

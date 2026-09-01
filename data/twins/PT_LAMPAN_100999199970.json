@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_100999199970",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lampan - Tillfällig belysning DCL - Tillfällig belysning",
+    "manufacturer": "Lampan",
+    "article_no": "100999199970",
+    "ean": "7340007450549",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 49,
+    "ean": "7340007450549",
+    "product_url": "https://lampan.se/p/tillfallig-belysning-dcl/",
+    "cart_deeplink": "https://lampan.se/p/tillfallig-belysning-dcl/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=100999199970&fid=2470&url=https://lampan.se/p/tillfallig-belysning-dcl/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/tillfalligbelysning-1-scaled-3317-1800x1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

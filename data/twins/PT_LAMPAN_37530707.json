@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_37530707",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Cato Dimbar - Golvlampa - Svart",
+    "manufacturer": "Belid",
+    "article_no": "37530707",
+    "ean": "7391534103255",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3699,
+    "ean": "7391534103255",
+    "product_url": "https://lampan.se/p/cato-dimbar-4/?option=1626",
+    "cart_deeplink": "https://lampan.se/p/cato-dimbar-4/?option=1626",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=37530707&fid=2470&url=https://lampan.se/p/cato-dimbar-4/?option=1626",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/partspartnumber37530707filename37530707.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

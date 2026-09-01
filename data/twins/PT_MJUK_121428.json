@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_121428",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Forms & Objects Olivia soffmodul",
+    "manufacturer": "Forms & Objects",
+    "article_no": "121428",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2850,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/121428/forms-objects-olivia-soffmodul",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/121428/forms-objects-olivia-soffmodul",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=121428&fid=978&url=https://www.mjuk.com/sv-se/product/121428/forms-objects-olivia-soffmodul",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/95babf6cbd2b973d38052efc73bd62d7.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

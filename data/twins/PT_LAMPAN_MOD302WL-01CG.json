@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD302WL-01CG",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Antic 55cm - Vägglampa - Guld",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD302WL-01CG",
+    "ean": "4251110031804",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1809,
+    "ean": "4251110031804",
+    "product_url": "https://lampan.se/p/antic-55cm/?option=6460",
+    "cart_deeplink": "https://lampan.se/p/antic-55cm/?option=6460",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD302WL-01CG&fid=2470&url=https://lampan.se/p/antic-55cm/?option=6460",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/mod302wl-01cg_on_w_standard_1.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

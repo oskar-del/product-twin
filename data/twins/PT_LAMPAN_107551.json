@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_107551",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Markslöjd - Gränsö Ø40 - Badrumslampa - Krom",
+    "manufacturer": "Markslöjd",
+    "article_no": "107551",
+    "ean": "7330024580152",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2199,
+    "ean": "7330024580152",
+    "product_url": "https://lampan.se/p/granso-o40-2/?option=3141",
+    "cart_deeplink": "https://lampan.se/p/granso-o40-2/?option=3141",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=107551&fid=2470&url=https://lampan.se/p/granso-o40-2/?option=3141",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/107551_granso_001.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

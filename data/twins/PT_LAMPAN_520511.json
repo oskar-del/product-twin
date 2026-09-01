@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_520511",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globen Lighting - Torrano 53cm - Bordslampa - Svart marmor",
+    "manufacturer": "Globen Lighting",
+    "article_no": "520511",
+    "ean": "7319435205113",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2999,
+    "ean": "7319435205113",
+    "product_url": "https://lampan.se/p/torrano-53cm-4/?option=14179",
+    "cart_deeplink": "https://lampan.se/p/torrano-53cm-4/?option=14179",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=520511&fid=2470&url=https://lampan.se/p/torrano-53cm-4/?option=14179",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/520511.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

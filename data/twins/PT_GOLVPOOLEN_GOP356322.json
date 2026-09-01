@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP356322",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställsblandare Strand Stainless Alice A23",
+    "manufacturer": "Strand Stainless",
+    "article_no": "GOP356322",
+    "ean": "7350025860633",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3295,
+    "ean": "7350025860633",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-strand-stainless-alice-a23/p-356322",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-strand-stainless-alice-a23/p-356322",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP356322&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-strand-stainless-alice-a23/p-356322",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/11903a86-3361-4fc9-b746-5f58d827699f/tvattstallsblandare-strand-alice-a23.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

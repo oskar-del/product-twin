@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_Z010TL-L8B3K",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Estudo 45cm - Skrivbordslampa - Svart",
+    "manufacturer": "Maytoni",
+    "article_no": "Z010TL-L8B3K",
+    "ean": "4251110027555",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1939,
+    "ean": "4251110027555",
+    "product_url": "https://lampan.se/p/estudo-45cm/?option=6526",
+    "cart_deeplink": "https://lampan.se/p/estudo-45cm/?option=6526",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=Z010TL-L8B3K&fid=2470&url=https://lampan.se/p/estudo-45cm/?option=6526",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/z010tl-l8b3k_on_w_standard.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

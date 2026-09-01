@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_129364",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Lyckeström 90x210 Medel A.Coal",
+    "manufacturer": "Kungsangen",
+    "article_no": "129364",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 50590,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-lyckestrom/129364",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-lyckestrom/129364",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=129364&fid=2564&url=https://kungsangen.com/se/p/sang-lyckestrom/129364",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h50/hf8/8825222987806/ks2000Wx1500H_lyckestrom_stallbar_mb21_vx20_90_anouk_coal/ks2000Wx1500H-lyckestrom-stallbar-mb21-vx20-90-anouk-coal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

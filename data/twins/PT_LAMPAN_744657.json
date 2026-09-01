@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_744657",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Hygge Ø24 - Taklampa - Svart",
+    "manufacturer": "Halo Design",
+    "article_no": "744657",
+    "ean": "5705639744657",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1149,
+    "ean": "5705639744657",
+    "product_url": "https://lampan.se/p/hygge-o24-0/?option=8027",
+    "cart_deeplink": "https://lampan.se/p/hygge-o24-0/?option=8027",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=744657&fid=2470&url=https://lampan.se/p/hygge-o24-0/?option=8027",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/744657_hd_hygge_pendant-24_graphite-black_72ppi_withoutpath.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

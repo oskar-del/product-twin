@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_35411GR",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Mars Ø40 - Taklampa - Grön",
+    "manufacturer": "Searchlight",
+    "article_no": "35411GR",
+    "ean": "5053423274300",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1449,
+    "ean": "5053423274300",
+    "product_url": "https://lampan.se/p/mars-o40-1/?option=12857",
+    "cart_deeplink": "https://lampan.se/p/mars-o40-1/?option=12857",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=35411GR&fid=2470&url=https://lampan.se/p/mars-o40-1/?option=12857",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/35411gr_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

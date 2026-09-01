@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_119762",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Altopiano soffbord antracit",
+    "manufacturer": "Mjuk",
+    "article_no": "119762",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2994,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/119762/altopiano-soffbord-antracit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/119762/altopiano-soffbord-antracit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=119762&fid=978&url=https://www.mjuk.com/sv-se/product/119762/altopiano-soffbord-antracit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/67733db9-3fb7-4d4d-b955-ea91645e902e.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

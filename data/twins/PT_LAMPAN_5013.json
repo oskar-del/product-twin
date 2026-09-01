@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_5013",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lightson - Kabel 10m - Lightson trädgårdssystem - Svart",
+    "manufacturer": "Lightson",
+    "article_no": "5013",
+    "ean": "7340110600077",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 269,
+    "ean": "7340110600077",
+    "product_url": "https://lampan.se/p/kabel-10m/?option=2760",
+    "cart_deeplink": "https://lampan.se/p/kabel-10m/?option=2760",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=5013&fid=2470&url=https://lampan.se/p/kabel-10m/?option=2760",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1_5013_cable_lightson_environ_closeup.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

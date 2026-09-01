@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP422248",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Toalettborste/Ersättningsborste Smedbo H234N Vit",
+    "manufacturer": "Smedbo",
+    "article_no": "GOP422248",
+    "ean": "7391447022179",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 115,
+    "ean": "7391447022179",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/toalettborste/toalettborste-och-ersattningsborste-smedbo-h234n-vit/p-422248",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/toalettborste/toalettborste-och-ersattningsborste-smedbo-h234n-vit/p-422248",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP422248&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/toalettborste/toalettborste-och-ersattningsborste-smedbo-h234n-vit/p-422248",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b117753b-096d-45de-9efd-437a80f8c143/toalettborste-och-ersattningsborste-smedbo-h234n-vit.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

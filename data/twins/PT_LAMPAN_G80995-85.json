@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_G80995-85",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Avola 56cm - Takplafond - Vit",
+    "manufacturer": "Brilliant",
+    "article_no": "G80995/85",
+    "ean": "4004353463167",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 889,
+    "ean": "4004353463167",
+    "product_url": "https://lampan.se/p/avola-56cm/?option=12987",
+    "cart_deeplink": "https://lampan.se/p/avola-56cm/?option=12987",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=G80995%2F85&fid=2470&url=https://lampan.se/p/avola-56cm/?option=12987",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/g80995_85.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_418-97",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - Förgrening Plugge - Tillbehör - Svart",
+    "manufacturer": "Star Trading",
+    "article_no": "418-97",
+    "ean": "7391482042095",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 499,
+    "ean": "7391482042095",
+    "product_url": "https://lampan.se/p/forgrening-plugge/?option=7273",
+    "cart_deeplink": "https://lampan.se/p/forgrening-plugge/?option=7273",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=418-97&fid=2470&url=https://lampan.se/p/forgrening-plugge/?option=7273",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-85126.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

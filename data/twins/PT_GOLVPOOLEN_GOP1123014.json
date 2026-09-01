@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1123014",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Köksblandare Hansgrohe Talis Select S 220 med Utdragbar Pip",
+    "manufacturer": "Hansgrohe",
+    "article_no": "GOP1123014",
+    "ean": "4011097823584",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 7535,
+    "ean": "4011097823584",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/koksblandare/koksblandare-hansgrohe-talis-select-s-220-med-utdragbar-pip/p-1123014",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/koksblandare/koksblandare-hansgrohe-talis-select-s-220-med-utdragbar-pip/p-1123014",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1123014&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/koksblandare/koksblandare-hansgrohe-talis-select-s-220-med-utdragbar-pip/p-1123014",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/23f9a77f-7fe7-4a4f-8ea2-a476b6d4ddf9/_72822000_1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

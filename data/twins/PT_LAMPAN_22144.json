@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_22144",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Eglo - Laterna 100cm - Pollare - Svart",
+    "manufacturer": "Eglo",
+    "article_no": "22144",
+    "ean": "9002759221447",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 719,
+    "ean": "9002759221447",
+    "product_url": "https://lampan.se/p/laterna-100cm/?option=15180",
+    "cart_deeplink": "https://lampan.se/p/laterna-100cm/?option=15180",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=22144&fid=2470&url=https://lampan.se/p/laterna-100cm/?option=15180",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/56d2deef5c102_101_0001.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

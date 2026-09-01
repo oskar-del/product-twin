@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_5933-360",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Konstsmide - Pappersstjärna Ø80 - Adventsstjärna - Brun",
+    "manufacturer": "Konstsmide",
+    "article_no": "5933-360",
+    "ean": "7318305933361",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 939,
+    "ean": "7318305933361",
+    "product_url": "https://lampan.se/p/pappersstjarna-o80/?option=11910",
+    "cart_deeplink": "https://lampan.se/p/pappersstjarna-o80/?option=11910",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=5933-360&fid=2470&url=https://lampan.se/p/pappersstjarna-o80/?option=11910",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-66430.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

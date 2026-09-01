@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_154627",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Lindeström 90x200 Extra fast A.Alu",
+    "manufacturer": "Kungsangen",
+    "article_no": "154627",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 29990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-lindestrom/154627",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-lindestrom/154627",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=154627&fid=2564&url=https://kungsangen.com/se/p/sang-lindestrom/154627",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hbf/h83/8825218007070/ks2000Wx1500H_lindestrom_kontinental_s23_vx20_90_anouk_alu/ks2000Wx1500H-lindestrom-kontinental-s23-vx20-90-anouk-alu.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

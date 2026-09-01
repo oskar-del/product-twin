@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4300580-4002",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "By Rydéns - Shelby Ø50 - Vägglampa - Mattsvart",
+    "manufacturer": "By Rydéns",
+    "article_no": "4300580-4002",
+    "ean": "7391741010377",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2449,
+    "ean": "7391741010377",
+    "product_url": "https://lampan.se/p/shelby-o50/?option=2276",
+    "cart_deeplink": "https://lampan.se/p/shelby-o50/?option=2276",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4300580-4002&fid=2470&url=https://lampan.se/p/shelby-o50/?option=2276",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/shelby_black_4300580_4002.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

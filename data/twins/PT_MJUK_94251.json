@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_94251",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Zack Foccio handduksstång stål",
+    "manufacturer": "Zack",
+    "article_no": "94251",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 364,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/94251/zack-foccio-handduksstang-stal",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/94251/zack-foccio-handduksstang-stal",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=94251&fid=978&url=https://www.mjuk.com/sv-se/product/94251/zack-foccio-handduksstang-stal",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/1c644c82afead017551a607b71ce8b55.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

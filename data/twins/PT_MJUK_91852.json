@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_91852",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Profim Ariz 575V stol svart",
+    "manufacturer": "Mjuk",
+    "article_no": "91852",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1966,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/91852/profim-ariz-575v-stol-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/91852/profim-ariz-575v-stol-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=91852&fid=978&url=https://www.mjuk.com/sv-se/product/91852/profim-ariz-575v-stol-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/a16a3b825fdfd16450c7fb42ef1bf31d.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

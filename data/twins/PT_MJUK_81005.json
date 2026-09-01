@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_81005",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Buster + Punch dörrhandtag stål",
+    "manufacturer": "Buster + Punch",
+    "article_no": "81005",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 978,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/81005/buster-punch-dorrhandtag-stal",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/81005/buster-punch-dorrhandtag-stal",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=81005&fid=978&url=https://www.mjuk.com/sv-se/product/81005/buster-punch-dorrhandtag-stal",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/8f2106e4dc5acb1089686455f00c6ad2.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

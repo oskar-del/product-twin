@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1731396",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dekorvax Osmo 3188 Snö 0,125 Liter",
+    "manufacturer": "Osmo",
+    "article_no": "GOP1731396",
+    "ean": "4006850807727",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 243,
+    "ean": "4006850807727",
+    "product_url": "https://www.golvpoolen.se/golv/golvvard/dekorvax-osmo-3188-sno-0125-liter/p-1731396",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvvard/dekorvax-osmo-3188-sno-0125-liter/p-1731396",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1731396&fid=2559&url=https://www.golvpoolen.se/golv/golvvard/dekorvax-osmo-3188-sno-0125-liter/p-1731396",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/259e317f-75e4-4d24-90c1-5731f2a94b42/4006850807727_1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

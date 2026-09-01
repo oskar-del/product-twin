@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1062804",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Fiona Nordic Compositions 590104",
+    "manufacturer": "Fiona",
+    "article_no": "GOP1062804",
+    "ean": "5701573461032",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 464,
+    "ean": "5701573461032",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-nordic-compositions-590104/p-1062804",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-nordic-compositions-590104/p-1062804",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1062804&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-nordic-compositions-590104/p-1062804",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/7f022083-ee56-4807-97f4-6d81d2c69451/590104.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

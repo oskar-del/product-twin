@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1116C9",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Artera - Una 42cm - Vägglampa - Krämvit",
+    "manufacturer": "Artera",
+    "article_no": "1116C9",
+    "ean": "5904798660864",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2379,
+    "ean": "5904798660864",
+    "product_url": "https://lampan.se/p/una-42cm-2/?option=13778",
+    "cart_deeplink": "https://lampan.se/p/una-42cm-2/?option=13778",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1116C9&fid=2470&url=https://lampan.se/p/una-42cm-2/?option=13778",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/12234_1_978.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

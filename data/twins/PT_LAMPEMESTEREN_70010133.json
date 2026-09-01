@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70010133",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "A330S Golden Bell Taklampa White - Artek - Matsal - Metall",
+    "manufacturer": "Artek",
+    "article_no": "70010133",
+    "ean": "6438305000991",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 5830,
+    "ean": "6438305000991",
+    "product_url": "https://www.lampemesteren.se/p/a330s-golden-bell-taklampa-white-artek-70010133.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/a330s-golden-bell-taklampa-white-artek-70010133.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70010133&fid=1004&url=https://www.lampemesteren.se/p/a330s-golden-bell-taklampa-white-artek-70010133.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/95087C06E5A5/k_e348330f84eb8d62e7dcfdf1a4a4553d;w_1600;h_1600;q_90/70010133.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

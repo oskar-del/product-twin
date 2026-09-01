@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_132546",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gervasoni matgrupp inkl. bord och 8 stolar",
+    "manufacturer": "Gervasoni",
+    "article_no": "132546",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 35101,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/132546/gervasoni-matgrupp-inkl-bord-och-8-stolar",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/132546/gervasoni-matgrupp-inkl-bord-och-8-stolar",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=132546&fid=978&url=https://www.mjuk.com/sv-se/product/132546/gervasoni-matgrupp-inkl-bord-och-8-stolar",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/428b6f11370e61d1b4cd4e1479b75e54.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

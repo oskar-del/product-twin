@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP882976-1567338",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Högskåp Vedum Free Bas",
+    "manufacturer": "Vedum",
+    "article_no": "GOP882976-1567338",
+    "ean": "7332936050013",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 8528,
+    "ean": "7332936050013",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/hogskap-vedum-free-bas/p-882976-1567338",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/hogskap-vedum-free-bas/p-882976-1567338",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP882976-1567338&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/hogskap-vedum-free-bas/p-882976-1567338",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b0ac216e-e0bc-472d-8973-9f939bdae5e8/530946292.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

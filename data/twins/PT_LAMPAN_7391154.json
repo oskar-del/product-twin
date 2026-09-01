@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7391154",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Taurus 80cm - Pollare - Roststruktur",
+    "manufacturer": "Belid",
+    "article_no": "7391154",
+    "ean": "7391534048181",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4549,
+    "ean": "7391534048181",
+    "product_url": "https://lampan.se/p/taurus-80cm-1/?option=1653",
+    "cart_deeplink": "https://lampan.se/p/taurus-80cm-1/?option=1653",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7391154&fid=2470&url=https://lampan.se/p/taurus-80cm-1/?option=1653",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/partspartnumber7391154filename7391154.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

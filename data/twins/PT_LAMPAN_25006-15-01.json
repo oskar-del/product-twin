@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_25006-15-01",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Silvia Ø22 - Fönsterlampa - Svart/Vit",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "25006-15-01",
+    "ean": "7041661283589",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 849,
+    "ean": "7041661283589",
+    "product_url": "https://lampan.se/p/silvia-o22/?option=13629",
+    "cart_deeplink": "https://lampan.se/p/silvia-o22/?option=13629",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=25006-15-01&fid=2470&url=https://lampan.se/p/silvia-o22/?option=13629",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/4aka3ba8l1ufpmnr22huwox2z.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

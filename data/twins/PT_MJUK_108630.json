@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_108630",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "B&B Italia Fat 3-sits soffa",
+    "manufacturer": "B&B Italia",
+    "article_no": "108630",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 18346,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/108630/bb-italia-fat-3-sits-soffa",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/108630/bb-italia-fat-3-sits-soffa",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=108630&fid=978&url=https://www.mjuk.com/sv-se/product/108630/bb-italia-fat-3-sits-soffa",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/6f56ee3ba486b24925b9c5c5c59415cd.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

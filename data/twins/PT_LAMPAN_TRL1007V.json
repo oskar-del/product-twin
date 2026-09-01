@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_TRL1007V",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Nordic Lighting - Forma skena 1m - Nordic Lighting skensystem - Vit",
+    "manufacturer": "Nordic Lighting",
+    "article_no": "TRL1007V",
+    "ean": "7350170884171",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 299,
+    "ean": "7350170884171",
+    "product_url": "https://lampan.se/p/forma-skena-1m-0/?option=1919",
+    "cart_deeplink": "https://lampan.se/p/forma-skena-1m-0/?option=1919",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=TRL1007V&fid=2470&url=https://lampan.se/p/forma-skena-1m-0/?option=1919",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/trl1007v.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

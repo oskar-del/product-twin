@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_237502",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Örngott Natur Kram Beige 40x185",
+    "manufacturer": "Kungsangen",
+    "article_no": "237502",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 399,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/orngott-natur-kram-beige/237502",
+    "cart_deeplink": "https://kungsangen.com/se/p/orngott-natur-kram-beige/237502",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=237502&fid=2564&url=https://kungsangen.com/se/p/orngott-natur-kram-beige/237502",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hb3/h73/8846325547038/ks2000Wx1500H_orngott-kram-beige/ks2000Wx1500H-orngott-kram-beige.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

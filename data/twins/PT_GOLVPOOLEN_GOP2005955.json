@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2005955",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Laminatgolv BerryAlloc Original Klint Oak 3-stav",
+    "manufacturer": "BerryAlloc",
+    "article_no": "GOP2005955",
+    "ean": "7052870181085",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 991,
+    "ean": "7052870181085",
+    "product_url": "https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-original-klint-oak-3-stav/p-2005955",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-original-klint-oak-3-stav/p-2005955",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2005955&fid=2559&url=https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-original-klint-oak-3-stav/p-2005955",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/45f2891f-a642-4bc0-9356-04c2f25ec5a1/62002846_1-kopiera.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

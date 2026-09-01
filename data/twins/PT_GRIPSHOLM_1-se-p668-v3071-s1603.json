@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GRIPSHOLM_1-se-p668-v3071-s1603",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gripsholm Påslakanset Siri Percale",
+    "manufacturer": "Gripsholm",
+    "article_no": "1/se-p668-v3071-s1603",
+    "ean": "7318161448580",
+    "source": "gripsholm_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "gripsholm SE",
+    "currency": "SEK",
+    "unit_price": 849,
+    "ean": "7318161448580",
+    "product_url": "https://www.gripsholm.se/p/bed-set-siri-percale-gots-whitecob?country=se",
+    "cart_deeplink": "https://www.gripsholm.se/p/bed-set-siri-percale-gots-whitecob?country=se",
+    "affiliate_link": "https://pid.gripsholm.se/t/t?a=1960533239&as=2106320328&t=2&tk=1&cupa_sku=1%2Fse-p668-v3071-s1603&fid=2720&url=https://www.gripsholm.se/p/bed-set-siri-percale-gots-whitecob?country=se",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://springhill.centracdn.net/client/dynamic/originals/668_cfa9f73171-917618-10-original.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_121519",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Swedoor Domoferm TS50 dörrstängare",
+    "manufacturer": "Mjuk",
+    "article_no": "121519",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 718,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/121519/swedoor-domoferm-ts50-dorrstangare",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/121519/swedoor-domoferm-ts50-dorrstangare",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=121519&fid=978&url=https://www.mjuk.com/sv-se/product/121519/swedoor-domoferm-ts50-dorrstangare",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/fcd7a588ab0df5c8c4f525ab1290a495.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

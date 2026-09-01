@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4300100-6519",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "By Rydéns - Hermine 22cm - Vägglampa - Matt mässing",
+    "manufacturer": "By Rydéns",
+    "article_no": "4300100-6519",
+    "ean": "7391741001047",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 895,
+    "ean": "7391741001047",
+    "product_url": "https://lampan.se/p/hermine-22cm/?option=2287",
+    "cart_deeplink": "https://lampan.se/p/hermine-22cm/?option=2287",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4300100-6519&fid=2470&url=https://lampan.se/p/hermine-22cm/?option=2287",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/hermine_brass_4300100_6519.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

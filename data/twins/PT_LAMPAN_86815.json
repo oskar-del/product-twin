@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_86815",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Eglo - Optica Ø45 - Taklampa - Vit",
+    "manufacturer": "Eglo",
+    "article_no": "86815",
+    "ean": "9002759868154",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2329,
+    "ean": "9002759868154",
+    "product_url": "https://lampan.se/p/optica-o45/?option=15202",
+    "cart_deeplink": "https://lampan.se/p/optica-o45/?option=15202",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=86815&fid=2470&url=https://lampan.se/p/optica-o45/?option=15202",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/86815_sh_view_0001-jpg2500px.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

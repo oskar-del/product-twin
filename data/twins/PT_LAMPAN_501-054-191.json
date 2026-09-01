@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_501-054-191",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "PR Home - Leya 54cm - Bordslampa - Svart",
+    "manufacturer": "PR Home",
+    "article_no": "501-054-191",
+    "ean": "7330976144167",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 999,
+    "ean": "7330976144167",
+    "product_url": "https://lampan.se/p/leya-54cm-1/?option=13954",
+    "cart_deeplink": "https://lampan.se/p/leya-54cm-1/?option=13954",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=501-054-191&fid=2470&url=https://lampan.se/p/leya-54cm-1/?option=13954",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/501-054-191_2.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

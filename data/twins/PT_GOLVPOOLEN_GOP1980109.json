@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1980109",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställsblandare Burlington Stafford Long Nose STA12QT 2H",
+    "manufacturer": "Burlington",
+    "article_no": "GOP1980109",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2195,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-burlington-stafford-long-nose-sta12qt-2h/p-1980109",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-burlington-stafford-long-nose-sta12qt-2h/p-1980109",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1980109&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-burlington-stafford-long-nose-sta12qt-2h/p-1980109",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/881de2f9-73d5-46be-b51b-8fb67328a65d/sta12-qt.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

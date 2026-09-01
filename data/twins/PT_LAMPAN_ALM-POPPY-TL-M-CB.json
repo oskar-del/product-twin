@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_ALM-POPPY-TL-M-CB",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Poppy 35cm - Bordslampa - Ljusblå",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "ALM-POPPY-TL-M-CB",
+    "ean": "5024005121886",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2059,
+    "ean": "5024005121886",
+    "product_url": "https://lampan.se/p/poppy-35cm-0/?option=15783",
+    "cart_deeplink": "https://lampan.se/p/poppy-35cm-0/?option=15783",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=ALM-POPPY-TL-M-CB&fid=2470&url=https://lampan.se/p/poppy-35cm-0/?option=15783",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/alm-poppy-tl-m-cb.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

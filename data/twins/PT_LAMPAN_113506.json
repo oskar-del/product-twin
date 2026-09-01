@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_113506",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globen Lighting - Hubble 24cm - Bordslampa - Valnöt",
+    "manufacturer": "Globen Lighting",
+    "article_no": "113506",
+    "ean": "7319431135063",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1699,
+    "ean": "7319431135063",
+    "product_url": "https://lampan.se/p/hubble-24cm-3/?option=14399",
+    "cart_deeplink": "https://lampan.se/p/hubble-24cm-3/?option=14399",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=113506&fid=2470&url=https://lampan.se/p/hubble-24cm-3/?option=14399",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/113506.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

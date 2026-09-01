@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_135846",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Houe Level soffmodul grå",
+    "manufacturer": "Houe",
+    "article_no": "135846",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 7790,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/135846/houe-level-soffmodul-gra",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/135846/houe-level-soffmodul-gra",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=135846&fid=978&url=https://www.mjuk.com/sv-se/product/135846/houe-level-soffmodul-gra",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/589a9c5e2f5af9954f84d113b337d32a.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

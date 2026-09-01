@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_139083",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bloomington Oxford Lyx puff beige",
+    "manufacturer": "Bloomington",
+    "article_no": "139083",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1944,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/139083/bloomington-oxford-lyx-puff-beige",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/139083/bloomington-oxford-lyx-puff-beige",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=139083&fid=978&url=https://www.mjuk.com/sv-se/product/139083/bloomington-oxford-lyx-puff-beige",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/2565b82f-4995-4db5-9926-80b36e121f29.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

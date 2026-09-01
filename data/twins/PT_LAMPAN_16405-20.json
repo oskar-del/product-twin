@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_16405-20",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Nicoline Ø26 - Badrumslampa - Krom",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "16405-20",
+    "ean": "7392986780186",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1299,
+    "ean": "7392986780186",
+    "product_url": "https://lampan.se/p/nicoline-o26/?option=1741",
+    "cart_deeplink": "https://lampan.se/p/nicoline-o26/?option=1741",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=16405-20&fid=2470&url=https://lampan.se/p/nicoline-o26/?option=1741",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/16405-20_nicoline_7392986780186.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

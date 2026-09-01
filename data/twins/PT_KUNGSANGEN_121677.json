@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_121677",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Engeström 210x200 Mjuk/Extra fast A.Nougat",
+    "manufacturer": "Kungsangen",
+    "article_no": "121677",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 57990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-engestrom/121677",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-engestrom/121677",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=121677&fid=2564&url=https://kungsangen.com/se/p/sang-engestrom/121677",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h1f/h10/8825212239902/ks2000Wx1500H_engestrom_kontinental_s23_vx20_180_anouk_nougat/ks2000Wx1500H-engestrom-kontinental-s23-vx20-180-anouk-nougat.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

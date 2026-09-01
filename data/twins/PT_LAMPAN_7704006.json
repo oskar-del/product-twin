@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7704006",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Westal - Gustav upp - Fasadbelysning - Svart",
+    "manufacturer": "Westal",
+    "article_no": "7704006",
+    "ean": "7393047192665",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3709,
+    "ean": "7393047192665",
+    "product_url": "https://lampan.se/p/gustav-upp/?option=6061",
+    "cart_deeplink": "https://lampan.se/p/gustav-upp/?option=6061",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7704006&fid=2470&url=https://lampan.se/p/gustav-upp/?option=6061",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/7704006_vi_1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

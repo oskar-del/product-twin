@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_142-14",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - Milano - Adventsljusstake - Krom",
+    "manufacturer": "Star Trading",
+    "article_no": "142-14",
+    "ean": "7391482017680",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 969,
+    "ean": "7391482017680",
+    "product_url": "https://lampan.se/p/milano-3/?option=14845",
+    "cart_deeplink": "https://lampan.se/p/milano-3/?option=14845",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=142-14&fid=2470&url=https://lampan.se/p/milano-3/?option=14845",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/142-14352-60_fl_001.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

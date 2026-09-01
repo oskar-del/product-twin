@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1175-6B",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emibig Lighting - Veken Ø55 - Takplafond - Svart/Guld",
+    "manufacturer": "Emibig Lighting",
+    "article_no": "1175/6B",
+    "ean": "5907106001304",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1509,
+    "ean": "5907106001304",
+    "product_url": "https://lampan.se/p/veken-o55-0/?option=12144",
+    "cart_deeplink": "https://lampan.se/p/veken-o55-0/?option=12144",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1175%2F6B&fid=2470&url=https://lampan.se/p/veken-o55-0/?option=12144",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1175_6b-1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

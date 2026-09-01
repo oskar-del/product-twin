@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_061-66",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - LED Blockljus Flamme Stripe - Batteriljus - Vit",
+    "manufacturer": "Star Trading",
+    "article_no": "061-66",
+    "ean": "7391482064912",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 99,
+    "ean": "7391482064912",
+    "product_url": "https://lampan.se/p/led-blockljus-flamme-stripe-0/?option=7189",
+    "cart_deeplink": "https://lampan.se/p/led-blockljus-flamme-stripe-0/?option=7189",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=061-66&fid=2470&url=https://lampan.se/p/led-blockljus-flamme-stripe-0/?option=7189",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-67646.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

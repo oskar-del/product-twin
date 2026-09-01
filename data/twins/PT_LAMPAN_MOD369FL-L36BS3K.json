@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD369FL-L36BS3K",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Crochet - Golvlampa - Guld",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD369FL-L36BS3K",
+    "ean": "4099776143482",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5089,
+    "ean": "4099776143482",
+    "product_url": "https://lampan.se/p/crochet/?option=12261",
+    "cart_deeplink": "https://lampan.se/p/crochet/?option=12261",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD369FL-L36BS3K&fid=2470&url=https://lampan.se/p/crochet/?option=12261",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/image0-15895.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

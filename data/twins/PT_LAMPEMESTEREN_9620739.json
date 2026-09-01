@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_9620739",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Fiona Taklampa Terracotta - Lindby - Vardagsrum - Medelhavs - Betong - Med en ljuskälla",
+    "manufacturer": "Lindby",
+    "article_no": "9620739",
+    "ean": "4251096519518",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 1269,
+    "ean": "4251096519518",
+    "product_url": "https://www.lampemesteren.se/p/fiona-taklampa-terracotta-lindby-9620739.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/fiona-taklampa-terracotta-lindby-9620739.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=9620739&fid=1004&url=https://www.lampemesteren.se/p/fiona-taklampa-terracotta-lindby-9620739.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/0AAEF919C16A/k_f298aa5f9a7ce25166653006717fb035;w_1600;h_1600;q_90/9620739.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

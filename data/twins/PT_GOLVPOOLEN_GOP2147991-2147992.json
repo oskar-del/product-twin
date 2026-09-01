@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2147991-2147992",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Badkarsblandare Gustavsberg Nya Nautic med Svängbar Pip",
+    "manufacturer": "Gustavsberg",
+    "article_no": "GOP2147991-2147992",
+    "ean": "7391530081205",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 4515,
+    "ean": "7391530081205",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/badkarsblandare/badkarsblandare-gustavsberg-nya-nautic-med-svangbar-pip/p-2147991-2147992",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/badkarsblandare/badkarsblandare-gustavsberg-nya-nautic-med-svangbar-pip/p-2147991-2147992",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2147991-2147992&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/badkarsblandare/badkarsblandare-gustavsberg-nya-nautic-med-svangbar-pip/p-2147991-2147992",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/4e459039-aa1d-4d02-8c96-0278e860de86/bild_1_8350161.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

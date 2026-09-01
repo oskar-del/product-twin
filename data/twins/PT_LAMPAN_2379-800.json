@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2379-800",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Konstsmide - Ljusslinga amber LED 10m - Partyslinga - Svart",
+    "manufacturer": "Konstsmide",
+    "article_no": "2379-800",
+    "ean": "7318302379803",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1059,
+    "ean": "7318302379803",
+    "product_url": "https://lampan.se/p/ljusslinga-amber-led-10m/?option=11937",
+    "cart_deeplink": "https://lampan.se/p/ljusslinga-amber-led-10m/?option=11937",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2379-800&fid=2470&url=https://lampan.se/p/ljusslinga-amber-led-10m/?option=11937",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/2-74491.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

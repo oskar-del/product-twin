@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1573431",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tigersåg Einhell TE-AP 18/28 BL Solo",
+    "manufacturer": "Einhell",
+    "article_no": "GOP1573431",
+    "ean": "4006825644951",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1210,
+    "ean": "4006825644951",
+    "product_url": "https://www.golvpoolen.se/verktyg/elverktyg/elsagar/tigersag-einhell-te-ap-18-och-28-bl-solo/p-1573431",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/elverktyg/elsagar/tigersag-einhell-te-ap-18-och-28-bl-solo/p-1573431",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1573431&fid=2559&url=https://www.golvpoolen.se/verktyg/elverktyg/elsagar/tigersag-einhell-te-ap-18-och-28-bl-solo/p-1573431",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/89205917-56f4-4eab-a831-916af7680ccd/1573431.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

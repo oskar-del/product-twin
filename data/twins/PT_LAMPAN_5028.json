@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_5028",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lightson - Kabel 2.5m - Lightson trädgårdssystem - Svart",
+    "manufacturer": "Lightson",
+    "article_no": "5028",
+    "ean": "7340110600329",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 84,
+    "ean": "7340110600329",
+    "product_url": "https://lampan.se/p/kabel-25m/?option=2765",
+    "cart_deeplink": "https://lampan.se/p/kabel-25m/?option=2765",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=5028&fid=2470&url=https://lampan.se/p/kabel-25m/?option=2765",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1_5028_cable_lightson_environ_closeup.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP861886",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handtag Ballingslöv Bad Krom",
+    "manufacturer": "Ballingslöv",
+    "article_no": "GOP861886",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 88,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-ballingslov-bad-krom/p-861886",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-ballingslov-bad-krom/p-861886",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP861886&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-ballingslov-bad-krom/p-861886",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/d7c73a77-9844-4039-9ed9-a9d09fcbf961/handtag-ballingslov-bad-krom.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

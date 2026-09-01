@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1486726",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet A Street Prints Adele  FD25146",
+    "manufacturer": "A Street Prints",
+    "article_no": "GOP1486726",
+    "ean": "5011419251469",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 919,
+    "ean": "5011419251469",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-a-street-prints-adele-fd25146/p-1486726",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-a-street-prints-adele-fd25146/p-1486726",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1486726&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-a-street-prints-adele-fd25146/p-1486726",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/169c50c1-88a9-478b-905f-58dc15beaf42/fd25146.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

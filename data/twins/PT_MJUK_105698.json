@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_105698",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "MYCS Chayr stol ek",
+    "manufacturer": "MYCS",
+    "article_no": "105698",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1342,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/105698/mycs-chayr-stol-ek",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/105698/mycs-chayr-stol-ek",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=105698&fid=978&url=https://www.mjuk.com/sv-se/product/105698/mycs-chayr-stol-ek",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/e2ed8acaea05ee220a0f9b0269c7bd02.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2017470",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tröskel Bjelin Earth grey",
+    "manufacturer": "Bjelin",
+    "article_no": "GOP2017470",
+    "ean": "3856018010916",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 729,
+    "ean": "3856018010916",
+    "product_url": "https://www.golvpoolen.se/golv/golvtillbehor/golvlister/troskel-bjelin-earth-grey/p-2017470",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvtillbehor/golvlister/troskel-bjelin-earth-grey/p-2017470",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2017470&fid=2559&url=https://www.golvpoolen.se/golv/golvtillbehor/golvlister/troskel-bjelin-earth-grey/p-2017470",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/0a1f25b4-9379-4330-9e23-e841f6cbfbab/238195.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

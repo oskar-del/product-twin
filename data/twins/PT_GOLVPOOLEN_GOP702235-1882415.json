@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP702235-1882415",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Väggskåp Gustavsberg Graphic",
+    "manufacturer": "Gustavsberg",
+    "article_no": "GOP702235-1882415",
+    "ean": "7391530084404",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 4493,
+    "ean": "7391530084404",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/vaggskap-gustavsberg-graphic/p-702235-1882415",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/vaggskap-gustavsberg-graphic/p-702235-1882415",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP702235-1882415&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/vaggskap-gustavsberg-graphic/p-702235-1882415",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b9423408-d4c2-4b72-8d16-36ead74bf152/vaggskap-gustavsberg-graphic.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

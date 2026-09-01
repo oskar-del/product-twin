@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_209206",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Örngott Royal Satin Grå 50x60",
+    "manufacturer": "Kungsangen",
+    "article_no": "209206",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 299,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/orngott-royal-satin-gra/209206",
+    "cart_deeplink": "https://kungsangen.com/se/p/orngott-royal-satin-gra/209206",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=209206&fid=2564&url=https://kungsangen.com/se/p/orngott-royal-satin-gra/209206",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h7c/h55/8830056759326/ks2000Wx1500H_orngott-royal-gra/ks2000Wx1500H-orngott-royal-gra.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

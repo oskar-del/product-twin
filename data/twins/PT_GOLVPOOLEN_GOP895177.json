@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP895177",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bård Wallfashion Oceans 1060-2",
+    "manufacturer": "Wallfashion",
+    "article_no": "GOP895177",
+    "ean": "8429596106026",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 169,
+    "ean": "8429596106026",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/tapetbard/bard-wallfashion-oceans-1060-2/p-895177",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/tapetbard/bard-wallfashion-oceans-1060-2/p-895177",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP895177&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/tapetbard/bard-wallfashion-oceans-1060-2/p-895177",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/abc0aaac-8806-49b9-8f9c-859a7cafbbbc/bard-wallfashion-oceans.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

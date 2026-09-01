@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP655509-566906",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschdörr INR Linc Josephine",
+    "manufacturer": "INR",
+    "article_no": "GOP655509-566906",
+    "ean": "7392102018384",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 7960,
+    "ean": "7392102018384",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-inr-linc-josephine/p-655509-566906",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-inr-linc-josephine/p-655509-566906",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP655509-566906&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-inr-linc-josephine/p-655509-566906",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/6884a456-7c6d-4d98-aaa2-41f89e0403a3/duschvagg-inr-linc-josephine.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

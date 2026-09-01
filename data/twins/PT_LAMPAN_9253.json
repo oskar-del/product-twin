@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_9253",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dyberg Larsen - Fonzy 38cm - Portabel lampa - Blå",
+    "manufacturer": "Dyberg Larsen",
+    "article_no": "9253",
+    "ean": "5704709092537",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 939,
+    "ean": "5704709092537",
+    "product_url": "https://lampan.se/p/fonzy-38cm/?option=10091",
+    "cart_deeplink": "https://lampan.se/p/fonzy-38cm/?option=10091",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=9253&fid=2470&url=https://lampan.se/p/fonzy-38cm/?option=10091",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/5704709092537_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

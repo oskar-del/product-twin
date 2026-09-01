@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP576565",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Toalettsits Gustavsberg Nautic 9M25 Hårdsits",
+    "manufacturer": "Gustavsberg",
+    "article_no": "GOP576565",
+    "ean": "4047289984108",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 625,
+    "ean": "4047289984108",
+    "product_url": "https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-gustavsberg-nautic-9m25-hardsits/p-576565",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-gustavsberg-nautic-9m25-hardsits/p-576565",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP576565&fid=2559&url=https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-gustavsberg-nautic-9m25-hardsits/p-576565",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/a6b41326-911b-401d-a69b-55b6ad6bfc22/toalettsits-gustavsberg-nautic-9m25-vit-hardsits.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

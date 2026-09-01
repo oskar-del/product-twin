@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1757024",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Kedjeslipmaskin HECHT Klingdiameter 145 mm",
+    "manufacturer": "HECHT",
+    "article_no": "GOP1757024",
+    "ean": "8594061744833",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1895,
+    "ean": "8594061744833",
+    "product_url": "https://www.golvpoolen.se/verktyg/elverktyg/slipmaskin/kedjeslipmaskin-hecht-klingdiameter-145-mm/p-1757024",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/elverktyg/slipmaskin/kedjeslipmaskin-hecht-klingdiameter-145-mm/p-1757024",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1757024&fid=2559&url=https://www.golvpoolen.se/verktyg/elverktyg/slipmaskin/kedjeslipmaskin-hecht-klingdiameter-145-mm/p-1757024",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/236e8176-e418-4081-bb94-4d718b870f0e/40270.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_45574-02-02",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Tycho 43cm - Bordslampa - Mattguld/mässing",
+    "manufacturer": "Lucide",
+    "article_no": "45574/02/02",
+    "ean": "5411212450968",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1059,
+    "ean": "5411212450968",
+    "product_url": "https://lampan.se/p/tycho-43cm/?option=1102",
+    "cart_deeplink": "https://lampan.se/p/tycho-43cm/?option=1102",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=45574%2F02%2F02&fid=2470&url=https://lampan.se/p/tycho-43cm/?option=1102",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/45574-02-02.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

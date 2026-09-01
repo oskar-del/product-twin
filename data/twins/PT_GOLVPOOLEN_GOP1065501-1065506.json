@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1065501-1065506",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukstork Duschbyggarna Snake",
+    "manufacturer": "Duschbyggarna",
+    "article_no": "GOP1065501-1065506",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 15320,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-duschbyggarna-snake/p-1065501-1065506",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-duschbyggarna-snake/p-1065501-1065506",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1065501-1065506&fid=2559&url=https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-duschbyggarna-snake/p-1065501-1065506",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/51d5103d-8ac2-4b94-84bd-fbf1caa48036/tb13650-2011-snake-1360x500-orange.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

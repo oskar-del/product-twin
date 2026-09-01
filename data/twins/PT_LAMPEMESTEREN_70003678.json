@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70003678",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "SuperEgg 200 Taklampa Röd - Piet Hein - Matsal - Glas",
+    "manufacturer": "Piet Hein",
+    "article_no": "70003678",
+    "ean": "5707646607680",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 3020,
+    "ean": "5707646607680",
+    "product_url": "https://www.lampemesteren.se/p/superegg-200-taklampa-rod-piet-hein-70003678.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/superegg-200-taklampa-rod-piet-hein-70003678.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70003678&fid=1004&url=https://www.lampemesteren.se/p/superegg-200-taklampa-rod-piet-hein-70003678.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/79CEF8150055/k_6065797b0df95ede1c85d4bac686f408;w_1600;h_1600;q_90/70003678.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

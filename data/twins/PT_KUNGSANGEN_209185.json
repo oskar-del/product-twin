@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_209185",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Påslakanset Signatur Satin Marin 220x210",
+    "manufacturer": "Kungsangen",
+    "article_no": "209185",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 1399,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/paslakanset-signatur-satin-marin/209185",
+    "cart_deeplink": "https://kungsangen.com/se/p/paslakanset-signatur-satin-marin/209185",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=209185&fid=2564&url=https://kungsangen.com/se/p/paslakanset-signatur-satin-marin/209185",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h39/h89/8830070652958/ks2000Wx1500H_paslakanset-signatur-bla-150x200/ks2000Wx1500H-paslakanset-signatur-bla-150x200.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

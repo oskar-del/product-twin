@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1876716",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tätband PCI Pecitape 50 M",
+    "manufacturer": "PCI",
+    "article_no": "GOP1876716",
+    "ean": "4049499027156",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1112,
+    "ean": "4049499027156",
+    "product_url": "https://www.golvpoolen.se/kakel-och-klinker/fix-och-fog/ovrig-fix-och-fog/tatband-pci-pecitape-50-m/p-1876716",
+    "cart_deeplink": "https://www.golvpoolen.se/kakel-och-klinker/fix-och-fog/ovrig-fix-och-fog/tatband-pci-pecitape-50-m/p-1876716",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1876716&fid=2559&url=https://www.golvpoolen.se/kakel-och-klinker/fix-och-fog/ovrig-fix-och-fog/tatband-pci-pecitape-50-m/p-1876716",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/0f40d8f6-7863-4ecf-ace9-f1892b491d45/311482.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

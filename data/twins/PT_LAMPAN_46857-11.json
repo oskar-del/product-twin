@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_46857-11",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Oriva - Bobby Ø18 - Fönsterlampa - Amber",
+    "manufacturer": "Oriva",
+    "article_no": "46857-11",
+    "ean": "7332065072177",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 489,
+    "ean": "7332065072177",
+    "product_url": "https://lampan.se/p/bobby-o18/?option=8443",
+    "cart_deeplink": "https://lampan.se/p/bobby-o18/?option=8443",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=46857-11&fid=2470&url=https://lampan.se/p/bobby-o18/?option=8443",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/46857-111400x1400.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

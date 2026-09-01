@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1062755",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Fiona Heritage 601034",
+    "manufacturer": "Fiona",
+    "article_no": "GOP1062755",
+    "ean": "5701573407115",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 699,
+    "ean": "5701573407115",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-heritage-601034/p-1062755",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-heritage-601034/p-1062755",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1062755&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-fiona-heritage-601034/p-1062755",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/ee7c9d48-2d4e-4b4b-8fb0-6bd7ffa7347c/601034.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

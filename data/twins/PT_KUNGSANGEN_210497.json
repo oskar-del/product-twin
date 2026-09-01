@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_210497",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Örngott Natur Blå 50x90",
+    "manufacturer": "Kungsangen",
+    "article_no": "210497",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 259,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/orngott-natur-bla/210497",
+    "cart_deeplink": "https://kungsangen.com/se/p/orngott-natur-bla/210497",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=210497&fid=2564&url=https://kungsangen.com/se/p/orngott-natur-bla/210497",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hbd/h05/8854658056222/ks2000Wx1500H_orngott-50x60-bla/ks2000Wx1500H-orngott-50x60-bla.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

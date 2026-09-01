@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_82309",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Muuto Fiber fåtölj orange",
+    "manufacturer": "Muuto",
+    "article_no": "82309",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 5346,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/82309/muuto-fiber-fatolj-orange",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/82309/muuto-fiber-fatolj-orange",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=82309&fid=978&url=https://www.mjuk.com/sv-se/product/82309/muuto-fiber-fatolj-orange",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/79e60d97404b405b90fc94d2b53f81c2.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

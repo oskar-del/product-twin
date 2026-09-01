@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_03617-01-30",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Shadi 50cm - Skrivbordslampa - Svart",
+    "manufacturer": "Lucide",
+    "article_no": "03617/01/30",
+    "ean": "5411212030849",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 829,
+    "ean": "5411212030849",
+    "product_url": "https://lampan.se/p/shadi-50cm/?option=378",
+    "cart_deeplink": "https://lampan.se/p/shadi-50cm/?option=378",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=03617%2F01%2F30&fid=2470&url=https://lampan.se/p/shadi-50cm/?option=378",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/03617-01-30.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

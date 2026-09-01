@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_115906",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ketall Mesh sidobord vit / svart",
+    "manufacturer": "Kettal",
+    "article_no": "115906",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 6230,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/115906/ketall-mesh-sidobord-vit-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/115906/ketall-mesh-sidobord-vit-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=115906&fid=978&url=https://www.mjuk.com/sv-se/product/115906/ketall-mesh-sidobord-vit-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/c84fe868dd18080223e1fbaa5f244a0c.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

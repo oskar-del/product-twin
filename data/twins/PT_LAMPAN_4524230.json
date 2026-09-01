@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4524230",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Unison - E14 XL rörlampa 1W 2200K - Ljuskälla - Transparent",
+    "manufacturer": "Unison",
+    "article_no": "4524230",
+    "ean": "7340037005795",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 69,
+    "ean": "7340037005795",
+    "product_url": "https://lampan.se/p/e14-xl-rorlampa-1w-2200k/?option=4547",
+    "cart_deeplink": "https://lampan.se/p/e14-xl-rorlampa-1w-2200k/?option=4547",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4524230&fid=2470&url=https://lampan.se/p/e14-xl-rorlampa-1w-2200k/?option=4547",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/4524250h.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

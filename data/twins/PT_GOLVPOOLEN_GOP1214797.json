@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1214797",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Paintpart Rolleri 11 5391-1",
+    "manufacturer": "Paintpart",
+    "article_no": "GOP1214797",
+    "ean": "6417271539117",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 374,
+    "ean": "6417271539117",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-paintpart-rolleri-11-5391-1/p-1214797",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-paintpart-rolleri-11-5391-1/p-1214797",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1214797&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-paintpart-rolleri-11-5391-1/p-1214797",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/5657a199-c3df-4378-9807-32416a8695c3/5391-1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

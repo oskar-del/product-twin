@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_BATH-BLAKE2-PN",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Blake 34cm - Badrumslampa - Polerad nickel",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "BATH-BLAKE2-PN",
+    "ean": "5024005209102",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4249,
+    "ean": "5024005209102",
+    "product_url": "https://lampan.se/p/blake-34cm-0/?option=2326",
+    "cart_deeplink": "https://lampan.se/p/blake-34cm-0/?option=2326",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=BATH-BLAKE2-PN&fid=2470&url=https://lampan.se/p/blake-34cm-0/?option=2326",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-9044.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

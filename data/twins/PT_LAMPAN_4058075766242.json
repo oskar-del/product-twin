@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4058075766242",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Oval Sensor 4000K - Solcellslampa - Svart",
+    "manufacturer": "Lampan.se",
+    "article_no": "4058075766242",
+    "ean": "4058075766242",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1449,
+    "ean": "4058075766242",
+    "product_url": "https://lampan.se/p/oval-sensor-4000k/?option=9365",
+    "cart_deeplink": "https://lampan.se/p/oval-sensor-4000k/?option=9365",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4058075766242&fid=2470&url=https://lampan.se/p/oval-sensor-4000k/?option=9365",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/asset-13083303_endura_style_solar_oval_wall_sen.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

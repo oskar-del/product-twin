@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_51135",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Porta Romana bordslampa",
+    "manufacturer": "No brand",
+    "article_no": "51135",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4202,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/51135/porta-romana-bordslampa",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/51135/porta-romana-bordslampa",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=51135&fid=978&url=https://www.mjuk.com/sv-se/product/51135/porta-romana-bordslampa",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/e291e6ea-0887-49e2-9761-5962c1cf9422.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

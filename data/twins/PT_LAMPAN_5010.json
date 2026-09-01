@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_5010",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "PR Home - Haru skärm exkl. upphäng Ø50 - Taklampa - Vit",
+    "manufacturer": "PR Home",
+    "article_no": "5010",
+    "ean": "7330976137237",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 449,
+    "ean": "7330976137237",
+    "product_url": "https://lampan.se/p/haru-skarm-exkl-upphang-o50/?option=2427",
+    "cart_deeplink": "https://lampan.se/p/haru-skarm-exkl-upphang-o50/?option=2427",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=5010&fid=2470&url=https://lampan.se/p/haru-skarm-exkl-upphang-o50/?option=2427",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/5010_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

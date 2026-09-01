@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_100642",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Markslöjd - Läckö Ø45 - Kristallkrona - Antik",
+    "manufacturer": "Markslöjd",
+    "article_no": "100642",
+    "ean": "7394472192558",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 18999,
+    "ean": "7394472192558",
+    "product_url": "https://lampan.se/p/lacko-o45/?option=3025",
+    "cart_deeplink": "https://lampan.se/p/lacko-o45/?option=3025",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=100642&fid=2470&url=https://lampan.se/p/lacko-o45/?option=3025",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/100642_lacko_001.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

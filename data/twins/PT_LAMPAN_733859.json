@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_733859",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Yep! 37cm - Skrivbordslampa - Grå",
+    "manufacturer": "Halo Design",
+    "article_no": "733859",
+    "ean": "5705639733859",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 489,
+    "ean": "5705639733859",
+    "product_url": "https://lampan.se/p/yep-37cm-0/?option=8163",
+    "cart_deeplink": "https://lampan.se/p/yep-37cm-0/?option=8163",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=733859&fid=2470&url=https://lampan.se/p/yep-37cm-0/?option=8163",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/733859-yep-table-lamp-grey_packshot.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

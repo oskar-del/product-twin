@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2072802-2072806",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukskrok INR Line",
+    "manufacturer": "INR",
+    "article_no": "GOP2072802-2072806",
+    "ean": "7392102811046",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 490,
+    "ean": "7392102811046",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/tillbehor-badrumsmobler/handdukskrok-inr-line/p-2072802-2072806",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/tillbehor-badrumsmobler/handdukskrok-inr-line/p-2072802-2072806",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2072802-2072806&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/tillbehor-badrumsmobler/handdukskrok-inr-line/p-2072802-2072806",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/2905c39e-d157-4a9a-8a54-0f5807725c9d/80001514_kv.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

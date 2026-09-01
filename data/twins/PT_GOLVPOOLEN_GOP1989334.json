@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1989334",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Insats TECE Profil för rengöringstabletter",
+    "manufacturer": "TECE",
+    "article_no": "GOP1989334",
+    "ean": "4027255097513",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 805,
+    "ean": "4027255097513",
+    "product_url": "https://www.golvpoolen.se/badrum/toalettstol/tillbehor-toalettstolar/insats-tece-profil-for-rengoringstabletter/p-1989334",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/toalettstol/tillbehor-toalettstolar/insats-tece-profil-for-rengoringstabletter/p-1989334",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1989334&fid=2559&url=https://www.golvpoolen.se/badrum/toalettstol/tillbehor-toalettstolar/insats-tece-profil-for-rengoringstabletter/p-1989334",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/cdad1436-3887-46a9-b5c4-91863f44303a/524414-kopiera.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

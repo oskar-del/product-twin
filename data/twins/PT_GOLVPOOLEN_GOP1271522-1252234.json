@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1271522-1252234",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättkorg Svedbergs Vit",
+    "manufacturer": "Svedbergs",
+    "article_no": "GOP1271522-1252234",
+    "ean": "7323100296610",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 750,
+    "ean": "7323100296610",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/ovriga-badrumstillbehor/tvattkorg-svedbergs-vit/p-1271522-1252234",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/ovriga-badrumstillbehor/tvattkorg-svedbergs-vit/p-1271522-1252234",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1271522-1252234&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/ovriga-badrumstillbehor/tvattkorg-svedbergs-vit/p-1271522-1252234",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/7727670a-9f2d-44dd-b8d6-c6ae5331cbf9/226171-tvattkorg-72550_74150-press-2.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

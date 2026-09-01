@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_120075",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Nordic Tech Titan 72 K X diskho",
+    "manufacturer": "Mjuk",
+    "article_no": "120075",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 5502,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/120075/nordic-tech-titan-72-k-x-diskho",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/120075/nordic-tech-titan-72-k-x-diskho",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=120075&fid=978&url=https://www.mjuk.com/sv-se/product/120075/nordic-tech-titan-72-k-x-diskho",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/e6f914bd06b99dd752b607c1ea8de1c9.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

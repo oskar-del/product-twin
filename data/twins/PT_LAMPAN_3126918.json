@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_3126918",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Light & Living  - Amadi 50cm - Vägglampa - Brons",
+    "manufacturer": "Light & Living",
+    "article_no": "3126918",
+    "ean": "8717807706715",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1629,
+    "ean": "8717807706715",
+    "product_url": "https://lampan.se/p/amadi-50cm/?option=10738",
+    "cart_deeplink": "https://lampan.se/p/amadi-50cm/?option=10738",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=3126918&fid=2470&url=https://lampan.se/p/amadi-50cm/?option=10738",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/3126918_l.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

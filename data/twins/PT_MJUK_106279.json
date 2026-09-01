@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_106279",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "FIFU1962 008 konstverk 56 x 71 cm",
+    "manufacturer": "Mjuk",
+    "article_no": "106279",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 12220,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/106279/fifu1962-008-konstverk-56-x-71-cm",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/106279/fifu1962-008-konstverk-56-x-71-cm",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=106279&fid=978&url=https://www.mjuk.com/sv-se/product/106279/fifu1962-008-konstverk-56-x-71-cm",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/02c0ddd4176cf97c0830f207d91bb6cc.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD314WL-L13G3K",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Jack-stone 80cm - Vägglampa - Guld",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD314WL-L13G3K",
+    "ean": "4251110033266",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4889,
+    "ean": "4251110033266",
+    "product_url": "https://lampan.se/p/jack-stone-80cm/?option=6477",
+    "cart_deeplink": "https://lampan.se/p/jack-stone-80cm/?option=6477",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD314WL-L13G3K&fid=2470&url=https://lampan.se/p/jack-stone-80cm/?option=6477",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/mod314wl-l13g3k_on_w_standard_1.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

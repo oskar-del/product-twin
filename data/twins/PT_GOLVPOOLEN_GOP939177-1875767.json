@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP939177-1875767",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschdörr Svedbergs Skoga Rak Enkel",
+    "manufacturer": "Svedbergs",
+    "article_no": "GOP939177-1875767",
+    "ean": "7323100357977",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 6135,
+    "ean": "7323100357977",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-svedbergs-skoga-rak-enkel/p-939177-1875767",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-svedbergs-skoga-rak-enkel/p-939177-1875767",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP939177-1875767&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschdorr/duschdorr-svedbergs-skoga-rak-enkel/p-939177-1875767",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/81b21c4c-4a6b-458c-8cb0-4098abe0cb2f/60108310.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

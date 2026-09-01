@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP784246",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Golvbrunn Purus Brage 75 Ø150 mm",
+    "manufacturer": "Purus",
+    "article_no": "GOP784246",
+    "ean": "7394000203404",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 399,
+    "ean": "7394000203404",
+    "product_url": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/golvbrunn-purus-brage-75-o150-mm/p-784246",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/golvbrunn-purus-brage-75-o150-mm/p-784246",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP784246&fid=2559&url=https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/golvbrunn-purus-brage-75-o150-mm/p-784246",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e07e4b9f-5e93-45c8-9b1d-a434d62856d8/golvbrunn-purus-brage-75-o150-mm.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

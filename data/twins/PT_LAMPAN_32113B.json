@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_32113B",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Vranos 30cm - Takbelysning - Svart",
+    "manufacturer": "Globo Lighting",
+    "article_no": "32113B",
+    "ean": "9007371440764",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 919,
+    "ean": "9007371440764",
+    "product_url": "https://lampan.se/p/vranos-30cm-0/?option=9756",
+    "cart_deeplink": "https://lampan.se/p/vranos-30cm-0/?option=9756",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=32113B&fid=2470&url=https://lampan.se/p/vranos-30cm-0/?option=9756",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-27326.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

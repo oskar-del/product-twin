@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP753205",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Mimou Tweed Peach",
+    "manufacturer": "Mimou",
+    "article_no": "GOP753205",
+    "ean": "7332908013367",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 671,
+    "ean": "7332908013367",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-mimou-tweed-peach/p-753205",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-mimou-tweed-peach/p-753205",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP753205&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-mimou-tweed-peach/p-753205",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/c4489ecb-3aa3-447a-9ad0-445f4b59b6e1/tapet-mimou-tweed-peach.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

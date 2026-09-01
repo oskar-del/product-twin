@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_16515S-10",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "SMAK Design - E5 12V 1W 10-pack - Ljuskälla",
+    "manufacturer": "SMAK Design",
+    "article_no": "16515S-10",
+    "ean": "7391741165114",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 285,
+    "ean": "7391741165114",
+    "product_url": "https://lampan.se/p/e5-12v-1w-10-pack/",
+    "cart_deeplink": "https://lampan.se/p/e5-12v-1w-10-pack/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=16515S-10&fid=2470&url=https://lampan.se/p/e5-12v-1w-10-pack/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-62352.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

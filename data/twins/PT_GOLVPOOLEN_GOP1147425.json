@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1147425",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Verktyg Fiona Tapetset med Roller, Handtag och Kniv",
+    "manufacturer": "Fiona",
+    "article_no": "GOP1147425",
+    "ean": "5701573110343",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 199,
+    "ean": "5701573110343",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/enfargade-tapeter/verktyg-fiona-tapetset-med-roller-handtag-och-kniv/p-1147425",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/enfargade-tapeter/verktyg-fiona-tapetset-med-roller-handtag-och-kniv/p-1147425",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1147425&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/enfargade-tapeter/verktyg-fiona-tapetset-med-roller-handtag-och-kniv/p-1147425",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/df349e0a-b27b-4feb-b8a9-80ca7c3ebc73/tapetset-fiona.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

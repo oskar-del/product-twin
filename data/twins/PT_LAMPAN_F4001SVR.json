@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_F4001SVR",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lampan - Ariston Ø20 - Fönsterlampa - Rökfärgad",
+    "manufacturer": "Lampan",
+    "article_no": "F4001SVR",
+    "ean": "7350170882900",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 699,
+    "ean": "7350170882900",
+    "product_url": "https://lampan.se/p/ariston-o20-0/?option=15249",
+    "cart_deeplink": "https://lampan.se/p/ariston-o20-0/?option=15249",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=F4001SVR&fid=2470&url=https://lampan.se/p/ariston-o20-0/?option=15249",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/f4001svr1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

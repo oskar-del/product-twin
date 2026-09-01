@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1122686",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Toalettpappershållare Hansgrohe Logis Krom 138",
+    "manufacturer": "Hansgrohe",
+    "article_no": "GOP1122686",
+    "ean": "4059625123119",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 492,
+    "ean": "4059625123119",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/toalettpappershallare/toalettpappershallare-hansgrohe-logis-krom-138/p-1122686",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/toalettpappershallare/toalettpappershallare-hansgrohe-logis-krom-138/p-1122686",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1122686&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/toalettpappershallare/toalettpappershallare-hansgrohe-logis-krom-138/p-1122686",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/6e0b3a6f-cd67-4b34-8365-89fd52554de4/_41723000_1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

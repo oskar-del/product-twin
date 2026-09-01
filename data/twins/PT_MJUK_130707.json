@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_130707",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "New Works Mass soffbord med låda ek",
+    "manufacturer": "New Works",
+    "article_no": "130707",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 6578,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/130707/new-works-mass-soffbord-med-lada-ek",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/130707/new-works-mass-soffbord-med-lada-ek",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=130707&fid=978&url=https://www.mjuk.com/sv-se/product/130707/new-works-mass-soffbord-med-lada-ek",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/4478e26b-b318-4f5f-9a2e-5c93e322c2f4.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

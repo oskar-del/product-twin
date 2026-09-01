@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_41562-24WW",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Sapana Ø42 - Badrumslampa - Trä",
+    "manufacturer": "Globo Lighting",
+    "article_no": "41562-24WW",
+    "ean": "9007371454426",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1039,
+    "ean": "9007371454426",
+    "product_url": "https://lampan.se/p/sapana-o42-0/?option=10017",
+    "cart_deeplink": "https://lampan.se/p/sapana-o42-0/?option=10017",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=41562-24WW&fid=2470&url=https://lampan.se/p/sapana-o42-0/?option=10017",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-66186.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

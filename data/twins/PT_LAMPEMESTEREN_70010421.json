@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70010421",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Stockholm Utomhus Bedlampe H47,5 Svart - Norlys - Terrass - Metall",
+    "manufacturer": "Norlys",
+    "article_no": "70010421",
+    "ean": "7042892870067",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 3585,
+    "ean": "7042892870067",
+    "product_url": "https://www.lampemesteren.se/p/stockholm-utomhus-bedlampe-h47-5-svart-norlys-70010421.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/stockholm-utomhus-bedlampe-h47-5-svart-norlys-70010421.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70010421&fid=1004&url=https://www.lampemesteren.se/p/stockholm-utomhus-bedlampe-h47-5-svart-norlys-70010421.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/4F3741B72144/k_e07384a1d3e6aa542334d440505d7b83;w_1600;h_1600;q_90/70010421.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

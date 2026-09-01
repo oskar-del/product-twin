@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP888093",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "T-Rör Nordhem till Kombidrift G15 Mattsvart",
+    "manufacturer": "Nordhem",
+    "article_no": "GOP888093",
+    "ean": "7340100021905",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 330,
+    "ean": "7340100021905",
+    "product_url": "https://www.golvpoolen.se/badrum/handdukstorkar/tillbehor-handdukstorkar/t-ror-nordhem-till-kombidrift-g15-mattsvart/p-888093",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handdukstorkar/tillbehor-handdukstorkar/t-ror-nordhem-till-kombidrift-g15-mattsvart/p-888093",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP888093&fid=2559&url=https://www.golvpoolen.se/badrum/handdukstorkar/tillbehor-handdukstorkar/t-ror-nordhem-till-kombidrift-g15-mattsvart/p-888093",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/a9bf8883-b408-409d-ab4e-579cf876f7f1/t-ror-nordhem-till-kombidrift-alt2-g15-mattsvart.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

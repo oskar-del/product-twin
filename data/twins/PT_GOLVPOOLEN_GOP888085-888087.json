@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP888085-888087",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukskrok Nordhem Krokskär",
+    "manufacturer": "Nordhem",
+    "article_no": "GOP888085-888087",
+    "ean": "7340100021981",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 102,
+    "ean": "7340100021981",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-nordhem-krokskar/p-888085-888087",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-nordhem-krokskar/p-888085-888087",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP888085-888087&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-nordhem-krokskar/p-888085-888087",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/23a189dd-f797-4339-af08-0940dced3c8f/handdukskrok-nordhem-krokskar.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

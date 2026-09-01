@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_138753",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sofacompany Vera 3-sits soffa Vega Cream",
+    "manufacturer": "Sofacompany",
+    "article_no": "138753",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 7666,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/138753/sofacompany-vera-3-sits-soffa-vega-cream",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/138753/sofacompany-vera-3-sits-soffa-vega-cream",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=138753&fid=978&url=https://www.mjuk.com/sv-se/product/138753/sofacompany-vera-3-sits-soffa-vega-cream",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/ccdb6cb06d87530e07a48538d376ba22.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

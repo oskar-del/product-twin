@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_746002",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Stockholm Ø5 - Taklampa - Antik",
+    "manufacturer": "Halo Design",
+    "article_no": "746002",
+    "ean": "5705639746002",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 749,
+    "ean": "5705639746002",
+    "product_url": "https://lampan.se/p/stockholm-o5/?option=7850",
+    "cart_deeplink": "https://lampan.se/p/stockholm-o5/?option=7850",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=746002&fid=2470&url=https://lampan.se/p/stockholm-o5/?option=7850",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/746002-937233-stockholmpendantcableset-72ppi.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

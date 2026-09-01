@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1544010-1544035",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Golvbrunnssil Purus PRO Line Sil",
+    "manufacturer": "Purus",
+    "article_no": "GOP1544010-1544035",
+    "ean": "7394022196371",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3118,
+    "ean": "7394022196371",
+    "product_url": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/golvbrunnssil-purus-pro-line-sil/p-1544010-1544035",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/golvbrunnssil-purus-pro-line-sil/p-1544010-1544035",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1544010-1544035&fid=2559&url=https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/golvbrunnssil-purus-pro-line-sil/p-1544010-1544035",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/7b72432b-0b9b-4673-9bae-40209a74e1a2/7129900.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

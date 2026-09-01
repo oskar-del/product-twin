@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1555983",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handtag Ifö Elegant 137 mm",
+    "manufacturer": "Ifö",
+    "article_no": "GOP1555983",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 115,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-ifo-elegant-137-mm/p-1555983",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-ifo-elegant-137-mm/p-1555983",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1555983&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-ifo-elegant-137-mm/p-1555983",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/2f1838ae-f438-4dd7-959c-78f8ec424da5/502479tb1-bild.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

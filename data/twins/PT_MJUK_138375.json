@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_138375",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Vogar 3-sits soffa brun",
+    "manufacturer": "Mjuk",
+    "article_no": "138375",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3484,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/138375/vogar-3-sits-soffa-brun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/138375/vogar-3-sits-soffa-brun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=138375&fid=978&url=https://www.mjuk.com/sv-se/product/138375/vogar-3-sits-soffa-brun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/b44d2d36-b1a2-4b19-ba03-13c905c62a5a.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_138422",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bonaldo Cubic bokhylla silver",
+    "manufacturer": "Bonaldo",
+    "article_no": "138422",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 8127,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/138422/bonaldo-cubic-bokhylla-silver",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/138422/bonaldo-cubic-bokhylla-silver",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=138422&fid=978&url=https://www.mjuk.com/sv-se/product/138422/bonaldo-cubic-bokhylla-silver",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/4de6e8f9c85f8045022a4c8b7fa462eb.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

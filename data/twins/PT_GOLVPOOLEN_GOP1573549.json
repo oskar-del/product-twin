@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1573549",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Borrhammare Dewalt DCH172E2T 18V (2x1,7Ah)",
+    "manufacturer": "DeWalt",
+    "article_no": "GOP1573549",
+    "ean": "5035048790182",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 4750,
+    "ean": "5035048790182",
+    "product_url": "https://www.golvpoolen.se/verktyg/elverktyg/borrmaskin/borrhammare-dewalt-dch172e2t-18v-2x17ah/p-1573549",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/elverktyg/borrmaskin/borrhammare-dewalt-dch172e2t-18v-2x17ah/p-1573549",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1573549&fid=2559&url=https://www.golvpoolen.se/verktyg/elverktyg/borrmaskin/borrhammare-dewalt-dch172e2t-18v-2x17ah/p-1573549",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e3880df1-c454-4b97-9ba7-a834cec19cec/34195182.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

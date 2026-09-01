@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1827349",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Kakel- & Glasborr Tebo 5 mm",
+    "manufacturer": "Tebo",
+    "article_no": "GOP1827349",
+    "ean": "7391142035924",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 64,
+    "ean": "7391142035924",
+    "product_url": "https://www.golvpoolen.se/verktyg/kakelverktyg/ovriga-kakelverktyg/kakel-och-glasborr-tebo-5-mm/p-1827349",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/kakelverktyg/ovriga-kakelverktyg/kakel-och-glasborr-tebo-5-mm/p-1827349",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1827349&fid=2559&url=https://www.golvpoolen.se/verktyg/kakelverktyg/ovriga-kakelverktyg/kakel-och-glasborr-tebo-5-mm/p-1827349",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/938ba83a-5ca0-471b-a75c-f97505b8f5c0/345533.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

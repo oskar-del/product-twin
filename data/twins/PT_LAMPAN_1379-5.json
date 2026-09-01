@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1379-5",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emibig Lighting - Libra 70cm - Taklampa - Vit",
+    "manufacturer": "Emibig Lighting",
+    "article_no": "1379/5",
+    "ean": "5907106009898",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2839,
+    "ean": "5907106009898",
+    "product_url": "https://lampan.se/p/libra-70cm/?option=12029",
+    "cart_deeplink": "https://lampan.se/p/libra-70cm/?option=12029",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1379%2F5&fid=2470&url=https://lampan.se/p/libra-70cm/?option=12029",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1379_5-2.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

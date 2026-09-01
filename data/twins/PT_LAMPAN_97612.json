@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_97612",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Eglo - Pasteri Ø57 - Takplafond - Taupe",
+    "manufacturer": "Eglo",
+    "article_no": "97612",
+    "ean": "9002759976125",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1429,
+    "ean": "9002759976125",
+    "product_url": "https://lampan.se/p/pasteri-o57-1/?option=15221",
+    "cart_deeplink": "https://lampan.se/p/pasteri-o57-1/?option=15221",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=97612&fid=2470&url=https://lampan.se/p/pasteri-o57-1/?option=15221",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/597efc0b63bde4.89402703_101_0001.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

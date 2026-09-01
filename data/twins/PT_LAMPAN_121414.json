@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_121414",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Primus II Ø43 - Taklampa - Vit/krom",
+    "manufacturer": "Belid",
+    "article_no": "121414",
+    "ean": "7391534113995",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2599,
+    "ean": "7391534113995",
+    "product_url": "https://lampan.se/p/primus-ii-o43-2/?option=1484",
+    "cart_deeplink": "https://lampan.se/p/primus-ii-o43-2/?option=1484",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=121414&fid=2470&url=https://lampan.se/p/primus-ii-o43-2/?option=1484",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/partspartnumber121414filename121414.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

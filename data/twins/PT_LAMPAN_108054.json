@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_108054",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Markslöjd - Sober - Golvlampa - Borstad mässing",
+    "manufacturer": "Markslöjd",
+    "article_no": "108054",
+    "ean": "7330024596078",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1999,
+    "ean": "7330024596078",
+    "product_url": "https://lampan.se/p/sober/?option=3196",
+    "cart_deeplink": "https://lampan.se/p/sober/?option=3196",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=108054&fid=2470&url=https://lampan.se/p/sober/?option=3196",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/108054_sober_001.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

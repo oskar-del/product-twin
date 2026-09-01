@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_121390",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bathlife Mångsidig duschdörr 45° svart",
+    "manufacturer": "Mjuk",
+    "article_no": "121390",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1852,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/121390/bathlife-mangsidig-duschdorr-45-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/121390/bathlife-mangsidig-duschdorr-45-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=121390&fid=978&url=https://www.mjuk.com/sv-se/product/121390/bathlife-mangsidig-duschdorr-45-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/551f79d0f7741dfe524ebd8d073a826a.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

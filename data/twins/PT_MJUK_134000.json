@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_134000",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Fogia Retreat soffmodul gul",
+    "manufacturer": "Fogia",
+    "article_no": "134000",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 15528,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/134000/fogia-retreat-soffmodul-gul",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/134000/fogia-retreat-soffmodul-gul",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=134000&fid=978&url=https://www.mjuk.com/sv-se/product/134000/fogia-retreat-soffmodul-gul",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/588100f82e88a7a8bd2f5e617bb5d8a8.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

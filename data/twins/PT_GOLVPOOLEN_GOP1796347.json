@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1796347",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Konstgräs ScanTurf Living",
+    "manufacturer": "ScanTurf",
+    "article_no": "GOP1796347",
+    "ean": "07350119010036",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 918,
+    "ean": "07350119010036",
+    "product_url": "https://www.golvpoolen.se/golv/utegolv/konstgras/konstgras-scanturf-living/p-1796347",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/utegolv/konstgras/konstgras-scanturf-living/p-1796347",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1796347&fid=2559&url=https://www.golvpoolen.se/golv/utegolv/konstgras/konstgras-scanturf-living/p-1796347",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/6d19cf4d-f1b9-4316-baf2-3490b36bacfa/living-snitt.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

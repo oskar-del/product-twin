@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP563255",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ventilfäste Grohe G20xG15",
+    "manufacturer": "Grohe",
+    "article_no": "GOP563255",
+    "ean": "4005176004438",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 450,
+    "ean": "4005176004438",
+    "product_url": "https://www.golvpoolen.se/badrum/duscharmatur/tillbehor-duscharmatur/ventilfaste-grohe-g20xg15/p-563255",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duscharmatur/tillbehor-duscharmatur/ventilfaste-grohe-g20xg15/p-563255",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP563255&fid=2559&url=https://www.golvpoolen.se/badrum/duscharmatur/tillbehor-duscharmatur/ventilfaste-grohe-g20xg15/p-563255",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/d2f9728d-3997-4f0a-971d-b33a39e94040/12015000.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

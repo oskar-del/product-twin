@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_5151",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lightson - Cozy Start 5m - Partyslinga - Svart",
+    "manufacturer": "Lightson",
+    "article_no": "5151",
+    "ean": "7340110602125",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 769,
+    "ean": "7340110602125",
+    "product_url": "https://lampan.se/p/cozy-start-5m/?option=11297",
+    "cart_deeplink": "https://lampan.se/p/cozy-start-5m/?option=11297",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=5151&fid=2470&url=https://lampan.se/p/cozy-start-5m/?option=11297",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1_5151_cosystart_lightson_roof_ivy_1500x1500.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

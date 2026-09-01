@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4202530-5000",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "By Rydéns - Selma Ø40 - Takplafond - Vit",
+    "manufacturer": "By Rydéns",
+    "article_no": "4202530-5000",
+    "ean": "7391741013095",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 819,
+    "ean": "7391741013095",
+    "product_url": "https://lampan.se/p/selma-o40/?option=14609",
+    "cart_deeplink": "https://lampan.se/p/selma-o40/?option=14609",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4202530-5000&fid=2470&url=https://lampan.se/p/selma-o40/?option=14609",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/selma_white_4202530_5000.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_915005221701",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Philips - Limbali 2 - Spotlight - Nickel",
+    "manufacturer": "Philips",
+    "article_no": "915005221701",
+    "ean": "8718696133200",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 189,
+    "ean": "8718696133200",
+    "product_url": "https://lampan.se/p/limbali-2-0/?option=6383",
+    "cart_deeplink": "https://lampan.se/p/limbali-2-0/?option=6383",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=915005221701&fid=2470&url=https://lampan.se/p/limbali-2-0/?option=6383",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/d95ee491e55548ee93dbaff000c38493.unknown.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

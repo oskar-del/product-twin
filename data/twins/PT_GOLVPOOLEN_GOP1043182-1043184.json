@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1043182-1043184",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Vägglampa PR Home Kappa",
+    "manufacturer": "PR Home",
+    "article_no": "GOP1043182-1043184",
+    "ean": "7330976100620",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 653,
+    "ean": "7330976100620",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsbelysning/vagglampa-pr-home-kappa/p-1043182-1043184",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsbelysning/vagglampa-pr-home-kappa/p-1043182-1043184",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1043182-1043184&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumsbelysning/vagglampa-pr-home-kappa/p-1043182-1043184",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/8c468333-7b46-4a13-8201-bde0a9749dc1/3201407.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

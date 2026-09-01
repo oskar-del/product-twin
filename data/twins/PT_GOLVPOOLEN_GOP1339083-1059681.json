@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1339083-1059681",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Badkar Villeroy & Boch Finion Fristående",
+    "manufacturer": "Villeroy & Boch",
+    "article_no": "GOP1339083-1059681",
+    "ean": "4051202729127",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 86991,
+    "ean": "4051202729127",
+    "product_url": "https://www.golvpoolen.se/badrum/badkar/fristaende-badkar/badkar-villeroy-och-boch-finion-fristaende/p-1339083-1059681",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badkar/fristaende-badkar/badkar-villeroy-och-boch-finion-fristaende/p-1339083-1059681",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1339083-1059681&fid=2559&url=https://www.golvpoolen.se/badrum/badkar/fristaende-badkar/badkar-villeroy-och-boch-finion-fristaende/p-1339083-1059681",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/4b604f89-4e40-43b7-baca-8dd0c427fc0b/pic_ubq177fin7a300v401.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_744084",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Paris Ø24 - Taklampa - Brun",
+    "manufacturer": "Halo Design",
+    "article_no": "744084",
+    "ean": "5705639744084",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2099,
+    "ean": "5705639744084",
+    "product_url": "https://lampan.se/p/paris-o24/?option=7891",
+    "cart_deeplink": "https://lampan.se/p/paris-o24/?option=7891",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=744084&fid=2470&url=https://lampan.se/p/paris-o24/?option=7891",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/744084_halodesign_paris_24_earthbrown_72dpi.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

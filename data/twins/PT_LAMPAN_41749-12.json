@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_41749-12",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Ovi Ø30 - Takplafond - Vit",
+    "manufacturer": "Globo Lighting",
+    "article_no": "41749-12",
+    "ean": "9007371411009",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 519,
+    "ean": "9007371411009",
+    "product_url": "https://lampan.se/p/ovi-o30/?option=10001",
+    "cart_deeplink": "https://lampan.se/p/ovi-o30/?option=10001",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=41749-12&fid=2470&url=https://lampan.se/p/ovi-o30/?option=10001",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-43155.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

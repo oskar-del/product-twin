@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70019099",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Davinci Taklampa Ø430 Mattsvart - Belid - Matsal - Metall",
+    "manufacturer": "Belid",
+    "article_no": "70019099",
+    "ean": "7391534083359",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 4899,
+    "ean": "7391534083359",
+    "product_url": "https://www.lampemesteren.se/p/davinci-taklampa-o430-mattsvart-belid-70019099.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/davinci-taklampa-o430-mattsvart-belid-70019099.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70019099&fid=1004&url=https://www.lampemesteren.se/p/davinci-taklampa-o430-mattsvart-belid-70019099.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/3169E758F696/k_b015ca8c805d510da3e704737d93bb90;w_1600;h_1600;q_90/70019099.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

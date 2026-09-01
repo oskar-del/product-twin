@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_84540",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Arper Paravan High Metal hylla",
+    "manufacturer": "Arper",
+    "article_no": "84540",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 6188,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/84540/arper-paravan-high-metal-hylla",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/84540/arper-paravan-high-metal-hylla",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=84540&fid=978&url=https://www.mjuk.com/sv-se/product/84540/arper-paravan-high-metal-hylla",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/884f1179b694e83a8c339edc998f751f.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1060844-1268760",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschkorg Miller Badrum Classic Hörn Limbar",
+    "manufacturer": "Miller Badrum",
+    "article_no": "GOP1060844-1268760",
+    "ean": "7331437509457",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1815,
+    "ean": "7331437509457",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-miller-badrum-classic-horn-limbar/p-1060844-1268760",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-miller-badrum-classic-horn-limbar/p-1060844-1268760",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1060844-1268760&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-miller-badrum-classic-horn-limbar/p-1060844-1268760",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/2f7d616e-f952-4d01-b62c-c2b4337969cf/miller-classic-856mp1g-01.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

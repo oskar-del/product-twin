@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2310K15",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Karlskrona lampfabrik - Månskenskupa 100 - Tillbehör - Transparent",
+    "manufacturer": "Karlskrona lampfabrik",
+    "article_no": "2310K15",
+    "ean": "7332535004660",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 630,
+    "ean": "7332535004660",
+    "product_url": "https://lampan.se/p/manskenskupa-100/?option=9714",
+    "cart_deeplink": "https://lampan.se/p/manskenskupa-100/?option=9714",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2310K15&fid=2470&url=https://lampan.se/p/manskenskupa-100/?option=9714",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/784x870_ta-2310k15.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

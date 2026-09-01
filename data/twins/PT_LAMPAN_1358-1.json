@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1358-1",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emibig Lighting - Spiral 30cm - Vägglampa - Krom",
+    "manufacturer": "Emibig Lighting",
+    "article_no": "1358/1",
+    "ean": "5901738880733",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1029,
+    "ean": "5901738880733",
+    "product_url": "https://lampan.se/p/spiral-30cm-0/?option=12034",
+    "cart_deeplink": "https://lampan.se/p/spiral-30cm-0/?option=12034",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1358%2F1&fid=2470&url=https://lampan.se/p/spiral-30cm-0/?option=12034",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1358_1-6.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

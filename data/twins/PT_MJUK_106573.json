@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_106573",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "In Living Viktor matstol brun läder",
+    "manufacturer": "No brand",
+    "article_no": "106573",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1103,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/106573/in-living-viktor-matstol-brun-lader",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/106573/in-living-viktor-matstol-brun-lader",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=106573&fid=978&url=https://www.mjuk.com/sv-se/product/106573/in-living-viktor-matstol-brun-lader",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/1e4122f4d221703f7e7754ec1c67fbba.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_8212",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dyberg Larsen - DL20 Ø20 - Taklampa - Svart",
+    "manufacturer": "Dyberg Larsen",
+    "article_no": "8212",
+    "ean": "5704709082125",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2079,
+    "ean": "5704709082125",
+    "product_url": "https://lampan.se/p/dl20-o20-1/?option=7705",
+    "cart_deeplink": "https://lampan.se/p/dl20-o20-1/?option=7705",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=8212&fid=2470&url=https://lampan.se/p/dl20-o20-1/?option=7705",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/5704709082125_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_694165",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globen Lighting - Art Deco Ø16 - Badrumslampa - Borstad mässing/vit",
+    "manufacturer": "Globen Lighting",
+    "article_no": "694165",
+    "ean": "7319436941652",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1699,
+    "ean": "7319436941652",
+    "product_url": "https://lampan.se/p/art-deco-o16-7/?option=14144",
+    "cart_deeplink": "https://lampan.se/p/art-deco-o16-7/?option=14144",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=694165&fid=2470&url=https://lampan.se/p/art-deco-o16-7/?option=14144",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/694165.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

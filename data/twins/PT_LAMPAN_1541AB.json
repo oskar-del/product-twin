@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1541AB",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Focus 13cm - Sänglampa - Antikmässing",
+    "manufacturer": "Searchlight",
+    "article_no": "1541AB",
+    "ean": "5053423019413",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 329,
+    "ean": "5053423019413",
+    "product_url": "https://lampan.se/p/focus-13cm/?option=12795",
+    "cart_deeplink": "https://lampan.se/p/focus-13cm/?option=12795",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1541AB&fid=2470&url=https://lampan.se/p/focus-13cm/?option=12795",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1541ab_p1541ab_1-21860.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

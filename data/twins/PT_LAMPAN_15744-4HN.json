@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_15744-4HN",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Quintara 110cm - Taklampa - Nickel",
+    "manufacturer": "Globo Lighting",
+    "article_no": "15744-4HN",
+    "ean": "9007371462322",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 6329,
+    "ean": "9007371462322",
+    "product_url": "https://lampan.se/p/quintara-110cm/?option=9948",
+    "cart_deeplink": "https://lampan.se/p/quintara-110cm/?option=9948",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=15744-4HN&fid=2470&url=https://lampan.se/p/quintara-110cm/?option=9948",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-33054.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

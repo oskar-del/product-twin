@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7510302",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ifö electric - Aton Cairo Ø20 - Badrumslampa - Grå",
+    "manufacturer": "Ifö electric",
+    "article_no": "7510302",
+    "ean": "7312907302129",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1559,
+    "ean": "7312907302129",
+    "product_url": "https://lampan.se/p/aton-cairo-o20-1/?option=4913",
+    "cart_deeplink": "https://lampan.se/p/aton-cairo-o20-1/?option=4913",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7510302&fid=2470&url=https://lampan.se/p/aton-cairo-o20-1/?option=4913",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-98001.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

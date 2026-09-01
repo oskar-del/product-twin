@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_B4940SV",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lampan - Amfora 67cm - Bordslampa - Svart",
+    "manufacturer": "Lampan",
+    "article_no": "B4940SV",
+    "ean": "7350170882603",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1149,
+    "ean": "7350170882603",
+    "product_url": "https://lampan.se/p/amfora-67cm-0/?option=15091",
+    "cart_deeplink": "https://lampan.se/p/amfora-67cm-0/?option=15091",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=B4940SV&fid=2470&url=https://lampan.se/p/amfora-67cm-0/?option=15091",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/b4940sv_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

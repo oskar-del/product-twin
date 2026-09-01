@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_09943-06-97",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Keoni 6 - Spotlight - Brun",
+    "manufacturer": "Lucide",
+    "article_no": "09943/06/97",
+    "ean": "5411212094162",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1909,
+    "ean": "5411212094162",
+    "product_url": "https://lampan.se/p/keoni-6/?option=12682",
+    "cart_deeplink": "https://lampan.se/p/keoni-6/?option=12682",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=09943%2F06%2F97&fid=2470&url=https://lampan.se/p/keoni-6/?option=12682",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-79283.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

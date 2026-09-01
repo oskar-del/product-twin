@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_130182",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lemvig soffmodul ljusbeige",
+    "manufacturer": "Beliani",
+    "article_no": "130182",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3588,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/130182/lemvig-soffmodul-ljusbeige",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/130182/lemvig-soffmodul-ljusbeige",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=130182&fid=978&url=https://www.mjuk.com/sv-se/product/130182/lemvig-soffmodul-ljusbeige",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/70650b52-b7a1-49b4-b8b9-bb212f49ae10.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

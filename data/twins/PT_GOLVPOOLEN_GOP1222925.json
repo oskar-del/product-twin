@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1222925",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Trappnos Berg  Berg Ek L Värmland / Gotland Borstad Vitolja Trapp B",
+    "manufacturer": "Berg & Berg",
+    "article_no": "GOP1222925",
+    "ean": "7330587510498",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2499,
+    "ean": "7330587510498",
+    "product_url": "https://www.golvpoolen.se/golv/golvtillbehor/trappnosar/trappnos-berg-berg-ek-l-varmland-och-gotland-borstad-vitolja-trapp-b/p-1222925",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvtillbehor/trappnosar/trappnos-berg-berg-ek-l-varmland-och-gotland-borstad-vitolja-trapp-b/p-1222925",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1222925&fid=2559&url=https://www.golvpoolen.se/golv/golvtillbehor/trappnosar/trappnos-berg-berg-ek-l-varmland-och-gotland-borstad-vitolja-trapp-b/p-1222925",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/da7db7be-217d-4c16-a784-5214d299b37d/tragolv-berg-och-berg-swedish-classics-varmland-ek-3-stav.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

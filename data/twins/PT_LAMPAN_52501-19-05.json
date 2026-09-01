@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_52501-19-05",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Lambada 60cm - Bordslampa - Champagne",
+    "manufacturer": "Lucide",
+    "article_no": "52501/19/05",
+    "ean": "5411212520920",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1949,
+    "ean": "5411212520920",
+    "product_url": "https://lampan.se/p/lambada-60cm-0/?option=15689",
+    "cart_deeplink": "https://lampan.se/p/lambada-60cm-0/?option=15689",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=52501%2F19%2F05&fid=2470&url=https://lampan.se/p/lambada-60cm-0/?option=15689",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/high-res52501-19-05.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

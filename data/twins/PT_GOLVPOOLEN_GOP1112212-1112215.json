@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1112212-1112215",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Diskmaskinsavstängning Gustavsberg Epic",
+    "manufacturer": "Gustavsberg",
+    "article_no": "GOP1112212-1112215",
+    "ean": "7393792234269",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1695,
+    "ean": "7393792234269",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/koksblandare-diskmaskinsavstangning/diskmaskinsavstangning-gustavsberg-epic/p-1112212-1112215",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/koksblandare-diskmaskinsavstangning/diskmaskinsavstangning-gustavsberg-epic/p-1112212-1112215",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1112212-1112215&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/koksblandare-diskmaskinsavstangning/diskmaskinsavstangning-gustavsberg-epic/p-1112212-1112215",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/bcb68e05-75e3-4d5e-b4f4-a3b301afe89b/gb41639755-24.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1196200-1196201",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Diskho Tapwell 3040",
+    "manufacturer": "Tapwell",
+    "article_no": "GOP1196200-1196201",
+    "ean": "7340188814505",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 5036,
+    "ean": "7340188814505",
+    "product_url": "https://www.golvpoolen.se/badrum/vask-kok-och-tvattstuga/diskho/diskho-tapwell-3040/p-1196200-1196201",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/vask-kok-och-tvattstuga/diskho/diskho-tapwell-3040/p-1196200-1196201",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1196200-1196201&fid=2559&url=https://www.golvpoolen.se/badrum/vask-kok-och-tvattstuga/diskho/diskho-tapwell-3040/p-1196200-1196201",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/43688ec4-8e8c-4cf2-8731-5cffd554182e/ta3040-pvd-black-chrome.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

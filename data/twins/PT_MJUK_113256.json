@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_113256",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Louise Roe Gallery Objekt 10 bricka kalksten",
+    "manufacturer": "Louise Roe",
+    "article_no": "113256",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3068,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/113256/louise-roe-gallery-objekt-10-bricka-kalksten",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/113256/louise-roe-gallery-objekt-10-bricka-kalksten",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=113256&fid=978&url=https://www.mjuk.com/sv-se/product/113256/louise-roe-gallery-objekt-10-bricka-kalksten",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/70e07c4376c2dfee42fc7d452954d4ea.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

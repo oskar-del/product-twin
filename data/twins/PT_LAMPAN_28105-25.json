@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_28105-25",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Epsilon 47cm - Bordslampa - Mässing",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "28105-25",
+    "ean": "7041661290297",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1549,
+    "ean": "7041661290297",
+    "product_url": "https://lampan.se/p/epsilon-47cm-1/?option=15801",
+    "cart_deeplink": "https://lampan.se/p/epsilon-47cm-1/?option=15801",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=28105-25&fid=2470&url=https://lampan.se/p/epsilon-47cm-1/?option=15801",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/7ko4rfj0hxb8jcrx5is7gfaqb.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

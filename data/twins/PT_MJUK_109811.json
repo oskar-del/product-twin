@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_109811",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Fogia matta 170 x 240 cm brun",
+    "manufacturer": "Fogia",
+    "article_no": "109811",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 5169,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/109811/fogia-matta-170-x-240-cm-brun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/109811/fogia-matta-170-x-240-cm-brun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=109811&fid=978&url=https://www.mjuk.com/sv-se/product/109811/fogia-matta-170-x-240-cm-brun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/65678a29d6a0332b109706383ec0a959.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

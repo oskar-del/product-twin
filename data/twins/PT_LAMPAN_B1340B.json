@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_B1340B",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Nordic Lighting - Porto 63cm - Bordslampa - Svart/beige",
+    "manufacturer": "Nordic Lighting",
+    "article_no": "B1340B",
+    "ean": "7350170881798",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1399,
+    "ean": "7350170881798",
+    "product_url": "https://lampan.se/p/porto-63cm/?option=14611",
+    "cart_deeplink": "https://lampan.se/p/porto-63cm/?option=14611",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=B1340B&fid=2470&url=https://lampan.se/p/porto-63cm/?option=14611",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/b1340b.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2017411",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Eklist Öppen Trappa Bjelin Terra brown",
+    "manufacturer": "Bjelin",
+    "article_no": "GOP2017411",
+    "ean": "3856018010275",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 559,
+    "ean": "3856018010275",
+    "product_url": "https://www.golvpoolen.se/golv/golvtillbehor/golvlister/eklist-oppen-trappa-bjelin-terra-brown/p-2017411",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvtillbehor/golvlister/eklist-oppen-trappa-bjelin-terra-brown/p-2017411",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2017411&fid=2559&url=https://www.golvpoolen.se/golv/golvtillbehor/golvlister/eklist-oppen-trappa-bjelin-terra-brown/p-2017411",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/15fd7f1e-3192-49da-9fc6-0a6e77d46781/238074.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

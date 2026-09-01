@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_10527-01-10",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Glitzer 18cm - Barnlampa - Guld",
+    "manufacturer": "Lucide",
+    "article_no": "10527/01/10",
+    "ean": "5411212106506",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 419,
+    "ean": "5411212106506",
+    "product_url": "https://lampan.se/p/glitzer-18cm-0/?option=14721",
+    "cart_deeplink": "https://lampan.se/p/glitzer-18cm-0/?option=14721",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=10527%2F01%2F10&fid=2470&url=https://lampan.se/p/glitzer-18cm-0/?option=14721",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/high-res10527-01-10.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

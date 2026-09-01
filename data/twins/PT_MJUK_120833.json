@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_120833",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gustaf Westman Chunky matbord svart",
+    "manufacturer": "Gustaf Westman",
+    "article_no": "120833",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 18118,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/120833/gustaf-westman-chunky-matbord-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/120833/gustaf-westman-chunky-matbord-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=120833&fid=978&url=https://www.mjuk.com/sv-se/product/120833/gustaf-westman-chunky-matbord-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/16e7bf8842796cc62d801d14d133cf88.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

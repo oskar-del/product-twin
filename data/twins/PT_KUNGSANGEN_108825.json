@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_108825",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Lindenäs 105x200 Mjuk A.Nougat",
+    "manufacturer": "Kungsangen",
+    "article_no": "108825",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 36990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-lindenas/108825",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-lindenas/108825",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=108825&fid=2564&url=https://kungsangen.com/se/p/sang-lindenas/108825",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h5c/heb/8825188384798/ks2000Wx1500H_lindenas_kontinental_s23_vx20_90_anouk_nougat/ks2000Wx1500H-lindenas-kontinental-s23-vx20-90-anouk-nougat.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

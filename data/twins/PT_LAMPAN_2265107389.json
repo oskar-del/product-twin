@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2265107389",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Bullo Ø38 - Takplafond - Oxid/opal",
+    "manufacturer": "Belid",
+    "article_no": "2265107389",
+    "ean": "7391534002831",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3299,
+    "ean": "7391534002831",
+    "product_url": "https://lampan.se/p/bullo-o38-6/?option=13527",
+    "cart_deeplink": "https://lampan.se/p/bullo-o38-6/?option=13527",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2265107389&fid=2470&url=https://lampan.se/p/bullo-o38-6/?option=13527",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/bullo_xl_2265107389_f_on.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

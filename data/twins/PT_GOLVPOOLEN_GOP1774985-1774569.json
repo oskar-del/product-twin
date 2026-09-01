@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1774985-1774569",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschkorg Beslagsboden 1202",
+    "manufacturer": "Beslagsboden",
+    "article_no": "GOP1774985-1774569",
+    "ean": "7391447092981",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 529,
+    "ean": "7391447092981",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-beslagsboden-1202/p-1774985-1774569",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-beslagsboden-1202/p-1774985-1774569",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1774985-1774569&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-beslagsboden-1202/p-1774985-1774569",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f531a019-2b4b-4324-80e7-e79a368da9e2/bb1202.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

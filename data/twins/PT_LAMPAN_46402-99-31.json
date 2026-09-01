@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_46402-99-31",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Triniti Ø80 - Taklampa - Vit",
+    "manufacturer": "Lucide",
+    "article_no": "46402/99/31",
+    "ean": "5411212460721",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 9319,
+    "ean": "5411212460721",
+    "product_url": "https://lampan.se/p/triniti-o80-0/?option=934",
+    "cart_deeplink": "https://lampan.se/p/triniti-o80-0/?option=934",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=46402%2F99%2F31&fid=2470&url=https://lampan.se/p/triniti-o80-0/?option=934",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/46402-99-31.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

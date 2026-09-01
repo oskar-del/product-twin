@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1065684-1065711",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukstork Duschbyggarna Simple",
+    "manufacturer": "Duschbyggarna",
+    "article_no": "GOP1065684-1065711",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 9720,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-duschbyggarna-simple/p-1065684-1065711",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-duschbyggarna-simple/p-1065684-1065711",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1065684-1065711&fid=2559&url=https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/handdukstork-duschbyggarna-simple/p-1065684-1065711",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/9e830f81-a4aa-401a-9f68-ed6435d70306/tj14450-2011-simple-1440x500-orange.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

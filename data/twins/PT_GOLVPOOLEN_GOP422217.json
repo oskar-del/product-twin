@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP422217",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Golvbrunnssil Smedbo Outline FS503 Rostfri",
+    "manufacturer": "Smedbo",
+    "article_no": "GOP422217",
+    "ean": "7391447041644",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 349,
+    "ean": "7391447041644",
+    "product_url": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/golvbrunnssil-smedbo-outline-fs503-rostfri/p-422217",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/golvbrunnssil-smedbo-outline-fs503-rostfri/p-422217",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP422217&fid=2559&url=https://www.golvpoolen.se/badrum/vvs-och-ventilation/vvs/inomhusavlopp/golvbrunnssil-smedbo-outline-fs503-rostfri/p-422217",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/a08cf3dd-2262-40e9-aa06-7b9fe5ffe67c/golvbrunnssil-smedbo-outline-fs503-rostfri.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_62717",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Faro Barcelona - Novo 25cm - Vägglampa - Svart",
+    "manufacturer": "Faro Barcelona",
+    "article_no": "62717",
+    "ean": "8421776408814",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1429,
+    "ean": "8421776408814",
+    "product_url": "https://lampan.se/p/novo-25cm-0/?option=13076",
+    "cart_deeplink": "https://lampan.se/p/novo-25cm-0/?option=13076",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=62717&fid=2470&url=https://lampan.se/p/novo-25cm-0/?option=13076",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-78843.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1082910",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschhållare Axor Citterio",
+    "manufacturer": "Axor",
+    "article_no": "GOP1082910",
+    "ean": "4011097545691",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1782,
+    "ean": "4011097545691",
+    "product_url": "https://www.golvpoolen.se/badrum/duscharmatur/duschhallare/duschhallare-axor-citterio/p-1082910",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duscharmatur/duschhallare/duschhallare-axor-citterio/p-1082910",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1082910&fid=2559&url=https://www.golvpoolen.se/badrum/duscharmatur/duschhallare/duschhallare-axor-citterio/p-1082910",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/8350e641-387c-47da-9aad-9e7e305f9f0d/axor_39525000.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

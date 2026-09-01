@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_75795",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Eglo - Huesa 30cm - Portabel lampa - Vit",
+    "manufacturer": "Eglo",
+    "article_no": "75795",
+    "ean": "9002759757953",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 339,
+    "ean": "9002759757953",
+    "product_url": "https://lampan.se/p/huesa-30cm-0/?option=12254",
+    "cart_deeplink": "https://lampan.se/p/huesa-30cm-0/?option=12254",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=75795&fid=2470&url=https://lampan.se/p/huesa-30cm-0/?option=12254",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-29937.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

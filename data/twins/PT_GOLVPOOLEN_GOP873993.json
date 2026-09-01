@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP873993",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Taklampa Astro Sabina 170",
+    "manufacturer": "Astro",
+    "article_no": "GOP873993",
+    "ean": "5038856070248",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1940,
+    "ean": "5038856070248",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsbelysning/taklampa-astro-sabina-170/p-873993",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsbelysning/taklampa-astro-sabina-170/p-873993",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP873993&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumsbelysning/taklampa-astro-sabina-170/p-873993",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/ca2c5f98-48ec-4323-97bc-817b718adb77/taklampa-astro-sabina-170.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

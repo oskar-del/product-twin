@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_15678-90",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Swirl 110cm - Taklampa - Stål",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "15678-90",
+    "ean": "7392986776882",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4299,
+    "ean": "7392986776882",
+    "product_url": "https://lampan.se/p/swirl-110cm/?option=1976",
+    "cart_deeplink": "https://lampan.se/p/swirl-110cm/?option=1976",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=15678-90&fid=2470&url=https://lampan.se/p/swirl-110cm/?option=1976",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/15678-90_swirl_7392986776882_pp2.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

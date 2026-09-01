@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7210",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Frilight - Ljusplatta 18cm - Dekorationsbelysning - Svart",
+    "manufacturer": "Frilight",
+    "article_no": "7210",
+    "ean": "7350028497157",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 349,
+    "ean": "7350028497157",
+    "product_url": "https://lampan.se/p/ljusplatta-18cm/?option=11034",
+    "cart_deeplink": "https://lampan.se/p/ljusplatta-18cm/?option=11034",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7210&fid=2470&url=https://lampan.se/p/ljusplatta-18cm/?option=11034",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/frilight-ljussockel-tra-svart-rekt-180-recw180-led.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

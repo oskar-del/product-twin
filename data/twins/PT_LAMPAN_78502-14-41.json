@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_78502-14-41",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Samling 23cm - Bordslampa - Taupe",
+    "manufacturer": "Lucide",
+    "article_no": "78502/14/41",
+    "ean": "5411212783004",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 979,
+    "ean": "5411212783004",
+    "product_url": "https://lampan.se/p/samling-23cm/?option=15052",
+    "cart_deeplink": "https://lampan.se/p/samling-23cm/?option=15052",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=78502%2F14%2F41&fid=2470&url=https://lampan.se/p/samling-23cm/?option=15052",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/high-res78502-14-41.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

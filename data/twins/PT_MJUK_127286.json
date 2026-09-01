@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_127286",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "CXL by Christian Lacroix Olivier fåtölj blå",
+    "manufacturer": "CXL by Christian Lacroix",
+    "article_no": "127286",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 10348,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/127286/cxl-by-christian-lacroix-olivier-fatolj-bla",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/127286/cxl-by-christian-lacroix-olivier-fatolj-bla",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=127286&fid=978&url=https://www.mjuk.com/sv-se/product/127286/cxl-by-christian-lacroix-olivier-fatolj-bla",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/2ff5882504189e88f830c02b8e7bf05f.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

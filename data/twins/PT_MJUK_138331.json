@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_138331",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Beliani Sersale utestol svart, set om 4 st",
+    "manufacturer": "Beliani",
+    "article_no": "138331",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1550,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/138331/beliani-sersale-utestol-svart-set-om-4-st",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/138331/beliani-sersale-utestol-svart-set-om-4-st",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=138331&fid=978&url=https://www.mjuk.com/sv-se/product/138331/beliani-sersale-utestol-svart-set-om-4-st",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/8f2053e3-6387-4b29-9ee9-1f76e6f0c834.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

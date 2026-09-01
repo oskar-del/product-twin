@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_275003",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "PR Home - Delhi Ø50 - Taklampa - Svart",
+    "manufacturer": "PR Home",
+    "article_no": "275003",
+    "ean": "7330976044580",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3999,
+    "ean": "7330976044580",
+    "product_url": "https://lampan.se/p/delhi-o50-0/?option=2458",
+    "cart_deeplink": "https://lampan.se/p/delhi-o50-0/?option=2458",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=275003&fid=2470&url=https://lampan.se/p/delhi-o50-0/?option=2458",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/275003.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

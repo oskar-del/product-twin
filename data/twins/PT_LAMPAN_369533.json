@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_369533",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "CO Bankeryd - Belli Ø55 - Takplafond - Vit",
+    "manufacturer": "CO Bankeryd",
+    "article_no": "369533",
+    "ean": "7319683695339",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1999,
+    "ean": "7319683695339",
+    "product_url": "https://lampan.se/p/belli-o55-0/?option=15022",
+    "cart_deeplink": "https://lampan.se/p/belli-o55-0/?option=15022",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=369533&fid=2470&url=https://lampan.se/p/belli-o55-0/?option=15022",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/co_bankeryd_belli_55_paper_369533_ceiling_product_1500_1500_off_1-1366x1366.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

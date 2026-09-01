@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_136006",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Mio Beach Baden-baden, set om 2",
+    "manufacturer": "Mio",
+    "article_no": "136006",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 822,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/136006/mio-beach-baden-baden-set-om-2",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/136006/mio-beach-baden-baden-set-om-2",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=136006&fid=978&url=https://www.mjuk.com/sv-se/product/136006/mio-beach-baden-baden-set-om-2",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/4aea5936-fe73-4270-9367-fc805d7a412a.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1551308-1053785",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Spegel Bathlife Glam",
+    "manufacturer": "Bathlife",
+    "article_no": "GOP1551308-1053785",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 569,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsspegel/spegel-bathlife-glam/p-1551308-1053785",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsspegel/spegel-bathlife-glam/p-1551308-1053785",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1551308-1053785&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumsspegel/spegel-bathlife-glam/p-1551308-1053785",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/7243eb14-4ffa-4ce4-bff0-d01ec6a2b4b0/1053785_800-utan-belysning.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

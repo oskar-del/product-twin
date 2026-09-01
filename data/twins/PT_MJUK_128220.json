@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_128220",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ligne Roset Myo fåtölj vit",
+    "manufacturer": "Ligne Roset",
+    "article_no": "128220",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 33020,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/128220/ligne-roset-myo-fatolj-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/128220/ligne-roset-myo-fatolj-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=128220&fid=978&url=https://www.mjuk.com/sv-se/product/128220/ligne-roset-myo-fatolj-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/de8577cf9cba78cb1e5c99351a38f316.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

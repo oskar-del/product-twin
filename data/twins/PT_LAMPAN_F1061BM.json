@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_F1061BM",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Nordic Lighting - Globi Ø15 - Fönsterlampa - Mässing/transparent",
+    "manufacturer": "Nordic Lighting",
+    "article_no": "F1061BM",
+    "ean": "7350170883358",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 449,
+    "ean": "7350170883358",
+    "product_url": "https://lampan.se/p/globi-o15-2/?option=14939",
+    "cart_deeplink": "https://lampan.se/p/globi-o15-2/?option=14939",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=F1061BM&fid=2470&url=https://lampan.se/p/globi-o15-2/?option=14939",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/f1061bm.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

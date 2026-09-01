@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_138740",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "NaughtOne Fiji 3-sits soffa orange",
+    "manufacturer": "unknown",
+    "article_no": "138740",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 24442,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/138740/naughtone-fiji-3-sits-soffa-orange",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/138740/naughtone-fiji-3-sits-soffa-orange",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=138740&fid=978&url=https://www.mjuk.com/sv-se/product/138740/naughtone-fiji-3-sits-soffa-orange",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/d6828a4f67b327d75775a944512b5b82.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

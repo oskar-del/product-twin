@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_109170",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Markslöjd - Styrka Ø75 - Taklampa - Flerfärgad",
+    "manufacturer": "Markslöjd",
+    "article_no": "109170",
+    "ean": "7330024622586",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3499,
+    "ean": "7330024622586",
+    "product_url": "https://lampan.se/p/styrka-o75-2/?option=15154",
+    "cart_deeplink": "https://lampan.se/p/styrka-o75-2/?option=15154",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=109170&fid=2470&url=https://lampan.se/p/styrka-o75-2/?option=15154",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/109170_styrka_001.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

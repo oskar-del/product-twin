@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_46859-15",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Oriva - Debbie Ø21 - Fönsterlampa - Grön",
+    "manufacturer": "Oriva",
+    "article_no": "46859-15",
+    "ean": "7332065072269",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 589,
+    "ean": "7332065072269",
+    "product_url": "https://lampan.se/p/debbie-o21-0/?option=8439",
+    "cart_deeplink": "https://lampan.se/p/debbie-o21-0/?option=8439",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=46859-15&fid=2470&url=https://lampan.se/p/debbie-o21-0/?option=8439",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/46859-151400x1400.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

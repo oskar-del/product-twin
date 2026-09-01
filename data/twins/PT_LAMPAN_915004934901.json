@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_915004934901",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Philips - Phase - Spotlight - Svart",
+    "manufacturer": "Philips",
+    "article_no": "915004934901",
+    "ean": "8718696125175",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 639,
+    "ean": "8718696125175",
+    "product_url": "https://lampan.se/p/phase/?option=6391",
+    "cart_deeplink": "https://lampan.se/p/phase/?option=6391",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=915004934901&fid=2470&url=https://lampan.se/p/phase/?option=6391",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1d71ca6b904044c3a012a9b9009fadf8.unknown.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

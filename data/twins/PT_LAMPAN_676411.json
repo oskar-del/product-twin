@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_676411",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Cato 3 - Spotlight - Aluminium",
+    "manufacturer": "Belid",
+    "article_no": "676411",
+    "ean": "7391534266127",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3499,
+    "ean": "7391534266127",
+    "product_url": "https://lampan.se/p/cato-3-6/?option=13560",
+    "cart_deeplink": "https://lampan.se/p/cato-3-6/?option=13560",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=676411&fid=2470&url=https://lampan.se/p/cato-3-6/?option=13560",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/catoled_676411_f.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

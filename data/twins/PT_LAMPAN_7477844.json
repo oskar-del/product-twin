@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7477844",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Designlight - Q-90 Distansring - Tillbehör - Svart",
+    "manufacturer": "Designlight",
+    "article_no": "7477844",
+    "ean": "7340132801834",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 89,
+    "ean": "7340132801834",
+    "product_url": "https://lampan.se/p/q-90-distansring-0/?option=15540",
+    "cart_deeplink": "https://lampan.se/p/q-90-distansring-0/?option=15540",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7477844&fid=2470&url=https://lampan.se/p/q-90-distansring-0/?option=15540",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/q-90b-distans-kokslampa-skapsbelysning.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

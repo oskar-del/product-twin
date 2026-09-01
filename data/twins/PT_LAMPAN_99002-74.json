@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_99002-74",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Knut 22cm - Bordslampa - Grön",
+    "manufacturer": "Brilliant",
+    "article_no": "99002/74",
+    "ean": "4004353430152",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 895,
+    "ean": "4004353430152",
+    "product_url": "https://lampan.se/p/knut-22cm/?option=15588",
+    "cart_deeplink": "https://lampan.se/p/knut-22cm/?option=15588",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=99002%2F74&fid=2470&url=https://lampan.se/p/knut-22cm/?option=15588",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/tischleuchten_knut_4004353430152_1_1920x1920.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

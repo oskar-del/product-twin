@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_716579",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Baltimore 2 - Golvlampa - Svart",
+    "manufacturer": "Halo Design",
+    "article_no": "716579",
+    "ean": "5705639716579",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3449,
+    "ean": "5705639716579",
+    "product_url": "https://lampan.se/p/baltimore-2/?option=8118",
+    "cart_deeplink": "https://lampan.se/p/baltimore-2/?option=8118",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=716579&fid=2470&url=https://lampan.se/p/baltimore-2/?option=8118",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/716579-baltimore-2arms_packshot.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

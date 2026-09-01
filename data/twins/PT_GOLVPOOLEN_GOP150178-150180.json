@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP150178-150180",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Diskmaskinsavstängning Mora INXX",
+    "manufacturer": "Mora",
+    "article_no": "GOP150178-150180",
+    "ean": "7391887177095",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1299,
+    "ean": "7391887177095",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/diskmaskinsavstangning-mora-inxx/p-150178-150180",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/diskmaskinsavstangning-mora-inxx/p-150178-150180",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP150178-150180&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/diskmaskinsavstangning-mora-inxx/p-150178-150180",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/16746d94-c830-4707-aa70-36ca9e49388a/diskmaskinsavstangning-mora-inxx.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

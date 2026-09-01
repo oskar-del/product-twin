@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP140437",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Konsoler Hafa till Porslintvättställ",
+    "manufacturer": "Hafa",
+    "article_no": "GOP140437",
+    "ean": "7330027019086",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 424,
+    "ean": "7330027019086",
+    "product_url": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/tillbehor-tvattstall/konsoler-hafa-till-porslintvattstall/p-140437",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/tillbehor-tvattstall/konsoler-hafa-till-porslintvattstall/p-140437",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP140437&fid=2559&url=https://www.golvpoolen.se/badrum/handfat-och-tvattstall/tillbehor-tvattstall/konsoler-hafa-till-porslintvattstall/p-140437",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/143840d4-d33b-45dc-8b69-11eca3e26f64/konsol-till-tvattstall-hafa-moon.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD043PL-06G",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Puntes Ø52 - Kristallkrona - Guld",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD043PL-06G",
+    "ean": "4251110033037",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 8759,
+    "ean": "4251110033037",
+    "product_url": "https://lampan.se/p/puntes-o52/?option=12274",
+    "cart_deeplink": "https://lampan.se/p/puntes-o52/?option=12274",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD043PL-06G&fid=2470&url=https://lampan.se/p/puntes-o52/?option=12274",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/image1-6157.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

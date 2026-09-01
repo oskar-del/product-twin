@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_15100-15-14",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Bell Ø47 - Taklampa - Rökfärgad",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "15100-15-14",
+    "ean": "7041661272545",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3199,
+    "ean": "7041661272545",
+    "product_url": "https://lampan.se/p/bell-o47-0/?option=1955",
+    "cart_deeplink": "https://lampan.se/p/bell-o47-0/?option=1955",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=15100-15-14&fid=2470&url=https://lampan.se/p/bell-o47-0/?option=1955",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-2595.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

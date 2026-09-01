@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_G99069-76",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Arion - Golvlampa - Trä",
+    "manufacturer": "Brilliant",
+    "article_no": "G99069/76",
+    "ean": "4004353425776",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1049,
+    "ean": "4004353425776",
+    "product_url": "https://lampan.se/p/arion/?option=13919",
+    "cart_deeplink": "https://lampan.se/p/arion/?option=13919",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=G99069%2F76&fid=2470&url=https://lampan.se/p/arion/?option=13919",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/stehleuchten_arion_4004353425776_1_800x800.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

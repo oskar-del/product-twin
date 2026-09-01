@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_92851",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "LoOok Industries Bazooka puff musta",
+    "manufacturer": "LoOok Industries",
+    "article_no": "92851",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4140,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/92851/loook-industries-bazooka-puff-musta",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/92851/loook-industries-bazooka-puff-musta",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=92851&fid=978&url=https://www.mjuk.com/sv-se/product/92851/loook-industries-bazooka-puff-musta",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/507d99e8e89130cb2378e951d8879860.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

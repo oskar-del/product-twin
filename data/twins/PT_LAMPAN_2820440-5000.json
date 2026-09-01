@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2820440-5000",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "By Rydéns - Omega 70cm - Bordslampa - Krom",
+    "manufacturer": "By Rydéns",
+    "article_no": "2820440-5000",
+    "ean": "7391741204486",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1949,
+    "ean": "7391741204486",
+    "product_url": "https://lampan.se/p/omega-70cm-0/?option=2314",
+    "cart_deeplink": "https://lampan.se/p/omega-70cm-0/?option=2314",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2820440-5000&fid=2470&url=https://lampan.se/p/omega-70cm-0/?option=2314",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/omega_chrome_2820440_5000.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_T040371",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Norrsken Design - Kate Ø50 - Kristallkrona - Antikmässing",
+    "manufacturer": "Norrsken Design",
+    "article_no": "T040371",
+    "ean": "7394363032734",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 8209,
+    "ean": "7394363032734",
+    "product_url": "https://lampan.se/p/kate-o50-1/?option=2419",
+    "cart_deeplink": "https://lampan.se/p/kate-o50-1/?option=2419",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=T040371&fid=2470&url=https://lampan.se/p/kate-o50-1/?option=2419",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-73800.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

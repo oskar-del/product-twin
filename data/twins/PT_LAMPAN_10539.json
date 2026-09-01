@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_10539",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Alde & Lind - Takupphäng 2m - Tillbehör - Tvinnad natur",
+    "manufacturer": "Alde & Lind",
+    "article_no": "10539",
+    "ean": "7350147273199",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 449,
+    "ean": "7350147273199",
+    "product_url": "https://lampan.se/p/takupphang-2m-7/?option=13481",
+    "cart_deeplink": "https://lampan.se/p/takupphang-2m-7/?option=13481",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=10539&fid=2470&url=https://lampan.se/p/takupphang-2m-7/?option=13481",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-22663.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_25165-30-40",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Gatsby Ø15 - Fönsterlampa - Antikmässing",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "25165-30-40",
+    "ean": "7041661291423",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 899,
+    "ean": "7041661291423",
+    "product_url": "https://lampan.se/p/gatsby-o15/?option=15819",
+    "cart_deeplink": "https://lampan.se/p/gatsby-o15/?option=15819",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=25165-30-40&fid=2470&url=https://lampan.se/p/gatsby-o15/?option=15819",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/clqnxqie0cxwxoisxdyyrjmb9.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

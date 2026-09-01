@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_V530045",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lampan - LED E27 unitherm 4W - Ljuskälla - Transparent",
+    "manufacturer": "Lampan",
+    "article_no": "V530045",
+    "ean": "7350134530045",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 149,
+    "ean": "7350134530045",
+    "product_url": "https://lampan.se/p/led-e27-unitherm-4w/?option=4373",
+    "cart_deeplink": "https://lampan.se/p/led-e27-unitherm-4w/?option=4373",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=V530045&fid=2470&url=https://lampan.se/p/led-e27-unitherm-4w/?option=4373",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/st64clear-lightup.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

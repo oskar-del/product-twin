@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP960333",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Decor Maison Lines 3107",
+    "manufacturer": "Decor Maison",
+    "article_no": "GOP960333",
+    "ean": "7340020803780",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 205,
+    "ean": "7340020803780",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-decor-maison-lines-3107/p-960333",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-decor-maison-lines-3107/p-960333",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP960333&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-decor-maison-lines-3107/p-960333",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/95db50ad-019e-40fc-9001-723f64c84226/3107.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

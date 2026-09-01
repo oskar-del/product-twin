@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP960629",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Köksblandare FM Mattsson 9000E 40 cc med Underliggande Pip",
+    "manufacturer": "FM Mattsson",
+    "article_no": "GOP960629",
+    "ean": "7391887240652",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2359,
+    "ean": "7391887240652",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/koksblandare/koksblandare-fm-mattsson-9000e-40-cc-med-underliggande-pip/p-960629",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/koksblandare/koksblandare-fm-mattsson-9000e-40-cc-med-underliggande-pip/p-960629",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP960629&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/koksblandare/koksblandare-fm-mattsson-9000e-40-cc-med-underliggande-pip/p-960629",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/bd8ec1f6-a6f8-48fb-b5cc-c4f953e559bb/118616.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

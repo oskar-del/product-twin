@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD007WL-01G",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Aster Ø28 - Vägglampa - Guld",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD007WL-01G",
+    "ean": "4251110027890",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1679,
+    "ean": "4251110027890",
+    "product_url": "https://lampan.se/p/aster-o28/?option=6465",
+    "cart_deeplink": "https://lampan.se/p/aster-o28/?option=6465",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD007WL-01G&fid=2470&url=https://lampan.se/p/aster-o28/?option=6465",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/mod007wl-01g_on_w_standard_2.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

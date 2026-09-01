@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1446-4",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emibig Lighting - Kairo 87cm - Takplafond - Svart",
+    "manufacturer": "Emibig Lighting",
+    "article_no": "1446/4",
+    "ean": "5907106011730",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2149,
+    "ean": "5907106011730",
+    "product_url": "https://lampan.se/p/kairo-87cm/?option=11984",
+    "cart_deeplink": "https://lampan.se/p/kairo-87cm/?option=11984",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1446%2F4&fid=2470&url=https://lampan.se/p/kairo-87cm/?option=11984",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1446_4-1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

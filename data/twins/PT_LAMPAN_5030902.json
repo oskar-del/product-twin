@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_5030902",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Unison - LED G4 10-30V 1,1W 2500K dimbar - Ljuskälla - Vit",
+    "manufacturer": "Unison",
+    "article_no": "5030902",
+    "ean": "7340037010850",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 65,
+    "ean": "7340037010850",
+    "product_url": "https://lampan.se/p/led-g4-10-30v-1-1w-2500k-dimbar/?option=4591",
+    "cart_deeplink": "https://lampan.se/p/led-g4-10-30v-1-1w-2500k-dimbar/?option=4591",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=5030902&fid=2470&url=https://lampan.se/p/led-g4-10-30v-1-1w-2500k-dimbar/?option=4591",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/5030902h.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

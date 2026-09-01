@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_QZ-WEST-END-F",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - West End Ø42 - Tiffany lampor - Flerfärgad",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "QZ-WEST-END-F",
+    "ean": "5024005270119",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3739,
+    "ean": "5024005270119",
+    "product_url": "https://lampan.se/p/west-end-o42/?option=10460",
+    "cart_deeplink": "https://lampan.se/p/west-end-o42/?option=10460",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=QZ-WEST-END-F&fid=2470&url=https://lampan.se/p/west-end-o42/?option=10460",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-56342.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

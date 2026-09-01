@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_78151-12-61",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Plano Ø23 - Badrumslampa - Silver",
+    "manufacturer": "Lucide",
+    "article_no": "78151/12/61",
+    "ean": "5411212782922",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1069,
+    "ean": "5411212782922",
+    "product_url": "https://lampan.se/p/plano-o23/?option=9537",
+    "cart_deeplink": "https://lampan.se/p/plano-o23/?option=9537",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=78151%2F12%2F61&fid=2470&url=https://lampan.se/p/plano-o23/?option=9537",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/skarmklipp-21137.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

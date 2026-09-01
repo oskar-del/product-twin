@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_22370773",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Bizzo Ø17 - Takplafond - Mattsvart/rökfärgad",
+    "manufacturer": "Belid",
+    "article_no": "22370773",
+    "ean": "7391534103606",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1699,
+    "ean": "7391534103606",
+    "product_url": "https://lampan.se/p/bizzo-o17-3/?option=1529",
+    "cart_deeplink": "https://lampan.se/p/bizzo-o17-3/?option=1529",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=22370773&fid=2470&url=https://lampan.se/p/bizzo-o17-3/?option=1529",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/partspartnumber22370773filenamebizzo_22370773_f_on.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

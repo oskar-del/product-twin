@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP536545-536547",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschblandare FM Mattsson Siljan 160 cc",
+    "manufacturer": "FM Mattsson",
+    "article_no": "GOP536545-536547",
+    "ean": "7391887236815",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2281,
+    "ean": "7391887236815",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-fm-mattsson-siljan-160-cc/p-536545-536547",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-fm-mattsson-siljan-160-cc/p-536545-536547",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP536545-536547&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-fm-mattsson-siljan-160-cc/p-536545-536547",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b7e1b4b7-4925-484d-859e-5610b71225d1/duschblandare-fm-mattsson-siljan-160-cc.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_20338-141",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Faro Barcelona - Tatawin 100cm - Taklampa - Svart",
+    "manufacturer": "Faro Barcelona",
+    "article_no": "20338-141",
+    "ean": "8421776620063",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5919,
+    "ean": "8421776620063",
+    "product_url": "https://lampan.se/p/tatawin-100cm-0/?option=13047",
+    "cart_deeplink": "https://lampan.se/p/tatawin-100cm-0/?option=13047",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=20338-141&fid=2470&url=https://lampan.se/p/tatawin-100cm-0/?option=13047",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-99037.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

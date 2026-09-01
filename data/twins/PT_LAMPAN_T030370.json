@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_T030370",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Norrsken Design - Kate Ø35 - Kristallkrona - Guld",
+    "manufacturer": "Norrsken Design",
+    "article_no": "T030370",
+    "ean": "7394363032338",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5959,
+    "ean": "7394363032338",
+    "product_url": "https://lampan.se/p/kate-o35-0/?option=2420",
+    "cart_deeplink": "https://lampan.se/p/kate-o35-0/?option=2420",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=T030370&fid=2470&url=https://lampan.se/p/kate-o35-0/?option=2420",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-56714.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

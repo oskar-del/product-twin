@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GRIPSHOLM_1-se-p796-v3964-s10437",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gripsholm Badhandduk 70x130",
+    "manufacturer": "Gripsholm",
+    "article_no": "1/se-p796-v3964-s10437",
+    "ean": "7318161326734",
+    "source": "gripsholm_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "gripsholm SE",
+    "currency": "SEK",
+    "unit_price": 249,
+    "ean": "7318161326734",
+    "product_url": "https://www.gripsholm.se/p/bath-towel-gripsholm-70x130-walnut?country=se",
+    "cart_deeplink": "https://www.gripsholm.se/p/bath-towel-gripsholm-70x130-walnut?country=se",
+    "affiliate_link": "https://pid.gripsholm.se/t/t?a=1960533239&as=2106320328&t=2&tk=1&cupa_sku=1%2Fse-p796-v3964-s10437&fid=2720&url=https://www.gripsholm.se/p/bath-towel-gripsholm-70x130-walnut?country=se",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://springhill.centracdn.net/client/dynamic/originals/796_bf3f41ea30-93100437-original.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7701218",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Westal - Illusion Box - Fasadbelysning - Svart",
+    "manufacturer": "Westal",
+    "article_no": "7701218",
+    "ean": "7393047800294",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2809,
+    "ean": "7393047800294",
+    "product_url": "https://lampan.se/p/illusion-box-1/?option=6045",
+    "cart_deeplink": "https://lampan.se/p/illusion-box-1/?option=6045",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7701218&fid=2470&url=https://lampan.se/p/illusion-box-1/?option=6045",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-37817.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

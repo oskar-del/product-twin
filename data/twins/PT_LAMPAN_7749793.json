@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7749793",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Norlys - Trysil 85cm - Pollare - Grafit",
+    "manufacturer": "Norlys",
+    "article_no": "7749793",
+    "ean": "7042890109688",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4609,
+    "ean": "7042890109688",
+    "product_url": "https://lampan.se/p/trysil-85cm-1/?option=4857",
+    "cart_deeplink": "https://lampan.se/p/trysil-85cm-1/?option=4857",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7749793&fid=2470&url=https://lampan.se/p/trysil-85cm-1/?option=4857",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/7749793trysil_gr_on1096gr3000ksym-1-59392.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_6763-330",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Hallbergs - Yoru 50cm - Taklampa - Svart",
+    "manufacturer": "Hallbergs",
+    "article_no": "6763-330",
+    "ean": "7319500047921",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 929,
+    "ean": "7319500047921",
+    "product_url": "https://lampan.se/p/yoru-50cm-0/?option=8713",
+    "cart_deeplink": "https://lampan.se/p/yoru-50cm-0/?option=8713",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=6763-330&fid=2470&url=https://lampan.se/p/yoru-50cm-0/?option=8713",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/15897.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

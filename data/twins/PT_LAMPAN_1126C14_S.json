@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1126C14_S",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Artera - Ball Ø15 - Vägglampa - Senap",
+    "manufacturer": "Artera",
+    "article_no": "1126C14_S",
+    "ean": "5904798658458",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1319,
+    "ean": "5904798658458",
+    "product_url": "https://lampan.se/p/ball-o15-8/?option=3585",
+    "cart_deeplink": "https://lampan.se/p/ball-o15-8/?option=3585",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1126C14_S&fid=2470&url=https://lampan.se/p/ball-o15-8/?option=3585",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/11980_1_695.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

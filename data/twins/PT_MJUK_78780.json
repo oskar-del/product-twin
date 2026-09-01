@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_78780",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Korpi Design Pala fotlampa vit",
+    "manufacturer": "Korpi Design",
+    "article_no": "78780",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4639,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/78780/korpi-design-pala-fotlampa-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/78780/korpi-design-pala-fotlampa-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=78780&fid=978&url=https://www.mjuk.com/sv-se/product/78780/korpi-design-pala-fotlampa-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/8de49aa3-fa61-4150-945b-8506d03e6c41.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_136506",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Luftkonditionering med fjärrkontroll 9000 BTU / 37 m²",
+    "manufacturer": "Mjuk",
+    "article_no": "136506",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3796,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/136506/luftkonditionering-med-fjarrkontroll-9000-btu-37-m",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/136506/luftkonditionering-med-fjarrkontroll-9000-btu-37-m",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=136506&fid=978&url=https://www.mjuk.com/sv-se/product/136506/luftkonditionering-med-fjarrkontroll-9000-btu-37-m",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/4d78dcb89901c3f2a6944f14b4a7ef99.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1847354-1847358",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Inbyggnadsbadkar Duravit DuraSquare",
+    "manufacturer": "Duravit",
+    "article_no": "GOP1847354-1847358",
+    "ean": "4067116319132",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 48760,
+    "ean": "4067116319132",
+    "product_url": "https://www.golvpoolen.se/badrum/badkar/inbyggnadsbadkar/inbyggnadsbadkar-duravit-durasquare/p-1847354-1847358",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badkar/inbyggnadsbadkar/inbyggnadsbadkar-duravit-durasquare/p-1847354-1847358",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1847354-1847358&fid=2559&url=https://www.golvpoolen.se/badrum/badkar/inbyggnadsbadkar/inbyggnadsbadkar-duravit-durasquare/p-1847354-1847358",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/0d3ed796-a4d6-4864-ae9c-c4bebf9759ca/duravit_pi-hi_700426hb0000000_3154510_300-1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

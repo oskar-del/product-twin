@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_20019",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sidobord med fot i metall",
+    "manufacturer": "Mjuk",
+    "article_no": "20019",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 416,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/20019/sidobord-med-fot-i-metall",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/20019/sidobord-med-fot-i-metall",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=20019&fid=978&url=https://www.mjuk.com/sv-se/product/20019/sidobord-med-fot-i-metall",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://mjuk-images.fra1.digitaloceanspaces.com/20019/image.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

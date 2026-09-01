@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD223WL-02BS",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Arco 38cm - Vägglampa - Mässing",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD223WL-02BS",
+    "ean": "4251110034119",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1649,
+    "ean": "4251110034119",
+    "product_url": "https://lampan.se/p/arco-38cm/?option=6529",
+    "cart_deeplink": "https://lampan.se/p/arco-38cm/?option=6529",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD223WL-02BS&fid=2470&url=https://lampan.se/p/arco-38cm/?option=6529",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-61676.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

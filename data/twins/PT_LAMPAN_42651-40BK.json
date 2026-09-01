@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_42651-40BK",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Cyprus Ø40 - Takplafond - Svart",
+    "manufacturer": "Searchlight",
+    "article_no": "42651-40BK",
+    "ean": "5053423273716",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2269,
+    "ean": "5053423273716",
+    "product_url": "https://lampan.se/p/cyprus-o40/?option=12878",
+    "cart_deeplink": "https://lampan.se/p/cyprus-o40/?option=12878",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=42651-40BK&fid=2470&url=https://lampan.se/p/cyprus-o40/?option=12878",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/42651-40bk_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2405247",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Airam - 2-vägs förlängningsuttag - Tillbehör",
+    "manufacturer": "Airam",
+    "article_no": "2405247",
+    "ean": "6435200258717",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 179,
+    "ean": "6435200258717",
+    "product_url": "https://lampan.se/p/2-vags-forlangningsuttag/",
+    "cart_deeplink": "https://lampan.se/p/2-vags-forlangningsuttag/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2405247&fid=2470&url=https://lampan.se/p/2-vags-forlangningsuttag/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-26415.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

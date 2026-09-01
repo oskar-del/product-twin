@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_21142",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Howard 4-sitssoffa grå",
+    "manufacturer": "Mjuk",
+    "article_no": "21142",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4940,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/21142/howard-4-sitssoffa-gra",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/21142/howard-4-sitssoffa-gra",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=21142&fid=978&url=https://www.mjuk.com/sv-se/product/21142/howard-4-sitssoffa-gra",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/5aaebc06829b13633ec184863309b280.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

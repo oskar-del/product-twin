@@ -28,7 +28,8 @@ async function main() {
   for await (const line of rl) {
     if (!line.trim()) continue;
     const row = JSON.parse(line);
-    const twinId = `PT_${BRAND_UPPER}_${row.id}`;
+    const safeId = String(row.id).replace(/[^A-Za-z0-9_.-]/g, '-');
+    const twinId = `PT_${BRAND_UPPER}_${safeId}`;
     if (seen.has(twinId)) { skipped++; continue; }
     seen.add(twinId);
 

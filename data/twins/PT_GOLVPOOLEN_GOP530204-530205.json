@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP530204-530205",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukskrok Hansgrohe Logis",
+    "manufacturer": "Hansgrohe",
+    "article_no": "GOP530204-530205",
+    "ean": "4011097584805",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 325,
+    "ean": "4011097584805",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-hansgrohe-logis/p-530204-530205",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-hansgrohe-logis/p-530204-530205",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP530204-530205&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-hansgrohe-logis/p-530204-530205",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/c60962c3-2c45-460e-8109-c00c9c6aec76/handdukskrok-hansgrohe-logis.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD547WL-13CH",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Dallas 95cm - Vägglampa - Krom",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD547WL-13CH",
+    "ean": "4251110026923",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4699,
+    "ean": "4251110026923",
+    "product_url": "https://lampan.se/p/dallas-95cm-2/?option=6594",
+    "cart_deeplink": "https://lampan.se/p/dallas-95cm-2/?option=6594",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD547WL-13CH&fid=2470&url=https://lampan.se/p/dallas-95cm-2/?option=6594",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/render_mod547wl-13ch_on_w_standard.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP564540",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Inbyggnadsdel Axor Massaud för Utloppspip",
+    "manufacturer": "Axor",
+    "article_no": "GOP564540",
+    "ean": "4011097532042",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1667,
+    "ean": "4011097532042",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/badkarsblandare/inbyggnadsdel-axor-massaud-for-utloppspip/p-564540",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/badkarsblandare/inbyggnadsdel-axor-massaud-for-utloppspip/p-564540",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP564540&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/badkarsblandare/inbyggnadsdel-axor-massaud-for-utloppspip/p-564540",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/da5d15f1-244e-4ba3-8c6c-32e16dedc3ad/inbyggnadsdel-hansgrohe-axor-massaud-for-utloppspip.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

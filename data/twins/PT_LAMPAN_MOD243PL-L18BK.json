@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD243PL-L18BK",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Light Reflection 98cm - Taklampa - Svart",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD243PL-L18BK",
+    "ean": "4099776080749",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2329,
+    "ean": "4099776080749",
+    "product_url": "https://lampan.se/p/light-reflection-98cm-0/?option=6552",
+    "cart_deeplink": "https://lampan.se/p/light-reflection-98cm-0/?option=6552",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD243PL-L18BK&fid=2470&url=https://lampan.se/p/light-reflection-98cm-0/?option=6552",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/render_mod243pl-l18bk_on_w_standard.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

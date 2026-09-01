@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_63547",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Faro Barcelona - Calma 30cm - Badrumslampa - Svart",
+    "manufacturer": "Faro Barcelona",
+    "article_no": "63547",
+    "ean": "8421776405462",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 529,
+    "ean": "8421776405462",
+    "product_url": "https://lampan.se/p/calma-30cm-3/?option=13103",
+    "cart_deeplink": "https://lampan.se/p/calma-30cm-3/?option=13103",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=63547&fid=2470&url=https://lampan.se/p/calma-30cm-3/?option=13103",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-30872.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

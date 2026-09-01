@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_115369",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "DBKD Edge vas brun",
+    "manufacturer": "DBKD",
+    "article_no": "115369",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 260,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/115369/dbkd-edge-vas-brun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/115369/dbkd-edge-vas-brun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=115369&fid=978&url=https://www.mjuk.com/sv-se/product/115369/dbkd-edge-vas-brun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/3c81a8eeb058bfc3f4e35f03f98ceba3.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

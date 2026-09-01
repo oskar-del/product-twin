@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1271510-1251497",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställ Svedbergs Hav",
+    "manufacturer": "Svedbergs",
+    "article_no": "GOP1271510-1251497",
+    "ean": "7323100287748",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 5722,
+    "ean": "7323100287748",
+    "product_url": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-svedbergs-hav/p-1271510-1251497",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-svedbergs-hav/p-1271510-1251497",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1271510-1251497&fid=2559&url=https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-svedbergs-hav/p-1271510-1251497",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/13e97142-187e-48f3-99db-58bb5ac653b6/5102.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

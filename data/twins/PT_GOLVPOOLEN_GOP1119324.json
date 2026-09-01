@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1119324",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ställdonsrelä LK Systems 24 V",
+    "manufacturer": "LK Systems",
+    "article_no": "GOP1119324",
+    "ean": "7331590034780",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 991,
+    "ean": "7331590034780",
+    "product_url": "https://www.golvpoolen.se/golv/golvvarme/tillbehor-golvvarme/stalldonsrela-lk-systems-24-v/p-1119324",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvvarme/tillbehor-golvvarme/stalldonsrela-lk-systems-24-v/p-1119324",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1119324&fid=2559&url=https://www.golvpoolen.se/golv/golvvarme/tillbehor-golvvarme/stalldonsrela-lk-systems-24-v/p-1119324",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b93c7cbf-14bb-4678-906b-e9f1f7202e0a/2419899.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

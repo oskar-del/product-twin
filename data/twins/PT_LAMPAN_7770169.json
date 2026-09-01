@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7770169",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Designlight - Batteridriven strålkastare med sensor - Solcellslampa - Svart",
+    "manufacturer": "Designlight",
+    "article_no": "7770169",
+    "ean": "7340132806273",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 599,
+    "ean": "7340132806273",
+    "product_url": "https://lampan.se/p/batteridriven-stralkastare-med-sensor-0/?option=15581",
+    "cart_deeplink": "https://lampan.se/p/batteridriven-stralkastare-med-sensor-0/?option=15581",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7770169&fid=2470&url=https://lampan.se/p/batteridriven-stralkastare-med-sensor-0/?option=15581",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/7770169_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

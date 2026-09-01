@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70007011",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Zero S1 Taklampa Svart - LIGHT-POINT - Vardagsrum - Metall",
+    "manufacturer": "LIGHT-POINT",
+    "article_no": "70007011",
+    "ean": "5711389801113",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 2570,
+    "ean": "5711389801113",
+    "product_url": "https://www.lampemesteren.se/p/zero-s1-taklampa-svart-light-point-70007011.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/zero-s1-taklampa-svart-light-point-70007011.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70007011&fid=1004&url=https://www.lampemesteren.se/p/zero-s1-taklampa-svart-light-point-70007011.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/932A055A3C18/k_0d92de545cdef3ac188618cfd220a7b8;w_1600;h_1600;q_90/70007011.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

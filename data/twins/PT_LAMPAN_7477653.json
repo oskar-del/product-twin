@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7477653",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Designlight - Cheapy 4CCT 4-pack - Infälld spotlight - Vit",
+    "manufacturer": "Designlight",
+    "article_no": "7477653",
+    "ean": "7340132806631",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 999,
+    "ean": "7340132806631",
+    "product_url": "https://lampan.se/p/cheapy-4cct-4-pack/?option=15544",
+    "cart_deeplink": "https://lampan.se/p/cheapy-4cct-4-pack/?option=15544",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7477653&fid=2470&url=https://lampan.se/p/cheapy-4cct-4-pack/?option=15544",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/cheapy-4-pack-vitbg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

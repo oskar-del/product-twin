@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_737048",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Halo Ø75 - Taklampa - Mörkgrå",
+    "manufacturer": "Halo Design",
+    "article_no": "737048",
+    "ean": "5705639737048",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4249,
+    "ean": "5705639737048",
+    "product_url": "https://lampan.se/p/halo-o75/?option=8087",
+    "cart_deeplink": "https://lampan.se/p/halo-o75/?option=8087",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=737048&fid=2470&url=https://lampan.se/p/halo-o75/?option=8087",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/737048-halo-6-lite-pendant_packshot.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_FE-ADAMS-3P-BB",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Adams Ø37 - Taklampa - Mässing",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "FE-ADAMS-3P-BB",
+    "ean": "5024005000433",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 11249,
+    "ean": "5024005000433",
+    "product_url": "https://lampan.se/p/adams-o37/?option=14773",
+    "cart_deeplink": "https://lampan.se/p/adams-o37/?option=14773",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=FE-ADAMS-3P-BB&fid=2470&url=https://lampan.se/p/adams-o37/?option=14773",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/fe-adams-3p-bb.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

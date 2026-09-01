@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1116L9_L",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Artera - Una 150cm - Taklampa - Krämvit",
+    "manufacturer": "Artera",
+    "article_no": "1116L9_L",
+    "ean": "5904798660840",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5149,
+    "ean": "5904798660840",
+    "product_url": "https://lampan.se/p/una-150cm-2/?option=13777",
+    "cart_deeplink": "https://lampan.se/p/una-150cm-2/?option=13777",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1116L9_L&fid=2470&url=https://lampan.se/p/una-150cm-2/?option=13777",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/12233_1_977.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

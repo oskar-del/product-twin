@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_91012",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Matting Jobmate Mini bord / arbetsskiva svart",
+    "manufacturer": "Matting",
+    "article_no": "91012",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1342,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/91012/matting-jobmate-mini-bord-arbetsskiva-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/91012/matting-jobmate-mini-bord-arbetsskiva-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=91012&fid=978&url=https://www.mjuk.com/sv-se/product/91012/matting-jobmate-mini-bord-arbetsskiva-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/1485d925d7bb0d374a87f15851f6a0d4.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

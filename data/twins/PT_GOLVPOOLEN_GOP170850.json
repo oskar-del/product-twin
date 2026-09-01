@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP170850",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "WC-fixtur Gustavsberg Triomont XS Mekanisk",
+    "manufacturer": "Gustavsberg",
+    "article_no": "GOP170850",
+    "ean": "8711778140813",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3387,
+    "ean": "8711778140813",
+    "product_url": "https://www.golvpoolen.se/badrum/toalettstol/wc-fixtur-och-wc-element/wc-fixtur-gustavsberg-triomont-xs-mekanisk/p-170850",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/toalettstol/wc-fixtur-och-wc-element/wc-fixtur-gustavsberg-triomont-xs-mekanisk/p-170850",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP170850&fid=2559&url=https://www.golvpoolen.se/badrum/toalettstol/wc-fixtur-och-wc-element/wc-fixtur-gustavsberg-triomont-xs-mekanisk/p-170850",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e97e68d7-e5bc-4982-b8df-9210a7e2d4f0/wc-fixtur-gustavsberg-triomont-xs-mekanisk.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

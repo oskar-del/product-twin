@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_134003",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Fogia Supersoft modulsoffa med divan",
+    "manufacturer": "Fogia",
+    "article_no": "134003",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 64213,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/134003/fogia-supersoft-modulsoffa-med-divan",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/134003/fogia-supersoft-modulsoffa-med-divan",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=134003&fid=978&url=https://www.mjuk.com/sv-se/product/134003/fogia-supersoft-modulsoffa-med-divan",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/7b6be08fa2934db21d50f0602bb73fea.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

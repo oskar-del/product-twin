@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_0327Q10",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Karlskrona lampfabrik - Tegnér rörpendel 2x60 - Karlskrona lampfabrik - Nickel",
+    "manufacturer": "Karlskrona lampfabrik",
+    "article_no": "0327Q10",
+    "ean": "7332535001454",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5300,
+    "ean": "7332535001454",
+    "product_url": "https://lampan.se/p/tegner-rorpendel-2x60-0/?option=9663",
+    "cart_deeplink": "https://lampan.se/p/tegner-rorpendel-2x60-0/?option=9663",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=0327Q10&fid=2470&url=https://lampan.se/p/tegner-rorpendel-2x60-0/?option=9663",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/784x870_ta-0327q_2306v25.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_119846",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Faro Magma pendellampa vit / gul",
+    "manufacturer": "Faro",
+    "article_no": "119846",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 6989,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/119846/faro-magma-pendellampa-vit-gul",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/119846/faro-magma-pendellampa-vit-gul",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=119846&fid=978&url=https://www.mjuk.com/sv-se/product/119846/faro-magma-pendellampa-vit-gul",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/e4fed28caffac3b0567515f9c1f2991c.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

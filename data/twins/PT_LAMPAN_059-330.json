@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_059-330",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Hallbergs - Rör till Perla 30cm - Tillbehör",
+    "manufacturer": "Hallbergs",
+    "article_no": "059-330",
+    "ean": "7319500045033",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 189,
+    "ean": "7319500045033",
+    "product_url": "https://lampan.se/p/ror-till-perla-30cm/",
+    "cart_deeplink": "https://lampan.se/p/ror-till-perla-30cm/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=059-330&fid=2470&url=https://lampan.se/p/ror-till-perla-30cm/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/056-330-86992.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

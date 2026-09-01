@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_9009",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dyberg Larsen - Stockholm 40cm - Bordslampa - Vit",
+    "manufacturer": "Dyberg Larsen",
+    "article_no": "9009",
+    "ean": "5704709090090",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 799,
+    "ean": "5704709090090",
+    "product_url": "https://lampan.se/p/stockholm-40cm/?option=7714",
+    "cart_deeplink": "https://lampan.se/p/stockholm-40cm/?option=7714",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=9009&fid=2470&url=https://lampan.se/p/stockholm-40cm/?option=7714",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/5704709090090_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

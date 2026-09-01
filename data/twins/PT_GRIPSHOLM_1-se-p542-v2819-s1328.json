@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GRIPSHOLM_1-se-p542-v2819-s1328",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gripsholm Örngott vintage 50x60",
+    "manufacturer": "Gripsholm",
+    "article_no": "1/se-p542-v2819-s1328",
+    "ean": "7318161434019",
+    "source": "gripsholm_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "gripsholm SE",
+    "currency": "SEK",
+    "unit_price": 149,
+    "ean": "7318161434019",
+    "product_url": "https://www.gripsholm.se/p/pillow-case-vintage-gots-fawn?country=se",
+    "cart_deeplink": "https://www.gripsholm.se/p/pillow-case-vintage-gots-fawn?country=se",
+    "affiliate_link": "https://pid.gripsholm.se/t/t?a=1960533239&as=2106320328&t=2&tk=1&cupa_sku=1%2Fse-p542-v2819-s1328&fid=2720&url=https://www.gripsholm.se/p/pillow-case-vintage-gots-fawn?country=se",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://springhill.centracdn.net/client/dynamic/originals/542_eeee7e1d90-91741731-original.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

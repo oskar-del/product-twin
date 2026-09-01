@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1138490",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duscharm Hansgrohe 470 mm",
+    "manufacturer": "Hansgrohe",
+    "article_no": "GOP1138490",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 4879,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/duscharmatur/tillbehor-duscharmatur/duscharm-hansgrohe-470-mm/p-1138490",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duscharmatur/tillbehor-duscharmatur/duscharm-hansgrohe-470-mm/p-1138490",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1138490&fid=2559&url=https://www.golvpoolen.se/badrum/duscharmatur/tillbehor-duscharmatur/duscharm-hansgrohe-470-mm/p-1138490",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/3eeb8fab-ee6e-4203-80b9-efa577182ae1/hansgrohe_27410000.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

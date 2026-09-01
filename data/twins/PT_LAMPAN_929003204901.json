@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_929003204901",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Philips - Runner 3 - Spotlight - Svart",
+    "manufacturer": "Philips",
+    "article_no": "929003204901",
+    "ean": "8719514435339",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1209,
+    "ean": "8719514435339",
+    "product_url": "https://lampan.se/p/runner-3-1/?option=6405",
+    "cart_deeplink": "https://lampan.se/p/runner-3-1/?option=6405",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=929003204901&fid=2470&url=https://lampan.se/p/runner-3-1/?option=6405",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/c9ca52075a6549a08a9fae3d01077e1c.unknown.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

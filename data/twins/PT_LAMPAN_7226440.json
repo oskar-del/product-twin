@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7226440",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Westinghouse - Madeline Ø142 - Takfläkt - Vit",
+    "manufacturer": "Westinghouse",
+    "article_no": "7226440",
+    "ean": "4895105613219",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 6289,
+    "ean": "4895105613219",
+    "product_url": "https://lampan.se/p/madeline-o142/?option=6804",
+    "cart_deeplink": "https://lampan.se/p/madeline-o142/?option=6804",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7226440&fid=2470&url=https://lampan.se/p/madeline-o142/?option=6804",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-85662.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

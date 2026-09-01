@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_122406",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Boknäs vitrinskåp med glasdörr S31",
+    "manufacturer": "Boknäs",
+    "article_no": "122406",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2434,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/122406/boknas-vitrinskap-med-glasdorr-s31",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/122406/boknas-vitrinskap-med-glasdorr-s31",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=122406&fid=978&url=https://www.mjuk.com/sv-se/product/122406/boknas-vitrinskap-med-glasdorr-s31",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/f9ae2111d659981212b56de39ee0f18b.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

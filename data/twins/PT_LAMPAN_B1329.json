@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_B1329",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lampan - Emsfors 43cm - Bordslampa - Blå",
+    "manufacturer": "Lampan",
+    "article_no": "B1329",
+    "ean": "7350170881903",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 649,
+    "ean": "7350170881903",
+    "product_url": "https://lampan.se/p/emsfors-43cm/?option=14622",
+    "cart_deeplink": "https://lampan.se/p/emsfors-43cm/?option=14622",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=B1329&fid=2470&url=https://lampan.se/p/emsfors-43cm/?option=14622",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/b1329.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

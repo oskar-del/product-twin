@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2322-205",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Konstsmide - Elljusstake 7ljus - Adventsljusstake - Vit",
+    "manufacturer": "Konstsmide",
+    "article_no": "2322-205",
+    "ean": "7318303222054",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 209,
+    "ean": "7318303222054",
+    "product_url": "https://lampan.se/p/elljusstake-7ljus-15/?option=11460",
+    "cart_deeplink": "https://lampan.se/p/elljusstake-7ljus-15/?option=11460",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2322-205&fid=2470&url=https://lampan.se/p/elljusstake-7ljus-15/?option=11460",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-5334.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

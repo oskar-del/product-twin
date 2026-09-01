@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_915005307201",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Philips - Star 2 - Spotlight - vit",
+    "manufacturer": "Philips",
+    "article_no": "915005307201",
+    "ean": "8718696154632",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 689,
+    "ean": "8718696154632",
+    "product_url": "https://lampan.se/p/star-2/?option=6420",
+    "cart_deeplink": "https://lampan.se/p/star-2/?option=6420",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=915005307201&fid=2470&url=https://lampan.se/p/star-2/?option=6420",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/59ca664e01f741a388a9a9b9009fd107.unknown.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

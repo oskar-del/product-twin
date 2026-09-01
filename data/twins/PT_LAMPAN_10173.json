@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_10173",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Alde & Lind - Takupphäng 2m - Tillbehör - Grön",
+    "manufacturer": "Alde & Lind",
+    "article_no": "10173",
+    "ean": "7350147270457",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 299,
+    "ean": "7350147270457",
+    "product_url": "https://lampan.se/p/takupphang-2m-4/?option=13447",
+    "cart_deeplink": "https://lampan.se/p/takupphang-2m-4/?option=13447",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=10173&fid=2470&url=https://lampan.se/p/takupphang-2m-4/?option=13447",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-74214.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

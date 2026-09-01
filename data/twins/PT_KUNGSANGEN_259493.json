@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_259493",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Hallarskär 210x200 Medel/Fast D.Ljusgrå",
+    "manufacturer": "Kungsangen",
+    "article_no": "259493",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 109990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-hallarskar/259493",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-hallarskar/259493",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=259493&fid=2564&url=https://kungsangen.com/se/p/sang-hallarskar/259493",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hc7/h90/8825294618654/ks2000Wx1500H_hallarskar_ramsang_s35_180_duved_ljusgra/ks2000Wx1500H-hallarskar-ramsang-s35-180-duved-ljusgra.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

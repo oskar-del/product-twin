@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_134781",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Department barpall beige / svart",
+    "manufacturer": "Department",
+    "article_no": "134781",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1192,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/134781/department-barpall-beige-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/134781/department-barpall-beige-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=134781&fid=978&url=https://www.mjuk.com/sv-se/product/134781/department-barpall-beige-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/1abe5d6a-eff0-4d7e-b0b0-3ffb2bb40ccc.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

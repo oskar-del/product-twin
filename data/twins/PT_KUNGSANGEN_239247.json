@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_239247",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Pläd Vidinge Bränd aprikos 130x160",
+    "manufacturer": "Kungsangen",
+    "article_no": "239247",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 599,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/plad-vidinge-brand-aprikos-130x160/239247",
+    "cart_deeplink": "https://kungsangen.com/se/p/plad-vidinge-brand-aprikos-130x160/239247",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=239247&fid=2564&url=https://kungsangen.com/se/p/plad-vidinge-brand-aprikos-130x160/239247",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h08/h7d/8846304542750/ks2000Wx1500H_vidinge-plad-aprikos/ks2000Wx1500H-vidinge-plad-aprikos.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

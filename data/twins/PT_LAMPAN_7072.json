@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7072",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dyberg Larsen - DL45 55cm - Bordslampa - Vit",
+    "manufacturer": "Dyberg Larsen",
+    "article_no": "7072",
+    "ean": "5704709070726",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2419,
+    "ean": "5704709070726",
+    "product_url": "https://lampan.se/p/dl45-55cm/?option=7557",
+    "cart_deeplink": "https://lampan.se/p/dl45-55cm/?option=7557",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7072&fid=2470&url=https://lampan.se/p/dl45-55cm/?option=7557",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/5704709070726_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

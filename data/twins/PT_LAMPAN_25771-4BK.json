@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_25771-4BK",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Cirque 110cm - Taklampa - Svart",
+    "manufacturer": "Searchlight",
+    "article_no": "25771-4BK",
+    "ean": "5053423174730",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2899,
+    "ean": "5053423174730",
+    "product_url": "https://lampan.se/p/cirque-110cm/?option=2878",
+    "cart_deeplink": "https://lampan.se/p/cirque-110cm/?option=2878",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=25771-4BK&fid=2470&url=https://lampan.se/p/cirque-110cm/?option=2878",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/25771-4bk.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

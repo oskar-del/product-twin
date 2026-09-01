@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1410112",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvåldispenser Smedbo House R369",
+    "manufacturer": "Smedbo",
+    "article_no": "GOP1410112",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 762,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvaldispenser-smedbo-house-r369/p-1410112",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvaldispenser-smedbo-house-r369/p-1410112",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1410112&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvaldispenser-smedbo-house-r369/p-1410112",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/0c01d7d0-800e-4122-ba1d-782200a05828/rx369.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

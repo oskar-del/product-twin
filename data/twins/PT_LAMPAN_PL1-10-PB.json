@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_PL1-10-PB",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Picture 19cm - Tavelbelysning - Mässing",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "PL1-10-PB",
+    "ean": "5024005375609",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1869,
+    "ean": "5024005375609",
+    "product_url": "https://lampan.se/p/picture-19cm-3/?option=10412",
+    "cart_deeplink": "https://lampan.se/p/picture-19cm-3/?option=10412",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=PL1-10-PB&fid=2470&url=https://lampan.se/p/picture-19cm-3/?option=10412",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/pl1-10-pb_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

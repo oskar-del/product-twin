@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4202590-2501",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "By Rydéns - Juliette Ø75 - Taklampa - Grön",
+    "manufacturer": "By Rydéns",
+    "article_no": "4202590-2501",
+    "ean": "7391741013255",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2995,
+    "ean": "7391741013255",
+    "product_url": "https://lampan.se/p/juliette-o75/?option=13435",
+    "cart_deeplink": "https://lampan.se/p/juliette-o75/?option=13435",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4202590-2501&fid=2470&url=https://lampan.se/p/juliette-o75/?option=13435",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/juliette_green_4202590_2501.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2028602",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschblandare FM Mattsson 9000XE 40 cc med Inlopp Uppåt",
+    "manufacturer": "FM Mattsson",
+    "article_no": "GOP2028602",
+    "ean": "7391887260278",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3025,
+    "ean": "7391887260278",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-fm-mattsson-9000xe-40-cc-med-inlopp-uppat/p-2028602",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-fm-mattsson-9000xe-40-cc-med-inlopp-uppat/p-2028602",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2028602&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-fm-mattsson-9000xe-40-cc-med-inlopp-uppat/p-2028602",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e5495368-c6f9-4e4f-9b92-50a824d799d6/8362217_2.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

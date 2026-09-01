@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_18316-02",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Ceres 46cm - Skrivbordslampa - Beige",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "18316-02",
+    "ean": "7041661277199",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1049,
+    "ean": "7041661277199",
+    "product_url": "https://lampan.se/p/ceres-46cm/?option=7309",
+    "cart_deeplink": "https://lampan.se/p/ceres-46cm/?option=7309",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=18316-02&fid=2470&url=https://lampan.se/p/ceres-46cm/?option=7309",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/s0vsuxqbtgl29c88w5w3dcgif.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

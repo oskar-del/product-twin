@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP921780-921786",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handtag Arredo Slimline",
+    "manufacturer": "Arredo",
+    "article_no": "GOP921780-921786",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 331,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-arredo-slimline/p-921780-921786",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-arredo-slimline/p-921780-921786",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP921780-921786&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/handtag-arredo-slimline/p-921780-921786",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/4ce6d109-564c-49fa-9100-014f1e95ea68/316744_1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

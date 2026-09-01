@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1183268",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställ Hafa Explore",
+    "manufacturer": "Hafa",
+    "article_no": "GOP1183268",
+    "ean": "7330027114989",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1879,
+    "ean": "7330027114989",
+    "product_url": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-hafa-explore/p-1183268",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-hafa-explore/p-1183268",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1183268&fid=2559&url=https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-hafa-explore/p-1183268",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/72121c24-7ecd-4d4e-a348-af2fd005a10e/1273105_produktbild.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

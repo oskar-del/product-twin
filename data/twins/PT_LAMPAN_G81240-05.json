@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_G81240-05",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Jade Ø28cm - Badrumslampa - Vit",
+    "manufacturer": "Brilliant",
+    "article_no": "G81240/05",
+    "ean": "4004353463471",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 249,
+    "ean": "4004353463471",
+    "product_url": "https://lampan.se/p/jade-o28cm/?option=12998",
+    "cart_deeplink": "https://lampan.se/p/jade-o28cm/?option=12998",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=G81240%2F05&fid=2470&url=https://lampan.se/p/jade-o28cm/?option=12998",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/g81240_05.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

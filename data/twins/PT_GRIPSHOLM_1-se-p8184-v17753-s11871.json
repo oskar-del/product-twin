@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GRIPSHOLM_1-se-p8184-v17753-s11871",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gripsholm Servetter i linne/bomullsblandning 2-pack",
+    "manufacturer": "Gripsholm",
+    "article_no": "1/se-p8184-v17753-s11871",
+    "ean": "7318161517262",
+    "source": "gripsholm_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "gripsholm SE",
+    "currency": "SEK",
+    "unit_price": 129,
+    "ean": "7318161517262",
+    "product_url": "https://www.gripsholm.se/p/napkin-linen-2-p-linen-beige?country=se",
+    "cart_deeplink": "https://www.gripsholm.se/p/napkin-linen-2-p-linen-beige?country=se",
+    "affiliate_link": "https://pid.gripsholm.se/t/t?a=1960533239&as=2106320328&t=2&tk=1&cupa_sku=1%2Fse-p8184-v17753-s11871&fid=2720&url=https://www.gripsholm.se/p/napkin-linen-2-p-linen-beige?country=se",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://springhill.centracdn.net/client/dynamic/originals/8184_f9dcd40edd-917739_917739-12-original.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

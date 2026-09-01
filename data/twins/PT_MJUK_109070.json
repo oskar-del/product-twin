@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_109070",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Misopa sängram med sänggavel 120 x 200 cm svart",
+    "manufacturer": "Mjuk",
+    "article_no": "109070",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2236,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/109070/misopa-sangram-med-sanggavel-120-x-200-cm-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/109070/misopa-sangram-med-sanggavel-120-x-200-cm-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=109070&fid=978&url=https://www.mjuk.com/sv-se/product/109070/misopa-sangram-med-sanggavel-120-x-200-cm-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/8c77d2007f9127f1240894bbf80a1d19.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

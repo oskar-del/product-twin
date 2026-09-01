@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP660644",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Takdusch FM Mattsson 9000E",
+    "manufacturer": "FM Mattsson",
+    "article_no": "GOP660644",
+    "ean": "7391887242915",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 4162,
+    "ean": "7391887242915",
+    "product_url": "https://www.golvpoolen.se/badrum/duscharmatur/takdusch/takdusch-fm-mattsson-9000e/p-660644",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duscharmatur/takdusch/takdusch-fm-mattsson-9000e/p-660644",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP660644&fid=2559&url=https://www.golvpoolen.se/badrum/duscharmatur/takdusch/takdusch-fm-mattsson-9000e/p-660644",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/fa185cd8-b8ea-42ce-bff1-8a94c7506d6f/takdusch-fm-mattsson-9000e.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

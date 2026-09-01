@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_237507",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Örngott Natur SoftErgo Blå Formsytt",
+    "manufacturer": "Kungsangen",
+    "article_no": "237507",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 329,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/orngott-natur-softergo-bla/237507",
+    "cart_deeplink": "https://kungsangen.com/se/p/orngott-natur-softergo-bla/237507",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=237507&fid=2564&url=https://kungsangen.com/se/p/orngott-natur-softergo-bla/237507",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hc0/h10/8863794692126/ks2000Wx1500H_orngott-softergo-bla/ks2000Wx1500H-orngott-softergo-bla.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

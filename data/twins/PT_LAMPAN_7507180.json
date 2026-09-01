@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7507180",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ifö electric - Ohm 140/170 - Badrumslampa - Svart",
+    "manufacturer": "Ifö electric",
+    "article_no": "7507180",
+    "ean": "7312908352161",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1689,
+    "ean": "7312908352161",
+    "product_url": "https://lampan.se/p/ohm-140-170/?option=4891",
+    "cart_deeplink": "https://lampan.se/p/ohm-140-170/?option=4891",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7507180&fid=2470&url=https://lampan.se/p/ohm-140-170/?option=4891",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/ohm-e-7507180-artno-8352-510-16-140-h-jd-170-mm-klarglas-svart-ip44-rak-e27-40w-1-pro-sq-arcit18.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

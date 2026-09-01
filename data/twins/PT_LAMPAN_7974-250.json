@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7974-250",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Konstsmide - Cesena - Takbelysning - Vit",
+    "manufacturer": "Konstsmide",
+    "article_no": "7974-250",
+    "ean": "7318307974256",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 959,
+    "ean": "7318307974256",
+    "product_url": "https://lampan.se/p/cesena/?option=5044",
+    "cart_deeplink": "https://lampan.se/p/cesena/?option=5044",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7974-250&fid=2470&url=https://lampan.se/p/cesena/?option=5044",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/7974-250.i.1.0.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_T9091HA",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cottex - New Haven Ø37 - Taklampa - Antiksvart",
+    "manufacturer": "Cottex",
+    "article_no": "T9091HA",
+    "ean": "7393168209136",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1199,
+    "ean": "7393168209136",
+    "product_url": "https://lampan.se/p/new-haven-o37/?option=4424",
+    "cart_deeplink": "https://lampan.se/p/new-haven-o37/?option=4424",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=T9091HA&fid=2470&url=https://lampan.se/p/new-haven-o37/?option=4424",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/t9091ha.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

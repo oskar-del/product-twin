@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_28041-15-02",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Ezai 55cm - Bordslampa - Svart/mässing",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "28041-15-02",
+    "ean": "7041661284739",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 999,
+    "ean": "7041661284739",
+    "product_url": "https://lampan.se/p/ezai-55cm/?option=13598",
+    "cart_deeplink": "https://lampan.se/p/ezai-55cm/?option=13598",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=28041-15-02&fid=2470&url=https://lampan.se/p/ezai-55cm/?option=13598",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/7xkqvl0p0ey8di26c33rir1bh.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

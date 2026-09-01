@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_727-37",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - Ljusslinga Akku 10m - Ljusslinga - Svart",
+    "manufacturer": "Star Trading",
+    "article_no": "727-37",
+    "ean": "7391482054623",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 129,
+    "ean": "7391482054623",
+    "product_url": "https://lampan.se/p/ljusslinga-akku-10m/?option=15318",
+    "cart_deeplink": "https://lampan.se/p/ljusslinga-akku-10m/?option=15318",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=727-37&fid=2470&url=https://lampan.se/p/ljusslinga-akku-10m/?option=15318",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/727-37_m2.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

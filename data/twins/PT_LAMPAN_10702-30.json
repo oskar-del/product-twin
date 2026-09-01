@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_10702-30",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Sandnes - Sänglampa - Antik",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "10702-30",
+    "ean": "7392986774246",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 699,
+    "ean": "7392986774246",
+    "product_url": "https://lampan.se/p/sandnes-0/?option=2000",
+    "cart_deeplink": "https://lampan.se/p/sandnes-0/?option=2000",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=10702-30&fid=2470&url=https://lampan.se/p/sandnes-0/?option=2000",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/10702-30_sandnes_7392986774246_pp1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

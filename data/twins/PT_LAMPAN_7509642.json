@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7509642",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ifö electric - Solenne 250/155 - Badrumslampa - Vit",
+    "manufacturer": "Ifö electric",
+    "article_no": "7509642",
+    "ean": "7312908441506",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2109,
+    "ean": "7312908441506",
+    "product_url": "https://lampan.se/p/solenne-250-155-0/?option=4864",
+    "cart_deeplink": "https://lampan.se/p/solenne-250-155-0/?option=4864",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7509642&fid=2470&url=https://lampan.se/p/solenne-250-155-0/?option=4864",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/solenne20250-15520mm20matt20opalglas20vit20ip4420rak2040w20e2720.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

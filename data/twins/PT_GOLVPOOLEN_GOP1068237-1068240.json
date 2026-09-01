@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1068237-1068240",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bottenventil LH Idro Push-Open",
+    "manufacturer": "LH",
+    "article_no": "GOP1068237-1068240",
+    "ean": "8057457127271",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 844,
+    "ean": "8057457127271",
+    "product_url": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/bottenventil/bottenventil-lh-idro-push-open/p-1068237-1068240",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/bottenventil/bottenventil-lh-idro-push-open/p-1068237-1068240",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1068237-1068240&fid=2559&url=https://www.golvpoolen.se/badrum/handfat-och-tvattstall/bottenventil/bottenventil-lh-idro-push-open/p-1068237-1068240",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/853ed3c0-5f8d-4d0b-ab22-01a52f25446a/san_a735rdo.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

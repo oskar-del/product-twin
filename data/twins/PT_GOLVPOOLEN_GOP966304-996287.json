@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP966304-996287",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Blandarhandtag Scandtap Short Bar",
+    "manufacturer": "Scandtap",
+    "article_no": "GOP966304-996287",
+    "ean": "7350086951967",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 165,
+    "ean": "7350086951967",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/blandarhandtag-scandtap-short-bar/p-966304-996287",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/blandarhandtag-scandtap-short-bar/p-966304-996287",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP966304-996287&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/blandarhandtag-scandtap-short-bar/p-966304-996287",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/c36fcbb1-90b1-4c2e-b2ed-320378c4752b/short-bar-coal-31006.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

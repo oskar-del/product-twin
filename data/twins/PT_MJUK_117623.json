@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_117623",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dan-Form Rover fåtölj Cashmere",
+    "manufacturer": "Dan-Form",
+    "article_no": "117623",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4920,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/117623/dan-form-rover-fatolj-cashmere",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/117623/dan-form-rover-fatolj-cashmere",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=117623&fid=978&url=https://www.mjuk.com/sv-se/product/117623/dan-form-rover-fatolj-cashmere",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/bb7bc784a8e5cea019be59234487f2fe.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_6588-8AB",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Bijou Ø64 - Kristallkrona - Antikmässing",
+    "manufacturer": "Searchlight",
+    "article_no": "6588-8AB",
+    "ean": "5053423242088",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 8709,
+    "ean": "5053423242088",
+    "product_url": "https://lampan.se/p/bijou-o64/?option=12803",
+    "cart_deeplink": "https://lampan.se/p/bijou-o64/?option=12803",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=6588-8AB&fid=2470&url=https://lampan.se/p/bijou-o64/?option=12803",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/6588-8ab_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

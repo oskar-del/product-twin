@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1886292",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Slagkloss Meister",
+    "manufacturer": "Meister",
+    "article_no": "GOP1886292",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 127,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/golv/golvtillbehor/ovriga-golvtillbehor/slagkloss-meister/p-1886292",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvtillbehor/ovriga-golvtillbehor/slagkloss-meister/p-1886292",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1886292&fid=2559&url=https://www.golvpoolen.se/golv/golvtillbehor/ovriga-golvtillbehor/slagkloss-meister/p-1886292",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/48c93d49-1092-454d-b308-6b4e554a5899/477993.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

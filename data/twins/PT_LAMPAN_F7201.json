@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_F7201",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Frilight - Ljusplatta Ø9 - Dekorationsbelysning - Svart",
+    "manufacturer": "Frilight",
+    "article_no": "F7201",
+    "ean": "7350028497065",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 349,
+    "ean": "7350028497065",
+    "product_url": "https://lampan.se/p/ljusplatta-o9/?option=11024",
+    "cart_deeplink": "https://lampan.se/p/ljusplatta-o9/?option=11024",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=F7201&fid=2470&url=https://lampan.se/p/ljusplatta-o9/?option=11024",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/frilight-ljussockel-tra-svart-rund-90-rw90-led.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

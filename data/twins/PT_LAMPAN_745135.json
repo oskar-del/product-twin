@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_745135",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Room 49 Ø15 - Taklampa - Antikmässing",
+    "manufacturer": "Halo Design",
+    "article_no": "745135",
+    "ean": "5705639745135",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1549,
+    "ean": "5705639745135",
+    "product_url": "https://lampan.se/p/room-49-o15/?option=7884",
+    "cart_deeplink": "https://lampan.se/p/room-49-o15/?option=7884",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=745135&fid=2470&url=https://lampan.se/p/room-49-o15/?option=7884",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/745135-room49-pendantlamp15-opalantiquebrass-72ppi.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

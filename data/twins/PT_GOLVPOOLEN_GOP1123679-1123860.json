@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1123679-1123860",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställsblandare Hansgrohe Metris S för Inbyggnad",
+    "manufacturer": "Hansgrohe",
+    "article_no": "GOP1123679-1123860",
+    "ean": "4011097641867",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 5815,
+    "ean": "4011097641867",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-hansgrohe-metris-s-for-inbyggnad/p-1123679-1123860",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-hansgrohe-metris-s-for-inbyggnad/p-1123679-1123860",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1123679-1123860&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tvattstallsblandare/tvattstallsblandare-hansgrohe-metris-s-for-inbyggnad/p-1123679-1123860",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/c084680e-b699-4f10-93b2-7ee0eb74307f/_31162000_1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

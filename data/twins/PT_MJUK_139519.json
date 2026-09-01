@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_139519",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sofacompany Aya 3,5-sits soffa Free Dune",
+    "manufacturer": "Sofacompany",
+    "article_no": "139519",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 9002,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/139519/sofacompany-aya-3-5-sits-soffa-free-dune",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/139519/sofacompany-aya-3-5-sits-soffa-free-dune",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=139519&fid=978&url=https://www.mjuk.com/sv-se/product/139519/sofacompany-aya-3-5-sits-soffa-free-dune",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/fd54581b24cdbe480ad5889b7782dd98.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

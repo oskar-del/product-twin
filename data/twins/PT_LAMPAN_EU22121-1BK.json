@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_EU22121-1BK",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Punch 57cm - Bordslampa - Champagne",
+    "manufacturer": "Searchlight",
+    "article_no": "EU22121-1BK",
+    "ean": "5053423251349",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1379,
+    "ean": "5053423251349",
+    "product_url": "https://lampan.se/p/punch-57cm/?option=14962",
+    "cart_deeplink": "https://lampan.se/p/punch-57cm/?option=14962",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=EU22121-1BK&fid=2470&url=https://lampan.se/p/punch-57cm/?option=14962",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/eu22121-1bk_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1040844",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Stödhandtag Strand Stainless GRABBA 0102DS",
+    "manufacturer": "Strand Stainless",
+    "article_no": "GOP1040844",
+    "ean": "7350025864778",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1472,
+    "ean": "7350025864778",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/ovriga-badrumstillbehor/stodhandtag-strand-stainless-grabba-0102ds/p-1040844",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/ovriga-badrumstillbehor/stodhandtag-strand-stainless-grabba-0102ds/p-1040844",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1040844&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/ovriga-badrumstillbehor/stodhandtag-strand-stainless-grabba-0102ds/p-1040844",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b3f563bf-1b6f-4bfe-8c13-ca05164c3d05/fbvhc-0102ds_red.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

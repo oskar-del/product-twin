@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_108344",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Markslöjd - Mini Ø10 - Badrumslampa - Svart",
+    "manufacturer": "Markslöjd",
+    "article_no": "108344",
+    "ean": "7330024602809",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 449,
+    "ean": "7330024602809",
+    "product_url": "https://lampan.se/p/mini-o10-0/?option=3231",
+    "cart_deeplink": "https://lampan.se/p/mini-o10-0/?option=3231",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=108344&fid=2470&url=https://lampan.se/p/mini-o10-0/?option=3231",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/108344_mini.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

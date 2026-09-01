@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_123510",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Abadeh orientalisk matta 103 x 143 cm",
+    "manufacturer": "Rezas",
+    "article_no": "123510",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 7624,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/123510/abadeh-orientalisk-matta-103-x-143-cm",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/123510/abadeh-orientalisk-matta-103-x-143-cm",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=123510&fid=978&url=https://www.mjuk.com/sv-se/product/123510/abadeh-orientalisk-matta-103-x-143-cm",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/9acdb6ba-86b8-43c4-82a3-d4eda567222f.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

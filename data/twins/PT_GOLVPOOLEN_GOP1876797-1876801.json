@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1876797-1876801",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Avslutningslist Lamelio Amber Höger",
+    "manufacturer": "Lamelio",
+    "article_no": "GOP1876797-1876801",
+    "ean": "5900774965428",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 149,
+    "ean": "5900774965428",
+    "product_url": "https://www.golvpoolen.se/golv/vaggbekladnad/vaggskivor/avslutningslist-lamelio-amber-hoger/p-1876797-1876801",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/vaggbekladnad/vaggskivor/avslutningslist-lamelio-amber-hoger/p-1876797-1876801",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1876797-1876801&fid=2559&url=https://www.golvpoolen.se/golv/vaggbekladnad/vaggskivor/avslutningslist-lamelio-amber-hoger/p-1876797-1876801",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/0a610559-e55f-4fcf-9320-1efd90f981cc/10090-292.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

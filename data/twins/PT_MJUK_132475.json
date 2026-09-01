@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_132475",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Joluma sänggavel 105 cm",
+    "manufacturer": "Mjuk",
+    "article_no": "132475",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1544,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/132475/joluma-sanggavel-105-cm",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/132475/joluma-sanggavel-105-cm",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=132475&fid=978&url=https://www.mjuk.com/sv-se/product/132475/joluma-sanggavel-105-cm",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/6c0b3b9c68a69526463c23dc70fb3b66.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

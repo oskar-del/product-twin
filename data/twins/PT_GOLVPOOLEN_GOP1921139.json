@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1921139",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Marburg Trend 7009",
+    "manufacturer": "Marburg",
+    "article_no": "GOP1921139",
+    "ean": "4001860333273",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 599,
+    "ean": "4001860333273",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-marburg-trend-7009/p-1921139",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-marburg-trend-7009/p-1921139",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1921139&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-marburg-trend-7009/p-1921139",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/07a6f3e0-20b5-4bf0-84af-c8d6413f4f38/7009.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

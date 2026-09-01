@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1119281",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Rörgivare LK Systems ETF",
+    "manufacturer": "LK Systems",
+    "article_no": "GOP1119281",
+    "ean": "7331590024156",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1439,
+    "ean": "7331590024156",
+    "product_url": "https://www.golvpoolen.se/golv/golvvarme/tillbehor-golvvarme/rorgivare-lk-systems-etf/p-1119281",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvvarme/tillbehor-golvvarme/rorgivare-lk-systems-etf/p-1119281",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1119281&fid=2559&url=https://www.golvpoolen.se/golv/golvvarme/tillbehor-golvvarme/rorgivare-lk-systems-etf/p-1119281",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/19a21ca9-f6d8-476d-a5a2-7c3e2b23e17d/5386178.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1533068",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Tyson Ø6 - Taklampa - Vitstruktur",
+    "manufacturer": "Belid",
+    "article_no": "1533068",
+    "ean": "7391534005832",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2699,
+    "ean": "7391534005832",
+    "product_url": "https://lampan.se/p/tyson-o6-0/?option=1465",
+    "cart_deeplink": "https://lampan.se/p/tyson-o6-0/?option=1465",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1533068&fid=2470&url=https://lampan.se/p/tyson-o6-0/?option=1465",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/partspartnumber1533068filenametyson_1533068_f_web.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

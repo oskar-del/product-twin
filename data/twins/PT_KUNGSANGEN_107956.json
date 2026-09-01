@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_107956",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sänggavel Mysinge 180 A.Petrol",
+    "manufacturer": "Kungsangen",
+    "article_no": "107956",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 7990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sanggavel-mysinge/107956",
+    "cart_deeplink": "https://kungsangen.com/se/p/sanggavel-mysinge/107956",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=107956&fid=2564&url=https://kungsangen.com/se/p/sanggavel-mysinge/107956",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hf7/h72/9575345651742/ks2000Wx1500H_mysinge_gavel_anouk_petrol/ks2000Wx1500H-mysinge-gavel-anouk-petrol.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

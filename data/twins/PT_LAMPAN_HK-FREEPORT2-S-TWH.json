@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_HK-FREEPORT2-S-TWH",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Freeport 24cm - Fasadbelysning - Vit",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "HK-FREEPORT2-S-TWH",
+    "ean": "5024005232803",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1439,
+    "ean": "5024005232803",
+    "product_url": "https://lampan.se/p/freeport-24cm-0/?option=10345",
+    "cart_deeplink": "https://lampan.se/p/freeport-24cm-0/?option=10345",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=HK-FREEPORT2-S-TWH&fid=2470&url=https://lampan.se/p/freeport-24cm-0/?option=10345",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/hk-freeport2-s-twh.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

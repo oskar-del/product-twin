@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_DIA005PL-06G",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Dune 93cm - Kristallkrona - Guld",
+    "manufacturer": "Maytoni",
+    "article_no": "DIA005PL-06G",
+    "ean": "4251110048444",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5279,
+    "ean": "4251110048444",
+    "product_url": "https://lampan.se/p/dune-93cm/?option=12279",
+    "cart_deeplink": "https://lampan.se/p/dune-93cm/?option=12279",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=DIA005PL-06G&fid=2470&url=https://lampan.se/p/dune-93cm/?option=12279",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/image4-25635.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

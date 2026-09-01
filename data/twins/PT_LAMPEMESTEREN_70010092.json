@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70010092",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "London 1 Utomhus Parkstolpa Svart - Norlys - Terrass - Aluminium",
+    "manufacturer": "Norlys",
+    "article_no": "70010092",
+    "ean": "7042894910068",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 10049,
+    "ean": "7042894910068",
+    "product_url": "https://www.lampemesteren.se/p/london-1-utomhus-parkstolpa-svart-norlys-70010092.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/london-1-utomhus-parkstolpa-svart-norlys-70010092.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70010092&fid=1004&url=https://www.lampemesteren.se/p/london-1-utomhus-parkstolpa-svart-norlys-70010092.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/1C08B78A1C30/k_122ea6c54b815e0b839d04bfb5789d35;w_1600;h_1600;q_90/70010092.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

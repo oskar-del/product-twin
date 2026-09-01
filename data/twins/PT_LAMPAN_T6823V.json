@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_T6823V",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cottex - Domus Ø25 - Taklampa - Vit",
+    "manufacturer": "Cottex",
+    "article_no": "T6823V",
+    "ean": "7393168282337",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 629,
+    "ean": "7393168282337",
+    "product_url": "https://lampan.se/p/domus-o25/?option=15331",
+    "cart_deeplink": "https://lampan.se/p/domus-o25/?option=15331",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=T6823V&fid=2470&url=https://lampan.se/p/domus-o25/?option=15331",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/wsi-imageoptim-t6823v.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

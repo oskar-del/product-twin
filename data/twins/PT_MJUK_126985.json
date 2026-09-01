@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_126985",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Northern Stilk soffbord svart / sand",
+    "manufacturer": "Northern",
+    "article_no": "126985",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2788,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/126985/northern-stilk-soffbord-svart-sand",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/126985/northern-stilk-soffbord-svart-sand",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=126985&fid=978&url=https://www.mjuk.com/sv-se/product/126985/northern-stilk-soffbord-svart-sand",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/4960255c41f2a6d46f8258214e34eb12.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

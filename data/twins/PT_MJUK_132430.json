@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_132430",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Hakola fåtölj med fotpall",
+    "manufacturer": "Hakola",
+    "article_no": "132430",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 6750,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/132430/hakola-fatolj-med-fotpall",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/132430/hakola-fatolj-med-fotpall",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=132430&fid=978&url=https://www.mjuk.com/sv-se/product/132430/hakola-fatolj-med-fotpall",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/a9311152ec47cfc9817cf3e093c23e90.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

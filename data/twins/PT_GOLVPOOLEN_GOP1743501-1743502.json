@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1743501-1743502",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschvägg SanSwiss Solino",
+    "manufacturer": "Sanswiss",
+    "article_no": "GOP1743501-1743502",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 4960,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschvagg/duschvagg-sanswiss-solino/p-1743501-1743502",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschvagg/duschvagg-sanswiss-solino/p-1743501-1743502",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1743501-1743502&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschvagg/duschvagg-sanswiss-solino/p-1743501-1743502",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/bb4b2d90-1c94-4092-a9cf-900c0b0eb509/sol108005007_solt108005007.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

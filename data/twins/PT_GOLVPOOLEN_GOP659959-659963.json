@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP659959-659963",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Spolknapp Geberit Sigma 20 Round",
+    "manufacturer": "Geberit",
+    "article_no": "GOP659959-659963",
+    "ean": "4025416544654",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1142,
+    "ean": "4025416544654",
+    "product_url": "https://www.golvpoolen.se/badrum/toalettstol/spolknapp/spolknapp-geberit-sigma-20-round/p-659959-659963",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/toalettstol/spolknapp/spolknapp-geberit-sigma-20-round/p-659959-659963",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP659959-659963&fid=2559&url=https://www.golvpoolen.se/badrum/toalettstol/spolknapp/spolknapp-geberit-sigma-20-round/p-659959-659963",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/266ed96a-02c2-41b2-bd5a-4dc270f7ea2c/spolknapp-geberit-sigma-20.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

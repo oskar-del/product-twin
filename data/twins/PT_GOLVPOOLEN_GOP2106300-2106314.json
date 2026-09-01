@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2106300-2106314",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halvhögt Skåp Vedum Free/Mezzo Bas",
+    "manufacturer": "Vedum",
+    "article_no": "GOP2106300-2106314",
+    "ean": "7332936083202",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 8274,
+    "ean": "7332936083202",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/halvhogt-skap-vedum-free-och-mezzo-bas/p-2106300-2106314",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/halvhogt-skap-vedum-free-och-mezzo-bas/p-2106300-2106314",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2106300-2106314&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/vagg-och-hogskap/halvhogt-skap-vedum-free-och-mezzo-bas/p-2106300-2106314",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/218844f1-a0f3-4228-8173-092fa9ad0e27/53108310_square.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

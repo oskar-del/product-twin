@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_938155",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "CO Bankeryd - Avenue Ø43 - Taklampa - Svart",
+    "manufacturer": "CO Bankeryd",
+    "article_no": "938155",
+    "ean": "7319689381557",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3999,
+    "ean": "7319689381557",
+    "product_url": "https://lampan.se/p/avenue-o43-1/?option=6884",
+    "cart_deeplink": "https://lampan.se/p/avenue-o43-1/?option=6884",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=938155&fid=2470&url=https://lampan.se/p/avenue-o43-1/?option=6884",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/co_bankeryd_avenue_43_pendant_black_938155_1500x1500.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

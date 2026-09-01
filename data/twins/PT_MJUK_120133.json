@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_120133",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Franke Alliance Tender 724-16 lägenhet",
+    "manufacturer": "Franke",
+    "article_no": "120133",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 5502,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/120133/franke-alliance-tender-724-16-lagenhet",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/120133/franke-alliance-tender-724-16-lagenhet",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=120133&fid=978&url=https://www.mjuk.com/sv-se/product/120133/franke-alliance-tender-724-16-lagenhet",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/aeea43e90edb29ba77738e079943ad6d.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

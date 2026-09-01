@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_ET50-FR01BT01",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "PR Home - Edith Ø50 - Taklampa - Vit",
+    "manufacturer": "PR Home",
+    "article_no": "ET50-FR01BT01",
+    "ean": "7330976140046",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1299,
+    "ean": "7330976140046",
+    "product_url": "https://lampan.se/p/edith-o50/?option=2625",
+    "cart_deeplink": "https://lampan.se/p/edith-o50/?option=2625",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=ET50-FR01BT01&fid=2470&url=https://lampan.se/p/edith-o50/?option=2625",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/et50-fr01bt01.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

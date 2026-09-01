@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_41412-80-31",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Kenneth Ø80 - Taklampa - Vit",
+    "manufacturer": "Lucide",
+    "article_no": "41412/80/31",
+    "ean": "5411212410481",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 7319,
+    "ean": "5411212410481",
+    "product_url": "https://lampan.se/p/kenneth-o80-0/?option=13654",
+    "cart_deeplink": "https://lampan.se/p/kenneth-o80-0/?option=13654",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=41412%2F80%2F31&fid=2470&url=https://lampan.se/p/kenneth-o80-0/?option=13654",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-95665.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

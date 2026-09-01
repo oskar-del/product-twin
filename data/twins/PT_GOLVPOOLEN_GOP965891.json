@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP965891",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Golvvärmekabel Raychem T2Blå-10 med SENZ WIFI-termostat",
+    "manufacturer": "Raychem",
+    "article_no": "GOP965891",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2052,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/golv/golvvarme/golvvarme-el/golvvarmekabel-raychem-t2bla-10-med-senz-wifi-termostat/p-965891",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvvarme/golvvarme-el/golvvarmekabel-raychem-t2bla-10-med-senz-wifi-termostat/p-965891",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP965891&fid=2559&url=https://www.golvpoolen.se/golv/golvvarme/golvvarme-el/golvvarmekabel-raychem-t2bla-10-med-senz-wifi-termostat/p-965891",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/caf271c9-cb1b-47a7-b7e2-8113f68047ed/nvent-raychem-t2bla-10-med-termostat_e-nr-8940602-mfl.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

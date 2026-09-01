@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_IR-BOX018",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Irislights - Irislights Cool Mint 20 bollar - Dekorationsbelysning - Blå",
+    "manufacturer": "Irislights",
+    "article_no": "IR BOX018",
+    "ean": "7333026001069",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 395,
+    "ean": "7333026001069",
+    "product_url": "https://lampan.se/p/irislights-cool-mint-20-bollar/?option=12710",
+    "cart_deeplink": "https://lampan.se/p/irislights-cool-mint-20-bollar/?option=12710",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=IR+BOX018&fid=2470&url=https://lampan.se/p/irislights-cool-mint-20-bollar/?option=12710",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/irislights_cool_mint_irbox0180_light_exposed_300dpi.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

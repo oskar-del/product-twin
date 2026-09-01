@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_248851",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Videlund 160x200 Duozon Mjuk/Duozon Fast Sa.12.Brun",
+    "manufacturer": "Kungsangen",
+    "article_no": "248851",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 75990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-videlund/248851",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-videlund/248851",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=248851&fid=2564&url=https://kungsangen.com/se/p/sang-videlund/248851",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/ha1/h8a/8831280971806/ks2000Wx1500H_videlund_kontinental_s31_vx20_180_sala_brun/ks2000Wx1500H-videlund-kontinental-s31-vx20-180-sala-brun.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_T5555LK",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cottex - Wave Ø55 - Taklampa - Krom",
+    "manufacturer": "Cottex",
+    "article_no": "T5555LK",
+    "ean": "7393168255539",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2249,
+    "ean": "7393168255539",
+    "product_url": "https://lampan.se/p/wave-o55/?option=4451",
+    "cart_deeplink": "https://lampan.se/p/wave-o55/?option=4451",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=T5555LK&fid=2470&url=https://lampan.se/p/wave-o55/?option=4451",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/t5555lk.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

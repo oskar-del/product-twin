@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_832-6B",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emibig Lighting - Brendi Ø75 - Takplafond - Rökfärgad",
+    "manufacturer": "Emibig Lighting",
+    "article_no": "832/6B",
+    "ean": "5907106007818",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2699,
+    "ean": "5907106007818",
+    "product_url": "https://lampan.se/p/brendi-o75-0/?option=2190",
+    "cart_deeplink": "https://lampan.se/p/brendi-o75-0/?option=2190",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=832%2F6B&fid=2470&url=https://lampan.se/p/brendi-o75-0/?option=2190",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/832_6b-1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

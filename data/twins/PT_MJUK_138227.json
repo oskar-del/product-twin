@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_138227",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "James Light 5-sits loungegrupp svart",
+    "manufacturer": "Comfort Garden",
+    "article_no": "138227",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4046,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/138227/james-light-5-sits-loungegrupp-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/138227/james-light-5-sits-loungegrupp-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=138227&fid=978&url=https://www.mjuk.com/sv-se/product/138227/james-light-5-sits-loungegrupp-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/bd611aae8bac9b8b8168879bb4c24d86.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

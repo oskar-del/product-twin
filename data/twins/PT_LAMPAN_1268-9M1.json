@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1268-9M1",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emibig Lighting - Astral 100cm - Taklampa - Flerfärgad",
+    "manufacturer": "Emibig Lighting",
+    "article_no": "1268/9M1",
+    "ean": "5907106000543",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4539,
+    "ean": "5907106000543",
+    "product_url": "https://lampan.se/p/astral-100cm-2/?option=12132",
+    "cart_deeplink": "https://lampan.se/p/astral-100cm-2/?option=12132",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1268%2F9M1&fid=2470&url=https://lampan.se/p/astral-100cm-2/?option=12132",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1268_9m1-1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

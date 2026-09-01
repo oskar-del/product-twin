@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1827320",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Nitrilhandske Tebo fodrad strl 10",
+    "manufacturer": "Tebo",
+    "article_no": "GOP1827320",
+    "ean": "7023771410000",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 62,
+    "ean": "7023771410000",
+    "product_url": "https://www.golvpoolen.se/verktyg/kakelverktyg/ovriga-kakelverktyg/nitrilhandske-tebo-fodrad-strl-10/p-1827320",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/kakelverktyg/ovriga-kakelverktyg/nitrilhandske-tebo-fodrad-strl-10/p-1827320",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1827320&fid=2559&url=https://www.golvpoolen.se/verktyg/kakelverktyg/ovriga-kakelverktyg/nitrilhandske-tebo-fodrad-strl-10/p-1827320",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/95c8a2e7-3435-4015-ab59-d3cbd38dfa05/450712.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_250897",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sänggavel Fornholma 145x210 D.Ljusgrå",
+    "manufacturer": "Kungsangen",
+    "article_no": "250897",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 25990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sanggavel-fornholma/250897",
+    "cart_deeplink": "https://kungsangen.com/se/p/sanggavel-fornholma/250897",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=250897&fid=2564&url=https://kungsangen.com/se/p/sanggavel-fornholma/250897",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hdf/h73/9575133315102/ks2000Wx1500H_fornholma_gavel_duved_ljusgra/ks2000Wx1500H-fornholma-gavel-duved-ljusgra.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

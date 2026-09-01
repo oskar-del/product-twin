@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_HK-AMELIA-P-M-HB",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Amelia Ø32 - Taklampa - Mässing",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "HK-AMELIA-P-M-HB",
+    "ean": "5024005000044",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 6549,
+    "ean": "5024005000044",
+    "product_url": "https://lampan.se/p/amelia-o32-0/?option=10288",
+    "cart_deeplink": "https://lampan.se/p/amelia-o32-0/?option=10288",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=HK-AMELIA-P-M-HB&fid=2470&url=https://lampan.se/p/amelia-o32-0/?option=10288",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/hk-amelia-p-m-hb.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

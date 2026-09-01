@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7704679",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Designlight - Wally - Fasadbelysning - Mörkgrå",
+    "manufacturer": "Designlight",
+    "article_no": "7704679",
+    "ean": "7340123803380",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 599,
+    "ean": "7340123803380",
+    "product_url": "https://lampan.se/p/wally-0/?option=15579",
+    "cart_deeplink": "https://lampan.se/p/wally-0/?option=15579",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7704679&fid=2470&url=https://lampan.se/p/wally-0/?option=15579",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/7704679_1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

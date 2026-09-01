@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_52100-54-02",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Sardana Ø64 - Takplafond - Matt guld",
+    "manufacturer": "Lucide",
+    "article_no": "52100/54/02",
+    "ean": "5411212520906",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4729,
+    "ean": "5411212520906",
+    "product_url": "https://lampan.se/p/sardana-o64/?option=13652",
+    "cart_deeplink": "https://lampan.se/p/sardana-o64/?option=13652",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=52100%2F54%2F02&fid=2470&url=https://lampan.se/p/sardana-o64/?option=13652",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-71253.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

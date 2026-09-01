@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_127588",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "FeelDesign St Elm trädgårdsstol",
+    "manufacturer": "FeelDesign",
+    "article_no": "127588",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1644,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/127588/feeldesign-st-elm-tradgardsstol",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/127588/feeldesign-st-elm-tradgardsstol",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=127588&fid=978&url=https://www.mjuk.com/sv-se/product/127588/feeldesign-st-elm-tradgardsstol",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/84a6d8b6a5049ef5f017a47c84f1918f.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

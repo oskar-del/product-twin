@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1728770-1728772",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Underbelysning INR Viskan",
+    "manufacturer": "INR",
+    "article_no": "GOP1728770-1728772",
+    "ean": "7340123929721",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1652,
+    "ean": "7340123929721",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/tillval-badrumsmobler/underbelysning-inr-viskan/p-1728770-1728772",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/tillval-badrumsmobler/underbelysning-inr-viskan/p-1728770-1728772",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1728770-1728772&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/tillval-badrumsmobler/underbelysning-inr-viskan/p-1728770-1728772",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e4c9fa2d-764e-448e-8738-131a7e9acf95/pluslight_viskan.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

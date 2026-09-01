@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_92713-04",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Venea 44cm - Skrivbordslampa - Mattgrön",
+    "manufacturer": "Brilliant",
+    "article_no": "92713/04",
+    "ean": "4004353353987",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 469,
+    "ean": "4004353353987",
+    "product_url": "https://lampan.se/p/venea-44cm/?option=3891",
+    "cart_deeplink": "https://lampan.se/p/venea-44cm/?option=3891",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=92713%2F04&fid=2470&url=https://lampan.se/p/venea-44cm/?option=3891",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/4004353353987.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_502-92",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - Stripe Ø77 - Adventsstjärna - Vit/röd",
+    "manufacturer": "Star Trading",
+    "article_no": "502-92",
+    "ean": "7391482079121",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 149,
+    "ean": "7391482079121",
+    "product_url": "https://lampan.se/p/stripe-o77/?option=14864",
+    "cart_deeplink": "https://lampan.se/p/stripe-o77/?option=14864",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=502-92&fid=2470&url=https://lampan.se/p/stripe-o77/?option=14864",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/502-92_fl_001.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

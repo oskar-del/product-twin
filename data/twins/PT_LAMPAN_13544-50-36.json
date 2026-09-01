@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_13544-50-36",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Figaro 48cm - Bordslampa - Grå",
+    "manufacturer": "Lucide",
+    "article_no": "13544/50/36",
+    "ean": "5411212134899",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 869,
+    "ean": "5411212134899",
+    "product_url": "https://lampan.se/p/figaro-48cm/?option=1037",
+    "cart_deeplink": "https://lampan.se/p/figaro-48cm/?option=1037",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=13544%2F50%2F36&fid=2470&url=https://lampan.se/p/figaro-48cm/?option=1037",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/13544-50-36.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

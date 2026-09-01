@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP982828-982829",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvålhylla Tapwell TA126",
+    "manufacturer": "Tapwell",
+    "article_no": "GOP982828-982829",
+    "ean": "7350004673469",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 335,
+    "ean": "7350004673469",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvalhylla-tapwell-ta126/p-982828-982829",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvalhylla-tapwell-ta126/p-982828-982829",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP982828-982829&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvalhylla-tapwell-ta126/p-982828-982829",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e2cc1cb8-f5d5-4f7d-82a4-a7dedbd3bc89/9418875.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1086510-1086512",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Möbelpaket Hafa Go med Spegelskåp 450",
+    "manufacturer": "Hafa",
+    "article_no": "GOP1086510-1086512",
+    "ean": "7330027104348",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 6175,
+    "ean": "7330027104348",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/mobelpaket/mobelpaket-hafa-go-med-spegelskap-450/p-1086510-1086512",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/mobelpaket/mobelpaket-hafa-go-med-spegelskap-450/p-1086510-1086512",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1086510-1086512&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/mobelpaket/mobelpaket-hafa-go-med-spegelskap-450/p-1086510-1086512",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/be617403-6238-40bd-af2b-6eeb9dd1a2fe/1580408-kopiera.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

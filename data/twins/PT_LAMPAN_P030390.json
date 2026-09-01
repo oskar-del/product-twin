@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_P030390",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Norrsken Design - Floria Ø15 - Kristallkrona - Guld",
+    "manufacturer": "Norrsken Design",
+    "article_no": "P030390",
+    "ean": null,
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1219,
+    "ean": null,
+    "product_url": "https://lampan.se/p/floria-o15/?option=2691",
+    "cart_deeplink": "https://lampan.se/p/floria-o15/?option=2691",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=P030390&fid=2470&url=https://lampan.se/p/floria-o15/?option=2691",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-36573.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP895211",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Wallfashion Fiber Stripe 1056-6",
+    "manufacturer": "Wallfashion",
+    "article_no": "GOP895211",
+    "ean": "8429596105661",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 337,
+    "ean": "8429596105661",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-wallfashion-fiber-stripe-1056-6/p-895211",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-wallfashion-fiber-stripe-1056-6/p-895211",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP895211&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-wallfashion-fiber-stripe-1056-6/p-895211",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/7257e8b3-c4e7-4ee3-b052-6c34c352edaf/tapet-wallfashion-fiber-stripe-gron.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

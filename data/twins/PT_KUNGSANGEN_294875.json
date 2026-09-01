@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_294875",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Hotellkudde Dun Medel 70% dun  50x90",
+    "manufacturer": "Kungsangen",
+    "article_no": "294875",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 3499,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/hotellkudde-dun-medel-70%-dun-/294875",
+    "cart_deeplink": "https://kungsangen.com/se/p/hotellkudde-dun-medel-70%-dun-/294875",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=294875&fid=2564&url=https://kungsangen.com/se/p/hotellkudde-dun-medel-70%25-dun-/294875",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h4c/hda/9800413708318/ks2000Wx1500H_Hotellkudde_dun_50x90-1985/ks2000Wx1500H-Hotellkudde-dun-50x90-1985.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

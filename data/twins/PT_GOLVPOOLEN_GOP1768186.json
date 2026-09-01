@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1768186",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Parkettgolv Berg & Berg Ek L Spader Mattlack 3-Stav",
+    "manufacturer": "Berg & Berg",
+    "article_no": "GOP1768186",
+    "ean": "7330587502516",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2780,
+    "ean": "7330587502516",
+    "product_url": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-berg-och-berg-ek-l-spader-mattlack-3-stav/p-1768186",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-berg-och-berg-ek-l-spader-mattlack-3-stav/p-1768186",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1768186&fid=2559&url=https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-berg-och-berg-ek-l-spader-mattlack-3-stav/p-1768186",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/bd1bd090-1003-4169-84f5-6bf895ab9cc2/ek-l-spader-mattlack-7413033002-miljobild.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7705640",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Westal - Tellus - Fasadbelysning - Svart",
+    "manufacturer": "Westal",
+    "article_no": "7705640",
+    "ean": "7393047449639",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1989,
+    "ean": "7393047449639",
+    "product_url": "https://lampan.se/p/tellus-0/?option=6078",
+    "cart_deeplink": "https://lampan.se/p/tellus-0/?option=6078",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7705640&fid=2470&url=https://lampan.se/p/tellus-0/?option=6078",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-83363.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7784140",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Westinghouse - 4-steg fjärrkontroll (radiofrekvens) - Takfläkt",
+    "manufacturer": "Westinghouse",
+    "article_no": "7784140",
+    "ean": "4895105608789",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1069,
+    "ean": "4895105608789",
+    "product_url": "https://lampan.se/p/4-steg-fjarrkontroll-radiofrekvens-0/",
+    "cart_deeplink": "https://lampan.se/p/4-steg-fjarrkontroll-radiofrekvens-0/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7784140&fid=2470&url=https://lampan.se/p/4-steg-fjarrkontroll-radiofrekvens-0/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-23594.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

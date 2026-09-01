@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2026629-2026633",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Knopp Tapwell Bar 055",
+    "manufacturer": "Tapwell",
+    "article_no": "GOP2026629-2026633",
+    "ean": "7340188847831",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 156,
+    "ean": "7340188847831",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/knopp-tapwell-bar-055/p-2026629-2026633",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/knopp-tapwell-bar-055/p-2026629-2026633",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2026629-2026633&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/knopp-tapwell-bar-055/p-2026629-2026633",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/6c1c5192-c4fe-4f74-92fd-579efac06066/9428711-bar-055.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_10013.256528",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Soft Ø44  - Taklampa - Natur/brons",
+    "manufacturer": "Belid",
+    "article_no": "10013.256528",
+    "ean": "7391534304577",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4449,
+    "ean": "7391534304577",
+    "product_url": "https://lampan.se/p/soft-o44-8/?option=15917",
+    "cart_deeplink": "https://lampan.se/p/soft-o44-8/?option=15917",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=10013.256528&fid=2470&url=https://lampan.se/p/soft-o44-8/?option=15917",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/soft-10013256528.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

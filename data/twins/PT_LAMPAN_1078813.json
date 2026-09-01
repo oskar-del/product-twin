@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1078813",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Eclipse Ø43 - Taklampa - Greige",
+    "manufacturer": "Belid",
+    "article_no": "1078813",
+    "ean": "7391534302122",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3279,
+    "ean": "7391534302122",
+    "product_url": "https://lampan.se/p/eclipse-o43-0/?option=14642",
+    "cart_deeplink": "https://lampan.se/p/eclipse-o43-0/?option=14642",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1078813&fid=2470&url=https://lampan.se/p/eclipse-o43-0/?option=14642",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/eclipse_1078813_f.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

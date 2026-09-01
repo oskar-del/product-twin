@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_130633",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Torretta soffmodul svart",
+    "manufacturer": "Mjuk",
+    "article_no": "130633",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1658,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/130633/torretta-soffmodul-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/130633/torretta-soffmodul-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=130633&fid=978&url=https://www.mjuk.com/sv-se/product/130633/torretta-soffmodul-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/4bb81a095c25afdc2ce80fa97a927815.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

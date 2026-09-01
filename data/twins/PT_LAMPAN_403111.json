@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_403111",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globen Lighting - Hubble Read - Golvlampa - Svart",
+    "manufacturer": "Globen Lighting",
+    "article_no": "403111",
+    "ean": "7319434031119",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2199,
+    "ean": "7319434031119",
+    "product_url": "https://lampan.se/p/hubble-read-0/?option=14241",
+    "cart_deeplink": "https://lampan.se/p/hubble-read-0/?option=14241",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=403111&fid=2470&url=https://lampan.se/p/hubble-read-0/?option=14241",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/4031111.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

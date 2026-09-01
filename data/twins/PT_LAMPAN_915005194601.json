@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_915005194601",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Philips - Stock 40cm - Pollare - Antracit",
+    "manufacturer": "Philips",
+    "article_no": "915005194601",
+    "ean": "8718696131329",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 979,
+    "ean": "8718696131329",
+    "product_url": "https://lampan.se/p/stock-40cm/?option=6440",
+    "cart_deeplink": "https://lampan.se/p/stock-40cm/?option=6440",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=915005194601&fid=2470&url=https://lampan.se/p/stock-40cm/?option=6440",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/a5b1ce214a96417db69da9b900907bdd.unknown.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

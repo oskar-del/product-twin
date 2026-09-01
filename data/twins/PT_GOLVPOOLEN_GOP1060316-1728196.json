@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1060316-1728196",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bottenventil INR med Pop-up",
+    "manufacturer": "INR",
+    "article_no": "GOP1060316-1728196",
+    "ean": "7392102912767",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 872,
+    "ean": "7392102912767",
+    "product_url": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/bottenventil/bottenventil-inr-med-pop-up/p-1060316-1728196",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/bottenventil/bottenventil-inr-med-pop-up/p-1060316-1728196",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1060316-1728196&fid=2559&url=https://www.golvpoolen.se/badrum/handfat-och-tvattstall/bottenventil/bottenventil-inr-med-pop-up/p-1060316-1728196",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/3db8c344-e12d-46d1-9e38-f6b14fcf5b21/pop-upbronze.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

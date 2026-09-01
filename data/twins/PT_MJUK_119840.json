@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_119840",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tom Rossau TR37 golvlampa vit",
+    "manufacturer": "Tom Rossau",
+    "article_no": "119840",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 9787,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/119840/tom-rossau-tr37-golvlampa-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/119840/tom-rossau-tr37-golvlampa-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=119840&fid=978&url=https://www.mjuk.com/sv-se/product/119840/tom-rossau-tr37-golvlampa-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/7b520cdd911165d4a5ae5ddcae9dc923.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

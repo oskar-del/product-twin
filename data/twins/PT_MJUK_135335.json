@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_135335",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Muurame Nappi skåp med glasdörr vit",
+    "manufacturer": "Muurame",
+    "article_no": "135335",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1550,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/135335/muurame-nappi-skap-med-glasdorr-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/135335/muurame-nappi-skap-med-glasdorr-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=135335&fid=978&url=https://www.mjuk.com/sv-se/product/135335/muurame-nappi-skap-med-glasdorr-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/48a954b8d755300b6f853cac1d291abd.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_929003253201",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Philips - Limbali 2 - Spotlight - Svart",
+    "manufacturer": "Philips",
+    "article_no": "929003253201",
+    "ean": "8719514465237",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 189,
+    "ean": "8719514465237",
+    "product_url": "https://lampan.se/p/limbali-2/?option=6380",
+    "cart_deeplink": "https://lampan.se/p/limbali-2/?option=6380",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=929003253201&fid=2470&url=https://lampan.se/p/limbali-2/?option=6380",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/86e43875f2394a43bbc7ae9a01738d54.unknown.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

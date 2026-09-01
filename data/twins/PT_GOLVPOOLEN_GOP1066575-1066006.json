@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1066575-1066006",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdukskrok Duschbyggarna Classic Dubbel",
+    "manufacturer": "Duschbyggarna",
+    "article_no": "GOP1066575-1066006",
+    "ean": "7340138723062",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 576,
+    "ean": "7340138723062",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-duschbyggarna-classic-dubbel/p-1066575-1066006",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-duschbyggarna-classic-dubbel/p-1066575-1066006",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1066575-1066006&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/handdukskrok-duschbyggarna-classic-dubbel/p-1066575-1066006",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e8a345f3-d0c0-4702-a143-7ede9b4ed8d4/c1203-handdukskrok-classic-brons-c1203.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

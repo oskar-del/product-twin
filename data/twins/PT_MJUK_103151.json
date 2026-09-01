@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_103151",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bitra Stool-Tool stol grön",
+    "manufacturer": "Vitra",
+    "article_no": "103151",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1550,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/103151/bitra-stool-tool-stol-gron",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/103151/bitra-stool-tool-stol-gron",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=103151&fid=978&url=https://www.mjuk.com/sv-se/product/103151/bitra-stool-tool-stol-gron",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/e1d7d0ea2f6e0589a821af6f64ebebd9.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

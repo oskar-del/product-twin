@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP998591",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvättställ Hafa Neat 420",
+    "manufacturer": "Hafa",
+    "article_no": "GOP998591",
+    "ean": "7330027113630",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1489,
+    "ean": "7330027113630",
+    "product_url": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-hafa-neat-420/p-998591",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-hafa-neat-420/p-998591",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP998591&fid=2559&url=https://www.golvpoolen.se/badrum/handfat-och-tvattstall/enkelt-handfat/tvattstall-hafa-neat-420/p-998591",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/2f805ef2-5d61-4f3d-bca9-19c945ac8ba9/hafa_neat_m_lucka_antracit_detalj2.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

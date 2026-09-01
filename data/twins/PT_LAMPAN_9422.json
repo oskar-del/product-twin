@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_9422",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dyberg Larsen - Skagerrak - Sänglampa - Svart",
+    "manufacturer": "Dyberg Larsen",
+    "article_no": "9422",
+    "ean": "5704709094227",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1139,
+    "ean": "5704709094227",
+    "product_url": "https://lampan.se/p/skagerrak-0/?option=6106",
+    "cart_deeplink": "https://lampan.se/p/skagerrak-0/?option=6106",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=9422&fid=2470&url=https://lampan.se/p/skagerrak-0/?option=6106",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/5704709094227_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

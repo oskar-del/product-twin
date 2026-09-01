@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7510459",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Westal - Chip Flex 15cm - Vägglampa - Svart",
+    "manufacturer": "Westal",
+    "article_no": "7510459",
+    "ean": "7393047250426",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 659,
+    "ean": "7393047250426",
+    "product_url": "https://lampan.se/p/chip-flex-15cm/?option=5807",
+    "cart_deeplink": "https://lampan.se/p/chip-flex-15cm/?option=5807",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7510459&fid=2470&url=https://lampan.se/p/chip-flex-15cm/?option=5807",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-37472.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

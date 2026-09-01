@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1121914",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handduksstång Hansgrohe Logis Enkel",
+    "manufacturer": "Hansgrohe",
+    "article_no": "GOP1121914",
+    "ean": "4059625123003",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 531,
+    "ean": "4059625123003",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/handduksstang-och-handdukshangare/handduksstang-hansgrohe-logis-enkel/p-1121914",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/handduksstang-och-handdukshangare/handduksstang-hansgrohe-logis-enkel/p-1121914",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1121914&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/handduksstang-och-handdukshangare/handduksstang-hansgrohe-logis-enkel/p-1121914",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b941f7a2-891e-4066-bc5a-4cc6344da835/41716000-1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

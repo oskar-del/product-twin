@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_256308",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Mariehamn 140x210 Multizon Medel Sa.67.Antracit",
+    "manufacturer": "Kungsangen",
+    "article_no": "256308",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 58690,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-mariehamn/256308",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-mariehamn/256308",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=256308&fid=2564&url=https://kungsangen.com/se/p/sang-mariehamn/256308",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h6a/hba/8829891280926/ks2000Wx1500H_Mariehamn_ramsang_s31_90_sala_antracit/ks2000Wx1500H-Mariehamn-ramsang-s31-90-sala-antracit.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

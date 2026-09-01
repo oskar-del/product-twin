@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_123524",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Keshan orientalisk matta 299 x 410 cm",
+    "manufacturer": "Rezas",
+    "article_no": "123524",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 30805,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/123524/keshan-orientalisk-matta-299-x-410-cm",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/123524/keshan-orientalisk-matta-299-x-410-cm",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=123524&fid=978&url=https://www.mjuk.com/sv-se/product/123524/keshan-orientalisk-matta-299-x-410-cm",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/7bfa4cee-4734-4726-8d9e-756f07c7022b.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP50000606-30001701",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Väggskiva BerryAlloc Kitchen Wall Vit Snö Subway",
+    "manufacturer": "BerryAlloc",
+    "article_no": "GOP50000606-30001701",
+    "ean": "7052870177408",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 743,
+    "ean": "7052870177408",
+    "product_url": "https://www.golvpoolen.se/golv/vaggbekladnad/vaggskivor/vaggskiva-berryalloc-kitchen-wall-vit-sno-subway/p-50000606-30001701",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/vaggbekladnad/vaggskivor/vaggskiva-berryalloc-kitchen-wall-vit-sno-subway/p-50000606-30001701",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP50000606-30001701&fid=2559&url=https://www.golvpoolen.se/golv/vaggbekladnad/vaggskivor/vaggskiva-berryalloc-kitchen-wall-vit-sno-subway/p-50000606-30001701",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/74fe8fde-cac1-4e5f-8923-27f5e5e749a7/snow-white-gf_subway.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

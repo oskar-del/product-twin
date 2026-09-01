@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_712-1",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emibig Lighting - Cosmo Ø12 - Taklampa - Rökfärgad",
+    "manufacturer": "Emibig Lighting",
+    "article_no": "712/1",
+    "ean": "5907106005968",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 689,
+    "ean": "5907106005968",
+    "product_url": "https://lampan.se/p/cosmo-o12/?option=2154",
+    "cart_deeplink": "https://lampan.se/p/cosmo-o12/?option=2154",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=712%2F1&fid=2470&url=https://lampan.se/p/cosmo-o12/?option=2154",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/712_1-1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

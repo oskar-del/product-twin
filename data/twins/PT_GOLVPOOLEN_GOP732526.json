@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP732526",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Saxstativ Dewalt DWE74912-XJ",
+    "manufacturer": "DeWalt",
+    "article_no": "GOP732526",
+    "ean": "5035048446515",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1180,
+    "ean": "5035048446515",
+    "product_url": "https://www.golvpoolen.se/verktyg/arbetsbord-och-bockar/sagbord/saxstativ-dewalt-dwe74912-xj/p-732526",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/arbetsbord-och-bockar/sagbord/saxstativ-dewalt-dwe74912-xj/p-732526",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP732526&fid=2559&url=https://www.golvpoolen.se/verktyg/arbetsbord-och-bockar/sagbord/saxstativ-dewalt-dwe74912-xj/p-732526",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e2d4b469-dcfa-4f42-8f7c-aa7a3a4e4e4e/saxstativ-dwe74912-dewalt.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_HB1344010420",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Herstal - Ballon 53cm - Bordslampa - Mässing",
+    "manufacturer": "Herstal",
+    "article_no": "HB1344010420",
+    "ean": "7391534109073",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1899,
+    "ean": "7391534109073",
+    "product_url": "https://lampan.se/p/ballon-53cm-0/?option=13311",
+    "cart_deeplink": "https://lampan.se/p/ballon-53cm-0/?option=13311",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=HB1344010420&fid=2470&url=https://lampan.se/p/ballon-53cm-0/?option=13311",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/ballon_hb1344010420_f_on.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

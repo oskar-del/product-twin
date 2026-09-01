@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_67350-24",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Jeffry 58cm - Takplafond - Trä",
+    "manufacturer": "Globo Lighting",
+    "article_no": "67350-24",
+    "ean": "9007371510597",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1839,
+    "ean": "9007371510597",
+    "product_url": "https://lampan.se/p/jeffry-58cm/?option=9492",
+    "cart_deeplink": "https://lampan.se/p/jeffry-58cm/?option=9492",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=67350-24&fid=2470&url=https://lampan.se/p/jeffry-58cm/?option=9492",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/67350-24_a.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

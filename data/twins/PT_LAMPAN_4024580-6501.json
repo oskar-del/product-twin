@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4024580-6501",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "By Rydéns - Twinkle - Adventsljusstake - Guld",
+    "manufacturer": "By Rydéns",
+    "article_no": "4024580-6501",
+    "ean": "7391741013323",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2195,
+    "ean": "7391741013323",
+    "product_url": "https://lampan.se/p/twinkle-2/?option=13728",
+    "cart_deeplink": "https://lampan.se/p/twinkle-2/?option=13728",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4024580-6501&fid=2470&url=https://lampan.se/p/twinkle-2/?option=13728",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/twinkle_gold_4024580_6501.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

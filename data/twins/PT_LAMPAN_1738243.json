@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1738243",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Light & Living  - Donio - Golvlampa - Trä",
+    "manufacturer": "Light & Living",
+    "article_no": "1738243",
+    "ean": "8717807710064",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2669,
+    "ean": "8717807710064",
+    "product_url": "https://lampan.se/p/donio/?option=10480",
+    "cart_deeplink": "https://lampan.se/p/donio/?option=10480",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1738243&fid=2470&url=https://lampan.se/p/donio/?option=10480",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1738243_l.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

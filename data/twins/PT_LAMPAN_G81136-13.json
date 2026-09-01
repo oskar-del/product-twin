@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_G81136-13",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Fancia Ø48 - Takplafond - Krom",
+    "manufacturer": "Brilliant",
+    "article_no": "G81136/13",
+    "ean": "4004353462924",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1019,
+    "ean": "4004353462924",
+    "product_url": "https://lampan.se/p/fancia-o48/?option=12965",
+    "cart_deeplink": "https://lampan.se/p/fancia-o48/?option=12965",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=G81136%2F13&fid=2470&url=https://lampan.se/p/fancia-o48/?option=12965",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/g81135_13_d2-20554.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

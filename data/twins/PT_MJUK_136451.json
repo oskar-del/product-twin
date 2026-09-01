@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_136451",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "HAY Pier System skrivbord svart",
+    "manufacturer": "Hay",
+    "article_no": "136451",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1399,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/136451/hay-pier-system-skrivbord-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/136451/hay-pier-system-skrivbord-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=136451&fid=978&url=https://www.mjuk.com/sv-se/product/136451/hay-pier-system-skrivbord-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/730a0fb2-3b68-4179-97c7-3c4adb662a23.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

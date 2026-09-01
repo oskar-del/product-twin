@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_22650718",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Bullo Ø38 - Takplafond - Svart/transparent",
+    "manufacturer": "Belid",
+    "article_no": "22650718",
+    "ean": "7391534002077",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3299,
+    "ean": "7391534002077",
+    "product_url": "https://lampan.se/p/bullo-o38-1/?option=1597",
+    "cart_deeplink": "https://lampan.se/p/bullo-o38-1/?option=1597",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=22650718&fid=2470&url=https://lampan.se/p/bullo-o38-1/?option=1597",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/partspartnumber22650718filenamebulloxl_22650718_f.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

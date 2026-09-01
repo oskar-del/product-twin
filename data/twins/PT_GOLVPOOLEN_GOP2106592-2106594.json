@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2106592-2106594",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Klinker INR Granitkeramik Alvaret Ash",
+    "manufacturer": "INR",
+    "article_no": "GOP2106592-2106594",
+    "ean": "7392102801825",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1303,
+    "ean": "7392102801825",
+    "product_url": "https://www.golvpoolen.se/kakel-och-klinker/klinker/klinkergolv/klinker-inr-granitkeramik-alvaret-ash/p-2106592-2106594",
+    "cart_deeplink": "https://www.golvpoolen.se/kakel-och-klinker/klinker/klinkergolv/klinker-inr-granitkeramik-alvaret-ash/p-2106592-2106594",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2106592-2106594&fid=2559&url=https://www.golvpoolen.se/kakel-och-klinker/klinker/klinkergolv/klinker-inr-granitkeramik-alvaret-ash/p-2106592-2106594",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/2df4c74e-2746-43b7-99ea-a400ccbe8a17/80001938_2.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

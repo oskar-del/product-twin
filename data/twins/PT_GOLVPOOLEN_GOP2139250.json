@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2139250",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschkabin Betrakta 80X80 Rak Klarglas",
+    "manufacturer": "Bathlife",
+    "article_no": "GOP2139250",
+    "ean": "7330027181714",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 5799,
+    "ean": "7330027181714",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschkabin/duschkabin-betrakta-80x80-rak-klarglas/p-2139250",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschkabin/duschkabin-betrakta-80x80-rak-klarglas/p-2139250",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2139250&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschkabin/duschkabin-betrakta-80x80-rak-klarglas/p-2139250",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/babc05d5-80ca-466b-9157-e7fff8654613/duschkabin-bathlife-betrakta-90x90-rak-r-och-w-klarglas.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

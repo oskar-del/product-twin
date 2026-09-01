@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_EU32803BK",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Space - Golvlampa - Svart",
+    "manufacturer": "Searchlight",
+    "article_no": "EU32803BK",
+    "ean": "5053423274713",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1989,
+    "ean": "5053423274713",
+    "product_url": "https://lampan.se/p/space/?option=12495",
+    "cart_deeplink": "https://lampan.se/p/space/?option=12495",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=EU32803BK&fid=2470&url=https://lampan.se/p/space/?option=12495",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/eu32803bk_32803bk_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

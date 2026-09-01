@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4211000-6509",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "By Rydéns - Omlott Ø53 - Takplafond - Vit",
+    "manufacturer": "By Rydéns",
+    "article_no": "4211000-6509",
+    "ean": "7391741012371",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4495,
+    "ean": "7391741012371",
+    "product_url": "https://lampan.se/p/omlott-o53/?option=8823",
+    "cart_deeplink": "https://lampan.se/p/omlott-o53/?option=8823",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4211000-6509&fid=2470&url=https://lampan.se/p/omlott-o53/?option=8823",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/omlott_brass_4211000_6509.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

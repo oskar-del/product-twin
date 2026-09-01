@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2745L30",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Karlskrona lampfabrik - Textilskärm 300 - Tillbehör - Olivgrön",
+    "manufacturer": "Karlskrona lampfabrik",
+    "article_no": "2745L30",
+    "ean": "7332535004950",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 810,
+    "ean": "7332535004950",
+    "product_url": "https://lampan.se/p/textilskarm-300-1/?option=9632",
+    "cart_deeplink": "https://lampan.se/p/textilskarm-300-1/?option=9632",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2745L30&fid=2470&url=https://lampan.se/p/textilskarm-300-1/?option=9632",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/784x870_ta-2745l30.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

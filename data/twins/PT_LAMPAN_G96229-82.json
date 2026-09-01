@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_G96229-82",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Hanni - Fasadbelysning - Stål",
+    "manufacturer": "Brilliant",
+    "article_no": "G96229/82",
+    "ean": "4004353189838",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 229,
+    "ean": "4004353189838",
+    "product_url": "https://lampan.se/p/hanni-2/?option=13938",
+    "cart_deeplink": "https://lampan.se/p/hanni-2/?option=13938",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=G96229%2F82&fid=2470&url=https://lampan.se/p/hanni-2/?option=13938",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/wandleuchten_hanni_4004353189838_1_800x800.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

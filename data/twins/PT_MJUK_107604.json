@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_107604",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Wästberg Sempé pendellampa vit",
+    "manufacturer": "Wästberg",
+    "article_no": "107604",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3108,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/107604/wastberg-sempe-pendellampa-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/107604/wastberg-sempe-pendellampa-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=107604&fid=978&url=https://www.mjuk.com/sv-se/product/107604/wastberg-sempe-pendellampa-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/20827970f5f3fa1def818f5f0e9d8e62.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_QN-MILNE-TL-TEAL",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Milne 64cm - Bordslampa - Blå",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "QN-MILNE-TL-TEAL",
+    "ean": "5024005381617",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4629,
+    "ean": "5024005381617",
+    "product_url": "https://lampan.se/p/milne-64cm/?option=10210",
+    "cart_deeplink": "https://lampan.se/p/milne-64cm/?option=10210",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=QN-MILNE-TL-TEAL&fid=2470&url=https://lampan.se/p/milne-64cm/?option=10210",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/qn-milne-tl-teal_shade_on.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

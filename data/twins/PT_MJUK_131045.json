@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_131045",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "BoConcept Adelaide stol",
+    "manufacturer": "BoConcept",
+    "article_no": "131045",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1980,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/131045/boconcept-adelaide-stol",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/131045/boconcept-adelaide-stol",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=131045&fid=978&url=https://www.mjuk.com/sv-se/product/131045/boconcept-adelaide-stol",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/e5af00fdb3abb5c3ebad2f8c0b2d4c7d.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

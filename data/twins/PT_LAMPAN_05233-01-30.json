@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_05233-01-30",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Calixt 50cm - Vägglampa - Svart",
+    "manufacturer": "Lucide",
+    "article_no": "05233/01/30",
+    "ean": "5411212051462",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 869,
+    "ean": "5411212051462",
+    "product_url": "https://lampan.se/p/calixt-50cm/?option=1222",
+    "cart_deeplink": "https://lampan.se/p/calixt-50cm/?option=1222",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=05233%2F01%2F30&fid=2470&url=https://lampan.se/p/calixt-50cm/?option=1222",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/05233-01-30.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

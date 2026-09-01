@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_910196",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "CO Bankeryd - Tage 50 Ø45 - Taklampa - Grön",
+    "manufacturer": "CO Bankeryd",
+    "article_no": "910196",
+    "ean": "7319689101964",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3899,
+    "ean": "7319689101964",
+    "product_url": "https://lampan.se/p/tage-50-o45/?option=6876",
+    "cart_deeplink": "https://lampan.se/p/tage-50-o45/?option=6876",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=910196&fid=2470&url=https://lampan.se/p/tage-50-o45/?option=6876",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/co_bankeryd_tage_50_pendant_black_green_glass_910196_1500x1500.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_BOWTIE-1-MB",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Bowtie 15cm - Badrumslampa - Svart",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "BOWTIE-1-MB",
+    "ean": "5024005020097",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2159,
+    "ean": "5024005020097",
+    "product_url": "https://lampan.se/p/bowtie-15cm/?option=10402",
+    "cart_deeplink": "https://lampan.se/p/bowtie-15cm/?option=10402",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=BOWTIE-1-MB&fid=2470&url=https://lampan.se/p/bowtie-15cm/?option=10402",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/bowtie-1-mb.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

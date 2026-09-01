@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1820305",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschblandare Grohe Start 150 cc",
+    "manufacturer": "Grohe",
+    "article_no": "GOP1820305",
+    "ean": "4005176782060",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1324,
+    "ean": "4005176782060",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-grohe-start-150-cc/p-1820305",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-grohe-start-150-cc/p-1820305",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1820305&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-grohe-start-150-cc/p-1820305",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/1c4a23ce-a42a-4171-a4f0-50f24aa373c4/322792432.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

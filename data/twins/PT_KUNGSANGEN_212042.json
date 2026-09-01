@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_212042",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bäddmadrass NORRSKÄR LATEX 120x210",
+    "manufacturer": "Kungsangen",
+    "article_no": "212042",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 24090,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/baddmadrass-norrskar-latex/212042",
+    "cart_deeplink": "https://kungsangen.com/se/p/baddmadrass-norrskar-latex/212042",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=212042&fid=2564&url=https://kungsangen.com/se/p/baddmadrass-norrskar-latex/212042",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/root/h8f/hd5/8831656558622/ks2000Wx1500H_Baddmadrass_norrskar_closeup/ks2000Wx1500H-Baddmadrass-norrskar-closeup.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

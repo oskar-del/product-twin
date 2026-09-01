@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_63282",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Faro Barcelona - Linear - Tillfällig belysning - Vit",
+    "manufacturer": "Faro Barcelona",
+    "article_no": "63282",
+    "ean": "8421776024397",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 899,
+    "ean": "8421776024397",
+    "product_url": "https://lampan.se/p/linear/?option=14367",
+    "cart_deeplink": "https://lampan.se/p/linear/?option=14367",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=63282&fid=2470&url=https://lampan.se/p/linear/?option=14367",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/pr28767bi15865_63282_plas_2_empotrable_blanco_high_power_led_1w_3000k_sz4.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

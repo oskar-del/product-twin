@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_123022",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Sofienäs 80x210 Fast A.Coal",
+    "manufacturer": "Kungsangen",
+    "article_no": "123022",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 20190,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-sofienas/123022",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-sofienas/123022",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=123022&fid=2564&url=https://kungsangen.com/se/p/sang-sofienas/123022",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hf7/h9a/9605613813790/ks2000Wx1500H_sofienas_ramsang_s23_90_anouk_coal/ks2000Wx1500H-sofienas-ramsang-s23-90-anouk-coal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_717309",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Elegance - Klämlampa - Svart",
+    "manufacturer": "Halo Design",
+    "article_no": "717309",
+    "ean": "5705639717309",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 419,
+    "ean": "5705639717309",
+    "product_url": "https://lampan.se/p/elegance/?option=8218",
+    "cart_deeplink": "https://lampan.se/p/elegance/?option=8218",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=717309&fid=2470&url=https://lampan.se/p/elegance/?option=8218",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/717309-elegance-clips-black_packshot.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

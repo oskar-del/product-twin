@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_132671",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "FeelDesign ARX stol",
+    "manufacturer": "FeelDesign",
+    "article_no": "132671",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1544,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/132671/feeldesign-arx-stol",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/132671/feeldesign-arx-stol",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=132671&fid=978&url=https://www.mjuk.com/sv-se/product/132671/feeldesign-arx-stol",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/df45849f676561574d132f291e73403a.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

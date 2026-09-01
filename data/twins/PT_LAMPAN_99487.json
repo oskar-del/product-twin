@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_99487",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Eglo - Almeida 120cm - Taklampa - Borstad mässing",
+    "manufacturer": "Eglo",
+    "article_no": "99487",
+    "ean": "9002759994877",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3489,
+    "ean": "9002759994877",
+    "product_url": "https://lampan.se/p/almeida-120cm-0/?option=4293",
+    "cart_deeplink": "https://lampan.se/p/almeida-120cm-0/?option=4293",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=99487&fid=2470&url=https://lampan.se/p/almeida-120cm-0/?option=4293",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/99487_view_0001.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

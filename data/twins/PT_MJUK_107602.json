@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_107602",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Edbyn Feather fåtölj ljusgrå",
+    "manufacturer": "Edsbyn",
+    "article_no": "107602",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2569,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/107602/edbyn-feather-fatolj-ljusgra",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/107602/edbyn-feather-fatolj-ljusgra",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=107602&fid=978&url=https://www.mjuk.com/sv-se/product/107602/edbyn-feather-fatolj-ljusgra",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/84004c2c80e173bdc7cf1d8f2fbabdc7.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

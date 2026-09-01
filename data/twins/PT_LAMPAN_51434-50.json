@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_51434-50",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Babsan 3 - Spotlight - Trä",
+    "manufacturer": "Brilliant",
+    "article_no": "51434/50",
+    "ean": "4004353261824",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 429,
+    "ean": "4004353261824",
+    "product_url": "https://lampan.se/p/babsan-3/?option=13805",
+    "cart_deeplink": "https://lampan.se/p/babsan-3/?option=13805",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=51434%2F50&fid=2470&url=https://lampan.se/p/babsan-3/?option=13805",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/strahler_babsan_4004353261824_1_800x800.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP162883-162884",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Blandarfäste Hafa Utvändig Röranslutning Krom",
+    "manufacturer": "Hafa",
+    "article_no": "GOP162883-162884",
+    "ean": "7320129704720",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1170,
+    "ean": "7320129704720",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/blandarfaste/blandarfaste-hafa-utvandig-roranslutning-krom/p-162883-162884",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/blandarfaste/blandarfaste-hafa-utvandig-roranslutning-krom/p-162883-162884",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP162883-162884&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/blandarfaste/blandarfaste-hafa-utvandig-roranslutning-krom/p-162883-162884",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f561ac01-318f-4447-884a-d80b6071a57c/blandarfaste-hafa-utvandig-roranslutning-krom.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

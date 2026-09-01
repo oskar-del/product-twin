@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_128867",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Melby fåtölj vit",
+    "manufacturer": "Beliani",
+    "article_no": "128867",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2279,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/128867/melby-fatolj-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/128867/melby-fatolj-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=128867&fid=978&url=https://www.mjuk.com/sv-se/product/128867/melby-fatolj-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/147434a3-e78d-433c-8d8c-27d7e1120c50.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

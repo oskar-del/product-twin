@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_QN-ALFORD-PLACE-4P-MB",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Alford Place 55cm - Takbelysning - Svart",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "QN-ALFORD-PLACE-4P-MB",
+    "ean": "5024005575511",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 9709,
+    "ean": "5024005575511",
+    "product_url": "https://lampan.se/p/alford-place-55cm/?option=10199",
+    "cart_deeplink": "https://lampan.se/p/alford-place-55cm/?option=10199",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=QN-ALFORD-PLACE-4P-MB&fid=2470&url=https://lampan.se/p/alford-place-55cm/?option=10199",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/qn-alford-place-4p-mb.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

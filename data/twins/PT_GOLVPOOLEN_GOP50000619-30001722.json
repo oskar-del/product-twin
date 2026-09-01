@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP50000619-30001722",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Laminatgolv BerryAlloc Original Sunset Boulevard 1-Stav",
+    "manufacturer": "BerryAlloc",
+    "article_no": "GOP50000619-30001722",
+    "ean": "7052870167157",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1442,
+    "ean": "7052870167157",
+    "product_url": "https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-original-sunset-boulevard-1-stav/p-50000619-30001722",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-original-sunset-boulevard-1-stav/p-50000619-30001722",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP50000619-30001722&fid=2559&url=https://www.golvpoolen.se/golv/laminatgolv/laminatgolv-berryalloc-original-sunset-boulevard-1-stav/p-50000619-30001722",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/2f1fe53b-c32c-4b0c-a00d-54c9b04c12d1/Berrybild2miljö.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

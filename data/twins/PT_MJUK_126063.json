@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_126063",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Arper Catifa 60 fåtölj brun",
+    "manufacturer": "Arper",
+    "article_no": "126063",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 8476,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/126063/arper-catifa-60-fatolj-brun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/126063/arper-catifa-60-fatolj-brun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=126063&fid=978&url=https://www.mjuk.com/sv-se/product/126063/arper-catifa-60-fatolj-brun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/731b8a8ec0295c161a0e2083262e26b5.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

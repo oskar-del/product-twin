@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_HB16659720301",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Herstal - Manola 20 Ø70 - Taklampa - Krom",
+    "manufacturer": "Herstal",
+    "article_no": "HB16659720301",
+    "ean": "7391534066185",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 9799,
+    "ean": "7391534066185",
+    "product_url": "https://lampan.se/p/manola-20-o70/?option=1681",
+    "cart_deeplink": "https://lampan.se/p/manola-20-o70/?option=1681",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=HB16659720301&fid=2470&url=https://lampan.se/p/manola-20-o70/?option=1681",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/partspartnumberhb16659720301filenamemanola_16659720101_f1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

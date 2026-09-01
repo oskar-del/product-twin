@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP200116",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Genomföringskoppling Noro Kabin 3/4 x 1/2",
+    "manufacturer": "Noro",
+    "article_no": "GOP200116",
+    "ean": "7340032406719",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 369,
+    "ean": "7340032406719",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/tillbehor-dusch/genomforingskoppling-noro-kabin-3-och-4-x-1-och-2/p-200116",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/tillbehor-dusch/genomforingskoppling-noro-kabin-3-och-4-x-1-och-2/p-200116",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP200116&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/tillbehor-dusch/genomforingskoppling-noro-kabin-3-och-4-x-1-och-2/p-200116",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/122999ce-93c2-452d-a342-e6eb1eb45a4d/dusjkabinett-noro-ocean-r.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

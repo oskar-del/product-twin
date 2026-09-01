@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_89028",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Muuto Fiber Side stol beige",
+    "manufacturer": "Muuto",
+    "article_no": "89028",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2580,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/89028/muuto-fiber-side-stol-beige",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/89028/muuto-fiber-side-stol-beige",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=89028&fid=978&url=https://www.mjuk.com/sv-se/product/89028/muuto-fiber-side-stol-beige",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/a095c236bf3d5ace851d29e72fae3847.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

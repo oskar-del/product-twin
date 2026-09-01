@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1360-1",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emibig Lighting - Spiral 30cm - Vägglampa - Vit",
+    "manufacturer": "Emibig Lighting",
+    "article_no": "1360/1",
+    "ean": "5901738880757",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 799,
+    "ean": "5901738880757",
+    "product_url": "https://lampan.se/p/spiral-30cm-2/?option=12036",
+    "cart_deeplink": "https://lampan.se/p/spiral-30cm-2/?option=12036",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1360%2F1&fid=2470&url=https://lampan.se/p/spiral-30cm-2/?option=12036",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1360_1-6.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

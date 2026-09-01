@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_320321",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Liljehamn 210x210 Medel/Fast Sa.12.Brun",
+    "manufacturer": "Kungsangen",
+    "article_no": "320321",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 119590,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-liljehamn/320321",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-liljehamn/320321",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=320321&fid=2564&url=https://kungsangen.com/se/p/sang-liljehamn/320321",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h40/h44/10117754388510/ks2000Wx1500H_Liljehamn_kontinental_s23_vx20_180_sala_brun/ks2000Wx1500H-Liljehamn-kontinental-s23-vx20-180-sala-brun.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

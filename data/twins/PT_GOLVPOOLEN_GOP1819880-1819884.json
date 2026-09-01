@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1819880-1819884",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Fixkam Grizzly Group Lång",
+    "manufacturer": "Grizzly Group",
+    "article_no": "GOP1819880-1819884",
+    "ean": "5060620190548",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 219,
+    "ean": "5060620190548",
+    "product_url": "https://www.golvpoolen.se/verktyg/kakelverktyg/fixkam/fixkam-grizzly-group-lang/p-1819880-1819884",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/kakelverktyg/fixkam/fixkam-grizzly-group-lang/p-1819880-1819884",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1819880-1819884&fid=2559&url=https://www.golvpoolen.se/verktyg/kakelverktyg/fixkam/fixkam-grizzly-group-lang/p-1819880-1819884",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/59159b92-6f90-4ff1-bc53-ca4b9a5ffd2b/481695.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

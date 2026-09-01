@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_28228-11",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Oriva - Conny Ø12 - Fönsterlampa - Amber",
+    "manufacturer": "Oriva",
+    "article_no": "28228-11",
+    "ean": "7332065072221",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 319,
+    "ean": "7332065072221",
+    "product_url": "https://lampan.se/p/conny-o12/?option=8448",
+    "cart_deeplink": "https://lampan.se/p/conny-o12/?option=8448",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=28228-11&fid=2470&url=https://lampan.se/p/conny-o12/?option=8448",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/28228-111400x1400.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

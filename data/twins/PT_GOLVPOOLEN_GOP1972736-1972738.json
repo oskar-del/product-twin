@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1972736-1972738",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Badkar Strømberg Delta",
+    "manufacturer": "Strømberg",
+    "article_no": "GOP1972736-1972738",
+    "ean": "5055350907863",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 10790,
+    "ean": "5055350907863",
+    "product_url": "https://www.golvpoolen.se/badrum/badkar/hornbadkar/badkar-stromberg-delta/p-1972736-1972738",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badkar/hornbadkar/badkar-stromberg-delta/p-1972736-1972738",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1972736-1972738&fid=2559&url=https://www.golvpoolen.se/badrum/badkar/hornbadkar/badkar-stromberg-delta/p-1972736-1972738",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f0b5bae2-bcb1-466c-abf0-88a672ab48ca/del1570_1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

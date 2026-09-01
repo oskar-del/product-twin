@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_15120-15",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Grafika Ø30 - Taklampa - Svart",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "15120-15",
+    "ean": "7041661271784",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1299,
+    "ean": "7041661271784",
+    "product_url": "https://lampan.se/p/grafika-o30/?option=1974",
+    "cart_deeplink": "https://lampan.se/p/grafika-o30/?option=1974",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=15120-15&fid=2470&url=https://lampan.se/p/grafika-o30/?option=1974",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/15120-15_grafika_7041661271784_pp1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

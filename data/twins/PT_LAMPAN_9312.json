@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_9312",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dyberg Larsen - Morph Ø20 - Vägglampa - Krom",
+    "manufacturer": "Dyberg Larsen",
+    "article_no": "9312",
+    "ean": "5704709093121",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2189,
+    "ean": "5704709093121",
+    "product_url": "https://lampan.se/p/morph-o20/?option=6189",
+    "cart_deeplink": "https://lampan.se/p/morph-o20/?option=6189",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=9312&fid=2470&url=https://lampan.se/p/morph-o20/?option=6189",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/5704709093121_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_L001470",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lampan - Line 4 - Spotlight - Vit",
+    "manufacturer": "Lampan",
+    "article_no": "L001470",
+    "ean": "5710849309312",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 449,
+    "ean": "5710849309312",
+    "product_url": "https://lampan.se/p/line-4/?option=11747",
+    "cart_deeplink": "https://lampan.se/p/line-4/?option=11747",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=L001470&fid=2470&url=https://lampan.se/p/line-4/?option=11747",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/img_5342-1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

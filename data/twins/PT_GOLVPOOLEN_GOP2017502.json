@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2017502",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Trägolv Bjelin Härdad Ek Grevie 3.0 XXL 1-stav",
+    "manufacturer": "Bjelin",
+    "article_no": "GOP2017502",
+    "ean": "7330044060115",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1825,
+    "ean": "7330044060115",
+    "product_url": "https://www.golvpoolen.se/golv/tragolv/hardat-tragolv/tragolv-bjelin-hardad-ek-grevie-30-xxl-1-stav/p-2017502",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tragolv/hardat-tragolv/tragolv-bjelin-hardad-ek-grevie-30-xxl-1-stav/p-2017502",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2017502&fid=2559&url=https://www.golvpoolen.se/golv/tragolv/hardat-tragolv/tragolv-bjelin-hardad-ek-grevie-30-xxl-1-stav/p-2017502",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/fcba099b-b391-4d29-857b-f00cb6352537/346011.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

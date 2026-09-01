@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GRIPSHOLM_1-se-p7112-v16019-s11504",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gripsholm Örngott bambu 50x60",
+    "manufacturer": "Gripsholm",
+    "article_no": "1/se-p7112-v16019-s11504",
+    "ean": "7318161508178",
+    "source": "gripsholm_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "gripsholm SE",
+    "currency": "SEK",
+    "unit_price": 149,
+    "ean": "7318161508178",
+    "product_url": "https://www.gripsholm.se/p/pillowcase-bamboo-solid-917726?country=se",
+    "cart_deeplink": "https://www.gripsholm.se/p/pillowcase-bamboo-solid-917726?country=se",
+    "affiliate_link": "https://pid.gripsholm.se/t/t?a=1960533239&as=2106320328&t=2&tk=1&cupa_sku=1%2Fse-p7112-v16019-s11504&fid=2720&url=https://www.gripsholm.se/p/pillowcase-bamboo-solid-917726?country=se",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://springhill.centracdn.net/client/dynamic/originals/7112_fbb623d2d3-917726_917726-10-original.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_P060930",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Norrsken Design - Bow Ø35 - Kristallkrona - Svart",
+    "manufacturer": "Norrsken Design",
+    "article_no": "P060930",
+    "ean": "7394363032024",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2859,
+    "ean": "7394363032024",
+    "product_url": "https://lampan.se/p/bow-o35/?option=2385",
+    "cart_deeplink": "https://lampan.se/p/bow-o35/?option=2385",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=P060930&fid=2470&url=https://lampan.se/p/bow-o35/?option=2385",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-26004.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

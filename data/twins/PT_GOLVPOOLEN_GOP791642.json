@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP791642",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Monteringssats Arredo Kioto för Dold Anslutning",
+    "manufacturer": "Arredo",
+    "article_no": "GOP791642",
+    "ean": "7340072801949",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 119,
+    "ean": "7340072801949",
+    "product_url": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/monteringssats-arredo-kioto-for-dold-anslutning/p-791642",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/monteringssats-arredo-kioto-for-dold-anslutning/p-791642",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP791642&fid=2559&url=https://www.golvpoolen.se/badrum/handdukstorkar/handdukstork-el/monteringssats-arredo-kioto-for-dold-anslutning/p-791642",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/fe08f650-d3fc-4704-ab0a-3b2530c0502d/monteringssats-arredo-kioto-for-dold-anslutning.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

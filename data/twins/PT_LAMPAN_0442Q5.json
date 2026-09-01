@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_0442Q5",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Karlskrona lampfabrik - Bergman - Karlskrona lampfabrik - Nickel",
+    "manufacturer": "Karlskrona lampfabrik",
+    "article_no": "0442Q5",
+    "ean": "7332535002154",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4000,
+    "ean": "7332535002154",
+    "product_url": "https://lampan.se/p/bergman/?option=9602",
+    "cart_deeplink": "https://lampan.se/p/bergman/?option=9602",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=0442Q5&fid=2470&url=https://lampan.se/p/bergman/?option=9602",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/784x870_ta-0442q1_2306v3.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

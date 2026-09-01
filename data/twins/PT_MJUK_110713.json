@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_110713",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Mirasol Highback fåtölj sammet",
+    "manufacturer": "Mjuk",
+    "article_no": "110713",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 16564,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/110713/mirasol-highback-fatolj-sammet",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/110713/mirasol-highback-fatolj-sammet",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=110713&fid=978&url=https://www.mjuk.com/sv-se/product/110713/mirasol-highback-fatolj-sammet",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/c8af3ff65f2b9475671d850ac94f7957.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

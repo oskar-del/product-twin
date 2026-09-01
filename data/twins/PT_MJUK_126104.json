@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_126104",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dino lekhage 80 x 99 cm",
+    "manufacturer": "Mjuk",
+    "article_no": "126104",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1810,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/126104/dino-lekhage-80-x-99-cm",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/126104/dino-lekhage-80-x-99-cm",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=126104&fid=978&url=https://www.mjuk.com/sv-se/product/126104/dino-lekhage-80-x-99-cm",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/3bd0b942-8942-4b40-9f8d-530395298e87.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

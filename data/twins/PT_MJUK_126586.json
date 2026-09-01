@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_126586",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Piet Hein Eek × IKEA INDUSTRIELL matbord och 6 stolar",
+    "manufacturer": "PietHeinEek",
+    "article_no": "126586",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 11305,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/126586/piet-hein-eek-ikea-industriell-matbord-och-6-stolar",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/126586/piet-hein-eek-ikea-industriell-matbord-och-6-stolar",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=126586&fid=978&url=https://www.mjuk.com/sv-se/product/126586/piet-hein-eek-ikea-industriell-matbord-och-6-stolar",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/19e7952829593a20131b33c6ad1d552b.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

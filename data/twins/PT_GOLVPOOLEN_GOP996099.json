@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP996099",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Parkettgolv Berg & Berg Ek XXL Spader Borstad Råträ Mattlack",
+    "manufacturer": "Berg & Berg",
+    "article_no": "GOP996099",
+    "ean": "7330587506682",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 5677,
+    "ean": "7330587506682",
+    "product_url": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-berg-och-berg-ek-xxl-spader-borstad-ratra-mattlack/p-996099",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-berg-och-berg-ek-xxl-spader-borstad-ratra-mattlack/p-996099",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP996099&fid=2559&url=https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-berg-och-berg-ek-xxl-spader-borstad-ratra-mattlack/p-996099",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/fb83ef88-7d3a-4e54-b873-e7c2c56178c5/ek-xxl-spader-borstad-ratra-mattlack-7414014022-produktbild.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

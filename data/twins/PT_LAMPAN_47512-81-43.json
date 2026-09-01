@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_47512-81-43",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Davina 58cm - Bordslampa - Brun",
+    "manufacturer": "Lucide",
+    "article_no": "47512/81/43",
+    "ean": "5411212470317",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2159,
+    "ean": "5411212470317",
+    "product_url": "https://lampan.se/p/davina-58cm/?option=15691",
+    "cart_deeplink": "https://lampan.se/p/davina-58cm/?option=15691",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=47512%2F81%2F43&fid=2470&url=https://lampan.se/p/davina-58cm/?option=15691",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/high-res47512-81-43off.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

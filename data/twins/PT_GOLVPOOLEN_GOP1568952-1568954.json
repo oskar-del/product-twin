@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1568952-1568954",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Toalettsits Pressalit Norden S1062",
+    "manufacturer": "Pressalit",
+    "article_no": "GOP1568952-1568954",
+    "ean": "5708590366784",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1499,
+    "ean": "5708590366784",
+    "product_url": "https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-pressalit-norden-s1062/p-1568952-1568954",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-pressalit-norden-s1062/p-1568952-1568954",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1568952-1568954&fid=2559&url=https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-pressalit-norden-s1062/p-1568952-1568954",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f367a0e9-1e19-4445-b1fa-e9533a3f284a/s1062111-bs38999_01.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

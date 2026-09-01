@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_65006-15",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Nebulosa Ø65 - Taklampa - Svart",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "65006-15",
+    "ean": "7041661268944",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3999,
+    "ean": "7041661268944",
+    "product_url": "https://lampan.se/p/nebulosa-o65/?option=1956",
+    "cart_deeplink": "https://lampan.se/p/nebulosa-o65/?option=1956",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=65006-15&fid=2470&url=https://lampan.se/p/nebulosa-o65/?option=1956",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/65006-15_nebulosa_7041661268944_pp1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

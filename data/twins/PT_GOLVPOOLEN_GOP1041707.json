@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1041707",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Helfrontstativ Gustavsberg 7417",
+    "manufacturer": "Gustavsberg",
+    "article_no": "GOP1041707",
+    "ean": "7391530071916",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3210,
+    "ean": "7391530071916",
+    "product_url": "https://www.golvpoolen.se/badrum/badkar/tillbehor-badkar/helfrontstativ-gustavsberg-7417/p-1041707",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badkar/tillbehor-badkar/helfrontstativ-gustavsberg-7417/p-1041707",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1041707&fid=2559&url=https://www.golvpoolen.se/badrum/badkar/tillbehor-badkar/helfrontstativ-gustavsberg-7417/p-1041707",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/784c3810-6e75-48f6-a7ed-ddf1b83afe2a/gb2174170100-bildjpg_red.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

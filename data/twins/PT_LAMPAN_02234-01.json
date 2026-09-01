@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_02234-01",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "SMAK Design - Dimmer/trafo inkl sladdställ - Tillbehör - Vit",
+    "manufacturer": "SMAK Design",
+    "article_no": "02234-01",
+    "ean": "7391741234049",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 829,
+    "ean": "7391741234049",
+    "product_url": "https://lampan.se/p/dimmer-trafo-inkl-sladdstall-0/?option=11736",
+    "cart_deeplink": "https://lampan.se/p/dimmer-trafo-inkl-sladdstall-0/?option=11736",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=02234-01&fid=2470&url=https://lampan.se/p/dimmer-trafo-inkl-sladdstall-0/?option=11736",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/transformator-elflugan-grande-vit.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

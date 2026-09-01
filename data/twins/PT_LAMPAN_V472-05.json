@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_V472-05",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Armaturhantverk - Tanum - Sänglampa - Vit",
+    "manufacturer": "Armaturhantverk",
+    "article_no": "V472/05",
+    "ean": "7330525472055",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1119,
+    "ean": "7330525472055",
+    "product_url": "https://lampan.se/p/tanum-0/?option=5226",
+    "cart_deeplink": "https://lampan.se/p/tanum-0/?option=5226",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=V472%2F05&fid=2470&url=https://lampan.se/p/tanum-0/?option=5226",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/v-472-vit.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_31651-6BK",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Cylinder Ø70 - Taklampa - Svart",
+    "manufacturer": "Searchlight",
+    "article_no": "31651-6BK",
+    "ean": "5053423231259",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4869,
+    "ean": "5053423231259",
+    "product_url": "https://lampan.se/p/cylinder-o70/?option=2874",
+    "cart_deeplink": "https://lampan.se/p/cylinder-o70/?option=2874",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=31651-6BK&fid=2470&url=https://lampan.se/p/cylinder-o70/?option=2874",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/31651-6bk_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

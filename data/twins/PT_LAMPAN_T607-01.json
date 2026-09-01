@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_T607-01",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Armaturhantverk - Adelsö Ø33 - Badrumslampa - Mässing",
+    "manufacturer": "Armaturhantverk",
+    "article_no": "T607/01",
+    "ean": "7330525607013",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3119,
+    "ean": "7330525607013",
+    "product_url": "https://lampan.se/p/adelso-o33-0/?option=5223",
+    "cart_deeplink": "https://lampan.se/p/adelso-o33-0/?option=5223",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=T607%2F01&fid=2470&url=https://lampan.se/p/adelso-o33-0/?option=5223",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/t60701massing.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

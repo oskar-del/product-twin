@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_93428A05",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Bizen Ø28 - Taklampa - Vit",
+    "manufacturer": "Brilliant",
+    "article_no": "93428A05",
+    "ean": "4004353182914",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 179,
+    "ean": "4004353182914",
+    "product_url": "https://lampan.se/p/bizen-o28/?option=13891",
+    "cart_deeplink": "https://lampan.se/p/bizen-o28/?option=13891",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=93428A05&fid=2470&url=https://lampan.se/p/bizen-o28/?option=13891",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/pendelleuchten_bizen_4004353182914_1_800x800.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

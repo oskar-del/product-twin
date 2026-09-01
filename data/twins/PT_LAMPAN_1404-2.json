@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1404-2",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emibig Lighting - Epoca 90cm - Taklampa - Beige",
+    "manufacturer": "Emibig Lighting",
+    "article_no": "1404/2",
+    "ean": "5907106010702",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1919,
+    "ean": "5907106010702",
+    "product_url": "https://lampan.se/p/epoca-90cm/?option=12067",
+    "cart_deeplink": "https://lampan.se/p/epoca-90cm/?option=12067",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1404%2F2&fid=2470&url=https://lampan.se/p/epoca-90cm/?option=12067",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1404_2-1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

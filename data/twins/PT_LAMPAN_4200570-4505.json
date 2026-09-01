@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4200570-4505",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "By Rydéns - Bellissimo Ø28 - Taklampa - Rökfärgad",
+    "manufacturer": "By Rydéns",
+    "article_no": "4200570-4505",
+    "ean": "7391741057013",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2199,
+    "ean": "7391741057013",
+    "product_url": "https://lampan.se/p/bellissimo-o28/?option=14593",
+    "cart_deeplink": "https://lampan.se/p/bellissimo-o28/?option=14593",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4200570-4505&fid=2470&url=https://lampan.se/p/bellissimo-o28/?option=14593",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/bellissimo_smokegrey_4200570_4505.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

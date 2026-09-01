@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_16905-20",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Messina Ø28 - Badrumslampa - Krom",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "16905-20",
+    "ean": "7392986770705",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1799,
+    "ean": "7392986770705",
+    "product_url": "https://lampan.se/p/messina-o28/?option=1737",
+    "cart_deeplink": "https://lampan.se/p/messina-o28/?option=1737",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=16905-20&fid=2470&url=https://lampan.se/p/messina-o28/?option=1737",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/16905-20_messina_7392986770705.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

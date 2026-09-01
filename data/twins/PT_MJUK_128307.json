@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_128307",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Artek Ben Af Schulten 555 2-sits soffa",
+    "manufacturer": "Artek",
+    "article_no": "128307",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 18613,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/128307/artek-ben-af-schulten-555-2-sits-soffa",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/128307/artek-ben-af-schulten-555-2-sits-soffa",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=128307&fid=978&url=https://www.mjuk.com/sv-se/product/128307/artek-ben-af-schulten-555-2-sits-soffa",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/1a40456e421e3776b3fdcff8dbc5f5ac.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

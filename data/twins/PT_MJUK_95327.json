@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_95327",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Frost Denmark Kube 1005 dörrhandtag stål",
+    "manufacturer": "FROST Denmark",
+    "article_no": "95327",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 489,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/95327/frost-denmark-kube-1005-dorrhandtag-stal",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/95327/frost-denmark-kube-1005-dorrhandtag-stal",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=95327&fid=978&url=https://www.mjuk.com/sv-se/product/95327/frost-denmark-kube-1005-dorrhandtag-stal",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/053c116596aa94389e81426b176aedd3.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

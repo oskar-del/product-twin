@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_067-11-1",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - LED Blockljus 4-pack - Batteriljus - Vit",
+    "manufacturer": "Star Trading",
+    "article_no": "067-11-1",
+    "ean": "7391482081940",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 249,
+    "ean": "7391482081940",
+    "product_url": "https://lampan.se/p/led-blockljus-4-pack/?option=15125",
+    "cart_deeplink": "https://lampan.se/p/led-blockljus-4-pack/?option=15125",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=067-11-1&fid=2470&url=https://lampan.se/p/led-blockljus-4-pack/?option=15125",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/067-11-1_mn.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

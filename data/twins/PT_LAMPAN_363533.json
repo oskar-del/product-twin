@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_363533",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "CO Bankeryd - Kolme Ø50 - Takplafond - Vit",
+    "manufacturer": "CO Bankeryd",
+    "article_no": "363533",
+    "ean": "7319683635335",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2299,
+    "ean": "7319683635335",
+    "product_url": "https://lampan.se/p/kolme-o50-1/?option=6841",
+    "cart_deeplink": "https://lampan.se/p/kolme-o50-1/?option=6841",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=363533&fid=2470&url=https://lampan.se/p/kolme-o50-1/?option=6841",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/classic_363533_kolme_1000x1000_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

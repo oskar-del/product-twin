@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_109335",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sofacompany Ellie matstol brun",
+    "manufacturer": "Sofacompany",
+    "article_no": "109335",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2330,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/109335/sofacompany-ellie-matstol-brun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/109335/sofacompany-ellie-matstol-brun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=109335&fid=978&url=https://www.mjuk.com/sv-se/product/109335/sofacompany-ellie-matstol-brun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/3379f3c26b15152df9c2a67241795b8b.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

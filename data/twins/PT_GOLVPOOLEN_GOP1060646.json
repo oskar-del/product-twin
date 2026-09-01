@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1060646",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tvålkopp Bosign Vit Porslin",
+    "manufacturer": "Bosign",
+    "article_no": "GOP1060646",
+    "ean": "7394142638287",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 235,
+    "ean": "7394142638287",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvalkopp-bosign-vit-porslin/p-1060646",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvalkopp-bosign-vit-porslin/p-1060646",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1060646&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/tvalkopp-och-tvalpump/tvalkopp-bosign-vit-porslin/p-1060646",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/1f81fcbe-1cc9-49ec-aeaf-11b8e2f0b114/263828_1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2306V60",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Karlskrona lampfabrik - Kupolskärm 60/170 - Tillbehör - Vit",
+    "manufacturer": "Karlskrona lampfabrik",
+    "article_no": "2306V60",
+    "ean": "7332535058861",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 450,
+    "ean": "7332535058861",
+    "product_url": "https://lampan.se/p/kupolskarm-60-170/?option=9623",
+    "cart_deeplink": "https://lampan.se/p/kupolskarm-60-170/?option=9623",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2306V60&fid=2470&url=https://lampan.se/p/kupolskarm-60-170/?option=9623",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/784x870_ta-2306v60.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1921148",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Marburg Trend 7025",
+    "manufacturer": "Marburg",
+    "article_no": "GOP1921148",
+    "ean": "4001860339701",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 395,
+    "ean": "4001860339701",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-marburg-trend-7025/p-1921148",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-marburg-trend-7025/p-1921148",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1921148&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-marburg-trend-7025/p-1921148",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/3abdf500-9340-4ef7-847c-c916b8cca08e/7025.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

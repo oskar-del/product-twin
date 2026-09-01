@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP817651",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschkorg Miller Badrum Classic 876C",
+    "manufacturer": "Miller Badrum",
+    "article_no": "GOP817651",
+    "ean": "7331437010397",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1050,
+    "ean": "7331437010397",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-miller-badrum-classic-876c/p-817651",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-miller-badrum-classic-876c/p-817651",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP817651&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/duschkorg/duschkorg-miller-badrum-classic-876c/p-817651",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b089c314-29dd-4c79-b36d-bf9c84f872fd/duschkorg-miller-classic-876c.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

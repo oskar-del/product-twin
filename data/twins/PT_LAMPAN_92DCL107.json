@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_92DCL107",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lampan - Lamppropp DCL - Tillbehör",
+    "manufacturer": "Lampan",
+    "article_no": "92DCL107",
+    "ean": null,
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 59,
+    "ean": null,
+    "product_url": "https://lampan.se/p/lamppropp-dcl/",
+    "cart_deeplink": "https://lampan.se/p/lamppropp-dcl/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=92DCL107&fid=2470&url=https://lampan.se/p/lamppropp-dcl/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/dcl-67870.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

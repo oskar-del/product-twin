@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_9275",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dyberg Larsen - Starlight - Sänglampa - Curry",
+    "manufacturer": "Dyberg Larsen",
+    "article_no": "9275",
+    "ean": "5704709092759",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1139,
+    "ean": "5704709092759",
+    "product_url": "https://lampan.se/p/starlight-0/?option=10084",
+    "cart_deeplink": "https://lampan.se/p/starlight-0/?option=10084",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=9275&fid=2470&url=https://lampan.se/p/starlight-0/?option=10084",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/5704709092759_2.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

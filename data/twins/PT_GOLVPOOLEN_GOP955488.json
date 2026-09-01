@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP955488",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Vinylgolv Kährs LT-Click Wentwood CLW 1-Stavs Grå",
+    "manufacturer": "Kährs",
+    "article_no": "GOP955488",
+    "ean": "7393969110228",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1032,
+    "ean": "7393969110228",
+    "product_url": "https://www.golvpoolen.se/golv/plastgolv/vinylgolv/vinylgolv-kahrs-lt-click-wentwood-clw-1-stavs-gra/p-955488",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/plastgolv/vinylgolv/vinylgolv-kahrs-lt-click-wentwood-clw-1-stavs-gra/p-955488",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP955488&fid=2559&url=https://www.golvpoolen.se/golv/plastgolv/vinylgolv/vinylgolv-kahrs-lt-click-wentwood-clw-1-stavs-gra/p-955488",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/49b057f8-fce6-468a-8e9d-5656568665a0/wentwood-clw-218.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_BATH-BLAKE2-PC",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Blake 34cm - Badrumslampa - Polerad krom",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "BATH-BLAKE2-PC",
+    "ean": "5024005208006",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4249,
+    "ean": "5024005208006",
+    "product_url": "https://lampan.se/p/blake-34cm/?option=7070",
+    "cart_deeplink": "https://lampan.se/p/blake-34cm/?option=7070",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=BATH-BLAKE2-PC&fid=2470&url=https://lampan.se/p/blake-34cm/?option=7070",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/bath-blake2-pc.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

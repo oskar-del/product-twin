@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70035558",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Kumo Ljuskrona Big Mässing - 101 Copenhagen - Matsal - Metall",
+    "manufacturer": "101 COPENHAGEN",
+    "article_no": "70035558",
+    "ean": "4251501412038",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 10222,
+    "ean": "4251501412038",
+    "product_url": "https://www.lampemesteren.se/p/kumo-ljuskrona-big-massing-101-copenhagen-70035558.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/kumo-ljuskrona-big-massing-101-copenhagen-70035558.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70035558&fid=1004&url=https://www.lampemesteren.se/p/kumo-ljuskrona-big-massing-101-copenhagen-70035558.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/73D3D01E0B16/k_64eeda2177fe59cf7d7de9bdef5d1386;w_1600;h_1600;q_90/70035558.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

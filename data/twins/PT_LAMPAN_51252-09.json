@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_51252-09",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Capucine Ø77 - Taklampa - Beige",
+    "manufacturer": "Brilliant",
+    "article_no": "51252/09",
+    "ean": "4004353442797",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 849,
+    "ean": "4004353442797",
+    "product_url": "https://lampan.se/p/capucine-o77/?option=13940",
+    "cart_deeplink": "https://lampan.se/p/capucine-o77/?option=13940",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=51252%2F09&fid=2470&url=https://lampan.se/p/capucine-o77/?option=13940",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/pendelleuchten_capucine_4004353442797_1_800x800.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

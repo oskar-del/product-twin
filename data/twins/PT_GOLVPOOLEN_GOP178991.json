@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP178991",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Spegelskåp Svedbergs Tvilling 65 Metall",
+    "manufacturer": "Svedbergs",
+    "article_no": "GOP178991",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1095,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/spegelskap/spegelskap-svedbergs-tvilling-65-metall/p-178991",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/spegelskap/spegelskap-svedbergs-tvilling-65-metall/p-178991",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP178991&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/spegelskap/spegelskap-svedbergs-tvilling-65-metall/p-178991",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/5f91f856-84da-4051-86c4-da6088814049/spegelskap-svedbergs-tvilling-65-metall.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

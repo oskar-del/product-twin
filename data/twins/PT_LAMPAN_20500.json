@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_20500",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Faro Barcelona - Matilda Ø17 - Sänglampa - Beige",
+    "manufacturer": "Faro Barcelona",
+    "article_no": "20500",
+    "ean": "8421776414563",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1299,
+    "ean": "8421776414563",
+    "product_url": "https://lampan.se/p/matilda-o17/?option=13023",
+    "cart_deeplink": "https://lampan.se/p/matilda-o17/?option=13023",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=20500&fid=2470&url=https://lampan.se/p/matilda-o17/?option=13023",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-24815.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

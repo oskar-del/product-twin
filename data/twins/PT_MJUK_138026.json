@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_138026",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Viktor matstol mörkgrå, set om 4",
+    "manufacturer": "Scandinavian Choice",
+    "article_no": "138026",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1751,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/138026/viktor-matstol-morkgra-set-om-4",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/138026/viktor-matstol-morkgra-set-om-4",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=138026&fid=978&url=https://www.mjuk.com/sv-se/product/138026/viktor-matstol-morkgra-set-om-4",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/47dd6162-dcf9-4203-a8a9-3b8f75cc92dc.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

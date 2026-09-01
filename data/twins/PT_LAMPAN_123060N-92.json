@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_123060N-92",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Pixie Design - Smide 7 - Adventsljusstake - Vit",
+    "manufacturer": "Pixie Design",
+    "article_no": "123060N-92",
+    "ean": "7340119811290",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 599,
+    "ean": "7340119811290",
+    "product_url": "https://lampan.se/p/smide-7-0/?option=3297",
+    "cart_deeplink": "https://lampan.se/p/smide-7-0/?option=3297",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=123060N-92&fid=2470&url=https://lampan.se/p/smide-7-0/?option=3297",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-17797.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

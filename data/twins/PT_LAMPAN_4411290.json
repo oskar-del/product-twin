@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4411290",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Unison - UNI-FLEX päron E14 2W 2200K dimbar - Ljuskälla",
+    "manufacturer": "Unison",
+    "article_no": "4411290",
+    "ean": "7340037008277",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 69,
+    "ean": "7340037008277",
+    "product_url": "https://lampan.se/p/uni-flex-paron-e14-2w-2200k-dimbar/",
+    "cart_deeplink": "https://lampan.se/p/uni-flex-paron-e14-2w-2200k-dimbar/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4411290&fid=2470&url=https://lampan.se/p/uni-flex-paron-e14-2w-2200k-dimbar/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-21420.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

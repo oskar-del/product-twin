@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_134770",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Department Ray Media TV-bänk valnöt",
+    "manufacturer": "Department",
+    "article_no": "134770",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4134,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/134770/department-ray-media-tv-bank-valnot",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/134770/department-ray-media-tv-bank-valnot",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=134770&fid=978&url=https://www.mjuk.com/sv-se/product/134770/department-ray-media-tv-bank-valnot",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/a41b6ceb-cd58-4196-9020-79abc6da08a2.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_05538-01-02",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Timon 20cm - Bordslampa - Mattguld/mässing",
+    "manufacturer": "Lucide",
+    "article_no": "05538/01/02",
+    "ean": "5411212051387",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 939,
+    "ean": "5411212051387",
+    "product_url": "https://lampan.se/p/timon-20cm/?option=973",
+    "cart_deeplink": "https://lampan.se/p/timon-20cm/?option=973",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=05538%2F01%2F02&fid=2470&url=https://lampan.se/p/timon-20cm/?option=973",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/05538-01-02.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

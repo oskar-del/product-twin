@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_107037",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Kuddskydd Percale 50x60",
+    "manufacturer": "Kungsangen",
+    "article_no": "107037",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 139,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/kuddskydd-percale/107037",
+    "cart_deeplink": "https://kungsangen.com/se/p/kuddskydd-percale/107037",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=107037&fid=2564&url=https://kungsangen.com/se/p/kuddskydd-percale/107037",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h62/h55/8845322059806/ks2000Wx1500H_Kuddskydd_Percale_50x60/ks2000Wx1500H-Kuddskydd-Percale-50x60.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

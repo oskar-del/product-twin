@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_120424",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Adax Neo H WT WiFi element vit",
+    "manufacturer": "Mjuk",
+    "article_no": "120424",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1030,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/120424/adax-neo-h-wt-wifi-element-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/120424/adax-neo-h-wt-wifi-element-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=120424&fid=978&url=https://www.mjuk.com/sv-se/product/120424/adax-neo-h-wt-wifi-element-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/474e9d2a4c5466cf1c023c07814c9731.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_203970105",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "House Doctor - Twice 70cm - Taklampa - Mässing",
+    "manufacturer": "House Doctor",
+    "article_no": "203970105",
+    "ean": "5707644492776",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2500,
+    "ean": "5707644492776",
+    "product_url": "https://lampan.se/p/twice-70cm/?option=8873",
+    "cart_deeplink": "https://lampan.se/p/twice-70cm/?option=8873",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=203970105&fid=2470&url=https://lampan.se/p/twice-70cm/?option=8873",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/203970105_01.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

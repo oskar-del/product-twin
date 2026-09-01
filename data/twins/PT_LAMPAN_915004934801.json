@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_915004934801",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Philips - Phase - Spotlight - vit",
+    "manufacturer": "Philips",
+    "article_no": "915004934801",
+    "ean": "8718696125168",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 639,
+    "ean": "8718696125168",
+    "product_url": "https://lampan.se/p/phase-0/?option=6392",
+    "cart_deeplink": "https://lampan.se/p/phase-0/?option=6392",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=915004934801&fid=2470&url=https://lampan.se/p/phase-0/?option=6392",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/bc2b7e765b314d9fbcf1a9b9009fb162.unknown.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_061-28",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - Lykta Flamme Float - Batteriljus - Transparent",
+    "manufacturer": "Star Trading",
+    "article_no": "061-28",
+    "ean": "7391482059352",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 189,
+    "ean": "7391482059352",
+    "product_url": "https://lampan.se/p/lykta-flamme-float/?option=7228",
+    "cart_deeplink": "https://lampan.se/p/lykta-flamme-float/?option=7228",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=061-28&fid=2470&url=https://lampan.se/p/lykta-flamme-float/?option=7228",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-60423.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

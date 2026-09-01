@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_8184",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dyberg Larsen - Gent - Golvlampa - Svart",
+    "manufacturer": "Dyberg Larsen",
+    "article_no": "8184",
+    "ean": "5704709081845",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1729,
+    "ean": "5704709081845",
+    "product_url": "https://lampan.se/p/gent/?option=7693",
+    "cart_deeplink": "https://lampan.se/p/gent/?option=7693",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=8184&fid=2470&url=https://lampan.se/p/gent/?option=7693",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/5704709081845_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

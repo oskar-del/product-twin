@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_64140H",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Diann Ø60 - Taklampa - Krom",
+    "manufacturer": "Globo Lighting",
+    "article_no": "64140H",
+    "ean": "9007371537853",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 6329,
+    "ean": "9007371537853",
+    "product_url": "https://lampan.se/p/diann-o60/?option=9992",
+    "cart_deeplink": "https://lampan.se/p/diann-o60/?option=9992",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=64140H&fid=2470&url=https://lampan.se/p/diann-o60/?option=9992",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-44206.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

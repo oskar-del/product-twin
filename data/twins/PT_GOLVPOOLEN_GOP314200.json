@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP314200",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elhyvel Bosch Power Tools PHO 3100",
+    "manufacturer": "Bosch Power Tools",
+    "article_no": "GOP314200",
+    "ean": "3165140441155",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2034,
+    "ean": "3165140441155",
+    "product_url": "https://www.golvpoolen.se/verktyg/elverktyg/hyvel/elhyvel-bosch-power-tools-pho-3100/p-314200",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/elverktyg/hyvel/elhyvel-bosch-power-tools-pho-3100/p-314200",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP314200&fid=2559&url=https://www.golvpoolen.se/verktyg/elverktyg/hyvel/elhyvel-bosch-power-tools-pho-3100/p-314200",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/1d0fe89b-4a4c-4be0-beb4-3727f88bdc66/elhyvel-bosch-pho-3100.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

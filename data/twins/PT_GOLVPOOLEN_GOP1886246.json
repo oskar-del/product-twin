@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1886246",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Laminatgolv Meister LC 55 S White Oak 6670",
+    "manufacturer": "Meister",
+    "article_no": "GOP1886246",
+    "ean": "4011138977900",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 724,
+    "ean": "4011138977900",
+    "product_url": "https://www.golvpoolen.se/golv/plastgolv/vinylgolv/laminatgolv-meister-lc-55-s-white-oak-6670/p-1886246",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/plastgolv/vinylgolv/laminatgolv-meister-lc-55-s-white-oak-6670/p-1886246",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1886246&fid=2559&url=https://www.golvpoolen.se/golv/plastgolv/vinylgolv/laminatgolv-meister-lc-55-s-white-oak-6670/p-1886246",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/1b7c5b6a-8c36-4bc0-ba93-516fbaee5517/439597.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

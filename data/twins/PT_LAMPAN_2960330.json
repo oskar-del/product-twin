@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2960330",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Light & Living  - Charita Ø46 - Taklampa - Natur",
+    "manufacturer": "Light & Living",
+    "article_no": "2960330",
+    "ean": "8717807643997",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1819,
+    "ean": "8717807643997",
+    "product_url": "https://lampan.se/p/charita-o46/?option=10631",
+    "cart_deeplink": "https://lampan.se/p/charita-o46/?option=10631",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2960330&fid=2470&url=https://lampan.se/p/charita-o46/?option=10631",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/2960330.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

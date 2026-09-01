@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_28116-18-31",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Brice-Led Ø18 - Badrumslampa - Vit",
+    "manufacturer": "Lucide",
+    "article_no": "28116/18/31",
+    "ean": "5411212281296",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 609,
+    "ean": "5411212281296",
+    "product_url": "https://lampan.se/p/brice-led-o18-0/?option=360",
+    "cart_deeplink": "https://lampan.se/p/brice-led-o18-0/?option=360",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=28116%2F18%2F31&fid=2470&url=https://lampan.se/p/brice-led-o18-0/?option=360",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/28116-18-31.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

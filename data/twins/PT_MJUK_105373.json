@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_105373",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Boknäs golvsockel med låda D39",
+    "manufacturer": "Boknäs",
+    "article_no": "105373",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2070,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/105373/boknas-golvsockel-med-lada-d39",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/105373/boknas-golvsockel-med-lada-d39",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=105373&fid=978&url=https://www.mjuk.com/sv-se/product/105373/boknas-golvsockel-med-lada-d39",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/d08b1de8f37a0cc5c06d05a266b7cd38.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

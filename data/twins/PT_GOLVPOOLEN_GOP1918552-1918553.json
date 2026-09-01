@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1918552-1918553",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Köksblandare Mora LYNX Sharp",
+    "manufacturer": "Mora",
+    "article_no": "GOP1918552-1918553",
+    "ean": "7391887268854",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3426,
+    "ean": "7391887268854",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/koksblandare/koksblandare-mora-lynx-sharp/p-1918552-1918553",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/koksblandare/koksblandare-mora-lynx-sharp/p-1918552-1918553",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1918552-1918553&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/koksblandare/koksblandare-mora-lynx-sharp/p-1918552-1918553",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/88b51481-0e05-41ea-9f27-6aa66ea63921/bild_10_8312211-kopiera-2.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

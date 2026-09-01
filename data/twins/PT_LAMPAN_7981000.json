@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7981000",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Designlight - D-MA4D Drivdon dimbart - Tillbehör",
+    "manufacturer": "Designlight",
+    "article_no": "7981000",
+    "ean": "7340132801278",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 149,
+    "ean": "7340132801278",
+    "product_url": "https://lampan.se/p/d-ma4d-drivdon-dimbart/",
+    "cart_deeplink": "https://lampan.se/p/d-ma4d-drivdon-dimbart/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7981000&fid=2470&url=https://lampan.se/p/d-ma4d-drivdon-dimbart/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/d-ma4d-white-bg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

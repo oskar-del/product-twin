@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_130738",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "&Tradition Ita OS4 soffbord",
+    "manufacturer": "&Tradition",
+    "article_no": "130738",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 11385,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/130738/tradition-ita-os4-soffbord",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/130738/tradition-ita-os4-soffbord",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=130738&fid=978&url=https://www.mjuk.com/sv-se/product/130738/tradition-ita-os4-soffbord",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/589ddb3d81f792003b76997e5be0b3c0.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

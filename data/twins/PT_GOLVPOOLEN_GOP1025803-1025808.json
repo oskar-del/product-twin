@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1025803-1025808",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Golvvärmekit Ebeco Cable Kit 500",
+    "manufacturer": "Ebeco",
+    "article_no": "GOP1025803-1025808",
+    "ean": "7330778610846",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2365,
+    "ean": "7330778610846",
+    "product_url": "https://www.golvpoolen.se/golv/golvvarme/golvvarme-el/golvvarmekit-ebeco-cable-kit-500/p-1025803-1025808",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvvarme/golvvarme-el/golvvarmekit-ebeco-cable-kit-500/p-1025803-1025808",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1025803-1025808&fid=2559&url=https://www.golvpoolen.se/golv/golvvarme/golvvarme-el/golvvarmekit-ebeco-cable-kit-500/p-1025803-1025808",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/3c135f0a-1254-4c31-a6e2-2eddeb78672d/kompletteringskit-ebeco-cable-kit.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

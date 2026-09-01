@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7834-330",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Konstsmide - Lille 36cm - Portabel lampa - Sand",
+    "manufacturer": "Konstsmide",
+    "article_no": "7834-330",
+    "ean": "7318307834338",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1319,
+    "ean": "7318307834338",
+    "product_url": "https://lampan.se/p/lille-36cm-1/?option=10436",
+    "cart_deeplink": "https://lampan.se/p/lille-36cm-1/?option=10436",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7834-330&fid=2470&url=https://lampan.se/p/lille-36cm-1/?option=10436",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-88925.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

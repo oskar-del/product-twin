@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_510035177-BT1",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "PR Home - Nell Ø35 - Taklampa - Beige/grön",
+    "manufacturer": "PR Home",
+    "article_no": "510035177-BT1",
+    "ean": "7330976147205",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 499,
+    "ean": "7330976147205",
+    "product_url": "https://lampan.se/p/nell-o35-0/?option=15311",
+    "cart_deeplink": "https://lampan.se/p/nell-o35-0/?option=15311",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=510035177-BT1&fid=2470&url=https://lampan.se/p/nell-o35-0/?option=15311",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/510035177-bt1_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

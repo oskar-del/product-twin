@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1588086",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Fold 118cm - Taklampa - Svartstruktur",
+    "manufacturer": "Belid",
+    "article_no": "1588086",
+    "ean": "7391534017477",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5499,
+    "ean": "7391534017477",
+    "product_url": "https://lampan.se/p/fold-118cm-2/?option=1572",
+    "cart_deeplink": "https://lampan.se/p/fold-118cm-2/?option=1572",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1588086&fid=2470&url=https://lampan.se/p/fold-118cm-2/?option=1572",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/partspartnumber1588086filenamefold_1588086_f.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

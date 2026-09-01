@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_CC01020",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "CableCup  - Cable Cup Hide - Tillbehör - Vit",
+    "manufacturer": "CableCup",
+    "article_no": "CC01020",
+    "ean": "7340033141411",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 179,
+    "ean": "7340033141411",
+    "product_url": "https://lampan.se/p/cable-cup-hide-0/?option=1712",
+    "cart_deeplink": "https://lampan.se/p/cable-cup-hide-0/?option=1712",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=CC01020&fid=2470&url=https://lampan.se/p/cable-cup-hide-0/?option=1712",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/partspartnumbercc01020filenamecc01020.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

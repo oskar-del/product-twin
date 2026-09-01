@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_LEAVES-BR-GL-TL",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Leaves 62cm - Bordslampa - Guld",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "LEAVES-BR-GL-TL",
+    "ean": "5024005367918",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4249,
+    "ean": "5024005367918",
+    "product_url": "https://lampan.se/p/leaves-62cm/?option=7091",
+    "cart_deeplink": "https://lampan.se/p/leaves-62cm/?option=7091",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=LEAVES-BR-GL-TL&fid=2470&url=https://lampan.se/p/leaves-62cm/?option=7091",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/leaves-br-gl-tl.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

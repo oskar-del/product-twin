@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD207WL-01BS",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Miracle 1 - Vägglampa - Mässing",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD207WL-01BS",
+    "ean": "4099776054825",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1279,
+    "ean": "4099776054825",
+    "product_url": "https://lampan.se/p/miracle-1/?option=6484",
+    "cart_deeplink": "https://lampan.se/p/miracle-1/?option=6484",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD207WL-01BS&fid=2470&url=https://lampan.se/p/miracle-1/?option=6484",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/render_mod207wl-01bs_on_w_standard_1.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

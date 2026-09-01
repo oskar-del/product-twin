@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_P040452",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Norrsken Design - Rhea Ø50 - Kristallkrona - Antikmässing",
+    "manufacturer": "Norrsken Design",
+    "article_no": "P040452",
+    "ean": "7394363032109",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4479,
+    "ean": "7394363032109",
+    "product_url": "https://lampan.se/p/rhea-o50/?option=2395",
+    "cart_deeplink": "https://lampan.se/p/rhea-o50/?option=2395",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=P040452&fid=2470&url=https://lampan.se/p/rhea-o50/?option=2395",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-79160.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_GOL1-SAND",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Texa Design - Barone - Golvlampa - Sand",
+    "manufacturer": "Texa Design",
+    "article_no": "GOL1-SAND",
+    "ean": null,
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4239,
+    "ean": null,
+    "product_url": "https://lampan.se/p/barone-1/?option=10827",
+    "cart_deeplink": "https://lampan.se/p/barone-1/?option=10827",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=GOL1-SAND&fid=2470&url=https://lampan.se/p/barone-1/?option=10827",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/gol1-sand-1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

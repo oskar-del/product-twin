@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_2025000-4007",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "SMAK Design - Elflugan - Adventsljusstake - Svart",
+    "manufacturer": "SMAK Design",
+    "article_no": "2025000-4007",
+    "ean": "7391741250032",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2979,
+    "ean": "7391741250032",
+    "product_url": "https://lampan.se/p/elflugan-0/?option=7422",
+    "cart_deeplink": "https://lampan.se/p/elflugan-0/?option=7422",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=2025000-4007&fid=2470&url=https://lampan.se/p/elflugan-0/?option=7422",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1-60026.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

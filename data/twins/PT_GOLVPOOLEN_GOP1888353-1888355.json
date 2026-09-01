@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1888353-1888355",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bänkskiva Svedbergs Glimmer Dubbel",
+    "manufacturer": "Svedbergs",
+    "article_no": "GOP1888353-1888355",
+    "ean": "7323100360229",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3143,
+    "ean": "7323100360229",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/tillbehor-badrumsmobler/bankskiva-svedbergs-glimmer-dubbel/p-1888353-1888355",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/tillbehor-badrumsmobler/bankskiva-svedbergs-glimmer-dubbel/p-1888353-1888355",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1888353-1888355&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/tillbehor-badrumsmobler/bankskiva-svedbergs-glimmer-dubbel/p-1888353-1888355",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/c420b9a2-c4d3-4096-921a-2ae4a6af672d/21603-d.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

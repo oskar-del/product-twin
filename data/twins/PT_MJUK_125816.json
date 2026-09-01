@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_125816",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Fritz Hansen Suspence P1 pendel ljusgrå",
+    "manufacturer": "Fritz Hansen",
+    "article_no": "125816",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2933,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/125816/fritz-hansen-suspence-p1-pendel-ljusgra",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/125816/fritz-hansen-suspence-p1-pendel-ljusgra",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=125816&fid=978&url=https://www.mjuk.com/sv-se/product/125816/fritz-hansen-suspence-p1-pendel-ljusgra",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/151eb56880bc34f1419eb1c5ff94d133.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

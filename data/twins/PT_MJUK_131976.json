@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_131976",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid Cato golvlampa Nougat",
+    "manufacturer": "Belid",
+    "article_no": "131976",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1820,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/131976/belid-cato-golvlampa-nougat",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/131976/belid-cato-golvlampa-nougat",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=131976&fid=978&url=https://www.mjuk.com/sv-se/product/131976/belid-cato-golvlampa-nougat",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/23105095bc7814cdf95e17970a0e4ef5.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_3974",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Villa Collection 2-sitssoffa vit",
+    "manufacturer": "Villa Collection",
+    "article_no": "3974",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 16630,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/3974/villa-collection-2-sitssoffa-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/3974/villa-collection-2-sitssoffa-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=3974&fid=978&url=https://www.mjuk.com/sv-se/product/3974/villa-collection-2-sitssoffa-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/47a0b3c64218baf0b5c9da1067ad3713.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

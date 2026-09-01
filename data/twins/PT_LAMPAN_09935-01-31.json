@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_09935-01-31",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Trigono - Spotlight - Vit",
+    "manufacturer": "Lucide",
+    "article_no": "09935/01/31",
+    "ean": "5411212093127",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 499,
+    "ean": "5411212093127",
+    "product_url": "https://lampan.se/p/trigono-0/?option=273",
+    "cart_deeplink": "https://lampan.se/p/trigono-0/?option=273",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=09935%2F01%2F31&fid=2470&url=https://lampan.se/p/trigono-0/?option=273",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/09935-01-31.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1068250",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Badrumskrok LH Tesina för Badrock",
+    "manufacturer": "LH",
+    "article_no": "GOP1068250",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 480,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/badrumskrok-lh-tesina-for-badrock/p-1068250",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/badrumskrok-lh-tesina-for-badrock/p-1068250",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1068250&fid=2559&url=https://www.golvpoolen.se/badrum/badrumstillbehor/handdukskrok/badrumskrok-lh-tesina-for-badrock/p-1068250",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/4c6c66a4-8be5-4528-a537-e204dac9af93/san_hiap960.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

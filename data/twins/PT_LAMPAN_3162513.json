@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_3162513",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "PR Home - August 38cm - Badrumslampa - Mässing/grön",
+    "manufacturer": "PR Home",
+    "article_no": "3162513",
+    "ean": "7330976147151",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1499,
+    "ean": "7330976147151",
+    "product_url": "https://lampan.se/p/august-38cm-2/?option=15006",
+    "cart_deeplink": "https://lampan.se/p/august-38cm-2/?option=15006",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=3162513&fid=2470&url=https://lampan.se/p/august-38cm-2/?option=15006",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/3162513_2.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

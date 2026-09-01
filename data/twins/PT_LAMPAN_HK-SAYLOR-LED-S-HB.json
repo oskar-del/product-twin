@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_HK-SAYLOR-LED-S-HB",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Saylor 43cm - Badrumslampa - Mässing",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "HK-SAYLOR-LED-S-HB",
+    "ean": "5024005121343",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3049,
+    "ean": "5024005121343",
+    "product_url": "https://lampan.se/p/saylor-43cm/?option=15768",
+    "cart_deeplink": "https://lampan.se/p/saylor-43cm/?option=15768",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=HK-SAYLOR-LED-S-HB&fid=2470&url=https://lampan.se/p/saylor-43cm/?option=15768",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/hk-saylor-led-s-hb.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1324536-1324543",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Textilgolv Kjellbergs Matrix",
+    "manufacturer": "Kjellbergs",
+    "article_no": "GOP1324536-1324543",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 6588,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/golv/textilgolv/heltackningsmatta/textilgolv-kjellbergs-matrix/p-1324536-1324543",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/textilgolv/heltackningsmatta/textilgolv-kjellbergs-matrix/p-1324536-1324543",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1324536-1324543&fid=2559&url=https://www.golvpoolen.se/golv/textilgolv/heltackningsmatta/textilgolv-kjellbergs-matrix/p-1324536-1324543",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/efa13c2a-5198-497e-848a-fb53e5219139/petrol-77.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

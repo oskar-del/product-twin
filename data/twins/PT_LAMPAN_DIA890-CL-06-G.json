@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_DIA890-CL-06-G",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Palace Ø50 - Kristallkrona - Antikguld",
+    "manufacturer": "Maytoni",
+    "article_no": "DIA890-CL-06-G",
+    "ean": "4251110012438",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 8079,
+    "ean": "4251110012438",
+    "product_url": "https://lampan.se/p/palace-o50/?option=12300",
+    "cart_deeplink": "https://lampan.se/p/palace-o50/?option=12300",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=DIA890-CL-06-G&fid=2470&url=https://lampan.se/p/palace-o50/?option=12300",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/image2-71348.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

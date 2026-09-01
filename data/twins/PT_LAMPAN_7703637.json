@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7703637",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Norlys - Larvik - Fasadbelysning - Galvaniserat stål",
+    "manufacturer": "Norlys",
+    "article_no": "7703637",
+    "ean": "7042896900036",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1759,
+    "ean": "7042896900036",
+    "product_url": "https://lampan.se/p/larvik-0/?option=4742",
+    "cart_deeplink": "https://lampan.se/p/larvik-0/?option=4742",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7703637&fid=2470&url=https://lampan.se/p/larvik-0/?option=4742",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/690ga.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

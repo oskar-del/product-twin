@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1486720",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet A Street Prints Tia  FD25140",
+    "manufacturer": "A Street Prints",
+    "article_no": "GOP1486720",
+    "ean": "5011419251407",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1299,
+    "ean": "5011419251407",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-a-street-prints-tia-fd25140/p-1486720",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-a-street-prints-tia-fd25140/p-1486720",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1486720&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-a-street-prints-tia-fd25140/p-1486720",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/38df8ec6-7b81-47ee-b7ed-22cadc9efe8b/fd25140.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_103608",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "FIFU1962 028 konstverk 39 x 49 cm",
+    "manufacturer": "Mjuk",
+    "article_no": "103608",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 6355,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/103608/fifu1962-028-konstverk-39-x-49-cm",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/103608/fifu1962-028-konstverk-39-x-49-cm",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=103608&fid=978&url=https://www.mjuk.com/sv-se/product/103608/fifu1962-028-konstverk-39-x-49-cm",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/3737cd2a4550bc4238d02a1c6f087951.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_746743",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Halo Design - Stockholm Nordic Ø40 - Taklampa - Natur",
+    "manufacturer": "Halo Design",
+    "article_no": "746743",
+    "ean": "5705639746743",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3249,
+    "ean": "5705639746743",
+    "product_url": "https://lampan.se/p/stockholm-nordic-o40/?option=7846",
+    "cart_deeplink": "https://lampan.se/p/stockholm-nordic-o40/?option=7846",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=746743&fid=2470&url=https://lampan.se/p/stockholm-nordic-o40/?option=7846",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/746743-stockholmnordicedition40nature-72ppi.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

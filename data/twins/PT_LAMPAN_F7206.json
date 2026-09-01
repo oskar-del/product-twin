@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_F7206",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Frilight - Ljusplatta 15x15cm - Bordslampa - Svart",
+    "manufacturer": "Frilight",
+    "article_no": "F7206",
+    "ean": "7350028497119",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 449,
+    "ean": "7350028497119",
+    "product_url": "https://lampan.se/p/ljusplatta-15x15cm/?option=11038",
+    "cart_deeplink": "https://lampan.se/p/ljusplatta-15x15cm/?option=11038",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=F7206&fid=2470&url=https://lampan.se/p/ljusplatta-15x15cm/?option=11038",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/ljusplatta-sw150-led-svart.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

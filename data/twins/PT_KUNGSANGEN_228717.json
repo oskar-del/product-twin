@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_228717",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Annelund 90x210 Multizon Medel Sa.12.Brun",
+    "manufacturer": "Kungsangen",
+    "article_no": "228717",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 48190,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-annelund/228717",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-annelund/228717",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=228717&fid=2564&url=https://kungsangen.com/se/p/sang-annelund/228717",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h65/h89/8833875771422/ks2000Wx1500H_annelund_kontinental_s23_vx20_90_sala_brun/ks2000Wx1500H-annelund-kontinental-s23-vx20-90-sala-brun.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2147509-2147515",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Badkar Comfornette Monaco",
+    "manufacturer": "Comfornette",
+    "article_no": "GOP2147509-2147515",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 16995,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/badkar/badkar-mot-vagg/badkar-comfornette-monaco/p-2147509-2147515",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badkar/badkar-mot-vagg/badkar-comfornette-monaco/p-2147509-2147515",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2147509-2147515&fid=2559&url=https://www.golvpoolen.se/badrum/badkar/badkar-mot-vagg/badkar-comfornette-monaco/p-2147509-2147515",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/962cc978-6463-434c-8102-2bad26eb3783/monaconew02.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

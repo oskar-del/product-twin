@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_5159",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lightson - Stella - Lightson trädgårdssystem - Mörkgrå",
+    "manufacturer": "Lightson",
+    "article_no": "5159",
+    "ean": "7340110602286",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 549,
+    "ean": "7340110602286",
+    "product_url": "https://lampan.se/p/stella-3/?option=10168",
+    "cart_deeplink": "https://lampan.se/p/stella-3/?option=10168",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=5159&fid=2470&url=https://lampan.se/p/stella-3/?option=10168",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/2_5159_stella_product_transp_1500x1500.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

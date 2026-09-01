@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_57510707",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Cato - Sänglampa - Mattsvart",
+    "manufacturer": "Belid",
+    "article_no": "57510707",
+    "ean": "7391534020927",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1699,
+    "ean": "7391534020927",
+    "product_url": "https://lampan.se/p/cato-9/?option=6900",
+    "cart_deeplink": "https://lampan.se/p/cato-9/?option=6900",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=57510707&fid=2470&url=https://lampan.se/p/cato-9/?option=6900",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/partspartnumber57510707filenamecato_57510707_f.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

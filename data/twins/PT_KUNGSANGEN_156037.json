@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_156037",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Sunnerström 160x210 Medel/Mjuk A.Coal",
+    "manufacturer": "Kungsangen",
+    "article_no": "156037",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 61990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-sunnerstrom/156037",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-sunnerstrom/156037",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=156037&fid=2564&url=https://kungsangen.com/se/p/sang-sunnerstrom/156037",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h09/h97/8825242910750/ks2000Wx1500H_sunnerstrom_kontinental_s31_vx20_180_anouk_coal/ks2000Wx1500H-sunnerstrom-kontinental-s31-vx20-180-anouk-coal.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

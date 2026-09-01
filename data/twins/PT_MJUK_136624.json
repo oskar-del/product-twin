@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_136624",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "GUBI Pedrera PD2 golvlampa vit",
+    "manufacturer": "Gubi",
+    "article_no": "136624",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 5998,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/136624/gubi-pedrera-pd2-golvlampa-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/136624/gubi-pedrera-pd2-golvlampa-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=136624&fid=978&url=https://www.mjuk.com/sv-se/product/136624/gubi-pedrera-pd2-golvlampa-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/c2d99298dfb287d15d1f00fc5ca59543.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

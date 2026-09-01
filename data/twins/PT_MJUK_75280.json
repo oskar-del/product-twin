@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_75280",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Massproductions Icha barstol ek 65 cm",
+    "manufacturer": "Massproductions",
+    "article_no": "75280",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4160,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/75280/massproductions-icha-barstol-ek-65-cm",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/75280/massproductions-icha-barstol-ek-65-cm",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=75280&fid=978&url=https://www.mjuk.com/sv-se/product/75280/massproductions-icha-barstol-ek-65-cm",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/e3d8764524875861dc007c1c5fdd7ed8.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

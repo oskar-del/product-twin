@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP313500-313502",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschblandare Mora Cera T4",
+    "manufacturer": "Mora",
+    "article_no": "GOP313500-313502",
+    "ean": "7391887233500",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 2083,
+    "ean": "7391887233500",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-mora-cera-t4/p-313500-313502",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-mora-cera-t4/p-313500-313502",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP313500-313502&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/duschblandare/duschblandare-mora-cera-t4/p-313500-313502",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/cfa72a91-d03e-46d2-8447-aa44b07725fe/duschblandare-mora-cera-t4.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

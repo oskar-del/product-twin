@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_T546PL-18B",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Jackson Ø98 - Taklampa - Svart",
+    "manufacturer": "Maytoni",
+    "article_no": "T546PL-18B",
+    "ean": "4251110043708",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 3309,
+    "ean": "4251110043708",
+    "product_url": "https://lampan.se/p/jackson-o98/?option=6544",
+    "cart_deeplink": "https://lampan.se/p/jackson-o98/?option=6544",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=T546PL-18B&fid=2470&url=https://lampan.se/p/jackson-o98/?option=6544",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/t546pl-18b_on_w.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

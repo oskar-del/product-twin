@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_8200120-5504",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cottex - Abbie Ø50 - Takplafond - Beige",
+    "manufacturer": "Cottex",
+    "article_no": "8200120-5504",
+    "ean": "7393168201222",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 999,
+    "ean": "7393168201222",
+    "product_url": "https://lampan.se/p/abbie-o50/?option=11081",
+    "cart_deeplink": "https://lampan.se/p/abbie-o50/?option=11081",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=8200120-5504&fid=2470&url=https://lampan.se/p/abbie-o50/?option=11081",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/abbie_beige_8200120_5504-5853.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

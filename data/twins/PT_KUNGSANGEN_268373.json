@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_268373",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sänggavel Sodala 200 H.22.Gråbeige",
+    "manufacturer": "Kungsangen",
+    "article_no": "268373",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 7590,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sanggavel-sodala/268373",
+    "cart_deeplink": "https://kungsangen.com/se/p/sanggavel-sodala/268373",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=268373&fid=2564&url=https://kungsangen.com/se/p/sanggavel-sodala/268373",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h4b/hec/9034551787550/ks2000Wx1500H_sodala_gavel_180_hagfors_grabeige/ks2000Wx1500H-sodala-gavel-180-hagfors-grabeige.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

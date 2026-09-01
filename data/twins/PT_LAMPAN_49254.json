@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_49254",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Eglo - Carlton Ø30 - Taklampa - Svart",
+    "manufacturer": "Eglo",
+    "article_no": "49254",
+    "ean": "9002759492540",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1289,
+    "ean": "9002759492540",
+    "product_url": "https://lampan.se/p/carlton-o30/?option=15191",
+    "cart_deeplink": "https://lampan.se/p/carlton-o30/?option=15191",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=49254&fid=2470&url=https://lampan.se/p/carlton-o30/?option=15191",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/49254_front_0001-jpg2500px.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

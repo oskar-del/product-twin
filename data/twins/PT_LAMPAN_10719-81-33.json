@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_10719-81-33",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Esterad - Golvlampa - Grön",
+    "manufacturer": "Lucide",
+    "article_no": "10719/81/33",
+    "ean": "5411212106025",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1659,
+    "ean": "5411212106025",
+    "product_url": "https://lampan.se/p/esterad-0/?option=414",
+    "cart_deeplink": "https://lampan.se/p/esterad-0/?option=414",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=10719%2F81%2F33&fid=2470&url=https://lampan.se/p/esterad-0/?option=414",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/10719-81-33.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

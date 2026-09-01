@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4099854452796",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Osram - Bamboo Paper Ø40 - Takplafond - Natur",
+    "manufacturer": "Osram",
+    "article_no": "4099854452796",
+    "ean": "4099854452796",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1449,
+    "ean": "4099854452796",
+    "product_url": "https://lampan.se/p/bamboo-paper-o40/?option=9210",
+    "cart_deeplink": "https://lampan.se/p/bamboo-paper-o40/?option=9210",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4099854452796&fid=2470&url=https://lampan.se/p/bamboo-paper-o40/?option=9210",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/asset-13215006_decor_bamboo_paper_clg_400_18w_830.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_101793",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Fogia Velar 2-sits soffa blå",
+    "manufacturer": "Fogia",
+    "article_no": "101793",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 21050,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/101793/fogia-velar-2-sits-soffa-bla",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/101793/fogia-velar-2-sits-soffa-bla",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=101793&fid=978&url=https://www.mjuk.com/sv-se/product/101793/fogia-velar-2-sits-soffa-bla",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/e8b6d361999565e2dcb65664e2d71a73.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

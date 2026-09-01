@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_15345-4MM",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Blacky 110cm - Taklampa - Mässing",
+    "manufacturer": "Globo Lighting",
+    "article_no": "15345-4MM",
+    "ean": "9007371416042",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4829,
+    "ean": "9007371416042",
+    "product_url": "https://lampan.se/p/blacky-110cm/?option=9896",
+    "cart_deeplink": "https://lampan.se/p/blacky-110cm/?option=9896",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=15345-4MM&fid=2470&url=https://lampan.se/p/blacky-110cm/?option=9896",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-80867.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

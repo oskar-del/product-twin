@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1888093",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dusch- och Badkarsblandare Burlington CL17 Anglesey",
+    "manufacturer": "Burlington",
+    "article_no": "GOP1888093",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 12185,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/badkarsblandare/dusch-och-badkarsblandare-burlington-cl17-anglesey/p-1888093",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/badkarsblandare/dusch-och-badkarsblandare-burlington-cl17-anglesey/p-1888093",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1888093&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/badkarsblandare/dusch-och-badkarsblandare-burlington-cl17-anglesey/p-1888093",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b5aeee9f-b985-4362-9dda-e3119923a675/cl17plust2-3.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

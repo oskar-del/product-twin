@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2010094-2010096",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Toalettsits Lavabo Studio 321111",
+    "manufacturer": "Lavabo",
+    "article_no": "GOP2010094-2010096",
+    "ean": "5711402804992",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 739,
+    "ean": "5711402804992",
+    "product_url": "https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-lavabo-studio-321111/p-2010094-2010096",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-lavabo-studio-321111/p-2010094-2010096",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2010094-2010096&fid=2559&url=https://www.golvpoolen.se/badrum/toalettstol/toalettsits/toalettsits-lavabo-studio-321111/p-2010094-2010096",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/e0c22a52-6851-4cb2-a562-1c4849e3c5eb/333294ms_studio-mat-sort-2.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

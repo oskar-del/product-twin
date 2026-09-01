@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_132653",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "FeelDesign Straight mediabänk vit",
+    "manufacturer": "FeelDesign",
+    "article_no": "132653",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3056,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/132653/feeldesign-straight-mediabank-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/132653/feeldesign-straight-mediabank-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=132653&fid=978&url=https://www.mjuk.com/sv-se/product/132653/feeldesign-straight-mediabank-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/397bbdc4b9bfddd276411cd11b2b804c.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

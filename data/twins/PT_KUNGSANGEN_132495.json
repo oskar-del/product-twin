@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_132495",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Iggenäs 210x210 Extra fast/Mjuk A.Petrol",
+    "manufacturer": "Kungsangen",
+    "article_no": "132495",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 58090,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-iggenas/132495",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-iggenas/132495",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=132495&fid=2564&url=https://kungsangen.com/se/p/sang-iggenas/132495",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h75/h4a/9719388635166/ks2000Wx1500H_classic_ram_iggenas/ks2000Wx1500H-classic-ram-iggenas.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

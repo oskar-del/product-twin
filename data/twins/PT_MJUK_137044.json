@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_137044",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Montana sänggavel 120 cm beige",
+    "manufacturer": "Cloud47",
+    "article_no": "137044",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2228,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/137044/montana-sanggavel-120-cm-beige",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/137044/montana-sanggavel-120-cm-beige",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=137044&fid=978&url=https://www.mjuk.com/sv-se/product/137044/montana-sanggavel-120-cm-beige",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/c4751b63-f81c-4072-a6c7-e32ca475756b.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_248077",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Vingeskär 180x200 Medel/Extra fast D.Grå",
+    "manufacturer": "Kungsangen",
+    "article_no": "248077",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 143990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-vingeskar/248077",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-vingeskar/248077",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=248077&fid=2564&url=https://kungsangen.com/se/p/sang-vingeskar/248077",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h57/h8c/8825263357982/ks2000Wx1500H_vingehamn_kontinental_s31_vx20_180_duved_morkgra/ks2000Wx1500H-vingehamn-kontinental-s31-vx20-180-duved-morkgra.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

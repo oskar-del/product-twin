@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP518806",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tapet Paintpart Mormors Tid 4831-7",
+    "manufacturer": "Paintpart",
+    "article_no": "GOP518806",
+    "ean": "6417271483175",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 474,
+    "ean": "6417271483175",
+    "product_url": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-paintpart-mormors-tid-4831-7/p-518806",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-paintpart-mormors-tid-4831-7/p-518806",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP518806&fid=2559&url=https://www.golvpoolen.se/golv/tapeter/monstrad-tapet/tapet-paintpart-mormors-tid-4831-7/p-518806",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/9f32e428-1d56-4c66-b7fe-9a5a486acfd7/tapet-paintpart-mormors-tid-4831-7.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

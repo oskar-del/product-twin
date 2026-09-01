@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2026657-2026659",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Knopp Tapwell Bean 030",
+    "manufacturer": "Tapwell",
+    "article_no": "GOP2026657-2026659",
+    "ean": "7340188848661",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 156,
+    "ean": "7340188848661",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/knopp-tapwell-bean-030/p-2026657-2026659",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/knopp-tapwell-bean-030/p-2026657-2026659",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2026657-2026659&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/knopp-tapwell-bean-030/p-2026657-2026659",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/b31af2d8-40c4-4b4f-86ec-9ab19ad2f822/9428794-bean-030-brushed-black-chrome.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

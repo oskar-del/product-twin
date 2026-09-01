@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GRIPSHOLM_1-se-p8189-v17758-s11875",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gripsholm Bordsduk linne/bomullblandning 145x350",
+    "manufacturer": "Gripsholm",
+    "article_no": "1/se-p8189-v17758-s11875",
+    "ean": "7318161517385",
+    "source": "gripsholm_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "gripsholm SE",
+    "currency": "SEK",
+    "unit_price": 1499,
+    "ean": "7318161517385",
+    "product_url": "https://www.gripsholm.se/p/table-cloth-linen-blend-917744?country=se",
+    "cart_deeplink": "https://www.gripsholm.se/p/table-cloth-linen-blend-917744?country=se",
+    "affiliate_link": "https://pid.gripsholm.se/t/t?a=1960533239&as=2106320328&t=2&tk=1&cupa_sku=1%2Fse-p8189-v17758-s11875&fid=2720&url=https://www.gripsholm.se/p/table-cloth-linen-blend-917744?country=se",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://springhill.centracdn.net/client/dynamic/originals/8189_01a30c70eb-917744-12-original.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

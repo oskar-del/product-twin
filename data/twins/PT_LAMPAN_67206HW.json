@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_67206HW",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Globo Lighting - Geronimo 108cm - Taklampa - Natur",
+    "manufacturer": "Globo Lighting",
+    "article_no": "67206HW",
+    "ean": "9007371451043",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2069,
+    "ean": "9007371451043",
+    "product_url": "https://lampan.se/p/geronimo-108cm/?option=9909",
+    "cart_deeplink": "https://lampan.se/p/geronimo-108cm/?option=9909",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=67206HW&fid=2470&url=https://lampan.se/p/geronimo-108cm/?option=9909",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-8632.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

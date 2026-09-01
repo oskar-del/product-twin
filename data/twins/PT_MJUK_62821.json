@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_62821",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lammhults Archal karmstol ljusblå",
+    "manufacturer": "Lammhults",
+    "article_no": "62821",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1706,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/62821/lammhults-archal-karmstol-ljusbla",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/62821/lammhults-archal-karmstol-ljusbla",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=62821&fid=978&url=https://www.mjuk.com/sv-se/product/62821/lammhults-archal-karmstol-ljusbla",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/acda0439-3824-4305-b351-07821cc725eb.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

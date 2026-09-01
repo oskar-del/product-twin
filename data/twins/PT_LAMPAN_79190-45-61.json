@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_79190-45-61",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Olson Ø45 - Badrumslampa - Vit",
+    "manufacturer": "Lucide",
+    "article_no": "79190/45/61",
+    "ean": "5411212792259",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 659,
+    "ean": "5411212792259",
+    "product_url": "https://lampan.se/p/olson-o45/?option=11766",
+    "cart_deeplink": "https://lampan.se/p/olson-o45/?option=11766",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=79190%2F45%2F61&fid=2470&url=https://lampan.se/p/olson-o45/?option=11766",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-20340.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

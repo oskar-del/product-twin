@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_14867-49-12",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Arne 50cm - Pollare - Satin krom",
+    "manufacturer": "Lucide",
+    "article_no": "14867/49/12",
+    "ean": "5411212143914",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 639,
+    "ean": "5411212143914",
+    "product_url": "https://lampan.se/p/arne-50cm/?option=441",
+    "cart_deeplink": "https://lampan.se/p/arne-50cm/?option=441",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=14867%2F49%2F12&fid=2470&url=https://lampan.se/p/arne-50cm/?option=441",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/14867-49-12.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

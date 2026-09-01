@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7826-972",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Konstsmide - Antibes 20cm - Portabel lampa - Rost",
+    "manufacturer": "Konstsmide",
+    "article_no": "7826-972",
+    "ean": "7318308269726",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1409,
+    "ean": "7318308269726",
+    "product_url": "https://lampan.se/p/antibes-20cm-0/?option=10440",
+    "cart_deeplink": "https://lampan.se/p/antibes-20cm-0/?option=10440",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7826-972&fid=2470&url=https://lampan.se/p/antibes-20cm-0/?option=10440",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-10481.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

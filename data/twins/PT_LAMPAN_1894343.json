@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1894343",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Light & Living  - Litto 33cm - Bordslampa - Natur",
+    "manufacturer": "Light & Living",
+    "article_no": "1894343",
+    "ean": "8717807792671",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 969,
+    "ean": "8717807792671",
+    "product_url": "https://lampan.se/p/litto-33cm/?option=14463",
+    "cart_deeplink": "https://lampan.se/p/litto-33cm/?option=14463",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1894343&fid=2470&url=https://lampan.se/p/litto-33cm/?option=14463",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1894343.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

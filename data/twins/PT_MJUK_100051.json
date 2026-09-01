@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_100051",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Layered Petit pall mörkgrå",
+    "manufacturer": "Layered",
+    "article_no": "100051",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1508,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/100051/layered-petit-pall-morkgra",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/100051/layered-petit-pall-morkgra",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=100051&fid=978&url=https://www.mjuk.com/sv-se/product/100051/layered-petit-pall-morkgra",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/ef3a3dbcedd5e3b110887cffe8266149.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

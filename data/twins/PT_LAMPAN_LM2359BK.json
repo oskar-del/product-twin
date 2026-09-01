@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_LM2359BK",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Leitmotiv - Rayado 34cm - Bordslampa - Greige/svart",
+    "manufacturer": "Leitmotiv",
+    "article_no": "LM2359BK",
+    "ean": "8714302776397",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1279,
+    "ean": "8714302776397",
+    "product_url": "https://lampan.se/p/rayado-34cm-3/?option=15460",
+    "cart_deeplink": "https://lampan.se/p/rayado-34cm-3/?option=15460",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=LM2359BK&fid=2470&url=https://lampan.se/p/rayado-34cm-3/?option=15460",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/lm2359bk_00.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

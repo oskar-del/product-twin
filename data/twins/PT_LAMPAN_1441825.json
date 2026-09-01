@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1441825",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "PR Home - Glimt 20cm - Portabel lampa - Beige",
+    "manufacturer": "PR Home",
+    "article_no": "1441825",
+    "ean": "7330976140664",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 799,
+    "ean": "7330976140664",
+    "product_url": "https://lampan.se/p/glimt-20cm-0/?option=13289",
+    "cart_deeplink": "https://lampan.se/p/glimt-20cm-0/?option=13289",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1441825&fid=2470&url=https://lampan.se/p/glimt-20cm-0/?option=13289",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/1441825_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

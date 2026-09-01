@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70022418",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gil Bordslampa Black - Herstal - Vardagsrum - Metall",
+    "manufacturer": "Herstal",
+    "article_no": "70022418",
+    "ean": "7391534009380",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 1099,
+    "ean": "7391534009380",
+    "product_url": "https://www.lampemesteren.se/p/gil-bordslampa-black-herstal-70022418.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/gil-bordslampa-black-herstal-70022418.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70022418&fid=1004&url=https://www.lampemesteren.se/p/gil-bordslampa-black-herstal-70022418.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/4D3B74574CA0/k_debd77def63850324e1835ed8aec1b24;w_1600;h_1600;q_90/70022418.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

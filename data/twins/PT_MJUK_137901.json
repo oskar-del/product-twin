@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_137901",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Stodene skrivbord vit",
+    "manufacturer": "Mjuk",
+    "article_no": "137901",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2228,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/137901/stodene-skrivbord-vit",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/137901/stodene-skrivbord-vit",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=137901&fid=978&url=https://www.mjuk.com/sv-se/product/137901/stodene-skrivbord-vit",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/6ff7f201-7762-4916-9ddc-2bfe816fb001.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_126161",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Gubi Pietra sivupöytä travertiini",
+    "manufacturer": "Gubi",
+    "article_no": "126161",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 6989,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/126161/gubi-pietra-sivupoyta-travertiini",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/126161/gubi-pietra-sivupoyta-travertiini",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=126161&fid=978&url=https://www.mjuk.com/sv-se/product/126161/gubi-pietra-sivupoyta-travertiini",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/71d9f24ab4ab74e3cd64dcdc287775c6.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

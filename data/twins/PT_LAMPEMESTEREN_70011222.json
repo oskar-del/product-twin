@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70011222",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lund 1 Utomhus Parkstolpa Svart - Norlys - Terrass - Metall",
+    "manufacturer": "Norlys",
+    "article_no": "70011222",
+    "ean": "7042892740063",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 6109,
+    "ean": "7042892740063",
+    "product_url": "https://www.lampemesteren.se/p/lund-1-utomhus-parkstolpa-svart-norlys-70011222.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/lund-1-utomhus-parkstolpa-svart-norlys-70011222.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70011222&fid=1004&url=https://www.lampemesteren.se/p/lund-1-utomhus-parkstolpa-svart-norlys-70011222.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/126FD9F3BB84/k_c45b5dc05b58433e2b73e601cc80fd2f;w_1600;h_1600;q_90/70011222.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

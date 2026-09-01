@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD156PL-L52B4K",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Curve 92cm - Taklampa - Svart",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD156PL-L52B4K",
+    "ean": "4099776027164",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4439,
+    "ean": "4099776027164",
+    "product_url": "https://lampan.se/p/curve-92cm/?option=6469",
+    "cart_deeplink": "https://lampan.se/p/curve-92cm/?option=6469",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD156PL-L52B4K&fid=2470&url=https://lampan.se/p/curve-92cm/?option=6469",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/mod156pl-l52b4k_on_w_standard_1.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

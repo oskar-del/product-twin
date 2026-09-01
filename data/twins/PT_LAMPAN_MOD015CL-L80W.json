@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_MOD015CL-L80W",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Rida 78cm - Takplafond - Vit",
+    "manufacturer": "Maytoni",
+    "article_no": "MOD015CL-L80W",
+    "ean": "4251110037950",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 6759,
+    "ean": "4251110037950",
+    "product_url": "https://lampan.se/p/rida-78cm/?option=6502",
+    "cart_deeplink": "https://lampan.se/p/rida-78cm/?option=6502",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=MOD015CL-L80W&fid=2470&url=https://lampan.se/p/rida-78cm/?option=6502",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/mod015cl-l80w_on_w_standard.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

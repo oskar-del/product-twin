@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2017446",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Tröskelplatta Bjelin Terra brown",
+    "manufacturer": "Bjelin",
+    "article_no": "GOP2017446",
+    "ean": "3856018010756",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 499,
+    "ean": "3856018010756",
+    "product_url": "https://www.golvpoolen.se/golv/golvtillbehor/golvlister/troskelplatta-bjelin-terra-brown/p-2017446",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvtillbehor/golvlister/troskelplatta-bjelin-terra-brown/p-2017446",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2017446&fid=2559&url=https://www.golvpoolen.se/golv/golvtillbehor/golvlister/troskelplatta-bjelin-terra-brown/p-2017446",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/1cdf071a-a931-406e-80c3-5157c9d79206/238185.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

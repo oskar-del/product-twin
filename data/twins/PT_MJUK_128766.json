@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_128766",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Harper sänggavel 105 cm beige",
+    "manufacturer": "Mjuk",
+    "article_no": "128766",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1394,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/128766/harper-sanggavel-105-cm-beige",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/128766/harper-sanggavel-105-cm-beige",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=128766&fid=978&url=https://www.mjuk.com/sv-se/product/128766/harper-sanggavel-105-cm-beige",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/55b0d2f1-12c3-4f7e-8235-9d153c67c81e.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

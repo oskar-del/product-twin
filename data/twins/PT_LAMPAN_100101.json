@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_100101",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Kord - Cuboid - Tillbehör - Pearled Ivory",
+    "manufacturer": "Kord",
+    "article_no": "100101",
+    "ean": "7350173340001",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 695,
+    "ean": "7350173340001",
+    "product_url": "https://lampan.se/p/cuboid/?option=14047",
+    "cart_deeplink": "https://lampan.se/p/cuboid/?option=14047",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=100101&fid=2470&url=https://lampan.se/p/cuboid/?option=14047",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/15-2860.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

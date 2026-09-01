@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1984711-1984723",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschhörna Bathlife Profil Rak Vägg + Rak Dörr",
+    "manufacturer": "Bathlife",
+    "article_no": "GOP1984711-1984723",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 4349,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschhorn/duschhorna-bathlife-profil-rak-vagg-plus-rak-dorr/p-1984711-1984723",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschhorn/duschhorna-bathlife-profil-rak-vagg-plus-rak-dorr/p-1984711-1984723",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1984711-1984723&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschhorn/duschhorna-bathlife-profil-rak-vagg-plus-rak-dorr/p-1984711-1984723",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/0d714292-a310-4010-b1ec-206380e7f943/door-fix-1-dorr-vagg.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

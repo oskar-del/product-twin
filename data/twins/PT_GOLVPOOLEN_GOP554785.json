@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP554785",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Badrum Hafa Clean & Shine",
+    "manufacturer": "Hafa",
+    "article_no": "GOP554785",
+    "ean": "7394490000101",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 173,
+    "ean": "7394490000101",
+    "product_url": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/tillbehor-tvattstall/badrum-hafa-clean-och-shine/p-554785",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/handfat-och-tvattstall/tillbehor-tvattstall/badrum-hafa-clean-och-shine/p-554785",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP554785&fid=2559&url=https://www.golvpoolen.se/badrum/handfat-och-tvattstall/tillbehor-tvattstall/badrum-hafa-clean-och-shine/p-554785",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/3a492d84-a17a-4fe4-bfec-44a0cdd64954/badrum-hafa-clean-och-shine-.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

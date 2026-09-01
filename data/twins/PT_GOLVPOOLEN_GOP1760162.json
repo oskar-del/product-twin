@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1760162",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Fogborste FUGINATOR® Home",
+    "manufacturer": "Fuginator",
+    "article_no": "GOP1760162",
+    "ean": "4260262741035",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 227,
+    "ean": "4260262741035",
+    "product_url": "https://www.golvpoolen.se/kakel-och-klinker/tillbehor-kakel-och-klinker/ovriga-tillbehor/fogborste-fuginatorr-home/p-1760162",
+    "cart_deeplink": "https://www.golvpoolen.se/kakel-och-klinker/tillbehor-kakel-och-klinker/ovriga-tillbehor/fogborste-fuginatorr-home/p-1760162",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1760162&fid=2559&url=https://www.golvpoolen.se/kakel-och-klinker/tillbehor-kakel-och-klinker/ovriga-tillbehor/fogborste-fuginatorr-home/p-1760162",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/ffad111a-8750-4224-bf3c-11a55d58828e/10500011_1_orange_fuginator.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

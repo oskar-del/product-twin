@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_138204",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "HOME4YOU Tulip paviljongstak grå",
+    "manufacturer": "HOME4YOU",
+    "article_no": "138204",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 587,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/138204/home4you-tulip-paviljongstak-gra",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/138204/home4you-tulip-paviljongstak-gra",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=138204&fid=978&url=https://www.mjuk.com/sv-se/product/138204/home4you-tulip-paviljongstak-gra",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/dc598717-c621-4f3a-a3ea-120032c2e9ed.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

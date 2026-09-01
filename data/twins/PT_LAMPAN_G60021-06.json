@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_G60021-06",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Brilliant - Salerno Ø58 - Takfläkt - Svart",
+    "manufacturer": "Brilliant",
+    "article_no": "G60021/06",
+    "ean": "4004353441219",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2109,
+    "ean": "4004353441219",
+    "product_url": "https://lampan.se/p/salerno-o58/?option=15649",
+    "cart_deeplink": "https://lampan.se/p/salerno-o58/?option=15649",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=G60021%2F06&fid=2470&url=https://lampan.se/p/salerno-o58/?option=15649",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/deckenleuchten_salerno_4004353441219_3_800x800.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

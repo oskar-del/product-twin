@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_218415",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Sänggavel Moholm 180 H.22.Gråbeige",
+    "manufacturer": "Kungsangen",
+    "article_no": "218415",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 7990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sanggavel-moholm/218415",
+    "cart_deeplink": "https://kungsangen.com/se/p/sanggavel-moholm/218415",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=218415&fid=2564&url=https://kungsangen.com/se/p/sanggavel-moholm/218415",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hff/h6b/9575340933150/ks2000Wx1500H_moholm_gavel_hagfors_grabeige/ks2000Wx1500H-moholm-gavel-hagfors-grabeige.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

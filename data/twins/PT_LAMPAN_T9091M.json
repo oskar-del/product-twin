@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_T9091M",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cottex - New Haven Ø37 - Taklampa - Mässing",
+    "manufacturer": "Cottex",
+    "article_no": "T9091M",
+    "ean": "7393168002591",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 899,
+    "ean": "7393168002591",
+    "product_url": "https://lampan.se/p/new-haven-o37-1/?option=12666",
+    "cart_deeplink": "https://lampan.se/p/new-haven-o37-1/?option=12666",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=T9091M&fid=2470&url=https://lampan.se/p/new-haven-o37-1/?option=12666",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/newhaven_brass_t9091m.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

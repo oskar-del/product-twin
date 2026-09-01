@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_95256",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Bröderna Anderssons fåtölj grå",
+    "manufacturer": "Bröderna Anderssons",
+    "article_no": "95256",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 5991,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/95256/broderna-anderssons-fatolj-gra",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/95256/broderna-anderssons-fatolj-gra",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=95256&fid=978&url=https://www.mjuk.com/sv-se/product/95256/broderna-anderssons-fatolj-gra",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/0ab7e2db19ec2be5e46a9b6e148c96a6.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

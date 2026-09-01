@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1727975-1983675",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Spegelskåp INR Circ Ø80",
+    "manufacturer": "INR",
+    "article_no": "GOP1727975-1983675",
+    "ean": "7340123978101",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 15098,
+    "ean": "7340123978101",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/spegelskap/spegelskap-inr-circ-o80/p-1727975-1983675",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/spegelskap/spegelskap-inr-circ-o80/p-1727975-1983675",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1727975-1983675&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/spegelskap/spegelskap-inr-circ-o80/p-1727975-1983675",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/a69ae19f-5c44-4cd9-9f79-060abf9d656e/367855-kopiera.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

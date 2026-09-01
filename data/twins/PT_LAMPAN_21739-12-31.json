@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_21739-12-31",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Fold 120cm - Golvlampa - Vit",
+    "manufacturer": "Lucide",
+    "article_no": "21739/12/31",
+    "ean": "5411212212122",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1549,
+    "ean": "5411212212122",
+    "product_url": "https://lampan.se/p/fold-120cm/?option=426",
+    "cart_deeplink": "https://lampan.se/p/fold-120cm/?option=426",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=21739%2F12%2F31&fid=2470&url=https://lampan.se/p/fold-120cm/?option=426",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/21739-12-31.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_45564-01-31",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Chago 20cm - Bordslampa - Vit",
+    "manufacturer": "Lucide",
+    "article_no": "45564/01/31",
+    "ean": "5411212450623",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 289,
+    "ean": "5411212450623",
+    "product_url": "https://lampan.se/p/chago-20cm/?option=1098",
+    "cart_deeplink": "https://lampan.se/p/chago-20cm/?option=1098",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=45564%2F01%2F31&fid=2470&url=https://lampan.se/p/chago-20cm/?option=1098",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/45564-01-31.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

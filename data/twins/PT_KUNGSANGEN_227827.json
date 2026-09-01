@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_227827",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Annelund 210x200 Duozon Medel/Duozon Fast Sa.149.Ljusgrå",
+    "manufacturer": "Kungsangen",
+    "article_no": "227827",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 81990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-annelund/227827",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-annelund/227827",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=227827&fid=2564&url=https://kungsangen.com/se/p/sang-annelund/227827",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h2c/h7d/8833757085726/ks2000Wx1500H_annelund_kontinental_s23_vx20_180_sala_ljusgra/ks2000Wx1500H-annelund-kontinental-s23-vx20-180-sala-ljusgra.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

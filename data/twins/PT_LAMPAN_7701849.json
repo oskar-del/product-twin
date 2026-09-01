@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_7701849",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Westal - Gustav ned - Fasadbelysning - Oxiderad koppar",
+    "manufacturer": "Westal",
+    "article_no": "7701849",
+    "ean": "7393047223116",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5069,
+    "ean": "7393047223116",
+    "product_url": "https://lampan.se/p/gustav-ned-1/?option=6074",
+    "cart_deeplink": "https://lampan.se/p/gustav-ned-1/?option=6074",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=7701849&fid=2470&url=https://lampan.se/p/gustav-ned-1/?option=6074",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/7701849_vi_1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

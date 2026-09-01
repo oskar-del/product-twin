@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_DIA891-CL-14-G",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Maytoni - Palace Ø80 - Kristallkrona - Guld",
+    "manufacturer": "Maytoni",
+    "article_no": "DIA891-CL-14-G",
+    "ean": "4251110012490",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 15729,
+    "ean": "4251110012490",
+    "product_url": "https://lampan.se/p/palace-o80/?option=6531",
+    "cart_deeplink": "https://lampan.se/p/palace-o80/?option=6531",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=DIA891-CL-14-G&fid=2470&url=https://lampan.se/p/palace-o80/?option=6531",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/dia891-cl-14-g_on_w_standard.jpeg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

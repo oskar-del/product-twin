@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_833-6B",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Emibig Lighting - Brendi Ø75 - Takplafond - Amber",
+    "manufacturer": "Emibig Lighting",
+    "article_no": "833/6B",
+    "ean": "5907106007832",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2699,
+    "ean": "5907106007832",
+    "product_url": "https://lampan.se/p/brendi-o75/?option=2192",
+    "cart_deeplink": "https://lampan.se/p/brendi-o75/?option=2192",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=833%2F6B&fid=2470&url=https://lampan.se/p/brendi-o75/?option=2192",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/833_6b-1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

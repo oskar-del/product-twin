@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1768764",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Avslutningslist Lundbergs Kastanj 2780x31x20 mm",
+    "manufacturer": "Lundbergs",
+    "article_no": "GOP1768764",
+    "ean": "7392119102670",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 369,
+    "ean": "7392119102670",
+    "product_url": "https://www.golvpoolen.se/golv/vaggbekladnad/vaggpanel-och-panelskiva/avslutningslist-lundbergs-kastanj-2780x31x20-mm/p-1768764",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/vaggbekladnad/vaggpanel-och-panelskiva/avslutningslist-lundbergs-kastanj-2780x31x20-mm/p-1768764",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1768764&fid=2559&url=https://www.golvpoolen.se/golv/vaggbekladnad/vaggpanel-och-panelskiva/avslutningslist-lundbergs-kastanj-2780x31x20-mm/p-1768764",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/c98e3360-acd7-4be6-9d4d-f69c642629ba/10267_bp1.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

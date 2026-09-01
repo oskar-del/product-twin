@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_QN-NANTUCKET-L-AS",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Elstead Lighting - Nantucket 42cm - Fasadbelysning - Antikmässing",
+    "manufacturer": "Elstead Lighting",
+    "article_no": "QN-NANTUCKET-L-AS",
+    "ean": "5024005587217",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 5609,
+    "ean": "5024005587217",
+    "product_url": "https://lampan.se/p/nantucket-42cm/?option=10251",
+    "cart_deeplink": "https://lampan.se/p/nantucket-42cm/?option=10251",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=QN-NANTUCKET-L-AS&fid=2470&url=https://lampan.se/p/nantucket-42cm/?option=10251",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/qn-nantucket-l-as.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

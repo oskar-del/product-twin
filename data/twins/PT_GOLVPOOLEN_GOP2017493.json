@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2017493",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Reparationsolja Bjelin",
+    "manufacturer": "Bjelin",
+    "article_no": "GOP2017493",
+    "ean": "7350135232030",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 169,
+    "ean": "7350135232030",
+    "product_url": "https://www.golvpoolen.se/golv/golvvard/reparationsolja-bjelin/p-2017493",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/golvvard/reparationsolja-bjelin/p-2017493",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2017493&fid=2559&url=https://www.golvpoolen.se/golv/golvvard/reparationsolja-bjelin/p-2017493",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/998b6f8d-a232-4241-a0a4-afd64e620ad2/8d297969315327713de96d9ecb4012a9_8000x8000_70_1742371879_bestfit_adb115059e28d960fa8badfac5516667.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

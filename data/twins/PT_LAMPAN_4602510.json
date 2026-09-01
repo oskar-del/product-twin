@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4602510",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "PR Home - Axel 50cm - Skrivbordslampa - Mässing",
+    "manufacturer": "PR Home",
+    "article_no": "4602510",
+    "ean": "7330976136834",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1699,
+    "ean": "7330976136834",
+    "product_url": "https://lampan.se/p/axel-50cm/?option=2614",
+    "cart_deeplink": "https://lampan.se/p/axel-50cm/?option=2614",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4602510&fid=2470&url=https://lampan.se/p/axel-50cm/?option=2614",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/4602510.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

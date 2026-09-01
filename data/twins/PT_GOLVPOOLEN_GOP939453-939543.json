@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP939453-939543",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschhörna Svedbergs Skoga Vikbar",
+    "manufacturer": "Svedbergs",
+    "article_no": "GOP939453-939543",
+    "ean": "7323100215352",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 11819,
+    "ean": "7323100215352",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschhorn/duschhorna-svedbergs-skoga-vikbar/p-939453-939543",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschhorn/duschhorna-svedbergs-skoga-vikbar/p-939453-939543",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP939453-939543&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschhorn/duschhorna-svedbergs-skoga-vikbar/p-939453-939543",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/8763d3f3-af06-4f34-821a-e010bc8f472b/61609471.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

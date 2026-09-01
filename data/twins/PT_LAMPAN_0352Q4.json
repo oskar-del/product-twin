@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_0352Q4",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Karlskrona lampfabrik - Heidenstam ampel 200 - Karlskrona lampfabrik - Nickel",
+    "manufacturer": "Karlskrona lampfabrik",
+    "article_no": "0352Q4",
+    "ean": "7332535031581",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 4000,
+    "ean": "7332535031581",
+    "product_url": "https://lampan.se/p/heidenstam-ampel-200-0/?option=9698",
+    "cart_deeplink": "https://lampan.se/p/heidenstam-ampel-200-0/?option=9698",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=0352Q4&fid=2470&url=https://lampan.se/p/heidenstam-ampel-200-0/?option=9698",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/karlskrona-lampfabrik-heidenstam-ampel-200-1-l-nickelopalglas.jpeg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

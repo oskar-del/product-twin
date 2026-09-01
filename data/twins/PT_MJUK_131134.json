@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_131134",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Muuto 70/70 bord svart",
+    "manufacturer": "Muuto",
+    "article_no": "131134",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 8830,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/131134/muuto-70-70-bord-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/131134/muuto-70-70-bord-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=131134&fid=978&url=https://www.mjuk.com/sv-se/product/131134/muuto-70-70-bord-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/7d09d383020e3a8c3c05737592d537e9.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

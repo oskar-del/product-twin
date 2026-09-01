@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_0223Q",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Karlskrona lampfabrik - Nattlampa - Karlskrona lampfabrik - Nickel",
+    "manufacturer": "Karlskrona lampfabrik",
+    "article_no": "0223Q",
+    "ean": "7332535052135",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2190,
+    "ean": "7332535052135",
+    "product_url": "https://lampan.se/p/nattlampa-1/?option=9102",
+    "cart_deeplink": "https://lampan.se/p/nattlampa-1/?option=9102",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=0223Q&fid=2470&url=https://lampan.se/p/nattlampa-1/?option=9102",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/nat3.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

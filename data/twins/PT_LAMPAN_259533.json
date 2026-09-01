@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_259533",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "CO Bankeryd - Kolme Ø70 - Takplafond - Vit",
+    "manufacturer": "CO Bankeryd",
+    "article_no": "259533",
+    "ean": "7319682595333",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2599,
+    "ean": "7319682595333",
+    "product_url": "https://lampan.se/p/kolme-o70-0/?option=6812",
+    "cart_deeplink": "https://lampan.se/p/kolme-o70-0/?option=6812",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=259533&fid=2470&url=https://lampan.se/p/kolme-o70-0/?option=6812",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/258533_kolme_vit_textil.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

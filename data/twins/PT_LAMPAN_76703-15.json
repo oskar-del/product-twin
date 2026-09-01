@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_76703-15",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Aneta Lighting - Pilot 5 - Spotlight - Svart",
+    "manufacturer": "Aneta Lighting",
+    "article_no": "76703-15",
+    "ean": "7041661273825",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1299,
+    "ean": "7041661273825",
+    "product_url": "https://lampan.se/p/pilot-5-0/?option=7354",
+    "cart_deeplink": "https://lampan.se/p/pilot-5-0/?option=7354",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=76703-15&fid=2470&url=https://lampan.se/p/pilot-5-0/?option=7354",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/rnt5awhq9ndba5femexdgqasz.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_9112-102GO",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Versailles Ø102 - Kristallkrona - Guld",
+    "manufacturer": "Searchlight",
+    "article_no": "9112-102GO",
+    "ean": "5053423058368",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 46279,
+    "ean": "5053423058368",
+    "product_url": "https://lampan.se/p/versailles-o102-0/?option=12816",
+    "cart_deeplink": "https://lampan.se/p/versailles-o102-0/?option=12816",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=9112-102GO&fid=2470&url=https://lampan.se/p/versailles-o102-0/?option=12816",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/9112-102go_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

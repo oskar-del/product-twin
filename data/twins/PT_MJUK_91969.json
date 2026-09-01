@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_91969",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Boom Interior telefonkiosk / skärmvägg brun",
+    "manufacturer": "Mjuk",
+    "article_no": "91969",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1550,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/91969/boom-interior-telefonkiosk-skarmvagg-brun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/91969/boom-interior-telefonkiosk-skarmvagg-brun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=91969&fid=978&url=https://www.mjuk.com/sv-se/product/91969/boom-interior-telefonkiosk-skarmvagg-brun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/0920cbf8f66a6fd8b414287fec649c12.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

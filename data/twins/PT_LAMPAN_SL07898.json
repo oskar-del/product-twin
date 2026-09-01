@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_SL07898",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Superliving - Urban 40cm - Vägglampa - Ljusgrön",
+    "manufacturer": "Superliving",
+    "article_no": "SL07898",
+    "ean": "5710825007898",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1550,
+    "ean": "5710825007898",
+    "product_url": "https://lampan.se/p/urban-40cm-1/?option=7765",
+    "cart_deeplink": "https://lampan.se/p/urban-40cm-1/?option=7765",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=SL07898&fid=2470&url=https://lampan.se/p/urban-40cm-1/?option=7765",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-63981.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

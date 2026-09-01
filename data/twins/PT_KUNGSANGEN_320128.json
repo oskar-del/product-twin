@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_320128",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Säng Liljehamn 160x210 Fast/Medel Sa.01.Beige",
+    "manufacturer": "Kungsangen",
+    "article_no": "320128",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 100990,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/sang-liljehamn/320128",
+    "cart_deeplink": "https://kungsangen.com/se/p/sang-liljehamn/320128",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=320128&fid=2564&url=https://kungsangen.com/se/p/sang-liljehamn/320128",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/ha4/h44/10118190202910/ks2000Wx1500H_Annehamn_kontinental_s23_vx20_180_sala_beige/ks2000Wx1500H-Annehamn-kontinental-s23-vx20-180-sala-beige.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

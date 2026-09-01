@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_133324",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Alsarp matstol, set om 2",
+    "manufacturer": "Mjuk",
+    "article_no": "133324",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 985,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/133324/alsarp-matstol-set-om-2",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/133324/alsarp-matstol-set-om-2",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=133324&fid=978&url=https://www.mjuk.com/sv-se/product/133324/alsarp-matstol-set-om-2",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/19e9a409-ec7b-4c92-9927-844e02532e96.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_B1215SV",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Cottex - Pablo 36cm - Bordslampa - Svart",
+    "manufacturer": "Cottex",
+    "article_no": "B1215SV",
+    "ean": "7393168521511",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 239,
+    "ean": "7393168521511",
+    "product_url": "https://lampan.se/p/pablo-36cm/?option=4428",
+    "cart_deeplink": "https://lampan.se/p/pablo-36cm/?option=4428",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=B1215SV&fid=2470&url=https://lampan.se/p/pablo-36cm/?option=4428",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/b1215sv.jpg.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

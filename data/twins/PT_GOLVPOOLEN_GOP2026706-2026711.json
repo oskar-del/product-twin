@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2026706-2026711",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Knopp Tapwell Pastille 060",
+    "manufacturer": "Tapwell",
+    "article_no": "GOP2026706-2026711",
+    "ean": "7340188848210",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 236,
+    "ean": "7340188848210",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/knopp-tapwell-pastille-060/p-2026706-2026711",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/knopp-tapwell-pastille-060/p-2026706-2026711",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2026706-2026711&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumshandtag/knopp-tapwell-pastille-060/p-2026706-2026711",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/d7370e96-b8c1-4be8-b01c-add5cc93bf89/9428749-pastille-060-mattsvart.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

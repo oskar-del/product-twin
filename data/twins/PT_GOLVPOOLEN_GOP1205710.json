@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1205710",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Polerhätta Einhell till Polermaskin",
+    "manufacturer": "Einhell",
+    "article_no": "GOP1205710",
+    "ean": "4006825631517",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 108,
+    "ean": "4006825631517",
+    "product_url": "https://www.golvpoolen.se/verktyg/tillbehor-verktyg/poleringstillbehor/polerhatta-einhell-till-polermaskin/p-1205710",
+    "cart_deeplink": "https://www.golvpoolen.se/verktyg/tillbehor-verktyg/poleringstillbehor/polerhatta-einhell-till-polermaskin/p-1205710",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1205710&fid=2559&url=https://www.golvpoolen.se/verktyg/tillbehor-verktyg/poleringstillbehor/polerhatta-einhell-till-polermaskin/p-1205710",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/3b9d41c2-a94a-40a0-986e-787f8640dc79/1205710.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1768986",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Spegel Vedum Mjörn Rund 1100",
+    "manufacturer": "Vedum",
+    "article_no": "GOP1768986",
+    "ean": "7332936065048",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 9088,
+    "ean": "7332936065048",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsspegel/spegel-vedum-mjorn-rund-1100/p-1768986",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsspegel/spegel-vedum-mjorn-rund-1100/p-1768986",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1768986&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumsspegel/spegel-vedum-mjorn-rund-1100/p-1768986",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/2bad73c6-5e1e-42a7-afda-23ef65c954a9/58780110.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

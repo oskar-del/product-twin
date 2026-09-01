@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_6110008",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Unison - Eldflugan reserv E5 12V 0,8W - Ljuskälla",
+    "manufacturer": "Unison",
+    "article_no": "6110008",
+    "ean": "7340037008765",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 59,
+    "ean": "7340037008765",
+    "product_url": "https://lampan.se/p/eldflugan-reserv-e5-12v-0-8w/",
+    "cart_deeplink": "https://lampan.se/p/eldflugan-reserv-e5-12v-0-8w/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=6110008&fid=2470&url=https://lampan.se/p/eldflugan-reserv-e5-12v-0-8w/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-93545.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

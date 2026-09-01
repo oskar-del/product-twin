@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_F1291CA",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lampan - Daimon Ø15 - Fönsterlampa - Amber",
+    "manufacturer": "Lampan",
+    "article_no": "F1291CA",
+    "ean": "7350170882948",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 499,
+    "ean": "7350170882948",
+    "product_url": "https://lampan.se/p/daimon-o15/?option=15245",
+    "cart_deeplink": "https://lampan.se/p/daimon-o15/?option=15245",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=F1291CA&fid=2470&url=https://lampan.se/p/daimon-o15/?option=15245",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/f1291ca.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

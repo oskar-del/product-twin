@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPEMESTEREN_70010036",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Grant Vägglampa L111 Svart - Normann Copenhagen - Vardagsrum - Sten",
+    "manufacturer": "Normann Copenhagen",
+    "article_no": "70010036",
+    "ean": "5712396021310",
+    "source": "lampemesteren_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampemesteren SE",
+    "currency": "SEK",
+    "unit_price": 8285,
+    "ean": "5712396021310",
+    "product_url": "https://www.lampemesteren.se/p/grant-vagglampa-l111-svart-normann-copenhagen-70010036.html",
+    "cart_deeplink": "https://www.lampemesteren.se/p/grant-vagglampa-l111-svart-normann-copenhagen-70010036.html",
+    "affiliate_link": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=70010036&fid=1004&url=https://www.lampemesteren.se/p/grant-vagglampa-l111-svart-normann-copenhagen-70010036.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lw-cdn.com/images/6B0D7AB36854/k_90128b6b19552aae93717d49bbfc0792;w_1600;h_1600;q_90/70010036.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

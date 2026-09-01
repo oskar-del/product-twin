@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_6099SB",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Searchlight - Atom Ø40 - Taklampa - Vit/mässing",
+    "manufacturer": "Searchlight",
+    "article_no": "6099SB",
+    "ean": "5053423250540",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2339,
+    "ean": "5053423250540",
+    "product_url": "https://lampan.se/p/atom-o40/?option=12834",
+    "cart_deeplink": "https://lampan.se/p/atom-o40/?option=12834",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=6099SB&fid=2470&url=https://lampan.se/p/atom-o40/?option=12834",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/6099sb_1.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

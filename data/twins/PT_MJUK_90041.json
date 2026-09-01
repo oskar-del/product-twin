@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_90041",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dan-Form Stiletto stol ljusbrun",
+    "manufacturer": "Dan-Form",
+    "article_no": "90041",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 2850,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/90041/dan-form-stiletto-stol-ljusbrun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/90041/dan-form-stiletto-stol-ljusbrun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=90041&fid=978&url=https://www.mjuk.com/sv-se/product/90041/dan-form-stiletto-stol-ljusbrun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/02521365aeed5de7b3d0020a5c46d7ec.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

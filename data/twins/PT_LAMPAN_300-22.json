@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_300-22",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Star Trading - E10 LED 0,5W 10-55V 7-pack - Ljuskälla",
+    "manufacturer": "Star Trading",
+    "article_no": "300-22",
+    "ean": "7391482070708",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 109,
+    "ean": "7391482070708",
+    "product_url": "https://lampan.se/p/e10-led-0-5w-10-55v-7-pack/",
+    "cart_deeplink": "https://lampan.se/p/e10-led-0-5w-10-55v-7-pack/",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=300-22&fid=2470&url=https://lampan.se/p/e10-led-0-5w-10-55v-7-pack/",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/300-22_mn.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

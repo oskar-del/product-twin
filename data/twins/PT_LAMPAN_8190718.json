@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_8190718",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Light & Living  - Shiva 55cm - Lampfot - Brons",
+    "manufacturer": "Light & Living",
+    "article_no": "8190718",
+    "ean": "8717807745189",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 999,
+    "ean": "8717807745189",
+    "product_url": "https://lampan.se/p/shiva-55cm-1/?option=11504",
+    "cart_deeplink": "https://lampan.se/p/shiva-55cm-1/?option=11504",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=8190718&fid=2470&url=https://lampan.se/p/shiva-55cm-1/?option=11504",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/8190718.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

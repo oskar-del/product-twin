@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_1108A1_2",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Artera - Form 2 - Golvlampa - Svart",
+    "manufacturer": "Artera",
+    "article_no": "1108A1_2",
+    "ean": "5904798659745",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2719,
+    "ean": "5904798659745",
+    "product_url": "https://lampan.se/p/form-2-0/?option=3633",
+    "cart_deeplink": "https://lampan.se/p/form-2-0/?option=3633",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=1108A1_2&fid=2470&url=https://lampan.se/p/form-2-0/?option=3633",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/11952_1_852.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

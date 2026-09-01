@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_134775",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid Bullo XL taklampa svart / opal",
+    "manufacturer": "Belid",
+    "article_no": "134775",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 1958,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/134775/belid-bullo-xl-taklampa-svart-opal",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/134775/belid-bullo-xl-taklampa-svart-opal",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=134775&fid=978&url=https://www.mjuk.com/sv-se/product/134775/belid-bullo-xl-taklampa-svart-opal",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/cd2ac1ab-b258-4b73-a2ac-676a70745d08.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1812390",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Parkettgolv Pergo Langeland Seafield Ek 1-Stav",
+    "manufacturer": "Pergo",
+    "article_no": "GOP1812390",
+    "ean": "5401013657888",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3799,
+    "ean": "5401013657888",
+    "product_url": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-pergo-langeland-seafield-ek-1-stav/p-1812390",
+    "cart_deeplink": "https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-pergo-langeland-seafield-ek-1-stav/p-1812390",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1812390&fid=2559&url=https://www.golvpoolen.se/golv/tragolv/parkettgolv/parkettgolv-pergo-langeland-seafield-ek-1-stav/p-1812390",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/161b1065-90f7-4ed0-9124-eeac545b873b/60045800.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

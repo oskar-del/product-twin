@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_SL07867",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Superliving - Urban 40cm - Vägglampa - Vit",
+    "manufacturer": "Superliving",
+    "article_no": "SL07867",
+    "ean": "5710825007867",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1550,
+    "ean": "5710825007867",
+    "product_url": "https://lampan.se/p/urban-40cm/?option=7763",
+    "cart_deeplink": "https://lampan.se/p/urban-40cm/?option=7763",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=SL07867&fid=2470&url=https://lampan.se/p/urban-40cm/?option=7763",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-35414.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1066276-1066140",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschhörn INR Arc 13 Måttanpassad",
+    "manufacturer": "INR",
+    "article_no": "GOP1066276-1066140",
+    "ean": "7392102026419",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 23564,
+    "ean": "7392102026419",
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/mattanpassade-duschar/duschhorn-inr-arc-13-mattanpassad/p-1066276-1066140",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/mattanpassade-duschar/duschhorn-inr-arc-13-mattanpassad/p-1066276-1066140",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1066276-1066140&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/mattanpassade-duschar/duschhorn-inr-arc-13-mattanpassad/p-1066276-1066140",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/5a2d97a3-2f53-47ed-b2e8-54588284d1bd/11303100.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

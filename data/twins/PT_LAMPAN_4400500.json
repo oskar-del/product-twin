@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4400500",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Unison - LED R7s 78mm 4W 3000K dimbar - Ljuskälla - Transparent",
+    "manufacturer": "Unison",
+    "article_no": "4400500",
+    "ean": "7340037011505",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 229,
+    "ean": "7340037011505",
+    "product_url": "https://lampan.se/p/led-r7s-78mm-4w-3000k-dimbar/?option=4607",
+    "cart_deeplink": "https://lampan.se/p/led-r7s-78mm-4w-3000k-dimbar/?option=4607",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4400500&fid=2470&url=https://lampan.se/p/led-r7s-78mm-4w-3000k-dimbar/?option=4607",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/4400520-v-w.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

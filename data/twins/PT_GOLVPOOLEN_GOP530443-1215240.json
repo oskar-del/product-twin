@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP530443-1215240",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Diskmedelspump Tapwell Birillo BI228",
+    "manufacturer": "Tapwell",
+    "article_no": "GOP530443-1215240",
+    "ean": "7350004674602",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 646,
+    "ean": "7350004674602",
+    "product_url": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/diskmedelspump-tapwell-birillo-bi228/p-530443-1215240",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/diskmedelspump-tapwell-birillo-bi228/p-530443-1215240",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP530443-1215240&fid=2559&url=https://www.golvpoolen.se/badrum/blandare/tillbehor-blandare/diskmedelspump-tapwell-birillo-bi228/p-530443-1215240",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/41f6db3f-661b-478f-902a-b95e02bc1912/bi228-grottesco.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

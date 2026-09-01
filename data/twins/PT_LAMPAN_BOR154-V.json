@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_BOR154-V",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Texa Design - Toreno 50cm - Skrivbordslampa - Vit",
+    "manufacturer": "Texa Design",
+    "article_no": "BOR154-V",
+    "ean": "7393064362010",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2119,
+    "ean": "7393064362010",
+    "product_url": "https://lampan.se/p/toreno-50cm-1/?option=10824",
+    "cart_deeplink": "https://lampan.se/p/toreno-50cm-1/?option=10824",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=BOR154-V&fid=2470&url=https://lampan.se/p/toreno-50cm-1/?option=10824",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/bor154-v.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

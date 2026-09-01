@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_132575",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Knoll Cesca stol med armstöd brun / bök",
+    "manufacturer": "Knoll",
+    "article_no": "132575",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 7200,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/132575/knoll-cesca-stol-med-armstod-brun-bok",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/132575/knoll-cesca-stol-med-armstod-brun-bok",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=132575&fid=978&url=https://www.mjuk.com/sv-se/product/132575/knoll-cesca-stol-med-armstod-brun-bok",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/845676181ffd2d8a9577b29bf1c25db7.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

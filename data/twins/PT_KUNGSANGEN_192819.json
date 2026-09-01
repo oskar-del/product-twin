@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_KUNGSANGEN_192819",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Dunkudde Hög 70% dun  50x60",
+    "manufacturer": "Kungsangen",
+    "article_no": "192819",
+    "ean": null,
+    "source": "kungsangen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "DECOR",
+  "commerce": {
+    "merchant": "kungsangen SE",
+    "currency": "SEK",
+    "unit_price": 2999,
+    "ean": null,
+    "product_url": "https://kungsangen.com/se/p/dunkudde-hog-70%-dun-/192819",
+    "cart_deeplink": "https://kungsangen.com/se/p/dunkudde-hog-70%-dun-/192819",
+    "affiliate_link": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=192819&fid=2564&url=https://kungsangen.com/se/p/dunkudde-hog-70%25-dun-/192819",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://api.kungsangen.com/medias/sys_master/images/h16/h05/8826343587870/ks2000Wx1500H_Dunkudde_Hog_50x60/ks2000Wx1500H-Dunkudde-Hog-50x60.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

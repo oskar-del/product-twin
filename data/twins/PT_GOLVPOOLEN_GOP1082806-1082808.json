@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP1082806-1082808",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschset Hansgrohe Croma Select E",
+    "manufacturer": "Hansgrohe",
+    "article_no": "GOP1082806-1082808",
+    "ean": "4011097753843",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1718,
+    "ean": "4011097753843",
+    "product_url": "https://www.golvpoolen.se/badrum/duscharmatur/duschset/duschset-hansgrohe-croma-select-e/p-1082806-1082808",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duscharmatur/duschset/duschset-hansgrohe-croma-select-e/p-1082806-1082808",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP1082806-1082808&fid=2559&url=https://www.golvpoolen.se/badrum/duscharmatur/duschset/duschset-hansgrohe-croma-select-e/p-1082806-1082808",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/f2672f68-7d8c-43b4-a439-2b8c72e8b52b/hansgrohe_26594400.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

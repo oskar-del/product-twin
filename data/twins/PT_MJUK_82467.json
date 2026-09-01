@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_82467",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Richmond Interiors Blaze pendellampa svart",
+    "manufacturer": "Richmond Interiors",
+    "article_no": "82467",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 4400,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/82467/richmond-interiors-blaze-pendellampa-svart",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/82467/richmond-interiors-blaze-pendellampa-svart",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=82467&fid=978&url=https://www.mjuk.com/sv-se/product/82467/richmond-interiors-blaze-pendellampa-svart",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/9185f5c20da07e7fda7aeb4f9fea5318.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

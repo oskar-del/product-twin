@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_46103-38-02",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Vidal Ø48 - Takplafond - Mattguld/mässing",
+    "manufacturer": "Lucide",
+    "article_no": "46103/38/02",
+    "ean": "5411212460837",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 2889,
+    "ean": "5411212460837",
+    "product_url": "https://lampan.se/p/vidal-o48/?option=583",
+    "cart_deeplink": "https://lampan.se/p/vidal-o48/?option=583",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=46103%2F38%2F02&fid=2470&url=https://lampan.se/p/vidal-o48/?option=583",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/46103-38-02.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

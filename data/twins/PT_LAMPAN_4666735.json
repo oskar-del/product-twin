@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_4666735",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Unison - E27 sensor rörelse 9W 3000K - Ljuskälla - Vit",
+    "manufacturer": "Unison",
+    "article_no": "4666735",
+    "ean": "7340037006204",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 149,
+    "ean": "7340037006204",
+    "product_url": "https://lampan.se/p/e27-sensor-rorelse-9w-3000k/?option=4530",
+    "cart_deeplink": "https://lampan.se/p/e27-sensor-rorelse-9w-3000k/?option=4530",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=4666735&fid=2470&url=https://lampan.se/p/e27-sensor-rorelse-9w-3000k/?option=4530",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/normal/led-e27-rorelsesensor-opal-2700k-806lm-83w60w.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

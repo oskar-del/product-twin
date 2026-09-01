@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP371395",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Handdusch Mora Cera S5 300 mm",
+    "manufacturer": "Mora",
+    "article_no": "GOP371395",
+    "ean": "7391887234156",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 532,
+    "ean": "7391887234156",
+    "product_url": "https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-mora-cera-s5-300-mm/p-371395",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-mora-cera-s5-300-mm/p-371395",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP371395&fid=2559&url=https://www.golvpoolen.se/badrum/duscharmatur/duschmunstycke-och-duschhandtag/handdusch-mora-cera-s5-300-mm/p-371395",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/47854a9d-3d64-48f6-ac28-dc394ca39b61/handdusch-mora-cera-s5.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

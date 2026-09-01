@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_135926",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Mio soffbord 120 cm brun",
+    "manufacturer": "Mio",
+    "article_no": "135926",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 3263,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/135926/mio-soffbord-120-cm-brun",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/135926/mio-soffbord-120-cm-brun",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=135926&fid=978&url=https://www.mjuk.com/sv-se/product/135926/mio-soffbord-120-cm-brun",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/03ba3463-b270-4493-bc5e-55620d03d3a9.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

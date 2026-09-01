@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_LM2073GR",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Leitmotiv - Phoebe LED 26cm - Portabel lampa - Grön",
+    "manufacturer": "Leitmotiv",
+    "article_no": "LM2073GR",
+    "ean": "8714302756658",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 939,
+    "ean": "8714302756658",
+    "product_url": "https://lampan.se/p/phoebe-led-26cm-0/?option=15417",
+    "cart_deeplink": "https://lampan.se/p/phoebe-led-26cm-0/?option=15417",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=LM2073GR&fid=2470&url=https://lampan.se/p/phoebe-led-26cm-0/?option=15417",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/lm2073gr_00.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

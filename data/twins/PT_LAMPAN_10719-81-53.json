@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_10719-81-53",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Lucide - Esterad - Golvlampa - Orange",
+    "manufacturer": "Lucide",
+    "article_no": "10719/81/53",
+    "ean": "5411212106049",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1659,
+    "ean": "5411212106049",
+    "product_url": "https://lampan.se/p/esterad-2/?option=416",
+    "cart_deeplink": "https://lampan.se/p/esterad-2/?option=416",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=10719%2F81%2F53&fid=2470&url=https://lampan.se/p/esterad-2/?option=416",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/10719-81-53.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

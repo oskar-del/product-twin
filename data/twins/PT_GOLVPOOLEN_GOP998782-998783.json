@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP998782-998783",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Badrumshylla Miller Badrum Classic Krom",
+    "manufacturer": "Miller Badrum",
+    "article_no": "GOP998782-998783",
+    "ean": "7331437010625",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 1200,
+    "ean": "7331437010625",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshylla/badrumshylla-miller-badrum-classic-krom/p-998782-998783",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumshylla/badrumshylla-miller-badrum-classic-krom/p-998782-998783",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP998782-998783&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumshylla/badrumshylla-miller-badrum-classic-krom/p-998782-998783",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/4d8442bf-ea67-48af-ac10-4b8194666e2e/810230c_02.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

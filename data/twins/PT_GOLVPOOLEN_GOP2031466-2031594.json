@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP2031466-2031594",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Duschhörna Invitrea Flair GH22 med Glasrengöring",
+    "manufacturer": "Invitrea",
+    "article_no": "GOP2031466-2031594",
+    "ean": null,
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 19784,
+    "ean": null,
+    "product_url": "https://www.golvpoolen.se/badrum/duschar/duschhorn/duschhorna-invitrea-flair-gh22-med-glasrengoring/p-2031466-2031594",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/duschar/duschhorn/duschhorna-invitrea-flair-gh22-med-glasrengoring/p-2031466-2031594",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP2031466-2031594&fid=2559&url=https://www.golvpoolen.se/badrum/duschar/duschhorn/duschhorna-invitrea-flair-gh22-med-glasrengoring/p-2031466-2031594",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/7ff030be-86b6-469f-9db1-0acea68ef03f/gh22_blankmassing_1-kopiera.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

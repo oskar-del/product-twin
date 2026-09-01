@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_GOLVPOOLEN_GOP962731-2106782",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Spegelbelysning Vedum Karleby",
+    "manufacturer": "Vedum",
+    "article_no": "GOP962731-2106782",
+    "ean": "7332936082076",
+    "source": "golvpoolen_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "golvpoolen SE",
+    "currency": "SEK",
+    "unit_price": 3100,
+    "ean": "7332936082076",
+    "product_url": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsbelysning/spegelbelysning-vedum-karleby/p-962731-2106782",
+    "cart_deeplink": "https://www.golvpoolen.se/badrum/badrumsmobler/badrumsbelysning/spegelbelysning-vedum-karleby/p-962731-2106782",
+    "affiliate_link": "https://dot.golvpoolen.se/t/t?a=1954023647&as=2106320328&t=2&tk=1&cupa_sku=GOP962731-2106782&fid=2559&url=https://www.golvpoolen.se/badrum/badrumsmobler/badrumsbelysning/spegelbelysning-vedum-karleby/p-962731-2106782",
+    "available": false,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://bhgst.imgix.net/155e2ffc-1b9c-4425-bd16-8ebdcc807fd6/5801208000_square.jpg?auto=format,compress&w=290&h=290&dpr=2&q=30"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

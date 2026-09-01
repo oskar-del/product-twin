@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_0306M1",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Karlskrona lampfabrik - Heidenstam 6 - Karlskrona lampfabrik - Mässing",
+    "manufacturer": "Karlskrona lampfabrik",
+    "article_no": "0306M1",
+    "ean": "7332535000228",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OTHER",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 14500,
+    "ean": "7332535000228",
+    "product_url": "https://lampan.se/p/heidenstam-6/?option=9678",
+    "cart_deeplink": "https://lampan.se/p/heidenstam-6/?option=9678",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=0306M1&fid=2470&url=https://lampan.se/p/heidenstam-6/?option=9678",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/784x870_ta-0306m_l1.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

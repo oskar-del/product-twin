@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_223507389",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Belid - Bullo Ø27 - Takplafond - Svart/opal",
+    "manufacturer": "Belid",
+    "article_no": "223507389",
+    "ean": "7391534080716",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 1849,
+    "ean": "7391534080716",
+    "product_url": "https://lampan.se/p/bullo-o27-5/?option=1590",
+    "cart_deeplink": "https://lampan.se/p/bullo-o27-5/?option=1590",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=223507389&fid=2470&url=https://lampan.se/p/bullo-o27-5/?option=1590",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/partspartnumber223507389filename223507389.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

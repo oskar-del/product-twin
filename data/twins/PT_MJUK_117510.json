@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_MJUK_117510",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Ateljé Lyktan Hood pendellampa röd",
+    "manufacturer": "Ateljé Lyktan",
+    "article_no": "117510",
+    "ean": null,
+    "source": "mjuk_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "LIGHTING",
+  "commerce": {
+    "merchant": "mjuk SE",
+    "currency": "SEK",
+    "unit_price": 6251,
+    "ean": null,
+    "product_url": "https://www.mjuk.com/sv-se/product/117510/atelje-lyktan-hood-pendellampa-rod",
+    "cart_deeplink": "https://www.mjuk.com/sv-se/product/117510/atelje-lyktan-hood-pendellampa-rod",
+    "affiliate_link": "https://do.mjuk.com/t/t?a=1670846955&as=2106320328&t=2&tk=1&cupa_sku=117510&fid=978&url=https://www.mjuk.com/sv-se/product/117510/atelje-lyktan-hood-pendellampa-rod",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://softserve.fra1.digitaloceanspaces.com/6ec0b31213fab70d13a4355768c6bbe5.jpg"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}

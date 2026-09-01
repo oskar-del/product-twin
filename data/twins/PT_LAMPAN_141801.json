@@ -1,0 +1,37 @@
+{
+  "twin_id": "PT_LAMPAN_141801",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Strömshaga - Fotogenlampa Oval Marja - Fotogenlampa - Transparent",
+    "manufacturer": "Strömshaga",
+    "article_no": "141801",
+    "ean": "7332771077015",
+    "source": "lampan_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "FURNITURE",
+  "commerce": {
+    "merchant": "lampan SE",
+    "currency": "SEK",
+    "unit_price": 399,
+    "ean": "7332771077015",
+    "product_url": "https://lampan.se/p/fotogenlampa-oval-marja/?option=13328",
+    "cart_deeplink": "https://lampan.se/p/fotogenlampa-oval-marja/?option=13328",
+    "affiliate_link": "https://do.lampan.se/t/t?a=1934366753&as=2106320328&t=2&tk=1&cupa_sku=141801&fid=2470&url=https://lampan.se/p/fotogenlampa-oval-marja/?option=13328",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://lampan.se/images/zoom/1-24205.png"
+  },
+  "geometry": {
+    "level": "G0",
+    "state": "catalog_only"
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G0_catalog_only"
+  }
+}
