@@ -1,5 +1,23 @@
 # Platform & 3D Engine — Claude Session Handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-01 (Brain; supersedes earlier pins; re-read every resume)
+>
+> THE BOTTLENECK IS NOW YOU: we hold ~226k channel-tracked SKUs (9 catalogs in
+> repo-avatar-factory/data/) + 3,849 GLBs + 8 native manufacturer meshes, but NO consumer
+> surface composes them. Build the SHOPPABLE ROOM surface on the one engine:
+> 1. **Consume the avatar library at scale**: load twin catalog rows (Newport first) +
+>    their GLB proxies into the engine's scene contract; render a furnished room with
+>    click-object → product panel (name, price, image, BUY = affiliate_link). The
+>    twin-consumption path you built (GLTF_ASSET + adapter) is the base — feed it real data.
+> 2. **Attach-point rendering**: Avatar is defining base+slot layering (sofa→pillows,
+>    table→vase, floor→rug). Render composed vignettes from that schema — swap any item.
+> 3. **Hero-still hook**: repo-avatar-factory/scripts/hero_still_poc.py proves scene→Cycles
+>    (~3min/frame, Archevio format). Add an engine export so ANY composed scene emits the
+>    Blender scene for a photoreal still. Interactive twin + hero still from one graph.
+> 4. Then: Site Intelligence template absorption + gate '9' derivation (unchanged backlog).
+> Deliverable-first: end every block with a rendered, clickable, shoppable room. Commit;
+> Oskar pushes.
+
 > ## ⛳ UPDATE 2026-08-27 — Lantmäteriet data landed
 > The LM vector grants delivered (parcels + buildings, `"../lm-data/"`, repo-external).
 > Spatial derived the authoritative SVÄRTINGE 54:28 boundary (1 936.8 m²,
