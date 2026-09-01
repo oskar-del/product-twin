@@ -1,5 +1,18 @@
 # MIMER (Svärtinge 54:28) — persistent handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-01 (Brain; supersedes earlier pins; re-read every resume)
+>
+> Winner is called: VINKELHUSET. Finish the Lender Edition against the WINNER:
+> 1. **§6 receipted cost BoM** — rebuild build_bom.py quantities from Vinkelhuset's
+>    developed geometry (BRAGE is drawing it now; use the concept dims meanwhile, mark
+>    CONCEPT, swap when developed dims land).
+> 2. **§7 finished-value comps** — comparable sales for the area, receipted sources.
+> 3. Fold the authoritative parcel receipt (#21) through every claim; keep the
+>    NOT-verified ledger current.
+> Deliverable: a bank-ready Vinkelhuset dossier PDF/HTML in the vault + code in repo.
+> Truth law: every claim receipted. Commit; Oskar pushes.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-08-27 (Brain; LANTMÄTERIET DATA LANDED; re-read every resume)
 >
 > The LM grants (LM2026/114822 fastighetsindelning + LM2026/114814 byggnad) were
