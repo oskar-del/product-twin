@@ -1,5 +1,27 @@
 # Avatar Factory (Claude) — persistent handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-01 (Brain; supersedes earlier pins; re-read every resume)
+>
+> DONE so far: 13,036 Newport catalog twins + 3,640 furniture G2 proxies; Valostore ingest;
+> generic catalog ingester. Brain added 7 more catalogs under data/: mjuk (7,284),
+> lampemesteren (19,516), lampan (10,874), golvpoolen (59,720), kungsangen (23,822),
+> gripsholm (166), vidaxl-outdoor (89,595). ~226k SKUs total, all channel-tracked.
+>
+> QUEUE, in order:
+> 1. **ATTACH-POINT / LAYERING SCHEMA (top priority — the product's edge).** Define on the
+>    twin manifest: FURNITURE = base objects exposing slots (sofa/chair → pillow slots on
+>    seat/back; table → centerpiece; floor → rug; shelf/console → vignette). DECOR +
+>    table/pendant LIGHTING declare attach_as + footprint. Emit a validated example scene:
+>    "sofa + 2 pillows + throw + coffee table + vase + rug" composed purely from schema.
+>    Platform renders it — coordinate via docs/DESIGN-SELECTOR-MOUNT-CONTRACT pattern.
+> 2. **Ingest the 7 new catalogs** with your generic ingester (bucket field ready).
+>    Proxy FURNITURE for mjuk + kungsangen + vidaxl-outdoor hero pieces next (batch, not all).
+> 3. **Material truth into renders:** wire each twin's material_cues/spine colour into
+>    scripts/hero_still_poc.py overrides (no hardcoded guesses) so Cycles stills show
+>    documented materials. PoC renders in .runtime/renders/.
+> Report NUMBERS every block. Commit every batch; Oskar pushes. Zero-LLM bulk scripts.
+
+
 > ## ⭐ NEWPORT DEEP-MAP — 2026-08-28 (Oskar priority; Newport = first APPROVED Adtraction program + warm relationship)
 >
 > Newport SE is APPROVED (9% commission, tracking link live at.newport.se). Product feed
