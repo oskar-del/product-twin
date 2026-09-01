@@ -2,7 +2,7 @@
   "scene_version": "twin-scene/v0.1",
   "entity_type": "ShoppableRoomSceneExport",
   "scene_id": "SCENE_SHOPPABLE_ROOM_IKEA_LIVING_V01",
-  "generated_at": "2026-09-01T19:15:00.824Z",
+  "generated_at": "2026-09-01T19:25:23.886Z",
   "subject": {
     "label": "IKEA Living Room — shoppable product display",
     "identity_evidence_class": "CONCEPT",
@@ -503,6 +503,142 @@
         "category": "ELECTRICAL.LUMINAIRES.FLOOR",
         "color": null,
         "dimensions_label": "620×620×1510 mm"
+      }
+    },
+    {
+      "id": "decor_pillow_a",
+      "type": "FURNITURE",
+      "label": "Concept Linen cushion, natural (450×450×150 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/concept-cushion-a.glb",
+        "position": [
+          -0.57,
+          0.83,
+          -1.8
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin DECOR_PILLOW_A"
+      ],
+      "limitations": [
+        "Geometry level G0: concept cushion"
+      ],
+      "commerce": {
+        "product_name": "Linen cushion, natural",
+        "brand": "Concept",
+        "product_url": null,
+        "buy_url": null,
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "FFE.TEXTILES.CUSHION",
+        "color": null,
+        "dimensions_label": "450×450×150 mm"
+      }
+    },
+    {
+      "id": "decor_pillow_b",
+      "type": "FURNITURE",
+      "label": "Concept Velvet cushion, sage (400×400×130 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/concept-cushion-b.glb",
+        "position": [
+          0,
+          0.83,
+          -1.8
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin DECOR_PILLOW_B"
+      ],
+      "limitations": [
+        "Geometry level G0: concept cushion"
+      ],
+      "commerce": {
+        "product_name": "Velvet cushion, sage",
+        "brand": "Concept",
+        "product_url": null,
+        "buy_url": null,
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "FFE.TEXTILES.CUSHION",
+        "color": null,
+        "dimensions_label": "400×400×130 mm"
+      }
+    },
+    {
+      "id": "decor_throw",
+      "type": "FURNITURE",
+      "label": "Concept Wool throw, oatmeal (1300×800×20 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/concept-throw.glb",
+        "position": [
+          0,
+          0.83,
+          -1.8
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin DECOR_THROW"
+      ],
+      "limitations": [
+        "Geometry level G0: concept throw"
+      ],
+      "commerce": {
+        "product_name": "Wool throw, oatmeal",
+        "brand": "Concept",
+        "product_url": null,
+        "buy_url": null,
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "FFE.TEXTILES.THROW",
+        "color": null,
+        "dimensions_label": "1300×800×20 mm"
+      }
+    },
+    {
+      "id": "decor_vase",
+      "type": "FURNITURE",
+      "label": "Concept Ceramic vase, white (140×140×280 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/concept-vase.glb",
+        "position": [
+          0,
+          0.37,
+          -0.2
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin DECOR_VASE"
+      ],
+      "limitations": [
+        "Geometry level G0: concept vase"
+      ],
+      "commerce": {
+        "product_name": "Ceramic vase, white",
+        "brand": "Concept",
+        "product_url": null,
+        "buy_url": null,
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "FFE.DECOR.VASE",
+        "color": null,
+        "dimensions_label": "140×140×280 mm"
       }
     }
   ]

@@ -81,5 +81,20 @@
     "exact selected-variant material and texture QA",
     "live postcode 29660 price, stock and delivery refresh"
   ],
-  "policy": "This is a real, exact retail product identity with a verified-scale G2 planning avatar. It is usable for room fit and circulation, but is not a G3 claim of exact visual likeness or finish."
+  "policy": "This is a real, exact retail product identity with a verified-scale G2 planning avatar. It is usable for room fit and circulation, but is not a G3 claim of exact visual likeness or finish.",
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "seat_back",
+        "type": "pillow",
+        "capacity": 1
+      },
+      {
+        "slot_id": "seat",
+        "type": "throw",
+        "capacity": 1
+      }
+    ]
+  }
 }

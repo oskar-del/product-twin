@@ -84,5 +84,15 @@
     "exact selected-variant material and texture QA",
     "destination availability recovery or an approved fit-safe substitute"
   ],
-  "policy": "This is a real, exact retail product identity with a verified-scale G2 planning avatar. It remains the selected room object but is currently unavailable for delivery to 29660. It is usable for room fit and circulation, but is not a G3 claim of exact visual likeness or finish and is not silently replaced."
+  "policy": "This is a real, exact retail product identity with a verified-scale G2 planning avatar. It remains the selected room object but is currently unavailable for delivery to 29660. It is usable for room fit and circulation, but is not a G3 claim of exact visual likeness or finish and is not silently replaced.",
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "top",
+        "type": "centerpiece",
+        "capacity": 1
+      }
+    ]
+  }
 }

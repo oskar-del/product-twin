@@ -49,12 +49,17 @@ console.log("§3 commerce data");
 const commerceElements = scene.elements.filter(e => e.commerce);
 check("at least 8 elements have commerce", commerceElements.length >= 8);
 
+const baseCommerce = commerceElements.filter(e => e.evidence_class !== "CONCEPT");
+const conceptCommerce = commerceElements.filter(e => e.evidence_class === "CONCEPT");
 for (const el of commerceElements) {
   const c = el.commerce;
   check(`${el.id} has product_name`, typeof c.product_name === "string" && c.product_name.length > 0);
   check(`${el.id} has brand`, typeof c.brand === "string" && c.brand.length > 0);
-  check(`${el.id} has product_url or buy_url`, c.product_url || c.buy_url);
 }
+for (const el of baseCommerce) {
+  check(`${el.id} has product_url or buy_url`, el.commerce.product_url || el.commerce.buy_url);
+}
+check("at least 8 base items with URLs", baseCommerce.length >= 8);
 
 // §4 Product panel extraction
 console.log("§4 product panel extraction");
@@ -66,7 +71,9 @@ for (const [id, panel] of panels) {
   check(`panel ${id} has element_id`, panel.element_id === id);
   check(`panel ${id} has product_name`, typeof panel.product_name === "string");
   check(`panel ${id} has evidence_class`, typeof panel.evidence_class === "string");
-  check(`panel ${id} has buy_url or product_url`, panel.buy_url || panel.product_url);
+  if (panel.evidence_class !== "CONCEPT") {
+    check(`panel ${id} has buy_url or product_url`, panel.buy_url || panel.product_url);
+  }
 }
 
 // §5 Non-shoppable elements don't produce panels
