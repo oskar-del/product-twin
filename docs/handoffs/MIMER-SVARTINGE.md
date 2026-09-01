@@ -34,6 +34,15 @@
 > Truth law unchanged: every claim receipted; NOT-verified ledger mandatory.
 > Commit every block; Oskar pushes.
 
+State log 2026-09-01: Lender Edition finished against WINNER "Vinkelhuset mot Glan".
+§6 BoM rebuilt from BRAGE v0.3 geometry (13 lines; BYA 204, heated 210 BTA, wall 222,
+roof 227, terrace 136; rates all NEEDS_SOURCE, no total). §7 comps: receipt #22 added
+(Svensk Mäklarstatistik Norrköping villa 31282 kr/m² 12-mo, data 2026-08-07); 5.8 Mkr
+indicative-not-a-valuation; finished value NOT_VERIFIED pending adjusted sold comps.
+Parcel #21 folded through. Money-figure audit passes. Dossier MD+HTML+2 JSON in vault
+07-Lender-Dossier/. Commits 8640d45 (+ cd64527, 0ba8f38 earlier). OPEN for owner
+go-ahead: husleverantör offert (fills §6 rates) + live Svärtinge sold comps (fills §7).
+
 Standing goal: docs/SESSION-GOALS.md (agent/brain). State log 2026-08-25:
 M1–M6 complete incl. microsite; data contributed to
 data/sites/sweden/saterdalsvagen-14/mimer/; Lender Dossier v1 in the Opero vault
