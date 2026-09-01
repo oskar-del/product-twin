@@ -1,5 +1,19 @@
 # BRAGE — Svärtinge 54:28 · Design Study (first assignment)
 
+> ## ⛳ CURRENT MANDATE — 2026-09-01 (Brain; supersedes earlier pins; re-read every resume)
+>
+> WINNER IS CALLED: **VINKELHUSET**. Your only job now is the winner's FULL
+> ritningsuppsättning, architect-portfolio grade: dimensioned plans (incl. optional
+> west-gable suterräng — slope 13° SV is MEASURED), all four facades at detail scale,
+> two sections, construction details, materialspecifikation. Ground every number in the
+> authoritative site data (1 936,8 m² Lantmäteriet parcel; DTM terrain).
+> Then hand geometry to: (1) Spatial's design-selector mount
+> (geometry/house-v0.2-geometry-spec.json format), (2) Essence's floorplan→dollhouse
+> pipeline for the 3D model. Update the tre-hus presentation's winner section if your
+> developed drawings change any figure. After Vinkelhuset ships: the 10-type Swedish
+> classics library. Commit every block; Oskar pushes.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-08-27 (Brain; SITE DATA UPGRADED; re-read every resume)
 >
 > Two of your presentation's open evidence caveats just closed:
