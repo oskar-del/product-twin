@@ -11,6 +11,7 @@ import fs from "node:fs";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
 import {parseScene, PRIMITIVES} from "../engine/core/scene-contract.mjs";
+import {resolveComposition} from "../engine/compose/attach-resolver.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const twinsDir = path.join(root, "data/twins");
@@ -26,19 +27,20 @@ function dimMetres(twin) {
 }
 
 function commerceFromTwin(twin) {
+  const direct = twin.commerce;
   const ei = twin.external_identities?.[0];
   const mfr = twin.identity?.manufacturer ?? "";
   const model = twin.identity?.model ?? twin.twin_id;
   return {
-    product_name: `${mfr} ${model}`.trim(),
-    brand: mfr || null,
-    product_url: ei?.product_url ?? null,
-    buy_url: ei?.affiliate_link ?? ei?.product_url ?? null,
-    image_url: twin.media?.hero_image ?? null,
-    price: null,
-    currency: null,
-    category: twin.category_id ?? null,
-    color: null,
+    product_name: direct?.product_name ?? `${mfr} ${model}`.trim(),
+    brand: direct?.brand ?? (mfr || null),
+    product_url: direct?.product_url ?? ei?.product_url ?? null,
+    buy_url: direct?.buy_url ?? ei?.affiliate_link ?? ei?.product_url ?? null,
+    image_url: direct?.image_url ?? twin.media?.hero_image ?? null,
+    price: direct?.price ?? null,
+    currency: direct?.currency ?? null,
+    category: direct?.category ?? twin.category_id ?? null,
+    color: direct?.color ?? null,
     dimensions_label: formatDimensions(twin)
   };
 }
@@ -133,10 +135,54 @@ const FURNITURE_LAYOUT = [
   {file: "PT_IKEA_LAUTERS_30405042.json",    id: "FLOOR_LAMP",  position: [2.3, 0, -2.0],  rotation_y_deg: 0}
 ];
 
+// Synthetic decor twins for attach-point demonstration
+const DECOR_TWINS = [
+  {twin_id: "DECOR_PILLOW_A", category_id: "FFE.TEXTILES.CUSHION", identity: {manufacturer: "Concept", model: "Linen cushion, natural"}, physical: {dimensions_mm: {width: 450, depth: 450, height: 150}}, geometry: {level: "G0", state: "concept_placeholder", asset_path: "data/geometry/avatars/concept-cushion-a.glb", shape_claim: "concept cushion"}, attach: {role: "attach", accepts_slot_type: "pillow", footprint_mm: {width: 450, depth: 450, height: 150}}, commerce: {product_name: "Linen cushion, natural", brand: "Concept", category: "FFE.TEXTILES.CUSHION"}},
+  {twin_id: "DECOR_PILLOW_B", category_id: "FFE.TEXTILES.CUSHION", identity: {manufacturer: "Concept", model: "Velvet cushion, sage"}, physical: {dimensions_mm: {width: 400, depth: 400, height: 130}}, geometry: {level: "G0", state: "concept_placeholder", asset_path: "data/geometry/avatars/concept-cushion-b.glb", shape_claim: "concept cushion"}, attach: {role: "attach", accepts_slot_type: "pillow", footprint_mm: {width: 400, depth: 400, height: 130}}, commerce: {product_name: "Velvet cushion, sage", brand: "Concept", category: "FFE.TEXTILES.CUSHION"}},
+  {twin_id: "DECOR_THROW", category_id: "FFE.TEXTILES.THROW", identity: {manufacturer: "Concept", model: "Wool throw, oatmeal"}, physical: {dimensions_mm: {width: 1300, depth: 800, height: 20}}, geometry: {level: "G0", state: "concept_placeholder", asset_path: "data/geometry/avatars/concept-throw.glb", shape_claim: "concept throw"}, attach: {role: "attach", accepts_slot_type: "throw", footprint_mm: {width: 1300, depth: 800, height: 20}}, commerce: {product_name: "Wool throw, oatmeal", brand: "Concept", category: "FFE.TEXTILES.THROW"}},
+  {twin_id: "DECOR_VASE", category_id: "FFE.DECOR.VASE", identity: {manufacturer: "Concept", model: "Ceramic vase, white"}, physical: {dimensions_mm: {width: 140, depth: 140, height: 280}}, geometry: {level: "G0", state: "concept_placeholder", asset_path: "data/geometry/avatars/concept-vase.glb", shape_claim: "concept vase"}, attach: {role: "attach", accepts_slot_type: "centerpiece", footprint_mm: {width: 140, depth: 140, height: 280}}, commerce: {product_name: "Ceramic vase, white", brand: "Concept", category: "FFE.DECOR.VASE"}}
+];
+
+// Attach-point composition: which decor attaches to which base
+const ATTACH_COMPOSITION = [
+  {twin_id: "DECOR_PILLOW_A", attach_to: "PT_IKEA_KIVIK_49440597", slot_id: "seat_back"},
+  {twin_id: "DECOR_PILLOW_B", attach_to: "PT_IKEA_KIVIK_49440597", slot_id: "seat_back"},
+  {twin_id: "DECOR_THROW", attach_to: "PT_IKEA_KIVIK_49440597", slot_id: "seat"},
+  {twin_id: "DECOR_VASE", attach_to: "PT_IKEA_LISTERBY_30513904", slot_id: "top"}
+];
+
 export function buildShoppableRoom() {
-  const furnitureElements = FURNITURE_LAYOUT.map(item => {
+  const twinIndex = new Map();
+
+  // Load base furniture twins
+  const compositionItems = FURNITURE_LAYOUT.map(item => {
     const twin = loadTwin(item.file);
-    return twinElement(twin, {position: item.position, rotation_y_deg: item.rotation_y_deg}, item.id);
+    twinIndex.set(twin.twin_id, twin);
+    return {twin_id: twin.twin_id, position: item.position, rotation_y_deg: item.rotation_y_deg};
+  });
+
+  // Register decor twins and add composition items
+  for (const decor of DECOR_TWINS) {
+    twinIndex.set(decor.twin_id, decor);
+  }
+  compositionItems.push(...ATTACH_COMPOSITION);
+
+  // Resolve attach positions
+  const {positioned, errors} = resolveComposition({items: compositionItems, twinIndex});
+  if (errors.length) console.warn(`  attach-resolver warnings: ${errors.join("; ")}`);
+
+  // Build id map from layout
+  const idByTwinId = new Map();
+  for (const item of FURNITURE_LAYOUT) {
+    const twin = loadTwin(item.file);
+    idByTwinId.set(twin.twin_id, item.id);
+  }
+
+  // Build elements from resolved positions
+  const furnitureElements = positioned.map(item => {
+    const id = idByTwinId.get(item.twin.twin_id)
+      ?? item.twin.twin_id.toLowerCase().replace(/[^a-z0-9]+/g, "_");
+    return twinElement(item.twin, {position: item.position, rotation_y_deg: item.rotation_y_deg}, id);
   });
 
   const scene = {
@@ -208,6 +254,6 @@ if (invokedDirectly) {
 
   console.log(`wrote ${path.relative(root, outputPath)}`);
   console.log(`  elements ${total} (${shoppable} shoppable) · stages ${parsed.stages.length}`);
-  console.log(`  furniture ${FURNITURE_LAYOUT.length} twins with GLB avatars`);
+  console.log(`  furniture ${FURNITURE_LAYOUT.length} base twins + ${ATTACH_COMPOSITION.length} attached decor`);
   console.log(`  profiles ${parsed.presentation.profiles.join(", ")}`);
 }

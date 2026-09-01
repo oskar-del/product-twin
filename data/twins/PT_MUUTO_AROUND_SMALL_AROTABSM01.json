@@ -24,7 +24,13 @@
     "professional_product_page": "https://professionals.muuto.com/product/around-coffee-table--p1920/60019/",
     "architect_download_page": "https://professionals.muuto.com/toolbox/product-information/download-ad-files/",
     "architect_download_hub": "https://download.muuto.com/digitalshowroom/",
-    "geometry_formats_advertised": ["DWG", "3DS", "OBJ", "SketchUp", "Revit"],
+    "geometry_formats_advertised": [
+      "DWG",
+      "3DS",
+      "OBJ",
+      "SketchUp",
+      "Revit"
+    ],
     "authority": "A_MANUFACTURER"
   },
   "external_identities": [
@@ -48,7 +54,13 @@
     "level": "G0",
     "state": "exact_product_bound_asset_unresolved",
     "preferred_source": "Muuto architect file",
-    "advertised_formats": ["OBJ", "3DS", "DWG", "SketchUp", "Revit"],
+    "advertised_formats": [
+      "OBJ",
+      "3DS",
+      "DWG",
+      "SketchUp",
+      "Revit"
+    ],
     "runtime_target": "GLB",
     "scale_state": "manufacturer_dimensions_known_asset_not_validated",
     "exact_likeness_state": "pending_asset_resolution",
@@ -78,5 +90,15 @@
   "commerce_evidence_file": "data/commerce/muuto-residential-hero-set-spain-offers-2026-08-17.json",
   "authorized_intake_manifest": "config/geometry/intake/muuto-around-small-arotabsm01-authorized-intake.json",
   "qa_evidence_template": "config/geometry/qa-evidence-templates/muuto-around-small-arotabsm01-geometry-qa.example.json",
-  "policy": "Exact identity and a Spain listing do not imply exact geometry or deliverability. Mutable price, stock and delivery data are resolved live before procurement."
+  "policy": "Exact identity and a Spain listing do not imply exact geometry or deliverability. Mutable price, stock and delivery data are resolved live before procurement.",
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "top",
+        "type": "centerpiece",
+        "capacity": 1
+      }
+    ]
+  }
 }
