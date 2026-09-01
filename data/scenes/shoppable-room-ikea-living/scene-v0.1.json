@@ -1,0 +1,509 @@
+{
+  "scene_version": "twin-scene/v0.1",
+  "entity_type": "ShoppableRoomSceneExport",
+  "scene_id": "SCENE_SHOPPABLE_ROOM_IKEA_LIVING_V01",
+  "generated_at": "2026-09-01T19:15:00.824Z",
+  "subject": {
+    "label": "IKEA Living Room — shoppable product display",
+    "identity_evidence_class": "CONCEPT",
+    "identity_scope": "SYNTHETIC_SHOPPABLE_ROOM"
+  },
+  "coordinate_system": {
+    "frame": "LOCAL_ENU",
+    "axes": {
+      "x": "EAST",
+      "y": "UP",
+      "z": "NORTH"
+    },
+    "origin_wgs84": [
+      0,
+      0
+    ],
+    "horizontal_reference": "SYNTHETIC — not a real location",
+    "vertical_reference": "LOCAL_RELATIVE_UNCALIBRATED",
+    "linear_units": "metre",
+    "evidence_class": "CONCEPT",
+    "limitations": [
+      "Synthetic room — not a real site."
+    ]
+  },
+  "source_bindings": [
+    {
+      "path": "scripts/compile-shoppable-room.mjs",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "ROOM_COMPILER"
+    },
+    {
+      "path": "data/twins/",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "PRODUCT_TWIN_CATALOG"
+    }
+  ],
+  "evidence_classes": [
+    "AUTHORITATIVE",
+    "INDICATIVE",
+    "DERIVED",
+    "REPORTED_UNVERIFIED",
+    "CONCEPT"
+  ],
+  "legal_claim_policy": {
+    "visualisation_allowed": true,
+    "concept_design_allowed": true,
+    "blocked_claims": [
+      "LEGAL_BOUNDARY",
+      "REGISTERED_AREA",
+      "ENTITLEMENT"
+    ],
+    "rule": "A shoppable room claims nothing about any real site. Product twins carry their own evidence classes for geometry fidelity."
+  },
+  "presentation": {
+    "profiles": [
+      "INTELLIGENCE",
+      "REALISTIC",
+      "SYSTEMS"
+    ],
+    "default_profile": "REALISTIC",
+    "default_stage": "ROOM"
+  },
+  "navigation": [
+    {
+      "id": "ROOM",
+      "label": "Room",
+      "camera": [
+        4.5,
+        3.2,
+        4.5
+      ],
+      "target": [
+        0,
+        0.8,
+        -0.5
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "ROOM",
+        "OPENING",
+        "FURNITURE"
+      ],
+      "cutaway": false,
+      "labels": false
+    },
+    {
+      "id": "SEATING",
+      "label": "Seating area",
+      "camera": [
+        2.8,
+        1.8,
+        2.2
+      ],
+      "target": [
+        0,
+        0.5,
+        -1
+      ],
+      "visible_groups": [
+        "FURNITURE",
+        "TERRAIN"
+      ],
+      "cutaway": false,
+      "labels": true
+    },
+    {
+      "id": "STORAGE",
+      "label": "Storage wall",
+      "camera": [
+        -1.5,
+        1.6,
+        2.5
+      ],
+      "target": [
+        -2.5,
+        0.8,
+        0.5
+      ],
+      "visible_groups": [
+        "FURNITURE",
+        "TERRAIN",
+        "ROOM"
+      ],
+      "cutaway": false,
+      "labels": true
+    }
+  ],
+  "elements": [
+    {
+      "id": "ROOM_FLOOR",
+      "type": "TERRAIN",
+      "label": "Room floor",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 8,
+        "segments": 1,
+        "vertices": [
+          [
+            -4,
+            0,
+            -4
+          ],
+          [
+            4,
+            0,
+            -4
+          ],
+          [
+            -4,
+            0,
+            4
+          ],
+          [
+            4,
+            0,
+            4
+          ]
+        ],
+        "method": "FLAT",
+        "height_reference": "LOCAL_RELATIVE"
+      },
+      "source_refs": [
+        "SHOPPABLE_ROOM_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic room shell for product display."
+      ]
+    },
+    {
+      "id": "ROOM_VOLUME",
+      "type": "ROOM",
+      "label": "Living room",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          6,
+          2.7,
+          5
+        ],
+        "position": [
+          0,
+          1.35,
+          0
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "LIVING"
+      },
+      "source_refs": [
+        "SHOPPABLE_ROOM_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic room for product display."
+      ]
+    },
+    {
+      "id": "ROOM_WINDOW",
+      "type": "OPENING",
+      "label": "South window",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.4,
+          1.6,
+          0.12
+        ],
+        "position": [
+          0,
+          1.7,
+          2.5
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "SHOPPABLE_ROOM_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic opening for light."
+      ]
+    },
+    {
+      "id": "SOFA",
+      "type": "FURNITURE",
+      "label": "IKEA 3-seat sofa, Tibbleby beige/grey (2280×950×830 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/ikea-kivik-49440597-g2-sofa-proxy.glb",
+        "position": [
+          0,
+          0,
+          -1.8
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin PT_IKEA_KIVIK_49440597"
+      ],
+      "limitations": [
+        "Geometry level G2: realistic upholstered planning proxy; exact IKEA industrial-design geometry and fabric texture are not claimed",
+        "Textures are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "IKEA 3-seat sofa, Tibbleby beige/grey",
+        "brand": "IKEA",
+        "product_url": "https://www.ikea.com/es/es/p/kivik-sofa-3-plazas-tibbleby-beis-gris-s49440597/",
+        "buy_url": "https://www.ikea.com/es/es/p/kivik-sofa-3-plazas-tibbleby-beis-gris-s49440597/",
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "FFE.SEATING.SOFA",
+        "color": null,
+        "dimensions_label": "2280×950×830 mm"
+      }
+    },
+    {
+      "id": "COFFEE_TABLE",
+      "type": "FURNITURE",
+      "label": "IKEA Coffee table, oak veneer (1400×600×370 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/ikea-listerby-30513904-g2-coffee-table-proxy.glb",
+        "position": [
+          0,
+          0,
+          -0.2
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin PT_IKEA_LISTERBY_30513904"
+      ],
+      "limitations": [
+        "Geometry level G2: product-bound oak-veneer planning reconstruction; exact IKEA industrial-design geometry and veneer artwork are not claimed",
+        "Textures are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "IKEA Coffee table, oak veneer",
+        "brand": "IKEA",
+        "product_url": "https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/",
+        "buy_url": "https://www.ikea.com/es/en/p/listerby-coffee-table-oak-veneer-30513904/",
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "FFE.TABLE.COFFEE",
+        "color": null,
+        "dimensions_label": "1400×600×370 mm"
+      }
+    },
+    {
+      "id": "ARMCHAIR",
+      "type": "FURNITURE",
+      "label": "IKEA Armchair, birch veneer/Knisa light beige (680×820×1000 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/ikea-poang-39240787-g2-armchair-proxy.glb",
+        "position": [
+          2,
+          0,
+          -1
+        ],
+        "rotation_y_deg": -30
+      },
+      "source_refs": [
+        "Product Twin PT_IKEA_POANG_39240787"
+      ],
+      "limitations": [
+        "Geometry level G2: realistic birch-frame/upholstery planning proxy; exact IKEA curved-frame geometry and fabric texture are not claimed",
+        "Textures are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "IKEA Armchair, birch veneer/Knisa light beige",
+        "brand": "IKEA",
+        "product_url": "https://www.ikea.com/es/es/p/poang-sillon-chapa-abedul-knisa-beige-claro-s39240787/",
+        "buy_url": "https://www.ikea.com/es/es/p/poang-sillon-chapa-abedul-knisa-beige-claro-s39240787/",
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "FFE.SEATING.ARMCHAIR",
+        "color": null,
+        "dimensions_label": "680×820×1000 mm"
+      }
+    },
+    {
+      "id": "SIDE_TABLE",
+      "type": "FURNITURE",
+      "label": "IKEA Tray table, dark grey-green (450×450×530 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/ikea-gladom-70578451-g2-tray-table-proxy.glb",
+        "position": [
+          -1.6,
+          0,
+          -1.5
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin PT_IKEA_GLADOM_70578451"
+      ],
+      "limitations": [
+        "Geometry level G2: product-bound powder-coated-steel planning reconstruction; exact tray/frame geometry is not claimed",
+        "Textures are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "IKEA Tray table, dark grey-green",
+        "brand": "IKEA",
+        "product_url": "https://www.ikea.com/es/en/p/gladom-tray-table-dark-grey-green-70578451/",
+        "buy_url": "https://www.ikea.com/es/en/p/gladom-tray-table-dark-grey-green-70578451/",
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "FFE.TABLE.SIDE",
+        "color": null,
+        "dimensions_label": "450×450×530 mm"
+      }
+    },
+    {
+      "id": "TV_BENCH",
+      "type": "FURNITURE",
+      "label": "IKEA TV bench, white/Lappviken white (1800×420×380 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/ikea-besta-89330691-g2-media-unit-proxy.glb",
+        "position": [
+          -2.7,
+          0,
+          0.5
+        ],
+        "rotation_y_deg": 90
+      },
+      "source_refs": [
+        "Product Twin PT_IKEA_BESTA_89330691"
+      ],
+      "limitations": [
+        "Geometry level G2: realistic warm-white three-front media-unit proxy; exact IKEA hardware and panel construction are not claimed",
+        "Textures are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "IKEA TV bench, white/Lappviken white",
+        "brand": "IKEA",
+        "product_url": "https://www.ikea.com/es/es/p/besta-mueble-tv-blanco-lappviken-blanco-s89330691/",
+        "buy_url": "https://www.ikea.com/es/es/p/besta-mueble-tv-blanco-lappviken-blanco-s89330691/",
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "FFE.STORAGE.MEDIA_UNIT",
+        "color": null,
+        "dimensions_label": "1800×420×380 mm"
+      }
+    },
+    {
+      "id": "BOOKCASE",
+      "type": "FURNITURE",
+      "label": "IKEA Bookcase, white (800×280×2020 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/ikea-billy-00263850-g2-bookcase-proxy.glb",
+        "position": [
+          2.7,
+          0,
+          0.8
+        ],
+        "rotation_y_deg": -90
+      },
+      "source_refs": [
+        "Product Twin PT_IKEA_BILLY_00263850"
+      ],
+      "limitations": [
+        "Geometry level G2: realistic warm-white shelf proxy; exact IKEA construction details are not claimed",
+        "Textures are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "IKEA Bookcase, white",
+        "brand": "IKEA",
+        "product_url": "https://www.ikea.com/es/es/p/billy-libreria-blanco-00263850/",
+        "buy_url": "https://www.ikea.com/es/es/p/billy-libreria-blanco-00263850/",
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "FFE.STORAGE.BOOKCASE",
+        "color": null,
+        "dimensions_label": "800×280×2020 mm"
+      }
+    },
+    {
+      "id": "RUG",
+      "type": "FURNITURE",
+      "label": "IKEA Rug, flatwoven, natural, 133×195 cm (1330×1950×13 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/ikea-lohals-30511288-g2-rug-proxy.glb",
+        "position": [
+          0,
+          0.005,
+          -0.8
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin PT_IKEA_LOHALS_30511288"
+      ],
+      "limitations": [
+        "Geometry level G2: natural-jute flatweave cue; exact fibre variation and manufacturer photography are not copied",
+        "Textures are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "IKEA Rug, flatwoven, natural, 133×195 cm",
+        "brand": "IKEA",
+        "product_url": "https://www.ikea.com/es/en/p/lohals-rug-flatwoven-natural-30511288/",
+        "buy_url": "https://www.ikea.com/es/en/p/lohals-rug-flatwoven-natural-30511288/",
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "FFE.TEXTILES.RUG",
+        "color": null,
+        "dimensions_label": "1330×1950×13 mm"
+      }
+    },
+    {
+      "id": "FLOOR_LAMP",
+      "type": "FURNITURE",
+      "label": "IKEA Floor lamp, ash/white (620×620×1510 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/ikea-lauters-30405042-g2-floor-lamp-proxy.glb",
+        "position": [
+          2.3,
+          0,
+          -2
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin PT_IKEA_LAUTERS_30405042"
+      ],
+      "limitations": [
+        "Geometry level G2: product-bound ash-tripod/textile-shade planning reconstruction; exact joinery and shade texture are not claimed",
+        "Textures are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "IKEA Floor lamp, ash/white",
+        "brand": "IKEA",
+        "product_url": "https://www.ikea.com/es/en/p/lauters-floor-lamp-ash-white-30405042/",
+        "buy_url": "https://www.ikea.com/es/en/p/lauters-floor-lamp-ash-white-30405042/",
+        "image_url": null,
+        "price": null,
+        "currency": null,
+        "category": "ELECTRICAL.LUMINAIRES.FLOOR",
+        "color": null,
+        "dimensions_label": "620×620×1510 mm"
+      }
+    }
+  ]
+}
