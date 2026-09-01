@@ -74,5 +74,15 @@
       "product_id": "54125",
       "product_url": "https://www.newport.se/shop/textil/mattor/ullmattor/key-border-matta-camel"
     }
-  ]
+  ],
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "rug",
+    "footprint_mm": {
+      "width": 1700,
+      "depth": 2400,
+      "height": 12
+    },
+    "footprint_source": "measured"
+  }
 }

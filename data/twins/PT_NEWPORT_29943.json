@@ -74,5 +74,15 @@
       "product_id": "29943",
       "product_url": "https://www.newport.se/shop/inredning/dekoration/spel/spelbord-brun-80x80"
     }
-  ]
+  ],
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "vignette",
+    "footprint_mm": {
+      "width": 800,
+      "depth": 800,
+      "height": 600
+    },
+    "footprint_source": "measured"
+  }
 }

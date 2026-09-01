@@ -54,5 +54,15 @@
       "product_url": "https://www.newport.se/shop/inredning/tavlor/livsstil-modeikoner/classic-ferrari"
     }
   ],
-  "attach_role": "art"
+  "attach_role": "art",
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "vignette",
+    "footprint_mm": {
+      "width": 150,
+      "depth": 150,
+      "height": 200
+    },
+    "footprint_source": "category_default"
+  }
 }

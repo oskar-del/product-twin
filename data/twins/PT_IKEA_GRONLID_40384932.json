@@ -73,5 +73,20 @@
     "dimensions": "verified",
     "geometry": "G2_promoted_universal_proxy"
   },
-  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build.",
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "seat_back",
+        "type": "pillow",
+        "capacity": 3
+      },
+      {
+        "slot_id": "seat",
+        "type": "throw",
+        "capacity": 1
+      }
+    ]
+  }
 }

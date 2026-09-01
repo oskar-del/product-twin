@@ -98,5 +98,15 @@
         "max_items": 3
       }
     ]
+  },
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "surface",
+        "type": "vignette",
+        "capacity": 2
+      }
+    ]
   }
 }

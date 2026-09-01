@@ -54,5 +54,15 @@
       "product_url": "https://www.newport.se/shop/inredning/dekoration/luftballonger/travels-light-luftballong-svartsilver"
     }
   ],
-  "attach_role": "centerpiece"
+  "attach_role": "centerpiece",
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "vignette",
+    "footprint_mm": {
+      "width": 200,
+      "depth": 200,
+      "height": 250
+    },
+    "footprint_source": "category_default"
+  }
 }

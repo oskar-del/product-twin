@@ -129,5 +129,15 @@
         "max_items": 1
       }
     ]
+  },
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "top",
+        "type": "centerpiece",
+        "capacity": 1
+      }
+    ]
   }
 }

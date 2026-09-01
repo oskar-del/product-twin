@@ -74,5 +74,15 @@
       "product_id": "18640",
       "product_url": "https://www.newport.se/shop/inredning/krukor-vaser/vaser/pallo-vas-s"
     }
-  ]
+  ],
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "centerpiece",
+    "footprint_mm": {
+      "width": 600,
+      "depth": 400,
+      "height": 600
+    },
+    "footprint_source": "measured"
+  }
 }

@@ -1,0 +1,13 @@
+{
+  "scene_id": "SCENE_EXAMPLE_SOFA_STYLED",
+  "schema_version": "0.1.0",
+  "note": "Validated example scene composed purely from the attach-point schema (config/geometry/attach-point-schema.md). All twin_ids are real, live Newport catalog entries.",
+  "items": [
+    { "twin_id": "PT_NEWPORT_47214" },
+    { "twin_id": "PT_NEWPORT_101832", "attach_to": "PT_NEWPORT_47214", "slot_id": "seat_back" },
+    { "twin_id": "PT_NEWPORT_95561",  "attach_to": "PT_NEWPORT_47214", "slot_id": "seat_back" },
+    { "twin_id": "PT_NEWPORT_67134" },
+    { "twin_id": "PT_NEWPORT_98646",  "attach_to": "PT_NEWPORT_67134", "slot_id": "top" },
+    { "twin_id": "PT_NEWPORT_101561" }
+  ]
+}

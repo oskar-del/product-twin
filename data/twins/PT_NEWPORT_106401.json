@@ -54,5 +54,15 @@
       "product_url": "https://www.newport.se/shop/textil/kuddar/kuddfodral/rosario-indigo-kuddfodral-fransar-60x60"
     }
   ],
-  "attach_role": "pillow"
+  "attach_role": "pillow",
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "pillow",
+    "footprint_mm": {
+      "width": 450,
+      "depth": 450,
+      "height": 150
+    },
+    "footprint_source": "category_default"
+  }
 }

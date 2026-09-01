@@ -73,5 +73,15 @@
     "dimensions": "verified",
     "geometry": "G2_promoted_universal_proxy"
   },
-  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build."
+  "policy": "Real, exact retail product identity with live commerce fields. Geometry awaits proxy build.",
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "surface",
+        "type": "vignette",
+        "capacity": 3
+      }
+    ]
+  }
 }

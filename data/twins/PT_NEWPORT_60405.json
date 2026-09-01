@@ -74,5 +74,20 @@
       "product_id": "60405",
       "product_url": "https://www.newport.se/shop/mobler/stolar/karmstolar/locarno-matstol-sisley-pink"
     }
-  ]
+  ],
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "seat_back",
+        "type": "pillow",
+        "capacity": 1
+      },
+      {
+        "slot_id": "seat",
+        "type": "throw",
+        "capacity": 1
+      }
+    ]
+  }
 }

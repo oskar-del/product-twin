@@ -5,7 +5,7 @@
   "identity": {
     "state": "verified",
     "manufacturer": "IKEA",
-    "product_family": "VALN\u00c4S",
+    "product_family": "VALNÄS",
     "model": "Coffee table, oak veneer",
     "article_no": "206.280.38",
     "configuration": "Coffee table, oak veneer"
@@ -106,5 +106,15 @@
     "available": true,
     "observed_at": "2026-08-25",
     "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "top",
+        "type": "centerpiece",
+        "capacity": 1
+      }
+    ]
   }
 }

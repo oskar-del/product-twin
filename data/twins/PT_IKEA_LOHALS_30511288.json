@@ -6,9 +6,9 @@
     "state": "verified",
     "manufacturer": "IKEA",
     "product_family": "LOHALS",
-    "model": "Rug, flatwoven, natural, 133\u00d7195 cm",
+    "model": "Rug, flatwoven, natural, 133×195 cm",
     "article_no": "305.112.88",
-    "configuration": "Rug, flatwoven, natural, 133\u00d7195 cm"
+    "configuration": "Rug, flatwoven, natural, 133×195 cm"
   },
   "physical": {
     "dimensions_mm": {
@@ -95,5 +95,15 @@
     "available": true,
     "observed_at": "2026-08-25",
     "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "rug",
+    "footprint_mm": {
+      "width": 1330,
+      "depth": 1950,
+      "height": 13
+    },
+    "footprint_source": "measured"
   }
 }

@@ -102,5 +102,20 @@
     "confirm render and platform-display rights",
     "refresh exact postcode tax, freight, stock allocation and delivery before quote or purchase"
   ],
-  "policy": "Shopify proves a native product-level 3D model and an exact merchant commerce join. G3 is not claimed until scale, visible material, rights and final delivery gates all pass."
+  "policy": "Shopify proves a native product-level 3D model and an exact merchant commerce join. G3 is not claimed until scale, visible material, rights and final delivery gates all pass.",
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "seat_back",
+        "type": "pillow",
+        "capacity": 3
+      },
+      {
+        "slot_id": "seat",
+        "type": "throw",
+        "capacity": 1
+      }
+    ]
+  }
 }

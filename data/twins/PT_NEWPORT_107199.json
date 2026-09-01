@@ -54,5 +54,15 @@
       "product_url": "https://www.newport.se/shop/textil/mattor/ullmattor/pomegranate-matta-vit-multi-200x300"
     }
   ],
-  "attach_role": "rug"
+  "attach_role": "rug",
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "rug",
+    "footprint_mm": {
+      "width": 2000,
+      "depth": 3000,
+      "height": 10
+    },
+    "footprint_source": "category_default"
+  }
 }

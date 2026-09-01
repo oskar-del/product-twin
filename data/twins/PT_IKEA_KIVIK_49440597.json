@@ -94,5 +94,20 @@
     "available": true,
     "observed_at": "2026-08-25",
     "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "seat_back",
+        "type": "pillow",
+        "capacity": 3
+      },
+      {
+        "slot_id": "seat",
+        "type": "throw",
+        "capacity": 1
+      }
+    ]
   }
 }

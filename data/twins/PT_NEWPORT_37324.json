@@ -74,5 +74,15 @@
       "product_id": "37324",
       "product_url": "https://www.newport.se/shop/inredning/dekoration/skulpturer-figurer/melville-bordsdekoration-maessing-2-set"
     }
-  ]
+  ],
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "vignette",
+    "footprint_mm": {
+      "width": 600,
+      "depth": 400,
+      "height": 600
+    },
+    "footprint_source": "measured"
+  }
 }

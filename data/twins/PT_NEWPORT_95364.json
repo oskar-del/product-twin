@@ -54,5 +54,15 @@
       "product_url": "https://www.newport.se/shop/flower-world/konstvaxter/krukvaxter/jardin-des-magnolias-gavoset-vit"
     }
   ],
-  "attach_role": "plant"
+  "attach_role": "plant",
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "centerpiece",
+    "footprint_mm": {
+      "width": 250,
+      "depth": 250,
+      "height": 350
+    },
+    "footprint_source": "category_default"
+  }
 }

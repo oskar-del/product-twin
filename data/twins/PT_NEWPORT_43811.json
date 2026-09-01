@@ -74,5 +74,15 @@
       "product_id": "43811",
       "product_url": "https://www.newport.se/shop/textil/kuddar/prydnadskuddar/palla-rund-kudde-boucle-cream"
     }
-  ]
+  ],
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "pillow",
+    "footprint_mm": {
+      "width": 600,
+      "depth": 400,
+      "height": 600
+    },
+    "footprint_source": "measured"
+  }
 }
