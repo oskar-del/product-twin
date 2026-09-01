@@ -16,9 +16,12 @@
   "evidence_policy": {
     "all_geometry_class": "CONCEPT",
     "statement": "No legal boundary, buildable envelope (BYA/BTA), access or terrain gate is closed. Finished-floor (Y=0 datum) is provisional flat-plot; do not treat any dimension as engineered or permitted.",
-    "open_gates_blocking_promotion": ["registered_area", "legal_boundary", "BYA_BTA", "H30_H50_eligibility", "terrain_DTM_slope_FFL", "legal_access", "utility_capacity"],
+    "open_gates_blocking_promotion": ["legal_boundary", "BYA_BTA", "H30_H50_eligibility", "legal_access", "utility_capacity"],
+    "closed_gates": [
+      {"id": "registered_area", "value": "1936.8 m²", "source": "Lantmäteriet fastighetsindelning", "date": "2026-08-27"},
+      {"id": "terrain_DTM_slope_FFL", "value": "13° SW, ~70 m RH2000, 43 m fall to Glan over 800 m", "source": "Spatial Studio 1 m DTM", "date": "2026-08-27"}
+    ],
     "upgrades_requested": [
-      {"id": "DTM_1M", "unlocks": "slope + fall line -> confirm/deny west-end souterräng upgrade; set finished-floor"},
       {"id": "VIEWSHED_GLAN", "unlocks": "promote Glan view REPORTED_UNVERIFIED -> DERIVED per south window at eye height"}
     ]
   },
@@ -30,10 +33,10 @@
       "evening_sun": "summer sunset az ~320 (WNW) -> keep west open; social zone at west end",
       "wind": "prevailing SW + lake breeze -> vindficka glazed windbreak at SW terrace corner; north wing screens NE/E",
       "envelope_economy": "garage as cold wing shortens heated perimeter; compact footprint de-risks open BYA gate",
-      "slope_agnostic": "correct on flat datum; west-end walk-out is a conditional upgrade only if DTM confirms south fall >= ~2.5 m"
+      "slope_validated": "13° SW slope confirmed by DTM; west-end walk-out suterräng validated (~2.5 m fall under bar footprint)"
     }
   },
-  "datum": { "finished_floor_level_Y": 0.0, "status": "PROVISIONAL_FLAT_PLOT" },
+  "datum": { "finished_floor_level_Y": 0.0, "status": "MEASURED_13_DEG_SW", "rh2000_approx": 70.0, "slope_deg": 13, "aspect": "SW" },
   "elements": [
     {
       "id": "HOUSE_BAR", "type": "CONCEPT_BUILDING_MASS", "label": "Heated south bar (1.5-plan)",
@@ -90,8 +93,10 @@
   ],
   "conditional_upgrades": [
     {
-      "id": "WEST_SOUTERRANG", "condition": "DTM_1M shows south fall >= ~2.5 m across HOUSE_BAR footprint",
-      "effect": "Drop Glanrummet/west social end to a walk-out lower level onto TERRACE_SOUTH; add lower-level slab below Y=0. Do NOT model until DTM closes."
+      "id": "WEST_SOUTERRANG", "condition": "DTM confirms >= ~2.5 m south fall — VALIDATED 2026-08-27 (13° SW)",
+      "status": "VALIDATED",
+      "effect": "Drop Glanrummet/west social end to a walk-out lower level; adds ~58 m² (gillestuga 34, gästrum 12, teknik/förråd 12).",
+      "geometry": { "primitive": "BOX", "footprint_xz": [[-11,-4],[-1,-4],[-1,3],[-11,3]], "wall_height_m": 2.8, "y_offset": -2.5, "storeys": "1" }
     }
   ],
   "handoff": {
