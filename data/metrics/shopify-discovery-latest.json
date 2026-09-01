@@ -1,20 +1,20 @@
 {
-  "fetched_at": "2026-08-28T15:22:37.024Z",
+  "fetched_at": "2026-09-01T08:38:54.408Z",
   "source_id": "shopify_global_catalog",
   "query_count": 122,
-  "unique_candidate_count": 15009,
+  "unique_candidate_count": 15192,
   "by_category": {
     "FFE.SEATING.SOFA": {
       "queries": 3,
-      "returned": 580
+      "returned": 600
     },
     "FFE.SEATING.LOUNGE": {
       "queries": 3,
-      "returned": 592
+      "returned": 600
     },
     "FFE.SEATING.DINING": {
       "queries": 2,
-      "returned": 397
+      "returned": 400
     },
     "FFE.SEATING.STOOL": {
       "queries": 2,
@@ -30,7 +30,7 @@
     },
     "FFE.TABLE.DINING": {
       "queries": 2,
-      "returned": 399
+      "returned": 400
     },
     "FFE.TABLE.DESK": {
       "queries": 2,
@@ -38,11 +38,11 @@
     },
     "FFE.STORAGE": {
       "queries": 2,
-      "returned": 392
+      "returned": 400
     },
     "FFE.BEDS": {
       "queries": 2,
-      "returned": 399
+      "returned": 400
     },
     "FFE.BEDSIDE": {
       "queries": 2,
@@ -66,11 +66,11 @@
     },
     "OUTDOOR_FFE.DINING_CHAIR": {
       "queries": 2,
-      "returned": 398
+      "returned": 400
     },
     "OUTDOOR_FFE.TABLE": {
       "queries": 2,
-      "returned": 399
+      "returned": 400
     },
     "OUTDOOR_FFE.SUNLOUNGER": {
       "queries": 2,
@@ -78,7 +78,7 @@
     },
     "OUTDOOR_FFE.UMBRELLA": {
       "queries": 2,
-      "returned": 355
+      "returned": 387
     },
     "ELECTRICAL.LUMINAIRES.PENDANT": {
       "queries": 3,
@@ -118,7 +118,7 @@
     },
     "KITCHEN.SINKS": {
       "queries": 2,
-      "returned": 194
+      "returned": 200
     },
     "KITCHEN.COOKING": {
       "queries": 2,
@@ -146,7 +146,7 @@
     },
     "OPENINGS.HARDWARE": {
       "queries": 2,
-      "returned": 199
+      "returned": 200
     },
     "OPENINGS.WINDOWS": {
       "queries": 2,
@@ -214,7 +214,7 @@
     },
     "ENERGY.SOLAR.INVERTER": {
       "queries": 3,
-      "returned": 297
+      "returned": 300
     },
     "ENERGY.SOLAR.MOUNTING": {
       "queries": 2,
@@ -222,7 +222,7 @@
     },
     "ENERGY.BATTERY": {
       "queries": 2,
-      "returned": 189
+      "returned": 200
     }
   },
   "storage_policy": "catalog_payload_ephemeral_not_cached"
