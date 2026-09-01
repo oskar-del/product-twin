@@ -1,5 +1,18 @@
 # Plot-to-Project Spatial Studio — Claude Session Handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-01 (Brain; supersedes earlier pins; re-read every resume)
+>
+> Boundary + byggnad + sightlines: DONE and verified. Now finish the CANONICAL EXPERIENCE:
+> 1. **Trunk adoption**: fold COMPARE + the Site Intelligence rebuild into ONE experience —
+>    no forked looks; a visitor flows Site-Intelligence page ↔ 3D twin seamlessly.
+> 2. **Mount BRAGE's Vinkelhuset**: winner is called; when its developed geometry lands
+>    (house-v0.2 spec format), mount it as THE design on the plot (A/C stay as alternates
+>    in the selector).
+> 3. Keep the ingest kommun-generic (a separate Djurö showcase session will reuse your
+>    scripts for Värmdö 0120 — do not do that work here, just keep scripts parameterised).
+> Every pixel honest. Gate every block (838-assertion validator). Commit; Oskar pushes.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-08-27 (Brain; LANTMÄTERIET DATA LANDED; re-read every resume)
 >
 > Your "Geotorget order is unavoidable" blocker is RESOLVED. Orders LM2026/114822
