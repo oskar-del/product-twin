@@ -96,6 +96,608 @@ footer strong{color:var(--accent);font-weight:600}
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
+<!-- VINKELHUSET — FULL RITNINGSUPPSÄTTNING                 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="house" id="ritning" style="border-color:var(--accent);border-width:1.5px">
+<div class="k">Ritningsuppsättning · B · Vinkelhuset mot Glan</div>
+<h2 style="display:block;margin:2px 0 6px">Full ritningsuppsättning</h2>
+<p class="thesis" style="font-style:normal">Dimensionerade planer, alla fyra fasader i detaljskala, två sektioner, konstruktionsdetaljer och materialspecifikation. Grundat i uppmätt terrängdata (13° SV, 1 936,8 m²).</p>
+
+<!-- ── 1. MARKPLAN (detailed, with dimensions) ── -->
+<div style="margin-top:20px">
+<div class="dlbl">1 · Markplan — dimensionerad (gatunivå +70,0 RH2000)</div>
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="420" fill="var(--section-bg)" rx="4"/>
+
+<!-- Site context -->
+<rect x="20" y="10" width="520" height="16" fill="var(--road)" rx="3" opacity=".4"/>
+<text x="280" y="22" font-family="Barlow Condensed" font-size="8" fill="var(--dim)" text-anchor="middle" font-weight="500">SÄTERDALSVÄGEN</text>
+<text x="280" y="400" font-family="Barlow Condensed" font-size="9" fill="var(--glass-stroke)" text-anchor="middle" font-weight="500" letter-spacing="3">↓  GLAN (az 185°)  ↓</text>
+
+<!-- ── BAR wall mass: 20m × 7m ── -->
+<!-- scale ~13px/m, x=60, y=220, w=260, h=91 -->
+<rect x="60" y="220" width="260" height="91" fill="var(--wall)"/>
+
+<!-- ── WING wall mass: 8m × 8m ── -->
+<!-- x=230, y=90, w=104, h=104 -->
+<rect x="230" y="90" width="104" height="130" fill="var(--wall)"/>
+
+<!-- Bar room cutouts -->
+<!-- Glanrummet (living+view room): SW corner, ~6m×5.5m -->
+<rect x="64" y="224" width="78" height="83" fill="var(--card)"/>
+<!-- Kitchen-dining: ~5m×5.5m -->
+<rect x="144" y="224" width="65" height="83" fill="var(--card)"/>
+<!-- Heart zone: ~3m×3m (at hinge) -->
+<rect x="234" y="224" width="39" height="40" fill="var(--heart-light)" stroke="var(--heart)" stroke-width="0.8"/>
+<!-- Main bedroom: ~4m×5m (east end) -->
+<rect x="275" y="252" width="41" height="55" fill="var(--card)"/>
+<!-- Ensuite: ~2.5m×3m (NE of bar) -->
+<rect x="275" y="224" width="41" height="26" fill="var(--card)"/>
+<!-- Hall passage -->
+<rect x="211" y="224" width="21" height="83" fill="var(--card)"/>
+
+<!-- Wing room cutouts -->
+<!-- Entry hall: ~3m×3m -->
+<rect x="234" y="120" width="40" height="42" fill="var(--card)"/>
+<!-- WC/laundry: ~2.5m×3m -->
+<rect x="276" y="120" width="28" height="42" fill="var(--card)"/>
+<!-- Utility: ~2m×2.5m -->
+<rect x="306" y="120" width="24" height="42" fill="var(--card)"/>
+<!-- Garage: double, ~5.5m×6m -->
+<rect x="234" y="94" width="96" height="24" fill="var(--card)"/>
+<rect x="252" y="94" width="60" height="20" fill="var(--card)"/>
+<!-- Garage interior -->
+<rect x="256" y="96" width="26" height="16" rx="3" fill="none" stroke="var(--furn-s)" stroke-dasharray="3 2" opacity=".5"/>
+<rect x="288" y="96" width="26" height="16" rx="3" fill="none" stroke="var(--furn-s)" stroke-dasharray="3 2" opacity=".5"/>
+
+<!-- Interior walls -->
+<line x1="144" y1="224" x2="144" y2="307" stroke="var(--wall-int)" stroke-width="1.2"/>
+<line x1="211" y1="224" x2="211" y2="307" stroke="var(--wall-int)" stroke-width="1"/>
+<line x1="234" y1="224" x2="234" y2="307" stroke="var(--wall-int)" stroke-width="1.2"/>
+<line x1="275" y1="224" x2="275" y2="307" stroke="var(--wall-int)" stroke-width="1.2"/>
+<line x1="275" y1="252" x2="316" y2="252" stroke="var(--wall-int)" stroke-width="1"/>
+<line x1="234" y1="264" x2="275" y2="264" stroke="var(--wall-int)" stroke-width="1"/>
+<line x1="276" y1="120" x2="276" y2="162" stroke="var(--wall-int)" stroke-width="1"/>
+<line x1="306" y1="120" x2="306" y2="162" stroke="var(--wall-int)" stroke-width="1"/>
+<line x1="234" y1="162" x2="334" y2="162" stroke="var(--wall-int)" stroke-width="1.2"/>
+<line x1="234" y1="118" x2="334" y2="118" stroke="var(--wall-int)" stroke-width="1"/>
+
+<!-- Windows — south glass -->
+<rect x="68" y="307" width="70" height="4" fill="var(--glass)" rx="1"/>
+<rect x="148" y="307" width="58" height="4" fill="var(--glass)" rx="1"/>
+<rect x="279" y="307" width="33" height="4" fill="var(--glass)" rx="1"/>
+<!-- West glass (Glanrummet) -->
+<rect x="60" y="234" width="4" height="66" fill="var(--glass)" rx="1"/>
+<!-- North wing windows -->
+<rect x="248" y="90" width="30" height="4" fill="var(--glass)" rx="1" opacity=".7"/>
+<!-- Garage door -->
+<rect x="252" y="90" width="60" height="3" fill="var(--furn)" stroke="var(--wall-int)" stroke-width="0.5"/>
+<!-- Entry door -->
+<rect x="238" y="162" width="14" height="3" fill="var(--furn)" stroke="var(--wall-int)" stroke-width="0.5"/>
+
+<!-- Door openings -->
+<rect x="142" y="260" width="4" height="12" fill="var(--card)"/>
+<rect x="209" y="260" width="4" height="12" fill="var(--card)"/>
+<rect x="232" y="240" width="4" height="12" fill="var(--card)"/>
+<rect x="273" y="234" width="4" height="12" fill="var(--card)"/>
+<rect x="274" y="136" width="4" height="10" fill="var(--card)"/>
+
+<!-- Furniture -->
+<g opacity=".45">
+<!-- Glanrummet: sofa -->
+<rect x="72" y="270" width="50" height="18" rx="2" fill="var(--furn)" stroke="var(--furn-s)" stroke-width="0.5"/>
+<!-- Dining table -->
+<rect x="158" y="250" width="36" height="18" rx="2" fill="var(--furn)" stroke="var(--furn-s)" stroke-width="0.5"/>
+<!-- Kitchen bench -->
+<rect x="148" y="228" width="58" height="8" rx="1" fill="var(--furn)" stroke="var(--furn-s)" stroke-width="0.4"/>
+<!-- Bed -->
+<rect x="282" y="264" width="26" height="32" rx="2" fill="var(--furn)" stroke="var(--furn-s)" stroke-width="0.5"/>
+<!-- Ensuite fixtures -->
+<rect x="280" y="228" width="14" height="8" rx="2" fill="none" stroke="var(--furn-s)"/>
+<rect x="298" y="228" width="8" height="8" rx="4" fill="none" stroke="var(--furn-s)"/>
+<!-- Heart fixtures -->
+<rect x="240" y="228" width="12" height="12" rx="1" fill="none" stroke="var(--heart)" stroke-width="0.6"/>
+<circle cx="260" cy="234" r="5" fill="none" stroke="var(--heart)" stroke-width="0.5"/>
+<!-- WC/laundry in wing -->
+<rect x="280" y="130" width="8" height="10" rx="2" fill="none" stroke="var(--furn-s)"/>
+<rect x="294" y="128" width="10" height="10" rx="1" fill="none" stroke="var(--furn-s)"/>
+</g>
+
+<!-- Terrace south -->
+<rect x="64" y="313" width="152" height="24" fill="var(--terrace)" stroke="var(--terrace-s)" stroke-width="0.7" stroke-dasharray="3 2"/>
+
+<!-- Vindficka -->
+<line x1="64" y1="337" x2="64" y2="313" stroke="var(--glass-stroke)" stroke-width="2.5"/>
+<line x1="64" y1="337" x2="114" y2="337" stroke="var(--glass-stroke)" stroke-width="2.5"/>
+
+<!-- Room labels -->
+<g font-family="Barlow Condensed" font-size="8.5" fill="var(--label)" text-anchor="middle">
+<text x="103" y="252" font-size="10" font-weight="500" fill="var(--accent)">Glanrummet</text>
+<text x="103" y="262" font-size="7.5" fill="var(--dim)">~40 m²</text>
+<text x="176" y="268" font-size="9">Kök / matsal</text>
+<text x="176" y="278" font-size="7" fill="var(--dim)">~28 m²</text>
+<text x="222" y="268" font-size="7.5">Hall</text>
+<text x="254" y="244" font-size="7.5" fill="var(--heart)">Heart</text>
+<text x="254" y="254" font-size="6.5" fill="var(--dim)">~9 m²</text>
+<text x="296" y="280" font-size="8.5">Sovrum</text>
+<text x="296" y="290" font-size="7" fill="var(--dim)">~20 m²</text>
+<text x="296" y="240" font-size="7.5">Bad</text>
+<text x="296" y="248" font-size="6.5" fill="var(--dim)">~8 m²</text>
+<text x="254" y="140" font-size="8">Entré</text>
+<text x="254" y="150" font-size="6.5" fill="var(--dim)">~12 m²</text>
+<text x="296" y="140" font-size="7">WC/</text>
+<text x="296" y="148" font-size="7">tvätt</text>
+<text x="320" y="140" font-size="7">Förr.</text>
+<text x="280" y="106" font-size="8">Garage (dubbel)</text>
+<text x="280" y="114" font-size="6.5" fill="var(--dim)">~30 m²</text>
+<text x="140" y="328" font-size="8" fill="var(--dim)">terrass (kvällssol)</text>
+<text x="88" y="348" font-size="7.5" fill="var(--glass-stroke)">vindficka</text>
+</g>
+
+<!-- Dimension lines -->
+<!-- Bar width -->
+<line x1="60" y1="360" x2="320" y2="360" class="dim-line"/><line x1="60" y1="357" x2="60" y2="363" class="dim-tick"/><line x1="320" y1="357" x2="320" y2="363" class="dim-tick"/>
+<text x="190" y="372" class="dim-text">20 000</text>
+<!-- Bar depth -->
+<line x1="345" y1="220" x2="345" y2="311" class="dim-line"/><line x1="342" y1="220" x2="348" y2="220" class="dim-tick"/><line x1="342" y1="311" x2="348" y2="311" class="dim-tick"/>
+<text x="358" y="268" class="dim-text" text-anchor="start" transform="rotate(-90 358 268)">7 000</text>
+<!-- Wing width -->
+<line x1="230" y1="78" x2="334" y2="78" class="dim-line"/><line x1="230" y1="75" x2="230" y2="81" class="dim-tick"/><line x1="334" y1="75" x2="334" y2="81" class="dim-tick"/>
+<text x="282" y="74" class="dim-text">8 000</text>
+<!-- Wing depth -->
+<line x1="345" y1="90" x2="345" y2="218" class="dim-line"/><line x1="342" y1="90" x2="348" y2="90" class="dim-tick"/><line x1="342" y1="218" x2="348" y2="218" class="dim-tick"/>
+<text x="358" y="156" class="dim-text" text-anchor="start" transform="rotate(-90 358 156)">10 000</text>
+<!-- Room widths along bar -->
+<line x1="64" y1="316" x2="142" y2="316" class="dim-line" opacity=".4"/><text x="103" y="314" class="dim-text" font-size="6">6 000</text>
+<line x1="144" y1="316" x2="209" y2="316" class="dim-line" opacity=".4"/><text x="176" y="314" class="dim-text" font-size="6">5 000</text>
+<line x1="275" y1="316" x2="316" y2="316" class="dim-line" opacity=".4"/><text x="296" y="314" class="dim-text" font-size="6">3 200</text>
+
+<!-- North arrow -->
+<g transform="translate(520,380)">
+<polygon points="0,-14 5,0 -5,0" fill="var(--wall)" opacity=".7"/>
+<text x="0" y="-17" font-family="Barlow" font-size="9" fill="var(--dim)" text-anchor="middle" font-weight="600">N</text>
+</g>
+<!-- Scale bar -->
+<g transform="translate(430,380)">
+<line x1="0" y1="0" x2="65" y2="0" stroke="var(--wall)" stroke-width="1.2"/>
+<line x1="0" y1="-3" x2="0" y2="3" stroke="var(--wall)" stroke-width="1"/>
+<line x1="65" y1="-3" x2="65" y2="3" stroke="var(--wall)" stroke-width="1"/>
+<text x="32.5" y="12" font-family="Barlow Condensed" font-size="8" fill="var(--dim)" text-anchor="middle">5 m</text>
+</g>
+
+<!-- Kvällssol arrow -->
+<line x1="36" y1="240" x2="56" y2="254" stroke="var(--accent)" stroke-width="1.2" opacity=".7"/>
+<circle cx="32" cy="236" r="4" fill="var(--accent)" opacity=".5"/>
+<text x="26" y="228" font-family="Barlow Condensed" font-size="7.5" fill="var(--accent)" text-anchor="middle">kvälls-</text>
+<text x="26" y="236" font-family="Barlow Condensed" font-size="7.5" fill="var(--accent)" text-anchor="middle">sol ↘</text>
+
+<!-- BTA summary -->
+<text x="280" y="410" font-family="Barlow Condensed" font-size="8.5" fill="var(--dim)" text-anchor="middle">Markplan BTA ~140 m² (uppvärmt) + garage ~30 m² (kallt) = fotavtryck ~170 m²</text>
+</svg>
+</div>
+
+<!-- ── 2. OPTIONAL SUTERRÄNG (west gable, validated by 13° slope) ── -->
+<div style="margin-top:20px">
+<div class="dlbl">2 · Suterrängplan — västra gaveln (sjönivå, +67,5 RH2000 ca) · bekräftad av 13° SV</div>
+<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="260" fill="var(--section-bg)" rx="4"/>
+
+<text x="280" y="16" font-family="Barlow Condensed" font-size="8" fill="var(--accent)" text-anchor="middle" font-weight="500">OPTION — aktiveras av 13° SV-sluttning (bekräftad)</text>
+
+<!-- Upper floor outline (dashed reference) -->
+<rect x="60" y="50" width="260" height="91" fill="none" stroke="var(--dim)" stroke-width="0.8" stroke-dasharray="5 3" opacity=".3"/>
+<text x="300" y="62" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" opacity=".5">markplan (ovan)</text>
+
+<!-- Suterräng wall mass: under western ~10m of bar, 10m × 7m -->
+<rect x="60" y="50" width="130" height="91" fill="var(--wall)"/>
+
+<!-- Room cutouts -->
+<!-- Gillestuga / allrum: ~6m × 5.5m -->
+<rect x="64" y="54" width="78" height="83" fill="var(--card)"/>
+<!-- Gästrum: ~3m × 5.5m -->
+<rect x="144" y="54" width="42" height="40" fill="var(--card)"/>
+<!-- Förråd / teknik: ~3m × 4m -->
+<rect x="144" y="96" width="42" height="41" fill="var(--card)"/>
+
+<!-- Interior walls -->
+<line x1="144" y1="54" x2="144" y2="137" stroke="var(--wall-int)" stroke-width="1.2"/>
+<line x1="144" y1="96" x2="186" y2="96" stroke="var(--wall-int)" stroke-width="1"/>
+
+<!-- South glass (walk-out to garden terrace) -->
+<rect x="68" y="137" width="70" height="4" fill="var(--glass)" rx="1"/>
+<!-- West glass -->
+<rect x="60" y="62" width="4" height="66" fill="var(--glass)" rx="1"/>
+
+<!-- Stair from above -->
+<rect x="144" y="58" width="38" height="28" fill="var(--heart-light)" stroke="var(--heart)" stroke-width="0.6"/>
+<g transform="translate(148,60)">
+<line x1="0" y1="0" x2="30" y2="0" stroke="var(--wall-int)" stroke-width="0.4"/>
+<line x1="0" y1="4" x2="30" y2="4" stroke="var(--wall-int)" stroke-width="0.4"/>
+<line x1="0" y1="8" x2="30" y2="8" stroke="var(--wall-int)" stroke-width="0.4"/>
+<line x1="0" y1="12" x2="30" y2="12" stroke="var(--wall-int)" stroke-width="0.4"/>
+<line x1="0" y1="16" x2="30" y2="16" stroke="var(--wall-int)" stroke-width="0.4"/>
+<line x1="0" y1="20" x2="30" y2="20" stroke="var(--wall-int)" stroke-width="0.4"/>
+<text x="15" y="-3" font-family="Barlow Condensed" font-size="6" fill="var(--accent)" text-anchor="middle">↑ trappa</text>
+</g>
+
+<!-- Door openings -->
+<rect x="142" y="106" width="4" height="10" fill="var(--card)"/>
+
+<!-- Terrace at lower level -->
+<rect x="64" y="145" width="120" height="22" fill="var(--terrace)" stroke="var(--terrace-s)" stroke-width="0.7" stroke-dasharray="3 2"/>
+
+<!-- Room labels -->
+<g font-family="Barlow Condensed" font-size="8.5" fill="var(--label)" text-anchor="middle">
+<text x="103" y="88" font-size="9" font-weight="500" fill="var(--accent)">Gillestuga</text>
+<text x="103" y="98" font-size="7.5" fill="var(--dim)">~34 m²</text>
+<text x="165" y="80" font-size="8">Gästrum</text>
+<text x="165" y="88" font-size="7" fill="var(--dim)">~12 m²</text>
+<text x="165" y="118" font-size="7.5">Teknik/</text>
+<text x="165" y="126" font-size="7.5">förråd</text>
+<text x="165" y="134" font-size="6.5" fill="var(--dim)">~12 m²</text>
+<text x="124" y="160" font-size="8" fill="var(--dim)">terrass (sjönivå)</text>
+</g>
+
+<!-- Dimension lines -->
+<line x1="60" y1="182" x2="190" y2="182" class="dim-line"/><line x1="60" y1="179" x2="60" y2="185" class="dim-tick"/><line x1="190" y1="179" x2="190" y2="185" class="dim-tick"/>
+<text x="125" y="194" class="dim-text">10 000</text>
+<line x1="200" y1="50" x2="200" y2="141" class="dim-line"/><line x1="197" y1="50" x2="203" y2="50" class="dim-tick"/><line x1="197" y1="141" x2="203" y2="141" class="dim-tick"/>
+<text x="213" y="98" class="dim-text" text-anchor="start" transform="rotate(-90 213 98)">7 000</text>
+
+<!-- Slope annotation -->
+<line x1="220" y1="200" x2="360" y2="200" stroke="var(--accent)" stroke-width="0.8" opacity=".5"/>
+<line x1="220" y1="200" x2="360" y2="168" stroke="var(--accent)" stroke-width="1" opacity=".6" stroke-dasharray="4 2"/>
+<text x="290" y="216" font-family="Barlow Condensed" font-size="7.5" fill="var(--accent)" text-anchor="middle">marknivå faller 13° mot SV</text>
+<text x="290" y="226" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">~2,5 m fall under husets fotavtryck → walk-out validerad</text>
+
+<text x="280" y="250" font-family="Barlow Condensed" font-size="8.5" fill="var(--dim)" text-anchor="middle">Suterräng BTA ~58 m² · total BTA ~228 m² (med option)</text>
+</svg>
+</div>
+
+<!-- ── 3. ALL FOUR FACADES (detail scale) ── -->
+<div style="margin-top:24px">
+<div class="dlbl">3 · Fasader — detaljskala</div>
+
+<!-- SOUTH FACADE (detail) -->
+<div style="margin-top:8px">
+<div class="dlbl" style="font-size:9px;letter-spacing:1.5px">Fasad söder (sjösidan)</div>
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="220" fill="var(--section-bg)" rx="4"/>
+<defs>
+<pattern id="timberD" width="5" height="30" patternUnits="userSpaceOnUse">
+<line x1="2.5" y1="0" x2="2.5" y2="30" stroke="var(--wall)" stroke-width="0.35" opacity=".18"/>
+</pattern>
+</defs>
+<!-- Ground line -->
+<line x1="20" y1="170" x2="540" y2="170" stroke="var(--ground)" stroke-width="2"/>
+<!-- Ground hatch -->
+<g opacity=".3"><line x1="20" y1="172" x2="30" y2="180" stroke="var(--ground)" stroke-width="0.5"/><line x1="35" y1="172" x2="45" y2="180" stroke="var(--ground)" stroke-width="0.5"/><line x1="50" y1="172" x2="60" y2="180" stroke="var(--ground)" stroke-width="0.5"/><line x1="65" y1="172" x2="75" y2="180" stroke="var(--ground)" stroke-width="0.5"/><line x1="495" y1="172" x2="505" y2="180" stroke="var(--ground)" stroke-width="0.5"/><line x1="510" y1="172" x2="520" y2="180" stroke="var(--ground)" stroke-width="0.5"/><line x1="525" y1="172" x2="535" y2="180" stroke="var(--ground)" stroke-width="0.5"/></g>
+
+<!-- Bar south wall -->
+<rect x="60" y="85" width="380" height="85" fill="var(--wall)"/>
+<rect x="60" y="85" width="380" height="85" fill="url(#timberD)"/>
+<!-- Roof -->
+<polyline points="56,78 250,52 444,78" fill="none" stroke="var(--roof)" stroke-width="2.5"/>
+<!-- Eave overhang -->
+<line x1="56" y1="80" x2="56" y2="85" stroke="var(--roof)" stroke-width="1.5"/>
+<line x1="444" y1="80" x2="444" y2="85" stroke="var(--roof)" stroke-width="1.5"/>
+<!-- Soffit (warm timber) -->
+<rect x="56" y="80" width="388" height="5" fill="var(--heart)" opacity=".3"/>
+
+<!-- Large south windows -->
+<rect x="76" y="96" width="100" height="56" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.8" rx="1"/>
+<line x1="126" y1="96" x2="126" y2="152" stroke="var(--glass-stroke)" stroke-width="0.5"/>
+<line x1="76" y1="124" x2="176" y2="124" stroke="var(--glass-stroke)" stroke-width="0.4"/>
+<!-- Kitchen windows -->
+<rect x="200" y="96" width="80" height="56" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.8" rx="1"/>
+<line x1="240" y1="96" x2="240" y2="152" stroke="var(--glass-stroke)" stroke-width="0.5"/>
+<line x1="200" y1="124" x2="280" y2="124" stroke="var(--glass-stroke)" stroke-width="0.4"/>
+<!-- Bedroom window -->
+<rect x="360" y="100" width="56" height="48" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.7" rx="1"/>
+<line x1="388" y1="100" x2="388" y2="148" stroke="var(--glass-stroke)" stroke-width="0.4"/>
+
+<!-- Stone/concrete plinth -->
+<rect x="60" y="162" width="380" height="8" fill="var(--stone)" opacity=".5" rx="1"/>
+
+<!-- Terrace indication -->
+<rect x="60" y="170" width="200" height="6" fill="var(--terrace)" opacity=".5"/>
+
+<!-- Wing visible behind -->
+<rect x="350" y="56" width="94" height="29" fill="var(--wall)" opacity=".4"/>
+<rect x="350" y="56" width="94" height="29" fill="url(#timberD)" opacity=".5"/>
+
+<!-- Material labels -->
+<g font-family="Barlow Condensed" font-size="7" fill="var(--dim)">
+<text x="470" y="130" text-anchor="start">stående panel, tjärad</text>
+<line x1="445" y1="128" x2="465" y2="128" stroke="var(--dim)" stroke-width="0.4"/>
+<text x="470" y="100" text-anchor="start">alu-klätt trä, U=0.9</text>
+<line x1="445" y1="98" x2="465" y2="98" stroke="var(--dim)" stroke-width="0.4"/>
+<text x="470" y="72" text-anchor="start">falsad plåt, PV-redo</text>
+<line x1="445" y1="70" x2="465" y2="70" stroke="var(--dim)" stroke-width="0.4"/>
+<text x="470" y="166" text-anchor="start">sten/btg sockel</text>
+<line x1="445" y1="164" x2="465" y2="164" stroke="var(--dim)" stroke-width="0.4"/>
+<text x="470" y="82" text-anchor="start">trä-soffit (värm)</text>
+<line x1="445" y1="80" x2="465" y2="80" stroke="var(--dim)" stroke-width="0.4"/>
+</g>
+
+<!-- Human figure scale -->
+<g transform="translate(48,170)" opacity=".5">
+<line x1="0" y1="0" x2="0" y2="-52" stroke="var(--wall)" stroke-width="1"/>
+<circle cx="0" cy="-56" r="4" fill="none" stroke="var(--wall)" stroke-width="0.8"/>
+<text x="0" y="8" font-family="Barlow Condensed" font-size="6" fill="var(--dim)" text-anchor="middle">1,8 m</text>
+</g>
+
+<!-- Dimension: total width -->
+<line x1="60" y1="190" x2="440" y2="190" class="dim-line"/><line x1="60" y1="187" x2="60" y2="193" class="dim-tick"/><line x1="440" y1="187" x2="440" y2="193" class="dim-tick"/>
+<text x="250" y="202" class="dim-text">20 000</text>
+<!-- Dimension: floor-to-ridge -->
+<line x1="28" y1="85" x2="28" y2="170" class="dim-line"/><line x1="25" y1="85" x2="31" y2="85" class="dim-tick"/><line x1="25" y1="170" x2="31" y2="170" class="dim-tick"/>
+<text x="22" y="130" class="dim-text" text-anchor="end" transform="rotate(-90 22 130)">6 500</text>
+</svg>
+</div>
+
+<!-- NORTH FACADE (detail) -->
+<div style="margin-top:14px">
+<div class="dlbl" style="font-size:9px;letter-spacing:1.5px">Fasad norr (ankomst / gatan)</div>
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="220" fill="var(--section-bg)" rx="4"/>
+<line x1="20" y1="170" x2="540" y2="170" stroke="var(--ground)" stroke-width="2"/>
+<!-- Wing (garage) prominent -->
+<rect x="200" y="78" width="180" height="92" fill="var(--wall)"/>
+<rect x="200" y="78" width="180" height="92" fill="url(#timberD)"/>
+<polyline points="196,74 290,55 384,74" fill="none" stroke="var(--roof)" stroke-width="2.5"/>
+<!-- Bar behind, lower -->
+<rect x="50" y="86" width="154" height="84" fill="var(--wall)" opacity=".8"/>
+<rect x="50" y="86" width="154" height="84" fill="url(#timberD)" opacity=".5"/>
+<line x1="46" y1="82" x2="208" y2="82" stroke="var(--roof)" stroke-width="2"/>
+<!-- Garage door -->
+<rect x="240" y="100" width="100" height="70" fill="var(--furn)" stroke="var(--wall-int)" stroke-width="0.8" rx="2"/>
+<line x1="260" y1="100" x2="260" y2="170" stroke="var(--wall-int)" stroke-width="0.3"/>
+<line x1="290" y1="100" x2="290" y2="170" stroke="var(--wall-int)" stroke-width="0.3"/>
+<line x1="320" y1="100" x2="320" y2="170" stroke="var(--wall-int)" stroke-width="0.3"/>
+<!-- Entry door -->
+<rect x="206" y="122" width="22" height="48" fill="var(--furn)" stroke="var(--wall-int)" stroke-width="0.7" rx="1"/>
+<!-- Small windows on bar north -->
+<rect x="80" y="104" width="30" height="30" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.6" rx="0.5"/>
+<rect x="130" y="108" width="22" height="24" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<!-- Wing window -->
+<rect x="352" y="98" width="20" height="24" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<!-- Plinth -->
+<rect x="50" y="162" width="330" height="8" fill="var(--stone)" opacity=".4" rx="1"/>
+<!-- Labels -->
+<g font-family="Barlow Condensed" font-size="7" fill="var(--dim)">
+<text x="290" y="192">garage (dubbel)</text>
+<text x="126" y="192">bar (norrsida, stängd)</text>
+<text x="212" y="116">entré</text>
+</g>
+</svg>
+</div>
+
+<!-- WEST FACADE (detail) — Glanrummet -->
+<div style="margin-top:14px">
+<div class="dlbl" style="font-size:9px;letter-spacing:1.5px">Fasad väst — Glanrummet · kvällssol</div>
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="200" fill="var(--section-bg)" rx="4"/>
+<line x1="15" y1="155" x2="285" y2="155" stroke="var(--ground)" stroke-width="2"/>
+<!-- Bar gable -->
+<rect x="50" y="78" width="140" height="77" fill="var(--wall)"/>
+<rect x="50" y="78" width="140" height="77" fill="url(#timberD)"/>
+<!-- Roof rake -->
+<polyline points="46,74 120,55 194,74" fill="none" stroke="var(--roof)" stroke-width="2.5"/>
+<!-- Glanrummet glass — full height -->
+<rect x="56" y="82" width="62" height="66" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.8" rx="1"/>
+<line x1="87" y1="82" x2="87" y2="148" stroke="var(--glass-stroke)" stroke-width="0.5"/>
+<line x1="56" y1="115" x2="118" y2="115" stroke="var(--glass-stroke)" stroke-width="0.4"/>
+<!-- Corner glass wraps -->
+<rect x="118" y="82" width="10" height="66" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.6"/>
+<!-- Upper window -->
+<rect x="148" y="90" width="26" height="28" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<!-- Plinth -->
+<rect x="50" y="147" width="140" height="8" fill="var(--stone)" opacity=".4" rx="1"/>
+<!-- Sun indicator -->
+<line x1="24" y1="48" x2="48" y2="72" stroke="var(--accent)" stroke-width="1.2" opacity=".6"/>
+<circle cx="20" cy="44" r="5" fill="var(--accent)" opacity=".5"/>
+<text x="22" y="38" font-family="Barlow Condensed" font-size="7.5" fill="var(--accent)" text-anchor="middle">kvällssol</text>
+<!-- Suterräng option dashed -->
+<rect x="50" y="155" width="70" height="40" fill="none" stroke="var(--dim)" stroke-width="0.8" stroke-dasharray="4 3" opacity=".5"/>
+<text x="85" y="178" font-family="Barlow Condensed" font-size="6.5" fill="var(--dim)" text-anchor="middle">suterräng (option)</text>
+<!-- Labels -->
+<text x="87" y="180" font-family="Barlow Condensed" font-size="7" fill="var(--accent)" text-anchor="middle" opacity=".8">walk-out bekräftad</text>
+</svg>
+</div>
+
+<!-- EAST FACADE (detail) -->
+<div style="margin-top:14px">
+<div class="dlbl" style="font-size:9px;letter-spacing:1.5px">Fasad öst</div>
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="200" fill="var(--section-bg)" rx="4"/>
+<line x1="15" y1="155" x2="285" y2="155" stroke="var(--ground)" stroke-width="2"/>
+<!-- Wing gable (foreground) -->
+<rect x="60" y="72" width="130" height="83" fill="var(--wall)"/>
+<rect x="60" y="72" width="130" height="83" fill="url(#timberD)"/>
+<polyline points="56,68 125,48 194,68" fill="none" stroke="var(--roof)" stroke-width="2.5"/>
+<!-- Garage door visible -->
+<rect x="76" y="92" width="46" height="63" fill="var(--furn)" stroke="var(--wall-int)" stroke-width="0.6" rx="1"/>
+<!-- Window -->
+<rect x="148" y="88" width="26" height="30" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.6" rx="0.5"/>
+<!-- Bar behind -->
+<rect x="192" y="80" width="60" height="75" fill="var(--wall)" opacity=".6"/>
+<line x1="190" y1="76" x2="256" y2="76" stroke="var(--roof)" stroke-width="1.5"/>
+<!-- Bedroom window on bar -->
+<rect x="206" y="92" width="24" height="30" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.5" rx="0.5"/>
+<!-- Plinth -->
+<rect x="60" y="147" width="192" height="8" fill="var(--stone)" opacity=".4" rx="1"/>
+<!-- Label -->
+<text x="125" y="175" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">garagegavel + sovrum bakom · morgonsol</text>
+</svg>
+</div>
+</div>
+
+<!-- ── 4. SECTIONS ── -->
+<div style="margin-top:24px">
+<div class="dlbl">4 · Sektioner</div>
+
+<!-- Section A-A: N-S through Glanrummet -->
+<div style="margin-top:8px">
+<div class="dlbl" style="font-size:9px;letter-spacing:1.5px">Sektion A-A · N–S genom Glanrummet</div>
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="200" fill="var(--section-bg)" rx="4"/>
+<!-- Ground -->
+<line x1="20" y1="148" x2="540" y2="148" stroke="var(--ground)" stroke-width="2"/>
+<!-- Slope indication -->
+<line x1="20" y1="148" x2="180" y2="160" stroke="var(--accent)" stroke-width="1" stroke-dasharray="4 2" opacity=".5"/>
+<text x="100" y="168" font-family="Barlow Condensed" font-size="7" fill="var(--accent)" text-anchor="middle">13° sluttning mot SV</text>
+
+<!-- Bar section cut -->
+<rect x="80" y="88" width="220" height="60" fill="var(--card)" stroke="var(--wall)" stroke-width="1.5"/>
+<!-- Roof structure -->
+<polyline points="76,84 190,62 304,84" fill="none" stroke="var(--roof)" stroke-width="2.5"/>
+<!-- Asymmetric: steeper north side -->
+<line x1="190" y1="62" x2="304" y2="84" stroke="var(--roof)" stroke-width="2.5"/>
+<!-- Eave -->
+<rect x="76" y="84" width="232" height="4" fill="var(--heart)" opacity=".2"/>
+<!-- Insulation hatching in roof -->
+<g opacity=".15"><line x1="100" y1="84" x2="120" y2="70" stroke="var(--dim)" stroke-width="0.5"/><line x1="140" y1="84" x2="160" y2="70" stroke="var(--dim)" stroke-width="0.5"/><line x1="180" y1="84" x2="195" y2="66" stroke="var(--dim)" stroke-width="0.5"/><line x1="220" y1="84" x2="240" y2="72" stroke="var(--dim)" stroke-width="0.5"/><line x1="260" y1="84" x2="280" y2="76" stroke="var(--dim)" stroke-width="0.5"/></g>
+
+<!-- South glass -->
+<rect x="80" y="92" width="5" height="50" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.8"/>
+<!-- North wall (closed) -->
+<rect x="295" y="88" width="5" height="60" fill="var(--wall)"/>
+
+<!-- Floor slab -->
+<rect x="80" y="148" width="220" height="6" fill="var(--stone)" opacity=".5"/>
+
+<!-- Sun angle — winter -->
+<line x1="30" y1="108" x2="85" y2="130" stroke="var(--accent)" stroke-width="0.8" stroke-dasharray="3 2" opacity=".7"/>
+<text x="20" y="102" font-family="Barlow Condensed" font-size="7" fill="var(--accent)">vintersol 8°</text>
+<!-- Sun angle — summer (showing eave cuts it) -->
+<line x1="68" y1="38" x2="85" y2="84" stroke="var(--accent)" stroke-width="0.6" stroke-dasharray="2 2" opacity=".4"/>
+<text x="56" y="34" font-family="Barlow Condensed" font-size="6.5" fill="var(--accent)" opacity=".7">sommarsol 55°</text>
+
+<!-- Terrace -->
+<rect x="40" y="148" width="40" height="5" fill="var(--terrace)" opacity=".6"/>
+<text x="60" y="162" font-family="Barlow Condensed" font-size="6.5" fill="var(--dim)" text-anchor="middle">terrass</text>
+
+<!-- Wing behind (dashed) -->
+<rect x="340" y="94" width="100" height="54" fill="none" stroke="var(--dim)" stroke-width="0.8" stroke-dasharray="4 3" opacity=".4"/>
+<text x="390" y="124" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle" opacity=".6">flygel (bakom)</text>
+
+<!-- Suterräng option (dashed, below south end) -->
+<rect x="80" y="154" width="100" height="36" fill="none" stroke="var(--accent)" stroke-width="0.8" stroke-dasharray="4 3" opacity=".4"/>
+<text x="130" y="176" font-family="Barlow Condensed" font-size="6.5" fill="var(--accent)" text-anchor="middle" opacity=".6">suterräng (option)</text>
+
+<!-- Dimension: ceiling height -->
+<line x1="320" y1="88" x2="320" y2="148" class="dim-line"/><line x1="317" y1="88" x2="323" y2="88" class="dim-tick"/><line x1="317" y1="148" x2="323" y2="148" class="dim-tick"/>
+<text x="330" y="120" class="dim-text" text-anchor="start">2 500</text>
+<!-- Dimension: ridge height -->
+<line x1="190" y1="62" x2="190" y2="48" stroke="var(--dim)" stroke-width="0.4" stroke-dasharray="2 2"/>
+<text x="190" y="44" class="dim-text">nock +6,5 m</text>
+
+<!-- Labels -->
+<text x="190" y="128" font-family="Barlow Condensed" font-size="9" fill="var(--label)" text-anchor="middle">S ← Glanrummet / kök → N</text>
+<text x="80" y="186" font-family="Barlow Condensed" font-size="7" fill="var(--dim)">S (Glan, sjöutsikt)</text>
+<text x="300" y="186" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="end">N (Säterdalsvägen)</text>
+</svg>
+</div>
+
+<!-- Section B-B: E-W through hinge -->
+<div style="margin-top:14px">
+<div class="dlbl" style="font-size:9px;letter-spacing:1.5px">Sektion B-B · Ö–V genom knutpunkten (House Heart)</div>
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="200" fill="var(--section-bg)" rx="4"/>
+<line x1="20" y1="148" x2="540" y2="148" stroke="var(--ground)" stroke-width="2"/>
+
+<!-- West end: Glanrummet (single storey, lower) -->
+<rect x="60" y="94" width="120" height="54" fill="var(--card)" stroke="var(--wall)" stroke-width="1.5"/>
+<line x1="56" y1="90" x2="184" y2="90" stroke="var(--roof)" stroke-width="2"/>
+<!-- West glass -->
+<rect x="60" y="98" width="5" height="44" fill="var(--glass)" stroke="var(--glass-stroke)" stroke-width="0.8"/>
+
+<!-- Heart zone (at hinge) -->
+<rect x="182" y="88" width="50" height="60" fill="var(--heart-light)" stroke="var(--heart)" stroke-width="1"/>
+<text x="207" y="122" font-family="Barlow Condensed" font-size="7" fill="var(--heart)" text-anchor="middle" font-weight="500">Heart</text>
+
+<!-- East end: bedroom + upper floor -->
+<rect x="234" y="88" width="140" height="60" fill="var(--card)" stroke="var(--wall)" stroke-width="1.5"/>
+<!-- Upper level (1.5 plan) -->
+<rect x="234" y="56" width="140" height="30" fill="var(--card)" stroke="var(--wall)" stroke-width="1" opacity=".6"/>
+<line x1="234" y1="88" x2="374" y2="88" stroke="var(--wall-int)" stroke-width="1"/>
+<!-- Roof over east -->
+<polyline points="230,52 304,36 378,52" fill="none" stroke="var(--roof)" stroke-width="2.5"/>
+
+<!-- Wing connection (behind, dashed) -->
+<rect x="380" y="94" width="80" height="54" fill="none" stroke="var(--dim)" stroke-width="0.8" stroke-dasharray="4 3" opacity=".4"/>
+<text x="420" y="124" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle" opacity=".5">flygel</text>
+
+<!-- Floor slabs -->
+<rect x="60" y="148" width="314" height="5" fill="var(--stone)" opacity=".4"/>
+
+<!-- Suterräng under west end -->
+<rect x="60" y="153" width="120" height="32" fill="none" stroke="var(--accent)" stroke-width="0.8" stroke-dasharray="4 3" opacity=".4"/>
+<text x="120" y="172" font-family="Barlow Condensed" font-size="6.5" fill="var(--accent)" text-anchor="middle" opacity=".6">suterräng (gillestuga)</text>
+
+<!-- Dimensions -->
+<line x1="60" y1="194" x2="374" y2="194" class="dim-line"/><line x1="60" y1="191" x2="60" y2="197" class="dim-tick"/><line x1="374" y1="191" x2="374" y2="197" class="dim-tick"/>
+<text x="217" y="192" class="dim-text">~24 000 (bar E-V)</text>
+
+<!-- Labels -->
+<text x="120" y="128" font-family="Barlow Condensed" font-size="8.5" fill="var(--accent)" text-anchor="middle">Glanrummet</text>
+<text x="120" y="138" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">(enkel takhöjd)</text>
+<text x="304" y="76" font-family="Barlow Condensed" font-size="7" fill="var(--label)" text-anchor="middle">övre: 2 barnrum + bad</text>
+<text x="304" y="128" font-family="Barlow Condensed" font-size="8" fill="var(--label)" text-anchor="middle">sovrum + bad</text>
+<text x="60" y="186" font-family="Barlow Condensed" font-size="7" fill="var(--dim)">V (kvällssol)</text>
+<text x="374" y="186" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="end">Ö (morgonsol)</text>
+</svg>
+</div>
+</div>
+
+<!-- ── 5. MATERIAL SPECIFICATION ── -->
+<div style="margin-top:24px">
+<div class="dlbl">5 · Materialspecifikation</div>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:10px">
+<div style="text-align:center">
+<div style="width:100%;aspect-ratio:1;background:var(--timber);border-radius:8px;border:1px solid var(--border)"></div>
+<div style="font:500 10px/1.4 'Barlow',sans-serif;color:var(--label);margin-top:5px">Stående panel</div>
+<div style="font:400 9px/1.3 'Barlow Condensed',sans-serif;color:var(--dim)">Tjärad furu, svart/mörk-brun. Vertikala brädor 120 mm, ~15 mm luftad spalt.</div>
+</div>
+<div style="text-align:center">
+<div style="width:100%;aspect-ratio:1;background:var(--glass);border-radius:8px;border:1px solid var(--border)"></div>
+<div style="font:500 10px/1.4 'Barlow',sans-serif;color:var(--label);margin-top:5px">Glaspartier</div>
+<div style="font:400 9px/1.3 'Barlow Condensed',sans-serif;color:var(--dim)">Alu-klätt trä. 3-glas, U≤0,9. Söder+väst: golv-till-tak. Norr: små, strategiska.</div>
+</div>
+<div style="text-align:center">
+<div style="width:100%;aspect-ratio:1;background:var(--roof);border-radius:8px;border:1px solid var(--border)"></div>
+<div style="font:500 10px/1.4 'Barlow',sans-serif;color:var(--label);margin-top:5px">Plåttak</div>
+<div style="font:400 9px/1.3 'Barlow Condensed',sans-serif;color:var(--dim)">Falsad ståndfals, matt antracit. PV-redo söderplan. Asymmetrisk nock.</div>
+</div>
+<div style="text-align:center">
+<div style="width:100%;aspect-ratio:1;background:var(--stone);border-radius:8px;border:1px solid var(--border)"></div>
+<div style="font:500 10px/1.4 'Barlow',sans-serif;color:var(--label);margin-top:5px">Sockel</div>
+<div style="font:400 9px/1.3 'Barlow Condensed',sans-serif;color:var(--dim)">Brädformad betong alt. lokal sten. Handskapad yta. Absorberar marklutning.</div>
+</div>
+<div style="text-align:center">
+<div style="width:100%;aspect-ratio:1;background:var(--heart);border-radius:8px;border:1px solid var(--border)"></div>
+<div style="font:500 10px/1.4 'Barlow',sans-serif;color:var(--label);margin-top:5px">Trä-soffit</div>
+<div style="font:400 9px/1.3 'Barlow Condensed',sans-serif;color:var(--dim)">Värmebehandlad furu under takfot. Lys upp den mörka fasaden, ramar glasen.</div>
+</div>
+</div>
+</div>
+
+<!-- ── 6. AREA SUMMARY ── -->
+<div class="info" style="margin-top:20px">
+<div class="k" style="margin-bottom:8px">Ytsammanställning</div>
+<div><b>Markplan (uppvärmt):</b> ~140 m² — Glanrummet 40, kök/matsal 28, hall 14, Heart 9, sovrum 20, bad 8, entré/WC/tvätt 21</div>
+<div><b>Garage (kallt):</b> ~30 m²</div>
+<div><b>Övre plan (1,5-plan, i taket):</b> ~35 m² — 2 barnrum + bad (över östra halvan)</div>
+<div><b>Suterräng (option):</b> ~58 m² — gillestuga 34, gästrum 12, teknik/förråd 12</div>
+<div style="margin-top:8px"><b>Total BTA utan option:</b> ~205 m² (inkl. garage)</div>
+<div><b>Total BTA med suterräng:</b> ~263 m²</div>
+<div style="margin-top:6px;color:var(--dim);font-size:14px">Fotavtryck ~170 m² på en tomt om 1 936,8 m² = exploatering ~8,8 %. Siffror är KONCEPT — mätning sker vid handlingsskede.</div>
+</div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
 <!-- A · LÅNGHUSET                                          -->
 <!-- ═══════════════════════════════════════════════════════ -->
 <div class="house" id="a">
