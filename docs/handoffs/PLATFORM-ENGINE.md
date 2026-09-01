@@ -174,5 +174,21 @@ One checkout = one executor. Deliverable-first: every block ends with something 
     render profile (dark environment for technical layers). Conformance fixture now 15 elements,
     10/10 primitives. `data/twins/*.json` records can now render as contract-valid scene elements.
     Nine suites, 277 checks, all green.
+  - **Shoppable room surface (2026-09-01, mandate tasks 1–3):**
+    1. **Click-object → product panel with BUY link** — `scripts/compile-shoppable-room.mjs` places
+       8 IKEA twins (sofa, armchair, coffee table, side table, TV bench, bookcase, rug, floor lamp)
+       in a 6×5m living room. Commerce overlay on every element (product name, brand, dimensions,
+       BUY url from twin external_identities). `engine/ui/product-panel.mjs` extracts panel payload;
+       `engine/ui/panel.mjs` extended with product section (name, brand, price, BUY button).
+       Verified in browser: click sphere → panel with "IKEA Tray table" + INDICATIVE + BUY→ikea.com.
+    2. **Attach-point rendering** — `engine/compose/attach-resolver.mjs`: resolves base+slot
+       composition (sofa→pillows, table→vase) into world-space positions. 17 twin records updated
+       with attach blocks (role/slots from Avatar Factory schema). Shoppable room now 15 elements:
+       8 base + 4 attached decor (2 pillows, 1 throw, 1 vase) + 3 shell.
+    3. **Hero-still hook** — `engine/export/blender-scene.mjs`: any composed scene → Blender Python
+       script for Cycles rendering. Maps GLTF_ASSET→import_scene.gltf, Y-up swap, stage camera→
+       Blender camera with look-at, sky/sun, INTELLIGENCE/REALISTIC profiles.
+       `npm run engine:blender:export -- scene.json` → .py runnable with `blender --background`.
+    Gate: 12 suites, 461 checks, all green.
   - **NOT done:** Milestone 2's formal exit (Essence consuming the engine *on a branch that has
     both*) is still blocked on D1. Commits are on `agent/platform-engine` in `../repo-platform`.
