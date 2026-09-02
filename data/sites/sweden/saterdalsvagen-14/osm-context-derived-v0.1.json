@@ -1,0 +1,1446 @@
+{
+ "schema_version": "svartinge-osm-context-derived/v0.1",
+ "entity_type": "OsmContextDerived",
+ "subject": "SVÄRTINGE 54:28",
+ "evidence_class": "DERIVED",
+ "source": "OpenStreetMap (Overpass)",
+ "licence": "ODbL 1.0",
+ "attribution": "© OpenStreetMap contributors",
+ "attribution_required": true,
+ "derived_at": "2026-08-25T12:05:41+00:00",
+ "coordinate_frame": "LOCAL_ENU x=EAST z=NORTH, origin = municipal pin (E0,N0 SWEREF99TM)",
+ "origin_sweref": [
+  559869.0,
+  6501790.31
+ ],
+ "method": "OSM building footprints reduced to PCA-oriented bounding boxes; highways to local polylines. Heights from building:levels×3 m or height tag, else 5.6 m.",
+ "limitations": [
+  "Crowd-sourced context, NOT authoritative cadastral geometry or surveyed heights.",
+  "Footprints are simplified to oriented boxes; orientation/size are approximate.",
+  "Superseded by the Lantmäteriet byggnad vector when acquired."
+ ],
+ "counts": {
+  "buildings": 60,
+  "roads": 18
+ },
+ "buildings": [
+  {
+   "id": "OSM_B_053",
+   "center_xz": [
+    -9.6,
+    -31.2
+   ],
+   "size": [
+    11.1,
+    5.6,
+    10.9
+   ],
+   "rotation_deg": 97.1,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_075",
+   "center_xz": [
+    33.0,
+    -33.0
+   ],
+   "size": [
+    22.2,
+    5.6,
+    11.9
+   ],
+   "rotation_deg": 167.8,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_033",
+   "center_xz": [
+    -48.8,
+    -8.2
+   ],
+   "size": [
+    14.2,
+    5.6,
+    12.4
+   ],
+   "rotation_deg": 144.4,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_034",
+   "center_xz": [
+    -60.0,
+    3.8
+   ],
+   "size": [
+    17.8,
+    5.6,
+    17.8
+   ],
+   "rotation_deg": -156.2,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_076",
+   "center_xz": [
+    72.7,
+    0.0
+   ],
+   "size": [
+    19.6,
+    5.6,
+    11.0
+   ],
+   "rotation_deg": 164.8,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_054",
+   "center_xz": [
+    61.5,
+    -39.8
+   ],
+   "size": [
+    15.0,
+    5.6,
+    12.9
+   ],
+   "rotation_deg": 146.3,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_074",
+   "center_xz": [
+    -26.0,
+    -69.8
+   ],
+   "size": [
+    15.9,
+    5.6,
+    13.1
+   ],
+   "rotation_deg": 154.3,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_073",
+   "center_xz": [
+    -38.0,
+    -65.5
+   ],
+   "size": [
+    10.0,
+    5.6,
+    10.0
+   ],
+   "rotation_deg": 121.7,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_082",
+   "center_xz": [
+    29.9,
+    71.9
+   ],
+   "size": [
+    11.2,
+    5.6,
+    10.7
+   ],
+   "rotation_deg": 168.0,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_083",
+   "center_xz": [
+    6.3,
+    78.6
+   ],
+   "size": [
+    21.9,
+    5.6,
+    14.9
+   ],
+   "rotation_deg": 167.4,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_081",
+   "center_xz": [
+    61.4,
+    55.4
+   ],
+   "size": [
+    29.3,
+    5.6,
+    15.1
+   ],
+   "rotation_deg": 140.4,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_077",
+   "center_xz": [
+    85.7,
+    8.5
+   ],
+   "size": [
+    11.0,
+    5.6,
+    10.3
+   ],
+   "rotation_deg": 154.5,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_037",
+   "center_xz": [
+    -68.9,
+    -55.2
+   ],
+   "size": [
+    15.3,
+    5.6,
+    11.6
+   ],
+   "rotation_deg": 172.6,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_036",
+   "center_xz": [
+    -31.9,
+    84.0
+   ],
+   "size": [
+    17.6,
+    5.6,
+    14.7
+   ],
+   "rotation_deg": 112.0,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_035",
+   "center_xz": [
+    -22.7,
+    87.1
+   ],
+   "size": [
+    8.9,
+    5.6,
+    7.1
+   ],
+   "rotation_deg": 71.4,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_078",
+   "center_xz": [
+    91.4,
+    30.4
+   ],
+   "size": [
+    17.2,
+    5.6,
+    15.2
+   ],
+   "rotation_deg": 151.5,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_032",
+   "center_xz": [
+    -100.2,
+    4.4
+   ],
+   "size": [
+    19.0,
+    5.6,
+    12.6
+   ],
+   "rotation_deg": 153.6,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_038",
+   "center_xz": [
+    -65.9,
+    -81.8
+   ],
+   "size": [
+    11.6,
+    5.6,
+    11.6
+   ],
+   "rotation_deg": -151.3,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_055",
+   "center_xz": [
+    106.0,
+    -5.7
+   ],
+   "size": [
+    13.1,
+    5.6,
+    10.3
+   ],
+   "rotation_deg": 76.5,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_018",
+   "center_xz": [
+    -79.8,
+    73.0
+   ],
+   "size": [
+    22.1,
+    5.6,
+    19.7
+   ],
+   "rotation_deg": 123.8,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_072",
+   "center_xz": [
+    22.7,
+    -110.0
+   ],
+   "size": [
+    11.3,
+    5.6,
+    9.2
+   ],
+   "rotation_deg": 143.0,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_057",
+   "center_xz": [
+    105.5,
+    -53.7
+   ],
+   "size": [
+    18.0,
+    5.6,
+    10.8
+   ],
+   "rotation_deg": 162.8,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_017",
+   "center_xz": [
+    -73.4,
+    93.6
+   ],
+   "size": [
+    12.9,
+    5.6,
+    12.2
+   ],
+   "rotation_deg": 96.7,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_056",
+   "center_xz": [
+    121.1,
+    -14.0
+   ],
+   "size": [
+    24.4,
+    5.6,
+    16.0
+   ],
+   "rotation_deg": 127.9,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_071",
+   "center_xz": [
+    50.0,
+    -113.8
+   ],
+   "size": [
+    23.2,
+    5.6,
+    17.6
+   ],
+   "rotation_deg": 94.6,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_030",
+   "center_xz": [
+    -125.2,
+    12.9
+   ],
+   "size": [
+    17.7,
+    5.6,
+    15.3
+   ],
+   "rotation_deg": 136.6,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_019",
+   "center_xz": [
+    -104.5,
+    74.4
+   ],
+   "size": [
+    9.9,
+    5.6,
+    8.2
+   ],
+   "rotation_deg": 57.0,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_079",
+   "center_xz": [
+    118.4,
+    52.0
+   ],
+   "size": [
+    10.3,
+    5.6,
+    9.2
+   ],
+   "rotation_deg": 77.4,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_031",
+   "center_xz": [
+    -131.8,
+    -10.3
+   ],
+   "size": [
+    12.1,
+    5.6,
+    8.6
+   ],
+   "rotation_deg": 167.2,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_052",
+   "center_xz": [
+    131.6,
+    23.9
+   ],
+   "size": [
+    26.5,
+    5.6,
+    19.2
+   ],
+   "rotation_deg": -146.8,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_039",
+   "center_xz": [
+    -79.8,
+    -111.4
+   ],
+   "size": [
+    15.3,
+    5.6,
+    15.6
+   ],
+   "rotation_deg": 64.5,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_080",
+   "center_xz": [
+    115.6,
+    78.9
+   ],
+   "size": [
+    19.0,
+    5.6,
+    16.2
+   ],
+   "rotation_deg": 127.7,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_045",
+   "center_xz": [
+    -139.3,
+    -31.5
+   ],
+   "size": [
+    13.2,
+    5.6,
+    11.3
+   ],
+   "rotation_deg": 173.7,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_041",
+   "center_xz": [
+    -129.3,
+    -75.1
+   ],
+   "size": [
+    11.1,
+    5.6,
+    11.1
+   ],
+   "rotation_deg": 115.7,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_070",
+   "center_xz": [
+    78.9,
+    -127.1
+   ],
+   "size": [
+    11.7,
+    5.6,
+    11.4
+   ],
+   "rotation_deg": -165.8,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_064",
+   "center_xz": [
+    95.2,
+    -122.8
+   ],
+   "size": [
+    8.3,
+    5.6,
+    7.9
+   ],
+   "rotation_deg": 135.8,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_027",
+   "center_xz": [
+    -154.1,
+    20.5
+   ],
+   "size": [
+    8.9,
+    5.6,
+    7.4
+   ],
+   "rotation_deg": 147.4,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_020",
+   "center_xz": [
+    -126.1,
+    93.2
+   ],
+   "size": [
+    17.9,
+    5.6,
+    13.8
+   ],
+   "rotation_deg": 163.6,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_058",
+   "center_xz": [
+    152.4,
+    -39.6
+   ],
+   "size": [
+    26.1,
+    5.6,
+    21.3
+   ],
+   "rotation_deg": 134.0,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_040",
+   "center_xz": [
+    -124.8,
+    -100.8
+   ],
+   "size": [
+    19.2,
+    5.6,
+    13.8
+   ],
+   "rotation_deg": 174.8,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_042",
+   "center_xz": [
+    -144.2,
+    -70.6
+   ],
+   "size": [
+    9.2,
+    5.6,
+    7.3
+   ],
+   "rotation_deg": 73.7,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_043",
+   "center_xz": [
+    -150.3,
+    -62.7
+   ],
+   "size": [
+    13.4,
+    5.6,
+    9.4
+   ],
+   "rotation_deg": 73.3,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_026",
+   "center_xz": [
+    -156.7,
+    48.9
+   ],
+   "size": [
+    18.5,
+    5.6,
+    7.7
+   ],
+   "rotation_deg": 144.3,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_048",
+   "center_xz": [
+    162.5,
+    40.4
+   ],
+   "size": [
+    8.7,
+    5.6,
+    8.3
+   ],
+   "rotation_deg": -139.4,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_029",
+   "center_xz": [
+    -167.5,
+    1.6
+   ],
+   "size": [
+    9.8,
+    5.6,
+    7.4
+   ],
+   "rotation_deg": 148.6,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_051",
+   "center_xz": [
+    166.9,
+    14.8
+   ],
+   "size": [
+    7.5,
+    5.6,
+    4.8
+   ],
+   "rotation_deg": 63.1,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_028",
+   "center_xz": [
+    -169.9,
+    25.6
+   ],
+   "size": [
+    13.7,
+    5.6,
+    13.5
+   ],
+   "rotation_deg": 129.0,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_049",
+   "center_xz": [
+    155.7,
+    74.1
+   ],
+   "size": [
+    13.0,
+    5.6,
+    12.6
+   ],
+   "rotation_deg": -168.1,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_007",
+   "center_xz": [
+    -16.7,
+    -172.0
+   ],
+   "size": [
+    14.1,
+    5.6,
+    13.5
+   ],
+   "rotation_deg": 149.0,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_044",
+   "center_xz": [
+    -164.9,
+    -53.6
+   ],
+   "size": [
+    14.6,
+    5.6,
+    10.1
+   ],
+   "rotation_deg": 148.1,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_006",
+   "center_xz": [
+    -3.1,
+    -173.4
+   ],
+   "size": [
+    10.4,
+    5.6,
+    6.1
+   ],
+   "rotation_deg": 90.1,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_069",
+   "center_xz": [
+    95.8,
+    -145.8
+   ],
+   "size": [
+    20.6,
+    5.6,
+    15.9
+   ],
+   "rotation_deg": 102.2,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_047",
+   "center_xz": [
+    173.3,
+    23.0
+   ],
+   "size": [
+    5.8,
+    5.6,
+    5.7
+   ],
+   "rotation_deg": 85.2,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_008",
+   "center_xz": [
+    -49.7,
+    -167.9
+   ],
+   "size": [
+    12.8,
+    5.6,
+    13.0
+   ],
+   "rotation_deg": -143.4,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_050",
+   "center_xz": [
+    166.7,
+    60.1
+   ],
+   "size": [
+    23.3,
+    5.6,
+    17.3
+   ],
+   "rotation_deg": 153.2,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_021",
+   "center_xz": [
+    -135.3,
+    114.8
+   ],
+   "size": [
+    10.2,
+    5.6,
+    7.1
+   ],
+   "rotation_deg": 80.4,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_004",
+   "center_xz": [
+    45.5,
+    -172.7
+   ],
+   "size": [
+    9.8,
+    5.6,
+    9.8
+   ],
+   "rotation_deg": 128.5,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_060",
+   "center_xz": [
+    174.0,
+    -46.3
+   ],
+   "size": [
+    12.0,
+    5.6,
+    11.8
+   ],
+   "rotation_deg": -156.2,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_005",
+   "center_xz": [
+    24.0,
+    -179.8
+   ],
+   "size": [
+    14.7,
+    5.6,
+    13.4
+   ],
+   "rotation_deg": 103.8,
+   "levels": null,
+   "name": null
+  },
+  {
+   "id": "OSM_B_009",
+   "center_xz": [
+    -111.8,
+    -144.9
+   ],
+   "size": [
+    17.3,
+    5.6,
+    14.9
+   ],
+   "rotation_deg": -161.0,
+   "levels": null,
+   "name": null
+  }
+ ],
+ "roads": [
+  {
+   "id": "OSM_R_001",
+   "name": "Gamla Landsvägen",
+   "highway": "residential",
+   "width_m": 5,
+   "points_xz": [
+    [
+     -15.2,
+     220.7
+    ],
+    [
+     80.6,
+     140.9
+    ],
+    [
+     115.3,
+     119.4
+    ],
+    [
+     130.1,
+     108.8
+    ],
+    [
+     154.2,
+     95.6
+    ],
+    [
+     164.0,
+     90.2
+    ],
+    [
+     235.4,
+     48.6
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_002",
+   "name": "Tingsbrötsvägen",
+   "highway": "residential",
+   "width_m": 5,
+   "points_xz": [
+    [
+     -253.8,
+     -44.0
+    ],
+    [
+     -132.5,
+     -118.8
+    ],
+    [
+     -71.4,
+     -140.0
+    ],
+    [
+     -33.4,
+     -150.2
+    ],
+    [
+     79.9,
+     -169.9
+    ],
+    [
+     247.3,
+     -220.8
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_003",
+   "name": "Kraftvägen",
+   "highway": "residential",
+   "width_m": 5,
+   "points_xz": [
+    [
+     -173.4,
+     -252.2
+    ],
+    [
+     -174.0,
+     -240.3
+    ],
+    [
+     -179.2,
+     -232.0
+    ],
+    [
+     -219.3,
+     -199.7
+    ],
+    [
+     -227.7,
+     -192.8
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_004",
+   "name": "Utsiktsvägen",
+   "highway": "residential",
+   "width_m": 5,
+   "points_xz": [
+    [
+     130.1,
+     108.8
+    ],
+    [
+     124.9,
+     103.4
+    ],
+    [
+     118.5,
+     100.4
+    ],
+    [
+     109.7,
+     99.4
+    ],
+    [
+     60.5,
+     102.9
+    ],
+    [
+     27.6,
+     103.6
+    ],
+    [
+     -2.3,
+     105.0
+    ],
+    [
+     -37.2,
+     107.0
+    ],
+    [
+     -61.4,
+     109.7
+    ],
+    [
+     -89.3,
+     117.2
+    ],
+    [
+     -120.5,
+     126.2
+    ],
+    [
+     -139.6,
+     133.6
+    ],
+    [
+     -182.2,
+     150.9
+    ],
+    [
+     -220.4,
+     165.2
+    ],
+    [
+     -233.0,
+     170.8
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_005",
+   "name": "Säterdalsvägen",
+   "highway": "residential",
+   "width_m": 5,
+   "points_xz": [
+    [
+     -34.6,
+     -22.8
+    ],
+    [
+     -42.4,
+     -50.1
+    ],
+    [
+     -71.4,
+     -140.0
+    ],
+    [
+     -75.6,
+     -148.3
+    ],
+    [
+     -152.1,
+     -243.2
+    ],
+    [
+     -159.5,
+     -246.9
+    ],
+    [
+     -173.4,
+     -252.2
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_006",
+   "name": "Gökstigen",
+   "highway": "residential",
+   "width_m": 5,
+   "points_xz": [
+    [
+     115.3,
+     119.4
+    ],
+    [
+     119.0,
+     124.7
+    ],
+    [
+     127.2,
+     138.2
+    ],
+    [
+     143.7,
+     159.9
+    ],
+    [
+     151.6,
+     173.1
+    ],
+    [
+     158.9,
+     191.1
+    ],
+    [
+     169.9,
+     217.5
+    ],
+    [
+     180.1,
+     250.3
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_007",
+   "name": "Hallonstigen",
+   "highway": "residential",
+   "width_m": 5,
+   "points_xz": [
+    [
+     196.5,
+     244.8
+    ],
+    [
+     180.1,
+     250.3
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_008",
+   "name": "Gamla landsvägen",
+   "highway": "residential",
+   "width_m": 5,
+   "points_xz": [
+    [
+     103.4,
+     -37.1
+    ],
+    [
+     93.4,
+     -14.9
+    ],
+    [
+     95.6,
+     -2.9
+    ],
+    [
+     154.2,
+     95.6
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_009",
+   "name": "Säterdalsvägen",
+   "highway": "residential",
+   "width_m": 5,
+   "points_xz": [
+    [
+     -42.4,
+     -50.1
+    ],
+    [
+     -174.8,
+     -2.4
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_010",
+   "name": "Gamla Landsvägen",
+   "highway": "service",
+   "width_m": 5,
+   "points_xz": [
+    [
+     235.4,
+     48.6
+    ],
+    [
+     186.1,
+     -15.8
+    ],
+    [
+     176.4,
+     -27.0
+    ],
+    [
+     171.6,
+     -31.7
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_011",
+   "name": "Gamla Landsvägen",
+   "highway": "service",
+   "width_m": 5,
+   "points_xz": [
+    [
+     254.6,
+     -58.7
+    ],
+    [
+     250.1,
+     -60.1
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_012",
+   "name": "Gamla Landsvägen",
+   "highway": "service",
+   "width_m": 5,
+   "points_xz": [
+    [
+     93.4,
+     -14.9
+    ],
+    [
+     84.4,
+     -17.1
+    ],
+    [
+     79.4,
+     -18.2
+    ],
+    [
+     67.5,
+     -22.6
+    ],
+    [
+     58.8,
+     -25.5
+    ],
+    [
+     49.6,
+     -27.0
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_013",
+   "name": "Kraftvägen",
+   "highway": "service",
+   "width_m": 5,
+   "points_xz": [
+    [
+     -219.3,
+     -199.7
+    ],
+    [
+     -212.8,
+     -195.6
+    ],
+    [
+     -207.9,
+     -193.1
+    ],
+    [
+     -193.7,
+     -182.6
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_014",
+   "name": "Kraftvägen",
+   "highway": "service",
+   "width_m": 5,
+   "points_xz": [
+    [
+     -227.7,
+     -192.8
+    ],
+    [
+     -223.6,
+     -189.4
+    ],
+    [
+     -220.0,
+     -185.9
+    ],
+    [
+     -217.9,
+     -176.0
+    ],
+    [
+     -211.9,
+     -157.8
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_015",
+   "name": "Tingsbrötsvägen",
+   "highway": "service",
+   "width_m": 5,
+   "points_xz": [
+    [
+     -231.6,
+     -16.6
+    ],
+    [
+     -223.5,
+     -14.7
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_016",
+   "name": "Utsiktsvägen",
+   "highway": "service",
+   "width_m": 5,
+   "points_xz": [
+    [
+     -220.4,
+     165.2
+    ],
+    [
+     -242.4,
+     125.3
+    ],
+    [
+     -253.7,
+     106.8
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_017",
+   "name": "Utsiktsvägen",
+   "highway": "service",
+   "width_m": 5,
+   "points_xz": [
+    [
+     -139.6,
+     133.6
+    ],
+    [
+     -144.8,
+     121.1
+    ],
+    [
+     -157.4,
+     94.3
+    ],
+    [
+     -164.5,
+     76.0
+    ],
+    [
+     -167.5,
+     71.4
+    ],
+    [
+     -173.3,
+     57.5
+    ],
+    [
+     -176.4,
+     53.8
+    ],
+    [
+     -184.3,
+     50.8
+    ]
+   ]
+  },
+  {
+   "id": "OSM_R_018",
+   "name": "Utsiktsvägen",
+   "highway": "residential",
+   "width_m": 5,
+   "points_xz": [
+    [
+     -233.0,
+     170.8
+    ],
+    [
+     -215.0,
+     205.6
+    ],
+    [
+     -204.5,
+     223.4
+    ]
+   ]
+  }
+ ]
+}

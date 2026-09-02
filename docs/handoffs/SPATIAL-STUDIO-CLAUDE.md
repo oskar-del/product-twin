@@ -1,5 +1,61 @@
 # Plot-to-Project Spatial Studio — Claude Session Handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-01 (Brain; supersedes earlier pins; re-read every resume)
+>
+> Boundary + byggnad + sightlines: DONE and verified. Now finish the CANONICAL EXPERIENCE:
+> 1. **Trunk adoption**: fold COMPARE + the Site Intelligence rebuild into ONE experience —
+>    no forked looks; a visitor flows Site-Intelligence page ↔ 3D twin seamlessly.
+> 2. **Mount BRAGE's Vinkelhuset**: winner is called; when its developed geometry lands
+>    (house-v0.2 spec format), mount it as THE design on the plot (A/C stay as alternates
+>    in the selector).
+> 3. Keep the ingest kommun-generic (a separate Djurö showcase session will reuse your
+>    scripts for Värmdö 0120 — do not do that work here, just keep scripts parameterised).
+> Every pixel honest. Gate every block (838-assertion validator). Commit; Oskar pushes.
+
+
+> ## ⛳ CURRENT MANDATE — 2026-08-27 (Brain; LANTMÄTERIET DATA LANDED; re-read every resume)
+>
+> Your "Geotorget order is unavoidable" blocker is RESOLVED. Orders LM2026/114822
+> (fastighetsindelning) + LM2026/114814 (byggnad) were delivered 2026-08-27; the zips
+> live at `"../lm-data/"` (repo-external, NOT in git — LM license). Brain already ran
+> YOUR drop-in (`scripts/ingest-property-division.py`) against the real data — one fix
+> was needed (real LM schema splits designation into trakt+etikett; composed, fallback
+> kept) — and GATE_SE_PROPERTY_DIVISION_CONTEXT is CLOSED:
+> `data/sites/sweden/saterdalsvagen-14/property-division-derived-v0.1.json` — subject
+> SVÄRTINGE 54:28, 1 ring (7 pts), **1 936.8 m² AUTHORITATIVE** (Lantmäteriet), 75
+> context parcels, full sha256 receipt chain. Validator re-run: 838 PASS.
+>
+> YOUR QUEUE NOW:
+> 1. **Wire the viewer overlay** to render the authoritative boundary (your own
+>    script's final message) — replace the provisional developer trace everywhere;
+>    evidence chip flips INDICATIVE → AUTHORITATIVE.
+> 2. **Byggnad footprints**: `../lm-data/byggnad_kn0581.zip` (35 MB GPKG) = official
+>    building geometry for the neighbourhood — upgrade/verify the OSM context with it
+>    (same ingest pattern; receipts mandatory).
+> 3. Nationwide: the grant serves EVERY kommun via
+>    `api.lantmateriet.se/stac-vektor/v1/collections/{fastighetsindelning,byggnader}/items/<kommunkod>`
+>    — keep the ingest generic; this is the plot-analysis SEO machine's data layer.
+> Then continue trunk adoption (COMPARE + Site Intelligence = one experience).
+> Commit every block; Oskar pushes.
+>
+> ### Claude progress — 2026-08-27 (mandate items 1 & 2 DONE, verified in browser)
+> - **Item 1 — boundary overlay wired (`ded76d7`)**: the authoritative 7-point 54:28
+>   polygon (1 937 m², EPSG:3006) renders as the AUTHORITATIVE green boundary fence +
+>   75 context parcels; provisional `PLOT_54_28` indicative trace suppressed; source
+>   chip flipped INDICATIVE → "✓ AUTHORITATIVE · 1937 m² · SHA 92ab23e77f…" (area via
+>   shoelace, never typed).
+> - **Item 2 — byggnad footprints (`c6933b8` ingest, `82f57b1` viewer)**:
+>   `scripts/ingest-buildings.py` (reuses the proven helpers) clipped 153 official
+>   footprints within 200 m (49 Bostad) → `buildings-official-derived-v0.1.json` with
+>   receipts; viewer extrudes them through profile(), retires the OSM boxes. Footprint
+>   AUTHORITATIVE, **height DERIVED** (LM byggnad has no height — never invented).
+> - **Item 3 — generic/nationwide**: both ingest scripts are kommun-parameterised
+>   (property-division pulls the STAC asset by kommunkod; buildings takes any
+>   `byggnad_kn<NNNN>.zip`). Ready to fan out to other kommuner.
+> - Gates/checks each block: `--self-test` PASS, validator 838 PASS, module syntax OK,
+>   no forbidden storage APIs. NOT checked: heavy 5-min soak / all 153 footprints for
+>   self-intersecting rings; COMPARE-mode trunk convergence still open.
+
 ## Role
 
 This is the persistent **Claude** specialist session for the Plot-to-Project Spatial Studio workstream. It continues the ChatGPT chat "3: Plot-to-Project Spatial Studio" with the capabilities that environment lacked: full local filesystem, authenticated GitHub push, a real browser, and the ability to download and process official Swedish geodata.
@@ -87,4 +143,11 @@ Every work session ends by reporting: branch + exact commit, files changed, comm
   - **⚠️ maker≠checker:** this gate closure was authored in the producing session. The Product Twin brain should independently re-run `.runtime/venv/bin/python scripts/derive_svartinge_terrain.py` + `npm run site:sweden:svartinge:prototype:gate` (both re-verify the multihash) before relying on it. Boundary/access/utility/FFL gates remain OPEN.
   - **Remaining polish (cosmetic, non-blocking):** Plot Outlook camera wants retuning for the real descending hill; the flat plot clearing sits proud of the sloped plot; tiny street props (logs/conduits) not draped. Optional: acquire m650_56 for full east coverage; order fastighetsindelning+byggnad vectors for the parcel/building legs.
   - **Env note:** data volume was ~94% full mid-session (a 246 MB download briefly ENOSPC'd). `repo-spatial-studio/.runtime -> ../repo/.runtime` symlink (git-excluded) shares tiles+venv.
+- 2026-08-18 (Claude, Brain-queue pass) — **realism ladder + real context, toward the goal "believe every pixel".**
+  - **Live Mapbox satellite drape (commit `84b71d2`).** REALISTIC terrain textured with the Mapbox Static Images API (satellite-v9) for the 360 m window, over the real 3D relief. Terrain gains planar UVs; `drapeSatelliteTerrain(token)`/`undrapeSatelliteTerrain()` wired to the Live Context token flow (fires on valid token, decoupled from the heavier mapbox-gl connect). Evidence-safe: pixels live-only, **token never committed** (public `pk.` in `repo/.runtime/credentials/mapbox.env`), "© Mapbox · © Maxar" attribution shown. ⚠️ for a public deploy the token must be URL-restricted in the Mapbox dashboard; a visitor without a token sees procedural grass (satellite is opt-in).
+  - **Real OSM neighbourhood (commit `260ec2d`).** `scripts/derive_svartinge_osm_context.py` (Overpass → `osm-context-derived-v0.1.json`, DERIVED, ODbL) replaces the 12 hand-placed blocks with **60 real building footprints (PCA-oriented boxes) + 18 real roads** (Säterdalsvägen, Gamla Landsvägen, Utsiktsvägen…), draped on the authoritative terrain. `ROAD_SATERDALSVAGEN` id preserved for the Street Room. Honest: crowd-sourced, superseded by the Lantmäteriet byggnad vector when acquired. Persistent ODbL+Lantmäteriet attribution added. Trees now respect building footprints (commit `027b07d`). Fixed a street-ribbon double-drape.
+  - **Design-selector mount contract (commit `009a4b7`).** `docs/DESIGN-SELECTOR-MOUNT-CONTRACT.md` — Stage-4 mount anchor, proposed A/B/C spec shape, `mountDesign()/clearDesign()` hook, CONCEPT-only constraints. **Selector NOT built (Platform's job)**; Spatial Studio implements the hook once the spec is frozen. Coordinate with Platform + BRAGE.
+  - **Also:** plot clearing draped onto slope + Plot Outlook camera retuned (`a8de798`).
+  - **Goal scorecard** (goal: a 5-min visitor believes every pixel; extend the trunk look, don't fork): real terrain ✅ · real imagery ✅ (satellite) · real neighbourhood ✅ (OSM) · honest gates ✅ (COMPARE proves evidence≠presentation) · **real boundary ⏳ needs the `fastighetsindelning` vector (Oskar to order)** · **concept studio comparing designs on the land ⏳ needs Platform's selector (contract handed over)**. POIs intentionally stay diagrammatic (gate requires `DIAGRAMMATIC_NOT_GEOGRAPHIC`/`distance_m:null` — honest locality-presence, not surveyed position).
+  - Full prototype gate: **838 assertions / 85 mutation attacks / context + alignment PASS.** All committed; push blocked in-session (Brain/Oskar push).
 - 2026-08-18 branch state (superseded below): `agent/spatial-studio-claude` was ahead 5 of origin (`80e3d98` audit + `fcf24b7` M4 + `5d0dc7c` terrain + `aa9ed59` handoff + `36bad4d` correction). Push was permission-denied in-session; run `git push origin agent/spatial-studio-claude` from `repo-spatial-studio/`.

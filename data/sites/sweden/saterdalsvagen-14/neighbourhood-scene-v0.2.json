@@ -3539,418 +3539,2472 @@
       ]
     },
     {
-      "id": "ROAD_SATERDALSVAGEN",
+      "id": "OSM_R_001",
       "type": "ROAD",
-      "label": "Säterdalsvägen derived alignment",
+      "label": "Gamla Landsvägen (OSM)",
       "evidence_class": "DERIVED",
       "geometry": {
         "primitive": "POLYLINE_RIBBON",
         "points": [
           [
-            -150,
-            -17.628,
-            -54
+            -15.2,
+            15.618,
+            220.7
           ],
           [
-            -70,
-            -11.411,
-            -43
+            80.6,
+            15.588,
+            140.9
           ],
           [
-            -35,
-            -6.383,
-            -30
+            115.3,
+            12.99,
+            119.4
           ],
           [
-            -28,
-            -4.414,
-            -18
+            130.1,
+            12.322,
+            108.8
           ],
           [
-            -27,
-            14.667,
-            80
+            154.2,
+            12.64,
+            95.6
+          ],
+          [
+            164,
+            12.91,
+            90.2
+          ],
+          [
+            235.4,
+            9.726,
+            48.6
           ]
         ],
-        "width_m": 6
+        "width_m": 5
       },
       "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE",
-        "RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY"
+        "OSM_CONTEXT_ODBL"
       ],
       "limitations": [
-        "Diagrammatic alignment traced from available map imagery.",
-        "No current centreline, width, gradient, road-manager or legal-access claim."
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
       ]
     },
     {
-      "id": "ROAD_GAMLA_LANDSVAGEN",
+      "id": "OSM_R_002",
       "type": "ROAD",
-      "label": "Gamla Landsvägen derived alignment",
+      "label": "Tingsbrötsvägen (OSM)",
       "evidence_class": "DERIVED",
       "geometry": {
         "primitive": "POLYLINE_RIBBON",
         "points": [
           [
-            20,
-            -3.479,
-            -31
-          ],
-          [
-            85,
-            -1.551,
+            -253.8,
+            -18.384,
             -44
           ],
           [
-            155,
-            1.465,
-            -52
+            -132.5,
+            -24.437,
+            -118.8
+          ],
+          [
+            -71.4,
+            -25.774,
+            -140
+          ],
+          [
+            -33.4,
+            -26.353,
+            -150.2
+          ],
+          [
+            79.9,
+            -23.193,
+            -169.9
+          ],
+          [
+            247.3,
+            -21,
+            -220.8
           ]
         ],
-        "width_m": 7
+        "width_m": 5
       },
       "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
+        "OSM_CONTEXT_ODBL"
       ],
       "limitations": [
-        "Diagrammatic alignment traced from listing map imagery.",
-        "Width and vertical geometry are estimated for navigation only."
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
       ]
     },
     {
-      "id": "CTX_BLDG_01",
+      "id": "OSM_R_003",
+      "type": "ROAD",
+      "label": "Kraftvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            -173.4,
+            -35.013,
+            -252.2
+          ],
+          [
+            -174,
+            -35.008,
+            -240.3
+          ],
+          [
+            -179.2,
+            -34.966,
+            -232
+          ],
+          [
+            -219.3,
+            -34.96,
+            -199.7
+          ],
+          [
+            -227.7,
+            -34.96,
+            -192.8
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_004",
+      "type": "ROAD",
+      "label": "Utsiktsvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            130.1,
+            12.322,
+            108.8
+          ],
+          [
+            124.9,
+            12.25,
+            103.4
+          ],
+          [
+            118.5,
+            12.481,
+            100.4
+          ],
+          [
+            109.7,
+            12.978,
+            99.4
+          ],
+          [
+            60.5,
+            13.239,
+            102.9
+          ],
+          [
+            27.6,
+            13.651,
+            103.6
+          ],
+          [
+            -2.3,
+            13.42,
+            105
+          ],
+          [
+            -37.2,
+            13.548,
+            107
+          ],
+          [
+            -61.4,
+            13.052,
+            109.7
+          ],
+          [
+            -89.3,
+            12.765,
+            117.2
+          ],
+          [
+            -120.5,
+            12.311,
+            126.2
+          ],
+          [
+            -139.6,
+            11.463,
+            133.6
+          ],
+          [
+            -182.2,
+            10.917,
+            150.9
+          ],
+          [
+            -220.4,
+            11.806,
+            165.2
+          ],
+          [
+            -233,
+            11.702,
+            170.8
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "ROAD_SATERDALSVAGEN",
+      "type": "ROAD",
+      "label": "Säterdalsvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            -34.6,
+            -5.264,
+            -22.8
+          ],
+          [
+            -42.4,
+            -10.773,
+            -50.1
+          ],
+          [
+            -71.4,
+            -25.774,
+            -140
+          ],
+          [
+            -75.6,
+            -26.338,
+            -148.3
+          ],
+          [
+            -152.1,
+            -34.134,
+            -243.2
+          ],
+          [
+            -159.5,
+            -34.677,
+            -246.9
+          ],
+          [
+            -173.4,
+            -35.013,
+            -252.2
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_006",
+      "type": "ROAD",
+      "label": "Gökstigen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            115.3,
+            12.99,
+            119.4
+          ],
+          [
+            119,
+            13.221,
+            124.7
+          ],
+          [
+            127.2,
+            14.418,
+            138.2
+          ],
+          [
+            143.7,
+            15.773,
+            159.9
+          ],
+          [
+            151.6,
+            15.756,
+            173.1
+          ],
+          [
+            158.9,
+            15.71,
+            191.1
+          ],
+          [
+            169.9,
+            15.71,
+            217.5
+          ],
+          [
+            180.1,
+            15.71,
+            250.3
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_007",
+      "type": "ROAD",
+      "label": "Hallonstigen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            196.5,
+            15.71,
+            244.8
+          ],
+          [
+            180.1,
+            15.71,
+            250.3
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_008",
+      "type": "ROAD",
+      "label": "Gamla landsvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            103.4,
+            2.979,
+            -37.1
+          ],
+          [
+            93.4,
+            5.973,
+            -14.9
+          ],
+          [
+            95.6,
+            7.359,
+            -2.9
+          ],
+          [
+            154.2,
+            12.64,
+            95.6
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_009",
+      "type": "ROAD",
+      "label": "Säterdalsvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            -42.4,
+            -10.773,
+            -50.1
+          ],
+          [
+            -174.8,
+            -8.36,
+            -2.4
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_010",
+      "type": "ROAD",
+      "label": "Gamla Landsvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            235.4,
+            9.726,
+            48.6
+          ],
+          [
+            186.1,
+            8.167,
+            -15.8
+          ],
+          [
+            176.4,
+            7.57,
+            -27
+          ],
+          [
+            171.6,
+            6.91,
+            -31.7
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_011",
+      "type": "ROAD",
+      "label": "Gamla Landsvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            254.6,
+            -0.005,
+            -58.7
+          ],
+          [
+            250.1,
+            -0.315,
+            -60.1
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_012",
+      "type": "ROAD",
+      "label": "Gamla Landsvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            93.4,
+            5.973,
+            -14.9
+          ],
+          [
+            84.4,
+            4.684,
+            -17.1
+          ],
+          [
+            79.4,
+            4.287,
+            -18.2
+          ],
+          [
+            67.5,
+            2.133,
+            -22.6
+          ],
+          [
+            58.8,
+            0.241,
+            -25.5
+          ],
+          [
+            49.6,
+            -0.552,
+            -27
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_013",
+      "type": "ROAD",
+      "label": "Kraftvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            -219.3,
+            -34.96,
+            -199.7
+          ],
+          [
+            -212.8,
+            -34.96,
+            -195.6
+          ],
+          [
+            -207.9,
+            -34.96,
+            -193.1
+          ],
+          [
+            -193.7,
+            -34.96,
+            -182.6
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_014",
+      "type": "ROAD",
+      "label": "Kraftvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            -227.7,
+            -34.96,
+            -192.8
+          ],
+          [
+            -223.6,
+            -34.96,
+            -189.4
+          ],
+          [
+            -220,
+            -34.96,
+            -185.9
+          ],
+          [
+            -217.9,
+            -34.947,
+            -176
+          ],
+          [
+            -211.9,
+            -33.931,
+            -157.8
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_015",
+      "type": "ROAD",
+      "label": "Tingsbrötsvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            -231.6,
+            -13.073,
+            -16.6
+          ],
+          [
+            -223.5,
+            -12.596,
+            -14.7
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_016",
+      "type": "ROAD",
+      "label": "Utsiktsvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            -220.4,
+            11.806,
+            165.2
+          ],
+          [
+            -242.4,
+            9.979,
+            125.3
+          ],
+          [
+            -253.7,
+            9.94,
+            106.8
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_017",
+      "type": "ROAD",
+      "label": "Utsiktsvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            -139.6,
+            11.463,
+            133.6
+          ],
+          [
+            -144.8,
+            11.11,
+            121.1
+          ],
+          [
+            -157.4,
+            9.467,
+            94.3
+          ],
+          [
+            -164.5,
+            6.608,
+            76
+          ],
+          [
+            -167.5,
+            6.581,
+            71.4
+          ],
+          [
+            -173.3,
+            5.255,
+            57.5
+          ],
+          [
+            -176.4,
+            4.537,
+            53.8
+          ],
+          [
+            -184.3,
+            4.105,
+            50.8
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_R_018",
+      "type": "ROAD",
+      "label": "Utsiktsvägen (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "POLYLINE_RIBBON",
+        "points": [
+          [
+            -233,
+            11.702,
+            170.8
+          ],
+          [
+            -215,
+            11.53,
+            205.6
+          ],
+          [
+            -204.5,
+            11.53,
+            223.4
+          ]
+        ],
+        "width_m": 5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Alignment from an OpenStreetMap highway (crowd-sourced); not a surveyed centreline, width, gradient, road-manager or legal-access claim."
+      ]
+    },
+    {
+      "id": "OSM_B_053",
       "type": "CONTEXT_BUILDING",
-      "label": "Context massing 01",
+      "label": "Context building (OSM)",
       "evidence_class": "DERIVED",
       "geometry": {
         "primitive": "BOX",
         "position": [
-          -88,
-          -4.878,
-          -20
+          -9.6,
+          -2.651,
+          -31.2
         ],
         "size": [
-          18,
-          5.8,
-          11
+          11.1,
+          5.6,
+          10.9
         ],
-        "rotation_y_deg": -12
+        "rotation_y_deg": 97.1
       },
       "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
+        "OSM_CONTEXT_ODBL"
       ],
       "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
       ]
     },
     {
-      "id": "CTX_BLDG_02",
+      "id": "OSM_B_075",
       "type": "CONTEXT_BUILDING",
-      "label": "Context massing 02",
+      "label": "Context building (OSM)",
       "evidence_class": "DERIVED",
       "geometry": {
         "primitive": "BOX",
         "position": [
-          -115,
-          -15.941,
-          -72
+          33,
+          0.294,
+          -33
         ],
         "size": [
-          14,
-          5.2,
-          10
+          22.2,
+          5.6,
+          11.9
         ],
-        "rotation_y_deg": 8
+        "rotation_y_deg": 167.8
       },
       "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
+        "OSM_CONTEXT_ODBL"
       ],
       "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
       ]
     },
     {
-      "id": "CTX_BLDG_03",
+      "id": "OSM_B_033",
       "type": "CONTEXT_BUILDING",
-      "label": "Context massing 03",
+      "label": "Context building (OSM)",
       "evidence_class": "DERIVED",
       "geometry": {
         "primitive": "BOX",
         "position": [
-          -57,
-          -14.229,
-          -76
+          -48.8,
+          -0.96,
+          -8.2
         ],
         "size": [
-          17,
-          6.1,
-          12
+          14.2,
+          5.6,
+          12.4
         ],
-        "rotation_y_deg": -4
+        "rotation_y_deg": 144.4
       },
       "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
+        "OSM_CONTEXT_ODBL"
       ],
       "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
       ]
     },
     {
-      "id": "CTX_BLDG_04",
+      "id": "OSM_B_034",
       "type": "CONTEXT_BUILDING",
-      "label": "Context massing 04",
+      "label": "Context building (OSM)",
       "evidence_class": "DERIVED",
       "geometry": {
         "primitive": "BOX",
         "position": [
-          10,
-          -5.818,
-          -58
+          -60,
+          0.116,
+          3.8
         ],
         "size": [
-          12,
-          5.4,
-          9
+          17.8,
+          5.6,
+          17.8
         ],
-        "rotation_y_deg": 15
+        "rotation_y_deg": -156.2
       },
       "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
+        "OSM_CONTEXT_ODBL"
       ],
       "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
       ]
     },
     {
-      "id": "CTX_BLDG_05",
+      "id": "OSM_B_076",
       "type": "CONTEXT_BUILDING",
-      "label": "Context massing 05",
+      "label": "Context building (OSM)",
       "evidence_class": "DERIVED",
       "geometry": {
         "primitive": "BOX",
         "position": [
-          58,
-          2.591,
-          -30
+          72.7,
+          10.186,
+          0
         ],
         "size": [
-          26,
-          6.2,
-          11
-        ],
-        "rotation_y_deg": -17
-      },
-      "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
-      ],
-      "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
-      ]
-    },
-    {
-      "id": "CTX_BLDG_06",
-      "type": "CONTEXT_BUILDING",
-      "label": "Context massing 06",
-      "evidence_class": "DERIVED",
-      "geometry": {
-        "primitive": "BOX",
-        "position": [
-          92,
-          -2.638,
-          -70
-        ],
-        "size": [
-          17,
-          5.8,
-          11
-        ],
-        "rotation_y_deg": -11
-      },
-      "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
-      ],
-      "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
-      ]
-    },
-    {
-      "id": "CTX_BLDG_07",
-      "type": "CONTEXT_BUILDING",
-      "label": "Context massing 07",
-      "evidence_class": "DERIVED",
-      "geometry": {
-        "primitive": "BOX",
-        "position": [
-          91,
-          15.033,
-          32
-        ],
-        "size": [
-          22,
-          6,
-          12
-        ],
-        "rotation_y_deg": 7
-      },
-      "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
-      ],
-      "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
-      ]
-    },
-    {
-      "id": "CTX_BLDG_08",
-      "type": "CONTEXT_BUILDING",
-      "label": "Context massing 08",
-      "evidence_class": "DERIVED",
-      "geometry": {
-        "primitive": "BOX",
-        "position": [
-          -90,
-          9.482,
-          57
-        ],
-        "size": [
-          17,
+          19.6,
           5.6,
           11
         ],
-        "rotation_y_deg": 12
+        "rotation_y_deg": 164.8
       },
       "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
+        "OSM_CONTEXT_ODBL"
       ],
       "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
       ]
     },
     {
-      "id": "CTX_BLDG_09",
+      "id": "OSM_B_054",
       "type": "CONTEXT_BUILDING",
-      "label": "Context massing 09",
+      "label": "Context building (OSM)",
       "evidence_class": "DERIVED",
       "geometry": {
         "primitive": "BOX",
         "position": [
-          -45,
-          17.955,
-          91
-        ],
-        "size": [
-          18,
-          6.1,
-          12
-        ],
-        "rotation_y_deg": -5
-      },
-      "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
-      ],
-      "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
-      ]
-    },
-    {
-      "id": "CTX_BLDG_10",
-      "type": "CONTEXT_BUILDING",
-      "label": "Context massing 10",
-      "evidence_class": "DERIVED",
-      "geometry": {
-        "primitive": "BOX",
-        "position": [
-          42,
-          17.691,
-          88
-        ],
-        "size": [
-          16,
-          5.5,
-          10
-        ],
-        "rotation_y_deg": 9
-      },
-      "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
-      ],
-      "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
-      ]
-    },
-    {
-      "id": "CTX_BLDG_11",
-      "type": "CONTEXT_BUILDING",
-      "label": "Context massing 11",
-      "evidence_class": "DERIVED",
-      "geometry": {
-        "primitive": "BOX",
-        "position": [
-          126,
-          15.153,
-          68
-        ],
-        "size": [
-          19,
-          6.4,
-          12
-        ],
-        "rotation_y_deg": -8
-      },
-      "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
-      ],
-      "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
-      ]
-    },
-    {
-      "id": "CTX_BLDG_12",
-      "type": "CONTEXT_BUILDING",
-      "label": "Context massing 12",
-      "evidence_class": "DERIVED",
-      "geometry": {
-        "primitive": "BOX",
-        "position": [
-          133,
-          10.73,
-          -10
+          61.5,
+          0.937,
+          -39.8
         ],
         "size": [
           15,
-          5.2,
-          10
+          5.6,
+          12.9
         ],
-        "rotation_y_deg": 11
+        "rotation_y_deg": 146.3
       },
       "source_refs": [
-        "RCPT_SE_LISTING_MAP_IMAGE"
+        "OSM_CONTEXT_ODBL"
       ],
       "limitations": [
-        "Footprint position and envelope are diagrammatically traced/estimated from the listing map.",
-        "Height is a context-massing estimate, not a surveyed storey or ridge height.",
-        "No ownership, use, lawful-status or address claim."
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_074",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -26,
+          -10.492,
+          -69.8
+        ],
+        "size": [
+          15.9,
+          5.6,
+          13.1
+        ],
+        "rotation_y_deg": 154.3
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_073",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -38,
+          -10.63,
+          -65.5
+        ],
+        "size": [
+          10,
+          5.6,
+          10
+        ],
+        "rotation_y_deg": 121.7
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_082",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          29.9,
+          16.965,
+          71.9
+        ],
+        "size": [
+          11.2,
+          5.6,
+          10.7
+        ],
+        "rotation_y_deg": 168
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_083",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          6.3,
+          18.101,
+          78.6
+        ],
+        "size": [
+          21.9,
+          5.6,
+          14.9
+        ],
+        "rotation_y_deg": 167.4
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_081",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          61.4,
+          16.434,
+          55.4
+        ],
+        "size": [
+          29.3,
+          5.6,
+          15.1
+        ],
+        "rotation_y_deg": 140.4
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_077",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          85.7,
+          11.203,
+          8.5
+        ],
+        "size": [
+          11,
+          5.6,
+          10.3
+        ],
+        "rotation_y_deg": 154.5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_037",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -68.9,
+          -9.822,
+          -55.2
+        ],
+        "size": [
+          15.3,
+          5.6,
+          11.6
+        ],
+        "rotation_y_deg": 172.6
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_036",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -31.9,
+          17.208,
+          84
+        ],
+        "size": [
+          17.6,
+          5.6,
+          14.7
+        ],
+        "rotation_y_deg": 112
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_035",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -22.7,
+          16.854,
+          87.1
+        ],
+        "size": [
+          8.9,
+          5.6,
+          7.1
+        ],
+        "rotation_y_deg": 71.4
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_078",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          91.4,
+          14.844,
+          30.4
+        ],
+        "size": [
+          17.2,
+          5.6,
+          15.2
+        ],
+        "rotation_y_deg": 151.5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_032",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -100.2,
+          -1.393,
+          4.4
+        ],
+        "size": [
+          19,
+          5.6,
+          12.6
+        ],
+        "rotation_y_deg": 153.6
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_038",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -65.9,
+          -15.787,
+          -81.8
+        ],
+        "size": [
+          11.6,
+          5.6,
+          11.6
+        ],
+        "rotation_y_deg": -151.3
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_055",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          106,
+          10.823,
+          -5.7
+        ],
+        "size": [
+          13.1,
+          5.6,
+          10.3
+        ],
+        "rotation_y_deg": 76.5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_018",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -79.8,
+          15.225,
+          73
+        ],
+        "size": [
+          22.1,
+          5.6,
+          19.7
+        ],
+        "rotation_y_deg": 123.8
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_072",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          22.7,
+          -15.213,
+          -110
+        ],
+        "size": [
+          11.3,
+          5.6,
+          9.2
+        ],
+        "rotation_y_deg": 143
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_057",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          105.5,
+          3.662,
+          -53.7
+        ],
+        "size": [
+          18,
+          5.6,
+          10.8
+        ],
+        "rotation_y_deg": 162.8
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_017",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -73.4,
+          15.04,
+          93.6
+        ],
+        "size": [
+          12.9,
+          5.6,
+          12.2
+        ],
+        "rotation_y_deg": 96.7
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_056",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          121.1,
+          10.994,
+          -14
+        ],
+        "size": [
+          24.4,
+          5.6,
+          16
+        ],
+        "rotation_y_deg": 127.9
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_071",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          50,
+          -13.737,
+          -113.8
+        ],
+        "size": [
+          23.2,
+          5.6,
+          17.6
+        ],
+        "rotation_y_deg": 94.6
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_030",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -125.2,
+          -1.353,
+          12.9
+        ],
+        "size": [
+          17.7,
+          5.6,
+          15.3
+        ],
+        "rotation_y_deg": 136.6
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_019",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -104.5,
+          15.068,
+          74.4
+        ],
+        "size": [
+          9.9,
+          5.6,
+          8.2
+        ],
+        "rotation_y_deg": 57
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_079",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          118.4,
+          12.786,
+          52
+        ],
+        "size": [
+          10.3,
+          5.6,
+          9.2
+        ],
+        "rotation_y_deg": 77.4
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_031",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -131.8,
+          -5.503,
+          -10.3
+        ],
+        "size": [
+          12.1,
+          5.6,
+          8.6
+        ],
+        "rotation_y_deg": 167.2
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_052",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          131.6,
+          12.006,
+          23.9
+        ],
+        "size": [
+          26.5,
+          5.6,
+          19.2
+        ],
+        "rotation_y_deg": -146.8
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_039",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -79.8,
+          -19.969,
+          -111.4
+        ],
+        "size": [
+          15.3,
+          5.6,
+          15.6
+        ],
+        "rotation_y_deg": 64.5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_080",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          115.6,
+          15.864,
+          78.9
+        ],
+        "size": [
+          19,
+          5.6,
+          16.2
+        ],
+        "rotation_y_deg": 127.7
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_045",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -139.3,
+          -8.353,
+          -31.5
+        ],
+        "size": [
+          13.2,
+          5.6,
+          11.3
+        ],
+        "rotation_y_deg": 173.7
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_041",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -129.3,
+          -16.871,
+          -75.1
+        ],
+        "size": [
+          11.1,
+          5.6,
+          11.1
+        ],
+        "rotation_y_deg": 115.7
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_070",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          78.9,
+          -14.113,
+          -127.1
+        ],
+        "size": [
+          11.7,
+          5.6,
+          11.4
+        ],
+        "rotation_y_deg": -165.8
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_064",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          95.2,
+          -12.006,
+          -122.8
+        ],
+        "size": [
+          8.3,
+          5.6,
+          7.9
+        ],
+        "rotation_y_deg": 135.8
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_027",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -154.1,
+          -1.069,
+          20.5
+        ],
+        "size": [
+          8.9,
+          5.6,
+          7.4
+        ],
+        "rotation_y_deg": 147.4
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_020",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -126.1,
+          15.104,
+          93.2
+        ],
+        "size": [
+          17.9,
+          5.6,
+          13.8
+        ],
+        "rotation_y_deg": 163.6
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_058",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          152.4,
+          7.388,
+          -39.6
+        ],
+        "size": [
+          26.1,
+          5.6,
+          21.3
+        ],
+        "rotation_y_deg": 134
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_040",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -124.8,
+          -19.525,
+          -100.8
+        ],
+        "size": [
+          19.2,
+          5.6,
+          13.8
+        ],
+        "rotation_y_deg": 174.8
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_042",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -144.2,
+          -16.928,
+          -70.6
+        ],
+        "size": [
+          9.2,
+          5.6,
+          7.3
+        ],
+        "rotation_y_deg": 73.7
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_043",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -150.3,
+          -16.467,
+          -62.7
+        ],
+        "size": [
+          13.4,
+          5.6,
+          9.4
+        ],
+        "rotation_y_deg": 73.3
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_026",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -156.7,
+          5.423,
+          48.9
+        ],
+        "size": [
+          18.5,
+          5.6,
+          7.7
+        ],
+        "rotation_y_deg": 144.3
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_048",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          162.5,
+          12.176,
+          40.4
+        ],
+        "size": [
+          8.7,
+          5.6,
+          8.3
+        ],
+        "rotation_y_deg": -139.4
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_029",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -167.5,
+          -4.737,
+          1.6
+        ],
+        "size": [
+          9.8,
+          5.6,
+          7.4
+        ],
+        "rotation_y_deg": 148.6
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_051",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          166.9,
+          11.954,
+          14.8
+        ],
+        "size": [
+          7.5,
+          5.6,
+          4.8
+        ],
+        "rotation_y_deg": 63.1
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_028",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -169.9,
+          -1.054,
+          25.6
+        ],
+        "size": [
+          13.7,
+          5.6,
+          13.5
+        ],
+        "rotation_y_deg": 129
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_049",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          155.7,
+          15.761,
+          74.1
+        ],
+        "size": [
+          13,
+          5.6,
+          12.6
+        ],
+        "rotation_y_deg": -168.1
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_007",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -16.7,
+          -24.766,
+          -172
+        ],
+        "size": [
+          14.1,
+          5.6,
+          13.5
+        ],
+        "rotation_y_deg": 149
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_044",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -164.9,
+          -15.01,
+          -53.6
+        ],
+        "size": [
+          14.6,
+          5.6,
+          10.1
+        ],
+        "rotation_y_deg": 148.1
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_006",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -3.1,
+          -24.267,
+          -173.4
+        ],
+        "size": [
+          10.4,
+          5.6,
+          6.1
+        ],
+        "rotation_y_deg": 90.1
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_069",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          95.8,
+          -14.727,
+          -145.8
+        ],
+        "size": [
+          20.6,
+          5.6,
+          15.9
+        ],
+        "rotation_y_deg": 102.2
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_047",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          173.3,
+          12.002,
+          23
+        ],
+        "size": [
+          5.8,
+          5.6,
+          5.7
+        ],
+        "rotation_y_deg": 85.2
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_008",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -49.7,
+          -25.659,
+          -167.9
+        ],
+        "size": [
+          12.8,
+          5.6,
+          13
+        ],
+        "rotation_y_deg": -143.4
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_050",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          166.7,
+          13.447,
+          60.1
+        ],
+        "size": [
+          23.3,
+          5.6,
+          17.3
+        ],
+        "rotation_y_deg": 153.2
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_021",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -135.3,
+          14.704,
+          114.8
+        ],
+        "size": [
+          10.2,
+          5.6,
+          7.1
+        ],
+        "rotation_y_deg": 80.4
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_004",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          45.5,
+          -22.445,
+          -172.7
+        ],
+        "size": [
+          9.8,
+          5.6,
+          9.8
+        ],
+        "rotation_y_deg": 128.5
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_060",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          174,
+          5.515,
+          -46.3
+        ],
+        "size": [
+          12,
+          5.6,
+          11.8
+        ],
+        "rotation_y_deg": -156.2
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_005",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          24,
+          -23.403,
+          -179.8
+        ],
+        "size": [
+          14.7,
+          5.6,
+          13.4
+        ],
+        "rotation_y_deg": 103.8
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
+      ]
+    },
+    {
+      "id": "OSM_B_009",
+      "type": "CONTEXT_BUILDING",
+      "label": "Context building (OSM)",
+      "evidence_class": "DERIVED",
+      "geometry": {
+        "primitive": "BOX",
+        "position": [
+          -111.8,
+          -23.357,
+          -144.9
+        ],
+        "size": [
+          17.3,
+          5.6,
+          14.9
+        ],
+        "rotation_y_deg": -161
+      },
+      "source_refs": [
+        "OSM_CONTEXT_ODBL"
+      ],
+      "limitations": [
+        "Footprint position/orientation reduced from an OpenStreetMap building outline (crowd-sourced), not surveyed cadastral geometry.",
+        "Height is estimated from building:levels or a default, not a surveyed ridge height.",
+        "Superseded by the Lantmäteriet byggnad vector when acquired."
       ]
     },
     {
