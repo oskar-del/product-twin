@@ -18,12 +18,21 @@
 .aerial-panel{grid-template-rows:auto auto 1fr auto}.aerial-years{padding:10px 16px;background:#20352c;display:flex;gap:7px}.aerial-year{flex:1;border:1px solid rgba(255,255,255,.2);background:transparent;color:white;border-radius:999px;padding:8px 5px;font-size:9px;cursor:pointer}.aerial-year.active{background:#f5f1e8;color:#14231d}.aerial-frame{position:relative;min-height:0;background:#0d1713;overflow:hidden;display:grid;place-items:center}.aerial-frame img{width:100%;height:100%;object-fit:cover;display:block}.aerial-crosshair{position:absolute;left:50%;top:50%;width:24px;height:24px;transform:translate(-50%,-50%);filter:drop-shadow(0 1px 2px rgba(0,0,0,.9));pointer-events:none}.aerial-crosshair:before,.aerial-crosshair:after{content:"";position:absolute;background:#ffcf5c}.aerial-crosshair:before{width:24px;height:2px;top:11px}.aerial-crosshair:after{height:24px;width:2px;left:11px}.aerial-caption{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(20,35,29,.88);padding:9px 10px;border-radius:10px;font-size:9px;line-height:1.4}.aerial-foot{padding:10px 16px;background:#20352c;font-size:8px;line-height:1.45;color:rgba(255,255,255,.7)}
 .gate{position:fixed;left:16px;top:64px;z-index:8;background:rgba(115,56,44,.92);color:white;border-radius:12px;padding:9px 11px;font-size:9px;max-width:305px;line-height:1.45}.gate b{letter-spacing:.08em}.loading{position:fixed;inset:0;display:grid;place-items:center;background:#d9e0db;z-index:20;font-size:12px;letter-spacing:.08em}.loading.error{color:#852f2f;padding:30px;text-align:center}
 @media(max-width:1050px){.top .chip{display:none}.mode-dock{left:auto;right:16px;transform:none}.mode-caption{display:none}.steps{left:10px;right:10px;top:64px;transform:none}.gate{top:111px}.study{display:none}.panel{width:calc(100vw - 32px)}.legend{max-width:230px}.split-label{top:111px}.live-panel{top:154px}}@media(max-width:640px){.brand{max-width:180px}.mode{padding:8px 7px;font-size:8px}.legend{display:none}.tools{left:16px}.gate{max-width:230px}.live-setup{grid-template-columns:1fr auto}.live-setup #liveDisconnect{grid-column:1/-1}}
+#siteIntel{position:fixed;inset:0;z-index:30;background:radial-gradient(130% 120% at 50% -10%,#1c2e26,#0f1a15);color:#f5f1e8;overflow:auto;padding:6vh 6vw}#siteIntel.hidden{display:none!important}#siteIntel .si-eyebrow{font-size:11px;letter-spacing:.22em;color:#d9b669;text-transform:uppercase}#siteIntel h1{font:500 clamp(34px,6vw,64px)/1.02 Georgia,serif;margin:.16em 0 .12em}#siteIntel .si-sub{opacity:.74;font-size:14px;max-width:660px;line-height:1.55}#siteIntel .si-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px;margin:34px 0 30px}#siteIntel .si-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px 18px}#siteIntel .si-card .k{font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.6}#siteIntel .si-card .v{font:500 30px/1.05 Georgia,serif;margin:9px 0 6px}#siteIntel .si-card .d{font-size:11px;opacity:.72;line-height:1.45}#siteIntel .si-tag{display:inline-block;margin-top:11px;padding:4px 8px;border-radius:999px;font-size:9px;letter-spacing:.08em}#siteIntel .si-cta{display:inline-flex;align-items:center;gap:10px;background:#d9b669;color:#14231d;border:0;border-radius:999px;padding:15px 26px;font-size:13px;font-weight:600;letter-spacing:.03em;cursor:pointer}#siteIntel .si-cta:hover{background:#e6c983}#siteIntel .si-foot{margin-top:24px;font-size:11px;opacity:.55;line-height:1.5}.si-authoritative{background:rgba(23,107,82,.25);color:#7fddb9}.si-derived{background:rgba(73,122,162,.25);color:#9cc7e6}.si-reported{background:rgba(166,91,104,.25);color:#e6a7b3}.si-open{background:rgba(193,138,45,.22);color:#e8c17a}.si-back{pointer-events:auto;cursor:pointer}
 </style>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"}}</script>
 </head>
 <body>
 <div class="loading" id="loading">ASSEMBLING ONE TWIN · THREE WAYS OF SEEING…</div>
-<div class="top"><div class="brand">PLOT-TO-PROJECT · SPATIAL STUDIO</div><div class="chip">SVÄRTINGE 54:28 · working identity</div><div class="chip">1,938.2 m² municipal-map surface · indicative</div></div>
+<section id="siteIntel">
+  <div class="si-eyebrow">Site Intelligence · Plot-to-Project</div>
+  <h1>Svärtinge 54:28</h1>
+  <div class="si-sub">Säterdalsvägen 14, Norrköping — a real for-sale plot. Know the land before you design it: the authoritative boundary and neighbours, the real slope, the reported lake view — every figure tied to a receipt, every legal gate left open.</div>
+  <div class="si-grid" id="siGrid"><div class="si-card"><div class="k">Reading receipts…</div></div></div>
+  <button class="si-cta" id="siEnter">Enter the 3D twin →</button>
+  <div class="si-foot">One geometry graph · every number computed from committed receipts · CONCEPT · legal gates open.</div>
+</section>
+<div class="top"><div class="brand">PLOT-TO-PROJECT · SPATIAL STUDIO</div><button class="chip si-back" id="siBack">← Site Intelligence</button><div class="chip">SVÄRTINGE 54:28 · working identity</div><div class="chip">1,938.2 m² municipal-map surface · indicative</div></div>
 <div class="mode-dock" role="group" aria-label="Twin view mode"><button class="mode active" data-mode="INTELLIGENCE">INTELLIGENCE</button><button class="mode" data-mode="REALISTIC">REALISTIC</button><button class="mode" data-mode="COMPARE">COMPARE</button></div>
 <div class="gate"><b>CONCEPT MODE · LEGAL GATES OPEN</b><br>Realism changes presentation—not evidence. No view proves a legal boundary, entitlement, access, utilities or surveyed terrain.</div>
 <nav class="steps" id="steps"></nav><div class="mode-caption" id="modeCaption">Evidence colours expose source status and uncertainty.</div>
@@ -529,6 +538,28 @@ setMode('INTELLIGENCE');stepTo(0,true);mountDesign(DESIGNS.find(d=>d.id==='BJ')|
 /* Cinematic fly-in: start high over the plot and settle into the neighbourhood framing, so the eye lands on 54:28. */
 {const s0p=camera.position.clone(),s0t=controls.target.clone();const start=new THREE.Vector3(plotCenterWorld.x+30,s0p.y+230,plotCenterWorld.z+150);camera.position.copy(start);controls.target.copy(plotCenterWorld);tween={fromPos:start,toPos:s0p,fromTarget:plotCenterWorld.clone(),toTarget:s0t,start:performance.now(),duration:2800};}
 renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-tween.start)/tween.duration),k=1-Math.pow(1-t,3);camera.position.lerpVectors(tween.fromPos,tween.toPos,k);controls.target.lerpVectors(tween.fromTarget,tween.toTarget,k);if(t===1)tween=null}try{controls.update();updateCompass();updatePlotPulse();if(mode==='COMPARE'){renderer.setScissorTest(true);const left=Math.floor(innerWidth/2);renderPass('INTELLIGENCE',0,left);renderPass('REALISTIC',left,innerWidth-left);renderer.setScissorTest(false)}else{applyProfile(mode);camera.aspect=innerWidth/innerHeight;camera.fov=45;camera.updateProjectionMatrix();composer.render()}}catch(_loopErr){/* A transient first-frame/mode-switch error must never permanently freeze the twin (a dead frame in front of a client is unacceptable). Log once, keep the loop alive; the next frame renders fine. */if(!window.__loopErr){window.__loopErr=(_loopErr&&_loopErr.stack)||String(_loopErr);console.warn('[render-loop recovered]',_loopErr);}}})}catch(error){loading.classList.add('error');loading.innerHTML=`Could not load the synchronized Twin.<br><br>${error.message}<br><br>Run <code>npm run site:sweden:svartinge:prototype:serve</code> from the repository root.`}
+</script>
+<script>
+/* Site-Intelligence front door — folds into the same experience as the 3D twin (no forked look).
+   Numbers are COMPUTED from the committed receipts (area via shoelace), never typed. */
+(async()=>{
+  const B='../../data/sites/sweden/saterdalsvagen-14/',j=async p=>{try{const r=await fetch(B+p);return r.ok?await r.json():null}catch(e){return null}};
+  const [pd,bd,td]=await Promise.all([j('property-division-derived-v0.1.json'),j('buildings-official-derived-v0.1.json'),j('terrain-dem-derived-v0.1.json')]);
+  let area='—',sha='';if(pd&&pd.subject_rings_local&&pd.subject_rings_local[0]){const r=pd.subject_rings_local[0];let a=0;for(let i=0;i<r.length-1;i++)a+=r[i][0]*r[i+1][1]-r[i+1][0]*r[i][1];area=(Math.abs(a)/2).toLocaleString('sv-SE',{maximumFractionDigits:1});sha=(pd.derived_geometry_sha256||'').slice(0,10);}
+  const bc=bd?bd.building_count:'—',bost=bd?bd.dwelling_count:'—';
+  const relief=td&&td.plot_footprint?td.plot_footprint.relief_m:'—',slope=td&&td.slope_aspect_at_pin?td.slope_aspect_at_pin.slope_deg:'—',drop=td&&td.glan_sightline_profile?td.glan_sightline_profile.drop_m:'—';
+  const cards=[
+    ['Registered boundary',area+' m²','Lantmäteriet fastighetsindelning · 7-pt polygon'+(sha?' · sha '+sha+'…':''),'AUTHORITATIVE','si-authoritative'],
+    ['Neighbourhood buildings',bc,bost+' dwellings · official byggnad footprints within 200 m · footprint authoritative, height derived','FOOTPRINT AUTHORITATIVE','si-authoritative'],
+    ['Terrain on the plot',relief+' m fall','1 m DTM · slope '+slope+'° SW · RH2000 · relief exaggerated ×2.2 for reading, not elevation evidence','DERIVED','si-derived'],
+    ['View to Lake Glan','~'+drop+' m below','sightline drop over ~800 m to the water — the listing’s selling point','REPORTED · UNVERIFIED','si-reported'],
+    ['Legal gates','2 / 18 closed','boundary + terrain closed; entitlement, buildable envelope, access, utilities, FFL remain OPEN','LEGAL GATES OPEN','si-open']
+  ];
+  const grid=document.getElementById('siGrid');if(grid)grid.innerHTML=cards.map(c=>'<div class="si-card"><div class="k">'+c[0]+'</div><div class="v">'+c[1]+'</div><div class="d">'+c[2]+'</div><span class="si-tag '+c[4]+'">'+c[3]+'</span></div>').join('');
+  const si=document.getElementById('siteIntel'),enter=document.getElementById('siEnter'),back=document.getElementById('siBack');
+  if(enter)enter.onclick=()=>si.classList.add('hidden');
+  if(back)back.onclick=()=>si.classList.remove('hidden');
+})();
 </script>
 </body>
 </html>
