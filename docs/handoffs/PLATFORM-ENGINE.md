@@ -190,5 +190,15 @@ One checkout = one executor. Deliverable-first: every block ends with something 
        Blender camera with look-at, sky/sun, INTELLIGENCE/REALISTIC profiles.
        `npm run engine:blender:export -- scene.json` → .py runnable with `blender --background`.
     Gate: 12 suites, 461 checks, all green.
+  - **Task 4 (2026-09-03, mandate item 4):**
+    1. **Site Intelligence template absorption** — `engine/ui/site-intelligence-template.mjs`:
+       extracted the reusable UI chrome from the Djurö prototype (mode dock, step nav, evidence
+       legend, detail panel, tools bar, gate notice, top bar, responsive breakpoints) into
+       parameterized builders. `composeSiteIntelligence()` emits a full skeleton any site can
+       use. Wiring JS helpers for mode switching, step navigation, and panel open/close.
+    2. **Gate '9' derivation** — `scripts/gate-integration-sprint.sh`: rg→grep (rg missing on
+       this machine), and the hard-coded "expected 9 stale offer blockers" now derives the
+       expected count from the manifest's `line_items.length + substitutions.length`.
+    Gate: 13 suites, 622 checks, all green.
   - **NOT done:** Milestone 2's formal exit (Essence consuming the engine *on a branch that has
     both*) is still blocked on D1. Commits are on `agent/platform-engine` in `../repo-platform`.
