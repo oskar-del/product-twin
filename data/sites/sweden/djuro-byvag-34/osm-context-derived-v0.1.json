@@ -1,0 +1,19 @@
+{
+  "schema_version": "osm-context-derived/v0.1",
+  "entity_type": "OsmContextDerived",
+  "subject_address": "Djurö byväg 34, 139 73 Djurhamn",
+  "kommun": "Värmdö",
+  "kommunkod": "0120",
+  "geocode": {
+    "method": "OSM Nominatim address search",
+    "query": "Djurö byväg 34, 139 73 Djurhamn, Sweden",
+    "result_class": "REPORTED",
+    "wgs84": { "lat": 59.324238, "lon": 18.7076237 }
+  },
+  "origin_sweref": [710934.881, 6582029.947],
+  "origin_note": "Karney/Kruger SWEREF99TM from WGS84 geocode. ENU origin for local frame: X=E-E0, Z=N-N0.",
+  "coordinate_transform": {
+    "method": "Karney/Kruger transverse-mercator series (GRS80, central meridian 15E, k0=0.9996, EPSG:3006)",
+    "class": "DERIVED"
+  }
+}

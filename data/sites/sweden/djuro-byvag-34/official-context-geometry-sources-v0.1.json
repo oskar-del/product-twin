@@ -1,0 +1,38 @@
+{
+  "schema_version": "official-context-geometry-sources/v0.1",
+  "entity_type": "OfficialContextGeometrySourceReceiptSet",
+  "subject": "DJURÖ 4:147",
+  "authority": "Lantmäteriet",
+  "catalogue": {
+    "api_url": "https://api.lantmateriet.se/stac-vektor/v1/",
+    "license": "CC-BY-4.0",
+    "retrieved_at": "2026-08-30"
+  },
+  "datasets": {
+    "property_division": {
+      "collection": "fastighetsindelning",
+      "item_id": "0120",
+      "title": "Fastighetsindelning i Värmdö kommun",
+      "item_url": "https://api.lantmateriet.se/stac-vektor/v1/collections/fastighetsindelning/items/0120",
+      "asset_url": "https://dl1.lantmateriet.se/fastighet/fastighetsindelning_kn0120.zip",
+      "asset_size_bytes": 33818912,
+      "horizontal_crs": "EPSG:3006",
+      "access_basis": "Geotorget order 2026-08-18, kundnr 30056732",
+      "local_path": "../lm-data/fastighetsindelning_kn0120.zip",
+      "downloaded_at": "2026-08-30",
+      "class": "AUTHORITATIVE"
+    },
+    "buildings": {
+      "collection": "byggnader",
+      "item_id": "0120",
+      "title": "Byggnader för Värmdö kommun",
+      "item_url": "https://api.lantmateriet.se/stac-vektor/v1/collections/byggnader/items/0120",
+      "asset_url": "https://dl1.lantmateriet.se/byggnad/byggnad_kn0120.zip",
+      "horizontal_crs": "EPSG:3006",
+      "access_basis": "Geotorget order 2026-08-18, kundnr 30056732",
+      "local_path": "../lm-data/byggnad_kn0120.zip",
+      "downloaded_at": "2026-08-30",
+      "class": "AUTHORITATIVE"
+    }
+  }
+}

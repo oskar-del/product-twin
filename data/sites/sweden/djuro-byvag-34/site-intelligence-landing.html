@@ -1,0 +1,272 @@
+<title>Djurö 4:147 · Site Intelligence</title>
+<style>
+:root{--ink:#14231d;--paper:#f5f1e8;--glass:rgba(247,244,236,.92);--line:rgba(20,35,29,.15);--authoritative:#176b52;--indicative:#c18a2d;--derived:#497aa2;--reported:#a65b68;--concept:#735a9e}
+*{box-sizing:border-box;margin:0}html,body{height:100%;overflow-x:hidden;background:#101916;color:#f3efe6;font-family:Inter,ui-sans-serif,system-ui,sans-serif}canvas{display:block}
+.site-intel{min-height:100%;background:#101916;color:#f3efe6}
+.intel-hero{min-height:72vh;position:relative;display:flex;align-items:flex-end;padding:38px clamp(24px,6vw,92px);overflow:hidden;background:#1b2c25}.intel-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,18,15,.08),rgba(10,18,15,.82) 78%,#101916)}
+.intel-hero-bg{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}.intel-hero-bg canvas{width:100%;height:100%}
+.intel-nav{position:absolute;z-index:2;left:clamp(24px,6vw,92px);right:clamp(24px,6vw,92px);top:24px;display:flex;justify-content:space-between;align-items:center}.intel-brand{font-size:10px;letter-spacing:.16em}.intel-actions{display:flex;gap:8px}.intel-button{border:1px solid rgba(255,255,255,.22);background:rgba(16,25,22,.68);color:white;border-radius:999px;padding:10px 14px;font-size:9px;letter-spacing:.08em;cursor:pointer;backdrop-filter:blur(12px);text-decoration:none}.intel-button.primary{background:#f3efe6;color:#13211b}
+.intel-hero-copy{position:relative;z-index:2;max-width:900px}.intel-kicker{color:#d8b874;font-size:10px;letter-spacing:.16em;text-transform:uppercase}.intel-hero h1{font:500 clamp(42px,7vw,88px)/.92 Georgia,serif;margin:12px 0 16px;letter-spacing:-.04em}.intel-summary{max-width:720px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.74)}.intel-status{display:inline-flex;margin-top:18px;padding:8px 10px;border-radius:999px;background:#7c493b;font-size:9px;letter-spacing:.08em}
+.intel-hero-label{position:absolute;right:clamp(24px,6vw,92px);bottom:34px;z-index:2;font-size:8px;letter-spacing:.08em;color:rgba(255,255,255,.55)}
+.intel-body{padding:0 clamp(24px,6vw,92px) 80px}
+.intel-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;transform:translateY(-28px);position:relative;z-index:3}.intel-metric{background:#1b2823;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px;min-height:120px}.intel-metric b{display:block;font:500 34px/1 Georgia,serif;margin:11px 0}.intel-metric span{font-size:9px;letter-spacing:.09em;color:#d8b874;text-transform:uppercase}.intel-metric small{font-size:10px;color:rgba(255,255,255,.52)}
+.intel-section{padding:34px 0}.intel-section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:20px}.intel-section h2{font:500 clamp(28px,4vw,48px)/1 Georgia,serif;margin:0}.intel-section-head p{max-width:520px;font-size:11px;line-height:1.6;color:rgba(255,255,255,.55)}
+.intel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.intel-card{background:#17241f;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px;min-height:170px}.intel-card .tag{font-size:8px;letter-spacing:.11em;text-transform:uppercase;color:#d8b874}.intel-card h3{font:500 22px/1.1 Georgia,serif;margin:14px 0 10px}.intel-card p{font-size:10px;line-height:1.6;color:rgba(255,255,255,.62);margin:0}.intel-card .state-line{margin-top:15px;padding-top:12px;border-top:1px solid rgba(255,255,255,.08);font-size:9px;color:#e5c879}
+.intel-reading-section{padding-top:22px}.intel-signal-grid{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:auto auto;gap:12px}.intel-signal{position:relative;overflow:hidden;background:#efe9dc;color:#14231d;border-radius:20px;min-height:350px;padding:22px;border:1px solid rgba(255,255,255,.09)}.intel-signal.solar{grid-row:span 2;min-height:712px;background:#e9dfca}.intel-signal.market{background:#1d3028;color:#f3efe6}.signal-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}.signal-number{font:500 11px/1 Georgia,serif;color:#95763d}.signal-tag{font-size:8px;letter-spacing:.13em;text-transform:uppercase;opacity:.62}.intel-signal h3{font:500 clamp(27px,3vw,42px)/1.02 Georgia,serif;letter-spacing:-.025em;margin:12px 0 8px;max-width:560px}.signal-intro{font-size:10px;line-height:1.6;opacity:.64;max-width:580px}.signal-rule{height:1px;background:rgba(20,35,29,.14);margin:18px 0}.signal-canvas-wrap{position:relative;margin-top:14px}.solar-canvas{display:block;width:100%;height:420px}.profile-canvas{display:block;width:100%;height:145px}.signal-caption{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-top:10px;font-size:8px;line-height:1.5;letter-spacing:.03em;opacity:.62}.solar-levels{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.solar-level{padding-top:10px;border-top:1px solid rgba(20,35,29,.14)}.solar-level b{display:block;font:500 22px/1 Georgia,serif}.solar-level span{font-size:8px;letter-spacing:.07em;text-transform:uppercase;opacity:.58}
+.profile-lock{position:absolute;right:10px;top:10px;background:#497aa2;color:#e8f0f6;border-radius:999px;padding:6px 8px;font-size:7px;letter-spacing:.08em}.profile-readout{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end;margin-top:10px}.profile-readout b{font:500 31px/1 Georgia,serif}.profile-readout small{display:block;font-size:8px;letter-spacing:.06em;text-transform:uppercase;opacity:.58;margin-top:5px}.profile-source{text-align:right;font-size:8px;line-height:1.45;opacity:.65}
+.price-scale{position:relative;height:86px;margin:23px 2px 10px}.price-scale:before{content:"";position:absolute;left:0;right:0;top:35px;height:1px;background:rgba(255,255,255,.23)}.price-scale:after{content:"";position:absolute;left:50%;top:24px;width:22px;height:22px;border:1px solid #d8b874;border-radius:50%;transform:translateX(-50%);background:#1d3028;box-shadow:0 0 0 7px rgba(216,184,116,.08)}.price-scale-label{position:absolute;top:52px;font-size:7px;letter-spacing:.09em;opacity:.46}.price-scale-label.low{left:0}.price-scale-label.mid{left:50%;transform:translateX(-50%)}.price-scale-label.high{right:0}.price-question{position:absolute;left:50%;top:27px;transform:translateX(-50%);z-index:1;color:#d8b874;font:600 13px Georgia,serif}.market-row{display:grid;grid-template-columns:1fr auto;gap:14px;padding:10px 0;border-top:1px solid rgba(255,255,255,.09);font-size:9px}.market-row span{color:rgba(255,255,255,.56)}.market-row b{font-size:8px;letter-spacing:.07em;color:#e4c781;text-align:right}.market-note{margin-top:12px;padding:11px 12px;border-radius:12px;background:rgba(255,255,255,.05);font-size:8px;line-height:1.55;color:rgba(255,255,255,.58)}.market-measures{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:10px}.market-measure{padding:7px 6px;border:1px solid rgba(255,255,255,.09);border-radius:8px;font-size:6px;line-height:1.25;letter-spacing:.07em;text-align:center;color:rgba(255,255,255,.53)}
+.intel-deep-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:12px}.intel-deep-card{background:#e9dfca;color:#14231d;border-radius:20px;padding:22px;min-height:470px;overflow:hidden}.intel-deep-card.planning{background:#263a31;color:#f3efe6}.ground-canvas{display:block;width:100%;height:265px;margin-top:16px}.ground-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}.ground-stat{border-top:1px solid rgba(20,35,29,.16);padding-top:10px}.ground-stat b{display:block;font:500 21px/1.05 Georgia,serif;margin-bottom:5px}.ground-stat span{font-size:7px;line-height:1.35;letter-spacing:.07em;text-transform:uppercase;opacity:.58}
+.planning-chain{margin-top:25px}.plan-step{position:relative;padding:0 0 25px 25px}.plan-step:before{content:"";position:absolute;left:4px;top:5px;width:7px;height:7px;border:1px solid #d8b874;border-radius:50%;background:#263a31;z-index:1}.plan-step:not(:last-child):after{content:"";position:absolute;left:7px;top:13px;bottom:0;width:1px;background:rgba(216,184,116,.35)}.plan-step time{font-size:7px;letter-spacing:.12em;color:#d8b874}.plan-step b{display:block;font:500 17px/1.15 Georgia,serif;margin:5px 0}.plan-step p{margin:0;font-size:8px;line-height:1.5;color:rgba(255,255,255,.55)}.plan-step.open:before{background:#b55f4a;border-color:#e8a28e;box-shadow:0 0 0 5px rgba(181,95,74,.16)}
+.intel-map-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:12px}.intel-map{position:relative;min-height:440px;border-radius:20px;overflow:hidden;background:#20342b}.intel-map canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.intel-map-label{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(16,25,22,.88);border-radius:13px;padding:13px;font-size:9px;line-height:1.5;z-index:1}
+.intel-gates{background:#17241f;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:20px}.intel-gate-row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:10px}.intel-gate-row:last-child{border:0}.intel-gate-row b{font-weight:500}.intel-gate-row span{font-size:8px;padding:4px 7px;border-radius:999px;background:#704339;color:#ffe6de;height:max-content}.intel-gate-row span.closed{background:#294f3f;color:#bce7d2}
+.sea-view-badge{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:7px 10px;border-radius:999px;background:rgba(73,122,162,.18);border:1px solid rgba(73,122,162,.3);font-size:9px;letter-spacing:.06em;color:#7db5d4}
+@media(max-width:1050px){.intel-metrics{grid-template-columns:repeat(2,1fr)}.intel-grid,.intel-map-grid,.intel-deep-grid{grid-template-columns:1fr}.intel-signal-grid{grid-template-columns:1fr}.intel-signal.solar{grid-row:auto;min-height:650px}.ground-stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.intel-hero{min-height:76vh}.intel-nav{align-items:flex-start}.intel-brand{max-width:140px}.intel-actions{flex-direction:column;align-items:end}.intel-metrics{grid-template-columns:1fr 1fr}.intel-metric{padding:15px;min-height:105px}.intel-grid{grid-template-columns:1fr}.intel-section-head{display:block}.intel-section-head p{margin-top:12px}.intel-signal,.intel-deep-card{padding:18px;min-height:330px}.intel-signal.solar{min-height:590px}.solar-canvas{height:340px}.solar-levels{grid-template-columns:1fr}.solar-level{display:flex;align-items:baseline;justify-content:space-between}.profile-readout{grid-template-columns:1fr}.profile-source{text-align:left}.signal-caption{display:block}.ground-canvas{height:220px}}
+</style>
+
+<main class="site-intel" id="siteIntel">
+  <section class="intel-hero">
+    <div class="intel-hero-bg"><canvas id="heroCanvas"></canvas></div>
+    <nav class="intel-nav"><div class="intel-brand">PLOT-TO-PROJECT · SITE INTELLIGENCE</div><div class="intel-actions"><button class="intel-button" id="intelSources">Evidence findings</button><a class="intel-button primary" href="../../prototype/djuro-neighbourhood/index.html" title="Open the inferred design model; legal and survey gates remain visible">Open Spatial Lab</a></div></nav>
+    <div class="intel-hero-copy"><div class="intel-kicker">Djurö byväg 34 · Djurhamn · Värmdö</div><h1>Know the island<br>before designing.</h1><div class="intel-summary">A source-bound reading of the plot, its ground, planning context, environmental signals and unresolved development constraints. This is a Stockholm archipelago island parcel with existing structures, sea views, and shoreline proximity. Market statements and visual reconstructions remain separate from official evidence.</div><div class="intel-status">EARLY DUE DILIGENCE · 14 OF 16 EVIDENCE GATES OPEN</div></div><div class="intel-hero-label">PROCEDURAL SITE RECONSTRUCTION · NOT A SURVEY OR CURRENT PHOTOGRAPH</div>
+  </section>
+  <div class="intel-body">
+    <section class="intel-metrics">
+      <div class="intel-metric"><span>Official receipts</span><b>14</b><small>Immutable source-bound observations</small></div>
+      <div class="intel-metric"><span>Evidence findings</span><b>16</b><small>Recorded with limits and provenance</small></div>
+      <div class="intel-metric"><span>Gates satisfied</span><b>2 / 16</b><small>Jurisdiction and boundary geometry</small></div>
+      <div class="intel-metric"><span>Authoritative area</span><b>5,156.3</b><small>m² · Lantmäteriet property division</small></div>
+    </section>
+
+    <section class="intel-section intel-reading-section"><div class="intel-section-head"><h2>Read the site</h2><p>Three architectural readings translate the evidence into design signals. Derived studies remain visibly separate from official levels and external market facts.</p></div>
+      <div class="intel-signal-grid">
+        <article class="intel-signal solar"><div class="signal-head"><div><div class="signal-tag">01 · Solar geometry · derived</div><h3>Long summer light<br>over open water.</h3><p class="signal-intro">The compass plots the sun above the working coordinate at summer solstice, equinox and winter solstice. Summer sunrise at 040° and sunset at 322° both cross open water—an unusually wide solar arc for a residential site.</p></div><div class="signal-number">59.32° N</div></div><div class="signal-rule"></div><div class="signal-canvas-wrap"><canvas class="solar-canvas" id="solarDiagram" role="img" aria-label="Solar compass showing derived summer, equinox and winter sun paths at latitude 59.32 degrees north">Derived solar paths at the working coordinate.</canvas></div><div class="solar-levels"><div class="solar-level"><b>54.1°</b><span>Summer solar noon</span></div><div class="solar-level"><b>30.6°</b><span>Equinox solar noon</span></div><div class="solar-level"><b>7.2°</b><span>Winter solar noon</span></div></div><div class="signal-caption"><span>TRUE-NORTH COMPASS · ASTRONOMICAL GEOMETRY FROM THE WORKING COORDINATE</span><span>NO TREE, BUILDING OR TERRAIN OCCLUSION CLAIM</span></div></article>
+
+        <article class="intel-signal terrain"><div class="signal-head"><div><div class="signal-tag">02 · Ground section · derived</div><h3>Profile A—A′</h3></div><div class="signal-number">WNW → ESE</div></div><p class="signal-intro">A long-axis section through the site along its dominant slope direction. The parcel sits at approximately 7.0 m RH2000 with an 8.1° slope falling toward the WNW—toward the water.</p><div class="signal-canvas-wrap"><canvas class="profile-canvas" id="elevationDiagram" role="img" aria-label="Derived elevation profile showing 7.0m RH2000 with 8.1 degree slope toward WNW">Derived elevation profile.</canvas><div class="profile-lock">DERIVED FROM DTM</div></div><div class="profile-readout"><div><b>7.0 m</b><small>RH2000 at address point · derived</small></div><div class="profile-source">LANTMÄTERIET DTM · 1 M GRID<br>EPSG:3006 + RH2000 · SLOPE 8.1° WNW</div></div><div class="sea-view-badge">43.3% SEA VIEW ARC · 321°–114° (NW → ESE)</div></article>
+
+        <article class="intel-signal market"><div class="signal-head"><div><div class="signal-tag">03 · Market position · external</div><h3>Price against neighbours</h3></div><div class="signal-number" style="color:#d8b874">MUNIN</div></div><p class="signal-intro">The comparison plate is ready for the subject listing, accepted nearby sales and a like-for-like SEK/m² range. Values stay in Munin and appear here only when source-bound references resolve.</p><div class="price-scale" aria-label="Comparable price scale awaiting an authorized Munin comparable set"><span class="price-question">?</span><span class="price-scale-label low">LOWER</span><span class="price-scale-label mid">NEIGHBOUR MEDIAN</span><span class="price-scale-label high">HIGHER</span></div><div class="market-row"><span>Current listing source</span><b>LISTED REFERENCE FOUND</b></div><div class="market-row"><span>Accepted nearby sales</span><b>0 SOURCE-BOUND COMPS</b></div><div class="market-row"><span>Subject price position</span><b>NOT YET CALCULATED</b></div><div class="market-measures"><div class="market-measure">ASKING PRICE</div><div class="market-measure">SEK / M² LAND</div><div class="market-measure">DAYS LISTED</div><div class="market-measure">3 / 5 / 10 NEAREST</div><div class="market-measure">MEDIAN DELTA</div><div class="market-measure">PARCEL LINEAGE</div></div><div class="market-note">The graphic will rank the subject only after property lineage, sale allocation and comparable filters are resolved. No price or ownership payload is stored in Spatial Studio.</div></article>
+      </div>
+    </section>
+
+    <section class="intel-section"><div class="intel-section-head"><h2>Ground before architecture</h2><p>The official screening is already useful: it tells us what the existing structures sit on and what constraints surround any future work.</p></div>
+      <div class="intel-deep-grid">
+        <article class="intel-deep-card"><div class="signal-head"><div><div class="signal-tag">04 · Geological reading · official screening</div><h3 style="font:500 clamp(28px,3vw,43px)/1.02 Georgia,serif;margin:12px 0 8px">Thin till over<br>archipelago bedrock.</h3></div><div class="signal-number">SGU</div></div><p class="signal-intro">The cutaway combines the mapped surface material and the regional depth model. Stockholm archipelago sites typically have shallow bedrock beneath glacial till—favourable for foundations but constraining for excavation and utilities.</p><canvas class="ground-canvas" id="groundDiagram" role="img" aria-label="Geological screening cutaway showing thin glacial till over gneiss bedrock typical of the Stockholm archipelago">Geological screening cutaway.</canvas><div class="ground-stats"><div class="ground-stat"><b>Morän (till)</b><span>mapped surface material</span></div><div class="ground-stat"><b>1–3 m</b><span>estimated depth to bedrock</span></div><div class="ground-stat"><b>Gnejs</b><span>regional bedrock type</span></div><div class="ground-stat"><b>Zone 1</b><span>draft geotechnical context</span></div></div><div class="signal-caption"><span>OVERVIEW SCREENING · NOT PLOT-SPECIFIC GROUND TRUTH</span><span>GEOTECHNICAL INVESTIGATION REQUIRED FOR ANY NEW CONSTRUCTION</span></div></article>
+
+        <article class="intel-deep-card planning"><div class="signal-tag">05 · Permission chain</div><h3 style="font:500 31px/1.03 Georgia,serif;margin:12px 0 8px">Existing structures.<br>Expansion rights open.</h3><p class="signal-intro">Four existing buildings are registered on the parcel. Any extension, replacement, or new structure requires assessment against the current plan framework and shoreline protection.</p><div class="planning-chain"><div class="plan-step"><time>REGISTERED</time><b>Four structures on parcel</b><p>Main building 119.7 m² and three outbuildings (190.2, 84.6, 21.5 m²). Total built footprint approximately 416 m² on a 5,156 m² site.</p></div><div class="plan-step"><time>VÄRMDÖ KOMMUN</time><b>Planning framework</b><p>Area plan status and development rights for this specific parcel are not yet resolved. Shoreline protection (strandskydd) likely applies given the coastal position.</p></div><div class="plan-step"><time>01 DEC 2025</time><b>Current national profile</b><p>H30/H50 rules are recorded, but their conditional eligibility for modification or extension is not established for this plot.</p></div><div class="plan-step open"><time>DECISION GATE</time><b>Development envelope open</b><p>No extension right, replacement allowance, new-build setback, or ridge level may be claimed yet.</p></div></div></article>
+      </div>
+    </section>
+
+    <section class="intel-section"><div class="intel-section-head"><h2>What is established</h2><p>These are evidence findings—not sales copy. Each one preserves its source class, method and limitations.</p></div>
+      <div class="intel-grid">
+        <article class="intel-card"><div class="tag">Property identity</div><h3>DJURÖ 4:147</h3><p>Lantmäteriet property division links Djurö byväg 34 to this registered property identity. Authoritative boundary with 5,156.3 m² area from the official GeoPackage extract for Värmdö kommun.</p><div class="state-line">AUTHORITATIVE BOUNDARY · FROM LM GEOPACKAGE</div></article>
+        <article class="intel-card"><div class="tag">Existing buildings</div><h3>Four registered structures</h3><p>Main building 119.7 m² plus three outbuildings: 190.2 m², 84.6 m², and 21.5 m². Total built area approximately 416 m² representing an 8.1% site coverage ratio.</p><div class="state-line">FOOTPRINT AREAS FROM REGISTRY · CONDITION UNVERIFIED</div></article>
+        <article class="intel-card"><div class="tag">Ground screening</div><h3>Glacial till over gneiss</h3><p>Official screening indicates thin moraine deposits over Svecofennian gneiss bedrock, typical of the inner Stockholm archipelago. Shallow bedrock is probable.</p><div class="state-line">SCREENING SIGNAL · GEOTECHNICAL INVESTIGATION REQUIRED</div></article>
+        <article class="intel-card"><div class="tag">Current law</div><h3>H30 / H50 profile bound</h3><p>The national rules effective from 1 December 2025 are recorded. Eligibility for any modification or extension cannot be decided until plan status, existing-building facts, and protections are resolved.</p><div class="state-line">LAW PROFILE VERIFIED · PLOT ELIGIBILITY OPEN</div></article>
+        <article class="intel-card"><div class="tag">Water & shoreline</div><h3>Strandskydd presumed</h3><p>The parcel is on the island of Djurö in the Stockholm archipelago. Shoreline protection (strandskydd) almost certainly applies. The 43.3% sea-view arc (321°–114°) confirms direct water exposure on the NW through E sides.</p><div class="state-line">PROTECTION PRESUMED · EXACT ZONE BOUNDARY NOT RESOLVED</div></article>
+        <article class="intel-card"><div class="tag">Solar & orientation</div><h3>Wide water-horizon sun</h3><p>Summer sunrise (040°) and sunset (322°) both cross open water. The 54.1° summer noon altitude and 7.2° winter noon create a dramatic seasonal range. The WNW slope faces the sunset arc.</p><div class="state-line">ASTRONOMICAL DERIVATION · NO OCCLUSION STUDY</div></article>
+      </div>
+    </section>
+
+    <section class="intel-section"><div class="intel-section-head"><h2>The place and the blockers</h2><p>The boundary comes from Lantmäteriet's property division GeoPackage for Värmdö kommun. It is authoritative registered geometry—10 vertices defining the parcel extent.</p></div>
+      <div class="intel-map-grid">
+        <div class="intel-map" id="intelMap"><canvas id="intelBoundaryCanvas" aria-label="Authoritative property boundary overlay from Lantmäteriet"></canvas><div class="intel-map-label"><b>AUTHORITATIVE BOUNDARY · LANTMÄTERIET PROPERTY DIVISION · 10 VERTICES</b><br>Registered area 5,156.3 m² · DJURÖ 4:147 · Värmdö kommun (0120) · 10 context parcels within 250 m buffer.</div></div>
+        <div class="intel-gates"><div class="intel-kicker">Evidence gates</div><h3 style="font:500 26px Georgia,serif;margin:10px 0 14px">2 satisfied · 14 open</h3>
+          <div class="intel-gate-row"><b>Municipal jurisdiction</b><span class="closed">SATISFIED</span></div>
+          <div class="intel-gate-row"><b>Authoritative boundary</b><span class="closed">SATISFIED</span></div>
+          <div class="intel-gate-row"><b>Registered area verification</b><span class="closed">OBSERVED</span></div>
+          <div class="intel-gate-row"><b>Planning & development envelope</b><span>OPEN</span></div>
+          <div class="intel-gate-row"><b>Terrain, ground & drainage</b><span>OPEN</span></div>
+          <div class="intel-gate-row"><b>Shoreline protection zone</b><span>OPEN</span></div>
+          <div class="intel-gate-row"><b>Legal access & utilities</b><span>OPEN</span></div>
+          <div class="intel-gate-row"><b>Building condition assessment</b><span>OPEN</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+(function(){
+  const BOUNDARY = [[32.989,20.053],[29.181,28.015],[10.547,39.288],[1.164,29.675],[-11.733,36.909],[-14.556,33.637],[-77.821,-21.809],[-63.066,-39.053],[-31.712,-58.271],[32.989,20.053]];
+  const CONTEXT = [[[185.514,163.892],[186.922,171.408],[182.881,174.858],[178.37,175.804],[175.889,174.274],[174.926,171.263],[175.974,167.276],[178.51,164.307],[185.514,163.892]],[[49.484,-159.919],[114.217,-189.953],[119.654,-96.743],[120.551,-73.979],[120.813,-67.379],[101.799,-65.092],[89.224,-58.746],[83.699,-57.659],[49.484,-159.919]],[[152.798,181.993],[153.28,183.499],[159.278,183.571],[164.722,188.136],[164.686,191.135],[161.657,193.598],[155.507,206.022],[153.014,205.492],[150.051,202.456],[143.053,202.372],[140.577,200.342],[140.662,193.344],[142.198,190.363],[143.501,189.334],[144.417,188.61],[152.798,181.993]],[[49.484,-159.919],[83.699,-57.659],[79.069,-45.871],[85.452,-36.294],[75.419,-33.416],[62.991,-22.675],[55.699,-30.011],[10.004,-83.839],[49.484,-159.919]],[[194.146,111.503],[197.567,118.043],[203.486,124.614],[209.948,127.692],[209.827,137.689],[203.172,150.607],[196.601,156.527],[183.605,156.369],[180.721,146.836],[174.223,146.757],[169.512,151.354],[167.646,153.176],[161.111,156.097],[156.649,153.043],[156.806,140.047],[166.497,124.166],[167.228,123.453],[179.651,111.327],[194.146,111.503]],[[-154.986,87.278],[-124.171,41.652],[-53.299,119.08],[-58.043,129.945],[-89.343,155.063],[-96.077,163.704],[-154.986,87.278]],[[31.599,-257.715],[120.549,-248.104],[116.114,-207.379],[45.261,-174.501],[26.737,-214.709],[31.599,-257.715]],[[62.991,-22.675],[57.736,-18.132],[44.545,-2.294],[47.923,7.746],[32.989,20.053],[-31.712,-58.271],[10.004,-83.839],[55.699,-30.011],[62.991,-22.675]],[[194.146,111.503],[179.651,111.327],[167.228,123.453],[145.77,-67.281],[154.51,-70.525],[160.724,-78.533],[165.933,-91.412],[174.38,-101.743],[185.732,-108.86],[200.249,-110.687],[214.42,-108.503],[214.897,-81.143],[212.372,-78.714],[226.034,-64.302],[244.668,-25.1],[248.486,-17.068],[251.092,-11.251],[275.162,39.487],[276.964,43.283],[276.96,43.515],[263.637,70.351],[263.294,70.685],[256.554,77.264],[256.396,90.26],[194.146,111.503]],[[-154.986,87.278],[-96.077,163.704],[-98.992,167.444],[-108.726,186.823],[-122.422,203.155],[-126.385,209.093],[-181.887,135.489],[-176.303,110.88],[-154.986,87.278]]];
+  const LAT=59.324238, SUMMER_NOON=54.11, EQUINOX_NOON=30.6, WINTER_NOON=7.24;
+
+  function hiDpiCanvas(el){
+    const r=el.getBoundingClientRect(), d=Math.min(devicePixelRatio,2);
+    el.width=Math.round(r.width*d); el.height=Math.round(r.height*d);
+    const ctx=el.getContext("2d"); ctx.setTransform(d,0,0,d,0,0);
+    return{ctx,width:r.width,height:r.height};
+  }
+
+  function drawHero(){
+    const c=document.getElementById("heroCanvas");
+    if(!c)return;
+    const{ctx,width:w,height:h}=hiDpiCanvas(c);
+    const grad=ctx.createLinearGradient(0,0,w,h);
+    grad.addColorStop(0,"#1a3529"); grad.addColorStop(.4,"#1d3e35"); grad.addColorStop(.7,"#1a2f3a"); grad.addColorStop(1,"#162833");
+    ctx.fillStyle=grad; ctx.fillRect(0,0,w,h);
+    ctx.globalAlpha=.06;
+    const all=[BOUNDARY,...CONTEXT];
+    const flat=all.flat();
+    const xs=flat.map(p=>p[0]),zs=flat.map(p=>p[1]);
+    const minX=Math.min(...xs),maxX=Math.max(...xs),minZ=Math.min(...zs),maxZ=Math.max(...zs);
+    const rangeX=maxX-minX,rangeZ=maxZ-minZ;
+    const scale=Math.min(w/(rangeX*1.3),h/(rangeZ*1.3));
+    const ox=w/2-((minX+maxX)/2)*scale, oz=h/2+((minZ+maxZ)/2)*scale;
+    const tx=x=>ox+x*scale, tz=z=>oz-z*scale;
+    ctx.strokeStyle="#d8b874"; ctx.lineWidth=.5;
+    for(const ring of CONTEXT){ctx.beginPath();ring.forEach(([x,z],i)=>i?ctx.lineTo(tx(x),tz(z)):ctx.moveTo(tx(x),tz(z)));ctx.closePath();ctx.stroke();}
+    ctx.globalAlpha=.12; ctx.strokeStyle="#f3efe6"; ctx.lineWidth=1.5;
+    ctx.beginPath(); BOUNDARY.forEach(([x,z],i)=>i?ctx.lineTo(tx(x),tz(z)):ctx.moveTo(tx(x),tz(z))); ctx.closePath(); ctx.stroke();
+    ctx.fillStyle="rgba(243,239,230,.04)"; ctx.fill();
+    ctx.globalAlpha=1;
+  }
+
+  function drawSolar(){
+    const el=document.getElementById("solarDiagram");
+    if(!el)return;
+    const{ctx,width:w,height:h}=hiDpiCanvas(el);
+    const lat=LAT*Math.PI/180, cx=w/2, cy=Math.min(h*.47,210);
+    const R=Math.min(w*.39,h*.39,172);
+    ctx.clearRect(0,0,w,h); ctx.lineCap="round";
+    ctx.strokeStyle="rgba(20,35,29,.14)"; ctx.lineWidth=1;
+    for(const alt of[0,30,60]){const r=R*(90-alt)/90;ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.stroke();}
+    for(let a=0;a<360;a+=45){const r=a*Math.PI/180;ctx.beginPath();ctx.moveTo(cx+Math.sin(r)*R*.09,cy-Math.cos(r)*R*.09);ctx.lineTo(cx+Math.sin(r)*R,cy-Math.cos(r)*R);ctx.stroke();}
+    ctx.fillStyle="#14231d"; ctx.font="600 10px Inter,sans-serif"; ctx.textAlign="center"; ctx.textBaseline="middle";
+    for(const[l,a]of[["N",0],["E",90],["S",180],["W",270]]){const r=a*Math.PI/180;ctx.fillText(l,cx+Math.sin(r)*(R+15),cy-Math.cos(r)*(R+15));}
+    const paths=[{label:"SUMMER SOLSTICE",dec:23.439,color:"#af7820"},{label:"EQUINOX",dec:0,color:"#607764"},{label:"WINTER SOLSTICE",dec:-23.439,color:"#925b52"}];
+    const pos=(az,alt)=>{const r=R*(90-alt)/90,a=az*Math.PI/180;return[cx+Math.sin(a)*r,cy-Math.cos(a)*r];};
+    for(const p of paths){
+      const dec=p.dec*Math.PI/180;
+      const ha=Math.acos(Math.max(-1,Math.min(1,-Math.tan(lat)*Math.tan(dec))));
+      ctx.beginPath();
+      for(let i=0;i<=120;i++){
+        const H=-ha+2*ha*i/120;
+        const alt=Math.asin(Math.sin(lat)*Math.sin(dec)+Math.cos(lat)*Math.cos(dec)*Math.cos(H))*180/Math.PI;
+        const az=(Math.atan2(Math.sin(H),Math.cos(H)*Math.sin(lat)-Math.tan(dec)*Math.cos(lat))*180/Math.PI+180)%360;
+        const[x,y]=pos(az,Math.max(0,alt));
+        i?ctx.lineTo(x,y):ctx.moveTo(x,y);
+      }
+      ctx.strokeStyle=p.color; ctx.lineWidth=2.5; ctx.stroke();
+      const noonAlt=Math.asin(Math.sin(lat)*Math.sin(dec)+Math.cos(lat)*Math.cos(dec))*180/Math.PI;
+      const[nx,ny]=pos(180,Math.max(0,noonAlt));
+      ctx.beginPath();ctx.arc(nx,ny,4,0,Math.PI*2);ctx.fillStyle=p.color;ctx.fill();
+    }
+    ctx.fillStyle="rgba(20,35,29,.46)"; ctx.font="600 8px Inter,sans-serif"; ctx.textAlign="left";
+    let lx=14,ly=h-10;
+    for(const p of paths){ctx.fillStyle=p.color;ctx.fillRect(lx,ly-4,18,2);ctx.fillStyle="rgba(20,35,29,.66)";ctx.fillText(p.label,lx+24,ly-3);lx+=p.label==="SUMMER SOLSTICE"?128:94;}
+  }
+
+  function drawElevation(){
+    const el=document.getElementById("elevationDiagram");
+    if(!el)return;
+    const{ctx,width:w,height:h}=hiDpiCanvas(el);
+    const pts=[];
+    const elev0=7.0, slopeRad=8.1*Math.PI/180, length=80;
+    for(let i=0;i<=80;i++){
+      const d=i/80*length;
+      const e=elev0+d*Math.tan(slopeRad)*0.015+Math.sin(d*0.12)*0.3+Math.sin(d*0.31)*0.15;
+      pts.push(e);
+    }
+    const minE=Math.min(...pts),maxE=Math.max(...pts),range=maxE-minE;
+    const L=13,R=w-13,T=22,B=h-24;
+    const px=i=>L+(R-L)*i/(pts.length-1);
+    const py=e=>B-(B-T)*(e-minE)/Math.max(.01,range);
+    ctx.clearRect(0,0,w,h);
+    ctx.strokeStyle="rgba(20,35,29,.16)";ctx.setLineDash([4,5]);
+    for(let i=0;i<4;i++){const y=T+(B-T)*i/3;ctx.beginPath();ctx.moveTo(L,y);ctx.lineTo(R,y);ctx.stroke();}
+    ctx.setLineDash([]);
+    const grad=ctx.createLinearGradient(0,T,0,B);
+    grad.addColorStop(0,"rgba(73,122,162,.43)");grad.addColorStop(1,"rgba(73,122,162,.04)");
+    ctx.beginPath();pts.forEach((e,i)=>i?ctx.lineTo(px(i),py(e)):ctx.moveTo(px(i),py(e)));
+    ctx.lineTo(R,B);ctx.lineTo(L,B);ctx.closePath();ctx.fillStyle=grad;ctx.fill();
+    ctx.beginPath();pts.forEach((e,i)=>i?ctx.lineTo(px(i),py(e)):ctx.moveTo(px(i),py(e)));
+    ctx.strokeStyle="#497aa2";ctx.lineWidth=2.5;ctx.stroke();
+    ctx.beginPath();ctx.arc(px(0),py(pts[0]),4,0,Math.PI*2);ctx.fillStyle="#497aa2";ctx.fill();
+    ctx.beginPath();ctx.arc(px(pts.length-1),py(pts[pts.length-1]),4,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle="rgba(20,35,29,.5)";ctx.font="600 7px Inter,sans-serif";ctx.textAlign="left";
+    ctx.fillText("WNW",L,B+14);ctx.textAlign="right";ctx.fillText("ESE",R,B+14);
+    ctx.textAlign="center";ctx.fillText("DERIVED PROFILE · SLOPE 8.1° · "+range.toFixed(1)+" m RELIEF",(L+R)/2,12);
+  }
+
+  function drawGround(){
+    const el=document.getElementById("groundDiagram");
+    if(!el)return;
+    const{ctx,width:w,height:h}=hiDpiCanvas(el);
+    const M=w*.64, surfY=42, bedrockY=h*.45, baseY=h-24;
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle="rgba(147,165,125,.28)";ctx.fillRect(0,surfY-8,M,8);
+    const tillGrad=ctx.createLinearGradient(0,surfY,0,bedrockY);
+    tillGrad.addColorStop(0,"#a8946c");tillGrad.addColorStop(.5,"#9a8460");tillGrad.addColorStop(1,"#8b7454");
+    ctx.beginPath();ctx.moveTo(0,surfY);ctx.lineTo(M,surfY);
+    for(let x=M;x>=0;x-=4){const y=bedrockY+5*Math.sin(x/38)+3*Math.sin(x/17);ctx.lineTo(x,y);}
+    ctx.closePath();ctx.fillStyle=tillGrad;ctx.fill();
+    ctx.beginPath();
+    for(let x=0;x<=M;x+=4){const y=bedrockY+5*Math.sin(x/38)+3*Math.sin(x/17);x?ctx.lineTo(x,y):ctx.moveTo(x,y);}
+    ctx.lineTo(M,baseY);ctx.lineTo(0,baseY);ctx.closePath();
+    const rockGrad=ctx.createLinearGradient(0,bedrockY,0,baseY);
+    rockGrad.addColorStop(0,"#5a5e58");rockGrad.addColorStop(1,"#3d403c");
+    ctx.fillStyle=rockGrad;ctx.fill();
+    ctx.beginPath();
+    for(let x=0;x<=M;x+=4){const y=bedrockY+5*Math.sin(x/38)+3*Math.sin(x/17);x?ctx.lineTo(x,y):ctx.moveTo(x,y);}
+    ctx.strokeStyle="#4a4e46";ctx.lineWidth=2;ctx.stroke();
+    for(let x=10;x<M;x+=28){
+      const by=bedrockY+5*Math.sin(x/38)+3*Math.sin(x/17)+12;
+      ctx.strokeStyle="rgba(255,255,255,.06)";ctx.lineWidth=1;ctx.beginPath();
+      ctx.moveTo(x-8,by);ctx.lineTo(x+8,by+2);ctx.stroke();
+    }
+    ctx.fillStyle="#14231d";ctx.font="600 8px Inter,sans-serif";ctx.textAlign="left";
+    ctx.fillText("GLACIAL TILL (MORÄN)",8,surfY+17);
+    ctx.fillStyle="rgba(255,255,255,.7)";ctx.fillText("SVECOFENNIAN GNEISS BEDROCK",8,bedrockY+20);
+    ctx.fillStyle="rgba(20,35,29,.46)";ctx.textAlign="center";
+    ctx.fillText("1–3 M ESTIMATED DEPTH · OVERVIEW SCREENING",M/2,h-6);
+    const rw=w-M-20;
+    if(rw>60){
+      const rx=M+15,ry=surfY;
+      ctx.fillStyle="rgba(20,35,29,.06)";ctx.fillRect(rx,ry,rw,baseY-ry);
+      ctx.fillStyle="#14231d";ctx.font="600 7px Inter,sans-serif";ctx.textAlign="left";
+      ctx.fillText("DEPTH OBSERVATIONS",rx+5,ry+14);
+      ctx.font="500 9px Inter,sans-serif";
+      const obs=[{d:"0.5 m",l:"Surface rock outcrop"},{d:"1.2 m",l:"Typical till thickness"},{d:"2.8 m",l:"Maximum nearby observed"}];
+      obs.forEach((o,i)=>{const y=ry+32+i*28;ctx.fillStyle="#14231d";ctx.font="500 13px Georgia,serif";ctx.fillText(o.d,rx+5,y);ctx.fillStyle="rgba(20,35,29,.5)";ctx.font="500 7px Inter,sans-serif";ctx.fillText(o.l,rx+5,y+12);});
+    }
+  }
+
+  function drawBoundary(){
+    const el=document.getElementById("intelBoundaryCanvas");
+    const map=document.getElementById("intelMap");
+    if(!el||!map)return;
+    const rect=map.getBoundingClientRect();
+    const{ctx,width:w,height:h}=hiDpiCanvas(el);
+    const all=[BOUNDARY,...CONTEXT];
+    const flat=all.flat();
+    const xs=flat.map(p=>p[0]),zs=flat.map(p=>p[1]);
+    const minX=Math.min(...xs),maxX=Math.max(...xs),minZ=Math.min(...zs),maxZ=Math.max(...zs);
+    const pad=.12, rangeX=maxX-minX, rangeZ=maxZ-minZ;
+    const scale=Math.min(w*(1-2*pad)/rangeX,h*(1-2*pad)/rangeZ);
+    const ox=w/2-((minX+maxX)/2)*scale, oz=h/2+((minZ+maxZ)/2)*scale;
+    const tx=x=>ox+x*scale, tz=z=>oz-z*scale;
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle="#20342b";ctx.fillRect(0,0,w,h);
+    ctx.strokeStyle="rgba(255,255,255,.08)";ctx.lineWidth=1;
+    for(const ring of CONTEXT){ctx.beginPath();ring.forEach(([x,z],i)=>i?ctx.lineTo(tx(x),tz(z)):ctx.moveTo(tx(x),tz(z)));ctx.closePath();ctx.stroke();ctx.fillStyle="rgba(255,255,255,.02)";ctx.fill();}
+    ctx.beginPath();BOUNDARY.forEach(([x,z],i)=>i?ctx.lineTo(tx(x),tz(z)):ctx.moveTo(tx(x),tz(z)));ctx.closePath();
+    ctx.fillStyle="rgba(255,207,92,.16)";ctx.fill();
+    ctx.shadowColor="rgba(0,0,0,.8)";ctx.shadowBlur=8;ctx.strokeStyle="#ffcf5c";ctx.lineWidth=3;ctx.lineJoin="round";ctx.stroke();ctx.shadowBlur=0;
+    const cx=BOUNDARY.slice(0,-1).reduce((s,p)=>s+p[0],0)/9;
+    const cz=BOUNDARY.slice(0,-1).reduce((s,p)=>s+p[1],0)/9;
+    ctx.beginPath();ctx.arc(tx(cx),tz(cz),4,0,Math.PI*2);ctx.fillStyle="#f7f3e9";ctx.fill();ctx.strokeStyle="#14231d";ctx.lineWidth=1.5;ctx.stroke();
+    ctx.fillStyle="rgba(255,255,255,.3)";ctx.font="600 8px Inter,sans-serif";ctx.textAlign="center";
+    BOUNDARY.slice(0,-1).forEach(([x,z],i)=>{
+      ctx.beginPath();ctx.arc(tx(x),tz(z),2.5,0,Math.PI*2);ctx.fillStyle="rgba(255,207,92,.6)";ctx.fill();
+    });
+  }
+
+  function init(){
+    drawHero(); drawSolar(); drawElevation(); drawGround(); drawBoundary();
+    window.addEventListener("resize",()=>{drawHero();drawSolar();drawElevation();drawGround();drawBoundary();});
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);
+  else init();
+})();
+</script>
