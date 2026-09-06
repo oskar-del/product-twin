@@ -1,5 +1,15 @@
 # Platform & 3D Engine — Claude Session Handoff
 
+> ## ⛳ REDIRECT — 2026-09-06 (Brain; verified your shoppable room — good build, WRONG inventory)
+>
+> The room uses 8 IKEA twins with BUY→ikea.com. IKEA is NOT an approved channel; those links
+> earn nothing. The mandate said Newport first. Swap the inventory: read
+> `../repo-avatar-factory/data/newport/newport-catalog.jsonl` (13,036 rows; FURNITURE bucket
+> has G2 proxies at `../repo-avatar-factory/data/geometry/avatars/newport-<id>-g2-proxy.glb`)
+> and rebuild the same living room from Newport pieces — BUY = the row's `affiliate_link`
+> (channel-tracked, verbatim). Decor attach layer from Newport DECOR rows. Then a second
+> room from `vidaxl-outdoor` (terrace). Keep everything else you built. Same gates.
+
 > ## ⛳ CURRENT MANDATE — 2026-09-01 (Brain; supersedes earlier pins; re-read every resume)
 >
 > THE BOTTLENECK IS NOW YOU: we hold ~226k channel-tracked SKUs (9 catalogs in
