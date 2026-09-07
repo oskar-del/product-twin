@@ -1,5 +1,21 @@
 # Avatar Factory (Claude) — persistent handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-08 (Brain; verified vidaXL classify + G2 proxies. Supersedes the 2026-09-01 pin.)
+>
+> Platform now renders real rooms from YOUR catalogs — you are the supply line. Queue:
+> 1. **CATEGORY MAPPING for the 6 unmapped catalogs** (the gap you flagged yourself): mjuk,
+>    lampemesteren, lampan, golvpoolen, kungsangen, gripsholm are stamped CATALOG_ONLY, so
+>    163k twins are invisible to the room compiler. Reuse the vidaXL title-classifier you just
+>    built. Target: every FURNITURE/LIGHTING/DECOR row carries a real leaf category + role.
+> 2. **PROXIES FOR A BEDROOM SET** — Kungsängen (23,822 beds/furniture) + Lampemesteren
+>    (19,516 lighting) hero pieces, so Platform can build room #3 from a different catalog.
+> 3. **DIMENSIONS ARE THE BOTTLENECK.** Platform can only place a SKU whose real size it knows
+>    (vidaXL: only 12.7% of titles state cm). Mine dimensions from every field you have
+>    (description, title, GLB bounds, Shopify options) and stamp `dimensions_mm` + its source
+>    on the twin. This single field decides how much of the 226k catalog is placeable.
+> Report NUMBERS every block. Zero-LLM bulk scripts. Commit each batch; Oskar pushes.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-01 (Brain; supersedes earlier pins; re-read every resume)
 >
 > DONE so far: 13,036 Newport catalog twins + 3,640 furniture G2 proxies; Valostore ingest;

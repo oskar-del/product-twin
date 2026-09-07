@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8756", "--directory", "/Users/oskarpeterson/Documents/AI/product twin/repo-avatar-factory"],
       "port": 8756
+    },
+    {
+      "name": "top50-preview",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["/Users/oskarpeterson/Documents/AI/product twin/repo-avatar-factory/serve-preview.mjs"],
+      "port": 3847
     }
   ]
 }
