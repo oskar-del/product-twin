@@ -1,0 +1,431 @@
+{
+  "schema_version": "0.1.0",
+  "furniture_manifest_id": "FURNITURE_MANIFEST_LIVING_ROOM_NEWPORT_V0_2",
+  "revision": "0.2.0",
+  "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+  "supersedes": "FURNITURE_MANIFEST_LIVING_ROOM_NEWPORT_V0_1 (all-G2-proxy geometry)",
+  "channel": {
+    "network": "Adtraction",
+    "program": "Newport SE",
+    "feed_id": "2175",
+    "commission_pct": 9,
+    "publisher_as": "2106320328"
+  },
+  "placements": [
+    {
+      "placement_id": "pt_newport_100112-placement-01",
+      "source_placement_alias": "LR_SOFA_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_60667",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          0,
+          0,
+          -1.78
+        ],
+        "rotation_y_rad": 3.141592653589793,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_60667_MESHY",
+        "uri": "data/geometry/meshy-test/moderno-soffa-meshy.glb",
+        "revision": "sha256:00b5e1224bc2e2e5d7be0ea7c8733b8798ee6754966576815eba86c9ea69bc80",
+        "sha256": "00b5e1224bc2e2e5d7be0ea7c8733b8798ee6754966576815eba86c9ea69bc80",
+        "geometry_level": "G2_PLUS",
+        "fidelity": "MESHY_IMAGE_TO_3D_RECONSTRUCTION",
+        "shape_claim": "reconstructed from the merchant product photo; approximate, not manufacturer CAD",
+        "appearance_level": "A2_RECONSTRUCTED_TEXTURE"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 215495,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=60667&fid=2175&url=https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/moderno-soffa-aveiro-sand-l",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "",
+        "material": "Björk / tyg / plywood / polyuretanskum",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 2280,
+          "depth": 950,
+          "height": 830
+        },
+        "actual_dims_mm": {
+          "width": 2000,
+          "depth": 900,
+          "height": 850
+        }
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    },
+    {
+      "placement_id": "pt_newport_100121-placement-01",
+      "source_placement_alias": "LR_ARMCHAIR_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_54473",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          -1.88,
+          0,
+          0.05
+        ],
+        "rotation_y_rad": -1.5707963267948966,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_54473_MESHY",
+        "uri": "data/geometry/meshy-test/54473-meshy.glb",
+        "revision": "sha256:86b1431ab0c07a7286b6301b2f9fab6e28cbf386b3733e9f30b8b8b34bfc4f79",
+        "sha256": "86b1431ab0c07a7286b6301b2f9fab6e28cbf386b3733e9f30b8b8b34bfc4f79",
+        "geometry_level": "G2_PLUS",
+        "fidelity": "MESHY_IMAGE_TO_3D_RECONSTRUCTION",
+        "shape_claim": "reconstructed from the merchant product photo; approximate, not manufacturer CAD",
+        "appearance_level": "A2_RECONSTRUCTED_TEXTURE"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 70495,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=54473&fid=2175&url=https://www.newport.se/shop/mobler/fatoljer/saddle-skinnfatolj-vintage-cigar",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "Brun",
+        "material": "Fullnarvsläder",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 680,
+          "depth": 820,
+          "height": 1000
+        },
+        "actual_dims_mm": {
+          "width": 750,
+          "depth": 800,
+          "height": 850
+        }
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    },
+    {
+      "placement_id": "pt_newport_100600-placement-01",
+      "source_placement_alias": "LR_COFFEE_TABLE_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_40622",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          0,
+          0,
+          -0.22
+        ],
+        "rotation_y_rad": 0,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_40622_MESHY",
+        "uri": "data/geometry/meshy-test/40622-meshy.glb",
+        "revision": "sha256:1c7d56f51882e598c004c223fc1b7e6be307d1dd9928ac755a415e2c5a011ada",
+        "sha256": "1c7d56f51882e598c004c223fc1b7e6be307d1dd9928ac755a415e2c5a011ada",
+        "geometry_level": "G2_PLUS",
+        "fidelity": "MESHY_IMAGE_TO_3D_RECONSTRUCTION",
+        "shape_claim": "reconstructed from the merchant product photo; approximate, not manufacturer CAD",
+        "appearance_level": "A2_RECONSTRUCTED_TEXTURE"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 86195,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=40622&fid=2175&url=https://www.newport.se/shop/mobler/bord/soffbord/callum-soffbord-massing-4-set",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "Guld",
+        "material": "Rostfritt stål / MDF / Glas / Spegelglas",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 1400,
+          "depth": 600,
+          "height": 370
+        },
+        "actual_dims_mm": {
+          "width": 1200,
+          "depth": 600,
+          "height": 400
+        }
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    },
+    {
+      "placement_id": "pt_newport_54125-placement-01",
+      "source_placement_alias": "LR_RUG_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_54125",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          0,
+          0,
+          -0.18
+        ],
+        "rotation_y_rad": 0,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_54125_G2_PROXY",
+        "uri": "data/geometry/avatars/newport-54125-g2-proxy.glb",
+        "revision": "sha256:b22db9b92f238e07a82ad9203d43488a3452803306419c4267ad66786dfd2a2b",
+        "sha256": "b22db9b92f238e07a82ad9203d43488a3452803306419c4267ad66786dfd2a2b",
+        "geometry_level": "G2",
+        "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY",
+        "fidelity": "G2_CATEGORY_PROXY",
+        "shape_claim": "category-default proxy; not manufacturer geometry"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 54795,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=54125&fid=2175&url=https://www.newport.se/shop/textil/mattor/ullmattor/key-border-matta-camel",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "Beige / Vit",
+        "material": "Ull",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 1330,
+          "depth": 1950,
+          "height": 13
+        },
+        "actual_dims_mm": {
+          "width": 1700,
+          "depth": 2400,
+          "height": 12
+        },
+        "fit_distance": 0.5859
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    },
+    {
+      "placement_id": "pt_newport_100599-placement-01",
+      "source_placement_alias": "LR_SIDE_TABLE_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_43622",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          1.58,
+          0,
+          -1.55
+        ],
+        "rotation_y_rad": 0,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_43622_MESHY",
+        "uri": "data/geometry/meshy-test/43622-meshy.glb",
+        "revision": "sha256:c00853d86d0f81741e80d00025b28b5e00029c11497d0c9e41731398fd46b04b",
+        "sha256": "c00853d86d0f81741e80d00025b28b5e00029c11497d0c9e41731398fd46b04b",
+        "geometry_level": "G2_PLUS",
+        "fidelity": "MESHY_IMAGE_TO_3D_RECONSTRUCTION",
+        "shape_claim": "reconstructed from the merchant product photo; approximate, not manufacturer CAD",
+        "appearance_level": "A2_RECONSTRUCTED_TEXTURE"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 54495,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=43622&fid=2175&url=https://www.newport.se/shop/mobler/bord/sidobord/hoxton-sidobord-massing-2-pack",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "Guld",
+        "material": "Rostfritt stål/ klarglas",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 450,
+          "depth": 450,
+          "height": 530
+        },
+        "actual_dims_mm": {
+          "width": 500,
+          "depth": 500,
+          "height": 550
+        }
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    },
+    {
+      "placement_id": "pt_newport_104061-placement-01",
+      "source_placement_alias": "LR_FLOOR_LAMP_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_104061",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          -1.72,
+          0,
+          -1.55
+        ],
+        "rotation_y_rad": 0.2,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_104061_G2_PROXY",
+        "uri": "data/geometry/avatars/newport-104061-g2-proxy.glb",
+        "revision": "sha256:19fc0b326b1d9f57e0e753fb5d29e6653b8e6cf70242cc607a9b2a71f2ce3ca2",
+        "sha256": "19fc0b326b1d9f57e0e753fb5d29e6653b8e6cf70242cc607a9b2a71f2ce3ca2",
+        "geometry_level": "G2",
+        "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY",
+        "fidelity": "G2_CATEGORY_PROXY",
+        "shape_claim": "category-default proxy; not manufacturer geometry"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 14295,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=104061&fid=2175&url=https://www.newport.se/shop/belysning/lampor/golvlampor/arabella-golvlampa-bordeaux-red-finish",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "Röd",
+        "material": "Marmor / Textil / Mangoträ / Järn / Mässing",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 620,
+          "depth": 620,
+          "height": 1510
+        },
+        "actual_dims_mm": {
+          "width": 400,
+          "depth": 400,
+          "height": 1500
+        },
+        "fit_distance": 0.7163
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    }
+  ],
+  "unfilled_roles": [
+    {
+      "role": "LR_MEDIA_UNIT_01",
+      "status": "REJECTED_POOR_FIT",
+      "best_candidate": "Denver byrå",
+      "twin_id": "PT_NEWPORT_10368",
+      "fit": 1.677,
+      "threshold": 0.9,
+      "reason": "closest Newport piece is dimensionally wrong for this role"
+    },
+    {
+      "role": "LR_BOOKCASE_01",
+      "status": "REJECTED_POOR_FIT",
+      "best_candidate": "Golfklubba klädhängare brun",
+      "twin_id": "PT_NEWPORT_100760",
+      "fit": 1.033,
+      "threshold": 0.9,
+      "reason": "closest Newport piece is dimensionally wrong for this role"
+    }
+  ],
+  "freeze": {
+    "camera_changes_allowed": false,
+    "placement_changes_allowed": false,
+    "silent_fallback_allowed": false
+  },
+  "fidelity_mix": {
+    "meshy_reconstruction": 4,
+    "g2_category_proxy": 2
+  }
+}

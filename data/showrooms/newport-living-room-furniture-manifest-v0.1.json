@@ -1,0 +1,419 @@
+{
+  "schema_version": "0.1.0",
+  "furniture_manifest_id": "FURNITURE_MANIFEST_LIVING_ROOM_NEWPORT_V0_1",
+  "revision": "0.1.0",
+  "scene_id": "SCENE_ROOM_LAB_MARBELLA_LIVING_V0_1",
+  "supersedes": "FURNITURE_MANIFEST_LIVING_ROOM_ALPHA_V0_1 (IKEA inventory — not an approved channel)",
+  "channel": {
+    "network": "Adtraction",
+    "program": "Newport SE",
+    "feed_id": "2175",
+    "commission_pct": 9,
+    "publisher_as": "2106320328"
+  },
+  "placements": [
+    {
+      "placement_id": "pt_newport_100112-placement-01",
+      "source_placement_alias": "LR_SOFA_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_100112",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          0,
+          0,
+          -1.78
+        ],
+        "rotation_y_rad": 3.141592653589793,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_100112_G2_PROXY",
+        "uri": "data/geometry/avatars/newport-100112-g2-proxy.glb",
+        "revision": "sha256:b1a8cb9e5c0a71b06538b36a290fbbc81af1396f9a7cbc4b4ef01ce645c4f45e",
+        "sha256": "b1a8cb9e5c0a71b06538b36a290fbbc81af1396f9a7cbc4b4ef01ce645c4f45e",
+        "geometry_level": "G2",
+        "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 45900,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100112&fid=2175&url=https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/san-francisco-soffa-sand-4-sits",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "Beige",
+        "material": "Polyester/bokträ/furu/mdf/plywood",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 2280,
+          "depth": 950,
+          "height": 830
+        },
+        "actual_dims_mm": {
+          "width": 2000,
+          "depth": 900,
+          "height": 850
+        },
+        "fit_distance": 0.1995
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    },
+    {
+      "placement_id": "pt_newport_100121-placement-01",
+      "source_placement_alias": "LR_ARMCHAIR_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_100121",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          -1.88,
+          0,
+          0.05
+        ],
+        "rotation_y_rad": -1.5707963267948966,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_100121_G2_PROXY",
+        "uri": "data/geometry/avatars/newport-100121-g2-proxy.glb",
+        "revision": "sha256:5a6b36cb490fc3b3d389eb767d912d6a27296d6d679a9c8ec135a2adedce7a28",
+        "sha256": "5a6b36cb490fc3b3d389eb767d912d6a27296d6d679a9c8ec135a2adedce7a28",
+        "geometry_level": "G2",
+        "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 21900,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100121&fid=2175&url=https://www.newport.se/shop/mobler/fatoljer/tygfatoljer/san-francisco-fatolj-sand-1-sits",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "Beige",
+        "material": "Polyester/bokträ/furu/mdf/plywood",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 680,
+          "depth": 820,
+          "height": 1000
+        },
+        "actual_dims_mm": {
+          "width": 750,
+          "depth": 800,
+          "height": 850
+        },
+        "fit_distance": 0.2773
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    },
+    {
+      "placement_id": "pt_newport_100600-placement-01",
+      "source_placement_alias": "LR_COFFEE_TABLE_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_100600",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          0,
+          0,
+          -0.22
+        ],
+        "rotation_y_rad": 0,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_100600_G2_PROXY",
+        "uri": "data/geometry/avatars/newport-100600-g2-proxy.glb",
+        "revision": "sha256:e91ca16eb1730121f157296d0dce813a25870498e581c04a04b90208d495cdec",
+        "sha256": "e91ca16eb1730121f157296d0dce813a25870498e581c04a04b90208d495cdec",
+        "geometry_level": "G2",
+        "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 22449,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100600&fid=2175&url=https://www.newport.se/shop/mobler/bord/soffbord/delano-soffbord-rund-valnot-beige",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "Beige / Brun",
+        "material": "Mässing / Trä / Marmor",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 1400,
+          "depth": 600,
+          "height": 370
+        },
+        "actual_dims_mm": {
+          "width": 1200,
+          "depth": 600,
+          "height": 400
+        },
+        "fit_distance": 0.2239
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    },
+    {
+      "placement_id": "pt_newport_54125-placement-01",
+      "source_placement_alias": "LR_RUG_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_54125",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          0,
+          0,
+          -0.18
+        ],
+        "rotation_y_rad": 0,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_54125_G2_PROXY",
+        "uri": "data/geometry/avatars/newport-54125-g2-proxy.glb",
+        "revision": "sha256:b22db9b92f238e07a82ad9203d43488a3452803306419c4267ad66786dfd2a2b",
+        "sha256": "b22db9b92f238e07a82ad9203d43488a3452803306419c4267ad66786dfd2a2b",
+        "geometry_level": "G2",
+        "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 54795,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=54125&fid=2175&url=https://www.newport.se/shop/textil/mattor/ullmattor/key-border-matta-camel",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "Beige / Vit",
+        "material": "Ull",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 1330,
+          "depth": 1950,
+          "height": 13
+        },
+        "actual_dims_mm": {
+          "width": 1700,
+          "depth": 2400,
+          "height": 12
+        },
+        "fit_distance": 0.5859
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    },
+    {
+      "placement_id": "pt_newport_100599-placement-01",
+      "source_placement_alias": "LR_SIDE_TABLE_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_100599",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          1.58,
+          0,
+          -1.55
+        ],
+        "rotation_y_rad": 0,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_100599_G2_PROXY",
+        "uri": "data/geometry/avatars/newport-100599-g2-proxy.glb",
+        "revision": "sha256:fa399397e5484215248e44bc8890efdcb5e4d7e514d235fc2da2eb0305e45451",
+        "sha256": "fa399397e5484215248e44bc8890efdcb5e4d7e514d235fc2da2eb0305e45451",
+        "geometry_level": "G2",
+        "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 10449,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100599&fid=2175&url=https://www.newport.se/shop/mobler/bord/sidobord/erin-sidobord-massing-valnot-beige",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "Beige / Guld",
+        "material": "Mässing / Marmor / Valnöt",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 450,
+          "depth": 450,
+          "height": 530
+        },
+        "actual_dims_mm": {
+          "width": 500,
+          "depth": 500,
+          "height": 550
+        },
+        "fit_distance": 0.26
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    },
+    {
+      "placement_id": "pt_newport_104061-placement-01",
+      "source_placement_alias": "LR_FLOOR_LAMP_01",
+      "source_lane": "PRODUCT_TWIN",
+      "product_twin_id": "PT_NEWPORT_104061",
+      "design_asset_id": null,
+      "transform": {
+        "translation_m": [
+          -1.72,
+          0,
+          -1.55
+        ],
+        "rotation_y_rad": 0.2,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "asset": {
+        "avatar_id": "AVATAR_NEWPORT_104061_G2_PROXY",
+        "uri": "data/geometry/avatars/newport-104061-g2-proxy.glb",
+        "revision": "sha256:19fc0b326b1d9f57e0e753fb5d29e6653b8e6cf70242cc607a9b2a71f2ce3ca2",
+        "sha256": "19fc0b326b1d9f57e0e753fb5d29e6653b8e6cf70242cc607a9b2a71f2ce3ca2",
+        "geometry_level": "G2",
+        "appearance_level": "A1_COLOUR_ROUGHNESS_CUE_ONLY"
+      },
+      "commerce": {
+        "merchant": "Newport SE",
+        "currency": "SEK",
+        "unit_price": 14295,
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=104061&fid=2175&url=https://www.newport.se/shop/belysning/lampor/golvlampor/arabella-golvlampa-bordeaux-red-finish",
+        "affiliate_link_matches_feed": true,
+        "adtraction_program": {
+          "feed_id": "2175",
+          "commission_pct": 9
+        }
+      },
+      "material_cues": {
+        "color": "Röd",
+        "material": "Marmor / Textil / Mangoträ / Järn / Mässing",
+        "source": "newport_adtraction_feed_2175"
+      },
+      "fit": {
+        "target_dims_mm": {
+          "width": 620,
+          "depth": 620,
+          "height": 1510
+        },
+        "actual_dims_mm": {
+          "width": 400,
+          "depth": 400,
+          "height": 1500
+        },
+        "fit_distance": 0.7163
+      },
+      "rights": {
+        "internal_render": "YES",
+        "provider_processing": "REVIEW",
+        "public_publication": "REVIEW",
+        "redistribution": "NO"
+      }
+    }
+  ],
+  "unfilled_roles": [
+    {
+      "role": "LR_MEDIA_UNIT_01",
+      "status": "REJECTED_POOR_FIT",
+      "best_candidate": "Denver byrå",
+      "twin_id": "PT_NEWPORT_10368",
+      "fit": 1.677,
+      "threshold": 0.9,
+      "reason": "closest Newport piece is dimensionally wrong for this role"
+    },
+    {
+      "role": "LR_BOOKCASE_01",
+      "status": "REJECTED_POOR_FIT",
+      "best_candidate": "Golfklubba klädhängare brun",
+      "twin_id": "PT_NEWPORT_100760",
+      "fit": 1.033,
+      "threshold": 0.9,
+      "reason": "closest Newport piece is dimensionally wrong for this role"
+    }
+  ],
+  "freeze": {
+    "camera_changes_allowed": false,
+    "placement_changes_allowed": false,
+    "silent_fallback_allowed": false
+  }
+}
