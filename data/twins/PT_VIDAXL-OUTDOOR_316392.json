@@ -8,7 +8,7 @@
     "ean": "8720286380703",
     "source": "vidaxl-outdoor_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.OUTDOOR.SHADE",
   "bucket": "OUTDOOR",
   "commerce": {
     "merchant": "vidaxl-outdoor SE",
@@ -26,12 +26,42 @@
     "primary_url": "https://vdxl.im/8720286380703_m_en_hd_1.jpg?t=1774499052"
   },
   "geometry": {
-    "level": "G0",
-    "state": "catalog_only"
+    "level": "G2",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_VIDAXL_OUTDOOR_316392_G2_PROXY",
+    "asset_path": "data/geometry/avatars/vidaxl-outdoor-316392-g2-proxy.glb",
+    "scale_state": "category_default 3000x3000x2400mm",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "placement": {
+      "origin": "floor_center",
+      "floor_contact": true
+    },
+    "appearance": {
+      "pbr_state": "spine_colour_by_category",
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
   },
   "readiness": {
     "identity": "feed_verified",
     "commerce": "affiliate_live",
-    "geometry": "G0_catalog_only"
+    "geometry": "G2_promoted_universal_proxy"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-vidaxl-outdoor.mjs",
+    "evidence_class": "DERIVED",
+    "limitation": "Category inferred from merchant title text, not a feed taxonomy field."
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 3000,
+      "depth": 3000,
+      "height": 2400
+    }
   }
 }

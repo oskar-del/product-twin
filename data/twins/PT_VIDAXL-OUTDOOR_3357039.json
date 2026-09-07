@@ -8,7 +8,7 @@
     "ean": "8721288372420",
     "source": "vidaxl-outdoor_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.OUTDOOR.SET",
   "bucket": "OUTDOOR",
   "commerce": {
     "merchant": "vidaxl-outdoor SE",
@@ -33,5 +33,11 @@
     "identity": "feed_verified",
     "commerce": "affiliate_live",
     "geometry": "G0_catalog_only"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-vidaxl-outdoor.mjs",
+    "evidence_class": "DERIVED",
+    "limitation": "Category inferred from merchant title text, not a feed taxonomy field."
   }
 }
