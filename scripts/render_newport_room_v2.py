@@ -65,6 +65,45 @@ print('NEWPORT ROOM — placements:')
 for p in manifest['placements']:
     objs = import_glb(os.path.join(BASE, p['asset']['uri']))
     is_meshy = str(p['asset'].get('fidelity', '')).startswith('MESHY')
+
+    # Meshy reconstructions arrive at an arbitrary scale. Normalise every piece to the
+    # dimensions the twin actually documents, so the room stays dimension-verified
+    # (this is what "G2" means here) instead of trusting whatever the GLB shipped with.
+    declared = ((p.get('fit') or {}).get('actual_dims_mm')) or {}
+    if declared.get('width'):
+        import mathutils as _mu
+        roots = [o for o in objs if o.parent is None]
+        lo = _mu.Vector((1e9, 1e9, 1e9)); hi = _mu.Vector((-1e9, -1e9, -1e9))
+        for o in objs:
+            if o.type != 'MESH':
+                continue
+            for c in o.bound_box:
+                w = o.matrix_world @ _mu.Vector(c)
+                lo = _mu.Vector((min(lo[i], w[i]) for i in range(3)))
+                hi = _mu.Vector((max(hi[i], w[i]) for i in range(3)))
+        cur = hi - lo
+        # GLB axes: X=width, Y=depth, Z=height once imported Z-up
+        want = (declared['width'] / 1000.0, declared['depth'] / 1000.0, declared['height'] / 1000.0)
+        if cur.x > 1e-6 and cur.y > 1e-6 and cur.z > 1e-6:
+            # The twin's dims are CATEGORY DEFAULTS (scale_state: "category_default"),
+            # not measured for this SKU -- forcing a real reconstruction into that box
+            # would distort true geometry to match a guessed number. So scale uniformly
+            # off HEIGHT only: it is the most stable category constant (seat/table height)
+            # and it preserves the reconstruction's real proportions.
+            k = want[2] / cur.z
+            for o in roots:
+                o.scale = (o.scale[0] * k, o.scale[1] * k, o.scale[2] * k)
+            bpy.context.view_layer.update()
+            # re-seat on the floor after scaling
+            lo2 = 1e9
+            for o in objs:
+                if o.type != 'MESH':
+                    continue
+                for c in o.bound_box:
+                    lo2 = min(lo2, (o.matrix_world @ _mu.Vector(c)).z)
+            for o in roots:
+                o.location.z -= lo2
+            print(f"    height-scaled {p['source_placement_alias']}: {round(cur.x,2)}x{round(cur.y,2)}x{round(cur.z,2)}m -> h={want[2]}m k={round(k,3)} => {round(cur.x*k,2)}x{round(cur.y*k,2)}x{round(cur.z*k,2)}m")
     rgb, state = colour_for((p.get('material_cues') or {}).get('color'))
     if is_meshy:
         state = 'meshy_baked_texture(kept)'
