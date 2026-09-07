@@ -1,5 +1,19 @@
 # MIMER (Svärtinge 54:28) — persistent handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-08 (Brain; Lender Edition verified — it correctly refuses to fake rates. Supersedes the 2026-09-01 pin.)
+>
+> §6 rates and §7 comps are blocked on owner input — do NOT invent them. Work the parts you own:
+> 1. **INTERIOR COST FROM THE REAL CATALOG.** We now hold ~226k channel-tracked SKUs with live
+>    prices (`../repo-avatar-factory/data/*/*.jsonl`) and Platform furnishes rooms from them.
+>    Add a receipted **furnishing/FF&E line** to the dossier: priced from actual catalog rows
+>    (price + source + date), per room, per spec level. That is a real number nobody has to quote.
+> 2. **RATE-CARD SKELETON** for §6: structure every line so a husleverantör offert drops straight
+>    in (unit, quantity, rate slot, source slot) — quantities are yours, rates stay NEEDS_SOURCE.
+> 3. **REUSABILITY:** make the dossier generator take a site + geometry spec as input, so Djurö
+>    4:147 (5,156.3 m², Värmdö) can produce one. Same truth law.
+> Every claim receipted; NOT-verified ledger mandatory. Commit; Oskar pushes.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-01 (Brain; supersedes earlier pins; re-read every resume)
 >
 > Winner is called: VINKELHUSET. Finish the Lender Edition against the WINNER:
