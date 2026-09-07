@@ -1,0 +1,67 @@
+{
+  "twin_id": "PT_VIDAXL-OUTDOOR_318420",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "vidaXL Trädgårdsbåge med spaljé 141x97x243 cm impregnerad massiv furu",
+    "manufacturer": "vidaXL",
+    "article_no": "318420",
+    "ean": "8720286878743",
+    "source": "vidaxl-outdoor_adtraction_feed"
+  },
+  "category_id": "FFE.OUTDOOR.PLANTER",
+  "bucket": "OUTDOOR",
+  "commerce": {
+    "merchant": "vidaxl-outdoor SE",
+    "currency": "SEK",
+    "unit_price": 0,
+    "ean": "8720286878743",
+    "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardsbage-med-spalje-141x97x243-cm-impregnerad-massiv-furu/8720286878743.html",
+    "cart_deeplink": "https://www.vidaxl.se/e/vidaxl-tradgardsbage-med-spalje-141x97x243-cm-impregnerad-massiv-furu/8720286878743.html",
+    "affiliate_link": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=318420&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardsbage-med-spalje-141x97x243-cm-impregnerad-massiv-furu/8720286878743.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://vdxl.im/8720286878743_m_en_hd_1.jpg?t=1727774695"
+  },
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_VIDAXL_OUTDOOR_318420_G2_PROXY",
+    "asset_path": "data/geometry/avatars/vidaxl-outdoor-318420-g2-proxy.glb",
+    "scale_state": "category_default 1410x970x2430mm",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "placement": {
+      "origin": "floor_center",
+      "floor_contact": true
+    },
+    "appearance": {
+      "pbr_state": "spine_colour_by_category",
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G2_promoted_universal_proxy"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-vidaxl-outdoor.mjs",
+    "evidence_class": "DERIVED",
+    "limitation": "Category inferred from merchant title text, not a feed taxonomy field."
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1410,
+      "depth": 970,
+      "height": 2430
+    }
+  }
+}

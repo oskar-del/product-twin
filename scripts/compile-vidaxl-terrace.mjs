@@ -28,14 +28,36 @@ export function loadCatalog(file = CATALOG) {
 }
 
 /**
- * vidaXL has no proxy library. Geometry is the title-stated size, and only
- * when the title gives all three axes — a two-axis span cannot be placed as a
- * solid. Returns no assetPath, so elements render as boxes at CONCEPT.
+ * vidaXL geometry, best source first.
+ *
+ * Until 2026-09-08 vidaXL had no proxy library at all, so every terrace piece
+ * rendered as a title-sized box at CONCEPT. The catalog is now classified
+ * (scripts/classify-vidaxl-outdoor.mjs in repo-avatar-factory) and G2 proxies
+ * are built per SKU, so prefer a real proxy and keep the box only as fallback.
+ *
+ * Order: G2 proxy mesh → title-stated box → nothing placeable.
  */
 export function resolveVidaxlGeometry(row) {
   const dims = dimensionsFromTitle(row.title);
+
+  const twinPath = path.join(root, "data/twins", `PT_VIDAXL-OUTDOOR_${row.id}.json`);
+  if (fs.existsSync(twinPath)) {
+    const twin = JSON.parse(fs.readFileSync(twinPath, "utf8"));
+    const assetPath = twin.geometry?.asset_path;
+    const level = twin.geometry?.level;
+    if ((level === "G2" || level === "G3") && assetPath && fs.existsSync(path.join(root, assetPath))) {
+      const d = twin.physical?.dimensions_mm;
+      return {
+        assetPath,
+        geometry_level: level,
+        bounds: d ? {size: [d.width / 1000, d.height / 1000, d.depth / 1000]} : (dims ? {size: dims.size} : null),
+        dimension_source: dims?.source ?? twin.geometry?.scale_state ?? "category_default"
+      };
+    }
+  }
+
   if (!dims || dims.axes !== 3) return null;
-  return { assetPath: null, bounds: { size: dims.size }, dimension_source: dims.source };
+  return {assetPath: null, geometry_level: "G0", bounds: {size: dims.size}, dimension_source: dims.source};
 }
 
 // Terrace 7×5 m. Back wall (house facade) at z=-2.5.

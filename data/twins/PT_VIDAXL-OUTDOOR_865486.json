@@ -1,0 +1,61 @@
+{
+  "twin_id": "PT_VIDAXL-OUTDOOR_865486",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "vidaXL Sektionell Soffa Enheter Vaxad brun 190 x 62 x 70,5 cm",
+    "manufacturer": "vidaXL",
+    "article_no": "865486",
+    "ean": "8721364507135",
+    "source": "vidaxl-outdoor_adtraction_feed"
+  },
+  "category_id": "CATALOG_ONLY",
+  "bucket": "OUTDOOR",
+  "commerce": {
+    "merchant": "vidaxl-outdoor SE",
+    "currency": "SEK",
+    "unit_price": 4727,
+    "ean": "8721364507135",
+    "product_url": "https://www.vidaxl.se/e/vidaXLSektionellSoffaEnheterVaxadbrun190x62x70,5cm/8721364507135.html",
+    "cart_deeplink": "https://www.vidaxl.se/e/vidaXLSektionellSoffaEnheterVaxadbrun190x62x70,5cm/8721364507135.html",
+    "affiliate_link": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=865486&fid=1333&url=https://www.vidaxl.se/e/vidaXLSektionellSoffaEnheterVaxadbrun190x62x70,5cm/8721364507135.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://vdxl.im/8721364507135_mo-im_en_px16_1.jpg?t=1770135273455"
+  },
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_VIDAXL_OUTDOOR_865486_G2_PROXY",
+    "asset_path": "data/geometry/avatars/vidaxl-outdoor-865486-g2-proxy.glb",
+    "scale_state": "category_default 1900x620x700mm",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "placement": {
+      "origin": "floor_center",
+      "floor_contact": true
+    },
+    "appearance": {
+      "pbr_state": "spine_colour_by_category",
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G2_promoted_universal_proxy"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1900,
+      "depth": 620,
+      "height": 700
+    }
+  }
+}

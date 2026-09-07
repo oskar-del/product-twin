@@ -1,0 +1,67 @@
+{
+  "twin_id": "PT_VIDAXL-OUTDOOR_315639",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "vidaXL Trädgårdsstol med dyna antracit 63x65x76 cm PP-rotting",
+    "manufacturer": "vidaXL",
+    "article_no": "315639",
+    "ean": "8720286231166",
+    "source": "vidaxl-outdoor_adtraction_feed"
+  },
+  "category_id": "FFE.OUTDOOR.CHAIR",
+  "bucket": "OUTDOOR",
+  "commerce": {
+    "merchant": "vidaxl-outdoor SE",
+    "currency": "SEK",
+    "unit_price": 1382,
+    "ean": "8720286231166",
+    "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardsstol-med-dyna-antracit-63x65x76-cm-pp-rotting/8720286231166.html",
+    "cart_deeplink": "https://www.vidaxl.se/e/vidaxl-tradgardsstol-med-dyna-antracit-63x65x76-cm-pp-rotting/8720286231166.html",
+    "affiliate_link": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=315639&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardsstol-med-dyna-antracit-63x65x76-cm-pp-rotting/8720286231166.html",
+    "available": true,
+    "observed_at": "2026-08-29",
+    "refresh_policy": "live_required_before_quote_or_purchase"
+  },
+  "image": {
+    "primary_url": "https://vdxl.im/8720286231166_a_en_hd_1.jpg?t=1750300062"
+  },
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_VIDAXL_OUTDOOR_315639_G2_PROXY",
+    "asset_path": "data/geometry/avatars/vidaxl-outdoor-315639-g2-proxy.glb",
+    "scale_state": "category_default 630x650x760mm",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "placement": {
+      "origin": "floor_center",
+      "floor_contact": true
+    },
+    "appearance": {
+      "pbr_state": "spine_colour_by_category",
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G2_promoted_universal_proxy"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-vidaxl-outdoor.mjs",
+    "evidence_class": "DERIVED",
+    "limitation": "Category inferred from merchant title text, not a feed taxonomy field."
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 630,
+      "depth": 650,
+      "height": 760
+    }
+  }
+}
