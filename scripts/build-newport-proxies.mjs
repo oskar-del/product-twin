@@ -1,6 +1,7 @@
-// Build G2 proxy geometry for Newport FURNITURE twins.
+// Build G2 proxy geometry for catalog twins (Newport, vidaxl-outdoor, ...).
 // Parses dimensions from desc when present, falls back to category defaults.
 // Usage: node scripts/build-newport-proxies.mjs [--force]
+//          [--prefix PT_NEWPORT_] [--buckets FURNITURE,DECOR] [--only 58855,61313] [--slug newport]
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
@@ -8,6 +9,18 @@ const ROOT = process.cwd();
 const TWINS_DIR = path.join(ROOT, 'data/twins');
 const OUTPUT = path.join(ROOT, 'data/geometry/avatars');
 const FORCE = process.argv.includes('--force');
+
+function argVal(flag, fallback) {
+  const i = process.argv.indexOf(flag);
+  return i !== -1 && process.argv[i + 1] ? process.argv[i + 1] : fallback;
+}
+// --prefix PT_NEWPORT_          which twin family to promote
+// --buckets FURNITURE,DECOR     which catalog buckets are eligible ('*' = all)
+// --only 58855,61313            restrict to these article numbers (cheap targeted builds)
+const PREFIX  = argVal('--prefix', 'PT_NEWPORT_');
+const BUCKETS = argVal('--buckets', 'FURNITURE').split(',').map(s => s.trim()).filter(Boolean);
+const ONLY    = new Set((argVal('--only', '') || '').split(',').map(s => s.trim()).filter(Boolean));
+const SLUG    = argVal('--slug', PREFIX.replace(/^PT_/, '').replace(/_$/, '').toLowerCase());
 
 // Category defaults (W x D x H in mm) — industry-standard furniture envelopes
 const CATEGORY_DEFAULTS = {
@@ -29,10 +42,26 @@ const CATEGORY_DEFAULTS = {
   'FFE.STORAGE.CABINET':       { w: 800, d: 450, h: 1200, shape: 'box' },
   'FFE.STORAGE.DRESSER':       { w: 900, d: 450, h: 800, shape: 'box' },
   'FFE.TEXTILES.RUG':          { w: 1700, d: 2400, h: 12, shape: 'flat' },
+  'FFE.TEXTILES.CUSHION':      { w: 500, d: 500, h: 150, shape: 'soft' },
+  'FFE.TEXTILES.THROW':        { w: 1300, d: 800, h: 25, shape: 'flat' },
+  'FFE.DECOR.VASE':            { w: 160, d: 160, h: 300, shape: 'cylinder' },
+  'FFE.DECOR.BOOK':            { w: 240, d: 170, h: 35, shape: 'box' },
+  'FFE.DECOR.PLANT':           { w: 350, d: 350, h: 700, shape: 'cylinder' },
+  'FFE.DECOR.CANDLE':          { w: 90, d: 90, h: 200, shape: 'cylinder' },
+  'FFE.DECOR':                 { w: 250, d: 250, h: 300, shape: 'box' },
   'FFE.OUTDOOR':               { w: 800, d: 800, h: 750, shape: 'box' },
   'FFE.OUTDOOR.SEATING':       { w: 750, d: 800, h: 800, shape: 'soft' },
   'FFE.OUTDOOR.SOFA':          { w: 2000, d: 900, h: 800, shape: 'soft' },
   'FFE.OUTDOOR.TABLE':         { w: 1500, d: 800, h: 750, shape: 'box' },
+  'FFE.OUTDOOR.CHAIR':         { w: 600, d: 600, h: 850, shape: 'box' },
+  'FFE.OUTDOOR.LOUNGER':       { w: 700, d: 2000, h: 700, shape: 'soft' },
+  'FFE.OUTDOOR.BENCH':         { w: 1500, d: 600, h: 850, shape: 'box' },
+  'FFE.OUTDOOR.PARASOL':       { w: 3000, d: 3000, h: 2500, shape: 'cylinder' },
+  'FFE.OUTDOOR.SHADE':         { w: 3000, d: 3000, h: 2400, shape: 'flat' },
+  'FFE.OUTDOOR.SET':           { w: 2000, d: 1600, h: 800, shape: 'box' },
+  'FFE.OUTDOOR.CUSHION':       { w: 600, d: 600, h: 120, shape: 'soft' },
+  'FFE.OUTDOOR.PLANTER':       { w: 600, d: 600, h: 500, shape: 'box' },
+  'FFE.OUTDOOR.STORAGE':       { w: 1200, d: 600, h: 700, shape: 'box' },
   'ELECTRICAL.LUMINAIRES.TABLE': { w: 300, d: 300, h: 500, shape: 'cylinder' },
   'ELECTRICAL.LUMINAIRES.FLOOR': { w: 400, d: 400, h: 1500, shape: 'cylinder' },
   'ELECTRICAL.LUMINAIRES':     { w: 350, d: 350, h: 400, shape: 'cylinder' },
@@ -165,14 +194,15 @@ function buildGlb(parts, mat){
 
 async function main() {
   await fs.mkdir(OUTPUT, { recursive: true });
-  const files = (await fs.readdir(TWINS_DIR)).filter(f => f.startsWith('PT_NEWPORT_') && f.endsWith('.json')).sort();
+  const files = (await fs.readdir(TWINS_DIR)).filter(f => f.startsWith(PREFIX) && f.endsWith('.json')).sort();
   let promoted = 0, skipped = 0, catalogOnly = 0;
 
   for (const file of files) {
     const p = path.join(TWINS_DIR, file);
     const twin = JSON.parse(await fs.readFile(p, 'utf8'));
 
-    if (twin.bucket !== 'FURNITURE') { catalogOnly++; continue; }
+    if (ONLY.size && !ONLY.has(String(twin.identity?.article_no))) { catalogOnly++; continue; }
+    if (!BUCKETS.includes('*') && !BUCKETS.includes(twin.bucket)) { catalogOnly++; continue; }
 
     if (!FORCE && twin.geometry?.level && twin.geometry.level !== 'G0') {
       skipped++; continue;
@@ -216,7 +246,7 @@ async function main() {
     }
 
     const glb = buildGlb(parts, mat);
-    const slug = `newport-${twin.identity.article_no}`;
+    const slug = `${SLUG}-${twin.identity.article_no}`;
     const assetFile = `${slug}-g2-proxy.glb`;
     const assetPath = `data/geometry/avatars/${assetFile}`;
     await fs.writeFile(path.join(ROOT, assetPath), glb);
@@ -226,7 +256,7 @@ async function main() {
     twin.geometry = {
       level: 'G2',
       state: 'promoted_universal_proxy',
-      avatar_id: `AVATAR_NEWPORT_${twin.identity.article_no}_G2_PROXY`,
+      avatar_id: `AVATAR_${SLUG.toUpperCase().replace(/-/g, '_')}_${twin.identity.article_no}_G2_PROXY`,
       asset_path: assetPath,
       scale_state: `category_default ${dims.width}x${dims.depth || dims.width}x${dims.height}mm`,
       shape_claim: 'category-default proxy; not manufacturer geometry',
