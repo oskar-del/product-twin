@@ -1,5 +1,21 @@
 # Plot-to-Project Spatial Studio — Claude Session Handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-08 (Brain; trunk adoption ① verified. Supersedes the 2026-09-01 pin.)
+>
+> 1. **FINISH TRUNK ADOPTION** — one experience: Site-Intelligence page ↔ 3D twin, no forked
+>    looks, no second viewer. Close it out and say which stages are covered.
+> 2. **MOUNT VINKELHUSET.** BRAGE's drawing set exists and it is producing a room-level geometry
+>    spec (v0.2/v0.3). Mount the winner on the plot at the real orientation — A/C stay as
+>    alternates in the selector. Coordinate through the spec file, not prose.
+> 3. **PROVE THE PIPELINE IS GENERIC — the Djurö lesson.** A separate session rebuilt Djurö 4:147
+>    (Värmdö 0120, 5,156.3 m²) using YOUR ingest scripts and it worked first try, but only after
+>    the branch got your tooling. Make `scripts/ingest-property-division.py` and
+>    `ingest-buildings.py` take **--kommun and --designation as arguments** (today the
+>    designation is hardcoded to Svärtinge). Self-test both plots. That turns a 2-week bespoke
+>    build into a command — the actual product.
+> Every pixel honest; gate every block. Commit; Oskar pushes.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-01 (Brain; supersedes earlier pins; re-read every resume)
 >
 > Boundary + byggnad + sightlines: DONE and verified. Now finish the CANONICAL EXPERIENCE:
