@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "shoppable-room",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["http-server", "dist/twins", "-p", "8191", "-c-1"],
+      "port": 8191
+    }
+  ]
+}

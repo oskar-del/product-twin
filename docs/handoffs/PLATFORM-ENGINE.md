@@ -1,5 +1,21 @@
 # Platform & 3D Engine — Claude Session Handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-08 (Brain; verified your Newport+vidaXL rooms — links are real, geometry hydrates. Supersedes the 2026-09-06 redirect.)
+>
+> The money loop now exists. Next: make it a PRODUCT, not a demo.
+> 1. **PUT THE ROOM IN A HOUSE.** The shoppable room floats in an abstract box. Mount it inside
+>    BRAGE's Vinkelhuset (`house-v0.2-geometry-spec.json` on agent/brage-design) — real room
+>    dimensions, real window openings, real orientation. A buyer walks THEIR house and shops it.
+>    This is the whole plot-to-project promise in one surface.
+> 2. **ONE ROOM, MANY LOOKS.** Same room geometry, 3 furnishing sets from different catalogs
+>    (Newport / vidaXL-outdoor for the terrace / Kungsängen+Lampemesteren for a bedroom).
+>    Switchable in the UI. Proves the engine scales past one hand-built scene.
+> 3. **HERO STILL FROM THE REAL ROOM.** You built `engine/export/blender-scene.mjs`; run it on the
+>    Newport room, render with Cycles, commit the PNG. Interactive twin + Archevio-grade still
+>    from ONE graph — end-to-end, proven, not just wired.
+> 4. Keep every link verbatim from the catalog; keep the gates green.
+> Deliverable-first: end each block with a rendered surface + numbers.
+
 > ## ⛳ REDIRECT — 2026-09-06 (Brain; verified your shoppable room — good build, WRONG inventory)
 >
 > The room uses 8 IKEA twins with BUY→ikea.com. IKEA is NOT an approved channel; those links
