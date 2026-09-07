@@ -1,0 +1,56 @@
+{
+  "twin_id": "PT_NEWPORT_10394",
+  "kind": "product",
+  "category_id": "FFE.STORAGE.MEDIA_UNIT",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "Artwood",
+    "model": "Elmwood mediabänk",
+    "article_no": "10394",
+    "configuration": "Elmwood mediabänk"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1000,
+      "height": 500,
+      "depth": 600
+    },
+    "evidence_state": "measured_from_shipped_g2_proxy_envelope; retailer feed carries no dimensions"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_affiliate",
+      "role": "affiliate_retail_reference",
+      "product_url": "https://www.newport.se/shop/mobler/bord/avlastningsbord/elmwood-mediabank",
+      "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=10394&fid=2175&url=https://www.newport.se/shop/mobler/bord/avlastningsbord/elmwood-mediabank",
+      "gtin": "7340172905172",
+      "verification": {
+        "state": "feed_row_verified",
+        "feed_id": "2175"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_realistic_planning_proxy",
+    "avatar_id": "AVATAR_NEWPORT_10394_G2_PROXY",
+    "asset_path": "data/geometry/avatars/newport-10394-g2-proxy.glb",
+    "shape_claim": "realistic planning proxy; exact manufacturer industrial-design geometry and material artwork are not claimed",
+    "placement": {
+      "origin": "floor_center"
+    }
+  },
+  "commerce": {
+    "product_name": "Elmwood mediabänk",
+    "brand": "Artwood",
+    "product_url": "https://www.newport.se/shop/mobler/bord/avlastningsbord/elmwood-mediabank",
+    "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=10394&fid=2175&url=https://www.newport.se/shop/mobler/bord/avlastningsbord/elmwood-mediabank",
+    "image_url": "https://cdn-images.newporthome.eu/product/63d369ab9dc411ebb34e000c29064583/list-45/list.jpg",
+    "price": "16295 SEK",
+    "currency": "SEK",
+    "category": "FFE.STORAGE.MEDIA_UNIT",
+    "color": null
+  }
+}

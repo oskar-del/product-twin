@@ -24,6 +24,7 @@ import {createMaterialFactory, applyProfile, PROFILE_COMPARE, PROFILE_INTELLIGEN
 import {createViewer} from "./core/viewer.mjs";
 import {createPicker} from "./core/picking.mjs";
 import {createSceneBuilder} from "./geometry/primitives.mjs";
+import {loadAvatar} from "./geometry/gltf-loader.mjs";
 import {createTextureLibrary} from "./geometry/textures.mjs";
 import {mergeContextBuildings} from "./geometry/merge-context.mjs";
 import {sunLightRig, localHourToUtc} from "./studies/sun.mjs";
@@ -67,6 +68,7 @@ async function loadScene(sceneUrl, sceneDocument) {
  * @param {string}  [options.brand]            short label shown top-left (scene subject by default)
  * @param {boolean} [options.chrome=true]      mount the engine's own dock/legend/panel/tools
  * @param {function}[options.onElementOpen]    called with each opened element
+ * @param {string}  [options.assetBasePath]    prefix for GLTF_ASSET asset_path resolution
  */
 export async function createTwinViewer({
   mount,
@@ -77,6 +79,7 @@ export async function createTwinViewer({
   decor = null,
   chrome = true,
   onElementOpen = null,
+  assetBasePath = "",
   tweenMs = DEFAULT_TWEEN_MS
 }) {
   if (!mount) throw new TypeError("createTwinViewer requires a mount element");
@@ -102,6 +105,56 @@ export async function createTwinViewer({
   const built = builder.build(scene);
 
   mergeContextBuildings(built.root, built.byId, built.clickable);
+
+  // ── GLTF_ASSET hydration ─────────────────────────────────────────────────────────────────
+  // Elements built as GLTF_ASSET start life as a placeholder sphere so the scene is
+  // interactive immediately. Each one is replaced in place by its real geometry as the
+  // GLB arrives; a failed load keeps the placeholder, which stays pickable and keeps its
+  // evidence colour, so a missing asset degrades visibly instead of silently vanishing.
+  const gltfPlaceholders = [];
+  built.root.traverse(node => {
+    if (node.userData?.isGltfPlaceholder && node.userData.assetPath) gltfPlaceholders.push(node);
+  });
+
+  function hydrateAvatars() {
+    return Promise.all(gltfPlaceholders.map(async placeholder => {
+      const element = scene.elements.find(e => e.id === placeholder.name.replace("gltf-placeholder-", ""));
+      if (!element) return null;
+      const assetPath = placeholder.userData.assetPath;
+      const url = assetBasePath ? `${assetBasePath.replace(/\/$/, "")}/${assetPath}` : assetPath;
+      try {
+        const {group, meshes} = await loadAvatar({url, element, materials});
+
+        // Placement already lives on the placeholder; the loader re-reads it from the
+        // element, so drop the loader's own transform and reuse the placeholder's parent slot.
+        group.position.set(0, 0, 0);
+        group.rotation.set(0, 0, 0);
+        group.scale.set(1, 1, 1);
+
+        for (const mesh of meshes) {
+          built.clickable.push(mesh);
+        }
+        // The placeholder sphere goes; its transform node stays and adopts the real meshes.
+        for (const child of [...placeholder.children]) placeholder.remove(child);
+        placeholder.add(group);
+        placeholder.userData.hydrated = true;
+        built.byId.set(element.id, placeholder);
+        return element.id;
+      } catch (error) {
+        placeholder.userData.loadError = String(error?.message ?? error);
+        console.warn(`twin-engine: GLB load failed for ${element.id} (${url}) — keeping placeholder`);
+        return null;
+      }
+    })).then(ids => {
+      const loaded = ids.filter(Boolean);
+      if (loaded.length) {
+        // The picker holds `built.clickable` by reference and re-reads it on every
+        // pick, so the newly pushed meshes are hittable without re-registering.
+        applyCurrentProfile(profile);
+      }
+      return loaded;
+    });
+  }
 
   const realismDecor = new THREE.Group();
   realismDecor.name = "twin-realism-decor";
@@ -248,6 +301,10 @@ export async function createTwinViewer({
     return profile;
   }
 
+  // Kick off GLB hydration now that profile application is wired. The scene is already
+  // interactive; avatars swap in as they arrive.
+  const avatarsReady = gltfPlaceholders.length ? hydrateAvatars() : Promise.resolve([]);
+
   // ── picking ──────────────────────────────────────────────────────────────────────────────
   const picker = createPicker({renderer: viewer.renderer, camera: viewer.camera, targets: built.clickable, sceneElements: scene.elements});
   viewer.renderer.domElement.addEventListener("click", event => {
@@ -301,6 +358,11 @@ export async function createTwinViewer({
     get hour() { return hour; },
     setProfile,
     setHour: setSun,
+    /**
+     * Resolves once every GLTF_ASSET element has either adopted its real geometry or
+     * kept its placeholder after a failed load. Resolves to the ids that hydrated.
+     */
+    avatarsReady,
     goToStage: (index, options = {}) => machine.goTo(index, {now: performance.now(), ...options}),
     goToStageId: (id, options = {}) => machine.goToId(id, {now: performance.now(), ...options}),
     openElementById: id => openElement(scene.elements.find(element => element.id === id)),

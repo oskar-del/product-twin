@@ -1,0 +1,54 @@
+{
+  "_comment": "Room definitions for the shoppable-room compiler. Every base item is a channel-tracked twin: BUY resolves to its commerce.affiliate_link verbatim. IKEA is NOT an approved channel and must never appear here.",
+  "approved_channels": ["newport", "vidaxl-outdoor"],
+  "rooms": [
+    {
+      "room_id": "newport-living",
+      "scene_id": "SCENE_SHOPPABLE_ROOM_NEWPORT_LIVING_V01",
+      "label": "Newport Living Room — shoppable product display",
+      "channel": "newport",
+      "shell": {"size": [6, 2.7, 5], "intended_use": "LIVING", "window": {"size": [2.4, 1.6, 0.12], "position": [0, 1.7, 2.5], "label": "South window"}},
+      "layout": [
+        {"twin": "PT_NEWPORT_58855", "id": "SOFA",        "position": [0, 0, -1.8],    "rotation_y_deg": 0},
+        {"twin": "PT_NEWPORT_51086", "id": "COFFEE_TABLE","position": [0, 0, -0.2],    "rotation_y_deg": 0},
+        {"twin": "PT_NEWPORT_98365", "id": "ARMCHAIR",    "position": [2.0, 0, -0.9],  "rotation_y_deg": -30},
+        {"twin": "PT_NEWPORT_98685", "id": "SIDE_TABLE",  "position": [-1.7, 0, -1.5], "rotation_y_deg": 0},
+        {"twin": "PT_NEWPORT_11960", "id": "SIDEBOARD",   "position": [-2.6, 0, 0.6],  "rotation_y_deg": 90},
+        {"twin": "PT_NEWPORT_61313", "id": "RUG",         "position": [0, 0.006, -0.7],"rotation_y_deg": 0},
+        {"twin": "PT_NEWPORT_69598", "id": "FLOOR_LAMP",  "position": [2.4, 0, -2.1],  "rotation_y_deg": 0}
+      ],
+      "attach": [
+        {"twin": "PT_NEWPORT_67284", "attach_to": "PT_NEWPORT_58855", "slot_id": "seat_back"},
+        {"twin": "PT_NEWPORT_67292", "attach_to": "PT_NEWPORT_58855", "slot_id": "seat_back"},
+        {"twin": "PT_NEWPORT_98240", "attach_to": "PT_NEWPORT_51086", "slot_id": "top"}
+      ],
+      "navigation": [
+        {"id": "ROOM", "label": "Room", "camera": [4.5, 3.2, 4.5], "target": [0, 0.8, -0.5], "visible_groups": ["TERRAIN", "ROOM", "OPENING", "FURNITURE"], "cutaway": false, "labels": false},
+        {"id": "SEATING", "label": "Seating area", "camera": [2.8, 1.8, 2.2], "target": [0, 0.5, -1.0], "visible_groups": ["FURNITURE", "TERRAIN"], "cutaway": false, "labels": true},
+        {"id": "STORAGE", "label": "Sideboard wall", "camera": [-1.5, 1.6, 2.5], "target": [-2.5, 0.8, 0.6], "visible_groups": ["FURNITURE", "TERRAIN", "ROOM"], "cutaway": false, "labels": true}
+      ]
+    },
+    {
+      "room_id": "vidaxl-terrace",
+      "scene_id": "SCENE_SHOPPABLE_ROOM_VIDAXL_TERRACE_V01",
+      "label": "vidaXL Terrace — shoppable outdoor display",
+      "channel": "vidaxl-outdoor",
+      "shell": {"size": [7, 0.1, 6], "intended_use": "TERRACE", "open_air": true},
+      "layout": [
+        {"twin": "PT_VIDAXL-OUTDOOR_340789",  "id": "OUTDOOR_RUG",   "position": [-1.4, 0.006, -1.2], "rotation_y_deg": 0},
+        {"twin": "PT_VIDAXL-OUTDOOR_362241",  "id": "DINING_TABLE",  "position": [-1.4, 0, -1.2],  "rotation_y_deg": 0},
+        {"twin": "PT_VIDAXL-OUTDOOR_4004912", "id": "CHAIR_N",       "position": [-1.4, 0, -2.3],  "rotation_y_deg": 180},
+        {"twin": "PT_VIDAXL-OUTDOOR_4004912", "id": "CHAIR_S",       "position": [-1.4, 0, -0.1],  "rotation_y_deg": 0},
+        {"twin": "PT_VIDAXL-OUTDOOR_4005109", "id": "PARASOL",       "position": [-1.4, 0, -1.2],  "rotation_y_deg": 0},
+        {"twin": "PT_VIDAXL-OUTDOOR_366494",  "id": "CORNER_SOFA",   "position": [2.2, 0, -1.9],   "rotation_y_deg": -45},
+        {"twin": "PT_VIDAXL-OUTDOOR_368280",  "id": "SUN_LOUNGER",   "position": [2.1, 0, 1.6],    "rotation_y_deg": 90}
+      ],
+      "attach": [],
+      "navigation": [
+        {"id": "TERRACE", "label": "Terrace", "camera": [5.5, 4.0, 5.5], "target": [0, 0.6, -0.6], "visible_groups": ["TERRAIN", "ROOM", "FURNITURE"], "cutaway": false, "labels": false},
+        {"id": "DINING", "label": "Dining under the parasol", "camera": [1.5, 2.2, 2.0], "target": [-1.4, 0.7, -1.2], "visible_groups": ["FURNITURE", "TERRAIN"], "cutaway": false, "labels": true},
+        {"id": "LOUNGE", "label": "Lounge corner", "camera": [5.0, 2.0, 1.0], "target": [2.2, 0.5, -1.0], "visible_groups": ["FURNITURE", "TERRAIN"], "cutaway": false, "labels": true}
+      ]
+    }
+  ]
+}

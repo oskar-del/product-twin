@@ -1,0 +1,509 @@
+{
+  "scene_version": "twin-scene/v0.1",
+  "entity_type": "ShoppableRoomSceneExport",
+  "scene_id": "SCENE_SHOPPABLE_TERRACE_VIDAXL_V01",
+  "generated_at": "2026-09-07T22:29:10.046Z",
+  "subject": {
+    "label": "vidaXL Terrace — shoppable, channel-tracked",
+    "identity_evidence_class": "CONCEPT",
+    "identity_scope": "SYNTHETIC_SHOPPABLE_TERRACE"
+  },
+  "coordinate_system": {
+    "frame": "LOCAL_ENU",
+    "axes": {
+      "x": "EAST",
+      "y": "UP",
+      "z": "NORTH"
+    },
+    "origin_wgs84": [
+      0,
+      0
+    ],
+    "horizontal_reference": "SYNTHETIC — not a real location",
+    "vertical_reference": "LOCAL_RELATIVE_UNCALIBRATED",
+    "linear_units": "metre",
+    "evidence_class": "CONCEPT",
+    "limitations": [
+      "Synthetic terrace — not a real site."
+    ]
+  },
+  "source_bindings": [
+    {
+      "path": "scripts/compile-vidaxl-terrace.mjs",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "ROOM_COMPILER"
+    },
+    {
+      "path": "../repo-avatar-factory/data/vidaxl-outdoor/vidaxl-outdoor-catalog.jsonl",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "CHANNEL_CATALOG"
+    }
+  ],
+  "evidence_classes": [
+    "AUTHORITATIVE",
+    "INDICATIVE",
+    "DERIVED",
+    "REPORTED_UNVERIFIED",
+    "CONCEPT"
+  ],
+  "legal_claim_policy": {
+    "visualisation_allowed": true,
+    "concept_design_allowed": true,
+    "blocked_claims": [
+      "LEGAL_BOUNDARY",
+      "REGISTERED_AREA",
+      "ENTITLEMENT"
+    ],
+    "rule": "No 3D proxy exists for this channel. Every piece is a box at the size its own title states — a placement aid, not a fit claim. BUY links carry the channel's tracking parameters verbatim."
+  },
+  "presentation": {
+    "profiles": [
+      "INTELLIGENCE",
+      "REALISTIC",
+      "SYSTEMS"
+    ],
+    "default_profile": "INTELLIGENCE",
+    "default_stage": "TERRACE"
+  },
+  "navigation": [
+    {
+      "id": "TERRACE",
+      "label": "Terrace",
+      "camera": [
+        5.2,
+        3.6,
+        5
+      ],
+      "target": [
+        0,
+        0.6,
+        -0.4
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "ROOM",
+        "FURNITURE"
+      ],
+      "cutaway": false,
+      "labels": false
+    },
+    {
+      "id": "LOUNGE",
+      "label": "Lounge",
+      "camera": [
+        1.6,
+        1.7,
+        2.4
+      ],
+      "target": [
+        -0.9,
+        0.45,
+        -1.1
+      ],
+      "visible_groups": [
+        "FURNITURE",
+        "TERRAIN"
+      ],
+      "cutaway": false,
+      "labels": true
+    },
+    {
+      "id": "SUN",
+      "label": "Sun deck",
+      "camera": [
+        4.4,
+        2,
+        3.2
+      ],
+      "target": [
+        2.2,
+        0.4,
+        0.8
+      ],
+      "visible_groups": [
+        "FURNITURE",
+        "TERRAIN"
+      ],
+      "cutaway": false,
+      "labels": true
+    }
+  ],
+  "elements": [
+    {
+      "id": "TERRACE_DECK",
+      "type": "TERRAIN",
+      "label": "Terrace deck",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 9,
+        "segments": 1,
+        "vertices": [
+          [
+            -4.5,
+            0,
+            -3
+          ],
+          [
+            4.5,
+            0,
+            -3
+          ],
+          [
+            -4.5,
+            0,
+            3
+          ],
+          [
+            4.5,
+            0,
+            3
+          ]
+        ],
+        "method": "FLAT",
+        "height_reference": "LOCAL_RELATIVE"
+      },
+      "source_refs": [
+        "VIDAXL_TERRACE_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic terrace deck for product display."
+      ]
+    },
+    {
+      "id": "HOUSE_FACADE",
+      "type": "ROOM",
+      "label": "House facade",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          7,
+          2.8,
+          0.3
+        ],
+        "position": [
+          0,
+          1.4,
+          -2.75
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "OUTDOOR"
+      },
+      "source_refs": [
+        "VIDAXL_TERRACE_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic facade to anchor the terrace."
+      ]
+    },
+    {
+      "id": "LOUNGE_SOFA",
+      "type": "FURNITURE",
+      "label": "vidaXL Trädgårdsoffa med kudde Antracit 200,5 x 70 x 85,5 cm Stål (2005×700×855 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.005,
+          0.855,
+          0.7
+        ],
+        "position": [
+          -0.9,
+          0.4275,
+          -1.6
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "VIDAXL catalog row 42007549",
+        "GTIN 8721158889775"
+      ],
+      "limitations": [
+        "No 3D proxy exists for this row; shown as a box at nominal scale.",
+        "Dimensions are not derived from geometry and are not a fit claim."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Trädgårdsoffa med kudde Antracit 200,5 x 70 x 85,5 cm Stål",
+        "brand": "vidaXL",
+        "product_url": "https://www.vidaxl.se/e/vidaXLTrädgårdsoffamedkuddeAntracit200,5x70x85,5cmStål/8721158889775.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=42007549&fid=1333&url=https://www.vidaxl.se/e/vidaXLTrädgårdsoffamedkuddeAntracit200,5x70x85,5cmStål/8721158889775.html",
+        "image_url": "https://vdxl.im/8721158889775_mo-im_en_hd_1.jpg",
+        "price": 1945,
+        "currency": "SEK",
+        "category": "Utesoffor",
+        "color": "Antracit",
+        "material": null,
+        "availability": "in_stock",
+        "sku": "42007549",
+        "gtin": "8721158889775",
+        "channel": "vidaxl"
+      }
+    },
+    {
+      "id": "LOUNGE_TABLE",
+      "type": "FURNITURE",
+      "label": "vidaXL Trädgårdsbord 110x60x45 cm massivt akaciaträ (1100×600×450 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.1,
+          0.45,
+          0.6
+        ],
+        "position": [
+          -0.9,
+          0.225,
+          -0.35
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "VIDAXL catalog row 316401",
+        "GTIN 8720286543535"
+      ],
+      "limitations": [
+        "No 3D proxy exists for this row; shown as a box at nominal scale.",
+        "Dimensions are not derived from geometry and are not a fit claim."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Trädgårdsbord 110x60x45 cm massivt akaciaträ",
+        "brand": "vidaXL",
+        "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardsbord-110x60x45-cm-massivt-akaciatra/8720286543535.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=316401&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardsbord-110x60x45-cm-massivt-akaciatra/8720286543535.html",
+        "image_url": "https://vdxl.im/8720286543535_a_en_hd_1.jpg?t=1707396296",
+        "price": 2180,
+        "currency": "SEK",
+        "category": "Utebord",
+        "color": "Brun",
+        "material": null,
+        "availability": "in_stock",
+        "sku": "316401",
+        "gtin": "8720286543535",
+        "channel": "vidaxl"
+      }
+    },
+    {
+      "id": "TERRACE_CHAIR",
+      "type": "FURNITURE",
+      "label": "vidaXL Trädgårdsstol med dyna antracit 63x65x76 cm PP-rotting (630×650×760 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.63,
+          0.76,
+          0.65
+        ],
+        "position": [
+          0.75,
+          0.38,
+          -0.75
+        ],
+        "rotation_y_deg": -52
+      },
+      "source_refs": [
+        "VIDAXL catalog row 315639",
+        "GTIN 8720286231166"
+      ],
+      "limitations": [
+        "No 3D proxy exists for this row; shown as a box at nominal scale.",
+        "Dimensions are not derived from geometry and are not a fit claim."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Trädgårdsstol med dyna antracit 63x65x76 cm PP-rotting",
+        "brand": "vidaXL",
+        "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardsstol-med-dyna-antracit-63x65x76-cm-pp-rotting/8720286231166.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=315639&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardsstol-med-dyna-antracit-63x65x76-cm-pp-rotting/8720286231166.html",
+        "image_url": "https://vdxl.im/8720286231166_a_en_hd_1.jpg?t=1750300062",
+        "price": 1382,
+        "currency": "SEK",
+        "category": "Utestolar",
+        "color": "Antracit",
+        "material": null,
+        "availability": "in_stock",
+        "sku": "315639",
+        "gtin": "8720286231166",
+        "channel": "vidaxl"
+      }
+    },
+    {
+      "id": "SUNBED",
+      "type": "FURNITURE",
+      "label": "vidaXL Solstol Reclining Grå 200.5 x 70 x 75 cm konstrotting (2005×700×750 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.005,
+          0.75,
+          0.7
+        ],
+        "position": [
+          2.3,
+          0.375,
+          0.9
+        ],
+        "rotation_y_deg": 90
+      },
+      "source_refs": [
+        "VIDAXL catalog row 42004126",
+        "GTIN 8721158874320"
+      ],
+      "limitations": [
+        "No 3D proxy exists for this row; shown as a box at nominal scale.",
+        "Dimensions are not derived from geometry and are not a fit claim."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Solstol Reclining Grå 200.5 x 70 x 75 cm konstrotting",
+        "brand": "vidaXL",
+        "product_url": "https://www.vidaxl.se/e/vidaXLSolstolRecliningGrå200.5x70x75cmkonstrotting/8721158874320.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=42004126&fid=1333&url=https://www.vidaxl.se/e/vidaXLSolstolRecliningGrå200.5x70x75cmkonstrotting/8721158874320.html",
+        "image_url": "https://vdxl.im/8721158874320_mo-im_en_hd_1.jpg",
+        "price": 2114,
+        "currency": "SEK",
+        "category": "Solsängar",
+        "color": "Grå",
+        "material": null,
+        "availability": "in_stock",
+        "sku": "42004126",
+        "gtin": "8721158874320",
+        "channel": "vidaxl"
+      }
+    },
+    {
+      "id": "GARDEN_BENCH",
+      "type": "FURNITURE",
+      "label": "vidaXL Utomhusbänk 150 x 56 x 90 cm Massivt Akaciaträ Naturlig (1500×560×900 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.5,
+          0.9,
+          0.56
+        ],
+        "position": [
+          -2.6,
+          0.45,
+          0.6
+        ],
+        "rotation_y_deg": 90
+      },
+      "source_refs": [
+        "VIDAXL catalog row 4105525",
+        "GTIN 8721158784971"
+      ],
+      "limitations": [
+        "No 3D proxy exists for this row; shown as a box at nominal scale.",
+        "Dimensions are not derived from geometry and are not a fit claim."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Utomhusbänk 150 x 56 x 90 cm Massivt Akaciaträ Naturlig",
+        "brand": "vidaXL",
+        "product_url": "https://www.vidaxl.se/e/vidaXLUtomhusbänk150x56x90cmMassivtAkaciaträNaturlig/8721158784971.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=4105525&fid=1333&url=https://www.vidaxl.se/e/vidaXLUtomhusbänk150x56x90cmMassivtAkaciaträNaturlig/8721158784971.html",
+        "image_url": "https://vdxl.im/8721158784971_mo-im_en_hd_1.jpg",
+        "price": 1568,
+        "currency": "SEK",
+        "category": "Trädgårdsbänkar",
+        "color": "Brun",
+        "material": null,
+        "availability": "in_stock",
+        "sku": "4105525",
+        "gtin": "8721158784971",
+        "channel": "vidaxl"
+      }
+    },
+    {
+      "id": "PLANTER",
+      "type": "FURNITURE",
+      "label": "vidaXL Utomhus planteringsbänk 86,5 x 48,5 x 106 cm Massivt Akaciaträ (865×485×1060 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.865,
+          1.06,
+          0.485
+        ],
+        "position": [
+          -2.6,
+          0.53,
+          -1.9
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "VIDAXL catalog row 903084",
+        "GTIN 8721451003441"
+      ],
+      "limitations": [
+        "No 3D proxy exists for this row; shown as a box at nominal scale.",
+        "Dimensions are not derived from geometry and are not a fit claim."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Utomhus planteringsbänk 86,5 x 48,5 x 106 cm Massivt Akaciaträ",
+        "brand": "vidaXL",
+        "product_url": "https://www.vidaxl.se/e/vidaXLUtomhusplanteringsbänk86,5x48,5x106cmMassivtAkaciaträ/8721451003441.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=903084&fid=1333&url=https://www.vidaxl.se/e/vidaXLUtomhusplanteringsbänk86,5x48,5x106cmMassivtAkaciaträ/8721451003441.html",
+        "image_url": "https://vdxl.im/8721451003441_mo-im_en_px16_1.jpg?t=1780677455711",
+        "price": 1038,
+        "currency": "SEK",
+        "category": "Planteringsbänkar",
+        "color": "Brun",
+        "material": null,
+        "availability": "in_stock",
+        "sku": "903084",
+        "gtin": "8721451003441",
+        "channel": "vidaxl"
+      }
+    },
+    {
+      "id": "SEAT_CUSHION",
+      "type": "FURNITURE",
+      "label": "vidaXL Utomhuskudde 2 st Tyg Blå och Vit 120 x 50 x 7 cm (1200×500×70 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.2,
+          0.07,
+          0.5
+        ],
+        "position": [
+          -0.9,
+          0.48,
+          -1.6
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "VIDAXL catalog row 42040527",
+        "GTIN 8721451241713"
+      ],
+      "limitations": [
+        "No 3D proxy exists for this row; shown as a box at nominal scale.",
+        "Dimensions are not derived from geometry and are not a fit claim."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Utomhuskudde 2 st Tyg Blå och Vit 120 x 50 x 7 cm",
+        "brand": "vidaXL",
+        "product_url": "https://www.vidaxl.se/e/vidaXLUtomhuskudde2stTygBlåochVit120x50x7cm/8721451241713.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=42040527&fid=1333&url=https://www.vidaxl.se/e/vidaXLUtomhuskudde2stTygBlåochVit120x50x7cm/8721451241713.html",
+        "image_url": "https://vdxl.im/8721451241713_mo-im_en_px16_1.jpg?t=1775789075481",
+        "price": 522,
+        "currency": "SEK",
+        "category": "Stols- & soffdynor",
+        "color": "Blå",
+        "material": null,
+        "availability": "in_stock",
+        "sku": "42040527",
+        "gtin": "8721451241713",
+        "channel": "vidaxl"
+      }
+    }
+  ]
+}

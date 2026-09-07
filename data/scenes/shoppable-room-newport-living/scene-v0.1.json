@@ -1,0 +1,680 @@
+{
+  "scene_version": "twin-scene/v0.1",
+  "entity_type": "ShoppableRoomSceneExport",
+  "scene_id": "SCENE_SHOPPABLE_ROOM_NEWPORT_LIVING_V01",
+  "generated_at": "2026-09-07T22:29:09.256Z",
+  "subject": {
+    "label": "Newport Living Room — shoppable, channel-tracked",
+    "identity_evidence_class": "CONCEPT",
+    "identity_scope": "SYNTHETIC_SHOPPABLE_ROOM"
+  },
+  "coordinate_system": {
+    "frame": "LOCAL_ENU",
+    "axes": {
+      "x": "EAST",
+      "y": "UP",
+      "z": "NORTH"
+    },
+    "origin_wgs84": [
+      0,
+      0
+    ],
+    "horizontal_reference": "SYNTHETIC — not a real location",
+    "vertical_reference": "LOCAL_RELATIVE_UNCALIBRATED",
+    "linear_units": "metre",
+    "evidence_class": "CONCEPT",
+    "limitations": [
+      "Synthetic room — not a real site."
+    ]
+  },
+  "source_bindings": [
+    {
+      "path": "scripts/compile-newport-room.mjs",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "ROOM_COMPILER"
+    },
+    {
+      "path": "../repo-avatar-factory/data/newport/newport-catalog.jsonl",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "CHANNEL_CATALOG"
+    },
+    {
+      "path": "../repo-avatar-factory/data/geometry/avatars/",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "G2_PROXY_LIBRARY"
+    }
+  ],
+  "evidence_classes": [
+    "AUTHORITATIVE",
+    "INDICATIVE",
+    "DERIVED",
+    "REPORTED_UNVERIFIED",
+    "CONCEPT"
+  ],
+  "legal_claim_policy": {
+    "visualisation_allowed": true,
+    "concept_design_allowed": true,
+    "blocked_claims": [
+      "LEGAL_BOUNDARY",
+      "REGISTERED_AREA",
+      "ENTITLEMENT"
+    ],
+    "rule": "A shoppable room claims nothing about any real site. Product geometry is a G2 proxy: real footprint and height, representative shape. BUY links carry the channel's own tracking parameters verbatim."
+  },
+  "presentation": {
+    "profiles": [
+      "INTELLIGENCE",
+      "REALISTIC",
+      "SYSTEMS"
+    ],
+    "default_profile": "REALISTIC",
+    "default_stage": "ROOM"
+  },
+  "navigation": [
+    {
+      "id": "ROOM",
+      "label": "Room",
+      "camera": [
+        4.5,
+        3.2,
+        4.5
+      ],
+      "target": [
+        0,
+        0.8,
+        -0.5
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "ROOM",
+        "OPENING",
+        "FURNITURE"
+      ],
+      "cutaway": false,
+      "labels": false
+    },
+    {
+      "id": "SEATING",
+      "label": "Seating area",
+      "camera": [
+        2.8,
+        1.8,
+        2.2
+      ],
+      "target": [
+        0,
+        0.5,
+        -1
+      ],
+      "visible_groups": [
+        "FURNITURE",
+        "TERRAIN"
+      ],
+      "cutaway": false,
+      "labels": true
+    },
+    {
+      "id": "MEDIA",
+      "label": "Media wall",
+      "camera": [
+        -1.4,
+        1.6,
+        2.6
+      ],
+      "target": [
+        -2.5,
+        0.7,
+        0.4
+      ],
+      "visible_groups": [
+        "FURNITURE",
+        "TERRAIN",
+        "ROOM"
+      ],
+      "cutaway": false,
+      "labels": true
+    }
+  ],
+  "elements": [
+    {
+      "id": "ROOM_FLOOR",
+      "type": "TERRAIN",
+      "label": "Room floor",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 8,
+        "segments": 1,
+        "vertices": [
+          [
+            -4,
+            0,
+            -4
+          ],
+          [
+            4,
+            0,
+            -4
+          ],
+          [
+            -4,
+            0,
+            4
+          ],
+          [
+            4,
+            0,
+            4
+          ]
+        ],
+        "method": "FLAT",
+        "height_reference": "LOCAL_RELATIVE"
+      },
+      "source_refs": [
+        "NEWPORT_ROOM_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic room shell for product display."
+      ]
+    },
+    {
+      "id": "ROOM_VOLUME",
+      "type": "ROOM",
+      "label": "Living room",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          6,
+          2.7,
+          5
+        ],
+        "position": [
+          0,
+          1.35,
+          0
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "LIVING"
+      },
+      "source_refs": [
+        "NEWPORT_ROOM_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic room for product display."
+      ]
+    },
+    {
+      "id": "ROOM_WINDOW",
+      "type": "OPENING",
+      "label": "South window",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.4,
+          1.6,
+          0.12
+        ],
+        "position": [
+          0,
+          1.7,
+          2.5
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT_ROOM_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic opening for light."
+      ]
+    },
+    {
+      "id": "SOFA",
+      "type": "FURNITURE",
+      "label": "San Francisco soffa sand 4-sits (2000×900×850 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-100112-g2-proxy.glb",
+        "position": [
+          0,
+          0,
+          -1.75
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT catalog row 100112",
+        "GTIN 7340066723127",
+        "G2 proxy data/geometry/avatars/newport-100112-g2-proxy.glb"
+      ],
+      "limitations": [
+        "Geometry level G2: promoted universal proxy — real footprint and height, representative shape.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "San Francisco soffa sand 4-sits",
+        "brand": "Newport",
+        "product_url": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/san-francisco-soffa-sand-4-sits",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100112&fid=2175&url=https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/san-francisco-soffa-sand-4-sits",
+        "image_url": "https://cdn-images.newporthome.eu/product/b580afe290704f19a49ffbed8d7408e9/list-45/list.jpg",
+        "price": 45900,
+        "currency": "SEK",
+        "category": "2-4 sitssoffor",
+        "color": "Beige",
+        "material": "Polyester/bokträ/furu/mdf/plywood",
+        "availability": "in_stock",
+        "sku": "100112",
+        "gtin": "7340066723127",
+        "channel": "newport"
+      }
+    },
+    {
+      "id": "COFFEE_TABLE",
+      "type": "FURNITURE",
+      "label": "Delano soffbord rund valnöt beige (1200×600×400 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-100600-g2-proxy.glb",
+        "position": [
+          0,
+          0,
+          -0.25
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT catalog row 100600",
+        "G2 proxy data/geometry/avatars/newport-100600-g2-proxy.glb"
+      ],
+      "limitations": [
+        "Geometry level G2: promoted universal proxy — real footprint and height, representative shape.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Delano soffbord rund valnöt beige",
+        "brand": "Ruth & Joanna",
+        "product_url": "https://www.newport.se/shop/mobler/bord/soffbord/delano-soffbord-rund-valnot-beige",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100600&fid=2175&url=https://www.newport.se/shop/mobler/bord/soffbord/delano-soffbord-rund-valnot-beige",
+        "image_url": "https://cdn-images.newporthome.eu/product/3556a8c8b9ad4148a484cc9055e1d71f/list-45/list.jpg",
+        "price": 22449,
+        "currency": "SEK",
+        "category": "Soffbord",
+        "color": "Beige / Brun",
+        "material": "Mässing / Trä / Marmor",
+        "availability": "in_stock",
+        "sku": "100600",
+        "gtin": null,
+        "channel": "newport"
+      }
+    },
+    {
+      "id": "ARMCHAIR",
+      "type": "FURNITURE",
+      "label": "San Francisco fåtölj sand (750×800×850 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-100121-g2-proxy.glb",
+        "position": [
+          2.05,
+          0,
+          -0.95
+        ],
+        "rotation_y_deg": -34
+      },
+      "source_refs": [
+        "NEWPORT catalog row 100121",
+        "GTIN 7340066723059",
+        "G2 proxy data/geometry/avatars/newport-100121-g2-proxy.glb"
+      ],
+      "limitations": [
+        "Geometry level G2: promoted universal proxy — real footprint and height, representative shape.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "San Francisco fåtölj sand",
+        "brand": "Newport",
+        "product_url": "https://www.newport.se/shop/mobler/fatoljer/tygfatoljer/san-francisco-fatolj-sand-1-sits",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100121&fid=2175&url=https://www.newport.se/shop/mobler/fatoljer/tygfatoljer/san-francisco-fatolj-sand-1-sits",
+        "image_url": "https://cdn-images.newporthome.eu/product/be3af752600f4990b81c38d8bdf08999/list-45/list.jpg",
+        "price": 21900,
+        "currency": "SEK",
+        "category": "Tygfåtöljer",
+        "color": "Beige",
+        "material": "Polyester/bokträ/furu/mdf/plywood",
+        "availability": "in_stock",
+        "sku": "100121",
+        "gtin": "7340066723059",
+        "channel": "newport"
+      }
+    },
+    {
+      "id": "SIDE_TABLE",
+      "type": "FURNITURE",
+      "label": "Erin sidobord mässing valnöt beige (500×500×550 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-100599-g2-proxy.glb",
+        "position": [
+          -1.7,
+          0,
+          -1.5
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT catalog row 100599",
+        "G2 proxy data/geometry/avatars/newport-100599-g2-proxy.glb"
+      ],
+      "limitations": [
+        "Geometry level G2: promoted universal proxy — real footprint and height, representative shape.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Erin sidobord mässing valnöt beige",
+        "brand": "Ruth & Joanna",
+        "product_url": "https://www.newport.se/shop/mobler/bord/sidobord/erin-sidobord-massing-valnot-beige",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100599&fid=2175&url=https://www.newport.se/shop/mobler/bord/sidobord/erin-sidobord-massing-valnot-beige",
+        "image_url": "https://cdn-images.newporthome.eu/product/13dd3aaad2504ab4a3efdfb39acc2bb1/list-45/list.jpg",
+        "price": 10449,
+        "currency": "SEK",
+        "category": "Sidobord",
+        "color": "Beige / Guld",
+        "material": "Mässing / Marmor / Valnöt",
+        "availability": "in_stock",
+        "sku": "100599",
+        "gtin": null,
+        "channel": "newport"
+      }
+    },
+    {
+      "id": "MEDIA_UNIT",
+      "type": "FURNITURE",
+      "label": "Douglas TV-bänk lodge top (800×400×800 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-19168-g2-proxy.glb",
+        "position": [
+          -2.65,
+          0,
+          0.4
+        ],
+        "rotation_y_deg": 90
+      },
+      "source_refs": [
+        "NEWPORT catalog row 19168",
+        "G2 proxy data/geometry/avatars/newport-19168-g2-proxy.glb"
+      ],
+      "limitations": [
+        "Geometry level G2: promoted universal proxy — real footprint and height, representative shape.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Douglas TV-bänk lodge top",
+        "brand": "Ocean House",
+        "product_url": "https://www.newport.se/shop/mobler/forvaring/tv-bankar-och-mediabankar/tv-bank-douglas-med-lodge-top",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=19168&fid=2175&url=https://www.newport.se/shop/mobler/forvaring/tv-bankar-och-mediabankar/tv-bank-douglas-med-lodge-top",
+        "image_url": "https://cdn-images.newporthome.eu/product/63f7029f9dc411ebb34e000c29064583/list-45/list.jpg",
+        "price": 20195,
+        "currency": "SEK",
+        "category": "TV-bänkar & Mediabänkar",
+        "color": "Brun / Vit",
+        "material": "Furu",
+        "availability": "in_stock",
+        "sku": "19168",
+        "gtin": null,
+        "channel": "newport"
+      }
+    },
+    {
+      "id": "FOOTSTOOL",
+      "type": "FURNITURE",
+      "label": "San Francisco fotpall sand (750×800×850 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-100611-g2-proxy.glb",
+        "position": [
+          1.15,
+          0,
+          0.35
+        ],
+        "rotation_y_deg": 12
+      },
+      "source_refs": [
+        "NEWPORT catalog row 100611",
+        "GTIN 7340066723080",
+        "G2 proxy data/geometry/avatars/newport-100611-g2-proxy.glb"
+      ],
+      "limitations": [
+        "Geometry level G2: promoted universal proxy — real footprint and height, representative shape.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "San Francisco fotpall sand",
+        "brand": "Newport",
+        "product_url": "https://www.newport.se/shop/mobler/fatoljer/fotpallar/san-francisco-fotpall-sand",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100611&fid=2175&url=https://www.newport.se/shop/mobler/fatoljer/fotpallar/san-francisco-fotpall-sand",
+        "image_url": "https://cdn-images.newporthome.eu/product/d14851fd4d0d42978de5554275b28168/list-45/list.jpg",
+        "price": 8900,
+        "currency": "SEK",
+        "category": "Fotpallar",
+        "color": null,
+        "material": "Polyester/bokträ/furu/mdf/plywood",
+        "availability": "in_stock",
+        "sku": "100611",
+        "gtin": "7340066723080",
+        "channel": "newport"
+      }
+    },
+    {
+      "id": "RUG",
+      "type": "FURNITURE",
+      "label": "Key Border matta camel (1700×2400×12 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-54125-g2-proxy.glb",
+        "position": [
+          0,
+          0.004,
+          -0.7
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT catalog row 54125",
+        "GTIN 848539021420",
+        "G2 proxy data/geometry/avatars/newport-54125-g2-proxy.glb"
+      ],
+      "limitations": [
+        "Geometry level G2: promoted universal proxy — real footprint and height, representative shape.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Key Border matta camel",
+        "brand": "Jonathan Adler",
+        "product_url": "https://www.newport.se/shop/textil/mattor/ullmattor/key-border-matta-camel",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=54125&fid=2175&url=https://www.newport.se/shop/textil/mattor/ullmattor/key-border-matta-camel",
+        "image_url": "https://cdn-images.newporthome.eu/product/95d8d68c6c9e11ec990d000c29064583/list-45/list.jpg",
+        "price": 54795,
+        "currency": "SEK",
+        "category": "Ullmattor",
+        "color": "Beige / Vit",
+        "material": "Ull",
+        "availability": "in_stock",
+        "sku": "54125",
+        "gtin": "848539021420",
+        "channel": "newport"
+      }
+    },
+    {
+      "id": "CUSHION_A",
+      "type": "FURNITURE",
+      "label": "Palla kudde Canberra sand (600×400×600 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-43808-g2-proxy.glb",
+        "position": [
+          -0.5,
+          0.442,
+          -2.05
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT catalog row 43808",
+        "G2 proxy data/geometry/avatars/newport-43808-g2-proxy.glb"
+      ],
+      "limitations": [
+        "Geometry level G2: promoted universal proxy — real footprint and height, representative shape.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Palla kudde Canberra sand",
+        "brand": "Eichholtz",
+        "product_url": "https://www.newport.se/shop/textil/kuddar/prydnadskuddar/palla-kudde-canberra-sand-37",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=43808&fid=2175&url=https://www.newport.se/shop/textil/kuddar/prydnadskuddar/palla-kudde-canberra-sand-37",
+        "image_url": "https://cdn-images.newporthome.eu/product/64a2772f9dc411ebb34e000c29064583/list-45/list.jpg",
+        "price": 2049,
+        "currency": "SEK",
+        "category": "Prydnadskuddar",
+        "color": "Beige",
+        "material": "Canberra sand",
+        "availability": "in_stock",
+        "sku": "43808",
+        "gtin": null,
+        "channel": "newport"
+      }
+    },
+    {
+      "id": "CUSHION_B",
+      "type": "FURNITURE",
+      "label": "Nomad woven kuddfodral linne (500×500×150 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-67284-g2-proxy.glb",
+        "position": [
+          0,
+          0.442,
+          -2.05
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT catalog row 67284",
+        "GTIN 7340172925521",
+        "G2 proxy data/geometry/avatars/newport-67284-g2-proxy.glb"
+      ],
+      "limitations": [
+        "Geometry level G2: promoted universal proxy — real footprint and height, representative shape.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Nomad woven kuddfodral linne",
+        "brand": "Artwood",
+        "product_url": "https://www.newport.se/shop/textil/kuddar/kuddfodral/nomad-woven-kuddfodral-linne-60x40-out",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=67284&fid=2175&url=https://www.newport.se/shop/textil/kuddar/kuddfodral/nomad-woven-kuddfodral-linne-60x40-out",
+        "image_url": "https://cdn-images.newporthome.eu/product/efbbd683b37d11eebd4a0050569f928a/list-45/list.jpg",
+        "price": 899,
+        "currency": "SEK",
+        "category": "Kuddfodral",
+        "color": "Beige",
+        "material": "Olefin / Polyester",
+        "availability": "in_stock",
+        "sku": "67284",
+        "gtin": "7340172925521",
+        "channel": "newport"
+      }
+    },
+    {
+      "id": "VASE",
+      "type": "FURNITURE",
+      "label": "Reef vas pale sand (160×160×300 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-98240-g2-proxy.glb",
+        "position": [
+          -0.2,
+          0.4,
+          -0.25
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT catalog row 98240",
+        "GTIN 7340172900450",
+        "G2 proxy data/geometry/avatars/newport-98240-g2-proxy.glb"
+      ],
+      "limitations": [
+        "Geometry level G2: promoted universal proxy — real footprint and height, representative shape.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Reef vas pale sand",
+        "brand": "Artwood",
+        "product_url": "https://www.newport.se/shop/inredning/krukor-vaser/vaser/reef-vas-pale-sand",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=98240&fid=2175&url=https://www.newport.se/shop/inredning/krukor-vaser/vaser/reef-vas-pale-sand",
+        "image_url": "https://cdn-images.newporthome.eu/product/475bf6ded1ac11ef947e0050569f928a/list-45/list.jpg",
+        "price": 2229,
+        "currency": "SEK",
+        "category": "Vaser",
+        "color": "Beige",
+        "material": "Glas",
+        "availability": "in_stock",
+        "sku": "98240",
+        "gtin": "7340172900450",
+        "channel": "newport"
+      }
+    },
+    {
+      "id": "TABLE_LAMP",
+      "type": "FURNITURE",
+      "label": "Blaze 16\" bordslampa uppladdningsbar brons (300×300×500 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-100443-g2-proxy.glb",
+        "position": [
+          -1.7,
+          0.55,
+          -1.5
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT catalog row 100443",
+        "G2 proxy data/geometry/avatars/newport-100443-g2-proxy.glb"
+      ],
+      "limitations": [
+        "Geometry level G2: promoted universal proxy — real footprint and height, representative shape.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Blaze 16\" bordslampa uppladdningsbar brons",
+        "brand": "Visual Comfort",
+        "product_url": "https://www.newport.se/shop/belysning/lampor/bordslampor/blaze-16-bordslampa-uppladdningsbar-brons",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100443&fid=2175&url=https://www.newport.se/shop/belysning/lampor/bordslampor/blaze-16-bordslampa-uppladdningsbar-brons",
+        "image_url": "https://cdn-images.newporthome.eu/product/08f227032f3d11f0947e0050569f928a/list-45/list.jpg",
+        "price": 18995,
+        "currency": "SEK",
+        "category": "Bordslampor",
+        "color": "Guld / Brun",
+        "material": null,
+        "availability": "in_stock",
+        "sku": "100443",
+        "gtin": null,
+        "channel": "newport"
+      }
+    }
+  ]
+}

@@ -7,7 +7,7 @@
  * meeting with no wifi.
  *
  *   node scripts/bundle-twin-scene.mjs <scene.json> [--out <file.html>]
- *                                      [--title "…"] [--eyebrow "…"] [--no-minify]
+ *                                      [--title "…"] [--eyebrow "…"] [--asset-base <url>] [--no-minify]
  *
  * The scene is parsed against the twin-scene contract first: a bundle is a published artifact,
  * and publishing a scene the engine would refuse to render is worse than failing here.
@@ -71,9 +71,29 @@ ${escapeScript(script)}
 `;
 }
 
-export async function bundleTwinScene({scenePath, outPath, title, eyebrow, minify = true, generatedAt}) {
+export async function bundleTwinScene({scenePath, outPath, title, eyebrow, minify = true, generatedAt, assetBasePath = ""}) {
   const absoluteScene = path.resolve(root, scenePath);
   const document = JSON.parse(fs.readFileSync(absoluteScene, "utf8"));
+
+  // Inline every GLTF_ASSET as a data: URI. Without this the bundle still
+  // fetches .glb files by relative path at runtime — which 404s wherever the
+  // HTML is served from a directory that isn't the repo root, and silently
+  // degrades every product to a placeholder sphere. "Self-contained" has to
+  // include the geometry, or the room has no furniture in it.
+  const assetReport = {inlined: 0, missing: [], bytes: 0};
+  for (const element of document.elements ?? []) {
+    const assetPath = element.geometry?.asset_path;
+    if (element.geometry?.primitive !== "GLTF_ASSET" || !assetPath) continue;
+    if (/^(data:|https?:)/.test(assetPath)) continue;
+    const abs = path.resolve(root, assetPath);
+    if (!fs.existsSync(abs)) { assetReport.missing.push(`${element.id} → ${assetPath}`); continue; }
+    const bytes = fs.readFileSync(abs);
+    element.geometry.asset_path = `data:model/gltf-binary;base64,${bytes.toString("base64")}`;
+    element.geometry.asset_source_path = assetPath;   // keep provenance readable
+    assetReport.inlined++;
+    assetReport.bytes += bytes.length;
+  }
+
   const scene = parseScene(document);
 
   const workDir = path.join(root, ".runtime/bundle");
@@ -87,10 +107,11 @@ export async function bundleTwinScene({scenePath, outPath, title, eyebrow, minif
 import {createTwinViewer} from ${JSON.stringify(path.join(root, "engine/twin-engine.mjs"))};
 
 const BRAND = ${JSON.stringify(eyebrowLabel)};
+const ASSET_BASE = ${JSON.stringify(assetBasePath)};
 
 const boot = document.getElementById("twin-boot");
 try {
-  globalThis.twinViewer = await createTwinViewer({mount: document.getElementById("twin-stage"), sceneDocument, brand: BRAND});
+  globalThis.twinViewer = await createTwinViewer({mount: document.getElementById("twin-stage"), sceneDocument, brand: BRAND, assetBasePath: ASSET_BASE});
   boot.remove();
 } catch (error) {
   boot.textContent = "This twin could not start: " + error.message;
@@ -122,7 +143,7 @@ try {
   fs.mkdirSync(path.dirname(output), {recursive: true});
   fs.writeFileSync(output, html);
 
-  return {scene, html, outputPath: output, bytes: Buffer.byteLength(html), scriptBytes: Buffer.byteLength(script)};
+  return {scene, html, outputPath: output, bytes: Buffer.byteLength(html), scriptBytes: Buffer.byteLength(script), assetReport};
 }
 
 const invokedDirectly = process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1]);
@@ -130,7 +151,7 @@ const invokedDirectly = process.argv[1] && fileURLToPath(import.meta.url) === pa
 if (invokedDirectly) {
   const options = parseArgs(process.argv.slice(2));
   if (!options.scene) {
-    console.error("usage: node scripts/bundle-twin-scene.mjs <scene.json> [--out <file.html>] [--title …] [--eyebrow …] [--no-minify]");
+    console.error("usage: node scripts/bundle-twin-scene.mjs <scene.json> [--out <file.html>] [--title …] [--eyebrow …] [--asset-base <url>] [--no-minify]");
     process.exit(2);
   }
   const built = await bundleTwinScene({
@@ -138,6 +159,7 @@ if (invokedDirectly) {
     outPath: options.out,
     title: options.title,
     eyebrow: options.eyebrow,
+    assetBasePath: options["asset-base"] ?? "",
     minify: options.minify,
     generatedAt: new Date().toISOString()
   });
@@ -145,5 +167,12 @@ if (invokedDirectly) {
   console.log(`bundled ${built.scene.scene_id}`);
   console.log(`  → ${path.relative(root, built.outputPath)}  ${kb(built.bytes)} (script ${kb(built.scriptBytes)})`);
   console.log(`  ${built.scene.elements.length} elements · ${built.scene.stages.length} stages · evidence ${JSON.stringify(evidenceProfile(built.scene))}`);
+  const {inlined, missing, bytes} = built.assetReport;
+  console.log(`  assets         ${inlined} GLB inlined (${kb(bytes)})${missing.length ? ` · ${missing.length} MISSING` : ""}`);
+  for (const m of missing) console.log(`    ✗ missing asset: ${m}`);
+  if (missing.length) {
+    console.error("  NOT self-contained: missing geometry would render as placeholder spheres");
+    process.exit(1);
+  }
   console.log("  self-contained: no network requests at runtime");
 }

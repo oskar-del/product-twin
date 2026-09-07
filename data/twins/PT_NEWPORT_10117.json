@@ -1,0 +1,71 @@
+{
+  "twin_id": "PT_NEWPORT_10117",
+  "kind": "product",
+  "category_id": "FFE.SEATING.SOFA",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "Artwood",
+    "model": "Viscount soffa vintage cigar 3-sits",
+    "article_no": "10117",
+    "configuration": "Viscount soffa vintage cigar 3-sits"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 2000,
+      "height": 850,
+      "depth": 900
+    },
+    "evidence_state": "measured_from_shipped_g2_proxy_envelope; retailer feed carries no dimensions"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_affiliate",
+      "role": "affiliate_retail_reference",
+      "product_url": "https://www.newport.se/shop/mobler/soffor/skinnsoffor/viscount-soffa-lader-vintage-cigar-3-sits",
+      "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=10117&fid=2175&url=https://www.newport.se/shop/mobler/soffor/skinnsoffor/viscount-soffa-lader-vintage-cigar-3-sits",
+      "gtin": "7340172900900",
+      "verification": {
+        "state": "feed_row_verified",
+        "feed_id": "2175"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_realistic_planning_proxy",
+    "avatar_id": "AVATAR_NEWPORT_10117_G2_PROXY",
+    "asset_path": "data/geometry/avatars/newport-10117-g2-proxy.glb",
+    "shape_claim": "realistic planning proxy; exact manufacturer industrial-design geometry and material artwork are not claimed",
+    "placement": {
+      "origin": "floor_center"
+    }
+  },
+  "commerce": {
+    "product_name": "Viscount soffa vintage cigar 3-sits",
+    "brand": "Artwood",
+    "product_url": "https://www.newport.se/shop/mobler/soffor/skinnsoffor/viscount-soffa-lader-vintage-cigar-3-sits",
+    "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=10117&fid=2175&url=https://www.newport.se/shop/mobler/soffor/skinnsoffor/viscount-soffa-lader-vintage-cigar-3-sits",
+    "image_url": "https://cdn-images.newporthome.eu/product/63d1f23e9dc411ebb34e000c29064583/list-45/list.jpg",
+    "price": "43795 SEK",
+    "currency": "SEK",
+    "category": "FFE.SEATING.SOFA",
+    "color": "Brun"
+  },
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "seat_back",
+        "type": "pillow",
+        "capacity": 3
+      },
+      {
+        "slot_id": "seat",
+        "type": "throw",
+        "capacity": 1
+      }
+    ]
+  }
+}

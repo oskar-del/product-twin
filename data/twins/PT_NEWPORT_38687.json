@@ -1,0 +1,61 @@
+{
+  "twin_id": "PT_NEWPORT_38687",
+  "kind": "product",
+  "category_id": "FFE.TEXTILES.CUSHION",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "Classic Collection",
+    "model": "Zebra kudde grå",
+    "article_no": "38687",
+    "configuration": "Zebra kudde grå"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 450,
+      "depth": 450,
+      "height": 150
+    },
+    "evidence_state": "concept_placeholder_envelope; DECOR bucket has no G2 proxy and the feed carries no dimensions"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_affiliate",
+      "role": "affiliate_retail_reference",
+      "product_url": "https://www.newport.se/shop/textil/kuddar/prydnadskuddar/zebra-kudde-gra-50x50",
+      "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=38687&fid=2175&url=https://www.newport.se/shop/textil/kuddar/prydnadskuddar/zebra-kudde-gra-50x50",
+      "gtin": "7340110811350",
+      "verification": {
+        "state": "feed_row_verified",
+        "feed_id": "2175"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "concept_placeholder",
+    "asset_path": "data/geometry/avatars/concept-cushion-b.glb",
+    "shape_claim": "concept placeholder geometry; only the commerce identity is real"
+  },
+  "commerce": {
+    "product_name": "Zebra kudde grå",
+    "brand": "Classic Collection",
+    "product_url": "https://www.newport.se/shop/textil/kuddar/prydnadskuddar/zebra-kudde-gra-50x50",
+    "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=38687&fid=2175&url=https://www.newport.se/shop/textil/kuddar/prydnadskuddar/zebra-kudde-gra-50x50",
+    "image_url": "https://cdn-images.newporthome.eu/product/647882839dc411ebb34e000c29064583/list-45/list.jpg",
+    "price": "489 SEK",
+    "currency": "SEK",
+    "category": "FFE.TEXTILES.CUSHION",
+    "color": "Grå / Vit"
+  },
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "pillow",
+    "footprint_mm": {
+      "width": 450,
+      "depth": 450,
+      "height": 150
+    }
+  }
+}

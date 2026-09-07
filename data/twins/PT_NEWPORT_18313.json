@@ -1,0 +1,61 @@
+{
+  "twin_id": "PT_NEWPORT_18313",
+  "kind": "product",
+  "category_id": "FFE.DECOR.VASE",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "Klong",
+    "model": "Äng vas mässing",
+    "article_no": "18313",
+    "configuration": "Äng vas mässing"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 450,
+      "depth": 450,
+      "height": 150
+    },
+    "evidence_state": "concept_placeholder_envelope; DECOR bucket has no G2 proxy and the feed carries no dimensions"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_affiliate",
+      "role": "affiliate_retail_reference",
+      "product_url": "https://www.newport.se/shop/inredning/krukor-vaser/vaser/ang-vas-massing-l",
+      "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=18313&fid=2175&url=https://www.newport.se/shop/inredning/krukor-vaser/vaser/ang-vas-massing-l",
+      "gtin": "7350077843202",
+      "verification": {
+        "state": "feed_row_verified",
+        "feed_id": "2175"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G0",
+    "state": "concept_placeholder",
+    "asset_path": "data/geometry/avatars/concept-vase.glb",
+    "shape_claim": "concept placeholder geometry; only the commerce identity is real"
+  },
+  "commerce": {
+    "product_name": "Äng vas mässing",
+    "brand": "Klong",
+    "product_url": "https://www.newport.se/shop/inredning/krukor-vaser/vaser/ang-vas-massing-l",
+    "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=18313&fid=2175&url=https://www.newport.se/shop/inredning/krukor-vaser/vaser/ang-vas-massing-l",
+    "image_url": "https://cdn-images.newporthome.eu/product/63f1fee29dc411ebb34e000c29064583/list-45/list.jpg",
+    "price": "1799 SEK",
+    "currency": "SEK",
+    "category": "FFE.DECOR.VASE",
+    "color": "Guld"
+  },
+  "attach": {
+    "role": "attach",
+    "accepts_slot_type": "centerpiece",
+    "footprint_mm": {
+      "width": 450,
+      "depth": 450,
+      "height": 150
+    }
+  }
+}

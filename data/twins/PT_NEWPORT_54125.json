@@ -1,0 +1,56 @@
+{
+  "twin_id": "PT_NEWPORT_54125",
+  "kind": "product",
+  "category_id": "FFE.TEXTILES.RUG",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "Jonathan Adler",
+    "model": "Key Border matta camel",
+    "article_no": "54125",
+    "configuration": "Key Border matta camel"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1700,
+      "height": 12,
+      "depth": 2400
+    },
+    "evidence_state": "measured_from_shipped_g2_proxy_envelope; retailer feed carries no dimensions"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_affiliate",
+      "role": "affiliate_retail_reference",
+      "product_url": "https://www.newport.se/shop/textil/mattor/ullmattor/key-border-matta-camel",
+      "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=54125&fid=2175&url=https://www.newport.se/shop/textil/mattor/ullmattor/key-border-matta-camel",
+      "gtin": "848539021420",
+      "verification": {
+        "state": "feed_row_verified",
+        "feed_id": "2175"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_realistic_planning_proxy",
+    "avatar_id": "AVATAR_NEWPORT_54125_G2_PROXY",
+    "asset_path": "data/geometry/avatars/newport-54125-g2-proxy.glb",
+    "shape_claim": "realistic planning proxy; exact manufacturer industrial-design geometry and material artwork are not claimed",
+    "placement": {
+      "origin": "floor_center"
+    }
+  },
+  "commerce": {
+    "product_name": "Key Border matta camel",
+    "brand": "Jonathan Adler",
+    "product_url": "https://www.newport.se/shop/textil/mattor/ullmattor/key-border-matta-camel",
+    "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=54125&fid=2175&url=https://www.newport.se/shop/textil/mattor/ullmattor/key-border-matta-camel",
+    "image_url": "https://cdn-images.newporthome.eu/product/95d8d68c6c9e11ec990d000c29064583/list-45/list.jpg",
+    "price": "54795 SEK",
+    "currency": "SEK",
+    "category": "FFE.TEXTILES.RUG",
+    "color": "Beige / Vit"
+  }
+}

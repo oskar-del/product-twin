@@ -1,0 +1,56 @@
+{
+  "twin_id": "PT_NEWPORT_104061",
+  "kind": "product",
+  "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
+  "identity": {
+    "state": "verified",
+    "manufacturer": "Eichholtz",
+    "model": "Arabella golvlampa bordeaux red finish",
+    "article_no": "104061",
+    "configuration": "Arabella golvlampa bordeaux red finish"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 400,
+      "height": 1500,
+      "depth": 400
+    },
+    "evidence_state": "measured_from_shipped_g2_proxy_envelope; retailer feed carries no dimensions"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_affiliate",
+      "role": "affiliate_retail_reference",
+      "product_url": "https://www.newport.se/shop/belysning/lampor/golvlampor/arabella-golvlampa-bordeaux-red-finish",
+      "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=104061&fid=2175&url=https://www.newport.se/shop/belysning/lampor/golvlampor/arabella-golvlampa-bordeaux-red-finish",
+      "gtin": "8720875197200",
+      "verification": {
+        "state": "feed_row_verified",
+        "feed_id": "2175"
+      },
+      "refresh_policy": "live_required_before_quote_or_purchase",
+      "mutable_catalog_data_persisted": false
+    }
+  ],
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_realistic_planning_proxy",
+    "avatar_id": "AVATAR_NEWPORT_104061_G2_PROXY",
+    "asset_path": "data/geometry/avatars/newport-104061-g2-proxy.glb",
+    "shape_claim": "realistic planning proxy; exact manufacturer industrial-design geometry and material artwork are not claimed",
+    "placement": {
+      "origin": "floor_center"
+    }
+  },
+  "commerce": {
+    "product_name": "Arabella golvlampa bordeaux red finish",
+    "brand": "Eichholtz",
+    "product_url": "https://www.newport.se/shop/belysning/lampor/golvlampor/arabella-golvlampa-bordeaux-red-finish",
+    "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=104061&fid=2175&url=https://www.newport.se/shop/belysning/lampor/golvlampor/arabella-golvlampa-bordeaux-red-finish",
+    "image_url": "https://cdn-images.newporthome.eu/product/bf444eab978811f093690050569f928a/list-45/list.jpg",
+    "price": "14295 SEK",
+    "currency": "SEK",
+    "category": "ELECTRICAL.LUMINAIRES.FLOOR",
+    "color": "Röd"
+  }
+}

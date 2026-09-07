@@ -1,0 +1,143 @@
+{
+  "twin_id": "PT_NEWPORT_51086",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Pittsburgh soffbord brun",
+    "manufacturer": "Artwood",
+    "article_no": "51086",
+    "ean": "7340172901259",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.TABLE.COFFEE",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": {
+      "width": 1200,
+      "depth": 600,
+      "height": 400
+    }
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 18395,
+    "sale_price": null,
+    "ean": "7340172901259",
+    "product_url": "https://www.newport.se/shop/mobler/bord/soffbord/pittsburgh-soffbord-brun",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/bord/soffbord/pittsburgh-soffbord-brun",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=51086&fid=2175&url=https://www.newport.se/shop/mobler/bord/soffbord/pittsburgh-soffbord-brun",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/92200135ede311eb8525000c29064583/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": "Brun",
+    "material": "Ek"
+  },
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_NEWPORT_51086_G2_PROXY",
+    "asset_path": "data/geometry/avatars/newport-51086-g2-proxy.glb",
+    "scale_state": "category_default 1200x600x400mm",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "placement": {
+      "origin": "floor_center",
+      "floor_contact": true
+    },
+    "appearance": {
+      "pbr_state": "spine_colour_by_category",
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G2_promoted_universal_proxy"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "51086",
+      "product_url": "https://www.newport.se/shop/mobler/bord/soffbord/pittsburgh-soffbord-brun"
+    }
+  ],
+  "attach_points": {
+    "base_type": "table",
+    "slots": [
+      {
+        "slot_id": "tabletop_center",
+        "slot_type": "surface",
+        "position": {
+          "x": 0,
+          "y": 0.4,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.DECOR.VASE",
+          "FFE.DECOR.CANDLE",
+          "FFE.DECOR.BOOK",
+          "FFE.DECOR.PLANT",
+          "FFE.DECOR.FRAGRANCE"
+        ],
+        "max_items": 3,
+        "size_constraint_mm": {
+          "max_width": 600,
+          "max_depth": 300,
+          "max_height": 500
+        }
+      },
+      {
+        "slot_id": "tabletop_left",
+        "slot_type": "surface",
+        "position": {
+          "x": -0.36,
+          "y": 0.4,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.DECOR",
+          "ELECTRICAL.LUMINAIRES.TABLE"
+        ],
+        "max_items": 1
+      },
+      {
+        "slot_id": "tabletop_right",
+        "slot_type": "surface",
+        "position": {
+          "x": 0.36,
+          "y": 0.4,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.DECOR",
+          "ELECTRICAL.LUMINAIRES.TABLE"
+        ],
+        "max_items": 1
+      }
+    ]
+  },
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "top",
+        "type": "centerpiece",
+        "capacity": 1
+      }
+    ]
+  }
+}

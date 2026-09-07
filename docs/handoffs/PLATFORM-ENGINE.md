@@ -210,5 +210,35 @@ One checkout = one executor. Deliverable-first: every block ends with something 
        this machine), and the hard-coded "expected 9 stale offer blockers" now derives the
        expected count from the manifest's `line_items.length + substitutions.length`.
     Gate: 13 suites, 622 checks, all green.
+  - **REDIRECT executed (2026-09-08) — Newport + vidaXL inventory, IKEA retired as the shoppable surface:**
+    - **Catalog-driven rooms.** `engine/compile/catalog-room.mjs` selects real rows per role and
+      `engine/compile/catalog-row.mjs` turns them into elements. BUY = the row's `affiliate_link`
+      **verbatim** — verified byte-identical to the catalog for all 11 Newport picks and in the
+      live DOM (`a=1884564186&as=2106320328&tk=1&cupa_sku=100112`).
+    - **Selection is derived, not typed.** For each role the compiler filters the catalog
+      (leaf category · in stock · proxy where required · envelope caps) and picks the best
+      *dimensional fit*, ties broken by catalog id — so the same catalog always yields the same
+      room. Emergent result: fit-scoring converged on one coherent sand-toned "San Francisco"
+      series across sofa/armchair/footstool without any styling rule.
+    - **Dimensions come from geometry.** `engine/compile/glb-bounds.mjs` parses the GLB JSON chunk
+      and unions the node hierarchy → real AABB (sofa 2000×900×850 mm). No dimension is typed.
+      For vidaXL, which ships no proxies, size is parsed from the title's stated cm (12.7% of rows
+      carry it) and only three-axis rows are eligible.
+    - **GLB hydration wired (this was broken).** `GLTF_ASSET` elements had always rendered as
+      placeholder spheres — `gltf-loader.mjs` existed but nothing consumed `isGltfPlaceholder`.
+      The engine now hydrates each placeholder in place, keeps a failed load visible as its
+      evidence-coloured placeholder, and exposes `viewer.avatarsReady`. Bundler gained
+      `--asset-base`. **Verified in browser: 11/11 GLBs fetched 200 and hydrated.**
+    - **Newport living room** — 14 elements, 11 shoppable, 11 channel-tracked, 11 INDICATIVE (G2)
+      + 3 CONCEPT shell. **vidaXL terrace** — 9 elements, 7 shoppable, 7 channel-tracked, all
+      CONCEPT (boxes at title-stated size; the claim policy says "not a fit claim").
+    - Gate `engine:catalog:test`, 124 checks. Suites 14.
+  - **⚠️ TWO EXECUTORS IN ONE CHECKOUT (2026-09-08).** While this session worked, another session
+    was executing the *same* redirect in `../repo-platform` via a different design (config-driven
+    `config/shoppable-rooms.json` + approved-channel guard, Newport GLBs copied into the repo),
+    leaving `scripts/compile-shoppable-room.mjs`, `scripts/test-shoppable-room.mjs` and
+    `scripts/test-blender-export.mjs` modified and uncommitted. **This session committed only its
+    own files and left that work untouched.** The two approaches overlap and need reconciling —
+    Brain's call, not mine. NOT checked: whether the other session's tests pass on their own.
   - **NOT done:** Milestone 2's formal exit (Essence consuming the engine *on a branch that has
     both*) is still blocked on D1. Commits are on `agent/platform-engine` in `../repo-platform`.

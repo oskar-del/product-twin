@@ -1,54 +1,69 @@
 /**
  * Shoppable room scene compiler.
  *
- * Reads twin records from data/twins/, places them in a furnished living room,
+ * Reads twin records from data/twins/, places them per config/shoppable-rooms.json,
  * and emits a twin-scene/v0.1 document with commerce overlays on every element.
  * The scene is contract-valid and renders in the engine with click → product panel.
  *
- *   node scripts/compile-shoppable-room.mjs [--out path]
+ * BUY links come from the twin's commerce.affiliate_link VERBATIM — those are the
+ * channel-tracked links that actually earn. A room built on an unapproved channel
+ * (IKEA, for one) is a rendering with no revenue behind it, so the channel guard
+ * below is a hard failure, not a warning.
+ *
+ *   node scripts/compile-shoppable-room.mjs [--room <id>|all] [--out path]
  */
 import fs from "node:fs";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
-import {parseScene, PRIMITIVES} from "../engine/core/scene-contract.mjs";
+import {parseScene} from "../engine/core/scene-contract.mjs";
 import {resolveComposition} from "../engine/compose/attach-resolver.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const twinsDir = path.join(root, "data/twins");
+const roomsConfigPath = path.join(root, "config/shoppable-rooms.json");
 
-function loadTwin(filename) {
-  return JSON.parse(fs.readFileSync(path.join(twinsDir, filename), "utf8"));
+const CONFIG = JSON.parse(fs.readFileSync(roomsConfigPath, "utf8"));
+const APPROVED = new Set(CONFIG.approved_channels);
+
+function loadTwin(twinId) {
+  const p = path.join(twinsDir, `${twinId}.json`);
+  if (!fs.existsSync(p)) throw new Error(`twin not found: ${twinId} (${path.relative(root, p)})`);
+  return JSON.parse(fs.readFileSync(p, "utf8"));
 }
 
-function dimMetres(twin) {
-  const d = twin.physical?.dimensions_mm;
-  if (!d) return null;
-  return {w: d.width / 1000, d: d.depth / 1000, h: d.height / 1000};
-}
-
-function commerceFromTwin(twin) {
-  const direct = twin.commerce;
-  const ei = twin.external_identities?.[0];
-  const mfr = twin.identity?.manufacturer ?? "";
-  const model = twin.identity?.model ?? twin.twin_id;
-  return {
-    product_name: direct?.product_name ?? `${mfr} ${model}`.trim(),
-    brand: direct?.brand ?? (mfr || null),
-    product_url: direct?.product_url ?? ei?.product_url ?? null,
-    buy_url: direct?.buy_url ?? ei?.affiliate_link ?? ei?.product_url ?? null,
-    image_url: direct?.image_url ?? twin.media?.hero_image ?? null,
-    price: direct?.price ?? null,
-    currency: direct?.currency ?? null,
-    category: direct?.category ?? twin.category_id ?? null,
-    color: direct?.color ?? null,
-    dimensions_label: formatDimensions(twin)
-  };
+/** The channel a twin's revenue is tracked through, derived from its twin_id family. */
+function channelOf(twin) {
+  const m = /^PT_([A-Z0-9-]+)_/.exec(twin.twin_id ?? "");
+  return m ? m[1].toLowerCase() : "unknown";
 }
 
 function formatDimensions(twin) {
   const d = twin.physical?.dimensions_mm;
   if (!d) return null;
   return `${d.width}×${d.depth}×${d.height} mm`;
+}
+
+function commerceFromTwin(twin) {
+  const c = twin.commerce ?? {};
+  const price = c.sale_price ?? c.unit_price ?? null;
+  return {
+    product_name: twin.identity?.name ?? twin.twin_id,
+    brand: twin.identity?.manufacturer ?? null,
+    merchant: c.merchant ?? null,
+    product_url: c.product_url ?? null,
+    // Channel-tracked, verbatim. Never rewritten, never substituted.
+    buy_url: c.affiliate_link ?? null,
+    image_url: twin.image?.primary_url ?? null,
+    price,
+    list_price: c.sale_price != null ? c.unit_price : null,
+    currency: c.currency ?? null,
+    category: twin.category_id ?? null,
+    color: twin.appearance?.color ?? null,
+    material: twin.appearance?.material ?? null,
+    available: c.available ?? null,
+    observed_at: c.observed_at ?? null,
+    dimensions_label: formatDimensions(twin)
+  };
 }
 
 const GEOMETRY_LEVEL_TO_EVIDENCE = {
@@ -60,140 +75,146 @@ const GEOMETRY_LEVEL_TO_EVIDENCE = {
 
 function twinElement(twin, placement, id) {
   const level = twin.geometry?.level ?? "G0";
-  const evidenceClass = GEOMETRY_LEVEL_TO_EVIDENCE[level] ?? "CONCEPT";
-  const dims = dimMetres(twin);
-  const dimStr = dims ? ` (${twin.physical.dimensions_mm.width}×${twin.physical.dimensions_mm.depth}×${twin.physical.dimensions_mm.height} mm)` : "";
+  const dims = twin.physical?.dimensions_mm;
+  const dimStr = dims ? ` (${dims.width}×${dims.depth}×${dims.height} mm)` : "";
+  const derivedCat = twin.classification?.method === "DETERMINISTIC_TITLE_KEYWORD";
 
   return {
     id,
     type: "FURNITURE",
-    label: `${twin.identity?.manufacturer ?? ""} ${twin.identity?.model ?? twin.twin_id}${dimStr}`.trim(),
-    evidence_class: evidenceClass,
+    label: `${twin.identity?.name ?? twin.twin_id}${dimStr}`.trim(),
+    evidence_class: GEOMETRY_LEVEL_TO_EVIDENCE[level] ?? "CONCEPT",
     geometry: {
       primitive: "GLTF_ASSET",
       asset_path: twin.geometry.asset_path,
       position: placement.position,
       rotation_y_deg: placement.rotation_y_deg ?? 0
     },
-    source_refs: [`Product Twin ${twin.twin_id}`],
+    source_refs: [`Product Twin ${twin.twin_id}`, `Channel ${channelOf(twin)}`],
     limitations: [
       `Geometry level ${level}: ${twin.geometry.shape_claim ?? "proxy"}`,
       ...(twin.geometry.appearance?.exact_manufacturer_texture_or_finish_claimed === false
         ? ["Textures are representative, not manufacturer artwork."]
-        : [])
+        : []),
+      ...(derivedCat
+        ? ["Category DERIVED from merchant title text, not a feed taxonomy field."]
+        : []),
+      "Price and availability observed at ingest — re-check live before quote or purchase."
     ],
     commerce: commerceFromTwin(twin)
   };
 }
 
-// Room shell: a simple box room 6×5m, 2.7m ceiling
-function roomShell() {
-  return [
+function roomShell(shell) {
+  const [w, h, d] = shell.size;
+  const half = Math.max(w, d) / 2 + 1;
+  const elements = [
     {
       id: "ROOM_FLOOR",
       type: "TERRAIN",
-      label: "Room floor",
+      label: shell.open_air ? "Terrace deck" : "Room floor",
       evidence_class: "CONCEPT",
-      geometry: {primitive: "GRID_SURFACE", size_m: 8, segments: 1, vertices: [[-4, 0, -4], [4, 0, -4], [-4, 0, 4], [4, 0, 4]], method: "FLAT", height_reference: "LOCAL_RELATIVE"},
+      geometry: {
+        primitive: "GRID_SURFACE", size_m: half * 2, segments: 1,
+        vertices: [[-half, 0, -half], [half, 0, -half], [-half, 0, half], [half, 0, half]],
+        method: "FLAT", height_reference: "LOCAL_RELATIVE"
+      },
       source_refs: ["SHOPPABLE_ROOM_COMPILER"],
       limitations: ["Synthetic room shell for product display."]
     },
     {
       id: "ROOM_VOLUME",
       type: "ROOM",
-      label: "Living room",
+      label: shell.open_air ? "Terrace" : "Living room",
       evidence_class: "CONCEPT",
-      geometry: {primitive: "ROOM_VOLUME", size: [6, 2.7, 5], position: [0, 1.35, 0], rotation_y_deg: 0, intended_use: "LIVING"},
+      geometry: {primitive: "ROOM_VOLUME", size: [w, h, d], position: [0, h / 2, 0], rotation_y_deg: 0, intended_use: shell.intended_use},
       source_refs: ["SHOPPABLE_ROOM_COMPILER"],
       limitations: ["Synthetic room for product display."]
-    },
-    {
-      id: "ROOM_WINDOW",
-      type: "OPENING",
-      label: "South window",
-      evidence_class: "CONCEPT",
-      geometry: {primitive: "BOX", size: [2.4, 1.6, 0.12], position: [0, 1.7, 2.5], rotation_y_deg: 0},
-      source_refs: ["SHOPPABLE_ROOM_COMPILER"],
-      limitations: ["Synthetic opening for light."]
     }
   ];
+  if (shell.window) {
+    elements.push({
+      id: "ROOM_WINDOW",
+      type: "OPENING",
+      label: shell.window.label ?? "Window",
+      evidence_class: "CONCEPT",
+      geometry: {primitive: "BOX", size: shell.window.size, position: shell.window.position, rotation_y_deg: 0},
+      source_refs: ["SHOPPABLE_ROOM_COMPILER"],
+      limitations: ["Synthetic opening for light."]
+    });
+  }
+  return elements;
 }
 
-// Furniture placement: a realistic living room layout
-// Room is 6×5m centred at origin. Back wall at z=-2.5, front at z=+2.5.
-// Sofa against back wall, coffee table in front, armchair to the side,
-// TV bench on left wall, bookcase on right wall, rug under seating area,
-// floor lamp beside armchair, side table beside sofa.
-const FURNITURE_LAYOUT = [
-  {file: "PT_IKEA_KIVIK_49440597.json",     id: "SOFA",        position: [0, 0, -1.8],    rotation_y_deg: 0},
-  {file: "PT_IKEA_LISTERBY_30513904.json",  id: "COFFEE_TABLE", position: [0, 0, -0.2],   rotation_y_deg: 0},
-  {file: "PT_IKEA_POANG_39240787.json",      id: "ARMCHAIR",    position: [2.0, 0, -1.0],  rotation_y_deg: -30},
-  {file: "PT_IKEA_GLADOM_70578451.json",     id: "SIDE_TABLE",  position: [-1.6, 0, -1.5], rotation_y_deg: 0},
-  {file: "PT_IKEA_BESTA_89330691.json",      id: "TV_BENCH",    position: [-2.7, 0, 0.5],  rotation_y_deg: 90},
-  {file: "PT_IKEA_BILLY_00263850.json",      id: "BOOKCASE",    position: [2.7, 0, 0.8],   rotation_y_deg: -90},
-  {file: "PT_IKEA_LOHALS_30511288.json",     id: "RUG",         position: [0, 0.005, -0.8], rotation_y_deg: 0},
-  {file: "PT_IKEA_LAUTERS_30405042.json",    id: "FLOOR_LAMP",  position: [2.3, 0, -2.0],  rotation_y_deg: 0}
-];
-
-// Synthetic decor twins for attach-point demonstration
-const DECOR_TWINS = [
-  {twin_id: "DECOR_PILLOW_A", category_id: "FFE.TEXTILES.CUSHION", identity: {manufacturer: "Concept", model: "Linen cushion, natural"}, physical: {dimensions_mm: {width: 450, depth: 450, height: 150}}, geometry: {level: "G0", state: "concept_placeholder", asset_path: "data/geometry/avatars/concept-cushion-a.glb", shape_claim: "concept cushion"}, attach: {role: "attach", accepts_slot_type: "pillow", footprint_mm: {width: 450, depth: 450, height: 150}}, commerce: {product_name: "Linen cushion, natural", brand: "Concept", category: "FFE.TEXTILES.CUSHION"}},
-  {twin_id: "DECOR_PILLOW_B", category_id: "FFE.TEXTILES.CUSHION", identity: {manufacturer: "Concept", model: "Velvet cushion, sage"}, physical: {dimensions_mm: {width: 400, depth: 400, height: 130}}, geometry: {level: "G0", state: "concept_placeholder", asset_path: "data/geometry/avatars/concept-cushion-b.glb", shape_claim: "concept cushion"}, attach: {role: "attach", accepts_slot_type: "pillow", footprint_mm: {width: 400, depth: 400, height: 130}}, commerce: {product_name: "Velvet cushion, sage", brand: "Concept", category: "FFE.TEXTILES.CUSHION"}},
-  {twin_id: "DECOR_THROW", category_id: "FFE.TEXTILES.THROW", identity: {manufacturer: "Concept", model: "Wool throw, oatmeal"}, physical: {dimensions_mm: {width: 1300, depth: 800, height: 20}}, geometry: {level: "G0", state: "concept_placeholder", asset_path: "data/geometry/avatars/concept-throw.glb", shape_claim: "concept throw"}, attach: {role: "attach", accepts_slot_type: "throw", footprint_mm: {width: 1300, depth: 800, height: 20}}, commerce: {product_name: "Wool throw, oatmeal", brand: "Concept", category: "FFE.TEXTILES.THROW"}},
-  {twin_id: "DECOR_VASE", category_id: "FFE.DECOR.VASE", identity: {manufacturer: "Concept", model: "Ceramic vase, white"}, physical: {dimensions_mm: {width: 140, depth: 140, height: 280}}, geometry: {level: "G0", state: "concept_placeholder", asset_path: "data/geometry/avatars/concept-vase.glb", shape_claim: "concept vase"}, attach: {role: "attach", accepts_slot_type: "centerpiece", footprint_mm: {width: 140, depth: 140, height: 280}}, commerce: {product_name: "Ceramic vase, white", brand: "Concept", category: "FFE.DECOR.VASE"}}
-];
-
-// Attach-point composition: which decor attaches to which base
-const ATTACH_COMPOSITION = [
-  {twin_id: "DECOR_PILLOW_A", attach_to: "PT_IKEA_KIVIK_49440597", slot_id: "seat_back"},
-  {twin_id: "DECOR_PILLOW_B", attach_to: "PT_IKEA_KIVIK_49440597", slot_id: "seat_back"},
-  {twin_id: "DECOR_THROW", attach_to: "PT_IKEA_KIVIK_49440597", slot_id: "seat"},
-  {twin_id: "DECOR_VASE", attach_to: "PT_IKEA_LISTERBY_30513904", slot_id: "top"}
-];
-
-export function buildShoppableRoom() {
+export function buildRoom(roomDef) {
   const twinIndex = new Map();
+  const problems = [];
 
-  // Load base furniture twins
-  const compositionItems = FURNITURE_LAYOUT.map(item => {
-    const twin = loadTwin(item.file);
+  // A layout may place the same twin more than once (a pair of chairs), so the
+  // element id — not the twin_id — is what identifies a placement.
+  const placements = [];
+  for (const item of roomDef.layout) {
+    const twin = loadTwin(item.twin);
+    const ch = channelOf(twin);
+    if (!APPROVED.has(ch)) problems.push(`${twin.twin_id}: channel "${ch}" is not an approved channel`);
+    if (!twin.commerce?.affiliate_link) problems.push(`${twin.twin_id}: no affiliate_link — BUY would earn nothing`);
+    if (twin.geometry?.level !== "G2" && twin.geometry?.level !== "G3") {
+      problems.push(`${twin.twin_id}: geometry level ${twin.geometry?.level ?? "none"} — no renderable proxy`);
+    }
+    const asset = path.join(root, twin.geometry?.asset_path ?? "");
+    if (!fs.existsSync(asset)) problems.push(`${twin.twin_id}: asset missing at ${twin.geometry?.asset_path}`);
     twinIndex.set(twin.twin_id, twin);
-    return {twin_id: twin.twin_id, position: item.position, rotation_y_deg: item.rotation_y_deg};
-  });
-
-  // Register decor twins and add composition items
-  for (const decor of DECOR_TWINS) {
-    twinIndex.set(decor.twin_id, decor);
-  }
-  compositionItems.push(...ATTACH_COMPOSITION);
-
-  // Resolve attach positions
-  const {positioned, errors} = resolveComposition({items: compositionItems, twinIndex});
-  if (errors.length) console.warn(`  attach-resolver warnings: ${errors.join("; ")}`);
-
-  // Build id map from layout
-  const idByTwinId = new Map();
-  for (const item of FURNITURE_LAYOUT) {
-    const twin = loadTwin(item.file);
-    idByTwinId.set(twin.twin_id, item.id);
+    placements.push({id: item.id, twin, position: item.position, rotation_y_deg: item.rotation_y_deg ?? 0});
   }
 
-  // Build elements from resolved positions
-  const furnitureElements = positioned.map(item => {
-    const id = idByTwinId.get(item.twin.twin_id)
-      ?? item.twin.twin_id.toLowerCase().replace(/[^a-z0-9]+/g, "_");
-    return twinElement(item.twin, {position: item.position, rotation_y_deg: item.rotation_y_deg}, id);
-  });
+  // Attached decor resolves its position from the base's slot geometry.
+  const attachItems = [];
+  for (const a of roomDef.attach ?? []) {
+    const twin = loadTwin(a.twin);
+    const ch = channelOf(twin);
+    if (!APPROVED.has(ch)) problems.push(`${twin.twin_id}: channel "${ch}" is not an approved channel`);
+    if (!twin.commerce?.affiliate_link) problems.push(`${twin.twin_id}: no affiliate_link — BUY would earn nothing`);
+    twinIndex.set(twin.twin_id, twin);
+    attachItems.push({twin_id: a.twin, attach_to: a.attach_to, slot_id: a.slot_id});
+  }
+
+  const baseItems = placements.map(p => ({twin_id: p.twin.twin_id, position: p.position, rotation_y_deg: p.rotation_y_deg}));
+  const {positioned, errors} = resolveComposition({items: [...baseItems, ...attachItems], twinIndex});
+  if (errors.length) problems.push(...errors.map(e => `attach-resolver: ${e}`));
+
+  // Base elements keep their configured ids; attached ones are derived from the twin.
+  const baseIds = new Set(placements.map(p => p.twin.twin_id));
+  const usedBase = new Map();
+  const furnitureElements = [];
+  for (const item of positioned) {
+    const tid = item.twin.twin_id;
+    let id;
+    if (baseIds.has(tid) && !attachItems.some(a => a.twin_id === tid)) {
+      const seen = usedBase.get(tid) ?? 0;
+      id = placements.filter(p => p.twin.twin_id === tid)[seen]?.id
+        ?? `${tid}_${seen}`;
+      usedBase.set(tid, seen + 1);
+    } else {
+      id = tid.replace(/^PT_/, "").toLowerCase().replace(/[^a-z0-9]+/g, "_");
+    }
+    furnitureElements.push(twinElement(item.twin, {position: item.position, rotation_y_deg: item.rotation_y_deg}, id));
+  }
 
   const scene = {
     scene_version: "twin-scene/v0.1",
     entity_type: "ShoppableRoomSceneExport",
-    scene_id: "SCENE_SHOPPABLE_ROOM_IKEA_LIVING_V01",
+    scene_id: roomDef.scene_id,
     generated_at: new Date().toISOString(),
     subject: {
-      label: "IKEA Living Room — shoppable product display",
+      label: roomDef.label,
       identity_evidence_class: "CONCEPT",
       identity_scope: "SYNTHETIC_SHOPPABLE_ROOM"
+    },
+    commerce_channel: {
+      channel: roomDef.channel,
+      approved: APPROVED.has(roomDef.channel),
+      buy_link_policy: "commerce.affiliate_link verbatim — channel-tracked; never rewritten or substituted",
+      price_policy: "observed_at ingest; live re-check required before quote or purchase"
     },
     coordinate_system: {
       frame: "LOCAL_ENU",
@@ -207,6 +228,7 @@ export function buildShoppableRoom() {
     },
     source_bindings: [
       {path: "scripts/compile-shoppable-room.mjs", sha256: "RUNTIME_ONLY_NOT_COMMITTED", role: "ROOM_COMPILER"},
+      {path: "config/shoppable-rooms.json", sha256: "RUNTIME_ONLY_NOT_COMMITTED", role: "ROOM_DEFINITION"},
       {path: "data/twins/", sha256: "RUNTIME_ONLY_NOT_COMMITTED", role: "PRODUCT_TWIN_CATALOG"}
     ],
     evidence_classes: ["AUTHORITATIVE", "INDICATIVE", "DERIVED", "REPORTED_UNVERIFIED", "CONCEPT"],
@@ -219,41 +241,51 @@ export function buildShoppableRoom() {
     presentation: {
       profiles: ["INTELLIGENCE", "REALISTIC", "SYSTEMS"],
       default_profile: "REALISTIC",
-      default_stage: "ROOM"
+      default_stage: roomDef.navigation[0].id
     },
-    navigation: [
-      {id: "ROOM", label: "Room", camera: [4.5, 3.2, 4.5], target: [0, 0.8, -0.5], visible_groups: ["TERRAIN", "ROOM", "OPENING", "FURNITURE"], cutaway: false, labels: false},
-      {id: "SEATING", label: "Seating area", camera: [2.8, 1.8, 2.2], target: [0, 0.5, -1.0], visible_groups: ["FURNITURE", "TERRAIN"], cutaway: false, labels: true},
-      {id: "STORAGE", label: "Storage wall", camera: [-1.5, 1.6, 2.5], target: [-2.5, 0.8, 0.5], visible_groups: ["FURNITURE", "TERRAIN", "ROOM"], cutaway: false, labels: true}
-    ],
-    elements: [
-      ...roomShell(),
-      ...furnitureElements
-    ]
+    navigation: roomDef.navigation,
+    elements: [...roomShell(roomDef.shell), ...furnitureElements]
   };
 
-  return scene;
+  return {scene, problems};
 }
 
 const invokedDirectly = process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1]);
 
 if (invokedDirectly) {
-  const outArg = process.argv.indexOf("--out");
-  const outputPath = outArg !== -1 && process.argv[outArg + 1]
-    ? path.resolve(process.argv[outArg + 1])
-    : path.join(root, "data/scenes/shoppable-room-ikea-living/scene-v0.1.json");
+  const roomArg = process.argv.indexOf("--room");
+  const wanted = roomArg !== -1 && process.argv[roomArg + 1] ? process.argv[roomArg + 1] : "all";
+  const rooms = wanted === "all" ? CONFIG.rooms : CONFIG.rooms.filter(r => r.room_id === wanted);
+  if (!rooms.length) {
+    console.error(`no such room: ${wanted} (have ${CONFIG.rooms.map(r => r.room_id).join(", ")})`);
+    process.exit(1);
+  }
 
-  const scene = buildShoppableRoom();
-  const parsed = parseScene(scene);
+  let failed = false;
+  for (const roomDef of rooms) {
+    const {scene, problems} = buildRoom(roomDef);
+    const parsed = parseScene(scene);
 
-  const shoppable = parsed.elements.filter(e => e.commerce).length;
-  const total = parsed.elements.length;
+    const shoppable = parsed.elements.filter(e => e.commerce?.buy_url);
+    const totalValue = shoppable.reduce((s, e) => s + (e.commerce.price ?? 0), 0);
+    const currency = shoppable[0]?.commerce?.currency ?? "";
 
-  fs.mkdirSync(path.dirname(outputPath), {recursive: true});
-  fs.writeFileSync(outputPath, `${JSON.stringify(scene, null, 2)}\n`);
+    const outputPath = path.join(root, `data/scenes/shoppable-room-${roomDef.room_id}/scene-v0.1.json`);
+    fs.mkdirSync(path.dirname(outputPath), {recursive: true});
+    fs.writeFileSync(outputPath, `${JSON.stringify(scene, null, 2)}\n`);
 
-  console.log(`wrote ${path.relative(root, outputPath)}`);
-  console.log(`  elements ${total} (${shoppable} shoppable) · stages ${parsed.stages.length}`);
-  console.log(`  furniture ${FURNITURE_LAYOUT.length} base twins + ${ATTACH_COMPOSITION.length} attached decor`);
-  console.log(`  profiles ${parsed.presentation.profiles.join(", ")}`);
+    console.log(`\n${roomDef.room_id} → ${path.relative(root, outputPath)}`);
+    console.log(`  channel        ${roomDef.channel} (${APPROVED.has(roomDef.channel) ? "APPROVED" : "NOT APPROVED"})`);
+    console.log(`  elements       ${parsed.elements.length} · ${shoppable.length} shoppable with BUY links`);
+    console.log(`  basket value   ${totalValue.toLocaleString("sv-SE")} ${currency}`);
+    console.log(`  stages         ${parsed.stages.length} · profiles ${parsed.presentation.profiles.join(", ")}`);
+    if (problems.length) {
+      failed = true;
+      console.log(`  PROBLEMS (${problems.length}):`);
+      for (const p of problems) console.log(`    ✗ ${p}`);
+    } else {
+      console.log("  gates          channel OK · every BUY is an affiliate_link · every proxy present");
+    }
+  }
+  if (failed) process.exit(1);
 }

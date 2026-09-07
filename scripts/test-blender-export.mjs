@@ -5,7 +5,10 @@
  */
 import {parseScene} from "../engine/core/scene-contract.mjs";
 import {exportBlenderScene} from "../engine/export/blender-scene.mjs";
-import {buildShoppableRoom} from "./compile-shoppable-room.mjs";
+import fs from "node:fs";
+import path from "node:path";
+import {fileURLToPath} from "node:url";
+import {buildRoom} from "./compile-shoppable-room.mjs";
 
 let passed = 0;
 let failed = 0;
@@ -14,7 +17,10 @@ function check(label, condition) {
   else { failed++; console.error(`FAIL  ${label}`); }
 }
 
-const document = buildShoppableRoom();
+// The compiler is room-driven now: export the first configured room.
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const rooms = JSON.parse(fs.readFileSync(path.join(root, "config/shoppable-rooms.json"), "utf8")).rooms;
+const {scene: document} = buildRoom(rooms[0]);
 const scene = parseScene(document);
 
 // §1 Basic export

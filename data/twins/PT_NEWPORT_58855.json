@@ -1,0 +1,160 @@
+{
+  "twin_id": "PT_NEWPORT_58855",
+  "schema_version": "0.4.0",
+  "identity": {
+    "name": "Plaza soffa sand 3-sits",
+    "manufacturer": "Newport",
+    "article_no": "58855",
+    "ean": "7340066723028",
+    "source": "newport_adtraction_feed_2175"
+  },
+  "category_id": "FFE.SEATING.SOFA",
+  "bucket": "FURNITURE",
+  "physical": {
+    "dimensions_mm": {
+      "width": 2000,
+      "depth": 900,
+      "height": 850
+    }
+  },
+  "commerce": {
+    "merchant": "Newport SE",
+    "currency": "SEK",
+    "unit_price": 31900,
+    "sale_price": null,
+    "ean": "7340066723028",
+    "product_url": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/plaza-soffa-sand-3-sits",
+    "cart_deeplink": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/plaza-soffa-sand-3-sits",
+    "affiliate_link": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=58855&fid=2175&url=https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/plaza-soffa-sand-3-sits",
+    "available": true,
+    "observed_at": "2026-08-28",
+    "refresh_policy": "live_required_before_quote_or_purchase",
+    "adtraction_program": {
+      "feed_id": "2175",
+      "commission_pct": 9
+    }
+  },
+  "image": {
+    "primary_url": "https://cdn-images.newporthome.eu/product/a22eb179674711edaf330050569f928a/list-45/list.jpg"
+  },
+  "appearance": {
+    "color": null,
+    "material": "Polyester / pocketfjädrar / silikon / trä"
+  },
+  "geometry": {
+    "level": "G2",
+    "state": "promoted_universal_proxy",
+    "avatar_id": "AVATAR_NEWPORT_58855_G2_PROXY",
+    "asset_path": "data/geometry/avatars/newport-58855-g2-proxy.glb",
+    "scale_state": "category_default 2000x900x850mm",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "placement": {
+      "origin": "floor_center",
+      "floor_contact": true
+    },
+    "appearance": {
+      "pbr_state": "spine_colour_by_category",
+      "exact_manufacturer_texture_or_finish_claimed": false
+    },
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
+  },
+  "readiness": {
+    "identity": "feed_verified",
+    "commerce": "affiliate_live",
+    "geometry": "G2_promoted_universal_proxy"
+  },
+  "external_identities": [
+    {
+      "source_id": "newport_adtraction",
+      "feed_id": "2175",
+      "product_id": "58855",
+      "product_url": "https://www.newport.se/shop/mobler/soffor/2-4-sitssoffor/plaza-soffa-sand-3-sits"
+    }
+  ],
+  "attach_points": {
+    "base_type": "sofa",
+    "slots": [
+      {
+        "slot_id": "seat_left",
+        "slot_type": "surface",
+        "position": {
+          "x": -0.6,
+          "y": 0.442,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.TEXTILES.CUSHION"
+        ],
+        "max_items": 2,
+        "size_constraint_mm": {
+          "max_width": 700,
+          "max_depth": 700,
+          "max_height": 200
+        }
+      },
+      {
+        "slot_id": "seat_right",
+        "slot_type": "surface",
+        "position": {
+          "x": 0.6,
+          "y": 0.442,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.TEXTILES.CUSHION"
+        ],
+        "max_items": 2,
+        "size_constraint_mm": {
+          "max_width": 700,
+          "max_depth": 700,
+          "max_height": 200
+        }
+      },
+      {
+        "slot_id": "back_center",
+        "slot_type": "lean",
+        "position": {
+          "x": 0,
+          "y": 0.5525,
+          "z": -0.315
+        },
+        "accepts": [
+          "FFE.TEXTILES.CUSHION"
+        ],
+        "max_items": 1
+      },
+      {
+        "slot_id": "arm_drape",
+        "slot_type": "drape",
+        "position": {
+          "x": 0.9,
+          "y": 0.51,
+          "z": 0
+        },
+        "accepts": [
+          "FFE.TEXTILES.THROW"
+        ],
+        "max_items": 1
+      }
+    ]
+  },
+  "attach": {
+    "role": "base",
+    "slots": [
+      {
+        "slot_id": "seat_back",
+        "type": "pillow",
+        "capacity": 3
+      },
+      {
+        "slot_id": "seat",
+        "type": "throw",
+        "capacity": 1
+      }
+    ]
+  }
+}

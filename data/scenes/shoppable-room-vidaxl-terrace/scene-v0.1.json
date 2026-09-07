@@ -1,0 +1,513 @@
+{
+  "scene_version": "twin-scene/v0.1",
+  "entity_type": "ShoppableRoomSceneExport",
+  "scene_id": "SCENE_SHOPPABLE_ROOM_VIDAXL_TERRACE_V01",
+  "generated_at": "2026-09-07T22:28:48.050Z",
+  "subject": {
+    "label": "vidaXL Terrace — shoppable outdoor display",
+    "identity_evidence_class": "CONCEPT",
+    "identity_scope": "SYNTHETIC_SHOPPABLE_ROOM"
+  },
+  "commerce_channel": {
+    "channel": "vidaxl-outdoor",
+    "approved": true,
+    "buy_link_policy": "commerce.affiliate_link verbatim — channel-tracked; never rewritten or substituted",
+    "price_policy": "observed_at ingest; live re-check required before quote or purchase"
+  },
+  "coordinate_system": {
+    "frame": "LOCAL_ENU",
+    "axes": {
+      "x": "EAST",
+      "y": "UP",
+      "z": "NORTH"
+    },
+    "origin_wgs84": [
+      0,
+      0
+    ],
+    "horizontal_reference": "SYNTHETIC — not a real location",
+    "vertical_reference": "LOCAL_RELATIVE_UNCALIBRATED",
+    "linear_units": "metre",
+    "evidence_class": "CONCEPT",
+    "limitations": [
+      "Synthetic room — not a real site."
+    ]
+  },
+  "source_bindings": [
+    {
+      "path": "scripts/compile-shoppable-room.mjs",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "ROOM_COMPILER"
+    },
+    {
+      "path": "config/shoppable-rooms.json",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "ROOM_DEFINITION"
+    },
+    {
+      "path": "data/twins/",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "PRODUCT_TWIN_CATALOG"
+    }
+  ],
+  "evidence_classes": [
+    "AUTHORITATIVE",
+    "INDICATIVE",
+    "DERIVED",
+    "REPORTED_UNVERIFIED",
+    "CONCEPT"
+  ],
+  "legal_claim_policy": {
+    "visualisation_allowed": true,
+    "concept_design_allowed": true,
+    "blocked_claims": [
+      "LEGAL_BOUNDARY",
+      "REGISTERED_AREA",
+      "ENTITLEMENT"
+    ],
+    "rule": "A shoppable room claims nothing about any real site. Product twins carry their own evidence classes for geometry fidelity."
+  },
+  "presentation": {
+    "profiles": [
+      "INTELLIGENCE",
+      "REALISTIC",
+      "SYSTEMS"
+    ],
+    "default_profile": "REALISTIC",
+    "default_stage": "TERRACE"
+  },
+  "navigation": [
+    {
+      "id": "TERRACE",
+      "label": "Terrace",
+      "camera": [
+        5.5,
+        4,
+        5.5
+      ],
+      "target": [
+        0,
+        0.6,
+        -0.6
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "ROOM",
+        "FURNITURE"
+      ],
+      "cutaway": false,
+      "labels": false
+    },
+    {
+      "id": "DINING",
+      "label": "Dining under the parasol",
+      "camera": [
+        1.5,
+        2.2,
+        2
+      ],
+      "target": [
+        -1.4,
+        0.7,
+        -1.2
+      ],
+      "visible_groups": [
+        "FURNITURE",
+        "TERRAIN"
+      ],
+      "cutaway": false,
+      "labels": true
+    },
+    {
+      "id": "LOUNGE",
+      "label": "Lounge corner",
+      "camera": [
+        5,
+        2,
+        1
+      ],
+      "target": [
+        2.2,
+        0.5,
+        -1
+      ],
+      "visible_groups": [
+        "FURNITURE",
+        "TERRAIN"
+      ],
+      "cutaway": false,
+      "labels": true
+    }
+  ],
+  "elements": [
+    {
+      "id": "ROOM_FLOOR",
+      "type": "TERRAIN",
+      "label": "Terrace deck",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 9,
+        "segments": 1,
+        "vertices": [
+          [
+            -4.5,
+            0,
+            -4.5
+          ],
+          [
+            4.5,
+            0,
+            -4.5
+          ],
+          [
+            -4.5,
+            0,
+            4.5
+          ],
+          [
+            4.5,
+            0,
+            4.5
+          ]
+        ],
+        "method": "FLAT",
+        "height_reference": "LOCAL_RELATIVE"
+      },
+      "source_refs": [
+        "SHOPPABLE_ROOM_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic room shell for product display."
+      ]
+    },
+    {
+      "id": "ROOM_VOLUME",
+      "type": "ROOM",
+      "label": "Terrace",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          7,
+          0.1,
+          6
+        ],
+        "position": [
+          0,
+          0.05,
+          0
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "TERRACE"
+      },
+      "source_refs": [
+        "SHOPPABLE_ROOM_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic room for product display."
+      ]
+    },
+    {
+      "id": "OUTDOOR_RUG",
+      "type": "FURNITURE",
+      "label": "vidaXL Utomhusmatta plattvävd 140x200 cm brun (1400×2000×12 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-340789-g2-proxy.glb",
+        "position": [
+          -1.4,
+          0.006,
+          -1.2
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin PT_VIDAXL-OUTDOOR_340789",
+        "Channel vidaxl-outdoor"
+      ],
+      "limitations": [
+        "Geometry level G2: category-default proxy; not manufacturer geometry",
+        "Textures are representative, not manufacturer artwork.",
+        "Category DERIVED from merchant title text, not a feed taxonomy field.",
+        "Price and availability observed at ingest — re-check live before quote or purchase."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Utomhusmatta plattvävd 140x200 cm brun",
+        "brand": "vidaXL",
+        "merchant": "vidaxl-outdoor SE",
+        "product_url": "https://www.vidaxl.se/e/vidaxl-utomhusmatta-plattvavd-140x200-cm-brun/8720286874691.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=340789&fid=1333&url=https://www.vidaxl.se/e/vidaxl-utomhusmatta-plattvavd-140x200-cm-brun/8720286874691.html",
+        "image_url": "https://vdxl.im/8720286874691_a_en_hd_1.jpg?t=1783321889",
+        "price": 652,
+        "list_price": null,
+        "currency": "SEK",
+        "category": "FFE.TEXTILES.RUG",
+        "color": null,
+        "material": null,
+        "available": true,
+        "observed_at": "2026-08-29",
+        "dimensions_label": "1400×2000×12 mm"
+      }
+    },
+    {
+      "id": "DINING_TABLE",
+      "type": "FURNITURE",
+      "label": "vidaXL Trädgårdsbord 150x90x74 cm massivt akaciaträ (1500×900×740 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-362241-g2-proxy.glb",
+        "position": [
+          -1.4,
+          0,
+          -1.2
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin PT_VIDAXL-OUTDOOR_362241",
+        "Channel vidaxl-outdoor"
+      ],
+      "limitations": [
+        "Geometry level G2: category-default proxy; not manufacturer geometry",
+        "Textures are representative, not manufacturer artwork.",
+        "Category DERIVED from merchant title text, not a feed taxonomy field.",
+        "Price and availability observed at ingest — re-check live before quote or purchase."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Trädgårdsbord 150x90x74 cm massivt akaciaträ",
+        "brand": "vidaXL",
+        "merchant": "vidaxl-outdoor SE",
+        "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardsbord-150x90x74-cm-massivt-akaciatra/8720845690823.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=362241&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardsbord-150x90x74-cm-massivt-akaciatra/8720845690823.html",
+        "image_url": "https://vdxl.im/8720845690823_m_en_hd_1.jpg?t=1697507590",
+        "price": 1801,
+        "list_price": null,
+        "currency": "SEK",
+        "category": "FFE.OUTDOOR.TABLE",
+        "color": null,
+        "material": null,
+        "available": true,
+        "observed_at": "2026-08-29",
+        "dimensions_label": "1500×900×740 mm"
+      }
+    },
+    {
+      "id": "CHAIR_N",
+      "type": "FURNITURE",
+      "label": "vidaXL Trädgårdsstolar 2 st 59x55x85 cm massivt akaciaträ (590×550×850 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-4004912-g2-proxy.glb",
+        "position": [
+          -1.4,
+          0,
+          -2.3
+        ],
+        "rotation_y_deg": 180
+      },
+      "source_refs": [
+        "Product Twin PT_VIDAXL-OUTDOOR_4004912",
+        "Channel vidaxl-outdoor"
+      ],
+      "limitations": [
+        "Geometry level G2: category-default proxy; not manufacturer geometry",
+        "Textures are representative, not manufacturer artwork.",
+        "Category DERIVED from merchant title text, not a feed taxonomy field.",
+        "Price and availability observed at ingest — re-check live before quote or purchase."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Trädgårdsstolar 2 st 59x55x85 cm massivt akaciaträ",
+        "brand": "vidaXL",
+        "merchant": "vidaxl-outdoor SE",
+        "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardsstolar-2-st-59x55x85-cm-massivt-akaciatra/8721012466548.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=4004912&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardsstolar-2-st-59x55x85-cm-massivt-akaciatra/8721012466548.html",
+        "image_url": "https://vdxl.im/8721012466548_m_en_hd_1.jpg?t=1737194974",
+        "price": 2103,
+        "list_price": null,
+        "currency": "SEK",
+        "category": "FFE.OUTDOOR.CHAIR",
+        "color": null,
+        "material": null,
+        "available": true,
+        "observed_at": "2026-08-29",
+        "dimensions_label": "590×550×850 mm"
+      }
+    },
+    {
+      "id": "CHAIR_S",
+      "type": "FURNITURE",
+      "label": "vidaXL Trädgårdsstolar 2 st 59x55x85 cm massivt akaciaträ (590×550×850 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-4004912-g2-proxy.glb",
+        "position": [
+          -1.4,
+          0,
+          -0.1
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin PT_VIDAXL-OUTDOOR_4004912",
+        "Channel vidaxl-outdoor"
+      ],
+      "limitations": [
+        "Geometry level G2: category-default proxy; not manufacturer geometry",
+        "Textures are representative, not manufacturer artwork.",
+        "Category DERIVED from merchant title text, not a feed taxonomy field.",
+        "Price and availability observed at ingest — re-check live before quote or purchase."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Trädgårdsstolar 2 st 59x55x85 cm massivt akaciaträ",
+        "brand": "vidaXL",
+        "merchant": "vidaxl-outdoor SE",
+        "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardsstolar-2-st-59x55x85-cm-massivt-akaciatra/8721012466548.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=4004912&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardsstolar-2-st-59x55x85-cm-massivt-akaciatra/8721012466548.html",
+        "image_url": "https://vdxl.im/8721012466548_m_en_hd_1.jpg?t=1737194974",
+        "price": 2103,
+        "list_price": null,
+        "currency": "SEK",
+        "category": "FFE.OUTDOOR.CHAIR",
+        "color": null,
+        "material": null,
+        "available": true,
+        "observed_at": "2026-08-29",
+        "dimensions_label": "590×550×850 mm"
+      }
+    },
+    {
+      "id": "PARASOL",
+      "type": "FURNITURE",
+      "label": "vidaXL Trädgårdsparasoll med stålstång brun 324x324x247 cm (3240×3240×2470 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-4005109-g2-proxy.glb",
+        "position": [
+          -1.4,
+          0,
+          -1.2
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "Product Twin PT_VIDAXL-OUTDOOR_4005109",
+        "Channel vidaxl-outdoor"
+      ],
+      "limitations": [
+        "Geometry level G2: category-default proxy; not manufacturer geometry",
+        "Textures are representative, not manufacturer artwork.",
+        "Category DERIVED from merchant title text, not a feed taxonomy field.",
+        "Price and availability observed at ingest — re-check live before quote or purchase."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Trädgårdsparasoll med stålstång brun 324x324x247 cm",
+        "brand": "vidaXL",
+        "merchant": "vidaxl-outdoor SE",
+        "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardsparasoll-med-stalstang-brun-324x324x247-cm/8721012488250.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=4005109&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardsparasoll-med-stalstang-brun-324x324x247-cm/8721012488250.html",
+        "image_url": "https://vdxl.im/8721012488250_m_en_hd_1.jpg?t=1719653387",
+        "price": 1315,
+        "list_price": null,
+        "currency": "SEK",
+        "category": "FFE.OUTDOOR.PARASOL",
+        "color": null,
+        "material": null,
+        "available": true,
+        "observed_at": "2026-08-29",
+        "dimensions_label": "3240×3240×2470 mm"
+      }
+    },
+    {
+      "id": "CORNER_SOFA",
+      "type": "FURNITURE",
+      "label": "vidaXL Trädgårdssoffa hörn med dynor 73x73x65 cm massivt akaciaträ (730×730×650 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-366494-g2-proxy.glb",
+        "position": [
+          2.2,
+          0,
+          -1.9
+        ],
+        "rotation_y_deg": -45
+      },
+      "source_refs": [
+        "Product Twin PT_VIDAXL-OUTDOOR_366494",
+        "Channel vidaxl-outdoor"
+      ],
+      "limitations": [
+        "Geometry level G2: category-default proxy; not manufacturer geometry",
+        "Textures are representative, not manufacturer artwork.",
+        "Category DERIVED from merchant title text, not a feed taxonomy field.",
+        "Price and availability observed at ingest — re-check live before quote or purchase."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Trädgårdssoffa hörn med dynor 73x73x65 cm massivt akaciaträ",
+        "brand": "vidaXL",
+        "merchant": "vidaxl-outdoor SE",
+        "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardssoffa-horn-med-dynor-73x73x65-cm-massivt-akaciatra/8721012467347.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=366494&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardssoffa-horn-med-dynor-73x73x65-cm-massivt-akaciatra/8721012467347.html",
+        "image_url": "https://vdxl.im/8721012467347_m_en_hd_1.jpg?t=1753779195",
+        "price": 2488,
+        "list_price": null,
+        "currency": "SEK",
+        "category": "FFE.OUTDOOR.SOFA",
+        "color": null,
+        "material": null,
+        "available": true,
+        "observed_at": "2026-08-29",
+        "dimensions_label": "730×730×650 mm"
+      }
+    },
+    {
+      "id": "SUN_LOUNGER",
+      "type": "FURNITURE",
+      "label": "vidaXL Solsäng med dyna grå 60x205x73 cm konstrotting (600×2050×730 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-368280-g2-proxy.glb",
+        "position": [
+          2.1,
+          0,
+          1.6
+        ],
+        "rotation_y_deg": 90
+      },
+      "source_refs": [
+        "Product Twin PT_VIDAXL-OUTDOOR_368280",
+        "Channel vidaxl-outdoor"
+      ],
+      "limitations": [
+        "Geometry level G2: category-default proxy; not manufacturer geometry",
+        "Textures are representative, not manufacturer artwork.",
+        "Category DERIVED from merchant title text, not a feed taxonomy field.",
+        "Price and availability observed at ingest — re-check live before quote or purchase."
+      ],
+      "commerce": {
+        "product_name": "vidaXL Solsäng med dyna grå 60x205x73 cm konstrotting",
+        "brand": "vidaXL",
+        "merchant": "vidaxl-outdoor SE",
+        "product_url": "https://www.vidaxl.se/e/vidaxl-solsang-med-dyna-gra-60x205x73-cm-konstrotting/8721012449053.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=368280&fid=1333&url=https://www.vidaxl.se/e/vidaxl-solsang-med-dyna-gra-60x205x73-cm-konstrotting/8721012449053.html",
+        "image_url": "https://vdxl.im/8721012449053_m_en_hd_1.jpg?t=1710415312",
+        "price": 2067,
+        "list_price": null,
+        "currency": "SEK",
+        "category": "FFE.OUTDOOR.LOUNGER",
+        "color": null,
+        "material": null,
+        "available": true,
+        "observed_at": "2026-08-29",
+        "dimensions_label": "600×2050×730 mm"
+      }
+    }
+  ]
+}
