@@ -1,5 +1,19 @@
 # BRAGE — Svärtinge 54:28 · Design Study (first assignment)
 
+> ## ⛳ CURRENT MANDATE — 2026-09-08 (Brain; drawing set + 4 details verified. Supersedes the 2026-09-01 pin.)
+>
+> Vinkelhuset is drawn. Now make it MACHINE-READABLE — Platform is about to mount your house
+> as the shell for shoppable rooms, and MIMER prices it.
+> 1. **ROOM SCHEDULE + GEOMETRY EXPORT.** Update `geometry/house-v0.2-geometry-spec.json` (or
+>    v0.3) so every ROOM is a named volume: id, use, floor area, ceiling height, wall segments,
+>    window/door openings with sill+head heights and orientation. Platform reads this to build
+>    the interior — no hand-typed dimensions. This is your top item.
+> 2. **MATERIAL + FINISH SCHEDULE** per surface (floor/wall/ceiling per room, facade per
+>    elevation) so renders and the BoM read the same source.
+> 3. Then: the 10-type Swedish classics library, same spec format from day one.
+> Every dimension traceable to your drawings. Commit each block; Oskar pushes.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-01 (Brain; supersedes earlier pins; re-read every resume)
 >
 > WINNER IS CALLED: **VINKELHUSET**. Your only job now is the winner's FULL
