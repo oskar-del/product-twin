@@ -1,20 +1,20 @@
 {
-  "fetched_at": "2026-09-08T08:04:57.713Z",
+  "fetched_at": "2026-09-11T08:03:07.813Z",
   "source_id": "shopify_global_catalog",
   "query_count": 122,
-  "unique_candidate_count": 15063,
+  "unique_candidate_count": 14814,
   "by_category": {
     "FFE.SEATING.SOFA": {
       "queries": 3,
-      "returned": 600
+      "returned": 574
     },
     "FFE.SEATING.LOUNGE": {
       "queries": 3,
-      "returned": 600
+      "returned": 575
     },
     "FFE.SEATING.DINING": {
       "queries": 2,
-      "returned": 400
+      "returned": 391
     },
     "FFE.SEATING.STOOL": {
       "queries": 2,
@@ -22,27 +22,27 @@
     },
     "FFE.TABLE.COFFEE": {
       "queries": 3,
-      "returned": 600
+      "returned": 597
     },
     "FFE.TABLE.SIDE": {
       "queries": 3,
-      "returned": 600
+      "returned": 597
     },
     "FFE.TABLE.DINING": {
       "queries": 2,
-      "returned": 400
+      "returned": 395
     },
     "FFE.TABLE.DESK": {
       "queries": 2,
-      "returned": 400
+      "returned": 398
     },
     "FFE.STORAGE": {
       "queries": 2,
-      "returned": 400
+      "returned": 384
     },
     "FFE.BEDS": {
       "queries": 2,
-      "returned": 400
+      "returned": 372
     },
     "FFE.BEDSIDE": {
       "queries": 2,
@@ -50,15 +50,15 @@
     },
     "FFE.RUGS": {
       "queries": 3,
-      "returned": 600
+      "returned": 587
     },
     "FFE.MIRRORS": {
       "queries": 2,
-      "returned": 400
+      "returned": 385
     },
     "OUTDOOR_FFE.SOFA": {
       "queries": 2,
-      "returned": 400
+      "returned": 382
     },
     "OUTDOOR_FFE.LOUNGE_CHAIR": {
       "queries": 2,
@@ -66,31 +66,31 @@
     },
     "OUTDOOR_FFE.DINING_CHAIR": {
       "queries": 2,
-      "returned": 400
+      "returned": 384
     },
     "OUTDOOR_FFE.TABLE": {
       "queries": 2,
-      "returned": 400
+      "returned": 395
     },
     "OUTDOOR_FFE.SUNLOUNGER": {
       "queries": 2,
-      "returned": 400
+      "returned": 386
     },
     "OUTDOOR_FFE.UMBRELLA": {
       "queries": 2,
-      "returned": 400
+      "returned": 341
     },
     "ELECTRICAL.LUMINAIRES.PENDANT": {
       "queries": 3,
-      "returned": 600
+      "returned": 595
     },
     "ELECTRICAL.LUMINAIRES.WALL": {
       "queries": 2,
-      "returned": 390
+      "returned": 383
     },
     "ELECTRICAL.LUMINAIRES.FLOOR": {
       "queries": 2,
-      "returned": 400
+      "returned": 380
     },
     "ELECTRICAL.LUMINAIRES.TABLE": {
       "queries": 2,
@@ -106,7 +106,7 @@
     },
     "BATH.SHOWERS": {
       "queries": 2,
-      "returned": 198
+      "returned": 195
     },
     "BATH.VANITIES": {
       "queries": 2,
@@ -118,7 +118,7 @@
     },
     "KITCHEN.SINKS": {
       "queries": 2,
-      "returned": 200
+      "returned": 189
     },
     "KITCHEN.COOKING": {
       "queries": 2,
@@ -126,7 +126,7 @@
     },
     "KITCHEN.REFRIGERATION": {
       "queries": 2,
-      "returned": 200
+      "returned": 193
     },
     "FINISHES.TILE": {
       "queries": 3,
@@ -150,7 +150,7 @@
     },
     "OPENINGS.WINDOWS": {
       "queries": 2,
-      "returned": 100
+      "returned": 99
     },
     "ELECTRICAL.SWITCHES": {
       "queries": 2,
@@ -158,7 +158,7 @@
     },
     "POOL.LIGHTING": {
       "queries": 2,
-      "returned": 200
+      "returned": 196
     },
     "POOL.PUMPS": {
       "queries": 2,
@@ -214,7 +214,7 @@
     },
     "ENERGY.SOLAR.INVERTER": {
       "queries": 3,
-      "returned": 300
+      "returned": 294
     },
     "ENERGY.SOLAR.MOUNTING": {
       "queries": 2,
@@ -222,7 +222,7 @@
     },
     "ENERGY.BATTERY": {
       "queries": 2,
-      "returned": 197
+      "returned": 195
     }
   },
   "storage_policy": "catalog_payload_ephemeral_not_cached"
