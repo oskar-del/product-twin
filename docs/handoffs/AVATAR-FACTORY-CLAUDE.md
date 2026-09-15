@@ -1,5 +1,20 @@
 # Avatar Factory (Claude) — persistent handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
+>
+> DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
+> paper cards, serif display (Georgia/Cormorant), Inter labels, bronze kicker #d8b874, five fixed
+> evidence-chip colours (authoritative #176b52 · indicative #c18a2d · derived #497aa2 · reported
+> #a65b68 · concept #735a9e). Screens: 1 Site Intelligence (FRONT DOOR, reading first) · 2 Spatial
+> Lab (3D) · 3 The House · 4 Rooms (shoppable; separate stage ships first, then inside the house)
+> · 5 Stills · 6 Numbers · plus an index of plots. Platform OWNS the chrome; everyone consumes it.
+>
+> YOUR QUEUE (unchanged priorities, you are the supply line):
+> 1. **dimensions_mm + source on every twin** (GLB bounds > Shopify options > description > title).
+>    Placeability = this field. Report % of each catalog now placeable.
+> 2. Category/role mapping for the 6 CATALOG_ONLY catalogs (163k rows) via your title classifier.
+> 3. Bedroom hero proxies (Kungsängen + Lampemesteren) for room look #3.
+> 4. Material truth into Blender renders for screen 5.
 > ## ⛳ CURRENT MANDATE — 2026-09-08 (Brain; verified vidaXL classify + G2 proxies. Supersedes the 2026-09-01 pin.)
 >
 > Platform now renders real rooms from YOUR catalogs — you are the supply line. Queue:
