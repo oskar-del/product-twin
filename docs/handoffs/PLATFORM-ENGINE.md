@@ -1,5 +1,25 @@
 # Platform & 3D Engine — Claude Session Handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
+>
+> DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
+> paper cards, serif display (Georgia/Cormorant), Inter labels, bronze kicker #d8b874, five fixed
+> evidence-chip colours (authoritative #176b52 · indicative #c18a2d · derived #497aa2 · reported
+> #a65b68 · concept #735a9e). Screens: 1 Site Intelligence (FRONT DOOR, reading first) · 2 Spatial
+> Lab (3D) · 3 The House · 4 Rooms (shoppable; separate stage ships first, then inside the house)
+> · 5 Stills · 6 Numbers · plus an index of plots. Platform OWNS the chrome; everyone consumes it.
+>
+> YOUR QUEUE (blocking everyone — do 1 first, ship it in a day):
+> 1. **THE CHROME PACKAGE** `engine/ui/chrome/`: tokens.css + chrome.mjs exporting topBar(plot,
+>    modes), sidePanel(), evidenceChip(class), card(), metricStrip(), sectionHead(). Reference
+>    = the Svärtinge Site-Intelligence page (its CSS is the source of the tokens — extract, don't
+>    invent). A demo page showing every component. Doc: `docs/CHROME.md`. Gate: every component
+>    renders in the demo + one screenshot committed.
+> 2. **RE-SKIN THE TWO SHOPPABLE ROOMS** with the chrome: dark stage, serif labels, product panel =
+>    sidePanel with name / brand / dimensions + evidence chip (AUTHORITATIVE if from GLB bounds,
+>    INDICATIVE if parsed from title) / price / BUY (verbatim affiliate link). Looks switcher.
+> 3. Then rooms INSIDE Vinkelhuset (BRAGE room spec), then stills gallery (screen 5) from your
+>    Blender export. Commit each; Oskar pushes.
 > ## ⛳ CURRENT MANDATE — 2026-09-08 (Brain; verified your Newport+vidaXL rooms — links are real, geometry hydrates. Supersedes the 2026-09-06 redirect.)
 >
 > The money loop now exists. Next: make it a PRODUCT, not a demo.
