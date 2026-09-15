@@ -1,5 +1,26 @@
 # Plot-to-Project Spatial Studio — Claude Session Handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
+>
+> DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
+> paper cards, serif display (Georgia/Cormorant), Inter labels, bronze kicker #d8b874, five fixed
+> evidence-chip colours (authoritative #176b52 · indicative #c18a2d · derived #497aa2 · reported
+> #a65b68 · concept #735a9e). Screens: 1 Site Intelligence (FRONT DOOR, reading first) · 2 Spatial
+> Lab (3D) · 3 The House · 4 Rooms (shoppable; separate stage ships first, then inside the house)
+> · 5 Stills · 6 Numbers · plus an index of plots. Platform OWNS the chrome; everyone consumes it.
+>
+> YOUR QUEUE:
+> 1. **Svärtinge = the reference instance.** Screen 1 (Site Intelligence, the reading, hero = a LIVE
+>    render of the twin, never a gradient) and screen 2 (Spatial Lab) on Platform's chrome the moment
+>    it lands (until then: extract your page's tokens into `engine/ui/chrome` WITH Platform — same
+>    file, no fork). Front door = screen 1; "Open Spatial Lab" = screen 2. Republish.
+> 2. **Parameterise the ingest**: `ingest-property-division.py` / `ingest-buildings.py` take
+>    `--kommun --designation --origin`; self-test on Svärtinge 54:28 AND Djurö 4:147 (kn0120 zip is
+>    in ../lm-data/). This is the product: a new plot = one command.
+> 3. **Site template**: one generator that emits screen 1 + 2 for any plot from its derived JSONs —
+>    the Djurö session will run it. Djurö today is a skeleton BECAUSE this didn't exist.
+> 4. Mount Vinkelhuset when BRAGE's room spec lands.
+
 > ## ⛳ CURRENT MANDATE — 2026-09-08 (Brain; trunk adoption ① verified. Supersedes the 2026-09-01 pin.)
 >
 > 1. **FINISH TRUNK ADOPTION** — one experience: Site-Intelligence page ↔ 3D twin, no forked
