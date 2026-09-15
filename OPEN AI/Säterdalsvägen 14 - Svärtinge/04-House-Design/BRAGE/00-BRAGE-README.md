@@ -1,5 +1,21 @@
 # BRAGE — Svärtinge 54:28 · Design Study (first assignment)
 
+> ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
+>
+> DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
+> paper cards, serif display (Georgia/Cormorant), Inter labels, bronze kicker #d8b874, five fixed
+> evidence-chip colours (authoritative #176b52 · indicative #c18a2d · derived #497aa2 · reported
+> #a65b68 · concept #735a9e). Screens: 1 Site Intelligence (FRONT DOOR, reading first) · 2 Spatial
+> Lab (3D) · 3 The House · 4 Rooms (shoppable; separate stage ships first, then inside the house)
+> · 5 Stills · 6 Numbers · plus an index of plots. Platform OWNS the chrome; everyone consumes it.
+>
+> YOUR QUEUE:
+> 1. **ROOM-LEVEL GEOMETRY SPEC** (unchanged, top): every room a named volume with openings,
+>    heights, orientation, finishes. Platform builds the interior from it.
+> 2. **Screen 3 "The House"**: the tre-hus presentation becomes a CHAPTER on the chrome (topBar,
+>    sectionHead, cards) — winner, rationale, plans, facades, sections, details as inline SVG.
+>    Not a separate design. Republish to the SAME artifact URL.
+> 3. Then the classics library.
 > ## ⛳ CURRENT MANDATE — 2026-09-08 (Brain; drawing set + 4 details verified. Supersedes the 2026-09-01 pin.)
 >
 > Vinkelhuset is drawn. Now make it MACHINE-READABLE — Platform is about to mount your house
