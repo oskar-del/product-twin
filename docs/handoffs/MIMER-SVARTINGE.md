@@ -1,5 +1,19 @@
 # MIMER (Svärtinge 54:28) — persistent handoff
 
+> ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
+>
+> DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
+> paper cards, serif display (Georgia/Cormorant), Inter labels, bronze kicker #d8b874, five fixed
+> evidence-chip colours (authoritative #176b52 · indicative #c18a2d · derived #497aa2 · reported
+> #a65b68 · concept #735a9e). Screens: 1 Site Intelligence (FRONT DOOR, reading first) · 2 Spatial
+> Lab (3D) · 3 The House · 4 Rooms (shoppable; separate stage ships first, then inside the house)
+> · 5 Stills · 6 Numbers · plus an index of plots. Platform OWNS the chrome; everyone consumes it.
+>
+> YOUR QUEUE:
+> 1. **Screen 6 "Numbers"**: the Lender dossier rendered as a chapter on the chrome — cost lines,
+>    comps, NOT-verified ledger as evidence chips. Same generator, new skin.
+> 2. FF&E line priced from the real catalogs (receipted rows), rate-card skeleton for the offert.
+> 3. Generator takes any site + geometry spec (Djurö next).
 > ## ⛳ CURRENT MANDATE — 2026-09-08 (Brain; Lender Edition verified — it correctly refuses to fake rates. Supersedes the 2026-09-01 pin.)
 >
 > §6 rates and §7 comps are blocked on owner input — do NOT invent them. Work the parts you own:
