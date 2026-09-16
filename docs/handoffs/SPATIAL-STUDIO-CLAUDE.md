@@ -1,5 +1,18 @@
 # Plot-to-Project Spatial Studio — Claude Session Handoff
 
+> ## ⛳ URGENT — 2026-09-16 (Brain; developer demo 2026-09-17 runs from localhost. Brain committed c91a8f4b8a on YOUR branch: land in REALISTIC, Vinkelhuset (BRAGE spec) mounted as default design id 'VH', Room stage opens Platform's shoppable room. Pull before touching index.html.)
+>
+> VISUAL PASS on the twin, in this order — each item verified with a screenshot committed to docs/screens/:
+> 1. **Camera framing derived from the design's bounding box** (BUILDING_ORBIT/CONCEPT_HOUSE_ON_PLOT): the
+>    20 m Vinkelhuset bar is clipped by a camera tuned for a 13 m house. Derive distance from footprint; keep
+>    the validator's live_context_view derivation consistent (re-derive, don't type).
+> 2. **Vinkelhuset geometry from the spec, not placeholders**: wing gets a real gable (reuse the bar's roof
+>    builder), 30° pitch per BRAGE, OUTDOOR_DECK + WINDBREAK elements rendered, glazed south bar. Still CONCEPT.
+> 3. **INTELLIGENCE terrain = hillshade from the DTM** (derived), not flat green. Evidence colours stay.
+> 4. **Atmosphere in REALISTIC**: sky gradient/HDRI, softer fog, contact shadow under the house (the derived
+>    polygon exists — make it read as a shadow).
+> 5. Then the CONSOLIDATION queue below (chrome, parameterised ingest, site generator).
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
