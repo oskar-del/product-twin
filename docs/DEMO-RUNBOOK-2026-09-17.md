@@ -9,7 +9,8 @@ version. Localhost shows the real thing.
 Open: http://localhost:8765/repo-spatial-studio/prototype/svartinge-neighbourhood/index.html
 
 ## Script (8 minutes)
-1. Front door — read the four numbers aloud: 1 936,8 m² AUTHORITATIVE (Lantmäteriet), 153 official
+1. Front door = the FULL Site Intelligence report (restored 2026-09-16: hero, readings, ground, permission chain,
+   findings, boundary map, gates). Scroll it slowly. Read the four numbers aloud: 1 936,8 m² AUTHORITATIVE (Lantmäteriet), 153 official
    footprints, 13.5 m fall, ~43 m above Glan. Point at the evidence chips: this page never types a number.
 2. "Enter the 3D twin" → lands in REALISTIC: real ortho, real cadastral lines, official buildings extruded.
    Orbit once. Press 1 for INTELLIGENCE (evidence colours), 3 for COMPARE (split), back to 2.
@@ -24,6 +25,6 @@ Open: http://localhost:8765/repo-spatial-studio/prototype/svartinge-neighbourhoo
 No entitlement, setback or FFL. Vinkelhuset is a concept massing, not developed drawings. 2/18 legal gates.
 
 ## State (2026-09-16, Brain)
-Spatial commit c91a8f4b8a: land in REALISTIC, VH mounted by default, Room → shoppable room.
+Spatial commits c91a8f4b8a, 862ce0a75b, 5d97e78147: land in REALISTIC, VH mounted by default, Room → shoppable room.
 Known rough edges (pinned to Spatial): building-orbit camera framed for a 13 m house (20 m bar too close);
 wing roof is a pyramid placeholder; no terrace/vindficka; INTELLIGENCE terrain is flat green.
