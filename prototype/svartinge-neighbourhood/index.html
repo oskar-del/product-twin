@@ -210,7 +210,7 @@ liveContextButton.onclick=()=>{panel.classList.remove('open');aerialPanel.classL
 liveConnect.onclick=async()=>{const token=liveToken.value.trim();liveToken.value='';if(token.length<8){setLiveStatus('A VALID TEMPORARY MAPBOX PUBLIC TOKEN IS REQUIRED',true);return}drapeSatelliteTerrain(token);liveConnect.disabled=true;setLiveStatus('LOADING ATTRIBUTED LIVE CONTEXT…');try{const mapboxgl=await loadMapboxRuntime();if(liveAdapter)liveAdapter.destroy();liveAdapter=createMapboxRuntimeAdapter({mapboxgl,publicToken:token,container:liveMap,originWgs84:data.coordinate_system.origin_wgs84,onState:state=>{if(state.phase==='CONNECTED'){liveMap.classList.add('connected');liveDisconnect.disabled=false;syncLiveStage()}else if(state.phase==='ERROR')setLiveStatus(`LIVE PROVIDER ERROR · ${state.detail}`,true)}});liveAdapter.mount()}catch(error){setLiveStatus(`${error.message} · THE TWIN IS STILL AVAILABLE`,true);liveAdapter=null}finally{liveConnect.disabled=false}};
 liveDisconnect.onclick=()=>{if(liveAdapter)liveAdapter.destroy();liveAdapter=null;liveMap.classList.remove('connected');liveDisconnect.disabled=true;liveToken.value='';undrapeSatelliteTerrain();setLiveStatus('DISCONNECTED · RUNTIME TOKEN FORGOTTEN · TWIN UNAFFECTED')};
 function applyStageVisibility(stage){const allowed=new Set(stage.visible_groups);root.traverse(object=>{const type=object.userData.item?.type;if(type)object.visible=allowed.has(type);if(object.userData.designHidden)object.visible=false});['HOUSE_ROOF','HOUSE_WALL_S'].forEach(id=>{const object=byId.get(id);if(object)object.visible=allowed.has(object.userData.item.type)&&!stage.cutaway})}
-function stepTo(i,instant=false){currentStep=i;const s=data.navigation[i];stageLabelsAllowed=!['STREET_VIEW','PLOT_ORBIT'].includes(s.id);
+function stepTo(i,instant=false){currentStep=i;const s=data.navigation[i];if(s.id==='ROOM'&&window.SHOPPABLE_ROOM_URL){/* the interior lives in Platform's shoppable room (real catalog, real BUY links) — open it beside the twin instead of the orange concept box */try{window.open(window.SHOPPABLE_ROOM_URL,'_blank','noopener');}catch(_e){}}stageLabelsAllowed=!['STREET_VIEW','PLOT_ORBIT'].includes(s.id);
   // Per-stage tilt limit. Tight 77° everywhere (no grazing the flat terrain edge-on / going
   // underground) EXCEPT the genuinely low/interior stages (street, inside the building), which
   // need a near-horizontal camera. This also pulls PLOT_ORBIT off its grazing angle onto a clean 3/4.
@@ -245,7 +245,19 @@ const DESIGNS=[
   {id:'SU',builder:'Eksjöhus',lang:'SLUTTNINGSHUS',name:'Eksjöhus Sundvik',boa:205,footprint:146,storeys:2,gfa:205,src:'eksjohus.se/husmodeller/sundvik',
    summary:'The premium Sluttningshus (205 m²): living, kitchen and dining on the ENTRY level so the main rooms take the Glan view from the upper storey; master suite on the walk-out level below. 146 m² footprint.',
    model:{W:13.6,D:10.7,storeyH:2.7,storeys:2,roof:'gable',balcony:true,balconyDepth:2.4,facade:'wood'}},
+  // BRAGE's chosen direction (Brain call 2026-08-27): "Vinkelhuset mot Glan". L-plan — heated E-W bar on the
+  // south (lake) frontage + cold garage/service wing stepping north off the east end. Massing straight from
+  // BRAGE geometry/house-v0.2-geometry-spec.json (HOUSE_BAR 20×7 m, HOUSE_WING_N 8×8 m, wall 3.0 m).
+  // Walk-out lower level = the spec's conditional west-gable suterräng on the MEASURED 13° SW fall. CONCEPT class.
+  {id:'VH',builder:'BRAGE',lang:'VINKELHUS · VALD RIKTNING',name:'Vinkelhuset mot Glan',boa:210,footprint:204,storeys:2,gfa:210,src:'BRAGE house-v0.2-geometry-spec.json',
+   summary:'The chosen design. A 20 m heated bar lies along the south edge so every main room takes the Glan view and the low winter sun; a cold garage wing steps north off the east end, leaving the west open to the WNW summer-evening sun and sheltering the SW terrace. 210 m² heated on a 204 m² footprint.',
+   model:{W:20,D:7,storeyH:2.9,storeys:2,roof:'gable',ridge:'width',roofPitch:30,balcony:true,balconyDepth:2.4,facade:'wood'},
+   wing:{p:[7,7],s:[8,3.0,8]}},
 ];
+const DEFAULT_DESIGN_ID='VH';
+/* Demo wiring: the "Room" stage opens Platform's shoppable Newport room (real catalog rows, verbatim channel-tracked BUY links).
+   Path is relative to the "product twin" static-server root; harmless (no-op) when served from elsewhere. */
+window.SHOPPABLE_ROOM_URL='../../../repo-platform/dist/twins/scene_shoppable_room_newport_living_v01.html';
 function studioBox(x,y,z,w,h,d,roof){
   const item={id:'DESIGN_BOX',type:'CONCEPT_BUILDING',evidence_class:'CONCEPT'};
   const m=profile(new THREE.Mesh(new THREE.BoxGeometry(w,h,d)),item);
@@ -297,9 +309,11 @@ function suterrangHouse(spec){
   const gF=groundY(ax+dx*m.D/2,az+dz*m.D/2),gB=groundY(ax-dx*m.D/2,az-dz*m.D/2);
   const base=Math.min(gF,gB)-0.4,H=m.storeyH;                             // lower floor cut into the fall
   const item={id:'EK_HOUSE',type:'CONCEPT_BUILDING',evidence_class:'CONCEPT',label:spec.name+' · concept massing',
-    geometry:{primitive:'Reconstructed Eksjöhus '+spec.name.replace('Eksjöhus ','')+' massing',size:[m.W,H*2,m.D],position:[ax,base,az]},
+    geometry:{primitive:'Reconstructed '+(spec.builder||'Eksjöhus')+' '+spec.name.replace('Eksjöhus ','')+' massing',size:[m.W,H*2,m.D],position:[ax,base,az]},
     source_refs:[spec.src||'Eksjöhus'],
-    limitations:['Massing reconstructed from Eksjöhus published BOA / footprint / height / storeys.','Exact width×depth and roof pitch are a stated assumption (not all published).','CONCEPT class: not an entitlement, setback or FFL claim.']};
+    limitations:spec.builder==='BRAGE'
+      ?['Massing from BRAGE house-v0.2-geometry-spec.json (HOUSE_BAR + HOUSE_WING_N); lower walk-out level = the spec\'s conditional suterräng on the measured 13° fall.','Roof pitch, glazing and finishes are concept-level, not developed drawings.','CONCEPT class: not an entitlement, setback or FFL claim.']
+      :['Massing reconstructed from Eksjöhus published BOA / footprint / height / storeys.','Exact width×depth and roof pitch are a stated assumption (not all published).','CONCEPT class: not an entitlement, setback or FFL claim.']};
   const W=m.W,D=m.D,top=base+2*H;
   const woodCol=m.facade==='render'?0xe7e3d9:(m.facade==='brick'?0x9c6b52:0xc9a877);
   const M={
@@ -350,7 +364,15 @@ function mountDesign(spec){
   while(designStudio.children.length)designStudio.remove(designStudio.children[0]);
   ekWindows=[];
   const ay=groundY(1,1);
-  if(spec.model)suterrangHouse(spec);
+  if(spec.model){const g=suterrangHouse(spec);
+    if(spec.wing&&g){/* L-plan wing in the house's own frame: +X = east end, +Z = uphill/north. Sits on natural ground at the entry level. */
+      const [px,pz]=spec.wing.p,[w,h,d]=spec.wing.s;const wp=g.localToWorld(new THREE.Vector3(px,0,pz));const gy=groundY(wp.x,wp.z);
+      const item={id:'EK_HOUSE',type:'CONCEPT_BUILDING',evidence_class:'CONCEPT',label:spec.name+' · cold garage/service wing',source_refs:[spec.src],limitations:['CONCEPT massing from BRAGE house-v0.2-geometry-spec.json (HOUSE_WING_N).','Not an entitlement, setback or FFL claim.']};
+      const wallM=new THREE.MeshStandardMaterial({color:0xc9a877,roughness:.72,metalness:.02,envMapIntensity:.85}),roofM=new THREE.MeshStandardMaterial({color:0x3f4245,roughness:.72,metalness:.05,envMapIntensity:.5});
+      const box=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),wallM);box.position.set(px,gy+h/2,pz);box.castShadow=true;box.receiveShadow=true;
+      const roof=new THREE.Mesh(new THREE.ConeGeometry(Math.max(w,d)*.72,1.9,4),roofM);roof.position.set(px,gy+h+.95,pz);roof.rotation.y=Math.PI/4;roof.castShadow=true;
+      for(const me of [box,roof]){me.userData.item=item;me.userData.intelligenceMaterial=intelligenceMat('CONCEPT',1);me.userData.realisticMaterial=me.material;me.material=(mode==='REALISTIC')?me.userData.realisticMaterial:me.userData.intelligenceMaterial;g.add(me);}
+    }}
   else if(spec.boxes)for(const b of spec.boxes)studioBox(1+b.p[0],ay+b.p[1],1+b.p[2],b.s[0],b.s[1],b.s[2],b.roof);
   DEFAULT_MASSING.forEach(id=>{const o=byId.get(id);if(o)o.userData.designHidden=!!(spec.boxes||spec.model);});
   if(data&&data.navigation)applyStageVisibility(data.navigation[currentStep]);
@@ -534,7 +556,7 @@ try{const _rb=await fetch(DERIVED_BUILDINGS);if(_rb.ok){const _bd=await _rb.json
    group so vectors, official buildings, boundary, aerial drape, labels and the concept house all match
    the real map. Camera/compass operate in world space and stay correct. */
 [root,labelGroup,poiGroup,realismDecor,authoritativeBoundary].forEach(g=>{g.scale.x=-1;g.updateMatrixWorld(true);});/* roadLabels is NOT flipped — flat text planes would render mirror-reversed under scale.x=-1; roadNameLabel places them in already-flipped world coords instead */
-setMode('INTELLIGENCE');stepTo(0,true);mountDesign(DESIGNS.find(d=>d.id==='BJ')||DESIGNS[0]);setSun();loading.remove();
+setMode('REALISTIC');/* land in REALISTIC (ortho-draped) — INTELLIGENCE is one click away; the flat evidence view is the wrong first impression */stepTo(0,true);mountDesign(DESIGNS.find(d=>d.id===DEFAULT_DESIGN_ID)||DESIGNS.find(d=>d.id==='BJ')||DESIGNS[0]);setSun();loading.remove();
 /* Cinematic fly-in: start high over the plot and settle into the neighbourhood framing, so the eye lands on 54:28. */
 {const s0p=camera.position.clone(),s0t=controls.target.clone();const start=new THREE.Vector3(plotCenterWorld.x+30,s0p.y+230,plotCenterWorld.z+150);camera.position.copy(start);controls.target.copy(plotCenterWorld);tween={fromPos:start,toPos:s0p,fromTarget:plotCenterWorld.clone(),toTarget:s0t,start:performance.now(),duration:2800};}
 renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-tween.start)/tween.duration),k=1-Math.pow(1-t,3);camera.position.lerpVectors(tween.fromPos,tween.toPos,k);controls.target.lerpVectors(tween.fromTarget,tween.toTarget,k);if(t===1)tween=null}try{controls.update();updateCompass();updatePlotPulse();if(mode==='COMPARE'){renderer.setScissorTest(true);const left=Math.floor(innerWidth/2);renderPass('INTELLIGENCE',0,left);renderPass('REALISTIC',left,innerWidth-left);renderer.setScissorTest(false)}else{applyProfile(mode);camera.aspect=innerWidth/innerHeight;camera.fov=45;camera.updateProjectionMatrix();composer.render()}}catch(_loopErr){/* A transient first-frame/mode-switch error must never permanently freeze the twin (a dead frame in front of a client is unacceptable). Log once, keep the loop alive; the next frame renders fine. */if(!window.__loopErr){window.__loopErr=(_loopErr&&_loopErr.stack)||String(_loopErr);console.warn('[render-loop recovered]',_loopErr);}}})}catch(error){loading.classList.add('error');loading.innerHTML=`Could not load the synchronized Twin.<br><br>${error.message}<br><br>Run <code>npm run site:sweden:svartinge:prototype:serve</code> from the repository root.`}
