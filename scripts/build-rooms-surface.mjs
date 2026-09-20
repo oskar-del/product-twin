@@ -37,6 +37,12 @@ const LOOKS = [
     channel: "vidaxl"
   },
   {
+    id: "BEDROOM",
+    label: "Bedroom · three channels",
+    scene: "data/scenes/shoppable-bedroom/scene-v0.1.json",
+    channel: "mixed"
+  },
+  {
     id: "GLANRUMMET",
     label: "Glanrummet · in the house",
     scene: "data/scenes/room-glanrummet-newport/scene-v0.1.json",

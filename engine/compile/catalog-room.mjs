@@ -65,7 +65,12 @@ export function selectForRoles({ rows, roles, resolveGeometry }) {
   const used = new Set();
 
   for (const role of roles) {
-    const pool = role.categories.flatMap(c => byCategory.get(c) ?? []);
+    // Some feeds ship no category at all (Kungsängen's 23,822 rows are all
+    // blank), so a role may select on the title instead. Categories still win
+    // when the feed has them — a title match is the weaker discriminator.
+    const pool = role.title_match
+      ? rows.filter(r => role.title_match.test(String(r.title ?? "")))
+      : (role.categories ?? []).flatMap(c => byCategory.get(c) ?? []);
 
     const scored = [];
     for (const row of pool) {
@@ -78,6 +83,8 @@ export function selectForRoles({ rows, roles, resolveGeometry }) {
       // A feed can supply one without the other (vidaXL states size in the
       // title but ships no geometry), so they are never conflated.
       if (role.require_asset !== false && !geom?.assetPath) continue;
+
+      if (role.min_tier && (TIER_RANK[geom?.dimension_tier ?? "NONE"] ?? 3) > (TIER_RANK[role.min_tier] ?? 3)) continue;
 
       const size = geom?.bounds?.size ?? null;
       const sizeKnown = Array.isArray(size) && size.every(v => Number.isFinite(v) && v > 0);

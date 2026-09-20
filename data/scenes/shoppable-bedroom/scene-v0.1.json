@@ -1,0 +1,560 @@
+{
+  "scene_version": "twin-scene/v0.1",
+  "entity_type": "ShoppableRoomSceneExport",
+  "scene_id": "SCENE_SHOPPABLE_BEDROOM_V01",
+  "generated_at": "2026-09-20T22:34:59.314Z",
+  "subject": {
+    "label": "Bedroom — Kungsängen · Lampemesteren · Newport",
+    "identity_evidence_class": "CONCEPT",
+    "identity_scope": "SYNTHETIC_SHOPPABLE_ROOM"
+  },
+  "coordinate_system": {
+    "frame": "LOCAL_ENU",
+    "axes": {
+      "x": "EAST",
+      "y": "UP",
+      "z": "NORTH"
+    },
+    "origin_wgs84": [
+      0,
+      0
+    ],
+    "horizontal_reference": "SYNTHETIC — not a real location",
+    "vertical_reference": "LOCAL_RELATIVE_UNCALIBRATED",
+    "linear_units": "metre",
+    "evidence_class": "CONCEPT",
+    "limitations": [
+      "Synthetic room — not a real site."
+    ]
+  },
+  "source_bindings": [
+    {
+      "path": "scripts/compile-bedroom.mjs",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "ROOM_COMPILER"
+    },
+    {
+      "path": "../repo-avatar-factory/data/kungsangen/kungsangen-catalog.jsonl",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "CHANNEL_CATALOG"
+    },
+    {
+      "path": "../repo-avatar-factory/data/lampemesteren/lampemesteren-catalog.jsonl",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "CHANNEL_CATALOG"
+    },
+    {
+      "path": "../repo-avatar-factory/data/newport/newport-catalog.jsonl",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "CHANNEL_CATALOG"
+    }
+  ],
+  "evidence_classes": [
+    "AUTHORITATIVE",
+    "INDICATIVE",
+    "DERIVED",
+    "REPORTED_UNVERIFIED",
+    "CONCEPT"
+  ],
+  "legal_claim_policy": {
+    "visualisation_allowed": true,
+    "concept_design_allowed": true,
+    "blocked_claims": [
+      "LEGAL_BOUNDARY",
+      "REGISTERED_AREA",
+      "ENTITLEMENT",
+      "PRODUCT_DIMENSION"
+    ],
+    "rule": "A shoppable room claims nothing about any real site. Most items here have a width and depth the merchant stated and a height taken from a per-category default table — the panel says so per item, and no defaulted figure may be quoted as a product dimension. BUY links carry the channel's own tracking parameters verbatim."
+  },
+  "presentation": {
+    "profiles": [
+      "INTELLIGENCE",
+      "REALISTIC",
+      "SYSTEMS"
+    ],
+    "default_profile": "REALISTIC",
+    "default_stage": "ROOM"
+  },
+  "navigation": [
+    {
+      "id": "ROOM",
+      "label": "Bedroom",
+      "camera": [
+        3.6,
+        2.8,
+        4.2
+      ],
+      "target": [
+        0,
+        0.6,
+        0.2
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "ROOM",
+        "FURNITURE"
+      ],
+      "cutaway": false,
+      "labels": false
+    },
+    {
+      "id": "BED",
+      "label": "The bed",
+      "camera": [
+        1.9,
+        1.5,
+        -1.6
+      ],
+      "target": [
+        0,
+        0.5,
+        1.2
+      ],
+      "visible_groups": [
+        "FURNITURE",
+        "TERRAIN"
+      ],
+      "cutaway": false,
+      "labels": true
+    }
+  ],
+  "elements": [
+    {
+      "id": "ROOM_FLOOR",
+      "type": "TERRAIN",
+      "label": "Bedroom floor",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 4.4,
+        "segments": 1,
+        "vertices": [
+          [
+            -2.1,
+            0,
+            -2.2
+          ],
+          [
+            2.1,
+            0,
+            -2.2
+          ],
+          [
+            -2.1,
+            0,
+            2.2
+          ],
+          [
+            2.1,
+            0,
+            2.2
+          ]
+        ],
+        "method": "FLAT",
+        "height_reference": "LOCAL_RELATIVE"
+      },
+      "source_refs": [
+        "BEDROOM_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic room shell for product display."
+      ]
+    },
+    {
+      "id": "ROOM_VOLUME",
+      "type": "ROOM",
+      "picking": false,
+      "label": "Bedroom",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          4.2,
+          2.5,
+          4.4
+        ],
+        "position": [
+          0,
+          1.25,
+          0
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "SLEEPING"
+      },
+      "source_refs": [
+        "BEDROOM_COMPILER"
+      ],
+      "limitations": [
+        "Synthetic room for product display."
+      ]
+    },
+    {
+      "id": "BED",
+      "type": "FURNITURE",
+      "label": "Säng Sunnernäs 180x210 Mjuk/Mjuk A.Rose (1800×2100×600 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.8,
+          0.6,
+          2.1
+        ],
+        "position": [
+          0,
+          0.3,
+          1
+        ],
+        "rotation_y_deg": 180
+      },
+      "source_refs": [
+        "KUNGSANGEN catalog row 124247"
+      ],
+      "limitations": [
+        "Width and depth are the merchant's; the height comes from the per-category default table and is not a product fact.",
+        "No 3D proxy exists for this row; shown as a box at nominal scale.",
+        "Dimensions are not derived from geometry and are not a fit claim."
+      ],
+      "commerce": {
+        "product_name": "Säng Sunnernäs 180x210 Mjuk/Mjuk A.Rose",
+        "brand": "Kungsangen",
+        "product_url": "https://kungsangen.com/se/p/sang-sunnernas/124247",
+        "buy_url": "https://on.kungsangen.com/t/t?a=1954031236&as=2106320328&t=2&tk=1&cupa_sku=124247&fid=2564&url=https://kungsangen.com/se/p/sang-sunnernas/124247",
+        "image_url": "https://api.kungsangen.com/medias/sys_master/images/hae/hf7/8825235570718/ks2000Wx1500H_sunnernas_kontinental_s31_vx20_180_anouk_rose/ks2000Wx1500H-sunnernas-kontinental-s31-vx20-180-anouk-rose.jpg",
+        "price": 68890,
+        "currency": "SEK",
+        "category": null,
+        "color": null,
+        "material": null,
+        "availability": "in_stock",
+        "sku": "124247",
+        "gtin": null,
+        "channel": "kungsangen",
+        "dimensions_mm": {
+          "width": 1800,
+          "height": 600,
+          "depth": 2100
+        },
+        "dimension_source": "title_regex:double_wd_cm_assumed + category_default:FFE.BEDROOM.BED_FRAME",
+        "dimension_evidence": "INDICATIVE",
+        "dimension_tier": "WD_SOURCE_H_DEFAULT",
+        "dimension_tier_label": "height: category default",
+        "dimension_native_mesh": false
+      }
+    },
+    {
+      "id": "NIGHTSTAND_L",
+      "type": "FURNITURE",
+      "label": "Erin sidobord mässing valnöt beige (500×500×550 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-100599-g2-proxy.glb",
+        "position": [
+          -1.25,
+          0,
+          1.7
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT catalog row 100599",
+        "G2 proxy data/geometry/avatars/newport-100599-g2-proxy.glb"
+      ],
+      "limitations": [
+        "All three axes come from the per-category default table. The 3D proxy is an envelope at that size, so measuring it precisely does not make it a measurement of the product.",
+        "Geometry level G2: promoted universal proxy at the category's default envelope — the shape is representative and the size is not the product's.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Erin sidobord mässing valnöt beige",
+        "brand": "Ruth & Joanna",
+        "product_url": "https://www.newport.se/shop/mobler/bord/sidobord/erin-sidobord-massing-valnot-beige",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100599&fid=2175&url=https://www.newport.se/shop/mobler/bord/sidobord/erin-sidobord-massing-valnot-beige",
+        "image_url": "https://cdn-images.newporthome.eu/product/13dd3aaad2504ab4a3efdfb39acc2bb1/list-45/list.jpg",
+        "price": 10449,
+        "currency": "SEK",
+        "category": "Sidobord",
+        "color": "Beige / Guld",
+        "material": "Mässing / Marmor / Valnöt",
+        "availability": "in_stock",
+        "sku": "100599",
+        "gtin": null,
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 500,
+          "height": 550,
+          "depth": 500
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "INDICATIVE",
+        "dimension_tier": "ALL_DEFAULT",
+        "dimension_tier_label": "size: category default (all three axes)",
+        "dimension_native_mesh": false
+      }
+    },
+    {
+      "id": "NIGHTSTAND_R",
+      "type": "FURNITURE",
+      "label": "Delano sidobord rund valnöt beige (500×500×550 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-100601-g2-proxy.glb",
+        "position": [
+          1.25,
+          0,
+          1.7
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT catalog row 100601",
+        "G2 proxy data/geometry/avatars/newport-100601-g2-proxy.glb"
+      ],
+      "limitations": [
+        "All three axes come from the per-category default table. The 3D proxy is an envelope at that size, so measuring it precisely does not make it a measurement of the product.",
+        "Geometry level G2: promoted universal proxy at the category's default envelope — the shape is representative and the size is not the product's.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Delano sidobord rund valnöt beige",
+        "brand": "Ruth & Joanna",
+        "product_url": "https://www.newport.se/shop/mobler/bord/sidobord/delano-sidobord-rund-valnot-beige",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100601&fid=2175&url=https://www.newport.se/shop/mobler/bord/sidobord/delano-sidobord-rund-valnot-beige",
+        "image_url": "https://cdn-images.newporthome.eu/product/9cedc1832ca44a9297eb55512696d797/list-45/list.jpg",
+        "price": 11695,
+        "currency": "SEK",
+        "category": "Sidobord",
+        "color": "Beige / Brun",
+        "material": "Mässing / Trä / Marmor",
+        "availability": "in_stock",
+        "sku": "100601",
+        "gtin": null,
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 500,
+          "height": 550,
+          "depth": 500
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "INDICATIVE",
+        "dimension_tier": "ALL_DEFAULT",
+        "dimension_tier_label": "size: category default (all three axes)",
+        "dimension_native_mesh": false
+      }
+    },
+    {
+      "id": "DRESSER",
+      "type": "FURNITURE",
+      "label": "Denver byrå (900×450×800 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-10368-g2-proxy.glb",
+        "position": [
+          -1.75,
+          0,
+          -1.4
+        ],
+        "rotation_y_deg": 90
+      },
+      "source_refs": [
+        "NEWPORT catalog row 10368",
+        "GTIN 7340172905080",
+        "G2 proxy data/geometry/avatars/newport-10368-g2-proxy.glb"
+      ],
+      "limitations": [
+        "All three axes come from the per-category default table. The 3D proxy is an envelope at that size, so measuring it precisely does not make it a measurement of the product.",
+        "Geometry level G2: promoted universal proxy at the category's default envelope — the shape is representative and the size is not the product's.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Denver byrå",
+        "brand": "Artwood",
+        "product_url": "https://www.newport.se/shop/mobler/forvaring/byraer/denver-byra",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=10368&fid=2175&url=https://www.newport.se/shop/mobler/forvaring/byraer/denver-byra",
+        "image_url": "https://cdn-images.newporthome.eu/product/63d348d39dc411ebb34e000c29064583/list-45/list.jpg",
+        "price": 41595,
+        "currency": "SEK",
+        "category": "Byråer",
+        "color": null,
+        "material": "Ekfanér",
+        "availability": "in_stock",
+        "sku": "10368",
+        "gtin": "7340172905080",
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 900,
+          "height": 800,
+          "depth": 450
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "INDICATIVE",
+        "dimension_tier": "ALL_DEFAULT",
+        "dimension_tier_label": "size: category default (all three axes)",
+        "dimension_native_mesh": false
+      }
+    },
+    {
+      "id": "ARMCHAIR",
+      "type": "FURNITURE",
+      "label": "San Francisco fåtölj sand (750×800×850 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-100121-g2-proxy.glb",
+        "position": [
+          1.5,
+          0,
+          -1.3
+        ],
+        "rotation_y_deg": -140
+      },
+      "source_refs": [
+        "NEWPORT catalog row 100121",
+        "GTIN 7340066723059",
+        "G2 proxy data/geometry/avatars/newport-100121-g2-proxy.glb"
+      ],
+      "limitations": [
+        "All three axes come from the per-category default table. The 3D proxy is an envelope at that size, so measuring it precisely does not make it a measurement of the product.",
+        "Geometry level G2: promoted universal proxy at the category's default envelope — the shape is representative and the size is not the product's.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "San Francisco fåtölj sand",
+        "brand": "Newport",
+        "product_url": "https://www.newport.se/shop/mobler/fatoljer/tygfatoljer/san-francisco-fatolj-sand-1-sits",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100121&fid=2175&url=https://www.newport.se/shop/mobler/fatoljer/tygfatoljer/san-francisco-fatolj-sand-1-sits",
+        "image_url": "https://cdn-images.newporthome.eu/product/be3af752600f4990b81c38d8bdf08999/list-45/list.jpg",
+        "price": 21900,
+        "currency": "SEK",
+        "category": "Tygfåtöljer",
+        "color": "Beige",
+        "material": "Polyester/bokträ/furu/mdf/plywood",
+        "availability": "in_stock",
+        "sku": "100121",
+        "gtin": "7340066723059",
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 750,
+          "height": 850,
+          "depth": 800
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "INDICATIVE",
+        "dimension_tier": "ALL_DEFAULT",
+        "dimension_tier_label": "size: category default (all three axes)",
+        "dimension_native_mesh": false
+      }
+    },
+    {
+      "id": "RUG",
+      "type": "FURNITURE",
+      "label": "Key Border matta camel (1700×2400×12 mm)",
+      "evidence_class": "INDICATIVE",
+      "geometry": {
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/newport-54125-g2-proxy.glb",
+        "position": [
+          0,
+          0.004,
+          -0.2
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "NEWPORT catalog row 54125",
+        "GTIN 848539021420",
+        "G2 proxy data/geometry/avatars/newport-54125-g2-proxy.glb"
+      ],
+      "limitations": [
+        "All three axes come from the per-category default table. The 3D proxy is an envelope at that size, so measuring it precisely does not make it a measurement of the product.",
+        "Geometry level G2: promoted universal proxy at the category's default envelope — the shape is representative and the size is not the product's.",
+        "Textures and finish are representative, not manufacturer artwork."
+      ],
+      "commerce": {
+        "product_name": "Key Border matta camel",
+        "brand": "Jonathan Adler",
+        "product_url": "https://www.newport.se/shop/textil/mattor/ullmattor/key-border-matta-camel",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=54125&fid=2175&url=https://www.newport.se/shop/textil/mattor/ullmattor/key-border-matta-camel",
+        "image_url": "https://cdn-images.newporthome.eu/product/95d8d68c6c9e11ec990d000c29064583/list-45/list.jpg",
+        "price": 54795,
+        "currency": "SEK",
+        "category": "Ullmattor",
+        "color": "Beige / Vit",
+        "material": "Ull",
+        "availability": "in_stock",
+        "sku": "54125",
+        "gtin": "848539021420",
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 1700,
+          "height": 12,
+          "depth": 2400
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "INDICATIVE",
+        "dimension_tier": "ALL_DEFAULT",
+        "dimension_tier_label": "size: category default (all three axes)",
+        "dimension_native_mesh": false
+      }
+    },
+    {
+      "id": "BEDSIDE_LAMP",
+      "type": "FURNITURE",
+      "label": "Lisa bordslampa, papper, vit, Ø 28 cm - Watt & Veke - Sovrum - Design - Papper / papp - Med en ljuskälla (280×280×420 mm)",
+      "evidence_class": "CONCEPT",
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.28,
+          0.42,
+          0.28
+        ],
+        "position": [
+          -1.25,
+          0.76,
+          1.7
+        ],
+        "rotation_y_deg": 0
+      },
+      "source_refs": [
+        "LAMPEMESTEREN catalog row 10048525",
+        "GTIN 7340044232351"
+      ],
+      "limitations": [
+        "Width and depth are the merchant's; the height comes from the per-category default table and is not a product fact.",
+        "No 3D proxy exists for this row; shown as a box at nominal scale.",
+        "Dimensions are not derived from geometry and are not a fit claim."
+      ],
+      "commerce": {
+        "product_name": "Lisa bordslampa, papper, vit, Ø 28 cm - Watt & Veke - Sovrum - Design - Papper / papp - Med en ljuskälla",
+        "brand": "Watt & Veke",
+        "product_url": "https://www.lampemesteren.se/p/lisa-bordslampa-papper-vit-o-28-cm-watt-veke-10048525.html",
+        "buy_url": "https://on.lampemesteren.se/t/t?a=1690870367&as=2106320328&t=2&tk=1&cupa_sku=10048525&fid=1004&url=https://www.lampemesteren.se/p/lisa-bordslampa-papper-vit-o-28-cm-watt-veke-10048525.html",
+        "image_url": "https://lw-cdn.com/images/AB3FF0FE60B9/k_8edde8c849baa76b4fcc0c577f983344;w_1600;h_1600;q_90/10048525.jpg",
+        "price": 1280,
+        "currency": "SEK",
+        "category": "Bordslampor",
+        "color": "Vit",
+        "material": "Papper / papp",
+        "availability": "in_stock",
+        "sku": "10048525",
+        "gtin": "7340044232351",
+        "channel": "lampemesteren",
+        "dimensions_mm": {
+          "width": 280,
+          "height": 420,
+          "depth": 280
+        },
+        "dimension_source": "title_regex:diameter + category_default:ELECTRICAL.LUMINAIRES.TABLE",
+        "dimension_evidence": "INDICATIVE",
+        "dimension_tier": "WD_SOURCE_H_DEFAULT",
+        "dimension_tier_label": "height: category default",
+        "dimension_native_mesh": false
+      }
+    }
+  ]
+}
