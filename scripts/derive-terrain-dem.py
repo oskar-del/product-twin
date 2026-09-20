@@ -347,6 +347,9 @@ def main():
                   "registered parcel mask; heights relative to the site-pin datum for the local "
                   "ENU heightfield.",
         "derived_at": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
+        # When the tiles themselves were acquired, taken from the runtime receipt, so a
+        # downstream ledger never has to hard-code a date for this site.
+        "source_retrieved_at": receipt.get("observed_at"),
         "coordinate_anchor": {
             "listing_pin_wgs84": [pin_lon, pin_lat],
             "sweref99tm_en": [e0, n0],

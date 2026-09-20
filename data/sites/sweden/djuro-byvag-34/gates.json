@@ -3,7 +3,7 @@
   "entity_type": "SiteGateSet",
   "subject": "DJURÖ 4:147",
   "site": "djuro-byvag-34",
-  "generated_at": "2026-09-20T18:48:15+00:00",
+  "generated_at": "2026-09-20T18:57:30+00:00",
   "generator": "scripts/build-findings-and-gates.py",
   "generated_from": [
     "property-division-derived-v0.1.json",
@@ -13,7 +13,9 @@
     "sea-view-derived-v0.1.json",
     "municipal-planning-status-v0.1.json"
   ],
-  "rule": "Nothing in these files is hand-typed; every value is read from a committed derived product. A rendered horizon is never a view claim.",
+  "receipts_absent": [],
+  "fields_absent": [],
+  "rule": "Nothing in these files is hand-typed; every value is read from a committed derived product. A rendered horizon is never a view claim. Every receipt is optional: a finding or gate whose receipt or field is absent is emitted OPEN with the reason, never skipped and never inferred.",
   "gate_count": 11,
   "closed": 7,
   "open": 4,
@@ -25,7 +27,7 @@
         "RCPT_SE_LM_PROPERTY_DIVISION_KN0120",
         "FINDING_SE_REGISTERED_PARCEL_EXTENT"
       ],
-      "decided_at": "2026-09-20T18:48:15+00:00",
+      "decided_at": "2026-09-20T18:57:30+00:00",
       "reason": "Authoritative registered extent for DJURÖ 4:147: 5,156.3 m², 9 boundary vertices, 10 context parcels."
     },
     {
@@ -35,7 +37,7 @@
         "RCPT_SE_LM_BUILDINGS_KN0120",
         "FINDING_SE_OFFICIAL_BUILDINGS_ON_PARCEL"
       ],
-      "decided_at": "2026-09-20T18:48:15+00:00",
+      "decided_at": "2026-09-20T18:57:30+00:00",
       "reason": "4 registered buildings on the parcel with real rings, 416.0 m² of footprint. The areas independently confirm the figures previously published without geometry behind them."
     },
     {
@@ -55,7 +57,7 @@
         "FINDING_SE_PARCEL_RELIEF",
         "FINDING_SE_SLOPE_THREE_MEASURES"
       ],
-      "decided_at": "2026-09-20T18:48:15+00:00",
+      "decided_at": "2026-09-20T18:57:30+00:00",
       "reason": "10 receipted 1 m DTM tiles re-verified by sha256 against .runtime/receipts before any pixel was read; the parcel mask derived from them measures 5155.0 m2 against 5156.3 m2 registered, an independent check that the boundary and DTM frames align."
     },
     {
@@ -74,7 +76,7 @@
         "FINDING_SE_PARCEL_REACHES_SHORELINE",
         "FINDING_SE_STRANDSKYDD_COVERS_WHOLE_PARCEL"
       ],
-      "decided_at": "2026-09-20T18:48:15+00:00",
+      "decided_at": "2026-09-20T18:57:30+00:00",
       "reason": "Measured, not presumed. The parcel reaches the water at 0.2 m and its farthest corner is 94.8 m out, so 100.0% of it lies inside the 100 m zone, as do all 4 registered buildings."
     },
     {
@@ -84,7 +86,7 @@
         "RCPT_SE_VARMDO_WFS_PLANNING",
         "FINDING_SE_NO_EXTENDED_STRANDSKYDD"
       ],
-      "decided_at": "2026-09-20T18:48:15+00:00",
+      "decided_at": "2026-09-20T18:57:30+00:00",
       "reason": "Verified negative across three independent layers, each with a passing control. The base 100 m applies here, and it already covers the whole parcel, so the extension question does not change the answer."
     },
     {
@@ -94,7 +96,7 @@
         "RCPT_SE_VARMDO_WFS_PLANNING",
         "FINDING_SE_NO_DETALJPLAN"
       ],
-      "decided_at": "2026-09-20T18:48:15+00:00",
+      "decided_at": "2026-09-20T18:57:30+00:00",
       "reason": "Verified negative: no plan in force, none pending, none revoked since 2023-01-01. Unplanned land."
     },
     {
@@ -111,7 +113,7 @@
         "RCPT_SE_LM_TERRAIN_DTM_DJURO",
         "FINDING_SE_SEA_VIEW_ARC"
       ],
-      "decided_at": "2026-09-20T18:48:15+00:00",
+      "decided_at": "2026-09-20T18:57:30+00:00",
       "reason": "43.9% of the compass in one unbroken arc 319.0°–117.0°, computed by viewshed. Closed as a TERRAIN result and as a CEILING only — see GATE_SE_VIEW_OCCLUSION."
     },
     {
