@@ -236,7 +236,7 @@ def main():
 
     doc = {
         # --- template contract (saterdalsvagen-14 shape; do not rename) ---------
-        "schema_version": "svartinge-buildings-official-derived/v0.1",
+        "schema_version": "buildings-official-derived/v0.1",
         "entity_type": "OfficialBuildingFootprintClip",
         "subject": designation,
         "authority": "Lantmäteriet",

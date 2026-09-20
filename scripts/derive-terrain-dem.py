@@ -198,17 +198,17 @@ def main():
             "The parcel falls as a coherent plane; the fitted slope describes the ground."
             if planar else
             "NO SINGLE SLOPE DESCRIBES THIS PARCEL. The whole-parcel plane falls "
-            f"{slope_deg:.1f}deg toward {compass(aspect)}, but the ground underfoot has a median "
-            f"gradient of {float(np.median(cell_deg)):.1f}deg and reaches "
-            f"{float(np.percentile(cell_deg, 90)):.1f}deg across the steepest tenth. The plane fit "
+            f"{slope_deg:.1f}° toward {compass(aspect)}, but the ground underfoot has a median "
+            f"gradient of {float(np.median(cell_deg)):.1f}° and reaches "
+            f"{float(np.percentile(cell_deg, 90)):.1f}° across the steepest tenth. The plane fit "
             f"leaves {rms:.2f} m RMS residual against {stats['relief_m']:.2f} m of relief. This is "
-            "broken ground - rock shelves and hollows - not a uniform hillside. Quote the fall "
+            "broken ground — rock shelves and hollows — not a uniform hillside. Quote the fall "
             "direction for orientation and the per-cell distribution for steepness; quoting any "
             "single slope alone materially understates the site."),
         "reconciliation_with_pin_slope": (
             "These figures do NOT contradict slope_aspect_at_pin. That field is the Horn 3x3 "
-            "gradient in the single 3 m window around the site pin - the same measure the "
-            "Svartinge template publishes - and it is a local microslope. The plane fit here is "
+            "gradient in the single 3 m window around the site pin — the same measure the "
+            "Svärtinge template publishes — and it is a local microslope. The plane fit here is "
             "the whole 5155 m2 parcel. Three different questions, three correct answers: at the "
             "pin the ground tilts gently WNW; across the parcel it falls NE to the water; "
             "underfoot the median gradient is steeper than either. Quote the one that matches "
@@ -317,7 +317,7 @@ def main():
 
     doc = {
         # --- template contract (saterdalsvagen-14 shape; do not rename) ---------
-        "schema_version": "svartinge-terrain-dem-derived/v0.1",
+        "schema_version": "terrain-dem-derived/v0.1",
         "entity_type": "DerivedTerrainEvidence",
         "subject": designation,
         "evidence_class": "DERIVED",

@@ -1,5 +1,5 @@
 {
-  "schema_version": "svartinge-terrain-dem-derived/v0.1",
+  "schema_version": "terrain-dem-derived/v0.1",
   "entity_type": "DerivedTerrainEvidence",
   "subject": "DJURÖ 4:147",
   "evidence_class": "DERIVED",
@@ -21,7 +21,7 @@
     "sha256_reverified": true
   },
   "method": "Windowed bilinear sample of the receipted 1 m DTM; Horn 3x3 slope/aspect at the pin; least-squares plane and per-cell gradient distribution over the registered parcel mask; heights relative to the site-pin datum for the local ENU heightfield.",
-  "derived_at": "2026-09-20T18:38:08+00:00",
+  "derived_at": "2026-09-20T18:48:15+00:00",
   "coordinate_anchor": {
     "listing_pin_wgs84": [
       18.7076237,
@@ -3521,8 +3521,8 @@
       "max_deg": 57.2
     },
     "is_effectively_planar": false,
-    "verdict": "NO SINGLE SLOPE DESCRIBES THIS PARCEL. The whole-parcel plane falls 3.9deg toward NE, but the ground underfoot has a median gradient of 8.3deg and reaches 23.8deg across the steepest tenth. The plane fit leaves 1.46 m RMS residual against 11.53 m of relief. This is broken ground - rock shelves and hollows - not a uniform hillside. Quote the fall direction for orientation and the per-cell distribution for steepness; quoting any single slope alone materially understates the site.",
-    "reconciliation_with_pin_slope": "These figures do NOT contradict slope_aspect_at_pin. That field is the Horn 3x3 gradient in the single 3 m window around the site pin - the same measure the Svartinge template publishes - and it is a local microslope. The plane fit here is the whole 5155 m2 parcel. Three different questions, three correct answers: at the pin the ground tilts gently WNW; across the parcel it falls NE to the water; underfoot the median gradient is steeper than either. Quote the one that matches the question being asked, and never present one as a correction of another."
+    "verdict": "NO SINGLE SLOPE DESCRIBES THIS PARCEL. The whole-parcel plane falls 3.9° toward NE, but the ground underfoot has a median gradient of 8.3° and reaches 23.8° across the steepest tenth. The plane fit leaves 1.46 m RMS residual against 11.53 m of relief. This is broken ground — rock shelves and hollows — not a uniform hillside. Quote the fall direction for orientation and the per-cell distribution for steepness; quoting any single slope alone materially understates the site.",
+    "reconciliation_with_pin_slope": "These figures do NOT contradict slope_aspect_at_pin. That field is the Horn 3x3 gradient in the single 3 m window around the site pin — the same measure the Svärtinge template publishes — and it is a local microslope. The plane fit here is the whole 5155 m2 parcel. Three different questions, three correct answers: at the pin the ground tilts gently WNW; across the parcel it falls NE to the water; underfoot the median gradient is steeper than either. Quote the one that matches the question being asked, and never present one as a correction of another."
   },
   "parcel_height_bands": [
     {
@@ -10774,5 +10774,5 @@
     "Two slope measures are reported because they answer different questions and can disagree. Read parcel_slope.verdict before quoting either one.",
     "This is a derivation from a verified source, not an official terrain survey, and it is not finished-floor or foundation input."
   ],
-  "derived_geometry_sha256": "fb69bd0a6fcd623176b3969116c3455d5457d1f7fbfc67ffbeb836324d432e3f"
+  "derived_geometry_sha256": "8bff3086d748d9da5cdb15142f9c2970cfbf4433e4736e2df9286f92ebbb2536"
 }

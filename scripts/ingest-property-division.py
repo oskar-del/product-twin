@@ -186,13 +186,20 @@ def to_local(polys, origin):
 def emit(subject, context, origin, parsed_srs, raw_sha, raw_bytes, zip_manifest):
     e0, n0 = origin
     rings = to_local(subject["polys"], origin)
+    gpkgs = [Path(e["name"]).stem for e in zip_manifest
+             if e["name"].lower().endswith(".gpkg")]
+    if len(gpkgs) != 1:
+        raise SystemExit(f"expected exactly one .gpkg in the archive, found {gpkgs}")
+    product_name = gpkgs[0]
     payload = {
-        "schema_version": "svartinge-property-division-derived/v0.1",
+        "schema_version": "property-division-derived/v0.1",
         "entity_type": "AuthoritativePropertyDivisionClip",
         "subject": subject["designation"],
         "evidence_class": "AUTHORITATIVE",
         "authority": "Lantmäteriet",
-        "source_product": "fastighetsindelning_kn0581 (GeoPackage)",
+        # Derived from the GeoPackage entry inside the archive we just hashed, never
+        # a literal: a hard-coded product name silently mislabels every other site.
+        "source_product": f"{product_name} (GeoPackage)",
         "source_object_ids": [subject["object_id"]] + [c["object_id"] for c in context],
         "source_crs": f"EPSG:{sorted(parsed_srs)[0]}" if parsed_srs else None,
         "coordinate_frame": "LOCAL_ENU x=EAST z=NORTH, origin = municipal pin (E0,N0 SWEREF99TM)",
