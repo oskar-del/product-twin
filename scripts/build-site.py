@@ -339,7 +339,11 @@ def read_findings_and_gates(docs):
         finding["_chip"] = (chip_name if chip_name in EVIDENCE_ORDER
                             else CHIP_VOCABULARY.get(finding.get("evidence_class", ""), "CONCEPT"))
 
-    closed = [g for g in gates if str(g.get("status", "")).upper() == "CLOSED"]
+    # Two vocabularies are in the wild: Djurö's generator writes CLOSED, Svärtinge's
+    # plot-intelligence record writes SATISFIED. Both mean the gate is answered. Counting only
+    # CLOSED reported Svärtinge as 0 of 18 when its own ledger says 2 are satisfied.
+    SATISFIED_STATES = {"CLOSED", "SATISFIED"}
+    closed = [g for g in gates if str(g.get("status", "")).upper() in SATISFIED_STATES]
     return {
         "findings": findings,
         "gates": gates,

@@ -1,0 +1,223 @@
+{
+  "schema_version": "site-findings/v0.1",
+  "entity_type": "SiteFindingSet",
+  "subject": "SVÄRTINGE 54:28",
+  "site": "saterdalsvagen-14",
+  "generated_at": "2026-09-20T19:02:23+00:00",
+  "generator": "scripts/build-findings-and-gates.py",
+  "generated_from": [
+    "property-division-derived-v0.1.json",
+    "buildings-official-derived-v0.1.json",
+    "terrain-dem-derived-v0.1.json",
+    "shoreline-strandskydd-derived-v0.1.json",
+    "sea-view-derived-v0.1.json",
+    "municipal-planning-status-v0.1.json"
+  ],
+  "receipts_absent": [
+    "ShorelineAndStrandskyddDerivation",
+    "SeaViewSightlineDerivation",
+    "MunicipalPlanningStatusReceiptSet"
+  ],
+  "fields_absent": [
+    "OfficialBuildingFootprintClip.placement",
+    "DerivedTerrainEvidence.parcel_height_statistics",
+    "DerivedTerrainEvidence.parcel_slope",
+    "DerivedTerrainEvidence.tile_integrity"
+  ],
+  "rule": "Nothing in these files is hand-typed; every value is read from a committed derived product. A rendered horizon is never a view claim. Every receipt is optional: a finding or gate whose receipt or field is absent is emitted OPEN with the reason, never skipped and never inferred.",
+  "source_receipts": [
+    {
+      "receipt_id": "RCPT_SE_LM_PROPERTY_DIVISION_KN0581",
+      "source_id": "SE_LM_FASTIGHETSINDELNING",
+      "retrieved_at": null,
+      "request_or_record_ref": "https://api.lantmateriet.se/stac-vektor/v1/collections/fastighetsindelning/items/0581",
+      "runtime_locator": null,
+      "sha256": "839f729f63d8393a02f4a111cd0ca51b4366c2a322e24b89a6da6aa605a4b646",
+      "scope": "Registered property division for the SVÄRTINGE 54:28 municipality clip.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_LM_BUILDINGS_KN0581",
+      "source_id": "SE_LM_BYGGNAD",
+      "retrieved_at": null,
+      "request_or_record_ref": "https://api.lantmateriet.se/stac-vektor/v1/collections/byggnader/items/0581",
+      "runtime_locator": null,
+      "sha256": "19570924b1048b33a65a866dd1a5855ce8362fe20bef7c5922a090f5695ed503",
+      "scope": "Registered building footprints for the SVÄRTINGE 54:28 municipality clip.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "FINDING_SE_REGISTERED_PARCEL_EXTENT",
+      "domain": "property",
+      "value": {
+        "designation": "SVÄRTINGE 54:28",
+        "area_m2": 1936.8,
+        "boundary_vertices": 6,
+        "context_parcels": 75,
+        "crs": "EPSG:3006"
+      },
+      "unit": "m2",
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "chip": "authoritative",
+      "source_receipt_refs": [
+        "RCPT_SE_LM_PROPERTY_DIVISION_KN0581"
+      ],
+      "method": "Lantmäteriet fastighetsindelning GeoPackage clipped around the site pin; geometry hash recorded.",
+      "observed_at": "2026-09-20T19:02:23+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "Authoritative for registered extent, not a survey of monument positions."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_OFFICIAL_BUILDINGS_ON_PARCEL",
+      "domain": "buildings",
+      "value": null,
+      "unit": null,
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [],
+      "method": null,
+      "observed_at": "2026-09-20T19:02:23+00:00",
+      "verification": "OPEN",
+      "reason": "field not present in OfficialBuildingFootprintClip: placement",
+      "limitations": [
+        "This site's OfficialBuildingFootprintClip does not carry placement. What is built on this parcel is therefore not established. Nothing here is inferred from the receipts that ARE present."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_BUILDING_HEIGHTS_ABSENT",
+      "domain": "buildings",
+      "value": {
+        "heights_available": false,
+        "product": "byggnad_kn0581 (GeoPackage)"
+      },
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "chip": "authoritative",
+      "source_receipt_refs": [
+        "RCPT_SE_LM_BUILDINGS_KN0581"
+      ],
+      "method": "Inspected every attribute column of the byggnad feature table.",
+      "observed_at": "2026-09-20T19:02:23+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "No storey count, eaves or ridge height exists in this product. Any extrusion in a render is DERIVED or CONCEPT and must be labelled as such."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_PARCEL_RELIEF",
+      "domain": "terrain",
+      "value": null,
+      "unit": null,
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [],
+      "method": null,
+      "observed_at": "2026-09-20T19:02:23+00:00",
+      "verification": "OPEN",
+      "reason": "field not present in DerivedTerrainEvidence: parcel_height_statistics, parcel_slope, tile_integrity",
+      "limitations": [
+        "This site's DerivedTerrainEvidence does not carry parcel_height_statistics, parcel_slope, tile_integrity. Heights, relief and the pin elevation are therefore not established. Nothing here is inferred from the receipts that ARE present."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_SLOPE_THREE_MEASURES",
+      "domain": "terrain",
+      "value": null,
+      "unit": null,
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [],
+      "method": null,
+      "observed_at": "2026-09-20T19:02:23+00:00",
+      "verification": "OPEN",
+      "reason": "field not present in DerivedTerrainEvidence: parcel_height_statistics, parcel_slope, tile_integrity",
+      "limitations": [
+        "This site's DerivedTerrainEvidence does not carry parcel_height_statistics, parcel_slope, tile_integrity. Slope and aspect are therefore not established by any of the three measures. Nothing here is inferred from the receipts that ARE present."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_PARCEL_REACHES_SHORELINE",
+      "domain": "water",
+      "value": null,
+      "unit": null,
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [],
+      "method": null,
+      "observed_at": "2026-09-20T19:02:23+00:00",
+      "verification": "OPEN",
+      "reason": "receipt not present: ShorelineAndStrandskyddDerivation",
+      "limitations": [
+        "This site holds no ShorelineAndStrandskyddDerivation. Distance to a shoreline is therefore not established, and no shoreline is implied. Nothing here is inferred from the receipts that ARE present."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_STRANDSKYDD_COVERS_WHOLE_PARCEL",
+      "domain": "regulatory",
+      "value": null,
+      "unit": null,
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [],
+      "method": null,
+      "observed_at": "2026-09-20T19:02:23+00:00",
+      "verification": "OPEN",
+      "reason": "receipt not present: ShorelineAndStrandskyddDerivation",
+      "limitations": [
+        "This site holds no ShorelineAndStrandskyddDerivation. Whether shoreline protection reaches this parcel is therefore not established - which is NOT the same as it not applying. Nothing here is inferred from the receipts that ARE present."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_NO_EXTENDED_STRANDSKYDD",
+      "domain": "regulatory",
+      "value": null,
+      "unit": null,
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [],
+      "method": null,
+      "observed_at": "2026-09-20T19:02:23+00:00",
+      "verification": "OPEN",
+      "reason": "receipt not present: MunicipalPlanningStatusReceiptSet",
+      "limitations": [
+        "This site holds no MunicipalPlanningStatusReceiptSet. No municipal layer has been queried, so an extended zone is neither confirmed nor ruled out. An unqueried layer is not a negative. Nothing here is inferred from the receipts that ARE present."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_NO_DETALJPLAN",
+      "domain": "regulatory",
+      "value": null,
+      "unit": null,
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [],
+      "method": null,
+      "observed_at": "2026-09-20T19:02:23+00:00",
+      "verification": "OPEN",
+      "reason": "receipt not present: MunicipalPlanningStatusReceiptSet",
+      "limitations": [
+        "This site holds no MunicipalPlanningStatusReceiptSet. Plan status is therefore unknown. Absence of a query is not absence of a plan. Nothing here is inferred from the receipts that ARE present."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_SEA_VIEW_ARC",
+      "domain": "view",
+      "value": null,
+      "unit": null,
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [],
+      "method": null,
+      "observed_at": "2026-09-20T19:02:23+00:00",
+      "verification": "OPEN",
+      "reason": "receipt not present: SeaViewSightlineDerivation",
+      "limitations": [
+        "This site holds no SeaViewSightlineDerivation. No viewshed has been computed, so no view figure exists for this site at all. Nothing here is inferred from the receipts that ARE present."
+      ]
+    }
+  ]
+}

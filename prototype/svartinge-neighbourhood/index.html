@@ -581,7 +581,7 @@ renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-t
    Lantmäteriet deliveries). Every number is COMPUTED from the committed receipts; canvases draw from the derived JSON. */
 (async()=>{
   const B='../../data/sites/sweden/saterdalsvagen-14/',j=async p=>{try{const r=await fetch(B+p);return r.ok?await r.json():null}catch(e){return null}};
-  const [pd,bd,td,pi]=await Promise.all([j('property-division-derived-v0.1.json'),j('buildings-official-derived-v0.1.json'),j('terrain-dem-derived-v0.1.json'),j('plot-intelligence-v0.1.json')]);
+  const [pd,bd,td,gj,pi]=await Promise.all([j('property-division-derived-v0.1.json'),j('buildings-official-derived-v0.1.json'),j('terrain-dem-derived-v0.1.json'),j('gates.json'),j('plot-intelligence-v0.1.json')]);
   const $=id=>document.getElementById(id),set=(id,v)=>{const e=$(id);if(e)e.textContent=v};
   const outer=r=>(r&&r.length&&Array.isArray(r[0])&&Array.isArray(r[0][0]))?r[0]:r; /* polygon [[ring],[hole]] → outer ring; a bare ring passes through */
   const BOUNDARY=outer((pd&&pd.subject_rings_local&&pd.subject_rings_local[0])||[]),CONTEXT=((pd&&pd.context_rings_local)||[]).map(outer).filter(r=>r&&r.length);
@@ -598,13 +598,18 @@ renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-t
      record now, so the page can only ever claim what the data says — including, honestly,
      0 / 18 while the ledger is stale. */
   (function renderGates(){
-    const gates=(pi&&Array.isArray(pi.gates))?pi.gates:null;
+    /* Prefer the regenerated canonical ledger; fall back to the plot-intelligence
+       record only while a site has not been regenerated yet. */
+    const ledger=(gj&&Array.isArray(gj.gates))?gj:((pi&&Array.isArray(pi.gates))?pi:null);
+    const gates=ledger?ledger.gates:null;
     const heading=$('intelGateHeading'),rows=$('intelGateRows');
     if(!gates){set('intelGateCount','—');set('intelGateNote','ledger unavailable');
       if(heading)heading.textContent='Ledger unavailable';
       if(rows)rows.innerHTML='<div class="intel-gate-row"><b>plot-intelligence-v0.1.json could not be read</b><span>UNKNOWN</span></div>';
       const st=$('intelGateStatus');if(st)st.textContent='EARLY DUE DILIGENCE · GATE LEDGER UNAVAILABLE';return}
-    const isClosed=g=>String(g.status||'').toUpperCase()==='CLOSED';
+    /* Two vocabularies mean the same thing: this record writes SATISFIED, the generic
+       ledger generator writes CLOSED. Counting only one of them under-reports the site. */
+    const isClosed=g=>['CLOSED','SATISFIED'].includes(String(g.status||'').toUpperCase());
     const closed=gates.filter(isClosed),open=gates.filter(g=>!isClosed(g));
     const label=g=>String(g.gate_id||'').replace(/^GATE_SE_/,'').replace(/_/g,' ')
       .toLowerCase().replace(/^./,c=>c.toUpperCase());
@@ -623,7 +628,7 @@ renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-t
         if(isClosed(g))state.className='closed';
         row.append(name,state);rows.append(row)}}
     /* A ledger older than the receipts it depends on cannot be read as current. */
-    const stamps=JSON.stringify(pi).match(/\d{4}-\d{2}-\d{2}/g)||[];
+    const stamps=JSON.stringify(ledger).match(/\d{4}-\d{2}-\d{2}/g)||[];
     const ledgerLatest=stamps.length?stamps.sort().slice(-1)[0]:null;
     const receiptDates=[pd,bd,td].filter(Boolean).map(d=>{
       const m=JSON.stringify(d).match(/\d{4}-\d{2}-\d{2}/g);return m?m.sort().slice(-1)[0]:null}).filter(Boolean);

@@ -1,0 +1,309 @@
+{
+  "schema_version": "site-gates/v0.2",
+  "entity_type": "SiteGateSet",
+  "subject": "SVÄRTINGE 54:28",
+  "site": "saterdalsvagen-14",
+  "generated_at": "2026-09-20T19:02:23+00:00",
+  "generator": "scripts/build-gate-ledger.py",
+  "registry": "config/gate-registry.json",
+  "rule": "Every gate in the canonical registry is emitted for every site. A gate a site cannot answer is OPEN with a reason, never dropped.",
+  "gate_count": 26,
+  "closed": 6,
+  "open": 20,
+  "decided_by_counts": {
+    "generic": 9,
+    "registry_rule": 3,
+    "legacy": 2,
+    "open_no_derivation": 12
+  },
+  "receipts_absent": [
+    "ShorelineAndStrandskyddDerivation",
+    "SeaViewSightlineDerivation",
+    "MunicipalPlanningStatusReceiptSet"
+  ],
+  "fields_absent": [
+    "OfficialBuildingFootprintClip.placement",
+    "DerivedTerrainEvidence.parcel_height_statistics",
+    "DerivedTerrainEvidence.parcel_slope",
+    "DerivedTerrainEvidence.tile_integrity"
+  ],
+  "gates": [
+    {
+      "gate_id": "GATE_SE_MUNICIPAL_JURISDICTION",
+      "status": "CLOSED",
+      "question": "Which municipality decides here, and is that established from an official source?",
+      "domain": "identity",
+      "evidence_refs": [
+        "RCPT_SE_NORRKOPING_NOKA_PROPERTY_PLAN_QUERY",
+        "FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"
+      ],
+      "decided_at": "2026-08-17T18:31:15Z",
+      "reason": "Norrköping's public NOKA address search and point query return Säterdalsvägen 14 and SVÄRTINGE 54:28 inside the municipal map service.",
+      "decided_by": "carried forward from plot-intelligence"
+    },
+    {
+      "gate_id": "GATE_SE_PLOT_IDENTITY",
+      "status": "CLOSED",
+      "question": "Does the address resolve to a named registered parcel, with its registered extent confirmed by an authoritative source?",
+      "domain": "identity",
+      "evidence_refs": [
+        "property-division-derived-v0.1.json"
+      ],
+      "decided_at": "2026-09-20T19:02:23+00:00",
+      "reason": "Answered by property-division-derived-v0.1.json (AuthoritativePropertyDivisionClip). Title and ownership are not established by a property-division clip; that is GATE_SE_PROPERTY_REGISTER.",
+      "decided_by": "registry rule"
+    },
+    {
+      "gate_id": "GATE_SE_PROPERTY_DIVISION_CONTEXT",
+      "status": "CLOSED",
+      "question": "Has an authoritative property-division vector been acquired for this parcel and its neighbours?",
+      "domain": "identity",
+      "evidence_refs": [
+        "RCPT_SE_LM_PROPERTY_DIVISION_KN0581",
+        "FINDING_SE_REGISTERED_PARCEL_EXTENT"
+      ],
+      "decided_at": "2026-09-20T19:02:23+00:00",
+      "reason": "Authoritative registered extent for SVÄRTINGE 54:28: 1,936.8 m², 6 boundary vertices, 75 context parcels.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_PROPERTY_REGISTER",
+      "status": "OPEN",
+      "question": "Has a property-register extract (title, area of record, encumbrances) been obtained?",
+      "domain": "identity",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No property-register extract has been requested; explicit permission is absent.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_RIGHTS_AND_JOINT_FACILITIES",
+      "status": "OPEN",
+      "question": "What servitudes, rights and joint facilities burden or benefit this parcel?",
+      "domain": "identity",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "Servitudes, joint facilities, cadastral acts, road rights and mortgages remain unresolved.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_BOUNDARY_FOR_DESIGN",
+      "status": "OPEN",
+      "question": "Is there a field survey or boundary determination good enough to set a building out against?",
+      "domain": "identity",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "The seller map is nonbinding and no field survey or boundary determination exists. Registered property-division geometry does NOT close this. It is authoritative for extent, not for monument positions.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_DETAIL_PLAN_AND_STATUS",
+      "status": "OPEN",
+      "question": "Is there a detaljplan covering this parcel, and what is its status?",
+      "domain": "planning",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "receipt not present: MunicipalPlanningStatusReceiptSet. Plan status has not been queried. Absence of a query is not absence of a plan.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_CURRENT_LAW_PROFILE",
+      "status": "CLOSED",
+      "question": "Which national rule profile is in force for this assessment?",
+      "domain": "planning",
+      "evidence_refs": [
+        "RCPT_SE_BOVERKET_CURRENT_LAW",
+        "FINDING_SE_CURRENT_H30_H50_PROFILE"
+      ],
+      "decided_at": "2026-08-17T17:37:00Z",
+      "reason": "Current Boverket guidance and the 2025-12-01 effective profile are bound for this assessment date.",
+      "decided_by": "carried forward from plot-intelligence"
+    },
+    {
+      "gate_id": "GATE_SE_H30_H50_ELIGIBILITY",
+      "status": "OPEN",
+      "question": "Is this parcel eligible under the H30/H50 conditional rules?",
+      "domain": "planning",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "Neither H30 nor H50 eligibility can be determined before plan status, principal-building facts, aggregate areas, placement and protections are resolved.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_BUILDABLE_ENVELOPE",
+      "status": "OPEN",
+      "question": "What setback, footprint, ridge height and placement may actually be built?",
+      "domain": "planning",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No authoritative buildable envelope may be drawn while boundary, planning, rights, environmental and access gates remain open.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_TERRAIN",
+      "status": "CLOSED",
+      "question": "Is a receipted height model clipped to this parcel, with deterministic derivations?",
+      "domain": "ground",
+      "evidence_refs": [
+        "terrain-dem-derived-v0.1.json"
+      ],
+      "decided_at": "2026-09-20T19:02:23+00:00",
+      "reason": "Answered by terrain-dem-derived-v0.1.json (DerivedTerrainEvidence). The generic generator did not recognise this site's receipt name.",
+      "decided_by": "registry rule over generic"
+    },
+    {
+      "gate_id": "GATE_SE_TERRAIN_PROVENANCE",
+      "status": "OPEN",
+      "question": "Was the height model checked against the source epoch for this parcel?",
+      "domain": "ground",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "field not present in DerivedTerrainEvidence: parcel_height_statistics, parcel_slope, tile_integrity. No terrain derivation exists, so its provenance cannot be assessed.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_GROUND_CONDITIONS",
+      "status": "OPEN",
+      "question": "What are the soil and bedrock conditions under this parcel, from investigation rather than screening?",
+      "domain": "ground",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "Official screening shows glaciofluvial sediment, strong nearby depth variability, proposed municipal geotechnical zone 2 and the Ovre Svartinge groundwater body at the locator. The draft layer says geotechnical investigation is required; plot-specific geotechnical, groundwater, radon, contamination and infiltration evidence is absent.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_FLOOD_AND_GEOHAZARDS",
+      "status": "OPEN",
+      "question": "Is this parcel exposed to flooding, landslide or erosion?",
+      "domain": "ground",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "The address locator did not intersect the draft municipality's extreme-rain, 100-year or BHF flood polygons, but that point-only result cannot establish absence across an unverified parcel. Terrain bytes, legal boundary, local drainage and parcel-wide municipal screening remain incomplete.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_BUILDING_FOOTPRINTS",
+      "status": "CLOSED",
+      "question": "Are the official building footprints on and around this parcel acquired?",
+      "domain": "buildings",
+      "evidence_refs": [
+        "buildings-official-derived-v0.1.json"
+      ],
+      "decided_at": "2026-09-20T19:02:23+00:00",
+      "reason": "Answered by buildings-official-derived-v0.1.json (OfficialBuildingFootprintClip). The generic generator did not recognise this site's receipt name.",
+      "decided_by": "registry rule over generic"
+    },
+    {
+      "gate_id": "GATE_SE_BUILDING_HEIGHTS",
+      "status": "OPEN",
+      "question": "Are the heights of existing buildings established, rather than assumed?",
+      "domain": "buildings",
+      "evidence_refs": [
+        "FINDING_SE_BUILDING_HEIGHTS_ABSENT"
+      ],
+      "decided_at": null,
+      "reason": "The LM byggnad product carries no heights. Storeys, eaves, ridge and volume are NOT established, so no massing can be presented as authoritative.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_ENVIRONMENTAL_RESTRICTIONS",
+      "status": "OPEN",
+      "question": "What environmental protections apply across this parcel?",
+      "domain": "environment",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "The draft municipal point screen returned no intersection with its Glan water-protection, queried nature, reserve or Natura polygons, but a point-only consultation layer cannot prove parcel-wide absence or legal status. The national WFS responses remain inconclusive, and shoreline protection plus the authoritative Glan zone overlay remain unresolved.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_STRANDSKYDD_GEOMETRY",
+      "status": "OPEN",
+      "question": "Where does the shoreline run, and how much of the parcel falls inside the strandskydd band?",
+      "domain": "environment",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "receipt not present: ShorelineAndStrandskyddDerivation. Distance to a shoreline has not been measured. This is not a finding that shoreline protection does not apply.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_STRANDSKYDD_EXTENSION",
+      "status": "OPEN",
+      "question": "Is an extended strandskydd (utvidgat) in force here?",
+      "domain": "environment",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "receipt not present: MunicipalPlanningStatusReceiptSet. No municipal layer has been queried. An unqueried layer is not a negative.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_STRANDSKYDD_DISPENS",
+      "status": "OPEN",
+      "question": "Has a strandskydd dispens been granted for what is proposed?",
+      "domain": "environment",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "Any dispens or upphävande attaching to this property is a case record in Värmdö's and Länsstyrelsen's registers, not a map layer. Not retrieved.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_CULTURAL_AND_CONTAMINATION",
+      "status": "OPEN",
+      "question": "Are there heritage or contamination constraints on this parcel?",
+      "domain": "environment",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "Two published heritage points occur about 472 m from the market locator. The public EBH layer also returns four known or suspected activity records within 2 km, nearest a fuel-handling record about 312 m away and a risk-class 2 nursery about 681 m away. These are context signals; full geometry/uncertainty, plot history, detailed EBH records and sampling remain incomplete.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_SEA_VIEW",
+      "status": "OPEN",
+      "question": "Is open water visible from this parcel, computed from the height model?",
+      "domain": "view",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "receipt not present: SeaViewSightlineDerivation. No viewshed has been computed, so no view figure exists for this site.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_VIEW_OCCLUSION",
+      "status": "OPEN",
+      "question": "Do vegetation and buildings occlude that view in practice?",
+      "domain": "view",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "receipt not present: SeaViewSightlineDerivation. No viewshed exists, so there is no bare-earth ceiling to qualify.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_LEGAL_ACCESS",
+      "status": "OPEN",
+      "question": "Is there a legally secured access route to this parcel?",
+      "domain": "access",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "Road proximity and the seller listing cannot prove legal or permitted access, road manager approval, gradients or construction access.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_UTILITIES_AND_CAPACITY",
+      "status": "OPEN",
+      "question": "Are water, sewer, power and data available with capacity to connect?",
+      "domain": "access",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "The seller statement that municipal VA is paid is not a provider-confirmed capacity, connection-point, cost or lead-time response.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_CONSTRUCTION_CLEARANCE",
+      "status": "OPEN",
+      "question": "Is there clearance to build — permits, notifications and start authorisation?",
+      "domain": "access",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No Ledningskollen case, provider line response, permit, notification or start clearance has been requested.",
+      "decided_by": "registry default"
+    }
+  ]
+}
