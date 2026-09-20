@@ -430,12 +430,33 @@ async function loadVinkelhusetSpec(){
   if(!a){vh.boa='—';vh.gfa='—';vh.footprint='—';vh.storeys='—';
     vh.summary+=' Areas unavailable: BRAGE\'s v0.3 spec could not be read.';
     if(window.updateDesignDock&&window.currentDesign===vh)window.updateDesignDock(vh);return}
-  const heated=a.heated_m2_excl_souterrain,footprint=a.ground_footprint_m2,
-        storeys=Object.keys(a.by_storey||{}).length;
-  vh.boa=heated;vh.gfa=heated;vh.footprint=footprint;vh.storeys=storeys;
+  const heated=a.heated_m2_excl_souterrain,heatedAll=a.heated_m2_incl_souterrain,
+        footprint=a.ground_footprint_m2,
+        /* The souterrain is a CONDITIONAL upgrade in BRAGE's scene patch, not a storey the
+           house simply has. Count the storeys without it and name the condition separately —
+           derived by dropping the SOUTERRAIN key, never by picking a tidier number. */
+        storeyKeys=Object.keys(a.by_storey||{}),
+        hasSouterrain=storeyKeys.some(k=>/SOUTERRAIN/i.test(k)),
+        storeys=storeyKeys.filter(k=>!/SOUTERRAIN/i.test(k)).length;
+  vh.boa=heated;vh.gfa=heated;vh.footprint=footprint;
+  vh.storeys=hasSouterrain?`${storeys} + souterrain`:storeys;
   vh.specVersion=(spec.schema_version||'house-v0.3');
-  vh.summary+=` ${heated} m² heated excluding the souterrain, on a ${footprint} m² ground footprint`
-    +` (${Object.entries(a.by_storey||{}).map(([k,v])=>k.toLowerCase()+' '+v).join(' · ')} m²).`;
+  let condition='';
+  if(hasSouterrain){
+    let patch=null;
+    try{const r=await fetch('../../data/designs/house-in-scene-v0.3-patch.json');if(r.ok)patch=await r.json()}catch(e){}
+    const up=(patch&&patch.conditional_upgrades||[]).find(u=>/SOUTERR/i.test(u.id||''));
+    let fall=null;
+    try{const r=await fetch('../../data/sites/sweden/saterdalsvagen-14/terrain-dem-derived-v0.1.json');
+        if(r.ok){const t=await r.json();fall=t.plot_footprint&&t.plot_footprint.relief_m}}catch(e){}
+    condition=up?` Souterrain is conditional — ${up.condition}`
+      +(fall!=null?`; the DTM measures ${fall} m fall across the plot, so the condition holds.`:'.')
+      :' Souterrain is a conditional upgrade in BRAGE\'s scene patch.';
+  }
+  vh.summary+=` ${heated} m² heated excluding the souterrain, ${heatedAll} m² including it,`
+    +` on a ${footprint} m² ground footprint`
+    +` (${Object.entries(a.by_storey||{}).map(([k,v])=>k.toLowerCase()+' '+v).join(' · ')} m²).`
+    +condition;
   if(window.updateDesignDock&&window.currentDesign===vh)window.updateDesignDock(vh);
 }
 const designDockEl=buildDesignDock();
