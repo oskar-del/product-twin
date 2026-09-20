@@ -90,6 +90,39 @@ Feeds shipping NO colour at all: kungsangen, golvpoolen, gripsholm (0 rows) — 
 Every item above was built AND measured by this session. This supply line feeds Platform's shoppable rooms (affiliate-revenue surfaces), so **a different session must verify before any of this is treated as done**. I have not ticked anything off in a coordination doc. Suggested checks: re-run `scripts/extract-dimensions.mjs` and `classify-catalogs.mjs` dry and diff the reports; open 10 random classified twins per catalog against their live product pages; confirm the 490 rebuilt proxies render non-black.
 
 
+
+### Item 1 follow-up — Brain maker≠checker ruling applied (2026-09-20, commit `e5816844`)
+Brain VERIFIED item 1 independently (recount matched to the unit) and ruled that heights no source
+states may be filled from a per-category table as INDICATIVE. Done:
+`config/geometry/category-height-defaults.json` — 33 categories each with a one-line rationale, and
+13 explicit REFUSALS. Applied as `dimensions_axes: "WD+H_DEFAULT"`, `dimensions_indicative: true`.
+
+Placeability by evidence tier — **these are never summed into one "placeable" number**:
+
+| tier | count | share |
+|---|---|---|
+| W×D×H stated by source | 6,364 | 2.8% |
+| W×D source + H category default (INDICATIVE) | 35,447 | 15.7% |
+| envelope fully invented by proxy build (INDICATIVE) | 3,687 | 1.6% |
+| footprint with no default (refused) | 11,416 | 5.1% |
+
+Kungsängen **0% → 93.0%** (22,149 beds). Per catalog: vidaxl-outdoor 8.2% · golvpoolen 2.4% ·
+kungsangen 93.0% · lampemesteren 15.7% · newport 28.4% · lampan 28.4% · mjuk 62.6% · gripsholm 48.8%.
+
+**⚠️ This re-labels the item 1 headline.** Brain asked me to stamp the 3,645 source-less Newport
+dimensions as `proxy_build:pre-existing`. They are not pre-existing measurements — their
+`geometry.scale_state` reads `category_default 800x800x750mm`, i.e. the universal proxy builder
+invented all three axes. They are stamped `proxy_build:category_default` + `WDH_DEFAULT` +
+indicative instead. **Newport's 28.2% "placeable" is 3,645 of 3,673 invented; only 28 Newport twins
+state a size in their source text.** The 1.7% baseline was likewise ~95% invented. Both my item-1
+table and Brain's independent recount matched because we counted the same FIELD without checking
+PROVENANCE — a shared blind spot, not a cross-check.
+
+**NOT checked:** no default height verified against a manufacturer spec sheet — every value is a
+market-convention judgement carrying its rationale string. Whether Platform actually renders the
+INDICATIVE chip for `dimensions_indicative: true` is unverified on the Platform side.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
