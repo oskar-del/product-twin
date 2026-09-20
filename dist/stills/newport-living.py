@@ -7,11 +7,20 @@ bpy.ops.wm.read_factory_settings(use_empty=True)
 sc = bpy.context.scene
 
 sc.render.engine = 'CYCLES'
-sc.cycles.samples = 160
+sc.cycles.samples = 256
 sc.cycles.use_denoising = True
 sc.render.resolution_x, sc.render.resolution_y = 1600, 1000
 sc.render.filepath = '/Users/oskarpeterson/Documents/AI/product twin/repo-platform/dist/stills/newport-living.png'
 sc.render.image_settings.file_format = 'PNG'
+sc.render.use_stamp = True
+sc.render.use_stamp_note = True
+for _f in ('use_stamp_time','use_stamp_date','use_stamp_render_time','use_stamp_frame','use_stamp_scene','use_stamp_camera','use_stamp_filename','use_stamp_lens','use_stamp_marker'):
+    if hasattr(sc.render, _f): setattr(sc.render, _f, False)
+sc.render.stamp_note_text = 'VISUALIZATION  ·  Newport Living Room — shoppable, channel-tracked  ·  CONCEPT design — not a survey, not a built house  ·  Rendered horizon is not a view claim'
+sc.render.stamp_font_size = 22
+sc.render.use_stamp_labels = False
+sc.render.stamp_background = (0, 0, 0, 0.55)
+sc.render.stamp_foreground = (1, 1, 1, 1)
 sc.view_settings.view_transform = 'AgX'
 sc.view_settings.look = 'AgX - Base Contrast'
 sc.view_settings.exposure = -0.3
@@ -73,14 +82,14 @@ m_wall = mat('wall', (0.74, 0.72, 0.68), 0.92)
 m_ceil = mat('ceiling', (0.86, 0.85, 0.83), 0.95)
 slab(W, D, T, (0, 0, -T / 2), m_floor)
 slab(W, D, T, (0, 0, H + T / 2), m_ceil)
-slab(T, D, H, (-W / 2 - T / 2, 0, H / 2), m_wall)
-slab(T, D, H, (W / 2 + T / 2, 0, H / 2), m_wall)
 slab(W, T, H, (0, -2.560, H / 2), m_wall)
-# opening ROOM_WINDOW — wall built as segments around it
-slab(1.800, T, H, (-2.100, 2.560, H / 2), m_wall)
-slab(1.800, T, H, (2.100, 2.560, H / 2), m_wall)
-slab(2.4, T, 0.900, (0, 2.560, 0.450), m_wall)
-slab(2.4, T, 0.200, (0, 2.560, 2.600), m_wall)
+# opening ROOM_WINDOW — north/south wall built as segments around it
+slab(1.800, T, 2.700, (-2.100, 2.560, 1.350), m_wall)
+slab(1.800, T, 2.700, (2.100, 2.560, 1.350), m_wall)
+slab(2.400, T, 0.900, (0.000, 2.560, 0.450), m_wall)
+slab(2.400, T, 0.200, (0.000, 2.560, 2.600), m_wall)
+slab(T, D, H, (-3.060, 0, H / 2), m_wall)
+slab(T, D, H, (3.060, 0, H / 2), m_wall)
 
 # Scene elements
 # San Francisco soffa sand 4-sits (2000×900×850 mm)
@@ -156,7 +165,7 @@ wl.size, wl.size_y = 2.4, 1.6
 wl.energy = 131
 wl.color = (1.0, 0.96, 0.90)
 wo = bpy.data.objects.new('ROOM_WINDOW_light', wl)
-wo.location = (0, 2.460, 1.7)
+wo.location = (0.000, 2.460, 1.7)
 wo.rotation_euler = (math.radians(90), 0, math.radians(180))
 sc.collection.objects.link(wo)
 

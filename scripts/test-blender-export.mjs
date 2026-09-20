@@ -113,5 +113,33 @@ function countChar(str, ch) {
 console.log("§10 coordinate conversion");
 check("script uses Blender Y-up mapping comment or mathutils", script.includes("mathutils") || script.includes("Y-up"));
 
+// §11 VISUALIZATION label — on the exporter AND on every committed .py
+console.log("§11 visualization label");
+
+// A still travels as a file, detached from the scene and any caption, so the
+// label has to be burned into the image, not left to whoever embeds it.
+check("export stamps VISUALIZATION", /VISUALIZATION/.test(script));
+check("export denies the view claim", /not a view claim/i.test(script));
+check("export names it CONCEPT", /CONCEPT design/.test(script));
+check("stamp is actually switched on", /use_stamp = True/.test(script));
+check("stamp note is switched on", /use_stamp_note = True/.test(script));
+check("intelligence profile is labelled too", /VISUALIZATION/.test(intelScript));
+check("a non-default stage is labelled too", /VISUALIZATION/.test(seatingScript));
+
+// The artifacts on disk: two of the three were exported before the stamp
+// existed and shipped unlabelled for a day. Asserting on the committed files
+// is what catches a stale export, which asserting on the exporter cannot.
+const stillsDir = path.resolve(root, "dist/stills");
+if (fs.existsSync(stillsDir)) {
+  const emitted = fs.readdirSync(stillsDir).filter(f => f.endsWith(".py"));
+  check("committed stills exist", emitted.length > 0);
+  for (const file of emitted) {
+    const body = fs.readFileSync(path.join(stillsDir, file), "utf8");
+    check(`${file}: carries VISUALIZATION`, /VISUALIZATION/.test(body));
+    check(`${file}: denies the view claim`, /not a view claim/i.test(body));
+    check(`${file}: stamp enabled`, /use_stamp = True/.test(body) && /use_stamp_note = True/.test(body));
+  }
+}
+
 console.log(`\n${passed} passed, ${failed} failed (${passed + failed} checks)`);
 if (failed) process.exit(1);

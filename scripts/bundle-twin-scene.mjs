@@ -137,7 +137,7 @@ export const LOOKS = [
   {id: "SCENE_SHOPPABLE_TERRACE_VIDAXL_V01", label: "vidaXL · terrace", href: "scene_shoppable_terrace_vidaxl_v01.html"}
 ];
 
-export async function bundleTwinScene({scenePath, outPath, title, eyebrow, minify = true, generatedAt, assetBasePath = "", looks = LOOKS, plot}) {
+export async function bundleTwinScene({scenePath, outPath, title, eyebrow, minify = true, generatedAt, assetBasePath = "", looks = LOOKS, plot, inkStage = true}) {
   const absoluteScene = path.resolve(root, scenePath);
   const document = JSON.parse(fs.readFileSync(absoluteScene, "utf8"));
 
@@ -187,10 +187,14 @@ export async function bundleTwinScene({scenePath, outPath, title, eyebrow, minif
   const entry = path.join(workDir, "entry.mjs");
   fs.writeFileSync(entry, `import sceneDocument from "./scene.json";
 import {createTwinViewer} from ${JSON.stringify(path.join(root, "engine/twin-engine.mjs"))};
+import {INK_STAGE_ENVIRONMENT} from ${JSON.stringify(path.join(root, "engine/core/profiles.mjs"))};
 import {createRoomPanel} from ${JSON.stringify(path.join(root, "engine/ui/chrome/room-panel.mjs"))};
 
 const BRAND = ${JSON.stringify(eyebrowLabel)};
 const ASSET_BASE = ${JSON.stringify(assetBasePath)};
+// Every bundled surface shares one stage: the chrome is dark, so the 3D
+// background is too. Opt out with --no-ink-stage for a daylight exterior.
+const INK_STAGE = ${inkStage ? "true" : "false"};
 
 const boot = document.getElementById("twin-boot");
 try {
@@ -201,6 +205,8 @@ try {
   globalThis.roomPanel = roomPanel;
   globalThis.twinViewer = await createTwinViewer({
     mount: stage, sceneDocument, brand: BRAND, assetBasePath: ASSET_BASE,
+    stageBackground: INK_STAGE ? 0x101916 : null,
+    stageEnvironment: INK_STAGE ? INK_STAGE_ENVIRONMENT : null,
     onElementOpen: element => roomPanel.open(element)
   });
   boot.remove();
@@ -253,6 +259,7 @@ if (invokedDirectly) {
     title: options.title,
     eyebrow: options.eyebrow,
     assetBasePath: options["asset-base"] ?? "",
+    inkStage: !process.argv.includes("--no-ink-stage"),
     minify: options.minify,
     generatedAt: new Date().toISOString()
   });

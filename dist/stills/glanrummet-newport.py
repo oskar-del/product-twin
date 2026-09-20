@@ -7,11 +7,20 @@ bpy.ops.wm.read_factory_settings(use_empty=True)
 sc = bpy.context.scene
 
 sc.render.engine = 'CYCLES'
-sc.cycles.samples = 160
+sc.cycles.samples = 256
 sc.cycles.use_denoising = True
 sc.render.resolution_x, sc.render.resolution_y = 1600, 1000
 sc.render.filepath = '/Users/oskarpeterson/Documents/AI/product twin/repo-platform/dist/stills/glanrummet-newport.png'
 sc.render.image_settings.file_format = 'PNG'
+sc.render.use_stamp = True
+sc.render.use_stamp_note = True
+for _f in ('use_stamp_time','use_stamp_date','use_stamp_render_time','use_stamp_frame','use_stamp_scene','use_stamp_camera','use_stamp_filename','use_stamp_lens','use_stamp_marker'):
+    if hasattr(sc.render, _f): setattr(sc.render, _f, False)
+sc.render.stamp_note_text = 'VISUALIZATION  ·  Glanrummet — Newport set inside BRAGE\'s Vinkelhuset  ·  CONCEPT design — not a survey, not a built house  ·  Rendered horizon is not a view claim'
+sc.render.stamp_font_size = 22
+sc.render.use_stamp_labels = False
+sc.render.stamp_background = (0, 0, 0, 0.55)
+sc.render.stamp_foreground = (1, 1, 1, 1)
 sc.view_settings.view_transform = 'AgX'
 sc.view_settings.look = 'AgX - Base Contrast'
 sc.view_settings.exposure = -0.3
@@ -60,7 +69,7 @@ def mat(name, base, rough, metal=0.0):
 BASE_PATH = '/Users/oskarpeterson/Documents/AI/product twin/repo-platform'
 
 # Room shell (from ROOM_VOLUME)
-W, H, D, T = 7, 3, 7, 0.12
+W, H, D, T = 7, 2.7, 7, 0.12
 def slab(sx, sy, sz, loc, material):
     bpy.ops.mesh.primitive_cube_add(size=1, location=loc)
     o = bpy.context.object
@@ -73,17 +82,19 @@ m_wall = mat('wall', (0.74, 0.72, 0.68), 0.92)
 m_ceil = mat('ceiling', (0.86, 0.85, 0.83), 0.95)
 slab(W, D, T, (0, 0, -T / 2), m_floor)
 slab(W, D, T, (0, 0, H + T / 2), m_ceil)
-# opening GLAZ_GLANRUMMET_S — north/south wall built as segments around it
-slab(0.300, T, 3.000, (-3.350, -3.560, 1.500), m_wall)
-slab(0.300, T, 3.000, (3.350, -3.560, 1.500), m_wall)
-slab(6.400, T, 0.100, (0.000, -3.560, 0.050), m_wall)
-slab(6.400, T, 0.250, (0.000, -3.560, 2.875), m_wall)
+# opening OP_GLAN_S1 — north/south wall built as segments around it
+slab(0.500, T, 2.700, (-3.250, -3.560, 1.350), m_wall)
+slab(0.500, T, 2.700, (3.250, -3.560, 1.350), m_wall)
+slab(6.000, T, 0.150, (0.000, -3.560, 2.625), m_wall)
+# opening OP_GLAN_DOOR — north/south wall built as segments around it
+slab(3.400, T, 2.700, (-1.800, -3.560, 1.350), m_wall)
+slab(1.800, T, 2.700, (2.600, -3.560, 1.350), m_wall)
+slab(1.800, T, 0.300, (0.800, -3.560, 2.550), m_wall)
 slab(W, T, H, (0, 3.560, H / 2), m_wall)
-# opening GLAZ_GLANRUMMET_W — east/west wall built as segments around it
-slab(T, 0.300, 3.000, (-3.560, -3.350, 1.500), m_wall)
-slab(T, 0.300, 3.000, (-3.560, 3.350, 1.500), m_wall)
-slab(T, 6.400, 0.100, (-3.560, 0.000, 0.050), m_wall)
-slab(T, 6.400, 0.250, (-3.560, 0.000, 2.875), m_wall)
+# opening OP_GLAN_W1 — east/west wall built as segments around it
+slab(T, 0.500, 2.700, (-3.560, -3.250, 1.350), m_wall)
+slab(T, 0.500, 2.700, (-3.560, 3.250, 1.350), m_wall)
+slab(T, 6.000, 0.150, (-3.560, 0.000, 2.625), m_wall)
 slab(T, D, H, (3.560, 0, H / 2), m_wall)
 
 # Scene elements
@@ -153,26 +164,37 @@ place(objs_table_lamp, (2.0000, 0.8000, 0.5500), 0)
 # surface derived from: Guld / Brun
 tint(objs_table_lamp, (0.360, 0.260, 0.180), 0.85, 0, 'TABLE_LAMP')
 
-# Window light from GLAZ_GLANRUMMET_S (6.4 × 2.65 m opening)
-wl = bpy.data.lights.new('GLAZ_GLANRUMMET_S', 'AREA')
+# Window light from OP_GLAN_S1 (6 × 2.55 m opening)
+wl = bpy.data.lights.new('OP_GLAN_S1', 'AREA')
 wl.shape = 'RECTANGLE'
-wl.size, wl.size_y = 6.4, 2.65
-wl.energy = 577
+wl.size, wl.size_y = 6, 2.55
+wl.energy = 520
 wl.color = (1.0, 0.96, 0.90)
-wo = bpy.data.objects.new('GLAZ_GLANRUMMET_S_light', wl)
-wo.location = (0.000, -3.460, 1.425)
+wo = bpy.data.objects.new('OP_GLAN_S1_light', wl)
+wo.location = (0.000, -3.460, 1.275)
 wo.rotation_euler = (math.radians(90), 0, math.radians(0))
 sc.collection.objects.link(wo)
 
-# Window light from GLAZ_GLANRUMMET_W (6.4 × 2.65 m opening)
-wl = bpy.data.lights.new('GLAZ_GLANRUMMET_W', 'AREA')
+# Window light from OP_GLAN_W1 (6 × 2.55 m opening)
+wl = bpy.data.lights.new('OP_GLAN_W1', 'AREA')
 wl.shape = 'RECTANGLE'
-wl.size, wl.size_y = 6.4, 2.65
-wl.energy = 577
+wl.size, wl.size_y = 6, 2.55
+wl.energy = 520
 wl.color = (1.0, 0.96, 0.90)
-wo = bpy.data.objects.new('GLAZ_GLANRUMMET_W_light', wl)
-wo.location = (-3.460, 0.000, 1.425)
+wo = bpy.data.objects.new('OP_GLAN_W1_light', wl)
+wo.location = (-3.460, 0.000, 1.275)
 wo.rotation_euler = (math.radians(90), 0, math.radians(90))
+sc.collection.objects.link(wo)
+
+# Window light from OP_GLAN_DOOR (1.7999999999999998 × 2.4 m opening)
+wl = bpy.data.lights.new('OP_GLAN_DOOR', 'AREA')
+wl.shape = 'RECTANGLE'
+wl.size, wl.size_y = 1.7999999999999998, 2.4
+wl.energy = 147
+wl.color = (1.0, 0.96, 0.90)
+wo = bpy.data.objects.new('OP_GLAN_DOOR_light', wl)
+wo.location = (0.800, -3.460, 1.2)
+wo.rotation_euler = (math.radians(90), 0, math.radians(0))
 sc.collection.objects.link(wo)
 
 # Environment
@@ -194,8 +216,8 @@ sc.collection.objects.link(sun)
 
 # Camera
 cam = bpy.data.objects.new('Cam', bpy.data.cameras.new('Cam'))
-cam.data.lens = 24
-cam.location = (3.0500, 3.0500, 1.4200)
+cam.data.lens = 30
+cam.location = (-3.0500, 3.0500, 1.4200)
 import mathutils
 target = mathutils.Vector((0.4182, -0.1909, 0.5800))
 direction = target - cam.location
