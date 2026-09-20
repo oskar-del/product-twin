@@ -1,0 +1,238 @@
+/*
+ * INK CHROME — the one design language for every plot-to-project surface.
+ *
+ * Source of truth: the Svärtinge Site-Intelligence page
+ * (repo-spatial-studio/prototype/svartinge-neighbourhood/index.html, the `.intel-*` rules).
+ * Every value below was extracted from that stylesheet — none is invented. Where the
+ * 2026-09-15 CONSOLIDATION mandate fixed a value (the five evidence colours), the mandate wins.
+ *
+ * Consume by linking this file, then building components with chrome.mjs. A host restyles the
+ * chrome by overriding tokens on `.ink`, never by forking the rules.
+ */
+
+.ink {
+  /* Ground + paper */
+  --ink-bg: #101916;             /* page ground            (.site-intel background) */
+  --ink-card: #17241f;           /* dark card              (.intel-card)            */
+  --ink-card-2: #1b2823;         /* metric card            (.intel-metric)          */
+  --ink-deep: #263a31;           /* deep panel             (.intel-deep-card.planning) */
+  --ink-paper: #f5f1e8;          /* light paper surface                              */
+  --ink-paper-warm: #e9dfca;     /* warm paper             (.intel-signal.solar)    */
+  --ink-paper-cool: #efe9dc;     /* cool paper             (.intel-signal)          */
+
+  /* Type colours */
+  --ink-text: #f3efe6;
+  --ink-text-dim: rgba(255, 255, 255, .62);
+  --ink-text-faint: rgba(255, 255, 255, .48);
+  --ink-on-paper: #14231d;
+  --ink-bronze: #d8b874;         /* kicker                 (.intel-kicker)          */
+  --ink-bronze-soft: #e5c879;
+
+  /* Structure */
+  --ink-line: rgba(255, 255, 255, .08);
+  --ink-line-paper: rgba(20, 35, 29, .14);
+  --ink-radius: 18px;
+  --ink-radius-lg: 20px;
+  --ink-pill: 999px;
+  --ink-gap: 12px;
+  --ink-pad: 20px;
+  --ink-gutter: clamp(24px, 6vw, 92px);
+
+  /* Type ramp */
+  --ink-display: 500 clamp(28px, 4vw, 48px)/1 Georgia, "Cormorant Garamond", serif;
+  --ink-serif: Georgia, "Cormorant Garamond", serif;
+  --ink-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ink-label: 9px;
+  --ink-track: .09em;
+
+  /* Evidence — the five fixed classes (2026-09-15 mandate) */
+  --ink-authoritative: #176b52;
+  --ink-indicative: #c18a2d;
+  --ink-derived: #497aa2;
+  --ink-reported: #a65b68;
+  --ink-concept: #735a9e;
+}
+
+.ink {
+  background: var(--ink-bg);
+  color: var(--ink-text);
+  font-family: var(--ink-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.ink *, .ink *::before, .ink *::after { box-sizing: border-box; }
+
+/* ---- topBar ------------------------------------------------------------ */
+.ink-topbar {
+  display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  padding: 18px var(--ink-gutter);
+  background: rgba(16, 25, 22, .82);
+  border-bottom: 1px solid var(--ink-line);
+  backdrop-filter: blur(12px);
+}
+.ink-topbar-id { min-width: 0; }
+.ink-topbar-id .ink-kicker { display: block; }
+.ink-topbar-id b {
+  display: block; margin-top: 5px;
+  font: 500 19px/1.1 var(--ink-serif); letter-spacing: -.02em;
+}
+.ink-modes { display: flex; gap: 8px; flex-wrap: wrap; }
+.ink-mode {
+  border: 1px solid rgba(255, 255, 255, .22);
+  background: rgba(16, 25, 22, .68);
+  color: #fff; border-radius: var(--ink-pill);
+  padding: 10px 14px; font: inherit; font-size: var(--ink-label);
+  letter-spacing: .08em; text-transform: uppercase; cursor: pointer;
+}
+.ink-mode:hover { border-color: rgba(255, 255, 255, .4); }
+.ink-mode[aria-pressed="true"] { background: var(--ink-paper); color: #13211b; border-color: transparent; }
+.ink-mode:disabled { opacity: .55; cursor: not-allowed; }
+
+.ink-kicker {
+  color: var(--ink-bronze); font-size: 10px;
+  letter-spacing: .16em; text-transform: uppercase;
+}
+
+/* ---- evidenceChip ------------------------------------------------------ */
+.ink-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 9px; border-radius: var(--ink-pill);
+  font-size: 8px; letter-spacing: .11em; text-transform: uppercase;
+  border: 1px solid currentColor; background: color-mix(in srgb, currentColor 14%, transparent);
+  white-space: nowrap;
+}
+.ink-chip::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: currentColor; flex: none;
+}
+.ink-chip[data-evidence="AUTHORITATIVE"] { color: #3ec79d; border-color: var(--ink-authoritative); }
+.ink-chip[data-evidence="INDICATIVE"]    { color: #e6b45c; border-color: var(--ink-indicative); }
+.ink-chip[data-evidence="DERIVED"]       { color: #7fb3d8; border-color: var(--ink-derived); }
+.ink-chip[data-evidence="REPORTED_UNVERIFIED"] { color: #dc9aa5; border-color: var(--ink-reported); }
+.ink-chip[data-evidence="CONCEPT"]       { color: #b39ed8; border-color: var(--ink-concept); }
+.ink-paper-surface .ink-chip[data-evidence="AUTHORITATIVE"] { color: var(--ink-authoritative); }
+.ink-paper-surface .ink-chip[data-evidence="INDICATIVE"]    { color: var(--ink-indicative); }
+.ink-paper-surface .ink-chip[data-evidence="DERIVED"]       { color: var(--ink-derived); }
+.ink-paper-surface .ink-chip[data-evidence="REPORTED_UNVERIFIED"] { color: var(--ink-reported); }
+.ink-paper-surface .ink-chip[data-evidence="CONCEPT"]       { color: var(--ink-concept); }
+
+/* ---- metricStrip ------------------------------------------------------- */
+.ink-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--ink-gap); }
+.ink-metric {
+  background: var(--ink-card-2); border: 1px solid var(--ink-line);
+  border-radius: var(--ink-radius); padding: var(--ink-pad); min-height: 120px;
+}
+.ink-metric > span {
+  font-size: var(--ink-label); letter-spacing: var(--ink-track);
+  color: var(--ink-bronze); text-transform: uppercase;
+}
+.ink-metric > b { display: block; font: 500 34px/1 var(--ink-serif); margin: 11px 0; }
+.ink-metric > small { font-size: 10px; line-height: 1.5; color: rgba(255, 255, 255, .52); }
+.ink-metric .ink-chip { margin-top: 10px; }
+
+/* ---- sectionHead ------------------------------------------------------- */
+.ink-section { padding: 34px 0; }
+.ink-section-head {
+  display: flex; justify-content: space-between; align-items: end;
+  gap: 30px; margin-bottom: 20px;
+}
+.ink-section-head h2 { font: var(--ink-display); margin: 0; letter-spacing: -.03em; }
+.ink-section-head p {
+  max-width: 520px; margin: 0;
+  font-size: 11px; line-height: 1.6; color: rgba(255, 255, 255, .55);
+}
+
+/* ---- card -------------------------------------------------------------- */
+.ink-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--ink-gap); }
+.ink-card {
+  background: var(--ink-card); border: 1px solid var(--ink-line);
+  border-radius: var(--ink-radius); padding: var(--ink-pad); min-height: 170px;
+  display: flex; flex-direction: column;
+}
+.ink-card.paper {
+  background: var(--ink-paper); color: var(--ink-on-paper);
+  border-color: rgba(20, 35, 29, .1);
+}
+.ink-card .ink-tag {
+  font-size: 8px; letter-spacing: .11em; text-transform: uppercase; color: var(--ink-bronze);
+}
+.ink-card.paper .ink-tag { color: #95763d; }
+.ink-card h3 { font: 500 22px/1.1 var(--ink-serif); margin: 14px 0 10px; }
+.ink-card p { font-size: 10px; line-height: 1.6; color: var(--ink-text-dim); margin: 0; }
+.ink-card.paper p { color: rgba(20, 35, 29, .68); }
+.ink-card .ink-state-line {
+  margin-top: auto; padding-top: 12px; border-top: 1px solid var(--ink-line);
+  font-size: 9px; color: var(--ink-bronze-soft);
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.ink-card.paper .ink-state-line { border-top-color: var(--ink-line-paper); color: #7a6330; }
+
+/* ---- sidePanel --------------------------------------------------------- */
+.ink-side {
+  width: 340px; max-width: 100%; align-self: start;
+  background: var(--ink-card); border: 1px solid var(--ink-line);
+  border-radius: var(--ink-radius-lg); padding: var(--ink-pad);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.ink-side.paper { background: var(--ink-paper); color: var(--ink-on-paper); }
+.ink-side-head b { display: block; font: 500 24px/1.08 var(--ink-serif); margin: 6px 0 4px; letter-spacing: -.02em; }
+.ink-side-head span.ink-brand { font-size: 10px; letter-spacing: .07em; color: var(--ink-text-dim); }
+.ink-side.paper .ink-side-head span.ink-brand { color: rgba(20, 35, 29, .6); }
+.ink-side-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ink-side-rows { display: flex; flex-direction: column; }
+.ink-side-row {
+  display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: baseline;
+  padding: 10px 0; border-top: 1px solid var(--ink-line); font-size: 10px;
+}
+.ink-side.paper .ink-side-row { border-top-color: var(--ink-line-paper); }
+.ink-side-row > span { color: var(--ink-text-dim); }
+.ink-side.paper .ink-side-row > span { color: rgba(20, 35, 29, .58); }
+.ink-side-row > b { font-weight: 500; text-align: right; }
+.ink-side-price { font: 500 30px/1 var(--ink-serif); }
+.ink-buy {
+  display: block; text-align: center; text-decoration: none;
+  background: var(--ink-paper); color: #13211b;
+  border-radius: var(--ink-pill); padding: 13px 16px;
+  font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+}
+.ink-side.paper .ink-buy { background: #14231d; color: var(--ink-paper); }
+.ink-side-note { font-size: 8px; line-height: 1.55; color: var(--ink-text-faint); }
+.ink-side.paper .ink-side-note { color: rgba(20, 35, 29, .5); }
+
+/* ---- layout helpers ---------------------------------------------------- */
+.ink-body { padding: 0 var(--ink-gutter) 80px; }
+
+@media (max-width: 1050px) {
+  .ink-metrics { grid-template-columns: repeat(2, 1fr); }
+  .ink-cards { grid-template-columns: 1fr; }
+  .ink-section-head { display: block; }
+}
+@media (max-width: 640px) {
+  .ink-metrics { grid-template-columns: 1fr 1fr; }
+  .ink-metric { padding: 15px; min-height: 105px; }
+  .ink-side { width: 100%; }
+}
+
+/* ---- evidenceLegend ---------------------------------------------------- */
+/* The palette key. Pinned bottom-left on a full screen; static in a page flow. */
+.ink-legend {
+  display: flex; flex-direction: column; gap: 8px;
+  background: rgba(16, 25, 22, .92);
+  border: 1px solid var(--ink-line);
+  border-radius: var(--ink-radius);
+  padding: 14px 16px; max-width: 330px;
+  backdrop-filter: blur(12px);
+}
+.ink-legend.is-pinned { position: fixed; left: 16px; bottom: 16px; z-index: 8; }
+.ink-legend-row {
+  display: grid; grid-template-columns: auto 1fr; gap: 9px; align-items: center;
+  font-size: 9px; line-height: 1.5; color: var(--ink-text-dim);
+}
+
+/* ---- topBar: primary action ------------------------------------------- */
+/* .intel-button.primary — the one light button in the header. */
+.ink-mode.is-primary {
+  background: var(--ink-paper); color: #13211b; border-color: transparent;
+  text-decoration: none;
+}
+.ink-mode.is-primary:hover { background: #fff; }
+a.ink-mode { text-decoration: none; display: inline-flex; align-items: center; }
