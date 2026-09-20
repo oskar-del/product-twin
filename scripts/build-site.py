@@ -198,12 +198,36 @@ def read_terrain(docs):
     if low is not None and high is not None:
         out["range"] = Figure(f"{low}–{high}", "m", src, "DERIVED", note="RH2000 across the parcel")
 
-    slope = doc.get("slope_aspect_at_pin") or {}
-    plane = ((doc.get("parcel_slope") or {}).get("whole_parcel_plane") or {})
-    slope_deg = slope.get("slope_deg", plane.get("slope_deg"))
-    if slope_deg is not None:
-        aspect = slope.get("aspect_compass") or plane.get("aspect_compass") or ""
-        out["slope"] = Figure(slope_deg, "°", src, "DERIVED", note=f"slope {aspect}".strip())
+    # Three different questions, three different numbers. Conflating them produced a card that
+    # contradicted itself: the pin's Horn 3×3 slope labelled as the "plane slope", with the
+    # whole-parcel plane given a sentence later as a different figure.
+    at_pin = doc.get("slope_aspect_at_pin") or {}
+    parcel_slope = doc.get("parcel_slope") or {}
+    plane = parcel_slope.get("whole_parcel_plane") or {}
+    underfoot = parcel_slope.get("local_ground_slope") or {}
+
+    measures = []
+    if at_pin.get("slope_deg") is not None:
+        measures.append(("At the pin",
+                         f"{at_pin['slope_deg']}° {at_pin.get('aspect_compass', '')}".strip(),
+                         at_pin.get("method") or "Horn 3×3"))
+    if plane.get("slope_deg") is not None:
+        measures.append(("Whole-parcel plane",
+                         f"{plane['slope_deg']}° {plane.get('fall_direction_compass', '')}".strip(),
+                         plane.get("answers") or "least-squares plane fit"))
+    if underfoot.get("median_deg") is not None:
+        measures.append(("Underfoot median",
+                         f"{underfoot['median_deg']}°",
+                         underfoot.get("answers") or "per-cell gradient distribution"))
+    out["slope_measures"] = measures
+    # The headline slope stays the whole-parcel plane where it exists — it is the one that
+    # answers "which way does this parcel fall" — otherwise the pin measurement.
+    headline = plane.get("slope_deg", at_pin.get("slope_deg"))
+    if headline is not None:
+        compass = plane.get("fall_direction_compass") or at_pin.get("aspect_compass") or ""
+        label = "whole-parcel plane" if plane.get("slope_deg") is not None else "at the pin"
+        out["slope"] = Figure(headline, "°", src, "DERIVED",
+                              note=f"{label} · falls {compass}".strip(" ·"))
 
     if doc.get("heightfield", {}).get("vertices"):
         out["heightfield"] = doc["heightfield"]
@@ -225,8 +249,14 @@ def read_buildings(docs):
     for building in rows:
         footprints.extend(as_rings(building.get("footprint_rings_local")
                                    or building.get("rings_local") or []))
+    radius = doc.get("clip_radius_m") or doc.get("clip_buffer_m")
+    note_bits = [f"within {radius:g} m"] if radius else []
+    if counts.get("on_parcel") is not None:
+        note_bits.append(f"{counts['on_parcel']} on the parcel")
     out = {
-        "count": Figure(total, "footprints", src, doc.get("footprint_evidence_class", doc.get("evidence_class", "AUTHORITATIVE"))),
+        "count": Figure(total, "footprints", src,
+                        doc.get("footprint_evidence_class", doc.get("evidence_class", "AUTHORITATIVE")),
+                        note=" · ".join(note_bits) or None),
         "source_product": doc.get("source_product"),
         "footprints": footprints,
         "limitations": doc.get("limitations") or [],
@@ -424,6 +454,50 @@ def consistency_checks(docs, files, identity, boundary, buildings):
 
 # ---------------------------------------------------------------- render
 
+def render_value(value, unit=None):
+    """
+    Render a finding's value readably at any nesting depth.
+
+    Findings carry structured values — a list of buildings, three slope measures, a set of
+    queried layers. Formatting those with str() puts a Python repr on the page
+    ("[{'type': 'Bostad', ...}]"), which is unreadable and looks like a leak. Scalars stay
+    inline; a dict becomes labelled rows; a list of dicts becomes one row per entry.
+    """
+    def fmt_scalar(v):
+        if isinstance(v, bool):
+            return "yes" if v else "no"
+        if isinstance(v, float):
+            return f"{v:,.2f}".rstrip("0").rstrip(".").replace(",", " ")
+        if isinstance(v, int):
+            return f"{v:,}".replace(",", " ")
+        return esc(str(v))
+
+    def walk(node, depth=0):
+        pad = f"margin-left:{depth * 10}px" if depth else ""
+        if isinstance(node, dict):
+            parts = []
+            for key, item in node.items():
+                if item is None:
+                    continue
+                label = esc(key.replace("_", " "))
+                if isinstance(item, (dict, list)):
+                    parts.append(f'<div style="{pad}"><b>{label}</b></div>' + walk(item, depth + 1))
+                else:
+                    parts.append(f'<div style="{pad}"><b>{label}</b> {fmt_scalar(item)}</div>')
+            return "".join(parts)
+        if isinstance(node, list):
+            if not node:
+                return f'<div style="{pad}">none</div>'
+            if all(not isinstance(x, (dict, list)) for x in node):
+                return f'<div style="{pad}">{esc(" · ".join(str(x) for x in node))}</div>'
+            return "".join(walk(x, depth) for x in node)
+        return f'<div style="{pad}">{fmt_scalar(node)}</div>'
+
+    if isinstance(value, (dict, list)):
+        return walk(value)
+    return f"{fmt_scalar(value)} {esc(unit or '')}".strip()
+
+
 def provenance_rows(qa):
     """
     Render provenance QA honestly.
@@ -554,8 +628,10 @@ def build_page(site_dir, docs, files, out_path):
             if terrain.get("range"):
                 body += f" ({esc(terrain['range'].text())} m RH2000)"
             body += ". "
-        if terrain.get("slope"):
-            body += f"Plane slope {esc(terrain['slope'].text())}° {esc(terrain['slope'].note or '')}. "
+        if terrain.get("slope_measures"):
+            body += "<br><br>" + " · ".join(
+                f"<b>{esc(label)}</b> {esc(value)}" for label, value, _ in terrain["slope_measures"])
+            body += "<br>"
         if verdict:
             body += f"<em>{esc(verdict)}</em>"
         cards.append(card("Ground", "Terrain from the 1 m DTM", body or "Terrain model acquired.",
@@ -575,7 +651,8 @@ def build_page(site_dir, docs, files, out_path):
             body += (f"<b>{esc(view['arc_percent'].text())}%</b> of the horizon has open water visible "
                      f"from the viewpoint")
             if view.get("arc_count"):
-                body += f", in {esc(view['arc_count'].text())} separate arcs"
+                count = view["arc_count"].value
+                body += f", in {esc(view['arc_count'].text())} separate arc{'' if count == 1 else 's'}"
             body += ". "
         if view.get("nearest_water"):
             body += f"Nearest visible water {esc(view['nearest_water'].text())} m. "
@@ -642,15 +719,13 @@ def build_page(site_dir, docs, files, out_path):
     if ledger and ledger["findings"]:
         blocks = []
         for finding in ledger["findings"]:
-            value = finding.get("value")
-            if isinstance(value, dict):
-                body = " · ".join(f"{k.replace('_', ' ')}: {v}" for k, v in value.items() if v is not None)
-            else:
-                body = f"{value} {finding.get('unit') or ''}".strip()
+            body = render_value(finding.get("value"), finding.get("unit"))
             blocks.append(card(
                 finding.get("domain", "finding"),
                 finding.get("finding_id", "").replace("FINDING_SE_", "").replace("_", " ").title() or "Finding",
-                esc(body) + (f"<br><br>{esc(finding.get('method', ''))}" if finding.get("method") else ""),
+                # render_value() already escapes its own leaves and returns markup, so this
+                # must NOT be escaped again or the reader sees the tags.
+                body + (f"<br>{esc(finding.get('method', ''))}" if finding.get("method") else ""),
                 state=finding.get("verification"), evidence=finding["_chip"]))
         findings_section = (
             '<section class="ink-section"><div class="ink-section-head"><h2>Findings</h2>'
@@ -693,7 +768,7 @@ def build_page(site_dir, docs, files, out_path):
     html = f"""<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{esc(title)} — site intelligence</title>
+<title>{esc(identity['designation'])} · Site Intelligence</title>
 <style>
 {tokens}
 html,body{{margin:0;background:var(--ink-bg)}}
