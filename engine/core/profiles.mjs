@@ -70,7 +70,27 @@ function idHash(id) {
   return [...String(id)].reduce((sum, character) => sum + character.charCodeAt(0), 0);
 }
 
-export function createMaterialFactory({realisticPalette = {}} = {}) {
+/**
+ * An interior stage framed in the ink chrome. Dark neutral ground, warm low-key
+ * sky, so a room reads as a lit interior rather than a lawn under a blue sky.
+ * Kept beside the profile environments because it is the same shape — but it is
+ * NOT a profile: profiles are a shared contract and every other surface uses
+ * REALISTIC as-is. A host opts into this per surface via `stageEnvironment`.
+ */
+export const INK_STAGE_ENVIRONMENT = Object.freeze({
+  background: 0x101916,
+  fog: {color: 0x101916, near: 24, far: 96},
+  hemisphere: {sky: 0xf3e7d2, ground: 0x1d2522, intensity: 1.34},
+  exposure: 1.08,
+  // Ground and shell read as neutral studio surfaces, not landscape. Light
+  // enough to register as a floor under the furniture; dark enough that the
+  // stage and the ink chrome around it read as one surface.
+  palette: Object.freeze({TERRAIN: 0x343a36, ROOM: 0x39433d}),
+  // The grass/asphalt maps are outdoor cues and have no place on an interior floor.
+  suppressTextures: true
+});
+
+export function createMaterialFactory({realisticPalette = {}, suppressTextures = false} = {}) {
   const palette = {...DEFAULT_REALISTIC_PALETTE, ...realisticPalette};
   const owned = new Set();
 
@@ -109,7 +129,7 @@ export function createMaterialFactory({realisticPalette = {}} = {}) {
       opacity: isGlazing ? 0.62 : opacity,
       side: THREE.DoubleSide
     }));
-    if (textures) {
+    if (textures && !suppressTextures) {
       if (type === "TERRAIN") material.map = textures.get("grass");
       if (type === "ROAD") material.map = textures.get("asphalt");
     }
@@ -130,16 +150,21 @@ export function createMaterialFactory({realisticPalette = {}} = {}) {
  * Apply a profile to a built scene graph. Meshes carry both materials from construction, so
  * switching is a pointer swap rather than a rebuild — profile changes must be free.
  */
-export function applyProfile(profileName, {scene, root, realismDecor, labelGroup, hemisphere, renderer, labelsVisible = true, depth = null, stageBackground = null}) {
+export function applyProfile(profileName, {scene, root, realismDecor, labelGroup, hemisphere, renderer, labelsVisible = true, depth = null, stageBackground = null, stageEnvironment = null}) {
   const name = profileName === PROFILE_COMPARE ? PROFILE_INTELLIGENCE : profileName;
-  const environment = PROFILE_ENVIRONMENTS[name] ?? PROFILE_ENVIRONMENTS.INTELLIGENCE;
+  const base = PROFILE_ENVIRONMENTS[name] ?? PROFILE_ENVIRONMENTS.INTELLIGENCE;
   const realistic = name === PROFILE_REALISTIC;
   const systems = name === PROFILE_SYSTEMS;
 
   // A surface that frames the stage in its own chrome (the ink Rooms page) needs the
-  // 3D background to match that chrome, not the profile's studio default — otherwise
-  // the canvas reads as a pasted-in rectangle. Fog still follows the profile so depth
-  // cues survive the override.
+  // whole environment to match that chrome, not just the background — a dark sky over
+  // a green lawn reads worse than either. The override applies only to the realistic
+  // look: INTELLIGENCE is the evidence view and must not be restyled per surface.
+  const environment = (stageEnvironment && realistic)
+    ? {...base, ...stageEnvironment, fog: {...base.fog, ...(stageEnvironment.fog ?? {})},
+       hemisphere: {...base.hemisphere, ...(stageEnvironment.hemisphere ?? {})}}
+    : base;
+
   scene.background = new THREE.Color(stageBackground ?? environment.background);
   // Fog distances come from the scene's own extents when it declares them: hardcoded distances
   // tuned on one site turn a larger site into haze and give a smaller one no depth cue at all.

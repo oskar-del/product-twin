@@ -170,7 +170,11 @@ export function buildVidaxlTerrace() {
     },
     presentation: {
       profiles: ["INTELLIGENCE", "REALISTIC", "SYSTEMS"],
-      default_profile: "INTELLIGENCE", default_stage: "TERRACE"
+      // REALISTIC by default now that these rows carry G2 proxies: the terrace
+      // reads as a furnished deck on the ink stage like the other two rooms.
+      // INTELLIGENCE is still one click away and still shows every piece in
+      // its evidence colour — that view is never restyled per surface.
+      default_profile: "REALISTIC", default_stage: "TERRACE"
     },
     navigation: [
       { id: "TERRACE", label: "Terrace", camera: [5.2, 3.6, 5.0], target: [0, 0.6, -0.4], visible_groups: ["TERRAIN", "ROOM", "FURNITURE"], cutaway: false, labels: false },

@@ -19,6 +19,7 @@ import { fileURLToPath } from "node:url";
 import esbuild from "esbuild";
 import { parseScene } from "../engine/core/scene-contract.mjs";
 import { topBar, evidenceLegend } from "../engine/ui/chrome/chrome.mjs";
+import { INK_STAGE_ENVIRONMENT } from "../engine/core/profiles.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -89,6 +90,7 @@ import { sidePanel } from ${JSON.stringify(path.join(root, "engine/ui/chrome/chr
 const LOOKS = ${JSON.stringify(looks.map(l => ({ id: l.id, label: l.label, channel: l.channel, doc: l.doc, stats: l.stats })))};
 const ASSET_BASE = ${JSON.stringify(assetBase)};
 const INK_BG = ${INK_BG};
+const INK_ENV = ${JSON.stringify(INK_STAGE_ENVIRONMENT)};
 
 const stage = document.getElementById("stage");
 const panelHost = document.getElementById("panelHost");
@@ -151,6 +153,7 @@ async function load(lookId) {
     chrome: false,              // the ink chrome replaces the engine's own
     assetBasePath: ASSET_BASE,
     stageBackground: INK_BG,
+    stageEnvironment: INK_ENV,
     onElementOpen: showPanel
   });
 

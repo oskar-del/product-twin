@@ -70,6 +70,8 @@ async function loadScene(sceneUrl, sceneDocument) {
  * @param {function}[options.onElementOpen]    called with each opened element
  * @param {string}  [options.assetBasePath]    prefix for GLTF_ASSET asset_path resolution
  * @param {number}  [options.stageBackground]  override the profile's background (host chrome match)
+ * @param {object}  [options.stageEnvironment] override the REALISTIC environment for this surface
+ *                                             (see INK_STAGE_ENVIRONMENT in core/profiles.mjs)
  */
 export async function createTwinViewer({
   mount,
@@ -82,6 +84,7 @@ export async function createTwinViewer({
   onElementOpen = null,
   assetBasePath = "",
   stageBackground = null,
+  stageEnvironment = null,
   tweenMs = DEFAULT_TWEEN_MS
 }) {
   if (!mount) throw new TypeError("createTwinViewer requires a mount element");
@@ -102,7 +105,12 @@ export async function createTwinViewer({
     shadowExtent: depth.shadowExtent
   });
   const textures = createTextureLibrary();
-  const materials = createMaterialFactory({realisticPalette});
+  // A stage environment may restyle the realistic ground/shell for this surface only;
+  // an explicit realisticPalette from the caller still wins over the environment's.
+  const materials = createMaterialFactory({
+    realisticPalette: {...(stageEnvironment?.palette ?? {}), ...(realisticPalette ?? {})},
+    suppressTextures: stageEnvironment?.suppressTextures === true
+  });
   const builder = createSceneBuilder({materials, textures});
   const built = builder.build(scene);
 
@@ -209,7 +217,8 @@ export async function createTwinViewer({
       renderer: viewer.renderer,
       labelsVisible: labelsEnabled && machine.current.labels,
       depth,
-      stageBackground
+      stageBackground,
+      stageEnvironment
     });
   }
 
