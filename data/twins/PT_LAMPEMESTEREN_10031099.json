@@ -36,5 +36,10 @@
   },
   "attach": {
     "role": "free"
+  },
+  "physical": {
+    "dimensions_source": "title_regex:single_measure",
+    "dimensions_axes": "ONE",
+    "dimensions_single_mm": 85
   }
 }

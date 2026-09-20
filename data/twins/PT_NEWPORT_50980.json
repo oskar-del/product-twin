@@ -11,7 +11,13 @@
   "category_id": "FFE.DECOR.CANDLE",
   "bucket": "DECOR",
   "physical": {
-    "dimensions_mm": null
+    "dimensions_mm": {
+      "width": 255,
+      "depth": 270,
+      "height": 370
+    },
+    "dimensions_source": "description_regex:labelled_wdh",
+    "dimensions_axes": "WDH"
   },
   "commerce": {
     "merchant": "Newport SE",

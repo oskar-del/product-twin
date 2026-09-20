@@ -11,7 +11,13 @@
   "category_id": "FFE.TEXTILES.RUG",
   "bucket": "DECOR",
   "physical": {
-    "dimensions_mm": null
+    "dimensions_mm": {
+      "width": 800,
+      "depth": 2500,
+      "height": null
+    },
+    "dimensions_source": "title_regex:double_wd_cm_assumed",
+    "dimensions_axes": "WD"
   },
   "commerce": {
     "merchant": "Newport SE",

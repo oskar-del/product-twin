@@ -33,5 +33,14 @@
     "identity": "feed_verified",
     "commerce": "affiliate_live",
     "geometry": "G0_catalog_only"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 540,
+      "depth": 550,
+      "height": 780
+    },
+    "dimensions_source": "title_regex:triple_wdh",
+    "dimensions_axes": "WDH"
   }
 }

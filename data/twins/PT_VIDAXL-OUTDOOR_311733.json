@@ -39,5 +39,14 @@
     "source": "scripts/classify-vidaxl-outdoor.mjs",
     "evidence_class": "DERIVED",
     "limitation": "Category inferred from merchant title text, not a feed taxonomy field."
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 30,
+      "depth": 45,
+      "height": null
+    },
+    "dimensions_source": "title_regex:double_wd_cm_assumed",
+    "dimensions_axes": "WD"
   }
 }

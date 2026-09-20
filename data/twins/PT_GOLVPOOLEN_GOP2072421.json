@@ -36,5 +36,14 @@
   },
   "attach": {
     "role": "free"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1800,
+      "depth": 900,
+      "height": 450
+    },
+    "dimensions_source": "title_regex:triple_wdh",
+    "dimensions_axes": "WDH"
   }
 }

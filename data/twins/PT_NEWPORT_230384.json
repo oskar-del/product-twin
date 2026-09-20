@@ -11,7 +11,13 @@
   "category_id": "OTHER",
   "bucket": "SEASONAL",
   "physical": {
-    "dimensions_mm": null
+    "dimensions_mm": {
+      "width": 400,
+      "depth": 600,
+      "height": null
+    },
+    "dimensions_source": "description_regex:double_wd",
+    "dimensions_axes": "WD"
   },
   "commerce": {
     "merchant": "Newport SE",

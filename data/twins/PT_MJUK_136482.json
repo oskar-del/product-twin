@@ -36,5 +36,14 @@
   },
   "attach": {
     "role": "free"
+  },
+  "physical": {
+    "dimensions_mm": {
+      "width": 1150,
+      "depth": 1150,
+      "height": null
+    },
+    "dimensions_source": "title_regex:diameter",
+    "dimensions_axes": "WD"
   }
 }

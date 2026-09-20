@@ -11,7 +11,10 @@
   "category_id": "FFE.DECOR.PLANT",
   "bucket": "DECOR",
   "physical": {
-    "dimensions_mm": null
+    "dimensions_mm": null,
+    "dimensions_source": "description_regex:single_measure",
+    "dimensions_axes": "ONE",
+    "dimensions_single_mm": 1800
   },
   "commerce": {
     "merchant": "Newport SE",

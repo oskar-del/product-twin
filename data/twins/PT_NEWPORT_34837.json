@@ -11,7 +11,13 @@
   "category_id": "OTHER",
   "bucket": "DECOR",
   "physical": {
-    "dimensions_mm": null
+    "dimensions_mm": {
+      "width": 300,
+      "depth": 250,
+      "height": 60
+    },
+    "dimensions_source": "description_regex:triple_wdh_cm_assumed",
+    "dimensions_axes": "WDH"
   },
   "commerce": {
     "merchant": "Newport SE",

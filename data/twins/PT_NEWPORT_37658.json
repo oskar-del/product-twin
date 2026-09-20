@@ -11,7 +11,10 @@
   "category_id": "FFE.DECOR.VASE",
   "bucket": "DECOR",
   "physical": {
-    "dimensions_mm": null
+    "dimensions_mm": null,
+    "dimensions_source": "title_regex:single_measure",
+    "dimensions_axes": "ONE",
+    "dimensions_single_mm": 300
   },
   "commerce": {
     "merchant": "Newport SE",

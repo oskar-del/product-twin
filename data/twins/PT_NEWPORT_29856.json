@@ -11,7 +11,13 @@
   "category_id": "FFE.DECOR",
   "bucket": "DECOR",
   "physical": {
-    "dimensions_mm": null
+    "dimensions_mm": {
+      "width": 1820,
+      "depth": 135,
+      "height": 80
+    },
+    "dimensions_source": "description_regex:triple_wdh",
+    "dimensions_axes": "WDH"
   },
   "commerce": {
     "merchant": "Newport SE",
