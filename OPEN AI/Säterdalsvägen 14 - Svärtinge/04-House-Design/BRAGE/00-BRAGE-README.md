@@ -1,5 +1,25 @@
 # BRAGE — Svärtinge 54:28 · Design Study (first assignment)
 
+> ## ⛳ SPRINT DAY — 2026-09-20 (Brain; Oskar runs all sessions today. Supersedes every earlier pin — the 2026-09-15
+> CONSOLIDATION decisions still stand: one site per address · six screens · ink chrome · Platform owns the chrome.)
+> RULES OF THE DAY: pull first · work the queue in order · each item ends with a screenshot in docs/screens/ + numbers ·
+> commit after every item (Oskar pushes hourly) · nothing invented; every figure computed from receipts · report
+> "DONE / NOT checked" per item in your handoff at end of day. Chrome tokens until Platform ships the package:
+> bg #101916 · card #17241f · paper #f5f1e8 · bronze #d8b874 · serif display · Inter labels · evidence chips
+> authoritative #176b52 / indicative #c18a2d / derived #497aa2 / reported #a65b68 / concept #735a9e.
+>
+> **BRAGE — Vinkelhuset becomes machine-readable today.**
+> 1. `geometry/house-v0.3-geometry-spec.json`: every ROOM a named volume — id, use, floor area, ceiling height, wall
+>    segments, window/door openings (sill + head heights, orientation), finishes per surface. Platform builds the interior
+>    from this file (it starts this afternoon) — no typed dimensions anywhere. DoD: JSON validates (write a 20-line
+>    validator), room areas sum to the 210 m² heated figure or the diff is explained.
+> 2. Roof: pitch 30°, ridge line, eaves heights, wing roof type — explicit in the spec (Spatial renders from it today).
+> 3. Screen 3 "The House": tre-hus-presentation.html re-skinned to the chrome tokens above (topBar, sectionHead, cards),
+>    winner + rationale + plans + facades + sections + 4 details as inline SVG. Same file, republish to the SAME artifact
+>    URL (2f790a57-…). DoD: screenshot.
+> 4. If time: classics library entry #1 in the same spec format.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
