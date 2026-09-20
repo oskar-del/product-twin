@@ -20,11 +20,16 @@
  .recon li{font-size:10px;line-height:1.65;color:rgba(255,255,255,.62);margin:4px 0}
  .chip{display:inline-block;padding:4px 8px;border-radius:999px;font-size:8px;letter-spacing:.11em;background:rgba(115,90,158,.18);color:#b39ed8;border:1px solid #735a9e}
 </style>
-<div class="kick">BRAGE · Vinkelhuset mot Glan · house-v0.3-geometry-spec.json</div>
+<div class="kick">BRAGE · Vinkelhuset mot Glan · house-v0.4-geometry-spec.json</div>
 <h1>Room schedule — drawn from the spec</h1>
 <p class="sub">Every wall, opening, area and label on this page is read out of the JSON by
-geometry/draw-house-v0.3.mjs. Nothing is drawn by hand, so if the plan is right the spec is
+geometry/draw-house-v0.4.mjs. Nothing is drawn by hand, so if the plan is right the spec is
 complete enough for Platform to build the interior from. <span class="chip">CONCEPT</span></p>
+<p class="sub" style="color:rgba(255,255,255,.72)"><b>v0.4 fixes a roof that did not close.</b>
+The wing's 15° mono-pitch in v0.3 fell to Y 0.64 m at the north edge while the rooms below are
+2.40–2.50 m — it passed straight through them. The wing now has its own 15° gable: eaves stay at
+3.0 m level with the bar's, ridge lands at 4.07 m, under the bar's 5.02 m. A roof-clearance
+assertion now runs at build time and refuses to write a spec whose roof intersects its own rooms.</p>
 <div class="plans">
 <figure>
   <figcaption>Ground floor — 7 rooms · 204.0 m²</figcaption>
@@ -106,7 +111,7 @@ complete enough for Platform to build the interior from. <span class="chip">CONC
   <div class="fact"><span>Heated, excl. suterräng</span><b>206.4 m²</b><small>12 heated rooms; garage excluded as cold</small></div>
   <div class="fact"><span>Heated, incl. suterräng</span><b>276.4 m²</b><small>Suterräng validated by the measured 13° SW slope</small></div>
   <div class="fact"><span>Upper floor usable</span><b>4.23 m</b><small>of the 7 m span — the band clearing 1.9 m under the 30° roof</small></div>
-  <div class="fact"><span>Ridge / eaves</span><b>5.02 m</b><small>eaves 3 m · 30° gable · wing 15° mono</small></div>
+  <div class="fact"><span>Ridge / eaves</span><b>5.02 m</b><small>eaves 3 m · bar 30° gable · wing 15° gable, ridge 4.07 m</small></div>
 </div>
 <div class="recon">
   <h2>The brief says 210 m². The geometry says 206.4 m².</h2>
