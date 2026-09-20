@@ -16,10 +16,10 @@
       "depth": 1300,
       "height": 750
     },
-    "dimensions_source": "proxy_build:category_default",
-    "dimensions_axes": "WDH_DEFAULT",
+    "dimensions_source": "title_regex:double_wd + proxy_category_default_height (reconciled 2026-09-21)",
+    "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "dimensions_tier": "ALL_DEFAULT"
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "commerce": {
     "merchant": "Newport SE",
@@ -64,7 +64,8 @@
       "geometry_owner": "Product Twin universal proxy",
       "manufacturer_geometry_copied": false,
       "manufacturer_texture_artwork_copied": false
-    }
+    },
+    "scale_state_note": "scale_state says \"category_default\" but these numbers came from the merchant title; see scripts/reconcile-dimension-tier.mjs"
   },
   "readiness": {
     "identity": "feed_verified",

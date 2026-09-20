@@ -148,6 +148,53 @@ TESTED, not the number it printed. Brain's recount matched mine to the unit beca
 `dimensions_mm` populated without reading `geometry.scale_state`.
 
 
+
+### ⚠️ CONSUMER GOTCHAS — read before using dimensions (verbatim from Platform, 2026-09-21)
+- **the stamp lives at `physical.dimensions_tier`, not top-level**
+- **`repo-platform/data/twins` is a stale 85-file subset — consumers must read your checkout**
+  (i.e. `product twin/repo-avatar-factory/data/twins`, 225,335 files on branch `agent/avatar-factory-claude`)
+
+### Tier reconciliation (2026-09-21, commit `90b50e7047`) — Platform's vidaXL disagreement
+Platform counted ~11,336 vidaXL titles "stating all three axes" against my 6,131 SOURCE. **Neither the
+regex nor the count was wrong; the two numbers measure different things.**
+
+| definition (measured on data/vidaxl-outdoor, 89,595 rows) | count |
+|---|---|
+| titles with 3 numbers separated by x/×/X — genuine three-axis | **6,124** |
+| titles with an x-pattern AND a `cm` token — 2-axis *and* 3-axis together | **11,254** ← matches Platform's ~11,336 |
+| of those: 3-axis 5,326 · 2-axis 5,927 | |
+
+So ~5,900 of Platform's population state only W×D. Those are correctly NOT `SOURCE`. Alternative
+notations were checked and are all **zero** in this feed: `*`-separated, dash-separated, and labelled
+`L/B/H` forms. **No pattern was missed.**
+
+**But Platform's underlying instinct was right, and found a real defect.** `build-newport-proxies.mjs`
+DOES parse dimensions out of the title and override the category defaults with them (lines 217-221) —
+then writes `scale_state: "category_default …"` **unconditionally**, whether the numbers came from the
+merchant's title or from `CATEGORY_DEFAULTS`. `scale_state` is therefore not a provenance record, and
+the backfill in `e5816844` trusted it. Compounding it, `extract-dimensions.mjs` skips any twin that
+already has all three axes, so those titles were never examined at all.
+
+`scripts/reconcile-dimension-tier.mjs` re-reads the title and re-stamps only where the title's numbers
+MATCH the stored dimensions (the match is the evidence):
+
+| tier | before | after | delta |
+|---|---|---|---|
+| `SOURCE` | 6,364 | **6,390** | +26 |
+| `WD_SOURCE_H_DEFAULT` | 35,447 | **35,474** | +27 |
+| `ALL_DEFAULT` | 3,687 | **3,634** | −53 |
+| `NONE` | 179,837 | 179,837 | 0 |
+
+By catalog: newport 4→SOURCE, 21→WD+H (3,620 stay); vidaxl-outdoor 22→SOURCE, 6→WD+H (14 stay).
+Screen 05 now reads **live tier counts from `data/twins`** (`scripts/tier-counts.mjs`) rather than a
+report file, so it cannot drift from the data after a later correction.
+
+**NOT checked:** the 3,634 remaining `ALL_DEFAULT` were not individually confirmed to lack a stated
+size — they are the rows whose titles either state nothing or state numbers that do NOT match the
+stored dimensions. `scale_state` remains unreliable across the corpus and should be treated as
+decorative; `dimensions_tier` is the field of record.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
