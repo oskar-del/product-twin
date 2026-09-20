@@ -158,9 +158,47 @@ A substring grep over the bundle under-reports links 5/7 because esbuild escapes
 `\xE4` in the JS literal — that is a source encoding, not a URL change; the runtime href is
 exact, which is what I verified.
 
-**Item 3 — room inside Vinkelhuset · NOT STARTED.** Dependency has landed and is confirmed:
-`repo-brage geometry/house-in-scene-v0.3-patch.json` carries `ROOM_GLANRUMMET`, a 7×3×7 m
-`ROOM_VOLUME`, with the bounding interior walls (`WALL_INT_LIVING_KITCHEN` et al). Next up.
+**Item 3 — room inside Vinkelhuset · DONE** (`bb45589906`) — picked up by ai-c6 [c3cd6a] after
+the other session ended.
+`scripts/compile-room-in-house.mjs` reads `ROOM_GLANRUMMET` out of
+`house-in-scene-v0.3-patch.json` — the real **7 × 3 × 7 m** volume — and re-seats the same
+Newport products inside it. The openings are BRAGE's as well: the room element states *"Fully
+glazed south+west"*, so the compiler emits one wall-sized opening per glazed face and **refuses
+to build** if the spec claims no glazing. The spec's note that the glazing is splayed toward the
+lake is carried as a limitation on those openings rather than modelled, since this volume is
+orthogonal.
+  15 elements · 11 shoppable · **BUY links 11/11 byte-identical** to the source scene (the
+  compiler diffs them and exits non-zero if one moves)
+  `dist/stills/glanrummet-newport.png` · 1600×1000 · 160 samples · **1 m 40 s**
+  `npm run engine:gate` — all suites green
+The exporter had only ever cut openings in north/south walls; it now resolves each opening to
+its wall by axis (a 90°-rotated opening lies in an east/west wall, width running along z) and
+lights it in that wall's own plane.
+*NOT checked:* the room is compiled at its **own origin** and is not yet mounted in the Svärtinge
+house scene at its real place (`room_origin_in_house [-7.5, 1.5, -0.5]` is recorded but unused),
+so the lake horizon in the render is Blender's sky — **not** a view solved against the real
+terrain or Glan; the interior walls BRAGE defines around this room
+(`WALL_INT_LIVING_KITCHEN` et al) are not rendered — the shell is the room volume's own faces;
+no doorway is modelled, because the patch specifies none for this room; the seating positions
+are my layout, not BRAGE's — the spec gives the volume and the glazing, not a furniture plan.
+
+### End of day — all four items
+
+| # | Item | State | Evidence |
+|---|------|-------|----------|
+| 1 | Chrome package | DONE | `a5e2f177e5`, `50438a61cf` · `docs/screens/chrome-demo-2026-09-20.png` |
+| 2 | Re-skin both rooms | DONE | `dc0ff62be9` · `docs/screens/room-*-2026-09-20.png` · BUY 18/18 byte-identical |
+| 3 | Room inside Vinkelhuset | DONE | `bb45589906` · `docs/screens/still-glanrummet-newport-2026-09-20.png` |
+| 4 | Stills gallery | DONE | `fe523f1fc1` · `docs/screens/still-newport-living-2026-09-20.png` |
+
+Full-resolution stills live in `dist/stills/` (item 4's DoD asks for them there); `docs/screens/`
+carries 1000 px copies so the day's screenshot rule is satisfied in one place.
+
+**Biggest thing left undone:** the room is not yet *in the house in the world*. Items 3 and 4
+render a room at its own origin. Mounting `ROOM_GLANRUMMET` into the Svärtinge scene at
+`[-7.5, 1.5, -0.5]`, with the real terrain and a real Glan sightline through the south glazing,
+is what turns this from a furnished box into the plot-to-project promise. That is the next move,
+and it needs Spatial's scene, not just BRAGE's patch.
 
 **Item 4 — stills gallery · DONE** (`fe523f1fc1`) — ai-c6 [c3cd6a], the other session.
 `dist/stills/newport-living.png` · 1600×1000 · Cycles · 160 samples · **5 m 42 s**, plus the
