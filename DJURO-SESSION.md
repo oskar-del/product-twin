@@ -57,10 +57,24 @@ building was not resolved.
 | below 1 / 2 / 3 / 5 m | 214 / 617 / 937 / 2 806 m² (4.2 / 12.0 / 18.2 / 54.4%) |
 | derived sha256 | `8fde130522f67737731d8af528c7d1afd105ff7e53f8313b30b273e2b729670c` |
 
-🔴 **The live page says 8.1° WNW. That is wrong.** The parcel falls **3.94° to the NE**. The 8.1°
-was close to the per-cell median (8.29°) but the direction is inverted, and the two measures disagree
-because the ground is not a plane — 1.46 m RMS against 11.53 m relief. The script now emits both
-measures and a `verdict` field stating that no single slope describes this parcel.
+⚠️ **CORRECTED 2026-09-20 evening — I was wrong; the page is right.** I originally reported the
+published 8.1° WNW as an error. It is not. Conforming to Svärtinge's template forced me to implement
+its `slope_aspect_at_pin` field — Horn 3×3 on the 1 m grid at the pin — and it returns **8.15°,
+aspect 294.8° WNW**, the page's figure, by the template's own method. I checked both aspect formulas
+on the same 3×3 window and they agree to 0.01°.
+
+**Three measures, three different questions, all correct:**
+
+| measure | value | answers |
+|---|---|---|
+| at the pin, Horn 3×3 | **8.1° WNW** | the local microslope — *what the page states* |
+| across the whole parcel | 3.94° NE | plane fit, 1.46 m RMS residual |
+| ground underfoot | 8.29° median · p90 23.77° · max 57.2° | what you stand on |
+
+What still stands: the parcel is **not planar**, so no single slope describes it, and it falls to the
+water across its whole extent. What does not stand: calling the pin figure an error. The escalation
+on this point is **withdrawn**. `terrain-dem-derived` now carries a `reconciliation_with_pin_slope`
+field and the screen no longer prints a correction banner.
 Screen `docs/screens/djuro-02-terrain-dtm.svg`.
 
 **NOT checked:** heights are bare-earth ground, not roof or canopy. This is a derivation from a
@@ -140,17 +154,56 @@ replaced, and **nothing was republished to artifact `7a1359ec-…`**.
 Per the mandate — *"the page gets regenerated from Spatial's template, not patched"* — I did **not**
 patch the live page. The data it needs is committed and waiting.
 
-🔴 **ESCALATION FOR OSKAR.** The live page currently states **8.1° WNW**, which item 2 shows is wrong
-in direction, and calls strandskydd **"presumed"**, which item 3 has now measured at 100% of the
-parcel. This goes to a real family. Either Spatial's generator lands and the page is regenerated, or
-the slope line and the strandskydd line need pulling — your call, not mine, because patching the page
-is what the mandate rules out.
+🔴 **ESCALATION FOR OSKAR — now narrower than I first reported.** The slope line on the page is
+**fine** (see the correction under item 2; I withdrew that). What remains is that the page calls
+strandskydd **"presumed"** when item 3 has measured it at **100% of the parcel**, and that it carries
+the 43.3% sea-view figure without its bare-earth ceiling. This goes to a real family. Either
+Spatial's generator lands and the page is regenerated, or that one line needs pulling — your call,
+because patching the page is what the mandate rules out.
 
 ### What today changed about the site
 The parcel runs down to the water — 0.2 m at its nearest, 0.15 m RH2000 at its lowest. That single
 fact drives the rest: strandskydd covers all of it, the sea view is real and unbroken across 158°,
-and the ground is broken archipelago rock (57° at its steepest), not the uniform 8.1° hillside the
-page describes. It is unplanned land with four registered buildings, all inside the 100 m zone.
+and the ground is broken archipelago rock — 57° at its steepest, and not planar, so the pin's
+correct 8.1° WNW describes a microslope rather than the site. It is unplanned land with four
+registered buildings, all inside the 100 m zone.
+
+## 🌙 EVENING — Brain prep tasks (a) schema conformance · (b) findings/gates as data · **BOTH DONE**
+
+**(a) Schema conformance.** Diffed against `repo-spatial-studio/data/sites/sweden/saterdalsvagen-14/`.
+Now **zero missing keys, zero type mismatches** on all three files — `property-division` already
+conformed; `buildings-official` and `terrain-dem` were reshaped to the template (my extra fields kept
+as additions, never renaming the template). Re-check with:
+`python3 scripts/build-findings-and-gates.py --site data/sites/sweden/djuro-byvag-34`
+
+Conforming is what caught my slope error — implementing the template's `slope_aspect_at_pin`
+reproduced the page's 8.1° WNW exactly. Worth noting: matching the template was what verified it.
+
+**Two things for Brain to rule on — flagged, not silently resolved:**
+1. `glan_sightline_profile` names the lake Svärtinge faces. Djurö faces open archipelago water. I emit
+   the correct `sightline_profile` **and** a `glan_sightline_profile` alias (`alias_of`,
+   `target_is_not_glan`) so a template-written generator resolves. **The key should be renamed in the
+   template.**
+2. `evidence_class`: Svärtinge's terrain doc says `AUTHORITATIVE`; mine says `DERIVED` with
+   `derived_from_evidence_class: AUTHORITATIVE`. The heights are the authority's own model values but
+   the slopes and profiles are computed. I did not copy the stronger label. **The two sites will
+   render different chips until this is standardised.**
+
+`provenance_qa` keys are present and **null** for Djurö — the ursprung/brytgeometri polygons were
+never downloaded, so null means NOT ESTABLISHED, not "fine".
+
+**(b) findings.json + gates.json.** `scripts/build-findings-and-gates.py` reads the six derived
+products and emits both in the template's `plot-intelligence` shape. Nothing hand-typed, so a finding
+cannot drift from the number it claims. **4 receipts · 10 findings · 11 gates (7 closed / 4 open).**
+Open: `BUILDING_HEIGHTS`, `TERRAIN_PROVENANCE`, `STRANDSKYDD_DISPENS`, `VIEW_OCCLUSION`.
+
+Brain's rule is enforced in the data, not just in prose: `GATE_SE_SEA_VIEW` is CLOSED **only** as a
+terrain result and a ceiling, `GATE_SE_VIEW_OCCLUSION` stays OPEN, and both the finding and
+`terrain-dem`'s limitations carry *"a rendered horizon in any image is never a view claim."*
+
+**NOT checked:** the generator does not exist yet, so nothing has been proved to render from these
+files — conformance is a key/type diff against the reference site, not a successful generator run.
+The current page was not touched.
 
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
