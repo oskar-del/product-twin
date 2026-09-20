@@ -19,10 +19,15 @@ import argparse, hashlib, importlib.util, json, os, sqlite3, struct, tempfile, z
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = ROOT / "data/sites/sweden/saterdalsvagen-14"
-OSM = SITE / "osm-context-derived-v0.1.json"
-OUT = SITE / "buildings-official-derived-v0.1.json"
-DEFAULT_ZIP = ROOT.parent / "lm-data" / "byggnad_kn0581.zip"
+DEFAULT_SITE = "data/sites/sweden/saterdalsvagen-14"
+
+# The Site resolver lives in the property-division ingest; both scripts must agree about which
+# kommun a site belongs to, and there must be exactly one place that decides it.
+_pd_spec = importlib.util.spec_from_file_location(
+    "ingest_property_division", Path(__file__).resolve().parent / "ingest-property-division.py")
+_pd = importlib.util.module_from_spec(_pd_spec)
+_pd_spec.loader.exec_module(_pd)
+Site = _pd.Site
 DEFAULT_RADIUS_M = 200.0
 EXPECTED_EPSG = 3006
 
@@ -31,8 +36,8 @@ _spec = importlib.util.spec_from_file_location("ipd", str(Path(__file__).with_na
 ipd = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(ipd)
 
 
-def origin():
-    e0, n0 = json.loads(OSM.read_text())["origin_sweref"]
+def origin(site):
+    e0, n0 = site.origin
     return float(e0), float(n0)
 
 
@@ -91,13 +96,16 @@ def ingest(gpkg_path, o, radius):
     return out, srs
 
 
-def emit(buildings, o, srs, raw_sha, raw_bytes, manifest, radius):
+def emit(site, buildings, o, srs, raw_sha, raw_bytes, manifest, radius):
     e0, n0 = o
     payload = {
-        "schema_version": "svartinge-buildings-official-derived/v0.1",
+        "schema_version": "buildings-official-derived/v0.1",
         "entity_type": "OfficialBuildingFootprintClip",
         "authority": "Lantmäteriet",
-        "source_product": "byggnad_kn0581 (GeoPackage)",
+        "subject": site.designation,
+        "source_product": f"byggnad_kn{site.kommun} (GeoPackage)",
+        "kommun": site.kommun_name,
+        "kommunkod": site.kommun,
         "footprint_evidence_class": "AUTHORITATIVE",
         "height_evidence_class": "DERIVED",   # LM byggnad has no height; never invented
         "source_crs": f"EPSG:{sorted(srs)[0]}" if srs else None,
@@ -123,20 +131,24 @@ def emit(buildings, o, srs, raw_sha, raw_bytes, manifest, radius):
     return payload
 
 
-def run(zip_path, radius):
-    zip_path = Path(zip_path or DEFAULT_ZIP)
+def run(site, zip_path, radius):
+    zip_path = Path(zip_path or (ROOT.parent / "lm-data" / f"byggnad_kn{site.kommun}.zip"))
+    if not zip_path.exists():
+        raise SystemExit(f"no byggnad archive for kn{site.kommun} at {zip_path} — pass --zip")
     if not zip_path.exists():
         raise SystemExit(f"asset not found: {zip_path}")
     raw = zip_path.read_bytes()
     raw_sha, raw_bytes = hashlib.sha256(raw).hexdigest(), len(raw)
     gpkg, manifest = extract_gpkg(zip_path)
-    o = origin()
+    o = origin(site)
     buildings, srs = ingest(gpkg, o, radius)
     if EXPECTED_EPSG not in srs and srs:
         print(f"WARN: expected EPSG:{EXPECTED_EPSG}, saw {sorted(srs)}")
     payload = emit(buildings, o, srs, raw_sha, raw_bytes, manifest, radius)
-    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
-    print(f"WROTE {OUT.relative_to(ROOT)}")
+    out = site.dir / "buildings-official-derived-v0.1.json"
+    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
+    print(f"WROTE {out}")
+    print(f"  kommun={payload['kommun']} ({payload['kommunkod']})  product={payload['source_product']}")
     print(f"  {payload['building_count']} footprints within {radius:.0f} m "
           f"({payload['dwelling_count']} Bostad)  crs={payload['source_crs']}")
     print(f"  types: {payload['type_breakdown']}")
@@ -154,8 +166,8 @@ def _gpkg_blob(srs, rings):
     return b"GP" + bytes([0, 0]) + struct.pack("<i", srs) + b
 
 
-def self_test():
-    o = origin(); e0, n0 = o
+def self_test(site):
+    o = origin(site); e0, n0 = o
     near = [[(e0 + 5, n0 + 5), (e0 + 15, n0 + 5), (e0 + 15, n0 + 15), (e0 + 5, n0 + 5)]]
     far = [[(e0 + 500, n0), (e0 + 510, n0), (e0 + 510, n0 + 10), (e0 + 500, n0)]]
     d = Path(tempfile.mkdtemp()); g = d / "b.gpkg"
@@ -177,19 +189,28 @@ def self_test():
     b = buildings[0]
     assert b["object_id"] == "uuid-near" and b["is_main"] and b["type"] == "Bostad", b
     assert b["footprint_rings_local"][0][0] == [5.0, 5.0], b["footprint_rings_local"][0][0]
-    p = emit(buildings, o, srs, "dead", 1, [], DEFAULT_RADIUS_M)
+    p = emit(site, buildings, o, srs, "dead", 1, [], DEFAULT_RADIUS_M)
     assert p["footprint_evidence_class"] == "AUTHORITATIVE" and p["height_evidence_class"] == "DERIVED"
-    print("SELF-TEST PASS")
-    print("  MultiPolygon parse ✓  200 m clip kept near, dropped far ✓  ENU transform ✓")
-    print("  footprint=AUTHORITATIVE, height=DERIVED (never invented) ✓")
+    assert p["kommunkod"] == site.kommun, p["kommunkod"]
+    assert p["source_product"] == f"byggnad_kn{site.kommun} (GeoPackage)", p["source_product"]
+    print(f"SELF-TEST PASS · {site.designation} · {site.kommun_name or '?'} (kn{site.kommun})")
+    print(f"  product line    {p['source_product']}")
+    print(f"  local ENU       origin {e0},{n0} · footprint[0]={b['footprint_rings_local'][0][0]}")
+    print("  200 m clip      kept the near building, dropped the 500 m one")
+    print("  evidence        footprint=AUTHORITATIVE, height=DERIVED (never invented)")
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(description="Ingest an official building footprint clip.")
+    ap.add_argument("--site", default=DEFAULT_SITE, help="site directory holding the receipts")
+    ap.add_argument("--kommun", help="kommunkod, e.g. 0581 (Norrköping) or 0120 (Värmdö)")
+    ap.add_argument("--designation", help='parcel designation, e.g. "SVÄRTINGE 54:28"')
+    ap.add_argument("--origin", help="ENU origin as E,N in SWEREF99TM (default: the site's receipts)")
     ap.add_argument("--zip"); ap.add_argument("--radius", type=float, default=DEFAULT_RADIUS_M)
     ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args()
+    site = Site(a.site, a.kommun, a.designation, a.origin)
     if a.self_test:
-        self_test()
+        self_test(site)
     else:
-        run(a.zip, a.radius)
+        run(site, a.zip, a.radius)
