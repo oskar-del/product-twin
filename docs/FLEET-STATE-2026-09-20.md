@@ -28,6 +28,9 @@
 - Consumer gotchas: tier lives at physical.dimensions_tier; repo-platform/data/twins is a stale 85-file subset.
 - Djurö on canonical registry 8/18/26, survival verified; jurisdiction rule proposed (property-division kommun code) → Spatial.
 
+- Stills audit (Platform b835819dc6): 2 of 3 committed Blender stills shipped WITHOUT the VISUALIZATION label — exported before the stamp existed (the exporter was fine; the artefacts were stale). Rule 10: GATE THE ARTEFACT, NOT THE TOOL — assert on committed files, per file; a render manifest (png sha + script sha + stamp) ties every PNG to a stamped script. Ink stage now default on every bundled surface.
+- Spatial: validate-gate-ledger.py with 8 mutation tests (rule 11: a validator that has only passed is untested). Vinkelhuset card reads v0.3 area_summary; archive-read naming unified; live re-ingest ordered. Storeys ruling: souterrain is conditional, not a storey.
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
