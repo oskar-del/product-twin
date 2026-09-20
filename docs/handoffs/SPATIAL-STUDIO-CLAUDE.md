@@ -1,5 +1,28 @@
 # Plot-to-Project Spatial Studio — Claude Session Handoff
 
+> ## ⛳ SPRINT DAY — 2026-09-20 (Brain; Oskar runs all sessions today. Supersedes every earlier pin — the 2026-09-15
+> CONSOLIDATION decisions still stand: one site per address · six screens · ink chrome · Platform owns the chrome.)
+> RULES OF THE DAY: pull first · work the queue in order · each item ends with a screenshot in docs/screens/ + numbers ·
+> commit after every item (Oskar pushes hourly) · nothing invented; every figure computed from receipts · report
+> "DONE / NOT checked" per item in your handoff at end of day. Chrome tokens until Platform ships the package:
+> bg #101916 · card #17241f · paper #f5f1e8 · bronze #d8b874 · serif display · Inter labels · evidence chips
+> authoritative #176b52 / indicative #c18a2d / derived #497aa2 / reported #a65b68 / concept #735a9e.
+>
+> **SPATIAL — Svärtinge is the reference instance; make the pipeline a command.**
+> Brain already committed on your branch (pull!): full Site-Intelligence report restored as front door (862ce0a, 5d97e78),
+> land-in-REALISTIC + Vinkelhuset mounted (c91a8f4), REALISTIC colour grade (4e34191).
+> 1. Camera framing derived from the mounted design's bounding box (BUILDING_ORBIT / CONCEPT_HOUSE_ON_PLOT): the 20 m
+>    Vinkelhuset bar is clipped. Re-derive live_context_view, don't type. DoD: screenshots of stages 4+5.
+> 2. Vinkelhuset from the spec, not placeholders: wing gable (30°), OUTDOOR_DECK + WINDBREAK rendered, glazed south bar.
+>    CONCEPT class stays. DoD: screenshot stage 5.
+> 3. INTELLIGENCE terrain = DTM hillshade (derived), not flat green. DoD: screenshot mode 1.
+> 4. `scripts/ingest-property-division.py` + `ingest-buildings.py` take `--kommun --designation --origin`; self-test on
+>    SVÄRTINGE 54:28 (kn0581) AND DJURÖ 4:147 (kn0120; zips in ../lm-data/). DoD: both runs' output pasted in handoff.
+> 5. `scripts/build-site.py <site-dir>` — emits screen 1 (report) + screen 2 (twin) for ANY plot from its derived JSONs,
+>    Svärtinge as the template. DoD: running it on Djurö's data dir produces a page that looks like Svärtinge's.
+> 6. When Platform's chrome lands: swap your inline `.intel-*` CSS for the import. Republish the artifact (same URL).
+
+
 > ## ⛳ URGENT — 2026-09-16 (Brain; developer demo 2026-09-17 runs from localhost. Brain committed c91a8f4b8a on YOUR branch: land in REALISTIC, Vinkelhuset (BRAGE spec) mounted as default design id 'VH', Room stage opens Platform's shoppable room. Pull before touching index.html.)
 >
 > VISUAL PASS on the twin, in this order — each item verified with a screenshot committed to docs/screens/:
