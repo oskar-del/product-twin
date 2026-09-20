@@ -8,7 +8,7 @@
     "ean": "5713839006925",
     "source": "lampemesteren_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "ELECTRICAL.LUMINAIRES.TABLE",
   "bucket": "FURNITURE",
   "commerce": {
     "merchant": "lampemesteren SE",
@@ -35,11 +35,18 @@
     "geometry": "G0_catalog_only"
   },
   "attach": {
-    "role": "free"
+    "role": "attach"
   },
   "physical": {
     "dimensions_source": "title_regex:single_measure",
     "dimensions_axes": "ONE",
     "dimensions_single_mm": 310
+  },
+  "classification": {
+    "method": "MERCHANT_TAXONOMY_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "REPORTED",
+    "matched_text": "Produkter  >  Bordslampor",
+    "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
   }
 }

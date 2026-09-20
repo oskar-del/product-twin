@@ -8,7 +8,7 @@
     "ean": null,
     "source": "lampan_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "ELECTRICAL.LUMINAIRES.ACCESSORY",
   "bucket": "LIGHTING",
   "commerce": {
     "merchant": "lampan SE",
@@ -33,5 +33,15 @@
     "identity": "feed_verified",
     "commerce": "affiliate_live",
     "geometry": "G0_catalog_only"
+  },
+  "attach": {
+    "role": "free"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "DERIVED",
+    "matched_text": "Lampan - Lamppropp DCL - Tillbehör",
+    "limitation": "Category inferred from merchant title text; feed ships no category field."
   }
 }

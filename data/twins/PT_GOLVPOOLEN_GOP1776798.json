@@ -8,7 +8,7 @@
     "ean": "7330095911596",
     "source": "golvpoolen_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.STORAGE.WARDROBE",
   "bucket": "FURNITURE",
   "commerce": {
     "merchant": "golvpoolen SE",
@@ -35,7 +35,7 @@
     "geometry": "G0_catalog_only"
   },
   "attach": {
-    "role": "free"
+    "role": "base"
   },
   "physical": {
     "dimensions_mm": {
@@ -45,5 +45,12 @@
     },
     "dimensions_source": "title_regex:triple_wdh_cm_assumed",
     "dimensions_axes": "WDH"
+  },
+  "classification": {
+    "method": "MERCHANT_TAXONOMY_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "REPORTED",
+    "matched_text": "inredning/garderob-och-tvattstuga/tvattstugeinredning/ovrig-tvattstugeinredning",
+    "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
   }
 }

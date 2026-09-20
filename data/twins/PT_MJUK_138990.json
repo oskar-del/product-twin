@@ -8,7 +8,7 @@
     "ean": null,
     "source": "mjuk_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.TABLE.SIDE",
   "bucket": "FURNITURE",
   "commerce": {
     "merchant": "mjuk SE",
@@ -35,11 +35,18 @@
     "geometry": "G0_catalog_only"
   },
   "attach": {
-    "role": "free"
+    "role": "base"
   },
   "physical": {
     "dimensions_source": "title_regex:single_measure",
     "dimensions_axes": "ONE",
     "dimensions_single_mm": 680
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "DERIVED",
+    "matched_text": "Paolo sidobord 68 cm brun",
+    "limitation": "Category inferred from merchant title text; feed ships no category field."
   }
 }

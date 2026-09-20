@@ -8,7 +8,7 @@
     "ean": "8059607054741",
     "source": "lampemesteren_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "ELECTRICAL.LUMINAIRES.PENDANT",
   "bucket": "LIGHTING",
   "commerce": {
     "merchant": "lampemesteren SE",
@@ -33,5 +33,15 @@
     "identity": "feed_verified",
     "commerce": "affiliate_live",
     "geometry": "G0_catalog_only"
+  },
+  "attach": {
+    "role": "base"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "DERIVED",
+    "matched_text": "2097/50 C LED Taklampa Matt White - Flos - Vardagsrum - Design - Metall - Med flera ljuskällor",
+    "limitation": "Category inferred from merchant title text; feed ships no category field."
   }
 }

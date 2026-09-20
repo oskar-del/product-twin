@@ -8,7 +8,7 @@
     "ean": null,
     "source": "mjuk_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.DECOR.MIRROR",
   "bucket": "DECOR",
   "commerce": {
     "merchant": "mjuk SE",
@@ -38,5 +38,15 @@
     "dimensions_source": "title_regex:single_measure",
     "dimensions_axes": "ONE",
     "dimensions_single_mm": 600
+  },
+  "attach": {
+    "role": "attach"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "DERIVED",
+    "matched_text": "Spegel 60 cm",
+    "limitation": "Category inferred from merchant title text; feed ships no category field."
   }
 }

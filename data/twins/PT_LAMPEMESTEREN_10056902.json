@@ -8,7 +8,7 @@
     "ean": "5705639745104",
     "source": "lampemesteren_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "ELECTRICAL.LUMINAIRES.CEILING",
   "bucket": "LIGHTING",
   "commerce": {
     "merchant": "lampemesteren SE",
@@ -42,5 +42,15 @@
     },
     "dimensions_source": "title_regex:diameter",
     "dimensions_axes": "WD"
+  },
+  "attach": {
+    "role": "base"
+  },
+  "classification": {
+    "method": "MERCHANT_TAXONOMY_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "REPORTED",
+    "matched_text": "Produkter  >  Plafonder",
+    "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
   }
 }

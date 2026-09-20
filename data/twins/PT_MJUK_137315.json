@@ -8,7 +8,7 @@
     "ean": null,
     "source": "mjuk_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.TEXTILES.RUG",
   "bucket": "DECOR",
   "commerce": {
     "merchant": "mjuk SE",
@@ -38,5 +38,15 @@
     "dimensions_source": "title_regex:single_measure",
     "dimensions_axes": "ONE",
     "dimensions_single_mm": 2000
+  },
+  "attach": {
+    "role": "attach"
+  },
+  "classification": {
+    "method": "MERCHANT_TAXONOMY_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "REPORTED",
+    "matched_text": "Möbler > Textilier och mattor > Mattor",
+    "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
   }
 }

@@ -8,7 +8,7 @@
     "ean": null,
     "source": "kungsangen_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.TEXTILES.BEDDING",
   "bucket": "DECOR",
   "commerce": {
     "merchant": "kungsangen SE",
@@ -42,5 +42,15 @@
     },
     "dimensions_source": "title_regex:double_wd_cm_assumed",
     "dimensions_axes": "WD"
+  },
+  "attach": {
+    "role": "attach"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "DERIVED",
+    "matched_text": "Påslakanset Natur Blå 220x210",
+    "limitation": "Category inferred from merchant title text; feed ships no category field."
   }
 }

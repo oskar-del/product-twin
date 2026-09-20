@@ -8,7 +8,7 @@
     "ean": null,
     "source": "kungsangen_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.BEDROOM.BED_FRAME",
   "bucket": "FURNITURE",
   "commerce": {
     "merchant": "kungsangen SE",
@@ -35,7 +35,7 @@
     "geometry": "G0_catalog_only"
   },
   "attach": {
-    "role": "free"
+    "role": "base"
   },
   "physical": {
     "dimensions_mm": {
@@ -45,5 +45,12 @@
     },
     "dimensions_source": "title_regex:double_wd_cm_assumed",
     "dimensions_axes": "WD"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "DERIVED",
+    "matched_text": "Säng Iggenäs 180x200 Mjuk/Medel A.Rose",
+    "limitation": "Category inferred from merchant title text; feed ships no category field."
   }
 }

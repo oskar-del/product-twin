@@ -8,7 +8,7 @@
     "ean": "5707644915985",
     "source": "lampan_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "ELECTRICAL.BULBS",
   "bucket": "LIGHTING",
   "commerce": {
     "merchant": "lampan SE",
@@ -33,5 +33,15 @@
     "identity": "feed_verified",
     "commerce": "affiliate_live",
     "geometry": "G0_catalog_only"
+  },
+  "attach": {
+    "role": "free"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "DERIVED",
+    "matched_text": "House Doctor - Ljuskälla till Light ljusslinga - Tillbehör",
+    "limitation": "Category inferred from merchant title text; feed ships no category field."
   }
 }

@@ -8,7 +8,7 @@
     "ean": null,
     "source": "kungsangen_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.BEDROOM.HEADBOARD",
   "bucket": "FURNITURE",
   "commerce": {
     "merchant": "kungsangen SE",
@@ -35,7 +35,7 @@
     "geometry": "G0_catalog_only"
   },
   "attach": {
-    "role": "free"
+    "role": "attach"
   },
   "physical": {
     "dimensions_mm": {
@@ -45,5 +45,12 @@
     },
     "dimensions_source": "title_regex:double_wd_cm_assumed",
     "dimensions_axes": "WD"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "DERIVED",
+    "matched_text": "Sänggavel Fornholma 145x210 H.56.Terrakotta",
+    "limitation": "Category inferred from merchant title text; feed ships no category field."
   }
 }

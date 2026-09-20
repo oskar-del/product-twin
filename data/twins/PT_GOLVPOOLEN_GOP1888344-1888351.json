@@ -8,7 +8,7 @@
     "ean": "7323100360243",
     "source": "golvpoolen_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.BATHROOM",
   "bucket": "FURNITURE",
   "commerce": {
     "merchant": "golvpoolen SE",
@@ -35,6 +35,13 @@
     "geometry": "G0_catalog_only"
   },
   "attach": {
-    "role": "free"
+    "role": "base"
+  },
+  "classification": {
+    "method": "MERCHANT_TAXONOMY_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "REPORTED",
+    "matched_text": "badrum/badrumsmobler/tillbehor-badrumsmobler",
+    "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
   }
 }

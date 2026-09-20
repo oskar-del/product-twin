@@ -8,7 +8,7 @@
     "ean": "5708311325366",
     "source": "lampemesteren_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "ELECTRICAL.BULBS",
   "bucket": "LIGHTING",
   "commerce": {
     "merchant": "lampemesteren SE",
@@ -38,5 +38,15 @@
     "dimensions_source": "title_regex:single_measure",
     "dimensions_axes": "ONE",
     "dimensions_single_mm": 400
+  },
+  "attach": {
+    "role": "free"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "DERIVED",
+    "matched_text": "PILLAR Maxi utomhus-LED-ljus, höjd 40 cm, IPX5 – Uyuni Lighting - Vardagsrum - Design - Plast - Med en ljuskälla",
+    "limitation": "Category inferred from merchant title text; feed ships no category field."
   }
 }

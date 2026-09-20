@@ -8,7 +8,7 @@
     "ean": "7391142340295",
     "source": "golvpoolen_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.SURFACE.FLOORING",
   "bucket": "OTHER",
   "commerce": {
     "merchant": "golvpoolen SE",
@@ -38,5 +38,15 @@
     "dimensions_source": "title_regex:single_measure",
     "dimensions_axes": "ONE",
     "dimensions_single_mm": 10
+  },
+  "attach": {
+    "role": "free"
+  },
+  "classification": {
+    "method": "MERCHANT_TAXONOMY_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "REPORTED",
+    "matched_text": "verktyg/kakelverktyg/ovriga-kakelverktyg",
+    "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
   }
 }

@@ -8,7 +8,7 @@
     "ean": "7332535024286",
     "source": "lampan_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "ELECTRICAL.LUMINAIRES.ACCESSORY",
   "bucket": "FURNITURE",
   "commerce": {
     "merchant": "lampan SE",
@@ -36,5 +36,12 @@
   },
   "attach": {
     "role": "free"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "DERIVED",
+    "matched_text": "Karlskrona lampfabrik - Flat bordlampskärm 235 - Tillbehör - Grön",
+    "limitation": "Category inferred from merchant title text; feed ships no category field."
   }
 }

@@ -8,7 +8,7 @@
     "ean": "7350004677061",
     "source": "golvpoolen_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "FFE.BATHROOM.SHOWER",
   "bucket": "LIGHTING",
   "commerce": {
     "merchant": "golvpoolen SE",
@@ -33,5 +33,15 @@
     "identity": "feed_verified",
     "commerce": "affiliate_live",
     "geometry": "G0_catalog_only"
+  },
+  "attach": {
+    "role": "base"
+  },
+  "classification": {
+    "method": "MERCHANT_TAXONOMY_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "REPORTED",
+    "matched_text": "badrum/duscharmatur/duschhallare",
+    "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
   }
 }

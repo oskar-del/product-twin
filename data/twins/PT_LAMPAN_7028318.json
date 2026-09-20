@@ -8,7 +8,7 @@
     "ean": "7340132807256",
     "source": "lampan_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "ELECTRICAL.LUMINAIRES.CEILING",
   "bucket": "LIGHTING",
   "commerce": {
     "merchant": "lampan SE",
@@ -42,5 +42,15 @@
     },
     "dimensions_source": "title_regex:diameter",
     "dimensions_axes": "WD"
+  },
+  "attach": {
+    "role": "base"
+  },
+  "classification": {
+    "method": "DETERMINISTIC_TITLE_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "DERIVED",
+    "matched_text": "Designlight - Plafondy Ø22 - Industriarmaturer - Vit",
+    "limitation": "Category inferred from merchant title text; feed ships no category field."
   }
 }

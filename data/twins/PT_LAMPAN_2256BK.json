@@ -8,7 +8,7 @@
     "ean": "5053423231426",
     "source": "lampan_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "ELECTRICAL.LUMINAIRES.WALL",
   "bucket": "FURNITURE",
   "commerce": {
     "merchant": "lampan SE",
@@ -35,11 +35,18 @@
     "geometry": "G0_catalog_only"
   },
   "attach": {
-    "role": "free"
+    "role": "attach"
   },
   "physical": {
     "dimensions_source": "title_regex:single_measure",
     "dimensions_axes": "ONE",
     "dimensions_single_mm": 300
+  },
+  "classification": {
+    "method": "MERCHANT_TAXONOMY_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "REPORTED",
+    "matched_text": "Väggbelysning  >  Sänglampor",
+    "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
   }
 }

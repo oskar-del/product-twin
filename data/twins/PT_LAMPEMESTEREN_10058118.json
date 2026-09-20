@@ -8,7 +8,7 @@
     "ean": "4028085481350",
     "source": "lampemesteren_adtraction_feed"
   },
-  "category_id": "CATALOG_ONLY",
+  "category_id": "ELECTRICAL.LUMINAIRES.FLOOR",
   "bucket": "LIGHTING",
   "commerce": {
     "merchant": "lampemesteren SE",
@@ -38,5 +38,15 @@
     "dimensions_source": "title_regex:single_measure",
     "dimensions_axes": "ONE",
     "dimensions_single_mm": 1200
+  },
+  "attach": {
+    "role": "base"
+  },
+  "classification": {
+    "method": "MERCHANT_TAXONOMY_KEYWORD",
+    "source": "scripts/classify-catalogs.mjs",
+    "evidence_class": "REPORTED",
+    "matched_text": "Produkter  >  Golvlampor",
+    "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
   }
 }
