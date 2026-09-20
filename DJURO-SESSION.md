@@ -257,6 +257,60 @@ new URL.
   no one has proved they don't regress the reference site. Brain has routed that to Spatial as part
   of its item 4.
 
+## 🌙 LATE — receipt-tolerant ledger generator · **DONE** (`0540b3a762`)
+
+`scripts/build-findings-and-gates.py` could only ever run on Djurö: it loaded shoreline, viewshed and
+municipal-planning receipts unconditionally, and Svärtinge has none of the three. Now **every receipt
+is optional** — indexed by `entity_type`, never filename — and a finding or gate whose evidence is
+absent is **emitted as OPEN carrying the reason**, never skipped and never inferred from the receipts
+that *are* present.
+
+**Field-level tolerance, which the Svärtinge run forced out.** A receipt can be present without
+carrying the field a finding needs, because the two sites came off different pipeline versions.
+Svärtinge's buildings have no `placement`; its terrain has no `parcel_height_statistics`,
+`parcel_slope` or `tile_integrity`. Handled like absent receipts, but the reason **distinguishes the
+two** rather than conflating them:
+
+```
+receipt not present: ShorelineAndStrandskyddDerivation
+field not present in OfficialBuildingFootprintClip: placement
+```
+
+That distinction matters — Svärtinge *does* hold the buildings receipt, and saying otherwise would put
+a false statement in its ledger.
+
+**More of the kn0581 bug, found while doing this.** The generic generator still carried Djurö
+literals: `5,156.3 m²`, `Värmdö kommun (0120)`, `KN0120`, `DJURO`, and a Djurö acquisition date.
+Registered area is now shoelace-computed from the authoritative ring; kommun and the KN suffix come
+from each site's own receipts; the site token from the directory name; and `derive-terrain-dem.py`
+emits `source_retrieved_at` so no date is ever typed. The shoelace reproduces **5156.3 exactly**,
+which is why Djurö's numbers did not move.
+
+**Proof (run timestamps normalised):** findings array identical (10) · receipts identical (4) · gates
+identical (11, 7 closed / 4 open) · counts identical. Three metadata lines differ deliberately —
+`receipts_absent`, `fields_absent`, and an extended `rule`. **Brain ruled: keep them**; array
+identity is the proof that matters.
+
+**Svärtinge dry run** (on a *copy*; its repo untouched): exit 0, subject resolves, 2 receipts, all 10
+findings and 11 gates emitted, 1 closed / 10 open. A sparse ledger is Svärtinge's honest state against
+those receipts, not a regression.
+
+### Awaiting a follow-up — do not start it speculatively
+Brain: **Svärtinge's record carries 18 gates, this generator emits 11.** Spatial is defining one
+**canonical gate registry** (union, stable ids) that the generator will emit for every site. This
+script will be pointed at that registry file once it exists. Wait for it; do not invent the union here.
+
+### Messaging note for the next session
+`SendMessage` to a peer's **display name** does not resolve (`"3: Plot-to-Project Spatial Studio"` →
+*no agent reachable*), and `ListAgents` shows only opaque `ai-XX` names. Use the **session id**:
+- Brain — `local_04110150-7524-435e-ad0b-3b38fb1c0ccd`
+- Spatial — `local_bc842a9e-d68c-4357-85a2-cfce16389cad`
+
+**NOT checked:** Svärtinge's stale 2026-09-07 ledger is **not** regenerated in place — that is
+Spatial's run, against its own directory. And nobody has checked how `build-site.py` renders a finding
+with a null value and `verification: OPEN`; worth looking before any Svärtinge page is published from
+this.
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
