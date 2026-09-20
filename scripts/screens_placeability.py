@@ -9,12 +9,17 @@ BG, CARD, PAPER, BRONZE = '#101916', '#17241f', '#f5f1e8', '#d8b874'
 AUTH, INDIC, DERIV = '#176b52', '#c18a2d', '#497aa2'
 
 rep = json.load(open('.runtime/dims-report.json'))
+# The extractor's own before_placeable reflects state at the time it last ran, so
+# after a re-run it reports the post-run number. The true pre-sprint baseline is
+# pinned in its own file.
+BASE = json.load(open('.runtime/dims-baseline.json'))['per_catalog']
 rows = sorted(rep.items(), key=lambda kv: -kv[1]['twins'])
 
 T = sum(s['twins'] for _, s in rows)
-B = sum(s['before_placeable'] for _, s in rows)
+B = sum(BASE.get(c, 0) for c, _ in rows)
 A = sum(s['after_placeable'] for _, s in rows)
 F = sum(s['footprint_only'] for _, s in rows)
+AMB = sum(s.get('ambiguous', 0) for _, s in rows)
 
 fig = plt.figure(figsize=(14, 8.6), facecolor=BG)
 fig.text(0.04, 0.955, 'Placeability — dimensions_mm coverage', color=PAPER,
@@ -26,7 +31,7 @@ ax = fig.add_axes([0.115, 0.12, 0.525, 0.74]); ax.set_facecolor(CARD)
 for s in ax.spines.values(): s.set_visible(False)
 labels = [c for c, _ in rows]
 y = range(len(rows))
-before = [100 * s['before_placeable'] / s['twins'] for _, s in rows]
+before = [100 * BASE.get(c, 0) / s['twins'] for c, s in rows]
 after = [100 * s['after_placeable'] / s['twins'] for _, s in rows]
 foot = [100 * s['footprint_only'] / s['twins'] for _, s in rows]
 
@@ -64,8 +69,9 @@ stat(0.82, f'{100*A/T:.1f}%', f'full W×D×H  ({A:,} of {T:,} twins)', AUTH)
 stat(0.66, f'{100*F/T:.1f}%', f'footprint only  ({F:,})', DERIV)
 stat(0.50, f'{100*(A+F)/T:.1f}%', f'any usable dims  ({A+F:,})')
 stat(0.34, f'{100*B/T:.1f}%', f'before this run  ({B:,})', INDIC)
-fig.text(cx + 0.02, 0.22, 'Heights are never invented:\na 2-number "80x200" is stored\nas footprint with height=null.',
-         color='#7d8d86', fontsize=9, va='top')
+fig.text(cx + 0.02, 0.225, 'Heights are never invented:\na 2-number "80x200" is stored\nas footprint with height=null.\n'
+         f'{AMB} luminaire rows read AxB as\ndiameter x drop, not a footprint,\nand are held as AMBIGUOUS.',
+         color='#7d8d86', fontsize=8.8, va='top')
 
 fig.text(0.115, 0.012, 'source: .runtime/dims-report.json · scripts/extract-dimensions.mjs --write · 2026-09-20',
          color='#4f6159', fontsize=8.6)
