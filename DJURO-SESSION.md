@@ -179,18 +179,18 @@ as additions, never renaming the template). Re-check with:
 Conforming is what caught my slope error — implementing the template's `slope_aspect_at_pin`
 reproduced the page's 8.1° WNW exactly. Worth noting: matching the template was what verified it.
 
-**Two things for Brain to rule on — flagged, not silently resolved:**
-1. `glan_sightline_profile` names the lake Svärtinge faces. Djurö faces open archipelago water. I emit
-   the correct `sightline_profile` **and** a `glan_sightline_profile` alias (`alias_of`,
-   `target_is_not_glan`) so a template-written generator resolves. **The key should be renamed in the
-   template.**
-2. `evidence_class`: Svärtinge's terrain doc says `AUTHORITATIVE`; mine says `DERIVED` with
-   `derived_from_evidence_class: AUTHORITATIVE`. The heights are the authority's own model values but
-   the slopes and profiles are computed. I did not copy the stronger label. **The two sites will
-   render different chips until this is standardised.**
+**Two things referred to Brain — both RULED 2026-09-20 evening, both in favour of what Djurö emits:**
+1. `glan_sightline_profile` → **the template key is renamed `sightline_profile`**, which is what Djurö
+   already emits; the generator will read only that. The `glan_sightline_profile` alias here
+   (`alias_of`, `target_is_not_glan`) is fine to keep and harmless once the rename lands.
+2. `evidence_class` → **`DERIVED` with `derived_from_evidence_class: AUTHORITATIVE` is the correct
+   label for terrain products fleet-wide.** Svärtinge's terrain doc gets relabelled to match Djurö,
+   not the reverse. No change needed here.
+3. `provenance_qa` nulls → **null now renders as NOT ESTABLISHED, enforced as a generator assertion.**
+   Djurö's nulls are correct as they stand: the ursprung/brytgeometri polygons were never downloaded.
 
-`provenance_qa` keys are present and **null** for Djurö — the ursprung/brytgeometri polygons were
-never downloaded, so null means NOT ESTABLISHED, not "fine".
+Brain also noted the slope self-correction will **not** be propagated as "8.1° was wrong", and that
+recording all three measures is the intended behaviour, not a workaround.
 
 **(b) findings.json + gates.json.** `scripts/build-findings-and-gates.py` reads the six derived
 products and emits both in the template's `plot-intelligence` shape. Nothing hand-typed, so a finding
@@ -204,6 +204,13 @@ terrain result and a ceiling, `GATE_SE_VIEW_OCCLUSION` stays OPEN, and both the 
 **NOT checked:** the generator does not exist yet, so nothing has been proved to render from these
 files — conformance is a key/type diff against the reference site, not a successful generator run.
 The current page was not touched.
+
+**NEXT SESSION PICKS UP HERE.** Item 5 is still the only open work and it is unblocked-but-waiting:
+when Spatial reports `scripts/build-site.py` runs on `data/sites/sweden/djuro-byvag-34/`, run it,
+replace the page, and republish to the **same** artifact URL
+(`claude.ai/code/artifact/7a1359ec-193a-48dd-a434-8dc530333f87`). Do not patch the page by hand, and
+do not publish to a new URL. Everything the generator needs is committed: six derived products plus
+`findings.json` and `gates.json`, all schema-conformant with `saterdalsvagen-14`.
 
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
