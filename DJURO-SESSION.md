@@ -19,6 +19,139 @@
 > Nothing invented — this goes to a real family.
 
 
+## ✅ SPRINT DAY 2026-09-20 — END OF DAY REPORT (Claude, Djurö session)
+
+Branch `agent/djuro-site-intelligence-v2`, rebased on `origin/main`. Four commits, one per queue item.
+Every figure below is printed by a committed script and re-derivable with the command shown.
+
+### Item 1 — Official building footprints · **DONE**
+`python3 scripts/ingest-buildings-official.py --site data/sites/sweden/djuro-byvag-34 --zip "../lm-data/byggnad_kn0120.zip" --buffer 200`
+
+| | |
+|---|---|
+| raw sha256 | `fbeea328dfab88995e1126396660d47a697071899dcf9ac52a892b4b7950878c` |
+| raw bytes | 15 280 624 |
+| bbox candidates → within 200 m | 51 → 35 |
+| on parcel | **4** — 416.0 m² of footprint on a 5 156.3 m² parcel |
+| derived geom sha256 | `a41f5dfe3b7d3e9afe711767adf0c9d7d200f2e2d999134259ec2a3c1f4f0e98` |
+
+Bostad 119.7 · Komplementbyggnad 190.2 / 84.6 / 21.5 m². The four areas independently confirm the
+figures already on the page, which until today had **no rings behind them**. Real rings now exist.
+Screen `docs/screens/djuro-01-buildings-official.svg`.
+
+**NOT checked:** no building heights exist in the LM byggnad product — storeys, volume and roof form
+remain NOT established. `huvudbyggnad` is `Nej` on all four features; which is legally the main
+building was not resolved.
+
+### Item 2 — DTM terrain · **DONE, and it corrects a published figure**
+`python3 scripts/derive-terrain-dem.py --site data/sites/sweden/djuro-byvag-34 --receipt .runtime/receipts/lantmateriet-terrain-djuro-2026-08-31.json`
+
+| | |
+|---|---|
+| tile integrity | 10/10 receipted tiles re-verified by sha256 before any pixel was read |
+| parcel mask | 5 155 px = 5 155.0 m² vs 5 156.3 m² registered — **0.03%**, an independent check that the boundary and DTM frames align |
+| height at site pin | 6.9 m RH2000 (dwelling sits at 7.00 m) |
+| parcel heights | 0.15 → 11.68 m · relief **11.53 m** · mean 5.23 · sd 2.51 |
+| whole-parcel plane | **3.94° falling NE**, 1.46 m RMS residual |
+| ground underfoot | median **8.29°**, p90 23.77°, max 57.2° |
+| below 1 / 2 / 3 / 5 m | 214 / 617 / 937 / 2 806 m² (4.2 / 12.0 / 18.2 / 54.4%) |
+| derived sha256 | `8fde130522f67737731d8af528c7d1afd105ff7e53f8313b30b273e2b729670c` |
+
+🔴 **The live page says 8.1° WNW. That is wrong.** The parcel falls **3.94° to the NE**. The 8.1°
+was close to the per-cell median (8.29°) but the direction is inverted, and the two measures disagree
+because the ground is not a plane — 1.46 m RMS against 11.53 m relief. The script now emits both
+measures and a `verdict` field stating that no single slope describes this parcel.
+Screen `docs/screens/djuro-02-terrain-dtm.svg`.
+
+**NOT checked:** heights are bare-earth ground, not roof or canopy. This is a derivation from a
+verified source, not an official terrain survey, and it is not finished-floor or foundation input.
+
+### Item 3 — Strandskydd + plan status · **DONE — three gates closed**
+`python3 scripts/derive-shoreline-strandskydd.py --site data/sites/sweden/djuro-byvag-34`
+`python3 scripts/query-varmdo-planning.py --site data/sites/sweden/djuro-byvag-34`
+
+Geometry. LM's ground model carries one constant height across open water. The script does not assume
+that value — it finds the modal height in the lowest metre and accepts it as water only because it
+covers an implausible share of a coastal window (0.15 m RH2000 over 20.9% of a 1 400 m window).
+Shoreline = the edge of that region, 8 233 cells at 1 m.
+
+| | |
+|---|---|
+| nearest point parcel → shoreline | **0.2 m** — the parcel reaches the water |
+| farthest boundary point | **94.8 m** — no corner escapes 100 m |
+| parcel inside the 100 m band | **5 155.0 m² = 100.0%** |
+| the four registered buildings | 12.4 / 30.2 / 32.8 / 70.6 m from the water — all inside |
+| derived sha256 | `72359bd81cab55d26508c064e9610c744f23c3ed55b196ba4d33977d7e4b63d1` |
+
+Plan status. Värmdö publishes a **public WFS** at `karta.varmdo.se/geoserver/wfs`. The authoritative
+parcel polygon is reprojected EPSG:3006 → EPSG:3011 and used as an `INTERSECTS` filter, so the answer
+covers the whole property, not a centre point. **Every layer was queried unfiltered first as a
+control**; a zero counts as a verified negative only where that control returned features.
+
+| layer | result | control |
+|---|---|---|
+| Utvidgat strandskydd 300 m (Länsstyrelsen) | NONE | 240 |
+| Utvidgat strandskydd (kommunens kopia) | NONE | 241 |
+| Utökat strandskydd 300 m (ÖP 2022–2035) | NONE | 241 |
+| Gällande detaljplaner | NONE | 559 |
+| Pågående detaljplaner | NONE | 38 |
+| Upphävda detaljplaner efter 2023-01-01 | NONE | 2 |
+
+**GATES**
+- `STRANDSKYDD_GEOMETRY` — **CLOSED.** Measured, not presumed.
+- `STRANDSKYDD_EXTENSION` — **CLOSED (negative).** No 300 m extension here, across three independent
+  layers. The base 100 m applies, and it already covers all of it.
+- `DETALJPLAN` — **CLOSED (negative).** Unplanned land. Bygglov is judged against översiktsplan,
+  strandskydd and PBL, not a plan map.
+- `STRANDSKYDD_DISPENS` — **OPEN.** A case record, not a map layer. Not retrieved.
+
+Screen `docs/screens/djuro-03-strandskydd.svg`.
+
+**NOT checked:** the WFS is the kommun's published depiction, not the plan document or the
+Länsstyrelsen decision itself — a transaction answer should quote the decision. No dispens,
+förhandsbesked or bygglov history for this property was queried. The shoreline is DERIVED from the
+ground model, not the cadastral shoreline and not the legal strandlinje.
+
+### Item 4 — Sea-view sightlines · **DONE — the claim survives**
+`python3 scripts/derive-sea-view.py --site data/sites/sweden/djuro-byvag-34`
+
+720 rays at 0.5° from the dwelling centroid at 1.6 m eye height, 1 m samples to 2 500 m, running-maximum
+horizon angle, earth curvature + refraction (k = 0.13). Nine receipted tiles re-verified first.
+
+| | |
+|---|---|
+| computed arc | **43.9%** = 158.0°, ONE unbroken arc **319.0° → 117.0°** (NW–ESE) |
+| previously stated | 43.3%, 321°–114° — a 153° span written as a percentage, never computed |
+| nearest visible water | 41.0 m |
+| derived sha256 | `97e0e729085e530765102390637eed507102a169aa85b3433b615194ca968e49` |
+
+The estimate was good. It is now derived and reproducible. Screen `docs/screens/djuro-04-sea-view.svg`.
+
+⚠️ **NOT checked — and this is the ceiling that matters:** the ground model is bare earth. No trees,
+no buildings, no boathouses, no neighbouring roofs. Every one of those blocks a real view and none is
+in this calculation. **43.9% is an UPPER BOUND** — the view on cleared ground, not the view from a
+window. One viewpoint, one eye height; this is not a room-by-room analysis.
+
+### Item 5 — Run Spatial's `scripts/build-site.py` · **BLOCKED, not started**
+`scripts/build-site.py` is **not on `origin/main`** as of the last fetch this evening
+(`git ls-tree -r origin/main --name-only | grep build-site` → nothing). Nothing was run, no page was
+replaced, and **nothing was republished to artifact `7a1359ec-…`**.
+
+Per the mandate — *"the page gets regenerated from Spatial's template, not patched"* — I did **not**
+patch the live page. The data it needs is committed and waiting.
+
+🔴 **ESCALATION FOR OSKAR.** The live page currently states **8.1° WNW**, which item 2 shows is wrong
+in direction, and calls strandskydd **"presumed"**, which item 3 has now measured at 100% of the
+parcel. This goes to a real family. Either Spatial's generator lands and the page is regenerated, or
+the slope line and the strandskydd line need pulling — your call, not mine, because patching the page
+is what the mandate rules out.
+
+### What today changed about the site
+The parcel runs down to the water — 0.2 m at its nearest, 0.15 m RH2000 at its lowest. That single
+fact drives the rest: strandskydd covers all of it, the sea view is real and unbroken across 158°,
+and the ground is broken archipelago rock (57° at its steepest), not the uniform 8.1° hillside the
+page describes. It is unplanned land with four registered buildings, all inside the 100 m zone.
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
