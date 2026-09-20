@@ -17,6 +17,39 @@
 > 3. Rate-card skeleton for §6 (unit · quantity · rate slot · source slot) so a husleverantör offert drops straight in.
 > 4. Generator takes `--site <dir> --geometry <spec>`; dry-run on Djurö 4:147 (5,156.3 m²) with all money NEEDS_SOURCE.
 
+> ### ✅ SPRINT RESULT — 2026-09-20 (end of day; maker=this session, verifier=Oskar/next session)
+> Commits on agent/mimer-svartinge: 546eb33 (#1+#3) · 0f25551 (#2) · c8d0e82 (#4). Oskar pushes.
+> Chrome tokens applied verbatim (bg #101916, card #17241f, paper #f5f1e8, bronze #d8b874, serif display,
+> Inter labels; chips authoritative #176b52 / indicative #c18a2d / derived #497aa2 / reported #a65b68 /
+> concept #735a9e).
+>
+> **#1 Screen 6 "Numbers" chapter — DONE.** `scripts/mimer/build_screen6.py` renders the Lender numbers on
+> the ink chrome with evidence chips. Svärtinge: parcel 1 936.8 m² (AUTHORITATIVE), §6 rate-card, §7 comps,
+> FF&E, NOT-verified ledger. HTML in vault `07-Lender-Dossier/screen6-numbers-svartinge.html`; screenshot
+> `docs/screens/screen6-numbers-svartinge.png`. Quantities pulled from committed BoM (BYA 204, ext-wall 222,
+> roof 227, heated 210 BTA). NOT checked: HTML not opened in a second browser/session; §6 rates still unpriced
+> (blocked on offert, by design); print-to-PDF not produced (HTML only).
+>
+> **#2 FF&E line — DONE.** `scripts/mimer/build_ffe.py` from repo-platform shoppable-room-newport-living
+> (11 receipted Newport rows, priced 2026-09-07). Three levels from the same catalog (13 036 rows):
+> THIS 208 760 · MID 147 701 (per-cat median) · PREMIUM 317 267 SEK (per-cat p90). Receipted table =
+> vault `08-ffe-living-room-v0.1.json`; line rendered in the Screen 6 PNG. NOT checked: buy_url links not
+> live-fetched (prices are the scene snapshot 2026-09-07, not re-verified against newport.se today);
+> mid/premium are category statistics, not specific chosen SKUs.
+>
+> **#3 §6 rate-card skeleton — DONE.** Rendered as the §6 table (unit·quantity·rate slot·source slot); every
+> rate NEEDS_SOURCE; CSV emitted next to each HTML (`*-ratecard.csv`, in vault / docs/screens). A husleverantör
+> offert drops straight in. NOT checked: no offert received, so no rate filled.
+>
+> **#4 Generator --site/--geometry + Djurö dry-run — DONE.** `build_screen6.py --site <dir> [--geometry] [--vault]`.
+> Djurö 4:147: authoritative parcel 5 156.3 m² (shoelace on LM rings, object 3021261); DRY-RUN — all quantities
+> NEEDS_GEOMETRY, all money NEEDS_SOURCE, comps+FF&E gracefully absent. Screenshot
+> `docs/screens/screen6-numbers-djuro.png`. NOT checked: no Djurö house geometry or comps exist yet (expected);
+> generator not run against a third site.
+>
+> Truth-law: no invented number — only receipted (parcel, benchmark, catalog rows) or explicit
+> NEEDS_SOURCE/NOT_VERIFIED/indicative-not-a-valuation. Verifier still to confirm (maker≠checker).
+
 
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
