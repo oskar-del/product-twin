@@ -124,7 +124,7 @@ function terraceShell() {
       limitations: ["Synthetic terrace deck for product display."]
     },
     {
-      id: "HOUSE_FACADE", type: "ROOM", label: "House facade", evidence_class: "CONCEPT",
+      id: "HOUSE_FACADE", type: "ROOM", picking: false, label: "House facade", evidence_class: "CONCEPT",
       geometry: { primitive: "ROOM_VOLUME", size: [7, 2.8, 0.3], position: [0, 1.4, -2.75], rotation_y_deg: 0, intended_use: "OUTDOOR" },
       source_refs: ["VIDAXL_TERRACE_COMPILER"],
       limitations: ["Synthetic facade to anchor the terrace."]

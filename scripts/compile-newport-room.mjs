@@ -134,7 +134,7 @@ function roomShell() {
       limitations: ["Synthetic room shell for product display."]
     },
     {
-      id: "ROOM_VOLUME", type: "ROOM", label: "Living room", evidence_class: "CONCEPT",
+      id: "ROOM_VOLUME", type: "ROOM", picking: false, label: "Living room", evidence_class: "CONCEPT",
       geometry: { primitive: "ROOM_VOLUME", size: [6, 2.7, 5], position: [0, 1.35, 0], rotation_y_deg: 0, intended_use: "LIVING" },
       source_refs: ["NEWPORT_ROOM_COMPILER"],
       limitations: ["Synthetic room for product display."]
