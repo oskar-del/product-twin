@@ -41,10 +41,12 @@
     "dimensions_mm": {
       "width": 300,
       "depth": 300,
-      "height": null
+      "height": 250
     },
-    "dimensions_source": "title_regex:diameter",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:diameter + category_default:ELECTRICAL.LUMINAIRES.WALL",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Wall luminaire body height."
   },
   "classification": {
     "method": "MERCHANT_TAXONOMY_KEYWORD",

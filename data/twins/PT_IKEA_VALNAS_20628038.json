@@ -19,7 +19,9 @@
     "secondary_dimensions_mm": {
       "maximum_load_kg": 20
     },
-    "evidence_state": "official_retailer_measurements_verified_live"
+    "evidence_state": "official_retailer_measurements_verified_live",
+    "dimensions_source": "proxy_build:verified_envelope",
+    "dimensions_axes": "WDH"
   },
   "external_identities": [
     {

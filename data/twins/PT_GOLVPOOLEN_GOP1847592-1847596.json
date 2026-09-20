@@ -38,10 +38,12 @@
     "dimensions_mm": {
       "width": 300,
       "depth": 300,
-      "height": null
+      "height": 2000
     },
-    "dimensions_source": "title_regex:diameter_bare_mm_by_magnitude",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:diameter_bare_mm_by_magnitude + category_default:FFE.BATHROOM.SHOWER",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Shower enclosure/door panel height."
   },
   "attach": {
     "role": "base"

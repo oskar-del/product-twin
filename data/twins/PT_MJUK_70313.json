@@ -41,10 +41,12 @@
     "dimensions_mm": {
       "width": 900,
       "depth": 900,
-      "height": null
+      "height": 740
     },
-    "dimensions_source": "title_regex:diameter",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:diameter + category_default:FFE.TABLE.DESK",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Standard fixed-height desk."
   },
   "classification": {
     "method": "MERCHANT_TAXONOMY_KEYWORD",

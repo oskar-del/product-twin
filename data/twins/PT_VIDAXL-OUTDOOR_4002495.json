@@ -44,10 +44,12 @@
     "dimensions_mm": {
       "width": 500,
       "depth": 40,
-      "height": null
+      "height": 350
     },
-    "dimensions_source": "title_regex:double_wd",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd + category_default:FFE.OUTDOOR.LOUNGER",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Sun lounger deck height, reclined."
   },
   "material_cues": {
     "colour_text": "Taupe",

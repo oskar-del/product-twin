@@ -38,10 +38,12 @@
     "dimensions_mm": {
       "width": 65,
       "depth": 65,
-      "height": null
+      "height": 120
     },
-    "dimensions_source": "title_regex:diameter",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:diameter + category_default:ELECTRICAL.LUMINAIRES.SPOT",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Surface-mounted spot body depth."
   },
   "attach": {
     "role": "base"

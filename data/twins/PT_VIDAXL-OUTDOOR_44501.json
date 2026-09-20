@@ -44,10 +44,12 @@
     "dimensions_mm": {
       "width": 3000,
       "depth": 2000,
-      "height": null
+      "height": 2400
     },
-    "dimensions_source": "title_regex:double_wd",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd + category_default:FFE.OUTDOOR.PARASOL",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Free-standing parasol open height."
   },
   "material_cues": {
     "colour_text": "Antracit",

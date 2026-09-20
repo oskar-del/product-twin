@@ -41,10 +41,12 @@
     "dimensions_mm": {
       "width": 900,
       "depth": 2000,
-      "height": null
+      "height": 850
     },
-    "dimensions_source": "title_regex:double_wd",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd + category_default:FFE.SEATING.SOFA",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Sofa overall height to back top."
   },
   "classification": {
     "method": "MERCHANT_TAXONOMY_KEYWORD",

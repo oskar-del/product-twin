@@ -41,10 +41,12 @@
     "dimensions_mm": {
       "width": 1600,
       "depth": 2000,
-      "height": null
+      "height": 180
     },
-    "dimensions_source": "title_regex:double_wd",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd + category_default:FFE.BEDROOM.MATTRESS",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Standard pocket-spring mattress depth for the SE market."
   },
   "classification": {
     "method": "MERCHANT_TAXONOMY_KEYWORD",

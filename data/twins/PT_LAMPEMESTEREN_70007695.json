@@ -38,10 +38,12 @@
     "dimensions_mm": {
       "width": 500,
       "depth": 500,
-      "height": null
+      "height": 1500
     },
-    "dimensions_source": "title_regex:diameter_bare_mm_by_magnitude",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:diameter_bare_mm_by_magnitude + category_default:ELECTRICAL.LUMINAIRES.FLOOR",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Floor lamp total height."
   },
   "attach": {
     "role": "base"

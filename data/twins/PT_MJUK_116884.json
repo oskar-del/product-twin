@@ -41,10 +41,12 @@
     "dimensions_mm": {
       "width": 750,
       "depth": 750,
-      "height": null
+      "height": 550
     },
-    "dimensions_source": "title_regex:double_wd",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd + category_default:FFE.TABLE.SIDE",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Side table sits between seat and armrest height."
   },
   "classification": {
     "method": "MERCHANT_TAXONOMY_KEYWORD",

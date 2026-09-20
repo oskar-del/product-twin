@@ -50,10 +50,12 @@
     "dimensions_mm": {
       "width": 1070,
       "depth": 1070,
-      "height": null
+      "height": 300
     },
-    "dimensions_source": "title_regex:diameter",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:diameter + category_default:ELECTRICAL.LUMINAIRES.PENDANT",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Shade body height only; cable drop is install-dependent and NOT included."
   },
   "attach": {
     "role": "base"

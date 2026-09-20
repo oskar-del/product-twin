@@ -38,10 +38,12 @@
     "dimensions_mm": {
       "width": 500,
       "depth": 900,
-      "height": null
+      "height": 150
     },
-    "dimensions_source": "title_regex:double_wd_cm_assumed",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd_cm_assumed + category_default:FFE.TEXTILES.PILLOW",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Filled bed pillow loft."
   },
   "attach": {
     "role": "attach"

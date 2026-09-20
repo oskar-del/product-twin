@@ -21,7 +21,9 @@
       "maximum_load_kg": 20,
       "maximum_shelf_load_kg": 10
     },
-    "evidence_state": "official_retailer_dimensions_and_glb_envelope_verified"
+    "evidence_state": "official_retailer_dimensions_and_glb_envelope_verified",
+    "dimensions_source": "proxy_build:verified_envelope",
+    "dimensions_axes": "WDH"
   },
   "external_identities": [
     {

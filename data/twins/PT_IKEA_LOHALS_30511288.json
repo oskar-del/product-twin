@@ -21,7 +21,9 @@
       "surface_density_g_m2": 2850,
       "underlay_required": true
     },
-    "evidence_state": "official_retailer_dimensions_and_glb_envelope_verified"
+    "evidence_state": "official_retailer_dimensions_and_glb_envelope_verified",
+    "dimensions_source": "proxy_build:verified_envelope",
+    "dimensions_axes": "WDH"
   },
   "external_identities": [
     {

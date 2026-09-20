@@ -38,10 +38,12 @@
     "dimensions_mm": {
       "width": 25,
       "depth": 25,
-      "height": null
+      "height": 10
     },
-    "dimensions_source": "title_regex:double_wd_cm_assumed",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd_cm_assumed + category_default:FFE.SURFACE.FLOORING",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Floor covering board/tile thickness."
   },
   "attach": {
     "role": "free"

@@ -21,7 +21,9 @@
       "cord_length": 1800
     },
     "electrical_state": "manufacturer_configuration_verified_retailer_electrical_observation_requires_refresh",
-    "evidence_state": "manufacturer_verified"
+    "evidence_state": "manufacturer_verified",
+    "dimensions_source": "proxy_build:verified_envelope",
+    "dimensions_axes": "WDH"
   },
   "manufacturer_evidence": {
     "product_page": "https://www.muuto.com/product/Leaf-Floor-Lamp--p2227/p2227/",

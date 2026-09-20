@@ -38,10 +38,12 @@
     "dimensions_mm": {
       "width": 72,
       "depth": 72,
-      "height": null
+      "height": 600
     },
-    "dimensions_source": "title_regex:diameter",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:diameter + category_default:FFE.BATHROOM.VANITY",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Wall-hung washbasin cabinet body height."
   },
   "attach": {
     "role": "base"

@@ -5,7 +5,7 @@
   "identity": {
     "state": "verified",
     "manufacturer": "IKEA",
-    "product_family": "BEST\u00c5",
+    "product_family": "BESTÅ",
     "model": "TV bench, white/Lappviken white",
     "article_no": "893.306.91",
     "configuration": "TV bench, white/Lappviken white"
@@ -20,7 +20,9 @@
       "door_count": 3,
       "cable_management": true
     },
-    "evidence_state": "official_retailer_dimensions_and_glb_envelope_verified"
+    "evidence_state": "official_retailer_dimensions_and_glb_envelope_verified",
+    "dimensions_source": "proxy_build:verified_envelope",
+    "dimensions_axes": "WDH"
   },
   "external_identities": [
     {

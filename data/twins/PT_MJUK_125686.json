@@ -41,10 +41,12 @@
     "dimensions_mm": {
       "width": 500,
       "depth": 500,
-      "height": null
+      "height": 400
     },
-    "dimensions_source": "title_regex:diameter",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:diameter + category_default:FFE.TABLE.COFFEE",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Coffee table top height relative to a 40-45 cm seat."
   },
   "classification": {
     "method": "MERCHANT_TAXONOMY_KEYWORD",

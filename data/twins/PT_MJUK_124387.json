@@ -38,10 +38,12 @@
     "dimensions_mm": {
       "width": 1000,
       "depth": 3030,
-      "height": null
+      "height": 12
     },
-    "dimensions_source": "title_regex:double_wd",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd + category_default:FFE.TEXTILES.RUG",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Woven pile thickness; a rug is a floor layer, not a volume."
   },
   "attach": {
     "role": "attach"

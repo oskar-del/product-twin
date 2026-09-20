@@ -38,10 +38,12 @@
     "dimensions_mm": {
       "width": 150,
       "depth": 150,
-      "height": null
+      "height": 300
     },
-    "dimensions_source": "title_regex:diameter",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:diameter + category_default:ELECTRICAL.LUMINAIRES.OUTDOOR",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Wall/bollard outdoor fitting body height."
   },
   "attach": {
     "role": "base"

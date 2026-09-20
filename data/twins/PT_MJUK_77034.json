@@ -41,10 +41,12 @@
     "dimensions_mm": {
       "width": 900,
       "depth": 900,
-      "height": null
+      "height": 750
     },
-    "dimensions_source": "title_regex:diameter",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:diameter + category_default:FFE.TABLE.DINING",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "EN 527 / market-standard dining table top height."
   },
   "classification": {
     "method": "MERCHANT_TAXONOMY_KEYWORD",

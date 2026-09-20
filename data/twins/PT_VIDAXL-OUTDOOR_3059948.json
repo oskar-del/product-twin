@@ -44,10 +44,12 @@
     "dimensions_mm": {
       "width": 2000,
       "depth": 1000,
-      "height": null
+      "height": 750
     },
-    "dimensions_source": "title_regex:double_wd",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd + category_default:FFE.OUTDOOR.SET",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Dining set envelope is driven by its table height."
   },
   "material_cues": {
     "colour_text": "Brun",

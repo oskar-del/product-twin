@@ -38,10 +38,12 @@
     "dimensions_mm": {
       "width": 400,
       "depth": 600,
-      "height": null
+      "height": 150
     },
-    "dimensions_source": "title_regex:double_wd",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd + category_default:FFE.TEXTILES.CUSHION",
+    "dimensions_axes": "WD+H_DEFAULT",
+    "dimensions_indicative": true,
+    "height_rationale": "Filled scatter cushion loft."
   },
   "attach": {
     "role": "attach"
