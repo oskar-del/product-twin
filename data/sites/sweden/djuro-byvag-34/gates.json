@@ -1,0 +1,127 @@
+{
+  "schema_version": "site-gates/v0.1",
+  "entity_type": "SiteGateSet",
+  "subject": "DJURÖ 4:147",
+  "site": "djuro-byvag-34",
+  "generated_at": "2026-09-20T18:38:08+00:00",
+  "generator": "scripts/build-findings-and-gates.py",
+  "generated_from": [
+    "property-division-derived-v0.1.json",
+    "buildings-official-derived-v0.1.json",
+    "terrain-dem-derived-v0.1.json",
+    "shoreline-strandskydd-derived-v0.1.json",
+    "sea-view-derived-v0.1.json",
+    "municipal-planning-status-v0.1.json"
+  ],
+  "rule": "Nothing in these files is hand-typed; every value is read from a committed derived product. A rendered horizon is never a view claim.",
+  "gate_count": 11,
+  "closed": 7,
+  "open": 4,
+  "gates": [
+    {
+      "gate_id": "GATE_SE_PROPERTY_DIVISION_CONTEXT",
+      "status": "CLOSED",
+      "evidence_refs": [
+        "RCPT_SE_LM_PROPERTY_DIVISION_KN0120",
+        "FINDING_SE_REGISTERED_PARCEL_EXTENT"
+      ],
+      "decided_at": "2026-09-20T18:38:08+00:00",
+      "reason": "Authoritative registered extent for DJURÖ 4:147: 5,156.3 m², 9 boundary vertices, 10 context parcels."
+    },
+    {
+      "gate_id": "GATE_SE_BUILDING_FOOTPRINTS",
+      "status": "CLOSED",
+      "evidence_refs": [
+        "RCPT_SE_LM_BUILDINGS_KN0120",
+        "FINDING_SE_OFFICIAL_BUILDINGS_ON_PARCEL"
+      ],
+      "decided_at": "2026-09-20T18:38:08+00:00",
+      "reason": "4 registered buildings on the parcel with real rings, 416.0 m² of footprint. The areas independently confirm the figures previously published without geometry behind them."
+    },
+    {
+      "gate_id": "GATE_SE_BUILDING_HEIGHTS",
+      "status": "OPEN",
+      "evidence_refs": [
+        "FINDING_SE_BUILDING_HEIGHTS_ABSENT"
+      ],
+      "decided_at": null,
+      "reason": "The LM byggnad product carries no heights. Storeys, eaves, ridge and volume are NOT established, so no massing can be presented as authoritative."
+    },
+    {
+      "gate_id": "GATE_SE_TERRAIN",
+      "status": "CLOSED",
+      "evidence_refs": [
+        "RCPT_SE_LM_TERRAIN_DTM_DJURO",
+        "FINDING_SE_PARCEL_RELIEF",
+        "FINDING_SE_SLOPE_THREE_MEASURES"
+      ],
+      "decided_at": "2026-09-20T18:38:08+00:00",
+      "reason": "10 receipted 1 m DTM tiles re-verified by sha256 against .runtime/receipts before any pixel was read; the parcel mask derived from them measures 5155.0 m2 against 5156.3 m2 registered, an independent check that the boundary and DTM frames align."
+    },
+    {
+      "gate_id": "GATE_SE_TERRAIN_PROVENANCE",
+      "status": "OPEN",
+      "evidence_refs": [
+        "RCPT_SE_LM_TERRAIN_DTM_DJURO"
+      ],
+      "decided_at": null,
+      "reason": "Tile integrity is verified on every run, but the per-tile ursprung/brytgeometri provenance polygons were never downloaded, so the laser-scan epoch behind these cells is unknown."
+    },
+    {
+      "gate_id": "GATE_SE_STRANDSKYDD_GEOMETRY",
+      "status": "CLOSED",
+      "evidence_refs": [
+        "FINDING_SE_PARCEL_REACHES_SHORELINE",
+        "FINDING_SE_STRANDSKYDD_COVERS_WHOLE_PARCEL"
+      ],
+      "decided_at": "2026-09-20T18:38:08+00:00",
+      "reason": "Measured, not presumed. The parcel reaches the water at 0.2 m and its farthest corner is 94.8 m out, so 100.0% of it lies inside the 100 m zone, as do all 4 registered buildings."
+    },
+    {
+      "gate_id": "GATE_SE_STRANDSKYDD_EXTENSION",
+      "status": "CLOSED",
+      "evidence_refs": [
+        "RCPT_SE_VARMDO_WFS_PLANNING",
+        "FINDING_SE_NO_EXTENDED_STRANDSKYDD"
+      ],
+      "decided_at": "2026-09-20T18:38:08+00:00",
+      "reason": "Verified negative across three independent layers, each with a passing control. The base 100 m applies here, and it already covers the whole parcel, so the extension question does not change the answer."
+    },
+    {
+      "gate_id": "GATE_SE_DETALJPLAN",
+      "status": "CLOSED",
+      "evidence_refs": [
+        "RCPT_SE_VARMDO_WFS_PLANNING",
+        "FINDING_SE_NO_DETALJPLAN"
+      ],
+      "decided_at": "2026-09-20T18:38:08+00:00",
+      "reason": "Verified negative: no plan in force, none pending, none revoked since 2023-01-01. Unplanned land."
+    },
+    {
+      "gate_id": "GATE_SE_STRANDSKYDD_DISPENS",
+      "status": "OPEN",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "Any dispens or upphävande attaching to this property is a case record in Värmdö's and Länsstyrelsen's registers, not a map layer. Not retrieved."
+    },
+    {
+      "gate_id": "GATE_SE_SEA_VIEW",
+      "status": "CLOSED",
+      "evidence_refs": [
+        "RCPT_SE_LM_TERRAIN_DTM_DJURO",
+        "FINDING_SE_SEA_VIEW_ARC"
+      ],
+      "decided_at": "2026-09-20T18:38:08+00:00",
+      "reason": "43.9% of the compass in one unbroken arc 319.0°–117.0°, computed by viewshed. Closed as a TERRAIN result and as a CEILING only — see GATE_SE_VIEW_OCCLUSION."
+    },
+    {
+      "gate_id": "GATE_SE_VIEW_OCCLUSION",
+      "status": "OPEN",
+      "evidence_refs": [
+        "FINDING_SE_SEA_VIEW_ARC"
+      ],
+      "decided_at": null,
+      "reason": "The viewshed is bare earth. Trees, buildings, boathouses and neighbouring roofs are not modelled and all of them reduce the arc. What a person actually sees from a window is NOT established, and no render may be used to assert it."
+    }
+  ]
+}

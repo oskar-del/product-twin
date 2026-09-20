@@ -117,6 +117,7 @@ def main():
 
     st, ps = t["parcel_height_statistics"], t["parcel_slope"]
     wp, lg = ps["whole_parcel_plane"], ps["local_ground_slope"]
+    pin = t["slope_aspect_at_pin"]
     band2 = t["parcel_height_bands"][1]
     CX, CW = MX + MAP + 36, SW - (MX + MAP + 36) - PAD
     cards = [
@@ -124,8 +125,10 @@ def main():
          f'{st["min_m"]} m to {st["max_m"]} m RH2000'),
         ("HEIGHT AT SITE PIN", f'{t["origin_height_rh2000_m"]} m',
          'bilinear from the 1 m grid'),
-        ("WHOLE-PARCEL FALL", f'{wp["slope_deg"]}° {wp["fall_direction_compass"]}',
-         f'{wp["rms_residual_m"]} m RMS residual — a poor fit'),
+        ("AT THE PIN (Horn 3×3)", f'{pin["slope_deg"]}° {pin["aspect_compass"]}',
+         'the figure already on the page — it is correct'),
+        ("ACROSS THE WHOLE PARCEL", f'{wp["slope_deg"]}° {wp["fall_direction_compass"]}',
+         f'plane fit, {wp["rms_residual_m"]} m RMS residual'),
         ("GROUND UNDERFOOT", f'{lg["median_deg"]}° median',
          f'p90 {lg["p90_deg"]}° · max {lg["max_deg"]}°'),
         ("BELOW 2 m RH2000", f'{band2["area_m2"]:.0f} m²',
@@ -135,11 +138,11 @@ def main():
     for k, v, sub in cards:
         el.append(f'<text x="{CX}" y="{y}" fill="#8ea399" font-family="Inter,sans-serif" '
                   f'font-size="10" letter-spacing="1.2">{k}</text>')
-        el.append(f'<text x="{CX}" y="{y + 30}" fill="#f5f1e8" font-family="Georgia,serif" '
-                  f'font-size="27">{v}</text>')
-        el.append(f'<text x="{CX}" y="{y + 48}" fill="#6c7f76" font-family="Inter,sans-serif" '
+        el.append(f'<text x="{CX}" y="{y + 27}" fill="#f5f1e8" font-family="Georgia,serif" '
+                  f'font-size="24">{v}</text>')
+        el.append(f'<text x="{CX}" y="{y + 43}" fill="#6c7f76" font-family="Inter,sans-serif" '
                   f'font-size="10.5">{esc(sub)}</text>')
-        y += 76
+        y += 64
 
     PX, PY, PW, PH = CX, y + 18, CW, 168
     hs_ = [p["height_rh2000_m"] for p in fl]; ds = [p["distance_m"] for p in fl]
@@ -166,9 +169,9 @@ def main():
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {SW} {SH}" width="{SW}" height="{SH}">
 <rect width="{SW}" height="{SH}" fill="#101916"/>
 <text x="{PAD}" y="38" fill="#d8b874" font-family="Georgia,serif" font-size="23">{esc(t["subject"])} — terrain from the Lantmäteriet 1 m ground model (RH2000)</text>
-<text x="{PAD}" y="58" fill="#8ea399" font-family="Inter,sans-serif" font-size="12">DERIVED from AUTHORITATIVE · tile {", ".join(t["tiles_used"])} · {len(t["tile_integrity"])}/{len(t["tile_integrity"])} receipted tiles re-verified · parcel mask {st["sample_count_px"]} px vs 5,156.3 m² registered</text>
+<text x="{PAD}" y="58" fill="#8ea399" font-family="Inter,sans-serif" font-size="12">DERIVED from AUTHORITATIVE · tile {", ".join(t["tiles_used"])} · {len(t["tile_integrity"])}/{len(t["tile_integrity"])} receipted tiles re-verified · parcel mask {st["sample_count_px"]} px vs 5,156.3 m² registered · relief {st["relief_m"]} m</text>
 {chr(10).join(el)}
-<text x="{PAD}" y="{SH - 34}" fill="#a65b68" font-family="Inter,sans-serif" font-size="12">CORRECTION — the page said 8.1° WNW. The parcel falls {wp["slope_deg"]}° to the {wp["fall_direction_compass"]}, and no single slope describes it: see the two measures above.</text>
+<text x="{PAD}" y="{SH - 34}" fill="#f5f1e8" font-family="Georgia,serif" font-size="14.5">Three questions, three right answers. The page's {pin["slope_deg"]}° {pin["aspect_compass"]} is the Horn 3×3 gradient at the pin and it stands. Across the whole parcel the ground falls {wp["slope_deg"]}° {wp["fall_direction_compass"]} to the water; underfoot the median is {lg["median_deg"]}°. None corrects another.</text>
 <text x="{PAD}" y="{SH - 16}" fill="#6c7f76" font-family="Inter,sans-serif" font-size="10.5">hillshade 315°/45° over hypsometric tint · white = registered boundary · gold = official footprints · dashed = fitted fall line · derived sha256 {t["derived_geometry_sha256"][:24]}…</text>
 </svg>'''
     outp = ROOT / a.out

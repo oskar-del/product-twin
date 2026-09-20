@@ -1,16 +1,29 @@
 {
-  "schema_version": "buildings-official-derived/v0.1",
-  "entity_type": "AuthoritativeBuildingFootprintClip",
+  "schema_version": "svartinge-buildings-official-derived/v0.1",
+  "entity_type": "OfficialBuildingFootprintClip",
   "subject": "DJURÖ 4:147",
-  "evidence_class": "AUTHORITATIVE",
   "authority": "Lantmäteriet",
-  "source_product": "byggnad_kn0120.zip (GeoPackage, table byggnad)",
+  "source_product": "byggnad_kn0120 (GeoPackage)",
+  "footprint_evidence_class": "AUTHORITATIVE",
+  "height_evidence_class": "DERIVED",
   "source_crs": "EPSG:3006",
-  "coordinate_frame": "LOCAL_ENU x=EAST z=NORTH, origin = site pin (E0,N0 SWEREF99TM)",
+  "coordinate_frame": "LOCAL_ENU x=EAST z=NORTH, origin = municipal pin (E0,N0 SWEREF99TM)",
   "origin_sweref": [
     710934.881,
     6582029.947
   ],
+  "clip_radius_m": 200.0,
+  "building_count": 35,
+  "main_building_count": 0,
+  "dwelling_count": 5,
+  "type_breakdown": {
+    "Bostad": 5,
+    "Komplementbyggnad": 21,
+    "Samhällsfunktion": 0,
+    "Övrig byggnad": 9
+  },
+  "evidence_class": "AUTHORITATIVE",
+  "source_table": "byggnad",
   "clip_buffer_m": 200.0,
   "catalogue_receipt": {
     "collection": "byggnader",
@@ -70,11 +83,48 @@
   ],
   "buildings": [
     {
+      "object_id": "e001e6c5-1a34-461b-8253-500b659e095e",
+      "type": "Bostad",
+      "purpose": "Bostad;Småhus friliggande",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            -0.646,
+            8.121
+          ],
+          [
+            -8.474,
+            2.391
+          ],
+          [
+            -2.896,
+            -5.23
+          ],
+          [
+            -0.805,
+            -3.699
+          ],
+          [
+            1.527,
+            -6.885
+          ],
+          [
+            7.264,
+            -2.686
+          ],
+          [
+            -0.646,
+            8.121
+          ]
+        ]
+      ],
       "source_object_id": "e001e6c5-1a34-461b-8253-500b659e095e",
       "object_version": 2,
       "valid_from": "2021-03-10T10:41:15.564Z",
       "object_type": "Bostad",
-      "purpose": [
+      "purpose_all": [
         "Bostad;Småhus friliggande"
       ],
       "is_main_building": false,
@@ -127,11 +177,40 @@
       ]
     },
     {
+      "object_id": "a5a70b71-d351-4e0f-abee-8c3331522d9c",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            13.083,
+            20.341
+          ],
+          [
+            16.111,
+            22.739
+          ],
+          [
+            12.652,
+            27.107
+          ],
+          [
+            9.624,
+            24.709
+          ],
+          [
+            13.083,
+            20.341
+          ]
+        ]
+      ],
       "source_object_id": "a5a70b71-d351-4e0f-abee-8c3331522d9c",
       "object_version": 1,
       "valid_from": "2021-03-19T15:19:50.630Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -176,11 +255,40 @@
       ]
     },
     {
+      "object_id": "188ac8ec-6e20-4ff6-b884-1663e7961595",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            -40.669,
+            3.859
+          ],
+          [
+            -35.484,
+            -1.758
+          ],
+          [
+            -27.352,
+            5.749
+          ],
+          [
+            -32.537,
+            11.366
+          ],
+          [
+            -40.669,
+            3.859
+          ]
+        ]
+      ],
       "source_object_id": "188ac8ec-6e20-4ff6-b884-1663e7961595",
       "object_version": 3,
       "valid_from": "2021-03-10T10:45:22.130Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -225,11 +333,56 @@
       ]
     },
     {
+      "object_id": "6f045bed-4cd7-4fb8-94dd-d61dc7aaf024",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            -32.959,
+            -21.411
+          ],
+          [
+            -41.249,
+            -23.614
+          ],
+          [
+            -36.747,
+            -40.555
+          ],
+          [
+            -35.391,
+            -40.195
+          ],
+          [
+            -34.531,
+            -46.922
+          ],
+          [
+            -28.99,
+            -46.26
+          ],
+          [
+            -29.982,
+            -38.672
+          ],
+          [
+            -28.478,
+            -38.272
+          ],
+          [
+            -32.959,
+            -21.411
+          ]
+        ]
+      ],
       "source_object_id": "6f045bed-4cd7-4fb8-94dd-d61dc7aaf024",
       "object_version": 4,
       "valid_from": "2021-03-10T10:45:21.453Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -290,11 +443,72 @@
       ]
     },
     {
+      "object_id": "149024bf-3520-4d31-ad99-955225dd1c32",
+      "type": "Bostad",
+      "purpose": "Bostad;Småhus friliggande",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            22.825,
+            -34.368
+          ],
+          [
+            29.988,
+            -28.724
+          ],
+          [
+            25.819,
+            -23.433
+          ],
+          [
+            24.484,
+            -24.485
+          ],
+          [
+            23.506,
+            -23.244
+          ],
+          [
+            24.774,
+            -22.245
+          ],
+          [
+            16.179,
+            -11.338
+          ],
+          [
+            9.246,
+            -16.802
+          ],
+          [
+            9.095,
+            -16.611
+          ],
+          [
+            5.603,
+            -19.363
+          ],
+          [
+            9.838,
+            -24.737
+          ],
+          [
+            13.168,
+            -22.113
+          ],
+          [
+            22.825,
+            -34.368
+          ]
+        ]
+      ],
       "source_object_id": "149024bf-3520-4d31-ad99-955225dd1c32",
       "object_version": 2,
       "valid_from": "2021-03-10T10:41:32.220Z",
       "object_type": "Bostad",
-      "purpose": [
+      "purpose_all": [
         "Bostad;Småhus friliggande"
       ],
       "is_main_building": false,
@@ -371,11 +585,40 @@
       ]
     },
     {
+      "object_id": "8c22637b-2595-4a71-98c5-474d68ea78ba",
+      "type": "Övrig byggnad",
+      "purpose": "Övrig byggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            16.055,
+            -38.982
+          ],
+          [
+            13.807,
+            -39.838
+          ],
+          [
+            15.081,
+            -43.181
+          ],
+          [
+            17.329,
+            -42.325
+          ],
+          [
+            16.055,
+            -38.982
+          ]
+        ]
+      ],
       "source_object_id": "8c22637b-2595-4a71-98c5-474d68ea78ba",
       "object_version": 1,
       "valid_from": "2021-03-10T18:37:09.562Z",
       "object_type": "Övrig byggnad",
-      "purpose": [
+      "purpose_all": [
         "Övrig byggnad;"
       ],
       "is_main_building": false,
@@ -420,11 +663,40 @@
       ]
     },
     {
+      "object_id": "c358a3ab-8801-4c14-b899-25f18af8261f",
+      "type": "Övrig byggnad",
+      "purpose": "Övrig byggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            -53.051,
+            0.373
+          ],
+          [
+            -45.769,
+            7.145
+          ],
+          [
+            -48.699,
+            10.296
+          ],
+          [
+            -55.981,
+            3.523
+          ],
+          [
+            -53.051,
+            0.373
+          ]
+        ]
+      ],
       "source_object_id": "c358a3ab-8801-4c14-b899-25f18af8261f",
       "object_version": 1,
       "valid_from": "2021-03-19T15:17:14.009Z",
       "object_type": "Övrig byggnad",
-      "purpose": [
+      "purpose_all": [
         "Övrig byggnad;"
       ],
       "is_main_building": false,
@@ -469,11 +741,40 @@
       ]
     },
     {
+      "object_id": "082af21a-e7aa-4189-9140-37e2c275eaaf",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            51.084,
+            -20.587
+          ],
+          [
+            48.04,
+            -22.161
+          ],
+          [
+            49.956,
+            -25.867
+          ],
+          [
+            53.001,
+            -24.293
+          ],
+          [
+            51.084,
+            -20.587
+          ]
+        ]
+      ],
       "source_object_id": "082af21a-e7aa-4189-9140-37e2c275eaaf",
       "object_version": 2,
       "valid_from": "2021-03-10T18:25:01.313Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -518,11 +819,40 @@
       ]
     },
     {
+      "object_id": "6f76a30b-c016-4329-add8-ae17e7db5e58",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            25.95,
+            -58.626
+          ],
+          [
+            23.323,
+            -59.227
+          ],
+          [
+            24.093,
+            -62.591
+          ],
+          [
+            26.72,
+            -61.99
+          ],
+          [
+            25.95,
+            -58.626
+          ]
+        ]
+      ],
       "source_object_id": "6f76a30b-c016-4329-add8-ae17e7db5e58",
       "object_version": 1,
       "valid_from": "2021-03-10T18:37:10.834Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -567,11 +897,40 @@
       ]
     },
     {
+      "object_id": "2bc50e53-7c8c-4c3e-ae27-7128242861f9",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            37.925,
+            -61.877
+          ],
+          [
+            32.708,
+            -57.619
+          ],
+          [
+            26.64,
+            -65.054
+          ],
+          [
+            31.857,
+            -69.312
+          ],
+          [
+            37.925,
+            -61.877
+          ]
+        ]
+      ],
       "source_object_id": "2bc50e53-7c8c-4c3e-ae27-7128242861f9",
       "object_version": 3,
       "valid_from": "2021-03-10T10:43:18.484Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -616,11 +975,40 @@
       ]
     },
     {
+      "object_id": "181ce535-ed32-443c-ac8d-fec15cb25b6a",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            23.739,
+            -75.999
+          ],
+          [
+            19.751,
+            -79.287
+          ],
+          [
+            22.079,
+            -82.11
+          ],
+          [
+            26.067,
+            -78.822
+          ],
+          [
+            23.739,
+            -75.999
+          ]
+        ]
+      ],
       "source_object_id": "181ce535-ed32-443c-ac8d-fec15cb25b6a",
       "object_version": 3,
       "valid_from": "2021-03-10T18:23:15.039Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -665,11 +1053,48 @@
       ]
     },
     {
+      "object_id": "15459d48-edfd-4f05-9ef1-72e57f249d4f",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            83.804,
+            -53.893
+          ],
+          [
+            88.804,
+            -48.51
+          ],
+          [
+            86.366,
+            -46.23
+          ],
+          [
+            83.731,
+            -49.049
+          ],
+          [
+            81.994,
+            -47.425
+          ],
+          [
+            79.612,
+            -49.972
+          ],
+          [
+            83.804,
+            -53.893
+          ]
+        ]
+      ],
       "source_object_id": "15459d48-edfd-4f05-9ef1-72e57f249d4f",
       "object_version": 4,
       "valid_from": "2021-03-10T18:23:15.740Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -722,11 +1147,40 @@
       ]
     },
     {
+      "object_id": "c6297ac7-382e-4505-b5d3-6cf21988705a",
+      "type": "Övrig byggnad",
+      "purpose": "Övrig byggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            57.675,
+            -75.542
+          ],
+          [
+            62.367,
+            -79.439
+          ],
+          [
+            63.111,
+            -78.544
+          ],
+          [
+            58.422,
+            -74.643
+          ],
+          [
+            57.675,
+            -75.542
+          ]
+        ]
+      ],
       "source_object_id": "c6297ac7-382e-4505-b5d3-6cf21988705a",
       "object_version": 1,
       "valid_from": "2021-03-19T15:17:11.032Z",
       "object_type": "Övrig byggnad",
-      "purpose": [
+      "purpose_all": [
         "Övrig byggnad;"
       ],
       "is_main_building": false,
@@ -771,11 +1225,72 @@
       ]
     },
     {
+      "object_id": "172ba08c-695b-4571-b90a-53d1727f9791",
+      "type": "Bostad",
+      "purpose": "Bostad;Småhus friliggande",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            60.333,
+            -94.977
+          ],
+          [
+            61.555,
+            -93.505
+          ],
+          [
+            61.953,
+            -93.836
+          ],
+          [
+            68.207,
+            -86.304
+          ],
+          [
+            62.067,
+            -81.204
+          ],
+          [
+            63.057,
+            -80.012
+          ],
+          [
+            57.059,
+            -75.031
+          ],
+          [
+            56.098,
+            -76.188
+          ],
+          [
+            52.144,
+            -72.905
+          ],
+          [
+            45.809,
+            -80.533
+          ],
+          [
+            50.78,
+            -84.661
+          ],
+          [
+            49.609,
+            -86.071
+          ],
+          [
+            60.333,
+            -94.977
+          ]
+        ]
+      ],
       "source_object_id": "172ba08c-695b-4571-b90a-53d1727f9791",
       "object_version": 2,
       "valid_from": "2021-03-10T10:46:42.731Z",
       "object_type": "Bostad",
-      "purpose": [
+      "purpose_all": [
         "Bostad;Småhus friliggande"
       ],
       "is_main_building": false,
@@ -852,11 +1367,40 @@
       ]
     },
     {
+      "object_id": "15459d48-edfd-4f05-9ef1-72e57f249d4f",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            83.173,
+            -54.52
+          ],
+          [
+            86.046,
+            -57.41
+          ],
+          [
+            91.479,
+            -52.01
+          ],
+          [
+            88.606,
+            -49.119
+          ],
+          [
+            83.173,
+            -54.52
+          ]
+        ]
+      ],
       "source_object_id": "15459d48-edfd-4f05-9ef1-72e57f249d4f",
       "object_version": 4,
       "valid_from": "2021-03-10T18:23:15.740Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -901,11 +1445,56 @@
       ]
     },
     {
+      "object_id": "ac66847a-02f1-46e2-afae-0b89dc64365a",
+      "type": "Övrig byggnad",
+      "purpose": "Övrig byggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            85.237,
+            -81.055
+          ],
+          [
+            84.438,
+            -82.911
+          ],
+          [
+            85.146,
+            -84.958
+          ],
+          [
+            87.206,
+            -85.6
+          ],
+          [
+            89.252,
+            -84.849
+          ],
+          [
+            90.052,
+            -82.989
+          ],
+          [
+            89.278,
+            -80.935
+          ],
+          [
+            87.258,
+            -80.199
+          ],
+          [
+            85.237,
+            -81.055
+          ]
+        ]
+      ],
       "source_object_id": "ac66847a-02f1-46e2-afae-0b89dc64365a",
       "object_version": 1,
       "valid_from": "2021-03-10T18:37:12.154Z",
       "object_type": "Övrig byggnad",
-      "purpose": [
+      "purpose_all": [
         "Övrig byggnad;"
       ],
       "is_main_building": false,
@@ -966,11 +1555,48 @@
       ]
     },
     {
+      "object_id": "8353014e-61a4-443d-89be-9b49a9243b80",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            105.601,
+            -85.877
+          ],
+          [
+            109.738,
+            -82.983
+          ],
+          [
+            107.661,
+            -80.014
+          ],
+          [
+            106.405,
+            -80.892
+          ],
+          [
+            103.282,
+            -76.427
+          ],
+          [
+            100.401,
+            -78.442
+          ],
+          [
+            105.601,
+            -85.877
+          ]
+        ]
+      ],
       "source_object_id": "8353014e-61a4-443d-89be-9b49a9243b80",
       "object_version": 3,
       "valid_from": "2021-03-10T10:44:20.524Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -1023,11 +1649,72 @@
       ]
     },
     {
+      "object_id": "bc7e54cc-28ff-4a95-bba4-59415c2091ac",
+      "type": "Bostad",
+      "purpose": "Bostad;Småhus friliggande",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            83.671,
+            -107.713
+          ],
+          [
+            87.11,
+            -108.926
+          ],
+          [
+            87.216,
+            -108.625
+          ],
+          [
+            92.307,
+            -110.422
+          ],
+          [
+            92.095,
+            -111.024
+          ],
+          [
+            96.375,
+            -112.534
+          ],
+          [
+            99.805,
+            -102.813
+          ],
+          [
+            96.364,
+            -101.598
+          ],
+          [
+            96.959,
+            -99.914
+          ],
+          [
+            91.146,
+            -97.863
+          ],
+          [
+            90.603,
+            -99.402
+          ],
+          [
+            87.046,
+            -98.147
+          ],
+          [
+            83.671,
+            -107.713
+          ]
+        ]
+      ],
       "source_object_id": "bc7e54cc-28ff-4a95-bba4-59415c2091ac",
       "object_version": 3,
       "valid_from": "2021-03-10T10:48:06.971Z",
       "object_type": "Bostad",
-      "purpose": [
+      "purpose_all": [
         "Bostad;Småhus friliggande"
       ],
       "is_main_building": false,
@@ -1104,11 +1791,40 @@
       ]
     },
     {
+      "object_id": "f1a38948-9c16-4043-b42f-7839311e4a4c",
+      "type": "Övrig byggnad",
+      "purpose": "Övrig byggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            88.06,
+            -108.923
+          ],
+          [
+            87.708,
+            -109.825
+          ],
+          [
+            91.66,
+            -111.365
+          ],
+          [
+            92.061,
+            -110.335
+          ],
+          [
+            88.06,
+            -108.923
+          ]
+        ]
+      ],
       "source_object_id": "f1a38948-9c16-4043-b42f-7839311e4a4c",
       "object_version": 1,
       "valid_from": "2021-03-11T17:17:43.206Z",
       "object_type": "Övrig byggnad",
-      "purpose": [
+      "purpose_all": [
         "Övrig byggnad;"
       ],
       "is_main_building": false,
@@ -1153,11 +1869,40 @@
       ]
     },
     {
+      "object_id": "bf0d634d-0bf7-44ff-ab8a-fb54ec0702ea",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            -128.863,
+            67.067
+          ],
+          [
+            -135.246,
+            62.163
+          ],
+          [
+            -129.56,
+            54.764
+          ],
+          [
+            -123.178,
+            59.669
+          ],
+          [
+            -128.863,
+            67.067
+          ]
+        ]
+      ],
       "source_object_id": "bf0d634d-0bf7-44ff-ab8a-fb54ec0702ea",
       "object_version": 2,
       "valid_from": "2021-03-10T10:41:56.333Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -1202,11 +1947,40 @@
       ]
     },
     {
+      "object_id": "5ce2dd8e-da20-4b52-a1f4-659831a48688",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            45.578,
+            -131.433
+          ],
+          [
+            42.974,
+            -139.023
+          ],
+          [
+            51.195,
+            -141.844
+          ],
+          [
+            53.8,
+            -134.254
+          ],
+          [
+            45.578,
+            -131.433
+          ]
+        ]
+      ],
       "source_object_id": "5ce2dd8e-da20-4b52-a1f4-659831a48688",
       "object_version": 3,
       "valid_from": "2021-03-10T10:47:56.041Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -1251,11 +2025,40 @@
       ]
     },
     {
+      "object_id": "8b7df4d8-6b7f-49c0-aa51-710f21c2bb12",
+      "type": "Övrig byggnad",
+      "purpose": "Övrig byggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            62.364,
+            -134.66
+          ],
+          [
+            63.517,
+            -134.8
+          ],
+          [
+            64.518,
+            -126.527
+          ],
+          [
+            63.364,
+            -126.388
+          ],
+          [
+            62.364,
+            -134.66
+          ]
+        ]
+      ],
       "source_object_id": "8b7df4d8-6b7f-49c0-aa51-710f21c2bb12",
       "object_version": 1,
       "valid_from": "2021-03-10T18:37:46.369Z",
       "object_type": "Övrig byggnad",
-      "purpose": [
+      "purpose_all": [
         "Övrig byggnad;"
       ],
       "is_main_building": false,
@@ -1300,11 +2103,40 @@
       ]
     },
     {
+      "object_id": "13e6871b-03c6-4ef9-a722-de00c47c0fc8",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            73.477,
+            -127.571
+          ],
+          [
+            75.087,
+            -128.171
+          ],
+          [
+            76.006,
+            -125.706
+          ],
+          [
+            74.395,
+            -125.106
+          ],
+          [
+            73.477,
+            -127.571
+          ]
+        ]
+      ],
       "source_object_id": "13e6871b-03c6-4ef9-a722-de00c47c0fc8",
       "object_version": 1,
       "valid_from": "2021-03-10T18:37:43.738Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -1349,11 +2181,76 @@
       ]
     },
     {
+      "object_id": "0608ea01-0ebf-4e11-89f0-45e715f8da95",
+      "type": "Bostad",
+      "purpose": "Bostad;Småhus friliggande",
+      "is_main": false,
+      "pos_uncertainty_m": 0.576,
+      "footprint_rings_local": [
+        [
+          [
+            -89.829,
+            111.48
+          ],
+          [
+            -98.336,
+            124.28
+          ],
+          [
+            -102.121,
+            130.686
+          ],
+          [
+            -108.024,
+            126.817
+          ],
+          [
+            -101.365,
+            116.658
+          ],
+          [
+            -102.358,
+            116.132
+          ],
+          [
+            -98.413,
+            110.043
+          ],
+          [
+            -97.315,
+            110.676
+          ],
+          [
+            -94.524,
+            106.35
+          ],
+          [
+            -92.867,
+            105.584
+          ],
+          [
+            -93.35,
+            104.642
+          ],
+          [
+            -87.805,
+            101.798
+          ],
+          [
+            -84.292,
+            108.646
+          ],
+          [
+            -89.829,
+            111.48
+          ]
+        ]
+      ],
       "source_object_id": "0608ea01-0ebf-4e11-89f0-45e715f8da95",
       "object_version": 3,
       "valid_from": "2022-06-01T12:17:16.052Z",
       "object_type": "Bostad",
-      "purpose": [
+      "purpose_all": [
         "Bostad;Småhus friliggande"
       ],
       "is_main_building": false,
@@ -1434,11 +2331,40 @@
       ]
     },
     {
+      "object_id": "5598dfaa-14fe-44ef-bf32-6e059666792d",
+      "type": "Övrig byggnad",
+      "purpose": "Övrig byggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            62.307,
+            -147.338
+          ],
+          [
+            63.55,
+            -147.783
+          ],
+          [
+            65.563,
+            -142.169
+          ],
+          [
+            64.32,
+            -141.723
+          ],
+          [
+            62.307,
+            -147.338
+          ]
+        ]
+      ],
       "source_object_id": "5598dfaa-14fe-44ef-bf32-6e059666792d",
       "object_version": 1,
       "valid_from": "2021-03-10T18:37:44.957Z",
       "object_type": "Övrig byggnad",
-      "purpose": [
+      "purpose_all": [
         "Övrig byggnad;"
       ],
       "is_main_building": false,
@@ -1483,11 +2409,48 @@
       ]
     },
     {
+      "object_id": "d419c273-3b2a-4e64-9129-3d8d7fa62d4d",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            90.958,
+            -137.347
+          ],
+          [
+            97.391,
+            -135.232
+          ],
+          [
+            94.607,
+            -126.763
+          ],
+          [
+            94.141,
+            -126.916
+          ],
+          [
+            92.097,
+            -120.701
+          ],
+          [
+            86.131,
+            -122.662
+          ],
+          [
+            90.958,
+            -137.347
+          ]
+        ]
+      ],
       "source_object_id": "d419c273-3b2a-4e64-9129-3d8d7fa62d4d",
       "object_version": 4,
       "valid_from": "2021-03-10T10:48:06.214Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -1540,11 +2503,56 @@
       ]
     },
     {
+      "object_id": "073d47d0-9334-4bf9-aa36-c4f91b2e638f",
+      "type": "Övrig byggnad",
+      "purpose": "Övrig byggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            -105.822,
+            136.743
+          ],
+          [
+            -107.285,
+            135.724
+          ],
+          [
+            -107.388,
+            133.728
+          ],
+          [
+            -106.141,
+            132.304
+          ],
+          [
+            -104.236,
+            132.287
+          ],
+          [
+            -102.924,
+            133.448
+          ],
+          [
+            -102.957,
+            135.504
+          ],
+          [
+            -103.977,
+            136.642
+          ],
+          [
+            -105.822,
+            136.743
+          ]
+        ]
+      ],
       "source_object_id": "073d47d0-9334-4bf9-aa36-c4f91b2e638f",
       "object_version": 1,
       "valid_from": "2021-03-10T18:30:51.300Z",
       "object_type": "Övrig byggnad",
-      "purpose": [
+      "purpose_all": [
         "Övrig byggnad;"
       ],
       "is_main_building": false,
@@ -1605,11 +2613,40 @@
       ]
     },
     {
+      "object_id": "9a63c0ad-5f83-49d4-aec1-6835e4ad8be2",
+      "type": "Övrig byggnad",
+      "purpose": "Övrig byggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            84.068,
+            -155.979
+          ],
+          [
+            84.934,
+            -155.849
+          ],
+          [
+            83.903,
+            -148.968
+          ],
+          [
+            83.036,
+            -149.098
+          ],
+          [
+            84.068,
+            -155.979
+          ]
+        ]
+      ],
       "source_object_id": "9a63c0ad-5f83-49d4-aec1-6835e4ad8be2",
       "object_version": 1,
       "valid_from": "2021-03-10T18:37:49.262Z",
       "object_type": "Övrig byggnad",
-      "purpose": [
+      "purpose_all": [
         "Övrig byggnad;"
       ],
       "is_main_building": false,
@@ -1654,11 +2691,40 @@
       ]
     },
     {
+      "object_id": "13563caf-b664-4ac6-bf3e-fdd313422238",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            160.847,
+            -65.309
+          ],
+          [
+            157.72,
+            -67.002
+          ],
+          [
+            161.031,
+            -73.116
+          ],
+          [
+            164.158,
+            -71.423
+          ],
+          [
+            160.847,
+            -65.309
+          ]
+        ]
+      ],
       "source_object_id": "13563caf-b664-4ac6-bf3e-fdd313422238",
       "object_version": 2,
       "valid_from": "2021-03-19T15:14:50.664Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -1703,11 +2769,40 @@
       ]
     },
     {
+      "object_id": "263f8896-0104-4b28-8786-1f5814ca13ae",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            84.643,
+            -162.088
+          ],
+          [
+            84.076,
+            -157.813
+          ],
+          [
+            78.43,
+            -158.561
+          ],
+          [
+            78.997,
+            -162.836
+          ],
+          [
+            84.643,
+            -162.088
+          ]
+        ]
+      ],
       "source_object_id": "263f8896-0104-4b28-8786-1f5814ca13ae",
       "object_version": 1,
       "valid_from": "2021-03-10T18:37:47.811Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -1752,11 +2847,48 @@
       ]
     },
     {
+      "object_id": "ef1149ee-5f57-4fc4-a472-7a11f5d4d0dd",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            -94.381,
+            159.127
+          ],
+          [
+            -98.044,
+            156.256
+          ],
+          [
+            -96.426,
+            154.192
+          ],
+          [
+            -95.698,
+            154.763
+          ],
+          [
+            -93.759,
+            152.289
+          ],
+          [
+            -90.824,
+            154.59
+          ],
+          [
+            -94.381,
+            159.127
+          ]
+        ]
+      ],
       "source_object_id": "ef1149ee-5f57-4fc4-a472-7a11f5d4d0dd",
       "object_version": 1,
       "valid_from": "2021-03-10T18:30:52.513Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -1809,11 +2941,48 @@
       ]
     },
     {
+      "object_id": "e00fecdb-9fdc-4f4c-a6aa-e289d0e0aca7",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            85.688,
+            -167.568
+          ],
+          [
+            88.99,
+            -167.161
+          ],
+          [
+            88.258,
+            -161.223
+          ],
+          [
+            87.974,
+            -161.258
+          ],
+          [
+            87.4,
+            -156.601
+          ],
+          [
+            84.382,
+            -156.973
+          ],
+          [
+            85.688,
+            -167.568
+          ]
+        ]
+      ],
       "source_object_id": "e00fecdb-9fdc-4f4c-a6aa-e289d0e0aca7",
       "object_version": 2,
       "valid_from": "2021-03-10T18:21:24.523Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -1866,11 +3035,40 @@
       ]
     },
     {
+      "object_id": "8be1b88c-3f89-4aa7-88aa-fdc3b1b6b402",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            -139.533,
+            128.74
+          ],
+          [
+            -137.583,
+            122.74
+          ],
+          [
+            -128.288,
+            125.762
+          ],
+          [
+            -130.239,
+            131.761
+          ],
+          [
+            -139.533,
+            128.74
+          ]
+        ]
+      ],
       "source_object_id": "8be1b88c-3f89-4aa7-88aa-fdc3b1b6b402",
       "object_version": 4,
       "valid_from": "2021-03-10T10:44:29.298Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -1915,11 +3113,40 @@
       ]
     },
     {
+      "object_id": "2d8268f8-8638-47af-a95b-dee540a0c3da",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            -107.291,
+            160.79
+          ],
+          [
+            -103.733,
+            160.266
+          ],
+          [
+            -103.075,
+            164.733
+          ],
+          [
+            -106.633,
+            165.257
+          ],
+          [
+            -107.291,
+            160.79
+          ]
+        ]
+      ],
       "source_object_id": "2d8268f8-8638-47af-a95b-dee540a0c3da",
       "object_version": 1,
       "valid_from": "2021-03-10T18:30:53.845Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -1964,11 +3191,56 @@
       ]
     },
     {
+      "object_id": "fe368220-a845-4b85-9bcf-ab4079e3dc85",
+      "type": "Komplementbyggnad",
+      "purpose": "Komplementbyggnad;",
+      "is_main": false,
+      "pos_uncertainty_m": 0.25,
+      "footprint_rings_local": [
+        [
+          [
+            -146.082,
+            128.439
+          ],
+          [
+            -142.04,
+            133.088
+          ],
+          [
+            -143.752,
+            134.576
+          ],
+          [
+            -143.071,
+            135.36
+          ],
+          [
+            -145.796,
+            137.729
+          ],
+          [
+            -146.543,
+            136.869
+          ],
+          [
+            -150.156,
+            140.01
+          ],
+          [
+            -154.131,
+            135.437
+          ],
+          [
+            -146.082,
+            128.439
+          ]
+        ]
+      ],
       "source_object_id": "fe368220-a845-4b85-9bcf-ab4079e3dc85",
       "object_version": 2,
       "valid_from": "2021-03-10T10:47:17.147Z",
       "object_type": "Komplementbyggnad",
-      "purpose": [
+      "purpose_all": [
         "Komplementbyggnad;"
       ],
       "is_main_building": false,
@@ -2040,9 +3312,11 @@
     }
   ],
   "limitations": [
+    "Footprints are the registered LM byggnad geometry (authoritative).",
+    "Heights are NOT in this product; any extrusion is DERIVED, not authoritative.",
     "Footprints are Lantmäteriet's registered building outlines captured at roof edge (insamlingslage), not a ground-level survey; plan uncertainty is per-feature.",
     "ON_PARCEL/CONTEXT is a centroid test against the registered property boundary; a footprint straddling the boundary is assigned by its centroid.",
     "The product carries no building heights; storeys and volume are NOT established here."
   ],
-  "derived_geometry_sha256": "a41f5dfe3b7d3e9afe711767adf0c9d7d200f2e2d999134259ec2a3c1f4f0e98"
+  "derived_geometry_sha256": "1af0d50272bc6ff9b79ff12d8cc1bb3974dd3364f349119aa530c58c4c845520"
 }

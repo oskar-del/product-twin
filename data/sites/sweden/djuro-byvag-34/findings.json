@@ -1,0 +1,395 @@
+{
+  "schema_version": "site-findings/v0.1",
+  "entity_type": "SiteFindingSet",
+  "subject": "DJURÖ 4:147",
+  "site": "djuro-byvag-34",
+  "generated_at": "2026-09-20T18:38:08+00:00",
+  "generator": "scripts/build-findings-and-gates.py",
+  "generated_from": [
+    "property-division-derived-v0.1.json",
+    "buildings-official-derived-v0.1.json",
+    "terrain-dem-derived-v0.1.json",
+    "shoreline-strandskydd-derived-v0.1.json",
+    "sea-view-derived-v0.1.json",
+    "municipal-planning-status-v0.1.json"
+  ],
+  "rule": "Nothing in these files is hand-typed; every value is read from a committed derived product. A rendered horizon is never a view claim.",
+  "source_receipts": [
+    {
+      "receipt_id": "RCPT_SE_LM_PROPERTY_DIVISION_KN0120",
+      "source_id": "SE_LM_FASTIGHETSINDELNING",
+      "retrieved_at": "2026-08-30",
+      "request_or_record_ref": "https://api.lantmateriet.se/stac-vektor/v1/collections/fastighetsindelning/items/0120",
+      "runtime_locator": "../lm-data/fastighetsindelning_kn0120.zip",
+      "sha256": "2dc19757b36124bfe3eb174d82e3f67528adbff3dafe643302f95a3d54b8c880",
+      "scope": "Registered property division for Värmdö kommun (0120).",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_LM_BUILDINGS_KN0120",
+      "source_id": "SE_LM_BYGGNAD",
+      "retrieved_at": "2026-08-30",
+      "request_or_record_ref": "https://api.lantmateriet.se/stac-vektor/v1/collections/byggnader/items/0120",
+      "runtime_locator": "../lm-data/byggnad_kn0120.zip",
+      "sha256": "fbeea328dfab88995e1126396660d47a697071899dcf9ac52a892b4b7950878c",
+      "scope": "Registered building footprints for Värmdö kommun (0120).",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_LM_TERRAIN_DTM_DJURO",
+      "source_id": "SE_LM_MARKHOJDMODELL_1M",
+      "retrieved_at": "2026-08-31T00:00:00+00:00",
+      "request_or_record_ref": "https://api.lantmateriet.se/stac-hojd/v1 (STAC, collection mhm-65_7) -> dl1.lantmateriet.se/hojd/data/grid1m/65_7/50/",
+      "runtime_locator": ".runtime/lantmateriet/terrain/",
+      "sha256": "d2f1ce020bfa9af983fc631c9960239a29f9077db8370952e51d63ef0afdf7f6",
+      "scope": "10 receipted 1 m DTM tiles; all sha256 re-verified on every run.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    },
+    {
+      "receipt_id": "RCPT_SE_VARMDO_WFS_PLANNING",
+      "source_id": "SE_VARMDO_GEOSERVER_WFS",
+      "retrieved_at": "2026-09-20T17:09:21+00:00",
+      "request_or_record_ref": "https://karta.varmdo.se/geoserver/wfs",
+      "runtime_locator": "data/sites/sweden/djuro-byvag-34/municipal-planning-status-v0.1.json",
+      "sha256": "94b7b5aded4cb3f93d57e0e6f83304deeb801eeb47f40d2b52a352acc80f8b60",
+      "scope": "Värmdö kommun public WFS: gällande/pågående/upphävda detaljplaner and utvidgat strandskydd, each queried with a control.",
+      "evidence_class": "OFFICIAL_OPEN_SOURCE"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "FINDING_SE_REGISTERED_PARCEL_EXTENT",
+      "domain": "property",
+      "value": {
+        "designation": "DJURÖ 4:147",
+        "area_m2": 5156.3,
+        "boundary_vertices": 9,
+        "context_parcels": 10,
+        "crs": "EPSG:3006"
+      },
+      "unit": "m2",
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "chip": "authoritative",
+      "source_receipt_refs": [
+        "RCPT_SE_LM_PROPERTY_DIVISION_KN0120"
+      ],
+      "method": "Lantmäteriet fastighetsindelning GeoPackage clipped around the site pin; geometry hash recorded.",
+      "observed_at": "2026-09-20T18:38:08+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "Authoritative for registered extent, not a survey of monument positions."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_OFFICIAL_BUILDINGS_ON_PARCEL",
+      "domain": "buildings",
+      "value": {
+        "on_parcel_count": 4,
+        "total_footprint_m2": 416.0,
+        "buildings": [
+          {
+            "type": "Bostad",
+            "footprint_m2": 119.7,
+            "object_id": "e001e6c5-1a34-461b-8253-500b659e095e"
+          },
+          {
+            "type": "Komplementbyggnad",
+            "footprint_m2": 21.5,
+            "object_id": "a5a70b71-d351-4e0f-abee-8c3331522d9c"
+          },
+          {
+            "type": "Komplementbyggnad",
+            "footprint_m2": 84.6,
+            "object_id": "188ac8ec-6e20-4ff6-b884-1663e7961595"
+          },
+          {
+            "type": "Komplementbyggnad",
+            "footprint_m2": 190.2,
+            "object_id": "6f045bed-4cd7-4fb8-94dd-d61dc7aaf024"
+          }
+        ],
+        "context_within_200m": 31
+      },
+      "unit": "m2",
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "chip": "authoritative",
+      "source_receipt_refs": [
+        "RCPT_SE_LM_BUILDINGS_KN0120"
+      ],
+      "method": "LM byggnad footprints clipped to 200 m and classified ON_PARCEL by centroid point-in-polygon against the registered boundary.",
+      "observed_at": "2026-09-20T18:38:08+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "Roof-edge capture (insamlingsläge Takkant), not ground-level survey.",
+        "A footprint straddling the boundary is assigned by its centroid."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_BUILDING_HEIGHTS_ABSENT",
+      "domain": "buildings",
+      "value": {
+        "heights_available": false,
+        "product": "byggnad_kn0120 (GeoPackage)"
+      },
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "chip": "authoritative",
+      "source_receipt_refs": [
+        "RCPT_SE_LM_BUILDINGS_KN0120"
+      ],
+      "method": "Inspected every attribute column of the byggnad feature table.",
+      "observed_at": "2026-09-20T18:38:08+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "No storey count, eaves or ridge height exists in this product. Any extrusion in a render is DERIVED or CONCEPT and must be labelled as such."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_PARCEL_RELIEF",
+      "domain": "terrain",
+      "value": {
+        "min_rh2000_m": 0.15,
+        "max_rh2000_m": 11.68,
+        "relief_m": 11.53,
+        "mean_rh2000_m": 5.23,
+        "pin_elevation_rh2000_m": 6.9,
+        "mask_area_m2": 5155.0,
+        "registered_area_m2": 5156.3
+      },
+      "unit": "m",
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [
+        "RCPT_SE_LM_TERRAIN_DTM_DJURO"
+      ],
+      "method": "Parcel mask over the 1 m ground model; the mask measures within 1.3 m2 of the registered area, an independent check that the boundary and DTM frames align.",
+      "observed_at": "2026-09-20T18:38:08+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "Bare-earth ground heights: no buildings, no vegetation.",
+        "A derivation from a verified source, not an official terrain survey; not finished-floor or foundation input."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_SLOPE_THREE_MEASURES",
+      "domain": "terrain",
+      "value": {
+        "at_pin_horn3x3": {
+          "slope_deg": 8.1,
+          "aspect_deg": 295,
+          "aspect_compass": "WNW"
+        },
+        "whole_parcel_plane": {
+          "slope_deg": 3.94,
+          "fall_compass": "NE",
+          "rms_residual_m": 1.46
+        },
+        "ground_underfoot": {
+          "median_deg": 8.29,
+          "p90_deg": 23.77,
+          "max_deg": 57.2
+        },
+        "is_effectively_planar": false
+      },
+      "unit": "deg",
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [
+        "RCPT_SE_LM_TERRAIN_DTM_DJURO"
+      ],
+      "method": "Horn 3x3 at the pin; least-squares plane over the parcel mask; per-cell gradient distribution over the same mask.",
+      "observed_at": "2026-09-20T18:38:08+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "THREE DIFFERENT QUESTIONS, THREE CORRECT ANSWERS. The pin figure is a local microslope, the plane is the whole parcel, the distribution is the ground underfoot. None is a correction of another; quote the one that matches the question.",
+        "The parcel is not planar (1.46 m RMS against 11.53 m relief), so no single slope describes it."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_PARCEL_REACHES_SHORELINE",
+      "domain": "water",
+      "value": {
+        "nearest_m": 0.2,
+        "farthest_boundary_point_m": 94.8,
+        "touches": true,
+        "water_surface_rh2000_m": 0.15,
+        "low_lying_area": [
+          {
+            "below_m": 1,
+            "area_m2": 214.0,
+            "share_percent": 4.2
+          },
+          {
+            "below_m": 2,
+            "area_m2": 617.0,
+            "share_percent": 12.0
+          },
+          {
+            "below_m": 3,
+            "area_m2": 937.0,
+            "share_percent": 18.2
+          },
+          {
+            "below_m": 5,
+            "area_m2": 2806.0,
+            "share_percent": 54.4
+          }
+        ]
+      },
+      "unit": "m",
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [
+        "RCPT_SE_LM_TERRAIN_DTM_DJURO"
+      ],
+      "method": "Shoreline taken as the edge of the ground model's constant water fill; that constant was found (modal height in the lowest metre) and accepted only because it covers an implausible share of a coastal window, not assumed.",
+      "observed_at": "2026-09-20T18:38:08+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "A DERIVED shoreline at 1 m resolution — not the cadastral shoreline and not the legal strandlinje."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_STRANDSKYDD_COVERS_WHOLE_PARCEL",
+      "domain": "regulatory",
+      "value": {
+        "band_m": 100,
+        "parcel_area_inside_m2": 5155.0,
+        "parcel_share_inside_percent": 100.0,
+        "buildings_inside": 4,
+        "buildings_total": 4,
+        "building_distances_m": [
+          12.4,
+          30.2,
+          32.8,
+          70.6
+        ],
+        "legal_basis": "7 kap. 13-14 §§ miljöbalken — the base strandskydd zone"
+      },
+      "unit": "%",
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [
+        "RCPT_SE_LM_TERRAIN_DTM_DJURO",
+        "RCPT_SE_LM_PROPERTY_DIVISION_KN0120"
+      ],
+      "method": "Distance field from the derived shoreline evaluated over every in-parcel DTM cell and every registered building centroid.",
+      "observed_at": "2026-09-20T18:38:08+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "Measured against a derived shoreline; a transaction answer should be taken from the authority.",
+        "No dispens, upphävande or plan-based exemption is accounted for here."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_NO_EXTENDED_STRANDSKYDD",
+      "domain": "regulatory",
+      "value": {
+        "result": "VERIFIED_NEGATIVE",
+        "layers": [
+          {
+            "layer": "extern_db:vy_lst_utvidgat_strandskydd_y",
+            "title": "Utvidgat strandskydd 300 m (Länsstyrelsen i Stockholms län)",
+            "matched": 0,
+            "control_features": 240
+          },
+          {
+            "layer": "intern_db:vy_strandskydd_utvidgat_lststockholm_y",
+            "title": "Utvidgat strandskydd, Lst Stockholm (kommunens kopia)",
+            "matched": 0,
+            "control_features": 241
+          },
+          {
+            "layer": "op_2022_2035_db:vy_op_ant_utokad_strandskydd_300m_y",
+            "title": "Utökat strandskydd 300 m (översiktsplan 2022–2035, antagen)",
+            "matched": 0,
+            "control_features": 241
+          }
+        ]
+      },
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "chip": "authoritative",
+      "source_receipt_refs": [
+        "RCPT_SE_VARMDO_WFS_PLANNING"
+      ],
+      "method": "WFS INTERSECTS against the authoritative parcel polygon, EPSG:3006 -> EPSG:3011; each layer queried unfiltered first as a control so a zero is a tested negative.",
+      "observed_at": "2026-09-20T18:38:08+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "The kommun's published depiction of the Länsstyrelsen decision, not the decision document itself."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_NO_DETALJPLAN",
+      "domain": "regulatory",
+      "value": {
+        "result": "VERIFIED_NEGATIVE",
+        "layers": [
+          {
+            "layer": "intern_db:vy_gallande_detaljplaner_y",
+            "title": "Gällande detaljplaner",
+            "matched": 0,
+            "control_features": 559
+          },
+          {
+            "layer": "intern_db:vy_pagaende_detaljplaner_y",
+            "title": "Pågående detaljplaner",
+            "matched": 0,
+            "control_features": 38
+          },
+          {
+            "layer": "intern_db:vy_upphavda_detaljplaner_efter_20230101_y",
+            "title": "Upphävda detaljplaner efter 2023-01-01",
+            "matched": 0,
+            "control_features": 2
+          }
+        ],
+        "consequence": "Unplanned land. Bygglov is judged against översiktsplan, strandskydd and PBL, not a plan map."
+      },
+      "unit": null,
+      "evidence_class": "OBSERVED_OFFICIAL",
+      "chip": "authoritative",
+      "source_receipt_refs": [
+        "RCPT_SE_VARMDO_WFS_PLANNING"
+      ],
+      "method": "Same controlled WFS INTERSECTS method as the strandskydd query.",
+      "observed_at": "2026-09-20T18:38:08+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "Absence of a plan is not absence of regulation.",
+        "No förhandsbesked or bygglov history was queried."
+      ]
+    },
+    {
+      "finding_id": "FINDING_SE_SEA_VIEW_ARC",
+      "domain": "view",
+      "value": {
+        "arc_percent": 43.9,
+        "arc_deg": 158.0,
+        "from_deg": 319.0,
+        "to_deg": 117.0,
+        "arc_count": 1,
+        "nearest_visible_water_m": 41.0,
+        "viewpoint": "centroid of the registered dwelling (119.7 m²)",
+        "eye_height_rh2000_m": 8.6,
+        "rays": 720,
+        "supersedes_stated_claim": "43.3% sea view, arc 321°–114°"
+      },
+      "unit": "%",
+      "evidence_class": "DERIVED",
+      "chip": "derived",
+      "source_receipt_refs": [
+        "RCPT_SE_LM_TERRAIN_DTM_DJURO"
+      ],
+      "method": "Radial ray-march of the 1 m ground model with running-maximum horizon angle, earth curvature and standard refraction; a bearing counts only where a VISIBLE sample is water.",
+      "observed_at": "2026-09-20T18:38:08+00:00",
+      "verification": "VERIFIED",
+      "limitations": [
+        "UPPER BOUND. The ground model is bare earth: no trees, no buildings, no boathouses, no neighbouring roofs. Each blocks a real view and none is in this calculation.",
+        "A RENDERED HORIZON IN ANY IMAGE IS NEVER A VIEW CLAIM. This number is the only view figure, and it is a ceiling, not an observation.",
+        "One viewpoint at one eye height; not a room-by-room analysis."
+      ]
+    }
+  ]
+}

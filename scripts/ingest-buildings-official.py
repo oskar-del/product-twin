@@ -160,12 +160,21 @@ def ingest(gpkg_path, origin, subject_ring, buffer_m):
         area = round(sum(ring_area(p[0]) - sum(ring_area(h) for h in p[1:]) for p in local), 1)
         on_parcel = point_in_ring((cx, cz), subject_ring)
         purposes = [props.get(f"andamal{i}") for i in range(1, 6)]
+        rings_flat = [[list(p) for p in ring] for poly in local for ring in poly]
         out.append({
+            # --- template contract (saterdalsvagen-14 shape; do not rename) -----
+            "object_id": props.get("objektidentitet"),
+            "type": props.get("objekttyp"),
+            "purpose": props.get("andamal1"),
+            "is_main": props.get("huvudbyggnad") == "Ja",
+            "pos_uncertainty_m": props.get("lagesosakerhetplan"),
+            "footprint_rings_local": rings_flat,
+            # --- additions this site needs (strandskydd, viewshed, placement) ---
             "source_object_id": props.get("objektidentitet"),
             "object_version": props.get("objektversion"),
             "valid_from": props.get("versiongiltigfran"),
             "object_type": props.get("objekttyp"),
-            "purpose": [p for p in purposes if p],
+            "purpose_all": [p for p in purposes if p],
             "is_main_building": props.get("huvudbyggnad") == "Ja",
             "house_number": props.get("husnummer"),
             "capture_reference": props.get("insamlingslage"),
@@ -219,16 +228,32 @@ def main():
                 Path(td) / gpkgs[0], origin, subject_ring, a.buffer)
 
     on_parcel = [b for b in buildings if b["placement"] == "ON_PARCEL"]
+    # The template's type vocabulary is carried in full so a consumer can index
+    # any canonical key; a zero is a true statement about this clip, not a gap.
+    types = {"Bostad": 0, "Komplementbyggnad": 0, "Samhällsfunktion": 0}
+    for b in buildings:
+        types[b["type"]] = types.get(b["type"], 0) + 1
+
     doc = {
-        "schema_version": "buildings-official-derived/v0.1",
-        "entity_type": "AuthoritativeBuildingFootprintClip",
+        # --- template contract (saterdalsvagen-14 shape; do not rename) ---------
+        "schema_version": "svartinge-buildings-official-derived/v0.1",
+        "entity_type": "OfficialBuildingFootprintClip",
         "subject": designation,
-        "evidence_class": "AUTHORITATIVE",
         "authority": "Lantmäteriet",
-        "source_product": f"{zpath.name} (GeoPackage, table {table})",
+        "source_product": f"{zpath.stem} (GeoPackage)",
+        "footprint_evidence_class": "AUTHORITATIVE",
+        "height_evidence_class": "DERIVED",
         "source_crs": f"EPSG:{srs}",
-        "coordinate_frame": "LOCAL_ENU x=EAST z=NORTH, origin = site pin (E0,N0 SWEREF99TM)",
+        "coordinate_frame": "LOCAL_ENU x=EAST z=NORTH, origin = municipal pin (E0,N0 SWEREF99TM)",
         "origin_sweref": list(origin),
+        "clip_radius_m": a.buffer,
+        "building_count": len(buildings),
+        "main_building_count": sum(1 for b in buildings if b["is_main"]),
+        "dwelling_count": sum(1 for b in buildings if b["type"] == "Bostad"),
+        "type_breakdown": dict(sorted(types.items())),
+        # --- additions this site needs -----------------------------------------
+        "evidence_class": "AUTHORITATIVE",
+        "source_table": table,
         "clip_buffer_m": a.buffer,
         "catalogue_receipt": receipt,
         "counts": {
@@ -238,11 +263,13 @@ def main():
             "context": len(buildings) - len(on_parcel),
         },
         "on_parcel_footprint_area_m2": round(sum(b["footprint_area_m2"] for b in on_parcel), 1),
-        "source_object_ids": [b["source_object_id"] for b in buildings],
+        "source_object_ids": [b["object_id"] for b in buildings],
         "buildings": buildings,
         "raw_asset": {"sha256": sha, "byte_count": len(raw)},
         "zip_entry_manifest": manifest,
         "limitations": [
+            "Footprints are the registered LM byggnad geometry (authoritative).",
+            "Heights are NOT in this product; any extrusion is DERIVED, not authoritative.",
             "Footprints are Lantmäteriet's registered building outlines captured at roof edge "
             "(insamlingslage), not a ground-level survey; plan uncertainty is per-feature.",
             "ON_PARCEL/CONTEXT is a centroid test against the registered property boundary; a "
@@ -251,7 +278,7 @@ def main():
         ],
     }
     geom_blob = json.dumps(
-        [b["rings_local"] for b in buildings], separators=(",", ":"), sort_keys=True)
+        [b["footprint_rings_local"] for b in buildings], separators=(",", ":"), sort_keys=True)
     doc["derived_geometry_sha256"] = hashlib.sha256(geom_blob.encode()).hexdigest()
 
     out = site / "buildings-official-derived-v0.1.json"
@@ -265,9 +292,9 @@ def main():
     print(f"on parcel          : {len(on_parcel)}  "
           f"({doc['on_parcel_footprint_area_m2']} m2 total footprint)")
     for b in on_parcel:
-        print(f"    - {b['object_type']:<20} {b['footprint_area_m2']:>7.1f} m2  "
-              f"{'HUVUDBYGGNAD' if b['is_main_building'] else ''} "
-              f"[{b['source_object_id']}]")
+        print(f"    - {b['type']:<20} {b['footprint_area_m2']:>7.1f} m2  "
+              f"{'HUVUDBYGGNAD' if b['is_main'] else ''} "
+              f"[{b['object_id']}]")
     print(f"derived geom sha256: {doc['derived_geometry_sha256']}")
     print(f"written            : {out}")
 
