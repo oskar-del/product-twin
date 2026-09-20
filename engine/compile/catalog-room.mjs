@@ -214,7 +214,12 @@ export function composeRoom({ rows, roles, decor = [], resolveGeometry }) {
       rotation_y_deg: p.rotation_y_deg,
       assetPath: geom?.assetPath ?? null,
       bounds: geom?.bounds ?? (role?.nominal_size_m ? { size: role.nominal_size_m } : null),
-      type: role?.element_type ?? "FURNITURE"
+      type: role?.element_type ?? "FURNITURE",
+      // The feed's resolver says where the size came from; a role falling back to
+      // its nominal box is NOMINAL no matter what the feed would have said.
+      dimensionSource: geom?.bounds
+        ? (geom.dimension_source ?? (geom.assetPath ? "GLB_BOUNDS" : "TITLE_STATED_CM"))
+        : (role?.nominal_size_m ? "NOMINAL" : null)
     });
   });
 

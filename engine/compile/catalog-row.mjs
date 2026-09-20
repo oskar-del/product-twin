@@ -75,6 +75,7 @@ export function commerceFromRow(row) {
  * @param {string} [opts.assetPath]    GLB path, when a proxy exists
  * @param {object} [opts.bounds]       derived bounds from glb-bounds
  * @param {string} [opts.type]         element type (default FURNITURE)
+ * @param {string} [opts.dimensionSource] GLB_BOUNDS | TITLE_STATED_CM | NOMINAL
  * @returns {object} scene element
  */
 export function rowElement(opts) {
@@ -85,7 +86,8 @@ export function rowElement(opts) {
     rotation_y_deg = 0,
     assetPath = null,
     bounds = null,
-    type = "FURNITURE"
+    type = "FURNITURE",
+    dimensionSource = null
   } = opts;
 
   const hasGeometry = Boolean(assetPath);
@@ -122,6 +124,13 @@ export function rowElement(opts) {
         "Dimensions are not derived from geometry and are not a fit claim."
       ];
 
+  // Where the numbers came from decides what the panel may claim about them.
+  // Measured off the shipped geometry → AUTHORITATIVE. Read out of a title
+  // string → INDICATIVE. Neither → nothing is claimed at all.
+  const resolvedSource = dimensionSource
+    ?? (hasGeometry && bounds ? "GLB_BOUNDS" : bounds ? "TITLE_STATED_CM" : "NOMINAL");
+  const dimensionEvidence = DIMENSION_EVIDENCE[resolvedSource] ?? "CONCEPT";
+
   return {
     id,
     type,
@@ -134,9 +143,38 @@ export function rowElement(opts) {
       ...(hasGeometry ? [`G2 proxy ${assetPath}`] : [])
     ],
     limitations,
-    commerce: commerceFromRow(row)
+    commerce: {
+      ...commerceFromRow(row),
+      dimensions_mm: bounds
+        ? {
+            width: Math.round(bounds.size[0] * 1000),
+            height: Math.round(bounds.size[1] * 1000),
+            depth: Math.round(bounds.size[2] * 1000)
+          }
+        : null,
+      dimension_source: bounds ? resolvedSource : null,
+      dimension_evidence: bounds ? dimensionEvidence : null
+    }
   };
 }
+
+/**
+ * Dimension provenance → evidence class (2026-09-15 consolidation).
+ * The chip beside a dimension describes how the number was obtained, which is a
+ * different question from how trustworthy the product's SHAPE is — a G2 proxy
+ * carries exact size with a representative silhouette.
+ */
+export const DIMENSION_EVIDENCE = {
+  GLB_BOUNDS: "AUTHORITATIVE",
+  TITLE_STATED_CM: "INDICATIVE",
+  NOMINAL: "CONCEPT"
+};
+
+export const DIMENSION_SOURCE_LABEL = {
+  GLB_BOUNDS: "Measured from the shipped G2 proxy geometry",
+  TITLE_STATED_CM: "Parsed from the product title's stated centimetres",
+  NOMINAL: "Nominal placeholder — not a product dimension"
+};
 
 /**
  * Dimensions parsed out of a product title ("... 200x90x74 cm").

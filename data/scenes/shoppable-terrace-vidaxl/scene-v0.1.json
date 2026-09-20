@@ -2,7 +2,7 @@
   "scene_version": "twin-scene/v0.1",
   "entity_type": "ShoppableRoomSceneExport",
   "scene_id": "SCENE_SHOPPABLE_TERRACE_VIDAXL_V01",
-  "generated_at": "2026-09-07T22:37:31.976Z",
+  "generated_at": "2026-09-20T17:19:31.161Z",
   "subject": {
     "label": "vidaXL Terrace — shoppable, channel-tracked",
     "identity_evidence_class": "CONCEPT",
@@ -173,6 +173,7 @@
     {
       "id": "HOUSE_FACADE",
       "type": "ROOM",
+      "picking": false,
       "label": "House facade",
       "evidence_class": "CONCEPT",
       "geometry": {
@@ -235,7 +236,14 @@
         "availability": "in_stock",
         "sku": "865486",
         "gtin": "8721364507135",
-        "channel": "vidaxl"
+        "channel": "vidaxl",
+        "dimensions_mm": {
+          "width": 1900,
+          "height": 700,
+          "depth": 620
+        },
+        "dimension_source": "TITLE_STATED_CM",
+        "dimension_evidence": "INDICATIVE"
       }
     },
     {
@@ -276,7 +284,14 @@
         "availability": "in_stock",
         "sku": "316401",
         "gtin": "8720286543535",
-        "channel": "vidaxl"
+        "channel": "vidaxl",
+        "dimensions_mm": {
+          "width": 1100,
+          "height": 450,
+          "depth": 600
+        },
+        "dimension_source": "TITLE_STATED_CM",
+        "dimension_evidence": "INDICATIVE"
       }
     },
     {
@@ -317,7 +332,14 @@
         "availability": "in_stock",
         "sku": "315639",
         "gtin": "8720286231166",
-        "channel": "vidaxl"
+        "channel": "vidaxl",
+        "dimensions_mm": {
+          "width": 630,
+          "height": 760,
+          "depth": 650
+        },
+        "dimension_source": "TITLE_STATED_CM",
+        "dimension_evidence": "INDICATIVE"
       }
     },
     {
@@ -358,7 +380,14 @@
         "availability": "in_stock",
         "sku": "3206372",
         "gtin": "8721012196896",
-        "channel": "vidaxl"
+        "channel": "vidaxl",
+        "dimensions_mm": {
+          "width": 2000,
+          "height": 830,
+          "depth": 680
+        },
+        "dimension_source": "TITLE_STATED_CM",
+        "dimension_evidence": "INDICATIVE"
       }
     },
     {
@@ -399,7 +428,14 @@
         "availability": "in_stock",
         "sku": "4105525",
         "gtin": "8721158784971",
-        "channel": "vidaxl"
+        "channel": "vidaxl",
+        "dimensions_mm": {
+          "width": 1500,
+          "height": 900,
+          "depth": 560
+        },
+        "dimension_source": "TITLE_STATED_CM",
+        "dimension_evidence": "INDICATIVE"
       }
     },
     {
@@ -440,7 +476,14 @@
         "availability": "in_stock",
         "sku": "42026959",
         "gtin": "8721364816640",
-        "channel": "vidaxl"
+        "channel": "vidaxl",
+        "dimensions_mm": {
+          "width": 300,
+          "height": 800,
+          "depth": 300
+        },
+        "dimension_source": "TITLE_STATED_CM",
+        "dimension_evidence": "INDICATIVE"
       }
     },
     {
@@ -481,7 +524,14 @@
         "availability": "in_stock",
         "sku": "42040527",
         "gtin": "8721451241713",
-        "channel": "vidaxl"
+        "channel": "vidaxl",
+        "dimensions_mm": {
+          "width": 1200,
+          "height": 750,
+          "depth": 500
+        },
+        "dimension_source": "TITLE_STATED_CM",
+        "dimension_evidence": "INDICATIVE"
       }
     }
   ]

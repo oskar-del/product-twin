@@ -2,7 +2,7 @@
   "scene_version": "twin-scene/v0.1",
   "entity_type": "ShoppableRoomSceneExport",
   "scene_id": "SCENE_SHOPPABLE_ROOM_NEWPORT_LIVING_V01",
-  "generated_at": "2026-09-07T22:29:09.256Z",
+  "generated_at": "2026-09-20T17:19:29.199Z",
   "subject": {
     "label": "Newport Living Room — shoppable, channel-tracked",
     "identity_evidence_class": "CONCEPT",
@@ -180,6 +180,7 @@
     {
       "id": "ROOM_VOLUME",
       "type": "ROOM",
+      "picking": false,
       "label": "Living room",
       "evidence_class": "CONCEPT",
       "geometry": {
@@ -268,7 +269,14 @@
         "availability": "in_stock",
         "sku": "100112",
         "gtin": "7340066723127",
-        "channel": "newport"
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 2000,
+          "height": 850,
+          "depth": 900
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "AUTHORITATIVE"
       }
     },
     {
@@ -308,7 +316,14 @@
         "availability": "in_stock",
         "sku": "100600",
         "gtin": null,
-        "channel": "newport"
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 1200,
+          "height": 400,
+          "depth": 600
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "AUTHORITATIVE"
       }
     },
     {
@@ -349,7 +364,14 @@
         "availability": "in_stock",
         "sku": "100121",
         "gtin": "7340066723059",
-        "channel": "newport"
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 750,
+          "height": 850,
+          "depth": 800
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "AUTHORITATIVE"
       }
     },
     {
@@ -389,7 +411,14 @@
         "availability": "in_stock",
         "sku": "100599",
         "gtin": null,
-        "channel": "newport"
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 500,
+          "height": 550,
+          "depth": 500
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "AUTHORITATIVE"
       }
     },
     {
@@ -429,7 +458,14 @@
         "availability": "in_stock",
         "sku": "19168",
         "gtin": null,
-        "channel": "newport"
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 800,
+          "height": 800,
+          "depth": 400
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "AUTHORITATIVE"
       }
     },
     {
@@ -470,7 +506,14 @@
         "availability": "in_stock",
         "sku": "100611",
         "gtin": "7340066723080",
-        "channel": "newport"
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 750,
+          "height": 850,
+          "depth": 800
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "AUTHORITATIVE"
       }
     },
     {
@@ -511,7 +554,14 @@
         "availability": "in_stock",
         "sku": "54125",
         "gtin": "848539021420",
-        "channel": "newport"
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 1700,
+          "height": 12,
+          "depth": 2400
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "AUTHORITATIVE"
       }
     },
     {
@@ -551,7 +601,14 @@
         "availability": "in_stock",
         "sku": "43808",
         "gtin": null,
-        "channel": "newport"
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 600,
+          "height": 600,
+          "depth": 400
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "AUTHORITATIVE"
       }
     },
     {
@@ -592,7 +649,14 @@
         "availability": "in_stock",
         "sku": "67284",
         "gtin": "7340172925521",
-        "channel": "newport"
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 500,
+          "height": 150,
+          "depth": 500
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "AUTHORITATIVE"
       }
     },
     {
@@ -633,7 +697,14 @@
         "availability": "in_stock",
         "sku": "98240",
         "gtin": "7340172900450",
-        "channel": "newport"
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 160,
+          "height": 300,
+          "depth": 160
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "AUTHORITATIVE"
       }
     },
     {
@@ -673,7 +744,14 @@
         "availability": "in_stock",
         "sku": "100443",
         "gtin": null,
-        "channel": "newport"
+        "channel": "newport",
+        "dimensions_mm": {
+          "width": 300,
+          "height": 500,
+          "depth": 300
+        },
+        "dimension_source": "GLB_BOUNDS",
+        "dimension_evidence": "AUTHORITATIVE"
       }
     }
   ]

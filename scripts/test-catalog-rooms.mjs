@@ -268,12 +268,28 @@ check("at least 6 shoppable elements", vxShoppable.length >= 6);
 check("every BUY carries channel tracking", vxShoppable.every(e => /[?&]as=/.test(e.commerce.buy_url ?? "")));
 check("terrace BUY goes to the vidaXL network",
   vxShoppable.every(e => /adt267\.com|vidaxl/i.test(e.commerce.buy_url ?? "")));
-check("no proxies claimed for vidaXL",
-  vxParsed.elements.every(e => e.geometry.primitive !== "GLTF_ASSET"));
-check("shoppable terrace pieces are CONCEPT",
-  vxShoppable.every(e => e.evidence_class === "CONCEPT"));
-check("terrace states the no-proxy limitation",
-  vxShoppable.every(e => e.limitations.some(l => /No 3D proxy/.test(l))));
+// vidaXL shipped no geometry when this room was first built; G2 proxies were
+// generated for it later. The invariant is NOT "there are no proxies" — it is
+// that each piece's evidence matches what it actually has, and that the
+// DIMENSIONS still trace to the title no matter how good the mesh gets.
+const vxWithProxy = vxShoppable.filter(e => e.geometry.primitive === "GLTF_ASSET");
+const vxWithoutProxy = vxShoppable.filter(e => e.geometry.primitive !== "GLTF_ASSET");
+
+check("proxy-backed terrace pieces are INDICATIVE",
+  vxWithProxy.every(e => e.evidence_class === "INDICATIVE"));
+check("proxy-backed terrace pieces name their asset",
+  vxWithProxy.every(e => typeof e.geometry.asset_path === "string" && e.geometry.asset_path.length > 0));
+check("terrace proxy files exist on disk",
+  vxWithProxy.every(e => fs.existsSync(path.resolve(root, e.geometry.asset_path))
+    || fs.existsSync(path.resolve(root, "../repo-avatar-factory", e.geometry.asset_path))));
+check("proxy-less terrace pieces are CONCEPT",
+  vxWithoutProxy.every(e => e.evidence_class === "CONCEPT"));
+check("proxy-less terrace pieces state the no-proxy limitation",
+  vxWithoutProxy.every(e => e.limitations.some(l => /No 3D proxy/.test(l))));
+check("terrace dimensions still come from the title, not the mesh",
+  vxShoppable.every(e => e.commerce.dimension_source === "TITLE_STATED_CM"));
+check("terrace dimension chip is INDICATIVE",
+  vxShoppable.every(e => e.commerce.dimension_evidence === "INDICATIVE"));
 check("claim policy names the box caveat", /not a fit claim/.test(vxScene.legal_claim_policy.rule));
 
 // Every terrace piece got its size from its own title
@@ -303,6 +319,52 @@ for (const [name, parsed] of [["newport", npParsed], ["vidaxl", vxParsed]]) {
     return new Set(skus).size === skus.length;
   })());
 }
+
+// §11 Item-2 contract: the chip beside a dimension, and verbatim BUY links
+console.log("§11 dimension provenance + verbatim links");
+import { DIMENSION_EVIDENCE } from "../engine/compile/catalog-row.mjs";
+
+check("GLB bounds map to AUTHORITATIVE", DIMENSION_EVIDENCE.GLB_BOUNDS === "AUTHORITATIVE");
+check("title-stated cm maps to INDICATIVE", DIMENSION_EVIDENCE.TITLE_STATED_CM === "INDICATIVE");
+check("nominal maps to CONCEPT", DIMENSION_EVIDENCE.NOMINAL === "CONCEPT");
+
+for (const [name, parsed] of [["newport", npParsed], ["vidaxl", vxParsed]]) {
+  const shop = parsed.elements.filter(e => e.commerce);
+  check(`${name}: every shoppable states a dimension source`,
+    shop.every(e => e.commerce.dimension_source));
+  check(`${name}: chip matches the source it sits beside`,
+    shop.every(e => e.commerce.dimension_evidence === DIMENSION_EVIDENCE[e.commerce.dimension_source]));
+  check(`${name}: dimensions_mm present whenever a source is claimed`,
+    shop.every(e => !e.commerce.dimension_source || e.commerce.dimensions_mm));
+}
+
+check("newport dimensions are measured from the shipped mesh",
+  npParsed.elements.filter(e => e.commerce).every(e => e.commerce.dimension_source === "GLB_BOUNDS"));
+
+// The BUY link is the revenue. Re-diff it against the catalog here, in the gate,
+// so a future refactor that "cleans up" a URL fails instead of silently earning nothing.
+const catalogs = {
+  newport: "../repo-avatar-factory/data/newport/newport-catalog.jsonl",
+  vidaxl: "../repo-avatar-factory/data/vidaxl-outdoor/vidaxl-outdoor-catalog.jsonl"
+};
+const byChannel = {};
+for (const [channel, rel] of Object.entries(catalogs)) {
+  byChannel[channel] = new Map(
+    fs.readFileSync(path.resolve(root, rel), "utf8")
+      .split("\n").filter(Boolean).map(l => JSON.parse(l)).map(r => [r.id, r])
+  );
+}
+let verbatimAll = 0;
+let shoppableAll = 0;
+for (const parsed of [npParsed, vxParsed]) {
+  for (const el of parsed.elements.filter(e => e.commerce)) {
+    shoppableAll++;
+    const src = byChannel[el.commerce.channel]?.get(el.commerce.sku);
+    if (src && el.commerce.buy_url === src.affiliate_link) verbatimAll++;
+  }
+}
+check(`every BUY link is byte-identical to its catalog row (${verbatimAll}/${shoppableAll})`,
+  verbatimAll === shoppableAll && shoppableAll >= 18);
 
 console.log(`\n${passed} passed, ${failed} failed (${passed + failed} checks)`);
 if (failed) process.exit(1);

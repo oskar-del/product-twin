@@ -69,6 +69,7 @@ async function loadScene(sceneUrl, sceneDocument) {
  * @param {boolean} [options.chrome=true]      mount the engine's own dock/legend/panel/tools
  * @param {function}[options.onElementOpen]    called with each opened element
  * @param {string}  [options.assetBasePath]    prefix for GLTF_ASSET asset_path resolution
+ * @param {number}  [options.stageBackground]  override the profile's background (host chrome match)
  */
 export async function createTwinViewer({
   mount,
@@ -80,6 +81,7 @@ export async function createTwinViewer({
   chrome = true,
   onElementOpen = null,
   assetBasePath = "",
+  stageBackground = null,
   tweenMs = DEFAULT_TWEEN_MS
 }) {
   if (!mount) throw new TypeError("createTwinViewer requires a mount element");
@@ -206,7 +208,8 @@ export async function createTwinViewer({
       hemisphere: viewer.hemisphere,
       renderer: viewer.renderer,
       labelsVisible: labelsEnabled && machine.current.labels,
-      depth
+      depth,
+      stageBackground
     });
   }
 

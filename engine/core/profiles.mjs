@@ -130,13 +130,17 @@ export function createMaterialFactory({realisticPalette = {}} = {}) {
  * Apply a profile to a built scene graph. Meshes carry both materials from construction, so
  * switching is a pointer swap rather than a rebuild — profile changes must be free.
  */
-export function applyProfile(profileName, {scene, root, realismDecor, labelGroup, hemisphere, renderer, labelsVisible = true, depth = null}) {
+export function applyProfile(profileName, {scene, root, realismDecor, labelGroup, hemisphere, renderer, labelsVisible = true, depth = null, stageBackground = null}) {
   const name = profileName === PROFILE_COMPARE ? PROFILE_INTELLIGENCE : profileName;
   const environment = PROFILE_ENVIRONMENTS[name] ?? PROFILE_ENVIRONMENTS.INTELLIGENCE;
   const realistic = name === PROFILE_REALISTIC;
   const systems = name === PROFILE_SYSTEMS;
 
-  scene.background = new THREE.Color(environment.background);
+  // A surface that frames the stage in its own chrome (the ink Rooms page) needs the
+  // 3D background to match that chrome, not the profile's studio default — otherwise
+  // the canvas reads as a pasted-in rectangle. Fog still follows the profile so depth
+  // cues survive the override.
+  scene.background = new THREE.Color(stageBackground ?? environment.background);
   // Fog distances come from the scene's own extents when it declares them: hardcoded distances
   // tuned on one site turn a larger site into haze and give a smaller one no depth cue at all.
   scene.fog = new THREE.Fog(

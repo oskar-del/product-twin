@@ -71,7 +71,6 @@ function shell({title, script, scene, generatedAt, looks = [], plot}) {
 <meta name="generator" content="${escapeHtml(ENGINE_VERSION_STRING)}">
 <meta name="twin-scene-id" content="${escapeHtml(scene.scene_id)}">
 <meta name="twin-scene-version" content="${escapeHtml(scene.scene_version)}">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 <style>
 ${chromeCss()}
   html,body{margin:0;height:100%;overflow:hidden}

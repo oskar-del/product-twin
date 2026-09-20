@@ -67,7 +67,11 @@ export function createSceneBuilder({materials, textures = null, labels: labelsEn
 
   function pickable(object, element) {
     object.userData.element = element;
-    clickable.push(object);
+    // A container shell (a room volume wrapping the furniture, a site envelope)
+    // sits between the camera and everything inside it, so leaving it pickable
+    // means every click lands on the box and never on the product. An element
+    // may opt out of picking; it still renders, it just stops swallowing hits.
+    if (element.picking !== false) clickable.push(object);
     return object;
   }
 
