@@ -1,5 +1,23 @@
 # MIMER (Svärtinge 54:28) — persistent handoff
 
+> ## ⛳ SPRINT DAY — 2026-09-20 (Brain; Oskar runs all sessions today. Supersedes every earlier pin — the 2026-09-15
+> CONSOLIDATION decisions still stand: one site per address · six screens · ink chrome · Platform owns the chrome.)
+> RULES OF THE DAY: pull first · work the queue in order · each item ends with a screenshot in docs/screens/ + numbers ·
+> commit after every item (Oskar pushes hourly) · nothing invented; every figure computed from receipts · report
+> "DONE / NOT checked" per item in your handoff at end of day. Chrome tokens until Platform ships the package:
+> bg #101916 · card #17241f · paper #f5f1e8 · bronze #d8b874 · serif display · Inter labels · evidence chips
+> authoritative #176b52 / indicative #c18a2d / derived #497aa2 / reported #a65b68 / concept #735a9e.
+>
+> **MIMER — the numbers become a chapter, and they price the real interior.**
+> 1. Screen 6 "Numbers": the Lender dossier generator emits an HTML chapter on the chrome tokens — cost lines, comps,
+>    NOT-verified ledger rendered as evidence chips. Same generator, new skin. DoD: HTML in the vault + screenshot.
+> 2. FF&E line: price the Vinkelhuset living room from Platform's actual room composition
+>    (../repo-platform/data/scenes/shoppable-room-newport-living/ rows → price + source + date). One receipted number
+>    per spec level (this set / a mid set / a premium set from the same catalog). DoD: table in dossier with receipts.
+> 3. Rate-card skeleton for §6 (unit · quantity · rate slot · source slot) so a husleverantör offert drops straight in.
+> 4. Generator takes `--site <dir> --geometry <spec>`; dry-run on Djurö 4:147 (5,156.3 m²) with all money NEEDS_SOURCE.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
