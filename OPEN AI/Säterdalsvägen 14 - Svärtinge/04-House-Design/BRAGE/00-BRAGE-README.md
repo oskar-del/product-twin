@@ -89,6 +89,52 @@
 > After Vinkelhuset ships: the 10-type Swedish classics library.
 > Commit every block; Oskar pushes.
 
+
+## SPRINT DAY 2026-09-20 — BRAGE status
+
+**Item 1 — room-level geometry spec · DONE** (`7a37f92978`)
+`geometry/house-v0.3-geometry-spec.json` + `build-house-v0.3.mjs` (generator),
+`validate-house-v0.3.mjs` (validator), `draw-house-v0.3.mjs` (plan renderer).
+13 rooms (12 heated, 1 cold) · 18 openings with sill/head heights and orientation ·
+finishes per surface · wall segments derived from each polygon. No typed dimensions:
+rooms are footprint polygons and every area, perimeter, volume and glazing ratio is
+computed from them. `ROOM_GLANRUMMET` keeps its v0.2 id and 7×7 m footprint so the
+room Platform already built still resolves.
+`node geometry/validate-house-v0.3.mjs` → `PASS · 13 rooms · 18 openings · heated
+206.4 m² (brief 210, diff -3.6)`, exit 0. It re-derives each stated area from its own
+polygon rather than trusting the file.
+Upper floor is counted only where headroom clears 1.9 m under the 30° roof — 4.23 m of
+the 7 m span. Counting the full span would have added ~40 m² nobody can stand up in.
+Brain ruled 206,4 m² supersedes the brief's 210.
+*NOT checked:* no BYA/BTA or H30/H50 check (gates open); the souterrain's −2.5 m floor
+level is still the v0.2 assumption, not re-derived against the DTM; openings are design
+intent, not daylight- or egress-checked; MIMER has not re-priced from v0.3.
+
+**Item 2 — roof · DONE** (same commit)
+30° gable, ridge E–W at Y 5.02 m, eaves Y 3.0 m, 0.5 m overhang, standing-seam metal;
+cold wing 15° mono-pitch falling north. Supersedes the asymmetric-ridge sketch in
+`04-WINNER-DEVELOPED.md`, which now carries that note. Spatial renders from this.
+
+**Item 3 — screen 3 on the chrome · DONE** (`8ba8e6fc56`)
+Republished to the same artifact URL (2f790a57-…), name and 🏡 favicon unchanged.
+Tokens mirrored from `repo-platform/engine/ui/chrome/tokens.css`, not invented. The
+re-skin is one indirection, not 31 edits: the drawings paint with this file's own
+variable names, so re-pointing those at the ink tokens re-skins every drawing at once.
+Areas propagated — markplan 164 m² heated + 40 m² cold = 204 m² footprint, exploatering
+10,5 %; winner room labels 49 / 42 / 9 / 42 / 14 / 14; zero remaining hits for
+"210 m²", "~30 m² garage" or "markplan ~140".
+*NOT checked:* only the first screen-height of the artifact was rendered and looked at.
+The A/B/C sections, the four construction details and the material palette were
+re-skinned through the token remap but NOT visually inspected on the dark ground —
+contrast there is unverified. Mirrored tokens can drift from Platform's package with
+nothing detecting it. The artifact is shared by link and viewers stay pinned to the
+previous version until the share pin is moved.
+
+**Item 4 — classics library entry #1 · NOT STARTED** (it was "if time"; the time went on
+items 1–3 and on verifying them).
+
+Nothing is pushed — Oskar pushes.
+
 BRAGE is the creative counterpart to MIMER: MIMER measures the site, BRAGE argues **what deserves to stand on it**, then develops the chosen concept into a spatial + systems spec the engine can build.
 
 - Property: `SVÄRTINGE 54:28` — Säterdalsvägen 14, 605 70 Svärtinge, Norrköping
