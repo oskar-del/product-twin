@@ -24,7 +24,7 @@ Usage:
   python3 scripts/ingest-property-division.py --zip /path/kn0581.zip          # local asset
   python3 scripts/ingest-property-division.py --self-test                     # prove pipeline
 """
-import argparse, base64, hashlib, json, os, re, sqlite3, struct, sys, tempfile, urllib.request, zipfile
+import argparse, base64, hashlib, json, os, pathlib, re, sqlite3, struct, sys, tempfile, urllib.request, zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -110,8 +110,29 @@ class Site:
                     return subject
         return None
 
-    def product(self):
-        return f"fastighetsindelning_kn{self.kommun} (GeoPackage)"
+    def product(self, zip_manifest=None):
+        """
+        Name the source product from the archive we just hashed, not from a resolved code.
+
+        Adopted from Djurö's ingest (the mechanism that fixed the same bug from the other side):
+        the .gpkg entry inside the hashed zip IS the product, so the emitted name cannot
+        disagree with the bytes. The kommun-derived name is only a fallback for the self-test,
+        which has no real archive, and it is labelled as such.
+        """
+        if zip_manifest:
+            names = [pathlib.PurePath(entry["name"]).stem for entry in zip_manifest
+                     if str(entry.get("name", "")).lower().endswith(".gpkg")]
+            if len(names) != 1:
+                raise SystemExit(f"expected exactly one .gpkg in the archive, found {names}")
+            product = f"{names[0]} (GeoPackage)"
+            found = re.search(r"kn(\d{4})", names[0])
+            if found and found.group(1) != self.kommun:
+                raise SystemExit(
+                    f"archive names kommun kn{found.group(1)} but this site is {self.kommun_name} "
+                    f"(kommunkod {self.kommun}). Refusing to emit a receipt whose product name "
+                    f"contradicts the site.")
+            return product
+        return f"fastighetsindelning_kn{self.kommun} (GeoPackage, name derived from kommunkod — no archive read)"
 EXPECTED_EPSG = 3006
 
 
@@ -261,7 +282,7 @@ def emit(site, subject, context, origin, parsed_srs, raw_sha, raw_bytes, zip_man
         "subject": subject["designation"],
         "evidence_class": "AUTHORITATIVE",
         "authority": "Lantmäteriet",
-        "source_product": site.product(),
+        "source_product": site.product(zip_manifest),
         "kommun": site.kommun_name,
         "kommunkod": site.kommun,
         "source_object_ids": [subject["object_id"]] + [c["object_id"] for c in context],
@@ -383,13 +404,24 @@ def self_test(site):
     con.commit(); con.close()
 
     subject, context, srs = ingest_gpkg(g, origin, site.designation)
-    payload = emit(site, subject, context, origin, srs, "deadbeef", 123,
-                   [{"name": "t.gpkg", "size": 1}])
+    # A realistic manifest, so the self-test exercises the archive-read path that real runs use.
+    manifest = [{"name": f"fastighetsindelning_kn{site.kommun}.gpkg", "size": 1}]
+    payload = emit(site, subject, context, origin, srs, "deadbeef", 123, manifest)
 
     assert payload["subject"] == site.designation, payload["subject"]
     assert payload["kommunkod"] == site.kommun, payload["kommunkod"]
     assert payload["source_product"] == f"fastighetsindelning_kn{site.kommun} (GeoPackage)", \
         payload["source_product"]
+    # Without an archive the name falls back to the kommun code and SAYS so, so a reader can
+    # tell a name that was read from bytes from one that was composed.
+    fallback = emit(site, subject, context, origin, srs, "deadbeef", 123, None)
+    assert "no archive read" in fallback["source_product"], fallback["source_product"]
+    try:
+        emit(site, subject, context, origin, srs, "deadbeef", 123,
+             [{"name": "fastighetsindelning_kn9999.gpkg", "size": 1}])
+        raise AssertionError("a contradicting archive name was accepted")
+    except SystemExit:
+        pass
     assert srs == {3006}, srs
     ring = payload["subject_rings_local"][0]
     assert ring[0] == [-20.0, -15.0], ring[0]           # E-E0, N-N0
@@ -397,11 +429,12 @@ def self_test(site):
     assert len(context) == 1, f"clip buffer failed: {len(context)} (nbr in, far out)"
     assert context[0]["designation"] == neighbour
     h1 = payload["derived_geometry_sha256"]
-    h2 = emit(site, subject, context, origin, srs, "deadbeef", 123, [])["derived_geometry_sha256"]
+    h2 = emit(site, subject, context, origin, srs, "deadbeef", 123, manifest)["derived_geometry_sha256"]
     assert h1 == h2, "derived hash not deterministic"
 
     print(f"SELF-TEST PASS · {site.designation} · {site.kommun_name or '?'} (kn{site.kommun})")
-    print(f"  product line    {payload['source_product']}")
+    print(f"  product line    {payload['source_product']} (read from the archive manifest)")
+    print(f"  contradiction   an archive naming another kommun is refused")
     print(f"  local ENU       origin {e0},{n0} · ring[0]={ring[0]} ring[2]={ring[2]} (E-E0, N-N0)")
     print(f"  250 m clip      kept {neighbour}, dropped {distant}")
     print(f"  derived sha256  {h1[:16]}… deterministic")

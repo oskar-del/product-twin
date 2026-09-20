@@ -15,7 +15,7 @@ Usage:
   python3 scripts/ingest-buildings.py --zip PATH --radius 200
   python3 scripts/ingest-buildings.py --self-test
 """
-import argparse, hashlib, importlib.util, json, os, sqlite3, struct, tempfile, zipfile
+import argparse, hashlib, importlib.util, json, os, re, sqlite3, struct, tempfile, zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -96,6 +96,27 @@ def ingest(gpkg_path, o, radius):
     return out, srs
 
 
+def product_name(site, manifest):
+    """
+    Name the product from the .gpkg inside the archive we hashed, same mechanism as the
+    property-division ingest. The archive is the evidence; a composed name is only a fallback
+    and labels itself as one.
+    """
+    if manifest:
+        names = [Path(entry["name"]).stem for entry in manifest
+                 if str(entry.get("name", "")).lower().endswith(".gpkg")]
+        if len(names) != 1:
+            raise SystemExit(f"expected exactly one .gpkg in the archive, found {names}")
+        found = re.search(r"kn(\d{4})", names[0])
+        if found and found.group(1) != site.kommun:
+            raise SystemExit(
+                f"archive names kommun kn{found.group(1)} but this site is {site.kommun_name} "
+                f"(kommunkod {site.kommun}). Refusing to emit a receipt whose product name "
+                f"contradicts the site.")
+        return f"{names[0]} (GeoPackage)"
+    return f"byggnad_kn{site.kommun} (GeoPackage, name derived from kommunkod — no archive read)"
+
+
 def emit(site, buildings, o, srs, raw_sha, raw_bytes, manifest, radius):
     e0, n0 = o
     payload = {
@@ -103,7 +124,7 @@ def emit(site, buildings, o, srs, raw_sha, raw_bytes, manifest, radius):
         "entity_type": "OfficialBuildingFootprintClip",
         "authority": "Lantmäteriet",
         "subject": site.designation,
-        "source_product": f"byggnad_kn{site.kommun} (GeoPackage)",
+        "source_product": product_name(site, manifest),
         "kommun": site.kommun_name,
         "kommunkod": site.kommun,
         "footprint_evidence_class": "AUTHORITATIVE",
@@ -189,12 +210,21 @@ def self_test(site):
     b = buildings[0]
     assert b["object_id"] == "uuid-near" and b["is_main"] and b["type"] == "Bostad", b
     assert b["footprint_rings_local"][0][0] == [5.0, 5.0], b["footprint_rings_local"][0][0]
-    p = emit(site, buildings, o, srs, "dead", 1, [], DEFAULT_RADIUS_M)
+    manifest = [{"name": f"byggnad_kn{site.kommun}.gpkg", "size": 1}]
+    p = emit(site, buildings, o, srs, "dead", 1, manifest, DEFAULT_RADIUS_M)
     assert p["footprint_evidence_class"] == "AUTHORITATIVE" and p["height_evidence_class"] == "DERIVED"
     assert p["kommunkod"] == site.kommun, p["kommunkod"]
     assert p["source_product"] == f"byggnad_kn{site.kommun} (GeoPackage)", p["source_product"]
+    fallback = emit(site, buildings, o, srs, "dead", 1, None, DEFAULT_RADIUS_M)
+    assert "no archive read" in fallback["source_product"], fallback["source_product"]
+    try:
+        emit(site, buildings, o, srs, "dead", 1, [{"name": "byggnad_kn9999.gpkg", "size": 1}],
+             DEFAULT_RADIUS_M)
+        raise AssertionError("a contradicting archive name was accepted")
+    except SystemExit:
+        pass
     print(f"SELF-TEST PASS · {site.designation} · {site.kommun_name or '?'} (kn{site.kommun})")
-    print(f"  product line    {p['source_product']}")
+    print(f"  product line    {p['source_product']} (read from the archive manifest)")
     print(f"  local ENU       origin {e0},{n0} · footprint[0]={b['footprint_rings_local'][0][0]}")
     print("  200 m clip      kept the near building, dropped the 500 m one")
     print("  evidence        footprint=AUTHORITATIVE, height=DERIVED (never invented)")
