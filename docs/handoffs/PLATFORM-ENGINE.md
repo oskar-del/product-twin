@@ -270,6 +270,50 @@ One checkout = one executor. Deliverable-first: every block ends with something 
 
 ## Current state
 
+### 2026-09-20 POST-CLOSE — sole Platform executor from here
+
+Brain's dispatcher moved the second session to Spatial's queue: **repo-platform
+is now a single-executor checkout again.** Three commits land after the
+"all four items DONE" close above, so treat that close as a snapshot that
+predates them:
+
+- `b916c0f96f` **ink stage.** `INK_STAGE_ENVIRONMENT` in `core/profiles.mjs` —
+  dark neutral ground, warm low-key hemisphere, contact shadows. Opt-in per
+  surface via `stageEnvironment`; it is **not** a new profile and does **not**
+  touch `REALISTIC`'s shared defaults, which every other surface renders
+  against. Scoped to REALISTIC by construction: INTELLIGENCE is the evidence
+  view and is never restyled to suit a surface. vidaXL terrace default profile
+  INTELLIGENCE → REALISTIC (it defaulted to the evidence view back when every
+  piece was a CONCEPT box; those rows now carry G2 proxies).
+- `ef3c9ebce0` **Glanrummet canonicalised.** `data/scenes/room-glanrummet-newport`
+  is the one scene; the `shoppable-room-glanrummet` duplicate is deleted and the
+  Rooms surface repointed. Two defects fixed while adopting it: the room volume
+  had no `picking:false` (third instance of that bug — it swallowed every click,
+  so no product panel could open), and the scene inherited the Newport room's
+  claim policy by spread, which understated a CONCEPT house sold on a lake
+  outlook. `blocked_claims` now carries BUILDABLE_ENVELOPE, VIEW_OR_OUTLOOK and
+  FLOOR_LEVEL, and both glazing elements state that anything seen through them
+  is a VISUALIZATION.
+
+**Standing rule (Brain, 2026-09-20):** a rendered horizon in any still is never
+a view claim — label VISUALIZATION.
+
+**Gate: 13 suites, 928 checks, green. Working tree clean.**
+
+**NOT checked:** `dist/stills/*.py` and the committed still are not yet audited
+against the VISUALIZATION rule — the rooms surface and the Glanrummet scene
+carry the label, the stills pipeline was the other session's and I have not
+read its output text. Also unchecked: any browser but the CDP/preview Chrome,
+narrow viewports, and scene teardown between Looks switches (not audited for
+leaks).
+
+**Next:** re-run `node scripts/compile-room-in-house.mjs` when BRAGE's
+house-v0.3 spec lands (it keeps ROOM_GLANRUMMET); the vendored copy is
+`data/house/brage-house-in-scene-v0.3-patch.json` with its source commit in
+`data/house/PROVENANCE.md`.
+
+
+
 ### 2026-09-20 SPRINT DAY — session B (the second Platform session) · end-of-day report
 
 **⚠️ READ THIS FIRST: two Platform sessions ran the same queue today.** A second
