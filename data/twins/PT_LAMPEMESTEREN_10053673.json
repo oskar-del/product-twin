@@ -48,5 +48,12 @@
     "evidence_class": "DERIVED",
     "matched_text": "PILLAR Maxi utomhus-LED-ljus, höjd 40 cm, IPX5 – Uyuni Lighting - Vardagsrum - Design - Plast - Med en ljuskälla",
     "limitation": "Category inferred from merchant title text; feed ships no category field."
+  },
+  "material_cues": {
+    "colour_text": "Vit",
+    "material_text": "Plast",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

@@ -36,11 +36,11 @@
   },
   "physical": {
     "dimensions_mm": {
-      "width": 2400,
-      "depth": 2400,
+      "width": 240,
+      "depth": 240,
       "height": null
     },
-    "dimensions_source": "title_regex:diameter",
+    "dimensions_source": "title_regex:diameter_bare_mm_by_magnitude",
     "dimensions_axes": "WD"
   },
   "attach": {

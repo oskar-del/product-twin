@@ -36,12 +36,16 @@
   },
   "physical": {
     "dimensions_mm": {
-      "width": 2200,
-      "depth": 780,
+      "width": null,
+      "depth": null,
       "height": null
     },
-    "dimensions_source": "title_regex:double_wd",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd_luminaire_ambiguous",
+    "dimensions_axes": "AMBIGUOUS",
+    "dimensions_ambiguous_mm": [
+      2200,
+      780
+    ]
   },
   "attach": {
     "role": "base"
@@ -52,5 +56,12 @@
     "evidence_class": "REPORTED",
     "matched_text": "Produkter  >  Taklampor",
     "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
+  },
+  "material_cues": {
+    "colour_text": "Metallisk",
+    "material_text": "Glas",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

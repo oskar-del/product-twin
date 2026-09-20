@@ -52,5 +52,12 @@
     "evidence_class": "DERIVED",
     "matched_text": "Cordie takfläkt med lampa Ø 53 cm tyst DC - Lucande - Vardagsrum - Lantlig / rustik - Bambu - Med en ljuskälla",
     "limitation": "Category inferred from merchant title text; feed ships no category field."
+  },
+  "material_cues": {
+    "colour_text": "Trä",
+    "material_text": "Bambu",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

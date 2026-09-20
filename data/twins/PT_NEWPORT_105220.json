@@ -60,7 +60,9 @@
       "geometry_owner": "Product Twin universal proxy",
       "manufacturer_geometry_copied": false,
       "manufacturer_texture_artwork_copied": false
-    }
+    },
+    "sha256": "e9c214abc2e4833a1766a4784f9e3d4cff3abf06d40d1f16a9c478a13ba66efc",
+    "rebuilt_reason": "cylinder cap winding fix 2026-09-20"
   },
   "readiness": {
     "identity": "feed_verified",
@@ -132,5 +134,12 @@
   },
   "attach": {
     "role": "free"
+  },
+  "material_cues": {
+    "colour_text": "Grön",
+    "material_text": "Keramik / Järn / PVC",
+    "evidence_class": "REPORTED",
+    "source": "newport_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

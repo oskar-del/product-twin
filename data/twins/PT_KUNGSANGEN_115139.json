@@ -26,13 +26,25 @@
     "primary_url": "https://api.kungsangen.com/medias/sys_master/images/hfc/h41/8825224560670/ks2000Wx1500H_sofiestrom_ramsang_s23_90_anouk_rose/ks2000Wx1500H-sofiestrom-ramsang-s23-90-anouk-rose.jpg"
   },
   "geometry": {
-    "level": "G0",
-    "state": "catalog_only"
+    "level": "G2",
+    "state": "promoted_hero_proxy",
+    "avatar_id": "AVATAR_KUNGSANGEN_115139_G2_PROXY",
+    "asset_path": "data/geometry/avatars/kungsangen-115139-g2-proxy.glb",
+    "sha256": "4319f93cc7e39274d7ba5c3698a06fff64f2e7eff9efaa2b126a6b4da16b4a76",
+    "scale_state": "footprint 1400x2000mm from title; height 600mm CATEGORY DEFAULT",
+    "height_source": "category_default",
+    "footprint_source": "title_regex:double_wd_cm_assumed",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
   },
   "readiness": {
     "identity": "feed_verified",
     "commerce": "affiliate_live",
-    "geometry": "G0_catalog_only"
+    "geometry": "G2_promoted_hero_proxy"
   },
   "attach": {
     "role": "base"

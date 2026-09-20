@@ -12,12 +12,16 @@
   "bucket": "LIGHTING",
   "physical": {
     "dimensions_mm": {
-      "width": 250,
-      "depth": 250,
+      "width": null,
+      "depth": null,
       "height": null
     },
-    "dimensions_source": "description_regex:double_wd_cm_assumed",
-    "dimensions_axes": "WD"
+    "dimensions_source": "description_regex:double_wd_cm_assumed_luminaire_ambiguous",
+    "dimensions_axes": "AMBIGUOUS",
+    "dimensions_ambiguous_mm": [
+      250,
+      250
+    ]
   },
   "commerce": {
     "merchant": "Newport SE",
@@ -60,5 +64,12 @@
       "product_url": "https://www.newport.se/shop/belysning/lampor/golvlampor/golvlampa-cambell"
     }
   ],
-  "attach_role": "lamp_floor"
+  "attach_role": "lamp_floor",
+  "material_cues": {
+    "colour_text": "Brun",
+    "material_text": "Bronze finish | swing arm",
+    "evidence_class": "REPORTED",
+    "source": "newport_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
+  }
 }

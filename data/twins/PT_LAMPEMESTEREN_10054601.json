@@ -26,13 +26,25 @@
     "primary_url": "https://lw-cdn.com/images/C9D2C9F9AA94/k_de9041fb9ca932c2192ca3549c35ba12;w_1600;h_1600;q_90/10054601.jpg"
   },
   "geometry": {
-    "level": "G0",
-    "state": "catalog_only"
+    "level": "G2",
+    "state": "promoted_hero_proxy",
+    "avatar_id": "AVATAR_LAMPEMESTEREN_10054601_G2_PROXY",
+    "asset_path": "data/geometry/avatars/lampemesteren-10054601-g2-proxy.glb",
+    "sha256": "125c1e0f9fb05561e41214508b88a081f6b3493e20cd5dc906f3efd6cad1a743",
+    "scale_state": "footprint 1070x1070mm from title; height 300mm CATEGORY DEFAULT",
+    "height_source": "category_default",
+    "footprint_source": "title_regex:diameter",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
   },
   "readiness": {
     "identity": "feed_verified",
     "commerce": "affiliate_live",
-    "geometry": "G0_catalog_only"
+    "geometry": "G2_promoted_hero_proxy"
   },
   "physical": {
     "dimensions_mm": {
@@ -52,5 +64,12 @@
     "evidence_class": "REPORTED",
     "matched_text": "Inomhusbelysning  >  Taklampor",
     "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
+  },
+  "material_cues": {
+    "colour_text": "Vit",
+    "material_text": "Plast",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

@@ -26,21 +26,33 @@
     "primary_url": "https://lw-cdn.com/images/CFFD1FF5C730/k_c7fe2fe8ae627df8391f08721fc27d12;w_1600;h_1600;q_90/70004855.jpg"
   },
   "geometry": {
-    "level": "G0",
-    "state": "catalog_only"
+    "level": "G2",
+    "state": "promoted_hero_proxy",
+    "avatar_id": "AVATAR_LAMPEMESTEREN_70004855_G2_PROXY",
+    "asset_path": "data/geometry/avatars/lampemesteren-70004855-g2-proxy.glb",
+    "sha256": "3a0c6c982e3fb58a34db9d18306bec8643b844654c0aca0eaaf46052bf9112f1",
+    "scale_state": "footprint 5500x5500mm from title; height 300mm CATEGORY DEFAULT",
+    "height_source": "category_default",
+    "footprint_source": "title_regex:diameter",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
   },
   "readiness": {
     "identity": "feed_verified",
     "commerce": "affiliate_live",
-    "geometry": "G0_catalog_only"
+    "geometry": "G2_promoted_hero_proxy"
   },
   "physical": {
     "dimensions_mm": {
-      "width": 5500,
-      "depth": 5500,
+      "width": 550,
+      "depth": 550,
       "height": null
     },
-    "dimensions_source": "title_regex:diameter",
+    "dimensions_source": "title_regex:diameter_bare_mm_by_magnitude",
     "dimensions_axes": "WD"
   },
   "attach": {
@@ -52,5 +64,12 @@
     "evidence_class": "REPORTED",
     "matched_text": "Produkter  >  Taklampor",
     "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
+  },
+  "material_cues": {
+    "colour_text": "Vit",
+    "material_text": "Glas",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

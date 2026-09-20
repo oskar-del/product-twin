@@ -42,5 +42,12 @@
     },
     "dimensions_source": "title_regex:double_wd",
     "dimensions_axes": "WD"
+  },
+  "material_cues": {
+    "colour_text": "Röd",
+    "material_text": null,
+    "evidence_class": "REPORTED",
+    "source": "mjuk_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

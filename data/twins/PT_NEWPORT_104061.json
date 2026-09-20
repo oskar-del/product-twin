@@ -60,7 +60,9 @@
       "geometry_owner": "Product Twin universal proxy",
       "manufacturer_geometry_copied": false,
       "manufacturer_texture_artwork_copied": false
-    }
+    },
+    "sha256": "619a0dcce735386178fe56ee9a110cea715e9ede94858951377e3581c683481b",
+    "rebuilt_reason": "cylinder cap winding fix 2026-09-20"
   },
   "readiness": {
     "identity": "feed_verified",
@@ -77,5 +79,12 @@
   ],
   "attach": {
     "role": "free"
+  },
+  "material_cues": {
+    "colour_text": "Röd",
+    "material_text": "Marmor / Textil / Mangoträ / Järn / Mässing",
+    "evidence_class": "REPORTED",
+    "source": "newport_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

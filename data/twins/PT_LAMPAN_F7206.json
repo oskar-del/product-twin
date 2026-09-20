@@ -39,12 +39,16 @@
   },
   "physical": {
     "dimensions_mm": {
-      "width": 150,
-      "depth": 150,
+      "width": null,
+      "depth": null,
       "height": null
     },
-    "dimensions_source": "title_regex:double_wd",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd_luminaire_ambiguous",
+    "dimensions_axes": "AMBIGUOUS",
+    "dimensions_ambiguous_mm": [
+      150,
+      150
+    ]
   },
   "classification": {
     "method": "MERCHANT_TAXONOMY_KEYWORD",
@@ -52,5 +56,12 @@
     "evidence_class": "REPORTED",
     "matched_text": "Bordsbelysning  >  Bordslampor",
     "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
+  },
+  "material_cues": {
+    "colour_text": "Svart",
+    "material_text": null,
+    "evidence_class": "REPORTED",
+    "source": "lampan_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

@@ -26,21 +26,33 @@
     "primary_url": "https://lw-cdn.com/images/47654D7AA080/k_774137959d272c3e96e84e4f09d56f82;w_1600;h_1600;q_90/70010449.jpg"
   },
   "geometry": {
-    "level": "G0",
-    "state": "catalog_only"
+    "level": "G2",
+    "state": "promoted_hero_proxy",
+    "avatar_id": "AVATAR_LAMPEMESTEREN_70010449_G2_PROXY",
+    "asset_path": "data/geometry/avatars/lampemesteren-70010449-g2-proxy.glb",
+    "sha256": "88c1ffd0cc189402000425ee9d7b7d170768784105899286a185401e7ae03bfe",
+    "scale_state": "footprint 5000x5000mm from title; height 300mm CATEGORY DEFAULT",
+    "height_source": "category_default",
+    "footprint_source": "title_regex:diameter",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
   },
   "readiness": {
     "identity": "feed_verified",
     "commerce": "affiliate_live",
-    "geometry": "G0_catalog_only"
+    "geometry": "G2_promoted_hero_proxy"
   },
   "physical": {
     "dimensions_mm": {
-      "width": 5000,
-      "depth": 5000,
+      "width": 500,
+      "depth": 500,
       "height": null
     },
-    "dimensions_source": "title_regex:diameter",
+    "dimensions_source": "title_regex:diameter_bare_mm_by_magnitude",
     "dimensions_axes": "WD"
   },
   "attach": {
@@ -52,5 +64,12 @@
     "evidence_class": "REPORTED",
     "matched_text": "Produkter  >  Taklampor",
     "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
+  },
+  "material_cues": {
+    "colour_text": "Brons / antikmässing",
+    "material_text": "Aluminium",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

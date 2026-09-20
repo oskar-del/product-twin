@@ -48,5 +48,12 @@
     },
     "dimensions_source": "title_regex:triple_wdh_cm_assumed",
     "dimensions_axes": "WDH"
+  },
+  "material_cues": {
+    "colour_text": "Silver",
+    "material_text": null,
+    "evidence_class": "REPORTED",
+    "source": "vidaxl-outdoor_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

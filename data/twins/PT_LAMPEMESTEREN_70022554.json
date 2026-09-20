@@ -43,5 +43,12 @@
     "evidence_class": "DERIVED",
     "matched_text": "Miira 8 oval ljuskrona, mässing/opal, 8 lampor - Nuura Nuura Aps - Matsal - Skandinavisk - Metall - Med flera ljuskällor",
     "limitation": "Category inferred from merchant title text; feed ships no category field."
+  },
+  "material_cues": {
+    "colour_text": "Guld / mässing",
+    "material_text": "Metall",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

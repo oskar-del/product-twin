@@ -43,5 +43,12 @@
     "evidence_class": "DERIVED",
     "matched_text": "Quimera pendellampa 2700/3000K mörkbrons - SLV - Vardagsrum - Aluminium - Med en ljuskälla",
     "limitation": "Category inferred from merchant title text; feed ships no category field."
+  },
+  "material_cues": {
+    "colour_text": "Brons / antikmässing",
+    "material_text": "Aluminium",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

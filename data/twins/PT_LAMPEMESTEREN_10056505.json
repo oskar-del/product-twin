@@ -52,5 +52,12 @@
     "evidence_class": "DERIVED",
     "matched_text": "København-ljuskrona, svart/opal, Ø 50 cm – Halo Design Kjøbenhavn - Vardagsrum - Metall - Med flera ljuskällor",
     "limitation": "Category inferred from merchant title text; feed ships no category field."
+  },
+  "material_cues": {
+    "colour_text": "Svart",
+    "material_text": "Metall",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

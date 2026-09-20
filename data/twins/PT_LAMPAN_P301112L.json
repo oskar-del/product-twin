@@ -40,7 +40,7 @@
       "depth": 300,
       "height": null
     },
-    "dimensions_source": "title_regex:diameter",
+    "dimensions_source": "title_regex:diameter_bare_cm_by_magnitude",
     "dimensions_axes": "WD"
   },
   "attach": {
@@ -52,5 +52,12 @@
     "evidence_class": "REPORTED",
     "matched_text": "Taklampor  >  Plafonder",
     "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
+  },
+  "material_cues": {
+    "colour_text": "Vit",
+    "material_text": null,
+    "evidence_class": "REPORTED",
+    "source": "lampan_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

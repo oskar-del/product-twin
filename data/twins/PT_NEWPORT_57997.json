@@ -12,11 +12,11 @@
   "bucket": "LIGHTING",
   "physical": {
     "dimensions_mm": {
-      "width": 1650,
-      "depth": 1650,
+      "width": 165,
+      "depth": 165,
       "height": null
     },
-    "dimensions_source": "title_regex:diameter",
+    "dimensions_source": "title_regex:diameter_bare_mm_by_magnitude",
     "dimensions_axes": "WD"
   },
   "commerce": {
@@ -60,5 +60,12 @@
       "product_url": "https://www.newport.se/shop/belysning/lampor/taklampor/crown-taklampa-antik-massing-165"
     }
   ],
-  "attach_role": "lamp_pendant"
+  "attach_role": "lamp_pendant",
+  "material_cues": {
+    "colour_text": "Guld",
+    "material_text": "Mässing",
+    "evidence_class": "REPORTED",
+    "source": "newport_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
+  }
 }

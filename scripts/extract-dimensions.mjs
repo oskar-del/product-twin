@@ -67,11 +67,19 @@ function parseDims(text) {
              axes: 'WD', rule: dbl[3] ? 'double_wd' : 'double_wd_cm_assumed' };
   }
 
-  // 4. Diameter "Ø12" / "Ø 40 cm" -> round footprint (w = d = diameter)
+  // 4. Diameter "Ø12" / "Ø 40 cm" / "Ø550" -> round footprint (w = d = diameter)
+  //    A BARE diameter switches unit by magnitude, and only here: measured across
+  //    the two lighting feeds, bare Ø<100 is cm (4,575 rows, "Ø12" = 12 cm) while
+  //    bare Ø>=100 is mm (314 rows, "Ø320" = 320 mm). Reading Ø550 as cm produced
+  //    a 5.5-METRE pendant in the first hero build. This heuristic is NOT applied
+  //    to the W x D patterns above, where "249 x 338" (a rug) is genuinely cm.
   const dia = t.match(/Ø\s*(\d+(?:[,.]\d+)?)\s*(cm|mm)?/i);
   if (dia) {
-    const v = toMm(num(dia[1]), (dia[2] || 'cm').toLowerCase());
-    return { w: v, d: v, h: null, axes: 'WD', rule: 'diameter' };
+    const raw = num(dia[1]);
+    const unit = dia[2] ? dia[2].toLowerCase() : (raw >= 100 ? 'mm' : 'cm');
+    const v = toMm(raw, unit);
+    return { w: v, d: v, h: null, axes: 'WD',
+             rule: dia[2] ? 'diameter' : `diameter_bare_${unit}_by_magnitude` };
   }
 
   // 5. Single measure "20cm" / "763 mm" -> one axis only; ambiguous which, so we
@@ -121,10 +129,18 @@ for (const [cat, file] of Object.entries(CATALOGS)) {
     }
     if (!got) { st.no_dims_in_text++; continue; }
 
+    // A bare "AxB cm" on a LUMINAIRE is ambiguous: it is usually diameter x DROP
+    // (e.g. "Pianopoli hanglampa 78x334 cm" = O78cm, 3.34m cable), not a W x D
+    // footprint. Asserting a footprint here produced a "5-metre-wide pendant" in
+    // the hero build. We record the numbers but refuse to call them a footprint.
+    if (/^ELECTRICAL\.LUMINAIRES/.test(r.cat || '') && /^double_wd/.test(got.rule)) {
+      got = { ...got, axes: 'AMBIGUOUS', rule: got.rule + '_luminaire_ambiguous' };
+    }
     st.by_rule[got.rule] = (st.by_rule[got.rule] || 0) + 1;
     st.by_source[source] = (st.by_source[source] || 0) + 1;
     if (got.axes === 'WDH') st.after_placeable++;
     else if (got.axes === 'WD') st.footprint_only++;
+    else if (got.axes === 'AMBIGUOUS') st.ambiguous = (st.ambiguous || 0) + 1;
     else st.single_only++;
 
     if (WRITE) {
@@ -135,7 +151,10 @@ for (const [cat, file] of Object.entries(CATALOGS)) {
       if (got.axes === 'WDH') { dims.width = got.w; dims.depth = got.d; dims.height = got.h; }
       else if (got.axes === 'WD') { dims.width = got.w; dims.depth = got.d; dims.height = null; }
       else { dims.width = null; dims.depth = null; dims.height = null; }
-      if (got.axes !== 'ONE') twin.physical.dimensions_mm = dims;
+      if (got.axes === 'AMBIGUOUS') {
+        twin.physical.dimensions_mm = { width: null, depth: null, height: null };
+        twin.physical.dimensions_ambiguous_mm = [got.w, got.d];
+      } else if (got.axes !== 'ONE') twin.physical.dimensions_mm = dims;
       twin.physical.dimensions_source = `${source}:${got.rule}`;
       twin.physical.dimensions_axes = got.axes;
       if (got.axes === 'ONE') twin.physical.dimensions_single_mm = got.single;

@@ -36,12 +36,16 @@
   },
   "physical": {
     "dimensions_mm": {
-      "width": 430,
-      "depth": 1330,
+      "width": null,
+      "depth": null,
       "height": null
     },
-    "dimensions_source": "title_regex:double_wd_cm_assumed",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd_cm_assumed_luminaire_ambiguous",
+    "dimensions_axes": "AMBIGUOUS",
+    "dimensions_ambiguous_mm": [
+      430,
+      1330
+    ]
   },
   "attach": {
     "role": "base"
@@ -52,5 +56,12 @@
     "evidence_class": "REPORTED",
     "matched_text": "Produkter  >  Taklampor",
     "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
+  },
+  "material_cues": {
+    "colour_text": "Trä",
+    "material_text": "Trä",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

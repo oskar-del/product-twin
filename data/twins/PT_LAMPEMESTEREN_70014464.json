@@ -36,11 +36,11 @@
   },
   "physical": {
     "dimensions_mm": {
-      "width": 1100,
-      "depth": 1100,
+      "width": 110,
+      "depth": 110,
       "height": null
     },
-    "dimensions_source": "title_regex:diameter",
+    "dimensions_source": "title_regex:diameter_bare_mm_by_magnitude",
     "dimensions_axes": "WD"
   },
   "attach": {
@@ -52,5 +52,12 @@
     "evidence_class": "REPORTED",
     "matched_text": "Produkter  >  Taklampor",
     "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
+  },
+  "material_cues": {
+    "colour_text": "Vit",
+    "material_text": "Aluminium",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

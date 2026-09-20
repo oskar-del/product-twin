@@ -12,12 +12,16 @@
   "bucket": "LIGHTING",
   "physical": {
     "dimensions_mm": {
-      "width": 360,
-      "depth": 110,
+      "width": null,
+      "depth": null,
       "height": null
     },
-    "dimensions_source": "description_regex:double_wd_cm_assumed",
-    "dimensions_axes": "WD"
+    "dimensions_source": "description_regex:double_wd_cm_assumed_luminaire_ambiguous",
+    "dimensions_axes": "AMBIGUOUS",
+    "dimensions_ambiguous_mm": [
+      360,
+      110
+    ]
   },
   "commerce": {
     "merchant": "Newport SE",
@@ -59,5 +63,12 @@
       "product_id": "21290",
       "product_url": "https://www.newport.se/shop/belysning/lampor/vagglampor/wall-lamp-westbrook"
     }
-  ]
+  ],
+  "material_cues": {
+    "colour_text": "Silver",
+    "material_text": "Nickel finish",
+    "evidence_class": "REPORTED",
+    "source": "newport_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
+  }
 }

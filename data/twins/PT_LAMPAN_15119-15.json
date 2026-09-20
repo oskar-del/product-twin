@@ -40,7 +40,14 @@
       "depth": 150,
       "height": null
     },
-    "dimensions_source": "title_regex:diameter",
+    "dimensions_source": "title_regex:diameter_bare_cm_by_magnitude",
     "dimensions_axes": "WD"
+  },
+  "material_cues": {
+    "colour_text": "Svart",
+    "material_text": null,
+    "evidence_class": "REPORTED",
+    "source": "lampan_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

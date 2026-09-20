@@ -28,7 +28,7 @@ const SPINE_MATERIALS = {
   '_default':      { color: [0.70, 0.68, 0.62, 1], roughness: 0.70, metallic: 0 },
 };
 
-function spineMaterial(categoryId) {
+export function spineMaterial(categoryId) {
   for (const [prefix, mat] of Object.entries(SPINE_MATERIALS)) {
     if (prefix !== '_default' && categoryId.startsWith(prefix)) return mat;
   }
@@ -36,7 +36,7 @@ function spineMaterial(categoryId) {
 }
 
 // Category → shape heuristic
-function shapeForCategory(categoryId) {
+export function shapeForCategory(categoryId) {
   if (categoryId.includes('LUMINAIRES') || categoryId.includes('BULBS')) return 'cylinder';
   if (categoryId.includes('RUG') || categoryId.includes('BATH_MAT') || categoryId.includes('WORKTOP') || categoryId.includes('DESK_TOP')) return 'flat';
   if (categoryId.includes('SEATING') && !categoryId.includes('CHAIR') && !categoryId.includes('STOOL')) return 'soft';
@@ -73,7 +73,10 @@ function cylinderGeometry(segments = 24) {
     const center=positions.length/3;positions.push(0,y,0);normals.push(0,ny,0);texcoords.push(.5,.5);
     const ring=positions.length/3;
     for(let i=0;i<=segments;i++){const angle=i/segments*Math.PI*2,x=Math.cos(angle)*.5,z=Math.sin(angle)*.5;positions.push(x,y,z);normals.push(0,ny,0);texcoords.push(.5+x,.5+z);}
-    for(let i=0;i<segments;i++) ny>0?indices.push(center,ring+i,ring+i+1):indices.push(center,ring+i+1,ring+i);
+    // Winding must agree with the declared vertex normal. Both caps were inverted:
+    // the top cap wound to a geometric -Y while shading +Y, which made every flat
+    // cylinder cap render black (all LUMINAIRES/BULBS proxies use this shape).
+    for(let i=0;i<segments;i++) ny>0?indices.push(center,ring+i+1,ring+i):indices.push(center,ring+i,ring+i+1);
   }
   return { positions, normals, texcoords, indices };
 }
@@ -99,7 +102,7 @@ function superellipsoidGeometry(latitudes = 14, longitudes = 24, exponent = .34)
 
 const geometries = { box: boxGeometry(), cylinder: cylinderGeometry(), soft: superellipsoidGeometry(), flat: boxGeometry() };
 
-function quaternionFromEuler(x=0,y=0,z=0){
+export function quaternionFromEuler(x=0,y=0,z=0){
   const c1=Math.cos(x/2),c2=Math.cos(y/2),c3=Math.cos(z/2),s1=Math.sin(x/2),s2=Math.sin(y/2),s3=Math.sin(z/2);
   return [s1*c2*c3+c1*s2*s3,c1*s2*c3-s1*c2*s3,c1*c2*s3+s1*s2*c3,c1*c2*c3-s1*s2*s3];
 }
@@ -107,7 +110,7 @@ function quaternionFromEuler(x=0,y=0,z=0){
 function pad4(buffer, byte=0){const padding=(4-buffer.length%4)%4;return padding?Buffer.concat([buffer,Buffer.alloc(padding,byte)]):buffer;}
 function minMax(values){const min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];for(let i=0;i<values.length;i+=3)for(let axis=0;axis<3;axis++){min[axis]=Math.min(min[axis],values[i+axis]);max[axis]=Math.max(max[axis],values[i+axis]);}return {min,max};}
 
-function buildGlb(parts, mat){
+export function buildGlb(parts, mat){
   const gltf={asset:{version:'2.0',generator:'Product Twin G2 universal proxy builder'},scene:0,scenes:[{nodes:[]}],nodes:[],meshes:[],materials:[{name:'spine',pbrMetallicRoughness:{baseColorFactor:mat.color,metallicFactor:mat.metallic,roughnessFactor:mat.roughness}}],accessors:[],bufferViews:[],buffers:[{byteLength:0}]};
   const binary=[];let offset=0;
   const addData=(buf,target)=>{const aligned=pad4(buf);const idx=gltf.bufferViews.length;gltf.bufferViews.push({buffer:0,byteOffset:offset,byteLength:buf.length,target});binary.push(aligned);offset+=aligned.length;return idx;};
@@ -239,4 +242,6 @@ async function main() {
   console.log(JSON.stringify({ promoted, skipped, failed, total: promoted + skipped + failed }));
 }
 
-await main();
+// Allow reuse of the geometry/GLB machinery by other builders without running the
+// full 225k sweep on import.
+if (import.meta.url === `file://${process.argv[1]}`) await main();

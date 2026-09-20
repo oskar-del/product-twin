@@ -42,5 +42,12 @@
     },
     "dimensions_source": "title_regex:diameter",
     "dimensions_axes": "WD"
+  },
+  "material_cues": {
+    "colour_text": "Svart/Silver",
+    "material_text": null,
+    "evidence_class": "REPORTED",
+    "source": "mjuk_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

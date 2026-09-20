@@ -36,12 +36,16 @@
   },
   "physical": {
     "dimensions_mm": {
-      "width": 20,
-      "depth": 600,
+      "width": null,
+      "depth": null,
       "height": null
     },
-    "dimensions_source": "title_regex:double_wd_cm_assumed",
-    "dimensions_axes": "WD"
+    "dimensions_source": "title_regex:double_wd_cm_assumed_luminaire_ambiguous",
+    "dimensions_axes": "AMBIGUOUS",
+    "dimensions_ambiguous_mm": [
+      20,
+      600
+    ]
   },
   "attach": {
     "role": "base"
@@ -52,5 +56,12 @@
     "evidence_class": "DERIVED",
     "matched_text": "Karlskrona lampfabrik - Tegnér rörpendel 2x60 - Karlskrona lampfabrik - Mässing",
     "limitation": "Category inferred from merchant title text; feed ships no category field."
+  },
+  "material_cues": {
+    "colour_text": "Mässing",
+    "material_text": null,
+    "evidence_class": "REPORTED",
+    "source": "lampan_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

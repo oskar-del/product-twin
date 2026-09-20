@@ -39,5 +39,12 @@
     "source": "scripts/classify-vidaxl-outdoor.mjs",
     "evidence_class": "DERIVED",
     "limitation": "Category inferred from merchant title text, not a feed taxonomy field."
+  },
+  "material_cues": {
+    "colour_text": "art",
+    "material_text": null,
+    "evidence_class": "REPORTED",
+    "source": "vidaxl-outdoor_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }

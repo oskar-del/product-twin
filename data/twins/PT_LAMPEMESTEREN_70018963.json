@@ -26,13 +26,25 @@
     "primary_url": "https://lw-cdn.com/images/882EEEE0E43D/k_5a961590dca887ff295052217d12e38e;w_1600;h_1600;q_90/70018963.jpg"
   },
   "geometry": {
-    "level": "G0",
-    "state": "catalog_only"
+    "level": "G2",
+    "state": "promoted_hero_proxy",
+    "avatar_id": "AVATAR_LAMPEMESTEREN_70018963_G2_PROXY",
+    "asset_path": "data/geometry/avatars/lampemesteren-70018963-g2-proxy.glb",
+    "sha256": "62b13ac6884113c70d113f4db1b5df8fc7c11505c8f9cdcaeefd2853b83e246c",
+    "scale_state": "footprint 1030x1030mm from title; height 300mm CATEGORY DEFAULT",
+    "height_source": "category_default",
+    "footprint_source": "title_regex:diameter",
+    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "rights": {
+      "geometry_owner": "Product Twin universal proxy",
+      "manufacturer_geometry_copied": false,
+      "manufacturer_texture_artwork_copied": false
+    }
   },
   "readiness": {
     "identity": "feed_verified",
     "commerce": "affiliate_live",
-    "geometry": "G0_catalog_only"
+    "geometry": "G2_promoted_hero_proxy"
   },
   "physical": {
     "dimensions_mm": {
@@ -52,5 +64,12 @@
     "evidence_class": "REPORTED",
     "matched_text": "Produkter  >  Taklampor",
     "limitation": "Leaf mapped from the merchant's own category string, not an industry taxonomy."
+  },
+  "material_cues": {
+    "colour_text": "Guld / mässing",
+    "material_text": "Metall",
+    "evidence_class": "REPORTED",
+    "source": "lampemesteren_feed",
+    "limitation": "Merchant-stated colour/material text. No swatch, hex or finish code is published, so renders map the colour NAME to a documented palette entry."
   }
 }
