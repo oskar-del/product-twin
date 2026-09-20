@@ -19,6 +19,77 @@
 > 4. Material truth: material_cues → Blender overrides in scripts/hero_still_poc.py; one re-render committed.
 
 
+## 📓 SPRINT DAY 2026-09-20 — DONE / NOT checked (Avatar Factory)
+
+Commits on `agent/avatar-factory-claude` (Oskar pushes): `5d4475cf` · `cf771182` · `3b97ef01` · `485d6fad` · `b98cf3a4`
+Screens: `docs/screens/01-placeability.png` · `02-classification.png` · `03-bedroom-heroes.png` · `04-material-truth.png`
+
+### Item 1 — dimensions_mm + dimensions_source on every twin
+**DONE.** `scripts/extract-dimensions.mjs` (zero-LLM). Placeability (full W×D×H):
+
+| catalog | before | after | footprint only (W×D, height unknown) |
+|---|---|---|---|
+| vidaxl-outdoor | 0.0% (42) | **6.9%** (6,131) | 11,011 |
+| golvpoolen | 0.0% (0) | 0.1% (47) | 1,539 |
+| kungsangen | 0.0% (0) | 0.0% (0) | 22,842 |
+| lampemesteren | 0.0% (0) | 0.0% (3) | 3,181 |
+| newport | 28.0% (3,645) | **28.2%** (3,673) | 73 |
+| lampan | 0.0% (0) | 0.0% (0) | 3,448 |
+| mjuk | 0.0% (0) | 0.0% (0) | 4,653 |
+| gripsholm | 0.0% (0) | 0.0% (0) | 116 |
+| **TOTAL** | **1.7%** (3,687) | **4.4%** (9,854) | **46,863 (21.0%)** |
+
+Any usable dims: **56,717 (25.4%)**. Re-prove: `node scripts/extract-dimensions.mjs` (dry) → `.runtime/dims-report.json`.
+
+Two cascade tiers measured and found EMPTY rather than assumed:
+- **GLB bounds yields 0.** All 3,882 twins with an `asset_path` already had full W/D/H — the proxies were built *from* dims, so the tier is circular.
+- **description regex is a no-op for 7 of 8 catalogs.** Only Newport ships a `desc` field (3,945/4,000 sampled); the rest have none, so the cascade is title-only there.
+
+**NOT checked:** heights for the 46,863 footprint-only rows do not exist in any source field — these are NOT placeable and the room compiler must not treat them as such. `double_wd_cm_assumed` reads a unitless "80x200" as cm by Swedish market convention (mm would be absurd at that magnitude); not independently verified against a Kungsängen spec sheet. No dimension was checked against a physical product.
+
+### Item 2 — category + attach-role for the 6 CATALOG_ONLY catalogs
+**DONE.** `scripts/classify-catalogs.mjs`. **98.1%** of 121,382 classified — 95,422 REPORTED (merchant's own taxonomy) / 23,594 DERIVED (title keywords) / 2,366 unmatched. Roles: **91,245 base · 21,940 attach · 5,831 free**.
+
+| catalog | twins | taxonomy | title | unmatched | cov% | base | attach | free |
+|---|---|---|---|---|---|---|---|---|
+| golvpoolen | 59,720 | 59,472 | 3 | 245 | 99.6% | 47,598 | 6,888 | 4,989 |
+| kungsangen | 23,822 | 0 | 23,160 | 662 | 97.2% | 21,860 | 1,182 | 118 |
+| lampemesteren | 19,516 | 19,194 | 175 | 147 | 99.2% | 12,817 | 6,180 | 372 |
+| lampan | 10,874 | 9,574 | 185 | 1,115 | 89.7% | 6,419 | 2,990 | 350 |
+| mjuk | 7,284 | 7,028 | 71 | 185 | 97.5% | 2,551 | 4,546 | 2 |
+| gripsholm | 166 | 154 | 0 | 12 | 92.8% | 0 | 154 | 0 |
+
+kungsängen's `category` field is empty on all 23,822 rows — title-derived by necessity, not by choice.
+
+**NOT checked:** accuracy was audited by SAMPLING leaf→category decisions, not exhaustively. 2,366 unmatched rows are unclassified and invisible to the room compiler. `attach.role` is a category default, not a per-SKU judgement — no slot geometry is implied.
+
+### Item 3 — bedroom hero proxies
+**DONE.** 40 GLBs in `data/geometry/avatars/`: 20 Kungsängen beds (19 × 1600×2000, 1 × 1400×2000) + 20 Lampemesteren pendants (Ø950–Ø1200). List: `.runtime/bedroom-heroes.json`.
+
+Footprint is REAL (parsed from title). **Heights are CATEGORY DEFAULTS** — bed 600mm, pendant 300mm, table lamp 420mm — used for geometry only; the twins' `dimensions_mm.height` stays `null`. Recorded in `geometry.scale_state` + `geometry.height_source`.
+
+**NOT checked:** no bed height verified against a Kungsängen spec. 19 of 20 bed proxies are byte-identical geometry (same footprint, different model names) — distinct SKUs, indistinguishable shapes. Pendant drop/cable length is not modelled, so these hang at origin.
+
+### Item 4 — material truth into Blender
+**DONE.** `scripts/material_truth_lib.py` + `hero_still_poc.py` (v4). `material_cues` stamped on **132,745 twins with a colour** and **29,311 with a material**, copied verbatim from the merchant feed (evidence `REPORTED`). Demo still: 11 of 13 pieces resolved from the merchant's own colour word; 2 controls fell back to a flagged neutral.
+
+Feeds shipping NO colour at all: kungsangen, golvpoolen, gripsholm (0 rows) — they get nothing rather than a guess.
+
+**NOT checked:** the colour NAME → RGB palette is our own reading of a Swedish colour word, not a merchant swatch, hex or finish code — no feed publishes one. Compound strings resolve on the first word ("Guld / Brun" → guld), which is an assumption about ordering. Metals render poorly against a dark world (no reflection environment). `hero_still_poc.py` v4 was NOT executed this sprint — the NORR11 GLBs live in gitignored `.runtime/` and were not regenerated; only the Newport-driven still was rendered.
+
+### Bugs found and fixed (all by auditing output, not by the summary %)
+1. **Cylinder cap winding inverted** in `build-all-proxies.mjs` — top cap wound to geometric −Y while shading +Y, so every flat cap rendered BLACK. Verified numerically (−0.0647 vs declared +1). Affected **490 already-committed proxies**, rebuilt via `scripts/rebuild-cylinder-proxies.mjs`.
+2. **15,170 bathroom vanities → bedroom dressers** (`...-och-kommod` matched the generic furniture rule first). Bathroom block now runs first; golvpoolen DRESSER is 0.
+3. **`Taklampor > Spotlights` → PENDANT** — matching the whole taxonomy path let the PARENT beat the leaf. Leaf-first matching recovered 411 SPOT rows.
+4. **`Ø550` → 5,500 mm** (a 5.5-metre pendant). Bare diameters switch unit by magnitude — measured: bare Ø<100 is cm (4,575 rows), Ø≥100 is mm (314). Applied to diameters ONLY; "249 x 338" on a rug is genuinely cm.
+5. **Luminaire `78x334 cm` read as a footprint** — it is diameter × cable DROP. 174 rows now held as `dimensions_axes: "AMBIGUOUS"` instead of asserting a false footprint.
+6. **`Madrasskydd` (protector) → MATTRESS** — a `(?!skydd)` lookahead can never fire because `madrass`+`skydd` share the double-s. Fixed by ordering.
+7. **Baseline self-erasure** — the placeability chart read `before_placeable` from the extractor's own report, which is rewritten each run; re-running would have silently redrawn the "before" bar as 4.4% and erased the improvement. True baseline pinned in `.runtime/dims-baseline.json`.
+
+### ⚠️ Verification owed (CLAUDE.md §7d — maker ≠ checker)
+Every item above was built AND measured by this session. This supply line feeds Platform's shoppable rooms (affiliate-revenue surfaces), so **a different session must verify before any of this is treated as done**. I have not ticked anything off in a coordination doc. Suggested checks: re-run `scripts/extract-dimensions.mjs` and `classify-catalogs.mjs` dry and diff the reports; open 10 random classified twins per catalog against their live product pages; confirm the 490 rebuilt proxies render non-black.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
