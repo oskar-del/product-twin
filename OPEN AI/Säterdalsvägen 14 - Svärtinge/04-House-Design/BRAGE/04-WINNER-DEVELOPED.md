@@ -52,6 +52,9 @@ Everything here is `CONCEPT`. Coordinates in scene-v0.2 metres (South/lake = −
 ```
 - Big south glass, low winter sun (7.9°) reaches deep into living; ~0.4–0.6 m eave overhang cuts the 54.7° summer noon sun → passive comfort, no machinery.
 - Asymmetric ridge: **long low south plane = the PV-ready roof** (ties to the solar-readiness product); steeper north plane sheds snow (58.6°N load).
+  > **Superseded 2026-09-20.** The roof is now a **30° symmetric gable** (ridge E–W at Y 5.02 m, eaves Y 3.0 m, 0.5 m overhang; cold wing a 15° mono-pitch falling north), specified in
+  > [`geometry/house-v0.3-geometry-spec.json`](geometry/house-v0.3-geometry-spec.json). The south plane is still the PV-ready plane — it is simply the same pitch as the north now.
+  > Areas on this sheet are likewise superseded by the v0.3 computed figures (heated 206,4 m² excl. suterräng / 276,4 m² incl.; garage 40 m² cold).
 - **Slope-robustness built into the section:** drawn correct on a flat datum. *If* MIMER's 1 m DTM later shows a south fall ≳2.5 m across the footprint, the west social end drops to a walk-out souterräng onto the terrace — an upgrade toggle, not a dependency. Finished-floor stays open until the DTM/survey close.
 
 ## Material family (`TASTE`, market-reasoned)

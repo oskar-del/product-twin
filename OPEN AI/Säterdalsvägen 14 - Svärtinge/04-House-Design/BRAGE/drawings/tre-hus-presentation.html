@@ -1,16 +1,35 @@
 <meta charset="utf-8">
-<title>Tre hus för Svärtinge 54:28</title>
+<title>Vinkelhuset mot Glan</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500&display=swap">
 <style>
 :root {
-  --paper:#f3f0e8;--card:#ffffff;--ink:#1a1a1a;--wall:#1e1e1e;--wall-int:#2a2a2a;
-  --glass:#a8c8da;--glass-stroke:#7aa8c0;--furn:#e0dcd4;--furn-s:#c8c2b8;
-  --terrace:#ece6da;--terrace-s:#d8d0c2;--label:#555;--dim:#999;--accent:#8a6530;
-  --green:#7a9a6a;--green-light:#c4d8b8;--ground:#ddd8cc;--road:#ccc6ba;
-  --border:#e4ded4;--timber:#3a3530;--stone:#9a9490;--roof:#4a4844;
-  --tag-safe-bg:#e6efe6;--tag-safe-fg:#3a6a42;--tag-rec-bg:#f0e8d0;--tag-rec-fg:#7a5a20;
-  --tag-bold-bg:#e8e0f0;--tag-bold-fg:#5a4a7a;--section-bg:#faf8f2;
-  --heart:#c8944a;--heart-light:#f0e0c8;
+  /* INK CHROME — tokens mirrored from Platform's package, which owns them:
+     repo-platform/engine/ui/chrome/tokens.css (see repo-platform/docs/CHROME.md).
+     Mirrored rather than linked because this file ships as a standalone artifact
+     with no network access to the repo. Values are copied verbatim; any drift is
+     fixed THERE and re-mirrored here, never patched locally. */
+  --ink-bg:#101916;--ink-card:#17241f;--ink-card-2:#1b2823;--ink-paper:#f5f1e8;
+  --ink-text:#f3efe6;--ink-text-dim:rgba(255,255,255,.62);--ink-text-faint:rgba(255,255,255,.52);
+  --ink-bronze:#d8b874;--ink-bronze-soft:#e5c879;--ink-line:rgba(255,255,255,.08);
+  --ink-serif:Georgia,"Times New Roman",serif;--ink-sans:Inter,ui-sans-serif,system-ui,sans-serif;
+  --ink-authoritative:#176b52;--ink-indicative:#c18a2d;--ink-derived:#497aa2;
+  --ink-reported:#a65b68;--ink-concept:#735a9e;
+  --ink-radius:18px;--ink-gap:12px;--ink-pad:20px;--ink-gutter:clamp(24px,6vw,92px);
+
+  /* The 31 drawings are painted with the names below, so re-pointing these at
+     the ink tokens re-skins every plan, facade, section and detail at once. */
+  --paper:var(--ink-bg);--card:var(--ink-card);--ink:var(--ink-text);
+  --wall:#e8e4da;--wall-int:#b9b4a8;
+  --glass:#2d5f77;--glass-stroke:#5d95b0;--furn:#2a3a33;--furn-s:#44554c;
+  --terrace:#20302a;--terrace-s:#31463d;--label:rgba(255,255,255,.62);--dim:rgba(255,255,255,.45);
+  --accent:var(--ink-bronze);
+  --green:#4a7a52;--green-light:#2a4230;--ground:#1c2a24;--road:#26332c;
+  --border:var(--ink-line);--timber:#c8a97a;--stone:#8a938c;--roof:#9aa39c;
+  --tag-safe-bg:rgba(23,107,82,.18);--tag-safe-fg:#5fc3a1;
+  --tag-rec-bg:rgba(193,138,45,.18);--tag-rec-fg:#e0ae5b;
+  --tag-bold-bg:rgba(115,90,158,.18);--tag-bold-fg:#a98fd6;
+  --section-bg:var(--ink-card-2);
+  --heart:var(--ink-bronze);--heart-light:rgba(216,184,116,.16);
 }
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --paper:#111110;--card:#1a1a18;--ink:#ddd8cc;--wall:#c8c4b8;--wall-int:#a0a098;
@@ -33,15 +52,15 @@
   --heart:#b88030;--heart-light:#2a2018;
 }
 *{box-sizing:border-box}
-body{font:400 16px/1.6 'Barlow',sans-serif;background:var(--paper);color:var(--ink);margin:0;-webkit-font-smoothing:antialiased}
+body{font:400 16px/1.6 'Barlow',sans-serif;background:var(--ink-bg);color:var(--ink-text);margin:0;-webkit-font-smoothing:antialiased}
 main{max-width:1120px;margin:0 auto;padding:48px 24px 80px}
-h1{font:500 44px/1.08 'Cormorant Garamond',Georgia,serif;margin:0;letter-spacing:-0.5px}
-h2{font:500 30px/1.15 'Cormorant Garamond',Georgia,serif;margin:0;display:inline}
+h1{font:500 44px/1.08 'Cormorant Garamond',Georgia,serif;margin:0;letter-spacing:-0.5px;color:var(--ink-text)}
+h2{font:500 30px/1.15 'Cormorant Garamond',Georgia,serif;margin:0;display:inline;color:var(--ink-text)}
 .sub{font:400 17px/1.5 'Cormorant Garamond',Georgia,serif;color:var(--label);max-width:62ch;margin:8px 0 0}
 .k{font:600 10.5px/1 'Barlow',sans-serif;letter-spacing:2.5px;color:var(--accent);text-transform:uppercase;margin-bottom:6px}
 .evi{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
-.evi span{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:5px 13px;font:500 12px/1.4 'Barlow',sans-serif;color:var(--label);white-space:nowrap}
-.house{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:30px 34px 28px;margin-top:26px}
+.evi span{background:var(--ink-card-2);border:1px solid var(--ink-line);border-radius:20px;padding:5px 13px;font:500 12px/1.4 'Barlow',sans-serif;color:var(--ink-text-dim);white-space:nowrap}
+.house{background:var(--ink-card);border:1px solid var(--ink-line);border-radius:var(--ink-radius);padding:30px 34px 28px;margin-top:26px;color:var(--ink-text)}
 .tag{font:600 10px/1 'Barlow',sans-serif;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:12px;display:inline-block;vertical-align:middle;margin-left:10px}
 .thesis{font:400 italic 17px/1.5 'Cormorant Garamond',Georgia,serif;color:var(--label);margin:6px 0 0;max-width:60ch}
 .drawings{display:grid;grid-template-columns:1.15fr 1fr;gap:24px;margin-top:18px;align-items:start}
@@ -52,7 +71,7 @@ svg{width:100%;height:auto;display:block}
 .info b{color:var(--accent);font-weight:600}
 @media(max-width:800px){.info{grid-template-columns:1fr}}
 .data{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font:500 12.5px/1 'Barlow',sans-serif;color:var(--dim)}
-.data span{background:var(--section-bg);border:1px solid var(--border);padding:6px 12px;border-radius:8px}
+.data span{background:var(--ink-card-2);border:1px solid var(--ink-line);padding:6px 12px;border-radius:8px;color:var(--ink-text-dim)}
 footer{margin-top:36px;font:13px/1.6 'Barlow',sans-serif;color:var(--dim);max-width:68ch}
 footer strong{color:var(--accent);font-weight:600}
 .elev-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px}
@@ -60,10 +79,43 @@ footer strong{color:var(--accent);font-weight:600}
 @media(max-width:500px){.elev-grid{grid-template-columns:1fr}}
 .dim-line{stroke:var(--accent);stroke-width:0.5;opacity:.6}
 .dim-tick{stroke:var(--accent);stroke-width:0.5;opacity:.6}
+/* ── ink chrome components (class names per repo-platform/docs/CHROME.md) ── */
+.ink-topbar{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:24px;
+  padding:16px var(--ink-gutter);background:rgba(16,25,22,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--ink-line);margin:-48px -24px 26px}
+.ink-topbar-id{min-width:0}
+.ink-kicker{color:var(--ink-bronze);font:500 10px/1 'Barlow',sans-serif;letter-spacing:.16em;text-transform:uppercase;display:block}
+.ink-topbar-id b{display:block;margin-top:5px;font:500 19px/1.1 var(--ink-serif);letter-spacing:-.02em}
+.ink-modes{display:flex;gap:8px;flex-wrap:wrap}
+.ink-mode{border:1px solid rgba(255,255,255,.22);background:rgba(16,25,22,.68);color:#fff;border-radius:999px;
+  padding:9px 13px;font:500 9px/1 'Barlow',sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;text-decoration:none}
+.ink-mode:hover{border-color:rgba(255,255,255,.4)}
+.ink-mode.is-primary{background:var(--ink-paper);color:#13211b;border-color:transparent}
+.ink-section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:20px}
+.ink-section-head h2{font:500 clamp(26px,3.4vw,40px)/1 var(--ink-serif);margin:0;letter-spacing:-.03em;display:block}
+.ink-section-head p{max-width:520px;margin:0;font-size:11px;line-height:1.6;color:rgba(255,255,255,.55)}
+.ink-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;font:500 8px/1 'Barlow',sans-serif;
+  letter-spacing:.11em;text-transform:uppercase;border:1px solid currentColor;background:color-mix(in srgb,currentColor 14%,transparent);white-space:nowrap}
+.ink-chip:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.ink-chip[data-evidence="AUTHORITATIVE"]{color:#3ec79d;border-color:var(--ink-authoritative)}
+.ink-chip[data-evidence="INDICATIVE"]{color:#e6b45c;border-color:var(--ink-indicative)}
+.ink-chip[data-evidence="DERIVED"]{color:#7fb3d8;border-color:var(--ink-derived)}
+.ink-chip[data-evidence="REPORTED_UNVERIFIED"]{color:#dc9aa5;border-color:var(--ink-reported)}
+.ink-chip[data-evidence="CONCEPT"]{color:#b39ed8;border-color:var(--ink-concept)}
 .dim-text{font-family:'Barlow Condensed',sans-serif;font-size:7.5px;fill:var(--accent);text-anchor:middle;opacity:.7}
 </style>
 
 <main>
+<header class="ink-topbar">
+<div class="ink-topbar-id"><span class="ink-kicker">Skärm 3 · Huset</span><b>Säterdalsvägen 14 — Svärtinge 54:28</b></div>
+<nav class="ink-modes">
+<a class="ink-mode" href="#valt">Valt förslag</a>
+<a class="ink-mode" href="#ritning">Ritningar</a>
+<a class="ink-mode" href="#a">A</a>
+<a class="ink-mode" href="#b">B</a>
+<a class="ink-mode" href="#c">C</a>
+<a class="ink-mode is-primary" href="#material">Material</a>
+</nav>
+</header>
 <div class="k">BRAGE designstudio · Svärtinge 54:28</div>
 <h1>Tre hus för samma tomt</h1>
 <p class="sub">Tre riktiga förslag, ritade ur samma platsdata. Samma fakta — olika svar. Välj riktning, sedan full ritningsuppsättning och 3D av vinnaren.</p>
@@ -213,9 +265,9 @@ footer strong{color:var(--accent);font-weight:600}
 <!-- Room labels -->
 <g font-family="Barlow Condensed" font-size="8.5" fill="var(--label)" text-anchor="middle">
 <text x="103" y="252" font-size="10" font-weight="500" fill="var(--accent)">Glanrummet</text>
-<text x="103" y="262" font-size="7.5" fill="var(--dim)">~40 m²</text>
+<text x="103" y="262" font-size="7.5" fill="var(--dim)">49 m²</text>
 <text x="176" y="268" font-size="9">Kök / matsal</text>
-<text x="176" y="278" font-size="7" fill="var(--dim)">~28 m²</text>
+<text x="176" y="278" font-size="7" fill="var(--dim)">42 m²</text>
 <text x="222" y="268" font-size="7.5">Hall</text>
 <text x="254" y="244" font-size="7.5" fill="var(--heart)">Heart</text>
 <text x="254" y="254" font-size="6.5" fill="var(--dim)">~9 m²</text>
@@ -224,12 +276,12 @@ footer strong{color:var(--accent);font-weight:600}
 <text x="296" y="240" font-size="7.5">Bad</text>
 <text x="296" y="248" font-size="6.5" fill="var(--dim)">~8 m²</text>
 <text x="254" y="140" font-size="8">Entré</text>
-<text x="254" y="150" font-size="6.5" fill="var(--dim)">~12 m²</text>
+<text x="254" y="150" font-size="6.5" fill="var(--dim)">9 m²</text>
 <text x="296" y="140" font-size="7">WC/</text>
 <text x="296" y="148" font-size="7">tvätt</text>
 <text x="320" y="140" font-size="7">Förr.</text>
 <text x="280" y="106" font-size="8">Garage (dubbel)</text>
-<text x="280" y="114" font-size="6.5" fill="var(--dim)">~30 m²</text>
+<text x="280" y="114" font-size="6.5" fill="var(--dim)">40 m²</text>
 <text x="140" y="328" font-size="8" fill="var(--dim)">terrass (kvällssol)</text>
 <text x="88" y="348" font-size="7.5" fill="var(--glass-stroke)">vindficka</text>
 </g>
@@ -272,7 +324,8 @@ footer strong{color:var(--accent);font-weight:600}
 <text x="26" y="236" font-family="Barlow Condensed" font-size="7.5" fill="var(--accent)" text-anchor="middle">sol ↘</text>
 
 <!-- BTA summary -->
-<text x="280" y="410" font-family="Barlow Condensed" font-size="8.5" fill="var(--dim)" text-anchor="middle">Markplan BTA ~140 m² (uppvärmt) + garage ~30 m² (kallt) = fotavtryck ~170 m²</text>
+<text x="280" y="410" font-family="Barlow Condensed" font-size="8.5" fill="var(--dim)" text-anchor="middle">Markplan 164 m² (uppvärmt) + garage 40 m² (kallt) = fotavtryck 204 m²</text>
+<text x="280" y="420" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">Rumsytor beräknade ur house-v0.3-geometry-spec.json — ersätter konceptsiffrorna. Sovrum + bad = ensuite 28 m².</text>
 </svg>
 </div>
 
@@ -329,12 +382,12 @@ footer strong{color:var(--accent);font-weight:600}
 <!-- Room labels -->
 <g font-family="Barlow Condensed" font-size="8.5" fill="var(--label)" text-anchor="middle">
 <text x="103" y="88" font-size="9" font-weight="500" fill="var(--accent)">Gillestuga</text>
-<text x="103" y="98" font-size="7.5" fill="var(--dim)">~34 m²</text>
+<text x="103" y="98" font-size="7.5" fill="var(--dim)">42 m²</text>
 <text x="165" y="80" font-size="8">Gästrum</text>
-<text x="165" y="88" font-size="7" fill="var(--dim)">~12 m²</text>
+<text x="165" y="88" font-size="7" fill="var(--dim)">14 m²</text>
 <text x="165" y="118" font-size="7.5">Teknik/</text>
 <text x="165" y="126" font-size="7.5">förråd</text>
-<text x="165" y="134" font-size="6.5" fill="var(--dim)">~12 m²</text>
+<text x="165" y="134" font-size="6.5" fill="var(--dim)">14 m²</text>
 <text x="124" y="160" font-size="8" fill="var(--dim)">terrass (sjönivå)</text>
 </g>
 
@@ -350,7 +403,7 @@ footer strong{color:var(--accent);font-weight:600}
 <text x="290" y="216" font-family="Barlow Condensed" font-size="7.5" fill="var(--accent)" text-anchor="middle">marknivå faller 13° mot SV</text>
 <text x="290" y="226" font-family="Barlow Condensed" font-size="7" fill="var(--dim)" text-anchor="middle">~2,5 m fall under husets fotavtryck → walk-out validerad</text>
 
-<text x="280" y="250" font-family="Barlow Condensed" font-size="8.5" fill="var(--dim)" text-anchor="middle">Suterräng BTA ~58 m² · total BTA ~228 m² (med option)</text>
+<text x="280" y="250" font-family="Barlow Condensed" font-size="8.5" fill="var(--dim)" text-anchor="middle">Suterräng 70 m² · uppvärmt totalt 276.4 m² (med option)</text>
 </svg>
 </div>
 
@@ -686,13 +739,14 @@ footer strong{color:var(--accent);font-weight:600}
 <!-- ── 6. AREA SUMMARY ── -->
 <div class="info" style="margin-top:20px">
 <div class="k" style="margin-bottom:8px">Ytsammanställning</div>
-<div><b>Markplan (uppvärmt):</b> ~140 m² — Glanrummet 40, kök/matsal 28, hall 14, Heart 9, sovrum 20, bad 8, entré/WC/tvätt 21</div>
-<div><b>Garage (kallt):</b> ~30 m²</div>
-<div><b>Övre plan (1,5-plan, i taket):</b> ~35 m² — 2 barnrum + bad (över östra halvan)</div>
-<div><b>Suterräng (option):</b> ~58 m² — gillestuga 34, gästrum 12, teknik/förråd 12</div>
-<div style="margin-top:8px"><b>Total BTA utan option:</b> ~205 m² (inkl. garage)</div>
-<div><b>Total BTA med suterräng:</b> ~263 m²</div>
-<div style="margin-top:6px;color:var(--dim);font-size:14px">Fotavtryck ~170 m² på en tomt om 1 936,8 m² = exploatering ~8,8 %. Siffror är KONCEPT — mätning sker vid handlingsskede.</div>
+<div><b>Markplan (uppvärmt):</b> 164 m² — Glanrummet 49, kök/matsal 42, Heart-zon 21, sovrum/ensuite 28, entréhall 9, tvätt/WC 15</div>
+<div><b>Garage (kallt):</b> 40 m²</div>
+<div><b>Övre plan (1,5-plan, i taket):</b> 42.4 m² — 2 barnrum + bad. Räknas bara där takhöjden når 1.9 m: 4.23 m av spannets 7 m.</div>
+<div><b>Suterräng (option):</b> 70 m² — gillestuga 42, gästrum 14, teknik/förråd 14</div>
+<div style="margin-top:8px"><b>Uppvärmt utan option:</b> 206.4 m² <span style="color:var(--dim)">(garaget är kallt och räknas inte in)</span></div>
+<div><b>Uppvärmt med suterräng:</b> 276.4 m²</div>
+<div style="margin-top:6px;color:var(--dim);font-size:14px">Fotavtryck 204 m² på en tomt om 1 936,8 m² = exploatering 10.5 %. Ytor beräknade ur house-v0.3-geometry-spec.json; ersätter konceptsiffrorna. Siffror är KONCEPT.</div>
+</div>
 </div>
 
 <!-- ── 7. KONSTRUKTIONSDETALJER ── -->
