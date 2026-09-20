@@ -39,7 +39,7 @@ const LOOKS = [
   {
     id: "GLANRUMMET",
     label: "Glanrummet · in the house",
-    scene: "data/scenes/shoppable-room-glanrummet/scene-v0.1.json",
+    scene: "data/scenes/room-glanrummet-newport/scene-v0.1.json",
     channel: "newport"
   }
 ];

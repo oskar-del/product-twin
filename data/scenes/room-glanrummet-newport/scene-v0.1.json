@@ -2,7 +2,7 @@
   "scene_version": "twin-scene/v0.1",
   "entity_type": "ShoppableRoomSceneExport",
   "scene_id": "SCENE_ROOM_GLANRUMMET_NEWPORT_V01",
-  "generated_at": "2026-09-20T17:42:51.875Z",
+  "generated_at": "2026-09-20T18:35:56.803Z",
   "subject": {
     "label": "Glanrummet — Newport set inside BRAGE's Vinkelhuset",
     "identity_evidence_class": "CONCEPT",
@@ -57,9 +57,12 @@
     "blocked_claims": [
       "LEGAL_BOUNDARY",
       "REGISTERED_AREA",
-      "ENTITLEMENT"
+      "ENTITLEMENT",
+      "BUILDABLE_ENVELOPE",
+      "VIEW_OR_OUTLOOK",
+      "FLOOR_LEVEL"
     ],
-    "rule": "A shoppable room claims nothing about any real site. Product geometry is a G2 proxy: real footprint and height, representative shape. BUY links carry the channel's own tracking parameters verbatim."
+    "rule": "A shoppable room claims nothing about any real site. The house and this room are BRAGE's CONCEPT proposal: no entitlement, buildable envelope, floor level or access is established. Anything seen through the glazing is a VISUALIZATION — a rendered horizon is never a view claim, and no sightline to Glan has been measured here. Product geometry is a G2 proxy: real footprint and height, representative shape. BUY links carry the channel's own tracking parameters verbatim."
   },
   "presentation": {
     "profiles": [
@@ -139,6 +142,7 @@
     {
       "id": "ROOM_GLANRUMMET",
       "type": "ROOM",
+      "picking": false,
       "label": "Glanrummet — west view/evening room (the one move)",
       "evidence_class": "CONCEPT",
       "source_refs": [
@@ -214,7 +218,8 @@
         "BRAGE house-in-scene-v0.3-patch ROOM_GLANRUMMET.feature"
       ],
       "limitations": [
-        "Glazed extent is read from BRAGE's stated 'fully glazed south+west'; no mullion, frame or opening schedule is specified yet."
+        "Glazed extent is read from BRAGE's stated 'fully glazed south+west'; no mullion, frame or opening schedule is specified yet.",
+        "Anything visible through this glazing is a VISUALIZATION. No outlook, sightline or sea view is claimed or evidenced here."
       ],
       "geometry": {
         "primitive": "BOX",
@@ -240,7 +245,8 @@
         "BRAGE house-in-scene-v0.3-patch ROOM_GLANRUMMET.feature"
       ],
       "limitations": [
-        "Glazed extent is read from BRAGE's stated 'fully glazed south+west'; the spec notes the glazing is splayed toward the lake, which this orthogonal volume does not model."
+        "Glazed extent is read from BRAGE's stated 'fully glazed south+west'; the spec notes the glazing is splayed toward the lake, which this orthogonal volume does not model.",
+        "Anything visible through this glazing is a VISUALIZATION. The Glan outlook is the room's stated intent, not a measured sightline — no view is claimed."
       ],
       "geometry": {
         "primitive": "BOX",

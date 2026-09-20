@@ -62,7 +62,10 @@ function main() {
       label: "Glanrummet south glazing — full-height toward the lake",
       evidence_class: "CONCEPT",
       source_refs: ["BRAGE house-in-scene-v0.3-patch ROOM_GLANRUMMET.feature"],
-      limitations: ["Glazed extent is read from BRAGE's stated 'fully glazed south+west'; no mullion, frame or opening schedule is specified yet."],
+      limitations: [
+        "Glazed extent is read from BRAGE's stated 'fully glazed south+west'; no mullion, frame or opening schedule is specified yet.",
+        "Anything visible through this glazing is a VISUALIZATION. No outlook, sightline or sea view is claimed or evidenced here."
+      ],
       geometry: {primitive: "BOX", size: [width - margin * 2, headHeight - sill, 0.12],
         position: [0, (sill + headHeight) / 2, -depth / 2], rotation_y_deg: 0}
     });
@@ -73,7 +76,10 @@ function main() {
       label: "Glanrummet west glazing — evening sun",
       evidence_class: "CONCEPT",
       source_refs: ["BRAGE house-in-scene-v0.3-patch ROOM_GLANRUMMET.feature"],
-      limitations: ["Glazed extent is read from BRAGE's stated 'fully glazed south+west'; the spec notes the glazing is splayed toward the lake, which this orthogonal volume does not model."],
+      limitations: [
+        "Glazed extent is read from BRAGE's stated 'fully glazed south+west'; the spec notes the glazing is splayed toward the lake, which this orthogonal volume does not model.",
+        "Anything visible through this glazing is a VISUALIZATION. The Glan outlook is the room's stated intent, not a measured sightline — no view is claimed."
+      ],
       geometry: {primitive: "BOX", size: [depth - margin * 2, headHeight - sill, 0.12],
         position: [-width / 2, (sill + headHeight) / 2, 0], rotation_y_deg: 90}
     });
@@ -104,7 +110,9 @@ function main() {
 
   const shell = [
     {
-      id: "ROOM_GLANRUMMET", type: "ROOM", label: room.label,
+      // Non-pickable: this volume encloses every product, so leaving it
+      // pickable means every click lands on the box instead of the sofa.
+      id: "ROOM_GLANRUMMET", type: "ROOM", picking: false, label: room.label,
       evidence_class: "CONCEPT",
       source_refs: room.source_refs,
       limitations: ["Concept room volume from BRAGE's house design. No entitlement, buildable envelope or floor level is established for this plot."],
@@ -129,6 +137,21 @@ function main() {
       label: "Glanrummet — Newport set inside BRAGE's Vinkelhuset",
       identity_evidence_class: "CONCEPT",
       identity_scope: "CONCEPT_ROOM_IN_CONCEPT_HOUSE"
+    },
+    // Inheriting the source room's policy would understate what this scene shows:
+    // it sits inside a CONCEPT house, and its whole subject is an outlook over
+    // Glan. Both need blocking explicitly.
+    legal_claim_policy: {
+      ...source.legal_claim_policy,
+      blocked_claims: [
+        ...new Set([
+          ...(source.legal_claim_policy?.blocked_claims ?? []),
+          "BUILDABLE_ENVELOPE",
+          "VIEW_OR_OUTLOOK",
+          "FLOOR_LEVEL"
+        ])
+      ],
+      rule: "A shoppable room claims nothing about any real site. The house and this room are BRAGE's CONCEPT proposal: no entitlement, buildable envelope, floor level or access is established. Anything seen through the glazing is a VISUALIZATION — a rendered horizon is never a view claim, and no sightline to Glan has been measured here. Product geometry is a G2 proxy: real footprint and height, representative shape. BUY links carry the channel's own tracking parameters verbatim."
     },
     elements: [...shell, ...moved],
     house_context: {
