@@ -162,8 +162,48 @@ exact, which is what I verified.
 `repo-brage geometry/house-in-scene-v0.3-patch.json` carries `ROOM_GLANRUMMET`, a 7×3×7 m
 `ROOM_VOLUME`, with the bounding interior walls (`WALL_INT_LIVING_KITCHEN` et al). Next up.
 
-**Item 4 — stills gallery · OWNED BY ai-c6**, not me. I have not touched `engine/export/` or
-`dist/stills/` and cannot report its state.
+**Item 4 — stills gallery · DONE** (`fe523f1fc1`) — ai-c6 [c3cd6a], the other session.
+`dist/stills/newport-living.png` · 1600×1000 · Cycles · 160 samples · **5 m 42 s**, plus the
+`.py` that produced it, both committed. The command:
+
+    node scripts/export-blender-scene.mjs \
+      data/scenes/shoppable-room-newport-living/scene-v0.1.json \
+      --out dist/stills/newport-living.py --samples 160
+    blender --background --python dist/stills/newport-living.py
+
+The export had never been run end to end. Doing so surfaced four defects, all fixed:
+`BASE_PATH` was the scene's own directory while `asset_path` is repo-relative, so all 11 GLB
+imports resolved to paths that do not exist and the render was an empty room; the shell was a
+hardcoded 12 m plane instead of the scene's `ROOM_VOLUME`; `slab()` scaled a unit cube by
+`size/2`, so every wall came out half-size and the room did not close; and the stage camera at
+(4.5, 4.5, 3.2) is outside the volume and above the ceiling, which shoots through a wall once
+the walls are real. The shell is now built from `ROOM_VOLUME` (6 × 2.7 × 5 m) with each
+`OPENING` cut out of its wall as segments and lit by an area light matched to the opening's own
+size and plane; the camera is derived — a corner at 1.42 m on a 30 mm lens aimed at the
+centroid of the furniture actually placed. Surfaces come from each catalog row's own
+`color`/`material` text through a fixed word table ("Mässing / Marmor / Valnöt" → brass,
+marble, walnut); nothing is styled per product by hand.
+`npm run engine:blender:test` — **37 passed, 0 failed**. §5 had asserted the old hardcoded
+`primitive_plane_add`; it now asserts the room dimensions reaching Blender, the opening being
+cut and lit, and the camera landing inside the volume.
+**LABEL: VISUALIZATION** — G2 planning proxies with representative surfaces: real footprint
+and height, not manufacturer industrial design or artwork. Not a photograph of these products.
+*NOT checked:* the vidaXL terrace still is unrendered (open-air scene, no `ROOM_VOLUME`, so it
+takes the untested stage-camera path); no perceptual or regression check on the image beyond
+my looking at it; the colour word table is hand-authored and exercised only by the Swedish
+words these two catalogs happen to use; no GPU/denoiser parity check against another machine.
+
+**`.gitignore` changed — read this before committing build output.** `dist/` was ignored, so
+"PNG committed under `dist/stills/`" was impossible as written. Line 5 is now `dist/*` plus
+`!dist/stills/`. **`dist/twins/` is therefore still ignored** — item 2's bundles are not
+committed, and whoever wants them committed must add `!dist/twins/` deliberately.
+
+**One claim above needs narrowing.** Item 1 records that the demo's shoelace area
+"independently lands on Lantmäteriet's 1 936,8 m²". The shoelace runs over derived geometry
+from the same clip file, so it establishes that the ring survived the pipeline uncorrupted —
+not that our figure independently agrees with Lantmäteriet's own registered area. Related: the
+subject ring stores **7 points whose last repeats the first**, so the parcel has **6 distinct
+corners**; the Spatial page's "7 vertices" is counting the closing point.
 
 ## Why this session exists
 Three workstreams are each building their own three.js viewer (Svärtinge twin, Essence microsite, Avatar showroom) plus four legacy prototypes. That's the same engine written five times. This session owns the SHARED technology so every surface gets the best stack once: one twin-engine, one design system, one bundling/publish pipeline.
