@@ -19,7 +19,8 @@
     "dimensions_source": "description_regex:double_wd + category_default:FFE.TEXTILES.RUG",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Woven pile thickness; a rug is a floor layer, not a volume."
+    "height_rationale": "Woven pile thickness; a rug is a floor layer, not a volume.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "commerce": {
     "merchant": "Newport SE",

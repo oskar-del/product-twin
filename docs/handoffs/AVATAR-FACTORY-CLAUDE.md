@@ -123,6 +123,31 @@ market-convention judgement carrying its rationale string. Whether Platform actu
 INDICATIVE chip for `dimensions_indicative: true` is unverified on the Platform side.
 
 
+
+### Reporting standard (Brain ruling 2026-09-20, commit `c181c772a2`) — the single "placeable %" is RETIRED
+Every twin now carries `physical.dimensions_tier`, so no consumer parses `dimensions_source` strings:
+
+| tier | meaning | count | consumer rule |
+|---|---|---|---|
+| `SOURCE` | all three axes stated by source, or verified measured envelope | 6,364 | safe to quote as a product fact |
+| `WD_SOURCE_H_DEFAULT` | W/D from source, height from the category table | 35,447 | INDICATIVE — panel says "height: category default" |
+| `ALL_DEFAULT` | every axis invented by the universal proxy builder | 3,687 | INDICATIVE and WEAKER — panel says "size: category default (all three axes)" |
+| `NONE` | no usable envelope | 179,837 | not placeable |
+
+Room-compiler selection order: `SOURCE` > `WD_SOURCE_H_DEFAULT` > `ALL_DEFAULT`, and `ALL_DEFAULT`
+is never chosen while a source-stated candidate exists for the same role.
+
+**Report the tiered table, never a single blended percentage.** The blend is what let "1.7% → 4.4%"
+stand for a month-equivalent of confidence when the real source-backed movement was 197 → 6,364.
+
+The 11,416 footprint-only rows with no category default stay UNFILLED (Brain confirmed). The 13
+refusal rationales in `config/geometry/category-height-defaults.json` are a deliverable, not a gap.
+
+**Lesson carried forward for maker≠checker (both sessions hit it):** re-derive what the label
+TESTED, not the number it printed. Brain's recount matched mine to the unit because we both counted
+`dimensions_mm` populated without reading `geometry.scale_state`.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,

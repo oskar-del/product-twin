@@ -43,7 +43,8 @@
     "dimensions_source": "title_regex:double_wd + category_default:FFE.TEXTILES.BEDDING",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Duvet/linen laid on a bed; a surface layer, not a volume."
+    "height_rationale": "Duvet/linen laid on a bed; a surface layer, not a volume.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "attach": {
     "role": "attach"

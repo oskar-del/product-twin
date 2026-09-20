@@ -49,7 +49,8 @@
     "dimensions_source": "title_regex:double_wd + category_default:FFE.OUTDOOR.TABLE",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Outdoor dining table top height."
+    "height_rationale": "Outdoor dining table top height.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "material_cues": {
     "colour_text": "Antracit",

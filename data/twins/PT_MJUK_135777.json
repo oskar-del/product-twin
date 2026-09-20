@@ -46,7 +46,8 @@
     "dimensions_source": "title_regex:double_wd + category_default:FFE.TABLE.DINING",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "EN 527 / market-standard dining table top height."
+    "height_rationale": "EN 527 / market-standard dining table top height.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "classification": {
     "method": "MERCHANT_TAXONOMY_KEYWORD",

@@ -49,7 +49,8 @@
     "dimensions_source": "title_regex:double_wd_cm_assumed + category_default:FFE.OUTDOOR.PARASOL",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Free-standing parasol open height."
+    "height_rationale": "Free-standing parasol open height.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "material_cues": {
     "colour_text": "Brun",

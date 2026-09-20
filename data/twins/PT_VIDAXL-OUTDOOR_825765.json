@@ -49,7 +49,8 @@
     "dimensions_source": "title_regex:double_wd + category_default:FFE.OUTDOOR.CHAIR",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Outdoor dining chair overall height (seat ~45 cm plus back)."
+    "height_rationale": "Outdoor dining chair overall height (seat ~45 cm plus back).",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "material_cues": {
     "colour_text": "Brun",

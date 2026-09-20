@@ -43,7 +43,8 @@
     "dimensions_source": "title_regex:diameter + category_default:ELECTRICAL.LUMINAIRES.BATHROOM",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Mirror/wall bathroom fitting body height."
+    "height_rationale": "Mirror/wall bathroom fitting body height.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "attach": {
     "role": "base"

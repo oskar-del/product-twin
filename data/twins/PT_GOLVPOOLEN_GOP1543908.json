@@ -43,7 +43,8 @@
     "dimensions_source": "title_regex:diameter_bare_cm_by_magnitude + category_default:FFE.BATHROOM.VANITY",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Wall-hung washbasin cabinet body height."
+    "height_rationale": "Wall-hung washbasin cabinet body height.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "attach": {
     "role": "base"

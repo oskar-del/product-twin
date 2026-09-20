@@ -43,7 +43,8 @@
     "dimensions_source": "title_regex:double_wd + category_default:FFE.SURFACE.FLOORING",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Floor covering board/tile thickness."
+    "height_rationale": "Floor covering board/tile thickness.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "attach": {
     "role": "free"

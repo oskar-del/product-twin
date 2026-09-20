@@ -43,7 +43,8 @@
     "dimensions_source": "title_regex:diameter_bare_cm_by_magnitude + category_default:ELECTRICAL.LUMINAIRES.CEILING",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Flush-mount plafond projects ~12 cm below the ceiling."
+    "height_rationale": "Flush-mount plafond projects ~12 cm below the ceiling.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "attach": {
     "role": "base"

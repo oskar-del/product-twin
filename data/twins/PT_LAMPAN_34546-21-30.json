@@ -40,7 +40,8 @@
   "physical": {
     "dimensions_source": "title_regex:single_measure",
     "dimensions_axes": "ONE",
-    "dimensions_single_mm": 300
+    "dimensions_single_mm": 300,
+    "dimensions_tier": "NONE"
   },
   "classification": {
     "method": "MERCHANT_TAXONOMY_KEYWORD",

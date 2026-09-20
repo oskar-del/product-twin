@@ -46,7 +46,8 @@
     "dimensions_source": "title_regex:double_wd_cm_assumed + category_default:FFE.BEDROOM.BED_FRAME",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Swedish continental bed: base plus mattress top surface sits 55-65 cm; 60 cm is the mid-market norm."
+    "height_rationale": "Swedish continental bed: base plus mattress top surface sits 55-65 cm; 60 cm is the mid-market norm.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "classification": {
     "method": "DETERMINISTIC_TITLE_KEYWORD",

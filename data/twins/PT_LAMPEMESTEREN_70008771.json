@@ -43,7 +43,8 @@
     "dimensions_source": "title_regex:diameter_bare_mm_by_magnitude + category_default:ELECTRICAL.LUMINAIRES.FLOOR",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Floor lamp total height."
+    "height_rationale": "Floor lamp total height.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "attach": {
     "role": "base"

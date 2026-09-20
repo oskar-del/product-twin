@@ -46,7 +46,8 @@
     "dimensions_source": "title_regex:diameter + category_default:FFE.TABLE.SIDE",
     "dimensions_axes": "WD+H_DEFAULT",
     "dimensions_indicative": true,
-    "height_rationale": "Side table sits between seat and armrest height."
+    "height_rationale": "Side table sits between seat and armrest height.",
+    "dimensions_tier": "WD_SOURCE_H_DEFAULT"
   },
   "classification": {
     "method": "MERCHANT_TAXONOMY_KEYWORD",
