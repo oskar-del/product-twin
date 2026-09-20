@@ -136,6 +136,26 @@ previous version until the share pin is moved.
 **Item 4 — classics library entry #1 · NOT STARTED** (it was "if time"; the time went on
 items 1–3 and on verifying them).
 
+**Downstream consumers of the geometry**
+- *Whole-house 3D:* Brain closed the long-open Essence handoff by RE-ROUTING it, not by
+  Essence — that session has been idle since 2026-08-28 and its charter is the Moraira
+  client. The whole-house model is now a **Platform** item, fed by
+  `geometry/house-v0.3-geometry-spec.json` + `validate-house-v0.3.mjs`, with both traps
+  passed on: `ROOM_GLANRUMMET` keeps its v0.2 id and footprint, and the upper floor is
+  heated only where headroom clears 1.9 m.
+- *Concept-comparison studio (the twin):* **STALE — open.** A grep of the fleet for
+  consumers of the v0.2 spec returns exactly one file,
+  `repo-spatial-studio/prototype/svartinge-neighbourhood/index.html`. Its Vinkelhuset
+  comparison card (line ~267) hard-codes `boa:210, gfa:210` sourced to
+  `house-v0.2-geometry-spec.json` — the superseded figure. `footprint:204` is right.
+  Its limitation strings still describe the massing as v0.2 and the roof as concept-level,
+  which is now wrong in a second way: the roof is a specified 30° gable. That file is
+  Spatial's worktree, so BRAGE has not edited it; reported to Brain to route.
+
+**Verification status:** items 1–3 were SELF-verified (validator, full-artifact render,
+link/figure diffs). They are owed a maker≠checker pass; Brain is doing it against the
+republished artifact.
+
 Nothing is pushed — Oskar pushes.
 
 BRAGE is the creative counterpart to MIMER: MIMER measures the site, BRAGE argues **what deserves to stand on it**, then develops the chosen concept into a spatial + systems spec the engine can build.
