@@ -110,7 +110,12 @@ export function exportBlenderScene(scene, opts = {}) {
     outputPath = "./render.png",
     stage: stageId,
     profile = "REALISTIC",
-    render: renderOverrides = {}
+    render: renderOverrides = {},
+    // Whole-house scenes carry their own walls, slabs and roof planes. The
+    // single-room path below wraps ONE ROOM_VOLUME in a shell, which is exactly
+    // wrong for a house with thirteen of them, so structural scenes take a
+    // generic path instead: every BOX and GRID_SURFACE is emitted as itself.
+    structure = false
   } = opts;
 
   const render = {...DEFAULT_RENDER, ...renderOverrides};
@@ -142,6 +147,27 @@ export function exportBlenderScene(scene, opts = {}) {
   emit(`sc.render.resolution_x, sc.render.resolution_y = ${opts.resolution?.[0] ?? render.resolution[0]}, ${opts.resolution?.[1] ?? render.resolution[1]}`);
   emit(`sc.render.filepath = '${escPy(outputPath)}'`);
   emit(`sc.render.image_settings.file_format = '${render.format}'`);
+
+  // Burn the label into the image itself. A still travels as a file, detached
+  // from the scene that made it and from any caption around it, so the claim it
+  // is NOT making has to survive the journey: a rendered horizon is never a view
+  // claim, and this house is a concept, not a built thing.
+  const stamp = [
+    "VISUALIZATION",
+    escPy(scene.subject?.label ?? scene.scene_id),
+    "CONCEPT design — not a survey, not a built house",
+    "Rendered horizon is not a view claim"
+  ].join("  ·  ");
+  emit("sc.render.use_stamp = True");
+  emit("sc.render.use_stamp_note = True");
+  emit("for _f in ('use_stamp_time','use_stamp_date','use_stamp_render_time','use_stamp_frame'," +
+       "'use_stamp_scene','use_stamp_camera','use_stamp_filename','use_stamp_lens','use_stamp_marker'):");
+  emit("    if hasattr(sc.render, _f): setattr(sc.render, _f, False)");
+  emit(`sc.render.stamp_note_text = '${stamp}'`);
+  emit("sc.render.stamp_font_size = 22");
+  emit("sc.render.use_stamp_labels = False");
+  emit("sc.render.stamp_background = (0, 0, 0, 0.55)");
+  emit("sc.render.stamp_foreground = (1, 1, 1, 1)");
   emit(`sc.view_settings.view_transform = '${escPy(render.view_transform)}'`);
   emit(`sc.view_settings.look = '${escPy(render.look)}'`);
   emit(`sc.view_settings.exposure = ${render.exposure}`);
@@ -196,7 +222,7 @@ export function exportBlenderScene(scene, opts = {}) {
   // the real interior size; OPENING elements are cut out of the wall they sit in by building
   // that wall as segments around the hole (a boolean would need the modifier stack to resolve
   // before the camera solve, and segments are exact for a rectangular opening).
-  const roomVolume = scene.elements.find(e => e.geometry?.primitive === "ROOM_VOLUME");
+  const roomVolume = structure ? null : scene.elements.find(e => e.geometry?.primitive === "ROOM_VOLUME");
   if (roomVolume) {
     const [width, height, depth] = roomVolume.geometry.size;
     const openings = scene.elements.filter(e => e.type === "OPENING" && e.geometry?.primitive === "BOX");
@@ -318,6 +344,72 @@ export function exportBlenderScene(scene, opts = {}) {
       emit("sc.collection.objects.link(wo)");
       emit("");
     }
+  }
+
+  // ── structural geometry (whole-house scenes) ───────────────────────────────
+  if (structure) {
+    emit("# Structure: every BOX and GRID_SURFACE the scene declares");
+    emit("def box(name, loc, size, rot_z_deg, rgb, rough=0.9, metal=0.0, alpha=1.0):");
+    emit("    bpy.ops.mesh.primitive_cube_add(size=1, location=loc)");
+    emit("    o = bpy.context.object; o.name = name");
+    emit("    o.scale = size");
+    emit("    o.rotation_mode = 'XYZ'; o.rotation_euler[2] = math.radians(rot_z_deg)");
+    emit("    m = bpy.data.materials.new(name); m.use_nodes = True");
+    emit("    b = m.node_tree.nodes['Principled BSDF']");
+    emit("    b.inputs['Base Color'].default_value = (*rgb, alpha)");
+    emit("    b.inputs['Roughness'].default_value = rough");
+    emit("    b.inputs['Metallic'].default_value = metal");
+    emit("    if alpha < 1.0:");
+    emit("        b.inputs['Transmission Weight'].default_value = 0.92");
+    emit("        b.inputs['IOR'].default_value = 1.45");
+    emit("    o.data.materials.append(m)");
+    emit("    return o");
+    emit("");
+    emit("def quad(name, verts, rgb, rough=0.55, metal=0.25):");
+    emit("    mesh = bpy.data.meshes.new(name)");
+    emit("    mesh.from_pydata(verts, [], [(0, 1, 3, 2)])");
+    emit("    mesh.update()");
+    emit("    o = bpy.data.objects.new(name, mesh); bpy.context.collection.objects.link(o)");
+    emit("    m = bpy.data.materials.new(name); m.use_nodes = True");
+    emit("    b = m.node_tree.nodes['Principled BSDF']");
+    emit("    b.inputs['Base Color'].default_value = (*rgb, 1)");
+    emit("    b.inputs['Roughness'].default_value = rough");
+    emit("    b.inputs['Metallic'].default_value = metal");
+    emit("    o.data.materials.append(m)");
+    emit("    return o");
+    emit("");
+
+    const PALETTE = {
+      WALL:       [0.74, 0.71, 0.66],
+      FLOOR_SLAB: [0.55, 0.53, 0.50],
+      ROOF:       [0.26, 0.27, 0.27],
+      TERRAIN:    [0.30, 0.34, 0.24],
+      OPENING:    [0.60, 0.74, 0.78]
+    };
+
+    for (const el of scene.elements) {
+      const g = el.geometry;
+      if (!g) continue;
+      const rgb = PALETTE[el.type] ?? [0.62, 0.60, 0.57];
+      const name = el.id.toLowerCase().replace(/[^a-z0-9]+/g, "_");
+
+      if (g.primitive === "BOX" && g.position && g.size) {
+        // three.js [x,y,z] (Y up) -> Blender [x,z,y] (Z up)
+        const loc = [g.position[0], g.position[2], g.position[1]];
+        const size = [g.size[0], g.size[2], g.size[1]];
+        const glass = el.type === "OPENING";
+        emit(`box('${escPy(name)}', ${pyVec(loc)}, ${pyVec(size)}, ${-(g.rotation_y_deg ?? 0)}, ${pyColor(rgb)}` +
+             `${glass ? ", rough=0.08, metal=0.0, alpha=0.25" : ""})`);
+      } else if (g.primitive === "GRID_SURFACE" && Array.isArray(g.vertices)) {
+        const verts = g.vertices.map(v => `(${v[0].toFixed(4)}, ${v[2].toFixed(4)}, ${v[1].toFixed(4)})`).join(", ");
+        const isGround = el.type === "TERRAIN";
+        emit(`quad('${escPy(name)}', [${verts}], ${pyColor(rgb)}` +
+             `${isGround ? ", rough=0.95, metal=0.0" : ""})`);
+      }
+      // ROOM_VOLUME cells are interior reading aids; they would fill the house
+      // with translucent boxes in an exterior still, so they are not emitted.
+    }
+    emit("");
   }
 
   // Sky and sun

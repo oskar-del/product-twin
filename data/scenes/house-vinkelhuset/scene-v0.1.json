@@ -1,0 +1,4436 @@
+{
+  "scene_version": "twin-scene/v0.1",
+  "entity_type": "ConceptHouseSceneExport",
+  "scene_id": "SCENE_HOUSE_VINKELHUSET_V03",
+  "generated_at": "2026-09-20T18:53:14.373Z",
+  "subject": {
+    "label": "Vinkelhuset mot Glan — whole-house concept model",
+    "identity_evidence_class": "CONCEPT",
+    "identity_scope": "CONCEPT_HOUSE_DESIGN"
+  },
+  "coordinate_system": {
+    "frame": "LOCAL_ENU",
+    "axes": {
+      "x": "EAST",
+      "y": "UP",
+      "z": "NORTH"
+    },
+    "origin_wgs84": [
+      0,
+      0
+    ],
+    "horizontal_reference": "Local scene frame. South (lake/view side) = negative Z. East = positive X. Y up.",
+    "vertical_reference": "LOCAL_RELATIVE_UNCALIBRATED",
+    "linear_units": "metre",
+    "evidence_class": "CONCEPT",
+    "limitations": [
+      "House frame is BRAGE's concept scene, not a surveyed set-out."
+    ]
+  },
+  "source_bindings": [
+    {
+      "path": "scripts/compile-house.mjs",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "HOUSE_COMPILER"
+    },
+    {
+      "path": "BRAGE/geometry/house-v0.3-geometry-spec.json",
+      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "role": "HOUSE_GEOMETRY_SPEC"
+    }
+  ],
+  "evidence_classes": [
+    "AUTHORITATIVE",
+    "INDICATIVE",
+    "DERIVED",
+    "REPORTED_UNVERIFIED",
+    "CONCEPT"
+  ],
+  "legal_claim_policy": {
+    "visualisation_allowed": true,
+    "concept_design_allowed": true,
+    "blocked_claims": [
+      "LEGAL_BOUNDARY",
+      "REGISTERED_AREA",
+      "ENTITLEMENT",
+      "BUILDABLE_ENVELOPE",
+      "VIEW_OR_OUTLOOK",
+      "FLOOR_LEVEL",
+      "FLOOR_AREA"
+    ],
+    "rule": "Every element is CONCEPT: BRAGE's design proposal, with no entitlement, buildable envelope, floor level or access established. Areas are the spec's own computed figures — heated 206.4 m² excluding the souterrain — and the upper floor counts only the band clearing 1.9 m headroom (4.23 m of its 7 m structural span), which is why the model is wider than the area. Any horizon in a render is a VISUALIZATION, never a view claim. Terrain is not modelled."
+  },
+  "presentation": {
+    "profiles": [
+      "INTELLIGENCE",
+      "REALISTIC",
+      "SYSTEMS"
+    ],
+    "default_profile": "REALISTIC",
+    "default_stage": "EXTERIOR"
+  },
+  "navigation": [
+    {
+      "id": "EXTERIOR",
+      "label": "The house",
+      "camera": [
+        26,
+        16,
+        -26
+      ],
+      "target": [
+        -1,
+        2.4,
+        -0.5
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "ROOF",
+        "WALL",
+        "OPENING",
+        "FLOOR_SLAB"
+      ],
+      "cutaway": false,
+      "labels": false
+    },
+    {
+      "id": "DOLLHOUSE",
+      "label": "Dollhouse",
+      "camera": [
+        22,
+        19,
+        -20
+      ],
+      "target": [
+        -1,
+        1.6,
+        -0.5
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "ROOM",
+        "WALL",
+        "OPENING",
+        "FLOOR_SLAB"
+      ],
+      "cutaway": true,
+      "labels": true
+    },
+    {
+      "id": "GROUND",
+      "label": "Ground floor",
+      "camera": [
+        4,
+        22,
+        4
+      ],
+      "target": [
+        -1,
+        0,
+        -0.5
+      ],
+      "visible_groups": [
+        "ROOM",
+        "WALL",
+        "OPENING",
+        "FLOOR_SLAB"
+      ],
+      "cutaway": true,
+      "labels": true
+    },
+    {
+      "id": "APPROACH",
+      "label": "From the arrival court",
+      "camera": [
+        16,
+        6,
+        24
+      ],
+      "target": [
+        2,
+        2,
+        5
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "ROOF",
+        "WALL",
+        "OPENING",
+        "FLOOR_SLAB"
+      ],
+      "cutaway": false,
+      "labels": false
+    }
+  ],
+  "elements": [
+    {
+      "id": "SITE_GROUND",
+      "type": "TERRAIN",
+      "label": "Ground plane",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "HOUSE_COMPILER"
+      ],
+      "limitations": [
+        "Flat reference plane at finished ground level. The real plot falls ~6 m to the south-west; terrain is NOT modelled here.",
+        "Not a site, not a survey, and not the plot's actual ground."
+      ],
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 38,
+        "segments": 1,
+        "vertices": [
+          [
+            -19,
+            0,
+            -12
+          ],
+          [
+            19,
+            0,
+            -12
+          ],
+          [
+            -19,
+            0,
+            19
+          ],
+          [
+            19,
+            0,
+            19
+          ]
+        ],
+        "method": "FLAT",
+        "height_reference": "LOCAL_RELATIVE"
+      }
+    },
+    {
+      "id": "ROOM_GLANRUMMET_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_GLANRUMMET floor · OILED_OAK_PLANK",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          0.3,
+          7
+        ],
+        "position": [
+          -7.5,
+          -0.15,
+          -0.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GLANRUMMET",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": false,
+      "label": "GLANRUMMET · 49 m² · 2.7 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]"
+      ],
+      "limitations": [
+        "Area 49 m² and volume 132.3 m³ are the spec's computed figures, not measured.",
+        "Heated volume."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          7,
+          2.7,
+          7
+        ],
+        "position": [
+          -7.5,
+          1.35,
+          -0.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "LIVING_VIEW"
+      }
+    },
+    {
+      "id": "ROOM_GLANRUMMET_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_GLANRUMMET_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "wall_segments[ROOM_GLANRUMMET_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.5,
+          2.7,
+          0.25
+        ],
+        "position": [
+          -10.75,
+          1.35,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GLANRUMMET_W0_P1",
+      "type": "WALL",
+      "label": "ROOM_GLANRUMMET_W0 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "wall_segments[ROOM_GLANRUMMET_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          6,
+          0.15000000000000036,
+          0.25
+        ],
+        "position": [
+          -7.5,
+          2.625,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GLANRUMMET_W0_P2",
+      "type": "WALL",
+      "label": "ROOM_GLANRUMMET_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "wall_segments[ROOM_GLANRUMMET_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.5,
+          2.7,
+          0.25
+        ],
+        "position": [
+          -4.25,
+          1.35,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "OP_GLAN_S1",
+      "type": "OPENING",
+      "label": "OP_GLAN_S1 — fixed glazing · SOUTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "openings[OP_GLAN_S1]"
+      ],
+      "limitations": [
+        "Extent, sill 0 m and head 2.55 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          6,
+          2.55,
+          0.08
+        ],
+        "position": [
+          -7.5,
+          1.275,
+          -4
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "SOUTH",
+        "opening_type": "FIXED_GLAZING",
+        "sill_m": 0,
+        "head_m": 2.55,
+        "length_m": 6,
+        "area_m2": 15.3,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "OP_GLAN_DOOR",
+      "type": "OPENING",
+      "label": "OP_GLAN_DOOR — sliding door · SOUTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "openings[OP_GLAN_DOOR]"
+      ],
+      "limitations": [
+        "Extent, sill 0 m and head 2.4 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.7999999999999998,
+          2.4,
+          0.08
+        ],
+        "position": [
+          -6.699999999999999,
+          1.2,
+          -4
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "SOUTH",
+        "opening_type": "SLIDING_DOOR",
+        "sill_m": 0,
+        "head_m": 2.4,
+        "length_m": 1.8,
+        "area_m2": 4.32,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": true,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_GLANRUMMET_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_GLANRUMMET_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "wall_segments[ROOM_GLANRUMMET_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.7,
+          0.25
+        ],
+        "position": [
+          -4,
+          1.35,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_GLANRUMMET_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_GLANRUMMET_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "wall_segments[ROOM_GLANRUMMET_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.7,
+          0.25
+        ],
+        "position": [
+          -7.5,
+          1.35,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GLANRUMMET_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_GLANRUMMET_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "wall_segments[ROOM_GLANRUMMET_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.5,
+          2.7,
+          0.25
+        ],
+        "position": [
+          -11,
+          1.35,
+          2.75
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_GLANRUMMET_W3_P1",
+      "type": "WALL",
+      "label": "ROOM_GLANRUMMET_W3 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "wall_segments[ROOM_GLANRUMMET_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          6,
+          0.15000000000000036,
+          0.25
+        ],
+        "position": [
+          -11,
+          2.625,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_GLANRUMMET_W3_P2",
+      "type": "WALL",
+      "label": "ROOM_GLANRUMMET_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "wall_segments[ROOM_GLANRUMMET_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.5,
+          2.7,
+          0.25
+        ],
+        "position": [
+          -11,
+          1.35,
+          -3.75
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "OP_GLAN_W1",
+      "type": "OPENING",
+      "label": "OP_GLAN_W1 — fixed glazing · WEST",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "openings[OP_GLAN_W1]"
+      ],
+      "limitations": [
+        "Extent, sill 0 m and head 2.55 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Spec note: Evening sun; splayed toward the lake.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          6,
+          2.55,
+          0.08
+        ],
+        "position": [
+          -11,
+          1.275,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      },
+      "opening_schedule": {
+        "wall": "WEST",
+        "opening_type": "FIXED_GLAZING",
+        "sill_m": 0,
+        "head_m": 2.55,
+        "length_m": 6,
+        "area_m2": 15.3,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_KITCHEN_DINING floor · OILED_OAK_PLANK",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          6,
+          0.3,
+          7
+        ],
+        "position": [
+          -1,
+          -0.15,
+          -0.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": false,
+      "label": "KITCHEN DINING · 42 m² · 2.5 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]"
+      ],
+      "limitations": [
+        "Area 42 m² and volume 105 m³ are the spec's computed figures, not measured.",
+        "Heated volume."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          6,
+          2.5,
+          7
+        ],
+        "position": [
+          -1,
+          1.25,
+          -0.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "KITCHEN_DINING"
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.6000000000000001,
+          2.5,
+          0.25
+        ],
+        "position": [
+          -3.7,
+          1.25,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W0_P1",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W0 sill",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          0.5,
+          0.25
+        ],
+        "position": [
+          -1.9,
+          0.25,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W0_P2",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W0 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          0.10000000000000009,
+          0.25
+        ],
+        "position": [
+          -1.9,
+          2.45,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W0_P3",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.6000000000000001,
+          2.5,
+          0.25
+        ],
+        "position": [
+          -0.09999999999999964,
+          1.25,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W0_P4",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W0 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.5999999999999996,
+          0.10000000000000009,
+          0.25
+        ],
+        "position": [
+          1,
+          2.45,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W0_P5",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.20000000000000018,
+          2.5,
+          0.25
+        ],
+        "position": [
+          1.9000000000000004,
+          1.25,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "OP_KD_S1",
+      "type": "OPENING",
+      "label": "OP_KD_S1 — window · SOUTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "openings[OP_KD_S1]"
+      ],
+      "limitations": [
+        "Extent, sill 0.5 m and head 2.4 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          1.9,
+          0.08
+        ],
+        "position": [
+          -1.9,
+          1.45,
+          -4
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "SOUTH",
+        "opening_type": "WINDOW",
+        "sill_m": 0.5,
+        "head_m": 2.4,
+        "length_m": 3,
+        "area_m2": 5.7,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "OP_KD_DOOR",
+      "type": "OPENING",
+      "label": "OP_KD_DOOR — sliding door · SOUTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "openings[OP_KD_DOOR]"
+      ],
+      "limitations": [
+        "Extent, sill 0 m and head 2.4 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.6,
+          2.4,
+          0.08
+        ],
+        "position": [
+          1,
+          1.2,
+          -4
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "SOUTH",
+        "opening_type": "SLIDING_DOOR",
+        "sill_m": 0,
+        "head_m": 2.4,
+        "length_m": 1.6,
+        "area_m2": 3.84,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": true,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.5,
+          0.25
+        ],
+        "position": [
+          2,
+          1.25,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3.7999999999999994,
+          2.5,
+          0.25
+        ],
+        "position": [
+          0.10000000000000031,
+          1.25,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W2_P1",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W2 sill",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.2000000000000006,
+          1.4,
+          0.25
+        ],
+        "position": [
+          -2.3999999999999995,
+          0.7,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W2_P2",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W2 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.2000000000000006,
+          0.10000000000000009,
+          0.25
+        ],
+        "position": [
+          -2.3999999999999995,
+          2.45,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W2_P3",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1,
+          2.5,
+          0.25
+        ],
+        "position": [
+          -3.5,
+          1.25,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "OP_KD_N1",
+      "type": "OPENING",
+      "label": "OP_KD_N1 — window · NORTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "openings[OP_KD_N1]"
+      ],
+      "limitations": [
+        "Extent, sill 1.4 m and head 2.4 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Spec note: High north light over the counter.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.2,
+          1,
+          0.08
+        ],
+        "position": [
+          -2.4,
+          1.9,
+          3
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "NORTH",
+        "opening_type": "WINDOW",
+        "sill_m": 1.4,
+        "head_m": 2.4,
+        "length_m": 1.2,
+        "area_m2": 1.2,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_KITCHEN_DINING_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_KITCHEN_DINING_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "wall_segments[ROOM_KITCHEN_DINING_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.5,
+          0.25
+        ],
+        "position": [
+          -4,
+          1.25,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_HEART_ZONE_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_HEART_ZONE floor · LARGE_FORMAT_STONE_TILE",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          0.3,
+          7
+        ],
+        "position": [
+          3.5,
+          -0.15,
+          -0.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_HEART_ZONE",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": false,
+      "label": "HEART ZONE · 21 m² · 2.5 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]"
+      ],
+      "limitations": [
+        "Area 21 m² and volume 52.5 m³ are the spec's computed figures, not measured.",
+        "Heated volume."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          3,
+          2.5,
+          7
+        ],
+        "position": [
+          3.5,
+          1.25,
+          -0.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "WET_CORE_AND_CIRCULATION"
+      }
+    },
+    {
+      "id": "ROOM_HEART_ZONE_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_HEART_ZONE_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]",
+        "wall_segments[ROOM_HEART_ZONE_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          2.5,
+          0.25
+        ],
+        "position": [
+          3.5,
+          1.25,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_HEART_ZONE_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_HEART_ZONE_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]",
+        "wall_segments[ROOM_HEART_ZONE_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.5,
+          0.25
+        ],
+        "position": [
+          5,
+          1.25,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_HEART_ZONE_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_HEART_ZONE_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]",
+        "wall_segments[ROOM_HEART_ZONE_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          2.5,
+          0.25
+        ],
+        "position": [
+          3.5,
+          1.25,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_HEART_ZONE_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_HEART_ZONE_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]",
+        "wall_segments[ROOM_HEART_ZONE_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.5,
+          0.25
+        ],
+        "position": [
+          2,
+          1.25,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_MAIN_BED floor · OILED_OAK_PLANK",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4,
+          0.3,
+          7
+        ],
+        "position": [
+          7,
+          -0.15,
+          -0.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": false,
+      "label": "MAIN BED · 28 m² · 2.5 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]"
+      ],
+      "limitations": [
+        "Area 28 m² and volume 70 m³ are the spec's computed figures, not measured.",
+        "Heated volume."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          4,
+          2.5,
+          7
+        ],
+        "position": [
+          7,
+          1.25,
+          -0.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "MAIN_BEDROOM_ENSUITE"
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_MAIN_BED_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "wall_segments[ROOM_MAIN_BED_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.5999999999999996,
+          2.5,
+          0.25
+        ],
+        "position": [
+          5.3,
+          1.25,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED_W0_P1",
+      "type": "WALL",
+      "label": "ROOM_MAIN_BED_W0 sill",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "wall_segments[ROOM_MAIN_BED_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.8000000000000007,
+          0.5,
+          0.25
+        ],
+        "position": [
+          7,
+          0.25,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED_W0_P2",
+      "type": "WALL",
+      "label": "ROOM_MAIN_BED_W0 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "wall_segments[ROOM_MAIN_BED_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.8000000000000007,
+          0.10000000000000009,
+          0.25
+        ],
+        "position": [
+          7,
+          2.45,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED_W0_P3",
+      "type": "WALL",
+      "label": "ROOM_MAIN_BED_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "wall_segments[ROOM_MAIN_BED_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.5999999999999996,
+          2.5,
+          0.25
+        ],
+        "position": [
+          8.7,
+          1.25,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "OP_BED_S1",
+      "type": "OPENING",
+      "label": "OP_BED_S1 — window · SOUTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "openings[OP_BED_S1]"
+      ],
+      "limitations": [
+        "Extent, sill 0.5 m and head 2.4 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.8000000000000007,
+          1.9,
+          0.08
+        ],
+        "position": [
+          7,
+          1.45,
+          -4
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "SOUTH",
+        "opening_type": "WINDOW",
+        "sill_m": 0.5,
+        "head_m": 2.4,
+        "length_m": 2.8,
+        "area_m2": 5.32,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_MAIN_BED_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "wall_segments[ROOM_MAIN_BED_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.4,
+          2.5,
+          0.25
+        ],
+        "position": [
+          9,
+          1.25,
+          -3.3
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED_W1_P1",
+      "type": "WALL",
+      "label": "ROOM_MAIN_BED_W1 sill",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "wall_segments[ROOM_MAIN_BED_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.4,
+          0.7,
+          0.25
+        ],
+        "position": [
+          9,
+          0.35,
+          -1.9000000000000004
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED_W1_P2",
+      "type": "WALL",
+      "label": "ROOM_MAIN_BED_W1 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "wall_segments[ROOM_MAIN_BED_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.4,
+          0.2999999999999998,
+          0.25
+        ],
+        "position": [
+          9,
+          2.35,
+          -1.9000000000000004
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED_W1_P3",
+      "type": "WALL",
+      "label": "ROOM_MAIN_BED_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "wall_segments[ROOM_MAIN_BED_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4.2,
+          2.5,
+          0.25
+        ],
+        "position": [
+          9,
+          1.25,
+          0.9000000000000004
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "OP_BED_E1",
+      "type": "OPENING",
+      "label": "OP_BED_E1 — window · EAST",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "openings[OP_BED_E1]"
+      ],
+      "limitations": [
+        "Extent, sill 0.7 m and head 2.2 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Spec note: Morning light.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.4000000000000001,
+          1.5000000000000002,
+          0.08
+        ],
+        "position": [
+          9,
+          1.4500000000000002,
+          -1.9
+        ],
+        "rotation_y_deg": 90
+      },
+      "opening_schedule": {
+        "wall": "EAST",
+        "opening_type": "WINDOW",
+        "sill_m": 0.7,
+        "head_m": 2.2,
+        "length_m": 1.4,
+        "area_m2": 2.1,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_MAIN_BED_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "wall_segments[ROOM_MAIN_BED_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4,
+          2.5,
+          0.25
+        ],
+        "position": [
+          7,
+          1.25,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_MAIN_BED_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_MAIN_BED_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "wall_segments[ROOM_MAIN_BED_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.5,
+          0.25
+        ],
+        "position": [
+          5,
+          1.25,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_ENTRY_HALL_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_ENTRY_HALL floor · LARGE_FORMAT_STONE_TILE",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          0.3,
+          3
+        ],
+        "position": [
+          4.5,
+          -0.15,
+          4.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_ENTRY_HALL",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": false,
+      "label": "ENTRY HALL · 9 m² · 2.5 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]"
+      ],
+      "limitations": [
+        "Area 9 m² and volume 22.5 m³ are the spec's computed figures, not measured.",
+        "Heated volume."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          3,
+          2.5,
+          3
+        ],
+        "position": [
+          4.5,
+          1.25,
+          4.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "ENTRY_HALL"
+      }
+    },
+    {
+      "id": "ROOM_ENTRY_HALL_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_ENTRY_HALL_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "wall_segments[ROOM_ENTRY_HALL_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          2.5,
+          0.25
+        ],
+        "position": [
+          4.5,
+          1.25,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_ENTRY_HALL_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_ENTRY_HALL_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "wall_segments[ROOM_ENTRY_HALL_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.6000000000000001,
+          2.5,
+          0.25
+        ],
+        "position": [
+          6,
+          1.25,
+          3.3
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_ENTRY_HALL_W1_P1",
+      "type": "WALL",
+      "label": "ROOM_ENTRY_HALL_W1 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "wall_segments[ROOM_ENTRY_HALL_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.1,
+          0.3999999999999999,
+          0.25
+        ],
+        "position": [
+          6,
+          2.3,
+          4.15
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_ENTRY_HALL_W1_P2",
+      "type": "WALL",
+      "label": "ROOM_ENTRY_HALL_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "wall_segments[ROOM_ENTRY_HALL_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.2999999999999998,
+          2.5,
+          0.25
+        ],
+        "position": [
+          6,
+          1.25,
+          5.35
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "OP_ENTRY_DOOR",
+      "type": "OPENING",
+      "label": "OP_ENTRY_DOOR — entrance door · EAST",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "openings[OP_ENTRY_DOOR]"
+      ],
+      "limitations": [
+        "Extent, sill 0 m and head 2.1 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Spec note: Off the arrival court.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.1,
+          2.1,
+          0.08
+        ],
+        "position": [
+          6,
+          1.05,
+          4.15
+        ],
+        "rotation_y_deg": 90
+      },
+      "opening_schedule": {
+        "wall": "EAST",
+        "opening_type": "ENTRANCE_DOOR",
+        "sill_m": 0,
+        "head_m": 2.1,
+        "length_m": 1.1,
+        "area_m2": 2.31,
+        "glazing": "PART_GLAZED_TIMBER",
+        "is_door": true,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_ENTRY_HALL_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_ENTRY_HALL_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "wall_segments[ROOM_ENTRY_HALL_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          2.5,
+          0.25
+        ],
+        "position": [
+          4.5,
+          1.25,
+          6
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_ENTRY_HALL_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_ENTRY_HALL_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "wall_segments[ROOM_ENTRY_HALL_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.7999999999999998,
+          2.5,
+          0.25
+        ],
+        "position": [
+          3,
+          1.25,
+          5.6
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_ENTRY_HALL_W3_P1",
+      "type": "WALL",
+      "label": "ROOM_ENTRY_HALL_W3 sill",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "wall_segments[ROOM_ENTRY_HALL_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.4000000000000004,
+          0.9,
+          0.25
+        ],
+        "position": [
+          3,
+          0.45,
+          4.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_ENTRY_HALL_W3_P2",
+      "type": "WALL",
+      "label": "ROOM_ENTRY_HALL_W3 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "wall_segments[ROOM_ENTRY_HALL_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.4000000000000004,
+          0.2999999999999998,
+          0.25
+        ],
+        "position": [
+          3,
+          2.35,
+          4.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_ENTRY_HALL_W3_P3",
+      "type": "WALL",
+      "label": "ROOM_ENTRY_HALL_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "wall_segments[ROOM_ENTRY_HALL_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.7999999999999998,
+          2.5,
+          0.25
+        ],
+        "position": [
+          3,
+          1.25,
+          3.4
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "OP_ENTRY_W1",
+      "type": "OPENING",
+      "label": "OP_ENTRY_W1 — window · WEST",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "openings[OP_ENTRY_W1]"
+      ],
+      "limitations": [
+        "Extent, sill 0.9 m and head 2.2 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.4000000000000004,
+          1.3000000000000003,
+          0.08
+        ],
+        "position": [
+          3,
+          1.55,
+          4.5
+        ],
+        "rotation_y_deg": 90
+      },
+      "opening_schedule": {
+        "wall": "WEST",
+        "opening_type": "WINDOW",
+        "sill_m": 0.9,
+        "head_m": 2.2,
+        "length_m": 1.4,
+        "area_m2": 1.82,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_UTILITY_WC_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_UTILITY_WC floor · LARGE_FORMAT_STONE_TILE",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          0.3,
+          5
+        ],
+        "position": [
+          4.5,
+          -0.15,
+          8.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_UTILITY_WC",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": false,
+      "label": "UTILITY WC · 15 m² · 2.5 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]"
+      ],
+      "limitations": [
+        "Area 15 m² and volume 37.5 m³ are the spec's computed figures, not measured.",
+        "Heated volume."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          3,
+          2.5,
+          5
+        ],
+        "position": [
+          4.5,
+          1.25,
+          8.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "UTILITY_WC_LAUNDRY"
+      }
+    },
+    {
+      "id": "ROOM_UTILITY_WC_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_UTILITY_WC_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "wall_segments[ROOM_UTILITY_WC_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          2.5,
+          0.25
+        ],
+        "position": [
+          4.5,
+          1.25,
+          6
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_UTILITY_WC_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_UTILITY_WC_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "wall_segments[ROOM_UTILITY_WC_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          5,
+          2.5,
+          0.25
+        ],
+        "position": [
+          6,
+          1.25,
+          8.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_UTILITY_WC_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_UTILITY_WC_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "wall_segments[ROOM_UTILITY_WC_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.2000000000000002,
+          2.5,
+          0.25
+        ],
+        "position": [
+          5.4,
+          1.25,
+          11
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_UTILITY_WC_W2_P1",
+      "type": "WALL",
+      "label": "ROOM_UTILITY_WC_W2 sill",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "wall_segments[ROOM_UTILITY_WC_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.1999999999999997,
+          1.3,
+          0.25
+        ],
+        "position": [
+          4.2,
+          0.65,
+          11
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_UTILITY_WC_W2_P2",
+      "type": "WALL",
+      "label": "ROOM_UTILITY_WC_W2 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "wall_segments[ROOM_UTILITY_WC_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.1999999999999997,
+          0.2999999999999998,
+          0.25
+        ],
+        "position": [
+          4.2,
+          2.35,
+          11
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_UTILITY_WC_W2_P3",
+      "type": "WALL",
+      "label": "ROOM_UTILITY_WC_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "wall_segments[ROOM_UTILITY_WC_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.6000000000000001,
+          2.5,
+          0.25
+        ],
+        "position": [
+          3.3,
+          1.25,
+          11
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "OP_UTIL_N1",
+      "type": "OPENING",
+      "label": "OP_UTIL_N1 — window · NORTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "openings[OP_UTIL_N1]"
+      ],
+      "limitations": [
+        "Extent, sill 1.3 m and head 2.2 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.1999999999999997,
+          0.9000000000000001,
+          0.08
+        ],
+        "position": [
+          4.2,
+          1.75,
+          11
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "NORTH",
+        "opening_type": "WINDOW",
+        "sill_m": 1.3,
+        "head_m": 2.2,
+        "length_m": 1.2,
+        "area_m2": 1.08,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_UTILITY_WC_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_UTILITY_WC_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "wall_segments[ROOM_UTILITY_WC_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          5,
+          2.5,
+          0.25
+        ],
+        "position": [
+          3,
+          1.25,
+          8.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_GARAGE_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_GARAGE floor · POWER_FLOATED_CONCRETE",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          5,
+          0.3,
+          8
+        ],
+        "position": [
+          8.5,
+          -0.15,
+          7
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GARAGE",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": false,
+      "label": "GARAGE · 40 m² · 2.4 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]"
+      ],
+      "limitations": [
+        "Area 40 m² and volume 96 m³ are the spec's computed figures, not measured.",
+        "COLD volume — excluded from the heated area."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          5,
+          2.4,
+          8
+        ],
+        "position": [
+          8.5,
+          1.2,
+          7
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "GARAGE_DOUBLE"
+      }
+    },
+    {
+      "id": "ROOM_GARAGE_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_GARAGE_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "wall_segments[ROOM_GARAGE_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          5,
+          2.4,
+          0.25
+        ],
+        "position": [
+          8.5,
+          1.2,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GARAGE_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_GARAGE_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "wall_segments[ROOM_GARAGE_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          8,
+          2.4,
+          0.25
+        ],
+        "position": [
+          11,
+          1.2,
+          7
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_GARAGE_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_GARAGE_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "wall_segments[ROOM_GARAGE_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.8000000000000007,
+          2.4,
+          0.25
+        ],
+        "position": [
+          10.6,
+          1.2,
+          11
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GARAGE_W2_P1",
+      "type": "WALL",
+      "label": "ROOM_GARAGE_W2 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "wall_segments[ROOM_GARAGE_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3.3999999999999995,
+          0.19999999999999973,
+          0.25
+        ],
+        "position": [
+          8.5,
+          2.3,
+          11
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GARAGE_W2_P2",
+      "type": "WALL",
+      "label": "ROOM_GARAGE_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "wall_segments[ROOM_GARAGE_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.7999999999999998,
+          2.4,
+          0.25
+        ],
+        "position": [
+          6.4,
+          1.2,
+          11
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "OP_GARAGE_DOOR",
+      "type": "OPENING",
+      "label": "OP_GARAGE_DOOR — garage door · NORTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "openings[OP_GARAGE_DOOR]"
+      ],
+      "limitations": [
+        "Extent, sill 0 m and head 2.2 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3.3999999999999995,
+          2.2,
+          0.08
+        ],
+        "position": [
+          8.5,
+          1.1,
+          11
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "NORTH",
+        "opening_type": "GARAGE_DOOR",
+        "sill_m": 0,
+        "head_m": 2.2,
+        "length_m": 3.4,
+        "area_m2": 7.48,
+        "glazing": "INSULATED_SECTIONAL",
+        "is_door": true,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_GARAGE_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_GARAGE_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "wall_segments[ROOM_GARAGE_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          8,
+          2.4,
+          0.25
+        ],
+        "position": [
+          6,
+          1.2,
+          7
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_CHILD_1_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_CHILD_1 floor · OILED_OAK_PLANK",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4,
+          0.3,
+          4.24
+        ],
+        "position": [
+          3,
+          2.85,
+          -0.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_CHILD_1",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": true,
+      "label": "CHILD 1 · 16.96 m² · 2.02 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]"
+      ],
+      "limitations": [
+        "Area 16.96 m² and volume 34.26 m³ are the spec's computed figures, not measured.",
+        "Heated volume.",
+        "Drawn as a flat-topped box for readability. The real ceiling follows the 30° pitch, so this box is wider at the top than the room is; the 16.96 m² area counts only the band clearing 1.9 m."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          4,
+          2.02,
+          4.24
+        ],
+        "position": [
+          3,
+          4.01,
+          -0.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "BEDROOM"
+      }
+    },
+    {
+      "id": "ROOM_CHILD_1_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_CHILD_1_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "wall_segments[ROOM_CHILD_1_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.6000000000000001,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          1.3,
+          3.388008714658996,
+          -2.62
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_CHILD_1_W0_P1",
+      "type": "WALL",
+      "label": "ROOM_CHILD_1_W0 sill",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "wall_segments[ROOM_CHILD_1_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.7999999999999998,
+          0.6,
+          0.25
+        ],
+        "position": [
+          2.5,
+          3.3,
+          -2.62
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_CHILD_1_W0_P3",
+      "type": "WALL",
+      "label": "ROOM_CHILD_1_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "wall_segments[ROOM_CHILD_1_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.6,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          4.2,
+          3.388008714658996,
+          -2.62
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "OP_CH1_S",
+      "type": "OPENING",
+      "label": "OP_CH1_S — dormer window · SOUTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "openings[OP_CH1_S]"
+      ],
+      "limitations": [
+        "Extent, sill 0.6 m and head 1.9 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.7999999999999998,
+          1.2999999999999998,
+          0.08
+        ],
+        "position": [
+          2.5,
+          4.25,
+          -2.62
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "SOUTH",
+        "opening_type": "DORMER_WINDOW",
+        "sill_m": 0.6,
+        "head_m": 1.9,
+        "length_m": 1.8,
+        "area_m2": 2.34,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_CHILD_1_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_CHILD_1_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "wall_segments[ROOM_CHILD_1_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4.24,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          5,
+          3.388008714658996,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_CHILD_1_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_CHILD_1_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "wall_segments[ROOM_CHILD_1_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          3,
+          3.388008714658996,
+          1.62
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_CHILD_1_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_CHILD_1_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "wall_segments[ROOM_CHILD_1_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4.24,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          1,
+          3.388008714658996,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_CHILD_2_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_CHILD_2 floor · OILED_OAK_PLANK",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4,
+          0.3,
+          4.24
+        ],
+        "position": [
+          7,
+          2.85,
+          -0.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_CHILD_2",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": true,
+      "label": "CHILD 2 · 16.96 m² · 2.02 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]"
+      ],
+      "limitations": [
+        "Area 16.96 m² and volume 34.26 m³ are the spec's computed figures, not measured.",
+        "Heated volume.",
+        "Drawn as a flat-topped box for readability. The real ceiling follows the 30° pitch, so this box is wider at the top than the room is; the 16.96 m² area counts only the band clearing 1.9 m."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          4,
+          2.02,
+          4.24
+        ],
+        "position": [
+          7,
+          4.01,
+          -0.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "BEDROOM"
+      }
+    },
+    {
+      "id": "ROOM_CHILD_2_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_CHILD_2_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "wall_segments[ROOM_CHILD_2_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.5999999999999996,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          5.3,
+          3.388008714658996,
+          -2.62
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_CHILD_2_W0_P1",
+      "type": "WALL",
+      "label": "ROOM_CHILD_2_W0 sill",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "wall_segments[ROOM_CHILD_2_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.8000000000000007,
+          0.6,
+          0.25
+        ],
+        "position": [
+          6.5,
+          3.3,
+          -2.62
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_CHILD_2_W0_P3",
+      "type": "WALL",
+      "label": "ROOM_CHILD_2_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "wall_segments[ROOM_CHILD_2_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.5999999999999996,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          8.2,
+          3.388008714658996,
+          -2.62
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "OP_CH2_S",
+      "type": "OPENING",
+      "label": "OP_CH2_S — dormer window · SOUTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "openings[OP_CH2_S]"
+      ],
+      "limitations": [
+        "Extent, sill 0.6 m and head 1.9 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.8000000000000007,
+          1.2999999999999998,
+          0.08
+        ],
+        "position": [
+          6.5,
+          4.25,
+          -2.62
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "SOUTH",
+        "opening_type": "DORMER_WINDOW",
+        "sill_m": 0.6,
+        "head_m": 1.9,
+        "length_m": 1.8,
+        "area_m2": 2.34,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_CHILD_2_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_CHILD_2_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "wall_segments[ROOM_CHILD_2_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4.24,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          9,
+          3.388008714658996,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_CHILD_2_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_CHILD_2_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "wall_segments[ROOM_CHILD_2_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          7,
+          3.388008714658996,
+          1.62
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_CHILD_2_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_CHILD_2_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "wall_segments[ROOM_CHILD_2_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4.24,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          5,
+          3.388008714658996,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_UPPER_BATH_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_UPPER_BATH floor · STONE_TILE",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2,
+          0.3,
+          4.24
+        ],
+        "position": [
+          0,
+          2.85,
+          -0.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_UPPER_BATH",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": true,
+      "label": "UPPER BATH · 8.48 m² · 2.02 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]"
+      ],
+      "limitations": [
+        "Area 8.48 m² and volume 17.13 m³ are the spec's computed figures, not measured.",
+        "Heated volume.",
+        "Drawn as a flat-topped box for readability. The real ceiling follows the 30° pitch, so this box is wider at the top than the room is; the 8.48 m² area counts only the band clearing 1.9 m."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          2,
+          2.02,
+          4.24
+        ],
+        "position": [
+          0,
+          4.01,
+          -0.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "BATHROOM"
+      }
+    },
+    {
+      "id": "OP_UPBATH_ROOF",
+      "type": "OPENING",
+      "label": "OP_UPBATH_ROOF — roof light · ROOF_NORTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]",
+        "openings[OP_UPBATH_ROOF]"
+      ],
+      "limitations": [
+        "Plan extent is BRAGE's; the spec states no sill or head for a rooflight, so its height is derived from the 30° roof plane at that Z.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed."
+      ],
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 1.2,
+        "segments": 1,
+        "vertices": [
+          [
+            -0.6,
+            4.6358548115672615,
+            0.2
+          ],
+          [
+            0.6,
+            4.6358548115672615,
+            0.2
+          ],
+          [
+            -0.6,
+            3.943034488539711,
+            1.4
+          ],
+          [
+            0.6,
+            3.943034488539711,
+            1.4
+          ]
+        ],
+        "method": "PLANE_FROM_SPEC",
+        "height_reference": "LOCAL_RELATIVE"
+      },
+      "opening_schedule": {
+        "wall": "ROOF_NORTH",
+        "opening_type": "ROOF_LIGHT",
+        "sill_m": null,
+        "head_m": null,
+        "length_m": 1.7,
+        "area_m2": null,
+        "glazing": "TRIPLE_ROOFLIGHT",
+        "is_door": false,
+        "in_roof_plane": true,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_UPPER_BATH_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_UPPER_BATH_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]",
+        "wall_segments[ROOM_UPPER_BATH_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          0,
+          3.388008714658996,
+          -2.62
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_UPPER_BATH_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_UPPER_BATH_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]",
+        "wall_segments[ROOM_UPPER_BATH_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4.24,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          1,
+          3.388008714658996,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_UPPER_BATH_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_UPPER_BATH_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]",
+        "wall_segments[ROOM_UPPER_BATH_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          0,
+          3.388008714658996,
+          1.62
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_UPPER_BATH_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_UPPER_BATH_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]",
+        "wall_segments[ROOM_UPPER_BATH_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Top clamped to the 30° roof plane: the spec states this wall at the room's 2.02 m clear height and gives knee_wall_m 1.1 separately, so the physical wall stops under the roof.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          4.24,
+          0.7760174293179927,
+          0.25
+        ],
+        "position": [
+          -1,
+          3.388008714658996,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_GILLESTUGA_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_GILLESTUGA floor · POLISHED_CONCRETE",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          6,
+          0.3,
+          7
+        ],
+        "position": [
+          -8,
+          -2.65,
+          -0.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GILLESTUGA",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": false,
+      "label": "GILLESTUGA · 42 m² · 2.4 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]"
+      ],
+      "limitations": [
+        "Area 42 m² and volume 100.8 m³ are the spec's computed figures, not measured.",
+        "Heated volume."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          6,
+          2.4,
+          7
+        ],
+        "position": [
+          -8,
+          -1.3,
+          -0.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "FAMILY_ROOM"
+      }
+    },
+    {
+      "id": "ROOM_GILLESTUGA_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_GILLESTUGA_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "wall_segments[ROOM_GILLESTUGA_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.4000000000000004,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -10.3,
+          -1.3,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GILLESTUGA_W0_P1",
+      "type": "WALL",
+      "label": "ROOM_GILLESTUGA_W0 sill",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "wall_segments[ROOM_GILLESTUGA_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.399999999999999,
+          0.9,
+          0.25
+        ],
+        "position": [
+          -8.4,
+          -2.05,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GILLESTUGA_W0_P2",
+      "type": "WALL",
+      "label": "ROOM_GILLESTUGA_W0 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "wall_segments[ROOM_GILLESTUGA_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.399999999999999,
+          0.19999999999999973,
+          0.25
+        ],
+        "position": [
+          -8.4,
+          -0.20000000000000018,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GILLESTUGA_W0_P3",
+      "type": "WALL",
+      "label": "ROOM_GILLESTUGA_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "wall_segments[ROOM_GILLESTUGA_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.2000000000000006,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -6.1000000000000005,
+          -1.3,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "OP_GILLE_S",
+      "type": "OPENING",
+      "label": "OP_GILLE_S — window · SOUTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "openings[OP_GILLE_S]"
+      ],
+      "limitations": [
+        "Extent, sill 0.9 m and head 2.2 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.3999999999999995,
+          1.3000000000000003,
+          0.08
+        ],
+        "position": [
+          -8.4,
+          -0.95,
+          -4
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "SOUTH",
+        "opening_type": "WINDOW",
+        "sill_m": 0.9,
+        "head_m": 2.2,
+        "length_m": 2.4,
+        "area_m2": 3.12,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_GILLESTUGA_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_GILLESTUGA_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "wall_segments[ROOM_GILLESTUGA_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -5,
+          -1.3,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_GILLESTUGA_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_GILLESTUGA_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "wall_segments[ROOM_GILLESTUGA_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          6,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -8,
+          -1.3,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GILLESTUGA_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_GILLESTUGA_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "wall_segments[ROOM_GILLESTUGA_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.6,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -11,
+          -1.3,
+          1.7
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_GILLESTUGA_W3_P1",
+      "type": "WALL",
+      "label": "ROOM_GILLESTUGA_W3 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "wall_segments[ROOM_GILLESTUGA_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2.9999999999999996,
+          0.19999999999999973,
+          0.25
+        ],
+        "position": [
+          -11,
+          -0.20000000000000018,
+          -1.0999999999999996
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_GILLESTUGA_W3_P2",
+      "type": "WALL",
+      "label": "ROOM_GILLESTUGA_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "wall_segments[ROOM_GILLESTUGA_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.4000000000000004,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -11,
+          -1.3,
+          -3.3
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "OP_GILLE_W",
+      "type": "OPENING",
+      "label": "OP_GILLE_W — sliding door · WEST",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "openings[OP_GILLE_W]"
+      ],
+      "limitations": [
+        "Extent, sill 0 m and head 2.2 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Spec note: The walk-out the 13° slope pays for.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          3,
+          2.2,
+          0.08
+        ],
+        "position": [
+          -11,
+          -1.4,
+          -1.1
+        ],
+        "rotation_y_deg": 90
+      },
+      "opening_schedule": {
+        "wall": "WEST",
+        "opening_type": "SLIDING_DOOR",
+        "sill_m": 0,
+        "head_m": 2.2,
+        "length_m": 3,
+        "area_m2": 6.6,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": true,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_GUEST_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_GUEST floor · OILED_OAK_PLANK",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2,
+          0.3,
+          7
+        ],
+        "position": [
+          -4,
+          -2.65,
+          -0.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GUEST",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": false,
+      "label": "GUEST · 14 m² · 2.4 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]"
+      ],
+      "limitations": [
+        "Area 14 m² and volume 33.6 m³ are the spec's computed figures, not measured.",
+        "Heated volume."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          2,
+          2.4,
+          7
+        ],
+        "position": [
+          -4,
+          -1.3,
+          -0.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "GUEST_BEDROOM"
+      }
+    },
+    {
+      "id": "ROOM_GUEST_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_GUEST_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "wall_segments[ROOM_GUEST_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.40000000000000036,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -4.8,
+          -1.3,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GUEST_W0_P1",
+      "type": "WALL",
+      "label": "ROOM_GUEST_W0 sill",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "wall_segments[ROOM_GUEST_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.1999999999999997,
+          0.9,
+          0.25
+        ],
+        "position": [
+          -4,
+          -2.05,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GUEST_W0_P2",
+      "type": "WALL",
+      "label": "ROOM_GUEST_W0 head",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "wall_segments[ROOM_GUEST_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.1999999999999997,
+          0.19999999999999973,
+          0.25
+        ],
+        "position": [
+          -4,
+          -0.20000000000000018,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GUEST_W0_P3",
+      "type": "WALL",
+      "label": "ROOM_GUEST_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "wall_segments[ROOM_GUEST_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "Cut around the openings BRAGE's schedule states for this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          0.3999999999999999,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -3.2,
+          -1.3,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "OP_GUEST_S",
+      "type": "OPENING",
+      "label": "OP_GUEST_S — window · SOUTH",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "openings[OP_GUEST_S]"
+      ],
+      "limitations": [
+        "Extent, sill 0.9 m and head 2.2 m are BRAGE's stated values; frame and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook or sightline is claimed or measured."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.1999999999999997,
+          1.3000000000000003,
+          0.08
+        ],
+        "position": [
+          -4,
+          -0.95,
+          -4
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "SOUTH",
+        "opening_type": "WINDOW",
+        "sill_m": 0.9,
+        "head_m": 2.2,
+        "length_m": 1.2,
+        "area_m2": 1.56,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "ROOM_GUEST_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_GUEST_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "wall_segments[ROOM_GUEST_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -3,
+          -1.3,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_GUEST_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_GUEST_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "wall_segments[ROOM_GUEST_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -4,
+          -1.3,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_GUEST_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_GUEST_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "wall_segments[ROOM_GUEST_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -5,
+          -1.3,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_TECH_STORE_SLAB",
+      "type": "FLOOR_SLAB",
+      "label": "ROOM_TECH_STORE floor · SEALED_CONCRETE",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]"
+      ],
+      "limitations": [
+        "Concept geometry from BRAGE's design. Not a survey; no level is set out."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2,
+          0.3,
+          7
+        ],
+        "position": [
+          -2,
+          -2.65,
+          -0.5
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_TECH_STORE",
+      "type": "ROOM",
+      "picking": false,
+      "storey_under_pitch": false,
+      "label": "TECH STORE · 14 m² · 2.4 m clear",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]"
+      ],
+      "limitations": [
+        "Area 14 m² and volume 33.6 m³ are the spec's computed figures, not measured.",
+        "Heated volume."
+      ],
+      "geometry": {
+        "primitive": "ROOM_VOLUME",
+        "size": [
+          2,
+          2.4,
+          7
+        ],
+        "position": [
+          -2,
+          -1.3,
+          -0.5
+        ],
+        "rotation_y_deg": 0,
+        "intended_use": "PLANT_AND_STORE"
+      }
+    },
+    {
+      "id": "ROOM_TECH_STORE_W0_P0",
+      "type": "WALL",
+      "label": "ROOM_TECH_STORE_W0 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]",
+        "wall_segments[ROOM_TECH_STORE_W0]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -2,
+          -1.3,
+          -4
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_TECH_STORE_W1_P0",
+      "type": "WALL",
+      "label": "ROOM_TECH_STORE_W1 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]",
+        "wall_segments[ROOM_TECH_STORE_W1]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -1,
+          -1.3,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOM_TECH_STORE_W2_P0",
+      "type": "WALL",
+      "label": "ROOM_TECH_STORE_W2 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]",
+        "wall_segments[ROOM_TECH_STORE_W2]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          2,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -2,
+          -1.3,
+          3
+        ],
+        "rotation_y_deg": 0
+      }
+    },
+    {
+      "id": "ROOM_TECH_STORE_W3_P0",
+      "type": "WALL",
+      "label": "ROOM_TECH_STORE_W3 pier",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]",
+        "wall_segments[ROOM_TECH_STORE_W3]"
+      ],
+      "limitations": [
+        "Concept wall. Thickness is a model convention, not a construction build-up.",
+        "No opening is stated on this wall."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          7,
+          2.4,
+          0.25
+        ],
+        "position": [
+          -3,
+          -1.3,
+          -0.5
+        ],
+        "rotation_y_deg": 90
+      }
+    },
+    {
+      "id": "ROOF_GABLE_SOUTH",
+      "type": "ROOF",
+      "label": "Gable roof — south plane (PV-ready)",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 roof"
+      ],
+      "limitations": [
+        "30° gable, ridge east–west at Y 5.02 m, eaves Y 3 m, 0.5 m overhang — BRAGE's stated values.",
+        "Covering STANDING_SEAM_SHEET_METAL. No structure, build-up, gutter or flashing is modelled."
+      ],
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 20,
+        "segments": 1,
+        "vertices": [
+          [
+            -11.5,
+            5.02,
+            -0.5
+          ],
+          [
+            9.5,
+            5.02,
+            -0.5
+          ],
+          [
+            -11.5,
+            2.711324865405187,
+            -4.5
+          ],
+          [
+            9.5,
+            2.711324865405187,
+            -4.5
+          ]
+        ],
+        "method": "PLANE_FROM_SPEC",
+        "height_reference": "LOCAL_RELATIVE"
+      }
+    },
+    {
+      "id": "ROOF_GABLE_NORTH",
+      "type": "ROOF",
+      "label": "Gable roof — north plane",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 roof"
+      ],
+      "limitations": [
+        "30° gable, ridge east–west at Y 5.02 m, eaves Y 3 m, 0.5 m overhang — BRAGE's stated values.",
+        "Covering STANDING_SEAM_SHEET_METAL. No structure, build-up, gutter or flashing is modelled."
+      ],
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 20,
+        "segments": 1,
+        "vertices": [
+          [
+            -11.5,
+            5.02,
+            -0.5
+          ],
+          [
+            9.5,
+            5.02,
+            -0.5
+          ],
+          [
+            -11.5,
+            2.711324865405187,
+            3.5
+          ],
+          [
+            9.5,
+            2.711324865405187,
+            3.5
+          ]
+        ],
+        "method": "PLANE_FROM_SPEC",
+        "height_reference": "LOCAL_RELATIVE"
+      }
+    },
+    {
+      "id": "ROOF_WING_MONO",
+      "type": "ROOF",
+      "label": "Cold wing roof — 15° monopitch falling north",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 wing_roof"
+      ],
+      "limitations": [
+        "15° monopitch falling north, plate Y 3 m, 0.4 m overhang — BRAGE's stated values.",
+        "Covering STANDING_SEAM_SHEET_METAL. Cold wing. A shallower mono-pitch keeps the wing visually subordinate to the bar and sheds to the arrival court.",
+        "SPEC CONFLICT — as stated, this plane passes through 3 room(s) beneath it. Worst: ROOM_UTILITY_WC needs 2.5 m, the plane is at 0.749 m (1.751 m short). Built to the spec's stated pitch and plate; not silently re-pitched. BRAGE to resolve."
+      ],
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 8,
+        "segments": 1,
+        "vertices": [
+          [
+            2.6,
+            3,
+            2.6
+          ],
+          [
+            11.4,
+            3,
+            2.6
+          ],
+          [
+            2.6,
+            0.6420471066061202,
+            11.4
+          ],
+          [
+            11.4,
+            0.6420471066061202,
+            11.4
+          ]
+        ],
+        "method": "PLANE_FROM_SPEC",
+        "height_reference": "LOCAL_RELATIVE"
+      }
+    }
+  ],
+  "house_summary": {
+    "spec_id": "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03",
+    "spec_version": "brage-house-geometry/v0.3",
+    "generated_at": "2026-09-20T18:32:08.795Z",
+    "rooms": 13,
+    "openings": 18,
+    "heated_m2_excl_souterrain": 206.4,
+    "heated_m2_incl_souterrain": 276.4,
+    "cold_m2": 40,
+    "ground_footprint_m2": 204,
+    "by_storey": {
+      "GROUND": 204,
+      "UPPER": 42.4,
+      "SOUTERRAIN": 70
+    },
+    "upper_floor": {
+      "method": "Usable width is the band under the 30° gable where headroom reaches the minimum, measured from the knee wall.",
+      "headroom_min_m": 1.9,
+      "knee_wall_m": 1.1,
+      "pitch_deg": 30,
+      "span_m": 7,
+      "distance_from_eaves_to_headroom_m": 1.39,
+      "usable_width_m": 4.23,
+      "usable_band_z": [
+        -2.62,
+        1.62
+      ],
+      "note": "The full 7 m span is NOT counted as floor area; only the band that clears 1.9 m."
+    },
+    "area_source": "BRAGE_SPEC_V03_AREA_SUMMARY",
+    "spec_conflicts": [
+      {
+        "roof": "ROOF_WING_MONO",
+        "room": "ROOM_ENTRY_HALL",
+        "room_top_y": 2.5,
+        "roof_low_y": 2.089,
+        "shortfall_m": 0.411
+      },
+      {
+        "roof": "ROOF_WING_MONO",
+        "room": "ROOM_UTILITY_WC",
+        "room_top_y": 2.5,
+        "roof_low_y": 0.749,
+        "shortfall_m": 1.751
+      },
+      {
+        "roof": "ROOF_WING_MONO",
+        "room": "ROOM_GARAGE",
+        "room_top_y": 2.4,
+        "roof_low_y": 0.749,
+        "shortfall_m": 1.651
+      }
+    ]
+  }
+}

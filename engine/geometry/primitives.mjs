@@ -108,7 +108,11 @@ export function createSceneBuilder({materials, textures = null, labels: labelsEn
       );
       wireframe.userData.intelligenceOnly = true;
       mesh.add(wireframe);
-      terrainMesh = mesh;
+      // Only actual ground claims the terrain slot. A GRID_SURFACE is just an
+      // arbitrary vertex mesh, and a house uses it for pitched roof planes too —
+      // letting the last one built become "the terrain" would silently repoint
+      // draping and the height lookups at a roof.
+      if (element.type === "TERRAIN") terrainMesh = mesh;
       return mesh;
     },
 

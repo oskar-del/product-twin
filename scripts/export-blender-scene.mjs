@@ -13,7 +13,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 const sceneArg = process.argv[2];
 if (!sceneArg) {
-  console.error("usage: node scripts/export-blender-scene.mjs <scene.json> [--out path.py] [--stage ID] [--profile REALISTIC|INTELLIGENCE]");
+  console.error("usage: node scripts/export-blender-scene.mjs <scene.json> [--out path.py] [--stage ID] [--profile REALISTIC|INTELLIGENCE] [--structure]");
   process.exit(1);
 }
 
@@ -28,6 +28,7 @@ const profileIdx = process.argv.indexOf("--profile");
 const outputPy = outIdx !== -1 ? path.resolve(process.argv[outIdx + 1]) : scenePath.replace(/\.json$/, ".py");
 const stage = stageIdx !== -1 ? process.argv[stageIdx + 1] : undefined;
 const profile = profileIdx !== -1 ? process.argv[profileIdx + 1] : "REALISTIC";
+const structure = process.argv.includes("--structure");
 
 // asset_path on a scene element is REPO-relative (data/geometry/avatars/...), so the base is
 // the repo root — not the scene's own directory, which would resolve every GLB to a path that
@@ -51,7 +52,8 @@ const script = exportBlenderScene(scene, {
   resolution: width ? [width, Math.round(width * 0.625)] : undefined,
   windowWattsPerSqm: numArg("--window-w"),
   lens: numArg("--lens"),
-  cameraCorner: process.argv.includes("--east") ? "east" : "west"
+  cameraCorner: process.argv.includes("--east") ? "east" : "west",
+  structure
 });
 
 fs.writeFileSync(outputPy, script);
