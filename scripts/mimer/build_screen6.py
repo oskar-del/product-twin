@@ -93,8 +93,9 @@ def bom_metrics(vault):
     if not b or "concept_metrics" not in b: return None
     m=b["concept_metrics"]
     return {"ground_footprint_BYA_m2":m.get("ground_footprint_BYA_m2"),
-            "ext_wall_gross_m2":m.get("ext_wall_ground_gross_m2") or m.get("ext_wall_gross_m2"),
+            "ext_wall_gross_m2":m.get("ext_wall_incl_gables_m2") or m.get("ext_wall_ground_gross_m2") or m.get("ext_wall_gross_m2"),
             "roof_slope_m2":m.get("roof_slope_m2"),"heated_BTA_m2":m.get("heated_BTA_m2"),
+            "reconciliation":b.get("brief_reconciliation"),
             "spec_id":b.get("derived_from","committed BoM").split("(")[0].strip()}
 
 def build(site_dir,geo_path,vault,out_html):
@@ -146,7 +147,13 @@ def build(site_dir,geo_path,vault,out_html):
         ffe_html=f'<p>{chip("NEEDS_SOURCE","FF&E")} No room composition bound for this site.</p>'
 
     # ---- ledger ----
-    LEDGER=[("Monument survey","boundary markers on ground","NOT_VERIFIED"),
+    recon = metrics.get("reconciliation") if metrics else None
+    LEDGER=[]
+    if recon:
+        LEDGER.append(("Heated-area basis",
+          f'{recon["brief_figure_m2"]} m² concept → {recon["computed_m2"]} m² computed from BRAGE v0.3 ({recon["difference_m2"]}); souterrain +70 if built',
+          "DERIVED"))
+    LEDGER+=[("Monument survey","boundary markers on ground","NOT_VERIFIED"),
             ("Present entitlement","current plan interpretation + HV corridor","NOT_VERIFIED"),
             ("Geotechnical / depth-to-rock","foundation basis","NOT_VERIFIED"),
             ("VA connection","point, capacity, paid status","NOT_VERIFIED"),
