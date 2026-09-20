@@ -20,6 +20,14 @@
 9. Maker≠checker must re-derive what a label TESTED, not recompute the number (Avatar dimensions: Brain recounted the same field). Tiers: SOURCE > WD_SOURCE_H_DEFAULT > ALL_DEFAULT > NONE; only SOURCE+native mesh is AUTHORITATIVE.
 8. Brain confession: the restored Svärtinge front door's "4 satisfied · 14 open" was typed by Brain 09-16. RESOLVED 62e66af982: canonical 26-gate registry (union), Svärtinge 6 closed / 20 open, all 18 original gates retained, counts computed. Root cause of 4-vs-0-vs-2: two vocabularies (SATISFIED vs CLOSED); canonical emits CLOSED only. validate-sweden-plot-intelligence's "18 open gates" printed registry SIZE, not status — never a count; a real ledger validator is being written. BOUNDARY_FOR_DESIGN and PROPERTY_REGISTER stay OPEN by rule: registered extent ≠ monument positions; a clip ≠ a title extract.
 
+## 2026-09-21 additions
+- RISK CLOSED: Platform tier report — 36 placed items across 4 rooms: 7 SOURCE (vidaXL title, no twin) · 2 WD_SOURCE_H_DEFAULT · 27 ALL_DEFAULT · 0 AUTHORITATIVE emitted. Platform overclaim found+fixed: GLB_BOUNDS had been stamped AUTHORITATIVE since the first Newport room (unearned green chips); now SOURCE+native mesh only, negative case asserted.
+- Bedroom look #3 (Kungsängen bed + Lampemesteren lamp + Newport), 7 tracked, 210 604 SEK; height-default disclosure on the panel.
+- Wing roof: BRAGE v0.3 wing_roof does not close (15° mono from 3.0 m plate passes through 2.5 m rooms; the other reading tops the bar ridge). Routed to BRAGE for v0.4 + validator clearance rule.
+- vidaXL under-stamped: ~11,336 titles state three axes vs 6,131 SOURCE stamped → Avatar reconciles.
+- Consumer gotchas: tier lives at physical.dimensions_tier; repo-platform/data/twins is a stale 85-file subset.
+- Djurö on canonical registry 8/18/26, survival verified; jurisdiction rule proposed (property-division kommun code) → Spatial.
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
