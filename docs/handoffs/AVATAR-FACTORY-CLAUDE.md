@@ -1,5 +1,24 @@
 # Avatar Factory (Claude) — persistent handoff
 
+> ## ⛳ SPRINT DAY — 2026-09-20 (Brain; Oskar runs all sessions today. Supersedes every earlier pin — the 2026-09-15
+> CONSOLIDATION decisions still stand: one site per address · six screens · ink chrome · Platform owns the chrome.)
+> RULES OF THE DAY: pull first · work the queue in order · each item ends with a screenshot in docs/screens/ + numbers ·
+> commit after every item (Oskar pushes hourly) · nothing invented; every figure computed from receipts · report
+> "DONE / NOT checked" per item in your handoff at end of day. Chrome tokens until Platform ships the package:
+> bg #101916 · card #17241f · paper #f5f1e8 · bronze #d8b874 · serif display · Inter labels · evidence chips
+> authoritative #176b52 / indicative #c18a2d / derived #497aa2 / reported #a65b68 / concept #735a9e.
+>
+> **AVATAR — placeability is the number that matters.**
+> 1. `dimensions_mm` + `dimensions_source` on EVERY twin, cascade: GLB bounds > Shopify options > description regex >
+>    title regex. Zero-LLM. DoD: per-catalog table "% placeable before → after" in the handoff (Newport, Kungsängen,
+>    Mjuk, Lampemesteren, Lampan, Golvpoolen, Gripsholm, vidaxl-outdoor).
+> 2. Category/role mapping for the 6 CATALOG_ONLY catalogs via the title classifier → base/attach/free roles stamped.
+>    DoD: counts per role per catalog.
+> 3. Bedroom hero proxies: Kungsängen beds (top 20 by fit) + Lampemesteren pendants/table lamps (top 20). DoD: GLBs in
+>    data/geometry/avatars/, list in handoff. (Raw feeds + Meshy test meshes live under .runtime/, never git.)
+> 4. Material truth: material_cues → Blender overrides in scripts/hero_still_poc.py; one re-render committed.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
