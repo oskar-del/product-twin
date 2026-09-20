@@ -324,7 +324,10 @@ for (const [name, parsed] of [["newport", npParsed], ["vidaxl", vxParsed]]) {
 console.log("§11 dimension provenance + verbatim links");
 import { DIMENSION_EVIDENCE } from "../engine/compile/catalog-row.mjs";
 
-check("GLB bounds map to AUTHORITATIVE", DIMENSION_EVIDENCE.GLB_BOUNDS === "AUTHORITATIVE");
+// Was "GLB bounds map to AUTHORITATIVE" until 2026-09-20. Avatar established
+// that 3,645 of Newport's 3,673 proxies are category-default envelopes, so a
+// proxy's bounding box is precision about a guess. It maps to INDICATIVE now.
+check("GLB bounds of a proxy are NOT authoritative", DIMENSION_EVIDENCE.GLB_BOUNDS === "INDICATIVE");
 check("title-stated cm maps to INDICATIVE", DIMENSION_EVIDENCE.TITLE_STATED_CM === "INDICATIVE");
 check("nominal maps to CONCEPT", DIMENSION_EVIDENCE.NOMINAL === "CONCEPT");
 
@@ -338,8 +341,32 @@ for (const [name, parsed] of [["newport", npParsed], ["vidaxl", vxParsed]]) {
     shop.every(e => !e.commerce.dimension_source || e.commerce.dimensions_mm));
 }
 
-check("newport dimensions are measured from the shipped mesh",
-  npParsed.elements.filter(e => e.commerce).every(e => e.commerce.dimension_source === "GLB_BOUNDS"));
+// Superseded 2026-09-20: a G2 proxy's bounding box is an invented envelope
+// measured precisely, not a measurement of the product. The assertion that
+// matters now is that nothing overclaims.
+import { TIER_RANK, dimensionEvidenceFor } from "../engine/compile/catalog-row.mjs";
+
+check("AUTHORITATIVE is unreachable without a native mesh",
+  dimensionEvidenceFor("SOURCE", { nativeMesh: false }) === "INDICATIVE"
+  && dimensionEvidenceFor("ALL_DEFAULT", { nativeMesh: true }) === "INDICATIVE");
+check("only SOURCE on a native mesh reaches AUTHORITATIVE",
+  dimensionEvidenceFor("SOURCE", { nativeMesh: true }) === "AUTHORITATIVE");
+
+for (const [name, parsed] of [["newport", npParsed], ["vidaxl", vxParsed]]) {
+  const shop = parsed.elements.filter(e => e.commerce);
+  check(`${name}: every item declares a dimension tier`,
+    shop.every(e => TIER_RANK[e.commerce.dimension_tier] !== undefined));
+  check(`${name}: every item carries the plain-language tier label`,
+    shop.every(e => typeof e.commerce.dimension_tier_label === "string" && e.commerce.dimension_tier_label.length > 0));
+  check(`${name}: the chip matches what the tier allows`,
+    shop.every(e => e.commerce.dimension_evidence ===
+      dimensionEvidenceFor(e.commerce.dimension_tier, { nativeMesh: e.commerce.dimension_native_mesh === true })));
+  // The overclaim this whole tier system exists to prevent.
+  check(`${name}: no proxy-backed item claims AUTHORITATIVE`,
+    shop.every(e => !(e.commerce.dimension_evidence === "AUTHORITATIVE" && e.commerce.dimension_native_mesh !== true)));
+  check(`${name}: a default tier never claims AUTHORITATIVE`,
+    shop.every(e => !(String(e.commerce.dimension_tier).includes("DEFAULT") && e.commerce.dimension_evidence === "AUTHORITATIVE")));
+}
 
 // The BUY link is the revenue. Re-diff it against the catalog here, in the gate,
 // so a future refactor that "cleans up" a URL fails instead of silently earning nothing.

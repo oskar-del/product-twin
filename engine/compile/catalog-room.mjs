@@ -12,7 +12,7 @@
  * the same room.
  */
 
-import { rowElement, leafCategory } from "./catalog-row.mjs";
+import { rowElement, leafCategory, TIER_RANK } from "./catalog-row.mjs";
 import { resolveComposition } from "../compose/attach-resolver.mjs";
 
 /**
@@ -90,9 +90,13 @@ export function selectForRoles({ rows, roles, resolveGeometry }) {
       scored.push({ row, geom, score: fitScore(sizeKnown ? size : null, role.target) });
     }
 
-    // Deterministic: best fit, ties broken by catalog id.
+    // Provenance first, then fit. A better-fitting item whose size was invented
+    // is still a worse answer than a slightly-off item the merchant actually
+    // measured, so tier sorts ahead of fit; id breaks the remaining ties.
     scored.sort((a, b) =>
-      a.score - b.score || String(a.row.id).localeCompare(String(b.row.id))
+      (TIER_RANK[a.geom?.dimension_tier ?? "ALL_DEFAULT"] ?? 2) - (TIER_RANK[b.geom?.dimension_tier ?? "ALL_DEFAULT"] ?? 2)
+      || a.score - b.score
+      || String(a.row.id).localeCompare(String(b.row.id))
     );
 
     const winner = scored[0];
@@ -110,7 +114,8 @@ export function selectForRoles({ rows, roles, resolveGeometry }) {
       sku: winner.row.id,
       title: winner.row.title,
       fit_score: Number(winner.score.toFixed(4)),
-      size_m: winner.geom?.bounds?.size?.map(v => Number(v.toFixed(3))) ?? null
+      size_m: winner.geom?.bounds?.size?.map(v => Number(v.toFixed(3))) ?? null,
+      dimension_tier: winner.geom?.dimension_tier ?? "ALL_DEFAULT"
     });
   }
 
@@ -219,7 +224,9 @@ export function composeRoom({ rows, roles, decor = [], resolveGeometry }) {
       // its nominal box is NOMINAL no matter what the feed would have said.
       dimensionSource: geom?.bounds
         ? (geom.dimension_source ?? (geom.assetPath ? "GLB_BOUNDS" : "TITLE_STATED_CM"))
-        : (role?.nominal_size_m ? "NOMINAL" : null)
+        : (role?.nominal_size_m ? "NOMINAL" : null),
+      dimensionTier: geom?.bounds ? (geom.dimension_tier ?? "ALL_DEFAULT") : "NONE",
+      nativeMesh: geom?.native_mesh === true
     });
   });
 

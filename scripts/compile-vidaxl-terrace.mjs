@@ -13,7 +13,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseScene } from "../engine/core/scene-contract.mjs";
-import { dimensionsFromTitle } from "../engine/compile/catalog-row.mjs";
+import { dimensionsFromTitle, resolveDimensionTier, isNativeMesh } from "../engine/compile/catalog-row.mjs";
 import { composeRoom } from "../engine/compile/catalog-room.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -40,9 +40,21 @@ export function loadCatalog(file = CATALOG) {
 export function resolveVidaxlGeometry(row) {
   const dims = dimensionsFromTitle(row.title);
 
-  const twinPath = path.join(root, "data/twins", `PT_VIDAXL-OUTDOOR_${row.id}.json`);
-  if (fs.existsSync(twinPath)) {
-    const twin = JSON.parse(fs.readFileSync(twinPath, "utf8"));
+  const twinPath = [
+    path.join(AVATAR_REPO, "data/twins", `PT_VIDAXL-OUTDOOR_${row.id}.json`),
+    path.join(root, "data/twins", `PT_VIDAXL-OUTDOOR_${row.id}.json`)
+  ].find(f => fs.existsSync(f));
+  const twin = twinPath ? JSON.parse(fs.readFileSync(twinPath, "utf8")) : null;
+
+  // One rule for the whole function: if a twin exists, Avatar's stamp is the
+  // tier. This compiler renders the title's stated centimetres rather than the
+  // twin's envelope, which argues these rows deserve a better tier — but
+  // promoting them on our own inference is the overclaim the contract exists to
+  // stop. Raised with Avatar instead. Only a row with NO twin falls back to the
+  // title, which is the merchant's own statement and the best we have.
+  const tier = twin ? resolveDimensionTier(twin) : (dims && dims.axes === 3 ? "SOURCE" : "NONE");
+
+  if (twin) {
     const assetPath = twin.geometry?.asset_path;
     const level = twin.geometry?.level;
     if ((level === "G2" || level === "G3") && assetPath && fs.existsSync(path.join(root, assetPath))) {
@@ -51,14 +63,20 @@ export function resolveVidaxlGeometry(row) {
         assetPath,
         geometry_level: level,
         bounds: d ? {size: [d.width / 1000, d.height / 1000, d.depth / 1000]} : (dims ? {size: dims.size} : null),
-        dimension_source: dims?.source ?? twin.geometry?.scale_state ?? "category_default"
+        dimension_source: dims?.source ?? twin.geometry?.scale_state ?? "category_default",
+        dimension_tier: tier,
+        native_mesh: isNativeMesh(twin, assetPath)
       };
     }
   }
 
   if (!dims || dims.axes !== 3) return null;
-  return {assetPath: null, geometry_level: "G0", bounds: {size: dims.size}, dimension_source: dims.source};
+  return {
+    assetPath: null, geometry_level: "G0", bounds: {size: dims.size},
+    dimension_source: dims.source, dimension_tier: tier, native_mesh: false
+  };
 }
+
 
 // Terrace 7×5 m. Back wall (house facade) at z=-2.5.
 const ROLES = [

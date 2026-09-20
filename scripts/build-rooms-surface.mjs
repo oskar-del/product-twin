@@ -111,7 +111,8 @@ function showPanel(element) {
   const rows = [
     { label: "Brand", value: c.brand },
     { label: "Dimensions", value: fmtDims(c) },
-    { label: "Dimension source", value: c.dimension_source ? c.dimension_source.replace(/_/g, " ").toLowerCase() : null },
+    // The tier label is the honest sentence, not the internal source enum.
+    { label: "Dimensions from", value: c.dimension_tier_label ?? null },
     { label: "Geometry evidence", value: element.evidence_class },
     { label: "Colour", value: c.color },
     { label: "Material", value: c.material },

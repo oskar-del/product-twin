@@ -12,6 +12,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseScene } from "../engine/core/scene-contract.mjs";
 import { glbBounds } from "../engine/compile/glb-bounds.mjs";
+import { resolveDimensionTier, isNativeMesh } from "../engine/compile/catalog-row.mjs";
 import { composeRoom } from "../engine/compile/catalog-room.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -35,9 +36,22 @@ export function resolveNewportGeometry(row) {
   let result = null;
   if (fs.existsSync(file)) {
     try {
+      // The twin record, not the mesh, decides what the numbers are worth: the
+      // proxy's bounding box is exact about whatever envelope Avatar gave it.
+      // Avatar's checkout is the stamped source of truth; the local copy under
+      // data/twins is a stale subset and would silently answer "unstamped".
+      const twinCandidates = [
+        path.join(AVATAR_REPO, "data/twins", `PT_NEWPORT_${row.id}.json`),
+        path.join(root, "data/twins", `PT_NEWPORT_${row.id}.json`)
+      ];
+      const twinFile = twinCandidates.find(f => fs.existsSync(f));
+      const twin = twinFile ? JSON.parse(fs.readFileSync(twinFile, "utf8")) : null;
+      const assetPath = `data/geometry/avatars/newport-${row.id}-g2-proxy.glb`;
       result = {
-        assetPath: `data/geometry/avatars/newport-${row.id}-g2-proxy.glb`,
-        bounds: glbBounds(fs.readFileSync(file))
+        assetPath,
+        bounds: glbBounds(fs.readFileSync(file)),
+        dimension_tier: resolveDimensionTier(twin),
+        native_mesh: isNativeMesh(twin, assetPath)
       };
     } catch {
       result = null;
