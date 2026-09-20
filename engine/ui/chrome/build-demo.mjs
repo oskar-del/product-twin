@@ -17,9 +17,10 @@ import fs from "node:fs";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
 import {
-  chromeCss, topBar, sectionHead, metricStrip, card, cards,
+  topBar, sectionHead, metricStrip, card, cards,
   sidePanel, evidenceChip, evidenceLegend, esc, EVIDENCE_CLASSES
 } from "./chrome.mjs";
+import {chromeCss} from "./chrome-css.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "../../..");

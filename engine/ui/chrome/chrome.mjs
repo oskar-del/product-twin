@@ -1,7 +1,6 @@
 /**
  * INK CHROME — the component package. Platform owns it; every surface consumes it.
  *
- *   chromeCss()             the stylesheet, as text, for inlining into a bundle
  *   topBar(plot, modes)     header: plot identity · mode switcher · actions
  *   sidePanel(spec)         the click-target detail panel (in Rooms: the product)
  *   evidenceChip(cls)       one of the five fixed evidence classes
@@ -19,16 +18,15 @@
  * All interpolated text is escaped. The one exception is documented at
  * `sidePanel`: a BUY href is emitted byte-for-byte.
  *
+ * The stylesheet is NOT here: node-only file reading lives in chrome-css.mjs so
+ * this module stays importable from browser code (esbuild, platform:browser).
+ *
  * Styling lives in tokens.css and nowhere else — this module emits class names
  * only, so re-theming is a token override, never a fork. Values in tokens.css
  * were extracted from Spatial's Site-Intelligence page
  * (repo-spatial-studio/prototype/svartinge-neighbourhood/index.html, the
  * `.intel-*` rules); each one names its source rule in a comment there.
  */
-
-import fs from "node:fs";
-import path from "node:path";
-import {fileURLToPath} from "node:url";
 
 export const INK_CLASS = "ink";
 
@@ -89,25 +87,6 @@ export function safeHref(href) {
   if (parsed.protocol !== "http:" && parsed.protocol !== "https:") return null;
   return href;
 }
-
-/* ── stylesheet ────────────────────────────────────────────────────────── */
-
-const TOKENS_PATH = path.join(path.dirname(fileURLToPath(import.meta.url)), "tokens.css");
-let cachedCss = null;
-
-/**
- * chromeCss() → tokens.css as text, for inlining into a self-contained page.
- *
- * Reads from disk, so it is node-only. A browser page links tokens.css instead.
- * Cached: a bundler calls this once per scene and there may be many scenes.
- */
-export function chromeCss() {
-  if (cachedCss == null) cachedCss = fs.readFileSync(TOKENS_PATH, "utf8");
-  return cachedCss;
-}
-
-/** Where tokens.css lives, for a consumer that wants to copy or link it. */
-export const TOKENS_CSS_PATH = TOKENS_PATH;
 
 /* ── components ────────────────────────────────────────────────────────── */
 
