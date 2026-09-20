@@ -152,9 +152,19 @@ items 1–3 and on verifying them).
   which is now wrong in a second way: the roof is a specified 30° gable. That file is
   Spatial's worktree, so BRAGE has not edited it; reported to Brain to route.
 
-**Verification status:** items 1–3 were SELF-verified (validator, full-artifact render,
-link/figure diffs). They are owed a maker≠checker pass; Brain is doing it against the
-republished artifact.
+**Verification status:** items 1–3 SELF-verified (validator, full-artifact render,
+figure diffs), then CHECKED BY BRAIN against the live artifact 2f790a57 on 2026-09-20 —
+verdict VERIFIED: "210 m²" 0 occurrences · 206,4 present 4× · "house-v0.3-geometry-spec"
+3× · 30° roof present · "165" only inside coordinates, never as an area · "2026-08-27"
+surviving only as the DTM measurement date, which is correct · ink top bar present.
+Maker≠checker satisfied: Brain checked, not BRAGE.
+
+### Standing rule — re-mirror the chrome tokens
+`drawings/tre-hus-presentation.html` MIRRORS Platform's `engine/ui/chrome/tokens.css`
+inline, because it ships as a standalone artifact with no network path to the repo. That
+mirror does not update itself and nothing detects drift. **When Platform changes
+tokens.css, re-mirror the token block here and republish.** Fixes go in Platform's
+package first — never patch the mirror to diverge from it.
 
 Nothing is pushed — Oskar pushes.
 
