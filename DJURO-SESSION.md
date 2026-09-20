@@ -257,7 +257,23 @@ new URL.
   no one has proved they don't regress the reference site. Brain has routed that to Spatial as part
   of its item 4.
 
-## ✅ DJURÖ IS COMPLETE (Brain, 2026-09-21). Nothing queued. The page is generated end-to-end by
+## ✅ DJURÖ IS COMPLETE (Brain, 2026-09-21). **9 CLOSED / 17 OPEN / 26.** Nothing queued.
+
+`GATE_SE_MUNICIPAL_JURISDICTION` now closes on a registry rule I proposed (Spatial `598b1132ab`):
+`requires_pattern` on the **kn code** inside the authoritative property-division `source_product`,
+because Lantmäteriet publishes fastighetsindelning per kommun. The geocoded kommun **name** stays
+REPORTED and closes nothing. Note the dependency — that rule only matches because the `kn0581`
+mislabel was fixed first; a lying label would have silently kept this gate open.
+
+Validated with `repo-spatial-studio/scripts/validate-gate-ledger.py`: **117 passed, 0 failed**,
+4 hashes re-derived, 0 unresolvable refs. Pass the browser's own numbers or it records a
+NOT-VERIFIED line rather than a pass:
+
+```bash
+python3 "../repo-spatial-studio/scripts/validate-gate-ledger.py" \
+  --site "$PWD/data/sites/sweden/djuro-byvag-34" --rendered-closed 9 --rendered-total 26
+```
+ The page is generated end-to-end by
 `build-site.py`, the gates are on the canonical registry, and the artifact is live at its stable URL
 **claude.ai/code/artifact/7a1359ec-193a-48dd-a434-8dc530333f87**. Any future change is: edit a
 **script**, re-run it, regenerate the page, republish to that **same** URL. Never hand-patch the page.
@@ -310,8 +326,8 @@ paths against its own repo root, not yours):
 python3 "../repo-spatial-studio/scripts/build-gate-ledger.py" --site "$PWD/data/sites/sweden/djuro-byvag-34"
 ```
 
-**Djurö: 8 CLOSED / 18 OPEN / 26** — decided by generic 11 · registry rule 1 · carried forward 0 ·
-open by default 14. Vocabulary is `CLOSED`/`OPEN` only; the old Svärtinge record's `SATISFIED` is gone.
+**Djurö: 9 CLOSED / 17 OPEN / 26** — decided by generic 11 · registry rule 2 · carried forward 0 ·
+open by default 13. (Was 8/18 until `GATE_SE_MUNICIPAL_JURISDICTION` gained a rule; see below.) Vocabulary is `CLOSED`/`OPEN` only; the old Svärtinge record's `SATISFIED` is gone.
 
 **Survival was verified gate-by-gate, not assumed** — a silent drop is the real risk in a registry
 swap. All 11 previous gates are accounted for: 7 still CLOSED (one renamed,
