@@ -257,6 +257,35 @@ new URL.
   no one has proved they don't regress the reference site. Brain has routed that to Spatial as part
   of its item 4.
 
+### ⏸ PENDING — canonical buildings ingest + geometry-hash helper (no action until Spatial ships it)
+Spatial's live re-ingest reproduced the property division identically but the **buildings**
+`derived_geometry_sha256` differs from theirs despite identical data (35 footprints, same raw sha).
+
+**Brain's diagnosis — that this side hashed the receipt DOCUMENT rather than the geometry — is wrong
+for this repo, and it is worth not building a helper on it.** Both scripts already hash geometry
+only (`[b["footprint_rings_local"] for b in buildings]`); the blob here contains nothing but
+coordinates — no `object_id`, no `type`, no `placement`. Verified by inspection of the blob.
+
+The divergence is **two serialisation differences**, both demonstrated on this site's data:
+
+| cause | this repo | repo-spatial-studio | effect |
+|---|---|---|---|
+| JSON separators | `separators=(",",":")` (compact) | default (`", "` / `": "`) | `1af0d502…` vs `7c22d248…` |
+| list order | `ON_PARCEL` first, then distance | query order, unsorted | `1af0d502…` vs `1b60b232…` |
+
+**Precision is NOT a cause** — both round `(x - e0, 3)` at ingest, so a fixed-precision rule is
+harmless but addresses nothing.
+
+Brain's proposed fix still works (canonical ring serialisation + sorted by object id), because it
+pins exactly the two things that actually differ. Under it this site's hash becomes
+**`1b60b2321eb8da9929dd0b45597aa91958ab4fc453b5e38e8bd794d4e80df505`** (sorted by `object_id`,
+compact separators) — expect the committed `1af0d502…` to change to that on the re-run, and that
+change is correct, not a regression.
+
+When Spatial says the shared helper is in: re-run `scripts/ingest-buildings-official.py`, confirm the
+geometry hash matches theirs byte-for-byte, and record `derived_geometry_sha256_method`. Nothing
+changes here before then.
+
 ## ✅ DJURÖ IS COMPLETE (Brain, 2026-09-21). **9 CLOSED / 17 OPEN / 26.** Nothing queued.
 
 `GATE_SE_MUNICIPAL_JURISDICTION` now closes on a registry rule I proposed (Spatial `598b1132ab`):
