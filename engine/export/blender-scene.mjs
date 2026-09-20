@@ -215,30 +215,48 @@ export function exportBlenderScene(scene, opts = {}) {
     emit("m_ceil = mat('ceiling', (0.86, 0.85, 0.83), 0.95)");
     emit("slab(W, D, T, (0, 0, -T / 2), m_floor)");
     emit("slab(W, D, T, (0, 0, H + T / 2), m_ceil)");
-    emit("slab(T, D, H, (-W / 2 - T / 2, 0, H / 2), m_wall)");
-    emit("slab(T, D, H, (W / 2 + T / 2, 0, H / 2), m_wall)");
+    // Every wall, and the segments around whatever opening sits in it. An opening rotated 90°
+    // lies in an east/west wall and its width runs along z; otherwise it is a north/south wall
+    // and the width runs along x. A "fully glazed" wall arrives as one wall-sized opening,
+    // which this same segment builder handles — the leftover segments just come out at zero.
+    const axisOf = o => (Math.abs(Math.abs(o.geometry.rotation_y_deg ?? 0) - 90) < 1 ? "x" : "z");
+    const wallSpecs = [
+      {axis: "z", sign: -1, span: width, at: depth / 2},
+      {axis: "z", sign: 1, span: width, at: depth / 2},
+      {axis: "x", sign: -1, span: depth, at: width / 2},
+      {axis: "x", sign: 1, span: depth, at: width / 2}
+    ];
+    for (const wall of wallSpecs) {
+      const offset = (wall.sign * (wall.at + T / 2)).toFixed(3);
+      const normalIndex = wall.axis === "z" ? 2 : 0;
+      const inWall = openings.filter(o => axisOf(o) === wall.axis
+        && Math.sign(o.geometry.position[normalIndex]) === wall.sign
+        && Math.abs(Math.abs(o.geometry.position[normalIndex]) - wall.at) < 0.51);
 
-    // Which wall (north/south) each opening belongs to, and the segments around it.
-    const walls = [{sign: -1}, {sign: 1}];
-    for (const wall of walls) {
-      const y = wall.sign * (depth / 2 + T / 2);
-      const inWall = openings.filter(o => Math.sign(o.geometry.position[2]) === wall.sign
-        && Math.abs(Math.abs(o.geometry.position[2]) - depth / 2) < 0.51);
       if (!inWall.length) {
-        emit(`slab(W, T, H, (0, ${y.toFixed(3)}, H / 2), m_wall)`);
+        emit(wall.axis === "z"
+          ? `slab(W, T, H, (0, ${offset}, H / 2), m_wall)`
+          : `slab(T, D, H, (${offset}, 0, H / 2), m_wall)`);
         continue;
       }
+      const seg = (len, centre, tall, base) => {
+        if (len <= 0.002 || tall <= 0.002) return;
+        emit(wall.axis === "z"
+          ? `slab(${len.toFixed(3)}, T, ${tall.toFixed(3)}, (${centre.toFixed(3)}, ${offset}, ${base.toFixed(3)}), m_wall)`
+          : `slab(T, ${len.toFixed(3)}, ${tall.toFixed(3)}, (${offset}, ${centre.toFixed(3)}, ${base.toFixed(3)}), m_wall)`);
+      };
       for (const opening of inWall) {
         const [ow, oh] = opening.geometry.size;
-        const cx = opening.geometry.position[0];
-        const cz = opening.geometry.position[1];            // scene y = up
-        const x0 = cx - ow / 2, x1 = cx + ow / 2;
+        const along = opening.geometry.position[wall.axis === "z" ? 0 : 2];
+        const cz = opening.geometry.position[1];
+        const a0 = along - ow / 2, a1 = along + ow / 2;
         const z0 = cz - oh / 2, z1 = cz + oh / 2;
-        emit(`# opening ${escPy(opening.id)} — wall built as segments around it`);
-        emit(`slab(${(x0 + width / 2).toFixed(3)}, T, H, (${((x0 - width / 2) / 2).toFixed(3)}, ${y.toFixed(3)}, H / 2), m_wall)`);
-        emit(`slab(${(width / 2 - x1).toFixed(3)}, T, H, (${((x1 + width / 2) / 2).toFixed(3)}, ${y.toFixed(3)}, H / 2), m_wall)`);
-        emit(`slab(${ow}, T, ${z0.toFixed(3)}, (${cx}, ${y.toFixed(3)}, ${(z0 / 2).toFixed(3)}), m_wall)`);
-        emit(`slab(${ow}, T, ${(height - z1).toFixed(3)}, (${cx}, ${y.toFixed(3)}, ${((z1 + height) / 2).toFixed(3)}), m_wall)`);
+        const half = wall.span / 2;
+        emit(`# opening ${escPy(opening.id)} — ${wall.axis === "z" ? "north/south" : "east/west"} wall built as segments around it`);
+        seg(a0 + half, (a0 - half) / 2, height, height / 2);
+        seg(half - a1, (a1 + half) / 2, height, height / 2);
+        seg(ow, along, z0, z0 / 2);
+        seg(ow, along, height - z1, (z1 + height) / 2);
       }
     }
     emit("");
@@ -278,13 +296,16 @@ export function exportBlenderScene(scene, opts = {}) {
   // window in the scene would actually admit, not a studio light invented for the shot.
   if (roomVolume) {
     const openings = scene.elements.filter(e => e.type === "OPENING" && e.geometry?.primitive === "BOX");
-    const [, , depth] = roomVolume.geometry.size;
+    const [width, , depth] = roomVolume.geometry.size;
     for (const opening of openings) {
       const [ow, oh] = opening.geometry.size;
-      const cx = opening.geometry.position[0];
+      const onX = Math.abs(Math.abs(opening.geometry.rotation_y_deg ?? 0) - 90) < 1;
       const cz = opening.geometry.position[1];
-      const sign = Math.sign(opening.geometry.position[2]) || 1;
-      const y = sign * (depth / 2 - 0.04);
+      const sign = Math.sign(opening.geometry.position[onX ? 0 : 2]) || 1;
+      const alongPos = opening.geometry.position[onX ? 2 : 0];
+      const inset = sign * ((onX ? width : depth) / 2 - 0.04);
+      const cx = onX ? inset : alongPos;
+      const y = onX ? alongPos : inset;
       emit(`# Window light from ${escPy(opening.id)} (${ow} × ${oh} m opening)`);
       emit(`wl = bpy.data.lights.new('${escPy(opening.id)}', 'AREA')`);
       emit("wl.shape = 'RECTANGLE'");
@@ -292,8 +313,8 @@ export function exportBlenderScene(scene, opts = {}) {
       emit(`wl.energy = ${Math.round(ow * oh * windowWattsPerSqm)}`);
       emit("wl.color = (1.0, 0.96, 0.90)");
       emit(`wo = bpy.data.objects.new('${escPy(opening.id)}_light', wl)`);
-      emit(`wo.location = (${cx}, ${y.toFixed(3)}, ${cz})`);
-      emit(`wo.rotation_euler = (math.radians(90), 0, math.radians(${sign > 0 ? 180 : 0}))`);
+      emit(`wo.location = (${typeof cx === "number" ? cx.toFixed(3) : cx}, ${typeof y === "number" ? y.toFixed(3) : y}, ${cz})`);
+      emit(`wo.rotation_euler = (math.radians(90), 0, math.radians(${onX ? (sign > 0 ? -90 : 90) : (sign > 0 ? 180 : 0)}))`);
       emit("sc.collection.objects.link(wo)");
       emit("");
     }
@@ -336,7 +357,7 @@ export function exportBlenderScene(scene, opts = {}) {
     const cornerX = (opts.cameraCorner ?? "west") === "east" ? 1 : -1;
     blenderCam = [cornerX * (width / 2 - inset), depth / 2 - inset, 1.42];   // corner, just below standing eye height
     blenderTarget = [cx, cz, 0.58];                              // the seating group, just above seat height
-    lens = 30;                                                   // interior
+    lens = opts.lens ?? 30;                                      // interior
   }
 
   emit("# Camera");

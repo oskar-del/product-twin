@@ -50,6 +50,7 @@ const script = exportBlenderScene(scene, {
   samples,
   resolution: width ? [width, Math.round(width * 0.625)] : undefined,
   windowWattsPerSqm: numArg("--window-w"),
+  lens: numArg("--lens"),
   cameraCorner: process.argv.includes("--east") ? "east" : "west"
 });
 
