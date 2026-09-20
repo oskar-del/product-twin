@@ -123,10 +123,13 @@ variable names, so re-pointing those at the ink tokens re-skins every drawing at
 Areas propagated — markplan 164 m² heated + 40 m² cold = 204 m² footprint, exploatering
 10,5 %; winner room labels 49 / 42 / 9 / 42 / 14 / 14; zero remaining hits for
 "210 m²", "~30 m² garage" or "markplan ~140".
-*NOT checked:* only the first screen-height of the artifact was rendered and looked at.
-The A/B/C sections, the four construction details and the material palette were
-re-skinned through the token remap but NOT visually inspected on the dark ground —
-contrast there is unverified. Mirrored tokens can drift from Platform's package with
+*Full-page inspection done after the first commit* (14 000 px render, cropped into bands).
+Contrast holds throughout — details, A/B/C facades, material swatches and footer all read
+on the dark ground. It caught three propagation misses the first pass left behind, now
+fixed and republished: the takfot detail still claimed an "Asymmetrisk sadeltak" after the
+roof became a 30° symmetric gable; house B's data chip still read "~165–185 m² + 35 m²
+garage"; and the footer still dated the figures 2026-08-27.
+*NOT checked:* no browser other than headless Chrome; Mirrored tokens can drift from Platform's package with
 nothing detecting it. The artifact is shared by link and viewers stay pinned to the
 previous version until the share pin is moved.
 
