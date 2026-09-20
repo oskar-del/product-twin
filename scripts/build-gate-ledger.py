@@ -21,7 +21,7 @@ So this script reconciles rather than replaces:
 A gate is only ever closed by a receipt that answers the question the registry states. Where
 Brain asked for a closure the evidence does not support, the gate stays open and says so.
 """
-import argparse, json, pathlib, subprocess, sys
+import argparse, json, pathlib, re, subprocess, sys
 from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -78,7 +78,18 @@ def evaluate_rule(rule, docs):
             missing = [f for f in rule.get("requires_fields", []) if not doc.get(f)]
             if missing:
                 return False, f"field not present in {name}: {', '.join(missing)}", []
+            pattern = rule.get("requires_pattern")
+            matched = None
+            if pattern:
+                value = str(doc.get(pattern["field"]) or "")
+                found = re.search(pattern["regex"], value)
+                if not found:
+                    return False, (f"field {pattern['field']} in {name} does not carry "
+                                   f"{pattern['regex']}: {value!r}"), []
+                matched = found.group(0)
             reason = f"Answered by {filename} ({name})."
+            if matched:
+                reason += f" {pattern['means']} Here: {matched}."
             if rule.get("still_not_established"):
                 reason += " " + rule["still_not_established"]
             return True, reason, [filename]
