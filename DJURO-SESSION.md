@@ -1,5 +1,24 @@
 # Djurö by väg 34 · DJURÖ 4:147 — session handoff
 
+> ## ⛳ SPRINT DAY — 2026-09-20 (Brain; Oskar runs all sessions today. Supersedes every earlier pin — the 2026-09-15
+> CONSOLIDATION decisions still stand: one site per address · six screens · ink chrome · Platform owns the chrome.)
+> RULES OF THE DAY: pull first · work the queue in order · each item ends with a screenshot in docs/screens/ + numbers ·
+> commit after every item (Oskar pushes hourly) · nothing invented; every figure computed from receipts · report
+> "DONE / NOT checked" per item in your handoff at end of day. Chrome tokens until Platform ships the package:
+> bg #101916 · card #17241f · paper #f5f1e8 · bronze #d8b874 · serif display · Inter labels · evidence chips
+> authoritative #176b52 / indicative #c18a2d / derived #497aa2 / reported #a65b68 / concept #735a9e.
+>
+> **DJURÖ — build the data today; the page gets regenerated from Spatial's template, not patched.**
+> 1. Official building footprints: pull `byggnad_kn0120.zip` (STAC, same pattern as Svärtinge, receipts) → clip 200 m
+>    around DJURÖ 4:147 → `buildings-official-derived-v0.1.json` with REAL rings (today's file has none). DoD: count + sha.
+> 2. DTM tile for the plot (stac-hojd) → `terrain-dem-derived-v0.1.json` with receipts; real relief/slope, not the 8.1° guess.
+> 3. Strandskydd + plan status from Värmdö kommun (detaljplan / områdesbestämmelser), receipted. Close what you can.
+> 4. Sea-view sightline geometry from the DTM (the 43.3% arc must be derived, not stated).
+> 5. When Spatial's `scripts/build-site.py` lands (this afternoon): run it on your data dir → screens 1+2 → replace the
+>    current page → republish to the SAME artifact URL (7a1359ec-…). DoD: screenshot beside Svärtinge's.
+> Nothing invented — this goes to a real family.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
