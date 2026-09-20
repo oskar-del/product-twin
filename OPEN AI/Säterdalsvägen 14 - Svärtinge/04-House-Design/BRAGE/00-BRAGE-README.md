@@ -159,6 +159,45 @@ verdict VERIFIED: "210 m²" 0 occurrences · 206,4 present 4× · "house-v0.3-ge
 surviving only as the DTM measurement date, which is correct · ink top bar present.
 Maker≠checker satisfied: Brain checked, not BRAGE.
 
+### v0.4 — the wing roof did not close (2026-09-21)
+
+v0.3 shipped a wing roof that passed through its own rooms: a 15° mono falling
+north off a 3.0 m plate lost 2.36 m over the 8.8 m run and reached Y 0.64 m,
+while the garage and utility rooms below are 2.40–2.50 m. Brain caught it; I
+reproduced the numbers before accepting them. Every other v0.3 check passed,
+because nothing related the roof to the rooms.
+
+Fix: the wing gets its own 15° gable, ridge E–W at mid-depth. Eaves stay at
+3.0 m level with the bar's and the ridge lands at 4.07 m, under the bar's 5.02 m.
+The alternatives — a 4.86 m plate or a 3.25° pitch — were both rejected: a
+4.86 m eave sits almost at the bar's ridge and destroys the subordination the
+parti depends on, and 3.25° is a flat roof pretending to be pitched.
+
+**Standing rule — a roof must clear the rooms beneath it.**
+`geometry/roof-planes.mjs` computes plane height at any (x,z) and is used by
+BOTH the generator and the validator, so the assertion cannot drift from the
+design. It runs at build time and refuses to write a clashing spec. Proof it
+works, rather than a claim that it would have:
+
+    node geometry/validate-house.mjs house-v0.3-geometry-spec.json  → FAIL (3), exit 1
+    node geometry/validate-house.mjs house-v0.4-geometry-spec.json  → PASS,    exit 0
+
+Any future version: run the validator against the PREVIOUS spec too. A gate that
+has never failed has not been tested.
+
+**Day's close (2026-09-21).** Items 1–3 DONE and checked by Brain, not by me.
+Item 4 (classics library entry #1) not started. v0.4 accepted by Brain, which
+also routed the downstream rebuilds — Platform rebuilds room-in-house, dollhouse
+and stills against v0.4; Spatial renders the wing from it. BRAGE is complete for
+this sprint.
+*NOT checked:* snow/wind loading on the new wing gable is quoted from the detail
+(2,5 kN/m² zone), not derived; the valley where the wing gable meets the bar's
+north plane is not detailed; no BYA/BTA or H30/H50 check — those gates are open;
+the souterrain's −2.5 m floor level is still the v0.2 assumption, not re-derived
+against the DTM; openings are design intent, not daylight- or egress-checked.
+*Open and not mine:* the artifact's share pin still shows viewers an earlier
+version — only the owner can move it, relayed to Oskar via Brain.
+
 ### Standing rule — re-mirror the chrome tokens
 `drawings/tre-hus-presentation.html` MIRRORS Platform's `engine/ui/chrome/tokens.css`
 inline, because it ships as a standalone artifact with no network path to the repo. That
