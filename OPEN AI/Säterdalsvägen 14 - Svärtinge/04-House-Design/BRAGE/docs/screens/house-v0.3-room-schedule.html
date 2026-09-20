@@ -1,0 +1,114 @@
+<!doctype html><meta charset="utf-8">
+<title>Vinkelhuset v0.3 — room schedule</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<style>
+ body{margin:0;background:#101916;color:#f3efe6;font-family:Inter,sans-serif;padding:34px 44px 50px}
+ h1{font:500 34px/1.1 Georgia,serif;margin:6px 0 4px;letter-spacing:-.02em}
+ .kick{color:#d8b874;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+ .sub{font-size:11px;color:rgba(255,255,255,.55);max-width:70ch;line-height:1.6;margin:0 0 22px}
+ .plans{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
+ figure{margin:0;background:#17241f;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:14px}
+ figcaption{font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:#d8b874;margin-bottom:6px}
+ svg{display:block}
+ .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+ .fact{background:#1b2823;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px}
+ .fact span{font-size:9px;letter-spacing:.09em;color:#d8b874;text-transform:uppercase}
+ .fact b{display:block;font:500 30px/1 Georgia,serif;margin:10px 0 6px}
+ .fact small{font-size:9px;color:rgba(255,255,255,.5);line-height:1.5}
+ .recon{margin-top:16px;background:#17241f;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px;max-width:100ch}
+ .recon h2{font:500 18px Georgia,serif;margin:0 0 8px}
+ .recon li{font-size:10px;line-height:1.65;color:rgba(255,255,255,.62);margin:4px 0}
+ .chip{display:inline-block;padding:4px 8px;border-radius:999px;font-size:8px;letter-spacing:.11em;background:rgba(115,90,158,.18);color:#b39ed8;border:1px solid #735a9e}
+</style>
+<div class="kick">BRAGE · Vinkelhuset mot Glan · house-v0.3-geometry-spec.json</div>
+<h1>Room schedule — drawn from the spec</h1>
+<p class="sub">Every wall, opening, area and label on this page is read out of the JSON by
+geometry/draw-house-v0.3.mjs. Nothing is drawn by hand, so if the plan is right the spec is
+complete enough for Platform to build the interior from. <span class="chip">CONCEPT</span></p>
+<div class="plans">
+<figure>
+  <figcaption>Ground floor — 7 rooms · 204.0 m²</figcaption>
+  <svg viewBox="0 0 868 656" width="868" height="656">
+    <text x="60" y="26" font-family="Inter,sans-serif" font-size="9" fill="#d8b874" letter-spacing="2">GROUND FLOOR</text>
+    <path d="M60.0,86.0L298.0,86.0L298.0,324.0L60.0,324.0Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/><line x1="77.0" y1="86.0" x2="281.0" y2="86.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/><line x1="60.0" y1="103.0" x2="60.0" y2="307.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/><line x1="175.6" y1="86.0" x2="236.8" y2="86.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/>
+      <text x="179.0" y="198.0" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">LIVING VIEW</text>
+      <text x="179.0" y="214.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">49 m²</text>
+      <text x="179.0" y="228.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.7 m</text><path d="M298.0,86.0L502.0,86.0L502.0,324.0L298.0,324.0Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/><line x1="318.4" y1="86.0" x2="420.4" y2="86.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/><line x1="440.8" y1="86.0" x2="495.2" y2="86.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/><line x1="332.0" y1="324.0" x2="372.8" y2="324.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/>
+      <text x="400.0" y="198.0" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">KITCHEN DINING</text>
+      <text x="400.0" y="214.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">42 m²</text>
+      <text x="400.0" y="228.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.5 m</text><path d="M502.0,86.0L604.0,86.0L604.0,324.0L502.0,324.0Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/>
+      <text x="553.0" y="198.0" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">WET CORE AND C…</text>
+      <text x="553.0" y="214.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">21 m²</text>
+      <text x="553.0" y="228.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.5 m</text><path d="M604.0,86.0L740.0,86.0L740.0,324.0L604.0,324.0Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/><line x1="624.4" y1="86.0" x2="719.6" y2="86.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/><line x1="740.0" y1="133.6" x2="740.0" y2="181.2" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/>
+      <text x="672.0" y="198.0" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">MAIN BEDROOM ENSUITE</text>
+      <text x="672.0" y="214.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">28 m²</text>
+      <text x="672.0" y="228.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.5 m</text><path d="M536.0,324.0L638.0,324.0L638.0,426.0L536.0,426.0Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/><line x1="638.0" y1="344.4" x2="638.0" y2="381.8" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/><line x1="536.0" y1="351.2" x2="536.0" y2="398.8" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/>
+      <text x="587.0" y="368.0" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">ENTRY HALL</text>
+      <text x="587.0" y="384.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">9 m²</text>
+      <text x="587.0" y="398.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.5 m</text><path d="M536.0,426.0L638.0,426.0L638.0,596.0L536.0,596.0Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/><line x1="556.4" y1="596.0" x2="597.2" y2="596.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/>
+      <text x="587.0" y="504.0" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">UTILITY WC LAU…</text>
+      <text x="587.0" y="520.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">15 m²</text>
+      <text x="587.0" y="534.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.5 m</text><path d="M638.0,324.0L808.0,324.0L808.0,596.0L638.0,596.0Z" fill="#141d1a" stroke="#f3efe6" stroke-width="2.2"/><line x1="665.2" y1="596.0" x2="780.8" y2="596.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/>
+      <text x="723.0" y="453.0" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">GARAGE DOUBLE</text>
+      <text x="723.0" y="469.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">40 m²</text>
+      <text x="723.0" y="483.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.4 m · cold</text>
+    <g stroke="rgba(255,255,255,.3)" stroke-width="1">
+      <line x1="60" y1="634" x2="230" y2="634"/>
+      <line x1="60" y1="630" x2="60" y2="638"/>
+      <line x1="230" y1="630" x2="230" y2="638"/>
+    </g>
+    <text x="60" y="648" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">5 m · south (lake) is down</text>
+  </svg></figure>
+<figure>
+  <figcaption>Upper floor (in the roof) — 3 rooms · 42.4 m²</figcaption>
+  <svg viewBox="0 0 460 290" width="460" height="290">
+    <text x="60" y="26" font-family="Inter,sans-serif" font-size="9" fill="#d8b874" letter-spacing="2">UPPER FLOOR (IN THE ROOF)</text>
+    <path d="M128.0,86.0L264.0,86.0L264.0,230.2L128.0,230.2Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/><line x1="148.4" y1="86.0" x2="209.6" y2="86.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/>
+      <text x="196.0" y="151.1" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">BEDROOM</text>
+      <text x="196.0" y="167.1" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">16.96 m²</text>
+      <text x="196.0" y="181.1" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.02 m</text><path d="M264.0,86.0L400.0,86.0L400.0,230.2L264.0,230.2Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/><line x1="284.4" y1="86.0" x2="345.6" y2="86.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/>
+      <text x="332.0" y="151.1" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">BEDROOM</text>
+      <text x="332.0" y="167.1" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">16.96 m²</text>
+      <text x="332.0" y="181.1" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.02 m</text><path d="M60.0,86.0L128.0,86.0L128.0,230.2L60.0,230.2Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/>
+      <text x="94.0" y="151.1" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">BATHROOM</text>
+      <text x="94.0" y="167.1" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">8.48 m²</text>
+      <text x="94.0" y="181.1" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.02 m</text>
+    <g stroke="rgba(255,255,255,.3)" stroke-width="1">
+      <line x1="60" y1="268" x2="230" y2="268"/>
+      <line x1="60" y1="264" x2="60" y2="272"/>
+      <line x1="230" y1="264" x2="230" y2="272"/>
+    </g>
+    <text x="60" y="282" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">5 m · south (lake) is down</text>
+  </svg></figure>
+<figure>
+  <figcaption>Souterrain (west gable) — 3 rooms · 70.0 m²</figcaption>
+  <svg viewBox="0 0 460 384" width="460" height="384">
+    <text x="60" y="26" font-family="Inter,sans-serif" font-size="9" fill="#d8b874" letter-spacing="2">SOUTERRAIN (WEST GABLE)</text>
+    <path d="M60.0,86.0L264.0,86.0L264.0,324.0L60.0,324.0Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/><line x1="60.0" y1="133.6" x2="60.0" y2="235.6" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/><line x1="107.6" y1="86.0" x2="189.2" y2="86.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/>
+      <text x="162.0" y="198.0" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">FAMILY ROOM</text>
+      <text x="162.0" y="214.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">42 m²</text>
+      <text x="162.0" y="228.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.4 m</text><path d="M264.0,86.0L332.0,86.0L332.0,324.0L264.0,324.0Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/><line x1="277.6" y1="86.0" x2="318.4" y2="86.0" stroke="#d8b874" stroke-width="4.5" stroke-linecap="butt"/>
+      <text x="298.0" y="198.0" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">GUEST BED…</text>
+      <text x="298.0" y="214.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">14 m²</text>
+      <text x="298.0" y="228.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.4 m</text><path d="M332.0,86.0L400.0,86.0L400.0,324.0L332.0,324.0Z" fill="#1b2823" stroke="#f3efe6" stroke-width="2.2"/>
+      <text x="366.0" y="198.0" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#f3efe6">PLANT AND…</text>
+      <text x="366.0" y="214.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#d8b874">14 m²</text>
+      <text x="366.0" y="228.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">h 2.4 m</text>
+    <g stroke="rgba(255,255,255,.3)" stroke-width="1">
+      <line x1="60" y1="362" x2="230" y2="362"/>
+      <line x1="60" y1="358" x2="60" y2="366"/>
+      <line x1="230" y1="358" x2="230" y2="366"/>
+    </g>
+    <text x="60" y="376" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">5 m · south (lake) is down</text>
+  </svg></figure>
+</div>
+<div class="facts">
+  <div class="fact"><span>Heated, excl. suterräng</span><b>206.4 m²</b><small>12 heated rooms; garage excluded as cold</small></div>
+  <div class="fact"><span>Heated, incl. suterräng</span><b>276.4 m²</b><small>Suterräng validated by the measured 13° SW slope</small></div>
+  <div class="fact"><span>Upper floor usable</span><b>4.23 m</b><small>of the 7 m span — the band clearing 1.9 m under the 30° roof</small></div>
+  <div class="fact"><span>Ridge / eaves</span><b>5.02 m</b><small>eaves 3 m · 30° gable · wing 15° mono</small></div>
+</div>
+<div class="recon">
+  <h2>The brief says 210 m². The geometry says 206.4 m².</h2>
+  <ul><li>The 210 m² in the sprint brief is not reproduced by the geometry, and has not been adjusted to fit.</li><li>Computed heated area excludes the garage (cold) and counts the upper floor only where headroom clears 1.9 m under the 30° roof, which is narrower than its 7 m structural span.</li><li>The earlier presentation quoted 'markplan ~140 m²', which is the bar alone; the wing's heated rooms (entry hall + utility/WC/laundry) were not in that figure.</li><li>It also quoted 'garage ~30 m²' where the v0.2 wing footprint gives 40 m².</li><li>Resolution is Brain's: either the brief's 210 is superseded by this computation, or the room program must grow by the stated difference.</li></ul>
+</div>
