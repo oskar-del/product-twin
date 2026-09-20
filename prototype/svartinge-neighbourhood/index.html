@@ -262,10 +262,12 @@ const DESIGNS=[
    model:{W:13.6,D:10.7,storeyH:2.7,storeys:2,roof:'gable',balcony:true,balconyDepth:2.4,facade:'wood'}},
   // BRAGE's chosen direction (Brain call 2026-08-27): "Vinkelhuset mot Glan". L-plan — heated E-W bar on the
   // south (lake) frontage + cold garage/service wing stepping north off the east end. Massing straight from
-  // BRAGE geometry/house-v0.2-geometry-spec.json (HOUSE_BAR 20×7 m, HOUSE_WING_N 8×8 m, wall 3.0 m).
+  // BRAGE geometry/house-v0.3-geometry-spec.json (HOUSE_BAR 20×7 m, HOUSE_WING_N 8×8 m, wall 3.0 m).
+  // boa/gfa/footprint/storeys are NOT typed here: loadVinkelhusetSpec() reads them from the
+  // vendored v0.3 area_summary at load, so the card cannot drift from the spec again.
   // Walk-out lower level = the spec's conditional west-gable suterräng on the MEASURED 13° SW fall. CONCEPT class.
-  {id:'VH',builder:'BRAGE',lang:'VINKELHUS · VALD RIKTNING',name:'Vinkelhuset mot Glan',boa:210,footprint:204,storeys:2,gfa:210,src:'BRAGE house-v0.2-geometry-spec.json',
-   summary:'The chosen design. A 20 m heated bar lies along the south edge so every main room takes the Glan view and the low winter sun; a cold garage wing steps north off the east end, leaving the west open to the WNW summer-evening sun and sheltering the SW terrace. 210 m² heated on a 204 m² footprint.',
+  {id:'VH',builder:'BRAGE',lang:'VINKELHUS · VALD RIKTNING',name:'Vinkelhuset mot Glan',boa:null,footprint:null,storeys:null,gfa:null,src:'BRAGE house-v0.3-geometry-spec.json',
+   summary:'The chosen design. A 20 m heated bar lies along the south edge so every main room takes the Glan view and the low winter sun; a cold garage wing steps north off the east end, leaving the west open to the WNW summer-evening sun and sheltering the SW terrace. ',
    model:{W:20,D:7,storeyH:2.9,storeys:2,roof:'gable',ridge:'width',roofPitch:30,balcony:true,balconyDepth:2.4,facade:'wood'},
    wing:{p:[7,7],s:[8,3.0,8]}},
 ];
@@ -327,7 +329,7 @@ function suterrangHouse(spec){
     geometry:{primitive:'Reconstructed '+(spec.builder||'Eksjöhus')+' '+spec.name.replace('Eksjöhus ','')+' massing',size:[m.W,H*2,m.D],position:[ax,base,az]},
     source_refs:[spec.src||'Eksjöhus'],
     limitations:spec.builder==='BRAGE'
-      ?['Massing from BRAGE house-v0.2-geometry-spec.json (HOUSE_BAR + HOUSE_WING_N); lower walk-out level = the spec\'s conditional suterräng on the measured 13° fall.','Roof pitch, glazing and finishes are concept-level, not developed drawings.','CONCEPT class: not an entitlement, setback or FFL claim.']
+      ?['Massing from BRAGE house-v0.3-geometry-spec.json (HOUSE_BAR + HOUSE_WING_N); lower walk-out level = the spec\'s conditional suterräng on the measured 13° fall.','Roof is specified, not sketched: 30° symmetric gable, ridge E–W at Y 5.02 m, eaves Y 3.0 m, 0.5 m overhang; cold north wing 15° mono falling north. Glazing and finishes remain concept-level.','CONCEPT class: not an entitlement, setback or FFL claim.']
       :['Massing reconstructed from Eksjöhus published BOA / footprint / height / storeys.','Exact width×depth and roof pitch are a stated assumption (not all published).','CONCEPT class: not an entitlement, setback or FFL claim.']};
   const W=m.W,D=m.D,top=base+2*H;
   const woodCol=m.facade==='render'?0xe7e3d9:(m.facade==='brick'?0x9c6b52:0xc9a877);
@@ -382,7 +384,7 @@ function mountDesign(spec){
   if(spec.model){const g=suterrangHouse(spec);
     if(spec.wing&&g){/* L-plan wing in the house's own frame: +X = east end, +Z = uphill/north. Sits on natural ground at the entry level. */
       const [px,pz]=spec.wing.p,[w,h,d]=spec.wing.s;const wp=g.localToWorld(new THREE.Vector3(px,0,pz));const gy=groundY(wp.x,wp.z);
-      const item={id:'EK_HOUSE',type:'CONCEPT_BUILDING',evidence_class:'CONCEPT',label:spec.name+' · cold garage/service wing',source_refs:[spec.src],limitations:['CONCEPT massing from BRAGE house-v0.2-geometry-spec.json (HOUSE_WING_N).','Not an entitlement, setback or FFL claim.']};
+      const item={id:'EK_HOUSE',type:'CONCEPT_BUILDING',evidence_class:'CONCEPT',label:spec.name+' · cold garage/service wing',source_refs:[spec.src],limitations:['CONCEPT massing from BRAGE house-v0.3-geometry-spec.json (HOUSE_WING_N); wing roof is a specified 15° monopitch falling north, 0.4 m overhang.','Not an entitlement, setback or FFL claim.']};
       const wallM=new THREE.MeshStandardMaterial({color:0xc9a877,roughness:.72,metalness:.02,envMapIntensity:.85}),roofM=new THREE.MeshStandardMaterial({color:0x3f4245,roughness:.72,metalness:.05,envMapIntensity:.5});
       const box=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),wallM);box.position.set(px,gy+h/2,pz);box.castShadow=true;box.receiveShadow=true;
       const roof=new THREE.Mesh(new THREE.ConeGeometry(Math.max(w,d)*.72,1.9,4),roofM);roof.position.set(px,gy+h+.95,pz);roof.rotation.y=Math.PI/4;roof.castShadow=true;
@@ -391,6 +393,7 @@ function mountDesign(spec){
   else if(spec.boxes)for(const b of spec.boxes)studioBox(1+b.p[0],ay+b.p[1],1+b.p[2],b.s[0],b.s[1],b.s[2],b.roof);
   DEFAULT_MASSING.forEach(id=>{const o=byId.get(id);if(o)o.userData.designHidden=!!(spec.boxes||spec.model);});
   if(data&&data.navigation)applyStageVisibility(data.navigation[currentStep]);
+  window.currentDesign=spec;
   if(window.updateDesignDock)window.updateDesignDock(spec);
   if(typeof drawSunShadow==='function')drawSunShadow();/* rebuild the derived shadow for the new massing */
   if(typeof drawGlanSightlines==='function')drawGlanSightlines();
@@ -412,7 +415,31 @@ function buildDesignDock(){
   };
   return dock;
 }
+/* Vinkelhuset's numbers come from BRAGE's spec, not from this file.
+   The card used to carry boa:210/gfa:210 typed against v0.2; v0.3 computes 206.4 m² heated
+   excluding the souterrain on a 204 m² ground footprint, and BRAGE's own validator records that
+   the 210 in the brief is NOT reproduced by the geometry and was deliberately not adjusted to
+   fit. Reading area_summary at load means the card cannot drift from the spec again — if the
+   spec changes, this changes with it, and if the spec cannot be read the card says so rather
+   than showing a stale number. */
+async function loadVinkelhusetSpec(){
+  const vh=DESIGNS.find(d=>d.id==='VH');if(!vh)return;
+  let spec=null;
+  try{const r=await fetch('../../data/designs/house-v0.3-geometry-spec.json');if(r.ok)spec=await r.json()}catch(e){}
+  const a=spec&&spec.area_summary;
+  if(!a){vh.boa='—';vh.gfa='—';vh.footprint='—';vh.storeys='—';
+    vh.summary+=' Areas unavailable: BRAGE\'s v0.3 spec could not be read.';
+    if(window.updateDesignDock&&window.currentDesign===vh)window.updateDesignDock(vh);return}
+  const heated=a.heated_m2_excl_souterrain,footprint=a.ground_footprint_m2,
+        storeys=Object.keys(a.by_storey||{}).length;
+  vh.boa=heated;vh.gfa=heated;vh.footprint=footprint;vh.storeys=storeys;
+  vh.specVersion=(spec.schema_version||'house-v0.3');
+  vh.summary+=` ${heated} m² heated excluding the souterrain, on a ${footprint} m² ground footprint`
+    +` (${Object.entries(a.by_storey||{}).map(([k,v])=>k.toLowerCase()+' '+v).join(' · ')} m²).`;
+  if(window.updateDesignDock&&window.currentDesign===vh)window.updateDesignDock(vh);
+}
 const designDockEl=buildDesignDock();
+loadVinkelhusetSpec();
 function toggleDesignDock(stageId){designDockEl.classList.toggle('hidden',!['CONCEPT_HOUSE_ON_PLOT','BUILDING_ORBIT'].includes(stageId));}
 // ---- Authoritative boundary (registered property division) ----
 // Drawn only when the ingest has produced the AUTHORITATIVE clip; inert otherwise.
