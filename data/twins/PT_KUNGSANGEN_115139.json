@@ -31,10 +31,10 @@
     "avatar_id": "AVATAR_KUNGSANGEN_115139_G2_PROXY",
     "asset_path": "data/geometry/avatars/kungsangen-115139-g2-proxy.glb",
     "sha256": "4319f93cc7e39274d7ba5c3698a06fff64f2e7eff9efaa2b126a6b4da16b4a76",
-    "scale_state": "footprint 1400x2000mm from title; height 600mm CATEGORY DEFAULT",
+    "scale_state": "wd_source_stated + h_category_default 1400x2000x600mm",
     "height_source": "category_default",
     "footprint_source": "title_regex:double_wd_cm_assumed",
-    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "shape_claim": "category-shape proxy; width/depth merchant-stated, height is a category default (INDICATIVE)",
     "rights": {
       "geometry_owner": "Product Twin universal proxy",
       "manufacturer_geometry_copied": false,

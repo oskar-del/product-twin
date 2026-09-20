@@ -195,6 +195,34 @@ stored dimensions. `scale_state` remains unreliable across the corpus and should
 decorative; `dimensions_tier` is the field of record.
 
 
+
+### scale_state made truthful + dangling geometry cleared (2026-09-21, commit `50979c4dbf`)
+Per Brain rule 12. `scripts/scale-state-lib.mjs` is now the single definition, derived from
+`physical.dimensions_tier`, and both proxy builders use it:
+
+| old string | written by | what was wrong |
+|---|---|---|
+| `category_default …` | `build-newport-proxies.mjs` | written even when the size had just been parsed out of the merchant title |
+| `verified …mm envelope` + `shape_claim: "dimension-verified proxy"` | `build-all-proxies.mjs` | claimed VERIFICATION over numbers that were often pure category defaults — the stronger false claim of the two |
+
+Backfilled across all 3,947 twins carrying geometry, so the misleading strings on disk are corrected,
+not merely avoided in future writes: `verified_measured` 195 · `source_stated` 26 ·
+`wd_source_stated` 90 · `category_default` 3,634. **Contradictions between `scale_state` and
+`dimensions_tier`: 0** (checked by re-reading every twin with geometry after the write).
+`verified_measured` is kept distinct from `source_stated` so an IKEA measured envelope is not
+flattened into "merchant-stated".
+
+**Separate defect found while verifying this — my own, from item 3.** The hero rebuild deleted every
+`*lampemesteren*`/`*kungsangen*`-g2-proxy.glb and regenerated only the newly-selected 20 per catalog.
+**25 twins from the earlier selection kept a geometry block pointing at a deleted file** — advertising
+G2 geometry no consumer could load. `scripts/fix-dangling-geometry.mjs` reverted them to
+`G0 / catalog_only`. Dangling references now 0; twins with a loadable GLB: 3,922.
+
+**NOT checked:** 14 GLBs on disk are referenced by no twin (IKEA/Roca/Longi assets from earlier
+sessions). They are harmless and may be referenced by other manifests, so they were left alone — not
+deleted, not verified as needed.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,

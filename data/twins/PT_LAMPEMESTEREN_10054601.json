@@ -31,10 +31,10 @@
     "avatar_id": "AVATAR_LAMPEMESTEREN_10054601_G2_PROXY",
     "asset_path": "data/geometry/avatars/lampemesteren-10054601-g2-proxy.glb",
     "sha256": "125c1e0f9fb05561e41214508b88a081f6b3493e20cd5dc906f3efd6cad1a743",
-    "scale_state": "footprint 1070x1070mm from title; height 300mm CATEGORY DEFAULT",
+    "scale_state": "wd_source_stated + h_category_default 1070x1070x300mm",
     "height_source": "category_default",
     "footprint_source": "title_regex:diameter",
-    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "shape_claim": "category-shape proxy; width/depth merchant-stated, height is a category default (INDICATIVE)",
     "rights": {
       "geometry_owner": "Product Twin universal proxy",
       "manufacturer_geometry_copied": false,

@@ -26,25 +26,14 @@
     "primary_url": "https://lw-cdn.com/images/A912ED2D11F1/k_62309f63429600e0985db45710051ece;w_1600;h_1600;q_90/70010254.jpg"
   },
   "geometry": {
-    "level": "G2",
-    "state": "promoted_hero_proxy",
-    "avatar_id": "AVATAR_LAMPEMESTEREN_70010254_G2_PROXY",
-    "asset_path": "data/geometry/avatars/lampemesteren-70010254-g2-proxy.glb",
-    "sha256": "5cfa57223722578642d420d4896d76973c0dbe2e371c1550e76aefb2ee402fa1",
-    "scale_state": "footprint 4200x4200mm from title; height 300mm CATEGORY DEFAULT",
-    "height_source": "category_default",
-    "footprint_source": "title_regex:diameter",
-    "shape_claim": "category-default proxy; not manufacturer geometry",
-    "rights": {
-      "geometry_owner": "Product Twin universal proxy",
-      "manufacturer_geometry_copied": false,
-      "manufacturer_texture_artwork_copied": false
-    }
+    "level": "G0",
+    "state": "catalog_only",
+    "note": "previous G2 proxy asset was removed by the 2026-09-20 hero rebuild; geometry cleared rather than left dangling"
   },
   "readiness": {
     "identity": "feed_verified",
     "commerce": "affiliate_live",
-    "geometry": "G2_promoted_hero_proxy"
+    "geometry": "G0_catalog_only"
   },
   "physical": {
     "dimensions_mm": {

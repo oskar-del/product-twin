@@ -4,6 +4,7 @@
 //          [--prefix PT_NEWPORT_] [--buckets FURNITURE,DECOR] [--only 58855,61313] [--slug newport]
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { scaleStateFor } from './scale-state-lib.mjs';
 
 const ROOT = process.cwd();
 const TWINS_DIR = path.join(ROOT, 'data/twins');
@@ -258,8 +259,7 @@ async function main() {
       state: 'promoted_universal_proxy',
       avatar_id: `AVATAR_${SLUG.toUpperCase().replace(/-/g, '_')}_${twin.identity.article_no}_G2_PROXY`,
       asset_path: assetPath,
-      scale_state: `category_default ${dims.width}x${dims.depth || dims.width}x${dims.height}mm`,
-      shape_claim: 'category-default proxy; not manufacturer geometry',
+      ...scaleStateFor(twin, dims.width, dims.depth || dims.width, dims.height),
       placement: { origin: 'floor_center', floor_contact: true },
       appearance: {
         pbr_state: 'spine_colour_by_category',

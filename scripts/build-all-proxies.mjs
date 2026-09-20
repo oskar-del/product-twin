@@ -7,6 +7,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { scaleStateFor } from './scale-state-lib.mjs';
 
 const ROOT = process.cwd();
 const TWINS_DIR = path.join(ROOT, 'data/twins');
@@ -216,8 +217,7 @@ async function main() {
       state: 'promoted_universal_proxy',
       avatar_id: avatarId,
       asset_path: assetPath,
-      scale_state: `verified ${result.w_mm}x${result.d_mm}x${result.h_mm}mm envelope`,
-      shape_claim: 'dimension-verified proxy from category heuristic; not exact manufacturer geometry',
+      ...scaleStateFor(twin, result.w_mm, result.d_mm, result.h_mm),
       placement: { origin: 'floor_center', floor_contact: true },
       appearance: {
         pbr_state: 'spine_colour_by_category',

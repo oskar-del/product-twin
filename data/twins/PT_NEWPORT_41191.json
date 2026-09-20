@@ -50,8 +50,8 @@
     "state": "promoted_universal_proxy",
     "avatar_id": "AVATAR_NEWPORT_41191_G2_PROXY",
     "asset_path": "data/geometry/avatars/newport-41191-g2-proxy.glb",
-    "scale_state": "category_default 2230x960x640mm",
-    "shape_claim": "category-default proxy; not manufacturer geometry",
+    "scale_state": "source_stated 2230x960x640mm",
+    "shape_claim": "category-shape proxy at merchant-stated dimensions; not exact manufacturer geometry",
     "placement": {
       "origin": "floor_center",
       "floor_contact": true
@@ -64,8 +64,7 @@
       "geometry_owner": "Product Twin universal proxy",
       "manufacturer_geometry_copied": false,
       "manufacturer_texture_artwork_copied": false
-    },
-    "scale_state_note": "scale_state says \"category_default\" but these numbers came from the merchant title; see scripts/reconcile-dimension-tier.mjs"
+    }
   },
   "readiness": {
     "identity": "feed_verified",
