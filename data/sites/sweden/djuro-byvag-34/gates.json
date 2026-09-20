@@ -1,129 +1,313 @@
 {
-  "schema_version": "site-gates/v0.1",
+  "schema_version": "site-gates/v0.2",
   "entity_type": "SiteGateSet",
   "subject": "DJURÖ 4:147",
   "site": "djuro-byvag-34",
-  "generated_at": "2026-09-20T18:57:30+00:00",
-  "generator": "scripts/build-findings-and-gates.py",
-  "generated_from": [
-    "property-division-derived-v0.1.json",
-    "buildings-official-derived-v0.1.json",
-    "terrain-dem-derived-v0.1.json",
-    "shoreline-strandskydd-derived-v0.1.json",
-    "sea-view-derived-v0.1.json",
-    "municipal-planning-status-v0.1.json"
-  ],
+  "generated_at": "2026-09-20T22:32:30+00:00",
+  "generator": "scripts/build-gate-ledger.py",
+  "registry": "config/gate-registry.json",
+  "rule": "Every gate in the canonical registry is emitted for every site. A gate a site cannot answer is OPEN with a reason, never dropped.",
+  "gate_count": 26,
+  "closed": 8,
+  "open": 18,
+  "decided_by_counts": {
+    "generic": 11,
+    "registry_rule": 1,
+    "legacy": 0,
+    "open_no_derivation": 14
+  },
   "receipts_absent": [],
   "fields_absent": [],
-  "rule": "Nothing in these files is hand-typed; every value is read from a committed derived product. A rendered horizon is never a view claim. Every receipt is optional: a finding or gate whose receipt or field is absent is emitted OPEN with the reason, never skipped and never inferred.",
-  "gate_count": 11,
-  "closed": 7,
-  "open": 4,
   "gates": [
+    {
+      "gate_id": "GATE_SE_MUNICIPAL_JURISDICTION",
+      "status": "OPEN",
+      "question": "Which municipality decides here, and is that established from an official source?",
+      "domain": "identity",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_PLOT_IDENTITY",
+      "status": "CLOSED",
+      "question": "Does the address resolve to a named registered parcel, with its registered extent confirmed by an authoritative source?",
+      "domain": "identity",
+      "evidence_refs": [
+        "property-division-derived-v0.1.json"
+      ],
+      "decided_at": "2026-09-20T22:32:30+00:00",
+      "reason": "Answered by property-division-derived-v0.1.json (AuthoritativePropertyDivisionClip). Title and ownership are not established by a property-division clip; that is GATE_SE_PROPERTY_REGISTER.",
+      "decided_by": "registry rule"
+    },
     {
       "gate_id": "GATE_SE_PROPERTY_DIVISION_CONTEXT",
       "status": "CLOSED",
+      "question": "Has an authoritative property-division vector been acquired for this parcel and its neighbours?",
+      "domain": "identity",
       "evidence_refs": [
         "RCPT_SE_LM_PROPERTY_DIVISION_KN0120",
         "FINDING_SE_REGISTERED_PARCEL_EXTENT"
       ],
-      "decided_at": "2026-09-20T18:57:30+00:00",
-      "reason": "Authoritative registered extent for DJURÖ 4:147: 5,156.3 m², 9 boundary vertices, 10 context parcels."
+      "decided_at": "2026-09-20T22:32:30+00:00",
+      "reason": "Authoritative registered extent for DJURÖ 4:147: 5,156.3 m², 9 boundary vertices, 10 context parcels.",
+      "decided_by": "generic generator"
     },
     {
-      "gate_id": "GATE_SE_BUILDING_FOOTPRINTS",
-      "status": "CLOSED",
-      "evidence_refs": [
-        "RCPT_SE_LM_BUILDINGS_KN0120",
-        "FINDING_SE_OFFICIAL_BUILDINGS_ON_PARCEL"
-      ],
-      "decided_at": "2026-09-20T18:57:30+00:00",
-      "reason": "4 registered buildings on the parcel with real rings, 416.0 m² of footprint. The areas independently confirm the figures previously published without geometry behind them."
-    },
-    {
-      "gate_id": "GATE_SE_BUILDING_HEIGHTS",
+      "gate_id": "GATE_SE_PROPERTY_REGISTER",
       "status": "OPEN",
-      "evidence_refs": [
-        "FINDING_SE_BUILDING_HEIGHTS_ABSENT"
-      ],
+      "question": "Has a property-register extract (title, area of record, encumbrances) been obtained?",
+      "domain": "identity",
+      "evidence_refs": [],
       "decided_at": null,
-      "reason": "The LM byggnad product carries no heights. Storeys, eaves, ridge and volume are NOT established, so no massing can be presented as authoritative."
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_RIGHTS_AND_JOINT_FACILITIES",
+      "status": "OPEN",
+      "question": "What servitudes, rights and joint facilities burden or benefit this parcel?",
+      "domain": "identity",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_BOUNDARY_FOR_DESIGN",
+      "status": "OPEN",
+      "question": "Is there a field survey or boundary determination good enough to set a building out against?",
+      "domain": "identity",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "Registered property-division geometry does NOT close this. It is authoritative for extent, not for monument positions.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_DETAIL_PLAN_AND_STATUS",
+      "status": "CLOSED",
+      "question": "Is there a detaljplan covering this parcel, and what is its status?",
+      "domain": "planning",
+      "evidence_refs": [
+        "RCPT_SE_VARMDO_WFS_PLANNING",
+        "FINDING_SE_NO_DETALJPLAN"
+      ],
+      "decided_at": "2026-09-20T22:32:30+00:00",
+      "reason": "Verified negative: no plan in force, none pending, none revoked since 2023-01-01. Unplanned land.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_CURRENT_LAW_PROFILE",
+      "status": "OPEN",
+      "question": "Which national rule profile is in force for this assessment?",
+      "domain": "planning",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_H30_H50_ELIGIBILITY",
+      "status": "OPEN",
+      "question": "Is this parcel eligible under the H30/H50 conditional rules?",
+      "domain": "planning",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_BUILDABLE_ENVELOPE",
+      "status": "OPEN",
+      "question": "What setback, footprint, ridge height and placement may actually be built?",
+      "domain": "planning",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
     },
     {
       "gate_id": "GATE_SE_TERRAIN",
       "status": "CLOSED",
+      "question": "Is a receipted height model clipped to this parcel, with deterministic derivations?",
+      "domain": "ground",
       "evidence_refs": [
         "RCPT_SE_LM_TERRAIN_DTM_DJURO",
         "FINDING_SE_PARCEL_RELIEF",
         "FINDING_SE_SLOPE_THREE_MEASURES"
       ],
-      "decided_at": "2026-09-20T18:57:30+00:00",
-      "reason": "10 receipted 1 m DTM tiles re-verified by sha256 against .runtime/receipts before any pixel was read; the parcel mask derived from them measures 5155.0 m2 against 5156.3 m2 registered, an independent check that the boundary and DTM frames align."
+      "decided_at": "2026-09-20T22:32:30+00:00",
+      "reason": "10 receipted 1 m DTM tiles re-verified by sha256 against .runtime/receipts before any pixel was read; the parcel mask derived from them measures 5155.0 m2 against 5156.3 m2 registered, an independent check that the boundary and DTM frames align.",
+      "decided_by": "generic generator"
     },
     {
       "gate_id": "GATE_SE_TERRAIN_PROVENANCE",
       "status": "OPEN",
+      "question": "Was the height model checked against the source epoch for this parcel?",
+      "domain": "ground",
       "evidence_refs": [
         "RCPT_SE_LM_TERRAIN_DTM_DJURO"
       ],
       "decided_at": null,
-      "reason": "Tile integrity is verified on every run, but the per-tile ursprung/brytgeometri provenance polygons were never downloaded, so the laser-scan epoch behind these cells is unknown."
+      "reason": "Tile integrity is verified on every run, but the per-tile ursprung/brytgeometri provenance polygons were never downloaded, so the laser-scan epoch behind these cells is unknown.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_GROUND_CONDITIONS",
+      "status": "OPEN",
+      "question": "What are the soil and bedrock conditions under this parcel, from investigation rather than screening?",
+      "domain": "ground",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_FLOOD_AND_GEOHAZARDS",
+      "status": "OPEN",
+      "question": "Is this parcel exposed to flooding, landslide or erosion?",
+      "domain": "ground",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_BUILDING_FOOTPRINTS",
+      "status": "CLOSED",
+      "question": "Are the official building footprints on and around this parcel acquired?",
+      "domain": "buildings",
+      "evidence_refs": [
+        "RCPT_SE_LM_BUILDINGS_KN0120",
+        "FINDING_SE_OFFICIAL_BUILDINGS_ON_PARCEL"
+      ],
+      "decided_at": "2026-09-20T22:32:30+00:00",
+      "reason": "4 registered buildings on the parcel with real rings, 416.0 m² of footprint. The areas independently confirm the figures previously published without geometry behind them.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_BUILDING_HEIGHTS",
+      "status": "OPEN",
+      "question": "Are the heights of existing buildings established, rather than assumed?",
+      "domain": "buildings",
+      "evidence_refs": [
+        "FINDING_SE_BUILDING_HEIGHTS_ABSENT"
+      ],
+      "decided_at": null,
+      "reason": "The LM byggnad product carries no heights. Storeys, eaves, ridge and volume are NOT established, so no massing can be presented as authoritative.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_ENVIRONMENTAL_RESTRICTIONS",
+      "status": "OPEN",
+      "question": "What environmental protections apply across this parcel?",
+      "domain": "environment",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
     },
     {
       "gate_id": "GATE_SE_STRANDSKYDD_GEOMETRY",
       "status": "CLOSED",
+      "question": "Where does the shoreline run, and how much of the parcel falls inside the strandskydd band?",
+      "domain": "environment",
       "evidence_refs": [
         "FINDING_SE_PARCEL_REACHES_SHORELINE",
         "FINDING_SE_STRANDSKYDD_COVERS_WHOLE_PARCEL"
       ],
-      "decided_at": "2026-09-20T18:57:30+00:00",
-      "reason": "Measured, not presumed. The parcel reaches the water at 0.2 m and its farthest corner is 94.8 m out, so 100.0% of it lies inside the 100 m zone, as do all 4 registered buildings."
+      "decided_at": "2026-09-20T22:32:30+00:00",
+      "reason": "Measured, not presumed. The parcel reaches the water at 0.2 m and its farthest corner is 94.8 m out, so 100.0% of it lies inside the 100 m zone, as do all 4 registered buildings.",
+      "decided_by": "generic generator"
     },
     {
       "gate_id": "GATE_SE_STRANDSKYDD_EXTENSION",
       "status": "CLOSED",
+      "question": "Is an extended strandskydd (utvidgat) in force here?",
+      "domain": "environment",
       "evidence_refs": [
         "RCPT_SE_VARMDO_WFS_PLANNING",
         "FINDING_SE_NO_EXTENDED_STRANDSKYDD"
       ],
-      "decided_at": "2026-09-20T18:57:30+00:00",
-      "reason": "Verified negative across three independent layers, each with a passing control. The base 100 m applies here, and it already covers the whole parcel, so the extension question does not change the answer."
-    },
-    {
-      "gate_id": "GATE_SE_DETALJPLAN",
-      "status": "CLOSED",
-      "evidence_refs": [
-        "RCPT_SE_VARMDO_WFS_PLANNING",
-        "FINDING_SE_NO_DETALJPLAN"
-      ],
-      "decided_at": "2026-09-20T18:57:30+00:00",
-      "reason": "Verified negative: no plan in force, none pending, none revoked since 2023-01-01. Unplanned land."
+      "decided_at": "2026-09-20T22:32:30+00:00",
+      "reason": "Verified negative across three independent layers, each with a passing control. The base 100 m applies here, and it already covers the whole parcel, so the extension question does not change the answer.",
+      "decided_by": "generic generator"
     },
     {
       "gate_id": "GATE_SE_STRANDSKYDD_DISPENS",
       "status": "OPEN",
+      "question": "Has a strandskydd dispens been granted for what is proposed?",
+      "domain": "environment",
       "evidence_refs": [],
       "decided_at": null,
-      "reason": "Any dispens or upphävande attaching to this property is a case record in Värmdö's and Länsstyrelsen's registers, not a map layer. Not retrieved."
+      "reason": "Any dispens or upphävande attaching to this property is a case record in Värmdö's and Länsstyrelsen's registers, not a map layer. Not retrieved.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_CULTURAL_AND_CONTAMINATION",
+      "status": "OPEN",
+      "question": "Are there heritage or contamination constraints on this parcel?",
+      "domain": "environment",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
     },
     {
       "gate_id": "GATE_SE_SEA_VIEW",
       "status": "CLOSED",
+      "question": "Is open water visible from this parcel, computed from the height model?",
+      "domain": "view",
       "evidence_refs": [
         "RCPT_SE_LM_TERRAIN_DTM_DJURO",
         "FINDING_SE_SEA_VIEW_ARC"
       ],
-      "decided_at": "2026-09-20T18:57:30+00:00",
-      "reason": "43.9% of the compass in one unbroken arc 319.0°–117.0°, computed by viewshed. Closed as a TERRAIN result and as a CEILING only — see GATE_SE_VIEW_OCCLUSION."
+      "decided_at": "2026-09-20T22:32:30+00:00",
+      "reason": "43.9% of the compass in one unbroken arc 319.0°–117.0°, computed by viewshed. Closed as a TERRAIN result and as a CEILING only — see GATE_SE_VIEW_OCCLUSION.",
+      "decided_by": "generic generator"
     },
     {
       "gate_id": "GATE_SE_VIEW_OCCLUSION",
       "status": "OPEN",
+      "question": "Do vegetation and buildings occlude that view in practice?",
+      "domain": "view",
       "evidence_refs": [
         "FINDING_SE_SEA_VIEW_ARC"
       ],
       "decided_at": null,
-      "reason": "The viewshed is bare earth. Trees, buildings, boathouses and neighbouring roofs are not modelled and all of them reduce the arc. What a person actually sees from a window is NOT established, and no render may be used to assert it."
+      "reason": "The viewshed is bare earth. Trees, buildings, boathouses and neighbouring roofs are not modelled and all of them reduce the arc. What a person actually sees from a window is NOT established, and no render may be used to assert it.",
+      "decided_by": "generic generator"
+    },
+    {
+      "gate_id": "GATE_SE_LEGAL_ACCESS",
+      "status": "OPEN",
+      "question": "Is there a legally secured access route to this parcel?",
+      "domain": "access",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_UTILITIES_AND_CAPACITY",
+      "status": "OPEN",
+      "question": "Are water, sewer, power and data available with capacity to connect?",
+      "domain": "access",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
+    },
+    {
+      "gate_id": "GATE_SE_CONSTRUCTION_CLEARANCE",
+      "status": "OPEN",
+      "question": "Is there clearance to build — permits, notifications and start authorisation?",
+      "domain": "access",
+      "evidence_refs": [],
+      "decided_at": null,
+      "reason": "No derivation at this site answers this gate yet.",
+      "decided_by": "registry default"
     }
   ]
 }
