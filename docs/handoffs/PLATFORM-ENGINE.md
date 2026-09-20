@@ -115,6 +115,56 @@
 > make derived instead of typed.
 > Full verified fleet state: `docs/FLEET-STATE-2026-08-25.md` on `agent/brain`.
 
+
+## SPRINT DAY 2026-09-20 — Platform status (written during the day, not at close)
+
+Two sessions were live in this one worktree (`repo-platform`, `agent/platform-engine`)
+against the rule "one checkout = one executor". ai-c6 and I found each other mid-build on
+item 1, both having written `engine/ui/chrome/`. We split by message: I took items 1 and 2,
+ai-c6 took item 4 and the screenshot tooling. `tokens.css` is ai-c6's and I kept it; the
+component API is mine. Nothing was lost, but the overlap cost about an hour — worth a
+dispatcher rule before the next sprint day.
+
+**Item 1 — chrome package · DONE** (`a5e2f177e5`, `50438a61cf`)
+`engine/ui/chrome/{tokens.css,chrome.mjs,chrome-css.mjs,build-demo.mjs,demo.html}` +
+`docs/CHROME.md`. Screenshot `docs/screens/chrome-demo-2026-09-20.png`.
+Verified in-browser: topBar 1 · modes 6 · metricStrip 4 · evidenceChip 21 · card 5 ·
+sectionHead 7 · sidePanel 1 · evidenceLegend 1; body background `rgb(16,25,22)` = #101916;
+`--ink-bronze` resolves #d8b874. Demo figures are computed from receipts — parcel area is
+recomputed by shoelace from the clip's own ring and independently lands on Lantmäteriet's
+**1 936,8 m²** (6 vertices, 75 context rings, raw sha256 `839f729f63d8…`).
+Components return HTML **strings**, not DOM nodes: the consumers are node-side generators
+(the bundler, build-demo) and neither has a DOM.
+*NOT checked:* no visual-regression baseline, so drift from the `.intel-*` source is caught
+only by eye; untested in Safari/Firefox (chips use `color-mix()`); I did not re-derive every
+value in ai-c6's `tokens.css` against the source page myself.
+
+**Item 2 — re-skin both rooms · DONE** (`dc0ff62be9`)
+Dark ground, chrome topBar, "Looks" switcher (each look is the other bundled room), product
+panel = `sidePanel()` via the engine's existing `onElementOpen` seam.
+  newport-living  14 elements · 11 GLB inlined (137 KB) · 11 measured from mesh
+  vidaxl-terrace   9 elements ·  7 GLB inlined  (44 KB) ·  7 measured from mesh
+  BUY links **18/18 byte-identical** to the catalog twins' `affiliate_link`.
+The dimension chip needed something true behind it — scene elements carried no dimension
+provenance, so AUTHORITATIVE/INDICATIVE would have been asserted rather than known.
+`engine/geometry/glb-bounds.mjs` reads POSITION accessor min/max out of the GLB JSON chunk:
+measured off the mesh = AUTHORITATIVE, catalog title or category default = INDICATIVE.
+Screenshots `docs/screens/room-{newport-living,vidaxl-terrace}-2026-09-20.png`.
+*NOT checked:* headless Chrome cannot create a WebGL context, so screenshots use
+`--use-angle=swiftshader` — they prove the page, not GPU parity. The 3D environment is still
+the engine's REALISTIC sky/ground; only the chrome around the stage is dark. `dist/` is
+gitignored so the bundles are not committed. No BUY click-through to a live merchant.
+A substring grep over the bundle under-reports links 5/7 because esbuild escapes "ä" as
+`\xE4` in the JS literal — that is a source encoding, not a URL change; the runtime href is
+exact, which is what I verified.
+
+**Item 3 — room inside Vinkelhuset · NOT STARTED.** Dependency has landed and is confirmed:
+`repo-brage geometry/house-in-scene-v0.3-patch.json` carries `ROOM_GLANRUMMET`, a 7×3×7 m
+`ROOM_VOLUME`, with the bounding interior walls (`WALL_INT_LIVING_KITCHEN` et al). Next up.
+
+**Item 4 — stills gallery · OWNED BY ai-c6**, not me. I have not touched `engine/export/` or
+`dist/stills/` and cannot report its state.
+
 ## Why this session exists
 Three workstreams are each building their own three.js viewer (Svärtinge twin, Essence microsite, Avatar showroom) plus four legacy prototypes. That's the same engine written five times. This session owns the SHARED technology so every surface gets the best stack once: one twin-engine, one design system, one bundling/publish pipeline.
 
