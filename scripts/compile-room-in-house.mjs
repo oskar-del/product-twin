@@ -16,8 +16,12 @@ import path from "node:path";
 import {fileURLToPath} from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+// BRAGE's room-level spec, read live from their worktree — never a vendored copy,
+// which goes stale the moment they regenerate. v0.3 supersedes the in-scene patch
+// as the source for room volumes and openings: the patch states a massing box and
+// a prose "fully glazed south+west", the spec states the actual opening schedule.
 const BRAGE = path.resolve(root,
-  "../repo-brage/OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-in-scene-v0.3-patch.json");
+  "../repo-brage/OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-v0.3-geometry-spec.json");
 const SOURCE = path.join(root, "data/scenes/shoppable-room-newport-living/scene-v0.1.json");
 const OUT_DIR = path.join(root, "data/scenes/room-glanrummet-newport");
 
@@ -39,51 +43,87 @@ const PLAN = {
 const ATTACHED_TO = {CUSHION_A: "SOFA", CUSHION_B: "SOFA", VASE: "COFFEE_TABLE", TABLE_LAMP: "SIDE_TABLE"};
 
 function main() {
-  const patch = read(BRAGE);
-  const room = patch.add_elements.find(e => e.id === "ROOM_GLANRUMMET");
-  if (!room) throw new Error("ROOM_GLANRUMMET not found in BRAGE patch");
-  const [width, height, depth] = room.geometry.size;
+  const spec = read(BRAGE);
+  const room = (spec.rooms ?? []).find(r => r.id === "ROOM_GLANRUMMET");
+  if (!room) throw new Error(`ROOM_GLANRUMMET not found in ${spec.spec_id ?? "BRAGE spec"}`);
 
-  // The openings are BRAGE's, not ours: the room element itself states "Fully glazed
-  // south+west". We render that as one wall-sized opening per glazed face, inset from the
-  // structure, and we do not add a single opening the spec does not claim.
-  const feature = room.feature ?? "";
-  const glazedSouth = /south/i.test(feature) && /glaz/i.test(feature);
-  const glazedWest = /west/i.test(feature) && /glaz/i.test(feature);
-  if (!glazedSouth && !glazedWest) throw new Error(`no glazing stated for ROOM_GLANRUMMET: "${feature}"`);
+  // Volume is computed from the stated footprint and ceiling height — not from a
+  // massing box. v0.3 gives 2.7 m clear; the v0.2 patch said 3.0, which was the
+  // structural plate height, not the room.
+  const xs = room.footprint_xz.map(p => p[0]);
+  const zs = room.footprint_xz.map(p => p[1]);
+  const minX = Math.min(...xs), maxX = Math.max(...xs);
+  const minZ = Math.min(...zs), maxZ = Math.max(...zs);
+  const width = maxX - minX;
+  const depth = maxZ - minZ;
+  const height = room.ceiling_height_m;
+  if (!(width > 0 && depth > 0 && height > 0)) {
+    throw new Error(`ROOM_GLANRUMMET geometry is not usable: ${width}x${depth}x${height}`);
+  }
+  // Room-local frame: the spec is in house coordinates, the scene is centred on the room.
+  const cx = (minX + maxX) / 2;
+  const cz = (minZ + maxZ) / 2;
 
-  const margin = 0.3;                       // structure left at the wall edges
-  const sill = 0.1;
-  const headHeight = height - 0.25;
-  const openings = [];
-  if (glazedSouth) {
-    openings.push({
-      id: "GLAZ_GLANRUMMET_S", type: "OPENING",
-      label: "Glanrummet south glazing — full-height toward the lake",
-      evidence_class: "CONCEPT",
-      source_refs: ["BRAGE house-in-scene-v0.3-patch ROOM_GLANRUMMET.feature"],
-      limitations: [
-        "Glazed extent is read from BRAGE's stated 'fully glazed south+west'; no mullion, frame or opening schedule is specified yet.",
-        "Anything visible through this glazing is a VISUALIZATION. No outlook, sightline or sea view is claimed or evidenced here."
-      ],
-      geometry: {primitive: "BOX", size: [width - margin * 2, headHeight - sill, 0.12],
-        position: [0, (sill + headHeight) / 2, -depth / 2], rotation_y_deg: 0}
-    });
+  // Openings come from the spec's own schedule. Nothing is inferred from prose and
+  // no margin, sill or head is invented here: if the spec states no opening for this
+  // room, the room renders solid and that is the honest answer.
+  const specOpenings = (room.openings ?? []);
+  if (specOpenings.length === 0) {
+    throw new Error("ROOM_GLANRUMMET states no openings in the spec — refusing to invent glazing");
   }
-  if (glazedWest) {
-    openings.push({
-      id: "GLAZ_GLANRUMMET_W", type: "OPENING",
-      label: "Glanrummet west glazing — evening sun",
+
+  const wallFaces = new Set((room.wall_segments ?? []).map(w => w.faces));
+  const openings = specOpenings.map(o => {
+    const [ax, az] = o.from_xz;
+    const [bx, bz] = o.to_xz;
+    const sill = o.sill_m;
+    const head = o.head_m;
+    if (!(head > sill)) throw new Error(`${o.id}: head_m ${head} is not above sill_m ${sill}`);
+    if (o.wall && wallFaces.size && !wallFaces.has(o.wall)) {
+      throw new Error(`${o.id}: sits on wall "${o.wall}", which is not a stated wall face of this room`);
+    }
+
+    const runX = Math.abs(bx - ax);
+    const runZ = Math.abs(bz - az);
+    const horizontal = runX >= runZ;          // opening runs along X (a south/north wall)
+    const length = horizontal ? runX : runZ;
+    const midX = (ax + bx) / 2 - cx;
+    const midZ = (az + bz) / 2 - cz;
+
+    const isDoor = /DOOR/i.test(o.type ?? "");
+    return {
+      id: o.id,
+      type: "OPENING",
+      label: `${o.id} — ${String(o.type ?? "opening").replace(/_/g, " ").toLowerCase()} on the ${String(o.wall ?? "").toLowerCase()} wall`,
       evidence_class: "CONCEPT",
-      source_refs: ["BRAGE house-in-scene-v0.3-patch ROOM_GLANRUMMET.feature"],
-      limitations: [
-        "Glazed extent is read from BRAGE's stated 'fully glazed south+west'; the spec notes the glazing is splayed toward the lake, which this orthogonal volume does not model.",
-        "Anything visible through this glazing is a VISUALIZATION. The Glan outlook is the room's stated intent, not a measured sightline — no view is claimed."
+      source_refs: [
+        `${spec.spec_id} ROOM_GLANRUMMET.openings[${o.id}]`,
+        `BRAGE ${spec.spec_version} · generated ${spec.generated_at}`
       ],
-      geometry: {primitive: "BOX", size: [depth - margin * 2, headHeight - sill, 0.12],
-        position: [-width / 2, (sill + headHeight) / 2, 0], rotation_y_deg: 90}
-    });
-  }
+      limitations: [
+        `Extent, sill ${sill} m and head ${head} m are BRAGE's stated values; frame, mullion and ironmongery are not specified.`,
+        o.note ? `Spec note: ${o.note}` : null,
+        "Anything visible through this opening is a VISUALIZATION. No outlook, sightline or lake view is claimed or measured here."
+      ].filter(Boolean),
+      geometry: {
+        primitive: "BOX",
+        size: horizontal ? [length, head - sill, 0.12] : [length, head - sill, 0.12],
+        position: [midX, (sill + head) / 2, midZ],
+        rotation_y_deg: horizontal ? 0 : 90
+      },
+      opening_schedule: {
+        wall: o.wall ?? null,
+        opening_type: o.type ?? null,
+        sill_m: sill,
+        head_m: head,
+        length_m: o.length_m ?? Number(length.toFixed(3)),
+        area_m2: o.area_m2 ?? null,
+        glazing: o.glazing ?? null,
+        is_door: isDoor,
+        source: "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    };
+  });
 
   const source = read(SOURCE);
   const byId = new Map(source.elements.map(e => [e.id, e]));
@@ -112,11 +152,15 @@ function main() {
     {
       // Non-pickable: this volume encloses every product, so leaving it
       // pickable means every click lands on the box instead of the sofa.
-      id: "ROOM_GLANRUMMET", type: "ROOM", picking: false, label: room.label,
-      evidence_class: "CONCEPT",
-      source_refs: room.source_refs,
-      limitations: ["Concept room volume from BRAGE's house design. No entitlement, buildable envelope or floor level is established for this plot."],
-      geometry: {primitive: "ROOM_VOLUME", size: [width, height, depth], position: [0, height / 2, 0], rotation_y_deg: 0, intended_use: room.intended_use}
+      id: "ROOM_GLANRUMMET", type: "ROOM", picking: false,
+      label: `Glanrummet — ${room.floor_area_m2} m² · ${room.ceiling_height_m} m clear`,
+      evidence_class: room.evidence_class ?? "CONCEPT",
+      source_refs: [`${spec.spec_id} rooms[ROOM_GLANRUMMET]`, `BRAGE ${spec.spec_version}`],
+      limitations: [
+        "Concept room volume from BRAGE's house design. No entitlement, buildable envelope or floor level is established for this plot.",
+        `Footprint ${width} × ${depth} m and ${height} m clear height are the spec's computed values, not a survey.`
+      ],
+      geometry: {primitive: "ROOM_VOLUME", size: [width, height, depth], position: [0, height / 2, 0], rotation_y_deg: 0, intended_use: room.use}
     },
     {
       id: "ROOM_FLOOR", type: "TERRAIN", label: "Room floor",
@@ -156,9 +200,28 @@ function main() {
     elements: [...shell, ...moved],
     house_context: {
       house: "Vinkelhuset mot Glan",
-      patch: "house-in-scene-v0.3-patch.json",
-      room_origin_in_house: room.geometry.position,
-      note: "The room is compiled at its own origin; room_origin_in_house is where it sits in the house scene."
+      spec: {
+        id: spec.spec_id,
+        version: spec.spec_version,
+        generated_at: spec.generated_at,
+        supersedes: spec.supersedes ?? null
+      },
+      room: {
+        floor_area_m2: room.floor_area_m2,
+        ceiling_height_m: room.ceiling_height_m,
+        volume_m3: room.volume_m3,
+        glazed_area_m2: room.glazed_area_m2 ?? null,
+        glazing_ratio_of_floor: room.glazing_ratio_of_floor ?? null,
+        finishes: room.finishes ?? null
+      },
+      // Where this room sits in the house frame; the scene itself is centred on the room.
+      room_centre_in_house_xz: [cx, cz],
+      room_footprint_xz: room.footprint_xz,
+      roof: spec.roof
+        ? {type: spec.roof.type, pitch_deg: spec.roof.pitch_deg, ridge_axis: spec.roof.ridge_axis,
+           ridge_Y: spec.roof.ridge_Y, eaves_Y: spec.roof.eaves_Y, eaves_overhang_m: spec.roof.eaves_overhang_m}
+        : null,
+      note: "The room is compiled at its own origin; room_centre_in_house_xz is where it sits in the house frame. Roof is carried for context only — this scene renders the room interior, not the envelope."
     }
   };
 
@@ -171,10 +234,31 @@ function main() {
   const sourceLinks = new Map(sourceShoppable.map(e => [e.id, e.commerce.buy_url]));
   const changed = shoppable.filter(e => sourceLinks.get(e.id) !== e.commerce.buy_url);
 
+  const glazedArea = openings.reduce((sum, o) => sum + (o.opening_schedule.area_m2 ?? 0), 0);
+
+  // Cross-check: the areas we carried per opening must add up to the room total the
+  // spec computed independently. If these ever diverge we are reading the schedule
+  // wrongly — better to stop than to ship a room whose glazing is quietly invented.
+  if (typeof room.glazed_area_m2 === "number") {
+    const drift = Math.abs(glazedArea - room.glazed_area_m2);
+    if (drift > 0.01) {
+      throw new Error(
+        `glazed area mismatch: openings sum to ${glazedArea.toFixed(2)} m² but the spec states ` +
+        `${room.glazed_area_m2} m² (drift ${drift.toFixed(3)} m²) — the opening schedule is not being read correctly`
+      );
+    }
+  }
+
   console.log(`wrote ${path.relative(root, out)}`);
-  console.log(`  room        ${room.label}`);
-  console.log(`  volume      ${width} × ${height} × ${depth} m (BRAGE ROOM_GLANRUMMET)`);
-  console.log(`  glazing     ${openings.map(o => o.id).join(", ") || "none"} — from "${feature}"`);
+  console.log(`  spec        ${spec.spec_id} · ${spec.spec_version} · generated ${spec.generated_at}`);
+  console.log(`  room        ROOM_GLANRUMMET · ${room.floor_area_m2} m² · ${room.volume_m3} m³`);
+  console.log(`  volume      ${width} × ${depth} m footprint · ${height} m clear (computed from footprint_xz + ceiling_height_m)`);
+  console.log(`  openings    ${openings.length} from the spec's schedule:`);
+  for (const o of openings) {
+    const k = o.opening_schedule;
+    console.log(`                ${o.id.padEnd(13)} ${String(k.wall).padEnd(5)} ${String(k.opening_type).padEnd(14)} ${k.length_m} m · sill ${k.sill_m} → head ${k.head_m} m · ${k.area_m2} m²`);
+  }
+  console.log(`  glazed area ${glazedArea.toFixed(2)} m² computed · ${room.glazed_area_m2 ?? "?"} m² stated by the spec`);
   console.log(`  elements    ${scene.elements.length} · ${shoppable.length} shoppable`);
   console.log(`  BUY links   ${shoppable.length - changed.length}/${shoppable.length} byte-identical to the source scene${changed.length ? ` — CHANGED: ${changed.map(e => e.id).join(", ")}` : ""}`);
   if (changed.length) process.exit(1);

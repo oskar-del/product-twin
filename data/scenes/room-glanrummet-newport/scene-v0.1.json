@@ -2,7 +2,7 @@
   "scene_version": "twin-scene/v0.1",
   "entity_type": "ShoppableRoomSceneExport",
   "scene_id": "SCENE_ROOM_GLANRUMMET_NEWPORT_V01",
-  "generated_at": "2026-09-20T18:35:56.803Z",
+  "generated_at": "2026-09-20T18:40:32.611Z",
   "subject": {
     "label": "Glanrummet — Newport set inside BRAGE's Vinkelhuset",
     "identity_evidence_class": "CONCEPT",
@@ -143,25 +143,26 @@
       "id": "ROOM_GLANRUMMET",
       "type": "ROOM",
       "picking": false,
-      "label": "Glanrummet — west view/evening room (the one move)",
+      "label": "Glanrummet — 49 m² · 2.7 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V02",
-        "USER_DIRECTIVE_CONCEPT"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE brage-house-geometry/v0.3"
       ],
       "limitations": [
-        "Concept room volume from BRAGE's house design. No entitlement, buildable envelope or floor level is established for this plot."
+        "Concept room volume from BRAGE's house design. No entitlement, buildable envelope or floor level is established for this plot.",
+        "Footprint 7 × 7 m and 2.7 m clear height are the spec's computed values, not a survey."
       ],
       "geometry": {
         "primitive": "ROOM_VOLUME",
         "size": [
           7,
-          3,
+          2.7,
           7
         ],
         "position": [
           0,
-          1.5,
+          1.35,
           0
         ],
         "rotation_y_deg": 0,
@@ -210,57 +211,121 @@
       }
     },
     {
-      "id": "GLAZ_GLANRUMMET_S",
+      "id": "OP_GLAN_S1",
       "type": "OPENING",
-      "label": "Glanrummet south glazing — full-height toward the lake",
+      "label": "OP_GLAN_S1 — fixed glazing on the south wall",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE house-in-scene-v0.3-patch ROOM_GLANRUMMET.feature"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 ROOM_GLANRUMMET.openings[OP_GLAN_S1]",
+        "BRAGE brage-house-geometry/v0.3 · generated 2026-09-20T18:32:08.795Z"
       ],
       "limitations": [
-        "Glazed extent is read from BRAGE's stated 'fully glazed south+west'; no mullion, frame or opening schedule is specified yet.",
-        "Anything visible through this glazing is a VISUALIZATION. No outlook, sightline or sea view is claimed or evidenced here."
+        "Extent, sill 0 m and head 2.55 m are BRAGE's stated values; frame, mullion and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook, sightline or lake view is claimed or measured here."
       ],
       "geometry": {
         "primitive": "BOX",
         "size": [
-          6.4,
-          2.65,
+          6,
+          2.55,
           0.12
         ],
         "position": [
           0,
-          1.425,
+          1.275,
           -3.5
         ],
         "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "SOUTH",
+        "opening_type": "FIXED_GLAZING",
+        "sill_m": 0,
+        "head_m": 2.55,
+        "length_m": 6,
+        "area_m2": 15.3,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
       }
     },
     {
-      "id": "GLAZ_GLANRUMMET_W",
+      "id": "OP_GLAN_W1",
       "type": "OPENING",
-      "label": "Glanrummet west glazing — evening sun",
+      "label": "OP_GLAN_W1 — fixed glazing on the west wall",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE house-in-scene-v0.3-patch ROOM_GLANRUMMET.feature"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 ROOM_GLANRUMMET.openings[OP_GLAN_W1]",
+        "BRAGE brage-house-geometry/v0.3 · generated 2026-09-20T18:32:08.795Z"
       ],
       "limitations": [
-        "Glazed extent is read from BRAGE's stated 'fully glazed south+west'; the spec notes the glazing is splayed toward the lake, which this orthogonal volume does not model.",
-        "Anything visible through this glazing is a VISUALIZATION. The Glan outlook is the room's stated intent, not a measured sightline — no view is claimed."
+        "Extent, sill 0 m and head 2.55 m are BRAGE's stated values; frame, mullion and ironmongery are not specified.",
+        "Spec note: Evening sun; splayed toward the lake.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook, sightline or lake view is claimed or measured here."
       ],
       "geometry": {
         "primitive": "BOX",
         "size": [
-          6.4,
-          2.65,
+          6,
+          2.55,
           0.12
         ],
         "position": [
           -3.5,
-          1.425,
+          1.275,
           0
         ],
         "rotation_y_deg": 90
+      },
+      "opening_schedule": {
+        "wall": "WEST",
+        "opening_type": "FIXED_GLAZING",
+        "sill_m": 0,
+        "head_m": 2.55,
+        "length_m": 6,
+        "area_m2": 15.3,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": false,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
+      }
+    },
+    {
+      "id": "OP_GLAN_DOOR",
+      "type": "OPENING",
+      "label": "OP_GLAN_DOOR — sliding door on the south wall",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 ROOM_GLANRUMMET.openings[OP_GLAN_DOOR]",
+        "BRAGE brage-house-geometry/v0.3 · generated 2026-09-20T18:32:08.795Z"
+      ],
+      "limitations": [
+        "Extent, sill 0 m and head 2.4 m are BRAGE's stated values; frame, mullion and ironmongery are not specified.",
+        "Anything visible through this opening is a VISUALIZATION. No outlook, sightline or lake view is claimed or measured here."
+      ],
+      "geometry": {
+        "primitive": "BOX",
+        "size": [
+          1.7999999999999998,
+          2.4,
+          0.12
+        ],
+        "position": [
+          0.8000000000000007,
+          1.2,
+          -3.5
+        ],
+        "rotation_y_deg": 0
+      },
+      "opening_schedule": {
+        "wall": "SOUTH",
+        "opening_type": "SLIDING_DOOR",
+        "sill_m": 0,
+        "head_m": 2.4,
+        "length_m": 1.8,
+        "area_m2": 4.32,
+        "glazing": "TRIPLE_ALU_CLAD_TIMBER",
+        "is_door": true,
+        "source": "BRAGE_SPEC_V03_OPENING_SCHEDULE"
       }
     },
     {
@@ -789,12 +854,54 @@
   ],
   "house_context": {
     "house": "Vinkelhuset mot Glan",
-    "patch": "house-in-scene-v0.3-patch.json",
-    "room_origin_in_house": [
+    "spec": {
+      "id": "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03",
+      "version": "brage-house-geometry/v0.3",
+      "generated_at": "2026-09-20T18:32:08.795Z",
+      "supersedes": "brage-house-geometry/v0.2"
+    },
+    "room": {
+      "floor_area_m2": 49,
+      "ceiling_height_m": 2.7,
+      "volume_m3": 132.3,
+      "glazed_area_m2": 34.92,
+      "glazing_ratio_of_floor": 0.713,
+      "finishes": {
+        "floor": "OILED_OAK_PLANK",
+        "walls": "PAINTED_PLASTER_WARM_WHITE",
+        "ceiling": "EXPOSED_TIMBER_SOFFIT"
+      }
+    },
+    "room_centre_in_house_xz": [
       -7.5,
-      1.5,
       -0.5
     ],
-    "note": "The room is compiled at its own origin; room_origin_in_house is where it sits in the house scene."
+    "room_footprint_xz": [
+      [
+        -11,
+        -4
+      ],
+      [
+        -4,
+        -4
+      ],
+      [
+        -4,
+        3
+      ],
+      [
+        -11,
+        3
+      ]
+    ],
+    "roof": {
+      "type": "GABLE",
+      "pitch_deg": 30,
+      "ridge_axis": "EAST_WEST",
+      "ridge_Y": 5.02,
+      "eaves_Y": 3,
+      "eaves_overhang_m": 0.5
+    },
+    "note": "The room is compiled at its own origin; room_centre_in_house_xz is where it sits in the house frame. Roof is carried for context only — this scene renders the room interior, not the envelope."
   }
 }

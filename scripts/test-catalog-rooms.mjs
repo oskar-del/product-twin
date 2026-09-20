@@ -366,5 +366,59 @@ for (const parsed of [npParsed, vxParsed]) {
 check(`every BUY link is byte-identical to its catalog row (${verbatimAll}/${shoppableAll})`,
   verbatimAll === shoppableAll && shoppableAll >= 18);
 
+// §12 Glanrummet: openings come from BRAGE's spec schedule, never from defaults
+console.log("§12 glanrummet opening schedule");
+const glanPath = path.resolve(root, "data/scenes/room-glanrummet-newport/scene-v0.1.json");
+if (!fs.existsSync(glanPath)) {
+  check("glanrummet scene exists", false);
+} else {
+  const glan = JSON.parse(fs.readFileSync(glanPath, "utf8"));
+  const ctx = glan.house_context ?? {};
+  const glanOpenings = glan.elements.filter(e => e.type === "OPENING");
+
+  check("glanrummet is built from the v0.3 spec", ctx.spec?.version === "brage-house-geometry/v0.3");
+  check("spec id recorded", ctx.spec?.id === "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03");
+  check("spec generation timestamp recorded", typeof ctx.spec?.generated_at === "string");
+
+  check("room has openings at all", glanOpenings.length >= 3);
+  check("every opening carries a schedule from the spec",
+    glanOpenings.every(o => o.opening_schedule?.source === "BRAGE_SPEC_V03_OPENING_SCHEDULE"));
+  check("every opening states sill and head",
+    glanOpenings.every(o => Number.isFinite(o.opening_schedule?.sill_m) && Number.isFinite(o.opening_schedule?.head_m)));
+  check("every head sits above its sill",
+    glanOpenings.every(o => o.opening_schedule.head_m > o.opening_schedule.sill_m));
+  check("every opening names the wall it sits on",
+    glanOpenings.every(o => typeof o.opening_schedule.wall === "string" && o.opening_schedule.wall.length > 0));
+  check("the sliding door is carried, not collapsed into the glazing",
+    glanOpenings.some(o => o.opening_schedule.is_door === true));
+
+  // The independent cross-check: per-opening areas must reconcile with the room
+  // total the spec computed separately. This is what distinguishes "read the
+  // schedule" from "drew something plausible on the glazed faces".
+  const areaSum = glanOpenings.reduce((s2, o) => s2 + (o.opening_schedule.area_m2 ?? 0), 0);
+  check(`opening areas reconcile with the spec total (${areaSum.toFixed(2)} m²)`,
+    typeof ctx.room?.glazed_area_m2 === "number" && Math.abs(areaSum - ctx.room.glazed_area_m2) <= 0.01);
+
+  // Clear height is the room's, not the structural plate height the v0.2 patch stated.
+  const vol = glan.elements.find(e => e.id === "ROOM_GLANRUMMET");
+  check("room volume uses the spec's clear ceiling height",
+    vol && Math.abs(vol.geometry.size[1] - ctx.room.ceiling_height_m) < 1e-9);
+  check("clear height is 2.7 m, not the 3.0 m plate height", ctx.room?.ceiling_height_m === 2.7);
+  check("room volume is not pickable", vol?.picking === false);
+
+  // Claim guards: this room is sold on an outlook it cannot evidence.
+  const blocked = glan.legal_claim_policy?.blocked_claims ?? [];
+  check("VIEW_OR_OUTLOOK is blocked", blocked.includes("VIEW_OR_OUTLOOK"));
+  check("BUILDABLE_ENVELOPE is blocked", blocked.includes("BUILDABLE_ENVELOPE"));
+  check("every opening says what is seen through it is a visualization",
+    glanOpenings.every(o => o.limitations.some(l => /VISUALIZATION/i.test(l))));
+
+  // Products are untouched by re-seating.
+  const glanShoppable = glan.elements.filter(e => e.commerce);
+  check("glanrummet keeps 11 shoppable products", glanShoppable.length === 11);
+  check("glanrummet BUY links still carry channel tracking",
+    glanShoppable.every(e => /[?&]as=/.test(e.commerce.buy_url ?? "")));
+}
+
 console.log(`\n${passed} passed, ${failed} failed (${passed + failed} checks)`);
 if (failed) process.exit(1);
