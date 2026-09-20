@@ -257,6 +257,11 @@ new URL.
   no one has proved they don't regress the reference site. Brain has routed that to Spatial as part
   of its item 4.
 
+## ✅ DJURÖ IS COMPLETE (Brain, 2026-09-21). Nothing queued. The page is generated end-to-end by
+`build-site.py`, the gates are on the canonical registry, and the artifact is live at its stable URL
+**claude.ai/code/artifact/7a1359ec-193a-48dd-a434-8dc530333f87**. Any future change is: edit a
+**script**, re-run it, regenerate the page, republish to that **same** URL. Never hand-patch the page.
+
 ## 🌙 LATE — receipt-tolerant ledger generator · **DONE** (`0540b3a762`)
 
 `scripts/build-findings-and-gates.py` could only ever run on Djurö: it loaded shoreline, viewshed and
@@ -295,10 +300,24 @@ identity is the proof that matters.
 findings and 11 gates emitted, 1 closed / 10 open. A sparse ledger is Svärtinge's honest state against
 those receipts, not a regression.
 
-### Awaiting a follow-up — do not start it speculatively
-Brain: **Svärtinge's record carries 18 gates, this generator emits 11.** Spatial is defining one
-**canonical gate registry** (union, stable ids) that the generator will emit for every site. This
-script will be pointed at that registry file once it exists. Wait for it; do not invent the union here.
+### Follow-up landed — **DONE** (`8197fbb6e4`)
+Spatial's canonical registry (`agent/spatial-studio-claude` `62e66af982`,
+`scripts/build-gate-ledger.py`, `config/gate-registry.json`) is the union of Svärtinge's 18 and this
+site's 11 = **26 gates**. Run it read-only with an **absolute** `--site` path (it resolves relative
+paths against its own repo root, not yours):
+
+```bash
+python3 "../repo-spatial-studio/scripts/build-gate-ledger.py" --site "$PWD/data/sites/sweden/djuro-byvag-34"
+```
+
+**Djurö: 8 CLOSED / 18 OPEN / 26** — decided by generic 11 · registry rule 1 · carried forward 0 ·
+open by default 14. Vocabulary is `CLOSED`/`OPEN` only; the old Svärtinge record's `SATISFIED` is gone.
+
+**Survival was verified gate-by-gate, not assumed** — a silent drop is the real risk in a registry
+swap. All 11 previous gates are accounted for: 7 still CLOSED (one renamed,
+`GATE_SE_DETALJPLAN` → `GATE_SE_DETAIL_PLAN_AND_STATUS`), 4 still OPEN. The single new closure,
+`GATE_SE_PLOT_IDENTITY`, is correctly scoped — title and ownership stay with `GATE_SE_PROPERTY_REGISTER`,
+which remains open.
 
 ### Messaging note for the next session
 `SendMessage` to a peer's **display name** does not resolve (`"3: Plot-to-Project Spatial Studio"` →
