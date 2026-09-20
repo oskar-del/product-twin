@@ -31,6 +31,10 @@
 - Stills audit (Platform b835819dc6): 2 of 3 committed Blender stills shipped WITHOUT the VISUALIZATION label — exported before the stamp existed (the exporter was fine; the artefacts were stale). Rule 10: GATE THE ARTEFACT, NOT THE TOOL — assert on committed files, per file; a render manifest (png sha + script sha + stamp) ties every PNG to a stamped script. Ink stage now default on every bundled surface.
 - Spatial: validate-gate-ledger.py with 8 mutation tests (rule 11: a validator that has only passed is untested). Vinkelhuset card reads v0.3 area_summary; archive-read naming unified; live re-ingest ordered. Storeys ruling: souterrain is conditional, not a storey.
 
+- vidaXL reconciled (Avatar f0d5f7fd): the 11,336-vs-6,131 gap was two populations (2+3-axis vs 3-axis); the real defect: proxy builder wrote scale_state "category_default" unconditionally → it was never provenance. Rule 12: scale_state is decorative; dimensions_tier is the field of record; a stamp is evidence only where title numbers MATCH stored dims. Re-stamp: SOURCE 6,390 · WD+H 35,474 · ALL_DEFAULT 3,634 · NONE 179,837 (re-read verified). Platform emits a per-build disagreement list for Avatar.
+- BRAGE v0.4 (bb453b8a28): wing gets its own 15° gable (eaves 3.0, ridge 4.07 < bar 5.02); shared roof-planes.mjs in generator+validator; validator indicts v0.3 (3 rooms) and passes v0.4. Platform/Spatial rebuilding. Share pin on artifact 2f790a57 points at an OLD version — Oskar must move it.
+- Djurö 9/17/26 (32ee4a97e6), diffed: one status change. Validator ergonomics: partial run must fail loudly → Spatial.
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
