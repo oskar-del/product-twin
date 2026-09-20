@@ -231,6 +231,92 @@ Product decisions (Brain), evidence/G-promotion (Avatar Factory + Verification),
 One checkout = one executor. Deliverable-first: every block ends with something visible or a merged reusable module. Decisions >scope → Brain. Never edit other worktrees or `~/.codex/`.
 
 ## Current state
+
+### 2026-09-20 SPRINT DAY — session B (the second Platform session) · end-of-day report
+
+**⚠️ READ THIS FIRST: two Platform sessions ran the same queue today.** A second
+session was working the identical 4-item queue in this same worktree. It
+overwrote `engine/ui/chrome/chrome.mjs` + `tokens.css` (18:55), then
+`scripts/compile-vidaxl-terrace.mjs`, then `scripts/compile-room-in-house.mjs`
+(19:41) while I had them open, and it has committed items 1, 2 and 4
+(`3da5edc5dc`, `fe523f1fc1`, `a8d4ca2f01`). Oskar was asked at 19:0x which lane
+to take and said "take item 2, verify theirs". Everything below is from that
+split. **The two item-2 implementations overlap and need reconciling — Brain's
+call, not mine.**
+
+**Item 1 — the chrome package: NOT MINE.** Built and committed by the other
+session. My only contribution was verification: at 19:02 their `demo.html`
+rendered **blank** (`demo.html` imported a `section` export that `chrome.mjs`
+did not provide — console `SyntaxError`, screenshot blank). They rewrote
+`chrome.mjs` twice afterwards; the version at 19:20 loads and its string API
+(`topBar`/`sidePanel`/`evidenceChip`/`card`/`metricStrip`/`sectionHead`) is what
+item 2 consumes.
+- **NOT checked:** the final demo.html after their fixes; `docs/CHROME.md`;
+  whether every component actually renders in their committed demo. I verified
+  the broken state, not the fixed one — someone other than them still needs to
+  open it.
+
+**Item 2 — re-skin both rooms: DONE (mine, `1a5774609e`).**
+`scripts/build-rooms-surface.mjs` → `dist/twins/rooms.html`, one page, three
+looks. Engine chrome off (`chrome:false`); the ink package is the only chrome.
+- Newport living  14 elements · 11 shoppable · 11 tracked · 208 760 SEK
+- vidaXL terrace   9 elements ·  7 shoppable ·  7 tracked ·  18 911 SEK
+- Glanrummet      17 elements · 11 shoppable · 11 tracked · 208 760 SEK
+- **18/18 BUY links byte-identical to their catalog rows**, now asserted in the
+  gate (§11) so a future "URL cleanup" fails loudly instead of earning nothing.
+- Dimension provenance is explicit and chipped: GLB bounds → AUTHORITATIVE,
+  title-stated cm → INDICATIVE, nominal → CONCEPT. One chip, describing the
+  dimensions it sits beside; geometry evidence is a separate row.
+- Screenshots: `docs/screens/2026-09-20-rooms-newport-panel.png`,
+  `docs/screens/2026-09-20-rooms-vidaxl-panel.png` (1600×1000@2x, panel open).
+- Three real defects fixed on the way: `ROOM_VOLUME` swallowed every click
+  (container shells can now opt out of picking — this had been worked around
+  twice by switching stages); the self-contained bundle had gained an external
+  Google-Fonts `<link>`, breaking the one-request guarantee the bundle gate
+  enforces; deep links went through `viewer.elements`, which is a Map of
+  three.js objects, not scene elements.
+- **NOT checked:** any browser other than the CDP/preview Chrome; mobile or
+  narrow viewports; the Looks switcher under rapid repeated switching (scene
+  teardown between looks is not audited for leaks); whether the other session's
+  parallel item-2 surface and this one can coexist; prices/availability are the
+  catalog's at build time and were not re-fetched.
+
+**Item 3 — room inside Vinkelhuset: NOT MINE, INCOMPLETE ON MY SIDE.** I read
+BRAGE's `house-in-scene-v0.3-patch.json`, vendored it to `data/house/` with
+`PROVENANCE.md` (source commit + refresh command, since reading across branches
+is not reproducible), and built a compiler from `ROOM_GLANRUMMET` (7×7×3 m at
+[-7.5, 1.5, -0.5], 120 mm east wall from `WALL_INT_LIVING_KITCHEN`, south+west
+glazing from the room's own `feature` string) with 0 pieces outside the room
+volume. The other session overwrote that file at 19:41 with their own version;
+theirs is what is on disk and in the Looks switcher.
+- **NOT checked / NOT DONE:** my interior stage fix never applied (the file was
+  replaced mid-edit), so **the DoD "one rendered room with real walls/openings"
+  is NOT met by anything I produced** — my only Glanrummet render showed the
+  furniture with the walls culled, so I deleted it rather than pass it off.
+  Their version is unverified by me.
+
+**Item 4 — stills gallery: NOT MINE.** Committed by the other session
+(`fe523f1fc1`). I verified the artefact: `dist/stills/newport-living.png` is a
+genuine 1 600 × 1 000 Cycles render — real GI, soft contact shadows, the Newport
+G2 proxies in a shell — not a placeholder.
+- **NOT checked:** the exact command/seed that produced it; whether it is
+  reproducible from the committed `.py`; whether it is labelled VISUALIZATION
+  where a buyer would see it; render time.
+
+**Gate at end of day: 13 suites, 928 checks, all green** (`npm run engine:gate`,
+re-run after every change above). `engine:catalog:test` grew 124 → 139: the
+vidaXL assertions that claimed "no proxies exist" were stale once the other
+session generated vidaXL G2 proxies, and were rewritten to assert the new truth
+(proxy-backed → INDICATIVE + asset on disk; proxy-less → CONCEPT + says so;
+dimensions still trace to the title either way) rather than deleted.
+
+**Tooling added:** `scripts/shoot.mjs` — screenshots a live page over CDP and
+waits for the page's own readiness flag. `--virtual-time-budget` never exhausts
+against a continuous render loop (it hangs), and a fixed delay captures whatever
+had painted rather than a known state. Note for anyone reusing it: macOS has no
+`timeout`, and `--disable-gpu` kills the WebGL context outright.
+
+
 - 2026-08-19: seeded by Brain. Nothing built.
 - 2026-08-19 (Platform session, branch `agent/platform-engine`, worktree `../repo-platform`):
   - **Milestone 1 DONE** — `docs/TWIN-ENGINE-AUDIT-2026-08-19.md`: measured capability matrix of

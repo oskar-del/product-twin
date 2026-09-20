@@ -34,6 +34,12 @@ const LOOKS = [
     label: "vidaXL · terrace",
     scene: "data/scenes/shoppable-terrace-vidaxl/scene-v0.1.json",
     channel: "vidaxl"
+  },
+  {
+    id: "GLANRUMMET",
+    label: "Glanrummet · in the house",
+    scene: "data/scenes/shoppable-room-glanrummet/scene-v0.1.json",
+    channel: "newport"
   }
 ];
 
@@ -170,12 +176,13 @@ globalThis.loadLook = load;
 // reproducible without scripting a click at fixed pixel coordinates.
 function parseHash() {
   const h = new URLSearchParams(String(location.hash || "").replace(/^#/, ""));
-  return { look: h.get("look"), open: h.get("open") };
+  return { look: h.get("look"), open: h.get("open"), stage: h.get("stage") };
 }
 
 async function applyHash() {
-  const { look, open } = parseHash();
+  const { look, open, stage } = parseHash();
   await load(look ?? LOOKS[0].id);
+  if (stage) { try { viewer.goToStageId(stage, { instant: true }); } catch {} }
   if (open) {
     // Route through the engine's own opener: viewer.elements is a Map of
     // three.js objects, not scene elements, and openElementById fires
