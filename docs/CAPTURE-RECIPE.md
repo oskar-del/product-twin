@@ -2,6 +2,10 @@
 
 Headless Chrome DOES write the PNG; it then hangs on exit. Wait for the file, then kill it.
 
+RULES: (1) `pgrep -fl headless=new` FIRST — strays fight over the profile singleton and write about:blank;
+kill them (`pkill -f headless=new`) before capturing. (2) A FRESH --user-data-dir per run (mktemp -d).
+(3) Kill the PID you started, always, even on success.
+
     CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
     "$CH" --headless=new --disable-gpu --hide-scrollbars --no-first-run \
       --user-data-dir=/tmp/chrome-profile-$$ --window-size=1600,4400 --virtual-time-budget=10000 \
