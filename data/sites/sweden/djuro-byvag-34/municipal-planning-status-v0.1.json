@@ -1,0 +1,116 @@
+{
+  "schema_version": "municipal-planning-status/v0.1",
+  "entity_type": "MunicipalPlanningStatusReceiptSet",
+  "subject": "DJURÖ 4:147",
+  "evidence_class": "AUTHORITATIVE",
+  "authority": "Värmdö kommun (publik WFS); Länsstyrelsen i Stockholms län for the utvidgat strandskydd decision layer",
+  "service_endpoint": "https://karta.varmdo.se/geoserver/wfs",
+  "service_crs": "EPSG:3011",
+  "query_method": "WFS 2.0 GetFeature, cql_filter INTERSECTS against the authoritative Lantmäteriet parcel polygon reprojected EPSG:3006 -> EPSG:3011",
+  "parcel_wkt_3011": "POLYGON((190321.228 6579021.045,190317.783 6579029.169,190299.677 6579041.268,190289.872 6579032.089,190277.316 6579039.895,190274.349 6579036.754,190208.659 6578984.220,190222.621 6578966.331,190253.073 6578945.723,190321.228 6579021.045))",
+  "retrieved_at": "2026-09-20T17:09:21+00:00",
+  "control_discipline": "each layer was first queried unfiltered; a zero result is recorded as VERIFIED_NEGATIVE only where that control returned features, otherwise INCONCLUSIVE",
+  "layers": [
+    {
+      "layer": "extern_db:vy_lst_utvidgat_strandskydd_y",
+      "title": "Utvidgat strandskydd 300 m (Länsstyrelsen i Stockholms län)",
+      "question": "Does Länsstyrelsen's extended shoreline protection cover this property?",
+      "service": "https://karta.varmdo.se/geoserver/wfs",
+      "service_crs": "EPSG:3011",
+      "control": {
+        "unfiltered_numberMatched": 240,
+        "passed": true
+      },
+      "query_sha256": "94b7b5aded4cb3f93d57e0e6f83304deeb801eeb47f40d2b52a352acc80f8b60",
+      "response_bytes": 147,
+      "numberMatched": 0,
+      "result": "VERIFIED_NEGATIVE",
+      "detail": "the parcel polygon intersects none of the 240 features in this layer"
+    },
+    {
+      "layer": "intern_db:vy_strandskydd_utvidgat_lststockholm_y",
+      "title": "Utvidgat strandskydd, Lst Stockholm (kommunens kopia)",
+      "question": "Same question against the kommun's own copy of the decision.",
+      "service": "https://karta.varmdo.se/geoserver/wfs",
+      "service_crs": "EPSG:3011",
+      "control": {
+        "unfiltered_numberMatched": 241,
+        "passed": true
+      },
+      "query_sha256": "bc444070766b5d82dced6f87f5bd3e67e32d5653d573a17e12ea9e416586b62c",
+      "response_bytes": 147,
+      "numberMatched": 0,
+      "result": "VERIFIED_NEGATIVE",
+      "detail": "the parcel polygon intersects none of the 241 features in this layer"
+    },
+    {
+      "layer": "op_2022_2035_db:vy_op_ant_utokad_strandskydd_300m_y",
+      "title": "Utökat strandskydd 300 m (översiktsplan 2022–2035, antagen)",
+      "question": "How the adopted comprehensive plan depicts extended protection here.",
+      "service": "https://karta.varmdo.se/geoserver/wfs",
+      "service_crs": "EPSG:3011",
+      "control": {
+        "unfiltered_numberMatched": 241,
+        "passed": true
+      },
+      "query_sha256": "e3b06d2220bc4d6d20adf3085ca2916ec7f72c0e26524ca2c997eff200424056",
+      "response_bytes": 147,
+      "numberMatched": 0,
+      "result": "VERIFIED_NEGATIVE",
+      "detail": "the parcel polygon intersects none of the 241 features in this layer"
+    },
+    {
+      "layer": "intern_db:vy_gallande_detaljplaner_y",
+      "title": "Gällande detaljplaner",
+      "question": "Is the property inside a detaljplan in force?",
+      "service": "https://karta.varmdo.se/geoserver/wfs",
+      "service_crs": "EPSG:3011",
+      "control": {
+        "unfiltered_numberMatched": 559,
+        "passed": true
+      },
+      "query_sha256": "e089cd913a62609696f1b9b75724e56bd0d99ce54648ec2cb7cd7139f9e49af0",
+      "response_bytes": 147,
+      "numberMatched": 0,
+      "result": "VERIFIED_NEGATIVE",
+      "detail": "the parcel polygon intersects none of the 559 features in this layer"
+    },
+    {
+      "layer": "intern_db:vy_pagaende_detaljplaner_y",
+      "title": "Pågående detaljplaner",
+      "question": "Is a detaljplan under way over the property?",
+      "service": "https://karta.varmdo.se/geoserver/wfs",
+      "service_crs": "EPSG:3011",
+      "control": {
+        "unfiltered_numberMatched": 38,
+        "passed": true
+      },
+      "query_sha256": "2d5f9911868cd6a0565de120351c0756bae0cfea7909185a58139b7b25acc517",
+      "response_bytes": 147,
+      "numberMatched": 0,
+      "result": "VERIFIED_NEGATIVE",
+      "detail": "the parcel polygon intersects none of the 38 features in this layer"
+    },
+    {
+      "layer": "intern_db:vy_upphavda_detaljplaner_efter_20230101_y",
+      "title": "Upphävda detaljplaner efter 2023-01-01",
+      "question": "Has a plan over the property been revoked since 2023-01-01?",
+      "service": "https://karta.varmdo.se/geoserver/wfs",
+      "service_crs": "EPSG:3011",
+      "control": {
+        "unfiltered_numberMatched": 2,
+        "passed": true
+      },
+      "query_sha256": "8d11eb5b41e46bc580e514e3e79d6fd415b88510a9f7890520ed090f4d07236b",
+      "response_bytes": 147,
+      "numberMatched": 0,
+      "result": "VERIFIED_NEGATIVE",
+      "detail": "the parcel polygon intersects none of the 2 features in this layer"
+    }
+  ],
+  "limitations": [
+    "This is the kommun's published map service, which is the authoritative public depiction but is not the plan document or the Länsstyrelsen decision itself. A property-level answer for a transaction should quote the plan or decision.",
+    "Absence of a detaljplan does not mean building is unregulated: outside plan, Värmdö's översiktsplan, strandskydd and the PBL bygglov rules govern.",
+    "No dispens, forhandsbesked or bygglov history for this property was queried."
+  ]
+}
