@@ -2,7 +2,7 @@
 
 ## Delivered (Brain-verified)
 - Platform: ink chrome package (engine/ui/chrome: tokens.css, chrome.mjs strings API, chrome-css.mjs node-only, room-panel.mjs) + demo; both rooms re-skinned, 18/18 BUY links verbatim; Glanrummet room inside Vinkelhuset; Cycles still. Stage inside rooms still old sky/ground (open).
-- Avatar: dimensions_mm on 66,375 twins — placeability 4.5% (Newport 28.2%, vidaXL 6.9%, rest ~0 — feeds carry no height). Recount matched to the unit. 98.1% of 121k CATALOG_ONLY rows classified. Bedroom proxies. Material cues → Blender.
+- Avatar: dimensions_mm on 66,375 twins. CORRECTED 20:xx — the 4.5% / Newport 28.2% figures counted a populated field, not provenance: 3,645 Newport 'measured' twins are proxy envelopes invented on all axes. Source-stated full W×D×H: 197 → 6,364 (2.8%). Height-default table (33 cats + 13 refusals) applied: Kungsängen 0 → 93% WD_SOURCE_H_DEFAULT. Placeability is now reported by TIER, never summed. Brain's recount shared the blind spot (ruling 9). 98.1% of 121k CATALOG_ONLY rows classified. Bedroom proxies. Material cues → Blender.
 - MIMER: Screen 6 Numbers on chrome; FF&E from the real room (THIS 208 760 · MID 147 701 · PREMIUM 317 267 SEK); Djurö dry-run.
 - BRAGE: house-v0.3-geometry-spec.json (13 rooms, 18 openings, roof explicit) + validator; The House re-skinned + republished (Brain-verified: 210 gone, 206.4 ×4).
 - Djurö: official footprints (4 on parcel), DTM, strandskydd/plan, viewshed; findings.json + gates.json; label fix kn0581→kn0120.
@@ -16,6 +16,7 @@
 5. Missing heights may be category defaults, stamped category_default, rendered INDICATIVE, never quoted.
 6. Template key: sightline_profile (glan_* alias only).
 7. Whole-house 3D model → Platform (Essence idle since 08-28).
+9. Maker≠checker must re-derive what a label TESTED, not recompute the number (Avatar dimensions: Brain recounted the same field). Tiers: SOURCE > WD_SOURCE_H_DEFAULT > ALL_DEFAULT > NONE; only SOURCE+native mesh is AUTHORITATIVE.
 8. Brain confession: the restored Svärtinge front door's "4 satisfied · 14 open" was typed by Brain 09-16; ledger says 0/18. Fix = computed counts + ledger re-run (Spatial, in progress).
 
 ## Process
