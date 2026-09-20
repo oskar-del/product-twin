@@ -26,7 +26,7 @@
 - Wing roof: BRAGE v0.3 wing_roof does not close (15° mono from 3.0 m plate passes through 2.5 m rooms; the other reading tops the bar ridge). Routed to BRAGE for v0.4 + validator clearance rule.
 - vidaXL under-stamped: ~11,336 titles state three axes vs 6,131 SOURCE stamped → Avatar reconciles.
 - Consumer gotchas: tier lives at physical.dimensions_tier; repo-platform/data/twins is a stale 85-file subset.
-- Djurö on canonical registry 8/18/26, survival verified; jurisdiction rule proposed (property-division kommun code) → Spatial.
+- Djurö on canonical registry 8/18/26, survival verified; jurisdiction rule ADDED (registry requires_pattern on the property-division product kn code; 598b1132ab). Svärtinge stays 6/20/26 (closure upgraded carried-forward→authoritative, hashes re-derived 3→5); Djurö 8→9 pending its run. Note: Brain relayed "both sites gain a closure" unchecked — wrong; second time a gate figure travelled unchecked. Rule: no gate count leaves Brain without the validator line behind it.
 
 - Stills audit (Platform b835819dc6): 2 of 3 committed Blender stills shipped WITHOUT the VISUALIZATION label — exported before the stamp existed (the exporter was fine; the artefacts were stale). Rule 10: GATE THE ARTEFACT, NOT THE TOOL — assert on committed files, per file; a render manifest (png sha + script sha + stamp) ties every PNG to a stamped script. Ink stage now default on every bundled surface.
 - Spatial: validate-gate-ledger.py with 8 mutation tests (rule 11: a validator that has only passed is untested). Vinkelhuset card reads v0.3 area_summary; archive-read naming unified; live re-ingest ordered. Storeys ruling: souterrain is conditional, not a storey.
