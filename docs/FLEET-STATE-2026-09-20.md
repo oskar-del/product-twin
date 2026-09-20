@@ -6,6 +6,7 @@
 - MIMER: Screen 6 Numbers on chrome; FF&E from the real room (THIS 208 760 · MID 147 701 · PREMIUM 317 267 SEK); Djurö dry-run.
 - BRAGE: house-v0.3-geometry-spec.json (13 rooms, 18 openings, roof explicit) + validator; The House re-skinned + republished (Brain-verified: 210 gone, 206.4 ×4).
 - Djurö: official footprints (4 on parcel), DTM, strandskydd/plan, viewshed; findings.json + gates.json; label fix kn0581→kn0120.
+- Platform: whole-house Vinkelhuset model (dollhouse) from v0.3 — BRAGE→Essence handoff closed by re-route.
 - Spatial (executor reassigned from the idle Platform session): build-site.py — one command → screens 1+2 for any plot; acceptance run on Djurö exit 0. Captures in docs/screens/build-site-*.png.
 
 ## Rulings (fleet-wide)
@@ -17,7 +18,7 @@
 6. Template key: sightline_profile (glan_* alias only).
 7. Whole-house 3D model → Platform (Essence idle since 08-28).
 9. Maker≠checker must re-derive what a label TESTED, not recompute the number (Avatar dimensions: Brain recounted the same field). Tiers: SOURCE > WD_SOURCE_H_DEFAULT > ALL_DEFAULT > NONE; only SOURCE+native mesh is AUTHORITATIVE.
-8. Brain confession: the restored Svärtinge front door's "4 satisfied · 14 open" was typed by Brain 09-16; ledger says 0/18. Fix = computed counts + ledger re-run (Spatial, in progress).
+8. Brain confession: the restored Svärtinge front door's "4 satisfied · 14 open" was typed by Brain 09-16. RESOLVED 62e66af982: canonical 26-gate registry (union), Svärtinge 6 closed / 20 open, all 18 original gates retained, counts computed. Root cause of 4-vs-0-vs-2: two vocabularies (SATISFIED vs CLOSED); canonical emits CLOSED only. validate-sweden-plot-intelligence's "18 open gates" printed registry SIZE, not status — never a count; a real ledger validator is being written. BOUNDARY_FOR_DESIGN and PROPERTY_REGISTER stay OPEN by rule: registered extent ≠ monument positions; a clip ≠ a title extract.
 
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
