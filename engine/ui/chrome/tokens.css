@@ -118,6 +118,7 @@
 /* ---- metricStrip ------------------------------------------------------- */
 .ink-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--ink-gap); }
 .ink-metric {
+  color: var(--ink-text);
   background: var(--ink-card-2); border: 1px solid var(--ink-line);
   border-radius: var(--ink-radius); padding: var(--ink-pad); min-height: 120px;
 }
@@ -144,6 +145,7 @@
 /* ---- card -------------------------------------------------------------- */
 .ink-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--ink-gap); }
 .ink-card {
+  color: var(--ink-text);
   background: var(--ink-card); border: 1px solid var(--ink-line);
   border-radius: var(--ink-radius); padding: var(--ink-pad); min-height: 170px;
   display: flex; flex-direction: column;
@@ -168,6 +170,10 @@
 
 /* ---- sidePanel --------------------------------------------------------- */
 .ink-side {
+  /* Sets its own colour: a panel mounted inside another chrome (the engine's
+     light viewer, for one) would otherwise inherit dark ink onto a dark card
+     and render invisible text. */
+  color: var(--ink-text);
   width: 340px; max-width: 100%; align-self: start;
   background: var(--ink-card); border: 1px solid var(--ink-line);
   border-radius: var(--ink-radius-lg); padding: var(--ink-pad);
@@ -215,6 +221,7 @@
 /* ---- evidenceLegend ---------------------------------------------------- */
 /* The palette key. Pinned bottom-left on a full screen; static in a page flow. */
 .ink-legend {
+  color: var(--ink-text);
   display: flex; flex-direction: column; gap: 8px;
   background: rgba(16, 25, 22, .92);
   border: 1px solid var(--ink-line);
