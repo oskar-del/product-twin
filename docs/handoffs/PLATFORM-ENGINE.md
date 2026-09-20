@@ -1,5 +1,28 @@
 # Platform & 3D Engine — Claude Session Handoff
 
+> ## ⛳ SPRINT DAY — 2026-09-20 (Brain; Oskar runs all sessions today. Supersedes every earlier pin — the 2026-09-15
+> CONSOLIDATION decisions still stand: one site per address · six screens · ink chrome · Platform owns the chrome.)
+> RULES OF THE DAY: pull first · work the queue in order · each item ends with a screenshot in docs/screens/ + numbers ·
+> commit after every item (Oskar pushes hourly) · nothing invented; every figure computed from receipts · report
+> "DONE / NOT checked" per item in your handoff at end of day. Chrome tokens until Platform ships the package:
+> bg #101916 · card #17241f · paper #f5f1e8 · bronze #d8b874 · serif display · Inter labels · evidence chips
+> authoritative #176b52 / indicative #c18a2d / derived #497aa2 / reported #a65b68 / concept #735a9e.
+>
+> **PLATFORM — you unblock everyone. Ship item 1 by midday.**
+> 1. `engine/ui/chrome/` — tokens.css + chrome.mjs: topBar(plot, modes) · sidePanel() · evidenceChip(cls) · card() ·
+>    metricStrip() · sectionHead(). Extract from Spatial's Site-Intelligence page CSS (prototype/svartinge-neighbourhood
+>    /index.html, the `.intel-*` rules) — do not invent. Demo page `engine/ui/chrome/demo.html` showing every component.
+>    DoD: demo renders, screenshot, `docs/CHROME.md` with import instructions for the other sessions.
+> 2. Re-skin BOTH shoppable rooms (Newport living, vidaXL terrace) on the chrome: dark stage, serif labels, product
+>    panel = sidePanel(name · brand · dimensions + chip AUTHORITATIVE(GLB bounds)/INDICATIVE(title) · price · BUY
+>    verbatim affiliate_link). "Looks" switcher. DoD: both rooms rebuilt in dist/twins, screenshots, links diffed
+>    byte-identical to the catalog.
+> 3. Room INSIDE Vinkelhuset: read BRAGE's room spec (geometry/house-v0.3-* on agent/brage-design, landing today) —
+>    build the living room volume from it and place the Newport set inside. DoD: one rendered room with real walls/openings.
+> 4. Stills gallery (screen 5): run engine/export/blender-scene.mjs on the Newport room → Cycles PNG committed under
+>    dist/stills/, labelled VISUALIZATION. DoD: PNG + the command that made it.
+
+
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
 > DECISIONS: one product = one site per address, SIX screens, ONE chrome ("ink"): bg #101916,
