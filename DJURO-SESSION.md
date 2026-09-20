@@ -146,20 +146,54 @@ no buildings, no boathouses, no neighbouring roofs. Every one of those blocks a 
 in this calculation. **43.9% is an UPPER BOUND** — the view on cleared ground, not the view from a
 window. One viewpoint, one eye height; this is not a room-by-room analysis.
 
-### Item 5 — Run Spatial's `scripts/build-site.py` · **BLOCKED, not started**
-`scripts/build-site.py` is **not on `origin/main`** as of the last fetch this evening
-(`git ls-tree -r origin/main --name-only | grep build-site` → nothing). Nothing was run, no page was
-replaced, and **nothing was republished to artifact `7a1359ec-…`**.
+### Item 5 — Run Spatial's `scripts/build-site.py` · **DONE (late evening)**
+Landed on `agent/spatial-studio-claude` (`8149d16bac`). First run exited non-zero with a **PROVENANCE
+CONFLICT** banner caused by a label in *my* file — see the label fix below. After that fix:
 
-Per the mandate — *"the page gets regenerated from Spatial's template, not patched"* — I did **not**
-patch the live page. The data it needs is committed and waiting.
+```
+python3 scripts/build-site.py <djuro site dir>        exit 0, no banner
+receipts      10 files · 10 entity types
+boundary      5 156.3 m² · 9 corners (10 stored points, ring closed) · 10 context parcels
+terrain       11.5 m fall · slope 8.1°
+buildings     35 official footprints · 4 on the parcel
+shoreline     0.2 m to modelled shoreline
+viewshed      43.9% open-water arc
+findings      10 · gates 7 closed / 4 open (from findings.json + gates.json)
+provenance QA 4 checks · 4 NOT ESTABLISHED
+rendered      7 metrics · 5 evidence cards
+archive check 2 re-hashed · 0 not on disk
+```
 
-🔴 **ESCALATION FOR OSKAR — now narrower than I first reported.** The slope line on the page is
-**fine** (see the correction under item 2; I withdrew that). What remains is that the page calls
-strandskydd **"presumed"** when item 3 has measured it at **100% of the parcel**, and that it carries
-the 43.3% sea-view figure without its bare-earth ceiling. This goes to a real family. Either
-Spatial's generator lands and the page is regenerated, or that one line needs pulling — your call,
-because patching the page is what the mandate rules out.
+**Republished to the same artifact URL** `claude.ai/code/artifact/7a1359ec-193a-48dd-a434-8dc530333f87`.
+Verified in a browser, not just from the log: screen 1 renders metrics, findings and the full gate
+table **including both VERIFIED_NEGATIVE results with their control counts**; screen 2 renders the
+twin from the DTM heightfield with flat footprints and the footer *"building heights NOT established"*.
+
+**The label fix was a script bug, not a file typo.** `property-division-derived-v0.1.json` said
+`source_product: fastighetsindelning_kn0581` — Norrköping. The geometry was always right (raw sha256
+`2dc19757…880` matches `lm-data/fastighetsindelning_kn0120.zip` byte-for-byte); only the label lied.
+Root cause: `ingest-property-division.py` **hard-coded** the product name, so *every site it ever ran
+on* would carry the same wrong label. It now derives the name from the `.gpkg` entry inside the
+archive it just hashed and refuses an archive without exactly one. Copied `svartinge-*` schema
+prefixes genericised in the scripts too. Two `Svärtinge` mentions remain and are **true statements,
+not copied labels** — the Geotorget grant really is the same one, and the reconciliation prose really
+does refer to the template.
+
+**Four generator defects reported to Spatial (their file, not patched here):**
+1. **Priority.** The ground card renders *"Plane slope 8.1° slope WNW"* — duplicated word, and it
+   labels the Horn 3×3 **pin** measure as a **plane** measure, so the card contradicts its own next
+   sentence. This is the conflation this session spent the day untangling, now in template wording.
+2. `"in 1 separate arcs"` — plural agreement.
+3. Metric tile `OFFICIAL FOOTPRINTS 35` has no sub-label; 35 is the 200 m context clip, 4 are on the
+   parcel.
+4. Nested finding values render as raw Python `repr`.
+Plus: the generated `<title>` replaced the artifact's stable name. **Brain has adopted the stable
+`<title>` rule fleet-wide.**
+
+✅ **ESCALATION RESOLVED.** Both concerns are gone: the page was regenerated, so strandskydd is no
+longer "presumed" (it reads *"Strandskydd reaches this parcel … 100.0% of the parcel lies inside the
+100 m band"*) and the sea-view figure now carries its bare-earth ceiling (*"A viewshed from the height
+model — no rendered horizon is a view claim"*). The slope concern was mine and was withdrawn.
 
 ### What today changed about the site
 The parcel runs down to the water — 0.2 m at its nearest, 0.15 m RH2000 at its lowest. That single
@@ -205,12 +239,23 @@ terrain result and a ceiling, `GATE_SE_VIEW_OCCLUSION` stays OPEN, and both the 
 files — conformance is a key/type diff against the reference site, not a successful generator run.
 The current page was not touched.
 
-**NEXT SESSION PICKS UP HERE.** Item 5 is still the only open work and it is unblocked-but-waiting:
-when Spatial reports `scripts/build-site.py` runs on `data/sites/sweden/djuro-byvag-34/`, run it,
-replace the page, and republish to the **same** artifact URL
-(`claude.ai/code/artifact/7a1359ec-193a-48dd-a434-8dc530333f87`). Do not patch the page by hand, and
-do not publish to a new URL. Everything the generator needs is committed: six derived products plus
-`findings.json` and `gates.json`, all schema-conformant with `saterdalsvagen-14`.
+**NEXT SESSION PICKS UP HERE.** Brain: *"nothing further queued for Djurö until the template fixes
+land (then one regenerate + republish)."* When Spatial ships the four generator fixes, re-run:
+
+```bash
+python3 scripts/build-site.py "$PWD/data/sites/sweden/djuro-byvag-34" \
+  --out data/sites/sweden/djuro-byvag-34/site-intelligence-landing.html
+```
+(from the `repo-spatial-studio` worktree), confirm exit 0 and no banner, then republish to the **same**
+artifact URL `7a1359ec-193a-48dd-a434-8dc530333f87`. Never patch the page by hand; never publish to a
+new URL.
+
+**Two things left genuinely open, neither blocking:**
+- `GATE_SE_STRANDSKYDD_DISPENS` and `GATE_SE_VIEW_OCCLUSION` (plus `BUILDING_HEIGHTS`,
+  `TERRAIN_PROVENANCE`) — 4 open gates, all recorded in `gates.json` with reasons.
+- **NOT CHECKED:** the genericised `schema_version` values have never been run against Svärtinge, so
+  no one has proved they don't regress the reference site. Brain has routed that to Spatial as part
+  of its item 4.
 
 > ## ⛳ CURRENT MANDATE — 2026-09-15 · CONSOLIDATION (Brain; Oskar decided. Supersedes 2026-09-08.)
 >
