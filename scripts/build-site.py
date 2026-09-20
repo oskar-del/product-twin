@@ -181,7 +181,12 @@ def read_terrain(docs):
         return None
     src = "terrain DTM receipt"
     out = {"authority": doc.get("authority"), "limitations": doc.get("limitations") or [],
-           "verdict": (doc.get("parcel_slope") or {}).get("verdict"), "grid": None, "heightfield": None}
+           "verdict": (doc.get("parcel_slope") or {}).get("verdict"), "grid": None, "heightfield": None,
+           # Read ONLY the generic key. A site-specific name (glan_sightline_profile) is a lake
+           # this template has no business knowing about; Djurö's alias is even flagged
+           # target_is_not_glan. Sites keep the old key as an alias for their own viewers.
+           "sightline": doc.get("sightline_profile"),
+           "provenance_qa": doc.get("provenance_qa")}
 
     footprint = doc.get("plot_footprint") or {}
     stats = doc.get("parcel_height_statistics") or {}
@@ -274,6 +279,48 @@ def read_view(docs):
     return out
 
 
+CHIP_VOCABULARY = {
+    "OBSERVED_OFFICIAL": "AUTHORITATIVE", "OFFICIAL_OPEN_SOURCE": "AUTHORITATIVE",
+    "AUTHORITATIVE": "AUTHORITATIVE", "DERIVED": "DERIVED", "REPORTED": "REPORTED_UNVERIFIED",
+    "REPORTED_UNVERIFIED": "REPORTED_UNVERIFIED", "INDICATIVE": "INDICATIVE", "CONCEPT": "CONCEPT",
+}
+
+
+def read_findings_and_gates(docs):
+    """
+    Findings and gates are DATA, not prose written here.
+
+    Djurö ships findings.json + gates.json; Svärtinge carries the same arrays inside its
+    plot-intelligence record, which is the shape those files were modelled on. Either way the
+    generator renders what the file says and never composes a finding of its own.
+    """
+    findings_doc = pick(docs, "SiteFindingSet")
+    gates_doc = pick(docs, "SiteGateSet")
+    intelligence = pick(docs, "SwedenPlotIntelligence")
+
+    findings = (findings_doc or {}).get("findings") or (intelligence or {}).get("findings") or []
+    gates = (gates_doc or {}).get("gates") or (intelligence or {}).get("gates") or []
+    if not findings and not gates:
+        return None
+
+    for finding in findings:
+        # `chip` is authored where it exists; otherwise map the finding's own vocabulary on.
+        chip_name = (finding.get("chip") or "").upper()
+        finding["_chip"] = (chip_name if chip_name in EVIDENCE_ORDER
+                            else CHIP_VOCABULARY.get(finding.get("evidence_class", ""), "CONCEPT"))
+
+    closed = [g for g in gates if str(g.get("status", "")).upper() == "CLOSED"]
+    return {
+        "findings": findings,
+        "gates": gates,
+        "closed": len(closed),
+        "open": len(gates) - len(closed),
+        "source": ("findings.json + gates.json" if findings_doc or gates_doc
+                   else "plot-intelligence record"),
+        "generated_at": (findings_doc or gates_doc or {}).get("generated_at"),
+    }
+
+
 def read_planning(docs):
     doc = pick(docs, "MunicipalPlanningStatusReceiptSet")
     if not doc:
@@ -319,6 +366,30 @@ def consistency_checks(docs, files, identity, boundary, buildings):
                                f"(kommunkod {kommunkod}). The label is not evidence — see the archive check below."),
                 })
 
+    # A gate ledger older than the receipts it depends on is stale: a gate can only be decided
+    # against the evidence that existed when it was decided. This is not a data error, but a
+    # reader must not take "open" as current if newer evidence has since landed.
+    ledger_doc = pick(docs, "SiteFindingSet") or pick(docs, "SwedenPlotIntelligence")
+    if ledger_doc:
+        stamps = re.findall(r"\d{4}-\d{2}-\d{2}", json.dumps(ledger_doc))
+        ledger_latest = max(stamps) if stamps else None
+        newer = []
+        for entity, doc in docs.items():
+            if entity in ("SiteFindingSet", "SiteGateSet", "SwedenPlotIntelligence"):
+                continue
+            doc_stamps = re.findall(r"\d{4}-\d{2}-\d{2}", json.dumps(doc))
+            if doc_stamps and ledger_latest and max(doc_stamps) > ledger_latest:
+                newer.append(f"{entity} ({max(doc_stamps)})")
+        if newer:
+            problems.append({
+                "severity": "STALE",
+                "what": f"The findings/gates ledger ({ledger_latest}) predates {len(newer)} receipt(s)",
+                "detail": ("Gate states were decided before this evidence landed: "
+                           + ", ".join(sorted(newer)[:6])
+                           + ". Re-run the site's findings/gates generator before reading the "
+                             "gate counts as current."),
+            })
+
     for entry in files:
         sha, size = entry.get("raw_sha256"), entry.get("raw_bytes")
         if not sha:
@@ -352,6 +423,43 @@ def consistency_checks(docs, files, identity, boundary, buildings):
 
 
 # ---------------------------------------------------------------- render
+
+def provenance_rows(qa):
+    """
+    Render provenance QA honestly.
+
+    A key that exists but is null means the check was never run. That must read as NOT
+    ESTABLISHED — never as a pass, and never as a green chip. `checked: false` makes the whole
+    block not-established regardless of what individual keys happen to hold.
+    """
+    if not qa:
+        return []
+    checked = qa.get("checked")
+    rows = []
+    for key, value in qa.items():
+        if key in ("checked", "conclusion"):
+            continue
+        if value is None or checked is False:
+            rows.append((key, "NOT ESTABLISHED", "REPORTED_UNVERIFIED"))
+        elif value is True:
+            rows.append((key, "verified", "AUTHORITATIVE"))
+        elif value is False:
+            rows.append((key, "does not hold", "DERIVED"))
+        else:
+            rows.append((key, str(value), "DERIVED"))
+    return rows
+
+
+def assert_no_null_passes(qa, rows):
+    """A null must never have produced a satisfied row. Fails the build rather than the reader."""
+    if not qa:
+        return
+    for key, text, evidence in rows:
+        if qa.get(key) is None and evidence == "AUTHORITATIVE":
+            raise AssertionError(f"provenance_qa.{key} is null but rendered as satisfied")
+        if qa.get("checked") is False and evidence == "AUTHORITATIVE":
+            raise AssertionError(f"provenance_qa.checked is false but {key} rendered as satisfied")
+
 
 def esc(value):
     return (str(value).replace("&", "&amp;").replace("<", "&lt;")
@@ -392,7 +500,18 @@ def build_page(site_dir, docs, files, out_path):
     shoreline = read_shoreline(docs)
     view = read_view(docs)
     planning = read_planning(docs)
+    ledger = read_findings_and_gates(docs)
     problems = consistency_checks(docs, files, identity, boundary, buildings)
+
+    qa = (terrain or {}).get("provenance_qa")
+    qa_rows = provenance_rows(qa)
+    assert_no_null_passes(qa, qa_rows)
+    if qa and qa.get("checked") is False:
+        problems.append({
+            "severity": "NOT_ESTABLISHED",
+            "what": "Terrain provenance QA was not run for this site",
+            "detail": qa.get("conclusion") or "provenance_qa.checked is false",
+        })
 
     tokens = CHROME_TOKENS.read_text() if CHROME_TOKENS.exists() else ""
     if not tokens:
@@ -412,6 +531,10 @@ def build_page(site_dir, docs, files, out_path):
         metrics.append(metric("Parcel to shoreline", shoreline["nearest"]))
     if view and view.get("arc_percent"):
         metrics.append(metric("Open-water arc", view["arc_percent"]))
+    if ledger and ledger["gates"]:
+        metrics.append(metric("Evidence gates", Figure(
+            f"{ledger['closed']} / {len(ledger['gates'])}", "", ledger["source"], "AUTHORITATIVE",
+            note=f"{ledger['open']} still open")))
 
     # ---- reading cards, only where a receipt exists
     cards = []
@@ -474,11 +597,13 @@ def build_page(site_dir, docs, files, out_path):
             state=f"{len(verified)} layer(s) carry a control query", evidence="AUTHORITATIVE", paper=True))
 
     # ---- problems banner
+    flagged = [p for p in problems if p["severity"] in ("CONFLICT", "STALE", "NOT_ESTABLISHED")]
     conflicts = [p for p in problems if p["severity"] == "CONFLICT"]
     banner = ""
-    if conflicts:
-        items = "".join(f"<li><b>{esc(p['what'])}</b><br>{esc(p['detail'])}</li>" for p in conflicts)
-        banner = f'<div class="conflict"><div class="ink-kicker">Provenance conflict</div><ul>{items}</ul></div>'
+    if flagged:
+        items = "".join(f"<li><b>{esc(p['severity'])} · {esc(p['what'])}</b><br>{esc(p['detail'])}</li>"
+                        for p in flagged)
+        banner = f'<div class="conflict"><div class="ink-kicker">Read this first</div><ul>{items}</ul></div>'
 
     # ---- receipts table
     rows = []
@@ -511,6 +636,56 @@ def build_page(site_dir, docs, files, out_path):
         field = terrain["heightfield"]
         twin["terrain"] = {"kind": "field", "size_m": field.get("size_m"),
                            "segments": field.get("segments"), "vertices": field.get("vertices")}
+
+    # Findings render from the file, verbatim. The template chooses layout, never wording.
+    findings_section = ""
+    if ledger and ledger["findings"]:
+        blocks = []
+        for finding in ledger["findings"]:
+            value = finding.get("value")
+            if isinstance(value, dict):
+                body = " · ".join(f"{k.replace('_', ' ')}: {v}" for k, v in value.items() if v is not None)
+            else:
+                body = f"{value} {finding.get('unit') or ''}".strip()
+            blocks.append(card(
+                finding.get("domain", "finding"),
+                finding.get("finding_id", "").replace("FINDING_SE_", "").replace("_", " ").title() or "Finding",
+                esc(body) + (f"<br><br>{esc(finding.get('method', ''))}" if finding.get("method") else ""),
+                state=finding.get("verification"), evidence=finding["_chip"]))
+        findings_section = (
+            '<section class="ink-section"><div class="ink-section-head"><h2>Findings</h2>'
+            f'<p>{len(ledger["findings"])} findings, read from {esc(ledger["source"])}. '
+            'Nothing on this page is written by the template — each finding keeps the value, '
+            'method and verification its own record carries.</p></div>'
+            f'<div class="ink-cards">{"".join(blocks)}</div></section>')
+
+    gates_section = ""
+    if ledger and ledger["gates"]:
+        rows_html = "".join(
+            f'<tr><td>{esc(gate.get("gate_id", ""))}</td>'
+            f'<td>{chip("AUTHORITATIVE" if str(gate.get("status", "")).upper() == "CLOSED" else "REPORTED_UNVERIFIED", str(gate.get("status", "")).upper())}</td>'
+            f'<td>{esc(gate.get("reason", ""))}</td></tr>'
+            for gate in ledger["gates"])
+        gates_section = (
+            '<section class="ink-section"><div class="ink-section-head"><h2>Evidence gates</h2>'
+            f'<p>{ledger["closed"]} satisfied · {ledger["open"]} open. An open gate is a question '
+            'nobody has answered yet, not a defect — and never a thing to design against.</p></div>'
+            f'<table><thead><tr><th>Gate</th><th>State</th><th>Reason</th></tr></thead>'
+            f'<tbody>{rows_html}</tbody></table></section>')
+
+    provenance_section = ""
+    if qa_rows:
+        rows_html = "".join(
+            f'<tr><td>{esc(key.replace("_", " "))}</td><td>{chip(evidence, text)}</td></tr>'
+            for key, text, evidence in qa_rows)
+        conclusion = (qa or {}).get("conclusion")
+        provenance_section = (
+            '<section class="ink-section"><div class="ink-section-head"><h2>Terrain provenance</h2>'
+            '<p>Whether the height model under this parcel was checked against the source epoch. '
+            'A check that was never run reads NOT ESTABLISHED — a missing answer is not a pass.</p></div>'
+            f'<table><thead><tr><th>Check</th><th>State</th></tr></thead><tbody>{rows_html}</tbody></table>'
+            + (f'<p style="font-size:10px;line-height:1.6;color:var(--ink-text-dim);margin-top:12px">{esc(conclusion)}</p>'
+               if conclusion else "") + '</section>')
 
     generated = datetime.now(timezone.utc).isoformat(timespec="seconds")
     title = identity.get("address") or identity["designation"]
@@ -565,6 +740,9 @@ th{{font-size:8px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-
           <p>Evidence findings, not sales copy. Each keeps its source class, method and limitations.</p></div>
         <div class="ink-cards">{''.join(cards)}</div>
       </section>
+      {findings_section}
+      {gates_section}
+      {provenance_section}
       <section class="ink-section">
         <div class="ink-section-head"><h2>Receipts</h2>
           <p>Every file this page was built from. Where the raw archive is on disk it is re-hashed here,
@@ -744,6 +922,7 @@ renderer.setAnimationLoop(() => {{ controls.update(); renderer.render(scene, cam
         "identity": identity, "boundary": boundary, "terrain": terrain, "buildings": buildings,
         "shoreline": shoreline, "view": view, "planning": planning,
         "problems": problems, "metrics": len(metrics), "cards": len(cards), "twin": twin,
+        "ledger": ledger, "qa_rows": qa_rows,
     }
 
 
@@ -785,14 +964,22 @@ def main():
         print(f"  shoreline     {facts['shoreline']['nearest'].text()} m to modelled shoreline")
     if facts["view"] and facts["view"].get("arc_percent"):
         print(f"  viewshed      {facts['view']['arc_percent'].text()}% open-water arc")
+    ledger = facts.get("ledger")
+    if ledger:
+        print(f"  findings      {len(ledger['findings'])} · gates {ledger['closed']} closed / "
+              f"{ledger['open']} open (from {ledger['source']})")
+    not_established = [row for row in facts.get("qa_rows", []) if row[2] == "REPORTED_UNVERIFIED"]
+    if facts.get("qa_rows"):
+        print(f"  provenance QA {len(facts['qa_rows'])} checks · {len(not_established)} NOT ESTABLISHED")
     print(f"  rendered      {facts['metrics']} metrics · {facts['cards']} evidence cards")
 
     verified = [p for p in facts["problems"] if p["severity"] == "VERIFIED"]
     unverifiable = [p for p in facts["problems"] if p["severity"] == "UNVERIFIABLE"]
     conflicts = [p for p in facts["problems"] if p["severity"] == "CONFLICT"]
     print(f"  archive check {len(verified)} re-hashed · {len(unverifiable)} not on disk")
-    for problem in conflicts:
-        print(f"  CONFLICT      {problem['what']}\n                {problem['detail']}")
+    for problem in facts["problems"]:
+        if problem["severity"] in ("CONFLICT", "STALE", "NOT_ESTABLISHED"):
+            print(f"  {problem['severity']:<13} {problem['what']}")
     return 1 if conflicts else 0
 
 
