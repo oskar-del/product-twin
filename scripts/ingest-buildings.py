@@ -165,7 +165,7 @@ def run(site, zip_path, radius):
     buildings, srs = ingest(gpkg, o, radius)
     if EXPECTED_EPSG not in srs and srs:
         print(f"WARN: expected EPSG:{EXPECTED_EPSG}, saw {sorted(srs)}")
-    payload = emit(buildings, o, srs, raw_sha, raw_bytes, manifest, radius)
+    payload = emit(site, buildings, o, srs, raw_sha, raw_bytes, manifest, radius)
     out = site.dir / "buildings-official-derived-v0.1.json"
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
     print(f"WROTE {out}")

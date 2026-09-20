@@ -1,10 +1,12 @@
 {
-  "schema_version": "svartinge-property-division-derived/v0.1",
+  "schema_version": "property-division-derived/v0.1",
   "entity_type": "AuthoritativePropertyDivisionClip",
   "subject": "SVÄRTINGE 54:28",
   "evidence_class": "AUTHORITATIVE",
   "authority": "Lantmäteriet",
   "source_product": "fastighetsindelning_kn0581 (GeoPackage)",
+  "kommun": "Norrköping",
+  "kommunkod": "0581",
   "source_object_ids": [
     "registerenhetsomradesyta:51016844",
     "registerenhetsomradesyta:51002078",

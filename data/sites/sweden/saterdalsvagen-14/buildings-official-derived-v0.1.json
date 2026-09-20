@@ -1,8 +1,11 @@
 {
-  "schema_version": "svartinge-buildings-official-derived/v0.1",
+  "schema_version": "buildings-official-derived/v0.1",
   "entity_type": "OfficialBuildingFootprintClip",
   "authority": "Lantmäteriet",
+  "subject": "SVÄRTINGE 54:28",
   "source_product": "byggnad_kn0581 (GeoPackage)",
+  "kommun": "Norrköping",
+  "kommunkod": "0581",
   "footprint_evidence_class": "AUTHORITATIVE",
   "height_evidence_class": "DERIVED",
   "source_crs": "EPSG:3006",
