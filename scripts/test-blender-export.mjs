@@ -60,8 +60,19 @@ check("contains world", script.includes("sc.world"));
 
 // §5 Room shell
 console.log("§5 room shell");
-check("contains floor plane", script.includes("primitive_plane_add"));
-check("contains wall", script.includes("wall"));
+// The shell is built from the scene's own ROOM_VOLUME, so the assertions are about the real
+// dimensions reaching Blender — not about which primitive call happens to draw them.
+check("declares the room volume dimensions", /^W, H, D, T = 6, 2\.7, 5, /m.test(script));
+check("contains floor slab", script.includes("m_floor") && script.includes("slab(W, D, T"));
+check("contains wall", script.includes("m_wall"));
+check("cuts the window opening out of its wall", script.includes("opening ROOM_WINDOW"));
+check("lights the opening", script.includes("ROOM_WINDOW_light"));
+check("camera is inside the room volume", (() => {
+  const loc = /cam\.location = \(([-\d.]+), ([-\d.]+), ([-\d.]+)\)/.exec(script);
+  if (!loc) return false;
+  const [x, y, z] = loc.slice(1).map(Number);
+  return Math.abs(x) < 3 && Math.abs(y) < 2.5 && z > 0 && z < 2.7;
+})());
 
 // §6 Intelligence profile
 console.log("§6 intelligence profile");

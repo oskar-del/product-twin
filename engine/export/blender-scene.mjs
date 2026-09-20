@@ -49,7 +49,62 @@ function escPy(s) {
  * @param {object} [opts.render]       override DEFAULT_RENDER fields
  * @returns {string} Blender Python script
  */
+
+/**
+ * Surface appearance derived from what the catalog row actually says.
+ *
+ * The G2 proxies ship without manufacturer artwork, so a still of them is bare white unless we
+ * give them a surface. We do not invent one per product: the base colour comes from the row's
+ * own `color` field and the finish from its `material` field, both mapped through this fixed
+ * table. A row that says nothing gets the neutral fabric default, and the scene's existing
+ * "textures and finish are representative, not manufacturer artwork" limitation still holds.
+ */
+const COLOR_WORDS = {
+  beige: [0.78, 0.72, 0.61], sand: [0.80, 0.74, 0.62], vit: [0.90, 0.89, 0.86],
+  gra: [0.55, 0.55, 0.54], svart: [0.09, 0.09, 0.09], brun: [0.36, 0.26, 0.18],
+  blaa: [0.24, 0.33, 0.45], gron: [0.30, 0.38, 0.31], guld: [0.72, 0.58, 0.28],
+  antracit: [0.22, 0.23, 0.24], natur: [0.74, 0.66, 0.52]
+};
+const MATERIAL_WORDS = {
+  massing: {rough: 0.32, metal: 0.9, tint: [0.72, 0.55, 0.25]},
+  marmor: {rough: 0.16, metal: 0.0, tint: [0.85, 0.84, 0.80]},
+  valnot: {rough: 0.45, metal: 0.0, tint: [0.28, 0.17, 0.10]},
+  ek: {rough: 0.50, metal: 0.0, tint: [0.55, 0.41, 0.26]},
+  furu: {rough: 0.55, metal: 0.0, tint: [0.70, 0.56, 0.36]},
+  glas: {rough: 0.06, metal: 0.0, tint: [0.84, 0.88, 0.87]},
+  ull: {rough: 0.95, metal: 0.0},
+  polyester: {rough: 0.90, metal: 0.0},
+  metall: {rough: 0.35, metal: 0.85}
+};
+
+const fold = value => String(value ?? "").toLowerCase()
+  .replace(/ä/g, "a").replace(/å/g, "aa").replace(/ö/g, "o").replace(/é/g, "e");
+
+export function surfaceFor(element) {
+  const commerce = element.commerce ?? {};
+  const colorText = fold(commerce.color);
+  const materialText = fold(commerce.material);
+
+  let base = null;
+  for (const [word, rgb] of Object.entries(COLOR_WORDS)) {
+    if (colorText.includes(word)) { base = rgb; break; }
+  }
+  let finish = null;
+  for (const [word, spec] of Object.entries(MATERIAL_WORDS)) {
+    if (materialText.includes(word)) { finish = spec; break; }
+  }
+
+  const rgb = base ?? finish?.tint ?? [0.76, 0.72, 0.66];
+  return {
+    rgb: base && finish?.tint && finish.metal > 0.5 ? finish.tint : rgb,
+    rough: finish?.rough ?? 0.85,
+    metal: finish?.metal ?? 0.0,
+    derivedFrom: [commerce.color, commerce.material].filter(Boolean).join(" · ") || "default fabric"
+  };
+}
+
 export function exportBlenderScene(scene, opts = {}) {
+  const windowWattsPerSqm = opts.windowWattsPerSqm ?? 34;
   const {
     glbBasePath = ".",
     outputPath = "./render.png",
@@ -82,9 +137,9 @@ export function exportBlenderScene(scene, opts = {}) {
 
   // Render settings
   emit(`sc.render.engine = '${render.engine}'`);
-  emit(`sc.cycles.samples = ${render.samples}`);
+  emit(`sc.cycles.samples = ${opts.samples ?? render.samples}`);
   emit(`sc.cycles.use_denoising = ${render.denoising ? "True" : "False"}`);
-  emit(`sc.render.resolution_x, sc.render.resolution_y = ${render.resolution[0]}, ${render.resolution[1]}`);
+  emit(`sc.render.resolution_x, sc.render.resolution_y = ${opts.resolution?.[0] ?? render.resolution[0]}, ${opts.resolution?.[1] ?? render.resolution[1]}`);
   emit(`sc.render.filepath = '${escPy(outputPath)}'`);
   emit(`sc.render.image_settings.file_format = '${render.format}'`);
   emit(`sc.view_settings.view_transform = '${escPy(render.view_transform)}'`);
@@ -115,6 +170,17 @@ export function exportBlenderScene(scene, opts = {}) {
   emit("            o.data.materials.clear()");
   emit("            o.data.materials.append(m)");
   emit("");
+  emit("def tint(objs, rgb, rough, metal, name):");
+  emit("    m = bpy.data.materials.new(name); m.use_nodes = True");
+  emit("    b = m.node_tree.nodes['Principled BSDF']");
+  emit("    b.inputs['Base Color'].default_value = (*rgb, 1)");
+  emit("    b.inputs['Roughness'].default_value = rough");
+  emit("    b.inputs['Metallic'].default_value = metal");
+  emit("    for o in objs:");
+  emit("        if o.type == 'MESH':");
+  emit("            o.data.materials.clear()");
+  emit("            o.data.materials.append(m)");
+  emit("");
   emit("def mat(name, base, rough, metal=0.0):");
   emit("    m = bpy.data.materials.new(name); m.use_nodes = True");
   emit("    b = m.node_tree.nodes['Principled BSDF']");
@@ -126,18 +192,55 @@ export function exportBlenderScene(scene, opts = {}) {
   emit(`BASE_PATH = '${escPy(glbBasePath)}'`);
   emit("");
 
-  // Room shell: floor + backdrop wall for non-GLTF elements
-  const hasRoom = scene.elements.some(e => e.type === "ROOM");
-  if (hasRoom) {
-    emit("# Room shell");
-    emit("bpy.ops.mesh.primitive_plane_add(size=12, location=(0, 0, 0))");
-    emit("floor = bpy.context.object");
-    emit("floor.data.materials.append(mat('floor', (0.55, 0.48, 0.38), 0.5))");
+  // Room shell built from the scene's own ROOM_VOLUME — not a stand-in box. The volume carries
+  // the real interior size; OPENING elements are cut out of the wall they sit in by building
+  // that wall as segments around the hole (a boolean would need the modifier stack to resolve
+  // before the camera solve, and segments are exact for a rectangular opening).
+  const roomVolume = scene.elements.find(e => e.geometry?.primitive === "ROOM_VOLUME");
+  if (roomVolume) {
+    const [width, height, depth] = roomVolume.geometry.size;
+    const openings = scene.elements.filter(e => e.type === "OPENING" && e.geometry?.primitive === "BOX");
+    const T = 0.12;                                  // wall thickness
+    emit("# Room shell (from ROOM_VOLUME)");
+    emit(`W, H, D, T = ${width}, ${height}, ${depth}, ${T}`);
+    emit("def slab(sx, sy, sz, loc, material):");
+    emit("    bpy.ops.mesh.primitive_cube_add(size=1, location=loc)");
+    emit("    o = bpy.context.object");
+    emit("    o.scale = (sx, sy, sz)   # primitive_cube_add(size=1) is already a unit cube");
+    emit("    o.data.materials.append(material)");
+    emit("    return o");
     emit("");
-    emit("bpy.ops.mesh.primitive_plane_add(size=12, location=(0, 5, 6))");
-    emit("wall = bpy.context.object");
-    emit("wall.rotation_euler[0] = math.radians(90)");
-    emit("wall.data.materials.append(mat('wall', (0.72, 0.68, 0.62), 0.9))");
+    emit("m_floor = mat('floor', (0.52, 0.44, 0.34), 0.55)");
+    emit("m_wall = mat('wall', (0.74, 0.72, 0.68), 0.92)");
+    emit("m_ceil = mat('ceiling', (0.86, 0.85, 0.83), 0.95)");
+    emit("slab(W, D, T, (0, 0, -T / 2), m_floor)");
+    emit("slab(W, D, T, (0, 0, H + T / 2), m_ceil)");
+    emit("slab(T, D, H, (-W / 2 - T / 2, 0, H / 2), m_wall)");
+    emit("slab(T, D, H, (W / 2 + T / 2, 0, H / 2), m_wall)");
+
+    // Which wall (north/south) each opening belongs to, and the segments around it.
+    const walls = [{sign: -1}, {sign: 1}];
+    for (const wall of walls) {
+      const y = wall.sign * (depth / 2 + T / 2);
+      const inWall = openings.filter(o => Math.sign(o.geometry.position[2]) === wall.sign
+        && Math.abs(Math.abs(o.geometry.position[2]) - depth / 2) < 0.51);
+      if (!inWall.length) {
+        emit(`slab(W, T, H, (0, ${y.toFixed(3)}, H / 2), m_wall)`);
+        continue;
+      }
+      for (const opening of inWall) {
+        const [ow, oh] = opening.geometry.size;
+        const cx = opening.geometry.position[0];
+        const cz = opening.geometry.position[1];            // scene y = up
+        const x0 = cx - ow / 2, x1 = cx + ow / 2;
+        const z0 = cz - oh / 2, z1 = cz + oh / 2;
+        emit(`# opening ${escPy(opening.id)} — wall built as segments around it`);
+        emit(`slab(${(x0 + width / 2).toFixed(3)}, T, H, (${((x0 - width / 2) / 2).toFixed(3)}, ${y.toFixed(3)}, H / 2), m_wall)`);
+        emit(`slab(${(width / 2 - x1).toFixed(3)}, T, H, (${((x1 + width / 2) / 2).toFixed(3)}, ${y.toFixed(3)}, H / 2), m_wall)`);
+        emit(`slab(${ow}, T, ${z0.toFixed(3)}, (${cx}, ${y.toFixed(3)}, ${(z0 / 2).toFixed(3)}), m_wall)`);
+        emit(`slab(${ow}, T, ${(height - z1).toFixed(3)}, (${cx}, ${y.toFixed(3)}, ${((z1 + height) / 2).toFixed(3)}), m_wall)`);
+      }
+    }
     emit("");
   }
 
@@ -157,11 +260,43 @@ export function exportBlenderScene(scene, opts = {}) {
     emit(`objs_${element.id.toLowerCase().replace(/[^a-z0-9]+/g, "_")} = import_glb(os.path.join(BASE_PATH, '${escPy(assetPath)}'))`);
     emit(`place(objs_${element.id.toLowerCase().replace(/[^a-z0-9]+/g, "_")}, ${pyVec(blenderPos)}, ${rotDeg})`);
 
+    const varName = `objs_${element.id.toLowerCase().replace(/[^a-z0-9]+/g, "_")}`;
     if (useIntelligence) {
       const color = EVIDENCE_COLORS[element.evidence_class] ?? EVIDENCE_COLORS.CONCEPT;
-      emit(`flat_color(objs_${element.id.toLowerCase().replace(/[^a-z0-9]+/g, "_")}, ${pyColor(color)})`);
+      emit(`flat_color(${varName}, ${pyColor(color)})`);
+    } else {
+      const surface = surfaceFor(element);
+      emit(`# surface derived from: ${escPy(surface.derivedFrom)}`);
+      emit(`tint(${varName}, ${pyColor(surface.rgb)}, ${surface.rough}, ${surface.metal}, '${escPy(element.id)}')`);
     }
     emit("");
+  }
+
+  // Window light. A sealed room lit only by a distant sun renders as a grey box: the opening is
+  // a hole, so almost nothing reaches the interior. Each OPENING therefore gets an area light
+  // matched to its own size and placed in its own plane, facing in — the daylight that the
+  // window in the scene would actually admit, not a studio light invented for the shot.
+  if (roomVolume) {
+    const openings = scene.elements.filter(e => e.type === "OPENING" && e.geometry?.primitive === "BOX");
+    const [, , depth] = roomVolume.geometry.size;
+    for (const opening of openings) {
+      const [ow, oh] = opening.geometry.size;
+      const cx = opening.geometry.position[0];
+      const cz = opening.geometry.position[1];
+      const sign = Math.sign(opening.geometry.position[2]) || 1;
+      const y = sign * (depth / 2 - 0.04);
+      emit(`# Window light from ${escPy(opening.id)} (${ow} × ${oh} m opening)`);
+      emit(`wl = bpy.data.lights.new('${escPy(opening.id)}', 'AREA')`);
+      emit("wl.shape = 'RECTANGLE'");
+      emit(`wl.size, wl.size_y = ${ow}, ${oh}`);
+      emit(`wl.energy = ${Math.round(ow * oh * windowWattsPerSqm)}`);
+      emit("wl.color = (1.0, 0.96, 0.90)");
+      emit(`wo = bpy.data.objects.new('${escPy(opening.id)}_light', wl)`);
+      emit(`wo.location = (${cx}, ${y.toFixed(3)}, ${cz})`);
+      emit(`wo.rotation_euler = (math.radians(90), 0, math.radians(${sign > 0 ? 180 : 0}))`);
+      emit("sc.collection.objects.link(wo)");
+      emit("");
+    }
   }
 
   // Sky and sun
@@ -174,29 +309,44 @@ export function exportBlenderScene(scene, opts = {}) {
   emit("sky.sun_rotation = math.radians(210)");
   emit("sky.sun_intensity = 0.3");
   emit("nt.links.new(sky.outputs['Color'], bg.inputs['Color'])");
-  emit("bg.inputs['Strength'].default_value = 0.5");
+  emit("bg.inputs['Strength'].default_value = 0.55");
   emit("");
   emit("sun = bpy.data.objects.new('Sun', bpy.data.lights.new('Sun', 'SUN'))");
-  emit("sun.data.energy = 2.8");
+  emit("sun.data.energy = 0.9");
   emit("sun.data.angle = math.radians(1.2)");
   emit("sun.data.color = (1.0, 0.85, 0.65)");
   emit("sun.rotation_euler = (math.radians(72), 0, math.radians(35))");
   emit("sc.collection.objects.link(sun)");
   emit("");
 
-  // Camera from stage
-  const cam = activeStage.camera;
-  const target = activeStage.target;
-  const blenderCam = [cam[0], cam[2], cam[1]];
+  // Camera. A stage camera authored for the open-stage room sits OUTSIDE the volume (and above
+  // the ceiling), which shoots straight through a real wall. When the scene has a ROOM_VOLUME we
+  // therefore derive an interior camera instead: standing in a corner at eye height, aimed at the
+  // centroid of the furniture actually placed in the room.
+  let blenderCam = [activeStage.camera[0], activeStage.camera[2], activeStage.camera[1]];
+  let blenderTarget = [activeStage.target[0], activeStage.target[2], activeStage.target[1]];
+  let lens = 50;
+
+  if (roomVolume) {
+    const [width, , depth] = roomVolume.geometry.size;
+    const placed = scene.elements.filter(e => e.geometry?.primitive === "GLTF_ASSET" && e.geometry.position);
+    const cx = placed.length ? placed.reduce((s, e) => s + e.geometry.position[0], 0) / placed.length : 0;
+    const cz = placed.length ? placed.reduce((s, e) => s + e.geometry.position[2], 0) / placed.length : 0;
+    const inset = 0.45;
+    const cornerX = (opts.cameraCorner ?? "west") === "east" ? 1 : -1;
+    blenderCam = [cornerX * (width / 2 - inset), depth / 2 - inset, 1.42];   // corner, just below standing eye height
+    blenderTarget = [cx, cz, 0.58];                              // the seating group, just above seat height
+    lens = 30;                                                   // interior
+  }
 
   emit("# Camera");
   emit("cam = bpy.data.objects.new('Cam', bpy.data.cameras.new('Cam'))");
-  emit("cam.data.lens = 50");
+  emit(`cam.data.lens = ${lens}`);
   emit(`cam.location = ${pyVec(blenderCam)}`);
 
   // Compute look-at rotation
   emit(`import mathutils`);
-  emit(`target = mathutils.Vector(${pyVec([target[0], target[2], target[1]])})`);
+  emit(`target = mathutils.Vector(${pyVec(blenderTarget)})`);
   emit(`direction = target - cam.location`);
   emit(`rot_quat = direction.to_track_quat('-Z', 'Y')`);
   emit(`cam.rotation_euler = rot_quat.to_euler()`);

@@ -2,4 +2,8 @@
 node_modules/
 .env
 .DS_Store
-dist/
+dist/*
+# Rendered stills are a committed deliverable (SPRINT DAY 2026-09-20 item 4): the PNG and the
+# Blender script that produced it travel with the repo so a still can be re-derived, not just
+# admired. Everything else under dist/ stays build output.
+!dist/stills/

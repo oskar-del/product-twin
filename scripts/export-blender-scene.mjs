@@ -29,14 +29,28 @@ const outputPy = outIdx !== -1 ? path.resolve(process.argv[outIdx + 1]) : sceneP
 const stage = stageIdx !== -1 ? process.argv[stageIdx + 1] : undefined;
 const profile = profileIdx !== -1 ? process.argv[profileIdx + 1] : "REALISTIC";
 
-const glbBasePath = path.dirname(scenePath);
+// asset_path on a scene element is REPO-relative (data/geometry/avatars/...), so the base is
+// the repo root — not the scene's own directory, which would resolve every GLB to a path that
+// does not exist and import an empty room.
+const glbBasePath = root;
 const renderOutput = outputPy.replace(/\.py$/, ".png");
+
+const numArg = flag => {
+  const i = process.argv.indexOf(flag);
+  return i === -1 ? undefined : Number(process.argv[i + 1]);
+};
+const samples = numArg("--samples");
+const width = numArg("--width");
 
 const script = exportBlenderScene(scene, {
   glbBasePath,
   outputPath: renderOutput,
   stage,
-  profile
+  profile,
+  samples,
+  resolution: width ? [width, Math.round(width * 0.625)] : undefined,
+  windowWattsPerSqm: numArg("--window-w"),
+  cameraCorner: process.argv.includes("--east") ? "east" : "west"
 });
 
 fs.writeFileSync(outputPy, script);
