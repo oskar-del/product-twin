@@ -39,6 +39,8 @@
 
 - Platform 868ead1225 (Brain-verified screenshot): v0.4 compiles with 0 clearance conflicts, wing gable rendered; stills re-rendered from stamped scripts with manifest (png sha + script sha + stamp; both failure modes proven); disagreements.json = 0 traced; 36 placed / 7 SOURCE / 4 WD+H / 25 ALL_DEFAULT / 0 AUTHORITATIVE. Rule 14 (Platform): NO second copies of a supplier's spec — record sha of bytes compiled + supplier commit (specProvenance). Rule 15 (Platform): assert the CONTRACT, not the snapshot — four of its own gates broke when BRAGE shipped a fix; a gate that fails on a supplier's improvement trains people to ignore it.
 
+- Spatial items 1–3 (4576f4fae7, c01608a0fe, a502332b07), Brain-verified by CDP capture: bar gable now spans the 7 m depth with ridge E–W (Brain's 09-16 ridge:'width' literal had it across the short axis, rising 5.93 m — Brain's bug); wing own 15° gable per v0.4; terrace + vindficka from the scene patch; cameras derived at build; DTM hillshade in INTELLIGENCE. Open on the VH card: inherited Eksjöhus limitation text; top chip still 1,938.2 municipal → must be computed 1 936,8; no south-facing stage. Capture rule for WebGL pages: CDP + readiness flag (repo-platform/scripts/shoot.mjs), never --screenshot.
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
