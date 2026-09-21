@@ -93,6 +93,8 @@ def main():
     ap.add_argument("--site", required=True)
     ap.add_argument("--rendered-closed", type=int)
     ap.add_argument("--rendered-total", type=int)
+    ap.add_argument("--allow-unrendered", action="store_true",
+                    help="accept a run that never checked the browser's own numbers")
     args = ap.parse_args()
 
     site = pathlib.Path(args.site)
@@ -182,7 +184,8 @@ def main():
     if args.rendered_total is not None:
         check(f"front door rendered {args.rendered_total} total, ledger has {total}",
               args.rendered_total == total)
-    if args.rendered_closed is None and args.rendered_total is None:
+    unrendered = args.rendered_closed is None and args.rendered_total is None
+    if unrendered:
         notes.append("front-door rendered numbers not supplied (--rendered-closed/--rendered-total): "
                      "markup was checked statically, the browser's own output was not")
 
@@ -192,7 +195,16 @@ def main():
     for note in notes:
         print(f"  NOT VERIFIED  {note}")
     print(f"\n{passed} passed, {failed} failed ({passed + failed} checks)")
-    return 1 if failed else 0
+    if failed:
+        return 1
+    if unrendered and not args.allow_unrendered:
+        # A partial run must not read as a clean pass. Distinct exit code so a CI-style
+        # reader cannot mistake "nobody checked the browser" for "the browser agreed".
+        print("PARTIAL — rendered numbers not supplied; the browser's own output was never "
+              "compared. Pass --rendered-closed/--rendered-total, or --allow-unrendered to "
+              "accept a static-only run.")
+        return 2
+    return 0
 
 
 if __name__ == "__main__":

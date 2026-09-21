@@ -14,6 +14,53 @@ const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),"utf8"));
 const sha=p=>crypto.createHash("sha256").update(fs.readFileSync(path.join(root,p))).digest("hex");
 const round=(n,d=4)=>Number(n.toFixed(d));
 
+/**
+ * Frame the two design stages from the design's own bounding box.
+ *
+ * Both cameras were authored by eye for a ~13 m concept house. Vinkelhuset's bar is 20 m and
+ * its wing reaches 11 m north, so the design overran the frame and the ends clipped. The
+ * direction each camera looks from is a composition choice and is kept; only the DISTANCE is
+ * re-derived, from the box that has to fit. Deriving it here rather than at runtime keeps
+ * live_context_view consistent, because that is derived from the same camera a few lines later.
+ */
+function designBoundingBox(){
+  const patch=read("data/designs/house-in-scene-v0.3-patch.json");
+  const spec=read("data/designs/house-v0.4-geometry-spec.json");
+  const foot=[];
+  for(const el of patch.add_elements||[]){
+    const pts=el.geometry&&el.geometry.points_xz;
+    if(pts&&["HOUSE_BAR","HOUSE_WING_N"].includes(el.id))foot.push(...pts);
+  }
+  if(!foot.length)throw new Error("no HOUSE_BAR/HOUSE_WING_N footprint in the vendored patch");
+  const xs=foot.map(p=>p[0]),zs=foot.map(p=>p[1]);
+  const top=Math.max(spec.roof?.ridge_Y??0,spec.wing_roof?.ridge_Y??0);
+  if(!top)throw new Error("no ridge height in the vendored spec");
+  return {minX:Math.min(...xs),maxX:Math.max(...xs),minZ:Math.min(...zs),maxZ:Math.max(...zs),
+          height:top,source:`${spec.spec_version||"house-v0.4"} + scene patch footprints`};
+}
+
+function frameDesignStages(navigation){
+  const box=designBoundingBox();
+  const cx=(box.minX+box.maxX)/2, cz=(box.minZ+box.maxZ)/2, cy=box.height/2;
+  const halfDiagonal=Math.hypot(box.maxX-box.minX,box.maxZ-box.minZ,box.height)/2;
+  const fovRad=45*Math.PI/180;                       // the viewer's vertical fov
+  const fit=halfDiagonal/Math.sin(fovRad/2);         // distance at which the box just fills it
+  const margins={BUILDING_ORBIT:1.18,CONCEPT_HOUSE_ON_PLOT:1.95};
+  const framed={};
+  for(const step of navigation){
+    const margin=margins[step.id];
+    if(!margin)continue;
+    const dir=[step.camera[0]-step.target[0],step.camera[1]-step.target[1],step.camera[2]-step.target[2]];
+    const length=Math.hypot(...dir)||1;
+    const unit=dir.map(v=>v/length);
+    step.target=[round(cx,3),round(cy,3),round(cz,3)];
+    step.camera=unit.map((v,i)=>round([cx,cy,cz][i]+v*fit*margin,3));
+    framed[step.id]={distance:round(fit*margin,2)};
+  }
+  return {box,fit:round(fit,2),framed};
+}
+
+
 // Authoritative terrain heightfield derived from the gate-tracked Lantmäteriet 1 m DTM COG.
 const terrainDerived=read(`${base}/terrain-dem-derived-v0.1.json`);
 // DERIVED neighbourhood context from OpenStreetMap (ODbL, © OSM contributors).
@@ -131,6 +178,7 @@ function buildScene(){
     {id:"ENTER_BUILDING",label:"Enter building",camera:[-3.5,2.1,0.7],target:[3,1.6,-0.5],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE"],cutaway:true},
     {id:"ROOM",label:"Room",camera:[5.1,1.75,1.1],target:[2.7,1.45,-1.1],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE","VIEW_DIRECTION"],cutaway:true}
   ];
+  const framing=frameDesignStages(navigation);
   drapeOnTerrain(elements,navigation);
   navigation.forEach(step=>{step.live_context_view=deriveLiveContextView({originWgs84:[lon,lat],camera:step.camera,target:step.target,zoom:liveZoom[step.id]});});
 

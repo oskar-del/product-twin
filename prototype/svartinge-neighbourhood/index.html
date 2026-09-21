@@ -230,7 +230,9 @@ function stepTo(i,instant=false){currentStep=i;const s=data.navigation[i];if(s.i
   // underground) EXCEPT the genuinely low/interior stages (street, inside the building), which
   // need a near-horizontal camera. This also pulls PLOT_ORBIT off its grazing angle onto a clean 3/4.
   controls.maxPolarAngle=['ENTER_BUILDING','ROOM'].includes(s.id)?Math.PI*0.62:Math.PI*0.48;/* never let the outdoor camera drop below the horizontal — that is what let you tilt UNDER the terrain and see the backstage/underside. Only the interior stages (inside the house) relax it. */document.querySelectorAll('.step').forEach((b,n)=>b.classList.toggle('active',n===i));applyStageVisibility(s);roadLabels.visible=i<4;/* road-NAME labels belong in the overview stages (neighbourhood/street/outlook/house-on-plot); hide them in the tight orbit + interior so a big depthTest-off pill can't float inside the room */toggleDesignDock(s.id);toggleBoundary(s.id);syncLiveStage();const pos=new THREE.Vector3(...s.camera),target=new THREE.Vector3(...s.target);tween=instant?null:{fromPos:camera.position.clone(),toPos:pos,fromTarget:controls.target.clone(),toTarget:target,start:performance.now(),duration:900};if(instant){camera.position.copy(pos);controls.target.copy(target)}if(i===6){const room=byId.get('ROOM_LIVING');if(room)openPanel(room.userData.item)}else panel.classList.remove('open')}
-function makeSteps(){data.navigation.forEach((s,i)=>{const b=document.createElement('button');b.className='step';b.textContent=`${i+1}. ${s.label}`;b.onclick=()=>stepTo(i);steps.appendChild(b)})}
+/* exposed for the deep link in the non-module script below (#stage=N) */
+window.stepTo=stepTo;
+function makeSteps(){window.__stageCount=data.navigation.length;data.navigation.forEach((s,i)=>{const b=document.createElement('button');b.className='step';b.textContent=`${i+1}. ${s.label}`;b.onclick=()=>stepTo(i);steps.appendChild(b)})}
 function solarPosition(hour){const t=(hour-6)/14,az=THREE.MathUtils.degToRad(70+220*t),alt=THREE.MathUtils.degToRad(Math.max(2,54*Math.sin(Math.PI*t)));return new THREE.Vector3(Math.sin(az)*Math.cos(alt)*150,Math.sin(alt)*150,Math.cos(az)*Math.cos(alt)*150)}
 function solarDir(hour){const p=solarPosition(hour);p.x=-p.x;/* our content frame is east-flipped (scale.x=-1); flip the sun too so the derived shadows fall the geographically-correct way */return p.normalize();}
 function setSun(){const h=+solarTime.value;timeLabel.textContent=`${String(Math.floor(h)).padStart(2,'0')}:${h%1?String(Math.round((h%1)*60)).padStart(2,'0'):'00'}`;const d=solarDir(h);sun.position.copy(plotCenterWorld).add(d.clone().multiplyScalar(170));sun.target.position.copy(plotCenterWorld);sun.target.updateMatrixWorld();sun.intensity=Math.max(.25,3*Math.sin(Math.PI*(h-6)/14));positionSunMarker();drawSunShadow()}
@@ -700,6 +702,26 @@ renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-t
   if(enter)enter.onclick=()=>si.classList.add('hidden');
   if(back)back.onclick=()=>{si.classList.remove('hidden');si.scrollTop=0};
   if(src)src.onclick=()=>{const f=[...document.querySelectorAll('#siteIntel h2')].find(h=>h.textContent.trim()==='What is established');if(f)f.scrollIntoView({behavior:'smooth'})};
+
+  /* Deep link, so a stage can be opened without clicking through: #twin opens the twin at the
+     current stage, #stage=5 opens it at that stage (1-based, as the buttons are numbered).
+     A headless capture cannot click, and a demo should not have to. */
+  function applyDeepLink(){
+    const hash=String(location.hash||'').replace(/^#/,'');
+    if(!hash)return;
+    const stage=/^stage=(\d+)$/.exec(hash);
+    if(hash==='twin'||stage)si.classList.add('hidden');
+    if(stage&&typeof window.stepTo==='function'){
+      const index=Math.max(0,Math.min(Number(stage[1])-1,(window.__stageCount||7)-1));
+      /* instant: a capture must not photograph a camera mid-tween */
+      window.stepTo(index,true);
+    }
+  }
+  addEventListener('hashchange',applyDeepLink);
+  /* the twin's own script loads asynchronously; retry briefly until stepTo exists */
+  let tries=0;const waitForTwin=setInterval(()=>{
+    if(typeof window.stepTo==='function'||++tries>60){clearInterval(waitForTwin);applyDeepLink()}
+  },100);
 })();
 </script>
 </body>

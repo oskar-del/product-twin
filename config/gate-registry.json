@@ -17,7 +17,7 @@
         },
         "still_not_established": "The kommun's NAME here comes from geocoding, which is REPORTED; the authoritative part is the kommun CODE."
       },
-      "note": "Closed by the kommun code in the authoritative property-division product, never by a geocoder's kommun name alone."
+      "note": "Closed by the kommun code in the authoritative property-division product, never by a geocoder's kommun name alone. DEPENDENCY: requires_pattern reads source_product, so this rule is only as good as how that string was written. A receipt ingested before the archive-read fix (repo-spatial-studio fdae4ea938) carries a COMPOSED product name and could in principle answer jurisdiction from a label rather than from the archive. Re-ingest a site before trusting this gate on an older receipt."
     },
     {
       "gate_id": "GATE_SE_PLOT_IDENTITY",
