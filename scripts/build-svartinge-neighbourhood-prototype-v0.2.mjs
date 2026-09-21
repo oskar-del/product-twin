@@ -38,22 +38,34 @@ const round=(n,d=4)=>Number(n.toFixed(d));
  */
 const BRAGE_GEOMETRY="../repo-brage/OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry";
 
-function brageCommit(){
+function brageGit(args){
   try{
-    return execFileSync("git",["-C",path.join(root,"../repo-brage"),"rev-parse","HEAD"],
-      {encoding:"utf8"}).trim();
+    return execFileSync("git",["-C",path.join(root,"../repo-brage"),...args],{encoding:"utf8"}).trim()||null;
   }catch{ return null; }
 }
 
 function readBrage(filename){
   const full=path.join(root,BRAGE_GEOMETRY,filename);
+  if(!fs.existsSync(full)){
+    throw new Error(
+      `BRAGE's ${filename} was not found.\n`+
+      `This build reads the design from BRAGE's worktree rather than shipping a copy of it, so it `+
+      `requires the sibling worktree ../repo-brage on agent/brage-design.\n`+
+      `  git worktree add "../repo-brage" agent/brage-design\n`+
+      `Expected at: ${full}`);
+  }
   const bytes=fs.readFileSync(full);                       // the exact bytes we hash and parse
   return {
     json:JSON.parse(bytes.toString("utf8")),
     provenance:{
       source_repo:"repo-brage (agent/brage-design)",
       source_path:`${BRAGE_GEOMETRY}/${filename}`.replace("../",""),
-      source_commit:brageCommit(),
+      /* Two commits, because they answer different questions: read_commit dates the READ (what
+         the worktree was on), source_file_commit dates the FILE (what last touched these bytes).
+         A build can read an unchanged spec from a moved HEAD, and the pair makes that legible. */
+      read_commit:brageGit(["rev-parse","HEAD"]),
+      source_file_commit:brageGit(["log","-1","--format=%H","--",
+        `${BRAGE_GEOMETRY.replace("../repo-brage/","")}/${filename}`]),
       sha256:crypto.createHash("sha256").update(bytes).digest("hex"),
       byte_length:bytes.length,
       read_at:new Date().toISOString()
@@ -276,6 +288,22 @@ function buildScene(){
 
 export function build(){
   const scene=buildScene();
+  /* Rule 16: a content-derived build id, so cache-busting keys off what the scene SAYS rather
+     than when it was written. A timestamp busts caches even when nothing changed, and — worse —
+     tells you nothing about whether two surfaces are showing the same data. `generated_at` moves
+     every run, so it is excluded from the hash: two builds of identical content get one id. */
+  const volatile=new Set(["generated_at","read_at"]);   // when it ran, not what it says
+  const stable=(node)=>{
+    if(Array.isArray(node))return node.map(stable);
+    if(node&&typeof node==="object"){
+      const out={};
+      for(const key of Object.keys(node).sort())if(!volatile.has(key))out[key]=stable(node[key]);
+      return out;
+    }
+    return node;
+  };
+  scene.build_id=crypto.createHash("sha256")
+    .update(JSON.stringify(stable(scene))).digest("hex").slice(0,16);
   fs.writeFileSync(path.join(root,outputPath),JSON.stringify(scene,null,2)+"\n");
   return scene;
 }

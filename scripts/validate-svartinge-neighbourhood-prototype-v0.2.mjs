@@ -205,6 +205,8 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
   /* The supplier's design, asserted as a CONTRACT and not as a snapshot (rule 15): what the twin
      needs must be present and coherent, but a version string or a particular roof shape is
      BRAGE's business. A supplier fixing their own geometry must not fail this gate. */
+  check(typeof scene.build_id==="string"&&/^[0-9a-f]{16}$/.test(scene.build_id),
+    "scene: build_id must be a content hash (16 hex chars) — it keys every cache-bust (rule 16)");
   const design=scene.design;
   check(!!design,"design: payload missing from the scene");
   if(design){
@@ -244,11 +246,13 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
         `design.provenance.${which}: no sha256 of the bytes read`);
       check(!!pr&&typeof pr.byte_length==="number"&&pr.byte_length>0,
         `design.provenance.${which}: no byte length`);
-      check(!!pr&&typeof pr.source_commit==="string"&&pr.source_commit.length>=7,
-        `design.provenance.${which}: no source commit`);
+      check(!!pr&&typeof pr.read_commit==="string"&&pr.read_commit.length>=7,
+        `design.provenance.${which}: no read_commit (which HEAD the bytes were read from)`);
+      check(!!pr&&typeof pr.source_file_commit==="string"&&pr.source_file_commit.length>=7,
+        `design.provenance.${which}: no source_file_commit (what last touched those bytes)`);
     }
   }
-  exactKeys(scene,["scene_version","entity_type","scene_id","generated_at","subject","coordinate_system","source_bindings","evidence_classes","measurements","legal_claim_policy","design","navigation","elements","studies","prototype","project_status"],"scene",check);
+  exactKeys(scene,["scene_version","entity_type","scene_id","generated_at","subject","coordinate_system","source_bindings","evidence_classes","measurements","legal_claim_policy","design","build_id","navigation","elements","studies","prototype","project_status"],"scene",check);
   check(scene.scene_version==="svartinge-neighbourhood-scene/v0.2","scene version drift");
   check(scene.subject?.working_property_identity==="SVÄRTINGE 54:28","working identity drift");
   check(scene.subject?.identity_scope==="MUNICIPAL_ADDRESS_TO_PROPERTY_OBSERVATION_NOT_PROPERTY_REGISTER","identity scope promoted");
