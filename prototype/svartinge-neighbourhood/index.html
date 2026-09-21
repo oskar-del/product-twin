@@ -47,7 +47,7 @@
     <section class="intel-section"><div class="intel-section-head"><h2>The place and the blockers</h2><p>The boundary is Lantmäteriet’s registered property division for SVÄRTINGE 54:28 — 7 vertices, authoritative geometry — with 75 neighbouring parcels and 153 official building footprints in the clip. Registered geometry is not a set-out survey.</p></div><div class="intel-map-grid"><div class="intel-map" id="intelMap"><canvas id="intelBoundaryCanvas" aria-label="Municipal map boundary observation overlay"></canvas><div class="intel-map-label"><b>AUTHORITATIVE BOUNDARY · LANTMÄTERIET FASTIGHETSINDELNING · 7 VERTICES</b><br>Registered geometry <span id="intelAreaMap">…</span> m² · SVÄRTINGE 54:28 · 75 context parcels · official footprints extruded in the twin.</div></div><div class="intel-gates"><div class="intel-kicker">Evidence gates</div><h3 id="intelGateHeading" style="font:500 26px Georgia,serif;margin:10px 0 14px">…</h3><div id="intelGateRows"></div></div></div></section>
   </div>
 </main>
-<div class="top"><div class="brand">PLOT-TO-PROJECT · SPATIAL STUDIO</div><button class="chip si-back" id="siBack">← Site Intelligence</button><div class="chip">SVÄRTINGE 54:28 · working identity</div><div class="chip">1,938.2 m² municipal-map surface · indicative</div></div>
+<div class="top"><div class="brand">PLOT-TO-PROJECT · SPATIAL STUDIO</div><button class="chip si-back" id="siBack">← Site Intelligence</button><div class="chip">SVÄRTINGE 54:28 · working identity</div><div class="chip" id="topAreaChip">registered area — reading…</div></div>
 <div class="mode-dock" role="group" aria-label="Twin view mode"><button class="mode active" data-mode="INTELLIGENCE">INTELLIGENCE</button><button class="mode" data-mode="REALISTIC">REALISTIC</button><button class="mode" data-mode="COMPARE">COMPARE</button></div>
 <div class="gate"><b>CONCEPT MODE · LEGAL GATES OPEN</b><br>Realism changes presentation—not evidence. No view proves a legal boundary, entitlement, access, utilities or surveyed terrain.</div>
 <nav class="steps" id="steps"></nav><div class="mode-caption" id="modeCaption">Evidence colours expose source status and uncertainty.</div>
@@ -272,6 +272,22 @@ liveContextButton.onclick=()=>{panel.classList.remove('open');aerialPanel.classL
 liveConnect.onclick=async()=>{const token=liveToken.value.trim();liveToken.value='';if(token.length<8){setLiveStatus('A VALID TEMPORARY MAPBOX PUBLIC TOKEN IS REQUIRED',true);return}drapeSatelliteTerrain(token);liveConnect.disabled=true;setLiveStatus('LOADING ATTRIBUTED LIVE CONTEXT…');try{const mapboxgl=await loadMapboxRuntime();if(liveAdapter)liveAdapter.destroy();liveAdapter=createMapboxRuntimeAdapter({mapboxgl,publicToken:token,container:liveMap,originWgs84:data.coordinate_system.origin_wgs84,onState:state=>{if(state.phase==='CONNECTED'){liveMap.classList.add('connected');liveDisconnect.disabled=false;syncLiveStage()}else if(state.phase==='ERROR')setLiveStatus(`LIVE PROVIDER ERROR · ${state.detail}`,true)}});liveAdapter.mount()}catch(error){setLiveStatus(`${error.message} · THE TWIN IS STILL AVAILABLE`,true);liveAdapter=null}finally{liveConnect.disabled=false}};
 liveDisconnect.onclick=()=>{if(liveAdapter)liveAdapter.destroy();liveAdapter=null;liveMap.classList.remove('connected');liveDisconnect.disabled=true;liveToken.value='';undrapeSatelliteTerrain();setLiveStatus('DISCONNECTED · RUNTIME TOKEN FORGOTTEN · TWIN UNAFFECTED')};
 function applyStageVisibility(stage){const allowed=new Set(stage.visible_groups);root.traverse(object=>{const type=object.userData.item?.type;if(type)object.visible=allowed.has(type);if(object.userData.designHidden)object.visible=false});['HOUSE_ROOF','HOUSE_WALL_S'].forEach(id=>{const object=byId.get(id);if(object)object.visible=allowed.has(object.userData.item.type)&&!stage.cutaway})}
+/* The registered area, computed from the authoritative ring — never typed and never the
+   municipal map's indicative surface. The top chip used to state 1 938,2 m² "municipal-map
+   surface · indicative"; the authoritative property division computes 1 936,8 m², which is what
+   the front door has been showing. Two different numbers for the same plot on one screen is the
+   kind of thing a buyer notices and we cannot explain. */
+function subjectRing(pd){
+  const first=pd&&pd.subject_rings_local&&pd.subject_rings_local[0];
+  if(!first)return null;
+  /* a ring is [[x,z],…]; a polygon is [[ring],…] — take the outer ring either way */
+  return (Array.isArray(first[0])&&Array.isArray(first[0][0]))?first[0]:first;
+}
+function subjectAreaM2(pd){
+  const ring=subjectRing(pd);if(!ring||ring.length<3)return null;
+  let a=0;for(let i=0;i<ring.length;i++){const [x1,z1]=ring[i],[x2,z2]=ring[(i+1)%ring.length];a+=x1*z2-x2*z1;}
+  return Math.abs(a)/2;
+}
 function stepTo(i,instant=false){currentStep=i;const s=data.navigation[i];if(s.id==='ROOM'&&window.SHOPPABLE_ROOM_URL){/* the interior lives in Platform's shoppable room (real catalog, real BUY links) — open it beside the twin instead of the orange concept box */try{window.open(window.SHOPPABLE_ROOM_URL,'_blank','noopener');}catch(_e){}}stageLabelsAllowed=!['STREET_VIEW','PLOT_ORBIT'].includes(s.id);
   // Per-stage tilt limit. Tight 77° everywhere (no grazing the flat terrain edge-on / going
   // underground) EXCEPT the genuinely low/interior stages (street, inside the building), which
@@ -516,13 +532,31 @@ function clearDesign(){mountDesign(DESIGNS[0]);}
 function buildDesignDock(){
   const dock=document.createElement('div');dock.id='designDock';dock.className='hidden';
   dock.style.cssText='position:fixed;right:16px;top:154px;z-index:9;width:min(320px,calc(100vw - 32px));background:rgba(20,35,29,.94);color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:15px;box-shadow:0 18px 48px rgba(0,0,0,.2);backdrop-filter:blur(16px);font-size:11px';
-  dock.innerHTML='<div style="display:flex;justify-content:space-between;gap:12px"><b style="font-size:9px;letter-spacing:.12em">CONCEPT DESIGN STUDIO</b><span style="font-size:7px;letter-spacing:.09em;color:#d9b669">ON THE LAND</span></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px;padding:8px;border-radius:10px;background:rgba(255,255,255,.05)"><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">13° SW</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">SLOPE · ASPECT</span></div><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">43 m</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">GLAN FALL / 800 m</span></div><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">70 m</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">RH2000 AT PIN</span></div></div><div style="font-size:7px;letter-spacing:.05em;color:rgba(255,255,255,.42);margin-top:5px">Measured land the designs respond to (authoritative 1 m DTM)</div><div id="ddOpts" style="display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:12px 0"></div><div id="ddLang" style="font-size:7px;letter-spacing:.11em;color:#d9b669"></div><div id="ddName" style="font:500 19px/1.05 Georgia,serif;margin:5px 0"></div><div id="ddSummary" style="font-size:9px;line-height:1.5;color:rgba(255,255,255,.66)"></div><div id="ddMetrics" style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:11px"></div><div style="margin-top:11px;padding:8px;border-radius:9px;background:rgba(181,95,74,.22);font-size:7px;line-height:1.45;color:#f5d8cf">Eksjöhus’s real Sluttningshus (walk-out) models — the line built for exactly this SW fall — reconstructed as massing from their published figures and sited on the real plot, terrain &amp; boundary. Exact width×depth &amp; roof pitch assumed (not all published). CONCEPT class: modelled after Eksjöhus, not their drawings; no entitlement / setback / FFL claim.</div>';
+  dock.innerHTML='<div style="display:flex;justify-content:space-between;gap:12px"><b style="font-size:9px;letter-spacing:.12em">CONCEPT DESIGN STUDIO</b><span style="font-size:7px;letter-spacing:.09em;color:#d9b669">ON THE LAND</span></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px;padding:8px;border-radius:10px;background:rgba(255,255,255,.05)"><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">13° SW</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">SLOPE · ASPECT</span></div><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">43 m</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">GLAN FALL / 800 m</span></div><div><b style="display:block;font:500 13px/1 Georgia,serif;color:#e1c77d">70 m</b><span style="font-size:6px;letter-spacing:.07em;color:rgba(255,255,255,.5)">RH2000 AT PIN</span></div></div><div style="font-size:7px;letter-spacing:.05em;color:rgba(255,255,255,.42);margin-top:5px">Measured land the designs respond to (authoritative 1 m DTM)</div><div id="ddOpts" style="display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:12px 0"></div><div id="ddLang" style="font-size:7px;letter-spacing:.11em;color:#d9b669"></div><div id="ddName" style="font:500 19px/1.05 Georgia,serif;margin:5px 0"></div><div id="ddSummary" style="font-size:9px;line-height:1.5;color:rgba(255,255,255,.66)"></div><div id="ddMetrics" style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:11px"></div><div style="margin-top:11px;padding:8px;border-radius:9px;background:rgba(181,95,74,.22);font-size:7px;line-height:1.45;color:#f5d8cf"><span id="ddFooterText">Eksjöhus’s real Sluttningshus (walk-out) models — the line built for exactly this SW fall — reconstructed as massing from their published figures and sited on the real plot, terrain &amp; boundary. Exact width×depth &amp; roof pitch assumed (not all published). CONCEPT class: modelled after Eksjöhus, not their drawings; no entitlement / setback / FFL claim.</span></div>';
   document.body.appendChild(dock);
   const opts=dock.querySelector('#ddOpts');
   DESIGNS.forEach(d=>{const b=document.createElement('button');b.textContent=d.builder?d.name.replace('Eksjöhus ',''):'Base';b.dataset.id=d.id;b.style.cssText='border:1px solid rgba(255,255,255,.18);background:transparent;color:rgba(255,255,255,.72);border-radius:9px;padding:7px 3px;font-size:8px;cursor:pointer';b.onclick=()=>mountDesign(d);opts.appendChild(b);});
   window.updateDesignDock=spec=>{
     dock.querySelector('#ddLang').textContent=(spec.builder?spec.builder+' · ':'')+spec.lang;dock.querySelector('#ddName').textContent=spec.name;
     dock.querySelector('#ddSummary').innerHTML=spec.summary+(spec.builder?`<div style="margin-top:6px;font-size:7px;letter-spacing:.05em;color:rgba(255,255,255,.42)">Modelled after ${spec.builder} ${spec.name.replace(spec.builder+' ','')} · ${spec.src}</div>`:'');
+    const foot=dock.querySelector('#ddFooterText');
+    if(foot){
+      if(spec.builder==='BRAGE'){
+        /* The catalogue footer is Eksjöhus copy and must not stand under BRAGE's own design.
+           Vinkelhuset is a design of ours, not a reconstruction of a builder's published model,
+           and its provenance is the spec we read — quoted here with the hash of those bytes. */
+        const pr=(data&&data.design&&data.design.provenance&&data.design.provenance.spec)||null;
+        foot.textContent='BRAGE\'s own design, built from '+((data&&data.design&&data.design.spec_version)||'their geometry spec')
+          +'. Massing, roofs, terrace and windbreaks are read from that spec at build time'
+          +(pr?' (commit '+String(pr.source_commit||'').slice(0,10)+' · sha256 '+String(pr.sha256||'').slice(0,12)+'… · '+pr.byte_length+' bytes)':'')
+          +'. CONCEPT class: no entitlement, setback or FFL claim, and glazing and finishes remain concept-level.';
+      }else{
+        foot.textContent='Eksjöhus\'s real Sluttningshus (walk-out) models — the line built for exactly this SW fall — '
+          +'reconstructed as massing from their published figures and sited on the real plot, terrain & boundary. '
+          +'Exact width×depth & roof pitch assumed (not all published). CONCEPT class: modelled after Eksjöhus, '
+          +'not their drawings; no entitlement / setback / FFL claim.';
+      }
+    }
     const metrics=spec.builder?[['BOA',spec.boa+' m²'],['Footprint',spec.footprint+' m²'],['Storeys',spec.storeys]]:[['Footprint',spec.footprint+' m²'],['Storeys',spec.storeys],['GFA ≈',spec.gfa+' m²']];
     dock.querySelector('#ddMetrics').innerHTML=metrics.map(([k,v])=>`<div style="border-top:1px solid rgba(255,255,255,.14);padding-top:8px"><b style="display:block;font:500 15px/1 Georgia,serif">${v}</b><span style="font-size:6px;letter-spacing:.08em;color:rgba(255,255,255,.5)">${k}</span></div>`).join('');
     [...opts.children].forEach(b=>{const on=b.dataset.id===spec.id;b.style.background=on?'#d9b669':'transparent';b.style.color=on?'#14231d':'rgba(255,255,255,.72)';b.style.borderColor=on?'#d9b669':'rgba(255,255,255,.18)';});
@@ -573,7 +607,7 @@ async function loadVinkelhusetSpec(){
   if(window.updateDesignDock&&window.currentDesign===vh)window.updateDesignDock(vh);
 }
 const designDockEl=buildDesignDock();
-function toggleDesignDock(stageId){designDockEl.classList.toggle('hidden',!['CONCEPT_HOUSE_ON_PLOT','BUILDING_ORBIT'].includes(stageId));}
+function toggleDesignDock(stageId){designDockEl.classList.toggle('hidden',!['CONCEPT_HOUSE_ON_PLOT','LAKE_SIDE_VIEW','BUILDING_ORBIT'].includes(stageId));}
 // ---- Authoritative boundary (registered property division) ----
 // Drawn only when the ingest has produced the AUTHORITATIVE clip; inert otherwise.
 const authoritativeBoundary=new THREE.Group();scene.add(authoritativeBoundary);authoritativeBoundary.visible=false;
@@ -620,7 +654,7 @@ function drawSunShadow(){
   const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));
   sunShadow.add(new THREE.Mesh(g,new THREE.MeshBasicMaterial({color:0x0b0f0c,transparent:true,opacity:.32,side:THREE.DoubleSide,depthWrite:false})));
 }
-const BOUNDARY_STAGES=['NEIGHBOURHOOD_VIEW','STREET_VIEW','PLOT_ORBIT','PLOT_OUTLOOK','CONCEPT_HOUSE_ON_PLOT','BUILDING_ORBIT'];
+const BOUNDARY_STAGES=['NEIGHBOURHOOD_VIEW','STREET_VIEW','PLOT_ORBIT','PLOT_OUTLOOK','CONCEPT_HOUSE_ON_PLOT','LAKE_SIDE_VIEW','BUILDING_ORBIT'];
 const plotPulse=[];/* {mat,base,amp} materials animated in the render loop so the plot "breathes" */
 const ACCENT=0xffcf6a;/* signature plot accent (bronze-gold) */
 function plotChip(designation,areaText){
@@ -656,7 +690,8 @@ function drawAuthoritativeBoundary(pd){
   // Marker BEAM at the plot centre (Google-pin energy, pulsing) + always-on plot CHIP above it
   const bmat=new THREE.MeshBasicMaterial({color:ACCENT,transparent:true,opacity:.16,depthWrite:false,side:THREE.DoubleSide});
   const beam=new THREE.Mesh(new THREE.CylinderGeometry(1.1,1.7,56,22,1,true),bmat);beam.position.set(cx,cy+28,cz);beam.renderOrder=2;authoritativeBoundary.add(beam);plotPulse.push({mat:bmat,base:.16,amp:.12});
-  const areaTxt=(pd.subject_area_m2?Math.round(pd.subject_area_m2).toLocaleString('sv-SE'):'1 938')+' m² · your plot';
+  const _area=pd.subject_area_m2??subjectAreaM2(pd);
+  const areaTxt=(_area!=null?Math.round(_area).toLocaleString('sv-SE'):'area unavailable')+' m² · your plot';
   const chip=plotChip(pd.subject_designation||'Svärtinge 54:28',areaTxt);chip.position.set(cx,cy+62,cz);authoritativeBoundary.add(chip);
 }
 function updatePlotPulse(){if(!plotPulse.length||!authoritativeBoundary.visible)return;const s=(Math.sin(performance.now()*0.0022)+1)*0.5;for(const p of plotPulse)p.mat.opacity=p.base+p.amp*s;}
@@ -727,7 +762,10 @@ function drawOfficialBuildings(bd){
    convincing — the twin renders happily against yesterday's numbers. Seen exactly that
    while wiring the design payload: the page kept a cached scene with no design in it. */
 const _cb=`?v=${Date.now()}`;
-try{[data,providers,streetContext,terrainMetadata,officialGeometrySources,aerialHistory]=await Promise.all([fetch(DATA+_cb),fetch(PROVIDERS+_cb),fetch(STREET+_cb),fetch(TERRAIN_METADATA+_cb),fetch(OFFICIAL_GEOMETRY+_cb),fetch(AERIAL_HISTORY+_cb)]).then(async rs=>{for(const r of rs)if(!r.ok)throw new Error(`${r.status} ${r.statusText}`);return Promise.all(rs.map(r=>r.json()))});data.elements.forEach(buildElement);buildRealismDecor();drapeMunicipalOrtho();drapeWideContext();mountAerialHistory();makeSteps();setSun();try{const _r=await fetch(DERIVED_BOUNDARY);if(_r.ok){const _pd=await _r.json();if(_pd&&_pd.evidence_class==='AUTHORITATIVE'&&_pd.subject_rings_local?.length){propertyDivision=_pd;drawAuthoritativeBoundary(_pd);const _prov=byId.get('PLOT_54_28');if(_prov){_prov.userData.designHidden=true;if(_prov.userData.label)_prov.userData.label.visible=false;}/* the authoritative clip supersedes the indicative municipal-map trace + its label */}}}catch(_e){}
+try{[data,providers,streetContext,terrainMetadata,officialGeometrySources,aerialHistory]=await Promise.all([fetch(DATA+_cb),fetch(PROVIDERS+_cb),fetch(STREET+_cb),fetch(TERRAIN_METADATA+_cb),fetch(OFFICIAL_GEOMETRY+_cb),fetch(AERIAL_HISTORY+_cb)]).then(async rs=>{for(const r of rs)if(!r.ok)throw new Error(`${r.status} ${r.statusText}`);return Promise.all(rs.map(r=>r.json()))});data.elements.forEach(buildElement);buildRealismDecor();drapeMunicipalOrtho();drapeWideContext();mountAerialHistory();makeSteps();setSun();try{const _r=await fetch(DERIVED_BOUNDARY);if(_r.ok){const _pd=await _r.json();if(_pd&&_pd.evidence_class==='AUTHORITATIVE'&&_pd.subject_rings_local?.length){propertyDivision=_pd;drawAuthoritativeBoundary(_pd);
+        {const _a=subjectAreaM2(_pd),_c=document.getElementById('topAreaChip');
+         if(_c)_c.textContent=(_a!=null?_a.toLocaleString('sv-SE',{maximumFractionDigits:1}):'—')
+           +' m² registered · '+((_pd.evidence_class||'AUTHORITATIVE').toLowerCase());}const _prov=byId.get('PLOT_54_28');if(_prov){_prov.userData.designHidden=true;if(_prov.userData.label)_prov.userData.label.visible=false;}/* the authoritative clip supersedes the indicative municipal-map trace + its label */}}}catch(_e){}
 try{const _rb=await fetch(DERIVED_BUILDINGS);if(_rb.ok){const _bd=await _rb.json();if(_bd&&_bd.buildings?.length){drawOfficialBuildings(_bd);/* authoritative footprints supersede the OSM-derived boxes */root.traverse(o=>{if(o.userData?.item?.id&&o.userData.item.id.startsWith('OSM_B'))o.userData.designHidden=true;if(o.userData?.item?.type==='ROAD')o.userData.designHidden=true;});/* hide the OSM building boxes+roofs (superseded by authoritative byggnad) AND the road ribbon meshes: the dark asphalt ribbons read as ugly black bars against the aerial, which already shows every real road photographically. The road-NAME labels (roadLabels group, anchored at each road's nearest point to the plot) STAY visible so Säterdalsvägen etc. can still be checked against Google. */}}}catch(_e){}/* ORIENTATION FIX (2026-08-28): the scene frame is x=EAST, z=NORTH. Rendered top-down/oblique that
    is a LEFT-HANDED (mirrored) view of reality — Säterdalsvägen came out WEST of the plot when it is
    really EAST (verified: nearest road to the 54:28 boundary is Säterdalsvägen at 10.7 m, on the wrong

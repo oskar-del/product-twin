@@ -107,7 +107,7 @@ function frameDesignStages(navigation,design){
   const halfDiagonal=Math.hypot(box.maxX-box.minX,box.maxZ-box.minZ,box.height)/2;
   const fovRad=45*Math.PI/180;                       // the viewer's vertical fov
   const fit=halfDiagonal/Math.sin(fovRad/2);         // distance at which the box just fills it
-  const margins={BUILDING_ORBIT:1.18,CONCEPT_HOUSE_ON_PLOT:1.95};
+  const margins={BUILDING_ORBIT:1.18,LAKE_SIDE_VIEW:1.35,CONCEPT_HOUSE_ON_PLOT:1.95};
   const framed={};
   for(const step of navigation){
     const margin=margins[step.id];
@@ -230,12 +230,13 @@ function buildScene(){
   const poiNames=["Svärtinge Skogsbacke skola","Svärtingehus skola","Utsiktens förskola","Svärtinge skogsbacke stop","ICA Nära Svärtinge","Lake Glan context"];
   poiNames.forEach((label,i)=>elements.push(element(`POI_${String(i+1).padStart(2,"0")}`,"POI",label,"INDICATIVE",{primitive:"DIAGRAMMATIC_MARKER",position:[-145+i*52,8,145+(i%2)*18],placement_method:"DIAGRAMMATIC_NOT_GEOGRAPHIC",distance_m:null},[alpha.proximity_register.find(p=>p.name===label)?.source_url??"NEIGHBOURHOOD_ALPHA_PROXIMITY_REGISTER"],["Locality presence is source-bound, but the 3D marker position is indicative and diagrammatic.","No coordinate, distance, route or travel-time claim."])));
 
-  const liveZoom={NEIGHBOURHOOD_VIEW:15.6,STREET_VIEW:19.2,PLOT_ORBIT:17.8,CONCEPT_HOUSE_ON_PLOT:18.7,BUILDING_ORBIT:19.4,ENTER_BUILDING:20,ROOM:20.5};
+  const liveZoom={NEIGHBOURHOOD_VIEW:15.6,STREET_VIEW:19.2,PLOT_ORBIT:17.8,CONCEPT_HOUSE_ON_PLOT:18.7,LAKE_SIDE_VIEW:19.0,BUILDING_ORBIT:19.4,ENTER_BUILDING:20,ROOM:20.5};
   const navigation=[
     {id:"NEIGHBOURHOOD_VIEW",label:"Neighbourhood view",camera:[150,125,185],target:[0,0,0],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","POI","CONCEPT_BUILDING"],cutaway:false},
     {id:"STREET_VIEW",label:"Street room",camera:[-78,2.25,-52],target:[-27,1.35,20],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","POI"],cutaway:false},
     {id:"PLOT_ORBIT",label:"Plot outlook",camera:[6,5,24],target:[0,-1,-230],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION"],cutaway:false},
     {id:"CONCEPT_HOUSE_ON_PLOT",label:"Concept house on plot",camera:[34,24,36],target:[1,2,1],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION","CONCEPT_BUILDING","OPENING"],cutaway:false},
+    {id:"LAKE_SIDE_VIEW",label:"From the lake side",camera:[-18,14,-30],target:[1,2,1],visible_groups:["TERRAIN","PLOT","ROAD","CONTEXT_BUILDING","VIEW_DIRECTION","CONCEPT_BUILDING","OPENING","OUTDOOR_DECK","WINDBREAK"],cutaway:false},
     {id:"BUILDING_ORBIT",label:"Building orbit",camera:[18,11,17],target:[1,2,1],visible_groups:["PLOT","CONCEPT_BUILDING","OPENING","VIEW_DIRECTION"],cutaway:false},
     {id:"ENTER_BUILDING",label:"Enter building",camera:[-3.5,2.1,0.7],target:[3,1.6,-0.5],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE"],cutaway:true},
     {id:"ROOM",label:"Room",camera:[5.1,1.75,1.1],target:[2.7,1.45,-1.1],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE","VIEW_DIRECTION"],cutaway:true}

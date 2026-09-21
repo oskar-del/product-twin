@@ -20,7 +20,7 @@ const aerialHistorySchemaPath="config/spatial/svartinge-municipal-aerial-history
 const viewerPath="prototype/svartinge-neighbourhood/index.html";
 const liveAdapterPath="prototype/svartinge-neighbourhood/live-context-adapter.mjs";
 const CLASSES=["AUTHORITATIVE","INDICATIVE","DERIVED","REPORTED_UNVERIFIED","CONCEPT"];
-const STEPS=["NEIGHBOURHOOD_VIEW","STREET_VIEW","PLOT_ORBIT","CONCEPT_HOUSE_ON_PLOT","BUILDING_ORBIT","ENTER_BUILDING","ROOM"];
+const STEPS=["NEIGHBOURHOOD_VIEW","STREET_VIEW","PLOT_ORBIT","CONCEPT_HOUSE_ON_PLOT","LAKE_SIDE_VIEW","BUILDING_ORBIT","ENTER_BUILDING","ROOM"];
 const BLOCKED=["LEGAL_BOUNDARY","REGISTERED_AREA","ENTITLEMENT","BUILDABLE_ENVELOPE","LEGAL_ACCESS","UTILITY_CAPACITY","SURVEYED_TERRAIN","FINISHED_FLOOR_LEVEL"];
 const PROVIDER_STATES=["CONNECTED","EXECUTABLE_NOT_TESTED","DOCUMENTED_NOT_CONNECTED","KEY_REQUIRED","RESEARCH_ONLY"];
 const FORBIDDEN_LOCAL_KEYS=new Set(["owner","owners","asking_price","sale_price","price","transaction","transactions","valuation","comparables","utility_capacity_verified","legal_access_verified","entitled"]);
@@ -322,7 +322,10 @@ export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}
 }
 
 if(process.argv[1]===fileURLToPath(import.meta.url)){
-  const result=validateSvartingePrototype(read(scenePath));
+  const scene=read(scenePath);
+  const result=validateSvartingePrototype(scene);
   if(!result.ok){console.error(`Svärtinge 3D prototype FAIL (${result.assertions} assertions)`);result.errors.forEach(e=>console.error(`- ${e}`));process.exitCode=1;}
-  else console.log(`Svärtinge 3D prototype PASS (${result.assertions} assertions; 7 navigation stages; 5 evidence classes)`);
+  /* Counts printed FROM the scene, not typed: this line claimed "7 navigation stages" while the
+     scene carried 8, which is the same class of error the gate exists to catch. */
+  else console.log(`Svärtinge 3D prototype PASS (${result.assertions} assertions; ${scene.navigation.length} navigation stages; ${scene.evidence_classes.length} evidence classes)`);
 }

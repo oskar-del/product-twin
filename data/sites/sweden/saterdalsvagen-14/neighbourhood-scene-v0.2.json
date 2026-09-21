@@ -303,7 +303,7 @@
         "source_commit": "2efbc4c1a1f2053b227de6a1c8d1431c96978827",
         "sha256": "4792a51a9af2b6752f96a529f32221d9c1f350b1af4666d0443425c7b9023513",
         "byte_length": 37451,
-        "read_at": "2026-09-21T20:02:27.426Z"
+        "read_at": "2026-09-21T20:06:45.286Z"
       },
       "patch": {
         "source_repo": "repo-brage (agent/brage-design)",
@@ -311,7 +311,7 @@
         "source_commit": "2efbc4c1a1f2053b227de6a1c8d1431c96978827",
         "sha256": "8faa111262b7af0f31a9315775ee8cdf6be8c12089bf4ed097e8a740ac8498f6",
         "byte_length": 9637,
-        "read_at": "2026-09-21T20:02:27.436Z"
+        "read_at": "2026-09-21T20:06:45.296Z"
       }
     }
   },
@@ -447,6 +447,43 @@
         "zoom": 18.7,
         "pitch": 57.5456,
         "bearing": 223.3155,
+        "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
+        "evidence_effect": "NONE"
+      }
+    },
+    {
+      "id": "LAKE_SIDE_VIEW",
+      "label": "From the lake side",
+      "camera": [
+        -23.717,
+        10.888,
+        -35.196
+      ],
+      "target": [
+        0,
+        4.197,
+        3.5
+      ],
+      "visible_groups": [
+        "TERRAIN",
+        "PLOT",
+        "ROAD",
+        "CONTEXT_BUILDING",
+        "VIEW_DIRECTION",
+        "CONCEPT_BUILDING",
+        "OPENING",
+        "OUTDOOR_DECK",
+        "WINDBREAK"
+      ],
+      "cutaway": false,
+      "live_context_view": {
+        "center_wgs84": [
+          16.0317063331,
+          58.65227310584652
+        ],
+        "zoom": 19,
+        "pitch": 81.6136,
+        "bearing": 31.5044,
         "synchronization": "LOCAL_EAST_UP_NORTH_STAGE_REFERENCE",
         "evidence_effect": "NONE"
       }
