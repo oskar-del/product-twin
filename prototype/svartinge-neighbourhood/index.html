@@ -412,8 +412,8 @@ function suterrangHouse(spec){
      The patch is in the house's own frame (HOUSE_BAR spans x -11..9, z -4..3), so every point is
      shifted by the bar's centre (-1, -0.5) into this group's local frame rather than re-typed.
      The souterrain walks out onto this terrace, so it sits at the lower floor level. */
-  if(spec.builder==='BRAGE'&&window.__housePatch){
-    const els=window.__housePatch.add_elements||[];
+  if(spec.builder==='BRAGE'&&houseSpec&&houseSpec.outdoor){
+    const els=houseSpec.outdoor;
     const SX=1,SZ=0.5;                                  // patch → local: bar centre at (-1,-0.5)
     const deckItem={id:'TERRACE_SOUTH',type:'OUTDOOR_DECK',evidence_class:'CONCEPT',
       label:'South terrace (kvällssol)',source_refs:[spec.src],
@@ -538,8 +538,9 @@ function buildDesignDock(){
    than showing a stale number. */
 async function loadVinkelhusetSpec(){
   const vh=DESIGNS.find(d=>d.id==='VH');if(!vh)return;
-  let spec=null;
-  try{const r=await fetch('../../data/designs/house-v0.4-geometry-spec.json');if(r.ok)spec=await r.json()}catch(e){}
+  /* Same single source as the twin: the scene's design payload, hashed from BRAGE's worktree
+     at build time. No design file is fetched at runtime. */
+  const spec=(data&&data.design)||null;
   const a=spec&&spec.area_summary;
   if(!a){vh.boa='—';vh.gfa='—';vh.footprint='—';vh.storeys='—';
     vh.summary+=' Areas unavailable: BRAGE\'s v0.4 spec could not be read.';
@@ -557,9 +558,7 @@ async function loadVinkelhusetSpec(){
   vh.specVersion=(spec.schema_version||'house-v0.3');
   let condition='';
   if(hasSouterrain){
-    let patch=null;
-    try{const r=await fetch('../../data/designs/house-in-scene-v0.3-patch.json');if(r.ok)patch=await r.json()}catch(e){}
-    const up=(patch&&patch.conditional_upgrades||[]).find(u=>/SOUTERR/i.test(u.id||''));
+    const up=((spec&&spec.conditional_upgrades)||[]).find(u=>/SOUTERR/i.test(u.id||''));
     let fall=null;
     try{const r=await fetch('../../data/sites/sweden/saterdalsvagen-14/terrain-dem-derived-v0.1.json');
         if(r.ok){const t=await r.json();fall=t.plot_footprint&&t.plot_footprint.relief_m}}catch(e){}
@@ -574,7 +573,6 @@ async function loadVinkelhusetSpec(){
   if(window.updateDesignDock&&window.currentDesign===vh)window.updateDesignDock(vh);
 }
 const designDockEl=buildDesignDock();
-loadVinkelhusetSpec();
 function toggleDesignDock(stageId){designDockEl.classList.toggle('hidden',!['CONCEPT_HOUSE_ON_PLOT','BUILDING_ORBIT'].includes(stageId));}
 // ---- Authoritative boundary (registered property division) ----
 // Drawn only when the ingest has produced the AUTHORITATIVE clip; inert otherwise.
@@ -725,7 +723,11 @@ function drawOfficialBuildings(bd){
     });
   });
 }
-try{[data,providers,streetContext,terrainMetadata,officialGeometrySources,aerialHistory]=await Promise.all([fetch(DATA),fetch(PROVIDERS),fetch(STREET),fetch(TERRAIN_METADATA),fetch(OFFICIAL_GEOMETRY),fetch(AERIAL_HISTORY)]).then(async rs=>{for(const r of rs)if(!r.ok)throw new Error(`${r.status} ${r.statusText}`);return Promise.all(rs.map(r=>r.json()))});data.elements.forEach(buildElement);buildRealismDecor();drapeMunicipalOrtho();drapeWideContext();mountAerialHistory();makeSteps();setSun();try{const _r=await fetch(DERIVED_BOUNDARY);if(_r.ok){const _pd=await _r.json();if(_pd&&_pd.evidence_class==='AUTHORITATIVE'&&_pd.subject_rings_local?.length){propertyDivision=_pd;drawAuthoritativeBoundary(_pd);const _prov=byId.get('PLOT_54_28');if(_prov){_prov.userData.designHidden=true;if(_prov.userData.label)_prov.userData.label.visible=false;}/* the authoritative clip supersedes the indicative municipal-map trace + its label */}}}catch(_e){}
+/* Cache-bust every receipt fetch. A rebuilt scene served stale from cache is silent and
+   convincing — the twin renders happily against yesterday's numbers. Seen exactly that
+   while wiring the design payload: the page kept a cached scene with no design in it. */
+const _cb=`?v=${Date.now()}`;
+try{[data,providers,streetContext,terrainMetadata,officialGeometrySources,aerialHistory]=await Promise.all([fetch(DATA+_cb),fetch(PROVIDERS+_cb),fetch(STREET+_cb),fetch(TERRAIN_METADATA+_cb),fetch(OFFICIAL_GEOMETRY+_cb),fetch(AERIAL_HISTORY+_cb)]).then(async rs=>{for(const r of rs)if(!r.ok)throw new Error(`${r.status} ${r.statusText}`);return Promise.all(rs.map(r=>r.json()))});data.elements.forEach(buildElement);buildRealismDecor();drapeMunicipalOrtho();drapeWideContext();mountAerialHistory();makeSteps();setSun();try{const _r=await fetch(DERIVED_BOUNDARY);if(_r.ok){const _pd=await _r.json();if(_pd&&_pd.evidence_class==='AUTHORITATIVE'&&_pd.subject_rings_local?.length){propertyDivision=_pd;drawAuthoritativeBoundary(_pd);const _prov=byId.get('PLOT_54_28');if(_prov){_prov.userData.designHidden=true;if(_prov.userData.label)_prov.userData.label.visible=false;}/* the authoritative clip supersedes the indicative municipal-map trace + its label */}}}catch(_e){}
 try{const _rb=await fetch(DERIVED_BUILDINGS);if(_rb.ok){const _bd=await _rb.json();if(_bd&&_bd.buildings?.length){drawOfficialBuildings(_bd);/* authoritative footprints supersede the OSM-derived boxes */root.traverse(o=>{if(o.userData?.item?.id&&o.userData.item.id.startsWith('OSM_B'))o.userData.designHidden=true;if(o.userData?.item?.type==='ROAD')o.userData.designHidden=true;});/* hide the OSM building boxes+roofs (superseded by authoritative byggnad) AND the road ribbon meshes: the dark asphalt ribbons read as ugly black bars against the aerial, which already shows every real road photographically. The road-NAME labels (roadLabels group, anchored at each road's nearest point to the plot) STAY visible so Säterdalsvägen etc. can still be checked against Google. */}}}catch(_e){}/* ORIENTATION FIX (2026-08-28): the scene frame is x=EAST, z=NORTH. Rendered top-down/oblique that
    is a LEFT-HANDED (mirrored) view of reality — Säterdalsvägen came out WEST of the plot when it is
    really EAST (verified: nearest road to the 54:28 boundary is Säterdalsvägen at 10.7 m, on the wrong
@@ -737,10 +739,9 @@ try{const _rb=await fetch(DERIVED_BUILDINGS);if(_rb.ok){const _bd=await _rb.json
    the card's own model literals, which is how the bar ended up with its ridge across the SHORT
    axis: a 30° gable spanning the 20 m width rises 5.93 m, where the spec's 30° over the 7 m
    depth rises 2.02 m to ridge_Y 5.02. Reading the spec removes the guess. */
-try{const _r=await fetch('../../data/designs/house-v0.4-geometry-spec.json');
-    if(_r.ok)houseSpec=await _r.json();}catch(_e){}
-try{const _p=await fetch('../../data/designs/house-in-scene-v0.3-patch.json');
-    if(_p.ok)window.__housePatch=await _p.json();}catch(_e){}
+/* BRAGE's design comes from the scene payload, hashed at build time from their worktree.
+   Rule 14: no second copy of a supplier's spec is shipped, so there is nothing here to drift. */
+houseSpec=(data&&data.design)||null;window.__housePatch=houseSpec;await loadVinkelhusetSpec();
 setMode('REALISTIC');/* land in REALISTIC (ortho-draped) — INTELLIGENCE is one click away; the flat evidence view is the wrong first impression */stepTo(0,true);mountDesign(DESIGNS.find(d=>d.id===DEFAULT_DESIGN_ID)||DESIGNS.find(d=>d.id==='BJ')||DESIGNS[0]);setSun();loading.remove();window.__twinReady=true;
 /* Debug accessor for verification: what the mounted design actually contains, by element type.
    Defined at the END of init — an earlier build crashed on a debug hook that touched module

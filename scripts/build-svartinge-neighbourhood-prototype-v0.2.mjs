@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import {execFileSync} from "node:child_process";
 import {fileURLToPath} from "node:url";
 import {deriveLiveContextView} from "../prototype/svartinge-neighbourhood/geographic-alignment.mjs";
 
@@ -23,24 +24,85 @@ const round=(n,d=4)=>Number(n.toFixed(d));
  * re-derived, from the box that has to fit. Deriving it here rather than at runtime keeps
  * live_context_view consistent, because that is derived from the same camera a few lines later.
  */
-function designBoundingBox(){
-  const patch=read("data/designs/house-in-scene-v0.3-patch.json");
-  const spec=read("data/designs/house-v0.4-geometry-spec.json");
-  const foot=[];
-  for(const el of patch.add_elements||[]){
-    const pts=el.geometry&&el.geometry.points_xz;
-    if(pts&&["HOUSE_BAR","HOUSE_WING_N"].includes(el.id))foot.push(...pts);
-  }
-  if(!foot.length)throw new Error("no HOUSE_BAR/HOUSE_WING_N footprint in the vendored patch");
-  const xs=foot.map(p=>p[0]),zs=foot.map(p=>p[1]);
-  const top=Math.max(spec.roof?.ridge_Y??0,spec.wing_roof?.ridge_Y??0);
-  if(!top)throw new Error("no ridge height in the vendored spec");
-  return {minX:Math.min(...xs),maxX:Math.max(...xs),minZ:Math.min(...zs),maxZ:Math.max(...zs),
-          height:top,source:`${spec.spec_version||"house-v0.4"} + scene patch footprints`};
+/**
+ * BRAGE's design, read from BRAGE's worktree at build time.
+ *
+ * Rule 14: a second copy is the thing that goes stale. Nothing under data/designs is shipped
+ * any more — the spec and its scene patch are read from repo-brage as bytes, hashed, and only
+ * the FACTS the twin needs are emitted into the scene with that provenance attached. The
+ * prototype then reads the scene it already loads, so no design file is fetched at runtime and
+ * there is no copy to drift.
+ *
+ * The version is not asserted here (rule 15): the build takes the newest spec it finds and
+ * records which one it read. Contract assertions live in the validator.
+ */
+const BRAGE_GEOMETRY="../repo-brage/OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry";
+
+function brageCommit(){
+  try{
+    return execFileSync("git",["-C",path.join(root,"../repo-brage"),"rev-parse","HEAD"],
+      {encoding:"utf8"}).trim();
+  }catch{ return null; }
 }
 
-function frameDesignStages(navigation){
-  const box=designBoundingBox();
+function readBrage(filename){
+  const full=path.join(root,BRAGE_GEOMETRY,filename);
+  const bytes=fs.readFileSync(full);                       // the exact bytes we hash and parse
+  return {
+    json:JSON.parse(bytes.toString("utf8")),
+    provenance:{
+      source_repo:"repo-brage (agent/brage-design)",
+      source_path:`${BRAGE_GEOMETRY}/${filename}`.replace("../",""),
+      source_commit:brageCommit(),
+      sha256:crypto.createHash("sha256").update(bytes).digest("hex"),
+      byte_length:bytes.length,
+      read_at:new Date().toISOString()
+    }
+  };
+}
+
+function newestHouseSpec(){
+  const dir=path.join(root,BRAGE_GEOMETRY);
+  const specs=fs.readdirSync(dir).filter(f=>/^house-v\d+\.\d+-geometry-spec\.json$/.test(f)).sort();
+  if(!specs.length)throw new Error(`no house-vN.N-geometry-spec.json in ${dir}`);
+  return readBrage(specs[specs.length-1]);
+}
+
+function designPayload(){
+  const spec=newestHouseSpec();
+  const patch=readBrage("house-in-scene-v0.3-patch.json");
+  const footprints={};
+  for(const el of patch.json.add_elements||[]){
+    if(["HOUSE_BAR","HOUSE_WING_N"].includes(el.id)&&el.geometry?.points_xz)
+      footprints[el.id]=el.geometry.points_xz;
+  }
+  const outdoor=(patch.json.add_elements||[])
+    .filter(el=>el.id==="TERRACE_SOUTH"||String(el.id).startsWith("VINDFICKA"))
+    .map(el=>({id:el.id,type:el.id==="TERRACE_SOUTH"?"OUTDOOR_DECK":"WINDBREAK",
+               label:el.label,geometry:el.geometry}));
+  return {
+    spec_version:spec.json.spec_version||null,
+    roof:spec.json.roof||null,
+    wing_roof:spec.json.wing_roof||null,
+    area_summary:spec.json.area_summary||null,
+    conditional_upgrades:patch.json.conditional_upgrades||null,
+    footprints,
+    outdoor,
+    provenance:{spec:spec.provenance,patch:patch.provenance}
+  };
+}
+
+function designBoundingBox(design){
+  const foot=[...(design.footprints.HOUSE_BAR||[]),...(design.footprints.HOUSE_WING_N||[])];
+  if(!foot.length)throw new Error("no HOUSE_BAR/HOUSE_WING_N footprint in BRAGE's scene patch");
+  const xs=foot.map(p=>p[0]),zs=foot.map(p=>p[1]);
+  const top=Math.max(design.roof?.ridge_Y??0,design.wing_roof?.ridge_Y??0);
+  if(!top)throw new Error("no ridge height in BRAGE's spec");
+  return {minX:Math.min(...xs),maxX:Math.max(...xs),minZ:Math.min(...zs),maxZ:Math.max(...zs),height:top};
+}
+
+function frameDesignStages(navigation,design){
+  const box=designBoundingBox(design);
   const cx=(box.minX+box.maxX)/2, cz=(box.minZ+box.maxZ)/2, cy=box.height/2;
   const halfDiagonal=Math.hypot(box.maxX-box.minX,box.maxZ-box.minZ,box.height)/2;
   const fovRad=45*Math.PI/180;                       // the viewer's vertical fov
@@ -178,7 +240,8 @@ function buildScene(){
     {id:"ENTER_BUILDING",label:"Enter building",camera:[-3.5,2.1,0.7],target:[3,1.6,-0.5],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE"],cutaway:true},
     {id:"ROOM",label:"Room",camera:[5.1,1.75,1.1],target:[2.7,1.45,-1.1],visible_groups:["CONCEPT_BUILDING","OPENING","ROOM","FURNITURE","VIEW_DIRECTION"],cutaway:true}
   ];
-  const framing=frameDesignStages(navigation);
+  const design=designPayload();
+  const framing=frameDesignStages(navigation,design);
   drapeOnTerrain(elements,navigation);
   navigation.forEach(step=>{step.live_context_view=deriveLiveContextView({originWgs84:[lon,lat],camera:step.camera,target:step.target,zoom:liveZoom[step.id]});});
 
@@ -198,6 +261,10 @@ function buildScene(){
     evidence_classes:["AUTHORITATIVE","INDICATIVE","DERIVED","REPORTED_UNVERIFIED","CONCEPT"],
     measurements:{municipal_map_area_m2:{value:municipalArea,evidence_class:"INDICATIVE",source_ref:"FINDING_SE_NOKA_PROPERTY_LOCATOR_CONFIRMED"},listing_area_m2:{value:1939,evidence_class:"REPORTED_UNVERIFIED",source_ref:"PROJECT_SE_SATERDALSVAGEN14"},derived_trace_area_m2:{value:derivedArea,evidence_class:"DERIVED",method:"Visual quadrilateral trace scaled uniformly to municipal-map area"}},
     legal_claim_policy:{visualisation_allowed:true,concept_design_allowed:true,sun_view_navigation_allowed:true,blocked_claims:["LEGAL_BOUNDARY","REGISTERED_AREA","ENTITLEMENT","BUILDABLE_ENVELOPE","LEGAL_ACCESS","UTILITY_CAPACITY","SURVEYED_TERRAIN","FINISHED_FLOOR_LEVEL"],rule:"Open gates block authoritative legal/design-basis claims, not explicitly labelled concept visualization."},
+    /* BRAGE's design, read from their worktree at build time and carried here with the hash of
+       the exact bytes read. The prototype consumes THIS — it fetches no design file — so there
+       is no second copy to go stale (rule 14). */
+    design,
     navigation,
     elements,
     studies:{solar:{evidence_class:"DERIVED",coordinate:[lon,lat],date:"2026-06-21",interactive_hour_range:[6,20],limitations:["Analytical sun direction on derived context only."]},views:{evidence_class:"REPORTED_UNVERIFIED",direction_id:"VIEW_GLAN",limitations:["Seller-reported view; no verified visibility analysis."]}},

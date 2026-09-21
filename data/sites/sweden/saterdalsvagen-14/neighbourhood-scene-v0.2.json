@@ -93,6 +93,228 @@
     ],
     "rule": "Open gates block authoritative legal/design-basis claims, not explicitly labelled concept visualization."
   },
+  "design": {
+    "spec_version": "brage-house-geometry/v0.4",
+    "roof": {
+      "type": "GABLE",
+      "pitch_deg": 30,
+      "ridge_axis": "EAST_WEST",
+      "ridge_xz": [
+        [
+          -11,
+          -0.5
+        ],
+        [
+          9,
+          -0.5
+        ]
+      ],
+      "ridge_at_z": -0.5,
+      "extent_x": [
+        -11.5,
+        9.5
+      ],
+      "extent_z": [
+        -4.5,
+        3.5
+      ],
+      "span_m": 7,
+      "wall_plate_Y": 3,
+      "eaves_overhang_m": 0.5,
+      "knee_wall_m": 1.1,
+      "covering": "STANDING_SEAM_SHEET_METAL",
+      "note": "30° both planes. Supersedes the asymmetric-ridge sketch in 04-WINNER-DEVELOPED.md; the south plane is still the PV-ready plane, it is now the same pitch as the north.",
+      "ridge_height_above_plate_m": 2.02,
+      "ridge_Y": 5.02,
+      "eaves_Y": 3
+    },
+    "wing_roof": {
+      "type": "GABLE",
+      "pitch_deg": 15,
+      "ridge_axis": "EAST_WEST",
+      "ridge_at_z": 7,
+      "ridge_xz": [
+        [
+          3,
+          7
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "ridge_Y": 4.07,
+      "wall_plate_Y": 3,
+      "eaves_Y": 3,
+      "span_m": 8,
+      "eaves_overhang_m": 0.4,
+      "extent_x": [
+        2.6,
+        11.4
+      ],
+      "extent_z": [
+        2.6,
+        11.4
+      ],
+      "covering": "STANDING_SEAM_SHEET_METAL",
+      "supersedes": "v0.3 WING_ROOF — a 15° MONOPITCH falling north, which passed through the rooms below it",
+      "note": "Cold wing. Its own gable keeps the eaves level with the bar's and the ridge below it, so the wing stays subordinate without a 4.9 m eave."
+    },
+    "area_summary": {
+      "heated_m2_excl_souterrain": 206.4,
+      "heated_m2_incl_souterrain": 276.4,
+      "cold_m2": 40,
+      "ground_footprint_m2": 204,
+      "by_storey": {
+        "GROUND": 204,
+        "UPPER": 42.4,
+        "SOUTERRAIN": 70
+      },
+      "brief_reconciliation": {
+        "brief_figure_m2": 210,
+        "computed_m2": 206.4,
+        "difference_m2": -3.6,
+        "explanation": [
+          "The 210 m² in the sprint brief is not reproduced by the geometry, and has not been adjusted to fit.",
+          "Computed heated area excludes the garage (cold) and counts the upper floor only where headroom clears 1.9 m under the 30° roof, which is narrower than its 7 m structural span.",
+          "The earlier presentation quoted 'markplan ~140 m²', which is the bar alone; the wing's heated rooms (entry hall + utility/WC/laundry) were not in that figure.",
+          "It also quoted 'garage ~30 m²' where the v0.2 wing footprint gives 40 m².",
+          "Resolution is Brain's: either the brief's 210 is superseded by this computation, or the room program must grow by the stated difference."
+        ]
+      }
+    },
+    "conditional_upgrades": [
+      {
+        "id": "WEST_SOUTERRANG",
+        "condition": "DTM_1M shows south fall >= ~2.5 m across HOUSE_BAR footprint",
+        "effect": "Drop Glanrummet/west social end to a walk-out lower level onto TERRACE_SOUTH; add lower-level slab below Y=0. Do NOT model until DTM closes."
+      }
+    ],
+    "footprints": {
+      "HOUSE_BAR": [
+        [
+          -11,
+          -4
+        ],
+        [
+          9,
+          -4
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          -11,
+          3
+        ]
+      ],
+      "HOUSE_WING_N": [
+        [
+          3,
+          3
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          3,
+          11
+        ]
+      ]
+    },
+    "outdoor": [
+      {
+        "id": "TERRACE_SOUTH",
+        "type": "OUTDOOR_DECK",
+        "label": "South terrace (kvällssol)",
+        "geometry": {
+          "primitive": "EXTRUDED_POLYGON",
+          "points_xz": [
+            [
+              -11,
+              -4
+            ],
+            [
+              6,
+              -4
+            ],
+            [
+              6,
+              -12
+            ],
+            [
+              -11,
+              -12
+            ]
+          ],
+          "thickness_m": 0.15,
+          "top_Y": 0.05
+        }
+      },
+      {
+        "id": "VINDFICKA_SW_0",
+        "type": "WINDBREAK",
+        "label": "SW glazed windbreak + planting (the grafted 'heart')",
+        "geometry": {
+          "primitive": "WALL_SEGMENT",
+          "from_xz": [
+            -11,
+            -9
+          ],
+          "to_xz": [
+            -6,
+            -9
+          ],
+          "height_m": 2,
+          "thickness_m": 0.12,
+          "material": "GLASS_ON_TIMBER_POSTS"
+        }
+      },
+      {
+        "id": "VINDFICKA_SW_1",
+        "type": "WINDBREAK",
+        "label": "SW glazed windbreak + planting (the grafted 'heart')",
+        "geometry": {
+          "primitive": "WALL_SEGMENT",
+          "from_xz": [
+            -11,
+            -9
+          ],
+          "to_xz": [
+            -11,
+            -4
+          ],
+          "height_m": 2,
+          "thickness_m": 0.12,
+          "material": "GLASS_ON_TIMBER_POSTS"
+        }
+      }
+    ],
+    "provenance": {
+      "spec": {
+        "source_repo": "repo-brage (agent/brage-design)",
+        "source_path": "repo-brage/OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-v0.4-geometry-spec.json",
+        "source_commit": "2efbc4c1a1f2053b227de6a1c8d1431c96978827",
+        "sha256": "4792a51a9af2b6752f96a529f32221d9c1f350b1af4666d0443425c7b9023513",
+        "byte_length": 37451,
+        "read_at": "2026-09-21T20:02:27.426Z"
+      },
+      "patch": {
+        "source_repo": "repo-brage (agent/brage-design)",
+        "source_path": "repo-brage/OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-in-scene-v0.3-patch.json",
+        "source_commit": "2efbc4c1a1f2053b227de6a1c8d1431c96978827",
+        "sha256": "8faa111262b7af0f31a9315775ee8cdf6be8c12089bf4ed097e8a740ac8498f6",
+        "byte_length": 9637,
+        "read_at": "2026-09-21T20:02:27.436Z"
+      }
+    }
+  },
   "navigation": [
     {
       "id": "NEIGHBOURHOOD_VIEW",

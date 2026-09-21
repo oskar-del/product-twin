@@ -202,7 +202,53 @@ export function validateTerrainSourceMetadata(terrain,{repoRoot=root}={}){
 
 export function validateSvartingePrototype(scene,{checkFiles=true,repoRoot=root}={}){
   const errors=[];let assertions=0;const check=(ok,msg)=>{assertions++;if(!ok)errors.push(msg);};
-  exactKeys(scene,["scene_version","entity_type","scene_id","generated_at","subject","coordinate_system","source_bindings","evidence_classes","measurements","legal_claim_policy","navigation","elements","studies","prototype","project_status"],"scene",check);
+  /* The supplier's design, asserted as a CONTRACT and not as a snapshot (rule 15): what the twin
+     needs must be present and coherent, but a version string or a particular roof shape is
+     BRAGE's business. A supplier fixing their own geometry must not fail this gate. */
+  const design=scene.design;
+  check(!!design,"design: payload missing from the scene");
+  if(design){
+    const version=/v(\d+)\.(\d+)/.exec(design.spec_version||"");
+    check(!!version,`design: spec_version does not carry a version (${design.spec_version})`);
+    if(version){
+      const [major,minor]=[Number(version[1]),Number(version[2])];
+      check(major>0||minor>=3,`design: spec older than v0.3 (${design.spec_version})`);
+    }
+    check(!!design.roof&&!!design.wing_roof,"design: both the bar and the wing must carry a roof");
+    for(const [name,roof] of [["roof",design.roof],["wing_roof",design.wing_roof]]){
+      if(!roof)continue;
+      check(typeof roof.pitch_deg==="number"&&roof.pitch_deg>0,`design.${name}: no pitch`);
+      check(typeof roof.ridge_Y==="number"&&typeof roof.wall_plate_Y==="number",
+        `design.${name}: no ridge/plate height`);
+      if(typeof roof.ridge_Y==="number"&&typeof roof.wall_plate_Y==="number"){
+        check(roof.ridge_Y>roof.wall_plate_Y,
+          `design.${name}: ridge ${roof.ridge_Y} is not above the plate ${roof.wall_plate_Y}`);
+        if(typeof roof.span_m==="number"){
+          const rise=(roof.span_m/2)*Math.tan(roof.pitch_deg*Math.PI/180);
+          check(Math.abs((roof.ridge_Y-roof.wall_plate_Y)-rise)<0.05,
+            `design.${name}: ridge height does not follow from pitch and span `+
+            `(${(roof.ridge_Y-roof.wall_plate_Y).toFixed(2)} vs ${rise.toFixed(2)})`);
+        }
+      }
+    }
+    if(design.roof&&design.wing_roof)
+      check(design.wing_roof.ridge_Y<=design.roof.ridge_Y,
+        "design: the wing ridge must not top the bar ridge");
+    check(!!design.area_summary&&typeof design.area_summary.heated_m2_excl_souterrain==="number",
+      "design: no heated area");
+    check(!!design.footprints&&!!design.footprints.HOUSE_BAR,"design: no bar footprint");
+    const prov=design.provenance||{};
+    for(const which of ["spec","patch"]){
+      const pr=prov[which];
+      check(!!pr&&typeof pr.sha256==="string"&&pr.sha256.length===64,
+        `design.provenance.${which}: no sha256 of the bytes read`);
+      check(!!pr&&typeof pr.byte_length==="number"&&pr.byte_length>0,
+        `design.provenance.${which}: no byte length`);
+      check(!!pr&&typeof pr.source_commit==="string"&&pr.source_commit.length>=7,
+        `design.provenance.${which}: no source commit`);
+    }
+  }
+  exactKeys(scene,["scene_version","entity_type","scene_id","generated_at","subject","coordinate_system","source_bindings","evidence_classes","measurements","legal_claim_policy","design","navigation","elements","studies","prototype","project_status"],"scene",check);
   check(scene.scene_version==="svartinge-neighbourhood-scene/v0.2","scene version drift");
   check(scene.subject?.working_property_identity==="SVÄRTINGE 54:28","working identity drift");
   check(scene.subject?.identity_scope==="MUNICIPAL_ADDRESS_TO_PROPERTY_OBSERVATION_NOT_PROPERTY_REGISTER","identity scope promoted");
