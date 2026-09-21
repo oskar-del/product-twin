@@ -41,6 +41,8 @@
 
 - Spatial items 1–3 (4576f4fae7, c01608a0fe, a502332b07), Brain-verified by CDP capture: bar gable now spans the 7 m depth with ridge E–W (Brain's 09-16 ridge:'width' literal had it across the short axis, rising 5.93 m — Brain's bug); wing own 15° gable per v0.4; terrace + vindficka from the scene patch; cameras derived at build; DTM hillshade in INTELLIGENCE. Open on the VH card: inherited Eksjöhus limitation text; top chip still 1,938.2 municipal → must be computed 1 936,8; no south-facing stage. Capture rule for WebGL pages: CDP + readiness flag (repo-platform/scripts/shoot.mjs), never --screenshot.
 
+- Spatial 9d81010cdc: vendored specs DELETED; build reads BRAGE's newest spec + patch from repo-brage as bytes, records provenance, emits only needed facts into scene.design; validator asserts contract (7 mutations proven), 861 assertions. Rule 16 (Spatial): STALE-CACHE — receipt fetches on static hosts had no cache-busting; a rebuilt scene served stale rendered perfectly with the design silently missing. Every fetch carries a content-derived buster; every surface exposes a counts probe. Platform checking its bundles.
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
