@@ -78,11 +78,42 @@ const argValue = flag => {
 const assetBase = argValue("--asset-base") ?? "/assets";
 const outPath = path.resolve(root, argValue("--out") ?? "dist/twins/rooms.html");
 
+/**
+ * Inline every GLB the scene names, as the twin bundler already does.
+ *
+ * Rule 16: a surface that fetches assets from a static host at runtime can be
+ * served a stale cache and still render perfectly — Spatial's Svärtinge twin
+ * did exactly that, terrace silently gone, console clean. This page was
+ * fetching 33 GLBs by path with no cache-buster. Inlining removes the class of
+ * bug rather than papering over it with a query string.
+ */
+function inlineAssets(doc) {
+  const report = { inlined: 0, bytes: 0, missing: [] };
+  for (const element of doc.elements ?? []) {
+    const assetPath = element.geometry?.asset_path;
+    if (element.geometry?.primitive !== "GLTF_ASSET" || !assetPath) continue;
+    if (/^(data:|https?:)/.test(assetPath)) continue;
+
+    const abs = [root, path.resolve(root, "../repo-avatar-factory")]
+      .map(base => path.resolve(base, assetPath))
+      .find(candidate => fs.existsSync(candidate));
+    if (!abs) { report.missing.push(`${element.id} → ${assetPath}`); continue; }
+
+    const bytes = fs.readFileSync(abs);
+    element.geometry.asset_path = `data:model/gltf-binary;base64,${bytes.toString("base64")}`;
+    element.geometry.asset_source_path = assetPath;
+    report.inlined++;
+    report.bytes += bytes.length;
+  }
+  return report;
+}
+
 // ── load and verify every look before writing a page that claims them ────────
 const looks = LOOKS.map(look => {
   const doc = JSON.parse(fs.readFileSync(path.join(root, look.scene), "utf8"));
   const parsed = parseScene(doc);
-  return { ...look, doc, stats: summarise(parsed) };
+  const assets = inlineAssets(doc);
+  return { ...look, doc, assets, stats: summarise(parsed) };
 });
 
 const workDir = path.join(root, ".runtime", "rooms-surface");
@@ -181,6 +212,31 @@ document.querySelectorAll("[data-look]").forEach(b =>
 
 globalThis.loadLook = load;
 
+// Counts probe (Brain rule 16): a stale cached build renders perfectly and says
+// nothing. These numbers are comparable against the build log per look.
+globalThis.__twinCounts = () => {
+  const out = {};
+  for (const l of LOOKS) {
+    const els = l.doc.elements ?? [];
+    const shop = els.filter(e => e.commerce);
+    const tiers = {};
+    for (const e of shop) tiers[e.commerce.dimension_tier ?? "NONE"] = (tiers[e.commerce.dimension_tier ?? "NONE"] ?? 0) + 1;
+    out[l.id] = {
+      scene_id: l.doc.scene_id,
+      generated_at: l.doc.generated_at,
+      elements: els.length,
+      shoppable: shop.length,
+      tracked: shop.filter(e => /[?&]as=/.test(e.commerce.buy_url ?? "")).length,
+      external_assets: els.filter(e => e.geometry?.primitive === "GLTF_ASSET"
+        && !String(e.geometry?.asset_path ?? "").startsWith("data:")).length,
+      dimension_tiers: tiers,
+      authoritative_chips: shop.filter(e => e.commerce.dimension_evidence === "AUTHORITATIVE").length
+    };
+  }
+  out.current_look = current;
+  return out;
+};
+
 // Deep link: #look=<id>&open=<elementId> selects a look and opens one product.
 // Gives a shareable link to a specific piece, and makes a headless screenshot
 // reproducible without scripting a click at fixed pixel coordinates.
@@ -266,4 +322,5 @@ fs.writeFileSync(outPath, html);
 console.log(`wrote ${path.relative(root, outPath)}  ${(html.length / 1024).toFixed(0)} KB`);
 for (const l of looks) {
   console.log(`  ${l.label.padEnd(26)} ${String(l.stats.elements).padStart(2)} elements · ${l.stats.shoppable} shoppable · ${l.stats.tracked} tracked · ${l.stats.total}`);
+  console.log(`  ${" ".repeat(26)} ${l.assets.inlined} GLB inlined (${(l.assets.bytes / 1024).toFixed(0)} KB)${l.assets.missing.length ? ` · ${l.assets.missing.length} MISSING: ${l.assets.missing.join(", ")}` : ""}`);
 }

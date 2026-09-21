@@ -151,22 +151,26 @@ export async function bundleTwinScene({scenePath, outPath, title, eyebrow, minif
     const assetPath = element.geometry?.asset_path;
     if (element.geometry?.primitive !== "GLTF_ASSET" || !assetPath) continue;
     if (/^(data:|https?:)/.test(assetPath)) continue;
-    const abs = path.resolve(root, assetPath);
-    if (!fs.existsSync(abs)) { assetReport.missing.push(`${element.id} → ${assetPath}`); continue; }
-    // Measure the mesh that will actually render. A dimension read off the GLB
-    // is AUTHORITATIVE for what the viewer shows; a dimension parsed from a
-    // merchant title is at best INDICATIVE. The panel needs to tell them apart,
-    // and only this side of the pipeline can measure.
+    // Assets live in Avatar's checkout as often as in this one. Resolving only
+    // under `root` silently dropped a GLB and the room rendered a placeholder
+    // sphere in its place — a bundle that is "self-contained" because it left
+    // something out is the worst of both.
+    const abs = [root, path.resolve(root, "../repo-avatar-factory")]
+      .map(base => path.resolve(base, assetPath))
+      .find(candidate => fs.existsSync(candidate));
+    if (!abs) { assetReport.missing.push(`${element.id} → ${assetPath}`); continue; }
+    // Measure the mesh that will actually render, and say ONLY that. The earlier
+    // version called this AUTHORITATIVE on the reasoning that a measured mesh
+    // beats a parsed title — but Avatar established that 3,645 of Newport's
+    // 3,673 proxies are category-default envelopes, so this measurement is
+    // exact about a guess. It describes the RENDER, not the product, and it may
+    // never outrank the tier the twin carries.
     const measured = glbBounds(abs);
     if (measured) {
       element.geometry.measured_bounds_m = measured.size;
       element.geometry.dimensions_label = boundsLabelMm(measured.size);
-      element.geometry.dimension_evidence = "AUTHORITATIVE";
-      element.geometry.dimension_source = "Measured from the GLB POSITION accessors";
+      element.geometry.rendered_size_source = "Measured from the GLB POSITION accessors — describes the mesh on screen, not the product";
       assetReport.measured++;
-    } else {
-      element.geometry.dimension_evidence = "INDICATIVE";
-      element.geometry.dimension_source = "Catalog title or category default — mesh not measurable";
     }
 
     const bytes = fs.readFileSync(abs);
@@ -203,6 +207,30 @@ try {
   // is hidden by this page's CSS. onElementOpen is the engine's existing seam.
   const roomPanel = createRoomPanel({mount: stage});
   globalThis.roomPanel = roomPanel;
+  // Counts probe (Brain rule 16). A stale cached build renders perfectly and
+  // lies quietly — Spatial's Svärtinge twin served a cached scene with the
+  // terrace silently gone and a clean console. Numbers are catchable where a
+  // screenshot is not: compare these against the build log.
+  globalThis.__twinCounts = () => {
+    const els = sceneDocument.elements ?? [];
+    const shoppable = els.filter(e => e.commerce);
+    const tiers = {};
+    for (const e of shoppable) tiers[e.commerce.dimension_tier ?? "NONE"] = (tiers[e.commerce.dimension_tier ?? "NONE"] ?? 0) + 1;
+    return {
+      scene_id: sceneDocument.scene_id,
+      generated_at: sceneDocument.generated_at,
+      elements: els.length,
+      shoppable: shoppable.length,
+      tracked: shoppable.filter(e => /[?&]as=/.test(e.commerce.buy_url ?? "")).length,
+      inlined_assets: els.filter(e => String(e.geometry?.asset_path ?? "").startsWith("data:")).length,
+      external_assets: els.filter(e => e.geometry?.primitive === "GLTF_ASSET"
+        && !String(e.geometry?.asset_path ?? "").startsWith("data:")).length,
+      dimension_tiers: tiers,
+      authoritative_chips: shoppable.filter(e => e.commerce.dimension_evidence === "AUTHORITATIVE").length,
+      stages: (sceneDocument.navigation ?? []).length
+    };
+  };
+
   globalThis.twinViewer = await createTwinViewer({
     mount: stage, sceneDocument, brand: BRAND, assetBasePath: ASSET_BASE,
     stageBackground: INK_STAGE ? 0x101916 : null,
