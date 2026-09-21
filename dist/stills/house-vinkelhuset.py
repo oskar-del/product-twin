@@ -16,10 +16,10 @@ sc.render.use_stamp = True
 sc.render.use_stamp_note = True
 for _f in ('use_stamp_time','use_stamp_date','use_stamp_render_time','use_stamp_frame','use_stamp_scene','use_stamp_camera','use_stamp_filename','use_stamp_lens','use_stamp_marker'):
     if hasattr(sc.render, _f): setattr(sc.render, _f, False)
-sc.render.stamp_note_text = 'VISUALIZATION  ·  Vinkelhuset mot Glan — whole-house concept model  ·  CONCEPT design — not a survey, not a built house  ·  Rendered horizon is not a view claim'
-sc.render.stamp_font_size = 22
+sc.render.stamp_note_text = 'VISUALIZATION  ·  Vinkelhuset mot Glan  ·  CONCEPT, not a survey  ·  Rendered horizon is not a view claim'
+sc.render.stamp_font_size = 16
 sc.render.use_stamp_labels = False
-sc.render.stamp_background = (0, 0, 0, 0.55)
+sc.render.stamp_background = (0, 0, 0, 0.72)
 sc.render.stamp_foreground = (1, 1, 1, 1)
 sc.view_settings.view_transform = 'AgX'
 sc.view_settings.look = 'AgX - Base Contrast'
@@ -225,7 +225,8 @@ box('room_tech_store_w2_p0', (-2.0000, 3.0000, -1.3000), (2.0000, 0.2500, 2.4000
 box('room_tech_store_w3_p0', (-3.0000, -0.5000, -1.3000), (7.0000, 0.2500, 2.4000), -90, (0.740, 0.710, 0.660))
 quad('roof_gable_south', [(-11.5000, -0.5000, 5.0200), (9.5000, -0.5000, 5.0200), (-11.5000, -4.5000, 2.7113), (9.5000, -4.5000, 2.7113)], (0.260, 0.270, 0.270))
 quad('roof_gable_north', [(-11.5000, -0.5000, 5.0200), (9.5000, -0.5000, 5.0200), (-11.5000, 3.5000, 2.7113), (9.5000, 3.5000, 2.7113)], (0.260, 0.270, 0.270))
-quad('roof_wing_mono', [(2.6000, 2.6000, 3.0000), (11.4000, 2.6000, 3.0000), (2.6000, 11.4000, 0.6420), (11.4000, 11.4000, 0.6420)], (0.260, 0.270, 0.270))
+quad('roof_wing_south', [(2.6000, 7.0000, 4.0700), (11.4000, 7.0000, 4.0700), (2.6000, 2.6000, 3.0000), (11.4000, 2.6000, 3.0000)], (0.260, 0.270, 0.270))
+quad('roof_wing_north', [(2.6000, 7.0000, 4.0700), (11.4000, 7.0000, 4.0700), (2.6000, 11.4000, 3.0000), (11.4000, 11.4000, 3.0000)], (0.260, 0.270, 0.270))
 
 # Environment
 w = bpy.data.worlds.new('W'); sc.world = w; w.use_nodes = True

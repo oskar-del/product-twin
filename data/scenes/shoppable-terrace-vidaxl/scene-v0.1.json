@@ -2,7 +2,7 @@
   "scene_version": "twin-scene/v0.1",
   "entity_type": "ShoppableRoomSceneExport",
   "scene_id": "SCENE_SHOPPABLE_TERRACE_VIDAXL_V01",
-  "generated_at": "2026-09-20T21:01:13.215Z",
+  "generated_at": "2026-09-21T19:49:21.075Z",
   "subject": {
     "label": "vidaXL Terrace — shoppable, channel-tracked",
     "identity_evidence_class": "CONCEPT",
@@ -201,50 +201,47 @@
     {
       "id": "LOUNGE_SOFA",
       "type": "FURNITURE",
-      "label": "vidaXL Trädgårdsoffa Naturfärg 185,5 x 60 x 62 cm Massiv furu (1855×600×620 mm)",
-      "evidence_class": "CONCEPT",
+      "label": "vidaXL Sektionell Soffa Enheter Vaxad brun 190 x 62 x 70,5 cm (1900×620×700 mm)",
+      "evidence_class": "INDICATIVE",
       "geometry": {
-        "primitive": "BOX",
-        "size": [
-          1.855,
-          0.62,
-          0.6
-        ],
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-865486-g2-proxy.glb",
         "position": [
           -0.9,
-          0.31,
+          0,
           -1.6
         ],
         "rotation_y_deg": 0
       },
       "source_refs": [
-        "VIDAXL catalog row 873871",
-        "GTIN 8721288550651"
+        "VIDAXL catalog row 865486",
+        "GTIN 8721364507135",
+        "G2 proxy data/geometry/avatars/vidaxl-outdoor-865486-g2-proxy.glb"
       ],
       "limitations": [
         "Width, depth and height as the merchant states them.",
-        "No 3D proxy exists for this row; shown as a box at nominal scale.",
-        "Dimensions are not derived from geometry and are not a fit claim."
+        "Geometry level G2: promoted universal proxy — footprint and height as stated, shape representative.",
+        "Textures and finish are representative, not manufacturer artwork."
       ],
       "commerce": {
-        "product_name": "vidaXL Trädgårdsoffa Naturfärg 185,5 x 60 x 62 cm Massiv furu",
+        "product_name": "vidaXL Sektionell Soffa Enheter Vaxad brun 190 x 62 x 70,5 cm",
         "brand": "vidaXL",
-        "product_url": "https://www.vidaxl.se/e/vidaXLTrädgårdsoffaNaturfärg185,5x60x62cmMassivfuru/8721288550651.html",
-        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=873871&fid=1333&url=https://www.vidaxl.se/e/vidaXLTrädgårdsoffaNaturfärg185,5x60x62cmMassivfuru/8721288550651.html",
-        "image_url": "https://vdxl.im/8721288550651_mo-im_en_hd_1.jpg",
-        "price": 3471,
+        "product_url": "https://www.vidaxl.se/e/vidaXLSektionellSoffaEnheterVaxadbrun190x62x70,5cm/8721364507135.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=865486&fid=1333&url=https://www.vidaxl.se/e/vidaXLSektionellSoffaEnheterVaxadbrun190x62x70,5cm/8721364507135.html",
+        "image_url": "https://vdxl.im/8721364507135_mo-im_en_px16_1.jpg?t=1770135273455",
+        "price": 4727,
         "currency": "SEK",
-        "category": "Utesoffor",
+        "category": "Moduler till utomhussoffa",
         "color": "Brun",
         "material": null,
         "availability": "in_stock",
-        "sku": "873871",
-        "gtin": "8721288550651",
+        "sku": "865486",
+        "gtin": "8721364507135",
         "channel": "vidaxl",
         "dimensions_mm": {
-          "width": 1855,
-          "height": 620,
-          "depth": 600
+          "width": 1900,
+          "height": 700,
+          "depth": 620
         },
         "dimension_source": "TITLE_STATED_CM",
         "dimension_evidence": "INDICATIVE",
@@ -256,49 +253,46 @@
     {
       "id": "LOUNGE_TABLE",
       "type": "FURNITURE",
-      "label": "vidaXL Trädgårdsbord Brun 110 x 60 x 72 cm Massivt Akaciaträ (1100×600×720 mm)",
-      "evidence_class": "CONCEPT",
+      "label": "vidaXL Trädgårdsbord 110x60x45 cm massivt akaciaträ (1100×600×450 mm)",
+      "evidence_class": "INDICATIVE",
       "geometry": {
-        "primitive": "BOX",
-        "size": [
-          1.1,
-          0.72,
-          0.6
-        ],
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-316401-g2-proxy.glb",
         "position": [
           -0.9,
-          0.36,
+          0,
           -0.35
         ],
         "rotation_y_deg": 0
       },
       "source_refs": [
-        "VIDAXL catalog row 4103887",
-        "GTIN 8721158785077"
+        "VIDAXL catalog row 316401",
+        "GTIN 8720286543535",
+        "G2 proxy data/geometry/avatars/vidaxl-outdoor-316401-g2-proxy.glb"
       ],
       "limitations": [
         "Width, depth and height as the merchant states them.",
-        "No 3D proxy exists for this row; shown as a box at nominal scale.",
-        "Dimensions are not derived from geometry and are not a fit claim."
+        "Geometry level G2: promoted universal proxy — footprint and height as stated, shape representative.",
+        "Textures and finish are representative, not manufacturer artwork."
       ],
       "commerce": {
-        "product_name": "vidaXL Trädgårdsbord Brun 110 x 60 x 72 cm Massivt Akaciaträ",
+        "product_name": "vidaXL Trädgårdsbord 110x60x45 cm massivt akaciaträ",
         "brand": "vidaXL",
-        "product_url": "https://www.vidaxl.se/e/vidaXLTrädgårdsbordBrun110x60x72cmMassivtAkaciaträ/8721158785077.html",
-        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=4103887&fid=1333&url=https://www.vidaxl.se/e/vidaXLTrädgårdsbordBrun110x60x72cmMassivtAkaciaträ/8721158785077.html",
-        "image_url": "https://vdxl.im/8721158785077_wbg-an-m_en_px16_1.jpg?t=1764623655693",
-        "price": 1585,
+        "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardsbord-110x60x45-cm-massivt-akaciatra/8720286543535.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=316401&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardsbord-110x60x45-cm-massivt-akaciatra/8720286543535.html",
+        "image_url": "https://vdxl.im/8720286543535_a_en_hd_1.jpg?t=1707396296",
+        "price": 2180,
         "currency": "SEK",
         "category": "Utebord",
         "color": "Brun",
         "material": null,
         "availability": "in_stock",
-        "sku": "4103887",
-        "gtin": "8721158785077",
+        "sku": "316401",
+        "gtin": "8720286543535",
         "channel": "vidaxl",
         "dimensions_mm": {
           "width": 1100,
-          "height": 720,
+          "height": 450,
           "depth": 600
         },
         "dimension_source": "TITLE_STATED_CM",
@@ -311,50 +305,47 @@
     {
       "id": "TERRACE_CHAIR",
       "type": "FURNITURE",
-      "label": "vidaXL Trädgårdsstol vit 60x64x70,5 cm massiv furu (600×640×705 mm)",
-      "evidence_class": "CONCEPT",
+      "label": "vidaXL Trädgårdsstol med dyna antracit 63x65x76 cm PP-rotting (630×650×760 mm)",
+      "evidence_class": "INDICATIVE",
       "geometry": {
-        "primitive": "BOX",
-        "size": [
-          0.6,
-          0.705,
-          0.64
-        ],
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-315639-g2-proxy.glb",
         "position": [
           0.75,
-          0.3525,
+          0,
           -0.75
         ],
         "rotation_y_deg": -52
       },
       "source_refs": [
-        "VIDAXL catalog row 859308",
-        "GTIN 8721158637826"
+        "VIDAXL catalog row 315639",
+        "GTIN 8720286231166",
+        "G2 proxy data/geometry/avatars/vidaxl-outdoor-315639-g2-proxy.glb"
       ],
       "limitations": [
         "Width, depth and height as the merchant states them.",
-        "No 3D proxy exists for this row; shown as a box at nominal scale.",
-        "Dimensions are not derived from geometry and are not a fit claim."
+        "Geometry level G2: promoted universal proxy — footprint and height as stated, shape representative.",
+        "Textures and finish are representative, not manufacturer artwork."
       ],
       "commerce": {
-        "product_name": "vidaXL Trädgårdsstol vit 60x64x70,5 cm massiv furu",
+        "product_name": "vidaXL Trädgårdsstol med dyna antracit 63x65x76 cm PP-rotting",
         "brand": "vidaXL",
-        "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardsstol-vit-60x64x705-cm-massiv-furu/8721158637826.html",
-        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=859308&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardsstol-vit-60x64x705-cm-massiv-furu/8721158637826.html",
-        "image_url": "https://vdxl.im/8721158637826_m_en_hd_1.jpg?t=1744984683",
-        "price": 969,
+        "product_url": "https://www.vidaxl.se/e/vidaxl-tradgardsstol-med-dyna-antracit-63x65x76-cm-pp-rotting/8720286231166.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=315639&fid=1333&url=https://www.vidaxl.se/e/vidaxl-tradgardsstol-med-dyna-antracit-63x65x76-cm-pp-rotting/8720286231166.html",
+        "image_url": "https://vdxl.im/8720286231166_a_en_hd_1.jpg?t=1750300062",
+        "price": 1382,
         "currency": "SEK",
         "category": "Utestolar",
-        "color": "Vit",
+        "color": "Antracit",
         "material": null,
         "availability": "in_stock",
-        "sku": "859308",
-        "gtin": "8721158637826",
+        "sku": "315639",
+        "gtin": "8720286231166",
         "channel": "vidaxl",
         "dimensions_mm": {
-          "width": 600,
-          "height": 705,
-          "depth": 640
+          "width": 630,
+          "height": 760,
+          "depth": 650
         },
         "dimension_source": "TITLE_STATED_CM",
         "dimension_evidence": "INDICATIVE",
@@ -367,44 +358,41 @@
       "id": "SUNBED",
       "type": "FURNITURE",
       "label": "vidaXL Solstolar 2 st med kuddar 200x68x83 cm massivt akaciaträ (2000×680×830 mm)",
-      "evidence_class": "CONCEPT",
+      "evidence_class": "INDICATIVE",
       "geometry": {
-        "primitive": "BOX",
-        "size": [
-          2,
-          0.83,
-          0.68
-        ],
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-3206372-g2-proxy.glb",
         "position": [
           2.3,
-          0.415,
+          0,
           0.9
         ],
         "rotation_y_deg": 90
       },
       "source_refs": [
-        "VIDAXL catalog row 3206373",
-        "GTIN 8721012196902"
+        "VIDAXL catalog row 3206372",
+        "GTIN 8721012196896",
+        "G2 proxy data/geometry/avatars/vidaxl-outdoor-3206372-g2-proxy.glb"
       ],
       "limitations": [
         "Width, depth and height as the merchant states them.",
-        "No 3D proxy exists for this row; shown as a box at nominal scale.",
-        "Dimensions are not derived from geometry and are not a fit claim."
+        "Geometry level G2: promoted universal proxy — footprint and height as stated, shape representative.",
+        "Textures and finish are representative, not manufacturer artwork."
       ],
       "commerce": {
         "product_name": "vidaXL Solstolar 2 st med kuddar 200x68x83 cm massivt akaciaträ",
         "brand": "vidaXL",
-        "product_url": "https://www.vidaxl.se/e/vidaxl-solstolar-2-st-med-kuddar-200x68x83-cm-massivt-akaciatra/8721012196902.html",
-        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=3206373&fid=1333&url=https://www.vidaxl.se/e/vidaxl-solstolar-2-st-med-kuddar-200x68x83-cm-massivt-akaciatra/8721012196902.html",
-        "image_url": "https://vdxl.im/8721012196902_m_en_hd_1.jpg?t=1715350661",
-        "price": 6253,
+        "product_url": "https://www.vidaxl.se/e/vidaxl-solstolar-2-st-med-kuddar-200x68x83-cm-massivt-akaciatra/8721012196896.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=3206372&fid=1333&url=https://www.vidaxl.se/e/vidaxl-solstolar-2-st-med-kuddar-200x68x83-cm-massivt-akaciatra/8721012196896.html",
+        "image_url": "https://vdxl.im/8721012196896_m_en_hd_1.jpg?t=1766974280",
+        "price": 7407,
         "currency": "SEK",
         "category": "Solsängar",
         "color": "Brun",
         "material": null,
         "availability": "in_stock",
-        "sku": "3206373",
-        "gtin": "8721012196902",
+        "sku": "3206372",
+        "gtin": "8721012196896",
         "channel": "vidaxl",
         "dimensions_mm": {
           "width": 2000,
@@ -421,45 +409,42 @@
     {
       "id": "GARDEN_BENCH",
       "type": "FURNITURE",
-      "label": "vidaXL Utomhusbänk 2 -sitsig 150 x 56 x 90 cm Massivt Akaciaträ (1500×560×900 mm)",
-      "evidence_class": "CONCEPT",
+      "label": "vidaXL Utomhusbänk 150 x 56 x 90 cm Massivt Akaciaträ Naturlig (1500×560×900 mm)",
+      "evidence_class": "INDICATIVE",
       "geometry": {
-        "primitive": "BOX",
-        "size": [
-          1.5,
-          0.9,
-          0.56
-        ],
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-4105525-g2-proxy.glb",
         "position": [
           -2.6,
-          0.45,
+          0,
           0.6
         ],
         "rotation_y_deg": 90
       },
       "source_refs": [
-        "VIDAXL catalog row 42028083",
-        "GTIN 8721364614239"
+        "VIDAXL catalog row 4105525",
+        "GTIN 8721158784971",
+        "G2 proxy data/geometry/avatars/vidaxl-outdoor-4105525-g2-proxy.glb"
       ],
       "limitations": [
         "Width, depth and height as the merchant states them.",
-        "No 3D proxy exists for this row; shown as a box at nominal scale.",
-        "Dimensions are not derived from geometry and are not a fit claim."
+        "Geometry level G2: promoted universal proxy — footprint and height as stated, shape representative.",
+        "Textures and finish are representative, not manufacturer artwork."
       ],
       "commerce": {
-        "product_name": "vidaXL Utomhusbänk 2 -sitsig 150 x 56 x 90 cm Massivt Akaciaträ",
+        "product_name": "vidaXL Utomhusbänk 150 x 56 x 90 cm Massivt Akaciaträ Naturlig",
         "brand": "vidaXL",
-        "product_url": "https://www.vidaxl.se/e/vidaXLUtomhusbänk2-sitsig150x56x90cmMassivtAkaciaträ/8721364614239.html",
-        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=42028083&fid=1333&url=https://www.vidaxl.se/e/vidaXLUtomhusbänk2-sitsig150x56x90cmMassivtAkaciaträ/8721364614239.html",
-        "image_url": "https://vdxl.im/8721364614239_mo-im_en_px16_1.jpg?t=1775779229181",
-        "price": 2091,
+        "product_url": "https://www.vidaxl.se/e/vidaXLUtomhusbänk150x56x90cmMassivtAkaciaträNaturlig/8721158784971.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=4105525&fid=1333&url=https://www.vidaxl.se/e/vidaXLUtomhusbänk150x56x90cmMassivtAkaciaträNaturlig/8721158784971.html",
+        "image_url": "https://vdxl.im/8721158784971_mo-im_en_hd_1.jpg",
+        "price": 1568,
         "currency": "SEK",
         "category": "Trädgårdsbänkar",
         "color": "Brun",
         "material": null,
         "availability": "in_stock",
-        "sku": "42028083",
-        "gtin": "8721364614239",
+        "sku": "4105525",
+        "gtin": "8721158784971",
         "channel": "vidaxl",
         "dimensions_mm": {
           "width": 1500,
@@ -476,45 +461,42 @@
     {
       "id": "PLANTER",
       "type": "FURNITURE",
-      "label": "vidaXL Utomhusset 3 st 30 x 30 x 80 cm Metall (300×300×800 mm)",
-      "evidence_class": "CONCEPT",
+      "label": "vidaXL Utomhusset 3 st Svart 30 x 30 x 80 cm Metall (300×300×800 mm)",
+      "evidence_class": "INDICATIVE",
       "geometry": {
-        "primitive": "BOX",
-        "size": [
-          0.3,
-          0.8,
-          0.3
-        ],
+        "primitive": "GLTF_ASSET",
+        "asset_path": "data/geometry/avatars/vidaxl-outdoor-42026959-g2-proxy.glb",
         "position": [
           -2.6,
-          0.4,
+          0,
           -1.9
         ],
         "rotation_y_deg": 0
       },
       "source_refs": [
-        "VIDAXL catalog row 42026960",
-        "GTIN 8721364816657"
+        "VIDAXL catalog row 42026959",
+        "GTIN 8721364816640",
+        "G2 proxy data/geometry/avatars/vidaxl-outdoor-42026959-g2-proxy.glb"
       ],
       "limitations": [
         "Width, depth and height as the merchant states them.",
-        "No 3D proxy exists for this row; shown as a box at nominal scale.",
-        "Dimensions are not derived from geometry and are not a fit claim."
+        "Geometry level G2: promoted universal proxy — footprint and height as stated, shape representative.",
+        "Textures and finish are representative, not manufacturer artwork."
       ],
       "commerce": {
-        "product_name": "vidaXL Utomhusset 3 st 30 x 30 x 80 cm Metall",
+        "product_name": "vidaXL Utomhusset 3 st Svart 30 x 30 x 80 cm Metall",
         "brand": "vidaXL",
-        "product_url": "https://www.vidaxl.se/e/vidaXLUtomhusset3st30x30x80cmMetall/8721364816657.html",
-        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=42026960&fid=1333&url=https://www.vidaxl.se/e/vidaXLUtomhusset3st30x30x80cmMetall/8721364816657.html",
-        "image_url": "https://vdxl.im/8721364816657_mo-im_en_px16_1.jpg?t=1768837043649",
-        "price": 1126,
+        "product_url": "https://www.vidaxl.se/e/vidaXLUtomhusset3stSvart30x30x80cmMetall/8721364816640.html",
+        "buy_url": "https://go.adt267.com/t/t?a=1680333342&as=2106320328&t=2&tk=1&cupa_sku=42026959&fid=1333&url=https://www.vidaxl.se/e/vidaXLUtomhusset3stSvart30x30x80cmMetall/8721364816640.html",
+        "image_url": "https://vdxl.im/8721364816640_mo-im_en_px16_1.jpg?t=1768836757296",
+        "price": 1125,
         "currency": "SEK",
         "category": "Krukor & odlingslådor",
-        "color": "Brun",
+        "color": "art",
         "material": null,
         "availability": "in_stock",
-        "sku": "42026960",
-        "gtin": "8721364816657",
+        "sku": "42026959",
+        "gtin": "8721364816640",
         "channel": "vidaxl",
         "dimensions_mm": {
           "width": 300,
@@ -542,7 +524,7 @@
         ],
         "position": [
           -0.9,
-          0.357,
+          0.399,
           -1.6
         ],
         "rotation_y_deg": 0

@@ -270,6 +270,74 @@ One checkout = one executor. Deliverable-first: every block ends with something 
 
 ## Current state
 
+### 2026-09-21 — BRAGE v0.4, dimension tiers, and two overclaims removed
+
+**The wing roof clash is closed.** v0.3's `wing_roof` was a 15° monopitch falling
+north; taken literally it landed at Y 0.64 while the garage and utility beneath
+reach 2.40–2.50 m, so the roof passed through the rooms. The other reading
+(rising south) overtopped the bar ridge. I built the literal reading, detected
+the clash and disclosed it rather than re-pitching someone else's roof; BRAGE's
+v0.4 makes the wing **its own 15° gable** — ridge z=7 at Y 4.07, eaves level with
+the bar's at 3.0 — and its `supersedes` note records the reason. Compiling v0.4
+now yields **0 spec conflicts** and four roof planes.
+
+`compile-house.mjs` is shape-aware: GABLE and MONOPITCH both compile, so an older
+spec still compiles as what it says it is.
+
+**Spec provenance instead of a vendored copy.** Brain asked for a re-vendored
+spec carrying source_commit + sha. A second copy is the thing that goes stale, so
+the file stays BRAGE's and `specProvenance()` records the sha256 of the exact
+bytes compiled plus the brage commit. Reproducible, cannot drift.
+
+**Dimension tiers (the bigger correction).** This compiler had stamped
+`GLB_BOUNDS → AUTHORITATIVE` since the first Newport room. Avatar established
+that 3,645 of Newport's 3,673 "measured" twins are category-default envelopes,
+so that bounding box is exact about a guess — every Newport item wore a green
+AUTHORITATIVE chip it had not earned. AUTHORITATIVE now requires SOURCE *and* a
+manufacturer-native mesh and is unreachable otherwise, asserted including the
+negative case. Two gotchas for other consumers: the stamp is at
+`physical.dimensions_tier`, **not** top-level, and `data/twins` here is a stale
+unstamped subset — read Avatar's checkout.
+
+Placed-item tiers, from the stamps:
+
+| room | placed | SOURCE | WD_S+H_DEF | ALL_DEFAULT |
+|---|---|---|---|---|
+| Newport living | 11 | 0 | 1 | 10 |
+| vidaXL terrace | 7 | 7 | 0 | 0 |
+| Bedroom (3 channels) | 7 | 0 | 2 | 5 |
+| Glanrummet | 11 | 0 | 1 | 10 |
+| **TOTAL** | **36** | **7** | **4** | **25** |
+
+AUTHORITATIVE emitted: **0**.
+
+**The disagreement loop worked.** I flagged that vidaXL titles state all three
+axes while their twins were stamped ALL_DEFAULT, and deferred to the stamp rather
+than promoting locally. Avatar re-stamped; those rows are now SOURCE and the
+terrace picks better-provenanced SKUs. `scripts/dimension-disagreements.mjs`
+records any future such gap per build and the gate asserts it is current —
+currently **0 disagreements**.
+
+**"Gate the artefact, not the tool."** The stills exporter was already correct,
+but 2 of 3 committed `.py` files had been shipping with no VISUALIZATION stamp —
+they were exported before it existed. Asserting on the exporter could not see
+that. The gate now asserts on the committed files, and
+`scripts/stills-manifest.mjs` records png sha + script sha + stamp per still so a
+re-export without a re-render is caught too. The stamp was also shortened to one
+line: the first version wrapped and its second line fell off its background strip
+onto light pixels, which made the disclaimer the least readable thing in frame.
+
+**Bedroom look #3** — Kungsängen bed + Lampemesteren lamp + 5 Newport, three
+channels in one room, and the first real exercise of "height: category default".
+Needed title-based role selection (Kungsängen ships an empty category on all
+23,822 rows) and a per-role minimum tier (Lampemesteren is mostly NONE).
+
+**NOT checked:** no browser but the CDP/preview Chrome; narrow viewports; scene
+teardown between Looks switches; `dist/twins` is gitignored so the interactive
+pages are build outputs only.
+
+
+
 ### 2026-09-20 POST-CLOSE — sole Platform executor from here
 
 Brain's dispatcher moved the second session to Spatial's queue: **repo-platform

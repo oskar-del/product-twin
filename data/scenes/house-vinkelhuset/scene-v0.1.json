@@ -2,7 +2,7 @@
   "scene_version": "twin-scene/v0.1",
   "entity_type": "ConceptHouseSceneExport",
   "scene_id": "SCENE_HOUSE_VINKELHUSET_V03",
-  "generated_at": "2026-09-20T19:02:29.460Z",
+  "generated_at": "2026-09-21T19:46:39.223Z",
   "subject": {
     "label": "Vinkelhuset mot Glan — whole-house concept model",
     "identity_evidence_class": "CONCEPT",
@@ -34,8 +34,12 @@
       "role": "HOUSE_COMPILER"
     },
     {
-      "path": "BRAGE/geometry/house-v0.3-geometry-spec.json",
-      "sha256": "RUNTIME_ONLY_NOT_COMMITTED",
+      "path": "BRAGE/geometry/house-v0.4-geometry-spec.json",
+      "sha256": "4792a51a9af2b6752f96a529f32221d9c1f350b1af4666d0443425c7b9023513",
+      "bytes": 37451,
+      "source_commit": "2efbc4c1a1f2053b227de6a1c8d1431c96978827",
+      "read_at": "2026-09-21T19:46:39.260Z",
+      "note": "Read live from BRAGE's worktree; not vendored. The sha256 pins the exact bytes compiled.",
       "role": "HOUSE_GEOMETRY_SPEC"
     }
   ],
@@ -211,7 +215,7 @@
       "label": "ROOM_GLANRUMMET floor · OILED_OAK_PLANK",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -239,7 +243,7 @@
       "label": "GLANRUMMET · 49 m² · 2.7 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]"
       ],
       "limitations": [
         "Area 49 m² and volume 132.3 m³ are the spec's computed figures, not measured.",
@@ -267,7 +271,7 @@
       "label": "ROOM_GLANRUMMET_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
         "wall_segments[ROOM_GLANRUMMET_W0]"
       ],
       "limitations": [
@@ -295,7 +299,7 @@
       "label": "ROOM_GLANRUMMET_W0 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
         "wall_segments[ROOM_GLANRUMMET_W0]"
       ],
       "limitations": [
@@ -323,7 +327,7 @@
       "label": "ROOM_GLANRUMMET_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
         "wall_segments[ROOM_GLANRUMMET_W0]"
       ],
       "limitations": [
@@ -351,7 +355,7 @@
       "label": "OP_GLAN_S1 — fixed glazing · SOUTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
         "openings[OP_GLAN_S1]"
       ],
       "limitations": [
@@ -390,7 +394,7 @@
       "label": "OP_GLAN_DOOR — sliding door · SOUTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
         "openings[OP_GLAN_DOOR]"
       ],
       "limitations": [
@@ -429,7 +433,7 @@
       "label": "ROOM_GLANRUMMET_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
         "wall_segments[ROOM_GLANRUMMET_W1]"
       ],
       "limitations": [
@@ -457,7 +461,7 @@
       "label": "ROOM_GLANRUMMET_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
         "wall_segments[ROOM_GLANRUMMET_W2]"
       ],
       "limitations": [
@@ -485,7 +489,7 @@
       "label": "ROOM_GLANRUMMET_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
         "wall_segments[ROOM_GLANRUMMET_W3]"
       ],
       "limitations": [
@@ -513,7 +517,7 @@
       "label": "ROOM_GLANRUMMET_W3 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
         "wall_segments[ROOM_GLANRUMMET_W3]"
       ],
       "limitations": [
@@ -541,7 +545,7 @@
       "label": "ROOM_GLANRUMMET_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
         "wall_segments[ROOM_GLANRUMMET_W3]"
       ],
       "limitations": [
@@ -569,7 +573,7 @@
       "label": "OP_GLAN_W1 — fixed glazing · WEST",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
         "openings[OP_GLAN_W1]"
       ],
       "limitations": [
@@ -609,7 +613,7 @@
       "label": "ROOM_KITCHEN_DINING floor · OILED_OAK_PLANK",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -637,7 +641,7 @@
       "label": "KITCHEN DINING · 42 m² · 2.5 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]"
       ],
       "limitations": [
         "Area 42 m² and volume 105 m³ are the spec's computed figures, not measured.",
@@ -665,7 +669,7 @@
       "label": "ROOM_KITCHEN_DINING_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W0]"
       ],
       "limitations": [
@@ -693,7 +697,7 @@
       "label": "ROOM_KITCHEN_DINING_W0 sill",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W0]"
       ],
       "limitations": [
@@ -721,7 +725,7 @@
       "label": "ROOM_KITCHEN_DINING_W0 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W0]"
       ],
       "limitations": [
@@ -749,7 +753,7 @@
       "label": "ROOM_KITCHEN_DINING_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W0]"
       ],
       "limitations": [
@@ -777,7 +781,7 @@
       "label": "ROOM_KITCHEN_DINING_W0 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W0]"
       ],
       "limitations": [
@@ -805,7 +809,7 @@
       "label": "ROOM_KITCHEN_DINING_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W0]"
       ],
       "limitations": [
@@ -833,7 +837,7 @@
       "label": "OP_KD_S1 — window · SOUTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "openings[OP_KD_S1]"
       ],
       "limitations": [
@@ -872,7 +876,7 @@
       "label": "OP_KD_DOOR — sliding door · SOUTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "openings[OP_KD_DOOR]"
       ],
       "limitations": [
@@ -911,7 +915,7 @@
       "label": "ROOM_KITCHEN_DINING_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W1]"
       ],
       "limitations": [
@@ -939,7 +943,7 @@
       "label": "ROOM_KITCHEN_DINING_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W2]"
       ],
       "limitations": [
@@ -967,7 +971,7 @@
       "label": "ROOM_KITCHEN_DINING_W2 sill",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W2]"
       ],
       "limitations": [
@@ -995,7 +999,7 @@
       "label": "ROOM_KITCHEN_DINING_W2 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W2]"
       ],
       "limitations": [
@@ -1023,7 +1027,7 @@
       "label": "ROOM_KITCHEN_DINING_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W2]"
       ],
       "limitations": [
@@ -1051,7 +1055,7 @@
       "label": "OP_KD_N1 — window · NORTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "openings[OP_KD_N1]"
       ],
       "limitations": [
@@ -1091,7 +1095,7 @@
       "label": "ROOM_KITCHEN_DINING_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_KITCHEN_DINING]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_KITCHEN_DINING]",
         "wall_segments[ROOM_KITCHEN_DINING_W3]"
       ],
       "limitations": [
@@ -1119,7 +1123,7 @@
       "label": "ROOM_HEART_ZONE floor · LARGE_FORMAT_STONE_TILE",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_HEART_ZONE]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -1147,7 +1151,7 @@
       "label": "HEART ZONE · 21 m² · 2.5 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_HEART_ZONE]"
       ],
       "limitations": [
         "Area 21 m² and volume 52.5 m³ are the spec's computed figures, not measured.",
@@ -1175,7 +1179,7 @@
       "label": "ROOM_HEART_ZONE_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_HEART_ZONE]",
         "wall_segments[ROOM_HEART_ZONE_W0]"
       ],
       "limitations": [
@@ -1203,7 +1207,7 @@
       "label": "ROOM_HEART_ZONE_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_HEART_ZONE]",
         "wall_segments[ROOM_HEART_ZONE_W1]"
       ],
       "limitations": [
@@ -1231,7 +1235,7 @@
       "label": "ROOM_HEART_ZONE_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_HEART_ZONE]",
         "wall_segments[ROOM_HEART_ZONE_W2]"
       ],
       "limitations": [
@@ -1259,7 +1263,7 @@
       "label": "ROOM_HEART_ZONE_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_HEART_ZONE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_HEART_ZONE]",
         "wall_segments[ROOM_HEART_ZONE_W3]"
       ],
       "limitations": [
@@ -1287,7 +1291,7 @@
       "label": "ROOM_MAIN_BED floor · OILED_OAK_PLANK",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -1315,7 +1319,7 @@
       "label": "MAIN BED · 28 m² · 2.5 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]"
       ],
       "limitations": [
         "Area 28 m² and volume 70 m³ are the spec's computed figures, not measured.",
@@ -1343,7 +1347,7 @@
       "label": "ROOM_MAIN_BED_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "wall_segments[ROOM_MAIN_BED_W0]"
       ],
       "limitations": [
@@ -1371,7 +1375,7 @@
       "label": "ROOM_MAIN_BED_W0 sill",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "wall_segments[ROOM_MAIN_BED_W0]"
       ],
       "limitations": [
@@ -1399,7 +1403,7 @@
       "label": "ROOM_MAIN_BED_W0 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "wall_segments[ROOM_MAIN_BED_W0]"
       ],
       "limitations": [
@@ -1427,7 +1431,7 @@
       "label": "ROOM_MAIN_BED_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "wall_segments[ROOM_MAIN_BED_W0]"
       ],
       "limitations": [
@@ -1455,7 +1459,7 @@
       "label": "OP_BED_S1 — window · SOUTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "openings[OP_BED_S1]"
       ],
       "limitations": [
@@ -1494,7 +1498,7 @@
       "label": "ROOM_MAIN_BED_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "wall_segments[ROOM_MAIN_BED_W1]"
       ],
       "limitations": [
@@ -1522,7 +1526,7 @@
       "label": "ROOM_MAIN_BED_W1 sill",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "wall_segments[ROOM_MAIN_BED_W1]"
       ],
       "limitations": [
@@ -1550,7 +1554,7 @@
       "label": "ROOM_MAIN_BED_W1 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "wall_segments[ROOM_MAIN_BED_W1]"
       ],
       "limitations": [
@@ -1578,7 +1582,7 @@
       "label": "ROOM_MAIN_BED_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "wall_segments[ROOM_MAIN_BED_W1]"
       ],
       "limitations": [
@@ -1606,7 +1610,7 @@
       "label": "OP_BED_E1 — window · EAST",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "openings[OP_BED_E1]"
       ],
       "limitations": [
@@ -1646,7 +1650,7 @@
       "label": "ROOM_MAIN_BED_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "wall_segments[ROOM_MAIN_BED_W2]"
       ],
       "limitations": [
@@ -1674,7 +1678,7 @@
       "label": "ROOM_MAIN_BED_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_MAIN_BED]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_MAIN_BED]",
         "wall_segments[ROOM_MAIN_BED_W3]"
       ],
       "limitations": [
@@ -1702,7 +1706,7 @@
       "label": "ROOM_ENTRY_HALL floor · LARGE_FORMAT_STONE_TILE",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -1730,7 +1734,7 @@
       "label": "ENTRY HALL · 9 m² · 2.5 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]"
       ],
       "limitations": [
         "Area 9 m² and volume 22.5 m³ are the spec's computed figures, not measured.",
@@ -1758,7 +1762,7 @@
       "label": "ROOM_ENTRY_HALL_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]",
         "wall_segments[ROOM_ENTRY_HALL_W0]"
       ],
       "limitations": [
@@ -1786,7 +1790,7 @@
       "label": "ROOM_ENTRY_HALL_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]",
         "wall_segments[ROOM_ENTRY_HALL_W1]"
       ],
       "limitations": [
@@ -1814,7 +1818,7 @@
       "label": "ROOM_ENTRY_HALL_W1 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]",
         "wall_segments[ROOM_ENTRY_HALL_W1]"
       ],
       "limitations": [
@@ -1842,7 +1846,7 @@
       "label": "ROOM_ENTRY_HALL_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]",
         "wall_segments[ROOM_ENTRY_HALL_W1]"
       ],
       "limitations": [
@@ -1870,7 +1874,7 @@
       "label": "OP_ENTRY_DOOR — entrance door · EAST",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]",
         "openings[OP_ENTRY_DOOR]"
       ],
       "limitations": [
@@ -1910,7 +1914,7 @@
       "label": "ROOM_ENTRY_HALL_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]",
         "wall_segments[ROOM_ENTRY_HALL_W2]"
       ],
       "limitations": [
@@ -1938,7 +1942,7 @@
       "label": "ROOM_ENTRY_HALL_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]",
         "wall_segments[ROOM_ENTRY_HALL_W3]"
       ],
       "limitations": [
@@ -1966,7 +1970,7 @@
       "label": "ROOM_ENTRY_HALL_W3 sill",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]",
         "wall_segments[ROOM_ENTRY_HALL_W3]"
       ],
       "limitations": [
@@ -1994,7 +1998,7 @@
       "label": "ROOM_ENTRY_HALL_W3 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]",
         "wall_segments[ROOM_ENTRY_HALL_W3]"
       ],
       "limitations": [
@@ -2022,7 +2026,7 @@
       "label": "ROOM_ENTRY_HALL_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]",
         "wall_segments[ROOM_ENTRY_HALL_W3]"
       ],
       "limitations": [
@@ -2050,7 +2054,7 @@
       "label": "OP_ENTRY_W1 — window · WEST",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_ENTRY_HALL]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_ENTRY_HALL]",
         "openings[OP_ENTRY_W1]"
       ],
       "limitations": [
@@ -2089,7 +2093,7 @@
       "label": "ROOM_UTILITY_WC floor · LARGE_FORMAT_STONE_TILE",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UTILITY_WC]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -2117,7 +2121,7 @@
       "label": "UTILITY WC · 15 m² · 2.5 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UTILITY_WC]"
       ],
       "limitations": [
         "Area 15 m² and volume 37.5 m³ are the spec's computed figures, not measured.",
@@ -2145,7 +2149,7 @@
       "label": "ROOM_UTILITY_WC_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UTILITY_WC]",
         "wall_segments[ROOM_UTILITY_WC_W0]"
       ],
       "limitations": [
@@ -2173,7 +2177,7 @@
       "label": "ROOM_UTILITY_WC_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UTILITY_WC]",
         "wall_segments[ROOM_UTILITY_WC_W1]"
       ],
       "limitations": [
@@ -2201,7 +2205,7 @@
       "label": "ROOM_UTILITY_WC_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UTILITY_WC]",
         "wall_segments[ROOM_UTILITY_WC_W2]"
       ],
       "limitations": [
@@ -2229,7 +2233,7 @@
       "label": "ROOM_UTILITY_WC_W2 sill",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UTILITY_WC]",
         "wall_segments[ROOM_UTILITY_WC_W2]"
       ],
       "limitations": [
@@ -2257,7 +2261,7 @@
       "label": "ROOM_UTILITY_WC_W2 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UTILITY_WC]",
         "wall_segments[ROOM_UTILITY_WC_W2]"
       ],
       "limitations": [
@@ -2285,7 +2289,7 @@
       "label": "ROOM_UTILITY_WC_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UTILITY_WC]",
         "wall_segments[ROOM_UTILITY_WC_W2]"
       ],
       "limitations": [
@@ -2313,7 +2317,7 @@
       "label": "OP_UTIL_N1 — window · NORTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UTILITY_WC]",
         "openings[OP_UTIL_N1]"
       ],
       "limitations": [
@@ -2352,7 +2356,7 @@
       "label": "ROOM_UTILITY_WC_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UTILITY_WC]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UTILITY_WC]",
         "wall_segments[ROOM_UTILITY_WC_W3]"
       ],
       "limitations": [
@@ -2380,7 +2384,7 @@
       "label": "ROOM_GARAGE floor · POWER_FLOATED_CONCRETE",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GARAGE]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -2408,7 +2412,7 @@
       "label": "GARAGE · 40 m² · 2.4 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GARAGE]"
       ],
       "limitations": [
         "Area 40 m² and volume 96 m³ are the spec's computed figures, not measured.",
@@ -2436,7 +2440,7 @@
       "label": "ROOM_GARAGE_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GARAGE]",
         "wall_segments[ROOM_GARAGE_W0]"
       ],
       "limitations": [
@@ -2464,7 +2468,7 @@
       "label": "ROOM_GARAGE_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GARAGE]",
         "wall_segments[ROOM_GARAGE_W1]"
       ],
       "limitations": [
@@ -2492,7 +2496,7 @@
       "label": "ROOM_GARAGE_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GARAGE]",
         "wall_segments[ROOM_GARAGE_W2]"
       ],
       "limitations": [
@@ -2520,7 +2524,7 @@
       "label": "ROOM_GARAGE_W2 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GARAGE]",
         "wall_segments[ROOM_GARAGE_W2]"
       ],
       "limitations": [
@@ -2548,7 +2552,7 @@
       "label": "ROOM_GARAGE_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GARAGE]",
         "wall_segments[ROOM_GARAGE_W2]"
       ],
       "limitations": [
@@ -2576,7 +2580,7 @@
       "label": "OP_GARAGE_DOOR — garage door · NORTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GARAGE]",
         "openings[OP_GARAGE_DOOR]"
       ],
       "limitations": [
@@ -2615,7 +2619,7 @@
       "label": "ROOM_GARAGE_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GARAGE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GARAGE]",
         "wall_segments[ROOM_GARAGE_W3]"
       ],
       "limitations": [
@@ -2643,7 +2647,7 @@
       "label": "ROOM_CHILD_1 floor · OILED_OAK_PLANK",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_1]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -2671,7 +2675,7 @@
       "label": "CHILD 1 · 16.96 m² · 2.02 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_1]"
       ],
       "limitations": [
         "Area 16.96 m² and volume 34.26 m³ are the spec's computed figures, not measured.",
@@ -2700,7 +2704,7 @@
       "label": "ROOM_CHILD_1_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_1]",
         "wall_segments[ROOM_CHILD_1_W0]"
       ],
       "limitations": [
@@ -2729,7 +2733,7 @@
       "label": "ROOM_CHILD_1_W0 sill",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_1]",
         "wall_segments[ROOM_CHILD_1_W0]"
       ],
       "limitations": [
@@ -2758,7 +2762,7 @@
       "label": "ROOM_CHILD_1_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_1]",
         "wall_segments[ROOM_CHILD_1_W0]"
       ],
       "limitations": [
@@ -2787,7 +2791,7 @@
       "label": "OP_CH1_S — dormer window · SOUTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_1]",
         "openings[OP_CH1_S]"
       ],
       "limitations": [
@@ -2826,7 +2830,7 @@
       "label": "ROOM_CHILD_1_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_1]",
         "wall_segments[ROOM_CHILD_1_W1]"
       ],
       "limitations": [
@@ -2855,7 +2859,7 @@
       "label": "ROOM_CHILD_1_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_1]",
         "wall_segments[ROOM_CHILD_1_W2]"
       ],
       "limitations": [
@@ -2884,7 +2888,7 @@
       "label": "ROOM_CHILD_1_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_1]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_1]",
         "wall_segments[ROOM_CHILD_1_W3]"
       ],
       "limitations": [
@@ -2913,7 +2917,7 @@
       "label": "ROOM_CHILD_2 floor · OILED_OAK_PLANK",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_2]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -2941,7 +2945,7 @@
       "label": "CHILD 2 · 16.96 m² · 2.02 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_2]"
       ],
       "limitations": [
         "Area 16.96 m² and volume 34.26 m³ are the spec's computed figures, not measured.",
@@ -2970,7 +2974,7 @@
       "label": "ROOM_CHILD_2_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_2]",
         "wall_segments[ROOM_CHILD_2_W0]"
       ],
       "limitations": [
@@ -2999,7 +3003,7 @@
       "label": "ROOM_CHILD_2_W0 sill",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_2]",
         "wall_segments[ROOM_CHILD_2_W0]"
       ],
       "limitations": [
@@ -3028,7 +3032,7 @@
       "label": "ROOM_CHILD_2_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_2]",
         "wall_segments[ROOM_CHILD_2_W0]"
       ],
       "limitations": [
@@ -3057,7 +3061,7 @@
       "label": "OP_CH2_S — dormer window · SOUTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_2]",
         "openings[OP_CH2_S]"
       ],
       "limitations": [
@@ -3096,7 +3100,7 @@
       "label": "ROOM_CHILD_2_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_2]",
         "wall_segments[ROOM_CHILD_2_W1]"
       ],
       "limitations": [
@@ -3125,7 +3129,7 @@
       "label": "ROOM_CHILD_2_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_2]",
         "wall_segments[ROOM_CHILD_2_W2]"
       ],
       "limitations": [
@@ -3154,7 +3158,7 @@
       "label": "ROOM_CHILD_2_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_CHILD_2]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_CHILD_2]",
         "wall_segments[ROOM_CHILD_2_W3]"
       ],
       "limitations": [
@@ -3183,7 +3187,7 @@
       "label": "ROOM_UPPER_BATH floor · STONE_TILE",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UPPER_BATH]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -3211,7 +3215,7 @@
       "label": "UPPER BATH · 8.48 m² · 2.02 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UPPER_BATH]"
       ],
       "limitations": [
         "Area 8.48 m² and volume 17.13 m³ are the spec's computed figures, not measured.",
@@ -3240,7 +3244,7 @@
       "label": "OP_UPBATH_ROOF — roof light · ROOF_NORTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UPPER_BATH]",
         "openings[OP_UPBATH_ROOF]"
       ],
       "limitations": [
@@ -3295,7 +3299,7 @@
       "label": "ROOM_UPPER_BATH_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UPPER_BATH]",
         "wall_segments[ROOM_UPPER_BATH_W0]"
       ],
       "limitations": [
@@ -3324,7 +3328,7 @@
       "label": "ROOM_UPPER_BATH_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UPPER_BATH]",
         "wall_segments[ROOM_UPPER_BATH_W1]"
       ],
       "limitations": [
@@ -3353,7 +3357,7 @@
       "label": "ROOM_UPPER_BATH_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UPPER_BATH]",
         "wall_segments[ROOM_UPPER_BATH_W2]"
       ],
       "limitations": [
@@ -3382,7 +3386,7 @@
       "label": "ROOM_UPPER_BATH_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_UPPER_BATH]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_UPPER_BATH]",
         "wall_segments[ROOM_UPPER_BATH_W3]"
       ],
       "limitations": [
@@ -3411,7 +3415,7 @@
       "label": "ROOM_GILLESTUGA floor · POLISHED_CONCRETE",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -3439,7 +3443,7 @@
       "label": "GILLESTUGA · 42 m² · 2.4 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]"
       ],
       "limitations": [
         "Area 42 m² and volume 100.8 m³ are the spec's computed figures, not measured.",
@@ -3467,7 +3471,7 @@
       "label": "ROOM_GILLESTUGA_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]",
         "wall_segments[ROOM_GILLESTUGA_W0]"
       ],
       "limitations": [
@@ -3495,7 +3499,7 @@
       "label": "ROOM_GILLESTUGA_W0 sill",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]",
         "wall_segments[ROOM_GILLESTUGA_W0]"
       ],
       "limitations": [
@@ -3523,7 +3527,7 @@
       "label": "ROOM_GILLESTUGA_W0 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]",
         "wall_segments[ROOM_GILLESTUGA_W0]"
       ],
       "limitations": [
@@ -3551,7 +3555,7 @@
       "label": "ROOM_GILLESTUGA_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]",
         "wall_segments[ROOM_GILLESTUGA_W0]"
       ],
       "limitations": [
@@ -3579,7 +3583,7 @@
       "label": "OP_GILLE_S — window · SOUTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]",
         "openings[OP_GILLE_S]"
       ],
       "limitations": [
@@ -3618,7 +3622,7 @@
       "label": "ROOM_GILLESTUGA_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]",
         "wall_segments[ROOM_GILLESTUGA_W1]"
       ],
       "limitations": [
@@ -3646,7 +3650,7 @@
       "label": "ROOM_GILLESTUGA_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]",
         "wall_segments[ROOM_GILLESTUGA_W2]"
       ],
       "limitations": [
@@ -3674,7 +3678,7 @@
       "label": "ROOM_GILLESTUGA_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]",
         "wall_segments[ROOM_GILLESTUGA_W3]"
       ],
       "limitations": [
@@ -3702,7 +3706,7 @@
       "label": "ROOM_GILLESTUGA_W3 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]",
         "wall_segments[ROOM_GILLESTUGA_W3]"
       ],
       "limitations": [
@@ -3730,7 +3734,7 @@
       "label": "ROOM_GILLESTUGA_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]",
         "wall_segments[ROOM_GILLESTUGA_W3]"
       ],
       "limitations": [
@@ -3758,7 +3762,7 @@
       "label": "OP_GILLE_W — sliding door · WEST",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GILLESTUGA]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GILLESTUGA]",
         "openings[OP_GILLE_W]"
       ],
       "limitations": [
@@ -3798,7 +3802,7 @@
       "label": "ROOM_GUEST floor · OILED_OAK_PLANK",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GUEST]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -3826,7 +3830,7 @@
       "label": "GUEST · 14 m² · 2.4 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GUEST]"
       ],
       "limitations": [
         "Area 14 m² and volume 33.6 m³ are the spec's computed figures, not measured.",
@@ -3854,7 +3858,7 @@
       "label": "ROOM_GUEST_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GUEST]",
         "wall_segments[ROOM_GUEST_W0]"
       ],
       "limitations": [
@@ -3882,7 +3886,7 @@
       "label": "ROOM_GUEST_W0 sill",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GUEST]",
         "wall_segments[ROOM_GUEST_W0]"
       ],
       "limitations": [
@@ -3910,7 +3914,7 @@
       "label": "ROOM_GUEST_W0 head",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GUEST]",
         "wall_segments[ROOM_GUEST_W0]"
       ],
       "limitations": [
@@ -3938,7 +3942,7 @@
       "label": "ROOM_GUEST_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GUEST]",
         "wall_segments[ROOM_GUEST_W0]"
       ],
       "limitations": [
@@ -3966,7 +3970,7 @@
       "label": "OP_GUEST_S — window · SOUTH",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GUEST]",
         "openings[OP_GUEST_S]"
       ],
       "limitations": [
@@ -4005,7 +4009,7 @@
       "label": "ROOM_GUEST_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GUEST]",
         "wall_segments[ROOM_GUEST_W1]"
       ],
       "limitations": [
@@ -4033,7 +4037,7 @@
       "label": "ROOM_GUEST_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GUEST]",
         "wall_segments[ROOM_GUEST_W2]"
       ],
       "limitations": [
@@ -4061,7 +4065,7 @@
       "label": "ROOM_GUEST_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GUEST]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GUEST]",
         "wall_segments[ROOM_GUEST_W3]"
       ],
       "limitations": [
@@ -4089,7 +4093,7 @@
       "label": "ROOM_TECH_STORE floor · SEALED_CONCRETE",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_TECH_STORE]"
       ],
       "limitations": [
         "Concept geometry from BRAGE's design. Not a survey; no level is set out."
@@ -4117,7 +4121,7 @@
       "label": "TECH STORE · 14 m² · 2.4 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_TECH_STORE]"
       ],
       "limitations": [
         "Area 14 m² and volume 33.6 m³ are the spec's computed figures, not measured.",
@@ -4145,7 +4149,7 @@
       "label": "ROOM_TECH_STORE_W0 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_TECH_STORE]",
         "wall_segments[ROOM_TECH_STORE_W0]"
       ],
       "limitations": [
@@ -4173,7 +4177,7 @@
       "label": "ROOM_TECH_STORE_W1 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_TECH_STORE]",
         "wall_segments[ROOM_TECH_STORE_W1]"
       ],
       "limitations": [
@@ -4201,7 +4205,7 @@
       "label": "ROOM_TECH_STORE_W2 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_TECH_STORE]",
         "wall_segments[ROOM_TECH_STORE_W2]"
       ],
       "limitations": [
@@ -4229,7 +4233,7 @@
       "label": "ROOM_TECH_STORE_W3 pier",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_TECH_STORE]",
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_TECH_STORE]",
         "wall_segments[ROOM_TECH_STORE_W3]"
       ],
       "limitations": [
@@ -4257,7 +4261,7 @@
       "label": "Gable roof — south plane (PV-ready)",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 roof"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 roof"
       ],
       "limitations": [
         "30° gable, ridge east–west at Y 5.02 m, eaves Y 3 m, 0.5 m overhang — BRAGE's stated values.",
@@ -4299,7 +4303,7 @@
       "label": "Gable roof — north plane",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 roof"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 roof"
       ],
       "limitations": [
         "30° gable, ridge east–west at Y 5.02 m, eaves Y 3 m, 0.5 m overhang — BRAGE's stated values.",
@@ -4336,25 +4340,35 @@
       }
     },
     {
-      "id": "ROOF_WING_MONO",
+      "id": "ROOF_WING_SOUTH",
       "type": "ROOF",
-      "label": "Cold wing roof — 15° monopitch falling north",
+      "label": "Cold wing roof — south plane",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 wing_roof"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 wing_roof"
       ],
       "limitations": [
-        "15° monopitch falling north, plate Y 3 m, 0.4 m overhang — BRAGE's stated values.",
-        "Covering STANDING_SEAM_SHEET_METAL. Cold wing. A shallower mono-pitch keeps the wing visually subordinate to the bar and sheds to the arrival court.",
-        "SPEC CONFLICT — as stated, this plane passes through 3 room(s) beneath it. Worst: ROOM_UTILITY_WC needs 2.5 m, the plane is at 0.749 m (1.751 m short). Built to the spec's stated pitch and plate; not silently re-pitched. BRAGE to resolve."
+        "15° gable, eaves Y 3 m, 0.4 m overhang — BRAGE's stated values.",
+        "Covering STANDING_SEAM_SHEET_METAL. Cold wing. Its own gable keeps the eaves level with the bar's and the ridge below it, so the wing stays subordinate without a 4.9 m eave.",
+        "Supersedes v0.3 WING_ROOF — a 15° MONOPITCH falling north, which passed through the rooms below it"
       ],
       "geometry": {
         "primitive": "GRID_SURFACE",
-        "size_m": 8,
+        "size_m": 8.8,
         "segments": 1,
         "vertices": [
           [
             2.6,
+            4.07,
+            7
+          ],
+          [
+            11.4,
+            4.07,
+            7
+          ],
+          [
+            2.6,
             3,
             2.6
           ],
@@ -4362,15 +4376,48 @@
             11.4,
             3,
             2.6
+          ]
+        ],
+        "method": "PLANE_FROM_SPEC",
+        "height_reference": "LOCAL_RELATIVE"
+      }
+    },
+    {
+      "id": "ROOF_WING_NORTH",
+      "type": "ROOF",
+      "label": "Cold wing roof — north plane",
+      "evidence_class": "CONCEPT",
+      "source_refs": [
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 wing_roof"
+      ],
+      "limitations": [
+        "15° gable, eaves Y 3 m, 0.4 m overhang — BRAGE's stated values.",
+        "Covering STANDING_SEAM_SHEET_METAL. Cold wing. Its own gable keeps the eaves level with the bar's and the ridge below it, so the wing stays subordinate without a 4.9 m eave.",
+        "Supersedes v0.3 WING_ROOF — a 15° MONOPITCH falling north, which passed through the rooms below it"
+      ],
+      "geometry": {
+        "primitive": "GRID_SURFACE",
+        "size_m": 8.8,
+        "segments": 1,
+        "vertices": [
+          [
+            2.6,
+            4.07,
+            7
+          ],
+          [
+            11.4,
+            4.07,
+            7
           ],
           [
             2.6,
-            0.6420471066061202,
+            3,
             11.4
           ],
           [
             11.4,
-            0.6420471066061202,
+            3,
             11.4
           ]
         ],
@@ -4380,9 +4427,9 @@
     }
   ],
   "house_summary": {
-    "spec_id": "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03",
-    "spec_version": "brage-house-geometry/v0.3",
-    "generated_at": "2026-09-20T18:32:08.795Z",
+    "spec_id": "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04",
+    "spec_version": "brage-house-geometry/v0.4",
+    "generated_at": "2026-09-20T22:38:35.566Z",
     "rooms": 13,
     "openings": 18,
     "heated_m2_excl_souterrain": 206.4,
@@ -4409,28 +4456,6 @@
       "note": "The full 7 m span is NOT counted as floor area; only the band that clears 1.9 m."
     },
     "area_source": "BRAGE_SPEC_V03_AREA_SUMMARY",
-    "spec_conflicts": [
-      {
-        "roof": "ROOF_WING_MONO",
-        "room": "ROOM_ENTRY_HALL",
-        "room_top_y": 2.5,
-        "roof_low_y": 2.089,
-        "shortfall_m": 0.411
-      },
-      {
-        "roof": "ROOF_WING_MONO",
-        "room": "ROOM_UTILITY_WC",
-        "room_top_y": 2.5,
-        "roof_low_y": 0.749,
-        "shortfall_m": 1.751
-      },
-      {
-        "roof": "ROOF_WING_MONO",
-        "room": "ROOM_GARAGE",
-        "room_top_y": 2.4,
-        "roof_low_y": 0.749,
-        "shortfall_m": 1.651
-      }
-    ]
+    "spec_conflicts": []
   }
 }

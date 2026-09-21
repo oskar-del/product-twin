@@ -21,7 +21,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 // as the source for room volumes and openings: the patch states a massing box and
 // a prose "fully glazed south+west", the spec states the actual opening schedule.
 const BRAGE = path.resolve(root,
-  "../repo-brage/OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-v0.3-geometry-spec.json");
+  "../repo-brage/OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-v0.4-geometry-spec.json");
 const SOURCE = path.join(root, "data/scenes/shoppable-room-newport-living/scene-v0.1.json");
 const OUT_DIR = path.join(root, "data/scenes/room-glanrummet-newport");
 

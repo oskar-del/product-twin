@@ -16,10 +16,10 @@ sc.render.use_stamp = True
 sc.render.use_stamp_note = True
 for _f in ('use_stamp_time','use_stamp_date','use_stamp_render_time','use_stamp_frame','use_stamp_scene','use_stamp_camera','use_stamp_filename','use_stamp_lens','use_stamp_marker'):
     if hasattr(sc.render, _f): setattr(sc.render, _f, False)
-sc.render.stamp_note_text = 'VISUALIZATION  ·  Glanrummet — Newport set inside BRAGE\'s Vinkelhuset  ·  CONCEPT design — not a survey, not a built house  ·  Rendered horizon is not a view claim'
-sc.render.stamp_font_size = 22
+sc.render.stamp_note_text = 'VISUALIZATION  ·  Glanrummet  ·  CONCEPT, not a survey  ·  Rendered horizon is not a view claim'
+sc.render.stamp_font_size = 16
 sc.render.use_stamp_labels = False
-sc.render.stamp_background = (0, 0, 0, 0.55)
+sc.render.stamp_background = (0, 0, 0, 0.72)
 sc.render.stamp_foreground = (1, 1, 1, 1)
 sc.view_settings.view_transform = 'AgX'
 sc.view_settings.look = 'AgX - Base Contrast'

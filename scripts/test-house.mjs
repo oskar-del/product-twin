@@ -63,10 +63,24 @@ if (!fs.existsSync(p)) {
   const byType = {};
   for (const e of scene.elements) byType[e.type] = (byType[e.type] ?? 0) + 1;
 
-  check("built from the v0.3 spec", s.spec_version === "brage-house-geometry/v0.3");
+  // Was pinned to v0.3 and broke the day v0.4 landed. The contract is that a
+  // BRAGE house spec is recorded and is not older than v0.3, not that it is
+  // frozen at one version.
+  const vm = String(s.spec_version ?? "").match(/^brage-house-geometry\/v(\d+)\.(\d+)$/);
+  check("built from a BRAGE house spec", vm !== null);
+  check("spec is v0.3 or newer", vm ? (Number(vm[1]) > 0 || Number(vm[2]) >= 3) : false);
   check("all 13 rooms present", byType.ROOM === 13);
   check("all 18 openings present", byType.OPENING === 18);
-  check("both gable planes and the wing roof", byType.ROOF === 3);
+  // v0.3 gave the wing one monopitch plane (3 roof planes); v0.4 made it its own
+  // gable (4), because the monopitch fell through the rooms below it. Assert the
+  // bar's two planes plus at least one wing plane, so either shape passes and a
+  // missing roof still fails.
+  const roofIds = scene.elements.filter(e => e.type === "ROOF").map(e => e.id);
+  check("the bar has both gable planes",
+    roofIds.includes("ROOF_GABLE_SOUTH") && roofIds.includes("ROOF_GABLE_NORTH"));
+  check("the wing is roofed", roofIds.some(id => /^ROOF_WING_/.test(id)));
+  check("no roof plane passes through the rooms below it",
+    (s.spec_conflicts ?? []).length === 0);
   check("walls were split, not drawn whole", byType.WALL > 13 * 4);
 
   // BRAGE's trap 1

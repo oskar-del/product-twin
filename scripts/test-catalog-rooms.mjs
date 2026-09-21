@@ -403,8 +403,17 @@ if (!fs.existsSync(glanPath)) {
   const ctx = glan.house_context ?? {};
   const glanOpenings = glan.elements.filter(e => e.type === "OPENING");
 
-  check("glanrummet is built from the v0.3 spec", ctx.spec?.version === "brage-house-geometry/v0.3");
-  check("spec id recorded", ctx.spec?.id === "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03");
+  // Pinning the exact version made every BRAGE bump a gate failure for no
+  // reason (v0.4 broke this the day it landed). Assert the contract instead:
+  // a BRAGE house spec is recorded, and it is not older than the v0.3 that
+  // first carried a real opening schedule.
+  const specVersion = String(ctx.spec?.version ?? "");
+  const versionMatch = specVersion.match(/^brage-house-geometry\/v(\d+)\.(\d+)$/);
+  check("glanrummet records a BRAGE house spec version", versionMatch !== null);
+  check("spec is v0.3 or newer", versionMatch
+    ? (Number(versionMatch[1]) > 0 || Number(versionMatch[2]) >= 3)
+    : false);
+  check("spec id recorded", /^BRAGE_SE_SVARTINGE_54_28_HOUSE_V\d+$/.test(String(ctx.spec?.id ?? "")));
   check("spec generation timestamp recorded", typeof ctx.spec?.generated_at === "string");
 
   check("room has openings at all", glanOpenings.length >= 3);

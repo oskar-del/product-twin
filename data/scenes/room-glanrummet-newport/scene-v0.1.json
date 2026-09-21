@@ -2,7 +2,7 @@
   "scene_version": "twin-scene/v0.1",
   "entity_type": "ShoppableRoomSceneExport",
   "scene_id": "SCENE_ROOM_GLANRUMMET_NEWPORT_V01",
-  "generated_at": "2026-09-20T21:01:14.013Z",
+  "generated_at": "2026-09-21T19:49:24.609Z",
   "subject": {
     "label": "Glanrummet — Newport set inside BRAGE's Vinkelhuset",
     "identity_evidence_class": "CONCEPT",
@@ -146,8 +146,8 @@
       "label": "Glanrummet — 49 m² · 2.7 m clear",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 rooms[ROOM_GLANRUMMET]",
-        "BRAGE brage-house-geometry/v0.3"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 rooms[ROOM_GLANRUMMET]",
+        "BRAGE brage-house-geometry/v0.4"
       ],
       "limitations": [
         "Concept room volume from BRAGE's house design. No entitlement, buildable envelope or floor level is established for this plot.",
@@ -216,8 +216,8 @@
       "label": "OP_GLAN_S1 — fixed glazing on the south wall",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 ROOM_GLANRUMMET.openings[OP_GLAN_S1]",
-        "BRAGE brage-house-geometry/v0.3 · generated 2026-09-20T18:32:08.795Z"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 ROOM_GLANRUMMET.openings[OP_GLAN_S1]",
+        "BRAGE brage-house-geometry/v0.4 · generated 2026-09-20T22:38:35.566Z"
       ],
       "limitations": [
         "Extent, sill 0 m and head 2.55 m are BRAGE's stated values; frame, mullion and ironmongery are not specified.",
@@ -255,8 +255,8 @@
       "label": "OP_GLAN_W1 — fixed glazing on the west wall",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 ROOM_GLANRUMMET.openings[OP_GLAN_W1]",
-        "BRAGE brage-house-geometry/v0.3 · generated 2026-09-20T18:32:08.795Z"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 ROOM_GLANRUMMET.openings[OP_GLAN_W1]",
+        "BRAGE brage-house-geometry/v0.4 · generated 2026-09-20T22:38:35.566Z"
       ],
       "limitations": [
         "Extent, sill 0 m and head 2.55 m are BRAGE's stated values; frame, mullion and ironmongery are not specified.",
@@ -295,8 +295,8 @@
       "label": "OP_GLAN_DOOR — sliding door on the south wall",
       "evidence_class": "CONCEPT",
       "source_refs": [
-        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03 ROOM_GLANRUMMET.openings[OP_GLAN_DOOR]",
-        "BRAGE brage-house-geometry/v0.3 · generated 2026-09-20T18:32:08.795Z"
+        "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04 ROOM_GLANRUMMET.openings[OP_GLAN_DOOR]",
+        "BRAGE brage-house-geometry/v0.4 · generated 2026-09-20T22:38:35.566Z"
       ],
       "limitations": [
         "Extent, sill 0 m and head 2.4 m are BRAGE's stated values; frame, mullion and ironmongery are not specified.",
@@ -383,11 +383,11 @@
     {
       "id": "COFFEE_TABLE",
       "type": "FURNITURE",
-      "label": "Delano soffbord rund valnöt beige (1200×600×400 mm)",
+      "label": "Carlisle soffbord silver back 140x80cm (1400×800×400 mm)",
       "evidence_class": "INDICATIVE",
       "geometry": {
         "primitive": "GLTF_ASSET",
-        "asset_path": "data/geometry/avatars/newport-100600-g2-proxy.glb",
+        "asset_path": "data/geometry/avatars/newport-54442-g2-proxy.glb",
         "position": [
           0.2,
           0,
@@ -396,38 +396,39 @@
         "rotation_y_deg": 0
       },
       "source_refs": [
-        "NEWPORT catalog row 100600",
-        "G2 proxy data/geometry/avatars/newport-100600-g2-proxy.glb"
+        "NEWPORT catalog row 54442",
+        "GTIN 7340172901419",
+        "G2 proxy data/geometry/avatars/newport-54442-g2-proxy.glb"
       ],
       "limitations": [
-        "All three axes come from the per-category default table. The 3D proxy is an envelope at that size, so measuring it precisely does not make it a measurement of the product.",
-        "Geometry level G2: promoted universal proxy at the category's default envelope — the shape is representative and the size is not the product's.",
+        "Width and depth are the merchant's; the height comes from the per-category default table and is not a product fact.",
+        "Geometry level G2: promoted universal proxy — footprint and height as stated, shape representative.",
         "Textures and finish are representative, not manufacturer artwork."
       ],
       "commerce": {
-        "product_name": "Delano soffbord rund valnöt beige",
-        "brand": "Ruth & Joanna",
-        "product_url": "https://www.newport.se/shop/mobler/bord/soffbord/delano-soffbord-rund-valnot-beige",
-        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=100600&fid=2175&url=https://www.newport.se/shop/mobler/bord/soffbord/delano-soffbord-rund-valnot-beige",
-        "image_url": "https://cdn-images.newporthome.eu/product/3556a8c8b9ad4148a484cc9055e1d71f/list-45/list.jpg",
-        "price": 22449,
+        "product_name": "Carlisle soffbord silver back 140x80cm",
+        "brand": "Artwood",
+        "product_url": "https://www.newport.se/shop/mobler/bord/soffbord/carlisle-soffbord-silver-back-l",
+        "buy_url": "https://at.newport.se/t/t?a=1884564186&as=2106320328&t=2&tk=1&cupa_sku=54442&fid=2175&url=https://www.newport.se/shop/mobler/bord/soffbord/carlisle-soffbord-silver-back-l",
+        "image_url": "https://cdn-images.newporthome.eu/product/24c566ff77d711ec990d000c29064583/list-45/list.jpg",
+        "price": 12395,
         "currency": "SEK",
         "category": "Soffbord",
-        "color": "Beige / Brun",
-        "material": "Mässing / Trä / Marmor",
+        "color": "Silver",
+        "material": "Metall / Massiv ek",
         "availability": "in_stock",
-        "sku": "100600",
-        "gtin": null,
+        "sku": "54442",
+        "gtin": "7340172901419",
         "channel": "newport",
         "dimensions_mm": {
-          "width": 1200,
+          "width": 1400,
           "height": 400,
-          "depth": 600
+          "depth": 800
         },
         "dimension_source": "GLB_BOUNDS",
         "dimension_evidence": "INDICATIVE",
-        "dimension_tier": "ALL_DEFAULT",
-        "dimension_tier_label": "size: category default (all three axes)",
+        "dimension_tier": "WD_SOURCE_H_DEFAULT",
+        "dimension_tier_label": "height: category default",
         "dimension_native_mesh": false
       }
     },
@@ -801,7 +802,7 @@
         "primitive": "GLTF_ASSET",
         "asset_path": "data/geometry/avatars/newport-98240-g2-proxy.glb",
         "position": [
-          0,
+          -0.033333333333333326,
           0.4,
           -0.8
         ],
@@ -899,10 +900,10 @@
   "house_context": {
     "house": "Vinkelhuset mot Glan",
     "spec": {
-      "id": "BRAGE_SE_SVARTINGE_54_28_HOUSE_V03",
-      "version": "brage-house-geometry/v0.3",
-      "generated_at": "2026-09-20T18:32:08.795Z",
-      "supersedes": "brage-house-geometry/v0.2"
+      "id": "BRAGE_SE_SVARTINGE_54_28_HOUSE_V04",
+      "version": "brage-house-geometry/v0.4",
+      "generated_at": "2026-09-20T22:38:35.566Z",
+      "supersedes": "brage-house-geometry/v0.3 (its wing roof clashed with the rooms below)"
     },
     "room": {
       "floor_area_m2": 49,

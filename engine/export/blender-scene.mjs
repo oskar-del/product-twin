@@ -152,10 +152,15 @@ export function exportBlenderScene(scene, opts = {}) {
   // from the scene that made it and from any caption around it, so the claim it
   // is NOT making has to survive the journey: a rendered horizon is never a view
   // claim, and this house is a concept, not a built thing.
+  // Kept to one line at the render width: the first version wrapped, and the
+  // second line fell outside its background strip onto light pixels, which
+  // makes the disclaimer that must survive the journey the least readable
+  // thing in the frame. Short label, smaller type, one line.
+  const stampLabel = String(scene.subject?.label ?? scene.scene_id).split("—")[0].trim();
   const stamp = [
     "VISUALIZATION",
-    escPy(scene.subject?.label ?? scene.scene_id),
-    "CONCEPT design — not a survey, not a built house",
+    escPy(stampLabel),
+    "CONCEPT, not a survey",
     "Rendered horizon is not a view claim"
   ].join("  ·  ");
   emit("sc.render.use_stamp = True");
@@ -164,9 +169,9 @@ export function exportBlenderScene(scene, opts = {}) {
        "'use_stamp_scene','use_stamp_camera','use_stamp_filename','use_stamp_lens','use_stamp_marker'):");
   emit("    if hasattr(sc.render, _f): setattr(sc.render, _f, False)");
   emit(`sc.render.stamp_note_text = '${stamp}'`);
-  emit("sc.render.stamp_font_size = 22");
+  emit("sc.render.stamp_font_size = 16");
   emit("sc.render.use_stamp_labels = False");
-  emit("sc.render.stamp_background = (0, 0, 0, 0.55)");
+  emit("sc.render.stamp_background = (0, 0, 0, 0.72)");
   emit("sc.render.stamp_foreground = (1, 1, 1, 1)");
   emit(`sc.view_settings.view_transform = '${escPy(render.view_transform)}'`);
   emit(`sc.view_settings.look = '${escPy(render.look)}'`);

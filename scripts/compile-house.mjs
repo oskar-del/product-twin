@@ -22,15 +22,41 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import crypto from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { parseScene } from "../engine/core/scene-contract.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SPEC = path.resolve(root,
-  "../repo-brage/OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-v0.3-geometry-spec.json");
+  "../repo-brage/OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-v0.4-geometry-spec.json");
 
 const WALL_T = 0.25;      // external wall thickness for the model
 const SLAB_T = 0.3;       // floor slab thickness
 const GLASS_T = 0.08;
+
+/**
+ * Provenance for the spec we just read.
+ *
+ * Brain asked for a re-vendored copy carrying source_commit + sha. A second
+ * copy is the thing that goes stale, so the file stays BRAGE's and the
+ * provenance is recorded instead: the sha256 of the exact bytes compiled, plus
+ * the brage commit they came from. That is reproducible and cannot drift.
+ */
+export function specProvenance(file = SPEC) {
+  const bytes = fs.readFileSync(file);
+  let commit = null;
+  try {
+    commit = execFileSync("git", ["-C", path.dirname(file), "log", "-1", "--format=%H"], { encoding: "utf8" }).trim();
+  } catch { /* brage worktree not a git checkout here; sha still pins the bytes */ }
+  return {
+    path: "BRAGE/geometry/" + path.basename(file),
+    sha256: crypto.createHash("sha256").update(bytes).digest("hex"),
+    bytes: bytes.length,
+    source_commit: commit,
+    read_at: new Date().toISOString(),
+    note: "Read live from BRAGE's worktree; not vendored. The sha256 pins the exact bytes compiled."
+  };
+}
 
 export function readSpec(file = SPEC) {
   if (!fs.existsSync(file)) {
@@ -363,36 +389,49 @@ export function buildHouse(spec = readSpec()) {
   elements.push(roofPlane("ROOF_GABLE_NORTH", "Gable roof — north plane", rz + halfSpan));
 
   const wing = spec.wing_roof;
-  const wingRooms = spec.rooms.filter(r => {
-    const b = bbox(r.footprint_xz);
-    return b.minZ >= rz + halfSpan - 1e-9;          // everything north of the bar
-  });
-  if (wingRooms.length) {
-    const wx0 = Math.min(...wingRooms.map(r => bbox(r.footprint_xz).minX));
-    const wx1 = Math.max(...wingRooms.map(r => bbox(r.footprint_xz).maxX));
-    const wz0 = Math.min(...wingRooms.map(r => bbox(r.footprint_xz).minZ));
-    const wz1 = Math.max(...wingRooms.map(r => bbox(r.footprint_xz).maxZ));
-    const woh = wing.eaves_overhang_m;
-    const rise = (wz1 - wz0 + woh * 2) * Math.tan((wing.pitch_deg * Math.PI) / 180);
-    elements.push({
-      id: "ROOF_WING_MONO", type: "ROOF",
-      label: "Cold wing roof — 15° monopitch falling north",
+  if (wing) {
+    // v0.4 turned the wing from a MONOPITCH into its own GABLE, because the
+    // monopitch fell through the rooms below it — eaves now sit level with the
+    // bar's at 3.0 m and the ridge stays under the bar's, so the wing reads as
+    // subordinate without a 4.9 m eave. Both shapes are handled: an older spec
+    // still compiles, it just compiles as what it says it is.
+    const wx = wing.extent_x ?? [3, 11];
+    const wz = wing.extent_z ?? [3, 11];
+    const woh = wing.eaves_overhang_m ?? 0.4;
+    const wEaves = wing.eaves_Y ?? wing.wall_plate_Y;
+
+    const wingPlane = (id, label, zEdge, yRidge, zRidge) => ({
+      id, type: "ROOF", label,
       evidence_class: "CONCEPT",
       source_refs: [`${spec.spec_id} wing_roof`],
       limitations: [
-        `${wing.pitch_deg}° monopitch falling ${wing.falls_towards.toLowerCase()}, plate Y ${wing.wall_plate_Y} m, ${woh} m overhang — BRAGE's stated values.`,
-        `Covering ${wing.covering}. ${wing.note}`
-      ],
+        `${wing.pitch_deg}° ${String(wing.type).toLowerCase()}, eaves Y ${wEaves} m, ${woh} m overhang — BRAGE's stated values.`,
+        `Covering ${wing.covering}. ${wing.note ?? ""}`.trim(),
+        wing.supersedes ? `Supersedes ${wing.supersedes}` : null
+      ].filter(Boolean),
       geometry: {
-        primitive: "GRID_SURFACE", size_m: wx1 - wx0, segments: 1,
+        primitive: "GRID_SURFACE", size_m: wx[1] - wx[0], segments: 1,
         vertices: [
-          [wx0 - woh, wing.wall_plate_Y, wz0 - woh], [wx1 + woh, wing.wall_plate_Y, wz0 - woh],
-          [wx0 - woh, wing.wall_plate_Y - rise, wz1 + woh], [wx1 + woh, wing.wall_plate_Y - rise, wz1 + woh]
+          [wx[0], yRidge, zRidge], [wx[1], yRidge, zRidge],
+          [wx[0], wEaves, zEdge], [wx[1], wEaves, zEdge]
         ],
         method: "PLANE_FROM_SPEC", height_reference: "LOCAL_RELATIVE"
       }
     });
-    notes.push(`wing roof spans x[${wx0}, ${wx1}] z[${wz0}, ${wz1}] over ${wingRooms.length} rooms`);
+
+    if (String(wing.type).toUpperCase() === "GABLE") {
+      const zRidge = wing.ridge_at_z ?? (wz[0] + wz[1]) / 2;
+      const yRidge = wing.ridge_Y ?? wEaves;
+      elements.push(wingPlane("ROOF_WING_SOUTH", "Cold wing roof — south plane", wz[0], yRidge, zRidge));
+      elements.push(wingPlane("ROOF_WING_NORTH", "Cold wing roof — north plane", wz[1], yRidge, zRidge));
+      notes.push(`wing gable ridge z=${zRidge} at Y ${yRidge} · eaves Y ${wEaves} · x[${wx[0]}, ${wx[1]}]`);
+    } else {
+      // MONOPITCH: one plane, falling the way the spec says.
+      const rise = (wz[1] - wz[0]) * Math.tan((wing.pitch_deg * Math.PI) / 180);
+      elements.push(wingPlane("ROOF_WING_MONO", `Cold wing roof — ${wing.pitch_deg}° monopitch falling ${String(wing.falls_towards ?? "north").toLowerCase()}`,
+        wz[1], wEaves - rise, wz[0]));
+      notes.push(`wing monopitch over x[${wx[0]}, ${wx[1]}] z[${wz[0]}, ${wz[1]}]`);
+    }
   }
 
   // ── ground plane, for the exterior still to sit on ────────────────────────
@@ -503,7 +542,7 @@ export function houseScene(spec = readSpec()) {
       },
       source_bindings: [
         { path: "scripts/compile-house.mjs", sha256: "RUNTIME_ONLY_NOT_COMMITTED", role: "HOUSE_COMPILER" },
-        { path: "BRAGE/geometry/house-v0.3-geometry-spec.json", sha256: "RUNTIME_ONLY_NOT_COMMITTED", role: "HOUSE_GEOMETRY_SPEC" }
+        { ...specProvenance(), role: "HOUSE_GEOMETRY_SPEC" }
       ],
       evidence_classes: ["AUTHORITATIVE", "INDICATIVE", "DERIVED", "REPORTED_UNVERIFIED", "CONCEPT"],
       legal_claim_policy: {

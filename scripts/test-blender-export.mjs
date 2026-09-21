@@ -120,7 +120,9 @@ console.log("§11 visualization label");
 // label has to be burned into the image, not left to whoever embeds it.
 check("export stamps VISUALIZATION", /VISUALIZATION/.test(script));
 check("export denies the view claim", /not a view claim/i.test(script));
-check("export names it CONCEPT", /CONCEPT design/.test(script));
+// Asserts the claim, not the exact sentence: the stamp wording was shortened
+// to fit one line, and a check bound to the old phrasing fails on a fix.
+check("export names it CONCEPT", /\bCONCEPT\b/.test(script));
 check("stamp is actually switched on", /use_stamp = True/.test(script));
 check("stamp note is switched on", /use_stamp_note = True/.test(script));
 check("intelligence profile is labelled too", /VISUALIZATION/.test(intelScript));
@@ -140,6 +142,29 @@ if (fs.existsSync(stillsDir)) {
     check(`${file}: stamp enabled`, /use_stamp = True/.test(body) && /use_stamp_note = True/.test(body));
   }
 }
+
+// §12 manifest — proof the PNG came from a stamped script
+console.log("§12 stills manifest");
+import { verifyManifest, scriptStamps, buildManifest } from "./stills-manifest.mjs";
+
+check("a stamping script is recognised", scriptStamps(script) === true);
+check("a script missing the label is rejected",
+  scriptStamps(script.replace(/VISUALIZATION/g, "RENDER")) === false);
+check("a script with the label but the stamp off is rejected",
+  scriptStamps(script.replace("use_stamp = True", "use_stamp = False")) === false);
+
+const built = buildManifest();
+check("manifest lists every committed script", built.stills.length >= 3);
+check("every listed script stamps", built.stills.every(e => e.stamp === true));
+check("every listed script has a rendered PNG", built.stills.every(e => e.png !== null));
+check("every entry records both hashes",
+  built.stills.every(e => /^[a-f0-9]{64}$/.test(e.script_sha256) && /^[a-f0-9]{64}$/.test(e.png_sha256 ?? "")));
+
+// The hop the .py check cannot see: a script re-exported with the label while
+// the image beside it was rendered from the old one. Only hashes catch that.
+const drift = verifyManifest();
+for (const problem of drift) console.error(`      ${problem}`);
+check(`manifest verifies clean (${drift.length} problem(s))`, drift.length === 0);
 
 console.log(`\n${passed} passed, ${failed} failed (${passed + failed} checks)`);
 if (failed) process.exit(1);
