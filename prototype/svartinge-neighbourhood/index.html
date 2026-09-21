@@ -100,7 +100,7 @@ const _c0=new THREE.Vector3(),_c1=new THREE.Vector3();
 function updateCompass(){_c0.copy(controls.target).project(camera);_c1.set(controls.target.x,controls.target.y,controls.target.z+1).project(camera);const ang=Math.atan2(_c1.x-_c0.x,_c1.y-_c0.y)*180/Math.PI;_needle.style.transform='rotate('+ang+'deg)';}
 compass.onclick=()=>{const off=camera.position.clone().sub(controls.target),r=off.length()||120,polar=Math.min(controls.maxPolarAngle-0.02,Math.PI*0.36);camera.position.set(controls.target.x,controls.target.y+r*Math.cos(polar),controls.target.z-r*Math.sin(polar));camera.up.set(0,1,0);controls.update();};
 const backgrounds={INTELLIGENCE:new THREE.Color(0xd9e0db),REALISTIC:new THREE.Color(0x8fb2c2)},fogs={INTELLIGENCE:new THREE.Fog(0xd9e0db,260,620),REALISTIC:new THREE.Fog(0xa9c0c4,300,820)};
-const hemi=new THREE.HemisphereLight(0xffffff,0x68766e,1.65);scene.add(hemi);const sun=new THREE.DirectionalLight(0xfff1cf,2.8);sun.castShadow=false;/*real-time shadow-map is unusable under the scale.x=-1 content flip; the house shadow is a DERIVED projected polygon (drawSunShadow) instead*/sun.shadow.mapSize.set(2048,2048);sun.shadow.bias=-0.0004;sun.shadow.normalBias=0.02;sun.shadow.camera.left=-180;sun.shadow.camera.right=180;sun.shadow.camera.top=180;sun.shadow.camera.bottom=-180;scene.add(sun,sun.target);const root=new THREE.Group(),labelGroup=new THREE.Group(),poiGroup=new THREE.Group(),realismDecor=new THREE.Group(),roadLabels=new THREE.Group();scene.add(root,labelGroup,poiGroup,realismDecor,roadLabels);const clickable=[],byId=new Map();let data,providers,streetContext,terrainMetadata,officialGeometrySources,aerialHistory,currentStep=0,terrainObject=null,tween=null,mode='INTELLIGENCE',labelsEnabled=true,stageLabelsAllowed=true,liveAdapter=null;
+const hemi=new THREE.HemisphereLight(0xffffff,0x68766e,1.65);scene.add(hemi);const sun=new THREE.DirectionalLight(0xfff1cf,2.8);sun.castShadow=false;/*real-time shadow-map is unusable under the scale.x=-1 content flip; the house shadow is a DERIVED projected polygon (drawSunShadow) instead*/sun.shadow.mapSize.set(2048,2048);sun.shadow.bias=-0.0004;sun.shadow.normalBias=0.02;sun.shadow.camera.left=-180;sun.shadow.camera.right=180;sun.shadow.camera.top=180;sun.shadow.camera.bottom=-180;scene.add(sun,sun.target);const root=new THREE.Group(),labelGroup=new THREE.Group(),poiGroup=new THREE.Group(),realismDecor=new THREE.Group(),roadLabels=new THREE.Group();scene.add(root,labelGroup,poiGroup,realismDecor,roadLabels);const clickable=[],byId=new Map();let houseSpec=null,data,providers,streetContext,terrainMetadata,officialGeometrySources,aerialHistory,currentStep=0,terrainObject=null,tween=null,mode='INTELLIGENCE',labelsEnabled=true,stageLabelsAllowed=true,liveAdapter=null;
 const panel=document.getElementById('panel'),panelType=document.getElementById('panelType'),panelTitle=document.getElementById('panelTitle'),panelBadge=document.getElementById('panelBadge'),panelBody=document.getElementById('panelBody'),closeButton=document.getElementById('close'),sourcesButton=document.getElementById('sourcesButton'),steps=document.getElementById('steps'),solarTime=document.getElementById('solarTime'),timeLabel=document.getElementById('timeLabel'),terrainToggle=document.getElementById('terrainToggle'),poiToggle=document.getElementById('poiToggle'),labelsToggle=document.getElementById('labelsToggle'),divider=document.getElementById('divider'),leftLabel=document.getElementById('leftLabel'),rightLabel=document.getElementById('rightLabel'),modeCaption=document.getElementById('modeCaption'),loading=document.getElementById('loading'),livePanel=document.getElementById('livePanel'),liveContextButton=document.getElementById('liveContextButton'),liveClose=document.getElementById('liveClose'),liveToken=document.getElementById('liveToken'),liveConnect=document.getElementById('liveConnect'),liveDisconnect=document.getElementById('liveDisconnect'),liveStatus=document.getElementById('liveStatus'),liveMap=document.getElementById('liveMap'),aerialPanel=document.getElementById('aerialPanel'),aerialHistoryButton=document.getElementById('aerialHistoryButton'),aerialClose=document.getElementById('aerialClose'),aerialYears=document.getElementById('aerialYears'),aerialImage=document.getElementById('aerialImage'),aerialCrosshair=document.getElementById('aerialCrosshair'),aerialCaption=document.getElementById('aerialCaption'),aerialFoot=document.getElementById('aerialFoot');
 const intelligenceMat=(e,opacity=1)=>new THREE.MeshStandardMaterial({color:colors[e],roughness:.8,metalness:.02,transparent:opacity<1,opacity,side:THREE.DoubleSide});
 const naturalPalette={TERRAIN:0x71905f,PLOT:0x9fb47f,ROAD:0x525554,CONTEXT_BUILDING:0xddd4c5,CONCEPT_BUILDING:0xe6dfd1,ROOM:0xd6cab3,OPENING:0x83b2bd,FURNITURE:0x936e55,POI:0xd3a14c,VIEW_DIRECTION:0x9c6171,ENVIRONMENTAL_ANCHOR:0xe2b85f,ADDRESS_MARKER:0x2f765f};
@@ -264,11 +264,11 @@ const DESIGNS=[
    model:{W:13.6,D:10.7,storeyH:2.7,storeys:2,roof:'gable',balcony:true,balconyDepth:2.4,facade:'wood'}},
   // BRAGE's chosen direction (Brain call 2026-08-27): "Vinkelhuset mot Glan". L-plan — heated E-W bar on the
   // south (lake) frontage + cold garage/service wing stepping north off the east end. Massing straight from
-  // BRAGE geometry/house-v0.3-geometry-spec.json (HOUSE_BAR 20×7 m, HOUSE_WING_N 8×8 m, wall 3.0 m).
+  // BRAGE geometry/house-v0.4-geometry-spec.json (HOUSE_BAR 20×7 m, HOUSE_WING_N 8×8 m, wall 3.0 m).
   // boa/gfa/footprint/storeys are NOT typed here: loadVinkelhusetSpec() reads them from the
   // vendored v0.3 area_summary at load, so the card cannot drift from the spec again.
   // Walk-out lower level = the spec's conditional west-gable suterräng on the MEASURED 13° SW fall. CONCEPT class.
-  {id:'VH',builder:'BRAGE',lang:'VINKELHUS · VALD RIKTNING',name:'Vinkelhuset mot Glan',boa:null,footprint:null,storeys:null,gfa:null,src:'BRAGE house-v0.3-geometry-spec.json',
+  {id:'VH',builder:'BRAGE',lang:'VINKELHUS · VALD RIKTNING',name:'Vinkelhuset mot Glan',boa:null,footprint:null,storeys:null,gfa:null,src:'BRAGE house-v0.4-geometry-spec.json',
    summary:'The chosen design. A 20 m heated bar lies along the south edge so every main room takes the Glan view and the low winter sun; a cold garage wing steps north off the east end, leaving the west open to the WNW summer-evening sun and sheltering the SW terrace. ',
    model:{W:20,D:7,storeyH:2.9,storeys:2,roof:'gable',ridge:'width',roofPitch:30,balcony:true,balconyDepth:2.4,facade:'wood'},
    wing:{p:[7,7],s:[8,3.0,8]}},
@@ -331,7 +331,7 @@ function suterrangHouse(spec){
     geometry:{primitive:'Reconstructed '+(spec.builder||'Eksjöhus')+' '+spec.name.replace('Eksjöhus ','')+' massing',size:[m.W,H*2,m.D],position:[ax,base,az]},
     source_refs:[spec.src||'Eksjöhus'],
     limitations:spec.builder==='BRAGE'
-      ?['Massing from BRAGE house-v0.3-geometry-spec.json (HOUSE_BAR + HOUSE_WING_N); lower walk-out level = the spec\'s conditional suterräng on the measured 13° fall.','Roof is specified, not sketched: 30° symmetric gable, ridge E–W at Y 5.02 m, eaves Y 3.0 m, 0.5 m overhang; cold north wing 15° mono falling north. Glazing and finishes remain concept-level.','CONCEPT class: not an entitlement, setback or FFL claim.']
+      ?['Massing from BRAGE house-v0.4-geometry-spec.json (HOUSE_BAR + HOUSE_WING_N); lower walk-out level = the spec\'s conditional suterräng on the measured 13° fall.','Roofs are specified, not sketched: bar 30° symmetric gable, ridge E–W at Y 5.02 m, eaves Y 3.0 m, 0.5 m overhang; wing its own 15° gable, ridge E–W at Y 4.07 m, eaves Y 3.0 m, 0.4 m overhang. Glazing and finishes remain concept-level.','CONCEPT class: not an entitlement, setback or FFL claim.']
       :['Massing reconstructed from Eksjöhus published BOA / footprint / height / storeys.','Exact width×depth and roof pitch are a stated assumption (not all published).','CONCEPT class: not an entitlement, setback or FFL claim.']};
   const W=m.W,D=m.D,top=base+2*H;
   const woodCol=m.facade==='render'?0xe7e3d9:(m.facade==='brick'?0x9c6b52:0xc9a877);
@@ -361,12 +361,66 @@ function suterrangHouse(spec){
     [-1,1].forEach(s=>add(B(0.05,0.9,bd),M.rail,s*bw/2,by+0.55,-(D/2+bd/2)));
     [-bw/2,-bw/6,bw/6,bw/2].forEach(px=>add(B(0.1,0.95,0.1),M.trim,px,by+0.5,-(D/2+bd),false));
     add(B(bw,0.12,bd),M.plinth,0,by-0.12,-(D/2+bd/2),false);}
-  if(m.roof!=='flat'){const pitch=(m.roofPitch||27)*Math.PI/180,ovh=0.55,rw=W+2*ovh,rise=(rw/2)*Math.tan(pitch);
-    const sh=new THREE.Shape();sh.moveTo(-rw/2,0);sh.lineTo(rw/2,0);sh.lineTo(0,rise);sh.closePath();
-    const rg=new THREE.ExtrudeGeometry(sh,{depth:D+2*ovh,bevelEnabled:false});rg.translate(0,0,-(D+2*ovh)/2);
+  /* TERRACE_SOUTH + the two VINDFICKA windbreak segments, from BRAGE's scene patch.
+     The patch is in the house's own frame (HOUSE_BAR spans x -11..9, z -4..3), so every point is
+     shifted by the bar's centre (-1, -0.5) into this group's local frame rather than re-typed.
+     The souterrain walks out onto this terrace, so it sits at the lower floor level. */
+  if(spec.builder==='BRAGE'&&window.__housePatch){
+    const els=window.__housePatch.add_elements||[];
+    const SX=1,SZ=0.5;                                  // patch → local: bar centre at (-1,-0.5)
+    const deckItem={id:'TERRACE_SOUTH',type:'OUTDOOR_DECK',evidence_class:'CONCEPT',
+      label:'South terrace (kvällssol)',source_refs:[spec.src],
+      limitations:['CONCEPT: from BRAGE\'s scene patch. No level, drainage or edge detail is established.',
+                   'Not an entitlement, setback or FFL claim.']};
+    const t=els.find(e=>e.id==='TERRACE_SOUTH');
+    if(t&&t.geometry&&t.geometry.points_xz){
+      const pts=t.geometry.points_xz.map(([x,z])=>[x+SX,z+SZ]);
+      const xs=pts.map(p=>p[0]),zs=pts.map(p=>p[1]);
+      const dw=Math.max(...xs)-Math.min(...xs),dd=Math.max(...zs)-Math.min(...zs);
+      const cx=(Math.max(...xs)+Math.min(...xs))/2,cz=(Math.max(...zs)+Math.min(...zs))/2;
+      const th=t.geometry.thickness_m||0.15;
+      const me=new THREE.Mesh(B(dw,th,dd),M.deck);me.position.set(cx,base+(t.geometry.top_Y||0.05)-th/2,cz);
+      me.receiveShadow=true;me.userData.item=deckItem;
+      me.userData.intelligenceMaterial=intelligenceMat('CONCEPT',1);me.userData.realisticMaterial=me.material;
+      me.material=(mode==='REALISTIC')?me.userData.realisticMaterial:me.userData.intelligenceMaterial;
+      grp.add(me);clickable.push(me);
+    }
+    for(const wsEl of els.filter(e=>String(e.id).startsWith('VINDFICKA'))){
+      const g=wsEl.geometry;if(!g||!g.from_xz||!g.to_xz)continue;
+      const [x1,z1]=[g.from_xz[0]+SX,g.from_xz[1]+SZ],[x2,z2]=[g.to_xz[0]+SX,g.to_xz[1]+SZ];
+      const len=Math.hypot(x2-x1,z2-z1),th=g.thickness_m||0.12,ht=g.height_m||2;
+      const wItem={id:wsEl.id,type:'WINDBREAK',evidence_class:'CONCEPT',label:wsEl.label,
+        source_refs:[spec.src],
+        limitations:['CONCEPT: glazed windbreak from BRAGE\'s scene patch; no structure or fixing is designed.',
+                     'Not an entitlement, setback or FFL claim.']};
+      const me=new THREE.Mesh(B(len,ht,th),M.glass);
+      me.position.set((x1+x2)/2,base+ht/2,(z1+z2)/2);
+      me.rotation.y=Math.atan2(-(z2-z1),(x2-x1));
+      me.castShadow=true;me.userData.item=wItem;
+      me.userData.intelligenceMaterial=intelligenceMat('CONCEPT',1);me.userData.realisticMaterial=me.material;
+      me.material=(mode==='REALISTIC')?me.userData.realisticMaterial:me.userData.intelligenceMaterial;
+      grp.add(me);clickable.push(me);
+      const post=new THREE.Mesh(B(0.12,ht,0.12),M.trim);post.position.set(x2,base+ht/2,z2);
+      post.userData.item=wItem;post.userData.intelligenceMaterial=intelligenceMat('CONCEPT',1);
+      post.userData.realisticMaterial=post.material;
+      post.material=(mode==='REALISTIC')?post.userData.realisticMaterial:post.userData.intelligenceMaterial;
+      grp.add(post);
+    }
+  }
+  if(m.roof!=='flat'){
+    /* Gable per BRAGE v0.4: the ridge runs along the LONG axis (E–W on the bar), so the roof
+       spans the DEPTH. The previous build spanned the width, which put the ridge across the
+       short axis and raised it 5.93 m instead of the specified 2.02 m above the plate. */
+    const barSpec=houseSpec&&houseSpec.roof,
+          pitch=((barSpec&&barSpec.pitch_deg)||m.roofPitch||27)*Math.PI/180,
+          ovh=(barSpec&&barSpec.eaves_overhang_m)||0.5,
+          span=D+2*ovh,rise=(span/2)*Math.tan(pitch),rw=W+2*ovh;
+    const sh=new THREE.Shape();sh.moveTo(-span/2,0);sh.lineTo(span/2,0);sh.lineTo(0,rise);sh.closePath();
+    const rg=new THREE.ExtrudeGeometry(sh,{depth:rw,bevelEnabled:false});
+    rg.rotateY(Math.PI/2);rg.translate(-rw/2,0,0);   /* extrusion axis → X, ridge along the length */
     add(rg,M.roof,0,top,0);
     add(B(rw,0.12,0.14),M.trim,0,top-0.02,-(D/2+ovh),false);add(B(rw,0.12,0.14),M.trim,0,top-0.02,D/2+ovh,false); // fascia
-    add(B(0.7,1.6,0.7),M.plinth,W*0.22,top+rise*0.5,D*0.1);                            // chimney
+    add(B(0.7,1.6,0.7),M.plinth,W*0.22,top+rise*0.55,0);                               // chimney on the ridge
   }else{add(B(W,0.3,D),M.roof,0,top+0.15,0);add(B(W-0.6,0.12,D-0.6),M.deck,0,top+0.32,0,false);add(B(W,0.6,0.05),M.rail,0,top+0.6,-(D/2-0.02));}
   furnishLivingRoom(grp,base,H,W,D,item);
   designStudio.add(grp);grp.updateWorldMatrix(true,true);
@@ -386,10 +440,21 @@ function mountDesign(spec){
   if(spec.model){const g=suterrangHouse(spec);
     if(spec.wing&&g){/* L-plan wing in the house's own frame: +X = east end, +Z = uphill/north. Sits on natural ground at the entry level. */
       const [px,pz]=spec.wing.p,[w,h,d]=spec.wing.s;const wp=g.localToWorld(new THREE.Vector3(px,0,pz));const gy=groundY(wp.x,wp.z);
-      const item={id:'EK_HOUSE',type:'CONCEPT_BUILDING',evidence_class:'CONCEPT',label:spec.name+' · cold garage/service wing',source_refs:[spec.src],limitations:['CONCEPT massing from BRAGE house-v0.3-geometry-spec.json (HOUSE_WING_N); wing roof is a specified 15° monopitch falling north, 0.4 m overhang.','Not an entitlement, setback or FFL claim.']};
+      const item={id:'EK_HOUSE',type:'CONCEPT_BUILDING',evidence_class:'CONCEPT',label:spec.name+' · cold garage/service wing',source_refs:[spec.src],limitations:['CONCEPT massing from BRAGE house-v0.4-geometry-spec.json (HOUSE_WING_N); wing roof is its own specified 15° gable, ridge E–W at 4.07 m, eaves 3.0 m, 0.4 m overhang.','Not an entitlement, setback or FFL claim.']};
       const wallM=new THREE.MeshStandardMaterial({color:0xc9a877,roughness:.72,metalness:.02,envMapIntensity:.85}),roofM=new THREE.MeshStandardMaterial({color:0x3f4245,roughness:.72,metalness:.05,envMapIntensity:.5});
       const box=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),wallM);box.position.set(px,gy+h/2,pz);box.castShadow=true;box.receiveShadow=true;
-      const roof=new THREE.Mesh(new THREE.ConeGeometry(Math.max(w,d)*.72,1.9,4),roofM);roof.position.set(px,gy+h+.95,pz);roof.rotation.y=Math.PI/4;roof.castShadow=true;
+      /* Wing roof per BRAGE v0.4: its OWN 15° gable, ridge E–W at mid-depth, eaves at the 3.0 m
+         plate, ridge 4.07. v0.3 specified a 15° monopitch here, which Platform showed could not
+         be built — from a 3.0 m plate it either passed through the 2.5 m rooms or topped the bar
+         ridge. Until v0.4 this rendered as a four-sided cone, which was a placeholder, not a roof. */
+      const wr=houseSpec&&houseSpec.wing_roof,
+            wPitch=((wr&&wr.pitch_deg)||15)*Math.PI/180,
+            wOvh=(wr&&wr.eaves_overhang_m)||0.4,
+            wSpan=d+2*wOvh,wRise=(wSpan/2)*Math.tan(wPitch),wLen=w+2*wOvh;
+      const wsh=new THREE.Shape();wsh.moveTo(-wSpan/2,0);wsh.lineTo(wSpan/2,0);wsh.lineTo(0,wRise);wsh.closePath();
+      const wrg=new THREE.ExtrudeGeometry(wsh,{depth:wLen,bevelEnabled:false});
+      wrg.rotateY(Math.PI/2);wrg.translate(-wLen/2,0,0);
+      const roof=new THREE.Mesh(wrg,roofM);roof.position.set(px,gy+h,pz);roof.castShadow=true;
       for(const me of [box,roof]){me.userData.item=item;me.userData.intelligenceMaterial=intelligenceMat('CONCEPT',1);me.userData.realisticMaterial=me.material;me.material=(mode==='REALISTIC')?me.userData.realisticMaterial:me.userData.intelligenceMaterial;g.add(me);}
     }}
   else if(spec.boxes)for(const b of spec.boxes)studioBox(1+b.p[0],ay+b.p[1],1+b.p[2],b.s[0],b.s[1],b.s[2],b.roof);
@@ -427,10 +492,10 @@ function buildDesignDock(){
 async function loadVinkelhusetSpec(){
   const vh=DESIGNS.find(d=>d.id==='VH');if(!vh)return;
   let spec=null;
-  try{const r=await fetch('../../data/designs/house-v0.3-geometry-spec.json');if(r.ok)spec=await r.json()}catch(e){}
+  try{const r=await fetch('../../data/designs/house-v0.4-geometry-spec.json');if(r.ok)spec=await r.json()}catch(e){}
   const a=spec&&spec.area_summary;
   if(!a){vh.boa='—';vh.gfa='—';vh.footprint='—';vh.storeys='—';
-    vh.summary+=' Areas unavailable: BRAGE\'s v0.3 spec could not be read.';
+    vh.summary+=' Areas unavailable: BRAGE\'s v0.4 spec could not be read.';
     if(window.updateDesignDock&&window.currentDesign===vh)window.updateDesignDock(vh);return}
   const heated=a.heated_m2_excl_souterrain,heatedAll=a.heated_m2_incl_souterrain,
         footprint=a.ground_footprint_m2,
@@ -621,7 +686,19 @@ try{const _rb=await fetch(DERIVED_BUILDINGS);if(_rb.ok){const _bd=await _rb.json
    group so vectors, official buildings, boundary, aerial drape, labels and the concept house all match
    the real map. Camera/compass operate in world space and stay correct. */
 [root,labelGroup,poiGroup,realismDecor,authoritativeBoundary].forEach(g=>{g.scale.x=-1;g.updateMatrixWorld(true);});/* roadLabels is NOT flipped — flat text planes would render mirror-reversed under scale.x=-1; roadNameLabel places them in already-flipped world coords instead */
-setMode('REALISTIC');/* land in REALISTIC (ortho-draped) — INTELLIGENCE is one click away; the flat evidence view is the wrong first impression */stepTo(0,true);mountDesign(DESIGNS.find(d=>d.id===DEFAULT_DESIGN_ID)||DESIGNS.find(d=>d.id==='BJ')||DESIGNS[0]);setSun();loading.remove();
+/* BRAGE's roof geometry, read from the vendored v0.4 spec. The roofs used to be drawn from
+   the card's own model literals, which is how the bar ended up with its ridge across the SHORT
+   axis: a 30° gable spanning the 20 m width rises 5.93 m, where the spec's 30° over the 7 m
+   depth rises 2.02 m to ridge_Y 5.02. Reading the spec removes the guess. */
+try{const _r=await fetch('../../data/designs/house-v0.4-geometry-spec.json');
+    if(_r.ok)houseSpec=await _r.json();}catch(_e){}
+try{const _p=await fetch('../../data/designs/house-in-scene-v0.3-patch.json');
+    if(_p.ok)window.__housePatch=await _p.json();}catch(_e){}
+setMode('REALISTIC');/* land in REALISTIC (ortho-draped) — INTELLIGENCE is one click away; the flat evidence view is the wrong first impression */stepTo(0,true);mountDesign(DESIGNS.find(d=>d.id===DEFAULT_DESIGN_ID)||DESIGNS.find(d=>d.id==='BJ')||DESIGNS[0]);setSun();loading.remove();window.__twinReady=true;
+/* Debug accessor for verification: what the mounted design actually contains, by element type.
+   Defined at the END of init — an earlier build crashed on a debug hook that touched module
+   state before it was initialised, and that trap is not worth re-opening. */
+window.__designCounts=()=>{const c={};designStudio.traverse(o=>{const t=o.userData&&o.userData.item&&o.userData.item.type;if(t)c[t]=(c[t]||0)+1});return c;};
 /* Cinematic fly-in: start high over the plot and settle into the neighbourhood framing, so the eye lands on 54:28. */
 {const s0p=camera.position.clone(),s0t=controls.target.clone();const start=new THREE.Vector3(plotCenterWorld.x+30,s0p.y+230,plotCenterWorld.z+150);camera.position.copy(start);controls.target.copy(plotCenterWorld);tween={fromPos:start,toPos:s0p,fromTarget:plotCenterWorld.clone(),toTarget:s0t,start:performance.now(),duration:2800};}
 renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-tween.start)/tween.duration),k=1-Math.pow(1-t,3);camera.position.lerpVectors(tween.fromPos,tween.toPos,k);controls.target.lerpVectors(tween.fromTarget,tween.toTarget,k);if(t===1)tween=null}try{controls.update();updateCompass();updatePlotPulse();if(mode==='COMPARE'){renderer.setScissorTest(true);const left=Math.floor(innerWidth/2);renderPass('INTELLIGENCE',0,left);renderPass('REALISTIC',left,innerWidth-left);renderer.setScissorTest(false)}else{applyProfile(mode);camera.aspect=innerWidth/innerHeight;camera.fov=45;camera.updateProjectionMatrix();composer.render()}}catch(_loopErr){/* A transient first-frame/mode-switch error must never permanently freeze the twin (a dead frame in front of a client is unacceptable). Log once, keep the loop alive; the next frame renders fine. */if(!window.__loopErr){window.__loopErr=(_loopErr&&_loopErr.stack)||String(_loopErr);console.warn('[render-loop recovered]',_loopErr);}}})}catch(error){loading.classList.add('error');loading.innerHTML=`Could not load the synchronized Twin.<br><br>${error.message}<br><br>Run <code>npm run site:sweden:svartinge:prototype:serve</code> from the repository root.`}
@@ -720,7 +797,9 @@ renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-t
   addEventListener('hashchange',applyDeepLink);
   /* the twin's own script loads asynchronously; retry briefly until stepTo exists */
   let tries=0;const waitForTwin=setInterval(()=>{
-    if(typeof window.stepTo==='function'||++tries>60){clearInterval(waitForTwin);applyDeepLink()}
+    /* wait for the twin's OWN init to finish — it calls stepTo(0) at the end, which would
+       otherwise override the deep link a moment after we applied it */
+    if(window.__twinReady||++tries>150){clearInterval(waitForTwin);applyDeepLink()}
   },100);
 })();
 </script>
