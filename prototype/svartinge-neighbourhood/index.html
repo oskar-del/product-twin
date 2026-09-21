@@ -111,7 +111,54 @@ function profile(mesh,item,intelOpacity=1,naturalOpacity=1,variant='base'){mesh.
 function labelSprite(text,evidence,scale=1){const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');canvas.width=512;canvas.height=96;ctx.fillStyle='rgba(249,247,241,.97)';ctx.roundRect(4,4,504,88,18);ctx.fill();ctx.strokeStyle=cssColors[evidence];ctx.lineWidth=6;ctx.stroke();ctx.fillStyle='#0f1a15';ctx.font='700 30px Inter, sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(text.slice(0,42),256,48);const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(canvas),transparent:true,depthTest:false}));sprite.scale.set(16*scale,3*scale,1);sprite.userData.isLabel=true;labelGroup.add(sprite);return sprite}
 function attach(mesh,item){mesh.userData.item=item;clickable.push(mesh);byId.set(item.id,mesh);mesh.castShadow=true;mesh.receiveShadow=true;return mesh}
 function box(item,g){const mesh=profile(new THREE.Mesh(new THREE.BoxGeometry(...g.size)),item,item.type==='ROOM'?.15:item.type==='OPENING'?.48:1,item.type==='ROOM'?.08:1);mesh.position.set(...g.position);mesh.rotation.y=THREE.MathUtils.degToRad(g.rotation_y_deg||0);attach(mesh,item);root.add(mesh);if(item.type==='CONTEXT_BUILDING'){const roof=profile(new THREE.Mesh(new THREE.ConeGeometry(Math.max(g.size[0],g.size[2])*.72,1.7,4)),item,1,1,'roof');roof.position.set(g.position[0],g.position[1]+g.size[1]/2+.85,g.position[2]);roof.rotation.y=Math.PI/4+mesh.rotation.y;roof.userData.item=item;clickable.push(roof);roof.castShadow=true;root.add(roof)}return mesh}
-function terrain(item,g){const geo=new THREE.BufferGeometry(),verts=[],indices=[],n=g.segments+1;g.vertices.forEach(v=>verts.push(...v));for(let z=0;z<g.segments;z++)for(let x=0;x<g.segments;x++){const a=z*n+x,b=a+1,c=a+n,d=c+1;indices.push(a,c,b,b,c,d)}geo.setAttribute('position',new THREE.Float32BufferAttribute(verts,3));const _uv=[];for(let iz=0;iz<=g.segments;iz++)for(let ix=0;ix<=g.segments;ix++)_uv.push(ix/g.segments,iz/g.segments);geo.setAttribute('uv',new THREE.Float32BufferAttribute(_uv,2));geo.setIndex(indices);geo.computeVertexNormals();const mesh=profile(new THREE.Mesh(geo),item,.86,1);mesh.receiveShadow=true;/* so the concept house's derived shadow lands on the real slope */attach(mesh,item);root.add(mesh);terrainObject=mesh;const wire=new THREE.LineSegments(new THREE.WireframeGeometry(geo),new THREE.LineBasicMaterial({color:0x82968a,transparent:true,opacity:.18}));wire.userData.intelligenceOnly=true;mesh.add(wire);addTerrainSkirt(g);return mesh}
+
+/* INTELLIGENCE terrain = a DTM hillshade, not flat colour.
+   The evidence view showed the ground as one flat green plane, which threw away the very thing
+   the 1 m height model establishes: the shape of the fall. The shade below is a Lambertian
+   relief computed from the mesh's own normals — the same vertices the DERIVED terrain receipt
+   produced — so it reads as terrain while staying inside the DERIVED colour. It is a shading of
+   measured geometry, not a texture, and it invents nothing: no colour ramp by elevation, no
+   imagery, no contour that is not a surface normal.
+   Light comes from the north-west at 45°, the cartographic convention, which is NOT the solar
+   position — the sun study is a separate, derived thing and must not be confused with this. */
+const HILLSHADE_DIR=(()=>{const az=315*Math.PI/180,alt=45*Math.PI/180;
+  return new THREE.Vector3(Math.sin(az)*Math.cos(alt),Math.sin(alt),-Math.cos(az)*Math.cos(alt)).normalize();})();
+function hillshadeTerrain(geo,item){
+  const normal=geo.getAttribute('normal');if(!normal)return;
+  /* Vertical exaggeration (the cartographer's z-factor). Across a 360 m window with 13.5 m of
+     relief every normal is within a few degrees of vertical, so an unexaggerated Lambertian
+     shade is nearly constant and the relief does not read at all. Steepening the horizontal
+     components before shading is what makes the fall legible; it changes the SHADING only —
+     no vertex moves, and no slope figure anywhere on the page comes from this. */
+  const EXAG=3.2;   /* enough for a 13,5 m fall to read across a 360 m window, not a caricature */
+  const base=new THREE.Color(colors[item.evidence_class]??0x497aa2);
+  /* Modulate AROUND the evidence colour rather than darkening from it: a slope in shadow must
+     still read as the same evidence class, only dimmer. */
+  /* Contrast by luminance, not by desaturation: lerping the lit end toward white washed the
+     evidence colour out until the ground read as pale grey. Scaling the same hue keeps a slope
+     recognisably DERIVED-green whether it faces the light or away from it. */
+  /* NOTE these multipliers act in LINEAR space — three.js converts a hex colour out of sRGB —
+     so they are far wider than they look. 0.3x to 3.4x is roughly a stop and a half either side
+     of the evidence colour, which is what makes the fall legible without changing its hue. */
+  const dark=base.clone().multiplyScalar(0.3),light=base.clone().multiplyScalar(3.4);
+  const out=new Float32Array(normal.count*3),c=new THREE.Color();
+  for(let i=0;i<normal.count;i++){
+    let nx=normal.getX(i)*EXAG,ny=normal.getY(i),nz=normal.getZ(i)*EXAG;
+    const len=Math.hypot(nx,ny,nz)||1;nx/=len;ny/=len;nz/=len;
+    const shade=Math.max(0,nx*HILLSHADE_DIR.x+ny*HILLSHADE_DIR.y+nz*HILLSHADE_DIR.z);
+    c.copy(dark).lerp(light,shade);
+    out[i*3]=c.r;out[i*3+1]=c.g;out[i*3+2]=c.b;
+  }
+  geo.setAttribute('color',new THREE.Float32BufferAttribute(out,3));
+}
+function hillshadeMaterial(item){
+  /* The relief is baked into the vertex colours; the scene's hemisphere light does the rest.
+     Emissive is deliberately NOT used — it is a flat uniform that vertex colours do not
+     modulate, so it would wash the relief out rather than carry it. */
+  return new THREE.MeshStandardMaterial({vertexColors:true,roughness:.95,metalness:0,
+    transparent:true,opacity:.9,side:THREE.DoubleSide});
+}
+function terrain(item,g){const geo=new THREE.BufferGeometry(),verts=[],indices=[],n=g.segments+1;g.vertices.forEach(v=>verts.push(...v));for(let z=0;z<g.segments;z++)for(let x=0;x<g.segments;x++){const a=z*n+x,b=a+1,c=a+n,d=c+1;indices.push(a,c,b,b,c,d)}geo.setAttribute('position',new THREE.Float32BufferAttribute(verts,3));const _uv=[];for(let iz=0;iz<=g.segments;iz++)for(let ix=0;ix<=g.segments;ix++)_uv.push(ix/g.segments,iz/g.segments);geo.setAttribute('uv',new THREE.Float32BufferAttribute(_uv,2));geo.setIndex(indices);geo.computeVertexNormals();hillshadeTerrain(geo,item);const mesh=profile(new THREE.Mesh(geo),item,.86,1);mesh.userData.intelligenceMaterial=hillshadeMaterial(item);/* profile() already pointed mesh.material at the material it built, so swapping only the   userData entry leaves the live mesh on the old flat one until applyProfile next runs. */if(mode!=='REALISTIC')mesh.material=mesh.userData.intelligenceMaterial;mesh.receiveShadow=true;/* so the concept house's derived shadow lands on the real slope */attach(mesh,item);root.add(mesh);terrainObject=mesh;const wire=new THREE.LineSegments(new THREE.WireframeGeometry(geo),new THREE.LineBasicMaterial({color:0x82968a,transparent:true,opacity:.18}));wire.userData.intelligenceOnly=true;mesh.add(wire);addTerrainSkirt(g);return mesh}
 // Extrude the terrain perimeter down into a solid base + bottom cap, so at grazing angles the twin
 // reads as a carved block on a table instead of a paper-thin plate you can see under.
 function addTerrainSkirt(g){
@@ -698,6 +745,14 @@ setMode('REALISTIC');/* land in REALISTIC (ortho-draped) — INTELLIGENCE is one
 /* Debug accessor for verification: what the mounted design actually contains, by element type.
    Defined at the END of init — an earlier build crashed on a debug hook that touched module
    state before it was initialised, and that trap is not worth re-opening. */
+window.__terrainInfo=()=>{const o=terrainObject;if(!o)return 'no terrain';
+  const g=o.geometry,m=o.material;const col=g.getAttribute('color');
+  let lo=1,hi=0;if(col)for(let i=0;i<col.count;i++){const v=col.getX(i);if(v<lo)lo=v;if(v>hi)hi=v;}
+  let inRoot=false,q=o.parent;while(q){if(q===root){inRoot=true;break}q=q.parent}
+  return{mode,inRoot,matIsIntel:m===o.userData.intelligenceMaterial,matIsReal:m===o.userData.realisticMaterial,
+    matType:m&&m.type,vertexColors:!!(m&&m.vertexColors),hasMap:!!(m&&m.map),
+    hasColorAttr:!!col,colorRedRange:col?[+lo.toFixed(3),+hi.toFixed(3)]:null,
+    intelIsHillshade:!!(o.userData.intelligenceMaterial&&o.userData.intelligenceMaterial.vertexColors)};};
 window.__designCounts=()=>{const c={};designStudio.traverse(o=>{const t=o.userData&&o.userData.item&&o.userData.item.type;if(t)c[t]=(c[t]||0)+1});return c;};
 /* Cinematic fly-in: start high over the plot and settle into the neighbourhood framing, so the eye lands on 54:28. */
 {const s0p=camera.position.clone(),s0t=controls.target.clone();const start=new THREE.Vector3(plotCenterWorld.x+30,s0p.y+230,plotCenterWorld.z+150);camera.position.copy(start);controls.target.copy(plotCenterWorld);tween={fromPos:start,toPos:s0p,fromTarget:plotCenterWorld.clone(),toTarget:s0t,start:performance.now(),duration:2800};}
