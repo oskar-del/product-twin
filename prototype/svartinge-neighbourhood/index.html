@@ -7,7 +7,7 @@
 <style>
 :root{--ink:#14231d;--paper:#f5f1e8;--glass:rgba(247,244,236,.92);--line:rgba(20,35,29,.15);--authoritative:#176b52;--indicative:#c18a2d;--derived:#497aa2;--reported:#a65b68;--concept:#735a9e}
 *{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:#d9e0db;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,sans-serif}canvas{display:block}.hidden{display:none!important}
-.top{position:fixed;left:16px;right:16px;top:14px;display:flex;align-items:center;gap:8px;z-index:8;pointer-events:none}.brand{background:var(--ink);color:white;border-radius:12px;padding:10px 13px;font-size:10px;letter-spacing:.12em}.chip{background:var(--glass);border:1px solid var(--line);border-radius:999px;padding:8px 10px;font-size:10px;backdrop-filter:blur(12px)}
+.top{position:fixed;left:16px;top:14px;display:flex;align-items:center;gap:8px;z-index:8;pointer-events:none;max-width:calc(50% - 190px)}/* stop short of the centred .mode-dock: the registered-area chip was being clipped by it */.brand{background:var(--ink);color:white;border-radius:12px;padding:10px 13px;font-size:10px;letter-spacing:.12em}.chip{background:var(--glass);border:1px solid var(--line);border-radius:999px;padding:8px 10px;font-size:10px;backdrop-filter:blur(12px)}
 .mode-dock{position:fixed;left:50%;top:15px;transform:translateX(-50%);z-index:10;display:flex;gap:4px;background:rgba(20,35,29,.9);padding:5px;border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.18)}.mode{border:0;background:transparent;color:rgba(255,255,255,.67);padding:8px 12px;border-radius:10px;font-size:9px;letter-spacing:.08em;cursor:pointer}.mode.active{background:white;color:var(--ink)}
 .steps{position:fixed;left:50%;top:65px;transform:translateX(-50%);display:flex;gap:5px;z-index:9;background:rgba(20,35,29,.86);padding:6px;border-radius:15px;max-width:calc(100vw - 30px);overflow:auto}.step{border:0;color:rgba(255,255,255,.68);background:transparent;padding:8px 10px;border-radius:10px;font-size:9px;white-space:nowrap;cursor:pointer}.step.active{background:white;color:var(--ink)}
 .mode-caption{position:fixed;left:50%;top:112px;transform:translateX(-50%);z-index:7;padding:7px 11px;border-radius:999px;background:rgba(247,244,236,.82);border:1px solid rgba(20,35,29,.13);backdrop-filter:blur(10px);font-size:9px;letter-spacing:.06em;white-space:nowrap}.split-label{position:fixed;top:112px;z-index:8;color:white;background:rgba(20,35,29,.78);padding:6px 9px;border-radius:999px;font-size:8px;letter-spacing:.09em}.split-label.left{left:18px}.split-label.right{right:18px}.divider{position:fixed;top:0;bottom:0;left:50%;width:1px;background:rgba(255,255,255,.85);box-shadow:0 0 0 1px rgba(20,35,29,.15);z-index:6;pointer-events:none}
@@ -130,7 +130,9 @@ function hillshadeTerrain(geo,item){
      shade is nearly constant and the relief does not read at all. Steepening the horizontal
      components before shading is what makes the fall legible; it changes the SHADING only —
      no vertex moves, and no slope figure anywhere on the page comes from this. */
-  const EXAG=3.2;   /* enough for a 13,5 m fall to read across a 360 m window, not a caricature */
+  const EXAG=9;     /* 3,2 was measurably present but visually invisible at capture resolution:
+                       25×25 vertices over 360 m make every normal nearly vertical, so the shade
+                       has to be pushed hard before a 13,5 m fall is legible at all. */
   const base=new THREE.Color(colors[item.evidence_class]??0x497aa2);
   /* Modulate AROUND the evidence colour rather than darkening from it: a slope in shadow must
      still read as the same evidence class, only dimmer. */
@@ -140,7 +142,7 @@ function hillshadeTerrain(geo,item){
   /* NOTE these multipliers act in LINEAR space — three.js converts a hex colour out of sRGB —
      so they are far wider than they look. 0.3x to 3.4x is roughly a stop and a half either side
      of the evidence colour, which is what makes the fall legible without changing its hue. */
-  const dark=base.clone().multiplyScalar(0.3),light=base.clone().multiplyScalar(3.4);
+  const dark=base.clone().multiplyScalar(0.18),light=base.clone().multiplyScalar(5.5);
   const out=new Float32Array(normal.count*3),c=new THREE.Color();
   for(let i=0;i<normal.count;i++){
     let nx=normal.getX(i)*EXAG,ny=normal.getY(i),nz=normal.getZ(i)*EXAG;
@@ -294,7 +296,7 @@ function stepTo(i,instant=false){currentStep=i;const s=data.navigation[i];if(s.i
   // need a near-horizontal camera. This also pulls PLOT_ORBIT off its grazing angle onto a clean 3/4.
   controls.maxPolarAngle=['ENTER_BUILDING','ROOM'].includes(s.id)?Math.PI*0.62:Math.PI*0.48;/* never let the outdoor camera drop below the horizontal — that is what let you tilt UNDER the terrain and see the backstage/underside. Only the interior stages (inside the house) relax it. */document.querySelectorAll('.step').forEach((b,n)=>b.classList.toggle('active',n===i));applyStageVisibility(s);roadLabels.visible=i<4;/* road-NAME labels belong in the overview stages (neighbourhood/street/outlook/house-on-plot); hide them in the tight orbit + interior so a big depthTest-off pill can't float inside the room */toggleDesignDock(s.id);toggleBoundary(s.id);syncLiveStage();const pos=new THREE.Vector3(...s.camera),target=new THREE.Vector3(...s.target);tween=instant?null:{fromPos:camera.position.clone(),toPos:pos,fromTarget:controls.target.clone(),toTarget:target,start:performance.now(),duration:900};if(instant){camera.position.copy(pos);controls.target.copy(target)}if(i===6){const room=byId.get('ROOM_LIVING');if(room)openPanel(room.userData.item)}else panel.classList.remove('open')}
 /* exposed for the deep link in the non-module script below (#stage=N) */
-window.stepTo=stepTo;
+window.stepTo=stepTo;window.setMode=(m)=>setMode(m);
 function makeSteps(){window.__stageCount=data.navigation.length;data.navigation.forEach((s,i)=>{const b=document.createElement('button');b.className='step';b.textContent=`${i+1}. ${s.label}`;b.onclick=()=>stepTo(i);steps.appendChild(b)})}
 function solarPosition(hour){const t=(hour-6)/14,az=THREE.MathUtils.degToRad(70+220*t),alt=THREE.MathUtils.degToRad(Math.max(2,54*Math.sin(Math.PI*t)));return new THREE.Vector3(Math.sin(az)*Math.cos(alt)*150,Math.sin(alt)*150,Math.cos(az)*Math.cos(alt)*150)}
 function solarDir(hour){const p=solarPosition(hour);p.x=-p.x;/* our content frame is east-flipped (scale.x=-1); flip the sun too so the derived shadows fall the geographically-correct way */return p.normalize();}
@@ -691,7 +693,9 @@ function drawAuthoritativeBoundary(pd){
   const bmat=new THREE.MeshBasicMaterial({color:ACCENT,transparent:true,opacity:.16,depthWrite:false,side:THREE.DoubleSide});
   const beam=new THREE.Mesh(new THREE.CylinderGeometry(1.1,1.7,56,22,1,true),bmat);beam.position.set(cx,cy+28,cz);beam.renderOrder=2;authoritativeBoundary.add(beam);plotPulse.push({mat:bmat,base:.16,amp:.12});
   const _area=pd.subject_area_m2??subjectAreaM2(pd);
-  const areaTxt=(_area!=null?Math.round(_area).toLocaleString('sv-SE'):'area unavailable')+' m² · your plot';
+  /* One number, one rendering. This said "1 937" (rounded) while the top chip said "1 936,8",
+     which reads as two different areas for one plot. */
+  const areaTxt=(_area!=null?_area.toLocaleString('sv-SE',{maximumFractionDigits:1}):'area unavailable')+' m² · your plot';
   const chip=plotChip(pd.subject_designation||'Svärtinge 54:28',areaTxt);chip.position.set(cx,cy+62,cz);authoritativeBoundary.add(chip);
 }
 function updatePlotPulse(){if(!plotPulse.length||!authoritativeBoundary.visible)return;const s=(Math.sin(performance.now()*0.0022)+1)*0.5;for(const p of plotPulse)p.mat.opacity=p.base+p.amp*s;}
@@ -887,12 +891,17 @@ renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-t
   function applyDeepLink(){
     const hash=String(location.hash||'').replace(/^#/,'');
     if(!hash)return;
-    const stage=/^stage=(\d+)$/.exec(hash);
+    /* #stage=5 · #stage=5,INTELLIGENCE · #twin — the mode matters for capture: the hillshade
+       only exists in INTELLIGENCE, so without this no script could ever photograph it. */
+    const stage=/^stage=(\d+)(?:[,&](\w+))?$/.exec(hash);
     if(hash==='twin'||stage)si.classList.add('hidden');
     if(stage&&typeof window.stepTo==='function'){
       const index=Math.max(0,Math.min(Number(stage[1])-1,(window.__stageCount||7)-1));
       /* instant: a capture must not photograph a camera mid-tween */
       window.stepTo(index,true);
+      const mode=(stage[2]||'').toUpperCase();
+      if(['INTELLIGENCE','REALISTIC','COMPARE'].includes(mode)&&typeof window.setMode==='function')
+        window.setMode(mode);
     }
   }
   addEventListener('hashchange',applyDeepLink);
