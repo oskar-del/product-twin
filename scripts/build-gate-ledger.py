@@ -68,7 +68,67 @@ def run_generic(site):
     return load(site / "findings.json"), load(site / "gates.json")
 
 
+def dig(doc, path):
+    node = doc
+    for part in path.split("."):
+        if not isinstance(node, dict) or part not in node:
+            return None
+        node = node[part]
+    return node
+
+
+def evaluate_condition_rule(rule, docs):
+    """
+    A designer's own stated condition, evaluated against a measurement.
+
+    The threshold is parsed out of the condition TEXT rather than typed into the registry: the
+    designer owns the condition, we own the measurement, and neither should be able to drift
+    from the other silently. A condition that stops parsing fails the gate open with a reason —
+    it never falls back to a remembered number.
+    """
+    src = rule["condition_from"]
+    scene = docs.get(src["entity_type"])
+    if not scene:
+        return False, f"receipt not present: {src['entity_type']}", []
+    scene_doc, scene_file = scene
+    entries = dig(scene_doc, src["path"]) or []
+    entry = next((e for e in entries if e.get("id") == src["match_id"]), None)
+    if not entry:
+        return False, (f"{src['match_id']} is not in {src['path']} of {scene_file}: the designer "
+                       f"states no such condition"), []
+    text = str(entry.get(src["field"]) or "")
+    found = re.search(r"(-?\d+(?:[.,]\d+)?)\s*m", text)
+    if not found:
+        return False, (f"the condition could not be read as a number: \"{text}\". The gate stays "
+                       f"open rather than assuming a threshold."), []
+    threshold = float(found.group(1).replace(",", "."))
+
+    meas = rule["measurement_from"]
+    names = meas["entity_type"] if isinstance(meas["entity_type"], list) else [meas["entity_type"]]
+    value = measured_file = None
+    for name in names:
+        if name in docs:
+            doc, filename = docs[name]
+            value = dig(doc, meas["path"])
+            if value is None and meas.get("fallback_path"):
+                value = dig(doc, meas["fallback_path"])
+            measured_file = filename
+            if value is not None:
+                break
+    if value is None:
+        return False, f"no measurement for {meas['path']} in {' or '.join(names)}", []
+
+    ok = float(value) >= threshold if rule.get("operator", ">=") == ">=" else float(value) <= threshold
+    verdict = "holds" if ok else "does NOT hold"
+    reason = (f"The designer's condition is \"{text}\" ({scene_file}). The {meas['label']} measures "
+              f"{value} m ({measured_file}), so the condition {verdict}: "
+              f"{value} {rule.get('operator','>=')} {threshold}.")
+    return ok, reason, [scene_file, measured_file]
+
+
 def evaluate_rule(rule, docs):
+    if "condition_from" in rule:
+        return evaluate_condition_rule(rule, docs)
     """Registry closure rule → (closed, reason, evidence_refs)."""
     wanted = rule["entity_type"]
     names = [wanted] if isinstance(wanted, str) else list(wanted)

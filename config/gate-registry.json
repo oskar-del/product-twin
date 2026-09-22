@@ -178,6 +178,30 @@
       "gate_id": "GATE_SE_CONSTRUCTION_CLEARANCE",
       "domain": "access",
       "question": "Is there clearance to build — permits, notifications and start authorisation?"
+    },
+    {
+      "gate_id": "GATE_SE_SOUTERRAIN_CONDITION",
+      "domain": "ground",
+      "question": "Does the measured fall satisfy the designer's stated condition for the conditional souterrain?",
+      "note": "The threshold is NOT typed here. It is parsed from the designer's own condition text and compared against a measurement from the height receipt, so if the designer changes the condition the gate follows, and if the text stops parsing the gate fails loudly rather than quietly keeping a stale number.",
+      "closes_when": {
+        "condition_from": {
+          "entity_type": "NeighbourhoodSceneExport",
+          "path": "design.conditional_upgrades",
+          "match_id": "WEST_SOUTERRANG",
+          "field": "condition"
+        },
+        "measurement_from": {
+          "entity_type": [
+            "DerivedTerrainEvidence",
+            "TerrainHeightDerivation"
+          ],
+          "path": "plot_footprint.relief_m",
+          "fallback_path": "parcel_height_statistics.relief_m",
+          "label": "fall across the parcel (1 m DTM)"
+        },
+        "operator": ">="
+      }
     }
   ]
 }

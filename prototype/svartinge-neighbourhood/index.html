@@ -812,7 +812,10 @@ renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-t
 /* Site-Intelligence front door — the full reading (restored 2026-09-16 from the 2026-08-25 build, facts updated to the
    Lantmäteriet deliveries). Every number is COMPUTED from the committed receipts; canvases draw from the derived JSON. */
 (async()=>{
-  const B='../../data/sites/sweden/saterdalsvagen-14/',j=async p=>{try{const r=await fetch(B+p);return r.ok?await r.json():null}catch(e){return null}};
+  /* no-store on every receipt the front door reads. The twin's fetches were busted when the
+     stale-scene bug surfaced; these were not, and the page duly went on showing 6 / 26 after the
+     ledger had moved to 7 / 27 — the same silent staleness, one surface over. */
+  const B='../../data/sites/sweden/saterdalsvagen-14/',j=async p=>{try{const r=await fetch(B+p,{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}};
   const [pd,bd,td,gj,pi]=await Promise.all([j('property-division-derived-v0.1.json'),j('buildings-official-derived-v0.1.json'),j('terrain-dem-derived-v0.1.json'),j('gates.json'),j('plot-intelligence-v0.1.json')]);
   const $=id=>document.getElementById(id),set=(id,v)=>{const e=$(id);if(e)e.textContent=v};
   const outer=r=>(r&&r.length&&Array.isArray(r[0])&&Array.isArray(r[0][0]))?r[0]:r; /* polygon [[ring],[hole]] → outer ring; a bare ring passes through */
