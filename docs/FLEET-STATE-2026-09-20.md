@@ -54,6 +54,8 @@
 
 - 09-22 Djurö e94270445e: helper adopted, hash 50c2e422… matches Spatial byte-for-byte (its committed 1af0d502… MOVED — the fix landing; Brain had misquoted Spatial's hash as Djurö's). Ledger script hashes nothing (no call site — correctly not invented). Property-division switch deferred to a JOINT commit (both already agree on d5aaa775). Registry 27 (SOUTERRAIN_CONDITION); Djurö 9/18/27, validator 120/0 — its first run failed on a stale typed --rendered-total 26: the flag is the weak link → validator reads rendered numbers over CDP. Follow-ups → Spatial: METHOD_ID export; rename derived_geometry_sha256→derivation_sha256 on derive-* scripts.
 
+- 09-22 Spatial 5d4f380db9: SOUTERRAIN_CONDITION gate computes (threshold parsed from BRAGE's text vs DTM receipt, 5 cases proven); Svärtinge 7/20/27. Disclosed gap: measures fall across the PARCEL, condition asks for the BAR FOOTPRINT → queued: fall_within_footprint_m sampled inside the footprint; gate reason states the mismatch meanwhile. Parser to refuse ambiguous conditions. Stale cache recurred on the front door (showed 6/26 after 7/27): rule 16 amended — a cache fix is invisible until the carrying document is busted; verify with a fresh URL; audit all surfaces in one pass.
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
