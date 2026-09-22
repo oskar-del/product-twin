@@ -52,6 +52,8 @@
 
 - 09-22 Spatial 03c5ff688a: shared geometry-hash helper (explicit separators, sorted by object id, 1 mm) + one buildings ingest with Djurö's receipt shape. Cross-pipeline proof: Spatial's run on Djurö data = Djurö's committed hash 50c2e422…6717 (35/4/31, 416.0 m²). Svärtinge: 153 within 200 m, 0 on parcel (correct — the plot is empty). Rule 19: a mutation test proves a check FIRES, not that it is RIGHT — real records must be checked (LM multi-part buildings share one objektidentitet; the first helper wrongly refused duplicates). Helper stays in spatial; Djurö imports by path.
 
+- 09-22 Djurö e94270445e: helper adopted, hash 50c2e422… matches Spatial byte-for-byte (its committed 1af0d502… MOVED — the fix landing; Brain had misquoted Spatial's hash as Djurö's). Ledger script hashes nothing (no call site — correctly not invented). Property-division switch deferred to a JOINT commit (both already agree on d5aaa775). Registry 27 (SOUTERRAIN_CONDITION); Djurö 9/18/27, validator 120/0 — its first run failed on a stale typed --rendered-total 26: the flag is the weak link → validator reads rendered numbers over CDP. Follow-ups → Spatial: METHOD_ID export; rename derived_geometry_sha256→derivation_sha256 on derive-* scripts.
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
