@@ -56,6 +56,8 @@
 
 - 09-22 Spatial 5d4f380db9: SOUTERRAIN_CONDITION gate computes (threshold parsed from BRAGE's text vs DTM receipt, 5 cases proven); Svärtinge 7/20/27. Disclosed gap: measures fall across the PARCEL, condition asks for the BAR FOOTPRINT → queued: fall_within_footprint_m sampled inside the footprint; gate reason states the mismatch meanwhile. Parser to refuse ambiguous conditions. Stale cache recurred on the front door (showed 6/26 after 7/27): rule 16 amended — a cache fix is invisible until the carrying document is busted; verify with a fresh URL; audit all surfaces in one pass.
 
+- 09-22 Spatial 0fe3279668: METHOD_ID composed from parameters (geometry_hash/v1+p-3+c…+sorted_by_object_id+grouped_parts+xz_only); buildings field → derivation_sha256; validator reads rendered numbers over CDP with a fresh URL. Rule 20: the check that replaces a weak check must be proven to FAIL (first wiring compared before setting values → 118/0 on mismatched numbers). Ruling for property-division: object id = objektidentitet; subject and context hashed separately; joint commit Spatial+Djurö.
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
