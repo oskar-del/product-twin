@@ -302,7 +302,25 @@ separators and list order are invisible in review. Nothing else in the receipt m
 and all 35 footprints are identical. 35 rows / 34 unique ids — one multi-part building (a single
 `objektidentitet` with two rings), which the helper groups rather than rejects.
 
-### ⛔ ONE THING HELD DELIBERATELY — do not "finish" it alone
+### ✅ Property division landed too — joint commit with Spatial (`bbb04cfa0a` + this one)
+Both pipelines switched in one coordinated move, each pasting its hash before either committed.
+They matched first time:
+
+```
+subject   e3e7baf4…   id registerenhetsomradesyta:3021261   (the register's id, never the designation)
+context   27963a1f…   10 parcels, hashed SEPARATELY from the subject
+method    geometry_hash/v1+p-3+c44.59.124.10+sorted_by_object_id+grouped_parts+xz_only
+```
+
+`context_clip_buffer_m: 250.0` travels **with** the context hash — two context hashes computed at
+different buffers are two correct answers to different questions, and without the buffer beside them
+they read as a disagreement. Same shape on both sides.
+
+**Validator: 122 passed, 0 failed, 6 hashes re-derived** (was 4 — the buildings hash is now
+recomputed too; before this it was declared and never checked by anything).
+
+### ⛔ SUPERSEDED — the hold below is lifted; kept for the reasoning
+
 `scripts/ingest-property-division.py` also hashes geometry and has **deliberately not** been
 switched to the shared helper. Spatial's pipeline and this one **already reproduce `d5aaa775…`
 identically**, so changing one side alone would *break* an agreement that currently holds. It needs

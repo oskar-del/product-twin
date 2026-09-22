@@ -28,6 +28,20 @@ import argparse, base64, hashlib, json, os, re, sqlite3, struct, sys, tempfile, 
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# The canonical geometry hash is IMPORTED from the template repo, never copied: a copied
+# canonical form stops being canonical the first time one copy is edited.
+_HELPER = ROOT.parent / "repo-spatial-studio" / "scripts"
+if str(_HELPER) not in sys.path:
+    sys.path.insert(0, str(_HELPER))
+try:
+    from geometry_hash import geometry_sha256, METHOD_ID
+except ImportError as exc:                       # pragma: no cover - environment problem
+    raise SystemExit(
+        f"cannot import the shared geometry hash from {_HELPER}: {exc}\n"
+        "It is deliberately not vendored here. Check out repo-spatial-studio beside this "
+        "worktree (agent/spatial-studio-claude, 0fe3279668 or later)."
+    ) from exc
 DEFAULT_SITE = ROOT / "data/sites/sweden/saterdalsvagen-14"
 CLIP_BUFFER_M = 250.0
 EXPECTED_EPSG = 3006
@@ -183,7 +197,8 @@ def to_local(polys, origin):
     return [[[round(x - e0, 3), round(y - n0, 3)] for (x, y) in ring] for poly in polys for ring in poly]
 
 
-def emit(subject, context, origin, parsed_srs, raw_sha, raw_bytes, zip_manifest):
+def emit(subject, context, origin, parsed_srs, raw_sha, raw_bytes, zip_manifest,
+         buffer_m=CLIP_BUFFER_M):
     e0, n0 = origin
     rings = to_local(subject["polys"], origin)
     gpkgs = [Path(e["name"]).stem for e in zip_manifest
@@ -213,8 +228,25 @@ def emit(subject, context, origin, parsed_srs, raw_sha, raw_bytes, zip_manifest)
             "for extent, not a survey of monument positions.",
         ],
     }
-    payload["derived_geometry_sha256"] = hashlib.sha256(
-        json.dumps(payload["subject_rings_local"], sort_keys=True).encode()).hexdigest()
+    # Shared canonical form, keyed on the REGISTER's own objektidentitet rather than the
+    # designation: the designation is a label we normalise and re-case when matching, so
+    # hashing on it would make the hash depend on our parsing of a human string.
+    #
+    # Subject and context are hashed SEPARATELY. The context set is bounded by
+    # CLIP_BUFFER_M, a pipeline parameter - fold it into the subject's hash and changing
+    # the buffer would move the subject parcel's geometry hash, reporting a difference
+    # that is not one. Same failure the helper removes for row order and float noise.
+    ids = payload["source_object_ids"]
+    payload["derivation_sha256"] = geometry_sha256(
+        [(ids[0], payload["subject_rings_local"])])
+    payload["context_derivation_sha256"] = geometry_sha256(
+        zip(ids[1:], payload["context_rings_local"])) if payload["context_rings_local"] else None
+    # The buffer travels WITH the context hash. Two context hashes computed at different
+    # buffers are two correct answers to different questions, and without this they read as
+    # a disagreement - the same failure that kept context out of the subject hash, just
+    # moved alongside it instead of inside it. Spatial found this gap; same shape both sides.
+    payload["context_clip_buffer_m"] = buffer_m
+    payload["derivation_sha256_method"] = METHOD_ID
     return payload
 
 
@@ -258,7 +290,8 @@ def run(zip_path=None, site_path=None, designation=None):
     subject, context, srs = ingest_gpkg(gpkg, origin, designation=desig)
     if EXPECTED_EPSG not in srs:
         print(f"WARN: expected EPSG:{EXPECTED_EPSG}, saw srs_ids {sorted(srs)}", file=sys.stderr)
-    payload = emit(subject, context, origin, srs, raw_sha, raw_bytes, manifest)
+    payload = emit(subject, context, origin, srs, raw_sha, raw_bytes, manifest,
+                   buffer_m=CLIP_BUFFER_M)
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
     print(f"WROTE {out.relative_to(ROOT)}")
     print(f"  subject={payload['subject']}  rings={len(payload['subject_rings_local'])}"
@@ -266,7 +299,8 @@ def run(zip_path=None, site_path=None, designation=None):
     print(f"  source_object_ids={payload['source_object_ids'][:1]}... "
           f"({len(payload['source_object_ids'])} total)")
     print(f"  raw sha256={raw_sha[:16]}…  bytes={raw_bytes}")
-    print(f"  derived sha256={payload['derived_geometry_sha256'][:16]}…")
+    print(f"  derivation sha256={payload['derivation_sha256'][:16]}…  "
+          f"context={(payload['context_derivation_sha256'] or '-')[:16]}…")
     print("GATE_SE_PROPERTY_DIVISION_CONTEXT: geometry acquired — wire the viewer overlay to render it.")
 
 
@@ -283,8 +317,15 @@ def _gpkg_blob(srs, ring):
     return hdr + _wkb_polygon(ring)
 
 
+# A synthetic origin, deliberately NOT a site's. The self-test proves the pipeline, so it
+# must not depend on any site's receipts being present or unchanged. (It used to call
+# load_frame() with no arguments; that broke when the script was parameterised per site in
+# 349bdcc769 and nobody ran it again until 2026-09-22 - rule 21 applies to this file too.)
+SELF_TEST_ORIGIN = (500000.0, 6500000.0)
+
+
 def self_test():
-    origin, _ = load_frame()
+    origin = SELF_TEST_ORIGIN
     e0, n0 = origin
     subj = [(e0 - 20, n0 - 15), (e0 + 22, n0 - 15), (e0 + 22, n0 + 18),
             (e0 - 20, n0 + 18), (e0 - 20, n0 - 15)]
@@ -313,14 +354,38 @@ def self_test():
     assert ring[2] == [22.0, 18.0], ring[2]
     assert len(context) == 1, f"clip buffer failed: {len(context)} (nbr in, far out)"
     assert context[0]["designation"] == "SVÄRTINGE 54:29"
-    h1 = payload["derived_geometry_sha256"]
-    h2 = emit(subject, context, origin, srs, "deadbeef", 123, [])["derived_geometry_sha256"]
-    assert h1 == h2, "derived hash not deterministic"
+    h1 = payload["derivation_sha256"]
+    # Re-emit with a DIFFERENT archive and manifest. The hash covers geometry only, so a
+    # different product name and raw sha must not move it - a stronger claim than re-running
+    # with identical inputs, which would pass even if the hash covered the whole document.
+    h2 = emit(subject, context, origin, srs, "cafebabe", 999,
+              [{"name": "other.gpkg", "size": 99}])["derivation_sha256"]
+    assert h1 == h2, "hash is not geometry-only: it moved with the archive metadata"
+    assert payload["context_clip_buffer_m"] == CLIP_BUFFER_M, "clip buffer not recorded"
+
+    # RULE 21 - NEGATIVE CONTROL. A determinism assert that has never been shown to fail
+    # is only evidence that it ran. Move one corner by 2 mm (past the helper's 1 mm
+    # quantisation) and the hash MUST move; if it does not, the check above is asleep.
+    import copy
+    mutated = copy.deepcopy(payload)
+    mutated["subject_rings_local"][0][0][0] += 0.002
+    h_bad = geometry_sha256(
+        [(mutated["source_object_ids"][0], mutated["subject_rings_local"])])
+    assert h_bad != h1, "NEGATIVE CONTROL FAILED: a moved corner did not change the hash"
+
+    # and the converse - noise finer than the quantum must NOT move it
+    noisy = copy.deepcopy(payload)
+    noisy["subject_rings_local"][0][0][0] += 0.0001
+    h_noise = geometry_sha256(
+        [(noisy["source_object_ids"][0], noisy["subject_rings_local"])])
+    assert h_noise == h1, "quantisation failed: 0.1 mm of float noise moved the hash"
     print("SELF-TEST PASS")
     print(f"  extracted subject SVÄRTINGE 54:28, transformed to local ENU (origin {e0},{n0})")
     print(f"  subject ring[0]={ring[0]}  ring[2]={ring[2]}  (E-E0, N-N0 ✓)")
     print(f"  250 m clip: kept 1 neighbour, dropped the 900 m parcel ✓")
-    print(f"  deterministic derived sha256={h1[:16]}… ✓")
+    print(f"  geometry-only derivation sha256={h1[:16]}… ✓ (unmoved by a different archive)")
+    print(f"  negative control: +2 mm on one corner changes it ✓")
+    print(f"  quantisation: +0.1 mm of float noise does not ✓")
     print("  → real asset behind LM 401; run with LM_BASIC_AUTH once the order is granted.")
 
 
