@@ -284,7 +284,7 @@ th{font-size:8px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-b
       <h1>Know the land<br>before designing.</h1>
       <p>A source-bound reading of this parcel. Every figure below carries the receipt it came from,
          and anything without one is absent rather than estimated.</p>
-      
+      <div class="conflict"><div class="ink-kicker">Read this first</div><ul><li><b>STALE · The findings/gates ledger (2026-09-20) predates 1 receipt(s)</b><br>Gate states were decided before this evidence landed: NeighbourhoodSceneExport (2026-09-22). Re-run the site's findings/gates generator before reading the gate counts as current.</li></ul></div>
     </div>
     <div class="ink-body">
       <section class="ink-section"><section class="ink-metrics"><div class="ink-metric"><span>Registered boundary</span><b>1 936.8 m²</b><span class="ink-chip" data-evidence="AUTHORITATIVE">AUTHORITATIVE · property division receipt</span></div><div class="ink-metric"><span>Boundary corners</span><b>6</b><small>7 stored points, ring closed</small><span class="ink-chip" data-evidence="AUTHORITATIVE">AUTHORITATIVE · property division receipt</span></div><div class="ink-metric"><span>Terrain on the parcel</span><b>13.5 m</b><small>fall across the parcel · 1 m DTM · RH2000</small><span class="ink-chip" data-evidence="DERIVED">DERIVED · terrain DTM receipt</span></div><div class="ink-metric"><span>Official footprints</span><b>153</b><small>within 200 m</small><span class="ink-chip" data-evidence="AUTHORITATIVE">AUTHORITATIVE · official building footprint receipt</span></div><div class="ink-metric"><span>Evidence gates</span><b>6 / 26</b><small>20 still open</small><span class="ink-chip" data-evidence="AUTHORITATIVE">AUTHORITATIVE · findings.json + gates.json</span></div></section></section>
@@ -311,10 +311,24 @@ th{font-size:8px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-b
     <div class="stagenote" id="stagenote">Loading twin…</div>
   </section>
 
-  <div class="foot">GENERATED 2026-09-20T22:42:34+00:00 · python3 scripts/build-site.py /Users/oskarpeterson/Documents/AI/product twin/repo-spatial-studio/data/sites/sweden/saterdalsvagen-14
+  <div class="foot" id="buildFoot" data-build-id="e53b51a3340ea6e9">BUILD e53b51a3340ea6e9 · GENERATED 2026-09-22T10:34:50+00:00 · python3 scripts/build-site.py /Users/oskarpeterson/Documents/AI/product twin/repo-spatial-studio/data/sites/sweden/saterdalsvagen-14
     · EVERY FIGURE COMPUTED FROM A RECEIPT IN THAT DIRECTORY</div>
 </div>
 
+<script>
+/* Counts probe (rule 16). A convincing stale page is the failure mode this catches: the numbers
+   look plausible, nothing errors, and only a count reveals you are looking at yesterday's build.
+   Read window.__siteCounts() and compare build_id against the generator's output. */
+window.__siteCounts = () => ({
+  build_id: document.getElementById("buildFoot")?.dataset.buildId ?? null,
+  metrics: document.querySelectorAll(".ink-metric").length,
+  cards: document.querySelectorAll(".ink-card").length,
+  chips: document.querySelectorAll(".ink-chip").length,
+  table_rows: document.querySelectorAll("table tbody tr").length,
+  sections: [...document.querySelectorAll("h2")].map(h => h.textContent.trim()),
+  flagged: document.querySelectorAll(".conflict li").length
+});
+</script>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.module.js",
 "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.0/examples/jsm/"}}</script>
 <script>
@@ -465,5 +479,11 @@ note.textContent = `${DATA.designation} · terrain ${counts.terrain} samples · 
   + (counts.shoreline ? ` · ${counts.shoreline} shoreline points` : "")
   + " · AUTHORITATIVE boundary + footprints · terrain DERIVED · building heights NOT established";
 
+window.__twinCounts = () => ({
+  terrain_samples: counts.terrain, buildings: counts.buildings,
+  context_parcels: counts.context, shoreline_points: counts.shoreline,
+  boundary_points: DATA.boundary ? DATA.boundary.length : 0
+});
+globalThis.siteReady = true;   /* readiness flag for scripts/shoot.mjs */
 renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); });
 </script>

@@ -766,6 +766,20 @@ def build_page(site_dir, docs, files, out_path):
             + (f'<p style="font-size:10px;line-height:1.6;color:var(--ink-text-dim);margin-top:12px">{esc(conclusion)}</p>'
                if conclusion else "") + '</section>')
 
+    # A content id over what the page SAYS, so a stale page can be identified by number rather
+    # than by eye (rule 16). Volatile fields are excluded — an id that moves every build cannot
+    # tell you whether two surfaces are showing the same data.
+    fingerprint = {
+        "designation": identity["designation"],
+        "metrics": [m for m in metrics],
+        "cards": len(cards),
+        "twin": {k: (len(v) if isinstance(v, (list, dict)) else v) for k, v in twin.items()},
+        "ledger": {"closed": ledger["closed"], "open": ledger["open"],
+                   "gates": len(ledger["gates"]), "findings": len(ledger["findings"])} if ledger else None,
+        "problems": sorted(f"{p['severity']}:{p['what']}" for p in problems),
+    }
+    build_id = hashlib.sha256(json.dumps(fingerprint, sort_keys=True, ensure_ascii=False)
+                              .encode()).hexdigest()[:16]
     generated = datetime.now(timezone.utc).isoformat(timespec="seconds")
     title = identity.get("address") or identity["designation"]
 
@@ -837,10 +851,24 @@ th{{font-size:8px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-
     <div class="stagenote" id="stagenote">Loading twin…</div>
   </section>
 
-  <div class="foot">GENERATED {esc(generated)} · python3 scripts/build-site.py {esc(str(site_dir))}
+  <div class="foot" id="buildFoot" data-build-id="{esc(build_id)}">BUILD {esc(build_id)} · GENERATED {esc(generated)} · python3 scripts/build-site.py {esc(str(site_dir))}
     · EVERY FIGURE COMPUTED FROM A RECEIPT IN THAT DIRECTORY</div>
 </div>
 
+<script>
+/* Counts probe (rule 16). A convincing stale page is the failure mode this catches: the numbers
+   look plausible, nothing errors, and only a count reveals you are looking at yesterday's build.
+   Read window.__siteCounts() and compare build_id against the generator's output. */
+window.__siteCounts = () => ({{
+  build_id: document.getElementById("buildFoot")?.dataset.buildId ?? null,
+  metrics: document.querySelectorAll(".ink-metric").length,
+  cards: document.querySelectorAll(".ink-card").length,
+  chips: document.querySelectorAll(".ink-chip").length,
+  table_rows: document.querySelectorAll("table tbody tr").length,
+  sections: [...document.querySelectorAll("h2")].map(h => h.textContent.trim()),
+  flagged: document.querySelectorAll(".conflict li").length
+}});
+</script>
 <script type="importmap">{{"imports":{{"three":"https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.module.js",
 "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.0/examples/jsm/"}}}}</script>
 <script>
@@ -991,6 +1019,12 @@ note.textContent = `${{DATA.designation}} · terrain ${{counts.terrain}} samples
   + (counts.shoreline ? ` · ${{counts.shoreline}} shoreline points` : "")
   + " · AUTHORITATIVE boundary + footprints · terrain DERIVED · building heights NOT established";
 
+window.__twinCounts = () => ({{
+  terrain_samples: counts.terrain, buildings: counts.buildings,
+  context_parcels: counts.context, shoreline_points: counts.shoreline,
+  boundary_points: DATA.boundary ? DATA.boundary.length : 0
+}});
+globalThis.siteReady = true;   /* readiness flag for scripts/shoot.mjs */
 renderer.setAnimationLoop(() => {{ controls.update(); renderer.render(scene, camera); }});
 </script>
 """
@@ -1001,6 +1035,7 @@ renderer.setAnimationLoop(() => {{ controls.update(); renderer.render(scene, cam
         "identity": identity, "boundary": boundary, "terrain": terrain, "buildings": buildings,
         "shoreline": shoreline, "view": view, "planning": planning,
         "problems": problems, "metrics": len(metrics), "cards": len(cards), "twin": twin,
+        "build_id": build_id,
         "ledger": ledger, "qa_rows": qa_rows,
     }
 
@@ -1051,6 +1086,7 @@ def main():
     if facts.get("qa_rows"):
         print(f"  provenance QA {len(facts['qa_rows'])} checks · {len(not_established)} NOT ESTABLISHED")
     print(f"  rendered      {facts['metrics']} metrics · {facts['cards']} evidence cards")
+    print(f"  build         {facts['build_id']} (content id — compare with window.__siteCounts())")
 
     verified = [p for p in facts["problems"] if p["severity"] == "VERIFIED"]
     unverifiable = [p for p in facts["problems"] if p["severity"] == "UNVERIFIABLE"]
