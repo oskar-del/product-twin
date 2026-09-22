@@ -48,6 +48,8 @@
 
 - Platform f6aa048db4: "0 MISSING" is an assertion (missing / not inlined / left as runtime URL); AUTHORITATIVE fenced by SOURCE SCAN — only catalog-row.mjs may grant it. Rule 17: fences use an EXPLICIT allowlist (patterns re-admit offenders) and assert the owner still grants (a fence around an empty field protects nothing). Both proven to bite. Platform holds.
 
+- 09-22 Spatial e6776244d2 + 563cf073e8: CORRECTION — the hillshade Brain "confirmed" from a 600 px pane was invisible (flat mint); re-tuned exaggeration 3.2→9, shade 0.18×–5.5×, confirmed at NEW values only. Rule 18: a number being present ≠ visible. First real capture found a clipped top bar and "1 937" vs "1 936,8" on one screen (fixed). Deep link #stage=N,MODE. Spatial owns captures (swiftshader flags mandatory; silent failure without them; frames software-rendered). build-site pages: zero fetches, build_id stable/moves, __siteCounts()/__twinCounts() — NOT yet asserted against the generator (validator follow-up).
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
