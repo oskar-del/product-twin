@@ -25,6 +25,11 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // A fresh URL every time: a cached document cannot be told from a current one, and this tool
 // exists to answer exactly that question.
+//
+// Djurö nearly reported a fix as still-broken because their first read after a rebuild returned
+// the PREVIOUS page from cache — the old counts and the old chip, confidently. Reading a page
+// over CDP after a rebuild without busting gives you a clean, wrong answer, which is the shape
+// of nearly every bug found this week.
 const bust = url + (url.includes("?") ? "&" : "?") + "cdp=" + Date.now();
 
 const res = await fetch(`http://127.0.0.1:${port}/json/new?${encodeURIComponent(bust)}`, { method: "PUT" });

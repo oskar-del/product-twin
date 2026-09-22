@@ -242,15 +242,29 @@ def main():
     # three weeks. This is the only thing in the repo that runs on every ledger check, so it is
     # where the runner belongs. A FAILING self-test fails this; THIN COVERAGE DOES NOT, because
     # blocking a ledger check on untested unrelated scripts would just get the check skipped.
-    runner = ROOT / "scripts/run-self-tests.py"
-    if runner.exists():
-        run = subprocess.run([sys.executable, str(runner), "--quiet"],
-                             capture_output=True, text=True, timeout=600)
-        summary = (run.stdout.strip().splitlines() or ["no output"])[-1]
-        check(f"self-tests pass ({summary})", run.returncode == 0,
-              run.stdout.strip()[-400:])
-    else:
-        check("the self-test runner exists", False, f"missing {runner}")
+    # Which repo's self-tests? BOTH. My first version resolved the runner against ROOT — the
+    # VALIDATOR's repo — so validating Djurö's receipts ran Spatial's self-tests and never the
+    # self-tests of the scripts that actually produced those receipts. The hook was right and
+    # its root was wrong, which is a worse failure than no hook: it reports green over an
+    # unchecked pipeline. Djurö found it by breaking their own assert and watching me pass.
+    runners = []
+    for base in (ROOT, *site.resolve().parents):
+        candidate = base / "scripts/run-self-tests.py"
+        if candidate.exists() and candidate not in runners:
+            runners.append(candidate)
+    check("a self-test runner was found for the validator and for the site's own repo",
+          len(runners) >= 1, f"looked in {ROOT} and every parent of {site}")
+    print("     runners: " + ", ".join(f"{r.parents[1].name}" for r in runners))
+    for runner in runners:
+        where = runner.parents[1].name
+        try:
+            run = subprocess.run([sys.executable, str(runner), "--quiet"],
+                                 capture_output=True, text=True, timeout=600)
+            summary = (run.stdout.strip().splitlines() or ["no output"])[-1]
+            check(f"self-tests pass in {where} ({summary})", run.returncode == 0,
+                  run.stdout.strip()[-400:] or run.stderr.strip()[-400:])
+        except subprocess.TimeoutExpired:
+            check(f"self-tests complete in {where}", False, "the runner timed out after 600s")
 
     print("§4 counts are computed, not quoted")
     closed = sum(1 for g in gates if g.get("status") == "CLOSED")
