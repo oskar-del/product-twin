@@ -314,6 +314,11 @@ def emit(site, subject, context, origin, parsed_srs, raw_sha, raw_bytes, zip_man
     payload["derivation_sha256"] = geometry_sha256([(subject["object_id"], rings)])
     payload["context_derivation_sha256"] = geometry_sha256(
         (c["object_id"], to_local(c["polys"], origin)) for c in context) if context else None
+    # The buffer that DEFINES the context set, recorded beside the hash it determines. Djurö's
+    # key and Djurö's argument: without it, two context hashes computed at different buffers read
+    # as a disagreement rather than as two correct answers to different questions — the same
+    # failure their buffer reasoning identified, moved from inside the hash to beside it.
+    payload["context_clip_buffer_m"] = CLIP_BUFFER_M
     payload["derivation_sha256_method"] = METHOD_ID
     return payload
 

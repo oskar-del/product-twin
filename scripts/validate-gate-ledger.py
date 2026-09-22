@@ -208,17 +208,26 @@ def main():
     for gate in gates:
         gid = gate.get("gate_id", "?")
         status = gate.get("status")
-        check(f"{gid}: status is CLOSED or OPEN", status in ("CLOSED", "OPEN"), f"status={status!r}")
+        check(f"{gid}: status is CLOSED, OPEN or NOT_APPLICABLE",
+              status in ("CLOSED", "OPEN", "NOT_APPLICABLE"), f"status={status!r}")
         if status == "CLOSED":
             check(f"{gid}: closed gate carries a decision timestamp", bool(gate.get("decided_at")))
             check(f"{gid}: closed gate carries a reason", bool((gate.get("reason") or "").strip()))
         elif status == "OPEN":
             check(f"{gid}: open gate has no decision timestamp", gate.get("decided_at") in (None, ""))
             check(f"{gid}: open gate says why", bool((gate.get("reason") or "").strip()))
+        elif status == "NOT_APPLICABLE":
+            # Not-applicable is a claim too: it must say why it does not apply, and it must not
+            # look decided. Otherwise it becomes a convenient way to retire an awkward gate.
+            check(f"{gid}: not-applicable gate has no decision timestamp",
+                  gate.get("decided_at") in (None, ""))
+            check(f"{gid}: not-applicable gate says why it does not apply",
+                  bool((gate.get("reason") or "").strip()))
 
     print("§4 counts are computed, not quoted")
     closed = sum(1 for g in gates if g.get("status") == "CLOSED")
     open_count = sum(1 for g in gates if g.get("status") == "OPEN")
+    not_applicable = sum(1 for g in gates if g.get("status") == "NOT_APPLICABLE")
     total = len(gates)
     check("summary 'closed' matches the gates", ledger.get("closed") == closed,
           f"summary says {ledger.get('closed')}, counted {closed}")
@@ -226,7 +235,13 @@ def main():
           f"summary says {ledger.get('open')}, counted {open_count}")
     check("summary 'gate_count' matches the gates", ledger.get("gate_count") == total,
           f"summary says {ledger.get('gate_count')}, counted {total}")
-    check("closed + open accounts for every gate", closed + open_count == total)
+    check("closed + open + not-applicable accounts for every gate",
+          closed + open_count + not_applicable == total,
+          f"{closed} + {open_count} + {not_applicable} != {total}")
+    if ledger.get("not_applicable") is not None:
+        check("summary 'not_applicable' matches the gates",
+              ledger["not_applicable"] == not_applicable,
+              f"summary says {ledger.get('not_applicable')}, counted {not_applicable}")
 
     if FRONT_DOOR.exists() and site.name == "saterdalsvagen-14":
         html = FRONT_DOOR.read_text()

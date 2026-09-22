@@ -847,12 +847,16 @@ renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-t
     /* Two vocabularies mean the same thing: this record writes SATISFIED, the generic
        ledger generator writes CLOSED. Counting only one of them under-reports the site. */
     const isClosed=g=>['CLOSED','SATISFIED'].includes(String(g.status||'').toUpperCase());
-    const closed=gates.filter(isClosed),open=gates.filter(g=>!isClosed(g));
+    /* A gate that does not apply here is not an unanswered question, and counting it as open
+       tells a reader this plot carries a doubt it does not have. */
+    const isNotApplicable=g=>String(g.status||'').toUpperCase()==='NOT_APPLICABLE';
+    const closed=gates.filter(isClosed),na=gates.filter(isNotApplicable),
+          open=gates.filter(g=>!isClosed(g)&&!isNotApplicable(g));
     const label=g=>String(g.gate_id||'').replace(/^GATE_SE_/,'').replace(/_/g,' ')
       .toLowerCase().replace(/^./,c=>c.toUpperCase());
     set('intelGateCount',closed.length+' / '+gates.length);
     set('intelGateNote',closed.length?closed.map(label).join(' · '):'none satisfied yet — every gate still open');
-    if(heading)heading.textContent=closed.length+' satisfied · '+open.length+' open';
+    if(heading)heading.textContent=closed.length+' satisfied · '+open.length+' open'+(na.length?' · '+na.length+' n/a':'');
     const st=$('intelGateStatus');
     if(st)st.textContent='EARLY DUE DILIGENCE · '+open.length+' OF '+gates.length+' EVIDENCE GATES OPEN';
     if(rows){rows.innerHTML='';
@@ -861,8 +865,9 @@ renderer.setAnimationLoop(()=>{if(tween){const t=Math.min(1,(performance.now()-t
         const name=document.createElement('b');name.textContent=label(g);
         if(g.reason)row.title=g.reason;
         const state=document.createElement('span');
-        state.textContent=isClosed(g)?'SATISFIED':'OPEN';
+        state.textContent=isClosed(g)?'SATISFIED':(isNotApplicable(g)?'N/A':'OPEN');
         if(isClosed(g))state.className='closed';
+        if(isNotApplicable(g))state.style.cssText='background:rgba(255,255,255,.08);color:rgba(255,255,255,.5)';
         row.append(name,state);rows.append(row)}}
     /* A ledger older than the receipts it depends on cannot be read as current. */
     const stamps=JSON.stringify(ledger).match(/\d{4}-\d{2}-\d{2}/g)||[];

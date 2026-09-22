@@ -89,7 +89,15 @@ def evaluate_condition_rule(rule, docs):
     src = rule["condition_from"]
     scene = docs.get(src["entity_type"])
     if not scene:
-        return False, f"receipt not present: {src['entity_type']}", []
+        # NOT APPLICABLE, not OPEN. A gate asks whether a designer's stated condition is met;
+        # where no design exists there is no condition, and reporting it as an open question
+        # tells a reader this plot has an unanswered question it does not have. Keyed on the
+        # ABSENCE OF THE RECEIPT, never on the site — a "site == djuro" rule would be a site
+        # literal inside a generic registry, which is the kn0581 bug class exactly, and it would
+        # go stale the day that plot gets a designer. Djurö's framing.
+        return "NOT_APPLICABLE", (f"No {src['entity_type']} carrying {src['path']} exists for this "
+                                  f"site, so there is no designer-stated condition to test. This "
+                                  f"becomes an open question the moment a design lands."), []
     scene_doc, scene_file = scene
     entries = dig(scene_doc, src["path"]) or []
     entry = next((e for e in entries if e.get("id") == src["match_id"]), None)
@@ -244,9 +252,11 @@ def main():
 
         if "closes_when" in entry:
             closed, reason, refs = evaluate_rule(entry["closes_when"], docs)
-            gates.append({"gate_id": gate_id, "status": "CLOSED" if closed else "OPEN",
+            status = closed if isinstance(closed, str) else ("CLOSED" if closed else "OPEN")
+            gates.append({"gate_id": gate_id, "status": status,
                           "question": entry["question"], "domain": entry["domain"],
-                          "evidence_refs": refs, "decided_at": now if closed else None,
+                          "evidence_refs": refs,
+                          "decided_at": now if status == "CLOSED" else None,
                           "reason": reason, "decided_by": "registry rule"})
             sources["registry_rule"] += 1
             continue
@@ -273,6 +283,7 @@ def main():
         sources["open_no_derivation"] += 1
 
     closed = [g for g in gates if g["status"] == "CLOSED"]
+    not_applicable = [g for g in gates if g["status"] == "NOT_APPLICABLE"]
     payload = {
         "schema_version": "site-gates/v0.2",
         "entity_type": "SiteGateSet",
@@ -285,7 +296,8 @@ def main():
                  "cannot answer is OPEN with a reason, never dropped."),
         "gate_count": len(gates),
         "closed": len(closed),
-        "open": len(gates) - len(closed),
+        "open": len(gates) - len(closed) - len(not_applicable),
+        "not_applicable": len(not_applicable),
         "decided_by_counts": sources,
         "receipts_absent": (generic_gates_doc or {}).get("receipts_absent"),
         "fields_absent": (generic_gates_doc or {}).get("fields_absent"),
@@ -296,7 +308,8 @@ def main():
     print(f"wrote {site / 'gates.json'}")
     print(f"  subject       {subject}")
     print(f"  registry      {len(registry['gates'])} canonical gates")
-    print(f"  result        {len(closed)} closed / {len(gates) - len(closed)} open")
+    print(f"  result        {len(closed)} closed / {len(gates) - len(closed) - len(not_applicable)} open"
+          + (f" / {len(not_applicable)} not applicable" if not_applicable else ""))
     print(f"  decided by    generic {sources['generic']} · registry rule {sources['registry_rule']}"
           f" · carried forward {sources['legacy']} · open by default {sources['open_no_derivation']}")
     if findings_doc:

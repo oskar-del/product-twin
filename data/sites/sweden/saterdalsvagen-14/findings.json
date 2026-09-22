@@ -3,7 +3,7 @@
   "entity_type": "SiteFindingSet",
   "subject": "SVÄRTINGE 54:28",
   "site": "saterdalsvagen-14",
-  "generated_at": "2026-09-22T10:55:35+00:00",
+  "generated_at": "2026-09-22T10:56:57+00:00",
   "generator": "scripts/build-findings-and-gates.py",
   "generated_from": [
     "property-division-derived-v0.1.json",
@@ -65,7 +65,7 @@
         "RCPT_SE_LM_PROPERTY_DIVISION_KN0581"
       ],
       "method": "Lantmäteriet fastighetsindelning GeoPackage clipped around the site pin; geometry hash recorded.",
-      "observed_at": "2026-09-22T10:55:35+00:00",
+      "observed_at": "2026-09-22T10:56:57+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "Authoritative for registered extent, not a survey of monument positions."
@@ -80,7 +80,7 @@
       "chip": "derived",
       "source_receipt_refs": [],
       "method": null,
-      "observed_at": "2026-09-22T10:55:35+00:00",
+      "observed_at": "2026-09-22T10:56:57+00:00",
       "verification": "OPEN",
       "reason": "field not present in OfficialBuildingFootprintClip: placement",
       "limitations": [
@@ -101,7 +101,7 @@
         "RCPT_SE_LM_BUILDINGS_KN0581"
       ],
       "method": "Inspected every attribute column of the byggnad feature table.",
-      "observed_at": "2026-09-22T10:55:35+00:00",
+      "observed_at": "2026-09-22T10:56:57+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "No storey count, eaves or ridge height exists in this product. Any extrusion in a render is DERIVED or CONCEPT and must be labelled as such."
@@ -116,7 +116,7 @@
       "chip": "derived",
       "source_receipt_refs": [],
       "method": null,
-      "observed_at": "2026-09-22T10:55:35+00:00",
+      "observed_at": "2026-09-22T10:56:57+00:00",
       "verification": "OPEN",
       "reason": "field not present in DerivedTerrainEvidence: parcel_height_statistics, parcel_slope, tile_integrity",
       "limitations": [
@@ -132,7 +132,7 @@
       "chip": "derived",
       "source_receipt_refs": [],
       "method": null,
-      "observed_at": "2026-09-22T10:55:35+00:00",
+      "observed_at": "2026-09-22T10:56:57+00:00",
       "verification": "OPEN",
       "reason": "field not present in DerivedTerrainEvidence: parcel_height_statistics, parcel_slope, tile_integrity",
       "limitations": [
@@ -148,7 +148,7 @@
       "chip": "derived",
       "source_receipt_refs": [],
       "method": null,
-      "observed_at": "2026-09-22T10:55:35+00:00",
+      "observed_at": "2026-09-22T10:56:57+00:00",
       "verification": "OPEN",
       "reason": "receipt not present: ShorelineAndStrandskyddDerivation",
       "limitations": [
@@ -164,7 +164,7 @@
       "chip": "derived",
       "source_receipt_refs": [],
       "method": null,
-      "observed_at": "2026-09-22T10:55:35+00:00",
+      "observed_at": "2026-09-22T10:56:57+00:00",
       "verification": "OPEN",
       "reason": "receipt not present: ShorelineAndStrandskyddDerivation",
       "limitations": [
@@ -180,7 +180,7 @@
       "chip": "derived",
       "source_receipt_refs": [],
       "method": null,
-      "observed_at": "2026-09-22T10:55:35+00:00",
+      "observed_at": "2026-09-22T10:56:57+00:00",
       "verification": "OPEN",
       "reason": "receipt not present: MunicipalPlanningStatusReceiptSet",
       "limitations": [
@@ -196,7 +196,7 @@
       "chip": "derived",
       "source_receipt_refs": [],
       "method": null,
-      "observed_at": "2026-09-22T10:55:35+00:00",
+      "observed_at": "2026-09-22T10:56:57+00:00",
       "verification": "OPEN",
       "reason": "receipt not present: MunicipalPlanningStatusReceiptSet",
       "limitations": [
@@ -212,7 +212,7 @@
       "chip": "derived",
       "source_receipt_refs": [],
       "method": null,
-      "observed_at": "2026-09-22T10:55:35+00:00",
+      "observed_at": "2026-09-22T10:56:57+00:00",
       "verification": "OPEN",
       "reason": "receipt not present: SeaViewSightlineDerivation",
       "limitations": [
