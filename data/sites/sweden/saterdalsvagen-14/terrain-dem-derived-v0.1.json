@@ -3529,5 +3529,34 @@
   "not_checked": "East-neighbour tile m650_56 for full window coverage (far-east strip clamped); breakline (brytgeometri) integration; laser point cloud; registered legal area/boundary (needs fastighetsindelning vector — not yet ordered); vegetation/building occlusion of the Glan view.",
   "derived_from_evidence_class": "AUTHORITATIVE",
   "evidence_class_note": "Relabelled 2026-09-20 per the platform evidence vocabulary: AUTHORITATIVE is the register or survey object itself; anything computed from it, however faithfully, is DERIVED. The gate-tracked DTM tiles remain AUTHORITATIVE.",
-  "glan_sightline_profile_note": "Alias of sightline_profile, kept for the existing prototype viewer. New code reads sightline_profile."
+  "glan_sightline_profile_note": "Alias of sightline_profile, kept for the existing prototype viewer. New code reads sightline_profile.",
+  "fall_within_footprint_m": {
+    "element": "HOUSE_BAR",
+    "value_m": 4.64,
+    "min_m": -1.54,
+    "max_m": 3.1,
+    "samples": 169,
+    "sampling_spacing_m": 15.0,
+    "footprint_m": [
+      20,
+      7
+    ],
+    "resolution_sufficient": false,
+    "evidence_class": "DERIVED",
+    "method": "bilinear interpolation of the committed 360 m / 24-segment heightfield over the HOUSE_BAR footprint",
+    "source_element": "scene.design.footprints.HOUSE_BAR",
+    "design_provenance": {
+      "source_repo": "repo-brage (agent/brage-design)",
+      "source_path": "repo-brage/OPEN AI/Säterdalsvägen 14 - Svärtinge/04-House-Design/BRAGE/geometry/house-in-scene-v0.3-patch.json",
+      "read_commit": "2efbc4c1a1f2053b227de6a1c8d1431c96978827",
+      "source_file_commit": "28e7cc174c142a002d254182758f21aa581fbcb2",
+      "sha256": "8faa111262b7af0f31a9315775ee8cdf6be8c12089bf4ed097e8a740ac8498f6",
+      "byte_length": 9637,
+      "read_at": "2026-09-22T10:46:20.283Z"
+    },
+    "limitations": [
+      "Sampling spacing is 15 m and the footprint's shortest side is 7 m, so this is an interpolation of a coarse surface, not a measurement of the footprint.",
+      "The 1 m DTM itself is not held locally; re-run against it to make this a measurement."
+    ]
+  }
 }

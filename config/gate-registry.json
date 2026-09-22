@@ -198,7 +198,11 @@
           ],
           "path": "plot_footprint.relief_m",
           "fallback_path": "parcel_height_statistics.relief_m",
-          "label": "fall across the parcel (1 m DTM)"
+          "label": "fall across the parcel (1 m DTM)",
+          "prefer_path": "fall_within_footprint_m.value_m",
+          "prefer_guard": "fall_within_footprint_m.resolution_sufficient",
+          "prefer_label": "fall within the HOUSE_BAR footprint",
+          "fallback_note": "measured across the parcel, not the bar footprint — the condition asks for the footprint"
         },
         "operator": ">="
       }

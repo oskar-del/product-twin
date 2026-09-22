@@ -97,32 +97,55 @@ def evaluate_condition_rule(rule, docs):
         return False, (f"{src['match_id']} is not in {src['path']} of {scene_file}: the designer "
                        f"states no such condition"), []
     text = str(entry.get(src["field"]) or "")
-    found = re.search(r"(-?\d+(?:[.,]\d+)?)\s*m", text)
-    if not found:
+    # Every number-with-unit, not the first: "between 2,5 m and 4 m" has two thresholds and no
+    # single answer, so taking the first would quietly pick one and call the gate decided.
+    numbers = re.findall(r"(-?\d+(?:[.,]\d+)?)\s*m\b", text)
+    if not numbers:
         return False, (f"the condition could not be read as a number: \"{text}\". The gate stays "
                        f"open rather than assuming a threshold."), []
-    threshold = float(found.group(1).replace(",", "."))
+    if len(numbers) > 1:
+        return False, (f"condition ambiguous: \"{text}\" states {len(numbers)} measurements "
+                       f"({', '.join(numbers)} m) and this gate compares one. It stays open rather "
+                       f"than choosing which the designer meant."), []
+    threshold = float(numbers[0].replace(",", "."))
 
     meas = rule["measurement_from"]
     names = meas["entity_type"] if isinstance(meas["entity_type"], list) else [meas["entity_type"]]
     value = measured_file = None
+    label = meas["label"]
+    caveat = ""
     for name in names:
-        if name in docs:
-            doc, filename = docs[name]
+        if name not in docs:
+            continue
+        doc, filename = docs[name]
+        measured_file = filename
+        # Prefer the measurement that answers the question actually asked — but only when its
+        # own guard says it is resolved finely enough to mean anything. A coarse interpolation
+        # of the right quantity is not better than a precise measurement of the wrong one; it
+        # just hides the mismatch instead of showing it.
+        if meas.get("prefer_path") and dig(doc, meas["prefer_guard"]) is True:
+            value = dig(doc, meas["prefer_path"])
+            label = meas.get("prefer_label", label)
+        if value is None:
             value = dig(doc, meas["path"])
             if value is None and meas.get("fallback_path"):
                 value = dig(doc, meas["fallback_path"])
-            measured_file = filename
-            if value is not None:
-                break
+            if value is not None and meas.get("fallback_note"):
+                caveat = f" NOTE: {meas['fallback_note']}."
+                preferred = dig(doc, meas["prefer_path"]) if meas.get("prefer_path") else None
+                if preferred is not None:
+                    caveat += (f" The footprint figure interpolates to {preferred} m but its "
+                               f"sampling is coarser than the footprint, so it is not used.")
+        if value is not None:
+            break
     if value is None:
         return False, f"no measurement for {meas['path']} in {' or '.join(names)}", []
 
     ok = float(value) >= threshold if rule.get("operator", ">=") == ">=" else float(value) <= threshold
     verdict = "holds" if ok else "does NOT hold"
-    reason = (f"The designer's condition is \"{text}\" ({scene_file}). The {meas['label']} measures "
+    reason = (f"The designer's condition is \"{text}\" ({scene_file}). The {label} measures "
               f"{value} m ({measured_file}), so the condition {verdict}: "
-              f"{value} {rule.get('operator','>=')} {threshold}.")
+              f"{value} {rule.get('operator','>=')} {threshold}.{caveat}")
     return ok, reason, [scene_file, measured_file]
 
 

@@ -21,6 +21,20 @@ What it asserts:
 import argparse, hashlib, json, pathlib, re, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+
+# The front door's gate rows, in one place. The validator reads the PAGE, so it has to know the
+# page's markup; naming the selectors here means a markup change is one edit and an obvious one,
+# rather than a mysterious count mismatch reported from inside an inlined expression.
+GATE_ROW_SELECTOR = "#intelGateRows .intel-gate-row"
+GATE_SATISFIED_SELECTOR = "#intelGateRows span.closed"
+
+CHROME_LAUNCH_HINT = (
+    'no Chrome answering on that port. Start one first:\n'
+    '    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \\\n'
+    '      --headless --remote-debugging-port=9333 --use-angle=swiftshader \\\n'
+    '      --enable-unsafe-swiftshader --disable-gpu-sandbox &\n'
+    '  (swiftshader is not optional here: without it WebGL context creation fails and the page\n'
+    '   never becomes ready, which reads as a validation failure rather than a missing browser.)')
 REGISTRY = ROOT / "config/gate-registry.json"
 LM_DATA = ROOT.parent / "lm-data"
 FRONT_DOOR = ROOT / "prototype/svartinge-neighbourhood/index.html"
@@ -188,15 +202,17 @@ def main():
     # stale "26" got through exactly that way.
     if args.front_door_url:
         expression = ("JSON.parse(JSON.stringify({closed:"
-                      "document.querySelectorAll('#intelGateRows span.closed').length,total:"
-                      "document.querySelectorAll('#intelGateRows .intel-gate-row').length}))")
+                      f"document.querySelectorAll('{GATE_SATISFIED_SELECTOR}').length,total:"
+                      f"document.querySelectorAll('{GATE_ROW_SELECTOR}').length}}))")
         cmd = ["node", str(ROOT / "scripts/read_rendered.mjs"),
                                     args.front_door_url, expression,
-                                    "--ready", "document.querySelectorAll('#intelGateRows .intel-gate-row').length > 0",
+                                    "--ready", f"document.querySelectorAll('{GATE_ROW_SELECTOR}').length > 0",
                                     "--port", str(args.cdp_port)]
         result = subprocess.run(cmd, capture_output=True, text=True)
-        check("the rendered page could be read over CDP", result.returncode == 0,
-              result.stderr.strip()[:200])
+        detail = result.stderr.strip()[:200]
+        if "ECONNREFUSED" in result.stderr or "cannot open a CDP target" in result.stderr:
+            detail = CHROME_LAUNCH_HINT
+        check("the rendered page could be read over CDP", result.returncode == 0, detail)
         if result.returncode == 0:
             rendered = json.loads(result.stdout.strip())
             args.rendered_closed, args.rendered_total = rendered["closed"], rendered["total"]

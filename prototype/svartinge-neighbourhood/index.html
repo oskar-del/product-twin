@@ -596,7 +596,9 @@ async function loadVinkelhusetSpec(){
   if(hasSouterrain){
     const up=((spec&&spec.conditional_upgrades)||[]).find(u=>/SOUTERR/i.test(u.id||''));
     let fall=null;
-    try{const r=await fetch('../../data/sites/sweden/saterdalsvagen-14/terrain-dem-derived-v0.1.json');
+    /* no-store: the one fetch the earlier bust missed — found by auditing every surface in one
+       pass rather than waiting for the next stale number to give it away. */
+    try{const r=await fetch('../../data/sites/sweden/saterdalsvagen-14/terrain-dem-derived-v0.1.json',{cache:'no-store'});
         if(r.ok){const t=await r.json();fall=t.plot_footprint&&t.plot_footprint.relief_m}}catch(e){}
     condition=up?` Souterrain is conditional — ${up.condition}`
       +(fall!=null?`; the DTM measures ${fall} m fall across the plot, so the condition holds.`:'.')
