@@ -15,7 +15,10 @@ Usage:
   python3 scripts/ingest-buildings.py --zip PATH --radius 200
   python3 scripts/ingest-buildings.py --self-test
 """
-import argparse, hashlib, importlib.util, json, os, re, sqlite3, struct, tempfile, zipfile
+import argparse, hashlib, importlib.util, json, math, os, pathlib, re, sqlite3, struct, sys, tempfile, zipfile
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from geometry_hash import geometry_sha256   # one canonical form, shared with Djurö's pipeline
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -91,6 +94,7 @@ def ingest(gpkg_path, o, radius):
                 "is_main": (_first(rec, "huvudbyggnad") == "Ja"),
                 "pos_uncertainty_m": _first(rec, "lagesosakerhetplan"),
                 "footprint_rings_local": rings,
+                "rings_local": rings,                    # Djurö's field name for the same geometry
             })
     con.close()
     return out, srs
@@ -117,8 +121,78 @@ def product_name(site, manifest):
     return f"byggnad_kn{site.kommun} (GeoPackage, name derived from kommunkod — no archive read)"
 
 
+
+def ring_area_m2(ring):
+    total = 0.0
+    for i in range(len(ring)):
+        x1, z1 = ring[i][0], ring[i][1]
+        x2, z2 = ring[(i + 1) % len(ring)][0], ring[(i + 1) % len(ring)][1]
+        total += x1 * z2 - x2 * z1
+    return abs(total) / 2
+
+
+def ring_centroid(ring):
+    xs = [p[0] for p in ring]
+    zs = [p[1] for p in ring]
+    return [round(sum(xs) / len(xs), 3), round(sum(zs) / len(zs), 3)]
+
+
+def point_in_ring(point, ring):
+    """Ray casting. Used only to classify a building as on-parcel or context."""
+    x, z = point
+    inside = False
+    for i in range(len(ring)):
+        x1, z1 = ring[i][0], ring[i][1]
+        x2, z2 = ring[(i + 1) % len(ring)][0], ring[(i + 1) % len(ring)][1]
+        if (z1 > z) != (z2 > z):
+            crossing = x1 + (z - z1) * (x2 - x1) / ((z2 - z1) or 1e-12)
+            if crossing > x:
+                inside = not inside
+    return inside
+
+
+def parcel_ring(site):
+    """The subject parcel from this site's own property-division receipt, if it has one."""
+    path = site.dir / "property-division-derived-v0.1.json"
+    if not path.exists():
+        return None
+    first = (json.loads(path.read_text()).get("subject_rings_local") or [None])[0]
+    if not first:
+        return None
+    return first[0] if isinstance(first[0][0], list) else first
+
+
+def enrich(buildings, site):
+    """
+    Add the per-building facts Djurö's receipt carries and mine did not.
+
+    Two ingests for one concept was the same class of problem as two gate registries: the DATA
+    agreed on Djurö's buildings while the receipts disagreed in shape, so their derived hashes
+    could never match. This is the poorer receipt catching up to the richer one.
+    """
+    parcel = parcel_ring(site)
+    for building in buildings:
+        rings = building.get("footprint_rings_local") or []
+        outer = rings[0] if rings else None
+        building["footprint_area_m2"] = round(ring_area_m2(outer), 1) if outer and len(outer) >= 3 else None
+        building["centroid_local"] = ring_centroid(outer) if outer else None
+        if building["centroid_local"]:
+            cx, cz = building["centroid_local"]
+            building["distance_from_origin_m"] = round(math.hypot(cx, cz), 2)
+            building["bearing_from_origin_deg"] = round((math.degrees(math.atan2(cx, cz)) + 360) % 360, 1)
+        building["on_parcel"] = bool(parcel and building["centroid_local"]
+                                     and point_in_ring(building["centroid_local"], parcel))
+        # Djurö's field names for the same facts, so one consumer can read either receipt.
+        building["source_object_id"] = building["object_id"]
+        building["object_type"] = building["type"]
+        building["is_main_building"] = building["is_main"]
+        building["plan_uncertainty_m"] = building.get("pos_uncertainty_m")
+    return buildings, parcel is not None
+
 def emit(site, buildings, o, srs, raw_sha, raw_bytes, manifest, radius):
     e0, n0 = o
+    buildings, parcel_known = enrich(buildings, site)
+    on_parcel = [b for b in buildings if b["on_parcel"]]
     payload = {
         "schema_version": "buildings-official-derived/v0.1",
         "entity_type": "OfficialBuildingFootprintClip",
@@ -132,7 +206,17 @@ def emit(site, buildings, o, srs, raw_sha, raw_bytes, manifest, radius):
         "source_crs": f"EPSG:{sorted(srs)[0]}" if srs else None,
         "coordinate_frame": "LOCAL_ENU x=EAST z=NORTH, origin = municipal pin (E0,N0 SWEREF99TM)",
         "origin_sweref": [e0, n0],
+        "evidence_class": "AUTHORITATIVE",
+        "source_table": "byggnad",
         "clip_radius_m": radius,
+        "clip_buffer_m": radius,                 # Djurö's name for the same radius
+        "counts": {
+            "within_clip_radius": len(buildings),
+            "on_parcel": len(on_parcel) if parcel_known else None,
+            "context": (len(buildings) - len(on_parcel)) if parcel_known else None,
+        },
+        "on_parcel_footprint_area_m2": (round(sum(b["footprint_area_m2"] or 0 for b in on_parcel), 1)
+                                        if parcel_known else None),
         "building_count": len(buildings),
         "main_building_count": sum(1 for b in buildings if b["is_main"]),   # source huvudbyggnad='Ja'
         "dwelling_count": sum(1 for b in buildings if b["type"] == "Bostad"),
@@ -147,8 +231,12 @@ def emit(site, buildings, o, srs, raw_sha, raw_bytes, manifest, radius):
             "Heights are NOT in this product; any extrusion is DERIVED, not authoritative.",
         ],
     }
-    payload["derived_geometry_sha256"] = hashlib.sha256(
-        json.dumps([b["footprint_rings_local"] for b in buildings], sort_keys=True).encode()).hexdigest()
+    # Shared canonical form: sorted by object id, 1 mm precision, explicit separators. A hash
+    # that only agrees with its own pipeline cannot tell two pipelines they derived the same
+    # shapes, which is the only question it is asked.
+    payload["derived_geometry_sha256"] = geometry_sha256(
+        (b["object_id"], b["footprint_rings_local"]) for b in buildings)
+    payload["derived_geometry_method"] = "geometry_hash.geometry_sha256/v1"
     return payload
 
 

@@ -14,7 +14,16 @@
     559869.0,
     6501790.31
   ],
+  "evidence_class": "AUTHORITATIVE",
+  "source_table": "byggnad",
   "clip_radius_m": 200.0,
+  "clip_buffer_m": 200.0,
+  "counts": {
+    "within_clip_radius": 153,
+    "on_parcel": 0,
+    "context": 153
+  },
+  "on_parcel_footprint_area_m2": 0,
   "building_count": 153,
   "main_building_count": 0,
   "dwelling_count": 49,
@@ -240,7 +249,75 @@
             -108.576
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -24.245,
+            -108.576
+          ],
+          [
+            -23.795,
+            -106.636
+          ],
+          [
+            -23.947,
+            -106.601
+          ],
+          [
+            -22.88,
+            -102.001
+          ],
+          [
+            -22.776,
+            -101.992
+          ],
+          [
+            -22.181,
+            -99.431
+          ],
+          [
+            -29.004,
+            -97.847
+          ],
+          [
+            -29.606,
+            -100.445
+          ],
+          [
+            -29.575,
+            -100.447
+          ],
+          [
+            -29.622,
+            -100.651
+          ],
+          [
+            -30.766,
+            -100.385
+          ],
+          [
+            -32.236,
+            -106.721
+          ],
+          [
+            -24.245,
+            -108.576
+          ]
+        ]
+      ],
+      "footprint_area_m2": 72.7,
+      "centroid_local": [
+        -26.529,
+        -103.101
+      ],
+      "distance_from_origin_m": 106.46,
+      "bearing_from_origin_deg": 194.4,
+      "on_parcel": false,
+      "source_object_id": "01761ff0-884a-4fa9-9e21-6e40bbf8612b",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "3ca8038c-ff5a-4b76-afa7-c9c342a41727",
@@ -287,7 +364,59 @@
             -146.85
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            125.352,
+            -146.85
+          ],
+          [
+            123.919,
+            -146.164
+          ],
+          [
+            122.669,
+            -148.777
+          ],
+          [
+            135.37,
+            -154.856
+          ],
+          [
+            136.465,
+            -152.568
+          ],
+          [
+            138.655,
+            -153.616
+          ],
+          [
+            140.674,
+            -149.396
+          ],
+          [
+            127.216,
+            -142.956
+          ],
+          [
+            125.352,
+            -146.85
+          ]
+        ]
+      ],
+      "footprint_area_m2": 106.1,
+      "centroid_local": [
+        130.63,
+        -149.115
+      ],
+      "distance_from_origin_m": 198.24,
+      "bearing_from_origin_deg": 138.8,
+      "on_parcel": false,
+      "source_object_id": "3ca8038c-ff5a-4b76-afa7-c9c342a41727",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "0aa691d7-7c04-44ad-96bb-910693a5aa43",
@@ -318,7 +447,43 @@
             71.748
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            24.212,
+            71.748
+          ],
+          [
+            30.18,
+            67.377
+          ],
+          [
+            34.565,
+            73.36
+          ],
+          [
+            28.597,
+            77.73
+          ],
+          [
+            24.212,
+            71.748
+          ]
+        ]
+      ],
+      "footprint_area_m2": 54.9,
+      "centroid_local": [
+        28.353,
+        72.393
+      ],
+      "distance_from_origin_m": 77.75,
+      "bearing_from_origin_deg": 21.4,
+      "on_parcel": false,
+      "source_object_id": "0aa691d7-7c04-44ad-96bb-910693a5aa43",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "b76a9cd2-e1da-4bab-960f-63007b27229b",
@@ -349,7 +514,43 @@
             -137.57
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            112.311,
+            -137.57
+          ],
+          [
+            110.718,
+            -141.45
+          ],
+          [
+            112.952,
+            -142.367
+          ],
+          [
+            114.545,
+            -138.487
+          ],
+          [
+            112.311,
+            -137.57
+          ]
+        ]
+      ],
+      "footprint_area_m2": 10.1,
+      "centroid_local": [
+        112.567,
+        -139.489
+      ],
+      "distance_from_origin_m": 179.24,
+      "bearing_from_origin_deg": 141.1,
+      "on_parcel": false,
+      "source_object_id": "b76a9cd2-e1da-4bab-960f-63007b27229b",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "aa4a8556-b289-4710-932e-e6ae176914bc",
@@ -420,7 +621,83 @@
             22.184
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            140.722,
+            22.184
+          ],
+          [
+            143.78,
+            27.426
+          ],
+          [
+            131.815,
+            34.412
+          ],
+          [
+            128.702,
+            29.075
+          ],
+          [
+            127.845,
+            28.874
+          ],
+          [
+            126.475,
+            26.525
+          ],
+          [
+            126.73,
+            25.693
+          ],
+          [
+            124.217,
+            21.384
+          ],
+          [
+            124.735,
+            21.081
+          ],
+          [
+            122.499,
+            17.248
+          ],
+          [
+            121.981,
+            17.549
+          ],
+          [
+            121.799,
+            17.238
+          ],
+          [
+            129.078,
+            12.994
+          ],
+          [
+            136.068,
+            24.899
+          ],
+          [
+            140.722,
+            22.184
+          ]
+        ]
+      ],
+      "footprint_area_m2": 200.2,
+      "centroid_local": [
+        129.811,
+        23.251
+      ],
+      "distance_from_origin_m": 131.88,
+      "bearing_from_origin_deg": 79.8,
+      "on_parcel": false,
+      "source_object_id": "aa4a8556-b289-4710-932e-e6ae176914bc",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "beaf6366-5d18-4694-aa09-1c30c5c93591",
@@ -451,7 +728,43 @@
             68.254
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            155.053,
+            68.254
+          ],
+          [
+            161.811,
+            74.502
+          ],
+          [
+            156.792,
+            79.939
+          ],
+          [
+            150.029,
+            73.69
+          ],
+          [
+            155.053,
+            68.254
+          ]
+        ]
+      ],
+      "footprint_area_m2": 68.1,
+      "centroid_local": [
+        155.748,
+        72.928
+      ],
+      "distance_from_origin_m": 171.98,
+      "bearing_from_origin_deg": 64.9,
+      "on_parcel": false,
+      "source_object_id": "beaf6366-5d18-4694-aa09-1c30c5c93591",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "9f8119ee-cbf5-4d67-bed3-2e4f9dbf9a8b",
@@ -482,7 +795,43 @@
             0.704
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -172.67,
+            0.704
+          ],
+          [
+            -164.838,
+            -2.13
+          ],
+          [
+            -163.135,
+            2.573
+          ],
+          [
+            -170.968,
+            5.407
+          ],
+          [
+            -172.67,
+            0.704
+          ]
+        ]
+      ],
+      "footprint_area_m2": 41.7,
+      "centroid_local": [
+        -168.856,
+        1.452
+      ],
+      "distance_from_origin_m": 168.86,
+      "bearing_from_origin_deg": 270.5,
+      "on_parcel": false,
+      "source_object_id": "9f8119ee-cbf5-4d67-bed3-2e4f9dbf9a8b",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.3
     },
     {
       "object_id": "438abd8f-94f8-497a-b11b-e5b9b95b2321",
@@ -513,7 +862,43 @@
             83.978
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -144.251,
+            83.978
+          ],
+          [
+            -149.073,
+            85.661
+          ],
+          [
+            -150.249,
+            82.291
+          ],
+          [
+            -145.427,
+            80.609
+          ],
+          [
+            -144.251,
+            83.978
+          ]
+        ]
+      ],
+      "footprint_area_m2": 18.2,
+      "centroid_local": [
+        -146.65,
+        83.303
+      ],
+      "distance_from_origin_m": 168.66,
+      "bearing_from_origin_deg": 299.6,
+      "on_parcel": false,
+      "source_object_id": "438abd8f-94f8-497a-b11b-e5b9b95b2321",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "ee0f1207-b7bf-4e19-ad4b-662e9f997518",
@@ -560,7 +945,59 @@
             -111.184
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            16.567,
+            -111.184
+          ],
+          [
+            19.121,
+            -112.383
+          ],
+          [
+            18.326,
+            -114.076
+          ],
+          [
+            20.895,
+            -115.283
+          ],
+          [
+            21.69,
+            -113.589
+          ],
+          [
+            24.185,
+            -114.758
+          ],
+          [
+            27.511,
+            -107.665
+          ],
+          [
+            19.893,
+            -104.091
+          ],
+          [
+            16.567,
+            -111.184
+          ]
+        ]
+      ],
+      "footprint_area_m2": 71.2,
+      "centroid_local": [
+        20.528,
+        -111.579
+      ],
+      "distance_from_origin_m": 113.45,
+      "bearing_from_origin_deg": 169.6,
+      "on_parcel": false,
+      "source_object_id": "ee0f1207-b7bf-4e19-ad4b-662e9f997518",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "b8e327bb-5ad2-4f2d-8f14-8b7c4eeeead5",
@@ -607,7 +1044,59 @@
             -177.459
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -12.511,
+            -177.459
+          ],
+          [
+            -10.679,
+            -166.454
+          ],
+          [
+            -21.82,
+            -164.6
+          ],
+          [
+            -23.66,
+            -175.66
+          ],
+          [
+            -17.549,
+            -176.677
+          ],
+          [
+            -16.989,
+            -177.321
+          ],
+          [
+            -14.748,
+            -177.694
+          ],
+          [
+            -14.169,
+            -177.184
+          ],
+          [
+            -12.511,
+            -177.459
+          ]
+        ]
+      ],
+      "footprint_area_m2": 128.1,
+      "centroid_local": [
+        -16.071,
+        -174.501
+      ],
+      "distance_from_origin_m": 175.24,
+      "bearing_from_origin_deg": 185.3,
+      "on_parcel": false,
+      "source_object_id": "b8e327bb-5ad2-4f2d-8f14-8b7c4eeeead5",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "c99d6df9-1658-435f-9034-b0e925d94791",
@@ -638,7 +1127,43 @@
             -139.534
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            74.884,
+            -139.534
+          ],
+          [
+            77.582,
+            -140.757
+          ],
+          [
+            78.703,
+            -138.284
+          ],
+          [
+            76.006,
+            -137.061
+          ],
+          [
+            74.884,
+            -139.534
+          ]
+        ]
+      ],
+      "footprint_area_m2": 8.0,
+      "centroid_local": [
+        76.412,
+        -139.034
+      ],
+      "distance_from_origin_m": 158.65,
+      "bearing_from_origin_deg": 151.2,
+      "on_parcel": false,
+      "source_object_id": "c99d6df9-1658-435f-9034-b0e925d94791",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "0a7889ee-7a7d-416b-8971-0eb0a839c493",
@@ -685,7 +1210,59 @@
             -7.968
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -55.711,
+            -7.968
+          ],
+          [
+            -55.376,
+            -8.101
+          ],
+          [
+            -56.109,
+            -9.956
+          ],
+          [
+            -51.753,
+            -11.668
+          ],
+          [
+            -51.093,
+            -9.871
+          ],
+          [
+            -44.506,
+            -12.36
+          ],
+          [
+            -41.946,
+            -5.587
+          ],
+          [
+            -53.104,
+            -1.37
+          ],
+          [
+            -55.711,
+            -7.968
+          ]
+        ]
+      ],
+      "footprint_area_m2": 95.5,
+      "centroid_local": [
+        -51.701,
+        -8.317
+      ],
+      "distance_from_origin_m": 52.37,
+      "bearing_from_origin_deg": 260.9,
+      "on_parcel": false,
+      "source_object_id": "0a7889ee-7a7d-416b-8971-0eb0a839c493",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "32ab982d-24cf-4ffd-86d1-024472beb79b",
@@ -724,7 +1301,51 @@
             149.557
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -117.374,
+            149.557
+          ],
+          [
+            -114.355,
+            157.523
+          ],
+          [
+            -125.288,
+            161.667
+          ],
+          [
+            -129.344,
+            150.964
+          ],
+          [
+            -121.794,
+            148.103
+          ],
+          [
+            -120.757,
+            150.839
+          ],
+          [
+            -117.374,
+            149.557
+          ]
+        ]
+      ],
+      "footprint_area_m2": 123.2,
+      "centroid_local": [
+        -120.898,
+        152.601
+      ],
+      "distance_from_origin_m": 194.69,
+      "bearing_from_origin_deg": 321.6,
+      "on_parcel": false,
+      "source_object_id": "32ab982d-24cf-4ffd-86d1-024472beb79b",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "c28a018c-7f02-45ea-8b46-71d25ee48288",
@@ -755,7 +1376,43 @@
             127.104
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            18.019,
+            127.104
+          ],
+          [
+            20.618,
+            125.942
+          ],
+          [
+            22.232,
+            129.55
+          ],
+          [
+            19.633,
+            130.712
+          ],
+          [
+            18.019,
+            127.104
+          ]
+        ]
+      ],
+      "footprint_area_m2": 11.3,
+      "centroid_local": [
+        19.704,
+        128.082
+      ],
+      "distance_from_origin_m": 129.59,
+      "bearing_from_origin_deg": 8.7,
+      "on_parcel": false,
+      "source_object_id": "c28a018c-7f02-45ea-8b46-71d25ee48288",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "13ca5a5f-5728-4a6a-9007-a9d2bfb69184",
@@ -786,7 +1443,43 @@
             23.941
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            176.783,
+            23.941
+          ],
+          [
+            173.325,
+            26.112
+          ],
+          [
+            170.843,
+            22.159
+          ],
+          [
+            174.301,
+            19.988
+          ],
+          [
+            176.783,
+            23.941
+          ]
+        ]
+      ],
+      "footprint_area_m2": 19.1,
+      "centroid_local": [
+        174.407,
+        23.228
+      ],
+      "distance_from_origin_m": 175.95,
+      "bearing_from_origin_deg": 82.4,
+      "on_parcel": false,
+      "source_object_id": "13ca5a5f-5728-4a6a-9007-a9d2bfb69184",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "edc0fa24-3f61-4789-b8eb-cedb7219887b",
@@ -849,7 +1542,75 @@
             58.077
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            46.58,
+            58.077
+          ],
+          [
+            55.11,
+            52.488
+          ],
+          [
+            57.698,
+            56.439
+          ],
+          [
+            65.477,
+            51.342
+          ],
+          [
+            61.592,
+            45.412
+          ],
+          [
+            67.616,
+            41.465
+          ],
+          [
+            73.438,
+            50.35
+          ],
+          [
+            68.406,
+            53.648
+          ],
+          [
+            70.87,
+            57.408
+          ],
+          [
+            62.577,
+            62.842
+          ],
+          [
+            63.444,
+            64.166
+          ],
+          [
+            54.437,
+            70.067
+          ],
+          [
+            46.58,
+            58.077
+          ]
+        ]
+      ],
+      "footprint_area_m2": 303.6,
+      "centroid_local": [
+        61.063,
+        55.522
+      ],
+      "distance_from_origin_m": 82.53,
+      "bearing_from_origin_deg": 47.7,
+      "on_parcel": false,
+      "source_object_id": "edc0fa24-3f61-4789-b8eb-cedb7219887b",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "838f3bd3-fdc3-40de-91f3-fcc0d1abc940",
@@ -888,7 +1649,51 @@
             -163.975
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -45.168,
+            -163.975
+          ],
+          [
+            -55.35,
+            -162.03
+          ],
+          [
+            -56.642,
+            -168.79
+          ],
+          [
+            -54.61,
+            -169.179
+          ],
+          [
+            -55.24,
+            -172.475
+          ],
+          [
+            -47.091,
+            -174.033
+          ],
+          [
+            -45.168,
+            -163.975
+          ]
+        ]
+      ],
+      "footprint_area_m2": 99.2,
+      "centroid_local": [
+        -51.324,
+        -167.78
+      ],
+      "distance_from_origin_m": 175.45,
+      "bearing_from_origin_deg": 197.0,
+      "on_parcel": false,
+      "source_object_id": "838f3bd3-fdc3-40de-91f3-fcc0d1abc940",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "65a5ed51-6c5e-4886-964d-ee63d82491ee",
@@ -919,7 +1724,43 @@
             119.121
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -62.719,
+            119.121
+          ],
+          [
+            -54.901,
+            117.51
+          ],
+          [
+            -52.958,
+            126.935
+          ],
+          [
+            -60.777,
+            128.546
+          ],
+          [
+            -62.719,
+            119.121
+          ]
+        ]
+      ],
+      "footprint_area_m2": 76.8,
+      "centroid_local": [
+        -58.815,
+        122.247
+      ],
+      "distance_from_origin_m": 135.66,
+      "bearing_from_origin_deg": 334.3,
+      "on_parcel": false,
+      "source_object_id": "65a5ed51-6c5e-4886-964d-ee63d82491ee",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "388b6771-7ebb-4332-b29d-08cea068eac5",
@@ -958,7 +1799,51 @@
             1.757
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -104.741,
+            1.757
+          ],
+          [
+            -98.757,
+            -0.297
+          ],
+          [
+            -99.25,
+            -1.708
+          ],
+          [
+            -94.122,
+            -3.474
+          ],
+          [
+            -90.985,
+            5.638
+          ],
+          [
+            -102.079,
+            9.468
+          ],
+          [
+            -104.741,
+            1.757
+          ]
+        ]
+      ],
+      "footprint_area_m2": 103.8,
+      "centroid_local": [
+        -99.239,
+        1.877
+      ],
+      "distance_from_origin_m": 99.26,
+      "bearing_from_origin_deg": 271.1,
+      "on_parcel": false,
+      "source_object_id": "388b6771-7ebb-4332-b29d-08cea068eac5",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "099e5c41-2114-461c-ac3b-ccd8751dbb06",
@@ -1005,7 +1890,59 @@
             -167.88
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -80.265,
+            -167.88
+          ],
+          [
+            -77.548,
+            -170.135
+          ],
+          [
+            -76.843,
+            -169.287
+          ],
+          [
+            -74.169,
+            -171.508
+          ],
+          [
+            -70.757,
+            -167.399
+          ],
+          [
+            -73.457,
+            -165.156
+          ],
+          [
+            -73.479,
+            -165.182
+          ],
+          [
+            -76.169,
+            -162.949
+          ],
+          [
+            -80.265,
+            -167.88
+          ]
+        ]
+      ],
+      "footprint_area_m2": 41.2,
+      "centroid_local": [
+        -75.884,
+        -167.486
+      ],
+      "distance_from_origin_m": 183.87,
+      "bearing_from_origin_deg": 204.4,
+      "on_parcel": false,
+      "source_object_id": "099e5c41-2114-461c-ac3b-ccd8751dbb06",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "9d8e826f-fe3a-4650-aac4-d8c6b33830d4",
@@ -1088,7 +2025,95 @@
             -12.641
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            111.188,
+            -12.641
+          ],
+          [
+            122.49,
+            -18.229
+          ],
+          [
+            124.128,
+            -22.774
+          ],
+          [
+            126.401,
+            -21.978
+          ],
+          [
+            127.038,
+            -22.504
+          ],
+          [
+            128.04,
+            -21.404
+          ],
+          [
+            130.361,
+            -20.592
+          ],
+          [
+            130.012,
+            -19.612
+          ],
+          [
+            130.429,
+            -18.848
+          ],
+          [
+            129.597,
+            -16.513
+          ],
+          [
+            128.79,
+            -16.185
+          ],
+          [
+            126.82,
+            -10.656
+          ],
+          [
+            124.239,
+            -9.416
+          ],
+          [
+            123.98,
+            -9.956
+          ],
+          [
+            122.465,
+            -9.23
+          ],
+          [
+            122.725,
+            -8.689
+          ],
+          [
+            114.886,
+            -4.924
+          ],
+          [
+            111.188,
+            -12.641
+          ]
+        ]
+      ],
+      "footprint_area_m2": 164.0,
+      "centroid_local": [
+        124.154,
+        -15.377
+      ],
+      "distance_from_origin_m": 125.1,
+      "bearing_from_origin_deg": 97.1,
+      "on_parcel": false,
+      "source_object_id": "9d8e826f-fe3a-4650-aac4-d8c6b33830d4",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "ee3689fa-be73-4d70-8fc7-cef7c3a66657",
@@ -1135,7 +2160,59 @@
             128.4
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -36.247,
+            128.4
+          ],
+          [
+            -32.572,
+            127.985
+          ],
+          [
+            -32.709,
+            126.773
+          ],
+          [
+            -28.07,
+            126.249
+          ],
+          [
+            -27.934,
+            127.459
+          ],
+          [
+            -24.253,
+            127.044
+          ],
+          [
+            -23.298,
+            135.463
+          ],
+          [
+            -35.298,
+            136.794
+          ],
+          [
+            -36.247,
+            128.4
+          ]
+        ]
+      ],
+      "footprint_area_m2": 107.8,
+      "centroid_local": [
+        -30.736,
+        129.396
+      ],
+      "distance_from_origin_m": 133.0,
+      "bearing_from_origin_deg": 346.6,
+      "on_parcel": false,
+      "source_object_id": "ee3689fa-be73-4d70-8fc7-cef7c3a66657",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "992f4a57-a206-436c-9516-97b0c3d2992d",
@@ -1166,7 +2243,43 @@
             -67.678
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -140.134,
+            -67.678
+          ],
+          [
+            -144.45,
+            -65.222
+          ],
+          [
+            -148.401,
+            -72.163
+          ],
+          [
+            -144.083,
+            -74.616
+          ],
+          [
+            -140.134,
+            -67.678
+          ]
+        ]
+      ],
+      "footprint_area_m2": 39.7,
+      "centroid_local": [
+        -143.44,
+        -69.471
+      ],
+      "distance_from_origin_m": 159.38,
+      "bearing_from_origin_deg": 244.2,
+      "on_parcel": false,
+      "source_object_id": "992f4a57-a206-436c-9516-97b0c3d2992d",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "ddcb6ed6-2dc9-4b6c-bcd3-027cb2d1e82a",
@@ -1197,7 +2310,43 @@
             31.1
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -179.964,
+            31.1
+          ],
+          [
+            -178.776,
+            33.921
+          ],
+          [
+            -180.489,
+            34.587
+          ],
+          [
+            -181.597,
+            31.734
+          ],
+          [
+            -179.964,
+            31.1
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.5,
+      "centroid_local": [
+        -180.158,
+        32.488
+      ],
+      "distance_from_origin_m": 183.06,
+      "bearing_from_origin_deg": 280.2,
+      "on_parcel": false,
+      "source_object_id": "ddcb6ed6-2dc9-4b6c-bcd3-027cb2d1e82a",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "ceef3c33-d81c-4c5d-ac8e-5da836d1c004",
@@ -1260,7 +2409,75 @@
             85.452
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -1.835,
+            85.452
+          ],
+          [
+            -4.929,
+            77.621
+          ],
+          [
+            14.578,
+            69.973
+          ],
+          [
+            17.658,
+            77.801
+          ],
+          [
+            8.923,
+            81.236
+          ],
+          [
+            9.648,
+            83.1
+          ],
+          [
+            9.107,
+            83.31
+          ],
+          [
+            8.88,
+            84.021
+          ],
+          [
+            7.119,
+            84.708
+          ],
+          [
+            6.397,
+            84.365
+          ],
+          [
+            3.316,
+            85.566
+          ],
+          [
+            2.581,
+            83.707
+          ],
+          [
+            -1.835,
+            85.452
+          ]
+        ]
+      ],
+      "footprint_area_m2": 191.3,
+      "centroid_local": [
+        6.124,
+        82.024
+      ],
+      "distance_from_origin_m": 82.25,
+      "bearing_from_origin_deg": 4.3,
+      "on_parcel": false,
+      "source_object_id": "ceef3c33-d81c-4c5d-ac8e-5da836d1c004",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "759c025c-5a02-45cf-b942-88563b6557ec",
@@ -1291,7 +2508,43 @@
             159.679
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -13.481,
+            159.679
+          ],
+          [
+            -11.151,
+            157.357
+          ],
+          [
+            -9.912,
+            158.601
+          ],
+          [
+            -12.242,
+            160.922
+          ],
+          [
+            -13.481,
+            159.679
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.8,
+      "centroid_local": [
+        -12.053,
+        159.248
+      ],
+      "distance_from_origin_m": 159.7,
+      "bearing_from_origin_deg": 355.7,
+      "on_parcel": false,
+      "source_object_id": "759c025c-5a02-45cf-b942-88563b6557ec",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "d8fd4239-c685-4ee6-b250-515d6a6b3838",
@@ -1354,7 +2607,75 @@
             -45.323
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            65.894,
+            -45.323
+          ],
+          [
+            68.593,
+            -38.018
+          ],
+          [
+            63.029,
+            -35.963
+          ],
+          [
+            63.227,
+            -35.373
+          ],
+          [
+            60.351,
+            -34.349
+          ],
+          [
+            60.185,
+            -34.829
+          ],
+          [
+            57.383,
+            -33.897
+          ],
+          [
+            54.714,
+            -41.163
+          ],
+          [
+            57.785,
+            -42.324
+          ],
+          [
+            57.401,
+            -43.427
+          ],
+          [
+            62.374,
+            -45.272
+          ],
+          [
+            62.801,
+            -44.167
+          ],
+          [
+            65.894,
+            -45.323
+          ]
+        ]
+      ],
+      "footprint_area_m2": 101.0,
+      "centroid_local": [
+        61.51,
+        -39.956
+      ],
+      "distance_from_origin_m": 73.35,
+      "bearing_from_origin_deg": 123.0,
+      "on_parcel": false,
+      "source_object_id": "d8fd4239-c685-4ee6-b250-515d6a6b3838",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "63a93491-41dc-45bc-96be-38c6ce684aa1",
@@ -1393,7 +2714,51 @@
             -111.246
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -8.958,
+            -111.246
+          ],
+          [
+            1.076,
+            -116.539
+          ],
+          [
+            2.883,
+            -113.114
+          ],
+          [
+            -4.087,
+            -109.438
+          ],
+          [
+            -3.388,
+            -108.113
+          ],
+          [
+            -6.452,
+            -106.496
+          ],
+          [
+            -8.958,
+            -111.246
+          ]
+        ]
+      ],
+      "footprint_area_m2": 49.1,
+      "centroid_local": [
+        -3.983,
+        -110.885
+      ],
+      "distance_from_origin_m": 110.96,
+      "bearing_from_origin_deg": 182.1,
+      "on_parcel": false,
+      "source_object_id": "63a93491-41dc-45bc-96be-38c6ce684aa1",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.3
     },
     {
       "object_id": "155cbd2b-26e9-4a3b-9fe3-efb8bbbb42fe",
@@ -1424,7 +2789,43 @@
             -56.26
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -114.353,
+            -56.26
+          ],
+          [
+            -114.974,
+            -58.595
+          ],
+          [
+            -110.911,
+            -59.678
+          ],
+          [
+            -110.288,
+            -57.343
+          ],
+          [
+            -114.353,
+            -56.26
+          ]
+        ]
+      ],
+      "footprint_area_m2": 10.2,
+      "centroid_local": [
+        -112.976,
+        -57.627
+      ],
+      "distance_from_origin_m": 126.82,
+      "bearing_from_origin_deg": 243.0,
+      "on_parcel": false,
+      "source_object_id": "155cbd2b-26e9-4a3b-9fe3-efb8bbbb42fe",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "734e1be2-e2f5-4122-b3e5-98ff61957208",
@@ -1455,7 +2856,43 @@
             -198.081
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            6.421,
+            -198.081
+          ],
+          [
+            6.196,
+            -199.863
+          ],
+          [
+            9.953,
+            -200.337
+          ],
+          [
+            10.178,
+            -198.555
+          ],
+          [
+            6.421,
+            -198.081
+          ]
+        ]
+      ],
+      "footprint_area_m2": 6.8,
+      "centroid_local": [
+        7.834,
+        -198.983
+      ],
+      "distance_from_origin_m": 199.14,
+      "bearing_from_origin_deg": 177.7,
+      "on_parcel": false,
+      "source_object_id": "734e1be2-e2f5-4122-b3e5-98ff61957208",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "19654dcd-af21-4797-a89d-f20e51d238a3",
@@ -1486,7 +2923,43 @@
             -140.541
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            120.351,
+            -140.541
+          ],
+          [
+            116.196,
+            -139.092
+          ],
+          [
+            114.42,
+            -144.183
+          ],
+          [
+            118.575,
+            -145.633
+          ],
+          [
+            120.351,
+            -140.541
+          ]
+        ]
+      ],
+      "footprint_area_m2": 23.7,
+      "centroid_local": [
+        117.979,
+        -141.998
+      ],
+      "distance_from_origin_m": 184.61,
+      "bearing_from_origin_deg": 140.3,
+      "on_parcel": false,
+      "source_object_id": "19654dcd-af21-4797-a89d-f20e51d238a3",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "6f0f2f62-46fc-46fd-96e6-ad251fa407ba",
@@ -1517,7 +2990,43 @@
             -113.207
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -50.336,
+            -113.207
+          ],
+          [
+            -46.813,
+            -114.65
+          ],
+          [
+            -44.741,
+            -109.596
+          ],
+          [
+            -48.265,
+            -108.151
+          ],
+          [
+            -50.336,
+            -113.207
+          ]
+        ]
+      ],
+      "footprint_area_m2": 20.8,
+      "centroid_local": [
+        -48.098,
+        -111.762
+      ],
+      "distance_from_origin_m": 121.67,
+      "bearing_from_origin_deg": 203.3,
+      "on_parcel": false,
+      "source_object_id": "6f0f2f62-46fc-46fd-96e6-ad251fa407ba",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "0a37792d-3eb1-49ca-8eb2-1e7a0966e273",
@@ -1548,7 +3057,43 @@
             129.072
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -112.606,
+            129.072
+          ],
+          [
+            -108.85,
+            128.051
+          ],
+          [
+            -106.904,
+            135.21
+          ],
+          [
+            -110.66,
+            136.231
+          ],
+          [
+            -112.606,
+            129.072
+          ]
+        ]
+      ],
+      "footprint_area_m2": 28.9,
+      "centroid_local": [
+        -110.325,
+        131.527
+      ],
+      "distance_from_origin_m": 171.67,
+      "bearing_from_origin_deg": 320.0,
+      "on_parcel": false,
+      "source_object_id": "0a37792d-3eb1-49ca-8eb2-1e7a0966e273",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "fbc70e58-f60e-4246-bd42-62aec945eea4",
@@ -1579,7 +3124,43 @@
             -173.174
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            29.174,
+            -173.174
+          ],
+          [
+            19.957,
+            -171.733
+          ],
+          [
+            17.95,
+            -184.51
+          ],
+          [
+            27.164,
+            -185.957
+          ],
+          [
+            29.174,
+            -173.174
+          ]
+        ]
+      ],
+      "footprint_area_m2": 120.7,
+      "centroid_local": [
+        24.684,
+        -177.71
+      ],
+      "distance_from_origin_m": 179.42,
+      "bearing_from_origin_deg": 172.1,
+      "on_parcel": false,
+      "source_object_id": "fbc70e58-f60e-4246-bd42-62aec945eea4",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "b5c7ae06-5d2d-4149-b4ef-12087c2ba463",
@@ -1634,7 +3215,67 @@
             -188.45
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            57.095,
+            -188.45
+          ],
+          [
+            61.294,
+            -189.099
+          ],
+          [
+            61.495,
+            -187.795
+          ],
+          [
+            65.23,
+            -188.372
+          ],
+          [
+            64.587,
+            -192.534
+          ],
+          [
+            72.609,
+            -193.772
+          ],
+          [
+            74.474,
+            -181.696
+          ],
+          [
+            66.453,
+            -180.439
+          ],
+          [
+            66.266,
+            -181.663
+          ],
+          [
+            58.332,
+            -180.438
+          ],
+          [
+            57.095,
+            -188.45
+          ]
+        ]
+      ],
+      "footprint_area_m2": 159.4,
+      "centroid_local": [
+        64.085,
+        -186.61
+      ],
+      "distance_from_origin_m": 197.31,
+      "bearing_from_origin_deg": 161.0,
+      "on_parcel": false,
+      "source_object_id": "b5c7ae06-5d2d-4149-b4ef-12087c2ba463",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "dc50c358-1bd6-470e-beee-e7b679f39ab1",
@@ -1673,7 +3314,51 @@
             -178.411
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -71.586,
+            -178.411
+          ],
+          [
+            -69.411,
+            -180.703
+          ],
+          [
+            -67.12,
+            -178.528
+          ],
+          [
+            -67.829,
+            -177.781
+          ],
+          [
+            -67.32,
+            -177.296
+          ],
+          [
+            -68.785,
+            -175.754
+          ],
+          [
+            -71.586,
+            -178.411
+          ]
+        ]
+      ],
+      "footprint_area_m2": 11.5,
+      "centroid_local": [
+        -69.091,
+        -178.126
+      ],
+      "distance_from_origin_m": 191.06,
+      "bearing_from_origin_deg": 201.2,
+      "on_parcel": false,
+      "source_object_id": "dc50c358-1bd6-470e-beee-e7b679f39ab1",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "57079448-3b25-44dc-9009-6ad53a241edc",
@@ -1704,7 +3389,43 @@
             18.648
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -165.955,
+            18.648
+          ],
+          [
+            -163.013,
+            27.979
+          ],
+          [
+            -173.797,
+            31.379
+          ],
+          [
+            -176.739,
+            22.047
+          ],
+          [
+            -165.955,
+            18.648
+          ]
+        ]
+      ],
+      "footprint_area_m2": 110.6,
+      "centroid_local": [
+        -169.092,
+        23.74
+      ],
+      "distance_from_origin_m": 170.75,
+      "bearing_from_origin_deg": 278.0,
+      "on_parcel": false,
+      "source_object_id": "57079448-3b25-44dc-9009-6ad53a241edc",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.3
     },
     {
       "object_id": "3669ce63-c27c-4bf2-a07e-06241b09703a",
@@ -1751,7 +3472,59 @@
             76.698
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            107.796,
+            76.698
+          ],
+          [
+            113.771,
+            76.056
+          ],
+          [
+            113.347,
+            72.05
+          ],
+          [
+            119.783,
+            71.385
+          ],
+          [
+            120.211,
+            75.364
+          ],
+          [
+            120.786,
+            75.302
+          ],
+          [
+            121.644,
+            83.288
+          ],
+          [
+            108.638,
+            84.646
+          ],
+          [
+            107.796,
+            76.698
+          ]
+        ]
+      ],
+      "footprint_area_m2": 130.7,
+      "centroid_local": [
+        114.864,
+        76.832
+      ],
+      "distance_from_origin_m": 138.19,
+      "bearing_from_origin_deg": 56.2,
+      "on_parcel": false,
+      "source_object_id": "3669ce63-c27c-4bf2-a07e-06241b09703a",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "98dff17e-72d9-4bad-9048-f129d8c50b1f",
@@ -1782,7 +3555,43 @@
             0.613
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -67.072,
+            0.613
+          ],
+          [
+            -55.897,
+            -3.705
+          ],
+          [
+            -51.811,
+            6.957
+          ],
+          [
+            -62.955,
+            11.257
+          ],
+          [
+            -67.072,
+            0.613
+          ]
+        ]
+      ],
+      "footprint_area_m2": 136.6,
+      "centroid_local": [
+        -60.961,
+        3.147
+      ],
+      "distance_from_origin_m": 61.04,
+      "bearing_from_origin_deg": 273.0,
+      "on_parcel": false,
+      "source_object_id": "98dff17e-72d9-4bad-9048-f129d8c50b1f",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "5fdbecdc-1429-4d0f-a1ab-86af9dd7f484",
@@ -1813,7 +3622,43 @@
             149.126
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -0.091,
+            149.126
+          ],
+          [
+            5.429,
+            155.537
+          ],
+          [
+            1.039,
+            159.317
+          ],
+          [
+            -4.481,
+            152.905
+          ],
+          [
+            -0.091,
+            149.126
+          ]
+        ]
+      ],
+      "footprint_area_m2": 49.0,
+      "centroid_local": [
+        0.361,
+        153.202
+      ],
+      "distance_from_origin_m": 153.2,
+      "bearing_from_origin_deg": 0.1,
+      "on_parcel": false,
+      "source_object_id": "5fdbecdc-1429-4d0f-a1ab-86af9dd7f484",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "6a3023de-862f-4014-bd8c-ae9b2ff58331",
@@ -1868,7 +3713,67 @@
             85.693
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -119.649,
+            85.693
+          ],
+          [
+            -116.51,
+            94.888
+          ],
+          [
+            -120.512,
+            96.254
+          ],
+          [
+            -120.345,
+            96.744
+          ],
+          [
+            -129.688,
+            99.934
+          ],
+          [
+            -132.994,
+            90.249
+          ],
+          [
+            -133.283,
+            90.347
+          ],
+          [
+            -134.351,
+            87.219
+          ],
+          [
+            -120.429,
+            82.466
+          ],
+          [
+            -119.361,
+            85.595
+          ],
+          [
+            -119.649,
+            85.693
+          ]
+        ]
+      ],
+      "footprint_area_m2": 190.8,
+      "centroid_local": [
+        -124.252,
+        90.462
+      ],
+      "distance_from_origin_m": 153.69,
+      "bearing_from_origin_deg": 306.1,
+      "on_parcel": false,
+      "source_object_id": "6a3023de-862f-4014-bd8c-ae9b2ff58331",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "98d7e79b-2c4d-49f7-9dcc-6c324a1d0b63",
@@ -1899,7 +3804,43 @@
             -14.875
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -190.626,
+            -14.875
+          ],
+          [
+            -203.139,
+            -12.037
+          ],
+          [
+            -205.259,
+            -21.384
+          ],
+          [
+            -192.746,
+            -24.222
+          ],
+          [
+            -190.626,
+            -14.875
+          ]
+        ]
+      ],
+      "footprint_area_m2": 123.0,
+      "centroid_local": [
+        -196.479,
+        -17.479
+      ],
+      "distance_from_origin_m": 197.25,
+      "bearing_from_origin_deg": 264.9,
+      "on_parcel": false,
+      "source_object_id": "98d7e79b-2c4d-49f7-9dcc-6c324a1d0b63",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "8532c574-8ec6-4dcf-b8f5-35bd1488fac6",
@@ -1946,7 +3887,59 @@
             -57.267
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            197.322,
+            -57.267
+          ],
+          [
+            182.948,
+            -49.599
+          ],
+          [
+            179.619,
+            -55.837
+          ],
+          [
+            186.181,
+            -59.293
+          ],
+          [
+            185.786,
+            -60.021
+          ],
+          [
+            186.225,
+            -61.904
+          ],
+          [
+            184.997,
+            -64.155
+          ],
+          [
+            191.704,
+            -67.767
+          ],
+          [
+            197.322,
+            -57.267
+          ]
+        ]
+      ],
+      "footprint_area_m2": 153.6,
+      "centroid_local": [
+        188.012,
+        -59.234
+      ],
+      "distance_from_origin_m": 197.12,
+      "bearing_from_origin_deg": 107.5,
+      "on_parcel": false,
+      "source_object_id": "8532c574-8ec6-4dcf-b8f5-35bd1488fac6",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "f469c5ce-55bd-4906-9d9b-ce9e9c7994f7",
@@ -1977,7 +3970,43 @@
             50.073
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            113.582,
+            50.073
+          ],
+          [
+            119.553,
+            46.6
+          ],
+          [
+            123.563,
+            53.494
+          ],
+          [
+            117.62,
+            56.972
+          ],
+          [
+            113.582,
+            50.073
+          ]
+        ]
+      ],
+      "footprint_area_m2": 55.1,
+      "centroid_local": [
+        117.58,
+        51.442
+      ],
+      "distance_from_origin_m": 128.34,
+      "bearing_from_origin_deg": 66.4,
+      "on_parcel": false,
+      "source_object_id": "f469c5ce-55bd-4906-9d9b-ce9e9c7994f7",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "8f770d69-5481-4f50-905d-68b1693550e1",
@@ -2032,7 +4061,67 @@
             -140.222
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -131.888,
+            -140.222
+          ],
+          [
+            -135.49,
+            -138.274
+          ],
+          [
+            -135.79,
+            -138.828
+          ],
+          [
+            -139.878,
+            -136.617
+          ],
+          [
+            -143.051,
+            -142.483
+          ],
+          [
+            -141.84,
+            -143.138
+          ],
+          [
+            -143.915,
+            -146.974
+          ],
+          [
+            -140.057,
+            -149.06
+          ],
+          [
+            -137.866,
+            -145.009
+          ],
+          [
+            -135.244,
+            -146.427
+          ],
+          [
+            -131.888,
+            -140.222
+          ]
+        ]
+      ],
+      "footprint_area_m2": 79.3,
+      "centroid_local": [
+        -137.901,
+        -142.478
+      ],
+      "distance_from_origin_m": 198.28,
+      "bearing_from_origin_deg": 224.1,
+      "on_parcel": false,
+      "source_object_id": "8f770d69-5481-4f50-905d-68b1693550e1",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "dcc51411-3b07-454f-a484-24fd2554968a",
@@ -2063,7 +4152,43 @@
             35.351
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -182.288,
+            35.351
+          ],
+          [
+            -183.442,
+            32.515
+          ],
+          [
+            -181.576,
+            31.79
+          ],
+          [
+            -180.467,
+            34.644
+          ],
+          [
+            -182.288,
+            35.351
+          ]
+        ]
+      ],
+      "footprint_area_m2": 6.1,
+      "centroid_local": [
+        -182.012,
+        33.93
+      ],
+      "distance_from_origin_m": 185.15,
+      "bearing_from_origin_deg": 280.6,
+      "on_parcel": false,
+      "source_object_id": "dcc51411-3b07-454f-a484-24fd2554968a",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "3c4b0ec4-472c-4910-bb8d-5c3b2858f60c",
@@ -2094,7 +4219,43 @@
             -150.693
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -89.708,
+            -150.693
+          ],
+          [
+            -96.346,
+            -146.883
+          ],
+          [
+            -99.1,
+            -151.681
+          ],
+          [
+            -92.462,
+            -155.491
+          ],
+          [
+            -89.708,
+            -150.693
+          ]
+        ]
+      ],
+      "footprint_area_m2": 42.3,
+      "centroid_local": [
+        -93.465,
+        -151.088
+      ],
+      "distance_from_origin_m": 177.66,
+      "bearing_from_origin_deg": 211.7,
+      "on_parcel": false,
+      "source_object_id": "3c4b0ec4-472c-4910-bb8d-5c3b2858f60c",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "42f72a01-aa99-42e8-872f-ea8fa3b921e9",
@@ -2149,7 +4310,67 @@
             1.231
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            178.331,
+            1.231
+          ],
+          [
+            185.065,
+            -3.852
+          ],
+          [
+            188.065,
+            0.122
+          ],
+          [
+            188.936,
+            0.216
+          ],
+          [
+            190.562,
+            2.369
+          ],
+          [
+            190.413,
+            3.233
+          ],
+          [
+            194.126,
+            8.153
+          ],
+          [
+            183.075,
+            16.493
+          ],
+          [
+            179.432,
+            11.666
+          ],
+          [
+            183.748,
+            8.408
+          ],
+          [
+            178.331,
+            1.231
+          ]
+        ]
+      ],
+      "footprint_area_m2": 161.7,
+      "centroid_local": [
+        185.462,
+        4.479
+      ],
+      "distance_from_origin_m": 185.52,
+      "bearing_from_origin_deg": 88.6,
+      "on_parcel": false,
+      "source_object_id": "42f72a01-aa99-42e8-872f-ea8fa3b921e9",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "4d0c2133-f56c-407e-8222-6430f1fe11e7",
@@ -2180,7 +4401,43 @@
             65.219
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            31.516,
+            65.219
+          ],
+          [
+            33.359,
+            63.754
+          ],
+          [
+            34.866,
+            65.648
+          ],
+          [
+            33.023,
+            67.114
+          ],
+          [
+            31.516,
+            65.219
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.7,
+      "centroid_local": [
+        32.856,
+        65.391
+      ],
+      "distance_from_origin_m": 73.18,
+      "bearing_from_origin_deg": 26.7,
+      "on_parcel": false,
+      "source_object_id": "4d0c2133-f56c-407e-8222-6430f1fe11e7",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "2cabdc20-3f57-4fdc-b249-3e45d64e0ea6",
@@ -2227,7 +4484,59 @@
             -130.748
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            119.386,
+            -130.748
+          ],
+          [
+            124.802,
+            -132.838
+          ],
+          [
+            126.65,
+            -128.041
+          ],
+          [
+            121.237,
+            -125.952
+          ],
+          [
+            121.305,
+            -125.536
+          ],
+          [
+            120.132,
+            -125.083
+          ],
+          [
+            118.317,
+            -129.79
+          ],
+          [
+            119.57,
+            -130.272
+          ],
+          [
+            119.386,
+            -130.748
+          ]
+        ]
+      ],
+      "footprint_area_m2": 36.6,
+      "centroid_local": [
+        121.198,
+        -128.779
+      ],
+      "distance_from_origin_m": 176.84,
+      "bearing_from_origin_deg": 136.7,
+      "on_parcel": false,
+      "source_object_id": "2cabdc20-3f57-4fdc-b249-3e45d64e0ea6",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "74370e07-d268-4be0-b3e2-1999031fa5ab",
@@ -2258,7 +4567,43 @@
             -67.063
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -41.428,
+            -67.063
+          ],
+          [
+            -35.417,
+            -68.652
+          ],
+          [
+            -33.849,
+            -62.635
+          ],
+          [
+            -39.828,
+            -61.024
+          ],
+          [
+            -41.428,
+            -67.063
+          ]
+        ]
+      ],
+      "footprint_area_m2": 38.7,
+      "centroid_local": [
+        -38.39,
+        -65.287
+      ],
+      "distance_from_origin_m": 75.74,
+      "bearing_from_origin_deg": 210.5,
+      "on_parcel": false,
+      "source_object_id": "74370e07-d268-4be0-b3e2-1999031fa5ab",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "2ebf4589-77af-4d59-b908-703f69989651",
@@ -2289,7 +4634,43 @@
             28.32
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -195.974,
+            28.32
+          ],
+          [
+            -196.48,
+            24.546
+          ],
+          [
+            -190.992,
+            23.81
+          ],
+          [
+            -190.486,
+            27.584
+          ],
+          [
+            -195.974,
+            28.32
+          ]
+        ]
+      ],
+      "footprint_area_m2": 21.1,
+      "centroid_local": [
+        -193.981,
+        26.516
+      ],
+      "distance_from_origin_m": 195.78,
+      "bearing_from_origin_deg": 277.8,
+      "on_parcel": false,
+      "source_object_id": "2ebf4589-77af-4d59-b908-703f69989651",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "74cccaa5-d2d2-4034-961f-382d4685b4c8",
@@ -2336,7 +4717,59 @@
             59.344
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -183.074,
+            59.344
+          ],
+          [
+            -181.983,
+            66.398
+          ],
+          [
+            -189.046,
+            67.502
+          ],
+          [
+            -189.273,
+            66.051
+          ],
+          [
+            -193.644,
+            66.734
+          ],
+          [
+            -194.35,
+            65.037
+          ],
+          [
+            -189.429,
+            64.223
+          ],
+          [
+            -190.045,
+            60.495
+          ],
+          [
+            -183.074,
+            59.344
+          ]
+        ]
+      ],
+      "footprint_area_m2": 58.8,
+      "centroid_local": [
+        -188.213,
+        63.903
+      ],
+      "distance_from_origin_m": 198.77,
+      "bearing_from_origin_deg": 288.8,
+      "on_parcel": false,
+      "source_object_id": "74cccaa5-d2d2-4034-961f-382d4685b4c8",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "249cc6d1-5475-41a1-a20a-12687620cb11",
@@ -2367,7 +4800,43 @@
             107.369
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            108.529,
+            107.369
+          ],
+          [
+            110.293,
+            106.306
+          ],
+          [
+            111.699,
+            108.639
+          ],
+          [
+            109.913,
+            109.674
+          ],
+          [
+            108.529,
+            107.369
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.6,
+      "centroid_local": [
+        109.793,
+        107.871
+      ],
+      "distance_from_origin_m": 153.92,
+      "bearing_from_origin_deg": 45.5,
+      "on_parcel": false,
+      "source_object_id": "249cc6d1-5475-41a1-a20a-12687620cb11",
+      "object_type": "Samhällsfunktion",
+      "is_main_building": false,
+      "plan_uncertainty_m": 2.0
     },
     {
       "object_id": "7bd4e8c4-b61a-4283-89ec-ba6ec8bd198a",
@@ -2398,7 +4867,43 @@
             -23.076
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            158.928,
+            -23.076
+          ],
+          [
+            150.513,
+            -18.359
+          ],
+          [
+            146.52,
+            -25.481
+          ],
+          [
+            154.935,
+            -30.199
+          ],
+          [
+            158.928,
+            -23.076
+          ]
+        ]
+      ],
+      "footprint_area_m2": 78.8,
+      "centroid_local": [
+        153.965,
+        -24.038
+      ],
+      "distance_from_origin_m": 155.83,
+      "bearing_from_origin_deg": 98.9,
+      "on_parcel": false,
+      "source_object_id": "7bd4e8c4-b61a-4283-89ec-ba6ec8bd198a",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "65557b4b-937d-4a06-831c-af8ed651e141",
@@ -2429,7 +4934,43 @@
             -28.296
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            127.943,
+            -28.296
+          ],
+          [
+            125.495,
+            -32.932
+          ],
+          [
+            129.961,
+            -35.29
+          ],
+          [
+            132.409,
+            -30.654
+          ],
+          [
+            127.943,
+            -28.296
+          ]
+        ]
+      ],
+      "footprint_area_m2": 26.5,
+      "centroid_local": [
+        128.75,
+        -31.094
+      ],
+      "distance_from_origin_m": 132.45,
+      "bearing_from_origin_deg": 103.6,
+      "on_parcel": false,
+      "source_object_id": "65557b4b-937d-4a06-831c-af8ed651e141",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "9ac772d0-50d2-460d-99b5-9fcd6655119f",
@@ -2460,7 +5001,43 @@
             -59.811
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            36.642,
+            -59.811
+          ],
+          [
+            37.021,
+            -58.012
+          ],
+          [
+            33.903,
+            -57.358
+          ],
+          [
+            33.524,
+            -59.155
+          ],
+          [
+            36.642,
+            -59.811
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.9,
+      "centroid_local": [
+        35.546,
+        -58.829
+      ],
+      "distance_from_origin_m": 68.73,
+      "bearing_from_origin_deg": 148.9,
+      "on_parcel": false,
+      "source_object_id": "9ac772d0-50d2-460d-99b5-9fcd6655119f",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "3c5f0a77-bd66-4ea3-a1e8-59caaec748b9",
@@ -2499,7 +5076,51 @@
             68.234
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            35.761,
+            68.234
+          ],
+          [
+            38.857,
+            67.87
+          ],
+          [
+            40.652,
+            66.599
+          ],
+          [
+            42.246,
+            68.849
+          ],
+          [
+            37.448,
+            72.247
+          ],
+          [
+            35.696,
+            70.7
+          ],
+          [
+            35.761,
+            68.234
+          ]
+        ]
+      ],
+      "footprint_area_m2": 19.9,
+      "centroid_local": [
+        38.06,
+        68.962
+      ],
+      "distance_from_origin_m": 78.77,
+      "bearing_from_origin_deg": 28.9,
+      "on_parcel": false,
+      "source_object_id": "3c5f0a77-bd66-4ea3-a1e8-59caaec748b9",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "e03a94a3-3372-4f96-a827-f76290ee4242",
@@ -2538,7 +5159,51 @@
             -75.917
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -125.979,
+            -75.917
+          ],
+          [
+            -124.09,
+            -76.712
+          ],
+          [
+            -122.759,
+            -73.55
+          ],
+          [
+            -131.173,
+            -70.343
+          ],
+          [
+            -134.217,
+            -77.495
+          ],
+          [
+            -127.823,
+            -80.262
+          ],
+          [
+            -125.979,
+            -75.917
+          ]
+        ]
+      ],
+      "footprint_area_m2": 62.1,
+      "centroid_local": [
+        -127.431,
+        -75.742
+      ],
+      "distance_from_origin_m": 148.24,
+      "bearing_from_origin_deg": 239.3,
+      "on_parcel": false,
+      "source_object_id": "e03a94a3-3372-4f96-a827-f76290ee4242",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "9b92a2a6-0343-481c-b3f4-b91ee4ade0d9",
@@ -2569,7 +5234,43 @@
             -108.996
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -104.646,
+            -108.996
+          ],
+          [
+            -101.731,
+            -115.452
+          ],
+          [
+            -97.001,
+            -113.317
+          ],
+          [
+            -99.916,
+            -106.861
+          ],
+          [
+            -104.646,
+            -108.996
+          ]
+        ]
+      ],
+      "footprint_area_m2": 36.8,
+      "centroid_local": [
+        -101.588,
+        -110.724
+      ],
+      "distance_from_origin_m": 150.27,
+      "bearing_from_origin_deg": 222.5,
+      "on_parcel": false,
+      "source_object_id": "9b92a2a6-0343-481c-b3f4-b91ee4ade0d9",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "1eea8957-6de8-4b80-988d-b52eb9d0d08b",
@@ -2616,7 +5317,59 @@
             -122.289
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            91.36,
+            -122.289
+          ],
+          [
+            92.08,
+            -122.584
+          ],
+          [
+            91.235,
+            -124.648
+          ],
+          [
+            96.146,
+            -126.658
+          ],
+          [
+            96.974,
+            -124.635
+          ],
+          [
+            97.655,
+            -124.914
+          ],
+          [
+            99.444,
+            -120.546
+          ],
+          [
+            93.152,
+            -117.911
+          ],
+          [
+            91.36,
+            -122.289
+          ]
+        ]
+      ],
+      "footprint_area_m2": 43.9,
+      "centroid_local": [
+        94.378,
+        -122.942
+      ],
+      "distance_from_origin_m": 154.99,
+      "bearing_from_origin_deg": 142.5,
+      "on_parcel": false,
+      "source_object_id": "1eea8957-6de8-4b80-988d-b52eb9d0d08b",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "461a8f0d-1942-4b91-a416-a7e95d0ab76d",
@@ -2647,7 +5400,43 @@
             -72.709
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -107.504,
+            -72.709
+          ],
+          [
+            -106.655,
+            -69.998
+          ],
+          [
+            -108.515,
+            -69.415
+          ],
+          [
+            -109.367,
+            -72.138
+          ],
+          [
+            -107.504,
+            -72.709
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.5,
+      "centroid_local": [
+        -107.909,
+        -71.394
+      ],
+      "distance_from_origin_m": 129.39,
+      "bearing_from_origin_deg": 236.5,
+      "on_parcel": false,
+      "source_object_id": "461a8f0d-1942-4b91-a416-a7e95d0ab76d",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "82278262-da3a-462c-94c4-c111139fdef7",
@@ -2678,7 +5467,43 @@
             -178.914
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            56.537,
+            -178.914
+          ],
+          [
+            52.838,
+            -178.346
+          ],
+          [
+            51.714,
+            -185.637
+          ],
+          [
+            55.409,
+            -186.208
+          ],
+          [
+            56.537,
+            -178.914
+          ]
+        ]
+      ],
+      "footprint_area_m2": 27.6,
+      "centroid_local": [
+        54.607,
+        -181.604
+      ],
+      "distance_from_origin_m": 189.64,
+      "bearing_from_origin_deg": 163.3,
+      "on_parcel": false,
+      "source_object_id": "82278262-da3a-462c-94c4-c111139fdef7",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "f8681c38-96fe-4322-b3e7-607f36f6da09",
@@ -2725,7 +5550,59 @@
             -60.764
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -64.514,
+            -60.764
+          ],
+          [
+            -61.946,
+            -52.751
+          ],
+          [
+            -66.285,
+            -51.362
+          ],
+          [
+            -66.618,
+            -50.699
+          ],
+          [
+            -68.937,
+            -49.969
+          ],
+          [
+            -69.605,
+            -50.301
+          ],
+          [
+            -73.948,
+            -48.923
+          ],
+          [
+            -76.521,
+            -56.919
+          ],
+          [
+            -64.514,
+            -60.764
+          ]
+        ]
+      ],
+      "footprint_area_m2": 107.6,
+      "centroid_local": [
+        -68.099,
+        -53.606
+      ],
+      "distance_from_origin_m": 86.67,
+      "bearing_from_origin_deg": 231.8,
+      "on_parcel": false,
+      "source_object_id": "f8681c38-96fe-4322-b3e7-607f36f6da09",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "7ceadd69-b6f4-403b-9cc2-3f4087c76b67",
@@ -2756,7 +5633,43 @@
             5.695
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -34.816,
+            5.695
+          ],
+          [
+            -33.809,
+            8.433
+          ],
+          [
+            -37.257,
+            9.702
+          ],
+          [
+            -38.264,
+            6.965
+          ],
+          [
+            -34.816,
+            5.695
+          ]
+        ]
+      ],
+      "footprint_area_m2": 10.7,
+      "centroid_local": [
+        -35.792,
+        7.298
+      ],
+      "distance_from_origin_m": 36.53,
+      "bearing_from_origin_deg": 281.5,
+      "on_parcel": false,
+      "source_object_id": "7ceadd69-b6f4-403b-9cc2-3f4087c76b67",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "4e58bd9b-1569-414c-b46c-353f6dc1aad0",
@@ -2795,7 +5708,51 @@
             -64.563
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -137.501,
+            -64.563
+          ],
+          [
+            -142.553,
+            -61.779
+          ],
+          [
+            -144.45,
+            -65.222
+          ],
+          [
+            -140.134,
+            -67.678
+          ],
+          [
+            -140.232,
+            -67.85
+          ],
+          [
+            -139.532,
+            -68.248
+          ],
+          [
+            -137.501,
+            -64.563
+          ]
+        ]
+      ],
+      "footprint_area_m2": 23.1,
+      "centroid_local": [
+        -140.272,
+        -65.7
+      ],
+      "distance_from_origin_m": 154.9,
+      "bearing_from_origin_deg": 244.9,
+      "on_parcel": false,
+      "source_object_id": "4e58bd9b-1569-414c-b46c-353f6dc1aad0",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "394da5ba-c2bd-4dbf-82e9-6e6228592c0c",
@@ -2826,7 +5783,43 @@
             151.919
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            93.639,
+            151.919
+          ],
+          [
+            88.76,
+            153.771
+          ],
+          [
+            86.023,
+            146.56
+          ],
+          [
+            90.902,
+            144.708
+          ],
+          [
+            93.639,
+            151.919
+          ]
+        ]
+      ],
+      "footprint_area_m2": 40.3,
+      "centroid_local": [
+        90.593,
+        149.775
+      ],
+      "distance_from_origin_m": 175.04,
+      "bearing_from_origin_deg": 31.2,
+      "on_parcel": false,
+      "source_object_id": "394da5ba-c2bd-4dbf-82e9-6e6228592c0c",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "72bc37c7-c01b-4c58-b6c9-cb9089696b80",
@@ -2889,7 +5882,75 @@
             -1.077
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            61.996,
+            -1.077
+          ],
+          [
+            63.932,
+            -3.201
+          ],
+          [
+            68.847,
+            -4.711
+          ],
+          [
+            71.6,
+            -3.999
+          ],
+          [
+            72.038,
+            -2.817
+          ],
+          [
+            80.578,
+            -5.486
+          ],
+          [
+            82.414,
+            0.374
+          ],
+          [
+            77.492,
+            1.916
+          ],
+          [
+            78.03,
+            3.633
+          ],
+          [
+            73.919,
+            4.921
+          ],
+          [
+            73.419,
+            3.329
+          ],
+          [
+            64.268,
+            6.178
+          ],
+          [
+            61.996,
+            -1.077
+          ]
+        ]
+      ],
+      "footprint_area_m2": 150.3,
+      "centroid_local": [
+        71.579,
+        -0.155
+      ],
+      "distance_from_origin_m": 71.58,
+      "bearing_from_origin_deg": 90.1,
+      "on_parcel": false,
+      "source_object_id": "72bc37c7-c01b-4c58-b6c9-cb9089696b80",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "bdf22823-b237-41ea-b163-0fcfba2e8d54",
@@ -2920,7 +5981,43 @@
             -169.657
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            49.598,
+            -169.657
+          ],
+          [
+            42.727,
+            -168.582
+          ],
+          [
+            41.788,
+            -174.582
+          ],
+          [
+            48.659,
+            -175.657
+          ],
+          [
+            49.598,
+            -169.657
+          ]
+        ]
+      ],
+      "footprint_area_m2": 42.2,
+      "centroid_local": [
+        46.474,
+        -171.627
+      ],
+      "distance_from_origin_m": 177.81,
+      "bearing_from_origin_deg": 164.8,
+      "on_parcel": false,
+      "source_object_id": "bdf22823-b237-41ea-b163-0fcfba2e8d54",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "d84d68df-7e03-4ef6-8de1-83cb75c71592",
@@ -2959,7 +6056,51 @@
             -140.107
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -103.872,
+            -140.107
+          ],
+          [
+            -109.621,
+            -138.085
+          ],
+          [
+            -110.714,
+            -141.194
+          ],
+          [
+            -117.894,
+            -138.668
+          ],
+          [
+            -120.862,
+            -147.109
+          ],
+          [
+            -107.934,
+            -151.656
+          ],
+          [
+            -103.872,
+            -140.107
+          ]
+        ]
+      ],
+      "footprint_area_m2": 142.7,
+      "centroid_local": [
+        -110.681,
+        -142.418
+      ],
+      "distance_from_origin_m": 180.37,
+      "bearing_from_origin_deg": 217.9,
+      "on_parcel": false,
+      "source_object_id": "d84d68df-7e03-4ef6-8de1-83cb75c71592",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "b2643c12-bec1-4d97-94cb-479ca8fcc885",
@@ -2990,7 +6131,43 @@
             56.684
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -163.329,
+            56.684
+          ],
+          [
+            -166.759,
+            51.165
+          ],
+          [
+            -150.713,
+            41.192
+          ],
+          [
+            -147.283,
+            46.71
+          ],
+          [
+            -163.329,
+            56.684
+          ]
+        ]
+      ],
+      "footprint_area_m2": 122.8,
+      "centroid_local": [
+        -158.283,
+        50.487
+      ],
+      "distance_from_origin_m": 166.14,
+      "bearing_from_origin_deg": 287.7,
+      "on_parcel": false,
+      "source_object_id": "b2643c12-bec1-4d97-94cb-479ca8fcc885",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "e6815350-4ea9-4e7d-ba72-0812276d7d6f",
@@ -3053,7 +6230,75 @@
             -28.895
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            144.985,
+            -28.895
+          ],
+          [
+            139.52,
+            -39.594
+          ],
+          [
+            145.127,
+            -42.459
+          ],
+          [
+            143.308,
+            -46.019
+          ],
+          [
+            151.839,
+            -50.377
+          ],
+          [
+            153.5,
+            -47.127
+          ],
+          [
+            159.498,
+            -50.192
+          ],
+          [
+            165.162,
+            -39.106
+          ],
+          [
+            159.384,
+            -36.154
+          ],
+          [
+            159.884,
+            -35.175
+          ],
+          [
+            151.42,
+            -30.851
+          ],
+          [
+            150.88,
+            -31.907
+          ],
+          [
+            144.985,
+            -28.895
+          ]
+        ]
+      ],
+      "footprint_area_m2": 324.2,
+      "centroid_local": [
+        151.499,
+        -38.981
+      ],
+      "distance_from_origin_m": 156.43,
+      "bearing_from_origin_deg": 104.4,
+      "on_parcel": false,
+      "source_object_id": "e6815350-4ea9-4e7d-ba72-0812276d7d6f",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "75b783f6-8f1b-424d-8fa0-4492bcf68f9f",
@@ -3084,7 +6329,43 @@
             -7.314
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            181.711,
+            -7.314
+          ],
+          [
+            184.587,
+            -3.491
+          ],
+          [
+            178.331,
+            1.231
+          ],
+          [
+            175.455,
+            -2.581
+          ],
+          [
+            181.711,
+            -7.314
+          ]
+        ]
+      ],
+      "footprint_area_m2": 37.5,
+      "centroid_local": [
+        180.359,
+        -3.894
+      ],
+      "distance_from_origin_m": 180.4,
+      "bearing_from_origin_deg": 91.2,
+      "on_parcel": false,
+      "source_object_id": "75b783f6-8f1b-424d-8fa0-4492bcf68f9f",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "77603753-2ae6-4bd1-a7d2-d25e69d82912",
@@ -3115,7 +6396,43 @@
             -142.699
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            130.921,
+            -142.699
+          ],
+          [
+            133.67,
+            -143.869
+          ],
+          [
+            134.469,
+            -141.993
+          ],
+          [
+            131.72,
+            -140.823
+          ],
+          [
+            130.921,
+            -142.699
+          ]
+        ]
+      ],
+      "footprint_area_m2": 6.1,
+      "centroid_local": [
+        132.34,
+        -142.417
+      ],
+      "distance_from_origin_m": 194.41,
+      "bearing_from_origin_deg": 137.1,
+      "on_parcel": false,
+      "source_object_id": "77603753-2ae6-4bd1-a7d2-d25e69d82912",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "fd3f78ca-9eee-4c90-8458-d1e0a91f6fe8",
@@ -3162,7 +6479,59 @@
             -106.331
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -85.526,
+            -106.331
+          ],
+          [
+            -88.193,
+            -114.719
+          ],
+          [
+            -82.757,
+            -116.439
+          ],
+          [
+            -83.128,
+            -117.582
+          ],
+          [
+            -79.039,
+            -118.889
+          ],
+          [
+            -78.682,
+            -117.751
+          ],
+          [
+            -75.819,
+            -118.652
+          ],
+          [
+            -73.15,
+            -110.27
+          ],
+          [
+            -85.526,
+            -106.331
+          ]
+        ]
+      ],
+      "footprint_area_m2": 119.4,
+      "centroid_local": [
+        -81.313,
+        -114.107
+      ],
+      "distance_from_origin_m": 140.11,
+      "bearing_from_origin_deg": 215.5,
+      "on_parcel": false,
+      "source_object_id": "fd3f78ca-9eee-4c90-8458-d1e0a91f6fe8",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "634b8560-0f4b-4e23-8692-d823655b5066",
@@ -3193,7 +6562,43 @@
             -5.371
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            126.96,
+            -5.371
+          ],
+          [
+            129.124,
+            -6.513
+          ],
+          [
+            129.922,
+            -4.988
+          ],
+          [
+            127.763,
+            -3.848
+          ],
+          [
+            126.96,
+            -5.371
+          ]
+        ]
+      ],
+      "footprint_area_m2": 4.2,
+      "centroid_local": [
+        128.146,
+        -5.218
+      ],
+      "distance_from_origin_m": 128.25,
+      "bearing_from_origin_deg": 92.3,
+      "on_parcel": false,
+      "source_object_id": "634b8560-0f4b-4e23-8692-d823655b5066",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "3569f346-365f-49f0-af61-d7cfacb91014",
@@ -3224,7 +6629,43 @@
             85.196
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -105.74,
+            85.196
+          ],
+          [
+            -100.993,
+            83.362
+          ],
+          [
+            -99.611,
+            86.94
+          ],
+          [
+            -104.358,
+            88.774
+          ],
+          [
+            -105.74,
+            85.196
+          ]
+        ]
+      ],
+      "footprint_area_m2": 19.5,
+      "centroid_local": [
+        -103.288,
+        85.894
+      ],
+      "distance_from_origin_m": 134.34,
+      "bearing_from_origin_deg": 309.7,
+      "on_parcel": false,
+      "source_object_id": "3569f346-365f-49f0-af61-d7cfacb91014",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "f24fa4af-838c-47e0-b005-1e292c606759",
@@ -3255,7 +6696,43 @@
             12.038
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -74.407,
+            12.038
+          ],
+          [
+            -76.5,
+            12.763
+          ],
+          [
+            -77.253,
+            10.589
+          ],
+          [
+            -75.161,
+            9.864
+          ],
+          [
+            -74.407,
+            12.038
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.1,
+      "centroid_local": [
+        -75.546,
+        11.458
+      ],
+      "distance_from_origin_m": 76.41,
+      "bearing_from_origin_deg": 278.6,
+      "on_parcel": false,
+      "source_object_id": "f24fa4af-838c-47e0-b005-1e292c606759",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "ecd034db-b40f-4b8a-aeba-5831b9eb8e3f",
@@ -3286,7 +6763,43 @@
             -78.725
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -57.778,
+            -78.725
+          ],
+          [
+            -55.042,
+            -79.526
+          ],
+          [
+            -53.758,
+            -75.143
+          ],
+          [
+            -56.494,
+            -74.342
+          ],
+          [
+            -57.778,
+            -78.725
+          ]
+        ]
+      ],
+      "footprint_area_m2": 13.0,
+      "centroid_local": [
+        -56.17,
+        -77.292
+      ],
+      "distance_from_origin_m": 95.55,
+      "bearing_from_origin_deg": 216.0,
+      "on_parcel": false,
+      "source_object_id": "ecd034db-b40f-4b8a-aeba-5831b9eb8e3f",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "78f278d0-8a4d-4b9e-911d-c49d6e93d74d",
@@ -3325,7 +6838,51 @@
             120.938
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            39.739,
+            120.938
+          ],
+          [
+            45.425,
+            127.934
+          ],
+          [
+            46.881,
+            126.75
+          ],
+          [
+            50.456,
+            131.148
+          ],
+          [
+            43.737,
+            136.608
+          ],
+          [
+            34.477,
+            125.215
+          ],
+          [
+            39.739,
+            120.938
+          ]
+        ]
+      ],
+      "footprint_area_m2": 110.2,
+      "centroid_local": [
+        42.922,
+        127.076
+      ],
+      "distance_from_origin_m": 134.13,
+      "bearing_from_origin_deg": 18.7,
+      "on_parcel": false,
+      "source_object_id": "78f278d0-8a4d-4b9e-911d-c49d6e93d74d",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "74f0837a-a172-4430-98ec-ba6e9d235cc4",
@@ -3356,7 +6913,43 @@
             91.626
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            90.948,
+            91.626
+          ],
+          [
+            88.853,
+            91.636
+          ],
+          [
+            88.841,
+            89.025
+          ],
+          [
+            90.936,
+            89.015
+          ],
+          [
+            90.948,
+            91.626
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.5,
+      "centroid_local": [
+        90.105,
+        90.586
+      ],
+      "distance_from_origin_m": 127.77,
+      "bearing_from_origin_deg": 44.8,
+      "on_parcel": false,
+      "source_object_id": "74f0837a-a172-4430-98ec-ba6e9d235cc4",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "b1f185e6-faa5-4256-a434-615db564a77f",
@@ -3387,7 +6980,43 @@
             27.366
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            156.375,
+            27.366
+          ],
+          [
+            154.156,
+            23.565
+          ],
+          [
+            156.834,
+            22.002
+          ],
+          [
+            159.053,
+            25.803
+          ],
+          [
+            156.375,
+            27.366
+          ]
+        ]
+      ],
+      "footprint_area_m2": 13.6,
+      "centroid_local": [
+        156.559,
+        25.22
+      ],
+      "distance_from_origin_m": 158.58,
+      "bearing_from_origin_deg": 80.8,
+      "on_parcel": false,
+      "source_object_id": "b1f185e6-faa5-4256-a434-615db564a77f",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "d4745543-8e37-43ab-9212-cc77700d6050",
@@ -3426,7 +7055,51 @@
             138.97
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -5.194,
+            138.97
+          ],
+          [
+            -5.334,
+            131.484
+          ],
+          [
+            -0.985,
+            131.403
+          ],
+          [
+            -0.945,
+            133.532
+          ],
+          [
+            2.142,
+            133.474
+          ],
+          [
+            2.242,
+            138.831
+          ],
+          [
+            -5.194,
+            138.97
+          ]
+        ]
+      ],
+      "footprint_area_m2": 49.1,
+      "centroid_local": [
+        -1.895,
+        135.238
+      ],
+      "distance_from_origin_m": 135.25,
+      "bearing_from_origin_deg": 359.2,
+      "on_parcel": false,
+      "source_object_id": "d4745543-8e37-43ab-9212-cc77700d6050",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "f86391e3-c114-4fdc-9f62-d8e2fcf2428c",
@@ -3457,7 +7130,43 @@
             -50.365
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            118.771,
+            -50.365
+          ],
+          [
+            121.564,
+            -51.719
+          ],
+          [
+            123.665,
+            -47.386
+          ],
+          [
+            120.872,
+            -46.032
+          ],
+          [
+            118.771,
+            -50.365
+          ]
+        ]
+      ],
+      "footprint_area_m2": 14.9,
+      "centroid_local": [
+        120.729,
+        -49.173
+      ],
+      "distance_from_origin_m": 130.36,
+      "bearing_from_origin_deg": 112.2,
+      "on_parcel": false,
+      "source_object_id": "f86391e3-c114-4fdc-9f62-d8e2fcf2428c",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "62b1b2e3-efc3-479b-9fe9-bd7a07c3f3c9",
@@ -3488,7 +7197,43 @@
             54.416
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            94.257,
+            54.416
+          ],
+          [
+            96.107,
+            52.657
+          ],
+          [
+            97.619,
+            54.247
+          ],
+          [
+            95.769,
+            56.006
+          ],
+          [
+            94.257,
+            54.416
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.6,
+      "centroid_local": [
+        95.602,
+        54.348
+      ],
+      "distance_from_origin_m": 109.97,
+      "bearing_from_origin_deg": 60.4,
+      "on_parcel": false,
+      "source_object_id": "62b1b2e3-efc3-479b-9fe9-bd7a07c3f3c9",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "f3917dba-3bf5-4ea9-bac1-55878dbe39e9",
@@ -3555,7 +7300,79 @@
             22.256
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            96.433,
+            22.256
+          ],
+          [
+            96.8,
+            25.946
+          ],
+          [
+            97.216,
+            25.905
+          ],
+          [
+            98.194,
+            35.737
+          ],
+          [
+            92.673,
+            36.286
+          ],
+          [
+            92.794,
+            37.505
+          ],
+          [
+            91.987,
+            38.49
+          ],
+          [
+            85.867,
+            39.098
+          ],
+          [
+            85.656,
+            36.984
+          ],
+          [
+            84.338,
+            37.115
+          ],
+          [
+            83.416,
+            27.833
+          ],
+          [
+            88.179,
+            27.36
+          ],
+          [
+            87.757,
+            23.119
+          ],
+          [
+            96.433,
+            22.256
+          ]
+        ]
+      ],
+      "footprint_area_m2": 181.8,
+      "centroid_local": [
+        91.267,
+        31.135
+      ],
+      "distance_from_origin_m": 96.43,
+      "bearing_from_origin_deg": 71.2,
+      "on_parcel": false,
+      "source_object_id": "f3917dba-3bf5-4ea9-bac1-55878dbe39e9",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "3b7123b4-183c-41c6-b75a-0b005ef35c92",
@@ -3602,7 +7419,59 @@
             -83.771
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            32.14,
+            -83.771
+          ],
+          [
+            33.323,
+            -81.177
+          ],
+          [
+            27.646,
+            -78.588
+          ],
+          [
+            26.454,
+            -81.202
+          ],
+          [
+            27.479,
+            -81.669
+          ],
+          [
+            25.576,
+            -85.843
+          ],
+          [
+            30.702,
+            -88.18
+          ],
+          [
+            32.614,
+            -83.987
+          ],
+          [
+            32.14,
+            -83.771
+          ]
+        ]
+      ],
+      "footprint_area_m2": 43.8,
+      "centroid_local": [
+        29.786,
+        -83.132
+      ],
+      "distance_from_origin_m": 88.31,
+      "bearing_from_origin_deg": 160.3,
+      "on_parcel": false,
+      "source_object_id": "3b7123b4-183c-41c6-b75a-0b005ef35c92",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "f52cbac4-cadc-46c7-9b08-411fc11316bc",
@@ -3633,7 +7502,43 @@
             -72.513
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            95.144,
+            -72.513
+          ],
+          [
+            100.233,
+            -75.769
+          ],
+          [
+            101.683,
+            -73.502
+          ],
+          [
+            96.594,
+            -70.246
+          ],
+          [
+            95.144,
+            -72.513
+          ]
+        ]
+      ],
+      "footprint_area_m2": 16.3,
+      "centroid_local": [
+        97.76,
+        -72.909
+      ],
+      "distance_from_origin_m": 121.95,
+      "bearing_from_origin_deg": 126.7,
+      "on_parcel": false,
+      "source_object_id": "f52cbac4-cadc-46c7-9b08-411fc11316bc",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "e6b80a48-ac74-4a1f-871a-e23a161d6ed0",
@@ -3664,7 +7569,43 @@
             -55.62
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -172.33,
+            -55.62
+          ],
+          [
+            -160.838,
+            -60.586
+          ],
+          [
+            -157.204,
+            -52.176
+          ],
+          [
+            -168.696,
+            -47.21
+          ],
+          [
+            -172.33,
+            -55.62
+          ]
+        ]
+      ],
+      "footprint_area_m2": 114.7,
+      "centroid_local": [
+        -166.28,
+        -54.242
+      ],
+      "distance_from_origin_m": 174.9,
+      "bearing_from_origin_deg": 251.9,
+      "on_parcel": false,
+      "source_object_id": "e6b80a48-ac74-4a1f-871a-e23a161d6ed0",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "72666b40-705b-49cc-872a-80d6f226e4fc",
@@ -3695,7 +7636,43 @@
             14.948
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            57.675,
+            14.948
+          ],
+          [
+            57.406,
+            11.678
+          ],
+          [
+            61.944,
+            11.305
+          ],
+          [
+            62.213,
+            14.575
+          ],
+          [
+            57.675,
+            14.948
+          ]
+        ]
+      ],
+      "footprint_area_m2": 14.9,
+      "centroid_local": [
+        59.383,
+        13.491
+      ],
+      "distance_from_origin_m": 60.9,
+      "bearing_from_origin_deg": 77.2,
+      "on_parcel": false,
+      "source_object_id": "72666b40-705b-49cc-872a-80d6f226e4fc",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "16205270-6659-447e-9108-2a017de84d80",
@@ -3726,7 +7703,43 @@
             -31.465
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            142.123,
+            -31.465
+          ],
+          [
+            145.265,
+            -25.883
+          ],
+          [
+            140.688,
+            -23.307
+          ],
+          [
+            137.546,
+            -28.888
+          ],
+          [
+            142.123,
+            -31.465
+          ]
+        ]
+      ],
+      "footprint_area_m2": 33.6,
+      "centroid_local": [
+        141.549,
+        -28.202
+      ],
+      "distance_from_origin_m": 144.33,
+      "bearing_from_origin_deg": 101.3,
+      "on_parcel": false,
+      "source_object_id": "16205270-6659-447e-9108-2a017de84d80",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "cee3902d-15dc-492a-b651-e46ae01dd0ff",
@@ -3757,7 +7770,43 @@
             -19.121
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -46.264,
+            -19.121
+          ],
+          [
+            -41.374,
+            -20.941
+          ],
+          [
+            -40.299,
+            -18.055
+          ],
+          [
+            -45.189,
+            -16.235
+          ],
+          [
+            -46.264,
+            -19.121
+          ]
+        ]
+      ],
+      "footprint_area_m2": 16.1,
+      "centroid_local": [
+        -43.878,
+        -18.695
+      ],
+      "distance_from_origin_m": 47.69,
+      "bearing_from_origin_deg": 246.9,
+      "on_parcel": false,
+      "source_object_id": "cee3902d-15dc-492a-b651-e46ae01dd0ff",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.3
     },
     {
       "object_id": "e68d475e-5e29-4411-a2c2-8e1e4d05632f",
@@ -3788,7 +7837,43 @@
             82.06
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -39.08,
+            82.06
+          ],
+          [
+            -27.821,
+            80.953
+          ],
+          [
+            -26.991,
+            89.163
+          ],
+          [
+            -38.277,
+            90.289
+          ],
+          [
+            -39.08,
+            82.06
+          ]
+        ]
+      ],
+      "footprint_area_m2": 93.6,
+      "centroid_local": [
+        -34.25,
+        84.905
+      ],
+      "distance_from_origin_m": 91.55,
+      "bearing_from_origin_deg": 338.0,
+      "on_parcel": false,
+      "source_object_id": "e68d475e-5e29-4411-a2c2-8e1e4d05632f",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "ec48315c-47fc-4cd6-b42d-6abfdcdacc2d",
@@ -3819,7 +7904,43 @@
             -131.416
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            53.258,
+            -131.416
+          ],
+          [
+            60.722,
+            -134.288
+          ],
+          [
+            62.525,
+            -129.63
+          ],
+          [
+            55.055,
+            -126.751
+          ],
+          [
+            53.258,
+            -131.416
+          ]
+        ]
+      ],
+      "footprint_area_m2": 40.0,
+      "centroid_local": [
+        56.964,
+        -130.7
+      ],
+      "distance_from_origin_m": 142.57,
+      "bearing_from_origin_deg": 156.5,
+      "on_parcel": false,
+      "source_object_id": "ec48315c-47fc-4cd6-b42d-6abfdcdacc2d",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "4d157d9a-b6a1-49d1-ac9d-a998788cff98",
@@ -3866,7 +7987,59 @@
             139.559
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -80.527,
+            139.559
+          ],
+          [
+            -74.962,
+            138.23
+          ],
+          [
+            -75.481,
+            136.175
+          ],
+          [
+            -67.367,
+            134.234
+          ],
+          [
+            -64.183,
+            147.543
+          ],
+          [
+            -72.242,
+            149.472
+          ],
+          [
+            -73.593,
+            143.822
+          ],
+          [
+            -79.203,
+            145.163
+          ],
+          [
+            -80.527,
+            139.559
+          ]
+        ]
+      ],
+      "footprint_area_m2": 146.7,
+      "centroid_local": [
+        -74.232,
+        141.529
+      ],
+      "distance_from_origin_m": 159.82,
+      "bearing_from_origin_deg": 332.3,
+      "on_parcel": false,
+      "source_object_id": "4d157d9a-b6a1-49d1-ac9d-a998788cff98",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "61af8322-b1ce-4179-bb1e-2f6fdaeb764a",
@@ -3897,7 +8070,43 @@
             -10.072
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            100.852,
+            -10.072
+          ],
+          [
+            106.602,
+            -12.809
+          ],
+          [
+            111.191,
+            -3.151
+          ],
+          [
+            105.456,
+            -0.395
+          ],
+          [
+            100.852,
+            -10.072
+          ]
+        ]
+      ],
+      "footprint_area_m2": 68.1,
+      "centroid_local": [
+        104.991,
+        -7.3
+      ],
+      "distance_from_origin_m": 105.24,
+      "bearing_from_origin_deg": 94.0,
+      "on_parcel": false,
+      "source_object_id": "61af8322-b1ce-4179-bb1e-2f6fdaeb764a",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "57f76791-03df-47e8-bb35-048337347b1f",
@@ -3928,7 +8137,43 @@
             112.171
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -139.087,
+            112.171
+          ],
+          [
+            -134.324,
+            110.532
+          ],
+          [
+            -131.669,
+            118.16
+          ],
+          [
+            -136.433,
+            119.799
+          ],
+          [
+            -139.087,
+            112.171
+          ]
+        ]
+      ],
+      "footprint_area_m2": 40.7,
+      "centroid_local": [
+        -136.12,
+        114.567
+      ],
+      "distance_from_origin_m": 177.92,
+      "bearing_from_origin_deg": 310.1,
+      "on_parcel": false,
+      "source_object_id": "57f76791-03df-47e8-bb35-048337347b1f",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "40ad4ea9-4665-4c29-b644-d8c37d8a32b6",
@@ -3975,7 +8220,59 @@
             -144.529
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            88.01,
+            -144.529
+          ],
+          [
+            96.003,
+            -146.867
+          ],
+          [
+            94.155,
+            -153.324
+          ],
+          [
+            98.055,
+            -154.449
+          ],
+          [
+            99.936,
+            -148.017
+          ],
+          [
+            100.272,
+            -148.115
+          ],
+          [
+            102.543,
+            -140.349
+          ],
+          [
+            90.291,
+            -136.765
+          ],
+          [
+            88.01,
+            -144.529
+          ]
+        ]
+      ],
+      "footprint_area_m2": 130.7,
+      "centroid_local": [
+        95.253,
+        -146.327
+      ],
+      "distance_from_origin_m": 174.6,
+      "bearing_from_origin_deg": 146.9,
+      "on_parcel": false,
+      "source_object_id": "40ad4ea9-4665-4c29-b644-d8c37d8a32b6",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "a5eb1534-bbfa-4daf-bc1c-d4bdbbcc5737",
@@ -4006,7 +8303,43 @@
             -44.787
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            179.467,
+            -44.787
+          ],
+          [
+            172.954,
+            -41.225
+          ],
+          [
+            169.083,
+            -48.432
+          ],
+          [
+            175.564,
+            -51.947
+          ],
+          [
+            179.467,
+            -44.787
+          ]
+        ]
+      ],
+      "footprint_area_m2": 60.4,
+      "centroid_local": [
+        175.307,
+        -46.236
+      ],
+      "distance_from_origin_m": 181.3,
+      "bearing_from_origin_deg": 104.8,
+      "on_parcel": false,
+      "source_object_id": "a5eb1534-bbfa-4daf-bc1c-d4bdbbcc5737",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "f6ec7cc8-3e95-4838-b82f-cfbd31e3a5a5",
@@ -4037,7 +8370,43 @@
             58.569
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            22.178,
+            58.569
+          ],
+          [
+            20.382,
+            55.084
+          ],
+          [
+            24.965,
+            52.721
+          ],
+          [
+            26.762,
+            56.206
+          ],
+          [
+            22.178,
+            58.569
+          ]
+        ]
+      ],
+      "footprint_area_m2": 20.2,
+      "centroid_local": [
+        23.293,
+        56.23
+      ],
+      "distance_from_origin_m": 60.86,
+      "bearing_from_origin_deg": 22.5,
+      "on_parcel": false,
+      "source_object_id": "f6ec7cc8-3e95-4838-b82f-cfbd31e3a5a5",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "1166659f-6a3e-4d60-9d3b-6076a03703d4",
@@ -4068,7 +8437,43 @@
             44.036
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            163.234,
+            44.036
+          ],
+          [
+            159.236,
+            37.473
+          ],
+          [
+            162.326,
+            35.615
+          ],
+          [
+            166.313,
+            42.161
+          ],
+          [
+            163.234,
+            44.036
+          ]
+        ]
+      ],
+      "footprint_area_m2": 27.7,
+      "centroid_local": [
+        162.869,
+        40.664
+      ],
+      "distance_from_origin_m": 167.87,
+      "bearing_from_origin_deg": 76.0,
+      "on_parcel": false,
+      "source_object_id": "1166659f-6a3e-4d60-9d3b-6076a03703d4",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "86da71ad-6786-4f1c-a501-8deba816f2e0",
@@ -4099,7 +8504,43 @@
             -83.71
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            23.434,
+            -83.71
+          ],
+          [
+            24.482,
+            -81.293
+          ],
+          [
+            22.764,
+            -80.549
+          ],
+          [
+            21.716,
+            -82.966
+          ],
+          [
+            23.434,
+            -83.71
+          ]
+        ]
+      ],
+      "footprint_area_m2": 4.9,
+      "centroid_local": [
+        23.166,
+        -82.446
+      ],
+      "distance_from_origin_m": 85.64,
+      "bearing_from_origin_deg": 164.3,
+      "on_parcel": false,
+      "source_object_id": "86da71ad-6786-4f1c-a501-8deba816f2e0",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "f9c65fe8-0199-4683-9d78-975928d6610b",
@@ -4130,7 +8571,43 @@
             145.949
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            16.215,
+            145.949
+          ],
+          [
+            12.836,
+            149.173
+          ],
+          [
+            8.347,
+            144.467
+          ],
+          [
+            11.726,
+            141.244
+          ],
+          [
+            16.215,
+            145.949
+          ]
+        ]
+      ],
+      "footprint_area_m2": 30.4,
+      "centroid_local": [
+        13.068,
+        145.356
+      ],
+      "distance_from_origin_m": 145.94,
+      "bearing_from_origin_deg": 5.1,
+      "on_parcel": false,
+      "source_object_id": "f9c65fe8-0199-4683-9d78-975928d6610b",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "da1061f1-c8cd-4bf9-acb9-b1ae06337827",
@@ -4169,7 +8646,51 @@
             85.778
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -57.421,
+            85.778
+          ],
+          [
+            -64.27,
+            87.075
+          ],
+          [
+            -65.004,
+            83.197
+          ],
+          [
+            -60.669,
+            82.376
+          ],
+          [
+            -61.826,
+            76.268
+          ],
+          [
+            -59.312,
+            75.792
+          ],
+          [
+            -57.421,
+            85.778
+          ]
+        ]
+      ],
+      "footprint_area_m2": 43.4,
+      "centroid_local": [
+        -60.846,
+        82.323
+      ],
+      "distance_from_origin_m": 102.37,
+      "bearing_from_origin_deg": 323.5,
+      "on_parcel": false,
+      "source_object_id": "da1061f1-c8cd-4bf9-acb9-b1ae06337827",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "ace608fb-4cc0-45f4-8a53-60e44678eee8",
@@ -4224,7 +8745,67 @@
             -33.147
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            21.13,
+            -33.147
+          ],
+          [
+            37.367,
+            -39.182
+          ],
+          [
+            36.906,
+            -40.539
+          ],
+          [
+            41.303,
+            -42.166
+          ],
+          [
+            43.853,
+            -35.275
+          ],
+          [
+            39.405,
+            -33.623
+          ],
+          [
+            38.907,
+            -34.963
+          ],
+          [
+            36.826,
+            -34.181
+          ],
+          [
+            38.208,
+            -30.462
+          ],
+          [
+            24.079,
+            -25.211
+          ],
+          [
+            21.13,
+            -33.147
+          ]
+        ]
+      ],
+      "footprint_area_m2": 172.5,
+      "centroid_local": [
+        34.465,
+        -34.718
+      ],
+      "distance_from_origin_m": 48.92,
+      "bearing_from_origin_deg": 135.2,
+      "on_parcel": false,
+      "source_object_id": "ace608fb-4cc0-45f4-8a53-60e44678eee8",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "852f2e13-e202-4a59-b94d-20d23106ad01",
@@ -4255,7 +8836,43 @@
             -58.734
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            111.803,
+            -58.734
+          ],
+          [
+            110.871,
+            -60.642
+          ],
+          [
+            112.893,
+            -61.63
+          ],
+          [
+            113.825,
+            -59.721
+          ],
+          [
+            111.803,
+            -58.734
+          ]
+        ]
+      ],
+      "footprint_area_m2": 4.8,
+      "centroid_local": [
+        112.239,
+        -59.892
+      ],
+      "distance_from_origin_m": 127.22,
+      "bearing_from_origin_deg": 118.1,
+      "on_parcel": false,
+      "source_object_id": "852f2e13-e202-4a59-b94d-20d23106ad01",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "4cfeb135-92c7-4f06-b1b8-aa1ba3adf8f2",
@@ -4286,7 +8903,43 @@
             -92.061
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            45.909,
+            -92.061
+          ],
+          [
+            51.954,
+            -93.629
+          ],
+          [
+            52.927,
+            -89.878
+          ],
+          [
+            46.881,
+            -88.31
+          ],
+          [
+            45.909,
+            -92.061
+          ]
+        ]
+      ],
+      "footprint_area_m2": 24.2,
+      "centroid_local": [
+        48.716,
+        -91.188
+      ],
+      "distance_from_origin_m": 103.39,
+      "bearing_from_origin_deg": 151.9,
+      "on_parcel": false,
+      "source_object_id": "4cfeb135-92c7-4f06-b1b8-aa1ba3adf8f2",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "87125a77-388e-408c-ba16-2d42772ad339",
@@ -4317,7 +8970,43 @@
             122.051
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            150.077,
+            122.051
+          ],
+          [
+            143.821,
+            125.04
+          ],
+          [
+            140.734,
+            118.567
+          ],
+          [
+            146.992,
+            115.583
+          ],
+          [
+            150.077,
+            122.051
+          ]
+        ]
+      ],
+      "footprint_area_m2": 49.7,
+      "centroid_local": [
+        146.34,
+        120.658
+      ],
+      "distance_from_origin_m": 189.67,
+      "bearing_from_origin_deg": 50.5,
+      "on_parcel": false,
+      "source_object_id": "87125a77-388e-408c-ba16-2d42772ad339",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "114eab8b-2dcd-4dde-93c7-0d06061d9c91",
@@ -4348,7 +9037,43 @@
             -133.455
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -129.593,
+            -133.455
+          ],
+          [
+            -127.176,
+            -128.788
+          ],
+          [
+            -130.056,
+            -127.297
+          ],
+          [
+            -132.473,
+            -131.963
+          ],
+          [
+            -129.593,
+            -133.455
+          ]
+        ]
+      ],
+      "footprint_area_m2": 17.0,
+      "centroid_local": [
+        -129.778,
+        -130.992
+      ],
+      "distance_from_origin_m": 184.39,
+      "bearing_from_origin_deg": 224.7,
+      "on_parcel": false,
+      "source_object_id": "114eab8b-2dcd-4dde-93c7-0d06061d9c91",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "9ca93ca7-32c7-4b02-877e-77d8f5de60af",
@@ -4379,7 +9104,43 @@
             6.0
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            81.013,
+            6.0
+          ],
+          [
+            89.396,
+            5.251
+          ],
+          [
+            89.934,
+            11.217
+          ],
+          [
+            81.55,
+            11.973
+          ],
+          [
+            81.013,
+            6.0
+          ]
+        ]
+      ],
+      "footprint_area_m2": 50.4,
+      "centroid_local": [
+        84.581,
+        8.088
+      ],
+      "distance_from_origin_m": 84.97,
+      "bearing_from_origin_deg": 84.5,
+      "on_parcel": false,
+      "source_object_id": "9ca93ca7-32c7-4b02-877e-77d8f5de60af",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "878c46d3-db06-4ebf-bb57-f9f2f2d1e8d2",
@@ -4410,7 +9171,43 @@
             91.425
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -173.136,
+            91.425
+          ],
+          [
+            -173.503,
+            85.368
+          ],
+          [
+            -166.269,
+            84.93
+          ],
+          [
+            -165.902,
+            90.986
+          ],
+          [
+            -173.136,
+            91.425
+          ]
+        ]
+      ],
+      "footprint_area_m2": 44.0,
+      "centroid_local": [
+        -170.389,
+        88.827
+      ],
+      "distance_from_origin_m": 192.15,
+      "bearing_from_origin_deg": 297.5,
+      "on_parcel": false,
+      "source_object_id": "878c46d3-db06-4ebf-bb57-f9f2f2d1e8d2",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "98ea47f0-ba5e-4867-b9cc-c81aa758d284",
@@ -4441,7 +9238,43 @@
             155.351
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -44.09,
+            155.351
+          ],
+          [
+            -46.536,
+            155.562
+          ],
+          [
+            -46.725,
+            153.37
+          ],
+          [
+            -44.28,
+            153.159
+          ],
+          [
+            -44.09,
+            155.351
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.4,
+      "centroid_local": [
+        -45.144,
+        154.559
+      ],
+      "distance_from_origin_m": 161.02,
+      "bearing_from_origin_deg": 343.7,
+      "on_parcel": false,
+      "source_object_id": "98ea47f0-ba5e-4867-b9cc-c81aa758d284",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "a8aed5a9-6d21-43e4-9430-cbdc014f57e4",
@@ -4472,7 +9305,43 @@
             13.249
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -57.857,
+            13.249
+          ],
+          [
+            -55.281,
+            12.249
+          ],
+          [
+            -53.975,
+            15.613
+          ],
+          [
+            -56.551,
+            16.613
+          ],
+          [
+            -57.857,
+            13.249
+          ]
+        ]
+      ],
+      "footprint_area_m2": 10.0,
+      "centroid_local": [
+        -56.304,
+        14.195
+      ],
+      "distance_from_origin_m": 58.07,
+      "bearing_from_origin_deg": 284.2,
+      "on_parcel": false,
+      "source_object_id": "a8aed5a9-6d21-43e4-9430-cbdc014f57e4",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "dddac9a2-a752-4131-845c-86d46ffbe4bb",
@@ -4503,7 +9372,43 @@
             82.979
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            61.521,
+            82.979
+          ],
+          [
+            61.508,
+            90.37
+          ],
+          [
+            50.847,
+            90.351
+          ],
+          [
+            50.86,
+            82.96
+          ],
+          [
+            61.521,
+            82.979
+          ]
+        ]
+      ],
+      "footprint_area_m2": 78.8,
+      "centroid_local": [
+        57.251,
+        85.928
+      ],
+      "distance_from_origin_m": 103.25,
+      "bearing_from_origin_deg": 33.7,
+      "on_parcel": false,
+      "source_object_id": "dddac9a2-a752-4131-845c-86d46ffbe4bb",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "7fa69b10-cb24-4511-a8f6-cb917e7edf75",
@@ -4534,7 +9439,43 @@
             11.36
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -107.557,
+            11.36
+          ],
+          [
+            -110.702,
+            2.2
+          ],
+          [
+            -105.229,
+            0.343
+          ],
+          [
+            -102.079,
+            9.468
+          ],
+          [
+            -107.557,
+            11.36
+          ]
+        ]
+      ],
+      "footprint_area_m2": 56.0,
+      "centroid_local": [
+        -106.625,
+        6.946
+      ],
+      "distance_from_origin_m": 106.85,
+      "bearing_from_origin_deg": 273.7,
+      "on_parcel": false,
+      "source_object_id": "7fa69b10-cb24-4511-a8f6-cb917e7edf75",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "1340d08e-61bb-4f68-9791-180ecdf9d0d6",
@@ -4565,7 +9506,43 @@
             83.753
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -25.484,
+            83.753
+          ],
+          [
+            -21.519,
+            83.37
+          ],
+          [
+            -20.768,
+            91.303
+          ],
+          [
+            -24.735,
+            91.686
+          ],
+          [
+            -25.484,
+            83.753
+          ]
+        ]
+      ],
+      "footprint_area_m2": 31.7,
+      "centroid_local": [
+        -23.598,
+        86.773
+      ],
+      "distance_from_origin_m": 89.92,
+      "bearing_from_origin_deg": 344.8,
+      "on_parcel": false,
+      "source_object_id": "1340d08e-61bb-4f68-9791-180ecdf9d0d6",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "0e5caff5-2a8e-4f9f-9e77-3f899ef0d4cf",
@@ -4620,7 +9597,67 @@
             -70.962
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -32.493,
+            -70.962
+          ],
+          [
+            -30.603,
+            -71.476
+          ],
+          [
+            -31.076,
+            -73.213
+          ],
+          [
+            -30.083,
+            -73.483
+          ],
+          [
+            -30.241,
+            -74.063
+          ],
+          [
+            -23.981,
+            -75.784
+          ],
+          [
+            -23.349,
+            -73.47
+          ],
+          [
+            -20.465,
+            -74.257
+          ],
+          [
+            -18.45,
+            -66.882
+          ],
+          [
+            -30.485,
+            -63.592
+          ],
+          [
+            -32.493,
+            -70.962
+          ]
+        ]
+      ],
+      "footprint_area_m2": 112.7,
+      "centroid_local": [
+        -27.611,
+        -71.649
+      ],
+      "distance_from_origin_m": 76.79,
+      "bearing_from_origin_deg": 201.1,
+      "on_parcel": false,
+      "source_object_id": "0e5caff5-2a8e-4f9f-9e77-3f899ef0d4cf",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "c40c4929-d1af-4720-bac9-bdfe53c722cf",
@@ -4651,7 +9688,43 @@
             -166.419
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            98.289,
+            -166.419
+          ],
+          [
+            103.024,
+            -167.801
+          ],
+          [
+            105.522,
+            -159.241
+          ],
+          [
+            100.787,
+            -157.859
+          ],
+          [
+            98.289,
+            -166.419
+          ]
+        ]
+      ],
+      "footprint_area_m2": 44.0,
+      "centroid_local": [
+        101.182,
+        -163.548
+      ],
+      "distance_from_origin_m": 192.32,
+      "bearing_from_origin_deg": 148.3,
+      "on_parcel": false,
+      "source_object_id": "c40c4929-d1af-4720-bac9-bdfe53c722cf",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "f68af62b-8268-4906-99a3-1915c1b8e50e",
@@ -4682,7 +9755,43 @@
             -181.553
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -5.332,
+            -181.553
+          ],
+          [
+            -8.25,
+            -180.635
+          ],
+          [
+            -8.833,
+            -182.488
+          ],
+          [
+            -5.915,
+            -183.406
+          ],
+          [
+            -5.332,
+            -181.553
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.9,
+      "centroid_local": [
+        -6.732,
+        -181.927
+      ],
+      "distance_from_origin_m": 182.05,
+      "bearing_from_origin_deg": 182.1,
+      "on_parcel": false,
+      "source_object_id": "f68af62b-8268-4906-99a3-1915c1b8e50e",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "a9f88b0e-b2f3-4d67-ad5b-6cd1e8057003",
@@ -4713,7 +9822,43 @@
             63.6
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            43.538,
+            63.6
+          ],
+          [
+            39.905,
+            65.973
+          ],
+          [
+            37.007,
+            61.535
+          ],
+          [
+            40.64,
+            59.163
+          ],
+          [
+            43.538,
+            63.6
+          ]
+        ]
+      ],
+      "footprint_area_m2": 23.0,
+      "centroid_local": [
+        40.926,
+        62.774
+      ],
+      "distance_from_origin_m": 74.94,
+      "bearing_from_origin_deg": 33.1,
+      "on_parcel": false,
+      "source_object_id": "a9f88b0e-b2f3-4d67-ad5b-6cd1e8057003",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "902bfb47-487e-4ff4-bc7a-470a87a60348",
@@ -4744,7 +9889,43 @@
             124.063
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            47.583,
+            124.063
+          ],
+          [
+            52.549,
+            120.08
+          ],
+          [
+            59.769,
+            129.077
+          ],
+          [
+            54.792,
+            133.064
+          ],
+          [
+            47.583,
+            124.063
+          ]
+        ]
+      ],
+      "footprint_area_m2": 73.5,
+      "centroid_local": [
+        52.455,
+        126.069
+      ],
+      "distance_from_origin_m": 136.55,
+      "bearing_from_origin_deg": 22.6,
+      "on_parcel": false,
+      "source_object_id": "902bfb47-487e-4ff4-bc7a-470a87a60348",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "db2cb57c-9582-4a50-8523-21457e5673b2",
@@ -4783,7 +9964,51 @@
             100.018
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -77.252,
+            100.018
+          ],
+          [
+            -80.117,
+            90.615
+          ],
+          [
+            -69.498,
+            87.38
+          ],
+          [
+            -68.258,
+            91.451
+          ],
+          [
+            -69.258,
+            91.756
+          ],
+          [
+            -67.634,
+            97.087
+          ],
+          [
+            -77.252,
+            100.018
+          ]
+        ]
+      ],
+      "footprint_area_m2": 103.3,
+      "centroid_local": [
+        -72.753,
+        94.046
+      ],
+      "distance_from_origin_m": 118.9,
+      "bearing_from_origin_deg": 322.3,
+      "on_parcel": false,
+      "source_object_id": "db2cb57c-9582-4a50-8523-21457e5673b2",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "1ddcea50-15c7-4929-9ba0-b560e40d4961",
@@ -4862,7 +10087,91 @@
             65.709
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            172.003,
+            65.709
+          ],
+          [
+            169.36,
+            63.274
+          ],
+          [
+            168.849,
+            63.835
+          ],
+          [
+            168.002,
+            63.866
+          ],
+          [
+            166.51,
+            65.471
+          ],
+          [
+            166.567,
+            66.324
+          ],
+          [
+            162.433,
+            70.774
+          ],
+          [
+            157.209,
+            65.936
+          ],
+          [
+            158.424,
+            64.613
+          ],
+          [
+            157.547,
+            63.815
+          ],
+          [
+            161.167,
+            59.909
+          ],
+          [
+            162.045,
+            60.707
+          ],
+          [
+            164.137,
+            58.429
+          ],
+          [
+            162.816,
+            57.221
+          ],
+          [
+            168.044,
+            51.566
+          ],
+          [
+            177.232,
+            60.046
+          ],
+          [
+            172.003,
+            65.709
+          ]
+        ]
+      ],
+      "footprint_area_m2": 173.8,
+      "centroid_local": [
+        165.55,
+        62.777
+      ],
+      "distance_from_origin_m": 177.05,
+      "bearing_from_origin_deg": 69.2,
+      "on_parcel": false,
+      "source_object_id": "1ddcea50-15c7-4929-9ba0-b560e40d4961",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "af06a6fd-a9dc-4d39-9d7f-9c0df7b80f3b",
@@ -4909,7 +10218,59 @@
             173.398
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            3.717,
+            173.398
+          ],
+          [
+            -6.011,
+            181.485
+          ],
+          [
+            -10.609,
+            175.954
+          ],
+          [
+            -6.53,
+            172.564
+          ],
+          [
+            -10.737,
+            167.504
+          ],
+          [
+            -5.274,
+            162.962
+          ],
+          [
+            -1.067,
+            168.022
+          ],
+          [
+            -0.881,
+            167.867
+          ],
+          [
+            3.717,
+            173.398
+          ]
+        ]
+      ],
+      "footprint_area_m2": 137.7,
+      "centroid_local": [
+        -3.742,
+        171.462
+      ],
+      "distance_from_origin_m": 171.5,
+      "bearing_from_origin_deg": 358.7,
+      "on_parcel": false,
+      "source_object_id": "af06a6fd-a9dc-4d39-9d7f-9c0df7b80f3b",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "baa0894e-1ebe-4df6-b2ec-64f5787684ca",
@@ -4940,7 +10301,43 @@
             -130.139
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -152.88,
+            -130.139
+          ],
+          [
+            -146.185,
+            -134.256
+          ],
+          [
+            -140.567,
+            -125.12
+          ],
+          [
+            -147.263,
+            -121.004
+          ],
+          [
+            -152.88,
+            -130.139
+          ]
+        ]
+      ],
+      "footprint_area_m2": 84.3,
+      "centroid_local": [
+        -147.955,
+        -128.132
+      ],
+      "distance_from_origin_m": 195.73,
+      "bearing_from_origin_deg": 229.1,
+      "on_parcel": false,
+      "source_object_id": "baa0894e-1ebe-4df6-b2ec-64f5787684ca",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "5539c572-790f-45f9-bf29-ab988960ba5e",
@@ -4971,7 +10368,43 @@
             79.158
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            88.517,
+            79.158
+          ],
+          [
+            88.51,
+            75.373
+          ],
+          [
+            91.904,
+            75.367
+          ],
+          [
+            91.911,
+            79.152
+          ],
+          [
+            88.517,
+            79.158
+          ]
+        ]
+      ],
+      "footprint_area_m2": 12.8,
+      "centroid_local": [
+        89.872,
+        77.642
+      ],
+      "distance_from_origin_m": 118.77,
+      "bearing_from_origin_deg": 49.2,
+      "on_parcel": false,
+      "source_object_id": "5539c572-790f-45f9-bf29-ab988960ba5e",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "6db3210a-1767-41ec-ad07-653d63c2d0f6",
@@ -5002,7 +10435,43 @@
             166.987
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            90.366,
+            166.987
+          ],
+          [
+            88.706,
+            164.882
+          ],
+          [
+            91.492,
+            162.685
+          ],
+          [
+            93.152,
+            164.791
+          ],
+          [
+            90.366,
+            166.987
+          ]
+        ]
+      ],
+      "footprint_area_m2": 9.5,
+      "centroid_local": [
+        90.816,
+        165.266
+      ],
+      "distance_from_origin_m": 188.57,
+      "bearing_from_origin_deg": 28.8,
+      "on_parcel": false,
+      "source_object_id": "6db3210a-1767-41ec-ad07-653d63c2d0f6",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "5cc91edd-4deb-47e2-a896-e9f4d326a2de",
@@ -5033,7 +10502,43 @@
             69.71
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -103.339,
+            69.71
+          ],
+          [
+            -100.356,
+            77.693
+          ],
+          [
+            -106.819,
+            80.108
+          ],
+          [
+            -109.802,
+            72.125
+          ],
+          [
+            -103.339,
+            69.71
+          ]
+        ]
+      ],
+      "footprint_area_m2": 58.8,
+      "centroid_local": [
+        -104.731,
+        73.869
+      ],
+      "distance_from_origin_m": 128.16,
+      "bearing_from_origin_deg": 305.2,
+      "on_parcel": false,
+      "source_object_id": "5cc91edd-4deb-47e2-a896-e9f4d326a2de",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "f4eaa5d4-5802-4650-8ea7-6601b36fbd48",
@@ -5072,7 +10577,51 @@
             156.768
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -80.541,
+            156.768
+          ],
+          [
+            -71.485,
+            154.78
+          ],
+          [
+            -69.839,
+            162.275
+          ],
+          [
+            -75.224,
+            163.457
+          ],
+          [
+            -75.715,
+            161.216
+          ],
+          [
+            -79.387,
+            162.023
+          ],
+          [
+            -80.541,
+            156.768
+          ]
+        ]
+      ],
+      "footprint_area_m2": 62.5,
+      "centroid_local": [
+        -76.105,
+        159.612
+      ],
+      "distance_from_origin_m": 176.83,
+      "bearing_from_origin_deg": 334.5,
+      "on_parcel": false,
+      "source_object_id": "f4eaa5d4-5802-4650-8ea7-6601b36fbd48",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "bb19e352-b68b-4f83-8737-c7e484ec8efe",
@@ -5111,7 +10660,51 @@
             -60.481
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            110.95,
+            -60.481
+          ],
+          [
+            114.394,
+            -53.43
+          ],
+          [
+            100.385,
+            -46.586
+          ],
+          [
+            98.554,
+            -50.395
+          ],
+          [
+            101.226,
+            -51.742
+          ],
+          [
+            99.648,
+            -54.987
+          ],
+          [
+            110.95,
+            -60.481
+          ]
+        ]
+      ],
+      "footprint_area_m2": 111.6,
+      "centroid_local": [
+        105.158,
+        -54.015
+      ],
+      "distance_from_origin_m": 118.22,
+      "bearing_from_origin_deg": 117.2,
+      "on_parcel": false,
+      "source_object_id": "bb19e352-b68b-4f83-8737-c7e484ec8efe",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "f7ddfaf0-fb2d-4d83-bc38-1e080020cf7d",
@@ -5142,7 +10735,43 @@
             -57.35
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            168.163,
+            -57.35
+          ],
+          [
+            171.646,
+            -59.526
+          ],
+          [
+            172.935,
+            -57.463
+          ],
+          [
+            169.452,
+            -55.286
+          ],
+          [
+            168.163,
+            -57.35
+          ]
+        ]
+      ],
+      "footprint_area_m2": 10.0,
+      "centroid_local": [
+        170.072,
+        -57.395
+      ],
+      "distance_from_origin_m": 179.5,
+      "bearing_from_origin_deg": 108.6,
+      "on_parcel": false,
+      "source_object_id": "f7ddfaf0-fb2d-4d83-bc38-1e080020cf7d",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "7879c06c-e62e-4a7d-b388-864d6334d101",
@@ -5205,7 +10834,75 @@
             -103.133
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -134.383,
+            -103.133
+          ],
+          [
+            -128.665,
+            -104.951
+          ],
+          [
+            -129.037,
+            -106.107
+          ],
+          [
+            -125.809,
+            -107.103
+          ],
+          [
+            -125.446,
+            -105.976
+          ],
+          [
+            -122.587,
+            -106.882
+          ],
+          [
+            -121.255,
+            -102.649
+          ],
+          [
+            -117.422,
+            -103.854
+          ],
+          [
+            -114.869,
+            -95.74
+          ],
+          [
+            -118.874,
+            -94.479
+          ],
+          [
+            -120.313,
+            -99.05
+          ],
+          [
+            -131.896,
+            -95.366
+          ],
+          [
+            -134.383,
+            -103.133
+          ]
+        ]
+      ],
+      "footprint_area_m2": 139.9,
+      "centroid_local": [
+        -124.995,
+        -102.186
+      ],
+      "distance_from_origin_m": 161.45,
+      "bearing_from_origin_deg": 230.7,
+      "on_parcel": false,
+      "source_object_id": "7879c06c-e62e-4a7d-b388-864d6334d101",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "aa28514e-99b4-4d2a-b82e-614c4093b37a",
@@ -5236,7 +10933,43 @@
             -173.152
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -36.292,
+            -173.152
+          ],
+          [
+            -32.749,
+            -174.517
+          ],
+          [
+            -31.356,
+            -170.899
+          ],
+          [
+            -34.899,
+            -169.535
+          ],
+          [
+            -36.292,
+            -173.152
+          ]
+        ]
+      ],
+      "footprint_area_m2": 14.7,
+      "centroid_local": [
+        -34.318,
+        -172.251
+      ],
+      "distance_from_origin_m": 175.64,
+      "bearing_from_origin_deg": 191.3,
+      "on_parcel": false,
+      "source_object_id": "aa28514e-99b4-4d2a-b82e-614c4093b37a",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "de19c4e7-9553-48eb-8ff7-32abdd043745",
@@ -5275,7 +11008,51 @@
             10.448
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            52.269,
+            10.448
+          ],
+          [
+            50.6,
+            8.997
+          ],
+          [
+            51.022,
+            6.825
+          ],
+          [
+            53.114,
+            6.106
+          ],
+          [
+            54.783,
+            7.558
+          ],
+          [
+            54.36,
+            9.729
+          ],
+          [
+            52.269,
+            10.448
+          ]
+        ]
+      ],
+      "footprint_area_m2": 12.7,
+      "centroid_local": [
+        52.631,
+        8.587
+      ],
+      "distance_from_origin_m": 53.33,
+      "bearing_from_origin_deg": 80.7,
+      "on_parcel": false,
+      "source_object_id": "de19c4e7-9553-48eb-8ff7-32abdd043745",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "798f310d-76fa-4200-ba34-7d4583e085fc",
@@ -5322,7 +11099,59 @@
             19.59
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -129.825,
+            19.59
+          ],
+          [
+            -132.846,
+            11.754
+          ],
+          [
+            -128.926,
+            10.261
+          ],
+          [
+            -129.576,
+            8.585
+          ],
+          [
+            -124.545,
+            6.63
+          ],
+          [
+            -123.895,
+            8.307
+          ],
+          [
+            -119.984,
+            6.777
+          ],
+          [
+            -116.958,
+            14.614
+          ],
+          [
+            -129.825,
+            19.59
+          ]
+        ]
+      ],
+      "footprint_area_m2": 125.4,
+      "centroid_local": [
+        -126.264,
+        11.79
+      ],
+      "distance_from_origin_m": 126.81,
+      "bearing_from_origin_deg": 275.3,
+      "on_parcel": false,
+      "source_object_id": "798f310d-76fa-4200-ba34-7d4583e085fc",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "d92fd2a4-2f61-4f16-8c42-07118ec64945",
@@ -5361,7 +11190,51 @@
             -111.089
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            41.485,
+            -111.089
+          ],
+          [
+            47.594,
+            -113.33
+          ],
+          [
+            44.834,
+            -120.857
+          ],
+          [
+            52.098,
+            -123.52
+          ],
+          [
+            57.721,
+            -107.867
+          ],
+          [
+            44.433,
+            -103.109
+          ],
+          [
+            41.485,
+            -111.089
+          ]
+        ]
+      ],
+      "footprint_area_m2": 183.0,
+      "centroid_local": [
+        47.093,
+        -112.98
+      ],
+      "distance_from_origin_m": 122.4,
+      "bearing_from_origin_deg": 157.4,
+      "on_parcel": false,
+      "source_object_id": "d92fd2a4-2f61-4f16-8c42-07118ec64945",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "a4da1fb5-7323-4792-b823-29c1a8625dac",
@@ -5392,7 +11265,43 @@
             91.847
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            96.444,
+            91.847
+          ],
+          [
+            95.983,
+            87.686
+          ],
+          [
+            100.565,
+            87.178
+          ],
+          [
+            101.026,
+            91.339
+          ],
+          [
+            96.444,
+            91.847
+          ]
+        ]
+      ],
+      "footprint_area_m2": 19.3,
+      "centroid_local": [
+        98.092,
+        89.979
+      ],
+      "distance_from_origin_m": 133.11,
+      "bearing_from_origin_deg": 47.5,
+      "on_parcel": false,
+      "source_object_id": "a4da1fb5-7323-4792-b823-29c1a8625dac",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "89b3f97d-804d-4ffa-afa0-df1987b61579",
@@ -5423,7 +11332,43 @@
             -29.516
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -144.034,
+            -29.516
+          ],
+          [
+            -131.582,
+            -34.329
+          ],
+          [
+            -128.717,
+            -26.92
+          ],
+          [
+            -141.17,
+            -22.107
+          ],
+          [
+            -144.034,
+            -29.516
+          ]
+        ]
+      ],
+      "footprint_area_m2": 106.0,
+      "centroid_local": [
+        -137.907,
+        -28.478
+      ],
+      "distance_from_origin_m": 140.82,
+      "bearing_from_origin_deg": 258.3,
+      "on_parcel": false,
+      "source_object_id": "89b3f97d-804d-4ffa-afa0-df1987b61579",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "7e2447b0-df22-42c8-bcc4-18d7eadb5daf",
@@ -5454,7 +11399,43 @@
             -122.142
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            76.156,
+            -122.142
+          ],
+          [
+            73.89,
+            -129.896
+          ],
+          [
+            83.078,
+            -132.582
+          ],
+          [
+            85.344,
+            -124.828
+          ],
+          [
+            76.156,
+            -122.142
+          ]
+        ]
+      ],
+      "footprint_area_m2": 77.3,
+      "centroid_local": [
+        78.925,
+        -126.318
+      ],
+      "distance_from_origin_m": 148.95,
+      "bearing_from_origin_deg": 148.0,
+      "on_parcel": false,
+      "source_object_id": "7e2447b0-df22-42c8-bcc4-18d7eadb5daf",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "adbd35b0-b366-4b5d-a417-f241dd697146",
@@ -5505,7 +11486,63 @@
             146.584
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -13.878,
+            146.584
+          ],
+          [
+            -11.291,
+            145.413
+          ],
+          [
+            -10.36,
+            147.466
+          ],
+          [
+            -12.947,
+            148.638
+          ],
+          [
+            -12.984,
+            148.775
+          ],
+          [
+            -12.886,
+            148.99
+          ],
+          [
+            -14.523,
+            149.732
+          ],
+          [
+            -15.493,
+            147.592
+          ],
+          [
+            -13.775,
+            146.814
+          ],
+          [
+            -13.878,
+            146.584
+          ]
+        ]
+      ],
+      "footprint_area_m2": 10.8,
+      "centroid_local": [
+        -13.201,
+        147.659
+      ],
+      "distance_from_origin_m": 148.25,
+      "bearing_from_origin_deg": 354.9,
+      "on_parcel": false,
+      "source_object_id": "adbd35b0-b366-4b5d-a417-f241dd697146",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "b5fdc106-3578-476c-9431-b1d0cc01e812",
@@ -5536,7 +11573,43 @@
             119.476
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -158.441,
+            119.476
+          ],
+          [
+            -153.17,
+            117.42
+          ],
+          [
+            -150.254,
+            124.895
+          ],
+          [
+            -155.52,
+            126.95
+          ],
+          [
+            -158.441,
+            119.476
+          ]
+        ]
+      ],
+      "footprint_area_m2": 45.4,
+      "centroid_local": [
+        -155.165,
+        121.643
+      ],
+      "distance_from_origin_m": 197.16,
+      "bearing_from_origin_deg": 308.1,
+      "on_parcel": false,
+      "source_object_id": "b5fdc106-3578-476c-9431-b1d0cc01e812",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "db3f3d85-a5c5-4c3e-b9fa-edc5e9735c3f",
@@ -5567,7 +11640,43 @@
             116.817
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -48.446,
+            116.817
+          ],
+          [
+            -41.926,
+            116.109
+          ],
+          [
+            -40.694,
+            127.113
+          ],
+          [
+            -47.221,
+            127.844
+          ],
+          [
+            -48.446,
+            116.817
+          ]
+        ]
+      ],
+      "footprint_area_m2": 72.7,
+      "centroid_local": [
+        -45.347,
+        120.94
+      ],
+      "distance_from_origin_m": 129.16,
+      "bearing_from_origin_deg": 339.4,
+      "on_parcel": false,
+      "source_object_id": "db3f3d85-a5c5-4c3e-b9fa-edc5e9735c3f",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "0f2e22d9-e070-4840-8237-88d96792bd72",
@@ -5598,7 +11707,43 @@
             -4.3
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -134.736,
+            -4.3
+          ],
+          [
+            -137.393,
+            -11.203
+          ],
+          [
+            -128.346,
+            -14.686
+          ],
+          [
+            -125.673,
+            -7.792
+          ],
+          [
+            -134.736,
+            -4.3
+          ]
+        ]
+      ],
+      "footprint_area_m2": 71.8,
+      "centroid_local": [
+        -132.177,
+        -8.456
+      ],
+      "distance_from_origin_m": 132.45,
+      "bearing_from_origin_deg": 266.3,
+      "on_parcel": false,
+      "source_object_id": "0f2e22d9-e070-4840-8237-88d96792bd72",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "77c625c2-9c5e-4476-869d-48b8ea75e626",
@@ -5629,7 +11774,43 @@
             -83.054
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -69.75,
+            -83.054
+          ],
+          [
+            -62.592,
+            -85.317
+          ],
+          [
+            -60.689,
+            -79.298
+          ],
+          [
+            -68.037,
+            -76.975
+          ],
+          [
+            -69.75,
+            -83.054
+          ]
+        ]
+      ],
+      "footprint_area_m2": 48.0,
+      "centroid_local": [
+        -66.164,
+        -81.54
+      ],
+      "distance_from_origin_m": 105.01,
+      "bearing_from_origin_deg": 219.1,
+      "on_parcel": false,
+      "source_object_id": "77c625c2-9c5e-4476-869d-48b8ea75e626",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "aa510b31-3749-476f-a9c7-15c3d65f514c",
@@ -5660,7 +11841,43 @@
             9.144
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -34.222,
+            9.144
+          ],
+          [
+            -33.553,
+            10.74
+          ],
+          [
+            -36.252,
+            11.872
+          ],
+          [
+            -36.921,
+            10.275
+          ],
+          [
+            -34.222,
+            9.144
+          ]
+        ]
+      ],
+      "footprint_area_m2": 5.1,
+      "centroid_local": [
+        -35.034,
+        10.235
+      ],
+      "distance_from_origin_m": 36.5,
+      "bearing_from_origin_deg": 286.3,
+      "on_parcel": false,
+      "source_object_id": "aa510b31-3749-476f-a9c7-15c3d65f514c",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "bd8c01fa-b583-4110-a1a7-467ee2c9e00d",
@@ -5691,7 +11908,43 @@
             -55.612
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -150.682,
+            -55.612
+          ],
+          [
+            -155.623,
+            -66.353
+          ],
+          [
+            -149.371,
+            -69.275
+          ],
+          [
+            -144.415,
+            -58.494
+          ],
+          [
+            -150.682,
+            -55.612
+          ]
+        ]
+      ],
+      "footprint_area_m2": 81.7,
+      "centroid_local": [
+        -150.155,
+        -61.069
+      ],
+      "distance_from_origin_m": 162.1,
+      "bearing_from_origin_deg": 247.9,
+      "on_parcel": false,
+      "source_object_id": "bd8c01fa-b583-4110-a1a7-467ee2c9e00d",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "8f729d6c-8f3f-4dfb-be39-7b102f8195d2",
@@ -5722,7 +11975,43 @@
             -168.411
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            0.489,
+            -168.411
+          ],
+          [
+            -5.641,
+            -167.456
+          ],
+          [
+            -6.869,
+            -175.34
+          ],
+          [
+            -0.739,
+            -176.295
+          ],
+          [
+            0.489,
+            -168.411
+          ]
+        ]
+      ],
+      "footprint_area_m2": 49.5,
+      "centroid_local": [
+        -2.454,
+        -171.183
+      ],
+      "distance_from_origin_m": 171.2,
+      "bearing_from_origin_deg": 180.8,
+      "on_parcel": false,
+      "source_object_id": "8f729d6c-8f3f-4dfb-be39-7b102f8195d2",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "2540e49c-2743-401f-b4fa-a6dbe59791fb",
@@ -5753,7 +12042,43 @@
             30.836
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            167.055,
+            30.836
+          ],
+          [
+            164.34,
+            26.745
+          ],
+          [
+            168.097,
+            24.253
+          ],
+          [
+            170.811,
+            28.343
+          ],
+          [
+            167.055,
+            30.836
+          ]
+        ]
+      ],
+      "footprint_area_m2": 22.1,
+      "centroid_local": [
+        167.472,
+        28.203
+      ],
+      "distance_from_origin_m": 169.83,
+      "bearing_from_origin_deg": 80.4,
+      "on_parcel": false,
+      "source_object_id": "2540e49c-2743-401f-b4fa-a6dbe59791fb",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "d0b5bba1-8455-43cd-b1c9-475750ff8bc2",
@@ -5784,7 +12109,43 @@
             16.82
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            169.786,
+            16.82
+          ],
+          [
+            167.017,
+            18.62
+          ],
+          [
+            164.691,
+            15.04
+          ],
+          [
+            167.461,
+            13.241
+          ],
+          [
+            169.786,
+            16.82
+          ]
+        ]
+      ],
+      "footprint_area_m2": 14.1,
+      "centroid_local": [
+        167.748,
+        16.108
+      ],
+      "distance_from_origin_m": 168.52,
+      "bearing_from_origin_deg": 84.5,
+      "on_parcel": false,
+      "source_object_id": "d0b5bba1-8455-43cd-b1c9-475750ff8bc2",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.025
     },
     {
       "object_id": "b002eb6e-3c73-4fd2-a16c-4abdab1eead0",
@@ -5815,7 +12176,43 @@
             154.565
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -4.428,
+            154.565
+          ],
+          [
+            -2.064,
+            157.16
+          ],
+          [
+            -5.153,
+            159.976
+          ],
+          [
+            -7.55,
+            157.405
+          ],
+          [
+            -4.428,
+            154.565
+          ]
+        ]
+      ],
+      "footprint_area_m2": 14.8,
+      "centroid_local": [
+        -4.725,
+        156.734
+      ],
+      "distance_from_origin_m": 156.81,
+      "bearing_from_origin_deg": 358.3,
+      "on_parcel": false,
+      "source_object_id": "b002eb6e-3c73-4fd2-a16c-4abdab1eead0",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "4d3684d3-11c7-4505-acc3-fb1b0cef3011",
@@ -5862,7 +12259,59 @@
             62.592
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            82.286,
+            62.592
+          ],
+          [
+            84.522,
+            62.341
+          ],
+          [
+            85.06,
+            67.12
+          ],
+          [
+            85.292,
+            67.094
+          ],
+          [
+            85.724,
+            70.934
+          ],
+          [
+            83.55,
+            71.178
+          ],
+          [
+            83.118,
+            67.339
+          ],
+          [
+            82.824,
+            67.372
+          ],
+          [
+            82.286,
+            62.592
+          ]
+        ]
+      ],
+      "footprint_area_m2": 19.3,
+      "centroid_local": [
+        83.851,
+        66.507
+      ],
+      "distance_from_origin_m": 107.02,
+      "bearing_from_origin_deg": 51.6,
+      "on_parcel": false,
+      "source_object_id": "4d3684d3-11c7-4505-acc3-fb1b0cef3011",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "a140a6de-98e7-41f2-aa76-ac42a1a46236",
@@ -5893,7 +12342,43 @@
             42.4
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            193.571,
+            42.4
+          ],
+          [
+            199.386,
+            50.711
+          ],
+          [
+            194.946,
+            53.817
+          ],
+          [
+            189.131,
+            45.507
+          ],
+          [
+            193.571,
+            42.4
+          ]
+        ]
+      ],
+      "footprint_area_m2": 55.0,
+      "centroid_local": [
+        194.121,
+        46.967
+      ],
+      "distance_from_origin_m": 199.72,
+      "bearing_from_origin_deg": 76.4,
+      "on_parcel": false,
+      "source_object_id": "a140a6de-98e7-41f2-aa76-ac42a1a46236",
+      "object_type": "Komplementbyggnad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     },
     {
       "object_id": "cb61ba0c-df57-4225-bb25-96592a5cae6f",
@@ -5932,7 +12417,51 @@
             77.254
           ]
         ]
-      ]
+      ],
+      "rings_local": [
+        [
+          [
+            -71.126,
+            77.254
+          ],
+          [
+            -86.773,
+            82.488
+          ],
+          [
+            -89.493,
+            74.354
+          ],
+          [
+            -85.22,
+            72.924
+          ],
+          [
+            -87.745,
+            65.376
+          ],
+          [
+            -76.372,
+            61.572
+          ],
+          [
+            -71.126,
+            77.254
+          ]
+        ]
+      ],
+      "footprint_area_m2": 237.0,
+      "centroid_local": [
+        -81.122,
+        73.032
+      ],
+      "distance_from_origin_m": 109.15,
+      "bearing_from_origin_deg": 312.0,
+      "on_parcel": false,
+      "source_object_id": "cb61ba0c-df57-4225-bb25-96592a5cae6f",
+      "object_type": "Bostad",
+      "is_main_building": false,
+      "plan_uncertainty_m": 0.2
     }
   ],
   "raw_asset": {
@@ -5949,5 +12478,6 @@
     "Footprints are the registered LM byggnad geometry (authoritative).",
     "Heights are NOT in this product; any extrusion is DERIVED, not authoritative."
   ],
-  "derived_geometry_sha256": "723c88da14d4b97cc6cbb2a38a1650a69d33bad83fd25ffaabc952da46872be1"
+  "derived_geometry_sha256": "6bd95c891dd53bd902c826b53b04d630c43d993f6b7bc0a49090614f3f4d3880",
+  "derived_geometry_method": "geometry_hash.geometry_sha256/v1"
 }
