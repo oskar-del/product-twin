@@ -12,7 +12,11 @@ Why this exists at all: ingest-property-division.py's --self-test raised TypeErr
 on every invocation from 349bdcc769 until 2026-09-22 and nobody noticed, because
 nothing ran it. A self-test that is not invoked by anything is decoration.
 
-    python3 scripts/run-self-tests.py
+    python3 scripts/run-self-tests.py [--quiet]
+
+--quiet prints only the summary line, for callers that run this on every check.
+The coverage number stays in that line: it is the honest figure and must not be
+the thing that gets trimmed for brevity.
 """
 import subprocess, sys
 from pathlib import Path
@@ -29,6 +33,7 @@ def supports_self_test(path):
 
 
 def main():
+    quiet = "--quiet" in sys.argv[1:]
     tested, untested, failures = [], [], []
     for path in SCRIPTS:
         if not supports_self_test(path):
@@ -41,14 +46,16 @@ def main():
         if not ok:
             failures.append((path.name, (proc.stderr or proc.stdout).strip().splitlines()[-3:]))
 
-    for name, ok in tested:
-        print(f"  {'PASS' if ok else 'FAIL'}  {name}")
-    for name in untested:
-        print(f"  ----  {name}   NO SELF-TEST")
+    if not quiet:
+        for name, ok in tested:
+            print(f"  {'PASS' if ok else 'FAIL'}  {name}")
+        for name in untested:
+            print(f"  ----  {name}   NO SELF-TEST")
+        print()
 
-    print(f"\n{sum(1 for _, ok in tested if ok)} passed, {len(failures)} failed, "
+    print(f"{sum(1 for _, ok in tested if ok)} passed, {len(failures)} failed, "
           f"{len(untested)} of {len(SCRIPTS)} scripts have no self-test at all.")
-    if untested:
+    if untested and not quiet:
         print("An untested script is not a passing script. The line above is the real "
               "coverage, and it is thin.")
     for name, tail in failures:

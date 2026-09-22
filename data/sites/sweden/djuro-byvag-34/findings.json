@@ -3,7 +3,7 @@
   "entity_type": "SiteFindingSet",
   "subject": "DJURÖ 4:147",
   "site": "djuro-byvag-34",
-  "generated_at": "2026-09-22T10:53:52+00:00",
+  "generated_at": "2026-09-22T11:17:15+00:00",
   "generator": "scripts/build-findings-and-gates.py",
   "generated_from": [
     "property-division-derived-v0.1.json",
@@ -76,7 +76,7 @@
         "RCPT_SE_LM_PROPERTY_DIVISION_KN0120"
       ],
       "method": "Lantmäteriet fastighetsindelning GeoPackage clipped around the site pin; geometry hash recorded.",
-      "observed_at": "2026-09-22T10:53:52+00:00",
+      "observed_at": "2026-09-22T11:17:15+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "Authoritative for registered extent, not a survey of monument positions."
@@ -119,7 +119,7 @@
         "RCPT_SE_LM_BUILDINGS_KN0120"
       ],
       "method": "LM byggnad footprints clipped to 200 m and classified ON_PARCEL by centroid point-in-polygon against the registered boundary.",
-      "observed_at": "2026-09-22T10:53:52+00:00",
+      "observed_at": "2026-09-22T11:17:15+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "Roof-edge capture (insamlingsläge Takkant), not ground-level survey.",
@@ -140,7 +140,7 @@
         "RCPT_SE_LM_BUILDINGS_KN0120"
       ],
       "method": "Inspected every attribute column of the byggnad feature table.",
-      "observed_at": "2026-09-22T10:53:52+00:00",
+      "observed_at": "2026-09-22T11:17:15+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "No storey count, eaves or ridge height exists in this product. Any extrusion in a render is DERIVED or CONCEPT and must be labelled as such."
@@ -165,7 +165,7 @@
         "RCPT_SE_LM_TERRAIN_DTM_DJURO"
       ],
       "method": "Parcel mask over the 1 m ground model; the mask measures within 1.3 m2 of the registered area, an independent check that the boundary and DTM frames align.",
-      "observed_at": "2026-09-22T10:53:52+00:00",
+      "observed_at": "2026-09-22T11:17:15+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "Bare-earth ground heights: no buildings, no vegetation.",
@@ -200,7 +200,7 @@
         "RCPT_SE_LM_TERRAIN_DTM_DJURO"
       ],
       "method": "Horn 3x3 at the pin; least-squares plane over the parcel mask; per-cell gradient distribution over the same mask.",
-      "observed_at": "2026-09-22T10:53:52+00:00",
+      "observed_at": "2026-09-22T11:17:15+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "THREE DIFFERENT QUESTIONS, THREE CORRECT ANSWERS. The pin figure is a local microslope, the plane is the whole parcel, the distribution is the ground underfoot. None is a correction of another; quote the one that matches the question.",
@@ -245,7 +245,7 @@
         "RCPT_SE_LM_TERRAIN_DTM_DJURO"
       ],
       "method": "Shoreline taken as the edge of the ground model's constant water fill; that constant was found (modal height in the lowest metre) and accepted only because it covers an implausible share of a coastal window, not assumed.",
-      "observed_at": "2026-09-22T10:53:52+00:00",
+      "observed_at": "2026-09-22T11:17:15+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "A DERIVED shoreline at 1 m resolution — not the cadastral shoreline and not the legal strandlinje."
@@ -276,7 +276,7 @@
         "RCPT_SE_LM_PROPERTY_DIVISION_KN0120"
       ],
       "method": "Distance field from the derived shoreline evaluated over every in-parcel DTM cell and every registered building centroid.",
-      "observed_at": "2026-09-22T10:53:52+00:00",
+      "observed_at": "2026-09-22T11:17:15+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "Measured against a derived shoreline; a transaction answer should be taken from the authority.",
@@ -316,7 +316,7 @@
         "RCPT_SE_VARMDO_WFS_PLANNING"
       ],
       "method": "WFS INTERSECTS against the authoritative parcel polygon, EPSG:3006 -> EPSG:3011; each layer queried unfiltered first as a control so a zero is a tested negative.",
-      "observed_at": "2026-09-22T10:53:52+00:00",
+      "observed_at": "2026-09-22T11:17:15+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "The kommun's published depiction of the Länsstyrelsen decision, not the decision document itself."
@@ -356,7 +356,7 @@
         "RCPT_SE_VARMDO_WFS_PLANNING"
       ],
       "method": "Same controlled WFS INTERSECTS method as the strandskydd query.",
-      "observed_at": "2026-09-22T10:53:52+00:00",
+      "observed_at": "2026-09-22T11:17:15+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "Absence of a plan is not absence of regulation.",
@@ -385,7 +385,7 @@
         "RCPT_SE_LM_TERRAIN_DTM_DJURO"
       ],
       "method": "Radial ray-march of the 1 m ground model with running-maximum horizon angle, earth curvature and standard refraction; a bearing counts only where a VISIBLE sample is water.",
-      "observed_at": "2026-09-22T10:53:52+00:00",
+      "observed_at": "2026-09-22T11:17:15+00:00",
       "verification": "VERIFIED",
       "limitations": [
         "UPPER BOUND. The ground model is bare earth: no trees, no buildings, no boathouses, no neighbouring roofs. Each blocks a real view and none is in this calculation.",

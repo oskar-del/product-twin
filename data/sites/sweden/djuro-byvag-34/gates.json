@@ -3,13 +3,14 @@
   "entity_type": "SiteGateSet",
   "subject": "DJURÖ 4:147",
   "site": "djuro-byvag-34",
-  "generated_at": "2026-09-22T10:53:52+00:00",
+  "generated_at": "2026-09-22T11:17:15+00:00",
   "generator": "scripts/build-gate-ledger.py",
   "registry": "config/gate-registry.json",
   "rule": "Every gate in the canonical registry is emitted for every site. A gate a site cannot answer is OPEN with a reason, never dropped.",
   "gate_count": 27,
   "closed": 9,
-  "open": 18,
+  "open": 17,
+  "not_applicable": 1,
   "decided_by_counts": {
     "generic": 11,
     "registry_rule": 3,
@@ -27,7 +28,7 @@
       "evidence_refs": [
         "property-division-derived-v0.1.json"
       ],
-      "decided_at": "2026-09-22T10:53:52+00:00",
+      "decided_at": "2026-09-22T11:17:15+00:00",
       "reason": "Answered by property-division-derived-v0.1.json (AuthoritativePropertyDivisionClip). Lantmäteriet publishes fastighetsindelning per kommun, so the kn code in the product this parcel was clipped from names the kommun whose register the parcel sits in. That is authoritative. Here: kn0120. The kommun's NAME here comes from geocoding, which is REPORTED; the authoritative part is the kommun CODE.",
       "decided_by": "registry rule"
     },
@@ -39,7 +40,7 @@
       "evidence_refs": [
         "property-division-derived-v0.1.json"
       ],
-      "decided_at": "2026-09-22T10:53:52+00:00",
+      "decided_at": "2026-09-22T11:17:15+00:00",
       "reason": "Answered by property-division-derived-v0.1.json (AuthoritativePropertyDivisionClip). Title and ownership are not established by a property-division clip; that is GATE_SE_PROPERTY_REGISTER.",
       "decided_by": "registry rule"
     },
@@ -52,7 +53,7 @@
         "RCPT_SE_LM_PROPERTY_DIVISION_KN0120",
         "FINDING_SE_REGISTERED_PARCEL_EXTENT"
       ],
-      "decided_at": "2026-09-22T10:53:52+00:00",
+      "decided_at": "2026-09-22T11:17:15+00:00",
       "reason": "Authoritative registered extent for DJURÖ 4:147: 5,156.3 m², 9 boundary vertices, 10 context parcels.",
       "decided_by": "generic generator"
     },
@@ -95,7 +96,7 @@
         "RCPT_SE_VARMDO_WFS_PLANNING",
         "FINDING_SE_NO_DETALJPLAN"
       ],
-      "decided_at": "2026-09-22T10:53:52+00:00",
+      "decided_at": "2026-09-22T11:17:15+00:00",
       "reason": "Verified negative: no plan in force, none pending, none revoked since 2023-01-01. Unplanned land.",
       "decided_by": "generic generator"
     },
@@ -139,7 +140,7 @@
         "FINDING_SE_PARCEL_RELIEF",
         "FINDING_SE_SLOPE_THREE_MEASURES"
       ],
-      "decided_at": "2026-09-22T10:53:52+00:00",
+      "decided_at": "2026-09-22T11:17:15+00:00",
       "reason": "10 receipted 1 m DTM tiles re-verified by sha256 against .runtime/receipts before any pixel was read; the parcel mask derived from them measures 5155.0 m2 against 5156.3 m2 registered, an independent check that the boundary and DTM frames align.",
       "decided_by": "generic generator"
     },
@@ -184,7 +185,7 @@
         "RCPT_SE_LM_BUILDINGS_KN0120",
         "FINDING_SE_OFFICIAL_BUILDINGS_ON_PARCEL"
       ],
-      "decided_at": "2026-09-22T10:53:52+00:00",
+      "decided_at": "2026-09-22T11:17:15+00:00",
       "reason": "4 registered buildings on the parcel with real rings, 416.0 m² of footprint. The areas independently confirm the figures previously published without geometry behind them.",
       "decided_by": "generic generator"
     },
@@ -219,7 +220,7 @@
         "FINDING_SE_PARCEL_REACHES_SHORELINE",
         "FINDING_SE_STRANDSKYDD_COVERS_WHOLE_PARCEL"
       ],
-      "decided_at": "2026-09-22T10:53:52+00:00",
+      "decided_at": "2026-09-22T11:17:15+00:00",
       "reason": "Measured, not presumed. The parcel reaches the water at 0.2 m and its farthest corner is 94.8 m out, so 100.0% of it lies inside the 100 m zone, as do all 4 registered buildings.",
       "decided_by": "generic generator"
     },
@@ -232,7 +233,7 @@
         "RCPT_SE_VARMDO_WFS_PLANNING",
         "FINDING_SE_NO_EXTENDED_STRANDSKYDD"
       ],
-      "decided_at": "2026-09-22T10:53:52+00:00",
+      "decided_at": "2026-09-22T11:17:15+00:00",
       "reason": "Verified negative across three independent layers, each with a passing control. The base 100 m applies here, and it already covers the whole parcel, so the extension question does not change the answer.",
       "decided_by": "generic generator"
     },
@@ -265,7 +266,7 @@
         "RCPT_SE_LM_TERRAIN_DTM_DJURO",
         "FINDING_SE_SEA_VIEW_ARC"
       ],
-      "decided_at": "2026-09-22T10:53:52+00:00",
+      "decided_at": "2026-09-22T11:17:15+00:00",
       "reason": "43.9% of the compass in one unbroken arc 319.0°–117.0°, computed by viewshed. Closed as a TERRAIN result and as a CEILING only — see GATE_SE_VIEW_OCCLUSION.",
       "decided_by": "generic generator"
     },
@@ -313,12 +314,12 @@
     },
     {
       "gate_id": "GATE_SE_SOUTERRAIN_CONDITION",
-      "status": "OPEN",
+      "status": "NOT_APPLICABLE",
       "question": "Does the measured fall satisfy the designer's stated condition for the conditional souterrain?",
       "domain": "ground",
       "evidence_refs": [],
       "decided_at": null,
-      "reason": "receipt not present: NeighbourhoodSceneExport",
+      "reason": "No NeighbourhoodSceneExport carrying design.conditional_upgrades exists for this site, so there is no designer-stated condition to test. It has no bearing here unless a design is introduced.",
       "decided_by": "registry rule"
     }
   ]
