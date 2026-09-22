@@ -43,6 +43,9 @@
 
 - Spatial 9d81010cdc: vendored specs DELETED; build reads BRAGE's newest spec + patch from repo-brage as bytes, records provenance, emits only needed facts into scene.design; validator asserts contract (7 mutations proven), 861 assertions. Rule 16 (Spatial): STALE-CACHE — receipt fetches on static hosts had no cache-busting; a rebuilt scene served stale rendered perfectly with the design silently missing. Every fetch carries a content-derived buster; every surface exposes a counts probe. Platform checking its bundles.
 
+- 09-22: Spatial 483c7b309c + c6c7b2d131: VH card footer now states BRAGE v0.4 + provenance (was falsely "modelled after Eksjöhus"); area chip computed 1 936,8 (in-scene chip had a TYPED 1 938 fallback — removed; "area unavailable" instead); stage 5 "From the lake side" (Brain-captured: glazed south gable, terrace, windbreaks visible); validator printed a typed "7 stages" — now computed. Rule 16 amended: build_id excludes volatile fields at any depth (proven stable/moves/returns). Provenance: read_commit + source_file_commit. CDN no-store: UNPROVEN, no deploy yet.
+- 09-22: Platform d89f9444c5: rooms surface fetched 33 GLBs at runtime → inlined; COFFEE_TABLE proxy silently missing (placeholder sphere, log unread) → bundler resolves both checkouts, 11/11; bundler had re-introduced AUTHORITATIVE on measured meshes → rendered_size_source; __twinCounts() probe caught it on first run. All looks ext_assets=0 auth=0.
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
