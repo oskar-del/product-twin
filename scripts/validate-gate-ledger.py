@@ -18,7 +18,7 @@ What it asserts:
   §4 Counts are computed here, never read from the file's own summary, then checked against the
      summary AND (when supplied) against what the front door actually rendered.
 """
-import argparse, hashlib, json, pathlib, re, sys
+import argparse, hashlib, json, pathlib, re, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "config/gate-registry.json"
@@ -80,10 +80,12 @@ def rehash(doc, path):
                     match = candidate.name
                     break
         results.append(("raw archive", bool(match), match or "archive not on disk"))
-    if doc.get("derived_geometry_sha256") and doc.get("subject_rings_local"):
+    # Either name through the fleet rename; the value is what matters.
+    declared = doc.get("derivation_sha256") or doc.get("derived_geometry_sha256")
+    if declared and doc.get("subject_rings_local"):
         recomputed = hashlib.sha256(
             json.dumps(doc["subject_rings_local"], sort_keys=True).encode()).hexdigest()
-        results.append(("derived geometry", recomputed == doc["derived_geometry_sha256"],
+        results.append(("derived geometry", recomputed == declared,
                         "recomputed from subject_rings_local"))
     return results
 
@@ -95,6 +97,9 @@ def main():
     ap.add_argument("--rendered-total", type=int)
     ap.add_argument("--allow-unrendered", action="store_true",
                     help="accept a run that never checked the browser's own numbers")
+    ap.add_argument("--front-door-url",
+                    help="read the rendered counts from this page over CDP instead of being told them")
+    ap.add_argument("--cdp-port", default="9222")
     args = ap.parse_args()
 
     site = pathlib.Path(args.site)
@@ -177,6 +182,25 @@ def main():
                  if re.search(pattern, rendered_markup)]
         check("front door does not type a gate count", not typed,
               f"literal gate counts are back in the markup: {typed}")
+
+    # Read the page's own numbers rather than accepting typed ones. A --rendered-N flag is a
+    # human retyping what they believe the page says, which is the thing under test; Djurö's
+    # stale "26" got through exactly that way.
+    if args.front_door_url:
+        expression = ("JSON.parse(JSON.stringify({closed:"
+                      "document.querySelectorAll('#intelGateRows span.closed').length,total:"
+                      "document.querySelectorAll('#intelGateRows .intel-gate-row').length}))")
+        cmd = ["node", str(ROOT / "scripts/read_rendered.mjs"),
+                                    args.front_door_url, expression,
+                                    "--ready", "document.querySelectorAll('#intelGateRows .intel-gate-row').length > 0",
+                                    "--port", str(args.cdp_port)]
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        check("the rendered page could be read over CDP", result.returncode == 0,
+              result.stderr.strip()[:200])
+        if result.returncode == 0:
+            rendered = json.loads(result.stdout.strip())
+            args.rendered_closed, args.rendered_total = rendered["closed"], rendered["total"]
+            print(f"§4b read from the page itself: {rendered['closed']} closed of {rendered['total']}")
 
     if args.rendered_closed is not None:
         check(f"front door rendered {args.rendered_closed} closed, ledger has {closed}",

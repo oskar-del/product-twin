@@ -60,7 +60,9 @@ def load_site(site_dir: pathlib.Path):
                              if isinstance(v, str)), None),
             "raw_sha256": (doc.get("raw_asset") or {}).get("sha256"),
             "raw_bytes": (doc.get("raw_asset") or {}).get("byte_count"),
-            "derived_sha256": doc.get("derived_geometry_sha256"),
+            # Either name: the fleet is renaming derived_geometry_sha256 → derivation_sha256,
+            # and a receipt written before the rename must not read as having no hash.
+            "derived_sha256": doc.get("derivation_sha256") or doc.get("derived_geometry_sha256"),
         })
         if entity:
             docs.setdefault(entity, doc)

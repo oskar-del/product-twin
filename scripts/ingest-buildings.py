@@ -18,7 +18,7 @@ Usage:
 import argparse, hashlib, importlib.util, json, math, os, pathlib, re, sqlite3, struct, sys, tempfile, zipfile
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from geometry_hash import geometry_sha256   # one canonical form, shared with Djurö's pipeline
+from geometry_hash import METHOD_ID, geometry_sha256   # one canonical form, shared with Djurö's pipeline
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -234,9 +234,11 @@ def emit(site, buildings, o, srs, raw_sha, raw_bytes, manifest, radius):
     # Shared canonical form: sorted by object id, 1 mm precision, explicit separators. A hash
     # that only agrees with its own pipeline cannot tell two pipelines they derived the same
     # shapes, which is the only question it is asked.
-    payload["derived_geometry_sha256"] = geometry_sha256(
+    # `derivation_sha256`, not `derived_geometry_sha256`: it hashes a DERIVATION — the shapes we
+    # derived from the register — and the old name read as if the register itself had a hash.
+    payload["derivation_sha256"] = geometry_sha256(
         (b["object_id"], b["footprint_rings_local"]) for b in buildings)
-    payload["derived_geometry_method"] = "geometry_hash.geometry_sha256/v1"
+    payload["derivation_sha256_method"] = METHOD_ID
     return payload
 
 
@@ -262,7 +264,7 @@ def run(site, zip_path, radius):
           f"({payload['dwelling_count']} Bostad)  crs={payload['source_crs']}")
     print(f"  types: {payload['type_breakdown']}")
     print(f"  raw sha256={raw_sha[:16]}…  bytes={raw_bytes}")
-    print(f"  derived sha256={payload['derived_geometry_sha256'][:16]}…")
+    print(f"  derivation sha256={payload['derivation_sha256'][:16]}…  method={payload['derivation_sha256_method']}")
 
 
 # ---- self-test ----

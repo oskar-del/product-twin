@@ -32,6 +32,16 @@ OBJECT_SEP = "\n"
 PRECISION = Decimal("0.001")          # 1 mm
 
 
+# The method id is COMPOSED from the parameters that define the canonical form, never typed.
+# Two pipelines each writing their own "geometry_hash/v1" string would be shared-by-assertion one
+# level up: the label would agree while the form quietly diverged. Change a separator or the
+# precision and this moves, so a receipt cannot claim a method it did not use.
+METHOD_ID = (f"geometry_hash/v1"
+             f"+p{PRECISION.as_tuple().exponent}"
+             f"+c{ord(COORD_SEP)}.{ord(POINT_SEP)}.{ord(RING_SEP)}.{ord(OBJECT_SEP)}"
+             f"+sorted_by_object_id+grouped_parts+xz_only")
+
+
 def quantise(value):
     """A coordinate as a stable decimal string — no float noise, no negative zero."""
     if value is None:
@@ -46,12 +56,6 @@ def canonical_ring(ring):
     if len(ring) < 3:
         raise ValueError(f"ring has {len(ring)} points; a ring needs at least 3")
     return POINT_SEP.join(COORD_SEP.join(quantise(c) for c in point[:2]) for point in ring)
-
-
-def canonical_object(object_id, rings):
-    if not rings:
-        raise ValueError(f"{object_id}: no rings")
-    return f"{object_id}{RING_SEP}" + RING_SEP.join(canonical_ring(r) for r in rings)
 
 
 def canonical_form(objects):
