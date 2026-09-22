@@ -58,6 +58,8 @@
 
 - 09-22 Spatial 0fe3279668: METHOD_ID composed from parameters (geometry_hash/v1+p-3+c…+sorted_by_object_id+grouped_parts+xz_only); buildings field → derivation_sha256; validator reads rendered numbers over CDP with a fresh URL. Rule 20: the check that replaces a weak check must be proven to FAIL (first wiring compared before setting values → 118/0 on mismatched numbers). Ruling for property-division: object id = objektidentitet; subject and context hashed separately; joint commit Spatial+Djurö.
 
+- 09-22 Djurö blocks the joint commit, correctly: (1) Brain's field names (subject_geometry_sha256…) were invisible to Spatial's readers — amended to derivation_sha256 / context_derivation_sha256; (2) validate-gate-ledger.py recomputes the NAIVE hash the helper replaces — it passes today by reproducing the bug and its `if declared` guard SKIPS instead of failing. Joint commit = three legs (both ingests + validator). Rule 21 (Djurö): a check never shown to fail on a known-bad input is not evidence — negative control required before any check counts toward a gate.
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
