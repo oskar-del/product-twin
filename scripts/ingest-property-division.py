@@ -27,6 +27,9 @@ Usage:
 import argparse, base64, hashlib, json, os, pathlib, re, sqlite3, struct, sys, tempfile, urllib.request, zipfile
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from geometry_hash import METHOD_ID, geometry_sha256   # the shared canonical form
+
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SITE = "data/sites/sweden/saterdalsvagen-14"
 CLIP_BUFFER_M = 250.0
@@ -298,8 +301,20 @@ def emit(site, subject, context, origin, parsed_srs, raw_sha, raw_bytes, zip_man
             "for extent, not a survey of monument positions.",
         ],
     }
-    payload["derived_geometry_sha256"] = hashlib.sha256(
-        json.dumps(payload["subject_rings_local"], sort_keys=True).encode()).hexdigest()
+    # Subject and context are hashed SEPARATELY, and on the register's object id.
+    #
+    # The id is the register's, never the designation: a designation is a label we normalise and
+    # re-case, so hashing on it would make the hash depend on our parsing of a human string.
+    # Djurö's point, and they are right.
+    #
+    # The split matters for a reason worth writing down: the context set is determined by
+    # CLIP_BUFFER_M, a PIPELINE PARAMETER. Folded into one hash, changing the buffer would change
+    # the subject parcel's hash — a reported difference that is not a difference in the geometry,
+    # which is the same failure as row order and float noise, one level up.
+    payload["derivation_sha256"] = geometry_sha256([(subject["object_id"], rings)])
+    payload["context_derivation_sha256"] = geometry_sha256(
+        (c["object_id"], to_local(c["polys"], origin)) for c in context) if context else None
+    payload["derivation_sha256_method"] = METHOD_ID
     return payload
 
 
@@ -353,7 +368,8 @@ def run(site, zip_path=None):
     print(f"  source_object_ids={payload['source_object_ids'][:1]}... "
           f"({len(payload['source_object_ids'])} total)")
     print(f"  raw sha256={raw_sha[:16]}…  bytes={raw_bytes}")
-    print(f"  derived sha256={payload['derived_geometry_sha256'][:16]}…")
+    print(f"  derivation sha256={payload['derivation_sha256'][:16]}…  context={str(payload['context_derivation_sha256'])[:16]}…")
+    print(f"  method={payload['derivation_sha256_method']}")
     print("GATE_SE_PROPERTY_DIVISION_CONTEXT: geometry acquired — wire the viewer overlay to render it.")
 
 
@@ -428,8 +444,8 @@ def self_test(site):
     assert ring[2] == [22.0, 18.0], ring[2]
     assert len(context) == 1, f"clip buffer failed: {len(context)} (nbr in, far out)"
     assert context[0]["designation"] == neighbour
-    h1 = payload["derived_geometry_sha256"]
-    h2 = emit(site, subject, context, origin, srs, "deadbeef", 123, manifest)["derived_geometry_sha256"]
+    h1 = payload["derivation_sha256"]
+    h2 = emit(site, subject, context, origin, srs, "deadbeef", 123, manifest)["derivation_sha256"]
     assert h1 == h2, "derived hash not deterministic"
 
     print(f"SELF-TEST PASS · {site.designation} · {site.kommun_name or '?'} (kn{site.kommun})")
@@ -437,7 +453,7 @@ def self_test(site):
     print(f"  contradiction   an archive naming another kommun is refused")
     print(f"  local ENU       origin {e0},{n0} · ring[0]={ring[0]} ring[2]={ring[2]} (E-E0, N-N0)")
     print(f"  250 m clip      kept {neighbour}, dropped {distant}")
-    print(f"  derived sha256  {h1[:16]}… deterministic")
+    print(f"  derivation sha  {h1[:16]}… deterministic (subject, register object id)")
 
 
 if __name__ == "__main__":

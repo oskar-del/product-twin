@@ -20,6 +20,9 @@ What it asserts:
 """
 import argparse, hashlib, json, pathlib, re, subprocess, sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from geometry_hash import METHOD_ID, geometry_sha256
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # The front door's gate rows, in one place. The validator reads the PAGE, so it has to know the
@@ -94,13 +97,26 @@ def rehash(doc, path):
                     match = candidate.name
                     break
         results.append(("raw archive", bool(match), match or "archive not on disk"))
-    # Either name through the fleet rename; the value is what matters.
-    declared = doc.get("derivation_sha256") or doc.get("derived_geometry_sha256")
-    if declared and doc.get("subject_rings_local"):
-        recomputed = hashlib.sha256(
-            json.dumps(doc["subject_rings_local"], sort_keys=True).encode()).hexdigest()
-        results.append(("derived geometry", recomputed == declared,
-                        "recomputed from subject_rings_local"))
+    # Recompute with the SHARED helper, not with json.dumps.
+    #
+    # Djurö caught this: the old line reproduced the very serialisation the helper exists to
+    # replace, so it passed only by repeating the bug and would have gone red on a correct
+    # receipt. A check that agrees with what it is meant to catch is not a check.
+    if doc.get("subject_rings_local"):
+        declared = doc.get("derivation_sha256") or doc.get("derived_geometry_sha256")
+        subject_id = (doc.get("source_object_ids") or [None])[0]
+        # A receipt with geometry and no hash is not "nothing to check" — it is a receipt that
+        # cannot be verified, and that must fail rather than silently drop a check.
+        if not declared:
+            results.append(("derived geometry", False,
+                            "the receipt carries subject geometry but declares no hash"))
+        elif not subject_id:
+            results.append(("derived geometry", False,
+                            "no source_object_ids[0]: the subject's register id is what the hash is keyed on"))
+        else:
+            recomputed = geometry_sha256([(subject_id, doc["subject_rings_local"])])
+            results.append((f"derived geometry ({METHOD_ID})", recomputed == declared,
+                            f"declared {str(declared)[:16]}… recomputed {recomputed[:16]}…"))
     return results
 
 
