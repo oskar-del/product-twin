@@ -40,7 +40,7 @@
     "engine:blender:test": "node scripts/test-blender-export.mjs",
     "engine:blender:export": "node scripts/export-blender-scene.mjs",
     "engine:siteintel:test": "node scripts/test-site-intelligence-template.mjs",
-    "engine:gate": "npm run engine:scene:build && npm run engine:validate && npm run engine:mutations && npm run engine:compiler:test && npm run engine:heightfield:test && npm run engine:studies:test && npm run engine:osm:test && npm run engine:boundary:test && npm run engine:bundle:test && npm run engine:shoppable:test && npm run engine:attach:test && npm run engine:blender:test && npm run engine:siteintel:test && npm run engine:catalog:test && npm run engine:house:test && npm run engine:stills:manifest && npm run engine:disagreements:check",
+    "engine:gate": "npm run engine:scene:build && npm run engine:validate && npm run engine:mutations && npm run engine:compiler:test && npm run engine:heightfield:test && npm run engine:studies:test && npm run engine:osm:test && npm run engine:boundary:test && npm run engine:bundle:test && npm run engine:shoppable:test && npm run engine:attach:test && npm run engine:blender:test && npm run engine:siteintel:test && npm run engine:catalog:test && npm run engine:house:test && npm run engine:producer:test && npm run engine:stills:manifest && npm run engine:disagreements:check",
     "engine:demo": "node scripts/serve-twin-engine-demo.mjs",
     "scene:v0:validate": "node scripts/validate-v0-shoppable-scene.mjs",
     "scene:living:supply:validate": "node scripts/validate-living-room-supply-board.mjs",
@@ -103,7 +103,8 @@
     "engine:house:test": "node scripts/test-house.mjs",
     "engine:stills:manifest": "node scripts/stills-manifest.mjs",
     "engine:disagreements": "node scripts/dimension-disagreements.mjs",
-    "engine:disagreements:check": "node scripts/dimension-disagreements.mjs --check"
+    "engine:disagreements:check": "node scripts/dimension-disagreements.mjs --check",
+    "engine:producer:test": "node scripts/test-producer-invariants.mjs"
   },
   "devDependencies": {
     "ajv": "8.20.0",
