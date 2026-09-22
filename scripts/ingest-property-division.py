@@ -444,16 +444,36 @@ def self_test(site):
     assert ring[2] == [22.0, 18.0], ring[2]
     assert len(context) == 1, f"clip buffer failed: {len(context)} (nbr in, far out)"
     assert context[0]["designation"] == neighbour
+    # Djurö found the weakness in their copy of this and it was in mine too: re-emitting with
+    # IDENTICAL inputs proves determinism, which is nearly free, not geometry-only-ness, which is
+    # the actual claim. Re-emit with a different archive, sha and manifest instead — if the hash
+    # moves, it is covering more than the geometry.
     h1 = payload["derivation_sha256"]
-    h2 = emit(site, subject, context, origin, srs, "deadbeef", 123, manifest)["derivation_sha256"]
-    assert h1 == h2, "derived hash not deterministic"
+    other = emit(site, subject, context, origin, srs, "feedface", 999,
+                 [{"name": f"fastighetsindelning_kn{site.kommun}.gpkg", "size": 424242}])
+    assert h1 == other["derivation_sha256"], \
+        "the hash moved when only the ARCHIVE changed — it is not geometry-only"
+
+    # Negative control (rule 21): a check that has never failed is not evidence.
+    import copy as _copy
+    moved = _copy.deepcopy(subject)
+    moved["polys"][0][0][0] = (moved["polys"][0][0][0][0] + 0.002, moved["polys"][0][0][0][1])
+    assert emit(site, moved, context, origin, srs, "deadbeef", 123, manifest)["derivation_sha256"] != h1, \
+        "moving a corner 2 mm did not change the hash"
+
+    # And the quantisation must absorb float noise rather than report it as a change.
+    noisy = _copy.deepcopy(subject)
+    noisy["polys"][0][0][0] = (noisy["polys"][0][0][0][0] + 0.0001, noisy["polys"][0][0][0][1])
+    assert emit(site, noisy, context, origin, srs, "deadbeef", 123, manifest)["derivation_sha256"] == h1, \
+        "0,1 mm of float noise changed the hash"
 
     print(f"SELF-TEST PASS · {site.designation} · {site.kommun_name or '?'} (kn{site.kommun})")
     print(f"  product line    {payload['source_product']} (read from the archive manifest)")
     print(f"  contradiction   an archive naming another kommun is refused")
     print(f"  local ENU       origin {e0},{n0} · ring[0]={ring[0]} ring[2]={ring[2]} (E-E0, N-N0)")
     print(f"  250 m clip      kept {neighbour}, dropped {distant}")
-    print(f"  derivation sha  {h1[:16]}… deterministic (subject, register object id)")
+    print(f"  derivation sha  {h1[:16]}… geometry-only (unmoved by a different archive)")
+    print(f"  negative control +2 mm on one corner changes it · +0,1 mm of noise does not")
 
 
 if __name__ == "__main__":

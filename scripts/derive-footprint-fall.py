@@ -18,7 +18,7 @@ source makes the figure real and the gate picks it up automatically.
 
     python3 scripts/derive-footprint-fall.py --site <dir> [--element HOUSE_BAR]
 """
-import argparse, json, pathlib, sys
+import argparse, base64, json, os, pathlib, sys, urllib.error, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -40,6 +40,51 @@ def bilinear(field, x, z):
         return v[j * n + i][1]
     return (h(ix, iz) * (1 - tx) * (1 - tz) + h(ix + 1, iz) * tx * (1 - tz)
             + h(ix, iz + 1) * (1 - tx) * tz + h(ix + 1, iz + 1) * tx * tz)
+
+
+def probe_native_source(terrain):
+    """
+    Can we read the 1 m COG by range request, as the receipt's own method describes?
+
+    Brain's ruling assumed yes — the pin sample was "a windowed nearest-cell sample of the
+    verified gate-tracked DTM COG", so the tile is read remotely rather than held locally. It
+    turns out the data asset needs credentials that are not present here, and saying exactly
+    that is more useful than "not available": the fix is an authorisation, not a 246 MB
+    download. The result is recorded so the gate's reason can name the real obstacle.
+    """
+    item_url = ((terrain.get("gate_tracked_asset") or {}).get("stac_item"))
+    if not item_url:
+        return {"attempted": False, "reason": "the receipt names no STAC item"}
+    try:
+        with urllib.request.urlopen(item_url, timeout=30) as response:
+            item = json.load(response)
+    except Exception as exc:                                   # noqa: BLE001 - reported, not raised
+        return {"attempted": True, "stac": "unreachable", "error": f"{type(exc).__name__}: {exc}"}
+
+    href = ((item.get("assets") or {}).get("data") or {}).get("href")
+    if not href:
+        return {"attempted": True, "stac": "ok", "reason": "the STAC item exposes no data asset"}
+
+    request = urllib.request.Request(href, headers={"Range": "bytes=0-1023"})
+    auth = os.environ.get("LM_BASIC_AUTH")
+    if auth:
+        request.add_header("Authorization", "Basic " + base64.b64encode(auth.encode()).decode())
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            head = response.read(4)
+        readable = head[:4] in (b"II*\x00", b"MM\x00*")
+        return {"attempted": True, "stac": "ok", "asset_url": href, "http_status": response.status,
+                "looks_like_tiff": readable, "credentials_used": bool(auth),
+                "readable": readable}
+    except urllib.error.HTTPError as exc:
+        return {"attempted": True, "stac": "ok", "asset_url": href, "http_status": exc.code,
+                "credentials_used": bool(auth), "readable": False,
+                "reason": ("the 1 m raster requires Lantmäteriet credentials; set LM_BASIC_AUTH "
+                           "from the granted Geotorget order" if exc.code in (401, 403)
+                           else f"HTTP {exc.code}")}
+    except Exception as exc:                                   # noqa: BLE001
+        return {"attempted": True, "stac": "ok", "asset_url": href, "readable": False,
+                "error": f"{type(exc).__name__}: {exc}"}
 
 
 def main():
@@ -84,7 +129,9 @@ def main():
     shortest_side = min(max(xs) - min(xs), max(zs) - min(zs))
     resolved = spacing <= shortest_side / 2      # at least two samples across the short side
 
+    native = probe_native_source(terrain)
     terrain["fall_within_footprint_m"] = {
+        "native_source_probe": native,
         "element": args.element,
         "value_m": round(max(heights) - min(heights), 2),
         "min_m": round(min(heights), 2),
@@ -103,7 +150,10 @@ def main():
              f"{shortest_side:g} m, so this is an interpolation of a coarse surface, not a "
              f"measurement of the footprint." if not resolved else
              f"Interpolated from a {spacing:g} m heightfield."),
-            "The 1 m DTM itself is not held locally; re-run against it to make this a measurement.",
+            ("The 1 m raster could not be read: "
+             + (native.get("reason") or native.get("error") or "unknown")
+             + f" (HTTP {native.get('http_status')})." if not native.get("readable") else
+             "The 1 m raster is readable; windowed sampling is not implemented yet."),
         ],
     }
     terrain_path.write_text(json.dumps(terrain, ensure_ascii=False, indent=2) + "\n")
@@ -115,6 +165,10 @@ def main():
     print(f"  sampling           {block['samples']} points at {spacing:g} m spacing")
     print(f"  resolution enough  {'YES' if resolved else 'NO — coarser than the footprint'}")
     print(f"  parcel fall        {(terrain.get('plot_footprint') or {}).get('relief_m')} m (what the gate uses today)")
+    print(f"  1 m source         readable={native.get('readable')} "
+          f"http={native.get('http_status')} creds={native.get('credentials_used')}")
+    if not native.get("readable"):
+        print(f"                     {native.get('reason') or native.get('error')}")
 
 
 if __name__ == "__main__":

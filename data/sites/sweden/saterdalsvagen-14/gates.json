@@ -3,7 +3,7 @@
   "entity_type": "SiteGateSet",
   "subject": "SVÄRTINGE 54:28",
   "site": "saterdalsvagen-14",
-  "generated_at": "2026-09-22T10:52:23+00:00",
+  "generated_at": "2026-09-22T10:55:35+00:00",
   "generator": "scripts/build-gate-ledger.py",
   "registry": "config/gate-registry.json",
   "rule": "Every gate in the canonical registry is emitted for every site. A gate a site cannot answer is OPEN with a reason, never dropped.",
@@ -36,7 +36,7 @@
       "evidence_refs": [
         "property-division-derived-v0.1.json"
       ],
-      "decided_at": "2026-09-22T10:52:23+00:00",
+      "decided_at": "2026-09-22T10:55:35+00:00",
       "reason": "Answered by property-division-derived-v0.1.json (AuthoritativePropertyDivisionClip). Lantmäteriet publishes fastighetsindelning per kommun, so the kn code in the product this parcel was clipped from names the kommun whose register the parcel sits in. That is authoritative. Here: kn0581. The kommun's NAME here comes from geocoding, which is REPORTED; the authoritative part is the kommun CODE.",
       "decided_by": "registry rule"
     },
@@ -48,7 +48,7 @@
       "evidence_refs": [
         "property-division-derived-v0.1.json"
       ],
-      "decided_at": "2026-09-22T10:52:23+00:00",
+      "decided_at": "2026-09-22T10:55:35+00:00",
       "reason": "Answered by property-division-derived-v0.1.json (AuthoritativePropertyDivisionClip). Title and ownership are not established by a property-division clip; that is GATE_SE_PROPERTY_REGISTER.",
       "decided_by": "registry rule"
     },
@@ -61,7 +61,7 @@
         "RCPT_SE_LM_PROPERTY_DIVISION_KN0581",
         "FINDING_SE_REGISTERED_PARCEL_EXTENT"
       ],
-      "decided_at": "2026-09-22T10:52:23+00:00",
+      "decided_at": "2026-09-22T10:55:35+00:00",
       "reason": "Authoritative registered extent for SVÄRTINGE 54:28: 1,936.8 m², 6 boundary vertices, 75 context parcels.",
       "decided_by": "generic generator"
     },
@@ -146,7 +146,7 @@
       "evidence_refs": [
         "terrain-dem-derived-v0.1.json"
       ],
-      "decided_at": "2026-09-22T10:52:23+00:00",
+      "decided_at": "2026-09-22T10:55:35+00:00",
       "reason": "Answered by terrain-dem-derived-v0.1.json (DerivedTerrainEvidence). The generic generator did not recognise this site's receipt name.",
       "decided_by": "registry rule over generic"
     },
@@ -188,7 +188,7 @@
       "evidence_refs": [
         "buildings-official-derived-v0.1.json"
       ],
-      "decided_at": "2026-09-22T10:52:23+00:00",
+      "decided_at": "2026-09-22T10:55:35+00:00",
       "reason": "Answered by buildings-official-derived-v0.1.json (OfficialBuildingFootprintClip). The generic generator did not recognise this site's receipt name.",
       "decided_by": "registry rule over generic"
     },
@@ -313,7 +313,7 @@
         "neighbourhood-scene-v0.2.json",
         "terrain-dem-derived-v0.1.json"
       ],
-      "decided_at": "2026-09-22T10:52:23+00:00",
+      "decided_at": "2026-09-22T10:55:35+00:00",
       "reason": "The designer's condition is \"DTM_1M shows south fall >= ~2.5 m across HOUSE_BAR footprint\" (neighbourhood-scene-v0.2.json). The fall across the parcel (1 m DTM) measures 13.5 m (terrain-dem-derived-v0.1.json), so the condition holds: 13.5 >= 2.5. NOTE: measured across the parcel, not the bar footprint — the condition asks for the footprint. The footprint figure interpolates to 4.64 m but its sampling is coarser than the footprint, so it is not used.",
       "decided_by": "registry rule"
     }

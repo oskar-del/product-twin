@@ -102,11 +102,14 @@ def rehash(doc, path):
     # Djurö caught this: the old line reproduced the very serialisation the helper exists to
     # replace, so it passed only by repeating the bug and would have gone red on a correct
     # receipt. A check that agrees with what it is meant to catch is not a check.
+    #
+    # It also only ever looked at subject_rings_local, so the BUILDINGS hash — the fleet's
+    # most-recomputed-looking receipt — was verified by nothing at all. Djurö's find. Both
+    # shapes are recomputed now.
+    declared = doc.get("derivation_sha256") or doc.get("derived_geometry_sha256")
+
     if doc.get("subject_rings_local"):
-        declared = doc.get("derivation_sha256") or doc.get("derived_geometry_sha256")
         subject_id = (doc.get("source_object_ids") or [None])[0]
-        # A receipt with geometry and no hash is not "nothing to check" — it is a receipt that
-        # cannot be verified, and that must fail rather than silently drop a check.
         if not declared:
             results.append(("derived geometry", False,
                             "the receipt carries subject geometry but declares no hash"))
@@ -115,8 +118,32 @@ def rehash(doc, path):
                             "no source_object_ids[0]: the subject's register id is what the hash is keyed on"))
         else:
             recomputed = geometry_sha256([(subject_id, doc["subject_rings_local"])])
-            results.append((f"derived geometry ({METHOD_ID})", recomputed == declared,
+            results.append((f"subject geometry ({METHOD_ID})", recomputed == declared,
                             f"declared {str(declared)[:16]}… recomputed {recomputed[:16]}…"))
+        context = doc.get("context_rings_local")
+        declared_context = doc.get("context_derivation_sha256")
+        if context and declared_context:
+            ids = (doc.get("source_object_ids") or [])[1:]
+            if len(ids) == len(context):
+                recomputed = geometry_sha256(zip(ids, context))
+                results.append(("context geometry", recomputed == declared_context,
+                                f"declared {declared_context[:16]}… recomputed {recomputed[:16]}…"))
+
+    if doc.get("buildings"):
+        pairs = [((b.get("object_id") or b.get("source_object_id")),
+                  (b.get("footprint_rings_local") or b.get("rings_local") or []))
+                 for b in doc["buildings"]]
+        if not declared:
+            results.append(("buildings geometry", False,
+                            "the receipt carries building footprints but declares no hash"))
+        elif any(not pid or not rings for pid, rings in pairs):
+            results.append(("buildings geometry", False,
+                            "a building carries no object id or no rings"))
+        else:
+            recomputed = geometry_sha256(pairs)
+            results.append((f"buildings geometry ({METHOD_ID})", recomputed == declared,
+                            f"declared {str(declared)[:16]}… recomputed {recomputed[:16]}…"))
+
     return results
 
 
