@@ -302,6 +302,17 @@ separators and list order are invisible in review. Nothing else in the receipt m
 and all 35 footprints are identical. 35 rows / 34 unique ids — one multi-part building (a single
 `objektidentitet` with two rings), which the helper groups rather than rejects.
 
+### ⛔ ONE THING HELD DELIBERATELY — do not "finish" it alone
+`scripts/ingest-property-division.py` also hashes geometry and has **deliberately not** been
+switched to the shared helper. Spatial's pipeline and this one **already reproduce `d5aaa775…`
+identically**, so changing one side alone would *break* an agreement that currently holds. It needs
+a **joint commit with Spatial**, who will ping when ready. Switching it unilaterally looks like
+finishing the job and is the opposite.
+
+Related, not adopted: the three `derive-*` scripts hash a *derivation* (statistics, slope, profile),
+not geometry — the helper does not apply there. Their field name `derived_geometry_sha256` is a
+misnomer; a fleet-wide rename to `derivation_sha256` is routed to Spatial.
+
 `GATE_SE_MUNICIPAL_JURISDICTION` now closes on a registry rule I proposed (Spatial `598b1132ab`):
 `requires_pattern` on the **kn code** inside the authoritative property-division `source_product`,
 because Lantmäteriet publishes fastighetsindelning per kommun. The geocoded kommun **name** stays
