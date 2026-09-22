@@ -96,8 +96,8 @@ def evaluate_condition_rule(rule, docs):
         # literal inside a generic registry, which is the kn0581 bug class exactly, and it would
         # go stale the day that plot gets a designer. Djurö's framing.
         return "NOT_APPLICABLE", (f"No {src['entity_type']} carrying {src['path']} exists for this "
-                                  f"site, so there is no designer-stated condition to test. This "
-                                  f"becomes an open question the moment a design lands."), []
+                                  f"site, so there is no designer-stated condition to test. It has "
+                                  f"no bearing here unless a design is introduced."), []
     scene_doc, scene_file = scene
     entries = dig(scene_doc, src["path"]) or []
     entry = next((e for e in entries if e.get("id") == src["match_id"]), None)

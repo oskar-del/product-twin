@@ -30,6 +30,9 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 # rather than a mysterious count mismatch reported from inside an inlined expression.
 GATE_ROW_SELECTOR = "#intelGateRows .intel-gate-row"
 GATE_SATISFIED_SELECTOR = "#intelGateRows span.closed"
+# The page marks a not-applicable gate with the literal N/A pill. It has to be counted
+# separately or it lands in "open", which is the bug this check exists to catch.
+GATE_NA_TEXT = "N/A"
 
 CHROME_LAUNCH_HINT = (
     'no Chrome answering on that port. Start one first:\n'
@@ -159,6 +162,8 @@ def main():
     ap.add_argument("--site", required=True)
     ap.add_argument("--rendered-closed", type=int)
     ap.add_argument("--rendered-total", type=int)
+    ap.add_argument("--rendered-open", type=int)
+    ap.add_argument("--rendered-not-applicable", type=int)
     ap.add_argument("--allow-unrendered", action="store_true",
                     help="accept a run that never checked the browser's own numbers")
     ap.add_argument("--front-door-url",
@@ -231,6 +236,22 @@ def main():
             check(f"{gid}: not-applicable gate says why it does not apply",
                   bool((gate.get("reason") or "").strip()))
 
+    print("§3b the repo's self-tests still run")
+    # Djurö's fix for the gap we both had: a self-test nobody runs is indistinguishable from one
+    # that does not exist — theirs was broken from its first commit and cited as protection for
+    # three weeks. This is the only thing in the repo that runs on every ledger check, so it is
+    # where the runner belongs. A FAILING self-test fails this; THIN COVERAGE DOES NOT, because
+    # blocking a ledger check on untested unrelated scripts would just get the check skipped.
+    runner = ROOT / "scripts/run-self-tests.py"
+    if runner.exists():
+        run = subprocess.run([sys.executable, str(runner), "--quiet"],
+                             capture_output=True, text=True, timeout=600)
+        summary = (run.stdout.strip().splitlines() or ["no output"])[-1]
+        check(f"self-tests pass ({summary})", run.returncode == 0,
+              run.stdout.strip()[-400:])
+    else:
+        check("the self-test runner exists", False, f"missing {runner}")
+
     print("§4 counts are computed, not quoted")
     closed = sum(1 for g in gates if g.get("status") == "CLOSED")
     open_count = sum(1 for g in gates if g.get("status") == "OPEN")
@@ -266,9 +287,19 @@ def main():
     # human retyping what they believe the page says, which is the thing under test; Djurö's
     # stale "26" got through exactly that way.
     if args.front_door_url:
-        expression = ("JSON.parse(JSON.stringify({closed:"
-                      f"document.querySelectorAll('{GATE_SATISFIED_SELECTOR}').length,total:"
-                      f"document.querySelectorAll('{GATE_ROW_SELECTOR}').length}}))")
+        # Read EVERY count the page states, not just the two that happened to be right.
+        # Djurö's find: closed and total both matched while the open figure — the only one that
+        # was wrong — was never compared. A check that looks at the correct numbers and not the
+        # incorrect one passes with full marks and tells you nothing.
+        expression = (
+            "JSON.parse(JSON.stringify((()=>{"
+            f"const rows=[...document.querySelectorAll('{GATE_ROW_SELECTOR}')];"
+            f"const closed=document.querySelectorAll('{GATE_SATISFIED_SELECTOR}').length;"
+            # A string test, not a regex: the marker itself contains a slash, which closes a
+            # JS regex literal and silently produced no output at all.
+            f"const na=rows.filter(r=>r.textContent.includes({GATE_NA_TEXT!r})).length;"
+            "return{closed,na,total:rows.length,open:rows.length-closed-na};"
+            "})()))")
         cmd = ["node", str(ROOT / "scripts/read_rendered.mjs"),
                                     args.front_door_url, expression,
                                     "--ready", f"document.querySelectorAll('{GATE_ROW_SELECTOR}').length > 0",
@@ -280,8 +311,12 @@ def main():
         check("the rendered page could be read over CDP", result.returncode == 0, detail)
         if result.returncode == 0:
             rendered = json.loads(result.stdout.strip())
-            args.rendered_closed, args.rendered_total = rendered["closed"], rendered["total"]
-            print(f"§4b read from the page itself: {rendered['closed']} closed of {rendered['total']}")
+            args.rendered_closed = rendered["closed"]
+            args.rendered_total = rendered["total"]
+            args.rendered_open = rendered["open"]
+            args.rendered_not_applicable = rendered["na"]
+            print(f"§4b read from the page itself: {rendered['closed']} closed · "
+                  f"{rendered['open']} open · {rendered['na']} n/a · {rendered['total']} total")
 
     if args.rendered_closed is not None:
         check(f"front door rendered {args.rendered_closed} closed, ledger has {closed}",
@@ -289,6 +324,22 @@ def main():
     if args.rendered_total is not None:
         check(f"front door rendered {args.rendered_total} total, ledger has {total}",
               args.rendered_total == total)
+    if args.rendered_open is not None:
+        check(f"front door rendered {args.rendered_open} open, ledger has {open_count}",
+              args.rendered_open == open_count)
+    if args.rendered_not_applicable is not None:
+        check(f"front door rendered {args.rendered_not_applicable} not-applicable, "
+              f"ledger has {not_applicable}",
+              args.rendered_not_applicable == not_applicable)
+    # And the page's own arithmetic has to close, not only the ledger's: a page can render four
+    # internally inconsistent numbers while each matches nothing in particular.
+    if None not in (args.rendered_closed, args.rendered_open,
+                    args.rendered_not_applicable, args.rendered_total):
+        check("the page's own counts add up",
+              args.rendered_closed + args.rendered_open + args.rendered_not_applicable
+              == args.rendered_total,
+              f"{args.rendered_closed} + {args.rendered_open} + "
+              f"{args.rendered_not_applicable} != {args.rendered_total}")
     unrendered = args.rendered_closed is None and args.rendered_total is None
     if unrendered:
         notes.append("front-door rendered numbers not supplied (--rendered-closed/--rendered-total): "

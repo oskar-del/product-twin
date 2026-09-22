@@ -346,11 +346,17 @@ def read_findings_and_gates(docs):
     # CLOSED reported Svärtinge as 0 of 18 when its own ledger says 2 are satisfied.
     SATISFIED_STATES = {"CLOSED", "SATISFIED"}
     closed = [g for g in gates if str(g.get("status", "")).upper() in SATISFIED_STATES]
+    # A gate that does not apply here is NOT an open question. Folding it into "open" tells a
+    # reader this plot carries a doubt it does not have — and it is worse than vague wording,
+    # because the number looks authoritative. Djurö's find: the third state reached the gate
+    # table and never reached the counts.
+    not_applicable = [g for g in gates if str(g.get("status", "")).upper() == "NOT_APPLICABLE"]
     return {
         "findings": findings,
         "gates": gates,
         "closed": len(closed),
-        "open": len(gates) - len(closed),
+        "open": len(gates) - len(closed) - len(not_applicable),
+        "not_applicable": len(not_applicable),
         "source": ("findings.json + gates.json" if findings_doc or gates_doc
                    else "plot-intelligence record"),
         "generated_at": (findings_doc or gates_doc or {}).get("generated_at"),
@@ -459,6 +465,23 @@ def consistency_checks(docs, files, identity, boundary, buildings):
 
 
 # ---------------------------------------------------------------- render
+
+def gate_state_chip(gate):
+    """
+    A gate's state, chipped by what it IS.
+
+    NOT_APPLICABLE carries no evidence class: it has no evidence by construction
+    (evidence_refs is empty), and chipping it REPORTED read as though a third party had reported
+    something. Djurö's find.
+    """
+    state = str(gate.get("status", "")).upper()
+    if state in ("CLOSED", "SATISFIED"):
+        return chip("AUTHORITATIVE", state)
+    if state == "NOT_APPLICABLE":
+        return ('<span class="ink-chip" style="border-color:rgba(255,255,255,.22);'
+                'color:rgba(255,255,255,.55);background:transparent">NOT APPLICABLE</span>')
+    return chip("REPORTED_UNVERIFIED", state)
+
 
 def render_value(value, unit=None):
     """
@@ -614,7 +637,8 @@ def build_page(site_dir, docs, files, out_path):
     if ledger and ledger["gates"]:
         metrics.append(metric("Evidence gates", Figure(
             f"{ledger['closed']} / {len(ledger['gates'])}", "", ledger["source"], "AUTHORITATIVE",
-            note=f"{ledger['open']} still open")))
+            note=(f"{ledger['open']} still open"
+                  + (f" · {ledger['not_applicable']} not applicable" if ledger.get("not_applicable") else "")))))
 
     # ---- reading cards, only where a receipt exists
     cards = []
@@ -744,12 +768,14 @@ def build_page(site_dir, docs, files, out_path):
     if ledger and ledger["gates"]:
         rows_html = "".join(
             f'<tr><td>{esc(gate.get("gate_id", ""))}</td>'
-            f'<td>{chip("AUTHORITATIVE" if str(gate.get("status", "")).upper() == "CLOSED" else "REPORTED_UNVERIFIED", str(gate.get("status", "")).upper())}</td>'
+            f'<td>{gate_state_chip(gate)}</td>'
             f'<td>{esc(gate.get("reason", ""))}</td></tr>'
             for gate in ledger["gates"])
         gates_section = (
             '<section class="ink-section"><div class="ink-section-head"><h2>Evidence gates</h2>'
-            f'<p>{ledger["closed"]} satisfied · {ledger["open"]} open. An open gate is a question '
+            f'<p>{ledger["closed"]} satisfied · {ledger["open"]} open'
+            + (f' · {ledger["not_applicable"]} not applicable' if ledger.get("not_applicable") else "")
+            + '. An open gate is a question '
             'nobody has answered yet, not a defect — and never a thing to design against.</p></div>'
             f'<table><thead><tr><th>Gate</th><th>State</th><th>Reason</th></tr></thead>'
             f'<tbody>{rows_html}</tbody></table></section>')
@@ -777,6 +803,7 @@ def build_page(site_dir, docs, files, out_path):
         "cards": len(cards),
         "twin": {k: (len(v) if isinstance(v, (list, dict)) else v) for k, v in twin.items()},
         "ledger": {"closed": ledger["closed"], "open": ledger["open"],
+                   "not_applicable": ledger.get("not_applicable"),
                    "gates": len(ledger["gates"]), "findings": len(ledger["findings"])} if ledger else None,
         "problems": sorted(f"{p['severity']}:{p['what']}" for p in problems),
     }
@@ -1083,7 +1110,9 @@ def main():
     ledger = facts.get("ledger")
     if ledger:
         print(f"  findings      {len(ledger['findings'])} · gates {ledger['closed']} closed / "
-              f"{ledger['open']} open (from {ledger['source']})")
+              f"{ledger['open']} open"
+              + (f" / {ledger['not_applicable']} not applicable" if ledger.get("not_applicable") else "")
+              + f" (from {ledger['source']})")
     not_established = [row for row in facts.get("qa_rows", []) if row[2] == "REPORTED_UNVERIFIED"]
     if facts.get("qa_rows"):
         print(f"  provenance QA {len(facts['qa_rows'])} checks · {len(not_established)} NOT ESTABLISHED")
