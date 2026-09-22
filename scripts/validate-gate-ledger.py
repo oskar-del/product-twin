@@ -121,8 +121,15 @@ def rehash(doc, path):
             results.append((f"subject geometry ({METHOD_ID})", recomputed == declared,
                             f"declared {str(declared)[:16]}… recomputed {recomputed[:16]}…"))
         context = doc.get("context_rings_local")
-        declared_context = doc.get("context_derivation_sha256")
-        if context and declared_context:
+        context_block = doc.get("context_derivation") or {}
+        declared_context = context_block.get("sha256") or doc.get("context_derivation_sha256")
+        buffer_m = context_block.get("clip_buffer_m", doc.get("context_clip_buffer_m"))
+        if context and declared_context and buffer_m is None:
+            # Without the buffer the hash cannot be compared to anything: a different buffer is a
+            # different question, and a bare hash invites reading one as a disagreement.
+            results.append(("context geometry", False,
+                            "context hash declared without the clip buffer that defines it"))
+        elif context and declared_context:
             ids = (doc.get("source_object_ids") or [])[1:]
             if len(ids) == len(context):
                 recomputed = geometry_sha256(zip(ids, context))

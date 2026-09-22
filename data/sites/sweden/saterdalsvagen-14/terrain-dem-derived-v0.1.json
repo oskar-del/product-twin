@@ -3531,28 +3531,31 @@
   "evidence_class_note": "Relabelled 2026-09-20 per the platform evidence vocabulary: AUTHORITATIVE is the register or survey object itself; anything computed from it, however faithfully, is DERIVED. The gate-tracked DTM tiles remain AUTHORITATIVE.",
   "glan_sightline_profile_note": "Alias of sightline_profile, kept for the existing prototype viewer. New code reads sightline_profile.",
   "fall_within_footprint_m": {
-    "native_source_probe": {
+    "native_source": {
       "attempted": true,
-      "stac": "ok",
-      "asset_url": "https://dl1.lantmateriet.se/hojd/data/grid/mhm/65_5/m650_55.tif",
-      "http_status": 401,
-      "credentials_used": false,
-      "readable": false,
-      "reason": "the 1 m raster requires Lantmäteriet credentials; set LM_BASIC_AUTH from the granted Geotorget order"
+      "readable": true,
+      "credentials_used": true,
+      "asset": "m650_55.tif",
+      "tile_sha256": "789c7144922ab546ff8c149f8f82fb6a144fb751b2ff599abb8e96a9f5e56de2",
+      "pixel_size_m": 1.0,
+      "samples": 168,
+      "range_requests": 2,
+      "bytes_read": 394566,
+      "method": "windowed nearest-cell sample of the gate-tracked DTM COG over HTTP range requests"
     },
     "element": "HOUSE_BAR",
-    "value_m": 4.64,
-    "min_m": -1.54,
-    "max_m": 3.1,
-    "samples": 169,
-    "sampling_spacing_m": 15.0,
+    "value_m": 5.51,
+    "min_m": 68.44,
+    "max_m": 73.95,
+    "samples": 168,
+    "sampling_spacing_m": 1.0,
     "footprint_m": [
       20,
       7
     ],
-    "resolution_sufficient": false,
+    "resolution_sufficient": true,
     "evidence_class": "DERIVED",
-    "method": "bilinear interpolation of the committed 360 m / 24-segment heightfield over the HOUSE_BAR footprint",
+    "method": "windowed nearest-cell sample of the gate-tracked DTM COG over HTTP range requests",
     "source_element": "scene.design.footprints.HOUSE_BAR",
     "design_provenance": {
       "source_repo": "repo-brage (agent/brage-design)",
@@ -3561,11 +3564,11 @@
       "source_file_commit": "28e7cc174c142a002d254182758f21aa581fbcb2",
       "sha256": "8faa111262b7af0f31a9315775ee8cdf6be8c12089bf4ed097e8a740ac8498f6",
       "byte_length": 9637,
-      "read_at": "2026-09-22T10:52:27.637Z"
+      "read_at": "2026-09-22T10:57:49.292Z"
     },
     "limitations": [
-      "Sampling spacing is 15 m and the footprint's shortest side is 7 m, so this is an interpolation of a coarse surface, not a measurement of the footprint.",
-      "The 1 m raster could not be read: the 1 m raster requires Lantmäteriet credentials; set LM_BASIC_AUTH from the granted Geotorget order (HTTP 401)."
+      "Interpolated from a 1 m heightfield.",
+      "Sampled at the raster's native 1 m resolution over HTTP range requests; no local copy."
     ]
   }
 }

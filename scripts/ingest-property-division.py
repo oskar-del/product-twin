@@ -312,12 +312,19 @@ def emit(site, subject, context, origin, parsed_srs, raw_sha, raw_bytes, zip_man
     # the subject parcel's hash — a reported difference that is not a difference in the geometry,
     # which is the same failure as row order and float noise, one level up.
     payload["derivation_sha256"] = geometry_sha256([(subject["object_id"], rings)])
-    payload["context_derivation_sha256"] = geometry_sha256(
-        (c["object_id"], to_local(c["polys"], origin)) for c in context) if context else None
-    # The buffer that DEFINES the context set, recorded beside the hash it determines. Djurö's
-    # key and Djurö's argument: without it, two context hashes computed at different buffers read
-    # as a disagreement rather than as two correct answers to different questions — the same
-    # failure their buffer reasoning identified, moved from inside the hash to beside it.
+    # The context hash travels WITH the buffer that defines it, in one object (Brain's shape).
+    # Two context hashes computed at different buffers are two correct answers to different
+    # questions; separated from the buffer they read as a disagreement. Djurö's argument, one
+    # step further: keeping them in the same object means a comparison cannot accidentally omit it.
+    payload["context_derivation"] = {
+        "sha256": geometry_sha256((c["object_id"], to_local(c["polys"], origin)) for c in context)
+                  if context else None,
+        "method": METHOD_ID,
+        "clip_buffer_m": CLIP_BUFFER_M,
+        "count": len(context),
+    }
+    # Kept alongside for the transition; Djurö emits these names today.
+    payload["context_derivation_sha256"] = payload["context_derivation"]["sha256"]
     payload["context_clip_buffer_m"] = CLIP_BUFFER_M
     payload["derivation_sha256_method"] = METHOD_ID
     return payload

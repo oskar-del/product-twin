@@ -10943,6 +10943,12 @@
     "Massing/boundary geometry is the registered property division; it is authoritative for extent, not a survey of monument positions."
   ],
   "derivation_sha256": "7ec4c91df0c04db0c2c2444b08fd58c21dcf109f9179054545a346bf54136161",
+  "context_derivation": {
+    "sha256": "e01f7a3bda6dbd2bc71b69e34d2796b141d2f19e82fb5bf170e9e12833a74e88",
+    "method": "geometry_hash/v1+p-3+c44.59.124.10+sorted_by_object_id+grouped_parts+xz_only",
+    "clip_buffer_m": 250.0,
+    "count": 75
+  },
   "context_derivation_sha256": "e01f7a3bda6dbd2bc71b69e34d2796b141d2f19e82fb5bf170e9e12833a74e88",
   "context_clip_buffer_m": 250.0,
   "derivation_sha256_method": "geometry_hash/v1+p-3+c44.59.124.10+sorted_by_object_id+grouped_parts+xz_only"

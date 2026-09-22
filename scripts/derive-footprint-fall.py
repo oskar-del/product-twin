@@ -20,6 +20,9 @@ source makes the figure real and the gate picks it up automatically.
 """
 import argparse, base64, json, os, pathlib, sys, urllib.error, urllib.request
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from cog_window import RemoteCog, CogError
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 
@@ -87,6 +90,57 @@ def probe_native_source(terrain):
                 "error": f"{type(exc).__name__}: {exc}"}
 
 
+def sample_native(terrain, footprint, anchor):
+    """
+    Sample the footprint at the raster's own 1 m resolution, over HTTP range requests.
+
+    This is what the receipt's own method describes for the pin — "a windowed nearest-cell
+    sample of the verified gate-tracked DTM COG" — applied to the footprint. The tile is 246 MB;
+    the window is a handful of cells, so a COG read fetches the header and the one 512 × 512
+    tile the footprint lands in. No download, no local copy.
+    """
+    item_url = ((terrain.get("gate_tracked_asset") or {}).get("stac_item"))
+    if not item_url:
+        return None, {"attempted": False, "reason": "the receipt names no STAC item"}
+    try:
+        with urllib.request.urlopen(item_url, timeout=30) as response:
+            item = json.load(response)
+        href = ((item.get("assets") or {}).get("data") or {}).get("href")
+        if not href:
+            return None, {"attempted": True, "reason": "the STAC item exposes no data asset"}
+        cog = RemoteCog(href)
+        e0, n0 = anchor
+        xs = [p[0] for p in footprint]
+        zs = [p[1] for p in footprint]
+        heights = []
+        x = min(xs)
+        while x <= max(xs) + 1e-9:                    # native grid: one sample per metre
+            z = min(zs)
+            while z <= max(zs) + 1e-9:
+                value = cog.sample(e0 + x, n0 + z)
+                if value is not None:
+                    heights.append(value)
+                z += cog.py
+            x += cog.px
+        if not heights:
+            return None, {"attempted": True, "reason": "every cell in the window was nodata"}
+        return heights, {
+            "attempted": True, "readable": True, "credentials_used": bool(os.environ.get("LM_BASIC_AUTH")),
+            "asset": href.rsplit("/", 1)[-1],
+            "tile_sha256": (terrain.get("gate_tracked_asset") or {}).get("sha256"),
+            "pixel_size_m": cog.px, "samples": len(heights),
+            "range_requests": cog.requests, "bytes_read": cog.bytes_read,
+            "method": "windowed nearest-cell sample of the gate-tracked DTM COG over HTTP range requests",
+        }
+    except CogError as exc:
+        return None, {"attempted": True, "readable": False,
+                      "credentials_used": bool(os.environ.get("LM_BASIC_AUTH")), "reason": str(exc)}
+    except Exception as exc:                                   # noqa: BLE001
+        return None, {"attempted": True, "readable": False,
+                      "credentials_used": bool(os.environ.get("LM_BASIC_AUTH")),
+                      "error": f"{type(exc).__name__}: {exc}"}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--site", required=True)
@@ -129,9 +183,18 @@ def main():
     shortest_side = min(max(xs) - min(xs), max(zs) - min(zs))
     resolved = spacing <= shortest_side / 2      # at least two samples across the short side
 
-    native = probe_native_source(terrain)
+    anchor = (terrain.get("coordinate_anchor") or {}).get("sweref99tm_en")
+    native_heights, native = (None, {"attempted": False, "reason": "no coordinate anchor"})
+    if anchor:
+        native_heights, native = sample_native(terrain, footprint, anchor)
+    if native_heights:
+        # The real measurement replaces the interpolation entirely — it is not a refinement of
+        # it, it is a different and better number, and the guard opens.
+        heights = native_heights
+        spacing = native["pixel_size_m"]
+        resolved = True
     terrain["fall_within_footprint_m"] = {
-        "native_source_probe": native,
+        "native_source": native,
         "element": args.element,
         "value_m": round(max(heights) - min(heights), 2),
         "min_m": round(min(heights), 2),
@@ -141,7 +204,8 @@ def main():
         "footprint_m": [round(max(xs) - min(xs), 1), round(max(zs) - min(zs), 1)],
         "resolution_sufficient": resolved,
         "evidence_class": "DERIVED",
-        "method": (f"bilinear interpolation of the committed {field['size_m']} m / "
+        "method": (native.get("method") if native_heights else
+                   f"bilinear interpolation of the committed {field['size_m']} m / "
                    f"{field['segments']}-segment heightfield over the {args.element} footprint"),
         "source_element": "scene.design.footprints." + args.element,
         "design_provenance": (design.get("provenance") or {}).get("patch"),
@@ -150,7 +214,9 @@ def main():
              f"{shortest_side:g} m, so this is an interpolation of a coarse surface, not a "
              f"measurement of the footprint." if not resolved else
              f"Interpolated from a {spacing:g} m heightfield."),
-            ("The 1 m raster could not be read: "
+            ("Sampled at the raster's native 1 m resolution over HTTP range requests; no local copy."
+             if native_heights else
+             "The 1 m raster could not be read: "
              + (native.get("reason") or native.get("error") or "unknown")
              + f" (HTTP {native.get('http_status')})." if not native.get("readable") else
              "The 1 m raster is readable; windowed sampling is not implemented yet."),
