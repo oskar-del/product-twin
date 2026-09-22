@@ -62,6 +62,8 @@
 
 - 09-22 Spatial 1937b10441: fall across parcel 13.5 m vs within bar footprint 4.64 m (threefold; proven capable of flipping the verdict at a marginal site). Footprint figure from the 15 m heightfield is refused (resolution_sufficient=false) with the mismatch printed on the page. Brain: no acquisition needed — window the DTM COG over the footprint at native 1 m (same range-read the pin sample uses). Ambiguous conditions refused. Cache audit: one un-busted fetch (souterrain card) found before it produced a wrong number.
 
+- 09-22 JOINT COMMIT landed (Spatial bbb04cfa0a + Djurö): property-division hashed via the helper, subject e3e7baf4… / context 27963a1f… computed independently and matched before commit. Native 1 m DTM COG returns 401 without auth — not a download problem; credentials exist in ../repo/.runtime/credentials/lantmateriet.env (Spatial told; never in receipts). Deriver records native_source_probe honestly; gate stays on parcel figure until the windowed read is real. Rule 21 tally: three checks in two days passed by agreeing with the bug (duplicate-id test; validator's naive recompute; buildings recompute guarded by `if subject_rings_local`). Ruling: clip_buffer_m recorded beside context hash; compare only at equal buffers.
+
 ## Process
 - Session titles ≠ roles: two Platform sessions collided; no Spatial session existed. Reassigned by message. Rename sessions to roles.
 - Capture recipe: docs/CAPTURE-RECIPE.md (headless Chrome writes PNG then hangs → poll+kill).
