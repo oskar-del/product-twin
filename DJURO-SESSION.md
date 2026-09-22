@@ -286,7 +286,21 @@ When Spatial says the shared helper is in: re-run `scripts/ingest-buildings-offi
 geometry hash matches theirs byte-for-byte, and record `derived_geometry_sha256_method`. Nothing
 changes here before then.
 
-## ✅ DJURÖ IS COMPLETE (Brain, 2026-09-21). **9 CLOSED / 17 OPEN / 26.** Nothing queued.
+## ✅ DJURÖ IS COMPLETE. **9 CLOSED / 18 OPEN / 27** (validator 120 passed, 0 failed).
+
+**Geometry hash is now shared by implementation, not by assertion** (2026-09-22). The canonical form
+lives in `repo-spatial-studio/scripts/geometry_hash.py` and is **imported by relative path, never
+copied** — a copied canonical form stops being canonical the moment one copy is edited.
+`ingest-buildings-official.py` uses it and reproduces Spatial's hash byte-for-byte:
+
+```
+derived_geometry_sha256  1af0d502…  ->  50c2e422…6717   (matches Spatial exactly)
+```
+
+That change is **the fix landing, not drift** — the old hash used `json.dumps` defaults, whose
+separators and list order are invisible in review. Nothing else in the receipt moved: counts, areas
+and all 35 footprints are identical. 35 rows / 34 unique ids — one multi-part building (a single
+`objektidentitet` with two rings), which the helper groups rather than rejects.
 
 `GATE_SE_MUNICIPAL_JURISDICTION` now closes on a registry rule I proposed (Spatial `598b1132ab`):
 `requires_pattern` on the **kn code** inside the authoritative property-division `source_product`,

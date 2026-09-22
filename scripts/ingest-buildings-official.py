@@ -25,6 +25,32 @@ import argparse, hashlib, json, math, sqlite3, struct, sys, tempfile, zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# The canonical geometry hash lives in the template repo and is IMPORTED, never copied:
+# a copied canonical form stops being canonical the first time one copy is edited.
+_HELPER = ROOT.parent / "repo-spatial-studio" / "scripts"
+if str(_HELPER) not in sys.path:
+    sys.path.insert(0, str(_HELPER))
+try:
+    import geometry_hash as _gh
+    from geometry_hash import geometry_sha256
+except ImportError as exc:                      # pragma: no cover - environment problem
+    raise SystemExit(
+        f"cannot import the shared geometry hash from {_HELPER}: {exc}\n"
+        "It is deliberately not vendored here. Check out repo-spatial-studio beside this "
+        "worktree (agent/spatial-studio-claude, 03c5ff688a or later)."
+    ) from exc
+
+# The helper does not yet export a method id, so it is COMPOSED FROM THE HELPER'S OWN
+# CONSTANTS rather than typed here: a literal would silently keep claiming 1 mm after
+# someone changed PRECISION. This belongs in geometry_hash.py as a single exported
+# METHOD_ID so both pipelines write one identical string - raised with Spatial.
+METHOD_ID = (
+    "geometry_hash.geometry_sha256/sha256 · geometry only · grouped and sorted by object_id · "
+    f"rings sorted · coordinates quantised to {_gh.PRECISION} · separators "
+    f"coord={_gh.COORD_SEP!r} point={_gh.POINT_SEP!r} ring={_gh.RING_SEP!r} "
+    f"object={_gh.OBJECT_SEP!r}"
+)
 EXPECTED_EPSG = 3006
 DEFAULT_BUFFER_M = 200.0
 
@@ -277,9 +303,12 @@ def main():
             "The product carries no building heights; storeys and volume are NOT established here.",
         ],
     }
-    geom_blob = json.dumps(
-        [b["footprint_rings_local"] for b in buildings], separators=(",", ":"), sort_keys=True)
-    doc["derived_geometry_sha256"] = hashlib.sha256(geom_blob.encode()).hexdigest()
+    # Shared canonical form: explicit separators, sorted by object id, quantised to 1 mm,
+    # and GEOMETRY ONLY. Rows sharing an objektidentitet are a multi-part building and are
+    # grouped, not rejected - this clip contains exactly one such pair.
+    doc["derived_geometry_sha256"] = geometry_sha256(
+        (b["object_id"], b["footprint_rings_local"]) for b in buildings)
+    doc["derived_geometry_sha256_method"] = METHOD_ID
 
     out = site / "buildings-official-derived-v0.1.json"
     out.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n")
