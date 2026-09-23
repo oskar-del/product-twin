@@ -1,0 +1,189 @@
+<title>MYHOME Handover</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F3F4F1;--paper:#FFFFFF;--ink:#1F2A26;--ink-2:#4A5753;--ink-3:#7D8783;--line:#D9DDD8;
+  --blue:#2F5F8A;--blue-soft:#E4ECF4;--oak:#A9773C;--oak-soft:#F3E9DA;--green:#1E6F55;--green-soft:#E1EFE9;--rose:#9C4B5C;--rose-soft:#F4E3E7;
+  --display:"Fraunces",Georgia,serif;--body:"Public Sans",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ground:#171B19;--paper:#1F2522;--ink:#EEF0EC;--ink-2:#B9C0BC;--ink-3:#84908A;--line:#33403A;
+  --blue:#8FB6DA;--blue-soft:#22364A;--oak:#D6A86A;--oak-soft:#3A2E1D;--green:#7FCBAA;--green-soft:#1D3A30;--rose:#E1A0AE;--rose-soft:#3F262C;}}
+:root[data-theme="dark"]{
+  --ground:#171B19;--paper:#1F2522;--ink:#EEF0EC;--ink-2:#B9C0BC;--ink-3:#84908A;--line:#33403A;
+  --blue:#8FB6DA;--blue-soft:#22364A;--oak:#D6A86A;--oak-soft:#3A2E1D;--green:#7FCBAA;--green-soft:#1D3A30;--rose:#E1A0AE;--rose-soft:#3F262C;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+main{max-width:1040px;margin:0 auto;padding:56px 24px 96px}
+.col{max-width:68ch}
+h1,h2,h3{font-family:var(--display);font-weight:500;text-wrap:balance;margin:0}
+h1{font-size:clamp(40px,6vw,64px);line-height:1;letter-spacing:-.02em}
+h2{font-size:30px;line-height:1.15;margin-top:64px;padding-top:24px;border-top:1px solid var(--line)}
+h3{font-size:20px;margin-top:28px}
+p{margin:14px 0}
+.eyebrow{font:500 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.lede{font-size:20px;line-height:1.45;color:var(--ink-2);margin-top:18px}
+.thesis{margin-top:36px;padding:24px 28px;background:var(--paper);border-left:4px solid var(--blue);font-family:var(--display);font-size:24px;line-height:1.3}
+.meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:24px;font-size:13px;color:var(--ink-3)}
+.meta b{color:var(--ink-2);font-weight:500}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:18px 0;font-variant-numeric:tabular-nums}
+.tw{overflow-x:auto}
+th{text-align:left;font:500 11px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n{text-align:right;font-family:var(--mono);font-size:13px}
+tr.total td{font-weight:600;border-top:2px solid var(--ink)}
+.chip{display:inline-block;padding:3px 9px;border-radius:999px;font:500 11px/1.4 var(--body);letter-spacing:.06em;text-transform:uppercase}
+.c-blue{background:var(--blue-soft);color:var(--blue)}.c-oak{background:var(--oak-soft);color:var(--oak)}.c-green{background:var(--green-soft);color:var(--green)}.c-rose{background:var(--rose-soft);color:var(--rose)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:20px 0}
+.tile{background:var(--paper);border:1px solid var(--line);padding:18px 20px}
+.tile b{display:block;font:500 34px/1 var(--display);margin:6px 0 8px;font-variant-numeric:tabular-nums}
+.tile span{font-size:13px;color:var(--ink-2)}
+ul,ol{padding-left:22px}li{margin:8px 0}
+code{font-family:var(--mono);font-size:.88em;background:var(--paper);border:1px solid var(--line);padding:1px 6px;border-radius:3px}
+pre{font-family:var(--mono);font-size:13px;line-height:1.5;background:var(--paper);border:1px solid var(--line);padding:16px 18px;overflow-x:auto}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.keep{border-top:3px solid var(--green)}.drop{border-top:3px solid var(--rose)}
+.keep h3,.drop h3{margin-top:12px}
+.rule{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.rule i{font:500 13px/1.6 var(--mono);color:var(--ink-3);font-style:normal}
+.week{display:grid;grid-template-columns:90px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.week b{font-family:var(--display);font-weight:500;font-size:18px}
+small.note{display:block;color:var(--ink-3);font-size:13px;margin-top:6px}
+a{color:var(--blue)}
+</style>
+
+<main>
+<div class="col">
+<div class="eyebrow">Handover · Oskar → Sainath · 23 September 2026</div>
+<h1 style="margin-top:14px">MYHOME</h1>
+<p class="lede">Scan your room with your phone. Furnish it from a graph of real products with real dimensions. Order it. We take the commission.</p>
+<div class="thesis">Nothing on the market today lets a person scan their home, say "furnish it like this", and have a system find exact, buyable products and place them. That gap is the product.</div>
+<div class="meta"><span>Repo <b>oskar-del/product-twin</b></span><span>Owners <b>Oskar · Sainath</b></span><span>State <b>engine + graph built, consumer front end not started</b></span><span>Every number here is <b>computed from the repo</b>, not typed</span></div>
+</div>
+
+<div class="col">
+<h2>Why this, why now</h2>
+<p>Bliks sits on top of the model vendors' surface, and this month they shipped its core idea natively. Anything built there is one release note from obsolete. MYHOME sits on things a model vendor will never own: a mapped catalogue with live commission links, and the customer's own physical room. Both get stronger with every month of work rather than weaker.</p>
+<p>This is deliberately <b>not</b> the plot-to-project platform. Oskar keeps that as consulting for now (one house on one plot at a time). The two products share one engine and one product graph, and nothing else.</p>
+</div>
+
+<div class="col">
+<h2>The product in one line of user actions</h2>
+<ol>
+<li><b>Scan</b> a room on an iPhone (LiDAR / RoomPlan gives walls, doors and windows as geometry).</li>
+<li><b>Furnish</b>: the room compiler selects products from the graph by role and fit, or the user asks in words ("a 3-seat sofa facing the window, oak coffee table, two floor lamps").</li>
+<li><b>See it</b> in 3D, or as a photoreal still, with an honest label on every dimension.</li>
+<li><b>Order</b>: every product carries a channel-tracked affiliate link. Commission 3–15% by merchant.</li>
+</ol>
+<p>Steps 2, 3 and 4 exist and run today against a concept house. Step 1 is the new work.</p>
+</div>
+
+<h2>What is already built</h2>
+<div class="grid">
+<div class="tile"><span>Products in the graph</span><b>225 335</b><span>across 9 approved merchants, all with live tracked BUY links</span></div>
+<div class="tile"><span>With a source-stated size</span><b>6 390</b><span>plus 35 474 with stated width×depth and a labelled default height</span></div>
+<div class="tile"><span>3D proxies on disk</span><b>3 936</b><span>+ 8 native manufacturer meshes (NORR11, Wendelbo)</span></div>
+<div class="tile"><span>Furnished rooms compiled</span><b>4</b><span>living, terrace, bedroom, and a room inside a real house spec</span></div>
+</div>
+
+<div class="col">
+<h3>The graph</h3>
+<p>One JSON "twin" per product: identity, price, image, category, attach role, dimensions with a provenance tier, geometry pointer, commerce link. The tier is the single most important field, because it is what stops the app from lying about fit.</p>
+</div>
+<div class="tw"><table>
+<tr><th>Merchant</th><th>Commission</th><th class="n">Products</th><th class="n">Size stated</th><th class="n">W×D stated, H default</th><th>Notes</th></tr>
+<tr><td>Newport</td><td>9 %</td><td class="n">13 036</td><td class="n">32</td><td class="n">48</td><td>Wedge merchant (family contact). 3 620 have proxy envelopes only.</td></tr>
+<tr><td>Kungsängen</td><td>5 %</td><td class="n">23 822</td><td class="n">0</td><td class="n">22 149</td><td>Beds. 93 % placeable once heights defaulted.</td></tr>
+<tr><td>Mjuk</td><td>5 %</td><td class="n">7 284</td><td class="n">0</td><td class="n">4 558</td><td>Sustainable furniture + decor.</td></tr>
+<tr><td>Lampemesteren</td><td>8 %</td><td class="n">19 516</td><td class="n">3</td><td class="n">3 069</td><td>Designer lighting.</td></tr>
+<tr><td>Lampan</td><td>14 %</td><td class="n">10 874</td><td class="n">0</td><td class="n">3 084</td><td>Lighting.</td></tr>
+<tr><td>Golvpoolen</td><td>3 %</td><td class="n">59 720</td><td class="n">47</td><td class="n">1 358</td><td>Flooring, bath. Mostly not room objects.</td></tr>
+<tr><td>Gripsholm</td><td>15 %</td><td class="n">166</td><td class="n">0</td><td class="n">81</td><td>Linen, textiles (attach layer).</td></tr>
+<tr><td>vidaXL outdoor</td><td>6 %</td><td class="n">88 632</td><td class="n">6 111</td><td class="n">1 127</td><td>Only outdoor line. Filtered from a 160 595-row feed.</td></tr>
+<tr><td>Valostore</td><td>—</td><td class="n">2 082</td><td class="n">0</td><td class="n">0</td><td>Flashlights, catalogue-only.</td></tr>
+<tr class="total"><td>Total</td><td></td><td class="n">225 335</td><td class="n">6 390</td><td class="n">35 474</td><td>3 634 all-default envelopes · 179 837 no usable size</td></tr>
+</table></div>
+<div class="col">
+<p>The size tiers, in order of trust: <span class="chip c-green">source</span> merchant states all three axes · <span class="chip c-oak">w×d source, h default</span> height from a 33-category default table · <span class="chip c-oak">all default</span> a proxy envelope, never a product fact · <span class="chip c-rose">none</span> not placeable. The room compiler prefers source over default and never renders a default as measured. The single biggest lever for MYHOME is moving products up this ladder.</p>
+
+<h3>The engine (repo-platform/engine)</h3>
+<ul>
+<li><b>Scene contract + compiler</b>: rows → placed elements by role (sofa, table, lamp…), dimensional fit, attach points (sofa exposes pillow slots; table exposes centrepiece).</li>
+<li><b>Room inside a house</b>: reads a room spec (walls, openings with sill/head heights, finishes) and furnishes it. A LiDAR scan replaces that spec one-for-one.</li>
+<li><b>Shoppable surface</b>: click any object → panel with name, brand, price, dimensions + tier chip, BUY. Bundles are self-contained (all geometry inlined, zero runtime fetches).</li>
+<li><b>Photoreal still</b>: any composed scene exports to Blender and renders in Cycles (~3 min a frame), stamped VISUALIZATION.</li>
+<li><b>Design system</b>: one dark "ink" chrome package (tokens, top bar, side panel, evidence chips). MYHOME will want its own consumer skin on the same components.</li>
+<li><b>Gate</b>: 15 test suites, 1 043 checks, including negative controls (every check has been shown to fail on bad input).</li>
+</ul>
+
+<h3>The commerce rail</h3>
+<p>Adtraction channel "Hansson &amp; Hertzell" (content type, approved). Each merchant's product feed is public once approved and pulled by one script into the graph; commission links are carried verbatim, never rewritten. Ten programmes approved, nine still pending (Bosch, Siemens, Elon, Nordic Nest, KitchenTime…). IKEA, Elgiganten and MediaMarkt are on Awin, not Adtraction — a second network signup, not done.</p>
+</div>
+
+<h2>What stays out of MYHOME</h2>
+<div class="two">
+<div class="keep"><h3>Comes with you</h3><ul>
+<li>Avatar Factory: graph, catalogues, tiers, proxies, height-default table</li>
+<li>Platform: engine, compiler, rooms, chrome, Blender export, gates</li>
+<li>Brain docs: fleet rules, capture recipes, this handover</li>
+<li>Adtraction rail and credentials pattern</li>
+</ul></div>
+<div class="drop"><h3>Stays with Oskar's plot work</h3><ul>
+<li>Spatial Studio: Lantmäteriet ingest, site intelligence pages, terrain, gates ledger</li>
+<li>BRAGE: house designs and drawing sets</li>
+<li>MIMER: lender dossier and cost model</li>
+<li>Djurö / Svärtinge site data</li>
+</ul></div>
+</div>
+<div class="col"><p>The boundary is clean in the repo already: MYHOME reads <code>repo-avatar-factory</code> and <code>repo-platform</code>; it never reads a site directory. The one shared thing is the house-spec shape the room compiler consumes, and a scan will produce that shape.</p></div>
+
+<div class="col">
+<h2>The gap, honestly</h2>
+<ol>
+<li><b>Scan ingest.</b> RoomPlan (ARKit) exports a USDZ / JSON with walls, doors, windows, and detected furniture boxes. Convert that into the room spec the compiler already reads. This is the whole new piece, and it is mostly a format adapter plus a native iOS shell.</li>
+<li><b>Consumer front end.</b> Today's surfaces are dark, dense, and made for us. MYHOME needs a phone-first skin on the same engine.</li>
+<li><b>Geometry quality.</b> 3 936 proxies place correctly but look like blocks. The still-render path is what makes it look like a shop; native manufacturer meshes (8 today) are the long-term answer, and licensing them back to manufacturers is a revenue line of its own.</li>
+<li><b>Placeability.</b> 6 390 products with a fully stated size is thin. Mining merchant pages for the height axis, and asking Newport for their spec sheets directly, moves the number fastest.</li>
+<li><b>Language in.</b> "Furnish it like this" needs an intent → room-programme step in front of the compiler. The compiler's role selection is already deterministic, so the model only has to produce a programme, never a product.</li>
+</ol>
+</div>
+
+<div class="col">
+<h2>How we work, in 21 rules</h2>
+<p>Earned the hard way over three weeks; each one caught a real defect. The short list that matters most for a consumer product:</p>
+<div class="rule"><i>01</i><div>Computed beats typed. A figure someone typed is a claim; a figure the build derives is evidence.</div></div>
+<div class="rule"><i>05</i><div>A missing height may be a category default, labelled as such, shown as indicative, never quoted as a product fact.</div></div>
+<div class="rule"><i>09</i><div>Verify what a label <em>tested</em>, not the number. "Placeable" once silently included invented envelopes.</div></div>
+<div class="rule"><i>10</i><div>Gate the artefact, not the tool. Two committed renders shipped without their label because the exporter was fixed after they were made.</div></div>
+<div class="rule"><i>15</i><div>Assert the contract, not the snapshot. A gate that breaks when a supplier ships a fix trains people to ignore it.</div></div>
+<div class="rule"><i>16</i><div>Every fetch from a static host carries a content hash; every page exposes a counts probe. A stale page renders perfectly and lies.</div></div>
+<div class="rule"><i>21</i><div>A check never shown to fail on a known-bad input is not evidence. Three checks in two days passed by agreeing with the bug.</div></div>
+<small class="note">Full list: repo-brain/docs/FLEET-STATE-2026-09-20.md</small>
+</div>
+
+<div class="col">
+<h2>First four weeks</h2>
+<div class="week"><b>Week 1</b><div>Read this, clone the two repos, run <code>npm run engine:gate</code> in repo-platform and open <code>dist/twins/rooms.html</code>. Agree the scan→room-spec adapter contract (a JSON schema, one page).</div></div>
+<div class="week"><b>Week 2</b><div>iOS shell with RoomPlan export → adapter → room spec. Prove one real scanned room compiles through the existing pipeline with Newport furniture placed.</div></div>
+<div class="week"><b>Week 3</b><div>Phone-first surface on the engine: tap product → panel → BUY. First photoreal still of a real scanned room.</div></div>
+<div class="week"><b>Week 4</b><div>Ten friends scan ten rooms. Measure: rooms that compile, products placed, BUY clicks. That number decides the next month.</div></div>
+</div>
+
+<div class="col">
+<h2>Where things are</h2>
+<pre>product twin/
+  repo-avatar-factory/      graph · catalogues · twins · proxies       branch agent/avatar-factory-claude
+    data/&lt;merchant&gt;/&lt;merchant&gt;-catalog.jsonl
+    data/twins/PT_*.json     physical.dimensions_tier is the field of record
+    config/geometry/category-height-defaults.json
+  repo-platform/            engine · rooms · chrome · gates            branch agent/platform-engine
+    engine/compile/         catalog-row.mjs is the only file allowed to grant AUTHORITATIVE
+    data/scenes/            the four compiled rooms
+    dist/stills/            Cycles renders + manifest
+    docs/CHROME.md          the design system
+  repo-brain/docs/          rules · fleet state · capture recipes
+  repo/.runtime/credentials/   gitignored — Adtraction token, feed ids</pre>
+<p>Everything above is pushed. Ask Oskar for repo access and the credentials folder; nothing in it is in git.</p>
+</div>
+</main>
