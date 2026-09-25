@@ -1,28 +1,28 @@
 {
-  "fetched_at": "2026-09-15T08:40:42.294Z",
+  "fetched_at": "2026-09-25T08:49:16.023Z",
   "source_id": "shopify_global_catalog",
   "query_count": 122,
-  "unique_candidate_count": 15157,
+  "unique_candidate_count": 15071,
   "by_category": {
     "FFE.SEATING.SOFA": {
       "queries": 3,
-      "returned": 584
+      "returned": 502
     },
     "FFE.SEATING.LOUNGE": {
       "queries": 3,
-      "returned": 584
+      "returned": 592
     },
     "FFE.SEATING.DINING": {
       "queries": 2,
-      "returned": 397
+      "returned": 400
     },
     "FFE.SEATING.STOOL": {
       "queries": 2,
-      "returned": 386
+      "returned": 400
     },
     "FFE.TABLE.COFFEE": {
       "queries": 3,
-      "returned": 599
+      "returned": 591
     },
     "FFE.TABLE.SIDE": {
       "queries": 3,
@@ -38,11 +38,11 @@
     },
     "FFE.STORAGE": {
       "queries": 2,
-      "returned": 391
+      "returned": 400
     },
     "FFE.BEDS": {
       "queries": 2,
-      "returned": 391
+      "returned": 400
     },
     "FFE.BEDSIDE": {
       "queries": 2,
@@ -50,15 +50,15 @@
     },
     "FFE.RUGS": {
       "queries": 3,
-      "returned": 594
+      "returned": 600
     },
     "FFE.MIRRORS": {
       "queries": 2,
-      "returned": 388
+      "returned": 400
     },
     "OUTDOOR_FFE.SOFA": {
       "queries": 2,
-      "returned": 394
+      "returned": 400
     },
     "OUTDOOR_FFE.LOUNGE_CHAIR": {
       "queries": 2,
@@ -66,7 +66,7 @@
     },
     "OUTDOOR_FFE.DINING_CHAIR": {
       "queries": 2,
-      "returned": 398
+      "returned": 400
     },
     "OUTDOOR_FFE.TABLE": {
       "queries": 2,
@@ -86,11 +86,11 @@
     },
     "ELECTRICAL.LUMINAIRES.WALL": {
       "queries": 2,
-      "returned": 396
+      "returned": 400
     },
     "ELECTRICAL.LUMINAIRES.FLOOR": {
       "queries": 2,
-      "returned": 393
+      "returned": 394
     },
     "ELECTRICAL.LUMINAIRES.TABLE": {
       "queries": 2,
@@ -106,7 +106,7 @@
     },
     "BATH.SHOWERS": {
       "queries": 2,
-      "returned": 199
+      "returned": 200
     },
     "BATH.VANITIES": {
       "queries": 2,
@@ -122,11 +122,11 @@
     },
     "KITCHEN.COOKING": {
       "queries": 2,
-      "returned": 199
+      "returned": 200
     },
     "KITCHEN.REFRIGERATION": {
       "queries": 2,
-      "returned": 192
+      "returned": 200
     },
     "FINISHES.TILE": {
       "queries": 3,
@@ -222,7 +222,7 @@
     },
     "ENERGY.BATTERY": {
       "queries": 2,
-      "returned": 191
+      "returned": 200
     }
   },
   "storage_policy": "catalog_payload_ephemeral_not_cached"
